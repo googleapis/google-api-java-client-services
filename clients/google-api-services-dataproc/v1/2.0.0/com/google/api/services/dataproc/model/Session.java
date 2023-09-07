@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A representation of a session in the service. Next ID: 18
+ * A representation of a session.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -58,9 +58,9 @@ public final class Session extends com.google.api.client.json.GenericJson {
   private JupyterConfig jupyterSession;
 
   /**
-   * Optional. The labels to associate with this session. Label keys must contain 1 to 63
-   * characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values
-   * may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * Optional. The labels to associate with the session. Label keys must contain 1 to 63 characters,
+   * and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty,
+   * but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
    * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a
    * session.
    * The value may be {@code null}.
@@ -90,11 +90,11 @@ public final class Session extends com.google.api.client.json.GenericJson {
   private RuntimeInfo runtimeInfo;
 
   /**
-   * Optional. The session template used by the session.Only resource names including project ID and
-   * location are valid.Example: * https://www.googleapis.com/compute/v1/projects/[project_id]/locat
-   * ions/[dataproc_region]/sessionTemplates/[template_id] *
-   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id]Note that the
-   * template must be in the same project and Dataproc region.
+   * Optional. The session template used by the session.Only resource names, including project ID
+   * and location, are valid.Example: * https://www.googleapis.com/compute/v1/projects/[project_id]/
+   * locations/[dataproc_region]/sessionTemplates/[template_id] *
+   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id]The template
+   * must be in the same project and Dataproc region as the session.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,14 +115,14 @@ public final class Session extends com.google.api.client.json.GenericJson {
   private java.util.List<SessionStateHistory> stateHistory;
 
   /**
-   * Output only. Session state details, such as a failure description if the state is FAILED.
+   * Output only. Session state details, such as the failure description if the state is FAILED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stateMessage;
 
   /**
-   * Output only. The time when the session entered a current state.
+   * Output only. The time when the session entered the current state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,9 +212,9 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The labels to associate with this session. Label keys must contain 1 to 63
-   * characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values
-   * may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * Optional. The labels to associate with the session. Label keys must contain 1 to 63 characters,
+   * and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty,
+   * but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
    * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a
    * session.
    * @return value or {@code null} for none
@@ -224,9 +224,9 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The labels to associate with this session. Label keys must contain 1 to 63
-   * characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values
-   * may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * Optional. The labels to associate with the session. Label keys must contain 1 to 63 characters,
+   * and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty,
+   * but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
    * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a
    * session.
    * @param labels labels or {@code null} for none
@@ -288,11 +288,11 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The session template used by the session.Only resource names including project ID and
-   * location are valid.Example: * https://www.googleapis.com/compute/v1/projects/[project_id]/locat
-   * ions/[dataproc_region]/sessionTemplates/[template_id] *
-   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id]Note that the
-   * template must be in the same project and Dataproc region.
+   * Optional. The session template used by the session.Only resource names, including project ID
+   * and location, are valid.Example: * https://www.googleapis.com/compute/v1/projects/[project_id]/
+   * locations/[dataproc_region]/sessionTemplates/[template_id] *
+   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id]The template
+   * must be in the same project and Dataproc region as the session.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionTemplate() {
@@ -300,11 +300,11 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The session template used by the session.Only resource names including project ID and
-   * location are valid.Example: * https://www.googleapis.com/compute/v1/projects/[project_id]/locat
-   * ions/[dataproc_region]/sessionTemplates/[template_id] *
-   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id]Note that the
-   * template must be in the same project and Dataproc region.
+   * Optional. The session template used by the session.Only resource names, including project ID
+   * and location, are valid.Example: * https://www.googleapis.com/compute/v1/projects/[project_id]/
+   * locations/[dataproc_region]/sessionTemplates/[template_id] *
+   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id]The template
+   * must be in the same project and Dataproc region as the session.
    * @param sessionTemplate sessionTemplate or {@code null} for none
    */
   public Session setSessionTemplate(java.lang.String sessionTemplate) {
@@ -347,7 +347,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Session state details, such as a failure description if the state is FAILED.
+   * Output only. Session state details, such as the failure description if the state is FAILED.
    * @return value or {@code null} for none
    */
   public java.lang.String getStateMessage() {
@@ -355,7 +355,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Session state details, such as a failure description if the state is FAILED.
+   * Output only. Session state details, such as the failure description if the state is FAILED.
    * @param stateMessage stateMessage or {@code null} for none
    */
   public Session setStateMessage(java.lang.String stateMessage) {
@@ -364,7 +364,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the session entered a current state.
+   * Output only. The time when the session entered the current state.
    * @return value or {@code null} for none
    */
   public String getStateTime() {
@@ -372,7 +372,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the session entered a current state.
+   * Output only. The time when the session entered the current state.
    * @param stateTime stateTime or {@code null} for none
    */
   public Session setStateTime(String stateTime) {

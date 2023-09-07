@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A representation of a session template in the service. Next ID: 12
+ * A representation of a session template.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -65,12 +65,11 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   private JupyterConfig jupyterSession;
 
   /**
-   * Optional. The labels to associate with sessions created using this template. Label keys must
+   * Optional. Labels to associate with sessions created using this template. Label keys must
    * contain 1 to 63 characters, and must conform to RFC 1035
-   * (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must
-   * contain 1 to 63 characters, and must conform to RFC 1035
-   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a
-   * session.
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty, but, if present, must
+   * contain 1 to 63 characters and conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No
+   * more than 32 labels can be associated with a session.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +90,7 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   private RuntimeConfig runtimeConfig;
 
   /**
-   * Output only. The time template was last updated.
+   * Output only. The time the template was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,12 +182,11 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The labels to associate with sessions created using this template. Label keys must
+   * Optional. Labels to associate with sessions created using this template. Label keys must
    * contain 1 to 63 characters, and must conform to RFC 1035
-   * (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must
-   * contain 1 to 63 characters, and must conform to RFC 1035
-   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a
-   * session.
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty, but, if present, must
+   * contain 1 to 63 characters and conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No
+   * more than 32 labels can be associated with a session.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -196,12 +194,11 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The labels to associate with sessions created using this template. Label keys must
+   * Optional. Labels to associate with sessions created using this template. Label keys must
    * contain 1 to 63 characters, and must conform to RFC 1035
-   * (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must
-   * contain 1 to 63 characters, and must conform to RFC 1035
-   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a
-   * session.
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty, but, if present, must
+   * contain 1 to 63 characters and conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No
+   * more than 32 labels can be associated with a session.
    * @param labels labels or {@code null} for none
    */
   public SessionTemplate setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -244,7 +241,7 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The time template was last updated.
+   * Output only. The time the template was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -252,7 +249,7 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The time template was last updated.
+   * Output only. The time the template was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public SessionTemplate setUpdateTime(String updateTime) {

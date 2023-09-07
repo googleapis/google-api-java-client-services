@@ -58,15 +58,15 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String parent;
 
   /**
-   * The scopes of a policy define which resources an ACM policy can restrict, and where ACM
-   * resources can be referenced. For example, a policy with scopes=["folders/123"] has the
-   * following behavior: - vpcsc perimeters can only restrict projects within folders/123 - access
-   * levels can only be referenced by resources within folders/123. If empty, there are no
-   * limitations on which resources can be restricted by an ACM policy, and there are no limitations
-   * on where ACM resources can be referenced. Only one policy can include a given scope (attempting
-   * to create a second policy which includes "folders/123" will result in an error). Currently,
-   * scopes cannot be modified after a policy is created. Currently, policies can only have a single
-   * scope. Format: list of `folders/{folder_number}` or `projects/{project_number}`
+   * The scopes of the AccessPolicy. Scopes define which resources a policy can restrict and where
+   * its resources can be referenced. For example, policy A with `scopes=["folders/123"]` has the
+   * following behavior: - ServicePerimeter can only restrict projects within `folders/123`. -
+   * ServicePerimeter within policy A can only reference access levels defined within policy A. -
+   * Only one policy can include a given scope; thus, attempting to create a second policy which
+   * includes `folders/123` will result in an error. If no scopes are provided, then any resource
+   * within the organization can be restricted. Scopes cannot be modified after a policy is created.
+   * Policies can only have a single scope. Format: list of `folders/{folder_number}` or
+   * `projects/{project_number}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,15 +137,15 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The scopes of a policy define which resources an ACM policy can restrict, and where ACM
-   * resources can be referenced. For example, a policy with scopes=["folders/123"] has the
-   * following behavior: - vpcsc perimeters can only restrict projects within folders/123 - access
-   * levels can only be referenced by resources within folders/123. If empty, there are no
-   * limitations on which resources can be restricted by an ACM policy, and there are no limitations
-   * on where ACM resources can be referenced. Only one policy can include a given scope (attempting
-   * to create a second policy which includes "folders/123" will result in an error). Currently,
-   * scopes cannot be modified after a policy is created. Currently, policies can only have a single
-   * scope. Format: list of `folders/{folder_number}` or `projects/{project_number}`
+   * The scopes of the AccessPolicy. Scopes define which resources a policy can restrict and where
+   * its resources can be referenced. For example, policy A with `scopes=["folders/123"]` has the
+   * following behavior: - ServicePerimeter can only restrict projects within `folders/123`. -
+   * ServicePerimeter within policy A can only reference access levels defined within policy A. -
+   * Only one policy can include a given scope; thus, attempting to create a second policy which
+   * includes `folders/123` will result in an error. If no scopes are provided, then any resource
+   * within the organization can be restricted. Scopes cannot be modified after a policy is created.
+   * Policies can only have a single scope. Format: list of `folders/{folder_number}` or
+   * `projects/{project_number}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScopes() {
@@ -153,15 +153,15 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The scopes of a policy define which resources an ACM policy can restrict, and where ACM
-   * resources can be referenced. For example, a policy with scopes=["folders/123"] has the
-   * following behavior: - vpcsc perimeters can only restrict projects within folders/123 - access
-   * levels can only be referenced by resources within folders/123. If empty, there are no
-   * limitations on which resources can be restricted by an ACM policy, and there are no limitations
-   * on where ACM resources can be referenced. Only one policy can include a given scope (attempting
-   * to create a second policy which includes "folders/123" will result in an error). Currently,
-   * scopes cannot be modified after a policy is created. Currently, policies can only have a single
-   * scope. Format: list of `folders/{folder_number}` or `projects/{project_number}`
+   * The scopes of the AccessPolicy. Scopes define which resources a policy can restrict and where
+   * its resources can be referenced. For example, policy A with `scopes=["folders/123"]` has the
+   * following behavior: - ServicePerimeter can only restrict projects within `folders/123`. -
+   * ServicePerimeter within policy A can only reference access levels defined within policy A. -
+   * Only one policy can include a given scope; thus, attempting to create a second policy which
+   * includes `folders/123` will result in an error. If no scopes are provided, then any resource
+   * within the organization can be restricted. Scopes cannot be modified after a policy is created.
+   * Policies can only have a single scope. Format: list of `folders/{folder_number}` or
+   * `projects/{project_number}`
    * @param scopes scopes or {@code null} for none
    */
   public AccessPolicy setScopes(java.util.List<java.lang.String> scopes) {

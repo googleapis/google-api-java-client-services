@@ -35,6 +35,14 @@ package com.google.api.services.content.model;
 public final class BuiltInSimpleAction extends com.google.api.client.json.GenericJson {
 
   /**
+   * Long text from an external source that should be available to the merchant. Present when the
+   * type is `SHOW_ADDITIONAL_CONTENT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BuiltInSimpleActionAdditionalContent additionalContent;
+
+  /**
    * The attribute that needs to be updated. Present when the type is `EDIT_ITEM_ATTRIBUTE`. This
    * field contains a code for attribute, represented in snake_case. You can find a list of
    * product's attributes, with their codes
@@ -51,6 +59,25 @@ public final class BuiltInSimpleAction extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Long text from an external source that should be available to the merchant. Present when the
+   * type is `SHOW_ADDITIONAL_CONTENT`.
+   * @return value or {@code null} for none
+   */
+  public BuiltInSimpleActionAdditionalContent getAdditionalContent() {
+    return additionalContent;
+  }
+
+  /**
+   * Long text from an external source that should be available to the merchant. Present when the
+   * type is `SHOW_ADDITIONAL_CONTENT`.
+   * @param additionalContent additionalContent or {@code null} for none
+   */
+  public BuiltInSimpleAction setAdditionalContent(BuiltInSimpleActionAdditionalContent additionalContent) {
+    this.additionalContent = additionalContent;
+    return this;
+  }
 
   /**
    * The attribute that needs to be updated. Present when the type is `EDIT_ITEM_ATTRIBUTE`. This

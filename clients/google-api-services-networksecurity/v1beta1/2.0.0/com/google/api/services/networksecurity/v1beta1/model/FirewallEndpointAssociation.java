@@ -44,7 +44,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   private java.lang.String firewallEndpoint;
 
   /**
-   * Labels as key value pairs
+   * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +127,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Labels as key value pairs
+   * Optional. Labels as key value pairs
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -135,7 +135,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Labels as key value pairs
+   * Optional. Labels as key value pairs
    * @param labels labels or {@code null} for none
    */
   public FirewallEndpointAssociation setLabels(java.util.Map<String, java.lang.String> labels) {

@@ -47,7 +47,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
-   * Labels as key value pairs
+   * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +122,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Labels as key value pairs
+   * Optional. Labels as key value pairs
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -130,7 +130,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Labels as key value pairs
+   * Optional. Labels as key value pairs
    * @param labels labels or {@code null} for none
    */
   public FirewallEndpoint setLabels(java.util.Map<String, java.lang.String> labels) {

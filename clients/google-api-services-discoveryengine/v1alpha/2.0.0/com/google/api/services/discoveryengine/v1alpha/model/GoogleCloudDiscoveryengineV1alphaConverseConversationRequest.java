@@ -72,6 +72,13 @@ public final class GoogleCloudDiscoveryengineV1alphaConverseConversationRequest 
   private java.lang.String servingConfig;
 
   /**
+   * A specification for configuring the summary returned in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpec summarySpec;
+
+  /**
    * The user labels applied to a resource must meet the following requirements: * Each resource can
    * have multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have
    * a minimum length of 1 character and a maximum length of 63 characters and cannot be empty.
@@ -183,6 +190,23 @@ public final class GoogleCloudDiscoveryengineV1alphaConverseConversationRequest 
    */
   public GoogleCloudDiscoveryengineV1alphaConverseConversationRequest setServingConfig(java.lang.String servingConfig) {
     this.servingConfig = servingConfig;
+    return this;
+  }
+
+  /**
+   * A specification for configuring the summary returned in the response.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpec getSummarySpec() {
+    return summarySpec;
+  }
+
+  /**
+   * A specification for configuring the summary returned in the response.
+   * @param summarySpec summarySpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaConverseConversationRequest setSummarySpec(GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpec summarySpec) {
+    this.summarySpec = summarySpec;
     return this;
   }
 

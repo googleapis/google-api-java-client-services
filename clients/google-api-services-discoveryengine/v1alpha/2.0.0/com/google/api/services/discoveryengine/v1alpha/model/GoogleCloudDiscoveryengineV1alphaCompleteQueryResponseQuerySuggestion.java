@@ -35,7 +35,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCompleteQueryResponseQuerySu
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> completableFieldPath;
+  private java.util.List<java.lang.String> completableFieldPaths;
 
   /**
    * The suggestion for the query.
@@ -49,17 +49,17 @@ public final class GoogleCloudDiscoveryengineV1alphaCompleteQueryResponseQuerySu
    * from completable fields. This field is only populated for the document-completable model.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getCompletableFieldPath() {
-    return completableFieldPath;
+  public java.util.List<java.lang.String> getCompletableFieldPaths() {
+    return completableFieldPaths;
   }
 
   /**
    * The unique document field paths that serve as the source of this suggestion if it was generated
    * from completable fields. This field is only populated for the document-completable model.
-   * @param completableFieldPath completableFieldPath or {@code null} for none
+   * @param completableFieldPaths completableFieldPaths or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaCompleteQueryResponseQuerySuggestion setCompletableFieldPath(java.util.List<java.lang.String> completableFieldPath) {
-    this.completableFieldPath = completableFieldPath;
+  public GoogleCloudDiscoveryengineV1alphaCompleteQueryResponseQuerySuggestion setCompletableFieldPaths(java.util.List<java.lang.String> completableFieldPaths) {
+    this.completableFieldPaths = completableFieldPaths;
     return this;
   }
 

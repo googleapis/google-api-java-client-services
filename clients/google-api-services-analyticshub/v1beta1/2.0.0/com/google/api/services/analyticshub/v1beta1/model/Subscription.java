@@ -19,7 +19,6 @@ package com.google.api.services.analyticshub.v1beta1.model;
 /**
  * A subscription represents a subscribers' access to a particular set of published data. It
  * contains references to associated listings, data exchanges, and linked datasets.
- * TODO(b/267528977) Consider port the new resource to v1beta1 and dataexchange APIs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:

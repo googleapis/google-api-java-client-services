@@ -899,7 +899,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Batch create the ad unit mappings under the specific AdMob account. The maximum allowed batch
-       * size is 100.
+       * size is 100. This method has limited access. If you see a 403 permission denied error, please
+       * reach out to your account manager for access.
        *
        * Create a request for the method "adUnitMappings.batchCreate".
        *
@@ -927,7 +928,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Batch create the ad unit mappings under the specific AdMob account. The maximum allowed batch
-         * size is 100.
+         * size is 100. This method has limited access. If you see a 403 permission denied error, please
+         * reach out to your account manager for access.
          *
          * Create a request for the method "adUnitMappings.batchCreate".
          *
@@ -1067,7 +1069,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
     public class AdUnits {
 
       /**
-       * Creates an ad unit under the specified AdMob account.
+       * Creates an ad unit under the specified AdMob account. This method has limited access. If you see
+       * a 403 permission denied error, please reach out to your account manager for access.
        *
        * Create a request for the method "adUnits.create".
        *
@@ -1093,7 +1096,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Creates an ad unit under the specified AdMob account.
+         * Creates an ad unit under the specified AdMob account. This method has limited access. If you
+         * see a 403 permission denied error, please reach out to your account manager for access.
          *
          * Create a request for the method "adUnits.create".
          *
@@ -1421,7 +1425,9 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
       public class AdUnitMappings {
 
         /**
-         * Create an ad unit mapping under the specific AdMob account and ad unit.
+         * Create an ad unit mapping under the specific AdMob account and ad unit. This method has limited
+         * access. If you see a 403 permission denied error, please reach out to your account manager for
+         * access.
          *
          * Create a request for the method "adUnitMappings.create".
          *
@@ -1447,7 +1453,9 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
               java.util.regex.Pattern.compile("^accounts/[^/]+/adUnits/[^/]+$");
 
           /**
-           * Create an ad unit mapping under the specific AdMob account and ad unit.
+           * Create an ad unit mapping under the specific AdMob account and ad unit. This method has limited
+           * access. If you see a 403 permission denied error, please reach out to your account manager for
+           * access.
            *
            * Create a request for the method "adUnitMappings.create".
            *
@@ -1560,7 +1568,9 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * List ad unit mappings under the specified AdMob account and ad unit.
+         * List ad unit mappings under the specified AdMob account and ad unit. This method has limited
+         * access. If you see a 403 permission denied error, please reach out to your account manager for
+         * access.
          *
          * Create a request for the method "adUnitMappings.list".
          *
@@ -1585,7 +1595,9 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
               java.util.regex.Pattern.compile("^accounts/[^/]+/adUnits/[^/]+$");
 
           /**
-           * List ad unit mappings under the specified AdMob account and ad unit.
+           * List ad unit mappings under the specified AdMob account and ad unit. This method has limited
+           * access. If you see a 403 permission denied error, please reach out to your account manager for
+           * access.
            *
            * Create a request for the method "adUnitMappings.list".
            *
@@ -1813,7 +1825,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
     public class Apps {
 
       /**
-       * Creates an app under the specified AdMob account.
+       * Creates an app under the specified AdMob account. This method has limited access. If you see a
+       * 403 permission denied error, please reach out to your account manager for access.
        *
        * Create a request for the method "apps.create".
        *
@@ -1839,7 +1852,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Creates an app under the specified AdMob account.
+         * Creates an app under the specified AdMob account. This method has limited access. If you see a
+         * 403 permission denied error, please reach out to your account manager for access.
          *
          * Create a request for the method "apps.create".
          *
@@ -2323,7 +2337,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
     public class MediationGroups {
 
       /**
-       * Create a mediation group under the specific AdMob account.
+       * Create a mediation group under the specific AdMob account. This method has limited access. If you
+       * see a 403 permission denied error, please reach out to your account manager for access.
        *
        * Create a request for the method "mediationGroups.create".
        *
@@ -2348,7 +2363,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Create a mediation group under the specific AdMob account.
+         * Create a mediation group under the specific AdMob account. This method has limited access. If
+         * you see a 403 permission denied error, please reach out to your account manager for access.
          *
          * Create a request for the method "mediationGroups.create".
          *
@@ -2453,7 +2469,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * List mediation groups under the specified AdMob account.
+       * List mediation groups under the specified AdMob account. This method has limited access. If you
+       * see a 403 permission denied error, please reach out to your account manager for access.
        *
        * Create a request for the method "mediationGroups.list".
        *
@@ -2478,7 +2495,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * List mediation groups under the specified AdMob account.
+         * List mediation groups under the specified AdMob account. This method has limited access. If you
+         * see a 403 permission denied error, please reach out to your account manager for access.
          *
          * Create a request for the method "mediationGroups.list".
          *
@@ -2699,7 +2717,9 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Update the specified mediation group under the specified AdMob account.
+       * Update the specified mediation group under the specified AdMob account. This method has limited
+       * access. If you see a 403 permission denied error, please reach out to your account manager for
+       * access.
        *
        * Create a request for the method "mediationGroups.patch".
        *
@@ -2726,7 +2746,9 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
             java.util.regex.Pattern.compile("^accounts/[^/]+/mediationGroups/[^/]+$");
 
         /**
-         * Update the specified mediation group under the specified AdMob account.
+         * Update the specified mediation group under the specified AdMob account. This method has limited
+         * access. If you see a 403 permission denied error, please reach out to your account manager for
+         * access.
          *
          * Create a request for the method "mediationGroups.patch".
          *
@@ -2919,7 +2941,9 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
       public class MediationAbExperiments {
 
         /**
-         * Create an A/B testing experiment for a specified AdMob account and a mediation group.
+         * Create an A/B testing experiment for a specified AdMob account and a mediation group. This method
+         * has limited access. If you see a 403 permission denied error, please reach out to your account
+         * manager for access.
          *
          * Create a request for the method "mediationAbExperiments.create".
          *
@@ -2945,7 +2969,9 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
               java.util.regex.Pattern.compile("^accounts/[^/]+/mediationGroups/[^/]+$");
 
           /**
-           * Create an A/B testing experiment for a specified AdMob account and a mediation group.
+           * Create an A/B testing experiment for a specified AdMob account and a mediation group. This
+           * method has limited access. If you see a 403 permission denied error, please reach out to your
+           * account manager for access.
            *
            * Create a request for the method "mediationAbExperiments.create".
            *
@@ -3058,7 +3084,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Stop the mediation A/B experiment and choose a variant.
+         * Stop the mediation A/B experiment and choose a variant. This method has limited access. If you
+         * see a 403 permission denied error, please reach out to your account manager for access.
          *
          * Create a request for the method "mediationAbExperiments.stop".
          *
@@ -3084,7 +3111,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
               java.util.regex.Pattern.compile("^accounts/[^/]+/mediationGroups/[^/]+/mediationAbExperiments$");
 
           /**
-           * Stop the mediation A/B experiment and choose a variant.
+           * Stop the mediation A/B experiment and choose a variant. This method has limited access. If you
+           * see a 403 permission denied error, please reach out to your account manager for access.
            *
            * Create a request for the method "mediationAbExperiments.stop".
            *

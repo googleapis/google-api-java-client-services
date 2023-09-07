@@ -557,6 +557,138 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
         public class Hubs {
 
           /**
+           * Accepts a proposal to attach a Network Connectivity Center spoke to the hub.
+           *
+           * Create a request for the method "hubs.acceptSpoke".
+           *
+           * This request holds the parameters needed by the networkconnectivity server.  After setting any
+           * optional parameters, call the {@link AcceptSpoke#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name of the hub.
+           * @param content the {@link com.google.api.services.networkconnectivity.v1.model.AcceptHubSpokeRequest}
+           * @return the request
+           */
+          public AcceptSpoke acceptSpoke(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.AcceptHubSpokeRequest content) throws java.io.IOException {
+            AcceptSpoke result = new AcceptSpoke(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AcceptSpoke extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}:acceptSpoke";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
+
+            /**
+             * Accepts a proposal to attach a Network Connectivity Center spoke to the hub.
+             *
+             * Create a request for the method "hubs.acceptSpoke".
+             *
+             * This request holds the parameters needed by the the networkconnectivity server.  After setting
+             * any optional parameters, call the {@link AcceptSpoke#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * AcceptSpoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the hub.
+             * @param content the {@link com.google.api.services.networkconnectivity.v1.model.AcceptHubSpokeRequest}
+             * @since 1.13
+             */
+            protected AcceptSpoke(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.AcceptHubSpokeRequest content) {
+              super(Networkconnectivity.this, "POST", REST_PATH, content, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/hubs/[^/]+$");
+              }
+            }
+
+            @Override
+            public AcceptSpoke set$Xgafv(java.lang.String $Xgafv) {
+              return (AcceptSpoke) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AcceptSpoke setAccessToken(java.lang.String accessToken) {
+              return (AcceptSpoke) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AcceptSpoke setAlt(java.lang.String alt) {
+              return (AcceptSpoke) super.setAlt(alt);
+            }
+
+            @Override
+            public AcceptSpoke setCallback(java.lang.String callback) {
+              return (AcceptSpoke) super.setCallback(callback);
+            }
+
+            @Override
+            public AcceptSpoke setFields(java.lang.String fields) {
+              return (AcceptSpoke) super.setFields(fields);
+            }
+
+            @Override
+            public AcceptSpoke setKey(java.lang.String key) {
+              return (AcceptSpoke) super.setKey(key);
+            }
+
+            @Override
+            public AcceptSpoke setOauthToken(java.lang.String oauthToken) {
+              return (AcceptSpoke) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AcceptSpoke setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AcceptSpoke) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AcceptSpoke setQuotaUser(java.lang.String quotaUser) {
+              return (AcceptSpoke) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AcceptSpoke setUploadType(java.lang.String uploadType) {
+              return (AcceptSpoke) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AcceptSpoke setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AcceptSpoke) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the hub. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the hub.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the hub. */
+            public AcceptSpoke setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/hubs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public AcceptSpoke set(String parameterName, Object value) {
+              return (AcceptSpoke) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a new Network Connectivity Center hub in the specified project.
            *
            * Create a request for the method "hubs.create".
@@ -1940,6 +2072,142 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Rejects a Network Connectivity Center spoke from being attached to the hub. If the spoke was
+           * previously in the `ACTIVE` state, it transitions to the `INACTIVE` state and is no longer able to
+           * connect to other spokes that are attached to the hub.
+           *
+           * Create a request for the method "hubs.rejectSpoke".
+           *
+           * This request holds the parameters needed by the networkconnectivity server.  After setting any
+           * optional parameters, call the {@link RejectSpoke#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name of the hub.
+           * @param content the {@link com.google.api.services.networkconnectivity.v1.model.RejectHubSpokeRequest}
+           * @return the request
+           */
+          public RejectSpoke rejectSpoke(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.RejectHubSpokeRequest content) throws java.io.IOException {
+            RejectSpoke result = new RejectSpoke(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class RejectSpoke extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}:rejectSpoke";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
+
+            /**
+             * Rejects a Network Connectivity Center spoke from being attached to the hub. If the spoke was
+             * previously in the `ACTIVE` state, it transitions to the `INACTIVE` state and is no longer able
+             * to connect to other spokes that are attached to the hub.
+             *
+             * Create a request for the method "hubs.rejectSpoke".
+             *
+             * This request holds the parameters needed by the the networkconnectivity server.  After setting
+             * any optional parameters, call the {@link RejectSpoke#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * RejectSpoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the hub.
+             * @param content the {@link com.google.api.services.networkconnectivity.v1.model.RejectHubSpokeRequest}
+             * @since 1.13
+             */
+            protected RejectSpoke(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.RejectHubSpokeRequest content) {
+              super(Networkconnectivity.this, "POST", REST_PATH, content, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/hubs/[^/]+$");
+              }
+            }
+
+            @Override
+            public RejectSpoke set$Xgafv(java.lang.String $Xgafv) {
+              return (RejectSpoke) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public RejectSpoke setAccessToken(java.lang.String accessToken) {
+              return (RejectSpoke) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public RejectSpoke setAlt(java.lang.String alt) {
+              return (RejectSpoke) super.setAlt(alt);
+            }
+
+            @Override
+            public RejectSpoke setCallback(java.lang.String callback) {
+              return (RejectSpoke) super.setCallback(callback);
+            }
+
+            @Override
+            public RejectSpoke setFields(java.lang.String fields) {
+              return (RejectSpoke) super.setFields(fields);
+            }
+
+            @Override
+            public RejectSpoke setKey(java.lang.String key) {
+              return (RejectSpoke) super.setKey(key);
+            }
+
+            @Override
+            public RejectSpoke setOauthToken(java.lang.String oauthToken) {
+              return (RejectSpoke) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public RejectSpoke setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (RejectSpoke) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public RejectSpoke setQuotaUser(java.lang.String quotaUser) {
+              return (RejectSpoke) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public RejectSpoke setUploadType(java.lang.String uploadType) {
+              return (RejectSpoke) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public RejectSpoke setUploadProtocol(java.lang.String uploadProtocol) {
+              return (RejectSpoke) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the hub. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the hub.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the hub. */
+            public RejectSpoke setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/hubs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public RejectSpoke set(String parameterName, Object value) {
+              return (RejectSpoke) super.set(parameterName, value);
             }
           }
           /**

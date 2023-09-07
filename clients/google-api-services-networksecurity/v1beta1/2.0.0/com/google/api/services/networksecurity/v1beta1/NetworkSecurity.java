@@ -2406,17 +2406,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Filtering results */
+          /** Optional. Filtering results */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filtering results
+          /** Optional. Filtering results
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filtering results */
+          /** Optional. Filtering results */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -2439,22 +2439,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Requested page size. Server may return fewer items than requested. If unspecified,
-           * server will pick an appropriate default.
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Requested page size. Server may return fewer items than requested. If unspecified, server will pick
-         an appropriate default.
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Requested page size. Server may return fewer items than requested. If unspecified,
-           * server will pick an appropriate default.
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -10802,17 +10802,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Filtering results */
+          /** Optional. Filtering results */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filtering results
+          /** Optional. Filtering results
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filtering results */
+          /** Optional. Filtering results */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -10835,22 +10835,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Requested page size. Server may return fewer items than requested. If unspecified,
-           * server will pick an appropriate default.
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Requested page size. Server may return fewer items than requested. If unspecified, server will pick
-         an appropriate default.
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Requested page size. Server may return fewer items than requested. If unspecified,
-           * server will pick an appropriate default.
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;

@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends com.google.api.client.json.GenericJson {
 
   /**
+   * A collection of Safety Attribute categories and their associated confidence scores.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes safetyAttributes;
+
+  /**
    * Additional summary-skipped reasons. This provides the reason for ignored cases. If nothing is
    * skipped, this field is not set.
    * The value may be {@code null}.
@@ -43,6 +50,23 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends
    */
   @com.google.api.client.util.Key
   private java.lang.String summaryText;
+
+  /**
+   * A collection of Safety Attribute categories and their associated confidence scores.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes getSafetyAttributes() {
+    return safetyAttributes;
+  }
+
+  /**
+   * A collection of Safety Attribute categories and their associated confidence scores.
+   * @param safetyAttributes safetyAttributes or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseSummary setSafetyAttributes(GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes safetyAttributes) {
+    this.safetyAttributes = safetyAttributes;
+    return this;
+  }
 
   /**
    * Additional summary-skipped reasons. This provides the reason for ignored cases. If nothing is

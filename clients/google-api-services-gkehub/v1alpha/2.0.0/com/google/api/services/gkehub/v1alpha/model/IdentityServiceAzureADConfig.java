@@ -67,13 +67,6 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
   private java.lang.String tenant;
 
   /**
-   * Optional. Claim in the AzureAD ID Token that holds the user details.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String userClaim;
-
-  /**
    * ID for the registered client application that makes authentication requests to the Azure AD
    * identity provider.
    * @return value or {@code null} for none
@@ -187,23 +180,6 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
    */
   public IdentityServiceAzureADConfig setTenant(java.lang.String tenant) {
     this.tenant = tenant;
-    return this;
-  }
-
-  /**
-   * Optional. Claim in the AzureAD ID Token that holds the user details.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUserClaim() {
-    return userClaim;
-  }
-
-  /**
-   * Optional. Claim in the AzureAD ID Token that holds the user details.
-   * @param userClaim userClaim or {@code null} for none
-   */
-  public IdentityServiceAzureADConfig setUserClaim(java.lang.String userClaim) {
-    this.userClaim = userClaim;
     return this;
   }
 

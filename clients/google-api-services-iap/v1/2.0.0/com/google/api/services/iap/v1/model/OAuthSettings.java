@@ -41,6 +41,13 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
   private java.lang.String loginHint;
 
   /**
+   * List of client ids allowed to use IAP programmatically.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> programmaticClients;
+
+  /**
    * Domain hint to send as hd=? parameter in OAuth request flow. Enables redirect to primary IDP by
    * skipping Google's login screen. https://developers.google.com/identity/protocols/OpenIDConnect
    * #hd-param Note: IAP does not verify that the id token's hd claim matches this value since
@@ -60,6 +67,23 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
    */
   public OAuthSettings setLoginHint(java.lang.String loginHint) {
     this.loginHint = loginHint;
+    return this;
+  }
+
+  /**
+   * List of client ids allowed to use IAP programmatically.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProgrammaticClients() {
+    return programmaticClients;
+  }
+
+  /**
+   * List of client ids allowed to use IAP programmatically.
+   * @param programmaticClients programmaticClients or {@code null} for none
+   */
+  public OAuthSettings setProgrammaticClients(java.util.List<java.lang.String> programmaticClients) {
+    this.programmaticClients = programmaticClients;
     return this;
   }
 

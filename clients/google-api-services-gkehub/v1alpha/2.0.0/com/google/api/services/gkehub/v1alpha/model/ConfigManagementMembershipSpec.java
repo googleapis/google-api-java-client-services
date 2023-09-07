@@ -31,7 +31,8 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ConfigManagementMembershipSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Binauthz conifguration for the cluster.
+   * Binauthz conifguration for the cluster. Deprecated: This field will be ignored and should not
+   * be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +85,8 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   private java.lang.String version;
 
   /**
-   * Binauthz conifguration for the cluster.
+   * Binauthz conifguration for the cluster. Deprecated: This field will be ignored and should not
+   * be set.
    * @return value or {@code null} for none
    */
   public ConfigManagementBinauthzConfig getBinauthz() {
@@ -92,7 +94,8 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Binauthz conifguration for the cluster.
+   * Binauthz conifguration for the cluster. Deprecated: This field will be ignored and should not
+   * be set.
    * @param binauthz binauthz or {@code null} for none
    */
   public ConfigManagementMembershipSpec setBinauthz(ConfigManagementBinauthzConfig binauthz) {

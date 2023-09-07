@@ -49,8 +49,9 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Optional labels in key:value format. For more information about labels, see [Requirements for
-   * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+   * Optional labels in key-value pair format. For more information about labels, see [Requirements
+   * for labels](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * labels#requirements).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,8 +150,9 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional labels in key:value format. For more information about labels, see [Requirements for
-   * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+   * Optional labels in key-value pair format. For more information about labels, see [Requirements
+   * for labels](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * labels#requirements).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -158,8 +160,9 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional labels in key:value format. For more information about labels, see [Requirements for
-   * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+   * Optional labels in key-value pair format. For more information about labels, see [Requirements
+   * for labels](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * labels#requirements).
    * @param labels labels or {@code null} for none
    */
   public Hub setLabels(java.util.Map<String, java.lang.String> labels) {

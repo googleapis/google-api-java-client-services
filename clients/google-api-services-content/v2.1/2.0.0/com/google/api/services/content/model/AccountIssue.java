@@ -81,12 +81,9 @@ public final class AccountIssue extends com.google.api.client.json.GenericJson {
    * `tooltip-style-question` - the tooltip shows helpful information, can use the '?' as an icon. *
    * `tooltip-style-info` - the tooltip adds additional information fitting to the context, can use
    * the 'i' as an icon. * `content-moderation` - marks the paragraph that explains how the issue
-   * was identified. * `overlay` - wrapper for the `popup` dialog. It should be set to hidden by
-   * default. When the dialog is opened, the overlay should switch to be visible and cover the rest
-   * of the screen to highlight the dialog. * `popup` - dialog for showing a long block of content *
-   * `popup-close` - a button to close the `popup` dialog * `new-element` - Present for new elements
-   * added to the pre-rendered content in the future. To make sure that a new content element does
-   * not break your style, you can hide everything with this class.
+   * was identified. * `new-element` - Present for new elements added to the pre-rendered content in
+   * the future. To make sure that a new content element does not break your style, you can hide
+   * everything with this class.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,12 +175,9 @@ public final class AccountIssue extends com.google.api.client.json.GenericJson {
    * `tooltip-style-question` - the tooltip shows helpful information, can use the '?' as an icon. *
    * `tooltip-style-info` - the tooltip adds additional information fitting to the context, can use
    * the 'i' as an icon. * `content-moderation` - marks the paragraph that explains how the issue
-   * was identified. * `overlay` - wrapper for the `popup` dialog. It should be set to hidden by
-   * default. When the dialog is opened, the overlay should switch to be visible and cover the rest
-   * of the screen to highlight the dialog. * `popup` - dialog for showing a long block of content *
-   * `popup-close` - a button to close the `popup` dialog * `new-element` - Present for new elements
-   * added to the pre-rendered content in the future. To make sure that a new content element does
-   * not break your style, you can hide everything with this class.
+   * was identified. * `new-element` - Present for new elements added to the pre-rendered content in
+   * the future. To make sure that a new content element does not break your style, you can hide
+   * everything with this class.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrerenderedContent() {
@@ -219,12 +213,9 @@ public final class AccountIssue extends com.google.api.client.json.GenericJson {
    * `tooltip-style-question` - the tooltip shows helpful information, can use the '?' as an icon. *
    * `tooltip-style-info` - the tooltip adds additional information fitting to the context, can use
    * the 'i' as an icon. * `content-moderation` - marks the paragraph that explains how the issue
-   * was identified. * `overlay` - wrapper for the `popup` dialog. It should be set to hidden by
-   * default. When the dialog is opened, the overlay should switch to be visible and cover the rest
-   * of the screen to highlight the dialog. * `popup` - dialog for showing a long block of content *
-   * `popup-close` - a button to close the `popup` dialog * `new-element` - Present for new elements
-   * added to the pre-rendered content in the future. To make sure that a new content element does
-   * not break your style, you can hide everything with this class.
+   * was identified. * `new-element` - Present for new elements added to the pre-rendered content in
+   * the future. To make sure that a new content element does not break your style, you can hide
+   * everything with this class.
    * @param prerenderedContent prerenderedContent or {@code null} for none
    */
   public AccountIssue setPrerenderedContent(java.lang.String prerenderedContent) {

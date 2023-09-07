@@ -53,6 +53,14 @@ public final class DiagnoseClusterRequest extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> jobs;
 
   /**
+   * Optional. (Optional) The output Cloud Storage directory for the diagnostic tarball. If not
+   * specified, a task-specific directory in the cluster's staging bucket will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tarballGcsDir;
+
+  /**
    * Optional. DEPRECATED Specifies the yarn application on which diagnosis is to be performed.
    * The value may be {@code null}.
    */
@@ -118,6 +126,25 @@ public final class DiagnoseClusterRequest extends com.google.api.client.json.Gen
    */
   public DiagnoseClusterRequest setJobs(java.util.List<java.lang.String> jobs) {
     this.jobs = jobs;
+    return this;
+  }
+
+  /**
+   * Optional. (Optional) The output Cloud Storage directory for the diagnostic tarball. If not
+   * specified, a task-specific directory in the cluster's staging bucket will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTarballGcsDir() {
+    return tarballGcsDir;
+  }
+
+  /**
+   * Optional. (Optional) The output Cloud Storage directory for the diagnostic tarball. If not
+   * specified, a task-specific directory in the cluster's staging bucket will be used.
+   * @param tarballGcsDir tarballGcsDir or {@code null} for none
+   */
+  public DiagnoseClusterRequest setTarballGcsDir(java.lang.String tarballGcsDir) {
+    this.tarballGcsDir = tarballGcsDir;
     return this;
   }
 

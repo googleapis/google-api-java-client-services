@@ -30,14 +30,14 @@ package com.google.api.services.dataproc.model;
 public final class SessionStateHistory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The state of the session at this point in history.
+   * Output only. The state of the session at this point in the session history.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. Details about the state at this point in history.
+   * Output only. Details about the state at this point in the session history.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class SessionStateHistory extends com.google.api.client.json.Generi
   private String stateStartTime;
 
   /**
-   * Output only. The state of the session at this point in history.
+   * Output only. The state of the session at this point in the session history.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -59,7 +59,7 @@ public final class SessionStateHistory extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The state of the session at this point in history.
+   * Output only. The state of the session at this point in the session history.
    * @param state state or {@code null} for none
    */
   public SessionStateHistory setState(java.lang.String state) {
@@ -68,7 +68,7 @@ public final class SessionStateHistory extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Details about the state at this point in history.
+   * Output only. Details about the state at this point in the session history.
    * @return value or {@code null} for none
    */
   public java.lang.String getStateMessage() {
@@ -76,7 +76,7 @@ public final class SessionStateHistory extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Details about the state at this point in history.
+   * Output only. Details about the state at this point in the session history.
    * @param stateMessage stateMessage or {@code null} for none
    */
   public SessionStateHistory setStateMessage(java.lang.String stateMessage) {

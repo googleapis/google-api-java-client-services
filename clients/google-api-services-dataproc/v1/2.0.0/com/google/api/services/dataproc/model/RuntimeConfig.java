@@ -46,6 +46,13 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> properties;
 
   /**
+   * Optional. Dependency repository configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RepositoryConfig repositoryConfig;
+
+  /**
    * Optional. Version of the batch runtime.
    * The value may be {@code null}.
    */
@@ -87,6 +94,23 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
    */
   public RuntimeConfig setProperties(java.util.Map<String, java.lang.String> properties) {
     this.properties = properties;
+    return this;
+  }
+
+  /**
+   * Optional. Dependency repository configuration.
+   * @return value or {@code null} for none
+   */
+  public RepositoryConfig getRepositoryConfig() {
+    return repositoryConfig;
+  }
+
+  /**
+   * Optional. Dependency repository configuration.
+   * @param repositoryConfig repositoryConfig or {@code null} for none
+   */
+  public RuntimeConfig setRepositoryConfig(RepositoryConfig repositoryConfig) {
+    this.repositoryConfig = repositoryConfig;
     return this;
   }
 

@@ -17,7 +17,8 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A list of interactive sessions.
+ * Defines a mapping from machine types to the number of VMs that are created with each machine
+ * type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -27,67 +28,64 @@ package com.google.api.services.dataproc.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListSessionsResponse extends com.google.api.client.json.GenericJson {
+public final class InstanceSelectionResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token, which can be sent as page_token, to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * Output only. Full machine-type names, e.g. "n1-standard-16".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private java.lang.String machineType;
 
   /**
-   * Output only. The sessions from the specified collection.
+   * Output only. Number of VM provisioned with the machine_type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Session> sessions;
+  private java.lang.Integer vmCount;
 
   /**
-   * A token, which can be sent as page_token, to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * Output only. Full machine-type names, e.g. "n1-standard-16".
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public java.lang.String getMachineType() {
+    return machineType;
   }
 
   /**
-   * A token, which can be sent as page_token, to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * Output only. Full machine-type names, e.g. "n1-standard-16".
+   * @param machineType machineType or {@code null} for none
    */
-  public ListSessionsResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public InstanceSelectionResult setMachineType(java.lang.String machineType) {
+    this.machineType = machineType;
     return this;
   }
 
   /**
-   * Output only. The sessions from the specified collection.
+   * Output only. Number of VM provisioned with the machine_type.
    * @return value or {@code null} for none
    */
-  public java.util.List<Session> getSessions() {
-    return sessions;
+  public java.lang.Integer getVmCount() {
+    return vmCount;
   }
 
   /**
-   * Output only. The sessions from the specified collection.
-   * @param sessions sessions or {@code null} for none
+   * Output only. Number of VM provisioned with the machine_type.
+   * @param vmCount vmCount or {@code null} for none
    */
-  public ListSessionsResponse setSessions(java.util.List<Session> sessions) {
-    this.sessions = sessions;
+  public InstanceSelectionResult setVmCount(java.lang.Integer vmCount) {
+    this.vmCount = vmCount;
     return this;
   }
 
   @Override
-  public ListSessionsResponse set(String fieldName, Object value) {
-    return (ListSessionsResponse) super.set(fieldName, value);
+  public InstanceSelectionResult set(String fieldName, Object value) {
+    return (InstanceSelectionResult) super.set(fieldName, value);
   }
 
   @Override
-  public ListSessionsResponse clone() {
-    return (ListSessionsResponse) super.clone();
+  public InstanceSelectionResult clone() {
+    return (InstanceSelectionResult) super.clone();
   }
 
 }

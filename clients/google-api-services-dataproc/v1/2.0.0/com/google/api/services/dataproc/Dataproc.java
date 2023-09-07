@@ -2913,7 +2913,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
       public class SessionTemplates {
 
         /**
-         * Create an session template, synchronously.
+         * Create a session template synchronously.
          *
          * Create a request for the method "sessionTemplates.create".
          *
@@ -2938,7 +2938,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Create an session template, synchronously.
+           * Create a session template synchronously.
            *
            * Create a request for the method "sessionTemplates.create".
            *
@@ -3318,7 +3318,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which owns this collection of session templates.
+         * @param parent Required. The parent that owns this collection of session templates.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3344,7 +3344,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which owns this collection of session templates.
+           * @param parent Required. The parent that owns this collection of session templates.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3422,17 +3422,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent, which owns this collection of session templates. */
+          /** Required. The parent that owns this collection of session templates. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which owns this collection of session templates.
+          /** Required. The parent that owns this collection of session templates.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent, which owns this collection of session templates. */
+          /** Required. The parent that owns this collection of session templates. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3518,8 +3518,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Updates the session template, synchronously.Disable check for update_mask, because all updates
-         * will be full replacements.
+         * Updates the session template synchronously.
          *
          * Create a request for the method "sessionTemplates.patch".
          *
@@ -3544,8 +3543,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessionTemplates/[^/]+$");
 
           /**
-           * Updates the session template, synchronously.Disable check for update_mask, because all updates
-           * will be full replacements.
+           * Updates the session template synchronously.
            *
            * Create a request for the method "sessionTemplates.patch".
            *
@@ -3800,10 +3798,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. A unique ID used to identify the request. If the service receives two
-           * CreateSessionRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
-           * .dataproc.v1#google.cloud.dataproc.v1.CreateSessionRequest)s with the same ID, the
-           * second request is ignored and the first Session is created and stored in the backend is
-           * returned.Recommendation: Set this value to a UUID
+           * CreateSessionRequests (https://cloud.google.com/dataproc/docs/reference/rpc/google.clou
+           * d.dataproc.v1#google.cloud.dataproc.v1.CreateSessionRequest)s with the same ID, the
+           * second request is ignored, and the first Session is created and stored in the
+           * backend.Recommendation: Set this value to a UUID
            * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain
            * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
            * length is 40 characters.
@@ -3812,12 +3810,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           private java.lang.String requestId;
 
           /** Optional. A unique ID used to identify the request. If the service receives two
-         CreateSessionRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1
-         #google.cloud.dataproc.v1.CreateSessionRequest)s with the same ID, the second request is ignored
-         and the first Session is created and stored in the backend is returned.Recommendation: Set this
-         value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must
-         contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
-         length is 40 characters.
+         CreateSessionRequests (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v
+         1#google.cloud.dataproc.v1.CreateSessionRequest)s with the same ID, the second request is ignored,
+         and the first Session is created and stored in the backend.Recommendation: Set this value to a UUID
+         (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain only letters
+         (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -3825,10 +3822,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. A unique ID used to identify the request. If the service receives two
-           * CreateSessionRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
-           * .dataproc.v1#google.cloud.dataproc.v1.CreateSessionRequest)s with the same ID, the
-           * second request is ignored and the first Session is created and stored in the backend is
-           * returned.Recommendation: Set this value to a UUID
+           * CreateSessionRequests (https://cloud.google.com/dataproc/docs/reference/rpc/google.clou
+           * d.dataproc.v1#google.cloud.dataproc.v1.CreateSessionRequest)s with the same ID, the
+           * second request is ignored, and the first Session is created and stored in the
+           * backend.Recommendation: Set this value to a UUID
            * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain
            * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
            * length is 40 characters.
@@ -3869,8 +3866,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Deletes the interactive session resource. If the session is not in terminal state, it will be
-         * terminated and deleted afterwards.
+         * Deletes the interactive session resource. If the session is not in terminal state, it is
+         * terminated, and then deleted.
          *
          * Create a request for the method "sessions.delete".
          *
@@ -3894,8 +3891,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
 
           /**
-           * Deletes the interactive session resource. If the session is not in terminal state, it will be
-           * terminated and deleted afterwards.
+           * Deletes the interactive session resource. If the session is not in terminal state, it is
+           * terminated, and then deleted.
            *
            * Create a request for the method "sessions.delete".
            *
@@ -4175,137 +4172,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Inject Credentials in the interactive session.
-         *
-         * Create a request for the method "sessions.injectCredentials".
-         *
-         * This request holds the parameters needed by the dataproc server.  After setting any optional
-         * parameters, call the {@link InjectCredentials#execute()} method to invoke the remote operation.
-         *
-         * @param session Required. The name of the session resource to inject credentials to.
-         * @param content the {@link com.google.api.services.dataproc.model.InjectSessionCredentialsRequest}
-         * @return the request
-         */
-        public InjectCredentials injectCredentials(java.lang.String session, com.google.api.services.dataproc.model.InjectSessionCredentialsRequest content) throws java.io.IOException {
-          InjectCredentials result = new InjectCredentials(session, content);
-          initialize(result);
-          return result;
-        }
-
-        public class InjectCredentials extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
-
-          private static final String REST_PATH = "v1/{+session}:injectCredentials";
-
-          private final java.util.regex.Pattern SESSION_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
-
-          /**
-           * Inject Credentials in the interactive session.
-           *
-           * Create a request for the method "sessions.injectCredentials".
-           *
-           * This request holds the parameters needed by the the dataproc server.  After setting any
-           * optional parameters, call the {@link InjectCredentials#execute()} method to invoke the remote
-           * operation. <p> {@link InjectCredentials#initialize(com.google.api.client.googleapis.services.Ab
-           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
-           *
-           * @param session Required. The name of the session resource to inject credentials to.
-           * @param content the {@link com.google.api.services.dataproc.model.InjectSessionCredentialsRequest}
-           * @since 1.13
-           */
-          protected InjectCredentials(java.lang.String session, com.google.api.services.dataproc.model.InjectSessionCredentialsRequest content) {
-            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.Operation.class);
-            this.session = com.google.api.client.util.Preconditions.checkNotNull(session, "Required parameter session must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
-                  "Parameter session must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
-            }
-          }
-
-          @Override
-          public InjectCredentials set$Xgafv(java.lang.String $Xgafv) {
-            return (InjectCredentials) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public InjectCredentials setAccessToken(java.lang.String accessToken) {
-            return (InjectCredentials) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public InjectCredentials setAlt(java.lang.String alt) {
-            return (InjectCredentials) super.setAlt(alt);
-          }
-
-          @Override
-          public InjectCredentials setCallback(java.lang.String callback) {
-            return (InjectCredentials) super.setCallback(callback);
-          }
-
-          @Override
-          public InjectCredentials setFields(java.lang.String fields) {
-            return (InjectCredentials) super.setFields(fields);
-          }
-
-          @Override
-          public InjectCredentials setKey(java.lang.String key) {
-            return (InjectCredentials) super.setKey(key);
-          }
-
-          @Override
-          public InjectCredentials setOauthToken(java.lang.String oauthToken) {
-            return (InjectCredentials) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public InjectCredentials setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (InjectCredentials) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public InjectCredentials setQuotaUser(java.lang.String quotaUser) {
-            return (InjectCredentials) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public InjectCredentials setUploadType(java.lang.String uploadType) {
-            return (InjectCredentials) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public InjectCredentials setUploadProtocol(java.lang.String uploadProtocol) {
-            return (InjectCredentials) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The name of the session resource to inject credentials to. */
-          @com.google.api.client.util.Key
-          private java.lang.String session;
-
-          /** Required. The name of the session resource to inject credentials to.
-           */
-          public java.lang.String getSession() {
-            return session;
-          }
-
-          /** Required. The name of the session resource to inject credentials to. */
-          public InjectCredentials setSession(java.lang.String session) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
-                  "Parameter session must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
-            }
-            this.session = session;
-            return this;
-          }
-
-          @Override
-          public InjectCredentials set(String parameterName, Object value) {
-            return (InjectCredentials) super.set(parameterName, value);
-          }
-        }
-        /**
          * Lists interactive sessions.
          *
          * Create a request for the method "sessions.list".
@@ -4442,22 +4308,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. A filter for the sessions to return in the response.A filter is a logical
            * expression constraining the values of various fields in each session resource. Filters
            * are case sensitive, and may contain multiple clauses combined with logical operators
-           * (AND/OR). Supported fields are session_id, session_uuid, state, and create_time.e.g.
-           * state = ACTIVE and create_time < "2023-01-01T00:00:00Z" filters for sessions in state
-           * ACTIVE that were created before 2023-01-01See https://google.aip.dev/assets/misc/ebnf-
-           * filtering.txt for a detailed description of the filter syntax and a list of supported
-           * comparisons.
+           * (AND, OR). Supported fields are session_id, session_uuid, state, and
+           * create_time.Example: state = ACTIVE and create_time < "2023-01-01T00:00:00Z" is a
+           * filter for sessions in an ACTIVE state that were created before 2023-01-01.See
+           * https://google.aip.dev/assets/misc/ebnf-filtering.txt for a detailed description of the
+           * filter syntax and a list of supported comparators.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Optional. A filter for the sessions to return in the response.A filter is a logical expression
          constraining the values of various fields in each session resource. Filters are case sensitive, and
-         may contain multiple clauses combined with logical operators (AND/OR). Supported fields are
-         session_id, session_uuid, state, and create_time.e.g. state = ACTIVE and create_time <
-         "2023-01-01T00:00:00Z" filters for sessions in state ACTIVE that were created before 2023-01-01See
-         https://google.aip.dev/assets/misc/ebnf-filtering.txt for a detailed description of the filter
-         syntax and a list of supported comparisons.
+         may contain multiple clauses combined with logical operators (AND, OR). Supported fields are
+         session_id, session_uuid, state, and create_time.Example: state = ACTIVE and create_time <
+         "2023-01-01T00:00:00Z" is a filter for sessions in an ACTIVE state that were created before
+         2023-01-01.See https://google.aip.dev/assets/misc/ebnf-filtering.txt for a detailed description of
+         the filter syntax and a list of supported comparators.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -4467,11 +4333,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Optional. A filter for the sessions to return in the response.A filter is a logical
            * expression constraining the values of various fields in each session resource. Filters
            * are case sensitive, and may contain multiple clauses combined with logical operators
-           * (AND/OR). Supported fields are session_id, session_uuid, state, and create_time.e.g.
-           * state = ACTIVE and create_time < "2023-01-01T00:00:00Z" filters for sessions in state
-           * ACTIVE that were created before 2023-01-01See https://google.aip.dev/assets/misc/ebnf-
-           * filtering.txt for a detailed description of the filter syntax and a list of supported
-           * comparisons.
+           * (AND, OR). Supported fields are session_id, session_uuid, state, and
+           * create_time.Example: state = ACTIVE and create_time < "2023-01-01T00:00:00Z" is a
+           * filter for sessions in an ACTIVE state that were created before 2023-01-01.See
+           * https://google.aip.dev/assets/misc/ebnf-filtering.txt for a detailed description of the
+           * filter syntax and a list of supported comparators.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

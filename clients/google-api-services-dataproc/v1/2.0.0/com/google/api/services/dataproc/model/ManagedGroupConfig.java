@@ -37,6 +37,14 @@ public final class ManagedGroupConfig extends com.google.api.client.json.Generic
   private java.lang.String instanceGroupManagerName;
 
   /**
+   * Output only. The partial URI to the instance group manager for this group. E.g. projects/my-
+   * project/regions/us-central1/instanceGroupManagers/my-igm.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceGroupManagerUri;
+
+  /**
    * Output only. The name of the Instance Template used for the Managed Instance Group.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class ManagedGroupConfig extends com.google.api.client.json.Generic
    */
   public ManagedGroupConfig setInstanceGroupManagerName(java.lang.String instanceGroupManagerName) {
     this.instanceGroupManagerName = instanceGroupManagerName;
+    return this;
+  }
+
+  /**
+   * Output only. The partial URI to the instance group manager for this group. E.g. projects/my-
+   * project/regions/us-central1/instanceGroupManagers/my-igm.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceGroupManagerUri() {
+    return instanceGroupManagerUri;
+  }
+
+  /**
+   * Output only. The partial URI to the instance group manager for this group. E.g. projects/my-
+   * project/regions/us-central1/instanceGroupManagers/my-igm.
+   * @param instanceGroupManagerUri instanceGroupManagerUri or {@code null} for none
+   */
+  public ManagedGroupConfig setInstanceGroupManagerUri(java.lang.String instanceGroupManagerUri) {
+    this.instanceGroupManagerUri = instanceGroupManagerUri;
     return this;
   }
 

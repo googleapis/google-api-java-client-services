@@ -119,6 +119,19 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private CustomerEncryptionKey encryptionKey;
 
   /**
+   * Optional. Ephemeral directories which won't persist across workstation sessions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EphemeralDirectory> ephemeralDirectories;
+
+  static {
+    // hack to force ProGuard to consider EphemeralDirectory used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EphemeralDirectory.class);
+  }
+
+  /**
    * Optional. Checksum computed by the server. May be sent on update and delete requests to make
    * sure that the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -196,6 +209,16 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reconciling;
+
+  /**
+   * Optional. Immutable. Specifies the zones used to replicate the VM and disk resources within the
+   * region. If set, exactly two zones within the workstation cluster's region must be specified—for
+   * example, `['us-central1-a', 'us-central1-f']`. If this field is empty, two default zones within
+   * the region are used. Immutable after the workstation configuration is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> replicaZones;
 
   /**
    * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
@@ -410,6 +433,23 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. Ephemeral directories which won't persist across workstation sessions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EphemeralDirectory> getEphemeralDirectories() {
+    return ephemeralDirectories;
+  }
+
+  /**
+   * Optional. Ephemeral directories which won't persist across workstation sessions.
+   * @param ephemeralDirectories ephemeralDirectories or {@code null} for none
+   */
+  public WorkstationConfig setEphemeralDirectories(java.util.List<EphemeralDirectory> ephemeralDirectories) {
+    this.ephemeralDirectories = ephemeralDirectories;
+    return this;
+  }
+
+  /**
    * Optional. Checksum computed by the server. May be sent on update and delete requests to make
    * sure that the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
@@ -564,6 +604,29 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Specifies the zones used to replicate the VM and disk resources within the
+   * region. If set, exactly two zones within the workstation cluster's region must be specified—for
+   * example, `['us-central1-a', 'us-central1-f']`. If this field is empty, two default zones within
+   * the region are used. Immutable after the workstation configuration is created.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReplicaZones() {
+    return replicaZones;
+  }
+
+  /**
+   * Optional. Immutable. Specifies the zones used to replicate the VM and disk resources within the
+   * region. If set, exactly two zones within the workstation cluster's region must be specified—for
+   * example, `['us-central1-a', 'us-central1-f']`. If this field is empty, two default zones within
+   * the region are used. Immutable after the workstation configuration is created.
+   * @param replicaZones replicaZones or {@code null} for none
+   */
+  public WorkstationConfig setReplicaZones(java.util.List<java.lang.String> replicaZones) {
+    this.replicaZones = replicaZones;
     return this;
   }
 

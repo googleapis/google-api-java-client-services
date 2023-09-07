@@ -330,7 +330,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.String websiteUri;
 
   /**
-   * Output only. Specifies if the place has an entrance that is wheelchair-accessible.
+   * Output only. [Deprecated!] Specifies if the place has an entrance that is wheelchair-
+   * accessible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1057,7 +1058,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place has an entrance that is wheelchair-accessible.
+   * Output only. [Deprecated!] Specifies if the place has an entrance that is wheelchair-
+   * accessible.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWheelchairAccessibleEntrance() {
@@ -1065,7 +1067,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place has an entrance that is wheelchair-accessible.
+   * Output only. [Deprecated!] Specifies if the place has an entrance that is wheelchair-
+   * accessible.
    * @param wheelchairAccessibleEntrance wheelchairAccessibleEntrance or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setWheelchairAccessibleEntrance(java.lang.Boolean wheelchairAccessibleEntrance) {

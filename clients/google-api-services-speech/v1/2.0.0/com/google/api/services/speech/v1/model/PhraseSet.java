@@ -31,6 +31,14 @@ package com.google.api.services.speech.v1.model;
 public final class PhraseSet extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Allows users to store small amounts of arbitrary data. Both the key and the value
+   * must be 63 characters or less each. At most 100 annotations. This field is not used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * Hint Boost. Positive value will increase the probability that a specific phrase will be
    * recognized over other similar sounding phrases. The higher the boost, the higher the chance of
    * false positive recognition as well. Negative boost values would correspond to anti-biasing.
@@ -42,6 +50,38 @@ public final class PhraseSet extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Float boost;
+
+  /**
+   * Output only. The time at which this resource was requested for deletion. This field is not
+   * used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deleteTime;
+
+  /**
+   * Output only. User-settable, human-readable name for the PhraseSet. Must be 63 characters or
+   * less. This field is not used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
+   * Output only. This checksum is computed by the server based on the value of other fields. This
+   * may be sent on update, undelete, and delete requests to ensure the client has an up-to-date
+   * value before proceeding. This field is not used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
+   * Output only. The time at which this resource will be purged. This field is not used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
 
   /**
    * Output only. The [KMS key name](https://cloud.google.com/kms/docs/resource-hierarchy#keys) with
@@ -83,6 +123,47 @@ public final class PhraseSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Whether or not this PhraseSet is in the process of being updated. This field is
+   * not used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean reconciling;
+
+  /**
+   * Output only. The CustomClass lifecycle state. This field is not used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * Output only. System-assigned unique identifier for the PhraseSet. This field is not used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
+   * Output only. Allows users to store small amounts of arbitrary data. Both the key and the value
+   * must be 63 characters or less each. At most 100 annotations. This field is not used.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Output only. Allows users to store small amounts of arbitrary data. Both the key and the value
+   * must be 63 characters or less each. At most 100 annotations. This field is not used.
+   * @param annotations annotations or {@code null} for none
+   */
+  public PhraseSet setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
+
+  /**
    * Hint Boost. Positive value will increase the probability that a specific phrase will be
    * recognized over other similar sounding phrases. The higher the boost, the higher the chance of
    * false positive recognition as well. Negative boost values would correspond to anti-biasing.
@@ -108,6 +189,82 @@ public final class PhraseSet extends com.google.api.client.json.GenericJson {
    */
   public PhraseSet setBoost(java.lang.Float boost) {
     this.boost = boost;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which this resource was requested for deletion. This field is not
+   * used.
+   * @return value or {@code null} for none
+   */
+  public String getDeleteTime() {
+    return deleteTime;
+  }
+
+  /**
+   * Output only. The time at which this resource was requested for deletion. This field is not
+   * used.
+   * @param deleteTime deleteTime or {@code null} for none
+   */
+  public PhraseSet setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
+    return this;
+  }
+
+  /**
+   * Output only. User-settable, human-readable name for the PhraseSet. Must be 63 characters or
+   * less. This field is not used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. User-settable, human-readable name for the PhraseSet. Must be 63 characters or
+   * less. This field is not used.
+   * @param displayName displayName or {@code null} for none
+   */
+  public PhraseSet setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. This checksum is computed by the server based on the value of other fields. This
+   * may be sent on update, undelete, and delete requests to ensure the client has an up-to-date
+   * value before proceeding. This field is not used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Output only. This checksum is computed by the server based on the value of other fields. This
+   * may be sent on update, undelete, and delete requests to ensure the client has an up-to-date
+   * value before proceeding. This field is not used.
+   * @param etag etag or {@code null} for none
+   */
+  public PhraseSet setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which this resource will be purged. This field is not used.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Output only. The time at which this resource will be purged. This field is not used.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public PhraseSet setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
     return this;
   }
 
@@ -186,6 +343,59 @@ public final class PhraseSet extends com.google.api.client.json.GenericJson {
    */
   public PhraseSet setPhrases(java.util.List<Phrase> phrases) {
     this.phrases = phrases;
+    return this;
+  }
+
+  /**
+   * Output only. Whether or not this PhraseSet is in the process of being updated. This field is
+   * not used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReconciling() {
+    return reconciling;
+  }
+
+  /**
+   * Output only. Whether or not this PhraseSet is in the process of being updated. This field is
+   * not used.
+   * @param reconciling reconciling or {@code null} for none
+   */
+  public PhraseSet setReconciling(java.lang.Boolean reconciling) {
+    this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Output only. The CustomClass lifecycle state. This field is not used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The CustomClass lifecycle state. This field is not used.
+   * @param state state or {@code null} for none
+   */
+  public PhraseSet setState(java.lang.String state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. System-assigned unique identifier for the PhraseSet. This field is not used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. System-assigned unique identifier for the PhraseSet. This field is not used.
+   * @param uid uid or {@code null} for none
+   */
+  public PhraseSet setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

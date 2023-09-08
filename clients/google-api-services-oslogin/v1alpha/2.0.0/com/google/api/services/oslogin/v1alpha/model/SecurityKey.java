@@ -30,6 +30,13 @@ package com.google.api.services.oslogin.v1alpha.model;
 public final class SecurityKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * The security key nickname explicitly set by the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deviceNickname;
+
+  /**
    * Hardware-backed private key text in SSH format.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class SecurityKey extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WebAuthn webAuthn;
+
+  /**
+   * The security key nickname explicitly set by the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeviceNickname() {
+    return deviceNickname;
+  }
+
+  /**
+   * The security key nickname explicitly set by the user.
+   * @param deviceNickname deviceNickname or {@code null} for none
+   */
+  public SecurityKey setDeviceNickname(java.lang.String deviceNickname) {
+    this.deviceNickname = deviceNickname;
+    return this;
+  }
 
   /**
    * Hardware-backed private key text in SSH format.

@@ -30,6 +30,13 @@ package com.google.api.services.chromepolicy.v1.model;
 public final class Proto2FileDescriptorProto extends com.google.api.client.json.GenericJson {
 
   /**
+   * The edition of the proto file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String editionEnum;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,6 +82,23 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String syntax;
+
+  /**
+   * The edition of the proto file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEditionEnum() {
+    return editionEnum;
+  }
+
+  /**
+   * The edition of the proto file.
+   * @param editionEnum editionEnum or {@code null} for none
+   */
+  public Proto2FileDescriptorProto setEditionEnum(java.lang.String editionEnum) {
+    this.editionEnum = editionEnum;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

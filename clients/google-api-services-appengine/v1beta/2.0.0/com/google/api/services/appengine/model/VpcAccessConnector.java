@@ -37,7 +37,7 @@ public final class VpcAccessConnector extends com.google.api.client.json.Generic
   private java.lang.String egressSetting;
 
   /**
-   * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-
+   * Full Serverless VPC Access Connector name e.g. projects/my-project/locations/us-
    * central1/connectors/c1.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class VpcAccessConnector extends com.google.api.client.json.Generic
   }
 
   /**
-   * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-
+   * Full Serverless VPC Access Connector name e.g. projects/my-project/locations/us-
    * central1/connectors/c1.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class VpcAccessConnector extends com.google.api.client.json.Generic
   }
 
   /**
-   * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-
+   * Full Serverless VPC Access Connector name e.g. projects/my-project/locations/us-
    * central1/connectors/c1.
    * @param name name or {@code null} for none
    */

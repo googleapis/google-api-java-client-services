@@ -99,6 +99,14 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String gcrDomain;
 
   /**
+   * Additional Google Generated Customer Metadata, this field won't be provided by default and can
+   * be requested by setting the IncludeExtraData field in GetApplicationRequest
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> generatedCustomerMetadata;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,6 +314,25 @@ public final class Application extends com.google.api.client.json.GenericJson {
    */
   public Application setGcrDomain(java.lang.String gcrDomain) {
     this.gcrDomain = gcrDomain;
+    return this;
+  }
+
+  /**
+   * Additional Google Generated Customer Metadata, this field won't be provided by default and can
+   * be requested by setting the IncludeExtraData field in GetApplicationRequest
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getGeneratedCustomerMetadata() {
+    return generatedCustomerMetadata;
+  }
+
+  /**
+   * Additional Google Generated Customer Metadata, this field won't be provided by default and can
+   * be requested by setting the IncludeExtraData field in GetApplicationRequest
+   * @param generatedCustomerMetadata generatedCustomerMetadata or {@code null} for none
+   */
+  public Application setGeneratedCustomerMetadata(java.util.Map<String, java.lang.Object> generatedCustomerMetadata) {
+    this.generatedCustomerMetadata = generatedCustomerMetadata;
     return this;
   }
 

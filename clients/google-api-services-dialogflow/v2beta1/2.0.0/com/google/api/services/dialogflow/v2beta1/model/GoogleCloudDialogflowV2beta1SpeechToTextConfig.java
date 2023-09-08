@@ -51,6 +51,13 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
   private java.lang.String speechModelVariant;
 
   /**
+   * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useTimeoutBasedEndpointing;
+
+  /**
    * Which Speech model to select. Select the model best suited to your domain to get best results.
    * If a model is not explicitly specified, then a default model is used. Refer to [Cloud Speech
    * API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more
@@ -95,6 +102,23 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
    */
   public GoogleCloudDialogflowV2beta1SpeechToTextConfig setSpeechModelVariant(java.lang.String speechModelVariant) {
     this.speechModelVariant = speechModelVariant;
+    return this;
+  }
+
+  /**
+   * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseTimeoutBasedEndpointing() {
+    return useTimeoutBasedEndpointing;
+  }
+
+  /**
+   * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
+   * @param useTimeoutBasedEndpointing useTimeoutBasedEndpointing or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SpeechToTextConfig setUseTimeoutBasedEndpointing(java.lang.Boolean useTimeoutBasedEndpointing) {
+    this.useTimeoutBasedEndpointing = useTimeoutBasedEndpointing;
     return this;
   }
 

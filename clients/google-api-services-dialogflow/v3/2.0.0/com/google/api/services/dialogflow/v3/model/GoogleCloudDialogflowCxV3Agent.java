@@ -90,6 +90,13 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   private java.lang.Boolean enableStackdriverLogging;
 
   /**
+   * Gen App Builder-related agent-level settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3AgentGenAppBuilderSettings genAppBuilderSettings;
+
+  /**
    * Git integration settings for this agent.
    * The value may be {@code null}.
    */
@@ -288,6 +295,23 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
    */
   public GoogleCloudDialogflowCxV3Agent setEnableStackdriverLogging(java.lang.Boolean enableStackdriverLogging) {
     this.enableStackdriverLogging = enableStackdriverLogging;
+    return this;
+  }
+
+  /**
+   * Gen App Builder-related agent-level settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AgentGenAppBuilderSettings getGenAppBuilderSettings() {
+    return genAppBuilderSettings;
+  }
+
+  /**
+   * Gen App Builder-related agent-level settings.
+   * @param genAppBuilderSettings genAppBuilderSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Agent setGenAppBuilderSettings(GoogleCloudDialogflowCxV3AgentGenAppBuilderSettings genAppBuilderSettings) {
+    this.genAppBuilderSettings = genAppBuilderSettings;
     return this;
   }
 

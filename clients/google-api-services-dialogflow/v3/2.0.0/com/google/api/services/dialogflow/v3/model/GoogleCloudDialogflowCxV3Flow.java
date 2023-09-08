@@ -38,6 +38,14 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3Flow extends com.google.api.client.json.GenericJson {
 
   /**
+   * Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides
+   * the settings exposed at the higher level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings;
+
+  /**
    * The description of the flow. The maximum length is 500 characters. If exceeded, the request is
    * rejected.
    * The value may be {@code null}.
@@ -114,6 +122,25 @@ public final class GoogleCloudDialogflowCxV3Flow extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3TransitionRoute> transitionRoutes;
+
+  /**
+   * Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides
+   * the settings exposed at the higher level.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AdvancedSettings getAdvancedSettings() {
+    return advancedSettings;
+  }
+
+  /**
+   * Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides
+   * the settings exposed at the higher level.
+   * @param advancedSettings advancedSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Flow setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings) {
+    this.advancedSettings = advancedSettings;
+    return this;
+  }
 
   /**
    * The description of the flow. The maximum length is 500 characters. If exceeded, the request is

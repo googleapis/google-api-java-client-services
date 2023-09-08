@@ -44,8 +44,16 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfig conversationProcessConfig;
 
   /**
+   * Optional. Disable the logging of search queries sent by human agents. It can prevent those
+   * queries from being stored at answer records. Supported features: KNOWLEDGE_SEARCH.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableAgentQueryLogging;
+
+  /**
    * Automatically iterates all participants and tries to compile suggestions. Supported features:
-   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, KNOWLEDGE_ASSIST.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +115,27 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
+   * Optional. Disable the logging of search queries sent by human agents. It can prevent those
+   * queries from being stored at answer records. Supported features: KNOWLEDGE_SEARCH.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableAgentQueryLogging() {
+    return disableAgentQueryLogging;
+  }
+
+  /**
+   * Optional. Disable the logging of search queries sent by human agents. It can prevent those
+   * queries from being stored at answer records. Supported features: KNOWLEDGE_SEARCH.
+   * @param disableAgentQueryLogging disableAgentQueryLogging or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setDisableAgentQueryLogging(java.lang.Boolean disableAgentQueryLogging) {
+    this.disableAgentQueryLogging = disableAgentQueryLogging;
+    return this;
+  }
+
+  /**
    * Automatically iterates all participants and tries to compile suggestions. Supported features:
-   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, KNOWLEDGE_ASSIST.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableEventBasedSuggestion() {
@@ -117,7 +144,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
 
   /**
    * Automatically iterates all participants and tries to compile suggestions. Supported features:
-   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, KNOWLEDGE_ASSIST.
    * @param enableEventBasedSuggestion enableEventBasedSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setEnableEventBasedSuggestion(java.lang.Boolean enableEventBasedSuggestion) {

@@ -35,11 +35,28 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Hierarchical advanced settings for this fulfillment. The settings exposed at the lower level
+   * overrides the settings exposed at the higher level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings;
+
+  /**
    * Conditional cases for this fulfillment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3FulfillmentConditionalCases> conditionalCases;
+
+  /**
+   * If the flag is true, the agent will utilize LLM to generate a text response. If LLM generation
+   * fails, the defined responses in the fulfillment will be respected. This flag is only useful for
+   * fulfillments associated with no-match event handlers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableGenerativeFallback;
 
   /**
    * The list of rich message responses to present to the user.
@@ -84,6 +101,25 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   private java.lang.String webhook;
 
   /**
+   * Hierarchical advanced settings for this fulfillment. The settings exposed at the lower level
+   * overrides the settings exposed at the higher level.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AdvancedSettings getAdvancedSettings() {
+    return advancedSettings;
+  }
+
+  /**
+   * Hierarchical advanced settings for this fulfillment. The settings exposed at the lower level
+   * overrides the settings exposed at the higher level.
+   * @param advancedSettings advancedSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Fulfillment setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings) {
+    this.advancedSettings = advancedSettings;
+    return this;
+  }
+
+  /**
    * Conditional cases for this fulfillment.
    * @return value or {@code null} for none
    */
@@ -97,6 +133,27 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
    */
   public GoogleCloudDialogflowCxV3Fulfillment setConditionalCases(java.util.List<GoogleCloudDialogflowCxV3FulfillmentConditionalCases> conditionalCases) {
     this.conditionalCases = conditionalCases;
+    return this;
+  }
+
+  /**
+   * If the flag is true, the agent will utilize LLM to generate a text response. If LLM generation
+   * fails, the defined responses in the fulfillment will be respected. This flag is only useful for
+   * fulfillments associated with no-match event handlers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableGenerativeFallback() {
+    return enableGenerativeFallback;
+  }
+
+  /**
+   * If the flag is true, the agent will utilize LLM to generate a text response. If LLM generation
+   * fails, the defined responses in the fulfillment will be respected. This flag is only useful for
+   * fulfillments associated with no-match event handlers.
+   * @param enableGenerativeFallback enableGenerativeFallback or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Fulfillment setEnableGenerativeFallback(java.lang.Boolean enableGenerativeFallback) {
+    this.enableGenerativeFallback = enableGenerativeFallback;
     return this;
   }
 

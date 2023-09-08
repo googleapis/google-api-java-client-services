@@ -39,6 +39,13 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   private java.lang.String agent;
 
   /**
+   * Optional. The Dialogflow assist configuration for human agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceHumanAgentSideConfig humanAgentSideConfig;
+
+  /**
    * Required. The name of a Dialogflow virtual agent used for end user side intent detection and
    * suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same
    * Dialogflow project.
@@ -56,6 +63,23 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource setAgent(java.lang.String agent) {
     this.agent = agent;
+    return this;
+  }
+
+  /**
+   * Optional. The Dialogflow assist configuration for human agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceHumanAgentSideConfig getHumanAgentSideConfig() {
+    return humanAgentSideConfig;
+  }
+
+  /**
+   * Optional. The Dialogflow assist configuration for human agent.
+   * @param humanAgentSideConfig humanAgentSideConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource setHumanAgentSideConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceHumanAgentSideConfig humanAgentSideConfig) {
+    this.humanAgentSideConfig = humanAgentSideConfig;
     return this;
   }
 

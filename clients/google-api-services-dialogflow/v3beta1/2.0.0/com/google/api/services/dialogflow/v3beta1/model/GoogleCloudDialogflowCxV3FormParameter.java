@@ -30,6 +30,14 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3FormParameter extends com.google.api.client.json.GenericJson {
 
   /**
+   * Hierarchical advanced settings for this parameter. The settings exposed at the lower level
+   * overrides the settings exposed at the higher level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings;
+
+  /**
    * The default value of an optional parameter. If the parameter is required, the default value
    * will be ignored.
    * The value may be {@code null}.
@@ -86,6 +94,25 @@ public final class GoogleCloudDialogflowCxV3FormParameter extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean required;
+
+  /**
+   * Hierarchical advanced settings for this parameter. The settings exposed at the lower level
+   * overrides the settings exposed at the higher level.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AdvancedSettings getAdvancedSettings() {
+    return advancedSettings;
+  }
+
+  /**
+   * Hierarchical advanced settings for this parameter. The settings exposed at the lower level
+   * overrides the settings exposed at the higher level.
+   * @param advancedSettings advancedSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3FormParameter setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings) {
+    this.advancedSettings = advancedSettings;
+    return this;
+  }
 
   /**
    * The default value of an optional parameter. If the parameter is required, the default value

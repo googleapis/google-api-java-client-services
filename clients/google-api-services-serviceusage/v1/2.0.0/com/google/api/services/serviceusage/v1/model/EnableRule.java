@@ -38,8 +38,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
 
   /**
    * DEPRECATED: Please use field `values`. Service group should have prefix `groups/`. The names of
-   * the service groups that are enabled (Not Implemented). go/predefined-service-groups. Example:
-   * `groups/googleServices`.
+   * the service groups that are enabled (Not Implemented). Example: `groups/googleServices`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +54,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
 
   /**
    * The names of the services or service groups that are enabled. Example:
-   * `services/storage.googleapis.com`, groups/googleServices`, groups/allServices`.
+   * `services/storage.googleapis.com`, `groups/googleServices`, `groups/allServices`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +79,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
 
   /**
    * DEPRECATED: Please use field `values`. Service group should have prefix `groups/`. The names of
-   * the service groups that are enabled (Not Implemented). go/predefined-service-groups. Example:
-   * `groups/googleServices`.
+   * the service groups that are enabled (Not Implemented). Example: `groups/googleServices`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGroups() {
@@ -90,8 +88,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
 
   /**
    * DEPRECATED: Please use field `values`. Service group should have prefix `groups/`. The names of
-   * the service groups that are enabled (Not Implemented). go/predefined-service-groups. Example:
-   * `groups/googleServices`.
+   * the service groups that are enabled (Not Implemented). Example: `groups/googleServices`.
    * @param groups groups or {@code null} for none
    */
   public EnableRule setGroups(java.util.List<java.lang.String> groups) {
@@ -120,7 +117,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
 
   /**
    * The names of the services or service groups that are enabled. Example:
-   * `services/storage.googleapis.com`, groups/googleServices`, groups/allServices`.
+   * `services/storage.googleapis.com`, `groups/googleServices`, `groups/allServices`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -129,7 +126,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
 
   /**
    * The names of the services or service groups that are enabled. Example:
-   * `services/storage.googleapis.com`, groups/googleServices`, groups/allServices`.
+   * `services/storage.googleapis.com`, `groups/googleServices`, `groups/allServices`.
    * @param values values or {@code null} for none
    */
   public EnableRule setValues(java.util.List<java.lang.String> values) {

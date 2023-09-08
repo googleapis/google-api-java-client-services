@@ -30,6 +30,27 @@ package com.google.api.services.appengine.model;
 public final class Runtime extends com.google.api.client.json.GenericJson {
 
   /**
+   * Date when Runtime is decommissioned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Date decommissionedDate;
+
+  /**
+   * Date when Runtime is deprecated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Date deprecationDate;
+
+  /**
+   * Date when Runtime is end of support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Date endOfSupportDate;
+
+  /**
    * The environment of the runtime.
    * The value may be {@code null}.
    */
@@ -56,6 +77,57 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> warnings;
+
+  /**
+   * Date when Runtime is decommissioned.
+   * @return value or {@code null} for none
+   */
+  public Date getDecommissionedDate() {
+    return decommissionedDate;
+  }
+
+  /**
+   * Date when Runtime is decommissioned.
+   * @param decommissionedDate decommissionedDate or {@code null} for none
+   */
+  public Runtime setDecommissionedDate(Date decommissionedDate) {
+    this.decommissionedDate = decommissionedDate;
+    return this;
+  }
+
+  /**
+   * Date when Runtime is deprecated.
+   * @return value or {@code null} for none
+   */
+  public Date getDeprecationDate() {
+    return deprecationDate;
+  }
+
+  /**
+   * Date when Runtime is deprecated.
+   * @param deprecationDate deprecationDate or {@code null} for none
+   */
+  public Runtime setDeprecationDate(Date deprecationDate) {
+    this.deprecationDate = deprecationDate;
+    return this;
+  }
+
+  /**
+   * Date when Runtime is end of support.
+   * @return value or {@code null} for none
+   */
+  public Date getEndOfSupportDate() {
+    return endOfSupportDate;
+  }
+
+  /**
+   * Date when Runtime is end of support.
+   * @param endOfSupportDate endOfSupportDate or {@code null} for none
+   */
+  public Runtime setEndOfSupportDate(Date endOfSupportDate) {
+    this.endOfSupportDate = endOfSupportDate;
+    return this;
+  }
 
   /**
    * The environment of the runtime.

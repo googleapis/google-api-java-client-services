@@ -4229,38 +4229,6 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Optional. Maximum results to return per page. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Optional. Maximum results to return per page.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** Optional. Maximum results to return per page. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /** Optional. Continuation token for fetching the next page of results. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional. Continuation token for fetching the next page of results.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** Optional. Continuation token for fetching the next page of results. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);

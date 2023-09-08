@@ -49,8 +49,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * precedence. Only once all retries are exhausted, the defaultCustomErrorResponsePolicy is
    * applied. While attempting a retry, if load balancer is successful in reaching the service, the
    * defaultCustomErrorResponsePolicy is ignored and the response from the service is returned to
-   * the client. defaultCustomErrorResponsePolicy is supported only for Global External HTTP(S) load
-   * balancing.
+   * the client. defaultCustomErrorResponsePolicy is supported only for global external Application
+   * Load Balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * before forwarding the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only
-   * support the urlRewrite action within a path matcher's defaultRouteAction.
+   * or defaultUrlRedirect must be set. URL maps for classic Application Load Balancers only support
+   * the urlRewrite action within a path matcher's defaultRouteAction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,8 +168,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * precedence. Only once all retries are exhausted, the defaultCustomErrorResponsePolicy is
    * applied. While attempting a retry, if load balancer is successful in reaching the service, the
    * defaultCustomErrorResponsePolicy is ignored and the response from the service is returned to
-   * the client. defaultCustomErrorResponsePolicy is supported only for Global External HTTP(S) load
-   * balancing.
+   * the client. defaultCustomErrorResponsePolicy is supported only for global external Application
+   * Load Balancers.
    * @return value or {@code null} for none
    */
   public CustomErrorResponsePolicy getDefaultCustomErrorResponsePolicy() {
@@ -195,8 +195,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * precedence. Only once all retries are exhausted, the defaultCustomErrorResponsePolicy is
    * applied. While attempting a retry, if load balancer is successful in reaching the service, the
    * defaultCustomErrorResponsePolicy is ignored and the response from the service is returned to
-   * the client. defaultCustomErrorResponsePolicy is supported only for Global External HTTP(S) load
-   * balancing.
+   * the client. defaultCustomErrorResponsePolicy is supported only for global external Application
+   * Load Balancers.
    * @param defaultCustomErrorResponsePolicy defaultCustomErrorResponsePolicy or {@code null} for none
    */
   public PathMatcher setDefaultCustomErrorResponsePolicy(CustomErrorResponsePolicy defaultCustomErrorResponsePolicy) {
@@ -210,8 +210,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * before forwarding the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only
-   * support the urlRewrite action within a path matcher's defaultRouteAction.
+   * or defaultUrlRedirect must be set. URL maps for classic Application Load Balancers only support
+   * the urlRewrite action within a path matcher's defaultRouteAction.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getDefaultRouteAction() {
@@ -224,8 +224,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * before forwarding the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only
-   * support the urlRewrite action within a path matcher's defaultRouteAction.
+   * or defaultUrlRedirect must be set. URL maps for classic Application Load Balancers only support
+   * the urlRewrite action within a path matcher's defaultRouteAction.
    * @param defaultRouteAction defaultRouteAction or {@code null} for none
    */
   public PathMatcher setDefaultRouteAction(HttpRouteAction defaultRouteAction) {

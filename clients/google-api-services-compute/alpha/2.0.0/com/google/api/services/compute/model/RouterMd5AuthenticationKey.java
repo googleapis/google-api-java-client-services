@@ -39,7 +39,7 @@ public final class RouterMd5AuthenticationKey extends com.google.api.client.json
   private java.lang.String key;
 
   /**
-   * Name used to identify the key. Must be unique within a router. Must be referenced by at least
+   * Name used to identify the key. Must be unique within a router. Must be referenced by exactly
    * one bgpPeer. Must comply with RFC1035.
    * The value may be {@code null}.
    */
@@ -68,7 +68,7 @@ public final class RouterMd5AuthenticationKey extends com.google.api.client.json
   }
 
   /**
-   * Name used to identify the key. Must be unique within a router. Must be referenced by at least
+   * Name used to identify the key. Must be unique within a router. Must be referenced by exactly
    * one bgpPeer. Must comply with RFC1035.
    * @return value or {@code null} for none
    */
@@ -77,7 +77,7 @@ public final class RouterMd5AuthenticationKey extends com.google.api.client.json
   }
 
   /**
-   * Name used to identify the key. Must be unique within a router. Must be referenced by at least
+   * Name used to identify the key. Must be unique within a router. Must be referenced by exactly
    * one bgpPeer. Must comply with RFC1035.
    * @param name name or {@code null} for none
    */

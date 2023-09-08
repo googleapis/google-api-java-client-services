@@ -37,6 +37,19 @@ public final class BackendServiceListUsable extends com.google.api.client.json.G
   private java.lang.String id;
 
   /**
+   * A list of BackendService resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendService> items;
+
+  static {
+    // hack to force ProGuard to consider BackendService used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BackendService.class);
+  }
+
+  /**
    * [Output Only] Type of resource. Always compute#usableBackendServiceList for lists of usable
    * backend services.
    * The value may be {@code null}.
@@ -82,6 +95,23 @@ public final class BackendServiceListUsable extends com.google.api.client.json.G
    */
   public BackendServiceListUsable setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * A list of BackendService resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendService> getItems() {
+    return items;
+  }
+
+  /**
+   * A list of BackendService resources.
+   * @param items items or {@code null} for none
+   */
+  public BackendServiceListUsable setItems(java.util.List<BackendService> items) {
+    this.items = items;
     return this;
   }
 

@@ -80,8 +80,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * as URL rewrites and header transformations, before forwarding the request to the selected
    * backend. If routeAction specifies any weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
-   * of urlRedirect, service or routeAction.weightedBackendService must be set. URL maps for Classic
-   * external HTTP(S) load balancers only support the urlRewrite action within a route rule's
+   * of urlRedirect, service or routeAction.weightedBackendService must be set. URL maps for classic
+   * Application Load Balancers only support the urlRewrite action within a route rule's
    * routeAction.
    * The value may be {@code null}.
    */
@@ -216,8 +216,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * as URL rewrites and header transformations, before forwarding the request to the selected
    * backend. If routeAction specifies any weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
-   * of urlRedirect, service or routeAction.weightedBackendService must be set. URL maps for Classic
-   * external HTTP(S) load balancers only support the urlRewrite action within a route rule's
+   * of urlRedirect, service or routeAction.weightedBackendService must be set. URL maps for classic
+   * Application Load Balancers only support the urlRewrite action within a route rule's
    * routeAction.
    * @return value or {@code null} for none
    */
@@ -230,8 +230,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * as URL rewrites and header transformations, before forwarding the request to the selected
    * backend. If routeAction specifies any weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
-   * of urlRedirect, service or routeAction.weightedBackendService must be set. URL maps for Classic
-   * external HTTP(S) load balancers only support the urlRewrite action within a route rule's
+   * of urlRedirect, service or routeAction.weightedBackendService must be set. URL maps for classic
+   * Application Load Balancers only support the urlRewrite action within a route rule's
    * routeAction.
    * @param routeAction routeAction or {@code null} for none
    */

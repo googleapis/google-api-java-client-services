@@ -20,16 +20,18 @@ package com.google.api.services.compute.model;
  * Represents a URL Map resource. Compute Engine has two URL Map resources: *
  * [Global](/compute/docs/reference/rest/v1/urlMaps) *
  * [Regional](/compute/docs/reference/rest/v1/regionUrlMaps) A URL map resource is a component of
- * certain types of cloud load balancers and Traffic Director: * urlMaps are used by external
- * HTTP(S) load balancers and Traffic Director. * regionUrlMaps are used by internal HTTP(S) load
- * balancers. For a list of supported URL map features by the load balancer type, see the Load
- * balancing features: Routing and traffic management table. For a list of supported URL map
- * features for Traffic Director, see the Traffic Director features: Routing and traffic management
- * table. This resource defines mappings from hostnames and URL paths to either a backend service or
- * a backend bucket. To use the global urlMaps resource, the backend service must have a
- * loadBalancingScheme of either EXTERNAL or INTERNAL_SELF_MANAGED. To use the regionUrlMaps
- * resource, the backend service must have a loadBalancingScheme of INTERNAL_MANAGED. For more
- * information, read URL Map Concepts.
+ * certain types of cloud load balancers and Traffic Director: * urlMaps are used by global external
+ * Application Load Balancers, classic Application Load Balancers, and cross-region internal
+ * Application Load Balancers. * regionUrlMaps are used by internal Application Load Balancers,
+ * regional external Application Load Balancers and regional internal Application Load Balancers.
+ * For a list of supported URL map features by the load balancer type, see the Load balancing
+ * features: Routing and traffic management table. For a list of supported URL map features for
+ * Traffic Director, see the Traffic Director features: Routing and traffic management table. This
+ * resource defines mappings from hostnames and URL paths to either a backend service or a backend
+ * bucket. To use the global urlMaps resource, the backend service must have a loadBalancingScheme
+ * of either EXTERNAL or INTERNAL_SELF_MANAGED. To use the regionUrlMaps resource, the backend
+ * service must have a loadBalancingScheme of INTERNAL_MANAGED. For more information, read URL Map
+ * Concepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -54,10 +56,9 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only
-   * support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when
-   * the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to
-   * true.
+   * or defaultUrlRedirect must be set. URL maps for classic Application Load Balancers only support
+   * the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL
+   * map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,10 +214,9 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only
-   * support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when
-   * the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to
-   * true.
+   * or defaultUrlRedirect must be set. URL maps for classic Application Load Balancers only support
+   * the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL
+   * map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getDefaultRouteAction() {
@@ -229,10 +229,9 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only
-   * support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when
-   * the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to
-   * true.
+   * or defaultUrlRedirect must be set. URL maps for classic Application Load Balancers only support
+   * the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL
+   * map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
    * @param defaultRouteAction defaultRouteAction or {@code null} for none
    */
   public UrlMap setDefaultRouteAction(HttpRouteAction defaultRouteAction) {

@@ -36,8 +36,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * before forwarding the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only
-   * support the urlRewrite action within a path matcher's defaultRouteAction.
+   * or defaultUrlRedirect must be set. URL maps for classic Application Load Balancers only support
+   * the urlRewrite action within a path matcher's defaultRouteAction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +129,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * before forwarding the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only
-   * support the urlRewrite action within a path matcher's defaultRouteAction.
+   * or defaultUrlRedirect must be set. URL maps for classic Application Load Balancers only support
+   * the urlRewrite action within a path matcher's defaultRouteAction.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getDefaultRouteAction() {
@@ -143,8 +143,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * before forwarding the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
-   * or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only
-   * support the urlRewrite action within a path matcher's defaultRouteAction.
+   * or defaultUrlRedirect must be set. URL maps for classic Application Load Balancers only support
+   * the urlRewrite action within a path matcher's defaultRouteAction.
    * @param defaultRouteAction defaultRouteAction or {@code null} for none
    */
   public PathMatcher setDefaultRouteAction(HttpRouteAction defaultRouteAction) {

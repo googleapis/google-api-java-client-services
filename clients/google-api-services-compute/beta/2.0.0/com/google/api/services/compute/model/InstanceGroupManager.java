@@ -112,6 +112,14 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.math.BigInteger id;
 
   /**
+   * Instance flexibility allowing MIG to create VMs from multiple types of machines. Instance
+   * flexibility configuration on MIG overrides instance template configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerInstanceFlexibilityPolicy instanceFlexibilityPolicy;
+
+  /**
    * [Output Only] The URL of the Instance Group resource.
    * The value may be {@code null}.
    */
@@ -469,6 +477,25 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Instance flexibility allowing MIG to create VMs from multiple types of machines. Instance
+   * flexibility configuration on MIG overrides instance template configuration.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceFlexibilityPolicy getInstanceFlexibilityPolicy() {
+    return instanceFlexibilityPolicy;
+  }
+
+  /**
+   * Instance flexibility allowing MIG to create VMs from multiple types of machines. Instance
+   * flexibility configuration on MIG overrides instance template configuration.
+   * @param instanceFlexibilityPolicy instanceFlexibilityPolicy or {@code null} for none
+   */
+  public InstanceGroupManager setInstanceFlexibilityPolicy(InstanceGroupManagerInstanceFlexibilityPolicy instanceFlexibilityPolicy) {
+    this.instanceFlexibilityPolicy = instanceFlexibilityPolicy;
     return this;
   }
 

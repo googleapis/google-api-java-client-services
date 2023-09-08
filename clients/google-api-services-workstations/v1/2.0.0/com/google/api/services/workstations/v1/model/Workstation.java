@@ -100,6 +100,14 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean reconciling;
 
   /**
+   * Output only. Time when this workstation was most recently successfully started, regardless of
+   * the workstation's initial state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
+
+  /**
    * Output only. Current state of the workstation.
    * The value may be {@code null}.
    */
@@ -282,6 +290,25 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    */
   public Workstation setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Output only. Time when this workstation was most recently successfully started, regardless of
+   * the workstation's initial state.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Output only. Time when this workstation was most recently successfully started, regardless of
+   * the workstation's initial state.
+   * @param startTime startTime or {@code null} for none
+   */
+  public Workstation setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 

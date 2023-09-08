@@ -137,13 +137,6 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Optional. Config and state for sbom generation for resources within this Repository.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private SbomConfig sbomConfig;
-
-  /**
    * Output only. The size, in bytes, of all artifact storage in this repository. Repositories that
    * are generally available or in public preview use this to calculate storage costs.
    * The value may be {@code null}.
@@ -401,23 +394,6 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
-    return this;
-  }
-
-  /**
-   * Optional. Config and state for sbom generation for resources within this Repository.
-   * @return value or {@code null} for none
-   */
-  public SbomConfig getSbomConfig() {
-    return sbomConfig;
-  }
-
-  /**
-   * Optional. Config and state for sbom generation for resources within this Repository.
-   * @param sbomConfig sbomConfig or {@code null} for none
-   */
-  public Repository setSbomConfig(SbomConfig sbomConfig) {
-    this.sbomConfig = sbomConfig;
     return this;
   }
 

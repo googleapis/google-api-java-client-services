@@ -123,6 +123,15 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccount;
 
   /**
+   * Optional. Scopes to grant to the service_account. Various scopes are automatically added based
+   * on feature usage. When specified, users of workstations under this configuration must have
+   * `iam.serviceAccounts.actAs` on the service account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> serviceAccountScopes;
+
+  /**
    * Optional. A set of Compute Engine Shielded instance options.
    * The value may be {@code null}.
    */
@@ -344,6 +353,27 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    */
   public GceInstance setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Optional. Scopes to grant to the service_account. Various scopes are automatically added based
+   * on feature usage. When specified, users of workstations under this configuration must have
+   * `iam.serviceAccounts.actAs` on the service account.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getServiceAccountScopes() {
+    return serviceAccountScopes;
+  }
+
+  /**
+   * Optional. Scopes to grant to the service_account. Various scopes are automatically added based
+   * on feature usage. When specified, users of workstations under this configuration must have
+   * `iam.serviceAccounts.actAs` on the service account.
+   * @param serviceAccountScopes serviceAccountScopes or {@code null} for none
+   */
+  public GceInstance setServiceAccountScopes(java.util.List<java.lang.String> serviceAccountScopes) {
+    this.serviceAccountScopes = serviceAccountScopes;
     return this;
   }
 

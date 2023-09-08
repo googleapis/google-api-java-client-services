@@ -188,6 +188,16 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean reconciling;
 
   /**
+   * Optional. Immutable. Specifies the zones used to replicate the VM and disk resources within the
+   * region. If set, exactly two zones within the workstation cluster's region must be specified—for
+   * example, `['us-central1-a', 'us-central1-f']`. If this field is empty, two default zones within
+   * the region are used. Immutable after the workstation configuration is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> replicaZones;
+
+  /**
    * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
    * recommend that workstations be shut down daily to reduce costs and so that security updates can
    * be applied upon restart. The idle_timeout and running_timeout fields are independent of each
@@ -531,6 +541,29 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Specifies the zones used to replicate the VM and disk resources within the
+   * region. If set, exactly two zones within the workstation cluster's region must be specified—for
+   * example, `['us-central1-a', 'us-central1-f']`. If this field is empty, two default zones within
+   * the region are used. Immutable after the workstation configuration is created.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReplicaZones() {
+    return replicaZones;
+  }
+
+  /**
+   * Optional. Immutable. Specifies the zones used to replicate the VM and disk resources within the
+   * region. If set, exactly two zones within the workstation cluster's region must be specified—for
+   * example, `['us-central1-a', 'us-central1-f']`. If this field is empty, two default zones within
+   * the region are used. Immutable after the workstation configuration is created.
+   * @param replicaZones replicaZones or {@code null} for none
+   */
+  public WorkstationConfig setReplicaZones(java.util.List<java.lang.String> replicaZones) {
+    this.replicaZones = replicaZones;
     return this;
   }
 

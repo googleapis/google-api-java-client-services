@@ -39,6 +39,14 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.json.GenericJson {
 
   /**
+   * Hierarchical advanced settings for this page. The settings exposed at the lower level overrides
+   * the settings exposed at the higher level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings;
+
+  /**
    * Required. The human-readable name of the page, unique within the flow.
    * The value may be {@code null}.
    */
@@ -116,6 +124,25 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3TransitionRoute> transitionRoutes;
+
+  /**
+   * Hierarchical advanced settings for this page. The settings exposed at the lower level overrides
+   * the settings exposed at the higher level.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AdvancedSettings getAdvancedSettings() {
+    return advancedSettings;
+  }
+
+  /**
+   * Hierarchical advanced settings for this page. The settings exposed at the lower level overrides
+   * the settings exposed at the higher level.
+   * @param advancedSettings advancedSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Page setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings) {
+    this.advancedSettings = advancedSettings;
+    return this;
+  }
 
   /**
    * Required. The human-readable name of the page, unique within the flow.

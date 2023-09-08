@@ -119,6 +119,13 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettings extends com.go
   private java.lang.String redactionStrategy;
 
   /**
+   * Specifies the retention behavior defined by SecuritySettings.RetentionStrategy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String retentionStrategy;
+
+  /**
    * Retains data in interaction logging for the specified number of days. This does not apply to
    * Cloud logging, which is owned by the user - not Dialogflow. User must set a value lower than
    * Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored
@@ -327,6 +334,23 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettings extends com.go
    */
   public GoogleCloudDialogflowCxV3beta1SecuritySettings setRedactionStrategy(java.lang.String redactionStrategy) {
     this.redactionStrategy = redactionStrategy;
+    return this;
+  }
+
+  /**
+   * Specifies the retention behavior defined by SecuritySettings.RetentionStrategy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRetentionStrategy() {
+    return retentionStrategy;
+  }
+
+  /**
+   * Specifies the retention behavior defined by SecuritySettings.RetentionStrategy.
+   * @param retentionStrategy retentionStrategy or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1SecuritySettings setRetentionStrategy(java.lang.String retentionStrategy) {
+    this.retentionStrategy = retentionStrategy;
     return this;
   }
 

@@ -1076,6 +1076,162 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Gets the generative settings for the agent.
+         *
+         * Create a request for the method "agents.getGenerativeSettings".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link GetGenerativeSettings#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Format: `projects//locations//agents//generativeSettings`.
+         * @return the request
+         */
+        public GetGenerativeSettings getGenerativeSettings(java.lang.String name) throws java.io.IOException {
+          GetGenerativeSettings result = new GetGenerativeSettings(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetGenerativeSettings extends DialogflowRequest<com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1GenerativeSettings> {
+
+          private static final String REST_PATH = "v3beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/generativeSettings$");
+
+          /**
+           * Gets the generative settings for the agent.
+           *
+           * Create a request for the method "agents.getGenerativeSettings".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link GetGenerativeSettings#execute()} method to invoke the
+           * remote operation. <p> {@link GetGenerativeSettings#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects//locations//agents//generativeSettings`.
+           * @since 1.13
+           */
+          protected GetGenerativeSettings(java.lang.String name) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1GenerativeSettings.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/agents/[^/]+/generativeSettings$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetGenerativeSettings set$Xgafv(java.lang.String $Xgafv) {
+            return (GetGenerativeSettings) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetGenerativeSettings setAccessToken(java.lang.String accessToken) {
+            return (GetGenerativeSettings) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetGenerativeSettings setAlt(java.lang.String alt) {
+            return (GetGenerativeSettings) super.setAlt(alt);
+          }
+
+          @Override
+          public GetGenerativeSettings setCallback(java.lang.String callback) {
+            return (GetGenerativeSettings) super.setCallback(callback);
+          }
+
+          @Override
+          public GetGenerativeSettings setFields(java.lang.String fields) {
+            return (GetGenerativeSettings) super.setFields(fields);
+          }
+
+          @Override
+          public GetGenerativeSettings setKey(java.lang.String key) {
+            return (GetGenerativeSettings) super.setKey(key);
+          }
+
+          @Override
+          public GetGenerativeSettings setOauthToken(java.lang.String oauthToken) {
+            return (GetGenerativeSettings) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetGenerativeSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetGenerativeSettings) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetGenerativeSettings setQuotaUser(java.lang.String quotaUser) {
+            return (GetGenerativeSettings) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetGenerativeSettings setUploadType(java.lang.String uploadType) {
+            return (GetGenerativeSettings) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetGenerativeSettings setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetGenerativeSettings) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Format: `projects//locations//agents//generativeSettings`. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects//locations//agents//generativeSettings`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Format: `projects//locations//agents//generativeSettings`. */
+          public GetGenerativeSettings setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/agents/[^/]+/generativeSettings$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. Language code of the generative settings. */
+          @com.google.api.client.util.Key
+          private java.lang.String languageCode;
+
+          /** Required. Language code of the generative settings.
+           */
+          public java.lang.String getLanguageCode() {
+            return languageCode;
+          }
+
+          /** Required. Language code of the generative settings. */
+          public GetGenerativeSettings setLanguageCode(java.lang.String languageCode) {
+            this.languageCode = languageCode;
+            return this;
+          }
+
+          @Override
+          public GetGenerativeSettings set(String parameterName, Object value) {
+            return (GetGenerativeSettings) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the latest agent validation result. Agent validation is performed when ValidateAgent is
          * called.
          *
@@ -1726,6 +1882,161 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           @Override
           public Restore set(String parameterName, Object value) {
             return (Restore) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the generative settings for the agent.
+         *
+         * Create a request for the method "agents.updateGenerativeSettings".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link UpdateGenerativeSettings#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Format: `projects//locations//agents//generativeSettings`.
+         * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1GenerativeSettings}
+         * @return the request
+         */
+        public UpdateGenerativeSettings updateGenerativeSettings(java.lang.String name, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1GenerativeSettings content) throws java.io.IOException {
+          UpdateGenerativeSettings result = new UpdateGenerativeSettings(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateGenerativeSettings extends DialogflowRequest<com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1GenerativeSettings> {
+
+          private static final String REST_PATH = "v3beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/generativeSettings$");
+
+          /**
+           * Updates the generative settings for the agent.
+           *
+           * Create a request for the method "agents.updateGenerativeSettings".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link UpdateGenerativeSettings#execute()} method to invoke the
+           * remote operation. <p> {@link UpdateGenerativeSettings#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Format: `projects//locations//agents//generativeSettings`.
+           * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1GenerativeSettings}
+           * @since 1.13
+           */
+          protected UpdateGenerativeSettings(java.lang.String name, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1GenerativeSettings content) {
+            super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1GenerativeSettings.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/agents/[^/]+/generativeSettings$");
+            }
+          }
+
+          @Override
+          public UpdateGenerativeSettings set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateGenerativeSettings) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateGenerativeSettings setAccessToken(java.lang.String accessToken) {
+            return (UpdateGenerativeSettings) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateGenerativeSettings setAlt(java.lang.String alt) {
+            return (UpdateGenerativeSettings) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateGenerativeSettings setCallback(java.lang.String callback) {
+            return (UpdateGenerativeSettings) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateGenerativeSettings setFields(java.lang.String fields) {
+            return (UpdateGenerativeSettings) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateGenerativeSettings setKey(java.lang.String key) {
+            return (UpdateGenerativeSettings) super.setKey(key);
+          }
+
+          @Override
+          public UpdateGenerativeSettings setOauthToken(java.lang.String oauthToken) {
+            return (UpdateGenerativeSettings) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateGenerativeSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateGenerativeSettings) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateGenerativeSettings setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateGenerativeSettings) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateGenerativeSettings setUploadType(java.lang.String uploadType) {
+            return (UpdateGenerativeSettings) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateGenerativeSettings setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateGenerativeSettings) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Format: `projects//locations//agents//generativeSettings`. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Format: `projects//locations//agents//generativeSettings`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Format: `projects//locations//agents//generativeSettings`. */
+          public UpdateGenerativeSettings setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/agents/[^/]+/generativeSettings$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The mask to control which fields get updated. If the mask is not present, all
+           * fields will be updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The mask to control which fields get updated. If the mask is not present, all fields will
+         be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The mask to control which fields get updated. If the mask is not present, all
+           * fields will be updated.
+           */
+          public UpdateGenerativeSettings setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateGenerativeSettings set(String parameterName, Object value) {
+            return (UpdateGenerativeSettings) super.set(parameterName, value);
           }
         }
         /**

@@ -30,6 +30,17 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Returns the current advanced settings including IVR settings. Even though the operations
+   * configured by these settings are performed by Dialogflow, the client may need to perform
+   * special logic at the moment. For example, if Dialogflow exports audio to Google Cloud Storage,
+   * then the client may need to wait for the resulting object to appear in the bucket before
+   * proceeding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings;
+
+  /**
    * The current Page. Some, not all fields are filled in this message, including but not limited to
    * `name` and `display_name`.
    * The value may be {@code null}.
@@ -169,6 +180,31 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleRpcStatus> webhookStatuses;
+
+  /**
+   * Returns the current advanced settings including IVR settings. Even though the operations
+   * configured by these settings are performed by Dialogflow, the client may need to perform
+   * special logic at the moment. For example, if Dialogflow exports audio to Google Cloud Storage,
+   * then the client may need to wait for the resulting object to appear in the bucket before
+   * proceeding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AdvancedSettings getAdvancedSettings() {
+    return advancedSettings;
+  }
+
+  /**
+   * Returns the current advanced settings including IVR settings. Even though the operations
+   * configured by these settings are performed by Dialogflow, the client may need to perform
+   * special logic at the moment. For example, if Dialogflow exports audio to Google Cloud Storage,
+   * then the client may need to wait for the resulting object to appear in the bucket before
+   * proceeding.
+   * @param advancedSettings advancedSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryResult setAdvancedSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings) {
+    this.advancedSettings = advancedSettings;
+    return this;
+  }
 
   /**
    * The current Page. Some, not all fields are filled in this message, including but not limited to

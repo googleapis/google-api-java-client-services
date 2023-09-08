@@ -43,6 +43,14 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettings extends com.google.
   private GoogleCloudDialogflowCxV3GcsDestination audioExportGcsDestination;
 
   /**
+   * Settings for DTMF. Exposed at the following levels: - Agent level - Flow level - Page level -
+   * Parameter level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings dtmfSettings;
+
+  /**
    * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver
    * logs, and speech logging. Exposed at the following levels: - Agent level.
    * The value may be {@code null}.
@@ -66,6 +74,25 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettings extends com.google.
    */
   public GoogleCloudDialogflowCxV3AdvancedSettings setAudioExportGcsDestination(GoogleCloudDialogflowCxV3GcsDestination audioExportGcsDestination) {
     this.audioExportGcsDestination = audioExportGcsDestination;
+    return this;
+  }
+
+  /**
+   * Settings for DTMF. Exposed at the following levels: - Agent level - Flow level - Page level -
+   * Parameter level.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings getDtmfSettings() {
+    return dtmfSettings;
+  }
+
+  /**
+   * Settings for DTMF. Exposed at the following levels: - Agent level - Flow level - Page level -
+   * Parameter level.
+   * @param dtmfSettings dtmfSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AdvancedSettings setDtmfSettings(GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings dtmfSettings) {
+    this.dtmfSettings = dtmfSettings;
     return this;
   }
 

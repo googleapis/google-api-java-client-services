@@ -17856,6 +17856,146 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       public class Suggestions {
 
         /**
+         * Get answers for the given query based on knowledge documents.
+         *
+         * Create a request for the method "suggestions.searchKnowledge".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote operation.
+         *
+         * @param conversation The conversation (between human agent and end user) where the search request is triggered. Format:
+         *        `projects//locations//conversations/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest}
+         * @return the request
+         */
+        public SearchKnowledge searchKnowledge(java.lang.String conversation, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest content) throws java.io.IOException {
+          SearchKnowledge result = new SearchKnowledge(conversation, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SearchKnowledge extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+conversation}/suggestions:searchKnowledge";
+
+          private final java.util.regex.Pattern CONVERSATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+$");
+
+          /**
+           * Get answers for the given query based on knowledge documents.
+           *
+           * Create a request for the method "suggestions.searchKnowledge".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote
+           * operation. <p> {@link SearchKnowledge#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param conversation The conversation (between human agent and end user) where the search request is triggered. Format:
+         *        `projects//locations//conversations/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest}
+           * @since 1.13
+           */
+          protected SearchKnowledge(java.lang.String conversation, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeResponse.class);
+            this.conversation = com.google.api.client.util.Preconditions.checkNotNull(conversation, "Required parameter conversation must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                  "Parameter conversation must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+$");
+            }
+          }
+
+          @Override
+          public SearchKnowledge set$Xgafv(java.lang.String $Xgafv) {
+            return (SearchKnowledge) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SearchKnowledge setAccessToken(java.lang.String accessToken) {
+            return (SearchKnowledge) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SearchKnowledge setAlt(java.lang.String alt) {
+            return (SearchKnowledge) super.setAlt(alt);
+          }
+
+          @Override
+          public SearchKnowledge setCallback(java.lang.String callback) {
+            return (SearchKnowledge) super.setCallback(callback);
+          }
+
+          @Override
+          public SearchKnowledge setFields(java.lang.String fields) {
+            return (SearchKnowledge) super.setFields(fields);
+          }
+
+          @Override
+          public SearchKnowledge setKey(java.lang.String key) {
+            return (SearchKnowledge) super.setKey(key);
+          }
+
+          @Override
+          public SearchKnowledge setOauthToken(java.lang.String oauthToken) {
+            return (SearchKnowledge) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SearchKnowledge setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SearchKnowledge) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SearchKnowledge setQuotaUser(java.lang.String quotaUser) {
+            return (SearchKnowledge) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SearchKnowledge setUploadType(java.lang.String uploadType) {
+            return (SearchKnowledge) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SearchKnowledge setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SearchKnowledge) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The conversation (between human agent and end user) where the search request is
+           * triggered. Format: `projects//locations//conversations/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversation;
+
+          /** The conversation (between human agent and end user) where the search request is triggered. Format:
+         `projects//locations//conversations/`.
+           */
+          public java.lang.String getConversation() {
+            return conversation;
+          }
+
+          /**
+           * The conversation (between human agent and end user) where the search request is
+           * triggered. Format: `projects//locations//conversations/`.
+           */
+          public SearchKnowledge setConversation(java.lang.String conversation) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                  "Parameter conversation must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+$");
+            }
+            this.conversation = conversation;
+            return this;
+          }
+
+          @Override
+          public SearchKnowledge set(String parameterName, Object value) {
+            return (SearchKnowledge) super.set(parameterName, value);
+          }
+        }
+        /**
          * Suggest summary for a conversation based on specific historical messages. The range of the
          * messages to be used for summary can be specified in the request.
          *
@@ -35831,6 +35971,146 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Suggestions {
 
           /**
+           * Get answers for the given query based on knowledge documents.
+           *
+           * Create a request for the method "suggestions.searchKnowledge".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote operation.
+           *
+           * @param conversation The conversation (between human agent and end user) where the search request is triggered. Format:
+           *        `projects//locations//conversations/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest}
+           * @return the request
+           */
+          public SearchKnowledge searchKnowledge(java.lang.String conversation, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest content) throws java.io.IOException {
+            SearchKnowledge result = new SearchKnowledge(conversation, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchKnowledge extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeResponse> {
+
+            private static final String REST_PATH = "v2beta1/{+conversation}/suggestions:searchKnowledge";
+
+            private final java.util.regex.Pattern CONVERSATION_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+
+            /**
+             * Get answers for the given query based on knowledge documents.
+             *
+             * Create a request for the method "suggestions.searchKnowledge".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote
+             * operation. <p> {@link SearchKnowledge#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param conversation The conversation (between human agent and end user) where the search request is triggered. Format:
+           *        `projects//locations//conversations/`.
+             * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest}
+             * @since 1.13
+             */
+            protected SearchKnowledge(java.lang.String conversation, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeResponse.class);
+              this.conversation = com.google.api.client.util.Preconditions.checkNotNull(conversation, "Required parameter conversation must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                    "Parameter conversation must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+              }
+            }
+
+            @Override
+            public SearchKnowledge set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchKnowledge) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchKnowledge setAccessToken(java.lang.String accessToken) {
+              return (SearchKnowledge) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchKnowledge setAlt(java.lang.String alt) {
+              return (SearchKnowledge) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchKnowledge setCallback(java.lang.String callback) {
+              return (SearchKnowledge) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchKnowledge setFields(java.lang.String fields) {
+              return (SearchKnowledge) super.setFields(fields);
+            }
+
+            @Override
+            public SearchKnowledge setKey(java.lang.String key) {
+              return (SearchKnowledge) super.setKey(key);
+            }
+
+            @Override
+            public SearchKnowledge setOauthToken(java.lang.String oauthToken) {
+              return (SearchKnowledge) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchKnowledge setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchKnowledge) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchKnowledge setQuotaUser(java.lang.String quotaUser) {
+              return (SearchKnowledge) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchKnowledge setUploadType(java.lang.String uploadType) {
+              return (SearchKnowledge) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchKnowledge setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchKnowledge) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The conversation (between human agent and end user) where the search request is
+             * triggered. Format: `projects//locations//conversations/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String conversation;
+
+            /** The conversation (between human agent and end user) where the search request is triggered. Format:
+           `projects//locations//conversations/`.
+             */
+            public java.lang.String getConversation() {
+              return conversation;
+            }
+
+            /**
+             * The conversation (between human agent and end user) where the search request is
+             * triggered. Format: `projects//locations//conversations/`.
+             */
+            public SearchKnowledge setConversation(java.lang.String conversation) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                    "Parameter conversation must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+              }
+              this.conversation = conversation;
+              return this;
+            }
+
+            @Override
+            public SearchKnowledge set(String parameterName, Object value) {
+              return (SearchKnowledge) super.set(parameterName, value);
+            }
+          }
+          /**
            * Suggest summary for a conversation based on specific historical messages. The range of the
            * messages to be used for summary can be specified in the request.
            *
@@ -38687,6 +38967,144 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (GenerateStatelessSummary) super.set(parameterName, value);
           }
         }
+        /**
+         * Get answers for the given query based on knowledge documents.
+         *
+         * Create a request for the method "suggestions.searchKnowledge".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource contains the conversation profile Format: 'projects/' or `projects//locations/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest}
+         * @return the request
+         */
+        public SearchKnowledge searchKnowledge(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest content) throws java.io.IOException {
+          SearchKnowledge result = new SearchKnowledge(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SearchKnowledge extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+parent}/suggestions:searchKnowledge";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Get answers for the given query based on knowledge documents.
+           *
+           * Create a request for the method "suggestions.searchKnowledge".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote
+           * operation. <p> {@link SearchKnowledge#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param parent The parent resource contains the conversation profile Format: 'projects/' or `projects//locations/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest}
+           * @since 1.13
+           */
+          protected SearchKnowledge(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public SearchKnowledge set$Xgafv(java.lang.String $Xgafv) {
+            return (SearchKnowledge) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SearchKnowledge setAccessToken(java.lang.String accessToken) {
+            return (SearchKnowledge) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SearchKnowledge setAlt(java.lang.String alt) {
+            return (SearchKnowledge) super.setAlt(alt);
+          }
+
+          @Override
+          public SearchKnowledge setCallback(java.lang.String callback) {
+            return (SearchKnowledge) super.setCallback(callback);
+          }
+
+          @Override
+          public SearchKnowledge setFields(java.lang.String fields) {
+            return (SearchKnowledge) super.setFields(fields);
+          }
+
+          @Override
+          public SearchKnowledge setKey(java.lang.String key) {
+            return (SearchKnowledge) super.setKey(key);
+          }
+
+          @Override
+          public SearchKnowledge setOauthToken(java.lang.String oauthToken) {
+            return (SearchKnowledge) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SearchKnowledge setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SearchKnowledge) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SearchKnowledge setQuotaUser(java.lang.String quotaUser) {
+            return (SearchKnowledge) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SearchKnowledge setUploadType(java.lang.String uploadType) {
+            return (SearchKnowledge) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SearchKnowledge setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SearchKnowledge) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent resource contains the conversation profile Format: 'projects/' or
+           * `projects//locations/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource contains the conversation profile Format: 'projects/' or
+         `projects//locations/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent resource contains the conversation profile Format: 'projects/' or
+           * `projects//locations/`.
+           */
+          public SearchKnowledge setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public SearchKnowledge set(String parameterName, Object value) {
+            return (SearchKnowledge) super.set(parameterName, value);
+          }
+        }
 
       }
     }
@@ -39341,6 +39759,144 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         @Override
         public GenerateStatelessSummary set(String parameterName, Object value) {
           return (GenerateStatelessSummary) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get answers for the given query based on knowledge documents.
+       *
+       * Create a request for the method "suggestions.searchKnowledge".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote operation.
+       *
+       * @param parent The parent resource contains the conversation profile Format: 'projects/' or `projects//locations/`.
+       * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest}
+       * @return the request
+       */
+      public SearchKnowledge searchKnowledge(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest content) throws java.io.IOException {
+        SearchKnowledge result = new SearchKnowledge(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class SearchKnowledge extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeResponse> {
+
+        private static final String REST_PATH = "v2beta1/{+parent}/suggestions:searchKnowledge";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Get answers for the given query based on knowledge documents.
+         *
+         * Create a request for the method "suggestions.searchKnowledge".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote
+         * operation. <p> {@link SearchKnowledge#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param parent The parent resource contains the conversation profile Format: 'projects/' or `projects//locations/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest}
+         * @since 1.13
+         */
+        protected SearchKnowledge(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SearchKnowledgeResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public SearchKnowledge set$Xgafv(java.lang.String $Xgafv) {
+          return (SearchKnowledge) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SearchKnowledge setAccessToken(java.lang.String accessToken) {
+          return (SearchKnowledge) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SearchKnowledge setAlt(java.lang.String alt) {
+          return (SearchKnowledge) super.setAlt(alt);
+        }
+
+        @Override
+        public SearchKnowledge setCallback(java.lang.String callback) {
+          return (SearchKnowledge) super.setCallback(callback);
+        }
+
+        @Override
+        public SearchKnowledge setFields(java.lang.String fields) {
+          return (SearchKnowledge) super.setFields(fields);
+        }
+
+        @Override
+        public SearchKnowledge setKey(java.lang.String key) {
+          return (SearchKnowledge) super.setKey(key);
+        }
+
+        @Override
+        public SearchKnowledge setOauthToken(java.lang.String oauthToken) {
+          return (SearchKnowledge) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SearchKnowledge setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SearchKnowledge) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SearchKnowledge setQuotaUser(java.lang.String quotaUser) {
+          return (SearchKnowledge) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SearchKnowledge setUploadType(java.lang.String uploadType) {
+          return (SearchKnowledge) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SearchKnowledge setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SearchKnowledge) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The parent resource contains the conversation profile Format: 'projects/' or
+         * `projects//locations/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The parent resource contains the conversation profile Format: 'projects/' or
+       `projects//locations/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The parent resource contains the conversation profile Format: 'projects/' or
+         * `projects//locations/`.
+         */
+        public SearchKnowledge setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public SearchKnowledge set(String parameterName, Object value) {
+          return (SearchKnowledge) super.set(parameterName, value);
         }
       }
 

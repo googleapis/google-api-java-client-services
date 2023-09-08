@@ -40,11 +40,12 @@ public final class Authority extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid
-   * URL with length <2000 characters. If set, then Google will allow valid OIDC tokens from this
-   * issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on
-   * this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity.
-   * `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled)
-   * before using a new issuer (and re-enabling Workload Identity).
+   * URL with length <2000 characters, it must use `location` rather than `zone` for GKE clusters.
+   * If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the
+   * workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from
+   * the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified;
+   * it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling
+   * Workload Identity).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,11 +89,12 @@ public final class Authority extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid
-   * URL with length <2000 characters. If set, then Google will allow valid OIDC tokens from this
-   * issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on
-   * this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity.
-   * `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled)
-   * before using a new issuer (and re-enabling Workload Identity).
+   * URL with length <2000 characters, it must use `location` rather than `zone` for GKE clusters.
+   * If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the
+   * workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from
+   * the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified;
+   * it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling
+   * Workload Identity).
    * @return value or {@code null} for none
    */
   public java.lang.String getIssuer() {
@@ -101,11 +103,12 @@ public final class Authority extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid
-   * URL with length <2000 characters. If set, then Google will allow valid OIDC tokens from this
-   * issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on
-   * this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity.
-   * `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled)
-   * before using a new issuer (and re-enabling Workload Identity).
+   * URL with length <2000 characters, it must use `location` rather than `zone` for GKE clusters.
+   * If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the
+   * workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from
+   * the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified;
+   * it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling
+   * Workload Identity).
    * @param issuer issuer or {@code null} for none
    */
   public Authority setIssuer(java.lang.String issuer) {

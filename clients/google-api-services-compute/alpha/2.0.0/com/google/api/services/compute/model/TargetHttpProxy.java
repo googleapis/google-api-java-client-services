@@ -20,10 +20,12 @@ package com.google.api.services.compute.model;
  * Represents a Target HTTP Proxy resource. Google Compute Engine has two Target HTTP Proxy
  * resources: * [Global](/compute/docs/reference/rest/alpha/targetHttpProxies) *
  * [Regional](/compute/docs/reference/rest/alpha/regionTargetHttpProxies) A target HTTP proxy is a
- * component of GCP HTTP load balancers. * targetHttpProxies are used by external HTTP load
- * balancers and Traffic Director. * regionTargetHttpProxies are used by internal HTTP load
- * balancers. Forwarding rules reference a target HTTP proxy, and the target proxy then references a
- * URL map. For more information, read Using Target Proxies and Forwarding rule concepts.
+ * component of GCP HTTP load balancers. * targetHttpProxies are used by global external Application
+ * Load Balancers, classic Application Load Balancers, cross-region internal Application Load
+ * Balancers, and Traffic Director. * regionTargetHttpProxies are used by regional internal
+ * Application Load Balancers and regional external Application Load Balancers. Forwarding rules
+ * reference a target HTTP proxy, and the target proxy then references a URL map. For more
+ * information, read Using Target Proxies and Forwarding rule concepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -78,9 +80,9 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   /**
    * Specifies how long to keep a connection open, after completing a response, while there is no
    * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
-   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
-   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
-   * balancer (classic), this option is not available publicly.
+   * seconds) will be used. For global external Application Load Balancers, the minimum allowed
+   * value is 5 seconds and the maximum allowed value is 1200 seconds. For classic Application Load
+   * Balancers, this option is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -283,9 +285,9 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   /**
    * Specifies how long to keep a connection open, after completing a response, while there is no
    * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
-   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
-   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
-   * balancer (classic), this option is not available publicly.
+   * seconds) will be used. For global external Application Load Balancers, the minimum allowed
+   * value is 5 seconds and the maximum allowed value is 1200 seconds. For classic Application Load
+   * Balancers, this option is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHttpKeepAliveTimeoutSec() {
@@ -295,9 +297,9 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   /**
    * Specifies how long to keep a connection open, after completing a response, while there is no
    * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
-   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
-   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
-   * balancer (classic), this option is not available publicly.
+   * seconds) will be used. For global external Application Load Balancers, the minimum allowed
+   * value is 5 seconds and the maximum allowed value is 1200 seconds. For classic Application Load
+   * Balancers, this option is not supported.
    * @param httpKeepAliveTimeoutSec httpKeepAliveTimeoutSec or {@code null} for none
    */
   public TargetHttpProxy setHttpKeepAliveTimeoutSec(java.lang.Integer httpKeepAliveTimeoutSec) {

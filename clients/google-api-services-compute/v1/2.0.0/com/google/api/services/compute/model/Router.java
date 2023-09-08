@@ -76,8 +76,10 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Router interfaces. Each interface requires either one linked resource, (for example,
-   * linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
+   * Router interfaces. To create a BGP peer that uses a router interface, the interface must have
+   * one of the following fields specified: - linkedVpnTunnel - linkedInterconnectAttachment -
+   * subnetwork You can create a router interface without any of these fields specified. However,
+   * you cannot create a BGP peer that uses that interface.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,8 +248,10 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Router interfaces. Each interface requires either one linked resource, (for example,
-   * linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
+   * Router interfaces. To create a BGP peer that uses a router interface, the interface must have
+   * one of the following fields specified: - linkedVpnTunnel - linkedInterconnectAttachment -
+   * subnetwork You can create a router interface without any of these fields specified. However,
+   * you cannot create a BGP peer that uses that interface.
    * @return value or {@code null} for none
    */
   public java.util.List<RouterInterface> getInterfaces() {
@@ -255,8 +259,10 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Router interfaces. Each interface requires either one linked resource, (for example,
-   * linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
+   * Router interfaces. To create a BGP peer that uses a router interface, the interface must have
+   * one of the following fields specified: - linkedVpnTunnel - linkedInterconnectAttachment -
+   * subnetwork You can create a router interface without any of these fields specified. However,
+   * you cannot create a BGP peer that uses that interface.
    * @param interfaces interfaces or {@code null} for none
    */
   public Router setInterfaces(java.util.List<RouterInterface> interfaces) {

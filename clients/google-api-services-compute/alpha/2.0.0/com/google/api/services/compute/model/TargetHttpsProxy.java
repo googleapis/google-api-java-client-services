@@ -20,8 +20,10 @@ package com.google.api.services.compute.model;
  * Represents a Target HTTPS Proxy resource. Google Compute Engine has two Target HTTPS Proxy
  * resources: * [Global](/compute/docs/reference/rest/alpha/targetHttpsProxies) *
  * [Regional](/compute/docs/reference/rest/alpha/regionTargetHttpsProxies) A target HTTPS proxy is a
- * component of GCP HTTPS load balancers. * targetHttpsProxies are used by external HTTPS load
- * balancers. * regionTargetHttpsProxies are used by internal HTTPS load balancers. Forwarding rules
+ * component of GCP HTTPS load balancers. * targetHttpProxies are used by global external
+ * Application Load Balancers, classic Application Load Balancers, cross-region internal Application
+ * Load Balancers, and Traffic Director. * regionTargetHttpProxies are used by regional internal
+ * Application Load Balancers and regional external Application Load Balancers. Forwarding rules
  * reference a target HTTPS proxy, and the target proxy then references a URL map. For more
  * information, read Using Target Proxies and Forwarding rule concepts.
  *
@@ -114,9 +116,9 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * Specifies how long to keep a connection open, after completing a response, while there is no
    * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
-   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
-   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
-   * balancer (classic), this option is not available publicly.
+   * seconds) will be used. For global external Application Load Balancers, the minimum allowed
+   * value is 5 seconds and the maximum allowed value is 1200 seconds. For classic Application Load
+   * Balancers, this option is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -449,9 +451,9 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * Specifies how long to keep a connection open, after completing a response, while there is no
    * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
-   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
-   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
-   * balancer (classic), this option is not available publicly.
+   * seconds) will be used. For global external Application Load Balancers, the minimum allowed
+   * value is 5 seconds and the maximum allowed value is 1200 seconds. For classic Application Load
+   * Balancers, this option is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHttpKeepAliveTimeoutSec() {
@@ -461,9 +463,9 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * Specifies how long to keep a connection open, after completing a response, while there is no
    * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
-   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
-   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
-   * balancer (classic), this option is not available publicly.
+   * seconds) will be used. For global external Application Load Balancers, the minimum allowed
+   * value is 5 seconds and the maximum allowed value is 1200 seconds. For classic Application Load
+   * Balancers, this option is not supported.
    * @param httpKeepAliveTimeoutSec httpKeepAliveTimeoutSec or {@code null} for none
    */
   public TargetHttpsProxy setHttpKeepAliveTimeoutSec(java.lang.Integer httpKeepAliveTimeoutSec) {

@@ -45,7 +45,7 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * request for www.example.com/coming_soon/ encounters a 404, the policy in
    * PathRule.customErrorResponsePolicy takes effect. If any of the requests in this example
    * encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect.
-   * customErrorResponsePolicy is supported only for Global External HTTP(S) load balancing.
+   * customErrorResponsePolicy is supported only for global external Application Load Balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * URL rewrites and header transformations, before forwarding the request to the selected backend.
    * If routeAction specifies any weightedBackendServices, service must not be set. Conversely if
    * service is set, routeAction cannot contain any weightedBackendServices. Only one of routeAction
-   * or urlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support
-   * the urlRewrite action within a path rule's routeAction.
+   * or urlRedirect must be set. URL maps for classic Application Load Balancers only support the
+   * urlRewrite action within a path rule's routeAction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * request for www.example.com/coming_soon/ encounters a 404, the policy in
    * PathRule.customErrorResponsePolicy takes effect. If any of the requests in this example
    * encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect.
-   * customErrorResponsePolicy is supported only for Global External HTTP(S) load balancing.
+   * customErrorResponsePolicy is supported only for global external Application Load Balancers.
    * @return value or {@code null} for none
    */
   public CustomErrorResponsePolicy getCustomErrorResponsePolicy() {
@@ -130,7 +130,7 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * request for www.example.com/coming_soon/ encounters a 404, the policy in
    * PathRule.customErrorResponsePolicy takes effect. If any of the requests in this example
    * encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect.
-   * customErrorResponsePolicy is supported only for Global External HTTP(S) load balancing.
+   * customErrorResponsePolicy is supported only for global external Application Load Balancers.
    * @param customErrorResponsePolicy customErrorResponsePolicy or {@code null} for none
    */
   public PathRule setCustomErrorResponsePolicy(CustomErrorResponsePolicy customErrorResponsePolicy) {
@@ -164,8 +164,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * URL rewrites and header transformations, before forwarding the request to the selected backend.
    * If routeAction specifies any weightedBackendServices, service must not be set. Conversely if
    * service is set, routeAction cannot contain any weightedBackendServices. Only one of routeAction
-   * or urlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support
-   * the urlRewrite action within a path rule's routeAction.
+   * or urlRedirect must be set. URL maps for classic Application Load Balancers only support the
+   * urlRewrite action within a path rule's routeAction.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getRouteAction() {
@@ -177,8 +177,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * URL rewrites and header transformations, before forwarding the request to the selected backend.
    * If routeAction specifies any weightedBackendServices, service must not be set. Conversely if
    * service is set, routeAction cannot contain any weightedBackendServices. Only one of routeAction
-   * or urlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support
-   * the urlRewrite action within a path rule's routeAction.
+   * or urlRedirect must be set. URL maps for classic Application Load Balancers only support the
+   * urlRewrite action within a path rule's routeAction.
    * @param routeAction routeAction or {@code null} for none
    */
   public PathRule setRouteAction(HttpRouteAction routeAction) {

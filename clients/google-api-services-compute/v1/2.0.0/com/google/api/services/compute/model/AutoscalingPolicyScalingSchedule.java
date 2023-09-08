@@ -77,7 +77,7 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
 
   /**
    * The time zone to use when interpreting the schedule. The value of this field must be a time
-   * zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. This field is
+   * zone name from the tz database: https://en.wikipedia.org/wiki/Tz_database. This field is
    * assigned a default value of “UTC” if left empty.
    * The value may be {@code null}.
    */
@@ -189,7 +189,7 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
 
   /**
    * The time zone to use when interpreting the schedule. The value of this field must be a time
-   * zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. This field is
+   * zone name from the tz database: https://en.wikipedia.org/wiki/Tz_database. This field is
    * assigned a default value of “UTC” if left empty.
    * @return value or {@code null} for none
    */
@@ -199,7 +199,7 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
 
   /**
    * The time zone to use when interpreting the schedule. The value of this field must be a time
-   * zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. This field is
+   * zone name from the tz database: https://en.wikipedia.org/wiki/Tz_database. This field is
    * assigned a default value of “UTC” if left empty.
    * @param timeZone timeZone or {@code null} for none
    */

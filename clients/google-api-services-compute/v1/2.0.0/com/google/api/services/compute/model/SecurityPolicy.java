@@ -171,6 +171,17 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String type;
 
   /**
+   * Definitions of user-defined fields for CLOUD_ARMOR_NETWORK policies. A user-defined field
+   * consists of up to 4 bytes extracted from a fixed offset in the packet, relative to the IPv4,
+   * IPv6, TCP, or UDP header, with an optional mask to select certain bits. Rules may then specify
+   * matching values for these fields. Example: userDefinedFields: - name: "ipv4_fragment_offset"
+   * base: IPV4 offset: 6 size: 2 mask: "0x1fff"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecurityPolicyUserDefinedField> userDefinedFields;
+
+  /**
    * @return value or {@code null} for none
    */
   public SecurityPolicyAdaptiveProtectionConfig getAdaptiveProtectionConfig() {
@@ -567,6 +578,31 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   public SecurityPolicy setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Definitions of user-defined fields for CLOUD_ARMOR_NETWORK policies. A user-defined field
+   * consists of up to 4 bytes extracted from a fixed offset in the packet, relative to the IPv4,
+   * IPv6, TCP, or UDP header, with an optional mask to select certain bits. Rules may then specify
+   * matching values for these fields. Example: userDefinedFields: - name: "ipv4_fragment_offset"
+   * base: IPV4 offset: 6 size: 2 mask: "0x1fff"
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecurityPolicyUserDefinedField> getUserDefinedFields() {
+    return userDefinedFields;
+  }
+
+  /**
+   * Definitions of user-defined fields for CLOUD_ARMOR_NETWORK policies. A user-defined field
+   * consists of up to 4 bytes extracted from a fixed offset in the packet, relative to the IPv4,
+   * IPv6, TCP, or UDP header, with an optional mask to select certain bits. Rules may then specify
+   * matching values for these fields. Example: userDefinedFields: - name: "ipv4_fragment_offset"
+   * base: IPV4 offset: 6 size: 2 mask: "0x1fff"
+   * @param userDefinedFields userDefinedFields or {@code null} for none
+   */
+  public SecurityPolicy setUserDefinedFields(java.util.List<SecurityPolicyUserDefinedField> userDefinedFields) {
+    this.userDefinedFields = userDefinedFields;
     return this;
   }
 

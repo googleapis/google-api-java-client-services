@@ -19,8 +19,7 @@ package com.google.api.services.compute.model;
 /**
  * Represents a collection of network endpoints. A network endpoint group (NEG) defines how a set of
  * endpoints should be reached, whether they are reachable, and where they are located. For more
- * information about using NEGs, see Setting up external HTTP(S) Load Balancing with internet NEGs,
- * Setting up zonal NEGs, or Setting up external HTTP(S) Load Balancing with serverless NEGs.
+ * information about using NEGs for different use cases, see Network endpoint groups overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

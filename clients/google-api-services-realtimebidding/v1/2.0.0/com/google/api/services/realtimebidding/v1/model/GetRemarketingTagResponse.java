@@ -33,18 +33,18 @@ package com.google.api.services.realtimebidding.v1.model;
 public final class GetRemarketingTagResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A HTML tag that can be placed on the advertiser's page to add users to a user list. For more
-   * information and code samples on using snippet on your website refer to [Tag your site for
-   * remarketing]( https://support.google.com/google-ads/answer/2476688).
+   * An HTML tag that can be placed on the advertiser's page to add users to a user list. For more
+   * information and code samples on using snippets on your website, refer to [Tag your site for
+   * remarketing](https://support.google.com/google-ads/answer/2476688).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String snippet;
 
   /**
-   * A HTML tag that can be placed on the advertiser's page to add users to a user list. For more
-   * information and code samples on using snippet on your website refer to [Tag your site for
-   * remarketing]( https://support.google.com/google-ads/answer/2476688).
+   * An HTML tag that can be placed on the advertiser's page to add users to a user list. For more
+   * information and code samples on using snippets on your website, refer to [Tag your site for
+   * remarketing](https://support.google.com/google-ads/answer/2476688).
    * @return value or {@code null} for none
    */
   public java.lang.String getSnippet() {
@@ -52,9 +52,9 @@ public final class GetRemarketingTagResponse extends com.google.api.client.json.
   }
 
   /**
-   * A HTML tag that can be placed on the advertiser's page to add users to a user list. For more
-   * information and code samples on using snippet on your website refer to [Tag your site for
-   * remarketing]( https://support.google.com/google-ads/answer/2476688).
+   * An HTML tag that can be placed on the advertiser's page to add users to a user list. For more
+   * information and code samples on using snippets on your website, refer to [Tag your site for
+   * remarketing](https://support.google.com/google-ads/answer/2476688).
    * @param snippet snippet or {@code null} for none
    */
   public GetRemarketingTagResponse setSnippet(java.lang.String snippet) {

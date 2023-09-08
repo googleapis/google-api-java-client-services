@@ -32,8 +32,8 @@ public final class ListUserListsResponse extends com.google.api.client.json.Gene
 
   /**
    * The continuation page token to send back to the server in a subsequent request. Due to a
-   * currently known issue, it is recommended that the caller keep invoking the list method till the
-   * time a next page token is not returned (even if the result set is empty).
+   * currently known issue, it is recommended that the caller keep invoking the list method until
+   * the time a next page token is not returned, even if the result set is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class ListUserListsResponse extends com.google.api.client.json.Gene
 
   /**
    * The continuation page token to send back to the server in a subsequent request. Due to a
-   * currently known issue, it is recommended that the caller keep invoking the list method till the
-   * time a next page token is not returned (even if the result set is empty).
+   * currently known issue, it is recommended that the caller keep invoking the list method until
+   * the time a next page token is not returned, even if the result set is empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -58,8 +58,8 @@ public final class ListUserListsResponse extends com.google.api.client.json.Gene
 
   /**
    * The continuation page token to send back to the server in a subsequent request. Due to a
-   * currently known issue, it is recommended that the caller keep invoking the list method till the
-   * time a next page token is not returned (even if the result set is empty).
+   * currently known issue, it is recommended that the caller keep invoking the list method until
+   * the time a next page token is not returned, even if the result set is empty.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListUserListsResponse setNextPageToken(java.lang.String nextPageToken) {

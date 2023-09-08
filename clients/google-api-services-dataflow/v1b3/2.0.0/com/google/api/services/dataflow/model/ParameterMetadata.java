@@ -37,6 +37,15 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> customMetadata;
 
   /**
+   * Optional. The default values will pre-populate the parameter with the given value from the
+   * proto. If default_value is left empty, the parameter will be populated with a default of the
+   * relevant type, e.g. false for a boolean.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultValue;
+
+  /**
    * Optional. The options shown when ENUM ParameterType is specified.
    * The value may be {@code null}.
    */
@@ -127,6 +136,27 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
    */
   public ParameterMetadata setCustomMetadata(java.util.Map<String, java.lang.String> customMetadata) {
     this.customMetadata = customMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. The default values will pre-populate the parameter with the given value from the
+   * proto. If default_value is left empty, the parameter will be populated with a default of the
+   * relevant type, e.g. false for a boolean.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultValue() {
+    return defaultValue;
+  }
+
+  /**
+   * Optional. The default values will pre-populate the parameter with the given value from the
+   * proto. If default_value is left empty, the parameter will be populated with a default of the
+   * relevant type, e.g. false for a boolean.
+   * @param defaultValue defaultValue or {@code null} for none
+   */
+  public ParameterMetadata setDefaultValue(java.lang.String defaultValue) {
+    this.defaultValue = defaultValue;
     return this;
   }
 

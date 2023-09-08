@@ -108,6 +108,21 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   private java.lang.String minLikelihood;
 
   /**
+   * Per infotype likelihoods. For each infotype, a user can specify a minimum likelihood, and only
+   * return that infotype if it is above that threshold. If an infotype is not included, it uses the
+   * InspectConfig min_likelihood.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2InfoTypeLikelihood> minLikelihoodPerInfoType;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2InfoTypeLikelihood used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2InfoTypeLikelihood.class);
+  }
+
+  /**
    * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the
    * set are executed in the end, other rules are executed in the order they are specified for each
    * info type.
@@ -262,6 +277,27 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
    */
   public GooglePrivacyDlpV2InspectConfig setMinLikelihood(java.lang.String minLikelihood) {
     this.minLikelihood = minLikelihood;
+    return this;
+  }
+
+  /**
+   * Per infotype likelihoods. For each infotype, a user can specify a minimum likelihood, and only
+   * return that infotype if it is above that threshold. If an infotype is not included, it uses the
+   * InspectConfig min_likelihood.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2InfoTypeLikelihood> getMinLikelihoodPerInfoType() {
+    return minLikelihoodPerInfoType;
+  }
+
+  /**
+   * Per infotype likelihoods. For each infotype, a user can specify a minimum likelihood, and only
+   * return that infotype if it is above that threshold. If an infotype is not included, it uses the
+   * InspectConfig min_likelihood.
+   * @param minLikelihoodPerInfoType minLikelihoodPerInfoType or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InspectConfig setMinLikelihoodPerInfoType(java.util.List<GooglePrivacyDlpV2InfoTypeLikelihood> minLikelihoodPerInfoType) {
+    this.minLikelihoodPerInfoType = minLikelihoodPerInfoType;
     return this;
   }
 

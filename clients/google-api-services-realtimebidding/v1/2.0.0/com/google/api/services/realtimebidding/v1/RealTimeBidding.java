@@ -4263,11 +4263,12 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link GetRemarketingTag#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Required. To fetch remarketing tag for an account, name must follow the pattern `buyers/{accountId}`
-     *        where `{accountId}` represents ID of a buyer that owns the remarketing tag. For a bidder
-     *        accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should represent
-     *        the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name
-     *        must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
+     * @param name Required. To fetch the remarketing tag for an account, the name must follow the pattern
+     *        `buyers/{accountId}`, where `{accountId}` represents the ID of the buyer that owns the
+     *        remarketing tag. For a bidder accessing the remarketing tag on behalf of a child seat
+     *        buyer, `{accountId}` should represent the ID of the child seat buyer. To fetch the
+     *        remarketing tag for a specific user list, the name must follow the pattern
+     *        `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
      * @return the request
      */
     public GetRemarketingTag getRemarketingTag(java.lang.String name) throws java.io.IOException {
@@ -4298,11 +4299,12 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * stractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. To fetch remarketing tag for an account, name must follow the pattern `buyers/{accountId}`
-     *        where `{accountId}` represents ID of a buyer that owns the remarketing tag. For a bidder
-     *        accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should represent
-     *        the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name
-     *        must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
+       * @param name Required. To fetch the remarketing tag for an account, the name must follow the pattern
+     *        `buyers/{accountId}`, where `{accountId}` represents the ID of the buyer that owns the
+     *        remarketing tag. For a bidder accessing the remarketing tag on behalf of a child seat
+     *        buyer, `{accountId}` should represent the ID of the child seat buyer. To fetch the
+     *        remarketing tag for a specific user list, the name must follow the pattern
+     *        `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
        * @since 1.13
        */
       protected GetRemarketingTag(java.lang.String name) {
@@ -4381,33 +4383,34 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Required. To fetch remarketing tag for an account, name must follow the pattern
-       * `buyers/{accountId}` where `{accountId}` represents ID of a buyer that owns the remarketing
-       * tag. For a bidder accessing remarketing tag on behalf of a child seat buyer, `{accountId}`
-       * should represent the ID of the child seat buyer. To fetch remarketing tag for a specific
-       * user list, name must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See
-       * UserList.name.
+       * Required. To fetch the remarketing tag for an account, the name must follow the pattern
+       * `buyers/{accountId}`, where `{accountId}` represents the ID of the buyer that owns the
+       * remarketing tag. For a bidder accessing the remarketing tag on behalf of a child seat
+       * buyer, `{accountId}` should represent the ID of the child seat buyer. To fetch the
+       * remarketing tag for a specific user list, the name must follow the pattern
+       * `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. To fetch remarketing tag for an account, name must follow the pattern
-     `buyers/{accountId}` where `{accountId}` represents ID of a buyer that owns the remarketing tag.
-     For a bidder accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should
-     represent the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name
-     must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
+      /** Required. To fetch the remarketing tag for an account, the name must follow the pattern
+     `buyers/{accountId}`, where `{accountId}` represents the ID of the buyer that owns the remarketing
+     tag. For a bidder accessing the remarketing tag on behalf of a child seat buyer, `{accountId}`
+     should represent the ID of the child seat buyer. To fetch the remarketing tag for a specific user
+     list, the name must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See
+     UserList.name.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. To fetch remarketing tag for an account, name must follow the pattern
-       * `buyers/{accountId}` where `{accountId}` represents ID of a buyer that owns the remarketing
-       * tag. For a bidder accessing remarketing tag on behalf of a child seat buyer, `{accountId}`
-       * should represent the ID of the child seat buyer. To fetch remarketing tag for a specific
-       * user list, name must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See
-       * UserList.name.
+       * Required. To fetch the remarketing tag for an account, the name must follow the pattern
+       * `buyers/{accountId}`, where `{accountId}` represents the ID of the buyer that owns the
+       * remarketing tag. For a bidder accessing the remarketing tag on behalf of a child seat
+       * buyer, `{accountId}` should represent the ID of the child seat buyer. To fetch the
+       * remarketing tag for a specific user list, the name must follow the pattern
+       * `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
        */
       public GetRemarketingTag setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -5400,7 +5403,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
     public class UserLists {
 
       /**
-       * Change the status of a user list to CLOSED. This prevents new users from being added to the user
+       * Changes the status of a user list to CLOSED. This prevents new users from being added to the user
        * list.
        *
        * Create a request for the method "userLists.close".
@@ -5426,7 +5429,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^buyers/[^/]+/userLists/[^/]+$");
 
         /**
-         * Change the status of a user list to CLOSED. This prevents new users from being added to the
+         * Changes the status of a user list to CLOSED. This prevents new users from being added to the
          * user list.
          *
          * Create a request for the method "userLists.close".
@@ -5533,17 +5536,17 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Create a new user list.
+       * Creates a new user list.
        *
        * Create a request for the method "userLists.create".
        *
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent buyer of the user list to be retrieved that must follow the pattern
-       *        `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer
-       *        who owns user lists. For a bidder accessing user lists on behalf of a child seat buyer ,
-       *        `{buyerAccountId}` should represent the account ID of the child seat buyer.
+       * @param parent Required. The name of the parent buyer of the user list to be retrieved, which must follow the
+       *        pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of
+       *        the buyer who owns the user list. For a bidder accessing user lists on behalf of a child
+       *        seat buyer, `{buyerAccountId}` should represent the account ID of the child seat buyer.
        * @param content the {@link com.google.api.services.realtimebidding.v1.model.UserList}
        * @return the request
        */
@@ -5561,7 +5564,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^buyers/[^/]+$");
 
         /**
-         * Create a new user list.
+         * Creates a new user list.
          *
          * Create a request for the method "userLists.create".
          *
@@ -5571,10 +5574,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent buyer of the user list to be retrieved that must follow the pattern
-       *        `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer
-       *        who owns user lists. For a bidder accessing user lists on behalf of a child seat buyer ,
-       *        `{buyerAccountId}` should represent the account ID of the child seat buyer.
+         * @param parent Required. The name of the parent buyer of the user list to be retrieved, which must follow the
+       *        pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of
+       *        the buyer who owns the user list. For a bidder accessing user lists on behalf of a child
+       *        seat buyer, `{buyerAccountId}` should represent the account ID of the child seat buyer.
          * @param content the {@link com.google.api.services.realtimebidding.v1.model.UserList}
          * @since 1.13
          */
@@ -5644,17 +5647,18 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. The name of the parent buyer of the user list to be retrieved that must follow
-         * the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID
-         * of the buyer who owns user lists. For a bidder accessing user lists on behalf of a child
-         * seat buyer , `{buyerAccountId}` should represent the account ID of the child seat buyer.
+         * Required. The name of the parent buyer of the user list to be retrieved, which must
+         * follow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the
+         * account ID of the buyer who owns the user list. For a bidder accessing user lists on
+         * behalf of a child seat buyer, `{buyerAccountId}` should represent the account ID of the
+         * child seat buyer.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent buyer of the user list to be retrieved that must follow the
+        /** Required. The name of the parent buyer of the user list to be retrieved, which must follow the
        pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID of the buyer
-       who owns user lists. For a bidder accessing user lists on behalf of a child seat buyer ,
+       who owns the user list. For a bidder accessing user lists on behalf of a child seat buyer,
        `{buyerAccountId}` should represent the account ID of the child seat buyer.
          */
         public java.lang.String getParent() {
@@ -5662,10 +5666,11 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. The name of the parent buyer of the user list to be retrieved that must follow
-         * the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the account ID
-         * of the buyer who owns user lists. For a bidder accessing user lists on behalf of a child
-         * seat buyer , `{buyerAccountId}` should represent the account ID of the child seat buyer.
+         * Required. The name of the parent buyer of the user list to be retrieved, which must
+         * follow the pattern `buyers/{buyerAccountId}`, where `{buyerAccountId}` represents the
+         * account ID of the buyer who owns the user list. For a bidder accessing user lists on
+         * behalf of a child seat buyer, `{buyerAccountId}` should represent the account ID of the
+         * child seat buyer.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5833,11 +5838,12 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link GetRemarketingTag#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. To fetch remarketing tag for an account, name must follow the pattern `buyers/{accountId}`
-       *        where `{accountId}` represents ID of a buyer that owns the remarketing tag. For a bidder
-       *        accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should represent
-       *        the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name
-       *        must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
+       * @param name Required. To fetch the remarketing tag for an account, the name must follow the pattern
+       *        `buyers/{accountId}`, where `{accountId}` represents the ID of the buyer that owns the
+       *        remarketing tag. For a bidder accessing the remarketing tag on behalf of a child seat
+       *        buyer, `{accountId}` should represent the ID of the child seat buyer. To fetch the
+       *        remarketing tag for a specific user list, the name must follow the pattern
+       *        `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
        * @return the request
        */
       public GetRemarketingTag getRemarketingTag(java.lang.String name) throws java.io.IOException {
@@ -5868,11 +5874,12 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * stractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Required. To fetch remarketing tag for an account, name must follow the pattern `buyers/{accountId}`
-       *        where `{accountId}` represents ID of a buyer that owns the remarketing tag. For a bidder
-       *        accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should represent
-       *        the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name
-       *        must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
+         * @param name Required. To fetch the remarketing tag for an account, the name must follow the pattern
+       *        `buyers/{accountId}`, where `{accountId}` represents the ID of the buyer that owns the
+       *        remarketing tag. For a bidder accessing the remarketing tag on behalf of a child seat
+       *        buyer, `{accountId}` should represent the ID of the child seat buyer. To fetch the
+       *        remarketing tag for a specific user list, the name must follow the pattern
+       *        `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
          * @since 1.13
          */
         protected GetRemarketingTag(java.lang.String name) {
@@ -5951,32 +5958,33 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. To fetch remarketing tag for an account, name must follow the pattern
-         * `buyers/{accountId}` where `{accountId}` represents ID of a buyer that owns the
-         * remarketing tag. For a bidder accessing remarketing tag on behalf of a child seat buyer,
-         * `{accountId}` should represent the ID of the child seat buyer. To fetch remarketing tag
-         * for a specific user list, name must follow the pattern
+         * Required. To fetch the remarketing tag for an account, the name must follow the pattern
+         * `buyers/{accountId}`, where `{accountId}` represents the ID of the buyer that owns the
+         * remarketing tag. For a bidder accessing the remarketing tag on behalf of a child seat
+         * buyer, `{accountId}` should represent the ID of the child seat buyer. To fetch the
+         * remarketing tag for a specific user list, the name must follow the pattern
          * `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. To fetch remarketing tag for an account, name must follow the pattern
-       `buyers/{accountId}` where `{accountId}` represents ID of a buyer that owns the remarketing tag.
-       For a bidder accessing remarketing tag on behalf of a child seat buyer, `{accountId}` should
-       represent the ID of the child seat buyer. To fetch remarketing tag for a specific user list, name
-       must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
+        /** Required. To fetch the remarketing tag for an account, the name must follow the pattern
+       `buyers/{accountId}`, where `{accountId}` represents the ID of the buyer that owns the remarketing
+       tag. For a bidder accessing the remarketing tag on behalf of a child seat buyer, `{accountId}`
+       should represent the ID of the child seat buyer. To fetch the remarketing tag for a specific user
+       list, the name must follow the pattern `buyers/{accountId}/userLists/{userListId}`. See
+       UserList.name.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. To fetch remarketing tag for an account, name must follow the pattern
-         * `buyers/{accountId}` where `{accountId}` represents ID of a buyer that owns the
-         * remarketing tag. For a bidder accessing remarketing tag on behalf of a child seat buyer,
-         * `{accountId}` should represent the ID of the child seat buyer. To fetch remarketing tag
-         * for a specific user list, name must follow the pattern
+         * Required. To fetch the remarketing tag for an account, the name must follow the pattern
+         * `buyers/{accountId}`, where `{accountId}` represents the ID of the buyer that owns the
+         * remarketing tag. For a bidder accessing the remarketing tag on behalf of a child seat
+         * buyer, `{accountId}` should represent the ID of the child seat buyer. To fetch the
+         * remarketing tag for a specific user list, the name must follow the pattern
          * `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
          */
         public GetRemarketingTag setName(java.lang.String name) {
@@ -6162,17 +6170,17 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return this;
         }
 
-        /** Continuation page token (as received from a previous response). */
+        /** Continuation page token as received from a previous response. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Continuation page token (as received from a previous response).
+        /** Continuation page token as received from a previous response.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Continuation page token (as received from a previous response). */
+        /** Continuation page token as received from a previous response. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -6184,7 +6192,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Change the status of a user list to OPEN. This allows new users to be added to the user list.
+       * Changes the status of a user list to OPEN. This allows new users to be added to the user list.
        *
        * Create a request for the method "userLists.open".
        *
@@ -6209,7 +6217,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^buyers/[^/]+/userLists/[^/]+$");
 
         /**
-         * Change the status of a user list to OPEN. This allows new users to be added to the user list.
+         * Changes the status of a user list to OPEN. This allows new users to be added to the user list.
          *
          * Create a request for the method "userLists.open".
          *
@@ -6314,7 +6322,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Update the given user list. Only user lists with URLRestrictions can be updated.
+       * Updates the given user list. Only user lists with URLRestrictions can be updated.
        *
        * Create a request for the method "userLists.update".
        *
@@ -6343,7 +6351,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^buyers/[^/]+/userLists/[^/]+$");
 
         /**
-         * Update the given user list. Only user lists with URLRestrictions can be updated.
+         * Updates the given user list. Only user lists with URLRestrictions can be updated.
          *
          * Create a request for the method "userLists.update".
          *

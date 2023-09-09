@@ -45,6 +45,9 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
   private java.lang.String kind;
 
   /**
+   * Endpoints that are health checked before making the routing decision. Unhealthy endpoints are
+   * omitted from the results. If all endpoints are unhealthy, we serve a response based on the
+   * backup_geo_targets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,6 +96,9 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
   }
 
   /**
+   * Endpoints that are health checked before making the routing decision. Unhealthy endpoints are
+   * omitted from the results. If all endpoints are unhealthy, we serve a response based on the
+   * backup_geo_targets.
    * @return value or {@code null} for none
    */
   public RRSetRoutingPolicyHealthCheckTargets getPrimaryTargets() {
@@ -100,6 +106,9 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
   }
 
   /**
+   * Endpoints that are health checked before making the routing decision. Unhealthy endpoints are
+   * omitted from the results. If all endpoints are unhealthy, we serve a response based on the
+   * backup_geo_targets.
    * @param primaryTargets primaryTargets or {@code null} for none
    */
   public RRSetRoutingPolicyPrimaryBackupPolicy setPrimaryTargets(RRSetRoutingPolicyHealthCheckTargets primaryTargets) {

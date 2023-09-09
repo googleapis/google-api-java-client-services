@@ -17,7 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * Model definition for RRSetRoutingPolicyLoadBalancerTarget.
+ * The configuration for an individual load balancer to health check.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
@@ -30,13 +30,14 @@ package com.google.api.services.dns.model;
 public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * The frontend IP address of the Load Balancer to health check.
+   * The frontend IP address of the load balancer to health check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
 
   /**
+   * The protocol of the load balancer to health check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,44 +50,48 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   private java.lang.String kind;
 
   /**
-   * The type of Load Balancer specified by this target. Must match the configuration of the Load
-   * Balancer located at the LoadBalancerTarget's IP address/port and region.
+   * The type of load balancer specified by this target. This value must match the configuration of
+   * the load balancer located at the LoadBalancerTarget's IP address, port, and region. Use the
+   * following: - *regionalL4ilb*: for a regional internal passthrough Network Load Balancer. -
+   * *regionalL7ilb*: for a regional internal Application Load Balancer. - *globalL7ilb*: for a
+   * global internal Application Load Balancer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String loadBalancerType;
 
   /**
-   * The fully qualified url of the network on which the ILB is present. This should be formatted
-   * like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+   * The fully qualified URL of the network that the load balancer is attached to. This should be
+   * formatted like
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkUrl;
 
   /**
-   * The configured port of the Load Balancer.
+   * The configured port of the load balancer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String port;
 
   /**
-   * The project ID in which the ILB exists.
+   * The project ID in which the load balancer is located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
 
   /**
-   * The region in which the ILB exists.
+   * The region in which the load balancer is located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * The frontend IP address of the Load Balancer to health check.
+   * The frontend IP address of the load balancer to health check.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -94,7 +99,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The frontend IP address of the Load Balancer to health check.
+   * The frontend IP address of the load balancer to health check.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setIpAddress(java.lang.String ipAddress) {
@@ -103,6 +108,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
+   * The protocol of the load balancer to health check.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpProtocol() {
@@ -110,6 +116,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
+   * The protocol of the load balancer to health check.
    * @param ipProtocol ipProtocol or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setIpProtocol(java.lang.String ipProtocol) {
@@ -133,8 +140,11 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The type of Load Balancer specified by this target. Must match the configuration of the Load
-   * Balancer located at the LoadBalancerTarget's IP address/port and region.
+   * The type of load balancer specified by this target. This value must match the configuration of
+   * the load balancer located at the LoadBalancerTarget's IP address, port, and region. Use the
+   * following: - *regionalL4ilb*: for a regional internal passthrough Network Load Balancer. -
+   * *regionalL7ilb*: for a regional internal Application Load Balancer. - *globalL7ilb*: for a
+   * global internal Application Load Balancer.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancerType() {
@@ -142,8 +152,11 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The type of Load Balancer specified by this target. Must match the configuration of the Load
-   * Balancer located at the LoadBalancerTarget's IP address/port and region.
+   * The type of load balancer specified by this target. This value must match the configuration of
+   * the load balancer located at the LoadBalancerTarget's IP address, port, and region. Use the
+   * following: - *regionalL4ilb*: for a regional internal passthrough Network Load Balancer. -
+   * *regionalL7ilb*: for a regional internal Application Load Balancer. - *globalL7ilb*: for a
+   * global internal Application Load Balancer.
    * @param loadBalancerType loadBalancerType or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setLoadBalancerType(java.lang.String loadBalancerType) {
@@ -152,8 +165,9 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The fully qualified url of the network on which the ILB is present. This should be formatted
-   * like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+   * The fully qualified URL of the network that the load balancer is attached to. This should be
+   * formatted like
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} .
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUrl() {
@@ -161,8 +175,9 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The fully qualified url of the network on which the ILB is present. This should be formatted
-   * like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+   * The fully qualified URL of the network that the load balancer is attached to. This should be
+   * formatted like
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} .
    * @param networkUrl networkUrl or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setNetworkUrl(java.lang.String networkUrl) {
@@ -171,7 +186,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The configured port of the Load Balancer.
+   * The configured port of the load balancer.
    * @return value or {@code null} for none
    */
   public java.lang.String getPort() {
@@ -179,7 +194,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The configured port of the Load Balancer.
+   * The configured port of the load balancer.
    * @param port port or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setPort(java.lang.String port) {
@@ -188,7 +203,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The project ID in which the ILB exists.
+   * The project ID in which the load balancer is located.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -196,7 +211,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The project ID in which the ILB exists.
+   * The project ID in which the load balancer is located.
    * @param project project or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setProject(java.lang.String project) {
@@ -205,7 +220,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The region in which the ILB exists.
+   * The region in which the load balancer is located.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -213,7 +228,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The region in which the ILB exists.
+   * The region in which the load balancer is located.
    * @param region region or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setRegion(java.lang.String region) {

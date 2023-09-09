@@ -30,10 +30,10 @@ package com.google.api.services.dns.model;
 public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * endpoints that need to be health checked before making the routing decision. The unhealthy
-   * endpoints will be omitted from the result. If all endpoints within a buckete are unhealthy,
-   * we'll choose a different bucket (sampled w.r.t. its weight) for responding. Note that if DNSSEC
-   * is enabled for this zone, only one of rrdata or health_checked_targets can be set.
+   * Endpoints that are health checked before making the routing decision. The unhealthy endpoints
+   * are omitted from the result. If all endpoints within a bucket are unhealthy, we choose a
+   * different bucket (sampled with respect to its weight) for responding. If DNSSEC is enabled for
+   * this zone, only one of rrdata or health_checked_targets can be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,26 +53,27 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
 
   /**
    * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked
-   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
+   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> signatureRrdatas;
 
   /**
-   * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems
-   * are configured, the probability of returning an rrset is proportional to its weight relative to
-   * the sum of weights configured for all items. This weight should be non-negative.
+   * The weight corresponding to this WrrPolicyItem object. When multiple WrrPolicyItem objects are
+   * configured, the probability of returning an WrrPolicyItem object's data is proportional to its
+   * weight relative to the sum of weights configured for all items. This weight must be non-
+   * negative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double weight;
 
   /**
-   * endpoints that need to be health checked before making the routing decision. The unhealthy
-   * endpoints will be omitted from the result. If all endpoints within a buckete are unhealthy,
-   * we'll choose a different bucket (sampled w.r.t. its weight) for responding. Note that if DNSSEC
-   * is enabled for this zone, only one of rrdata or health_checked_targets can be set.
+   * Endpoints that are health checked before making the routing decision. The unhealthy endpoints
+   * are omitted from the result. If all endpoints within a bucket are unhealthy, we choose a
+   * different bucket (sampled with respect to its weight) for responding. If DNSSEC is enabled for
+   * this zone, only one of rrdata or health_checked_targets can be set.
    * @return value or {@code null} for none
    */
   public RRSetRoutingPolicyHealthCheckTargets getHealthCheckedTargets() {
@@ -80,10 +81,10 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   }
 
   /**
-   * endpoints that need to be health checked before making the routing decision. The unhealthy
-   * endpoints will be omitted from the result. If all endpoints within a buckete are unhealthy,
-   * we'll choose a different bucket (sampled w.r.t. its weight) for responding. Note that if DNSSEC
-   * is enabled for this zone, only one of rrdata or health_checked_targets can be set.
+   * Endpoints that are health checked before making the routing decision. The unhealthy endpoints
+   * are omitted from the result. If all endpoints within a bucket are unhealthy, we choose a
+   * different bucket (sampled with respect to its weight) for responding. If DNSSEC is enabled for
+   * this zone, only one of rrdata or health_checked_targets can be set.
    * @param healthCheckedTargets healthCheckedTargets or {@code null} for none
    */
   public RRSetRoutingPolicyWrrPolicyWrrPolicyItem setHealthCheckedTargets(RRSetRoutingPolicyHealthCheckTargets healthCheckedTargets) {
@@ -123,7 +124,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
 
   /**
    * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked
-   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
+   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSignatureRrdatas() {
@@ -132,7 +133,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
 
   /**
    * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked
-   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
+   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
    * @param signatureRrdatas signatureRrdatas or {@code null} for none
    */
   public RRSetRoutingPolicyWrrPolicyWrrPolicyItem setSignatureRrdatas(java.util.List<java.lang.String> signatureRrdatas) {
@@ -141,9 +142,10 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   }
 
   /**
-   * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems
-   * are configured, the probability of returning an rrset is proportional to its weight relative to
-   * the sum of weights configured for all items. This weight should be non-negative.
+   * The weight corresponding to this WrrPolicyItem object. When multiple WrrPolicyItem objects are
+   * configured, the probability of returning an WrrPolicyItem object's data is proportional to its
+   * weight relative to the sum of weights configured for all items. This weight must be non-
+   * negative.
    * @return value or {@code null} for none
    */
   public java.lang.Double getWeight() {
@@ -151,9 +153,10 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   }
 
   /**
-   * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems
-   * are configured, the probability of returning an rrset is proportional to its weight relative to
-   * the sum of weights configured for all items. This weight should be non-negative.
+   * The weight corresponding to this WrrPolicyItem object. When multiple WrrPolicyItem objects are
+   * configured, the probability of returning an WrrPolicyItem object's data is proportional to its
+   * weight relative to the sum of weights configured for all items. This weight must be non-
+   * negative.
    * @param weight weight or {@code null} for none
    */
   public RRSetRoutingPolicyWrrPolicyWrrPolicyItem setWeight(java.lang.Double weight) {

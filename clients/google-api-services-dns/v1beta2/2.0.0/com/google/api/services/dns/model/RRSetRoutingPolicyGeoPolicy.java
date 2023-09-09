@@ -30,11 +30,11 @@ package com.google.api.services.dns.model;
 public final class RRSetRoutingPolicyGeoPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Without fencing, if health check fails for all configured items in the current geo bucket,
-   * we'll failover to the next nearest geo bucket. With fencing, if health check is enabled, as
-   * long as some targets in the current geo bucket are healthy, we'll return only the healthy
-   * targets. However, if they're all unhealthy, we won't failover to the next nearest bucket, we'll
-   * simply return all the items in the current bucket even though they're unhealthy.
+   * Without fencing, if health check fails for all configured items in the current geo bucket, we
+   * failover to the next nearest geo bucket. With fencing, if health checking is enabled, as long
+   * as some targets in the current geo bucket are healthy, we return only the healthy targets.
+   * However, if all targets are unhealthy, we don't failover to the next nearest bucket; instead,
+   * we return all the items in the current bucket even when all targets are unhealthy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,11 +55,11 @@ public final class RRSetRoutingPolicyGeoPolicy extends com.google.api.client.jso
   private java.lang.String kind;
 
   /**
-   * Without fencing, if health check fails for all configured items in the current geo bucket,
-   * we'll failover to the next nearest geo bucket. With fencing, if health check is enabled, as
-   * long as some targets in the current geo bucket are healthy, we'll return only the healthy
-   * targets. However, if they're all unhealthy, we won't failover to the next nearest bucket, we'll
-   * simply return all the items in the current bucket even though they're unhealthy.
+   * Without fencing, if health check fails for all configured items in the current geo bucket, we
+   * failover to the next nearest geo bucket. With fencing, if health checking is enabled, as long
+   * as some targets in the current geo bucket are healthy, we return only the healthy targets.
+   * However, if all targets are unhealthy, we don't failover to the next nearest bucket; instead,
+   * we return all the items in the current bucket even when all targets are unhealthy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableFencing() {
@@ -67,11 +67,11 @@ public final class RRSetRoutingPolicyGeoPolicy extends com.google.api.client.jso
   }
 
   /**
-   * Without fencing, if health check fails for all configured items in the current geo bucket,
-   * we'll failover to the next nearest geo bucket. With fencing, if health check is enabled, as
-   * long as some targets in the current geo bucket are healthy, we'll return only the healthy
-   * targets. However, if they're all unhealthy, we won't failover to the next nearest bucket, we'll
-   * simply return all the items in the current bucket even though they're unhealthy.
+   * Without fencing, if health check fails for all configured items in the current geo bucket, we
+   * failover to the next nearest geo bucket. With fencing, if health checking is enabled, as long
+   * as some targets in the current geo bucket are healthy, we return only the healthy targets.
+   * However, if all targets are unhealthy, we don't failover to the next nearest bucket; instead,
+   * we return all the items in the current bucket even when all targets are unhealthy.
    * @param enableFencing enableFencing or {@code null} for none
    */
   public RRSetRoutingPolicyGeoPolicy setEnableFencing(java.lang.Boolean enableFencing) {

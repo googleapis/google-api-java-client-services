@@ -643,6 +643,156 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             }
           }
           /**
+           * Returns all metadata stored about an execution, excluding most data that is already accessible
+           * via other API methods.
+           *
+           * Create a request for the method "executions.exportData".
+           *
+           * This request holds the parameters needed by the workflowexecutions server.  After setting any
+           * optional parameters, call the {@link ExportData#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the execution to be data exported. Format:
+           *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+           * @return the request
+           */
+          public ExportData exportData(java.lang.String name) throws java.io.IOException {
+            ExportData result = new ExportData(name);
+            initialize(result);
+            return result;
+          }
+
+          public class ExportData extends WorkflowExecutionsRequest<com.google.api.services.workflowexecutions.v1.model.ExportDataResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:exportData";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+
+            /**
+             * Returns all metadata stored about an execution, excluding most data that is already accessible
+             * via other API methods.
+             *
+             * Create a request for the method "executions.exportData".
+             *
+             * This request holds the parameters needed by the the workflowexecutions server.  After setting
+             * any optional parameters, call the {@link ExportData#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * ExportData#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the execution to be data exported. Format:
+           *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+             * @since 1.13
+             */
+            protected ExportData(java.lang.String name) {
+              super(WorkflowExecutions.this, "GET", REST_PATH, null, com.google.api.services.workflowexecutions.v1.model.ExportDataResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public ExportData set$Xgafv(java.lang.String $Xgafv) {
+              return (ExportData) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExportData setAccessToken(java.lang.String accessToken) {
+              return (ExportData) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExportData setAlt(java.lang.String alt) {
+              return (ExportData) super.setAlt(alt);
+            }
+
+            @Override
+            public ExportData setCallback(java.lang.String callback) {
+              return (ExportData) super.setCallback(callback);
+            }
+
+            @Override
+            public ExportData setFields(java.lang.String fields) {
+              return (ExportData) super.setFields(fields);
+            }
+
+            @Override
+            public ExportData setKey(java.lang.String key) {
+              return (ExportData) super.setKey(key);
+            }
+
+            @Override
+            public ExportData setOauthToken(java.lang.String oauthToken) {
+              return (ExportData) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExportData setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExportData) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExportData setQuotaUser(java.lang.String quotaUser) {
+              return (ExportData) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExportData setUploadType(java.lang.String uploadType) {
+              return (ExportData) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExportData setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExportData) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the execution to be data exported. Format:
+             * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the execution to be data exported. Format:
+           projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the execution to be data exported. Format:
+             * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+             */
+            public ExportData setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ExportData set(String parameterName, Object value) {
+              return (ExportData) super.set(parameterName, value);
+            }
+          }
+          /**
            * Returns an execution of the given name.
            *
            * Create a request for the method "executions.get".
@@ -1103,6 +1253,229 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             }
           }
 
+          /**
+           * An accessor for creating requests from the Callbacks collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code WorkflowExecutions workflowexecutions = new WorkflowExecutions(...);}
+           *   {@code WorkflowExecutions.Callbacks.List request = workflowexecutions.callbacks().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Callbacks callbacks() {
+            return new Callbacks();
+          }
+
+          /**
+           * The "callbacks" collection of methods.
+           */
+          public class Callbacks {
+
+            /**
+             * Returns a list of active callbacks which belong to the execution with the given name. The
+             * returned callbacks are ordered by callback ID. first).
+             *
+             * Create a request for the method "callbacks.list".
+             *
+             * This request holds the parameters needed by the workflowexecutions server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the execution for which the callbacks should be listed. Format:
+             *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends WorkflowExecutionsRequest<com.google.api.services.workflowexecutions.v1.model.ListCallbacksResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/callbacks";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+
+              /**
+               * Returns a list of active callbacks which belong to the execution with the given name. The
+               * returned callbacks are ordered by callback ID. first).
+               *
+               * Create a request for the method "callbacks.list".
+               *
+               * This request holds the parameters needed by the the workflowexecutions server.  After setting
+               * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the execution for which the callbacks should be listed. Format:
+             *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(WorkflowExecutions.this, "GET", REST_PATH, null, com.google.api.services.workflowexecutions.v1.model.ListCallbacksResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Name of the execution for which the callbacks should be listed. Format:
+               * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the execution for which the callbacks should be listed. Format:
+             projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Name of the execution for which the callbacks should be listed. Format:
+               * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Maximum number of callbacks to return per call. The default value is 100 and is
+               * also the maximum value.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Maximum number of callbacks to return per call. The default value is 100 and is also the maximum
+             value.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Maximum number of callbacks to return per call. The default value is 100 and is
+               * also the maximum value.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A page token, received from a previous `ListCallbacks` call. Provide this to
+               * retrieve the subsequent page. Note that pagination is applied to dynamic data. The
+               * list of callbacks returned can change between page requests if callbacks are
+               * created or deleted.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A page token, received from a previous `ListCallbacks` call. Provide this to retrieve the
+             subsequent page. Note that pagination is applied to dynamic data. The list of callbacks returned
+             can change between page requests if callbacks are created or deleted.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A page token, received from a previous `ListCallbacks` call. Provide this to
+               * retrieve the subsequent page. Note that pagination is applied to dynamic data. The
+               * list of callbacks returned can change between page requests if callbacks are
+               * created or deleted.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
     }

@@ -95,7 +95,10 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   private java.lang.Long projectNumber;
 
   /**
-   * Output only. The default Firebase resources associated with the Project.
+   * Output only. **DEPRECATED.** _Auto-provisioning of these resources is changing, so this object
+   * no longer reliably provides information about the Project. Instead, retrieve information about
+   * each resource directly from its resource-specific API._ The default Firebase resources
+   * associated with the Project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,7 +244,10 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The default Firebase resources associated with the Project.
+   * Output only. **DEPRECATED.** _Auto-provisioning of these resources is changing, so this object
+   * no longer reliably provides information about the Project. Instead, retrieve information about
+   * each resource directly from its resource-specific API._ The default Firebase resources
+   * associated with the Project.
    * @return value or {@code null} for none
    */
   public DefaultResources getResources() {
@@ -249,7 +255,10 @@ public final class FirebaseProject extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The default Firebase resources associated with the Project.
+   * Output only. **DEPRECATED.** _Auto-provisioning of these resources is changing, so this object
+   * no longer reliably provides information about the Project. Instead, retrieve information about
+   * each resource directly from its resource-specific API._ The default Firebase resources
+   * associated with the Project.
    * @param resources resources or {@code null} for none
    */
   public FirebaseProject setResources(DefaultResources resources) {

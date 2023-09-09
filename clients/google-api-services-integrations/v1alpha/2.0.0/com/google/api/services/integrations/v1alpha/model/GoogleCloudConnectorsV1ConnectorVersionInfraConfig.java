@@ -67,6 +67,13 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
   private GoogleCloudConnectorsV1ResourceRequests resourceRequests;
 
   /**
+   * Output only. The name of shared connector deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sharedDeployment;
+
+  /**
    * Output only. HPA autoscaling config.
    * @return value or {@code null} for none
    */
@@ -148,6 +155,23 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setResourceRequests(GoogleCloudConnectorsV1ResourceRequests resourceRequests) {
     this.resourceRequests = resourceRequests;
+    return this;
+  }
+
+  /**
+   * Output only. The name of shared connector deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSharedDeployment() {
+    return sharedDeployment;
+  }
+
+  /**
+   * Output only. The name of shared connector deployment.
+   * @param sharedDeployment sharedDeployment or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setSharedDeployment(java.lang.String sharedDeployment) {
+    this.sharedDeployment = sharedDeployment;
     return this;
   }
 

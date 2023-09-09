@@ -133,12 +133,36 @@ public final class TrafficStats extends com.google.api.client.json.GenericJson {
   private java.lang.Double spfSuccessRatio;
 
   /**
-   * The ratio of user-report spam vs. email that was sent to the inbox. This metric only pertains
-   * to emails authenticated by [DKIM](http://www.dkim.org/).
+   * The ratio of user-report spam vs. email that was sent to the inbox. This is potentially inexact
+   * -- users may want to refer to the description of the interval fields
+   * userReportedSpamRatioLowerBound and userReportedSpamRatioUpperBound for more explicit accuracy
+   * guarantees. This metric only pertains to emails authenticated by [DKIM](http://www.dkim.org/).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double userReportedSpamRatio;
+
+  /**
+   * The lower bound of the confidence interval for the user reported spam ratio. If this field is
+   * set, then the value of userReportedSpamRatio is set to the midpoint of this interval and is
+   * thus inexact. However, the true ratio is guaranteed to be in between this lower bound and the
+   * corresponding upper bound 95% of the time. This metric only pertains to emails authenticated by
+   * [DKIM](http://www.dkim.org/).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double userReportedSpamRatioLowerBound;
+
+  /**
+   * The upper bound of the confidence interval for the user reported spam ratio. If this field is
+   * set, then the value of userReportedSpamRatio is set to the midpoint of this interval and is
+   * thus inexact. However, the true ratio is guaranteed to be in between this upper bound and the
+   * corresponding lower bound 95% of the time. This metric only pertains to emails authenticated by
+   * [DKIM](http://www.dkim.org/).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double userReportedSpamRatioUpperBound;
 
   /**
    * Delivery errors for the domain. This metric only pertains to traffic that passed
@@ -339,8 +363,10 @@ public final class TrafficStats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ratio of user-report spam vs. email that was sent to the inbox. This metric only pertains
-   * to emails authenticated by [DKIM](http://www.dkim.org/).
+   * The ratio of user-report spam vs. email that was sent to the inbox. This is potentially inexact
+   * -- users may want to refer to the description of the interval fields
+   * userReportedSpamRatioLowerBound and userReportedSpamRatioUpperBound for more explicit accuracy
+   * guarantees. This metric only pertains to emails authenticated by [DKIM](http://www.dkim.org/).
    * @return value or {@code null} for none
    */
   public java.lang.Double getUserReportedSpamRatio() {
@@ -348,12 +374,64 @@ public final class TrafficStats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ratio of user-report spam vs. email that was sent to the inbox. This metric only pertains
-   * to emails authenticated by [DKIM](http://www.dkim.org/).
+   * The ratio of user-report spam vs. email that was sent to the inbox. This is potentially inexact
+   * -- users may want to refer to the description of the interval fields
+   * userReportedSpamRatioLowerBound and userReportedSpamRatioUpperBound for more explicit accuracy
+   * guarantees. This metric only pertains to emails authenticated by [DKIM](http://www.dkim.org/).
    * @param userReportedSpamRatio userReportedSpamRatio or {@code null} for none
    */
   public TrafficStats setUserReportedSpamRatio(java.lang.Double userReportedSpamRatio) {
     this.userReportedSpamRatio = userReportedSpamRatio;
+    return this;
+  }
+
+  /**
+   * The lower bound of the confidence interval for the user reported spam ratio. If this field is
+   * set, then the value of userReportedSpamRatio is set to the midpoint of this interval and is
+   * thus inexact. However, the true ratio is guaranteed to be in between this lower bound and the
+   * corresponding upper bound 95% of the time. This metric only pertains to emails authenticated by
+   * [DKIM](http://www.dkim.org/).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUserReportedSpamRatioLowerBound() {
+    return userReportedSpamRatioLowerBound;
+  }
+
+  /**
+   * The lower bound of the confidence interval for the user reported spam ratio. If this field is
+   * set, then the value of userReportedSpamRatio is set to the midpoint of this interval and is
+   * thus inexact. However, the true ratio is guaranteed to be in between this lower bound and the
+   * corresponding upper bound 95% of the time. This metric only pertains to emails authenticated by
+   * [DKIM](http://www.dkim.org/).
+   * @param userReportedSpamRatioLowerBound userReportedSpamRatioLowerBound or {@code null} for none
+   */
+  public TrafficStats setUserReportedSpamRatioLowerBound(java.lang.Double userReportedSpamRatioLowerBound) {
+    this.userReportedSpamRatioLowerBound = userReportedSpamRatioLowerBound;
+    return this;
+  }
+
+  /**
+   * The upper bound of the confidence interval for the user reported spam ratio. If this field is
+   * set, then the value of userReportedSpamRatio is set to the midpoint of this interval and is
+   * thus inexact. However, the true ratio is guaranteed to be in between this upper bound and the
+   * corresponding lower bound 95% of the time. This metric only pertains to emails authenticated by
+   * [DKIM](http://www.dkim.org/).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUserReportedSpamRatioUpperBound() {
+    return userReportedSpamRatioUpperBound;
+  }
+
+  /**
+   * The upper bound of the confidence interval for the user reported spam ratio. If this field is
+   * set, then the value of userReportedSpamRatio is set to the midpoint of this interval and is
+   * thus inexact. However, the true ratio is guaranteed to be in between this upper bound and the
+   * corresponding lower bound 95% of the time. This metric only pertains to emails authenticated by
+   * [DKIM](http://www.dkim.org/).
+   * @param userReportedSpamRatioUpperBound userReportedSpamRatioUpperBound or {@code null} for none
+   */
+  public TrafficStats setUserReportedSpamRatioUpperBound(java.lang.Double userReportedSpamRatioUpperBound) {
+    this.userReportedSpamRatioUpperBound = userReportedSpamRatioUpperBound;
     return this;
   }
 

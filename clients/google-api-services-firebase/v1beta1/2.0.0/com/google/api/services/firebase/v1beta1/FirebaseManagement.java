@@ -4027,6 +4027,8 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
     public class AvailableLocations {
 
       /**
+       * **DEPRECATED.** _Instead, use the applicable resource-specific REST API (or associated
+       * documentation, as needed) to determine valid locations for each resource used in your Project._
        * Lists the valid Google Cloud Platform (GCP) resource locations for the specified Project
        * (including a FirebaseProject). One of these locations can be selected as the Project's [_default_
        * GCP resource location](https://firebase.google.com/docs/projects/locations), which is the
@@ -4068,6 +4070,8 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
+         * **DEPRECATED.** _Instead, use the applicable resource-specific REST API (or associated
+         * documentation, as needed) to determine valid locations for each resource used in your Project._
          * Lists the valid Google Cloud Platform (GCP) resource locations for the specified Project
          * (including a FirebaseProject). One of these locations can be selected as the Project's
          * [_default_ GCP resource location](https://firebase.google.com/docs/projects/locations), which
@@ -4288,8 +4292,10 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
     public class DefaultLocation {
 
       /**
-       * Sets the default Google Cloud Platform (GCP) resource location for the specified FirebaseProject.
-       * This method creates an App Engine application with a [default Cloud Storage
+       * **DEPRECATED.** _Instead, use the applicable resource-specific REST API to set the location for
+       * each resource used in your Project._ Sets the default Google Cloud Platform (GCP) resource
+       * location for the specified FirebaseProject. This method creates an App Engine application with a
+       * [default Cloud Storage
        * bucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient/setting-
        * up-cloud-storage#activating_a_cloud_storage_bucket), located in the specified
        * [`locationId`](#body.request_body.FIELDS.location_id). This location must be one of the available
@@ -4335,8 +4341,10 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Sets the default Google Cloud Platform (GCP) resource location for the specified
-         * FirebaseProject. This method creates an App Engine application with a [default Cloud Storage
+         * **DEPRECATED.** _Instead, use the applicable resource-specific REST API to set the location for
+         * each resource used in your Project._ Sets the default Google Cloud Platform (GCP) resource
+         * location for the specified FirebaseProject. This method creates an App Engine application with
+         * a [default Cloud Storage
          * bucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient
          * /setting-up-cloud-storage#activating_a_cloud_storage_bucket), located in the specified
          * [`locationId`](#body.request_body.FIELDS.location_id). This location must be one of the

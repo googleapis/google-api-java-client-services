@@ -17,7 +17,9 @@
 package com.google.api.services.firebase.v1beta1.model;
 
 /**
- * A GCP resource location that can be selected for a FirebaseProject.
+ * **DEPRECATED.** _This Location is no longer used to determine Firebase resource locations.
+ * Instead, consult product documentation to determine valid locations for each resource used in
+ * your Project._ A GCP resource location that can be selected for a FirebaseProject.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Management API. For a detailed explanation

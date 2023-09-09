@@ -57,13 +57,18 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String authDomain;
 
   /**
-   * The default Firebase Realtime Database URL.
+   * **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance name using the
+   * [list endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
+   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
+   * return might not contain a default instance._ The default Firebase Realtime Database URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String databaseURL;
 
   /**
+   * **DEPRECATED.** _Instead, use product-specific REST APIs to find the location of resources._
    * The ID of the Project's default GCP resource location. The location is one of the available
    * [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is
    * omitted if the default GCP resource location has not been finalized yet. To set a Project's
@@ -106,7 +111,11 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * The default Cloud Storage for Firebase storage bucket name.
+   * **DEPRECATED.** _Instead, find the default Cloud Storage for Firebase bucket using the [list en
+   * dpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v1beta/projects.buckets/li
+   * st) within the Cloud Storage for Firebase REST API. Note that the default bucket for the
+   * Project might not yet be provisioned, so the return might not contain a default bucket._ The
+   * default Cloud Storage for Firebase storage bucket name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +183,11 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default Firebase Realtime Database URL.
+   * **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance name using the
+   * [list endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
+   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
+   * return might not contain a default instance._ The default Firebase Realtime Database URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseURL() {
@@ -182,7 +195,11 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default Firebase Realtime Database URL.
+   * **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance name using the
+   * [list endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
+   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
+   * return might not contain a default instance._ The default Firebase Realtime Database URL.
    * @param databaseURL databaseURL or {@code null} for none
    */
   public WebAppConfig setDatabaseURL(java.lang.String databaseURL) {
@@ -191,6 +208,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * **DEPRECATED.** _Instead, use product-specific REST APIs to find the location of resources._
    * The ID of the Project's default GCP resource location. The location is one of the available
    * [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is
    * omitted if the default GCP resource location has not been finalized yet. To set a Project's
@@ -204,6 +222,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * **DEPRECATED.** _Instead, use product-specific REST APIs to find the location of resources._
    * The ID of the Project's default GCP resource location. The location is one of the available
    * [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is
    * omitted if the default GCP resource location has not been finalized yet. To set a Project's
@@ -287,7 +306,11 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default Cloud Storage for Firebase storage bucket name.
+   * **DEPRECATED.** _Instead, find the default Cloud Storage for Firebase bucket using the [list en
+   * dpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v1beta/projects.buckets/li
+   * st) within the Cloud Storage for Firebase REST API. Note that the default bucket for the
+   * Project might not yet be provisioned, so the return might not contain a default bucket._ The
+   * default Cloud Storage for Firebase storage bucket name.
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageBucket() {
@@ -295,7 +318,11 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default Cloud Storage for Firebase storage bucket name.
+   * **DEPRECATED.** _Instead, find the default Cloud Storage for Firebase bucket using the [list en
+   * dpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v1beta/projects.buckets/li
+   * st) within the Cloud Storage for Firebase REST API. Note that the default bucket for the
+   * Project might not yet be provisioned, so the return might not contain a default bucket._ The
+   * default Cloud Storage for Firebase storage bucket name.
    * @param storageBucket storageBucket or {@code null} for none
    */
   public WebAppConfig setStorageBucket(java.lang.String storageBucket) {

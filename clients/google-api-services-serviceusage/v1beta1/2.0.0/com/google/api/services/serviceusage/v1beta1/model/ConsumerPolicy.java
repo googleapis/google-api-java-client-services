@@ -54,10 +54,9 @@ public final class ConsumerPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String etag;
 
   /**
-   * Output only. The resource name of the policy. For example, We only allow consumer policy name
-   * as "default" for now: `projects/12345/consumerPolicies/default`,
-   * `folders/12345/consumerPolicies/default`, `organizations/12345/consumerPolicies/default`.
-   * Legacy format: `projects/12345/consumerPoly`
+   * Output only. The resource name of the policy. We only allow consumer policy name as `default`
+   * for now: `projects/12345/consumerPolicies/default`, `folders/12345/consumerPolicies/default`,
+   * `organizations/12345/consumerPolicies/default`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,10 +125,9 @@ public final class ConsumerPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The resource name of the policy. For example, We only allow consumer policy name
-   * as "default" for now: `projects/12345/consumerPolicies/default`,
-   * `folders/12345/consumerPolicies/default`, `organizations/12345/consumerPolicies/default`.
-   * Legacy format: `projects/12345/consumerPoly`
+   * Output only. The resource name of the policy. We only allow consumer policy name as `default`
+   * for now: `projects/12345/consumerPolicies/default`, `folders/12345/consumerPolicies/default`,
+   * `organizations/12345/consumerPolicies/default`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -137,10 +135,9 @@ public final class ConsumerPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The resource name of the policy. For example, We only allow consumer policy name
-   * as "default" for now: `projects/12345/consumerPolicies/default`,
-   * `folders/12345/consumerPolicies/default`, `organizations/12345/consumerPolicies/default`.
-   * Legacy format: `projects/12345/consumerPoly`
+   * Output only. The resource name of the policy. We only allow consumer policy name as `default`
+   * for now: `projects/12345/consumerPolicies/default`, `folders/12345/consumerPolicies/default`,
+   * `organizations/12345/consumerPolicies/default`.
    * @param name name or {@code null} for none
    */
   public ConsumerPolicy setName(java.lang.String name) {

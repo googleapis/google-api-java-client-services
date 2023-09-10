@@ -29,6 +29,84 @@ package com.google.api.services.datalineage.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Created lineage event names. Format: `projects/{project}/locations/{location}/processes/{proces
+   * s}/runs/{run}/lineageEvents/{lineage_event}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> lineageEvents;
+
+  /**
+   * Created process name. Format: `projects/{project}/locations/{location}/processes/{process}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String process;
+
+  /**
+   * Created run name. Format:
+   * `projects/{project}/locations/{location}/processes/{process}/runs/{run}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String run;
+
+  /**
+   * Created lineage event names. Format: `projects/{project}/locations/{location}/processes/{proces
+   * s}/runs/{run}/lineageEvents/{lineage_event}`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLineageEvents() {
+    return lineageEvents;
+  }
+
+  /**
+   * Created lineage event names. Format: `projects/{project}/locations/{location}/processes/{proces
+   * s}/runs/{run}/lineageEvents/{lineage_event}`.
+   * @param lineageEvents lineageEvents or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse setLineageEvents(java.util.List<java.lang.String> lineageEvents) {
+    this.lineageEvents = lineageEvents;
+    return this;
+  }
+
+  /**
+   * Created process name. Format: `projects/{project}/locations/{location}/processes/{process}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProcess() {
+    return process;
+  }
+
+  /**
+   * Created process name. Format: `projects/{project}/locations/{location}/processes/{process}`.
+   * @param process process or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse setProcess(java.lang.String process) {
+    this.process = process;
+    return this;
+  }
+
+  /**
+   * Created run name. Format:
+   * `projects/{project}/locations/{location}/processes/{process}/runs/{run}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRun() {
+    return run;
+  }
+
+  /**
+   * Created run name. Format:
+   * `projects/{project}/locations/{location}/processes/{process}/runs/{run}`.
+   * @param run run or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse setRun(java.lang.String run) {
+    this.run = run;
+    return this;
+  }
+
   @Override
   public GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse set(String fieldName, Object value) {
     return (GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse) super.set(fieldName, value);

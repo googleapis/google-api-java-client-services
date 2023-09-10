@@ -30,14 +30,16 @@ package com.google.api.services.datastore.v1beta3.model;
 public final class PropertyReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the property. If name includes "."s, it may be interpreted as a property name path.
+   * A reference to a property. Requires: * MUST be a dot-delimited (`.`) string of segments, where
+   * each segment conforms to entity property name limitations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The name of the property. If name includes "."s, it may be interpreted as a property name path.
+   * A reference to a property. Requires: * MUST be a dot-delimited (`.`) string of segments, where
+   * each segment conforms to entity property name limitations.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -45,7 +47,8 @@ public final class PropertyReference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The name of the property. If name includes "."s, it may be interpreted as a property name path.
+   * A reference to a property. Requires: * MUST be a dot-delimited (`.`) string of segments, where
+   * each segment conforms to entity property name limitations.
    * @param name name or {@code null} for none
    */
   public PropertyReference setName(java.lang.String name) {

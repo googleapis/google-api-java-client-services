@@ -39,6 +39,20 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.lang.String host;
 
   /**
+   * Output only. The full version of memcached server running on this node. e.g. - memcached-1.5.16
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String memcacheFullVersion;
+
+  /**
+   * Output only. Major version of memcached server running on this node, e.g. MEMCACHE_1_5
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String memcacheVersion;
+
+  /**
    * Output only. Identifier of the Memcached node. The node id does not include project or location
    * like the Memcached instance name.
    * The value may be {@code null}.
@@ -90,6 +104,40 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Output only. The full version of memcached server running on this node. e.g. - memcached-1.5.16
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMemcacheFullVersion() {
+    return memcacheFullVersion;
+  }
+
+  /**
+   * Output only. The full version of memcached server running on this node. e.g. - memcached-1.5.16
+   * @param memcacheFullVersion memcacheFullVersion or {@code null} for none
+   */
+  public Node setMemcacheFullVersion(java.lang.String memcacheFullVersion) {
+    this.memcacheFullVersion = memcacheFullVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Major version of memcached server running on this node, e.g. MEMCACHE_1_5
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMemcacheVersion() {
+    return memcacheVersion;
+  }
+
+  /**
+   * Output only. Major version of memcached server running on this node, e.g. MEMCACHE_1_5
+   * @param memcacheVersion memcacheVersion or {@code null} for none
+   */
+  public Node setMemcacheVersion(java.lang.String memcacheVersion) {
+    this.memcacheVersion = memcacheVersion;
     return this;
   }
 

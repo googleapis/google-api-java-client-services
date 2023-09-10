@@ -31,6 +31,13 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class Consumer extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The location of the endpoint URI. Format: projects/{project}/locations/{location}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String endpointLocation;
+
+  /**
    * Output only. The URI of the endpoint used to access the metastore service.
    * The value may be {@code null}.
    */
@@ -47,6 +54,23 @@ public final class Consumer extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * Output only. The location of the endpoint URI. Format: projects/{project}/locations/{location}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEndpointLocation() {
+    return endpointLocation;
+  }
+
+  /**
+   * Output only. The location of the endpoint URI. Format: projects/{project}/locations/{location}.
+   * @param endpointLocation endpointLocation or {@code null} for none
+   */
+  public Consumer setEndpointLocation(java.lang.String endpointLocation) {
+    this.endpointLocation = endpointLocation;
+    return this;
+  }
 
   /**
    * Output only. The URI of the endpoint used to access the metastore service.

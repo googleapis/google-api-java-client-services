@@ -5494,6 +5494,109 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
   public class Objects {
 
     /**
+     * Initiates a long-running bulk restore operation on the specified bucket.
+     *
+     * Create a request for the method "objects.bulkRestore".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link BulkRestore#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which the object resides.
+     * @param content the {@link com.google.api.services.storage.model.BulkRestoreObjectsRequest}
+     * @return the request
+     */
+    public BulkRestore bulkRestore(java.lang.String bucket, com.google.api.services.storage.model.BulkRestoreObjectsRequest content) throws java.io.IOException {
+      BulkRestore result = new BulkRestore(bucket, content);
+      initialize(result);
+      return result;
+    }
+
+    public class BulkRestore extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "b/{bucket}/o/bulkRestore";
+
+      /**
+       * Initiates a long-running bulk restore operation on the specified bucket.
+       *
+       * Create a request for the method "objects.bulkRestore".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link BulkRestore#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * BulkRestore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket in which the object resides.
+       * @param content the {@link com.google.api.services.storage.model.BulkRestoreObjectsRequest}
+       * @since 1.13
+       */
+      protected BulkRestore(java.lang.String bucket, com.google.api.services.storage.model.BulkRestoreObjectsRequest content) {
+        super(Storage.this, "POST", REST_PATH, content, com.google.api.services.storage.model.GoogleLongrunningOperation.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public BulkRestore setAlt(java.lang.String alt) {
+        return (BulkRestore) super.setAlt(alt);
+      }
+
+      @Override
+      public BulkRestore setFields(java.lang.String fields) {
+        return (BulkRestore) super.setFields(fields);
+      }
+
+      @Override
+      public BulkRestore setKey(java.lang.String key) {
+        return (BulkRestore) super.setKey(key);
+      }
+
+      @Override
+      public BulkRestore setOauthToken(java.lang.String oauthToken) {
+        return (BulkRestore) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BulkRestore setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BulkRestore) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BulkRestore setQuotaUser(java.lang.String quotaUser) {
+        return (BulkRestore) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BulkRestore setUploadType(java.lang.String uploadType) {
+        return (BulkRestore) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BulkRestore setUserIp(java.lang.String userIp) {
+        return (BulkRestore) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which the object resides. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which the object resides.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which the object resides. */
+      public BulkRestore setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      @Override
+      public BulkRestore set(String parameterName, Object value) {
+        return (BulkRestore) super.set(parameterName, value);
+      }
+    }
+    /**
      * Concatenates a list of existing objects into a new object in the same bucket.
      *
      * Create a request for the method "objects.compose".
@@ -6800,6 +6903,29 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /**
+       * If true, only soft-deleted object versions will be listed. The default is false. For more
+       * information, see Soft Delete.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean softDeleted;
+
+      /** If true, only soft-deleted object versions will be listed. The default is false. For more
+     information, see Soft Delete.
+       */
+      public java.lang.Boolean getSoftDeleted() {
+        return softDeleted;
+      }
+
+      /**
+       * If true, only soft-deleted object versions will be listed. The default is false. For more
+       * information, see Soft Delete.
+       */
+      public Get setSoftDeleted(java.lang.Boolean softDeleted) {
+        this.softDeleted = softDeleted;
+        return this;
+      }
+
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -7678,6 +7804,29 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * If true, only soft-deleted object versions will be listed. The default is false. For more
+       * information, see Soft Delete.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean softDeleted;
+
+      /** If true, only soft-deleted object versions will be listed. The default is false. For more
+     information, see Soft Delete.
+       */
+      public java.lang.Boolean getSoftDeleted() {
+        return softDeleted;
+      }
+
+      /**
+       * If true, only soft-deleted object versions will be listed. The default is false. For more
+       * information, see Soft Delete.
+       */
+      public List setSoftDeleted(java.lang.Boolean softDeleted) {
+        this.softDeleted = softDeleted;
+        return this;
+      }
+
+      /**
        * Filter results to objects whose names are lexicographically equal to or after startOffset.
        * If endOffset is also set, the objects listed will have names between startOffset
        * (inclusive) and endOffset (exclusive).
@@ -8047,6 +8196,285 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Restores a soft-deleted object.
+     *
+     * Create a request for the method "objects.restore".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which the object resides.
+     * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
+     *        Encoding URI Path Parts.
+     * @param generation Selects a specific revision of this object.
+     * @param content the {@link com.google.api.services.storage.model.StorageObject}
+     * @return the request
+     */
+    public Restore restore(java.lang.String bucket, java.lang.String object__, java.lang.Long generation, com.google.api.services.storage.model.StorageObject content) throws java.io.IOException {
+      Restore result = new Restore(bucket, object__, generation, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Restore extends StorageRequest<com.google.api.services.storage.model.StorageObject> {
+
+      private static final String REST_PATH = "b/{bucket}/o/{object}/restore";
+
+      /**
+       * Restores a soft-deleted object.
+       *
+       * Create a request for the method "objects.restore".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Restore#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket in which the object resides.
+       * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
+     *        Encoding URI Path Parts.
+       * @param generation Selects a specific revision of this object.
+       * @param content the {@link com.google.api.services.storage.model.StorageObject}
+       * @since 1.13
+       */
+      protected Restore(java.lang.String bucket, java.lang.String object__, java.lang.Long generation, com.google.api.services.storage.model.StorageObject content) {
+        super(Storage.this, "POST", REST_PATH, content, com.google.api.services.storage.model.StorageObject.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.object__ = com.google.api.client.util.Preconditions.checkNotNull(object__, "Required parameter object__ must be specified.");
+        this.generation = com.google.api.client.util.Preconditions.checkNotNull(generation, "Required parameter generation must be specified.");
+      }
+
+      @Override
+      public Restore setAlt(java.lang.String alt) {
+        return (Restore) super.setAlt(alt);
+      }
+
+      @Override
+      public Restore setFields(java.lang.String fields) {
+        return (Restore) super.setFields(fields);
+      }
+
+      @Override
+      public Restore setKey(java.lang.String key) {
+        return (Restore) super.setKey(key);
+      }
+
+      @Override
+      public Restore setOauthToken(java.lang.String oauthToken) {
+        return (Restore) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Restore setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Restore) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Restore setQuotaUser(java.lang.String quotaUser) {
+        return (Restore) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Restore setUploadType(java.lang.String uploadType) {
+        return (Restore) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Restore setUserIp(java.lang.String userIp) {
+        return (Restore) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which the object resides. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which the object resides.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which the object resides. */
+      public Restore setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /**
+       * Name of the object. For information about how to URL encode object names to be path safe,
+       * see Encoding URI Path Parts.
+       */
+      @com.google.api.client.util.Key("object")
+      private java.lang.String object__;
+
+      /** Name of the object. For information about how to URL encode object names to be path safe, see
+     Encoding URI Path Parts.
+       */
+      public java.lang.String getObject() {
+        return object__;
+      }
+
+      /**
+       * Name of the object. For information about how to URL encode object names to be path safe,
+       * see Encoding URI Path Parts.
+       */
+      public Restore setObject(java.lang.String object__) {
+        this.object__ = object__;
+        return this;
+      }
+
+      /** Selects a specific revision of this object. */
+      @com.google.api.client.util.Key
+      private java.lang.Long generation;
+
+      /** Selects a specific revision of this object.
+       */
+      public java.lang.Long getGeneration() {
+        return generation;
+      }
+
+      /** Selects a specific revision of this object. */
+      public Restore setGeneration(java.lang.Long generation) {
+        this.generation = generation;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the object's one live generation matches the
+       * given value. Setting to 0 makes the operation succeed only if there are no live versions of
+       * the object.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifGenerationMatch;
+
+      /** Makes the operation conditional on whether the object's one live generation matches the given
+     value. Setting to 0 makes the operation succeed only if there are no live versions of the object.
+       */
+      public java.lang.Long getIfGenerationMatch() {
+        return ifGenerationMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the object's one live generation matches the
+       * given value. Setting to 0 makes the operation succeed only if there are no live versions of
+       * the object.
+       */
+      public Restore setIfGenerationMatch(java.lang.Long ifGenerationMatch) {
+        this.ifGenerationMatch = ifGenerationMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether none of the object's live generations match the
+       * given value. If no live object exists, the precondition fails. Setting to 0 makes the
+       * operation succeed only if there is a live version of the object.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifGenerationNotMatch;
+
+      /** Makes the operation conditional on whether none of the object's live generations match the given
+     value. If no live object exists, the precondition fails. Setting to 0 makes the operation succeed
+     only if there is a live version of the object.
+       */
+      public java.lang.Long getIfGenerationNotMatch() {
+        return ifGenerationNotMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether none of the object's live generations match the
+       * given value. If no live object exists, the precondition fails. Setting to 0 makes the
+       * operation succeed only if there is a live version of the object.
+       */
+      public Restore setIfGenerationNotMatch(java.lang.Long ifGenerationNotMatch) {
+        this.ifGenerationNotMatch = ifGenerationNotMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the object's one live metageneration matches the
+       * given value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationMatch;
+
+      /** Makes the operation conditional on whether the object's one live metageneration matches the given
+     value.
+       */
+      public java.lang.Long getIfMetagenerationMatch() {
+        return ifMetagenerationMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the object's one live metageneration matches the
+       * given value.
+       */
+      public Restore setIfMetagenerationMatch(java.lang.Long ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether none of the object's live metagenerations match
+       * the given value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationNotMatch;
+
+      /** Makes the operation conditional on whether none of the object's live metagenerations match the
+     given value.
+       */
+      public java.lang.Long getIfMetagenerationNotMatch() {
+        return ifMetagenerationNotMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether none of the object's live metagenerations match
+       * the given value.
+       */
+      public Restore setIfMetagenerationNotMatch(java.lang.Long ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+      }
+
+      /** Set of properties to return. Defaults to full. */
+      @com.google.api.client.util.Key
+      private java.lang.String projection;
+
+      /** Set of properties to return. Defaults to full.
+       */
+      public java.lang.String getProjection() {
+        return projection;
+      }
+
+      /** Set of properties to return. Defaults to full. */
+      public Restore setProjection(java.lang.String projection) {
+        this.projection = projection;
+        return this;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      @com.google.api.client.util.Key
+      private java.lang.String userProject;
+
+      /** The project to be billed for this request. Required for Requester Pays buckets.
+       */
+      public java.lang.String getUserProject() {
+        return userProject;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      public Restore setUserProject(java.lang.String userProject) {
+        this.userProject = userProject;
+        return this;
+      }
+
+      @Override
+      public Restore set(String parameterName, Object value) {
+        return (Restore) super.set(parameterName, value);
       }
     }
     /**
@@ -9605,6 +10033,459 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public WatchAll set(String parameterName, Object value) {
         return (WatchAll) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Operations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Storage storage = new Storage(...);}
+   *   {@code Storage.Operations.List request = storage.operations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Operations operations() {
+    return new Operations();
+  }
+
+  /**
+   * The "operations" collection of methods.
+   */
+  public class Operations {
+
+    /**
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+     * cancel the operation, but success is not guaranteed.
+     *
+     * Create a request for the method "operations.cancel".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+     *
+     * @param bucket The parent bucket of the operation resource.
+     * @param operationId The ID of the operation resource.
+     * @return the request
+     */
+    public Cancel cancel(java.lang.String bucket, java.lang.String operationId) throws java.io.IOException {
+      Cancel result = new Cancel(bucket, operationId);
+      initialize(result);
+      return result;
+    }
+
+    public class Cancel extends StorageRequest<Void> {
+
+      private static final String REST_PATH = "b/{bucket}/operations/{operationId}/cancel";
+
+      /**
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed.
+       *
+       * Create a request for the method "operations.cancel".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket The parent bucket of the operation resource.
+       * @param operationId The ID of the operation resource.
+       * @since 1.13
+       */
+      protected Cancel(java.lang.String bucket, java.lang.String operationId) {
+        super(Storage.this, "POST", REST_PATH, null, Void.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.operationId = com.google.api.client.util.Preconditions.checkNotNull(operationId, "Required parameter operationId must be specified.");
+      }
+
+      @Override
+      public Cancel setAlt(java.lang.String alt) {
+        return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setFields(java.lang.String fields) {
+        return (Cancel) super.setFields(fields);
+      }
+
+      @Override
+      public Cancel setKey(java.lang.String key) {
+        return (Cancel) super.setKey(key);
+      }
+
+      @Override
+      public Cancel setOauthToken(java.lang.String oauthToken) {
+        return (Cancel) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Cancel) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Cancel setQuotaUser(java.lang.String quotaUser) {
+        return (Cancel) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancel setUserIp(java.lang.String userIp) {
+        return (Cancel) super.setUserIp(userIp);
+      }
+
+      /** The parent bucket of the operation resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** The parent bucket of the operation resource.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** The parent bucket of the operation resource. */
+      public Cancel setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The ID of the operation resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String operationId;
+
+      /** The ID of the operation resource.
+       */
+      public java.lang.String getOperationId() {
+        return operationId;
+      }
+
+      /** The ID of the operation resource. */
+      public Cancel setOperationId(java.lang.String operationId) {
+        this.operationId = operationId;
+        return this;
+      }
+
+      @Override
+      public Cancel set(String parameterName, Object value) {
+        return (Cancel) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the latest state of a long-running operation.
+     *
+     * Create a request for the method "operations.get".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param bucket The parent bucket of the operation resource.
+     * @param operationId The ID of the operation resource.
+     * @return the request
+     */
+    public Get get(java.lang.String bucket, java.lang.String operationId) throws java.io.IOException {
+      Get result = new Get(bucket, operationId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "b/{bucket}/operations/{operationId}";
+
+      /**
+       * Gets the latest state of a long-running operation.
+       *
+       * Create a request for the method "operations.get".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket The parent bucket of the operation resource.
+       * @param operationId The ID of the operation resource.
+       * @since 1.13
+       */
+      protected Get(java.lang.String bucket, java.lang.String operationId) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.GoogleLongrunningOperation.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.operationId = com.google.api.client.util.Preconditions.checkNotNull(operationId, "Required parameter operationId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** The parent bucket of the operation resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** The parent bucket of the operation resource.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** The parent bucket of the operation resource. */
+      public Get setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The ID of the operation resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String operationId;
+
+      /** The ID of the operation resource.
+       */
+      public java.lang.String getOperationId() {
+        return operationId;
+      }
+
+      /** The ID of the operation resource. */
+      public Get setOperationId(java.lang.String operationId) {
+        this.operationId = operationId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists operations that match the specified filter in the request.
+     *
+     * Create a request for the method "operations.list".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which to look for operations.
+     * @return the request
+     */
+    public List list(java.lang.String bucket) throws java.io.IOException {
+      List result = new List(bucket);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningListOperationsResponse> {
+
+      private static final String REST_PATH = "b/{bucket}/operations";
+
+      /**
+       * Lists operations that match the specified filter in the request.
+       *
+       * Create a request for the method "operations.list".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket in which to look for operations.
+       * @since 1.13
+       */
+      protected List(java.lang.String bucket) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.GoogleLongrunningListOperationsResponse.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which to look for operations. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which to look for operations.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which to look for operations. */
+      public List setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /**
+       * A filter to narrow down results to a preferred subset. The filtering language is documented
+       * in more detail in [AIP-160](https://google.aip.dev/160).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter to narrow down results to a preferred subset. The filtering language is documented in more
+     detail in [AIP-160](https://google.aip.dev/160).
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter to narrow down results to a preferred subset. The filtering language is documented
+       * in more detail in [AIP-160](https://google.aip.dev/160).
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Maximum number of items to return in a single page of responses. Fewer total results may be
+       * returned than requested. The service uses this parameter or 100 items, whichever is
+       * smaller.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Maximum number of items to return in a single page of responses. Fewer total results may be
+     returned than requested. The service uses this parameter or 100 items, whichever is smaller.
+
+     [minimum: 0]
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Maximum number of items to return in a single page of responses. Fewer total results may be
+       * returned than requested. The service uses this parameter or 100 items, whichever is
+       * smaller.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A previously-returned page token representing part of the larger set of results to view.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A previously-returned page token representing part of the larger set of results to view.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A previously-returned page token representing part of the larger set of results to view.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
       }
     }
 

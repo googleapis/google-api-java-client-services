@@ -37,7 +37,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   private java.lang.String instanceId;
 
   /**
-   * The insights data for sap system discovery. This is a copy of SAP System proto and should get
+   * The insights data for SAP system discovery. This is a copy of SAP System proto and should get
    * updated whenever that one changes.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   private SapDiscovery sapDiscovery;
 
   /**
-   * The insights data for the sap workload validation.
+   * The insights data for the SAP workload validation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The insights data for sap system discovery. This is a copy of SAP System proto and should get
+   * The insights data for SAP system discovery. This is a copy of SAP System proto and should get
    * updated whenever that one changes.
    * @return value or {@code null} for none
    */
@@ -92,7 +92,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The insights data for sap system discovery. This is a copy of SAP System proto and should get
+   * The insights data for SAP system discovery. This is a copy of SAP System proto and should get
    * updated whenever that one changes.
    * @param sapDiscovery sapDiscovery or {@code null} for none
    */
@@ -102,7 +102,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The insights data for the sap workload validation.
+   * The insights data for the SAP workload validation.
    * @return value or {@code null} for none
    */
   public SapValidation getSapValidation() {
@@ -110,7 +110,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The insights data for the sap workload validation.
+   * The insights data for the SAP workload validation.
    * @param sapValidation sapValidation or {@code null} for none
    */
   public Insight setSapValidation(SapValidation sapValidation) {

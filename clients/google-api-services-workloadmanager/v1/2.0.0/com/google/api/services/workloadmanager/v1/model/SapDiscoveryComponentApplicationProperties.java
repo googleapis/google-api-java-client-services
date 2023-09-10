@@ -37,7 +37,7 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   private java.lang.String applicationType;
 
   /**
-   * Required. Resource URI of the recognized ASCS host of the application.
+   * Optional. Resource URI of the recognized ASCS host of the application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   }
 
   /**
-   * Required. Resource URI of the recognized ASCS host of the application.
+   * Optional. Resource URI of the recognized ASCS host of the application.
    * @return value or {@code null} for none
    */
   public java.lang.String getAscsUri() {
@@ -77,7 +77,7 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   }
 
   /**
-   * Required. Resource URI of the recognized ASCS host of the application.
+   * Optional. Resource URI of the recognized ASCS host of the application.
    * @param ascsUri ascsUri or {@code null} for none
    */
   public SapDiscoveryComponentApplicationProperties setAscsUri(java.lang.String ascsUri) {

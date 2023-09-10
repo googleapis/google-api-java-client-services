@@ -44,21 +44,22 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   private SapDiscoveryComponentDatabaseProperties databaseProperties;
 
   /**
-   * Pantheon Project in which the resources reside.
+   * Required. Pantheon Project in which the resources reside.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hostProject;
 
   /**
-   * The resources in a component.
+   * Optional. The resources in a component.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SapDiscoveryResource> resources;
 
   /**
-   * The sap identifier, used by the SAP software and helps differentiate systems for customers.
+   * Optional. The SAP identifier, used by the SAP software and helps differentiate systems for
+   * customers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +100,7 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   }
 
   /**
-   * Pantheon Project in which the resources reside.
+   * Required. Pantheon Project in which the resources reside.
    * @return value or {@code null} for none
    */
   public java.lang.String getHostProject() {
@@ -107,7 +108,7 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   }
 
   /**
-   * Pantheon Project in which the resources reside.
+   * Required. Pantheon Project in which the resources reside.
    * @param hostProject hostProject or {@code null} for none
    */
   public SapDiscoveryComponent setHostProject(java.lang.String hostProject) {
@@ -116,7 +117,7 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   }
 
   /**
-   * The resources in a component.
+   * Optional. The resources in a component.
    * @return value or {@code null} for none
    */
   public java.util.List<SapDiscoveryResource> getResources() {
@@ -124,7 +125,7 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   }
 
   /**
-   * The resources in a component.
+   * Optional. The resources in a component.
    * @param resources resources or {@code null} for none
    */
   public SapDiscoveryComponent setResources(java.util.List<SapDiscoveryResource> resources) {
@@ -133,7 +134,8 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   }
 
   /**
-   * The sap identifier, used by the SAP software and helps differentiate systems for customers.
+   * Optional. The SAP identifier, used by the SAP software and helps differentiate systems for
+   * customers.
    * @return value or {@code null} for none
    */
   public java.lang.String getSid() {
@@ -141,7 +143,8 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   }
 
   /**
-   * The sap identifier, used by the SAP software and helps differentiate systems for customers.
+   * Optional. The SAP identifier, used by the SAP software and helps differentiate systems for
+   * customers.
    * @param sid sid or {@code null} for none
    */
   public SapDiscoveryComponent setSid(java.lang.String sid) {

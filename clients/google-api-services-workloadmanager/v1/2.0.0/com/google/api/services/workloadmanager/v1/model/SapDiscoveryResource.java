@@ -30,7 +30,7 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapDiscoveryResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of resource URIs related to this resource.
+   * Optional. A list of resource URIs related to this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,21 +51,21 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   private java.lang.String resourceType;
 
   /**
-   * URI of the resource, includes project, location, and name.
+   * Required. URI of the resource, includes project, location, and name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceUri;
 
   /**
-   * Unix timestamp of when this resource last had its discovery data updated.
+   * Required. Unix timestamp of when this resource last had its discovery data updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * A list of resource URIs related to this resource.
+   * Optional. A list of resource URIs related to this resource.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRelatedResources() {
@@ -73,7 +73,7 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * A list of resource URIs related to this resource.
+   * Optional. A list of resource URIs related to this resource.
    * @param relatedResources relatedResources or {@code null} for none
    */
   public SapDiscoveryResource setRelatedResources(java.util.List<java.lang.String> relatedResources) {
@@ -116,7 +116,7 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of the resource, includes project, location, and name.
+   * Required. URI of the resource, includes project, location, and name.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUri() {
@@ -124,7 +124,7 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of the resource, includes project, location, and name.
+   * Required. URI of the resource, includes project, location, and name.
    * @param resourceUri resourceUri or {@code null} for none
    */
   public SapDiscoveryResource setResourceUri(java.lang.String resourceUri) {
@@ -133,7 +133,7 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * Unix timestamp of when this resource last had its discovery data updated.
+   * Required. Unix timestamp of when this resource last had its discovery data updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -141,7 +141,7 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * Unix timestamp of when this resource last had its discovery data updated.
+   * Required. Unix timestamp of when this resource last had its discovery data updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public SapDiscoveryResource setUpdateTime(String updateTime) {

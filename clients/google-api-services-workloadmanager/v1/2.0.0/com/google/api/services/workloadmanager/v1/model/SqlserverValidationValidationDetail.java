@@ -43,7 +43,7 @@ public final class SqlserverValidationValidationDetail extends com.google.api.cl
   }
 
   /**
-   * The Sqlserver system that the validation data is from.
+   * Optional. The Sqlserver system that the validation data is from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class SqlserverValidationValidationDetail extends com.google.api.cl
   }
 
   /**
-   * The Sqlserver system that the validation data is from.
+   * Optional. The Sqlserver system that the validation data is from.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -75,7 +75,7 @@ public final class SqlserverValidationValidationDetail extends com.google.api.cl
   }
 
   /**
-   * The Sqlserver system that the validation data is from.
+   * Optional. The Sqlserver system that the validation data is from.
    * @param type type or {@code null} for none
    */
   public SqlserverValidationValidationDetail setType(java.lang.String type) {

@@ -31,7 +31,7 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SqlserverValidation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The agent version collected this data point
+   * Optional. The agent version collected this data point
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,14 +54,14 @@ public final class SqlserverValidation extends com.google.api.client.json.Generi
   private java.lang.String projectId;
 
   /**
-   * A list of SqlServer validation metrics data.
+   * Optional. A list of SqlServer validation metrics data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SqlserverValidationValidationDetail> validationDetails;
 
   /**
-   * The agent version collected this data point
+   * Optional. The agent version collected this data point
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentVersion() {
@@ -69,7 +69,7 @@ public final class SqlserverValidation extends com.google.api.client.json.Generi
   }
 
   /**
-   * The agent version collected this data point
+   * Optional. The agent version collected this data point
    * @param agentVersion agentVersion or {@code null} for none
    */
   public SqlserverValidation setAgentVersion(java.lang.String agentVersion) {
@@ -116,7 +116,7 @@ public final class SqlserverValidation extends com.google.api.client.json.Generi
   }
 
   /**
-   * A list of SqlServer validation metrics data.
+   * Optional. A list of SqlServer validation metrics data.
    * @return value or {@code null} for none
    */
   public java.util.List<SqlserverValidationValidationDetail> getValidationDetails() {
@@ -124,7 +124,7 @@ public final class SqlserverValidation extends com.google.api.client.json.Generi
   }
 
   /**
-   * A list of SqlServer validation metrics data.
+   * Optional. A list of SqlServer validation metrics data.
    * @param validationDetails validationDetails or {@code null} for none
    */
   public SqlserverValidation setValidationDetails(java.util.List<SqlserverValidationValidationDetail> validationDetails) {

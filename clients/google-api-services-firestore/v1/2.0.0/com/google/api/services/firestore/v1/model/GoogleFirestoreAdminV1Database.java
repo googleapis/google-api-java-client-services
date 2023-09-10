@@ -17,8 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * A Cloud Firestore Database. Currently only one database is allowed per cloud project; this
- * database must have a `database_id` of '(default)'.
+ * A Cloud Firestore Database.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:

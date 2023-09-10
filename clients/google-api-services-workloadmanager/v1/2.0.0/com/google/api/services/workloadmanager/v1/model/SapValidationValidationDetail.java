@@ -30,21 +30,21 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapValidationValidationDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * The pairs of metrics data: field name & field value.
+   * Optional. The pairs of metrics data: field name & field value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> details;
 
   /**
-   * The SAP system that the validation data is from.
+   * Optional. The SAP system that the validation data is from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sapValidationType;
 
   /**
-   * The pairs of metrics data: field name & field value.
+   * Optional. The pairs of metrics data: field name & field value.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDetails() {
@@ -52,7 +52,7 @@ public final class SapValidationValidationDetail extends com.google.api.client.j
   }
 
   /**
-   * The pairs of metrics data: field name & field value.
+   * Optional. The pairs of metrics data: field name & field value.
    * @param details details or {@code null} for none
    */
   public SapValidationValidationDetail setDetails(java.util.Map<String, java.lang.String> details) {
@@ -61,7 +61,7 @@ public final class SapValidationValidationDetail extends com.google.api.client.j
   }
 
   /**
-   * The SAP system that the validation data is from.
+   * Optional. The SAP system that the validation data is from.
    * @return value or {@code null} for none
    */
   public java.lang.String getSapValidationType() {
@@ -69,7 +69,7 @@ public final class SapValidationValidationDetail extends com.google.api.client.j
   }
 
   /**
-   * The SAP system that the validation data is from.
+   * Optional. The SAP system that the validation data is from.
    * @param sapValidationType sapValidationType or {@code null} for none
    */
   public SapValidationValidationDetail setSapValidationType(java.lang.String sapValidationType) {

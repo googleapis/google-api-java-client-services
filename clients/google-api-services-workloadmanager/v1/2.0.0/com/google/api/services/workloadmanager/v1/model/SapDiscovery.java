@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * LINT.IfChange The schema of SAP system discovery data.
+ * The schema of SAP system discovery data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,43 +30,43 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapDiscovery extends com.google.api.client.json.GenericJson {
 
   /**
-   * An SAP system may run without an application layer.
+   * Optional. An SAP system may run without an application layer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SapDiscoveryComponent applicationLayer;
 
   /**
-   * An SAP System must have a database.
+   * Required. An SAP System must have a database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SapDiscoveryComponent databaseLayer;
 
   /**
-   * The metadata for SAP system discovery data.
+   * Optional. The metadata for SAP system discovery data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SapDiscoveryMetadata metadata;
 
   /**
-   * A combination of database SID, database instance URI and tenant DB name to make a unique
-   * identifier per-system.
+   * Output only. A combination of database SID, database instance URI and tenant DB name to make a
+   * unique identifier per-system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String systemId;
 
   /**
-   * Unix timestamp this system has been updated last.
+   * Required. Unix timestamp this system has been updated last.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * An SAP system may run without an application layer.
+   * Optional. An SAP system may run without an application layer.
    * @return value or {@code null} for none
    */
   public SapDiscoveryComponent getApplicationLayer() {
@@ -74,7 +74,7 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An SAP system may run without an application layer.
+   * Optional. An SAP system may run without an application layer.
    * @param applicationLayer applicationLayer or {@code null} for none
    */
   public SapDiscovery setApplicationLayer(SapDiscoveryComponent applicationLayer) {
@@ -83,7 +83,7 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An SAP System must have a database.
+   * Required. An SAP System must have a database.
    * @return value or {@code null} for none
    */
   public SapDiscoveryComponent getDatabaseLayer() {
@@ -91,7 +91,7 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An SAP System must have a database.
+   * Required. An SAP System must have a database.
    * @param databaseLayer databaseLayer or {@code null} for none
    */
   public SapDiscovery setDatabaseLayer(SapDiscoveryComponent databaseLayer) {
@@ -100,7 +100,7 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The metadata for SAP system discovery data.
+   * Optional. The metadata for SAP system discovery data.
    * @return value or {@code null} for none
    */
   public SapDiscoveryMetadata getMetadata() {
@@ -108,7 +108,7 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The metadata for SAP system discovery data.
+   * Optional. The metadata for SAP system discovery data.
    * @param metadata metadata or {@code null} for none
    */
   public SapDiscovery setMetadata(SapDiscoveryMetadata metadata) {
@@ -117,8 +117,8 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A combination of database SID, database instance URI and tenant DB name to make a unique
-   * identifier per-system.
+   * Output only. A combination of database SID, database instance URI and tenant DB name to make a
+   * unique identifier per-system.
    * @return value or {@code null} for none
    */
   public java.lang.String getSystemId() {
@@ -126,8 +126,8 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A combination of database SID, database instance URI and tenant DB name to make a unique
-   * identifier per-system.
+   * Output only. A combination of database SID, database instance URI and tenant DB name to make a
+   * unique identifier per-system.
    * @param systemId systemId or {@code null} for none
    */
   public SapDiscovery setSystemId(java.lang.String systemId) {
@@ -136,7 +136,7 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unix timestamp this system has been updated last.
+   * Required. Unix timestamp this system has been updated last.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -144,7 +144,7 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unix timestamp this system has been updated last.
+   * Required. Unix timestamp this system has been updated last.
    * @param updateTime updateTime or {@code null} for none
    */
   public SapDiscovery setUpdateTime(String updateTime) {

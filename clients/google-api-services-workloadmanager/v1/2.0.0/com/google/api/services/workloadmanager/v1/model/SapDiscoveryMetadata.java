@@ -30,35 +30,35 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapDiscoveryMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Customer region string for customer's use. Does not represent GCP region.
+   * Optional. Customer region string for customer's use. Does not represent GCP region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerRegion;
 
   /**
-   * Customer defined, something like "E-commerce pre prod"
+   * Optional. Customer defined, something like "E-commerce pre prod"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String definedSystem;
 
   /**
-   * Should be "prod", "QA", "dev", "staging", etc.
+   * Optional. Should be "prod", "QA", "dev", "staging", etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environmentType;
 
   /**
-   * This sap product name
+   * Optional. This SAP product name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sapProduct;
 
   /**
-   * Customer region string for customer's use. Does not represent GCP region.
+   * Optional. Customer region string for customer's use. Does not represent GCP region.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerRegion() {
@@ -66,7 +66,7 @@ public final class SapDiscoveryMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * Customer region string for customer's use. Does not represent GCP region.
+   * Optional. Customer region string for customer's use. Does not represent GCP region.
    * @param customerRegion customerRegion or {@code null} for none
    */
   public SapDiscoveryMetadata setCustomerRegion(java.lang.String customerRegion) {
@@ -75,7 +75,7 @@ public final class SapDiscoveryMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * Customer defined, something like "E-commerce pre prod"
+   * Optional. Customer defined, something like "E-commerce pre prod"
    * @return value or {@code null} for none
    */
   public java.lang.String getDefinedSystem() {
@@ -83,7 +83,7 @@ public final class SapDiscoveryMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * Customer defined, something like "E-commerce pre prod"
+   * Optional. Customer defined, something like "E-commerce pre prod"
    * @param definedSystem definedSystem or {@code null} for none
    */
   public SapDiscoveryMetadata setDefinedSystem(java.lang.String definedSystem) {
@@ -92,7 +92,7 @@ public final class SapDiscoveryMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * Should be "prod", "QA", "dev", "staging", etc.
+   * Optional. Should be "prod", "QA", "dev", "staging", etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironmentType() {
@@ -100,7 +100,7 @@ public final class SapDiscoveryMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * Should be "prod", "QA", "dev", "staging", etc.
+   * Optional. Should be "prod", "QA", "dev", "staging", etc.
    * @param environmentType environmentType or {@code null} for none
    */
   public SapDiscoveryMetadata setEnvironmentType(java.lang.String environmentType) {
@@ -109,7 +109,7 @@ public final class SapDiscoveryMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * This sap product name
+   * Optional. This SAP product name
    * @return value or {@code null} for none
    */
   public java.lang.String getSapProduct() {
@@ -117,7 +117,7 @@ public final class SapDiscoveryMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * This sap product name
+   * Optional. This SAP product name
    * @param sapProduct sapProduct or {@code null} for none
    */
   public SapDiscoveryMetadata setSapProduct(java.lang.String sapProduct) {

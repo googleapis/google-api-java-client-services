@@ -18,7 +18,7 @@ package com.google.api.services.firestore.v1.model;
 
 /**
  * A Backup of a Cloud Firestore Database. The backup contains all documents and index
- * configurations for the given database at specific point in time.
+ * configurations for the given database at a specific point in time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:

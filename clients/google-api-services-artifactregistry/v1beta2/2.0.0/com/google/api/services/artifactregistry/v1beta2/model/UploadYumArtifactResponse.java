@@ -32,14 +32,14 @@ package com.google.api.services.artifactregistry.v1beta2.model;
 public final class UploadYumArtifactResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Apt artifacts updated.
+   * The Yum artifacts updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<YumArtifact> yumArtifacts;
 
   /**
-   * The Apt artifacts updated.
+   * The Yum artifacts updated.
    * @return value or {@code null} for none
    */
   public java.util.List<YumArtifact> getYumArtifacts() {
@@ -47,7 +47,7 @@ public final class UploadYumArtifactResponse extends com.google.api.client.json.
   }
 
   /**
-   * The Apt artifacts updated.
+   * The Yum artifacts updated.
    * @param yumArtifacts yumArtifacts or {@code null} for none
    */
   public UploadYumArtifactResponse setYumArtifacts(java.util.List<YumArtifact> yumArtifacts) {

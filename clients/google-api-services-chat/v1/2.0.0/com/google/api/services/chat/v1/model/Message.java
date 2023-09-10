@@ -238,9 +238,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Plain-text body of the message. The first link to an image, video, or web page generates a
-   * preview chip. You can also @mention a Google Chat user, or everyone in the space. To learn
-   * about creating text messages, see [Create a text
-   * message](https://developers.google.com/chat/api/guides/message-formats/text).
+   * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
+   * [@mention a Google Chat user](https://developers.google.com/chat/api/guides/message-
+   * formats/text#messages-@mention), or everyone in the space. To learn about creating text
+   * messages, see [Create a text message](https://developers.google.com/chat/api/guides/message-
+   * formats/text).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -669,9 +671,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Plain-text body of the message. The first link to an image, video, or web page generates a
-   * preview chip. You can also @mention a Google Chat user, or everyone in the space. To learn
-   * about creating text messages, see [Create a text
-   * message](https://developers.google.com/chat/api/guides/message-formats/text).
+   * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
+   * [@mention a Google Chat user](https://developers.google.com/chat/api/guides/message-
+   * formats/text#messages-@mention), or everyone in the space. To learn about creating text
+   * messages, see [Create a text message](https://developers.google.com/chat/api/guides/message-
+   * formats/text).
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -680,9 +684,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Plain-text body of the message. The first link to an image, video, or web page generates a
-   * preview chip. You can also @mention a Google Chat user, or everyone in the space. To learn
-   * about creating text messages, see [Create a text
-   * message](https://developers.google.com/chat/api/guides/message-formats/text).
+   * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
+   * [@mention a Google Chat user](https://developers.google.com/chat/api/guides/message-
+   * formats/text#messages-@mention), or everyone in the space. To learn about creating text
+   * messages, see [Create a text message](https://developers.google.com/chat/api/guides/message-
+   * formats/text).
    * @param text text or {@code null} for none
    */
   public Message setText(java.lang.String text) {

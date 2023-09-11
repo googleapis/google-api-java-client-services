@@ -31,16 +31,16 @@ package com.google.api.services.redis.v1beta1.model;
 public final class PscConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The consumer network where the IP address of the discovery endpoint will be reserved,
-   * in the form of projects/{network_host_project}/global/networks/{network_id}.
+   * Required. The network where the IP address of the discovery endpoint will be reserved, in the
+   * form of projects/{network_project}/global/networks/{network_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Required. The consumer network where the IP address of the discovery endpoint will be reserved,
-   * in the form of projects/{network_host_project}/global/networks/{network_id}.
+   * Required. The network where the IP address of the discovery endpoint will be reserved, in the
+   * form of projects/{network_project}/global/networks/{network_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -48,8 +48,8 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The consumer network where the IP address of the discovery endpoint will be reserved,
-   * in the form of projects/{network_host_project}/global/networks/{network_id}.
+   * Required. The network where the IP address of the discovery endpoint will be reserved, in the
+   * form of projects/{network_project}/global/networks/{network_id}.
    * @param network network or {@code null} for none
    */
   public PscConfig setNetwork(java.lang.String network) {

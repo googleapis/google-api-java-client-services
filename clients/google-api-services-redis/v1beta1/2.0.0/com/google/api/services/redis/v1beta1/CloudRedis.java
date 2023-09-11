@@ -535,7 +535,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
       public class Clusters {
 
         /**
-         * Creates a Redis cluster based on the specified tier and memory size. The creation is executed
+         * Creates a Redis cluster based on the specified properties. The creation is executed
          * asynchronously and callers may check the returned operation to track its progress. Once the
          * operation is completed the Redis cluster will be fully functional. The completed
          * longrunning.Operation will contain the new cluster object in the response field. The returned
@@ -567,7 +567,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a Redis cluster based on the specified tier and memory size. The creation is executed
+           * Creates a Redis cluster based on the specified properties. The creation is executed
            * asynchronously and callers may check the returned operation to track its progress. Once the
            * operation is completed the Redis cluster will be fully functional. The completed
            * longrunning.Operation will contain the new cluster object in the response field. The returned

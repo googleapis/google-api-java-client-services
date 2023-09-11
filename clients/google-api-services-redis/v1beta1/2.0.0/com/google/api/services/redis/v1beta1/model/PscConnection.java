@@ -54,7 +54,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
-   * The consumer project_id where the forwarding rule is created from.
+   * Output only. The consumer project_id where the forwarding rule is created from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The consumer project_id where the forwarding rule is created from.
+   * Output only. The consumer project_id where the forwarding rule is created from.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -131,7 +131,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The consumer project_id where the forwarding rule is created from.
+   * Output only. The consumer project_id where the forwarding rule is created from.
    * @param projectId projectId or {@code null} for none
    */
   public PscConnection setProjectId(java.lang.String projectId) {

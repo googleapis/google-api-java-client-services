@@ -163,7 +163,7 @@ public class {{ method.className }} extends {{ api.className }}Request<{{ method
    *
    * {% for param in method.requiredParameters %}@param {{ param.memberName }} {% emit_parameter_doc param %}{% endfor %}{% if method.requestType %}
    * @param content the {@link {{ method.requestType.fullClassName }}} media metadata or {@code null} if none{% endif %}
-   * @param mediaContent The media HTTP content or {@code null} if none.
+   * @param mediaContent The media HTTP content.
    * @since 1.13
    */
   protected {{ method.className }}({% parameter_list %}
@@ -181,6 +181,7 @@ public class {{ method.className }} extends {{ api.className }}Request<{{ method
   {% for param in method.requiredParameters %}
     this.{{ param.memberName }} = com.google.api.client.util.Preconditions.checkNotNull({{ param.memberName }}, "Required parameter {{ param.memberName }} must be specified.");
   {% endfor %}
+    com.google.api.client.util.Preconditions.checkNotNull({{ mediaContent }}, "Required parameter {{ mediaContent }} must be specified.");
     initializeMediaUpload(mediaContent);
   {% call_template _alt_def method=method %}
   }

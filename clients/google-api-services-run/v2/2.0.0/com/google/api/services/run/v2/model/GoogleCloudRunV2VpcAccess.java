@@ -49,6 +49,19 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   private java.lang.String egress;
 
   /**
+   * VPC network to access to. Currently only single network interface is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRunV2NetworkInterface> networkInterfaces;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRunV2NetworkInterface used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRunV2NetworkInterface.class);
+  }
+
+  /**
    * VPC Access connector name. Format:
    * projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project
    * id or number.
@@ -83,6 +96,23 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
    */
   public GoogleCloudRunV2VpcAccess setEgress(java.lang.String egress) {
     this.egress = egress;
+    return this;
+  }
+
+  /**
+   * VPC network to access to. Currently only single network interface is supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRunV2NetworkInterface> getNetworkInterfaces() {
+    return networkInterfaces;
+  }
+
+  /**
+   * VPC network to access to. Currently only single network interface is supported.
+   * @param networkInterfaces networkInterfaces or {@code null} for none
+   */
+  public GoogleCloudRunV2VpcAccess setNetworkInterfaces(java.util.List<GoogleCloudRunV2NetworkInterface> networkInterfaces) {
+    this.networkInterfaces = networkInterfaces;
     return this;
   }
 

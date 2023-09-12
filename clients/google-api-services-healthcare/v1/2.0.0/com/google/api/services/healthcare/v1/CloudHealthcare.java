@@ -16907,12 +16907,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Deletes a FHIR resource that match an identifier search query. Implements the FHIR standard
              * conditional delete interaction, limited to searching by resource identifier. If multiple
              * resources match, 412 Precondition Failed error will be returned. Search term for identifier
-             * should be in the pattern identifier=system|value or identifier=value - similar to the search
-             * method on resources with a specific identifier. Note: Unless resource versioning is disabled by
-             * setting the disable_resource_versioning flag on the FHIR store, the deleted resource is moved to
-             * a history repository that can still be retrieved through vread and related methods, unless they
-             * are removed by the purge method. For samples that show how to call `conditionalDelete`, see
-             * [Conditionally deleting a FHIR resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+             * should be in the pattern `identifier=system|value` or `identifier=value` - similar to the
+             * `search` method on resources with a specific identifier. Note: Unless resource versioning is
+             * disabled by setting the disable_resource_versioning flag on the FHIR store, the deleted resource
+             * is moved to a history repository that can still be retrieved through vread and related methods,
+             * unless they are removed by the purge method. For samples that show how to call
+             * `conditionalDelete`, see [Conditionally deleting a FHIR
+             * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
              * resources#conditionally_deleting_a_fhir_resource).
              *
              * Create a request for the method "fhir.conditionalDelete".
@@ -16947,13 +16948,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Deletes a FHIR resource that match an identifier search query. Implements the FHIR standard
                * conditional delete interaction, limited to searching by resource identifier. If multiple
                * resources match, 412 Precondition Failed error will be returned. Search term for identifier
-               * should be in the pattern identifier=system|value or identifier=value - similar to the search
-               * method on resources with a specific identifier. Note: Unless resource versioning is disabled by
-               * setting the disable_resource_versioning flag on the FHIR store, the deleted resource is moved
-               * to a history repository that can still be retrieved through vread and related methods, unless
-               * they are removed by the purge method. For samples that show how to call `conditionalDelete`,
-               * see [Conditionally deleting a FHIR resource](https://cloud.google.com/healthcare/docs/how-tos
-               * /fhir-resources#conditionally_deleting_a_fhir_resource).
+               * should be in the pattern `identifier=system|value` or `identifier=value` - similar to the
+               * `search` method on resources with a specific identifier. Note: Unless resource versioning is
+               * disabled by setting the disable_resource_versioning flag on the FHIR store, the deleted
+               * resource is moved to a history repository that can still be retrieved through vread and related
+               * methods, unless they are removed by the purge method. For samples that show how to call
+               * `conditionalDelete`, see [Conditionally deleting a FHIR
+               * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+               * resources#conditionally_deleting_a_fhir_resource).
                *
                * Create a request for the method "fhir.conditionalDelete".
                *
@@ -17109,10 +17111,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * document. Implements the FHIR standard conditional patch interaction, limited to searching by
              * resource identifier. DSTU2 doesn't define a conditional patch method, but the server supports it
              * in the same way it supports STU3. Search term for identifier should be in the pattern
-             * identifier=system|value or identifier=value - similar to the search method on resources with a
-             * specific identifier. If the search criteria identify more than one match, the request returns a
-             * `412 Precondition Failed` error. The request body must contain a JSON Patch document, and the
-             * request headers must contain `Content-Type: application/json-patch+json`. On success, the
+             * `identifier=system|value` or `identifier=value` - similar to the `search` method on resources
+             * with a specific identifier. If the search criteria identify more than one match, the request
+             * returns a `412 Precondition Failed` error. The request body must contain a JSON Patch document,
+             * and the request headers must contain `Content-Type: application/json-patch+json`. On success, the
              * response body contains a JSON-encoded representation of the updated resource, including the
              * server-assigned version ID. Errors generated by the FHIR store contain a JSON-encoded
              * `OperationOutcome` resource describing the reason for the error. If the request cannot be mapped
@@ -17156,11 +17158,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * document. Implements the FHIR standard conditional patch interaction, limited to searching by
                * resource identifier. DSTU2 doesn't define a conditional patch method, but the server supports
                * it in the same way it supports STU3. Search term for identifier should be in the pattern
-               * identifier=system|value or identifier=value - similar to the search method on resources with a
-               * specific identifier. If the search criteria identify more than one match, the request returns a
-               * `412 Precondition Failed` error. The request body must contain a JSON Patch document, and the
-               * request headers must contain `Content-Type: application/json-patch+json`. On success, the
-               * response body contains a JSON-encoded representation of the updated resource, including the
+               * `identifier=system|value` or `identifier=value` - similar to the `search` method on resources
+               * with a specific identifier. If the search criteria identify more than one match, the request
+               * returns a `412 Precondition Failed` error. The request body must contain a JSON Patch document,
+               * and the request headers must contain `Content-Type: application/json-patch+json`. On success,
+               * the response body contains a JSON-encoded representation of the updated resource, including the
                * server-assigned version ID. Errors generated by the FHIR store contain a JSON-encoded
                * `OperationOutcome` resource describing the reason for the error. If the request cannot be
                * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
@@ -17321,11 +17323,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * If a resource is found with the identifier specified in the query parameters, updates the entire
              * contents of that resource. Implements the FHIR standard conditional update interaction, limited
              * to searching by resource identifier. Search term for identifier should be in the pattern
-             * identifier=system|value or identifier=value - similar to the search method on resources with a
-             * specific identifier. If the search criteria identify more than one match, the request returns a
-             * `412 Precondition Failed` error. If the search criteria identify zero matches, and the supplied
-             * resource body contains an `id`, and the FHIR store has enable_update_create set, creates the
-             * resource with the client-specified ID. It is strongly advised not to include or encode any
+             * `identifier=system|value` or `identifier=value` - similar to the `search` method on resources
+             * with a specific identifier. If the search criteria identify more than one match, the request
+             * returns a `412 Precondition Failed` error. If the search criteria identify zero matches, and the
+             * supplied resource body contains an `id`, and the FHIR store has enable_update_create set, creates
+             * the resource with the client-specified ID. It is strongly advised not to include or encode any
              * sensitive data such as patient identifiers in client-specified resource IDs. Those IDs are part
              * of the FHIR resource path recorded in Cloud Audit Logs and Pub/Sub notifications. Those IDs can
              * also be contained in reference fields within other resources. If the search criteria identify
@@ -17374,23 +17376,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * If a resource is found with the identifier specified in the query parameters, updates the
                * entire contents of that resource. Implements the FHIR standard conditional update interaction,
                * limited to searching by resource identifier. Search term for identifier should be in the
-               * pattern identifier=system|value or identifier=value - similar to the search method on resources
-               * with a specific identifier. If the search criteria identify more than one match, the request
-               * returns a `412 Precondition Failed` error. If the search criteria identify zero matches, and
-               * the supplied resource body contains an `id`, and the FHIR store has enable_update_create set,
-               * creates the resource with the client-specified ID. It is strongly advised not to include or
-               * encode any sensitive data such as patient identifiers in client-specified resource IDs. Those
-               * IDs are part of the FHIR resource path recorded in Cloud Audit Logs and Pub/Sub notifications.
-               * Those IDs can also be contained in reference fields within other resources. If the search
-               * criteria identify zero matches, and the supplied resource body does not contain an `id`, the
-               * resource is created with a server-assigned ID as per the create method. The request body must
-               * contain a JSON-encoded FHIR resource, and the request headers must contain `Content-Type:
-               * application/fhir+json`. On success, the response body contains a JSON-encoded representation of
-               * the updated resource, including the server-assigned version ID. Errors generated by the FHIR
-               * store contain a JSON-encoded `OperationOutcome` resource describing the reason for the error.
-               * If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error
-               * might be returned instead. For samples that show how to call `conditionalUpdate`, see
-               * [Conditionally updating a FHIR resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+               * pattern `identifier=system|value` or `identifier=value` - similar to the `search` method on
+               * resources with a specific identifier. If the search criteria identify more than one match, the
+               * request returns a `412 Precondition Failed` error. If the search criteria identify zero
+               * matches, and the supplied resource body contains an `id`, and the FHIR store has
+               * enable_update_create set, creates the resource with the client-specified ID. It is strongly
+               * advised not to include or encode any sensitive data such as patient identifiers in client-
+               * specified resource IDs. Those IDs are part of the FHIR resource path recorded in Cloud Audit
+               * Logs and Pub/Sub notifications. Those IDs can also be contained in reference fields within
+               * other resources. If the search criteria identify zero matches, and the supplied resource body
+               * does not contain an `id`, the resource is created with a server-assigned ID as per the create
+               * method. The request body must contain a JSON-encoded FHIR resource, and the request headers
+               * must contain `Content-Type: application/fhir+json`. On success, the response body contains a
+               * JSON-encoded representation of the updated resource, including the server-assigned version ID.
+               * Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource
+               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
+               * FHIR store, a generic GCP error might be returned instead. For samples that show how to call
+               * `conditionalUpdate`, see [Conditionally updating a FHIR
+               * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
                * resources#conditionally_updating_a_fhir_resource).
                *
                * Create a request for the method "fhir.conditionalUpdate".
@@ -17551,13 +17554,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#create),
              * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#create)), which creates a new resource
-             * with a server-assigned resource ID. The request body must contain a JSON-encoded FHIR resource,
-             * and the request headers must contain `Content-Type: application/fhir+json`. On success, the
-             * response body contains a JSON-encoded representation of the resource as it was created on the
-             * server, including the server-assigned resource ID and version ID. Errors generated by the FHIR
-             * store contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
-             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-             * returned instead. For samples that show how to call `create`, see [Creating a FHIR
+             * with a server-assigned resource ID. Also supports the FHIR standard conditional create
+             * interaction ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#ccreate),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#ccreate),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#ccreate)), specified by supplying an
+             * `If-None-Exist` header containing a FHIR search query, limited to searching by resource
+             * identifier. If no resources match this search query, the server processes the create operation as
+             * normal. When using conditional create, the search term for identifier should be in the pattern
+             * `identifier=system|value` or `identifier=value` - similar to the `search` method on resources
+             * with a specific identifier. The request body must contain a JSON-encoded FHIR resource, and the
+             * request headers must contain `Content-Type: application/fhir+json`. On success, the response body
+             * contains a JSON-encoded representation of the resource as it was created on the server, including
+             * the server-assigned resource ID and version ID. Errors generated by the FHIR store contain a
+             * JSON-encoded `OperationOutcome` resource describing the reason for the error. If the request
+             * cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be returned
+             * instead. For samples that show how to call `create`, see [Creating a FHIR
              * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
              * resources#creating_a_fhir_resource).
              *
@@ -17596,7 +17607,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#create),
                * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#create)), which creates a new
-               * resource with a server-assigned resource ID. The request body must contain a JSON-encoded FHIR
+               * resource with a server-assigned resource ID. Also supports the FHIR standard conditional create
+               * interaction ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#ccreate),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#ccreate),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#ccreate)), specified by supplying an
+               * `If-None-Exist` header containing a FHIR search query, limited to searching by resource
+               * identifier. If no resources match this search query, the server processes the create operation
+               * as normal. When using conditional create, the search term for identifier should be in the
+               * pattern `identifier=system|value` or `identifier=value` - similar to the `search` method on
+               * resources with a specific identifier. The request body must contain a JSON-encoded FHIR
                * resource, and the request headers must contain `Content-Type: application/fhir+json`. On
                * success, the response body contains a JSON-encoded representation of the resource as it was
                * created on the server, including the server-assigned resource ID and version ID. Errors
@@ -18721,19 +18740,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
              * be fully searchable as the server might trim its generated search index in those cases. Note:
              * FHIR resources are indexed asynchronously, so there might be a slight delay between the time a
-             * resource is created or changed, and the time when the change reflects in search results. The only
-             * exception is resource identifier data, which is indexed synchronously as a special index. As a
-             * result, searching using resource identifier is not subject to indexing delay. To use the special
-             * synchronous index, the search term for identifier should be in the pattern
-             * `identifier=[system]|[value]` or `identifier=[value]`, and any of the following search result
-             * parameters can be used: * `_count` * `_include` * `_revinclude` * `_summary` * `_elements` If
-             * your query contains any other search parameters, the standard asynchronous index will be used
-             * instead. Note that searching against the special index is optimized for resolving a small number
-             * of matches. The search isn't optimized if your identifier search criteria matches a large number
-             * (i.e. more than 2,000) of resources. For a search query that will match a large number of
-             * resources, you can avoiding using the special synchronous index by including an additional
-             * `_sort` parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the default
-             * sorting order. For samples and detailed information, see [Searching for FHIR
+             * resource is created or changes and when the change is reflected in search results. For samples
+             * and detailed information, see [Searching for FHIR
              * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
              * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
              *
@@ -18796,22 +18804,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be used to retrieve the next page. Resources with a total size larger than 5MB or a field count
                * larger than 50,000 might not be fully searchable as the server might trim its generated search
                * index in those cases. Note: FHIR resources are indexed asynchronously, so there might be a
-               * slight delay between the time a resource is created or changed, and the time when the change
-               * reflects in search results. The only exception is resource identifier data, which is indexed
-               * synchronously as a special index. As a result, searching using resource identifier is not
-               * subject to indexing delay. To use the special synchronous index, the search term for identifier
-               * should be in the pattern `identifier=[system]|[value]` or `identifier=[value]`, and any of the
-               * following search result parameters can be used: * `_count` * `_include` * `_revinclude` *
-               * `_summary` * `_elements` If your query contains any other search parameters, the standard
-               * asynchronous index will be used instead. Note that searching against the special index is
-               * optimized for resolving a small number of matches. The search isn't optimized if your
-               * identifier search criteria matches a large number (i.e. more than 2,000) of resources. For a
-               * search query that will match a large number of resources, you can avoiding using the special
-               * synchronous index by including an additional `_sort` parameter in your query. Use
-               * `_sort=-_lastUpdated` if you want to keep the default sorting order. For samples and detailed
-               * information, see [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-
-               * tos/fhir-search) and [Advanced FHIR search features](https://cloud.google.com/healthcare/docs
-               * /how-tos/fhir-advanced-search).
+               * slight delay between the time a resource is created or changes and when the change is reflected
+               * in search results. For samples and detailed information, see [Searching for FHIR
+               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
+               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search".
                *
@@ -18953,19 +18949,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
              * be fully searchable as the server might trim its generated search index in those cases. Note:
              * FHIR resources are indexed asynchronously, so there might be a slight delay between the time a
-             * resource is created or changed, and the time when the change reflects in search results. The only
-             * exception is resource identifier data, which is indexed synchronously as a special index. As a
-             * result, searching using resource identifier is not subject to indexing delay. To use the special
-             * synchronous index, the search term for identifier should be in the pattern
-             * `identifier=[system]|[value]` or `identifier=[value]`, and any of the following search result
-             * parameters can be used: * `_count` * `_include` * `_revinclude` * `_summary` * `_elements` If
-             * your query contains any other search parameters, the standard asynchronous index will be used
-             * instead. Note that searching against the special index is optimized for resolving a small number
-             * of matches. The search isn't optimized if your identifier search criteria matches a large number
-             * (i.e. more than 2,000) of resources. For a search query that will match a large number of
-             * resources, you can avoiding using the special synchronous index by including an additional
-             * `_sort` parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the default
-             * sorting order. For samples and detailed information, see [Searching for FHIR
+             * resource is created or changes and when the change is reflected in search results. For samples
+             * and detailed information, see [Searching for FHIR
              * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
              * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
              *
@@ -19032,22 +19017,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be used to retrieve the next page. Resources with a total size larger than 5MB or a field count
                * larger than 50,000 might not be fully searchable as the server might trim its generated search
                * index in those cases. Note: FHIR resources are indexed asynchronously, so there might be a
-               * slight delay between the time a resource is created or changed, and the time when the change
-               * reflects in search results. The only exception is resource identifier data, which is indexed
-               * synchronously as a special index. As a result, searching using resource identifier is not
-               * subject to indexing delay. To use the special synchronous index, the search term for identifier
-               * should be in the pattern `identifier=[system]|[value]` or `identifier=[value]`, and any of the
-               * following search result parameters can be used: * `_count` * `_include` * `_revinclude` *
-               * `_summary` * `_elements` If your query contains any other search parameters, the standard
-               * asynchronous index will be used instead. Note that searching against the special index is
-               * optimized for resolving a small number of matches. The search isn't optimized if your
-               * identifier search criteria matches a large number (i.e. more than 2,000) of resources. For a
-               * search query that will match a large number of resources, you can avoiding using the special
-               * synchronous index by including an additional `_sort` parameter in your query. Use
-               * `_sort=-_lastUpdated` if you want to keep the default sorting order. For samples and detailed
-               * information, see [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-
-               * tos/fhir-search) and [Advanced FHIR search features](https://cloud.google.com/healthcare/docs
-               * /how-tos/fhir-advanced-search).
+               * slight delay between the time a resource is created or changes and when the change is reflected
+               * in search results. For samples and detailed information, see [Searching for FHIR
+               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
+               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search-type".
                *

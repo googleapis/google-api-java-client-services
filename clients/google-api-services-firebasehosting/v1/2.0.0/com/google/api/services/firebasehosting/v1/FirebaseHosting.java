@@ -621,6 +621,356 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code FirebaseHosting firebasehosting = new FirebaseHosting(...);}
+   *   {@code FirebaseHosting.Projects.List request = firebasehosting.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Sites collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code FirebaseHosting firebasehosting = new FirebaseHosting(...);}
+     *   {@code FirebaseHosting.Sites.List request = firebasehosting.sites().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Sites sites() {
+      return new Sites();
+    }
+
+    /**
+     * The "sites" collection of methods.
+     */
+    public class Sites {
+
+      /**
+       * An accessor for creating requests from the CustomDomains collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code FirebaseHosting firebasehosting = new FirebaseHosting(...);}
+       *   {@code FirebaseHosting.CustomDomains.List request = firebasehosting.customDomains().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public CustomDomains customDomains() {
+        return new CustomDomains();
+      }
+
+      /**
+       * The "customDomains" collection of methods.
+       */
+      public class CustomDomains {
+
+        /**
+         * An accessor for creating requests from the Operations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code FirebaseHosting firebasehosting = new FirebaseHosting(...);}
+         *   {@code FirebaseHosting.Operations.List request = firebasehosting.operations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Operations operations() {
+          return new Operations();
+        }
+
+        /**
+         * The "operations" collection of methods.
+         */
+        public class Operations {
+
+          /**
+           * CancelOperation is a part of the google.longrunning.Operations interface, but is not implemented
+           * for CustomDomain resources.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.firebasehosting.v1.model.CancelOperationRequest}
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String name, com.google.api.services.firebasehosting.v1.model.CancelOperationRequest content) throws java.io.IOException {
+            Cancel result = new Cancel(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}:cancel";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/customDomains/[^/]+/operations/[^/]+$");
+
+            /**
+             * CancelOperation is a part of the google.longrunning.Operations interface, but is not
+             * implemented for CustomDomain resources.
+             *
+             * Create a request for the method "operations.cancel".
+             *
+             * This request holds the parameters needed by the the firebasehosting server.  After setting any
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource to be cancelled.
+             * @param content the {@link com.google.api.services.firebasehosting.v1.model.CancelOperationRequest}
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String name, com.google.api.services.firebasehosting.v1.model.CancelOperationRequest content) {
+              super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/sites/[^/]+/customDomains/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource to be cancelled. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource to be cancelled.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource to be cancelled. */
+            public Cancel setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/sites/[^/]+/customDomains/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
+          /**
+           * DeleteOperation is a part of the google.longrunning.Operations interface, but is not implemented
+           * for CustomDomain resources.
+           *
+           * Create a request for the method "operations.delete".
+           *
+           * This request holds the parameters needed by the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource to be deleted.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/customDomains/[^/]+/operations/[^/]+$");
+
+            /**
+             * DeleteOperation is a part of the google.longrunning.Operations interface, but is not
+             * implemented for CustomDomain resources.
+             *
+             * Create a request for the method "operations.delete".
+             *
+             * This request holds the parameters needed by the the firebasehosting server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource to be deleted.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(FirebaseHosting.this, "DELETE", REST_PATH, null, com.google.api.services.firebasehosting.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/sites/[^/]+/customDomains/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource to be deleted. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource to be deleted.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource to be deleted. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/sites/[^/]+/customDomains/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
    * Builder for {@link FirebaseHosting}.
    *
    * <p>

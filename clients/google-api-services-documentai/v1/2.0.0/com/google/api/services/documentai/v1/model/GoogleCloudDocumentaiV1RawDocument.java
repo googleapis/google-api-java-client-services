@@ -40,7 +40,7 @@ public final class GoogleCloudDocumentaiV1RawDocument extends com.google.api.cli
   /**
    * The display name of the document, it supports all Unicode characters except the following: `*`,
    * `?`, `[`, `]`, `%`, `{`, `}`,`'`, `\"`, `,` `~`, `=` and `:` are reserved. If not specified, a
-   * default ID will be generated.
+   * default ID is generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class GoogleCloudDocumentaiV1RawDocument extends com.google.api.cli
   /**
    * The display name of the document, it supports all Unicode characters except the following: `*`,
    * `?`, `[`, `]`, `%`, `{`, `}`,`'`, `\"`, `,` `~`, `=` and `:` are reserved. If not specified, a
-   * default ID will be generated.
+   * default ID is generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -111,7 +111,7 @@ public final class GoogleCloudDocumentaiV1RawDocument extends com.google.api.cli
   /**
    * The display name of the document, it supports all Unicode characters except the following: `*`,
    * `?`, `[`, `]`, `%`, `{`, `}`,`'`, `\"`, `,` `~`, `=` and `:` are reserved. If not specified, a
-   * default ID will be generated.
+   * default ID is generated.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDocumentaiV1RawDocument setDisplayName(java.lang.String displayName) {

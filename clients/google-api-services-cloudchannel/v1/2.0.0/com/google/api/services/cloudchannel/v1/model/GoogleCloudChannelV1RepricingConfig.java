@@ -38,7 +38,8 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
 
   /**
    * Applies the repricing configuration at the channel partner level. Only
-   * ChannelPartnerRepricingConfig supports this value.
+   * ChannelPartnerRepricingConfig supports this value. Deprecated: This is no longer supported. Use
+   * RepricingConfig.entitlement_granularity instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +106,8 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
 
   /**
    * Applies the repricing configuration at the channel partner level. Only
-   * ChannelPartnerRepricingConfig supports this value.
+   * ChannelPartnerRepricingConfig supports this value. Deprecated: This is no longer supported. Use
+   * RepricingConfig.entitlement_granularity instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudChannelV1RepricingConfigChannelPartnerGranularity getChannelPartnerGranularity() {
@@ -114,7 +116,8 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
 
   /**
    * Applies the repricing configuration at the channel partner level. Only
-   * ChannelPartnerRepricingConfig supports this value.
+   * ChannelPartnerRepricingConfig supports this value. Deprecated: This is no longer supported. Use
+   * RepricingConfig.entitlement_granularity instead.
    * @param channelPartnerGranularity channelPartnerGranularity or {@code null} for none
    */
   public GoogleCloudChannelV1RepricingConfig setChannelPartnerGranularity(GoogleCloudChannelV1RepricingConfigChannelPartnerGranularity channelPartnerGranularity) {

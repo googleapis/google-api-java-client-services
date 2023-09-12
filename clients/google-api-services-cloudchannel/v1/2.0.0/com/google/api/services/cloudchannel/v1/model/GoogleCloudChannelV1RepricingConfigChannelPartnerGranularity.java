@@ -18,7 +18,8 @@ package com.google.api.services.cloudchannel.v1.model;
 
 /**
  * Applies the repricing configuration at the channel partner level. The channel partner value is
- * derived from the resource name. Takes an empty json object.
+ * derived from the resource name. Takes an empty json object. Deprecated: This is no longer
+ * supported. Use RepricingConfig.EntitlementGranularity instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Channel API. For a detailed explanation see:

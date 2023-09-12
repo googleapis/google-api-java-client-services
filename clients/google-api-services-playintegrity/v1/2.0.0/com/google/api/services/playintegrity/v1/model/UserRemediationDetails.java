@@ -17,8 +17,7 @@
 package com.google.api.services.playintegrity.v1.model;
 
 /**
- * Contains guidance details about the Integrity API response, providing additional context to the
- * integrity verdicts.
+ * Contains details of remediation guidance that the user can perform. See go/pia-interstitials-dd
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Integrity API. For a detailed explanation
@@ -29,43 +28,40 @@ package com.google.api.services.playintegrity.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GuidanceDetails extends com.google.api.client.json.GenericJson {
+public final class UserRemediationDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * This shows when there is an issue with at least one of the integrity verdicts, which can be
-   * remedied by the user and provides additional details.
+   * Description of the user remediation action. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<UserRemediationDetails> userRemediationDetails;
+  private java.lang.String remediation;
 
   /**
-   * This shows when there is an issue with at least one of the integrity verdicts, which can be
-   * remedied by the user and provides additional details.
+   * Description of the user remediation action. Required.
    * @return value or {@code null} for none
    */
-  public java.util.List<UserRemediationDetails> getUserRemediationDetails() {
-    return userRemediationDetails;
+  public java.lang.String getRemediation() {
+    return remediation;
   }
 
   /**
-   * This shows when there is an issue with at least one of the integrity verdicts, which can be
-   * remedied by the user and provides additional details.
-   * @param userRemediationDetails userRemediationDetails or {@code null} for none
+   * Description of the user remediation action. Required.
+   * @param remediation remediation or {@code null} for none
    */
-  public GuidanceDetails setUserRemediationDetails(java.util.List<UserRemediationDetails> userRemediationDetails) {
-    this.userRemediationDetails = userRemediationDetails;
+  public UserRemediationDetails setRemediation(java.lang.String remediation) {
+    this.remediation = remediation;
     return this;
   }
 
   @Override
-  public GuidanceDetails set(String fieldName, Object value) {
-    return (GuidanceDetails) super.set(fieldName, value);
+  public UserRemediationDetails set(String fieldName, Object value) {
+    return (UserRemediationDetails) super.set(fieldName, value);
   }
 
   @Override
-  public GuidanceDetails clone() {
-    return (GuidanceDetails) super.clone();
+  public UserRemediationDetails clone() {
+    return (UserRemediationDetails) super.clone();
   }
 
 }

@@ -38,6 +38,14 @@ public final class PipelineSpec extends com.google.api.client.json.GenericJson {
   private java.util.List<PipelineTask> finallyTasks;
 
   /**
+   * Output only. auto-generated yaml that is output only for display purpose for workflows using
+   * pipeline_spec, used by UI/gcloud cli for Workflows.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String generatedYaml;
+
+  /**
    * List of parameters.
    * The value may be {@code null}.
    */
@@ -81,6 +89,25 @@ public final class PipelineSpec extends com.google.api.client.json.GenericJson {
    */
   public PipelineSpec setFinallyTasks(java.util.List<PipelineTask> finallyTasks) {
     this.finallyTasks = finallyTasks;
+    return this;
+  }
+
+  /**
+   * Output only. auto-generated yaml that is output only for display purpose for workflows using
+   * pipeline_spec, used by UI/gcloud cli for Workflows.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGeneratedYaml() {
+    return generatedYaml;
+  }
+
+  /**
+   * Output only. auto-generated yaml that is output only for display purpose for workflows using
+   * pipeline_spec, used by UI/gcloud cli for Workflows.
+   * @param generatedYaml generatedYaml or {@code null} for none
+   */
+  public PipelineSpec setGeneratedYaml(java.lang.String generatedYaml) {
+    this.generatedYaml = generatedYaml;
     return this;
   }
 

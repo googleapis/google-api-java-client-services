@@ -54,7 +54,7 @@ public final class Results extends com.google.api.client.json.GenericJson {
   /**
    * List of build step outputs, produced by builder images, in the order corresponding to build
    * step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can
-   * produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is
+   * produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 50KB of data is
    * stored.
    * The value may be {@code null}.
    */
@@ -159,7 +159,7 @@ public final class Results extends com.google.api.client.json.GenericJson {
   /**
    * List of build step outputs, produced by builder images, in the order corresponding to build
    * step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can
-   * produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is
+   * produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 50KB of data is
    * stored.
    * @return value or {@code null} for none
    */
@@ -170,7 +170,7 @@ public final class Results extends com.google.api.client.json.GenericJson {
   /**
    * List of build step outputs, produced by builder images, in the order corresponding to build
    * step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can
-   * produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is
+   * produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 50KB of data is
    * stored.
    * @param buildStepOutputs buildStepOutputs or {@code null} for none
    */

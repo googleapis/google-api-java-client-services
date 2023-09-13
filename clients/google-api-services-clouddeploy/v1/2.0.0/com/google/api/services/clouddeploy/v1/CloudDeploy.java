@@ -2004,6 +2004,148 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
+         * Creates a `Rollout` to roll back the specified target.
+         *
+         * Create a request for the method "deliveryPipelines.rollbackTarget".
+         *
+         * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+         * parameters, call the {@link RollbackTarget#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created. Format should
+         *        be projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+         * @param content the {@link com.google.api.services.clouddeploy.v1.model.RollbackTargetRequest}
+         * @return the request
+         */
+        public RollbackTarget rollbackTarget(java.lang.String name, com.google.api.services.clouddeploy.v1.model.RollbackTargetRequest content) throws java.io.IOException {
+          RollbackTarget result = new RollbackTarget(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RollbackTarget extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.RollbackTargetResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:rollbackTarget";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+
+          /**
+           * Creates a `Rollout` to roll back the specified target.
+           *
+           * Create a request for the method "deliveryPipelines.rollbackTarget".
+           *
+           * This request holds the parameters needed by the the clouddeploy server.  After setting any
+           * optional parameters, call the {@link RollbackTarget#execute()} method to invoke the remote
+           * operation. <p> {@link RollbackTarget#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created. Format should
+         *        be projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           * @param content the {@link com.google.api.services.clouddeploy.v1.model.RollbackTargetRequest}
+           * @since 1.13
+           */
+          protected RollbackTarget(java.lang.String name, com.google.api.services.clouddeploy.v1.model.RollbackTargetRequest content) {
+            super(CloudDeploy.this, "POST", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.RollbackTargetResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+            }
+          }
+
+          @Override
+          public RollbackTarget set$Xgafv(java.lang.String $Xgafv) {
+            return (RollbackTarget) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RollbackTarget setAccessToken(java.lang.String accessToken) {
+            return (RollbackTarget) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RollbackTarget setAlt(java.lang.String alt) {
+            return (RollbackTarget) super.setAlt(alt);
+          }
+
+          @Override
+          public RollbackTarget setCallback(java.lang.String callback) {
+            return (RollbackTarget) super.setCallback(callback);
+          }
+
+          @Override
+          public RollbackTarget setFields(java.lang.String fields) {
+            return (RollbackTarget) super.setFields(fields);
+          }
+
+          @Override
+          public RollbackTarget setKey(java.lang.String key) {
+            return (RollbackTarget) super.setKey(key);
+          }
+
+          @Override
+          public RollbackTarget setOauthToken(java.lang.String oauthToken) {
+            return (RollbackTarget) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RollbackTarget setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RollbackTarget) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RollbackTarget setQuotaUser(java.lang.String quotaUser) {
+            return (RollbackTarget) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RollbackTarget setUploadType(java.lang.String uploadType) {
+            return (RollbackTarget) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RollbackTarget setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RollbackTarget) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created.
+           * Format should be
+           * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created. Format should
+         be projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created.
+           * Format should be
+           * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           */
+          public RollbackTarget setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RollbackTarget set(String parameterName, Object value) {
+            return (RollbackTarget) super.set(parameterName, value);
+          }
+        }
+        /**
          * Sets the access control policy on the specified resource. Replaces any existing policy. Can
          * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *

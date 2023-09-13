@@ -62,6 +62,13 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
   private java.lang.String fileName;
 
   /**
+   * Optional. `fmp4` container configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Fmp4Config fmp4;
+
+  /**
    * A unique key for this multiplexed stream.
    * The value may be {@code null}.
    */
@@ -148,6 +155,23 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
    */
   public MuxStream setFileName(java.lang.String fileName) {
     this.fileName = fileName;
+    return this;
+  }
+
+  /**
+   * Optional. `fmp4` container configuration.
+   * @return value or {@code null} for none
+   */
+  public Fmp4Config getFmp4() {
+    return fmp4;
+  }
+
+  /**
+   * Optional. `fmp4` container configuration.
+   * @param fmp4 fmp4 or {@code null} for none
+   */
+  public MuxStream setFmp4(Fmp4Config fmp4) {
+    this.fmp4 = fmp4;
     return this;
   }
 

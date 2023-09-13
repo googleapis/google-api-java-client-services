@@ -38,6 +38,13 @@ public final class SAMLParams extends com.google.api.client.json.GenericJson {
   private java.lang.String certificate;
 
   /**
+   * IdP field that maps to the user’s email address
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String emailMapping;
+
+  /**
    * Entity id URL
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class SAMLParams extends com.google.api.client.json.GenericJson {
    */
   public SAMLParams setCertificate(java.lang.String certificate) {
     this.certificate = certificate;
+    return this;
+  }
+
+  /**
+   * IdP field that maps to the user’s email address
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmailMapping() {
+    return emailMapping;
+  }
+
+  /**
+   * IdP field that maps to the user’s email address
+   * @param emailMapping emailMapping or {@code null} for none
+   */
+  public SAMLParams setEmailMapping(java.lang.String emailMapping) {
+    this.emailMapping = emailMapping;
     return this;
   }
 

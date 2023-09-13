@@ -30,12 +30,39 @@ package com.google.api.services.monitoring.v1.model;
 public final class DataSet extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The collection of breakdowns to be applied to the dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Breakdown> breakdowns;
+
+  static {
+    // hack to force ProGuard to consider Breakdown used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Breakdown.class);
+  }
+
+  /**
+   * Optional. A collection of dimension columns.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Dimension> dimensions;
+
+  /**
    * A template string for naming TimeSeries in the resulting data set. This should be a string with
    * interpolations of the form ${label_name}, which will resolve to the label's value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String legendTemplate;
+
+  /**
+   * Optional. A collection of measures.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Measure> measures;
 
   /**
    * Optional. The lower bound on data point frequency for this data set, implemented by specifying
@@ -69,6 +96,40 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
   private TimeSeriesQuery timeSeriesQuery;
 
   /**
+   * Optional. The collection of breakdowns to be applied to the dataset.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Breakdown> getBreakdowns() {
+    return breakdowns;
+  }
+
+  /**
+   * Optional. The collection of breakdowns to be applied to the dataset.
+   * @param breakdowns breakdowns or {@code null} for none
+   */
+  public DataSet setBreakdowns(java.util.List<Breakdown> breakdowns) {
+    this.breakdowns = breakdowns;
+    return this;
+  }
+
+  /**
+   * Optional. A collection of dimension columns.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Dimension> getDimensions() {
+    return dimensions;
+  }
+
+  /**
+   * Optional. A collection of dimension columns.
+   * @param dimensions dimensions or {@code null} for none
+   */
+  public DataSet setDimensions(java.util.List<Dimension> dimensions) {
+    this.dimensions = dimensions;
+    return this;
+  }
+
+  /**
    * A template string for naming TimeSeries in the resulting data set. This should be a string with
    * interpolations of the form ${label_name}, which will resolve to the label's value.
    * @return value or {@code null} for none
@@ -84,6 +145,23 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
    */
   public DataSet setLegendTemplate(java.lang.String legendTemplate) {
     this.legendTemplate = legendTemplate;
+    return this;
+  }
+
+  /**
+   * Optional. A collection of measures.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Measure> getMeasures() {
+    return measures;
+  }
+
+  /**
+   * Optional. A collection of measures.
+   * @param measures measures or {@code null} for none
+   */
+  public DataSet setMeasures(java.util.List<Measure> measures) {
+    this.measures = measures;
     return this;
   }
 

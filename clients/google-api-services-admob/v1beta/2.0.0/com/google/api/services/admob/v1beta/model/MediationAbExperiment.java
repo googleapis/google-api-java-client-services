@@ -17,7 +17,7 @@
 package com.google.api.services.admob.v1beta.model;
 
 /**
- * The mediation A/B experiment. NEXT ID: 12
+ * The mediation A/B experiment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AdMob API. For a detailed explanation see:

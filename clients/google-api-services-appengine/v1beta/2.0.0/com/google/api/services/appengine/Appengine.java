@@ -4538,6 +4538,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
+        /** Optional. Options to include extra data */
+        @com.google.api.client.util.Key
+        private java.lang.String includeExtraData;
+
+        /** Optional. Options to include extra data
+         */
+        public java.lang.String getIncludeExtraData() {
+          return includeExtraData;
+        }
+
+        /** Optional. Options to include extra data */
+        public Get setIncludeExtraData(java.lang.String includeExtraData) {
+          this.includeExtraData = includeExtraData;
+          return this;
+        }
+
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
@@ -5399,6 +5415,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           /** Part of `name`. See documentation of `appsId`. */
           public Get setVersionsId(java.lang.String versionsId) {
             this.versionsId = versionsId;
+            return this;
+          }
+
+          /** Optional. Options to include extra data */
+          @com.google.api.client.util.Key
+          private java.lang.String includeExtraData;
+
+          /** Optional. Options to include extra data
+           */
+          public java.lang.String getIncludeExtraData() {
+            return includeExtraData;
+          }
+
+          /** Optional. Options to include extra data */
+          public Get setIncludeExtraData(java.lang.String includeExtraData) {
+            this.includeExtraData = includeExtraData;
             return this;
           }
 

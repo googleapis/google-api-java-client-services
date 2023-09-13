@@ -34,6 +34,14 @@ package com.google.api.services.appengine.model;
 public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional Google Generated Customer Metadata, this field won't be provided by default and can
+   * be requested by setting the IncludeExtraData field in GetServiceRequest
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> generatedCustomerMetadata;
+
+  /**
    * Relative name of the service within the application. Example: default.@OutputOnly
    * The value may be {@code null}.
    */
@@ -75,6 +83,25 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TrafficSplit split;
+
+  /**
+   * Additional Google Generated Customer Metadata, this field won't be provided by default and can
+   * be requested by setting the IncludeExtraData field in GetServiceRequest
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getGeneratedCustomerMetadata() {
+    return generatedCustomerMetadata;
+  }
+
+  /**
+   * Additional Google Generated Customer Metadata, this field won't be provided by default and can
+   * be requested by setting the IncludeExtraData field in GetServiceRequest
+   * @param generatedCustomerMetadata generatedCustomerMetadata or {@code null} for none
+   */
+  public Service setGeneratedCustomerMetadata(java.util.Map<String, java.lang.Object> generatedCustomerMetadata) {
+    this.generatedCustomerMetadata = generatedCustomerMetadata;
+    return this;
+  }
 
   /**
    * Relative name of the service within the application. Example: default.@OutputOnly

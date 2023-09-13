@@ -3028,6 +3028,38 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
             return this;
           }
 
+          /** Optional. List filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. List filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. List filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Sort results. Supported values are "name", "name desc" or "" (unsorted). */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Sort results. Supported values are "name", "name desc" or "" (unsorted).
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Sort results. Supported values are "name", "name desc" or "" (unsorted). */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
           /** Maximum return size of the list call. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
@@ -6965,6 +6997,38 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /** Optional. List filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. List filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. List filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Sort results. Supported values are "name", "name desc" or "" (unsorted). */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Sort results. Supported values are "name", "name desc" or "" (unsorted).
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Sort results. Supported values are "name", "name desc" or "" (unsorted). */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
             return this;
           }
 

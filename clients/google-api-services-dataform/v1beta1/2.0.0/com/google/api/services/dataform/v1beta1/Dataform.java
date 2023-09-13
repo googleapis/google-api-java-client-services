@@ -20,7 +20,7 @@ package com.google.api.services.dataform.v1beta1;
  * Service definition for Dataform (v1beta1).
  *
  * <p>
- * 
+ * Service to develop, version control, and operationalize SQL pipelines in BigQuery.
  * </p>
  *
  * <p>

@@ -73,6 +73,13 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String forwardingRule;
 
   /**
+   * Output only. Specifies the type of the target of the forwarding rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forwardingRuleTarget;
+
+  /**
    * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-
    * engine/docs/concepts/cluster-architecture).
    * The value may be {@code null}.
@@ -89,12 +96,27 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is
-   * only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs
-   * /load-balancing-overview).
+   * only allowed when the test's destination is a [global load balancer
+   * VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
+
+  /**
+   * Output only. ID of the load balancer the forwarding rule points to. Empty for forwarding rules
+   * not related to load balancers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loadBalancerId;
+
+  /**
+   * Output only. Type of the load balancer the forwarding rule points to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loadBalancerType;
 
   /**
    * A Compute Engine network URI.
@@ -230,6 +252,23 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Specifies the type of the target of the forwarding rule.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForwardingRuleTarget() {
+    return forwardingRuleTarget;
+  }
+
+  /**
+   * Output only. Specifies the type of the target of the forwarding rule.
+   * @param forwardingRuleTarget forwardingRuleTarget or {@code null} for none
+   */
+  public Endpoint setForwardingRuleTarget(java.lang.String forwardingRuleTarget) {
+    this.forwardingRuleTarget = forwardingRuleTarget;
+    return this;
+  }
+
+  /**
    * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-
    * engine/docs/concepts/cluster-architecture).
    * @return value or {@code null} for none
@@ -267,8 +306,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is
-   * only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs
-   * /load-balancing-overview).
+   * only allowed when the test's destination is a [global load balancer
+   * VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -277,12 +316,48 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is
-   * only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs
-   * /load-balancing-overview).
+   * only allowed when the test's destination is a [global load balancer
+   * VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
    * @param ipAddress ipAddress or {@code null} for none
    */
   public Endpoint setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * Output only. ID of the load balancer the forwarding rule points to. Empty for forwarding rules
+   * not related to load balancers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoadBalancerId() {
+    return loadBalancerId;
+  }
+
+  /**
+   * Output only. ID of the load balancer the forwarding rule points to. Empty for forwarding rules
+   * not related to load balancers.
+   * @param loadBalancerId loadBalancerId or {@code null} for none
+   */
+  public Endpoint setLoadBalancerId(java.lang.String loadBalancerId) {
+    this.loadBalancerId = loadBalancerId;
+    return this;
+  }
+
+  /**
+   * Output only. Type of the load balancer the forwarding rule points to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoadBalancerType() {
+    return loadBalancerType;
+  }
+
+  /**
+   * Output only. Type of the load balancer the forwarding rule points to.
+   * @param loadBalancerType loadBalancerType or {@code null} for none
+   */
+  public Endpoint setLoadBalancerType(java.lang.String loadBalancerType) {
+    this.loadBalancerType = loadBalancerType;
     return this;
   }
 

@@ -74,6 +74,13 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private java.lang.String collation;
 
   /**
+   * Optional. Configuration for data cache.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataCacheConfig dataCacheConfig;
+
+  /**
    * The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.
    * The value may be {@code null}.
    */
@@ -279,6 +286,23 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
    */
   public CloudSqlSettings setCollation(java.lang.String collation) {
     this.collation = collation;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for data cache.
+   * @return value or {@code null} for none
+   */
+  public DataCacheConfig getDataCacheConfig() {
+    return dataCacheConfig;
+  }
+
+  /**
+   * Optional. Configuration for data cache.
+   * @param dataCacheConfig dataCacheConfig or {@code null} for none
+   */
+  public CloudSqlSettings setDataCacheConfig(DataCacheConfig dataCacheConfig) {
+    this.dataCacheConfig = dataCacheConfig;
     return this;
   }
 

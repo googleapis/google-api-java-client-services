@@ -2058,7 +2058,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link MarkDismissed#execute()} method to invoke the remote operation.
            *
-           * @param name Name of the recommendation.
+           * @param name Required. Name of the recommendation.
            * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
            * @return the request
            */
@@ -2089,7 +2089,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param name Name of the recommendation.
+             * @param name Required. Name of the recommendation.
              * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
              * @since 1.13
              */
@@ -2158,17 +2158,17 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
               return (MarkDismissed) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Name of the recommendation.
+            /** Required. Name of the recommendation.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             public MarkDismissed setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3705,7 +3705,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link MarkDismissed#execute()} method to invoke the remote operation.
            *
-           * @param name Name of the recommendation.
+           * @param name Required. Name of the recommendation.
            * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
            * @return the request
            */
@@ -3736,7 +3736,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param name Name of the recommendation.
+             * @param name Required. Name of the recommendation.
              * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
              * @since 1.13
              */
@@ -3805,17 +3805,17 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
               return (MarkDismissed) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Name of the recommendation.
+            /** Required. Name of the recommendation.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             public MarkDismissed setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6044,7 +6044,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link MarkDismissed#execute()} method to invoke the remote operation.
            *
-           * @param name Name of the recommendation.
+           * @param name Required. Name of the recommendation.
            * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
            * @return the request
            */
@@ -6075,7 +6075,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param name Name of the recommendation.
+             * @param name Required. Name of the recommendation.
              * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
              * @since 1.13
              */
@@ -6144,17 +6144,17 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
               return (MarkDismissed) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Name of the recommendation.
+            /** Required. Name of the recommendation.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             public MarkDismissed setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8383,7 +8383,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link MarkDismissed#execute()} method to invoke the remote operation.
            *
-           * @param name Name of the recommendation.
+           * @param name Required. Name of the recommendation.
            * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
            * @return the request
            */
@@ -8414,7 +8414,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param name Name of the recommendation.
+             * @param name Required. Name of the recommendation.
              * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1MarkRecommendationDismissedRequest}
              * @since 1.13
              */
@@ -8483,17 +8483,17 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
               return (MarkDismissed) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Name of the recommendation.
+            /** Required. Name of the recommendation.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             public MarkDismissed setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

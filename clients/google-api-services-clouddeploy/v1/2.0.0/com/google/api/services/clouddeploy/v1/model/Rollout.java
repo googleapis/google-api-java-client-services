@@ -170,6 +170,21 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Name of the `Rollout` that is rolled back by this `Rollout`. Empty if this
+   * `Rollout` wasn't created as a rollback.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rollbackOfRollout;
+
+  /**
+   * Output only. Names of `Rollouts` that rolled back this `Rollout`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> rolledBackByRollouts;
+
+  /**
    * Output only. Current state of the `Rollout`.
    * The value may be {@code null}.
    */
@@ -504,6 +519,42 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setPhases(java.util.List<Phase> phases) {
     this.phases = phases;
+    return this;
+  }
+
+  /**
+   * Output only. Name of the `Rollout` that is rolled back by this `Rollout`. Empty if this
+   * `Rollout` wasn't created as a rollback.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRollbackOfRollout() {
+    return rollbackOfRollout;
+  }
+
+  /**
+   * Output only. Name of the `Rollout` that is rolled back by this `Rollout`. Empty if this
+   * `Rollout` wasn't created as a rollback.
+   * @param rollbackOfRollout rollbackOfRollout or {@code null} for none
+   */
+  public Rollout setRollbackOfRollout(java.lang.String rollbackOfRollout) {
+    this.rollbackOfRollout = rollbackOfRollout;
+    return this;
+  }
+
+  /**
+   * Output only. Names of `Rollouts` that rolled back this `Rollout`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRolledBackByRollouts() {
+    return rolledBackByRollouts;
+  }
+
+  /**
+   * Output only. Names of `Rollouts` that rolled back this `Rollout`.
+   * @param rolledBackByRollouts rolledBackByRollouts or {@code null} for none
+   */
+  public Rollout setRolledBackByRollouts(java.util.List<java.lang.String> rolledBackByRollouts) {
+    this.rolledBackByRollouts = rolledBackByRollouts;
     return this;
   }
 

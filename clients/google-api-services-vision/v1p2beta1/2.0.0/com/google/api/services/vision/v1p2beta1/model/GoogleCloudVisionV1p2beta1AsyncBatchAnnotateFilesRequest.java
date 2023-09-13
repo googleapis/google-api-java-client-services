@@ -30,6 +30,16 @@ package com.google.api.services.vision.v1p2beta1.model;
 public final class GoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
    * /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
    * location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
@@ -50,6 +60,29 @@ public final class GoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest exte
     // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1AsyncAnnotateFileRequest used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1AsyncAnnotateFileRequest.class);
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
+    return this;
   }
 
   /**

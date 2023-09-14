@@ -74,13 +74,6 @@ public final class BlockchainNode extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * Polygon-specific blockchain node details.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PolygonDetails polygonDetails;
-
-  /**
    * Optional. This can only be accessed through the private ip.
    * The value may be {@code null}.
    */
@@ -202,23 +195,6 @@ public final class BlockchainNode extends com.google.api.client.json.GenericJson
    */
   public BlockchainNode setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Polygon-specific blockchain node details.
-   * @return value or {@code null} for none
-   */
-  public PolygonDetails getPolygonDetails() {
-    return polygonDetails;
-  }
-
-  /**
-   * Polygon-specific blockchain node details.
-   * @param polygonDetails polygonDetails or {@code null} for none
-   */
-  public BlockchainNode setPolygonDetails(PolygonDetails polygonDetails) {
-    this.polygonDetails = polygonDetails;
     return this;
   }
 

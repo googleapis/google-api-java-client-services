@@ -119,6 +119,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private String updateTime;
 
   /**
+   * Output only. The VM os image version of NotebookRuntime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
+
+  /**
    * Output only. Timestamp when this NotebookRuntime was created.
    * @return value or {@code null} for none
    */
@@ -327,6 +334,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The VM os image version of NotebookRuntime.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Output only. The VM os image version of NotebookRuntime.
+   * @param version version or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

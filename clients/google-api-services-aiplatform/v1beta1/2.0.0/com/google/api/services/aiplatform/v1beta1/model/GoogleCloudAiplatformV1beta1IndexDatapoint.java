@@ -54,8 +54,8 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
 
   /**
    * Optional. List of Restrict of the datapoint, used to perform "restricted searches" where
-   * boolean rule are used to filter the subset of the database eligible for matching. See:
-   * https://cloud.google.com/vertex-ai/docs/matching-engine/filtering
+   * boolean rule are used to filter the subset of the database eligible for matching. This uses
+   * categorical tokens. See: https://cloud.google.com/vertex-ai/docs/matching-engine/filtering
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,8 +118,8 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
 
   /**
    * Optional. List of Restrict of the datapoint, used to perform "restricted searches" where
-   * boolean rule are used to filter the subset of the database eligible for matching. See:
-   * https://cloud.google.com/vertex-ai/docs/matching-engine/filtering
+   * boolean rule are used to filter the subset of the database eligible for matching. This uses
+   * categorical tokens. See: https://cloud.google.com/vertex-ai/docs/matching-engine/filtering
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1IndexDatapointRestriction> getRestricts() {
@@ -128,8 +128,8 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
 
   /**
    * Optional. List of Restrict of the datapoint, used to perform "restricted searches" where
-   * boolean rule are used to filter the subset of the database eligible for matching. See:
-   * https://cloud.google.com/vertex-ai/docs/matching-engine/filtering
+   * boolean rule are used to filter the subset of the database eligible for matching. This uses
+   * categorical tokens. See: https://cloud.google.com/vertex-ai/docs/matching-engine/filtering
    * @param restricts restricts or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1IndexDatapoint setRestricts(java.util.List<GoogleCloudAiplatformV1beta1IndexDatapointRestriction> restricts) {

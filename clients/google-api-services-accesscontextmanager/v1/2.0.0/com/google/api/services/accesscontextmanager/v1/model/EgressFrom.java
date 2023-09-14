@@ -51,6 +51,22 @@ public final class EgressFrom extends com.google.api.client.json.GenericJson {
   private java.lang.String identityType;
 
   /**
+   * Whether to enforce traffic restrictions based on `sources` field. If the `sources` fields is
+   * non-empty, then this field must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceRestriction;
+
+  /**
+   * Sources that this EgressPolicy authorizes access from. If this field is not empty, then
+   * `source_restriction` must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EgressSource> sources;
+
+  /**
    * A list of identities that are allowed access through this [EgressPolicy]. Should be in the
    * format of email address. The email address should represent individual user or service account
    * only.
@@ -87,6 +103,44 @@ public final class EgressFrom extends com.google.api.client.json.GenericJson {
    */
   public EgressFrom setIdentityType(java.lang.String identityType) {
     this.identityType = identityType;
+    return this;
+  }
+
+  /**
+   * Whether to enforce traffic restrictions based on `sources` field. If the `sources` fields is
+   * non-empty, then this field must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceRestriction() {
+    return sourceRestriction;
+  }
+
+  /**
+   * Whether to enforce traffic restrictions based on `sources` field. If the `sources` fields is
+   * non-empty, then this field must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * @param sourceRestriction sourceRestriction or {@code null} for none
+   */
+  public EgressFrom setSourceRestriction(java.lang.String sourceRestriction) {
+    this.sourceRestriction = sourceRestriction;
+    return this;
+  }
+
+  /**
+   * Sources that this EgressPolicy authorizes access from. If this field is not empty, then
+   * `source_restriction` must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EgressSource> getSources() {
+    return sources;
+  }
+
+  /**
+   * Sources that this EgressPolicy authorizes access from. If this field is not empty, then
+   * `source_restriction` must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * @param sources sources or {@code null} for none
+   */
+  public EgressFrom setSources(java.util.List<EgressSource> sources) {
+    this.sources = sources;
     return this;
   }
 

@@ -37,14 +37,6 @@ public final class GoogleChecksReportV1alphaReport extends com.google.api.client
   private GoogleChecksReportV1alphaAppBundle appBundle;
 
   /**
-   * Resource name of the base report used for comparison. May be absent if this is the first report
-   * generated for the app.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String baseReport;
-
-  /**
    * List of checks that were run on the app bundle.
    * The value may be {@code null}.
    */
@@ -92,25 +84,6 @@ public final class GoogleChecksReportV1alphaReport extends com.google.api.client
    */
   public GoogleChecksReportV1alphaReport setAppBundle(GoogleChecksReportV1alphaAppBundle appBundle) {
     this.appBundle = appBundle;
-    return this;
-  }
-
-  /**
-   * Resource name of the base report used for comparison. May be absent if this is the first report
-   * generated for the app.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBaseReport() {
-    return baseReport;
-  }
-
-  /**
-   * Resource name of the base report used for comparison. May be absent if this is the first report
-   * generated for the app.
-   * @param baseReport baseReport or {@code null} for none
-   */
-  public GoogleChecksReportV1alphaReport setBaseReport(java.lang.String baseReport) {
-    this.baseReport = baseReport;
     return this;
   }
 

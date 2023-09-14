@@ -89,7 +89,7 @@ public final class DataExchange extends com.google.api.client.json.GenericJson {
   private java.lang.String primaryContact;
 
   /**
-   * Required. Configurable data sharing environment option for a data exchange.
+   * Optional. Configurable data sharing environment option for a data exchange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,7 +267,7 @@ public final class DataExchange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Configurable data sharing environment option for a data exchange.
+   * Optional. Configurable data sharing environment option for a data exchange.
    * @return value or {@code null} for none
    */
   public SharingEnvironmentConfig getSharingEnvironmentConfig() {
@@ -275,7 +275,7 @@ public final class DataExchange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Configurable data sharing environment option for a data exchange.
+   * Optional. Configurable data sharing environment option for a data exchange.
    * @param sharingEnvironmentConfig sharingEnvironmentConfig or {@code null} for none
    */
   public DataExchange setSharingEnvironmentConfig(SharingEnvironmentConfig sharingEnvironmentConfig) {

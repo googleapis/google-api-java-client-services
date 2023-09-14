@@ -30,6 +30,20 @@ package com.google.api.services.cloudfunctions.v2alpha.model;
 public final class Runtime extends com.google.api.client.json.GenericJson {
 
   /**
+   * Decommission date for the runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Date decommissionDate;
+
+  /**
+   * Deprecation date for the runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Date deprecationDate;
+
+  /**
    * The user facing name, eg 'Go 1.13', 'Node.js 12', etc.
    * The value may be {@code null}.
    */
@@ -63,6 +77,40 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> warnings;
+
+  /**
+   * Decommission date for the runtime.
+   * @return value or {@code null} for none
+   */
+  public Date getDecommissionDate() {
+    return decommissionDate;
+  }
+
+  /**
+   * Decommission date for the runtime.
+   * @param decommissionDate decommissionDate or {@code null} for none
+   */
+  public Runtime setDecommissionDate(Date decommissionDate) {
+    this.decommissionDate = decommissionDate;
+    return this;
+  }
+
+  /**
+   * Deprecation date for the runtime.
+   * @return value or {@code null} for none
+   */
+  public Date getDeprecationDate() {
+    return deprecationDate;
+  }
+
+  /**
+   * Deprecation date for the runtime.
+   * @param deprecationDate deprecationDate or {@code null} for none
+   */
+  public Runtime setDeprecationDate(Date deprecationDate) {
+    this.deprecationDate = deprecationDate;
+    return this;
+  }
 
   /**
    * The user facing name, eg 'Go 1.13', 'Node.js 12', etc.

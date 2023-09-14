@@ -73,6 +73,14 @@ public final class GoogleCloudAiplatformV1IndexEndpoint extends com.google.api.c
   private java.lang.Boolean enablePrivateServiceConnect;
 
   /**
+   * Immutable. Customer-managed encryption key spec for an IndexEndpoint. If set, this
+   * IndexEndpoint and all sub-resources of this IndexEndpoint will be secured by this key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EncryptionSpec encryptionSpec;
+
+  /**
    * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
    * happens.
    * The value may be {@code null}.
@@ -229,6 +237,25 @@ public final class GoogleCloudAiplatformV1IndexEndpoint extends com.google.api.c
    */
   public GoogleCloudAiplatformV1IndexEndpoint setEnablePrivateServiceConnect(java.lang.Boolean enablePrivateServiceConnect) {
     this.enablePrivateServiceConnect = enablePrivateServiceConnect;
+    return this;
+  }
+
+  /**
+   * Immutable. Customer-managed encryption key spec for an IndexEndpoint. If set, this
+   * IndexEndpoint and all sub-resources of this IndexEndpoint will be secured by this key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Immutable. Customer-managed encryption key spec for an IndexEndpoint. If set, this
+   * IndexEndpoint and all sub-resources of this IndexEndpoint will be secured by this key.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1IndexEndpoint setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

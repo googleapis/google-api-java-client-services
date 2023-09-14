@@ -19296,9 +19296,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the aiplatform server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format:
+             * @param parent Required. The resource name of the EntityType to create a Feature. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
              * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1Feature}
              * @return the request
              */
@@ -19326,9 +19326,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format:
+               * @param parent Required. The resource name of the EntityType to create a Feature. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
                * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1Feature}
                * @since 1.13
                */
@@ -19398,27 +19398,24 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Required. The resource name of the EntityType or FeatureGroup to create a Feature.
-               * Format: `projects/{project}/locations/{location}/featurestores/{featurestore}/entit
-               * yTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+               * Required. The resource name of the EntityType to create a Feature. Format: `project
+               * s/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_t
+               * ype}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format:
+              /** Required. The resource name of the EntityType to create a Feature. Format:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-             `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The resource name of the EntityType or FeatureGroup to create a Feature.
-               * Format: `projects/{project}/locations/{location}/featurestores/{featurestore}/entit
-               * yTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+               * Required. The resource name of the EntityType to create a Feature. Format: `project
+               * s/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_t
+               * ype}`
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -19434,14 +19431,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * Required. The ID to use for the Feature, which will become the final component of
                * the Feature's resource name. This value may be up to 128 characters, and valid
                * characters are `[a-z0-9_]`. The first character cannot be a number. The value must
-               * be unique within an EntityType/FeatureGroup.
+               * be unique within an EntityType .
                */
               @com.google.api.client.util.Key
               private java.lang.String featureId;
 
               /** Required. The ID to use for the Feature, which will become the final component of the Feature's
              resource name. This value may be up to 128 characters, and valid characters are `[a-z0-9_]`. The
-             first character cannot be a number. The value must be unique within an EntityType/FeatureGroup.
+             first character cannot be a number. The value must be unique within an EntityType .
                */
               public java.lang.String getFeatureId() {
                 return featureId;
@@ -19451,7 +19448,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * Required. The ID to use for the Feature, which will become the final component of
                * the Feature's resource name. This value may be up to 128 characters, and valid
                * characters are `[a-z0-9_]`. The first character cannot be a number. The value must
-               * be unique within an EntityType/FeatureGroup.
+               * be unique within an EntityType .
                */
               public Create setFeatureId(java.lang.String featureId) {
                 this.featureId = featureId;
@@ -19473,7 +19470,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/f
              *        eaturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
-             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -19502,7 +19498,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/f
              *        eaturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
-             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -19573,15 +19568,13 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Features to be deleted. Format: `projects/{project}/locat
                * ions/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{fe
-               * ature}` `projects/{project}/locations/{location}/featureGroups/{feature_group}/feat
-               * ures/{feature}`
+               * ature}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/
              featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
-             `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
                */
               public java.lang.String getName() {
                 return name;
@@ -19590,8 +19583,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Features to be deleted. Format: `projects/{project}/locat
                * ions/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{fe
-               * ature}` `projects/{project}/locations/{location}/featureGroups/{feature_group}/feat
-               * ures/{feature}`
+               * ature}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -19618,7 +19610,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The name of the Feature resource. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -19646,7 +19638,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The name of the Feature resource. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -19727,14 +19719,12 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Feature resource. Format: `projects/{project}/locations/{
                * location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The name of the Feature resource. Format:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-             `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getName() {
                 return name;
@@ -19743,7 +19733,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Feature resource. Format: `projects/{project}/locations/{
                * location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -19770,7 +19759,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param parent Required. The resource name of the Location to list Features. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -19798,7 +19787,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param parent Required. The resource name of the Location to list Features. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -19879,14 +19868,12 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The resource name of the Location to list Features. Format: `projects/{pr
                * oject}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the Location to list Features. Format:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-             `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getParent() {
                 return parent;
@@ -19895,7 +19882,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The resource name of the Location to list Features. Format: `projects/{pr
                * oject}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -19984,14 +19970,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `feature_id` * `value_type`
-               * * `create_time` * `update_time`
+               * (Not supported for FeatureRegistry Feature) * `create_time` * `update_time`
                */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
               /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
-             name for descending. Supported fields: * `feature_id` * `value_type` * `create_time` *
-             `update_time`
+             name for descending. Supported fields: * `feature_id` * `value_type` (Not supported for
+             FeatureRegistry Feature) * `create_time` * `update_time`
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
@@ -20000,7 +19986,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `feature_id` * `value_type`
-               * * `create_time` * `update_time`
+               * (Not supported for FeatureRegistry Feature) * `create_time` * `update_time`
                */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;

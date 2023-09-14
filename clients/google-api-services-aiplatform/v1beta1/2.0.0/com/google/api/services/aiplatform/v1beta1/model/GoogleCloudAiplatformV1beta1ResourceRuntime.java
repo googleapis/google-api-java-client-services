@@ -38,6 +38,16 @@ public final class GoogleCloudAiplatformV1beta1ResourceRuntime extends com.googl
   private java.util.Map<String, java.lang.String> accessUris;
 
   /**
+   * Output only. The resource name of NotebookRuntimeTemplate for the RoV Persistent Cluster The
+   * NotebokRuntimeTemplate is created in the same VPC (if set), and with the same Ray and Python
+   * version as the Persistent Cluster. Example: "projects/1000/locations/us-
+   * central1/notebookRuntimeTemplates/abc123"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notebookRuntimeTemplate;
+
+  /**
    * Output only. URIs for user to connect to the Cluster. Example: { "RAY_HEAD_NODE_INTERNAL_IP":
    * "head-node-IP:10001" "RAY_DASHBOARD_URI": "ray-dashboard-address:8888" }
    * @return value or {@code null} for none
@@ -53,6 +63,29 @@ public final class GoogleCloudAiplatformV1beta1ResourceRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1ResourceRuntime setAccessUris(java.util.Map<String, java.lang.String> accessUris) {
     this.accessUris = accessUris;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of NotebookRuntimeTemplate for the RoV Persistent Cluster The
+   * NotebokRuntimeTemplate is created in the same VPC (if set), and with the same Ray and Python
+   * version as the Persistent Cluster. Example: "projects/1000/locations/us-
+   * central1/notebookRuntimeTemplates/abc123"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotebookRuntimeTemplate() {
+    return notebookRuntimeTemplate;
+  }
+
+  /**
+   * Output only. The resource name of NotebookRuntimeTemplate for the RoV Persistent Cluster The
+   * NotebokRuntimeTemplate is created in the same VPC (if set), and with the same Ray and Python
+   * version as the Persistent Cluster. Example: "projects/1000/locations/us-
+   * central1/notebookRuntimeTemplates/abc123"
+   * @param notebookRuntimeTemplate notebookRuntimeTemplate or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ResourceRuntime setNotebookRuntimeTemplate(java.lang.String notebookRuntimeTemplate) {
+    this.notebookRuntimeTemplate = notebookRuntimeTemplate;
     return this;
   }
 

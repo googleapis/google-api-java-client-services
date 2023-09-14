@@ -33,7 +33,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Local SSDs are available through both "SCSI" and "NVMe" interfaces. If not indicated, "NVMe"
-   * will be the default one for local ssds. We only support "SCSI" for persistent disks now.
+   * will be the default one for local ssds. This field is ignored for persistent disks as the
+   * interface is chosen automatically. See https://cloud.google.com/compute/docs/disks/persistent-
+   * disks#choose_an_interface.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +88,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Local SSDs are available through both "SCSI" and "NVMe" interfaces. If not indicated, "NVMe"
-   * will be the default one for local ssds. We only support "SCSI" for persistent disks now.
+   * will be the default one for local ssds. This field is ignored for persistent disks as the
+   * interface is chosen automatically. See https://cloud.google.com/compute/docs/disks/persistent-
+   * disks#choose_an_interface.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskInterface() {
@@ -95,7 +99,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Local SSDs are available through both "SCSI" and "NVMe" interfaces. If not indicated, "NVMe"
-   * will be the default one for local ssds. We only support "SCSI" for persistent disks now.
+   * will be the default one for local ssds. This field is ignored for persistent disks as the
+   * interface is chosen automatically. See https://cloud.google.com/compute/docs/disks/persistent-
+   * disks#choose_an_interface.
    * @param diskInterface diskInterface or {@code null} for none
    */
   public Disk setDiskInterface(java.lang.String diskInterface) {

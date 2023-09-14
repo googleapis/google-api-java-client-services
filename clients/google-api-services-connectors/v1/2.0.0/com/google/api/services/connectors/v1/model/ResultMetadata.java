@@ -51,6 +51,13 @@ public final class ResultMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String field;
 
   /**
+   * JsonSchema representation of this action's result
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema jsonSchema;
+
+  /**
    * The data type of the field.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class ResultMetadata extends com.google.api.client.json.GenericJson
    */
   public ResultMetadata setField(java.lang.String field) {
     this.field = field;
+    return this;
+  }
+
+  /**
+   * JsonSchema representation of this action's result
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getJsonSchema() {
+    return jsonSchema;
+  }
+
+  /**
+   * JsonSchema representation of this action's result
+   * @param jsonSchema jsonSchema or {@code null} for none
+   */
+  public ResultMetadata setJsonSchema(JsonSchema jsonSchema) {
+    this.jsonSchema = jsonSchema;
     return this;
   }
 

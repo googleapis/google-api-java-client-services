@@ -66,6 +66,13 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private ResourceRequests resourceRequests;
 
   /**
+   * The name of shared connector deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sharedDeployment;
+
+  /**
    * HPA autoscaling config.
    * @return value or {@code null} for none
    */
@@ -147,6 +154,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setResourceRequests(ResourceRequests resourceRequests) {
     this.resourceRequests = resourceRequests;
+    return this;
+  }
+
+  /**
+   * The name of shared connector deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSharedDeployment() {
+    return sharedDeployment;
+  }
+
+  /**
+   * The name of shared connector deployment.
+   * @param sharedDeployment sharedDeployment or {@code null} for none
+   */
+  public ConnectorInfraConfig setSharedDeployment(java.lang.String sharedDeployment) {
+    this.sharedDeployment = sharedDeployment;
     return this;
   }
 

@@ -50,6 +50,13 @@ public final class RuntimeEntitySchema extends com.google.api.client.json.Generi
   }
 
   /**
+   * Output only. JsonSchema representation of this entity's metadata
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema jsonSchema;
+
+  /**
    * Output only. Name of the entity.
    * @return value or {@code null} for none
    */
@@ -80,6 +87,23 @@ public final class RuntimeEntitySchema extends com.google.api.client.json.Generi
    */
   public RuntimeEntitySchema setFields(java.util.List<Field> fields) {
     this.fields = fields;
+    return this;
+  }
+
+  /**
+   * Output only. JsonSchema representation of this entity's metadata
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getJsonSchema() {
+    return jsonSchema;
+  }
+
+  /**
+   * Output only. JsonSchema representation of this entity's metadata
+   * @param jsonSchema jsonSchema or {@code null} for none
+   */
+  public RuntimeEntitySchema setJsonSchema(JsonSchema jsonSchema) {
+    this.jsonSchema = jsonSchema;
     return this;
   }
 

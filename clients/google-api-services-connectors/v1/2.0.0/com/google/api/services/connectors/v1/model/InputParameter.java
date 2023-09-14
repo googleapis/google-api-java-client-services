@@ -52,6 +52,13 @@ public final class InputParameter extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * JsonSchema representation of this action's parameter
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema jsonSchema;
+
+  /**
    * Specifies whether a null value is allowed.
    * The value may be {@code null}.
    */
@@ -115,6 +122,23 @@ public final class InputParameter extends com.google.api.client.json.GenericJson
    */
   public InputParameter setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * JsonSchema representation of this action's parameter
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getJsonSchema() {
+    return jsonSchema;
+  }
+
+  /**
+   * JsonSchema representation of this action's parameter
+   * @param jsonSchema jsonSchema or {@code null} for none
+   */
+  public InputParameter setJsonSchema(JsonSchema jsonSchema) {
+    this.jsonSchema = jsonSchema;
     return this;
   }
 

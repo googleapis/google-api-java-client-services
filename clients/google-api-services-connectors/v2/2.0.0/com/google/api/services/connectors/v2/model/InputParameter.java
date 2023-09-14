@@ -52,6 +52,13 @@ public final class InputParameter extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * JsonSchema of the parameter, applicable only if parameter is of type `STRUCT`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema jsonSchema;
+
+  /**
    * Name of the Parameter.
    * The value may be {@code null}.
    */
@@ -115,6 +122,23 @@ public final class InputParameter extends com.google.api.client.json.GenericJson
    */
   public InputParameter setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * JsonSchema of the parameter, applicable only if parameter is of type `STRUCT`
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getJsonSchema() {
+    return jsonSchema;
+  }
+
+  /**
+   * JsonSchema of the parameter, applicable only if parameter is of type `STRUCT`
+   * @param jsonSchema jsonSchema or {@code null} for none
+   */
+  public InputParameter setJsonSchema(JsonSchema jsonSchema) {
+    this.jsonSchema = jsonSchema;
     return this;
   }
 

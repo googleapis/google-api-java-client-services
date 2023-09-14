@@ -64,7 +64,21 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean enrichmentEnabled;
 
   /**
-   * Registration endpoint for auto regsitration.
+   * Optional. Private Connectivity Enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean privateConnectivityEnabled;
+
+  /**
+   * Optional. Public Events listener endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publicEventsListenerEndpoint;
+
+  /**
+   * Registration endpoint for auto registration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +153,41 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Registration endpoint for auto regsitration.
+   * Optional. Private Connectivity Enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPrivateConnectivityEnabled() {
+    return privateConnectivityEnabled;
+  }
+
+  /**
+   * Optional. Private Connectivity Enabled.
+   * @param privateConnectivityEnabled privateConnectivityEnabled or {@code null} for none
+   */
+  public EventingConfig setPrivateConnectivityEnabled(java.lang.Boolean privateConnectivityEnabled) {
+    this.privateConnectivityEnabled = privateConnectivityEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Public Events listener endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublicEventsListenerEndpoint() {
+    return publicEventsListenerEndpoint;
+  }
+
+  /**
+   * Optional. Public Events listener endpoint.
+   * @param publicEventsListenerEndpoint publicEventsListenerEndpoint or {@code null} for none
+   */
+  public EventingConfig setPublicEventsListenerEndpoint(java.lang.String publicEventsListenerEndpoint) {
+    this.publicEventsListenerEndpoint = publicEventsListenerEndpoint;
+    return this;
+  }
+
+  /**
+   * Registration endpoint for auto registration.
    * @return value or {@code null} for none
    */
   public DestinationConfig getRegistrationDestinationConfig() {
@@ -147,7 +195,7 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Registration endpoint for auto regsitration.
+   * Registration endpoint for auto registration.
    * @param registrationDestinationConfig registrationDestinationConfig or {@code null} for none
    */
   public EventingConfig setRegistrationDestinationConfig(DestinationConfig registrationDestinationConfig) {

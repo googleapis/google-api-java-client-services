@@ -141,6 +141,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String imageLocation;
 
   /**
+   * Output only. Is trusted tester program enabled for the project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isTrustedTester;
+
+  /**
    * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on
    * labels for more details. https://cloud.google.com/compute/docs/labeling-resources
    * The value may be {@code null}.
@@ -477,6 +484,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setImageLocation(java.lang.String imageLocation) {
     this.imageLocation = imageLocation;
+    return this;
+  }
+
+  /**
+   * Output only. Is trusted tester program enabled for the project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsTrustedTester() {
+    return isTrustedTester;
+  }
+
+  /**
+   * Output only. Is trusted tester program enabled for the project.
+   * @param isTrustedTester isTrustedTester or {@code null} for none
+   */
+  public Connection setIsTrustedTester(java.lang.Boolean isTrustedTester) {
+    this.isTrustedTester = isTrustedTester;
     return this;
   }
 

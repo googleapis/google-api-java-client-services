@@ -37,6 +37,13 @@ public final class RuntimeActionSchema extends com.google.api.client.json.Generi
   private java.lang.String action;
 
   /**
+   * Output only. JsonSchema representation of this action's input metadata
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema inputJsonSchema;
+
+  /**
    * Output only. List of input parameter metadata for the action.
    * The value may be {@code null}.
    */
@@ -48,6 +55,13 @@ public final class RuntimeActionSchema extends com.google.api.client.json.Generi
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(InputParameter.class);
   }
+
+  /**
+   * Output only. JsonSchema representation of this action's result metadata
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema resultJsonSchema;
 
   /**
    * Output only. List of result field metadata.
@@ -80,6 +94,23 @@ public final class RuntimeActionSchema extends com.google.api.client.json.Generi
   }
 
   /**
+   * Output only. JsonSchema representation of this action's input metadata
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getInputJsonSchema() {
+    return inputJsonSchema;
+  }
+
+  /**
+   * Output only. JsonSchema representation of this action's input metadata
+   * @param inputJsonSchema inputJsonSchema or {@code null} for none
+   */
+  public RuntimeActionSchema setInputJsonSchema(JsonSchema inputJsonSchema) {
+    this.inputJsonSchema = inputJsonSchema;
+    return this;
+  }
+
+  /**
    * Output only. List of input parameter metadata for the action.
    * @return value or {@code null} for none
    */
@@ -93,6 +124,23 @@ public final class RuntimeActionSchema extends com.google.api.client.json.Generi
    */
   public RuntimeActionSchema setInputParameters(java.util.List<InputParameter> inputParameters) {
     this.inputParameters = inputParameters;
+    return this;
+  }
+
+  /**
+   * Output only. JsonSchema representation of this action's result metadata
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getResultJsonSchema() {
+    return resultJsonSchema;
+  }
+
+  /**
+   * Output only. JsonSchema representation of this action's result metadata
+   * @param resultJsonSchema resultJsonSchema or {@code null} for none
+   */
+  public RuntimeActionSchema setResultJsonSchema(JsonSchema resultJsonSchema) {
+    this.resultJsonSchema = resultJsonSchema;
     return this;
   }
 

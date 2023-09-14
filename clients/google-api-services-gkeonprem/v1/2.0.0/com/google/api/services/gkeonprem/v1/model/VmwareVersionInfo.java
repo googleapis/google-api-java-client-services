@@ -30,6 +30,19 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class VmwareVersionInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The list of upgrade dependencies for this version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UpgradeDependency> dependencies;
+
+  static {
+    // hack to force ProGuard to consider UpgradeDependency used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(UpgradeDependency.class);
+  }
+
+  /**
    * If set, the cluster dependencies (e.g. the admin cluster, other user clusters managed by the
    * same admin cluster) must be upgraded before this version can be installed or upgraded to.
    * The value may be {@code null}.
@@ -51,6 +64,23 @@ public final class VmwareVersionInfo extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * The list of upgrade dependencies for this version.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UpgradeDependency> getDependencies() {
+    return dependencies;
+  }
+
+  /**
+   * The list of upgrade dependencies for this version.
+   * @param dependencies dependencies or {@code null} for none
+   */
+  public VmwareVersionInfo setDependencies(java.util.List<UpgradeDependency> dependencies) {
+    this.dependencies = dependencies;
+    return this;
+  }
 
   /**
    * If set, the cluster dependencies (e.g. the admin cluster, other user clusters managed by the

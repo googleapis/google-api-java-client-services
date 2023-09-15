@@ -20,7 +20,7 @@ package com.google.api.services.firebasehosting.v1beta1.model;
  * A set of DNS record updates that you should make to allow Hosting to serve secure content in
  * response to requests against your domain name. These updates present the current state of your
  * domain name's DNS records when Hosting last queried them, and the desired set of records that
- * Hosting needs to see before your Custom Domain can be fully active.
+ * Hosting needs to see before your custom domain can be fully active.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -33,7 +33,7 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class DnsUpdates extends com.google.api.client.json.GenericJson {
 
   /**
-   * The last time Hosting checked your CustomDomain's DNS records.
+   * The last time Hosting checked your custom domain's DNS records.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class DnsUpdates extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last time Hosting checked your CustomDomain's DNS records.
+   * The last time Hosting checked your custom domain's DNS records.
    * @return value or {@code null} for none
    */
   public String getCheckTime() {
@@ -74,7 +74,7 @@ public final class DnsUpdates extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last time Hosting checked your CustomDomain's DNS records.
+   * The last time Hosting checked your custom domain's DNS records.
    * @param checkTime checkTime or {@code null} for none
    */
   public DnsUpdates setCheckTime(String checkTime) {

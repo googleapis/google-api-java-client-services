@@ -18,7 +18,7 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
  * An SSL certificate used to provide end-to-end encryption for requests against your domain name. A
- * `Certificate` can be an actual SSL certificate or, for newly-created Custom Domains, Hosting's
+ * `Certificate` can be an actual SSL certificate or, for newly-created custom domains, Hosting's
  * intent to create one.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -42,7 +42,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The certificate's expiration time. After this time, the cert can no longer be used
-   * to provide secure communication between Hosting and your Site's visitors.
+   * to provide secure communication between Hosting and your site's visitors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The certificate's expiration time. After this time, the cert can no longer be used
-   * to provide secure communication between Hosting and your Site's visitors.
+   * to provide secure communication between Hosting and your site's visitors.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -116,7 +116,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The certificate's expiration time. After this time, the cert can no longer be used
-   * to provide secure communication between Hosting and your Site's visitors.
+   * to provide secure communication between Hosting and your site's visitors.
    * @param expireTime expireTime or {@code null} for none
    */
   public Certificate setExpireTime(String expireTime) {

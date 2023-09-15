@@ -2900,7 +2900,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The `CustomDomain`'s parent, specifically a Firebase Hosting `Site`.
+         * @param parent Required. The custom domain's parent, specifically a Firebase Hosting `Site`.
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CustomDomain}
          * @return the request
          */
@@ -2928,7 +2928,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The `CustomDomain`'s parent, specifically a Firebase Hosting `Site`.
+           * @param parent Required. The custom domain's parent, specifically a Firebase Hosting `Site`.
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CustomDomain}
            * @since 1.13
            */
@@ -2997,17 +2997,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The `CustomDomain`'s parent, specifically a Firebase Hosting `Site`. */
+          /** Required. The custom domain's parent, specifically a Firebase Hosting `Site`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The `CustomDomain`'s parent, specifically a Firebase Hosting `Site`.
+          /** Required. The custom domain's parent, specifically a Firebase Hosting `Site`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The `CustomDomain`'s parent, specifically a Firebase Hosting `Site`. */
+          /** Required. The custom domain's parent, specifically a Firebase Hosting `Site`. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3399,7 +3399,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists each `CustomDomain` associated with the specified parent Hosting Site. Returns
+         * Lists each `CustomDomain` associated with the specified parent Hosting site. Returns
          * `CustomDomain`s in a consistent, but undefined, order to facilitate pagination.
          *
          * Create a request for the method "customDomains.list".
@@ -3424,7 +3424,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
 
           /**
-           * Lists each `CustomDomain` associated with the specified parent Hosting Site. Returns
+           * Lists each `CustomDomain` associated with the specified parent Hosting site. Returns
            * `CustomDomain`s in a consistent, but undefined, order to facilitate pagination.
            *
            * Create a request for the method "customDomains.list".
@@ -3803,7 +3803,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
         /**
          * Undeletes the specified `CustomDomain` if it has been soft-deleted. Hosting retains soft-deleted
-         * CustomDomains for around 30 days before permanently deleting them.
+         * custom domains for around 30 days before permanently deleting them.
          *
          * Create a request for the method "customDomains.undelete".
          *
@@ -3829,7 +3829,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
 
           /**
            * Undeletes the specified `CustomDomain` if it has been soft-deleted. Hosting retains soft-
-           * deleted CustomDomains for around 30 days before permanently deleting them.
+           * deleted custom domains for around 30 days before permanently deleting them.
            *
            * Create a request for the method "customDomains.undelete".
            *

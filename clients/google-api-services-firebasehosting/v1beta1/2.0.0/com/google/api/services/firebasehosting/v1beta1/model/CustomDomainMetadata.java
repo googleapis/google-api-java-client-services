@@ -54,10 +54,10 @@ public final class CustomDomainMetadata extends com.google.api.client.json.Gener
 
   /**
    * A set of DNS record updates and ACME challenges that allow you to transition domain names to
-   * Firebase Hosting with zero downtime. These updates allow Hosting's to create an SSL certificate
+   * Firebase Hosting with zero downtime. These updates allow Hosting to create an SSL certificate
    * and establish ownership for your custom domain before Hosting begins serving traffic on it. If
    * your domain name is already in active use with another provider, add one of the challenges and
-   * make the recommended dns updates. After adding challenges and adjusting DNS records as
+   * make the recommended DNS updates. After adding challenges and adjusting DNS records as
    * necessary, wait for the `ownershipState` to be `OWNERSHIP_ACTIVE` and the `certState` to be
    * `CERT_ACTIVE` before sending traffic to Hosting.
    * The value may be {@code null}.
@@ -146,10 +146,10 @@ public final class CustomDomainMetadata extends com.google.api.client.json.Gener
 
   /**
    * A set of DNS record updates and ACME challenges that allow you to transition domain names to
-   * Firebase Hosting with zero downtime. These updates allow Hosting's to create an SSL certificate
+   * Firebase Hosting with zero downtime. These updates allow Hosting to create an SSL certificate
    * and establish ownership for your custom domain before Hosting begins serving traffic on it. If
    * your domain name is already in active use with another provider, add one of the challenges and
-   * make the recommended dns updates. After adding challenges and adjusting DNS records as
+   * make the recommended DNS updates. After adding challenges and adjusting DNS records as
    * necessary, wait for the `ownershipState` to be `OWNERSHIP_ACTIVE` and the `certState` to be
    * `CERT_ACTIVE` before sending traffic to Hosting.
    * @return value or {@code null} for none
@@ -160,10 +160,10 @@ public final class CustomDomainMetadata extends com.google.api.client.json.Gener
 
   /**
    * A set of DNS record updates and ACME challenges that allow you to transition domain names to
-   * Firebase Hosting with zero downtime. These updates allow Hosting's to create an SSL certificate
+   * Firebase Hosting with zero downtime. These updates allow Hosting to create an SSL certificate
    * and establish ownership for your custom domain before Hosting begins serving traffic on it. If
    * your domain name is already in active use with another provider, add one of the challenges and
-   * make the recommended dns updates. After adding challenges and adjusting DNS records as
+   * make the recommended DNS updates. After adding challenges and adjusting DNS records as
    * necessary, wait for the `ownershipState` to be `OWNERSHIP_ACTIVE` and the `certState` to be
    * `CERT_ACTIVE` before sending traffic to Hosting.
    * @param liveMigrationSteps liveMigrationSteps or {@code null} for none

@@ -17,8 +17,8 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * A `CustomDomain` is an entity that links a domain name to a Firebase Hosting Site. Add a
- * `CustomDomain` to your Site to allow Hosting to serve the Site's content in response to requests
+ * A `CustomDomain` is an entity that links a domain name to a Firebase Hosting site. Add a
+ * `CustomDomain` to your site to allow Hosting to serve the site's content in response to requests
  * against your domain name.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -40,8 +40,8 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Output only. The SSL certificate Hosting has for this `CustomDomain`'s domain name. For new
-   * `CustomDomain`s, this often represents Hosting's intent to create a certificate, rather than an
+   * Output only. The SSL certificate Hosting has for this custom domain's domain name. For new
+   * custom domains, this often represents Hosting's intent to create a certificate, rather than an
    * actual cert. Check the `state` field for more.
    * The value may be {@code null}.
    */
@@ -50,25 +50,25 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
 
   /**
    * A field that lets you specify which SSL certificate type Hosting creates for your domain name.
-   * Spark plan `CustomDomain`s only have access to the `GROUPED` cert type, while Blaze plan can
-   * select any option.
+   * Spark plan custom domains only have access to the `GROUPED` cert type, while Blaze plan domains
+   * can select any option.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String certPreference;
 
   /**
-   * Output only. The `CustomDomain`'s create time.
+   * Output only. The custom domain's create time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. The time the `CustomDomain` was deleted; null for `CustomDomains` that haven't
-   * been deleted. Deleted `CustomDomains` persist for approximately 30 days, after which time
-   * Hosting removes them completely. To restore a deleted `CustomDomain`, make an
-   * `UndeleteCustomDomain` request.
+   * Output only. The time the `CustomDomain` was deleted; null for custom domains that haven't been
+   * deleted. Deleted custom domains persist for approximately 30 days, after which time Hosting
+   * removes them completely. To restore a deleted custom domain, make an `UndeleteCustomDomain`
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The minimum time before a soft-deleted `CustomDomain` is completely removed from
-   * Hosting; null for `CustomDomains` that haven't been deleted.
+   * Hosting; null for custom domains that haven't been deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,19 +130,18 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A field that, if true, indicates that Hosting's systems are attmepting to make the
-   * `CustomDomain`'s state match your preferred state. This is most frequently `true` when
-   * initially provisioning a `CustomDomain` after a `CreateCustomDomain` request or when creating a
-   * new SSL certificate to match an updated `cert_preference` after an `UpdateCustomDomain`
-   * request.
+   * custom domain's state match your preferred state. This is most frequently `true` when initially
+   * provisioning a `CustomDomain` after a `CreateCustomDomain` request or when creating a new SSL
+   * certificate to match an updated `cert_preference` after an `UpdateCustomDomain` request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reconciling;
 
   /**
-   * A domain name that this CustomDomain should direct traffic towards. If specified, Hosting will
-   * respond to requests against this CustomDomain with an HTTP 301 code, and route traffic to the
-   * specified `redirect_target` instead.
+   * A domain name that this `CustomDomain` should direct traffic towards. If specified, Hosting
+   * will respond to requests against this custom domain with an HTTP 301 code, and route traffic to
+   * the specified `redirect_target` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,8 +182,8 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The SSL certificate Hosting has for this `CustomDomain`'s domain name. For new
-   * `CustomDomain`s, this often represents Hosting's intent to create a certificate, rather than an
+   * Output only. The SSL certificate Hosting has for this custom domain's domain name. For new
+   * custom domains, this often represents Hosting's intent to create a certificate, rather than an
    * actual cert. Check the `state` field for more.
    * @return value or {@code null} for none
    */
@@ -193,8 +192,8 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The SSL certificate Hosting has for this `CustomDomain`'s domain name. For new
-   * `CustomDomain`s, this often represents Hosting's intent to create a certificate, rather than an
+   * Output only. The SSL certificate Hosting has for this custom domain's domain name. For new
+   * custom domains, this often represents Hosting's intent to create a certificate, rather than an
    * actual cert. Check the `state` field for more.
    * @param cert cert or {@code null} for none
    */
@@ -205,8 +204,8 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
 
   /**
    * A field that lets you specify which SSL certificate type Hosting creates for your domain name.
-   * Spark plan `CustomDomain`s only have access to the `GROUPED` cert type, while Blaze plan can
-   * select any option.
+   * Spark plan custom domains only have access to the `GROUPED` cert type, while Blaze plan domains
+   * can select any option.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertPreference() {
@@ -215,8 +214,8 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
 
   /**
    * A field that lets you specify which SSL certificate type Hosting creates for your domain name.
-   * Spark plan `CustomDomain`s only have access to the `GROUPED` cert type, while Blaze plan can
-   * select any option.
+   * Spark plan custom domains only have access to the `GROUPED` cert type, while Blaze plan domains
+   * can select any option.
    * @param certPreference certPreference or {@code null} for none
    */
   public CustomDomain setCertPreference(java.lang.String certPreference) {
@@ -225,7 +224,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The `CustomDomain`'s create time.
+   * Output only. The custom domain's create time.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -233,7 +232,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The `CustomDomain`'s create time.
+   * Output only. The custom domain's create time.
    * @param createTime createTime or {@code null} for none
    */
   public CustomDomain setCreateTime(String createTime) {
@@ -242,10 +241,10 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time the `CustomDomain` was deleted; null for `CustomDomains` that haven't
-   * been deleted. Deleted `CustomDomains` persist for approximately 30 days, after which time
-   * Hosting removes them completely. To restore a deleted `CustomDomain`, make an
-   * `UndeleteCustomDomain` request.
+   * Output only. The time the `CustomDomain` was deleted; null for custom domains that haven't been
+   * deleted. Deleted custom domains persist for approximately 30 days, after which time Hosting
+   * removes them completely. To restore a deleted custom domain, make an `UndeleteCustomDomain`
+   * request.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -253,10 +252,10 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time the `CustomDomain` was deleted; null for `CustomDomains` that haven't
-   * been deleted. Deleted `CustomDomains` persist for approximately 30 days, after which time
-   * Hosting removes them completely. To restore a deleted `CustomDomain`, make an
-   * `UndeleteCustomDomain` request.
+   * Output only. The time the `CustomDomain` was deleted; null for custom domains that haven't been
+   * deleted. Deleted custom domains persist for approximately 30 days, after which time Hosting
+   * removes them completely. To restore a deleted custom domain, make an `UndeleteCustomDomain`
+   * request.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public CustomDomain setDeleteTime(String deleteTime) {
@@ -287,7 +286,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The minimum time before a soft-deleted `CustomDomain` is completely removed from
-   * Hosting; null for `CustomDomains` that haven't been deleted.
+   * Hosting; null for custom domains that haven't been deleted.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -296,7 +295,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The minimum time before a soft-deleted `CustomDomain` is completely removed from
-   * Hosting; null for `CustomDomains` that haven't been deleted.
+   * Hosting; null for custom domains that haven't been deleted.
    * @param expireTime expireTime or {@code null} for none
    */
   public CustomDomain setExpireTime(String expireTime) {
@@ -395,10 +394,9 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A field that, if true, indicates that Hosting's systems are attmepting to make the
-   * `CustomDomain`'s state match your preferred state. This is most frequently `true` when
-   * initially provisioning a `CustomDomain` after a `CreateCustomDomain` request or when creating a
-   * new SSL certificate to match an updated `cert_preference` after an `UpdateCustomDomain`
-   * request.
+   * custom domain's state match your preferred state. This is most frequently `true` when initially
+   * provisioning a `CustomDomain` after a `CreateCustomDomain` request or when creating a new SSL
+   * certificate to match an updated `cert_preference` after an `UpdateCustomDomain` request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -407,10 +405,9 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A field that, if true, indicates that Hosting's systems are attmepting to make the
-   * `CustomDomain`'s state match your preferred state. This is most frequently `true` when
-   * initially provisioning a `CustomDomain` after a `CreateCustomDomain` request or when creating a
-   * new SSL certificate to match an updated `cert_preference` after an `UpdateCustomDomain`
-   * request.
+   * custom domain's state match your preferred state. This is most frequently `true` when initially
+   * provisioning a `CustomDomain` after a `CreateCustomDomain` request or when creating a new SSL
+   * certificate to match an updated `cert_preference` after an `UpdateCustomDomain` request.
    * @param reconciling reconciling or {@code null} for none
    */
   public CustomDomain setReconciling(java.lang.Boolean reconciling) {
@@ -419,9 +416,9 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A domain name that this CustomDomain should direct traffic towards. If specified, Hosting will
-   * respond to requests against this CustomDomain with an HTTP 301 code, and route traffic to the
-   * specified `redirect_target` instead.
+   * A domain name that this `CustomDomain` should direct traffic towards. If specified, Hosting
+   * will respond to requests against this custom domain with an HTTP 301 code, and route traffic to
+   * the specified `redirect_target` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getRedirectTarget() {
@@ -429,9 +426,9 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A domain name that this CustomDomain should direct traffic towards. If specified, Hosting will
-   * respond to requests against this CustomDomain with an HTTP 301 code, and route traffic to the
-   * specified `redirect_target` instead.
+   * A domain name that this `CustomDomain` should direct traffic towards. If specified, Hosting
+   * will respond to requests against this custom domain with an HTTP 301 code, and route traffic to
+   * the specified `redirect_target` instead.
    * @param redirectTarget redirectTarget or {@code null} for none
    */
   public CustomDomain setRedirectTarget(java.lang.String redirectTarget) {

@@ -17,8 +17,8 @@
 package com.google.api.services.chromemanagement.v1.model;
 
 /**
- * `TelemetryNetworkConnectionStateChangeEvent` is triggered on network connection state changes. *
- * Granular permission needed: TELEMETRY_API_NETWORK_REPORT
+ * `TelemetryNetworkSignalStrengthEvent` is triggered on WiFi signal strength events. * Granular
+ * permission needed: TELEMETRY_API_NETWORK_REPORT
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation
@@ -29,14 +29,7 @@ package com.google.api.services.chromemanagement.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Current connection state of the network.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String connectionState;
+public final class GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent extends com.google.api.client.json.GenericJson {
 
   /**
    * Unique identifier of the network.
@@ -46,21 +39,11 @@ public final class GoogleChromeManagementV1TelemetryNetworkConnectionStateChange
   private java.lang.String guid;
 
   /**
-   * Current connection state of the network.
-   * @return value or {@code null} for none
+   * Signal strength RSSI value.
+   * The value may be {@code null}.
    */
-  public java.lang.String getConnectionState() {
-    return connectionState;
-  }
-
-  /**
-   * Current connection state of the network.
-   * @param connectionState connectionState or {@code null} for none
-   */
-  public GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent setConnectionState(java.lang.String connectionState) {
-    this.connectionState = connectionState;
-    return this;
-  }
+  @com.google.api.client.util.Key
+  private java.lang.Integer signalStrengthDbm;
 
   /**
    * Unique identifier of the network.
@@ -74,19 +57,36 @@ public final class GoogleChromeManagementV1TelemetryNetworkConnectionStateChange
    * Unique identifier of the network.
    * @param guid guid or {@code null} for none
    */
-  public GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent setGuid(java.lang.String guid) {
+  public GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent setGuid(java.lang.String guid) {
     this.guid = guid;
     return this;
   }
 
-  @Override
-  public GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent set(String fieldName, Object value) {
-    return (GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent) super.set(fieldName, value);
+  /**
+   * Signal strength RSSI value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSignalStrengthDbm() {
+    return signalStrengthDbm;
+  }
+
+  /**
+   * Signal strength RSSI value.
+   * @param signalStrengthDbm signalStrengthDbm or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent setSignalStrengthDbm(java.lang.Integer signalStrengthDbm) {
+    this.signalStrengthDbm = signalStrengthDbm;
+    return this;
   }
 
   @Override
-  public GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent clone() {
-    return (GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent) super.clone();
+  public GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent set(String fieldName, Object value) {
+    return (GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent clone() {
+    return (GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent) super.clone();
   }
 
 }

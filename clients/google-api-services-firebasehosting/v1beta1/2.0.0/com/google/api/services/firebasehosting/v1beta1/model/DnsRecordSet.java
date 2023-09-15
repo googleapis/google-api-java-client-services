@@ -17,7 +17,7 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * A set of DNS records relevant to the set up and maintenance of a Custom Domain in Firebase
+ * A set of DNS records relevant to the setup and maintenance of a custom domain in Firebase
  * Hosting.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

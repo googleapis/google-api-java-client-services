@@ -68,6 +68,14 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
   private java.lang.String name;
 
   /**
+   * Output only. Payload for network connection state change event. Present only when `event_type`
+   * is `NETWORK_STATE_CHANGE`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent networkStateChangeEvent;
+
+  /**
    * Timestamp that represents when the event was reported.
    * The value may be {@code null}.
    */
@@ -88,6 +96,22 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
    */
   @com.google.api.client.util.Key
   private GoogleChromeManagementV1TelemetryUserInfo user;
+
+  /**
+   * Output only. Payload for VPN connection state change event. Present only when `event_type` is
+   * `VPN_CONNECTION_STATE_CHANGE`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent vpnConnectionStateChangeEvent;
+
+  /**
+   * Output only. Payload for WiFi signal strength events. Present only when `event_type` is
+   * `WIFI_SIGNAL_STRENGTH_LOW` or `WIFI_SIGNAL_STRENGTH_RECOVERED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent wifiSignalStrengthEvent;
 
   /**
    * Output only. Payload for audio severe underrun event. Present only when the `event_type` field
@@ -179,6 +203,25 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
   }
 
   /**
+   * Output only. Payload for network connection state change event. Present only when `event_type`
+   * is `NETWORK_STATE_CHANGE`.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent getNetworkStateChangeEvent() {
+    return networkStateChangeEvent;
+  }
+
+  /**
+   * Output only. Payload for network connection state change event. Present only when `event_type`
+   * is `NETWORK_STATE_CHANGE`.
+   * @param networkStateChangeEvent networkStateChangeEvent or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryEvent setNetworkStateChangeEvent(GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent networkStateChangeEvent) {
+    this.networkStateChangeEvent = networkStateChangeEvent;
+    return this;
+  }
+
+  /**
    * Timestamp that represents when the event was reported.
    * @return value or {@code null} for none
    */
@@ -228,6 +271,44 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
    */
   public GoogleChromeManagementV1TelemetryEvent setUser(GoogleChromeManagementV1TelemetryUserInfo user) {
     this.user = user;
+    return this;
+  }
+
+  /**
+   * Output only. Payload for VPN connection state change event. Present only when `event_type` is
+   * `VPN_CONNECTION_STATE_CHANGE`.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent getVpnConnectionStateChangeEvent() {
+    return vpnConnectionStateChangeEvent;
+  }
+
+  /**
+   * Output only. Payload for VPN connection state change event. Present only when `event_type` is
+   * `VPN_CONNECTION_STATE_CHANGE`.
+   * @param vpnConnectionStateChangeEvent vpnConnectionStateChangeEvent or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryEvent setVpnConnectionStateChangeEvent(GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent vpnConnectionStateChangeEvent) {
+    this.vpnConnectionStateChangeEvent = vpnConnectionStateChangeEvent;
+    return this;
+  }
+
+  /**
+   * Output only. Payload for WiFi signal strength events. Present only when `event_type` is
+   * `WIFI_SIGNAL_STRENGTH_LOW` or `WIFI_SIGNAL_STRENGTH_RECOVERED`.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent getWifiSignalStrengthEvent() {
+    return wifiSignalStrengthEvent;
+  }
+
+  /**
+   * Output only. Payload for WiFi signal strength events. Present only when `event_type` is
+   * `WIFI_SIGNAL_STRENGTH_LOW` or `WIFI_SIGNAL_STRENGTH_RECOVERED`.
+   * @param wifiSignalStrengthEvent wifiSignalStrengthEvent or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryEvent setWifiSignalStrengthEvent(GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent wifiSignalStrengthEvent) {
+    this.wifiSignalStrengthEvent = wifiSignalStrengthEvent;
     return this;
   }
 

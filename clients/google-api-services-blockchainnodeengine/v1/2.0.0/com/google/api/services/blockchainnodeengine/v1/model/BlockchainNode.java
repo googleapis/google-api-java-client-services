@@ -74,13 +74,6 @@ public final class BlockchainNode extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * Optional. This can only be accessed through the private ip.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean pscOnly;
-
-  /**
    * Output only. A status representing the state of the node.
    * The value may be {@code null}.
    */
@@ -195,23 +188,6 @@ public final class BlockchainNode extends com.google.api.client.json.GenericJson
    */
   public BlockchainNode setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Optional. This can only be accessed through the private ip.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPscOnly() {
-    return pscOnly;
-  }
-
-  /**
-   * Optional. This can only be accessed through the private ip.
-   * @param pscOnly pscOnly or {@code null} for none
-   */
-  public BlockchainNode setPscOnly(java.lang.Boolean pscOnly) {
-    this.pscOnly = pscOnly;
     return this;
   }
 

@@ -485,6 +485,151 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * Gets the CMEK config. Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+       * lcoation. By default there is no kms_key configured.
+       *
+       * Create a request for the method "locations.getCmekConfig".
+       *
+       * This request holds the parameters needed by the cloudtasks server.  After setting any optional
+       * parameters, call the {@link GetCmekConfig#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The config. For example: projects/PROJECT_ID/locations/LOCATION_ID/CmekConfig`
+       * @return the request
+       */
+      public GetCmekConfig getCmekConfig(java.lang.String name) throws java.io.IOException {
+        GetCmekConfig result = new GetCmekConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetCmekConfig extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.CmekConfig> {
+
+        private static final String REST_PATH = "v2beta2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cmekConfig$");
+
+        /**
+         * Gets the CMEK config. Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+         * lcoation. By default there is no kms_key configured.
+         *
+         * Create a request for the method "locations.getCmekConfig".
+         *
+         * This request holds the parameters needed by the the cloudtasks server.  After setting any
+         * optional parameters, call the {@link GetCmekConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetCmekConfig#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The config. For example: projects/PROJECT_ID/locations/LOCATION_ID/CmekConfig`
+         * @since 1.13
+         */
+        protected GetCmekConfig(java.lang.String name) {
+          super(CloudTasks.this, "GET", REST_PATH, null, com.google.api.services.cloudtasks.v2beta2.model.CmekConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetCmekConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetCmekConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetCmekConfig setAccessToken(java.lang.String accessToken) {
+          return (GetCmekConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetCmekConfig setAlt(java.lang.String alt) {
+          return (GetCmekConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetCmekConfig setCallback(java.lang.String callback) {
+          return (GetCmekConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetCmekConfig setFields(java.lang.String fields) {
+          return (GetCmekConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetCmekConfig setKey(java.lang.String key) {
+          return (GetCmekConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetCmekConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetCmekConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetCmekConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetCmekConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetCmekConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetCmekConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetCmekConfig setUploadType(java.lang.String uploadType) {
+          return (GetCmekConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetCmekConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetCmekConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The config. For example: projects/PROJECT_ID/locations/LOCATION_ID/CmekConfig`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The config. For example: projects/PROJECT_ID/locations/LOCATION_ID/CmekConfig`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The config. For example: projects/PROJECT_ID/locations/LOCATION_ID/CmekConfig`
+         */
+        public GetCmekConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetCmekConfig set(String parameterName, Object value) {
+          return (GetCmekConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -686,6 +831,161 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Creates or Updates a CMEK config. Updates the Customer Managed Encryption Key assotiated with the
+       * Cloud Tasks location (Creates if the key does not already exist). All new tasks created in the
+       * location will be encrypted at-rest with the KMS-key provided in the config.
+       *
+       * Create a request for the method "locations.updateCmekConfig".
+       *
+       * This request holds the parameters needed by the cloudtasks server.  After setting any optional
+       * parameters, call the {@link UpdateCmekConfig#execute()} method to invoke the remote operation.
+       *
+       * @param projectsId
+       * @param locationsId
+       * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.CmekConfig}
+       * @return the request
+       */
+      public UpdateCmekConfig updateCmekConfig(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.cloudtasks.v2beta2.model.CmekConfig content) throws java.io.IOException {
+        UpdateCmekConfig result = new UpdateCmekConfig(projectsId, locationsId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateCmekConfig extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.CmekConfig> {
+
+        private static final String REST_PATH = "v2beta2/projects/{projectsId}/locations/{locationsId}/cmekConfig";
+
+        /**
+         * Creates or Updates a CMEK config. Updates the Customer Managed Encryption Key assotiated with
+         * the Cloud Tasks location (Creates if the key does not already exist). All new tasks created in
+         * the location will be encrypted at-rest with the KMS-key provided in the config.
+         *
+         * Create a request for the method "locations.updateCmekConfig".
+         *
+         * This request holds the parameters needed by the the cloudtasks server.  After setting any
+         * optional parameters, call the {@link UpdateCmekConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateCmekConfig#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param projectsId
+         * @param locationsId
+         * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.CmekConfig}
+         * @since 1.13
+         */
+        protected UpdateCmekConfig(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.cloudtasks.v2beta2.model.CmekConfig content) {
+          super(CloudTasks.this, "PATCH", REST_PATH, content, com.google.api.services.cloudtasks.v2beta2.model.CmekConfig.class);
+          this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+          this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+        }
+
+        @Override
+        public UpdateCmekConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateCmekConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateCmekConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateCmekConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateCmekConfig setAlt(java.lang.String alt) {
+          return (UpdateCmekConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateCmekConfig setCallback(java.lang.String callback) {
+          return (UpdateCmekConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateCmekConfig setFields(java.lang.String fields) {
+          return (UpdateCmekConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateCmekConfig setKey(java.lang.String key) {
+          return (UpdateCmekConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateCmekConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateCmekConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateCmekConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateCmekConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateCmekConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateCmekConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateCmekConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateCmekConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateCmekConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateCmekConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        @com.google.api.client.util.Key
+        private java.lang.String projectsId;
+
+        /**
+
+         */
+        public java.lang.String getProjectsId() {
+          return projectsId;
+        }
+
+        public UpdateCmekConfig setProjectsId(java.lang.String projectsId) {
+          this.projectsId = projectsId;
+          return this;
+        }
+
+        @com.google.api.client.util.Key
+        private java.lang.String locationsId;
+
+        /**
+
+         */
+        public java.lang.String getLocationsId() {
+          return locationsId;
+        }
+
+        public UpdateCmekConfig setLocationsId(java.lang.String locationsId) {
+          this.locationsId = locationsId;
+          return this;
+        }
+
+        /** List of fields to be updated in this request. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** List of fields to be updated in this request.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** List of fields to be updated in this request. */
+        public UpdateCmekConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateCmekConfig set(String parameterName, Object value) {
+          return (UpdateCmekConfig) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the Queues collection.
@@ -863,10 +1163,15 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Deletes a queue. This command will delete the queue even if it has tasks in it. Note: If you
-         * delete a queue, a queue with the same name can't be created for 7 days. WARNING: Using this
-         * method may have unintended side effects if you are using an App Engine `queue.yaml` or
-         * `queue.xml` file to manage your queues. Read [Overview of Queue Management and
-         * queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this method.
+         * delete a queue, you may be prevented from creating a new queue with the same name as the deleted
+         * queue for a tombstone window of up to 3 days. During this window, the CreateQueue operation may
+         * appear to recreate the queue, but this can be misleading. If you attempt to create a queue with
+         * the same name as one that is in the tombstone window, run GetQueue to confirm that the queue
+         * creation was successful. If GetQueue returns 200 response code, your queue was successfully
+         * created with the name of the previously deleted queue. Otherwise, your queue did not successfully
+         * recreate. WARNING: Using this method may have unintended side effects if you are using an App
+         * Engine `queue.yaml` or `queue.xml` file to manage your queues. Read [Overview of Queue Management
+         * and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this method.
          *
          * Create a request for the method "queues.delete".
          *
@@ -891,10 +1196,16 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Deletes a queue. This command will delete the queue even if it has tasks in it. Note: If you
-           * delete a queue, a queue with the same name can't be created for 7 days. WARNING: Using this
-           * method may have unintended side effects if you are using an App Engine `queue.yaml` or
-           * `queue.xml` file to manage your queues. Read [Overview of Queue Management and
-           * queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this method.
+           * delete a queue, you may be prevented from creating a new queue with the same name as the
+           * deleted queue for a tombstone window of up to 3 days. During this window, the CreateQueue
+           * operation may appear to recreate the queue, but this can be misleading. If you attempt to
+           * create a queue with the same name as one that is in the tombstone window, run GetQueue to
+           * confirm that the queue creation was successful. If GetQueue returns 200 response code, your
+           * queue was successfully created with the name of the previously deleted queue. Otherwise, your
+           * queue did not successfully recreate. WARNING: Using this method may have unintended side
+           * effects if you are using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
+           * Read [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-
+           * yaml) before using this method.
            *
            * Create a request for the method "queues.delete".
            *

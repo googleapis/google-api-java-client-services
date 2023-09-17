@@ -209,13 +209,6 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   private Owner owner;
 
   /**
-   * A collection of object level retention parameters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Retention retention;
-
-  /**
    * A server-determined value that specifies the earliest time that the object's retention period
    * expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with
    * an active event-based hold, since retention expiration is unknown until the hold is removed.
@@ -717,23 +710,6 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A collection of object level retention parameters.
-   * @return value or {@code null} for none
-   */
-  public Retention getRetention() {
-    return retention;
-  }
-
-  /**
-   * A collection of object level retention parameters.
-   * @param retention retention or {@code null} for none
-   */
-  public StorageObject setRetention(Retention retention) {
-    this.retention = retention;
-    return this;
-  }
-
-  /**
    * A server-determined value that specifies the earliest time that the object's retention period
    * expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with
    * an active event-based hold, since retention expiration is unknown until the hold is removed.
@@ -1048,71 +1024,6 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
     @Override
     public Owner clone() {
       return (Owner) super.clone();
-    }
-
-  }
-
-  /**
-   * A collection of object level retention parameters.
-   */
-  public static final class Retention extends com.google.api.client.json.GenericJson {
-
-    /**
-     * The bucket's object retention mode, can only be Unlocked or Locked.
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.String mode;
-
-    /**
-     * A time in RFC 3339 format until which object retention protects this object.
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private com.google.api.client.util.DateTime retainUntilTime;
-
-    /**
-     * The bucket's object retention mode, can only be Unlocked or Locked.
-     * @return value or {@code null} for none
-     */
-    public java.lang.String getMode() {
-      return mode;
-    }
-
-    /**
-     * The bucket's object retention mode, can only be Unlocked or Locked.
-     * @param mode mode or {@code null} for none
-     */
-    public Retention setMode(java.lang.String mode) {
-      this.mode = mode;
-      return this;
-    }
-
-    /**
-     * A time in RFC 3339 format until which object retention protects this object.
-     * @return value or {@code null} for none
-     */
-    public com.google.api.client.util.DateTime getRetainUntilTime() {
-      return retainUntilTime;
-    }
-
-    /**
-     * A time in RFC 3339 format until which object retention protects this object.
-     * @param retainUntilTime retainUntilTime or {@code null} for none
-     */
-    public Retention setRetainUntilTime(com.google.api.client.util.DateTime retainUntilTime) {
-      this.retainUntilTime = retainUntilTime;
-      return this;
-    }
-
-    @Override
-    public Retention set(String fieldName, Object value) {
-      return (Retention) super.set(fieldName, value);
-    }
-
-    @Override
-    public Retention clone() {
-      return (Retention) super.clone();
     }
 
   }

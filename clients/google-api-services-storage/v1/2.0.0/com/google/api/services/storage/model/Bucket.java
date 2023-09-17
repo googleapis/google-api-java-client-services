@@ -181,13 +181,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The bucket's object retention config.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ObjectRetention objectRetention;
-
-  /**
    * The owner of the bucket. This is always the project team's owner group.
    * The value may be {@code null}.
    */
@@ -235,14 +228,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
-
-  /**
-   * The bucket's soft delete policy, which defines the period of time that soft-deleted objects
-   * will be retained, and cannot be permanently deleted.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private SoftDeletePolicy softDeletePolicy;
 
   /**
    * The bucket's default storage class, used whenever no storageClass is specified for a newly-
@@ -630,23 +615,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bucket's object retention config.
-   * @return value or {@code null} for none
-   */
-  public ObjectRetention getObjectRetention() {
-    return objectRetention;
-  }
-
-  /**
-   * The bucket's object retention config.
-   * @param objectRetention objectRetention or {@code null} for none
-   */
-  public Bucket setObjectRetention(ObjectRetention objectRetention) {
-    this.objectRetention = objectRetention;
-    return this;
-  }
-
-  /**
    * The owner of the bucket. This is always the project team's owner group.
    * @return value or {@code null} for none
    */
@@ -759,25 +727,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
-    return this;
-  }
-
-  /**
-   * The bucket's soft delete policy, which defines the period of time that soft-deleted objects
-   * will be retained, and cannot be permanently deleted.
-   * @return value or {@code null} for none
-   */
-  public SoftDeletePolicy getSoftDeletePolicy() {
-    return softDeletePolicy;
-  }
-
-  /**
-   * The bucket's soft delete policy, which defines the period of time that soft-deleted objects
-   * will be retained, and cannot be permanently deleted.
-   * @param softDeletePolicy softDeletePolicy or {@code null} for none
-   */
-  public Bucket setSoftDeletePolicy(SoftDeletePolicy softDeletePolicy) {
-    this.softDeletePolicy = softDeletePolicy;
     return this;
   }
 
@@ -899,22 +848,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean enabled;
 
     /**
-     * The storage class that objects in the bucket eventually transition to if they are not read for
-     * a certain length of time. Valid values are NEARLINE and ARCHIVE.
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.String terminalStorageClass;
-
-    /**
-     * A date and time in RFC 3339 format representing the time of the most recent update to
-     * "terminalStorageClass".
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private com.google.api.client.util.DateTime terminalStorageClassUpdateTime;
-
-    /**
      * A date and time in RFC 3339 format representing the instant at which "enabled" was last
      * toggled.
      * The value may be {@code null}.
@@ -936,44 +869,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
      */
     public Autoclass setEnabled(java.lang.Boolean enabled) {
       this.enabled = enabled;
-      return this;
-    }
-
-    /**
-     * The storage class that objects in the bucket eventually transition to if they are not read for
-     * a certain length of time. Valid values are NEARLINE and ARCHIVE.
-     * @return value or {@code null} for none
-     */
-    public java.lang.String getTerminalStorageClass() {
-      return terminalStorageClass;
-    }
-
-    /**
-     * The storage class that objects in the bucket eventually transition to if they are not read for
-     * a certain length of time. Valid values are NEARLINE and ARCHIVE.
-     * @param terminalStorageClass terminalStorageClass or {@code null} for none
-     */
-    public Autoclass setTerminalStorageClass(java.lang.String terminalStorageClass) {
-      this.terminalStorageClass = terminalStorageClass;
-      return this;
-    }
-
-    /**
-     * A date and time in RFC 3339 format representing the time of the most recent update to
-     * "terminalStorageClass".
-     * @return value or {@code null} for none
-     */
-    public com.google.api.client.util.DateTime getTerminalStorageClassUpdateTime() {
-      return terminalStorageClassUpdateTime;
-    }
-
-    /**
-     * A date and time in RFC 3339 format representing the time of the most recent update to
-     * "terminalStorageClass".
-     * @param terminalStorageClassUpdateTime terminalStorageClassUpdateTime or {@code null} for none
-     */
-    public Autoclass setTerminalStorageClassUpdateTime(com.google.api.client.util.DateTime terminalStorageClassUpdateTime) {
-      this.terminalStorageClassUpdateTime = terminalStorageClassUpdateTime;
       return this;
     }
 
@@ -2112,47 +2007,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bucket's object retention config.
-   */
-  public static final class ObjectRetention extends com.google.api.client.json.GenericJson {
-
-    /**
-     * The bucket's object retention mode. Can be Enabled.
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.String mode;
-
-    /**
-     * The bucket's object retention mode. Can be Enabled.
-     * @return value or {@code null} for none
-     */
-    public java.lang.String getMode() {
-      return mode;
-    }
-
-    /**
-     * The bucket's object retention mode. Can be Enabled.
-     * @param mode mode or {@code null} for none
-     */
-    public ObjectRetention setMode(java.lang.String mode) {
-      this.mode = mode;
-      return this;
-    }
-
-    @Override
-    public ObjectRetention set(String fieldName, Object value) {
-      return (ObjectRetention) super.set(fieldName, value);
-    }
-
-    @Override
-    public ObjectRetention clone() {
-      return (ObjectRetention) super.clone();
-    }
-
-  }
-
-  /**
    * The owner of the bucket. This is always the project team's owner group.
    */
   public static final class Owner extends com.google.api.client.json.GenericJson {
@@ -2317,78 +2171,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     @Override
     public RetentionPolicy clone() {
       return (RetentionPolicy) super.clone();
-    }
-
-  }
-
-  /**
-   * The bucket's soft delete policy, which defines the period of time that soft-deleted objects will
-   * be retained, and cannot be permanently deleted.
-   */
-  public static final class SoftDeletePolicy extends com.google.api.client.json.GenericJson {
-
-    /**
-     * Server-determined value that indicates the time from which the policy, or one with a greater
-     * retention, was effective. This value is in RFC 3339 format.
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private com.google.api.client.util.DateTime effectiveTime;
-
-    /**
-     * The period of time in seconds, that soft-deleted objects in the bucket will be retained and
-     * cannot be permanently deleted.
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-    private java.lang.Long retentionDurationSeconds;
-
-    /**
-     * Server-determined value that indicates the time from which the policy, or one with a greater
-     * retention, was effective. This value is in RFC 3339 format.
-     * @return value or {@code null} for none
-     */
-    public com.google.api.client.util.DateTime getEffectiveTime() {
-      return effectiveTime;
-    }
-
-    /**
-     * Server-determined value that indicates the time from which the policy, or one with a greater
-     * retention, was effective. This value is in RFC 3339 format.
-     * @param effectiveTime effectiveTime or {@code null} for none
-     */
-    public SoftDeletePolicy setEffectiveTime(com.google.api.client.util.DateTime effectiveTime) {
-      this.effectiveTime = effectiveTime;
-      return this;
-    }
-
-    /**
-     * The period of time in seconds, that soft-deleted objects in the bucket will be retained and
-     * cannot be permanently deleted.
-     * @return value or {@code null} for none
-     */
-    public java.lang.Long getRetentionDurationSeconds() {
-      return retentionDurationSeconds;
-    }
-
-    /**
-     * The period of time in seconds, that soft-deleted objects in the bucket will be retained and
-     * cannot be permanently deleted.
-     * @param retentionDurationSeconds retentionDurationSeconds or {@code null} for none
-     */
-    public SoftDeletePolicy setRetentionDurationSeconds(java.lang.Long retentionDurationSeconds) {
-      this.retentionDurationSeconds = retentionDurationSeconds;
-      return this;
-    }
-
-    @Override
-    public SoftDeletePolicy set(String fieldName, Object value) {
-      return (SoftDeletePolicy) super.set(fieldName, value);
-    }
-
-    @Override
-    public SoftDeletePolicy clone() {
-      return (SoftDeletePolicy) super.clone();
     }
 
   }

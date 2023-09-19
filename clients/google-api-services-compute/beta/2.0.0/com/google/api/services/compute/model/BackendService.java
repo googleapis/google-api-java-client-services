@@ -440,6 +440,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.Integer timeoutSec;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendServiceUsedBy> usedBy;
+
+  /**
    * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S)
    * load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session
    * affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser
@@ -1387,6 +1393,21 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setTimeoutSec(java.lang.Integer timeoutSec) {
     this.timeoutSec = timeoutSec;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendServiceUsedBy> getUsedBy() {
+    return usedBy;
+  }
+
+  /**
+   * @param usedBy usedBy or {@code null} for none
+   */
+  public BackendService setUsedBy(java.util.List<BackendServiceUsedBy> usedBy) {
+    this.usedBy = usedBy;
     return this;
   }
 

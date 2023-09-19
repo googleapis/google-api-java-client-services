@@ -30,8 +30,7 @@ package com.google.api.services.compute.model;
 public final class BackendServiceIAP extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the serving infrastructure will authenticate and authorize all incoming requests. If
-   * true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
+   * Whether the serving infrastructure will authenticate and authorize all incoming requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +60,7 @@ public final class BackendServiceIAP extends com.google.api.client.json.GenericJ
   private java.lang.String oauth2ClientSecretSha256;
 
   /**
-   * Whether the serving infrastructure will authenticate and authorize all incoming requests. If
-   * true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
+   * Whether the serving infrastructure will authenticate and authorize all incoming requests.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -70,8 +68,7 @@ public final class BackendServiceIAP extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether the serving infrastructure will authenticate and authorize all incoming requests. If
-   * true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
+   * Whether the serving infrastructure will authenticate and authorize all incoming requests.
    * @param enabled enabled or {@code null} for none
    */
   public BackendServiceIAP setEnabled(java.lang.Boolean enabled) {

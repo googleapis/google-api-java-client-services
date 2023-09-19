@@ -38,6 +38,22 @@ public final class PreservedState extends com.google.api.client.json.GenericJson
   private java.util.Map<String, PreservedStatePreservedDisk> disks;
 
   /**
+   * Preserved external IPs defined for this instance. This map is keyed with the name of the
+   * network interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, PreservedStatePreservedNetworkIp> externalIPs;
+
+  /**
+   * Preserved internal IPs defined for this instance. This map is keyed with the name of the
+   * network interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, PreservedStatePreservedNetworkIp> internalIPs;
+
+  /**
    * Preserved metadata defined for this instance.
    * The value may be {@code null}.
    */
@@ -60,6 +76,44 @@ public final class PreservedState extends com.google.api.client.json.GenericJson
    */
   public PreservedState setDisks(java.util.Map<String, PreservedStatePreservedDisk> disks) {
     this.disks = disks;
+    return this;
+  }
+
+  /**
+   * Preserved external IPs defined for this instance. This map is keyed with the name of the
+   * network interface.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, PreservedStatePreservedNetworkIp> getExternalIPs() {
+    return externalIPs;
+  }
+
+  /**
+   * Preserved external IPs defined for this instance. This map is keyed with the name of the
+   * network interface.
+   * @param externalIPs externalIPs or {@code null} for none
+   */
+  public PreservedState setExternalIPs(java.util.Map<String, PreservedStatePreservedNetworkIp> externalIPs) {
+    this.externalIPs = externalIPs;
+    return this;
+  }
+
+  /**
+   * Preserved internal IPs defined for this instance. This map is keyed with the name of the
+   * network interface.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, PreservedStatePreservedNetworkIp> getInternalIPs() {
+    return internalIPs;
+  }
+
+  /**
+   * Preserved internal IPs defined for this instance. This map is keyed with the name of the
+   * network interface.
+   * @param internalIPs internalIPs or {@code null} for none
+   */
+  public PreservedState setInternalIPs(java.util.Map<String, PreservedStatePreservedNetworkIp> internalIPs) {
+    this.internalIPs = internalIPs;
     return this;
   }
 

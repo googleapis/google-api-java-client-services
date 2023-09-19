@@ -96,6 +96,13 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
   private java.lang.String method;
 
   /**
+   * The omnichannel experience for a country. Required only for SetOmnichannelExperience.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiaOmnichannelExperience omnichannelExperience;
+
+  /**
    * The ID of POS data provider. Required only for SetPosProvider.
    * The value may be {@code null}.
    */
@@ -263,6 +270,23 @@ public final class LiasettingsCustomBatchRequestEntry extends com.google.api.cli
    */
   public LiasettingsCustomBatchRequestEntry setMethod(java.lang.String method) {
     this.method = method;
+    return this;
+  }
+
+  /**
+   * The omnichannel experience for a country. Required only for SetOmnichannelExperience.
+   * @return value or {@code null} for none
+   */
+  public LiaOmnichannelExperience getOmnichannelExperience() {
+    return omnichannelExperience;
+  }
+
+  /**
+   * The omnichannel experience for a country. Required only for SetOmnichannelExperience.
+   * @param omnichannelExperience omnichannelExperience or {@code null} for none
+   */
+  public LiasettingsCustomBatchRequestEntry setOmnichannelExperience(LiaOmnichannelExperience omnichannelExperience) {
+    this.omnichannelExperience = omnichannelExperience;
     return this;
   }
 

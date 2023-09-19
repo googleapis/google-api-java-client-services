@@ -220,6 +220,14 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * Output only. Represents time when the task was scheduled to run by the system. It is not
+   * guaranteed to be set in happens-before order across separate operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String scheduledTime;
+
+  /**
    * Email address of the IAM service account associated with the Task of a Job. The service account
    * represents the identity of the running task, and determines what permissions the task has. If
    * not provided, the task will use the project's default service account.
@@ -697,6 +705,25 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
    */
   public GoogleCloudRunV2Task setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * Output only. Represents time when the task was scheduled to run by the system. It is not
+   * guaranteed to be set in happens-before order across separate operations.
+   * @return value or {@code null} for none
+   */
+  public String getScheduledTime() {
+    return scheduledTime;
+  }
+
+  /**
+   * Output only. Represents time when the task was scheduled to run by the system. It is not
+   * guaranteed to be set in happens-before order across separate operations.
+   * @param scheduledTime scheduledTime or {@code null} for none
+   */
+  public GoogleCloudRunV2Task setScheduledTime(String scheduledTime) {
+    this.scheduledTime = scheduledTime;
     return this;
   }
 

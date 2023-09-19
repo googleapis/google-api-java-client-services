@@ -39,6 +39,14 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   private GoogleCloudPaymentsResellerSubscriptionV1Amount amount;
 
   /**
+   * Output only. The bundle details for the line item. Only populated if the line item corresponds
+   * to a hard bundle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SubscriptionLineItemBundleDetails bundleDetails;
+
+  /**
    * Output only. Description of this line item.
    * The value may be {@code null}.
    */
@@ -131,6 +139,25 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
    */
   public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setAmount(GoogleCloudPaymentsResellerSubscriptionV1Amount amount) {
     this.amount = amount;
+    return this;
+  }
+
+  /**
+   * Output only. The bundle details for the line item. Only populated if the line item corresponds
+   * to a hard bundle.
+   * @return value or {@code null} for none
+   */
+  public SubscriptionLineItemBundleDetails getBundleDetails() {
+    return bundleDetails;
+  }
+
+  /**
+   * Output only. The bundle details for the line item. Only populated if the line item corresponds
+   * to a hard bundle.
+   * @param bundleDetails bundleDetails or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setBundleDetails(SubscriptionLineItemBundleDetails bundleDetails) {
+    this.bundleDetails = bundleDetails;
     return this;
   }
 

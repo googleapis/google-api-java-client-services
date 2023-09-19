@@ -11321,6 +11321,226 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
+     * Sets the omnichannel experience for the specified country.
+     *
+     * Create a request for the method "liasettings.setomnichannelexperience".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Setomnichannelexperience#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
+     *        account.
+     * @param accountId The ID of the account for which to retrieve accessible Business Profiles.
+     * @return the request
+     */
+    public Setomnichannelexperience setomnichannelexperience(java.math.BigInteger merchantId, java.math.BigInteger accountId) throws java.io.IOException {
+      Setomnichannelexperience result = new Setomnichannelexperience(merchantId, accountId);
+      initialize(result);
+      return result;
+    }
+
+    public class Setomnichannelexperience extends ShoppingContentRequest<com.google.api.services.content.model.LiaOmnichannelExperience> {
+
+      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/setomnichannelexperience";
+
+      /**
+       * Sets the omnichannel experience for the specified country.
+       *
+       * Create a request for the method "liasettings.setomnichannelexperience".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Setomnichannelexperience#execute()} method to invoke the remote
+       * operation. <p> {@link Setomnichannelexperience#initialize(com.google.api.client.googleapis.serv
+       * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
+     *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
+     *        account.
+       * @param accountId The ID of the account for which to retrieve accessible Business Profiles.
+       * @since 1.13
+       */
+      protected Setomnichannelexperience(java.math.BigInteger merchantId, java.math.BigInteger accountId) {
+        super(ShoppingContent.this, "POST", REST_PATH, null, com.google.api.services.content.model.LiaOmnichannelExperience.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+      }
+
+      @Override
+      public Setomnichannelexperience set$Xgafv(java.lang.String $Xgafv) {
+        return (Setomnichannelexperience) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Setomnichannelexperience setAccessToken(java.lang.String accessToken) {
+        return (Setomnichannelexperience) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Setomnichannelexperience setAlt(java.lang.String alt) {
+        return (Setomnichannelexperience) super.setAlt(alt);
+      }
+
+      @Override
+      public Setomnichannelexperience setCallback(java.lang.String callback) {
+        return (Setomnichannelexperience) super.setCallback(callback);
+      }
+
+      @Override
+      public Setomnichannelexperience setFields(java.lang.String fields) {
+        return (Setomnichannelexperience) super.setFields(fields);
+      }
+
+      @Override
+      public Setomnichannelexperience setKey(java.lang.String key) {
+        return (Setomnichannelexperience) super.setKey(key);
+      }
+
+      @Override
+      public Setomnichannelexperience setOauthToken(java.lang.String oauthToken) {
+        return (Setomnichannelexperience) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Setomnichannelexperience setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Setomnichannelexperience) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Setomnichannelexperience setQuotaUser(java.lang.String quotaUser) {
+        return (Setomnichannelexperience) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Setomnichannelexperience setUploadType(java.lang.String uploadType) {
+        return (Setomnichannelexperience) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Setomnichannelexperience setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Setomnichannelexperience) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The ID of the managing account. If this parameter is not the same as accountId, then this
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
+       * this account.
+       */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the managing account. If this parameter is not the same as accountId, then this account
+     must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * The ID of the managing account. If this parameter is not the same as accountId, then this
+       * account must be a multi-client account and `accountId` must be the ID of a sub-account of
+       * this account.
+       */
+      public Setomnichannelexperience setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The ID of the account for which to retrieve accessible Business Profiles. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger accountId;
+
+      /** The ID of the account for which to retrieve accessible Business Profiles.
+       */
+      public java.math.BigInteger getAccountId() {
+        return accountId;
+      }
+
+      /** The ID of the account for which to retrieve accessible Business Profiles. */
+      public Setomnichannelexperience setAccountId(java.math.BigInteger accountId) {
+        this.accountId = accountId;
+        return this;
+      }
+
+      /**
+       * The CLDR country code (for example, "US") for which the omnichannel experience is selected.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String country;
+
+      /** The CLDR country code (for example, "US") for which the omnichannel experience is selected.
+       */
+      public java.lang.String getCountry() {
+        return country;
+      }
+
+      /**
+       * The CLDR country code (for example, "US") for which the omnichannel experience is selected.
+       */
+      public Setomnichannelexperience setCountry(java.lang.String country) {
+        this.country = country;
+        return this;
+      }
+
+      /**
+       * The Local Store Front (LSF) type for this country. Acceptable values are: - "`ghlsf`"
+       * (Google-Hosted Local Store Front) - "`mhlsfBasic`" (Merchant-Hosted Local Store Front
+       * Basic) - "`mhlsfFull`" (Merchant-Hosted Local Store Front Full) More details about these
+       * types can be found here.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String lsfType;
+
+      /** The Local Store Front (LSF) type for this country. Acceptable values are: - "`ghlsf`" (Google-
+     Hosted Local Store Front) - "`mhlsfBasic`" (Merchant-Hosted Local Store Front Basic) -
+     "`mhlsfFull`" (Merchant-Hosted Local Store Front Full) More details about these types can be found
+     here.
+       */
+      public java.lang.String getLsfType() {
+        return lsfType;
+      }
+
+      /**
+       * The Local Store Front (LSF) type for this country. Acceptable values are: - "`ghlsf`"
+       * (Google-Hosted Local Store Front) - "`mhlsfBasic`" (Merchant-Hosted Local Store Front
+       * Basic) - "`mhlsfFull`" (Merchant-Hosted Local Store Front Full) More details about these
+       * types can be found here.
+       */
+      public Setomnichannelexperience setLsfType(java.lang.String lsfType) {
+        this.lsfType = lsfType;
+        return this;
+      }
+
+      /**
+       * The Pickup types for this country. Acceptable values are: - "`pickupToday`" -
+       * "`pickupLater`"
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> pickupTypes;
+
+      /** The Pickup types for this country. Acceptable values are: - "`pickupToday`" - "`pickupLater`"
+       */
+      public java.util.List<java.lang.String> getPickupTypes() {
+        return pickupTypes;
+      }
+
+      /**
+       * The Pickup types for this country. Acceptable values are: - "`pickupToday`" -
+       * "`pickupLater`"
+       */
+      public Setomnichannelexperience setPickupTypes(java.util.List<java.lang.String> pickupTypes) {
+        this.pickupTypes = pickupTypes;
+        return this;
+      }
+
+      @Override
+      public Setomnichannelexperience set(String parameterName, Object value) {
+        return (Setomnichannelexperience) super.set(parameterName, value);
+      }
+    }
+    /**
      * Sets the POS data provider for the specified country.
      *
      * Create a request for the method "liasettings.setposdataprovider".

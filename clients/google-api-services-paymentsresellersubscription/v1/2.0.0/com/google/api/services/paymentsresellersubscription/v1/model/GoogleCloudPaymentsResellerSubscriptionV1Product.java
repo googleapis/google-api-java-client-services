@@ -35,7 +35,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetails bundleDetails;
+  private ProductBundleDetails bundleDetails;
 
   /**
    * Optional. Details for a subscription line item with finite billing cycles. If unset, the line
@@ -93,7 +93,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
    * Output only. Output Only. Specifies the details for a bundle product.
    * @return value or {@code null} for none
    */
-  public GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetails getBundleDetails() {
+  public ProductBundleDetails getBundleDetails() {
     return bundleDetails;
   }
 
@@ -101,7 +101,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
    * Output only. Output Only. Specifies the details for a bundle product.
    * @param bundleDetails bundleDetails or {@code null} for none
    */
-  public GoogleCloudPaymentsResellerSubscriptionV1Product setBundleDetails(GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetails bundleDetails) {
+  public GoogleCloudPaymentsResellerSubscriptionV1Product setBundleDetails(ProductBundleDetails bundleDetails) {
     this.bundleDetails = bundleDetails;
     return this;
   }

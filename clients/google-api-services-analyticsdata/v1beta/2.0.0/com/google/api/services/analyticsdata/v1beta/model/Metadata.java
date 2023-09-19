@@ -17,7 +17,7 @@
 package com.google.api.services.analyticsdata.v1beta.model;
 
 /**
- * The dimensions and metrics currently accepted in reporting methods.
+ * The dimensions, metrics and comparisons currently accepted in reporting methods.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation

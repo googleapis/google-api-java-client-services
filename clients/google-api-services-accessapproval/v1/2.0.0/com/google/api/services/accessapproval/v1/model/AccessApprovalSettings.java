@@ -103,6 +103,13 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> notificationEmails;
 
   /**
+   * Optional. A pubsub topic to which notifications relating to approval requests should be sent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notificationPubsubTopic;
+
+  /**
    * This preference is communicated to Google personnel when sending an approval request but can be
    * overridden if necessary.
    * The value may be {@code null}.
@@ -282,6 +289,23 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    */
   public AccessApprovalSettings setNotificationEmails(java.util.List<java.lang.String> notificationEmails) {
     this.notificationEmails = notificationEmails;
+    return this;
+  }
+
+  /**
+   * Optional. A pubsub topic to which notifications relating to approval requests should be sent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotificationPubsubTopic() {
+    return notificationPubsubTopic;
+  }
+
+  /**
+   * Optional. A pubsub topic to which notifications relating to approval requests should be sent.
+   * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
+   */
+  public AccessApprovalSettings setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {
+    this.notificationPubsubTopic = notificationPubsubTopic;
     return this;
   }
 

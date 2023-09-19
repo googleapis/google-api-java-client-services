@@ -69,7 +69,8 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   private java.lang.Boolean includeCitations;
 
   /**
-   * Language code for Summary. Use language tags defined by BCP47.
+   * Language code for Summary. Use language tags defined by [BCP47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt). Note: This is an experimental feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +173,8 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   }
 
   /**
-   * Language code for Summary. Use language tags defined by BCP47.
+   * Language code for Summary. Use language tags defined by [BCP47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt). Note: This is an experimental feature.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -180,7 +182,8 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   }
 
   /**
-   * Language code for Summary. Use language tags defined by BCP47.
+   * Language code for Summary. Use language tags defined by [BCP47](https://www.rfc-
+   * editor.org/rfc/bcp/bcp47.txt). Note: This is an experimental feature.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec setLanguageCode(java.lang.String languageCode) {

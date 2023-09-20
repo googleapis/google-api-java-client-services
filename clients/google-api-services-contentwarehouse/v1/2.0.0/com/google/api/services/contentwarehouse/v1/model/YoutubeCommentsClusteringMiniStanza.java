@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * Intended to be simpler to work with than the ExportedStanza it's derived from See documentation: 
  * https://g3doc.corp.google.com/company/teams/youtube/community_intelligence/eng_resources/data_sou
- * rces.md#ministanza Next available: 78
+ * rces.md#ministanza Next available: 80
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -105,6 +105,20 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Double> commentClassificationRanking;
+
+  /**
+   * Contains various comment moderated restrictions. Only available in the Atlas version. Extracted
+   * from http://shortn/_2LzgPEF5K3
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<YoutubeCommentsApiCommentModeratedRestriction> commentModeratedRestrictions;
+
+  static {
+    // hack to force ProGuard to consider YoutubeCommentsApiCommentModeratedRestriction used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(YoutubeCommentsApiCommentModeratedRestriction.class);
+  }
 
   /**
    * Whether the comment is on a video, post, or other product.
@@ -275,6 +289,13 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Boolean> lowQualityDecisions;
+
+  /**
+   * Comment low quality scores. Keyed by various model names. Rename from the old automod_scores.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Double> lowQualityScores;
 
   /**
    * Timed comments for the "mentioned" secondary key.
@@ -717,6 +738,25 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
+   * Contains various comment moderated restrictions. Only available in the Atlas version. Extracted
+   * from http://shortn/_2LzgPEF5K3
+   * @return value or {@code null} for none
+   */
+  public java.util.List<YoutubeCommentsApiCommentModeratedRestriction> getCommentModeratedRestrictions() {
+    return commentModeratedRestrictions;
+  }
+
+  /**
+   * Contains various comment moderated restrictions. Only available in the Atlas version. Extracted
+   * from http://shortn/_2LzgPEF5K3
+   * @param commentModeratedRestrictions commentModeratedRestrictions or {@code null} for none
+   */
+  public YoutubeCommentsClusteringMiniStanza setCommentModeratedRestrictions(java.util.List<YoutubeCommentsApiCommentModeratedRestriction> commentModeratedRestrictions) {
+    this.commentModeratedRestrictions = commentModeratedRestrictions;
+    return this;
+  }
+
+  /**
    * Whether the comment is on a video, post, or other product.
    * @return value or {@code null} for none
    */
@@ -1122,6 +1162,23 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   public YoutubeCommentsClusteringMiniStanza setLowQualityDecisions(java.util.Map<String, java.lang.Boolean> lowQualityDecisions) {
     this.lowQualityDecisions = lowQualityDecisions;
+    return this;
+  }
+
+  /**
+   * Comment low quality scores. Keyed by various model names. Rename from the old automod_scores.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Double> getLowQualityScores() {
+    return lowQualityScores;
+  }
+
+  /**
+   * Comment low quality scores. Keyed by various model names. Rename from the old automod_scores.
+   * @param lowQualityScores lowQualityScores or {@code null} for none
+   */
+  public YoutubeCommentsClusteringMiniStanza setLowQualityScores(java.util.Map<String, java.lang.Double> lowQualityScores) {
+    this.lowQualityScores = lowQualityScores;
     return this;
   }
 

@@ -17,7 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Oyster type information.
+ * Concept provides meaning semantics captured in a continuous space, as opposed to MRF. go
+ * /concepts-roofshot.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,43 +29,37 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RepositoryWebrefOysterType extends com.google.api.client.json.GenericJson {
+public final class KnowledgeAnswersIntentQueryConceptInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Oyster feature type, which provides a rough categorization. This is a value of the enum
-   * geostore.FeatureProto.TypeCategory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer featureType;
+  private ConceptsConceptId id;
 
   /**
-   * The Oyster feature type, which provides a rough categorization. This is a value of the enum
-   * geostore.FeatureProto.TypeCategory.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getFeatureType() {
-    return featureType;
+  public ConceptsConceptId getId() {
+    return id;
   }
 
   /**
-   * The Oyster feature type, which provides a rough categorization. This is a value of the enum
-   * geostore.FeatureProto.TypeCategory.
-   * @param featureType featureType or {@code null} for none
+   * @param id id or {@code null} for none
    */
-  public RepositoryWebrefOysterType setFeatureType(java.lang.Integer featureType) {
-    this.featureType = featureType;
+  public KnowledgeAnswersIntentQueryConceptInfo setId(ConceptsConceptId id) {
+    this.id = id;
     return this;
   }
 
   @Override
-  public RepositoryWebrefOysterType set(String fieldName, Object value) {
-    return (RepositoryWebrefOysterType) super.set(fieldName, value);
+  public KnowledgeAnswersIntentQueryConceptInfo set(String fieldName, Object value) {
+    return (KnowledgeAnswersIntentQueryConceptInfo) super.set(fieldName, value);
   }
 
   @Override
-  public RepositoryWebrefOysterType clone() {
-    return (RepositoryWebrefOysterType) super.clone();
+  public KnowledgeAnswersIntentQueryConceptInfo clone() {
+    return (KnowledgeAnswersIntentQueryConceptInfo) super.clone();
   }
 
 }

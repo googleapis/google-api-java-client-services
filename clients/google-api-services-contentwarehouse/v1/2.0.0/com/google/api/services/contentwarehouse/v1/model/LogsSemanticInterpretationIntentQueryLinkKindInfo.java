@@ -37,6 +37,7 @@ public final class LogsSemanticInterpretationIntentQueryLinkKindInfo extends com
   private LogsSemanticInterpretationIntentQueryLinkKindFlags flags;
 
   /**
+   * Not set for a while.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,6 +65,7 @@ public final class LogsSemanticInterpretationIntentQueryLinkKindInfo extends com
   }
 
   /**
+   * Not set for a while.
    * @return value or {@code null} for none
    */
   public java.lang.String getKcLinkName() {
@@ -71,6 +73,7 @@ public final class LogsSemanticInterpretationIntentQueryLinkKindInfo extends com
   }
 
   /**
+   * Not set for a while.
    * @param kcLinkName kcLinkName or {@code null} for none
    */
   public LogsSemanticInterpretationIntentQueryLinkKindInfo setKcLinkName(java.lang.String kcLinkName) {

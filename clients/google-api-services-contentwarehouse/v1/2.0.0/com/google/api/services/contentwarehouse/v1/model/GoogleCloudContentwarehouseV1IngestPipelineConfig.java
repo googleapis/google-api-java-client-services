@@ -31,6 +31,22 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudContentwarehouseV1IngestPipelineConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The Cloud Function resource name. The Cloud Function needs to live inside consumer project and
+   * is accessible to Document AI Warehouse P4SA. Only Cloud Functions V2 is supported. Cloud
+   * function execution should complete within 5 minutes or this file ingestion may fail due to
+   * timeout. Format: `https://{region}-{project_id}.cloudfunctions.net/{cloud_function}` The
+   * following keys are available the request json payload. * display_name * properties * plain_text
+   * * reference_id * document_schema_name * raw_document_path * raw_document_file_type The
+   * following keys from the cloud function json response payload will be ingested to the Document
+   * AI Warehouse as part of Document proto content and/or related information. The original values
+   * will be overridden if any key is present in the response. * display_name * properties *
+   * plain_text * document_acl_policy * folder
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudFunction;
+
+  /**
    * The document level acl policy config. This refers to an Identity and Access (IAM) policy, which
    * specifies access controls for all documents ingested by the pipeline. The role and members
    * under the policy needs to be specified. The following roles are supported for document level
@@ -58,6 +74,41 @@ public final class GoogleCloudContentwarehouseV1IngestPipelineConfig extends com
    */
   @com.google.api.client.util.Key
   private java.lang.String folder;
+
+  /**
+   * The Cloud Function resource name. The Cloud Function needs to live inside consumer project and
+   * is accessible to Document AI Warehouse P4SA. Only Cloud Functions V2 is supported. Cloud
+   * function execution should complete within 5 minutes or this file ingestion may fail due to
+   * timeout. Format: `https://{region}-{project_id}.cloudfunctions.net/{cloud_function}` The
+   * following keys are available the request json payload. * display_name * properties * plain_text
+   * * reference_id * document_schema_name * raw_document_path * raw_document_file_type The
+   * following keys from the cloud function json response payload will be ingested to the Document
+   * AI Warehouse as part of Document proto content and/or related information. The original values
+   * will be overridden if any key is present in the response. * display_name * properties *
+   * plain_text * document_acl_policy * folder
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudFunction() {
+    return cloudFunction;
+  }
+
+  /**
+   * The Cloud Function resource name. The Cloud Function needs to live inside consumer project and
+   * is accessible to Document AI Warehouse P4SA. Only Cloud Functions V2 is supported. Cloud
+   * function execution should complete within 5 minutes or this file ingestion may fail due to
+   * timeout. Format: `https://{region}-{project_id}.cloudfunctions.net/{cloud_function}` The
+   * following keys are available the request json payload. * display_name * properties * plain_text
+   * * reference_id * document_schema_name * raw_document_path * raw_document_file_type The
+   * following keys from the cloud function json response payload will be ingested to the Document
+   * AI Warehouse as part of Document proto content and/or related information. The original values
+   * will be overridden if any key is present in the response. * display_name * properties *
+   * plain_text * document_acl_policy * folder
+   * @param cloudFunction cloudFunction or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1IngestPipelineConfig setCloudFunction(java.lang.String cloudFunction) {
+    this.cloudFunction = cloudFunction;
+    return this;
+  }
 
   /**
    * The document level acl policy config. This refers to an Identity and Access (IAM) policy, which

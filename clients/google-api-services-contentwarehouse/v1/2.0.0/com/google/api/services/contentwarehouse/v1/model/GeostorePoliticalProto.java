@@ -40,6 +40,19 @@ public final class GeostorePoliticalProto extends com.google.api.client.json.Gen
   private GeostoreFeatureIdProto capital;
 
   /**
+   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeostoreFeatureIdProto> claim;
+
+  static {
+    // hack to force ProGuard to consider GeostoreFeatureIdProto used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GeostoreFeatureIdProto.class);
+  }
+
+  /**
    * The Gross Domestic Product of the political region measured in millions of current United
    * States dollars. It must not be negative.
    * The value may be {@code null}.
@@ -80,6 +93,23 @@ public final class GeostorePoliticalProto extends com.google.api.client.json.Gen
    */
   public GeostorePoliticalProto setCapital(GeostoreFeatureIdProto capital) {
     this.capital = capital;
+    return this;
+  }
+
+  /**
+   * RESERVED
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeostoreFeatureIdProto> getClaim() {
+    return claim;
+  }
+
+  /**
+   * RESERVED
+   * @param claim claim or {@code null} for none
+   */
+  public GeostorePoliticalProto setClaim(java.util.List<GeostoreFeatureIdProto> claim) {
+    this.claim = claim;
     return this;
   }
 

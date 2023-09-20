@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The attributes of encoded thumbnail images. Next id: 9.
+ * The attributes of encoded thumbnail images. Next id: 10.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -37,6 +37,13 @@ public final class DrishtiVesperEncodedThumbnail extends com.google.api.client.j
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long byteSize;
+
+  /**
+   * CRC-32 checksum of the image bytes. Can be used for data integrity check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long crc32c;
 
   /**
    * JPEG/WEBP quality factor in range [0,100].
@@ -105,6 +112,23 @@ public final class DrishtiVesperEncodedThumbnail extends com.google.api.client.j
    */
   public DrishtiVesperEncodedThumbnail setByteSize(java.lang.Long byteSize) {
     this.byteSize = byteSize;
+    return this;
+  }
+
+  /**
+   * CRC-32 checksum of the image bytes. Can be used for data integrity check.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCrc32c() {
+    return crc32c;
+  }
+
+  /**
+   * CRC-32 checksum of the image bytes. Can be used for data integrity check.
+   * @param crc32c crc32c or {@code null} for none
+   */
+  public DrishtiVesperEncodedThumbnail setCrc32c(java.lang.Long crc32c) {
+    this.crc32c = crc32c;
     return this;
   }
 

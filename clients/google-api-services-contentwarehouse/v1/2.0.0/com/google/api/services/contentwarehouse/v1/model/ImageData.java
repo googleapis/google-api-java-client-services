@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This defines the per-doc data which is extracted from thumbnails and propagated over to indexing.
- * It contains all information that can be used for restricts. Next tag id: 130
+ * It contains all information that can be used for restricts. Next tag id: 131
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -359,6 +359,13 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer imagerank;
+
+  /**
+   * Vertical indexing information for the document and associated image outlinks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ImageDataVerticalIndexingInfoImage> indexedVerticals;
 
   /**
    * IIP in scope signal (go/iip). Set to true if the image is annotated with any iip_in_scope
@@ -1524,6 +1531,23 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   public ImageData setImagerank(java.lang.Integer imagerank) {
     this.imagerank = imagerank;
+    return this;
+  }
+
+  /**
+   * Vertical indexing information for the document and associated image outlinks.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ImageDataVerticalIndexingInfoImage> getIndexedVerticals() {
+    return indexedVerticals;
+  }
+
+  /**
+   * Vertical indexing information for the document and associated image outlinks.
+   * @param indexedVerticals indexedVerticals or {@code null} for none
+   */
+  public ImageData setIndexedVerticals(java.util.List<ImageDataVerticalIndexingInfoImage> indexedVerticals) {
+    this.indexedVerticals = indexedVerticals;
     return this;
   }
 

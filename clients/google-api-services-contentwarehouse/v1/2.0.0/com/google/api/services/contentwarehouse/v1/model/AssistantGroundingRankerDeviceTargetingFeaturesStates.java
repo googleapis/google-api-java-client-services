@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * The states of the device. They are dynamic and may change based on the current context. Next ID:
- * 6
+ * 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -37,6 +37,34 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends
    */
   @com.google.api.client.util.Key
   private java.lang.String distance;
+
+  /**
+   * Indicates that the device is running a media session that is currently buffering.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasBufferingMediaSession;
+
+  /**
+   * Indicates that the device is running a media session that is currently paused.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasPausedMediaSession;
+
+  /**
+   * Indicates that the device is running a media session that is currently playing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasPlayingMediaSession;
+
+  /**
+   * Indicates whether or not the device is in the same structure as any local or hearing devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasSameStructure;
 
   /**
    * Indicate whether the device is docked on a base.
@@ -86,6 +114,74 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends
    */
   public AssistantGroundingRankerDeviceTargetingFeaturesStates setDistance(java.lang.String distance) {
     this.distance = distance;
+    return this;
+  }
+
+  /**
+   * Indicates that the device is running a media session that is currently buffering.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasBufferingMediaSession() {
+    return hasBufferingMediaSession;
+  }
+
+  /**
+   * Indicates that the device is running a media session that is currently buffering.
+   * @param hasBufferingMediaSession hasBufferingMediaSession or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setHasBufferingMediaSession(java.lang.Boolean hasBufferingMediaSession) {
+    this.hasBufferingMediaSession = hasBufferingMediaSession;
+    return this;
+  }
+
+  /**
+   * Indicates that the device is running a media session that is currently paused.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasPausedMediaSession() {
+    return hasPausedMediaSession;
+  }
+
+  /**
+   * Indicates that the device is running a media session that is currently paused.
+   * @param hasPausedMediaSession hasPausedMediaSession or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setHasPausedMediaSession(java.lang.Boolean hasPausedMediaSession) {
+    this.hasPausedMediaSession = hasPausedMediaSession;
+    return this;
+  }
+
+  /**
+   * Indicates that the device is running a media session that is currently playing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasPlayingMediaSession() {
+    return hasPlayingMediaSession;
+  }
+
+  /**
+   * Indicates that the device is running a media session that is currently playing.
+   * @param hasPlayingMediaSession hasPlayingMediaSession or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setHasPlayingMediaSession(java.lang.Boolean hasPlayingMediaSession) {
+    this.hasPlayingMediaSession = hasPlayingMediaSession;
+    return this;
+  }
+
+  /**
+   * Indicates whether or not the device is in the same structure as any local or hearing devices.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasSameStructure() {
+    return hasSameStructure;
+  }
+
+  /**
+   * Indicates whether or not the device is in the same structure as any local or hearing devices.
+   * @param hasSameStructure hasSameStructure or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setHasSameStructure(java.lang.Boolean hasSameStructure) {
+    this.hasSameStructure = hasSameStructure;
     return this;
   }
 

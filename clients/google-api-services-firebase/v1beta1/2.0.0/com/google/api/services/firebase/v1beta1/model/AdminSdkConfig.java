@@ -31,6 +31,11 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class AdminSdkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance name using the
+   * [list endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
+   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
+   * return might not contain a default instance._ The default Firebase Realtime Database URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,6 +75,11 @@ public final class AdminSdkConfig extends com.google.api.client.json.GenericJson
   private java.lang.String storageBucket;
 
   /**
+   * **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance name using the
+   * [list endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
+   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
+   * return might not contain a default instance._ The default Firebase Realtime Database URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseURL() {
@@ -77,6 +87,11 @@ public final class AdminSdkConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance name using the
+   * [list endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
+   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
+   * return might not contain a default instance._ The default Firebase Realtime Database URL.
    * @param databaseURL databaseURL or {@code null} for none
    */
   public AdminSdkConfig setDatabaseURL(java.lang.String databaseURL) {

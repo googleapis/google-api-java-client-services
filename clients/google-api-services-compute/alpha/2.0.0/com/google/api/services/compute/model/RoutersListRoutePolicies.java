@@ -85,7 +85,7 @@ public final class RoutersListRoutePolicies extends com.google.api.client.json.G
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> unreachable;
+  private java.util.List<java.lang.String> unreachables;
 
   /**
    * [Output Only] Informational warning message.
@@ -206,16 +206,16 @@ public final class RoutersListRoutePolicies extends com.google.api.client.json.G
    * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getUnreachable() {
-    return unreachable;
+  public java.util.List<java.lang.String> getUnreachables() {
+    return unreachables;
   }
 
   /**
    * [Output Only] Unreachable resources.
-   * @param unreachable unreachable or {@code null} for none
+   * @param unreachables unreachables or {@code null} for none
    */
-  public RoutersListRoutePolicies setUnreachable(java.util.List<java.lang.String> unreachable) {
-    this.unreachable = unreachable;
+  public RoutersListRoutePolicies setUnreachables(java.util.List<java.lang.String> unreachables) {
+    this.unreachables = unreachables;
     return this;
   }
 

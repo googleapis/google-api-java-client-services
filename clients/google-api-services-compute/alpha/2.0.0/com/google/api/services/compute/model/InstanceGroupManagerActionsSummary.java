@@ -58,15 +58,6 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   private java.lang.Integer creatingAtomically;
 
   /**
-   * [Output Only] The number of instances that the managed instance group will attempt to create in
-   * bulk. If the desired count of instances cannot be created, entire batch will be deleted and the
-   * group will decrease its targetSize value accordingly.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer creatingInBulk;
-
-  /**
    * [Output Only] The number of instances that the managed instance group will attempt to create.
    * The group attempts to create each instance only once. If the group fails to create any of these
    * instances, it decreases the group's targetSize value accordingly.
@@ -228,27 +219,6 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
    */
   public InstanceGroupManagerActionsSummary setCreatingAtomically(java.lang.Integer creatingAtomically) {
     this.creatingAtomically = creatingAtomically;
-    return this;
-  }
-
-  /**
-   * [Output Only] The number of instances that the managed instance group will attempt to create in
-   * bulk. If the desired count of instances cannot be created, entire batch will be deleted and the
-   * group will decrease its targetSize value accordingly.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getCreatingInBulk() {
-    return creatingInBulk;
-  }
-
-  /**
-   * [Output Only] The number of instances that the managed instance group will attempt to create in
-   * bulk. If the desired count of instances cannot be created, entire batch will be deleted and the
-   * group will decrease its targetSize value accordingly.
-   * @param creatingInBulk creatingInBulk or {@code null} for none
-   */
-  public InstanceGroupManagerActionsSummary setCreatingInBulk(java.lang.Integer creatingInBulk) {
-    this.creatingInBulk = creatingInBulk;
     return this;
   }
 

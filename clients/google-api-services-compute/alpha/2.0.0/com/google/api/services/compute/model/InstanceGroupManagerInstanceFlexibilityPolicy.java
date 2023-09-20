@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerInstanceFlexibilityPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of instance selection options that the group will use when creating new VMs.
+   * Named instance selections configuring properties that the group will use when creating new VMs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> instanceSelectionLists;
 
   /**
-   * List of instance selection options that the group will use when creating new VMs.
+   * Named instance selections configuring properties that the group will use when creating new VMs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> getInstanceSelectionLists() {
@@ -45,7 +45,7 @@ public final class InstanceGroupManagerInstanceFlexibilityPolicy extends com.goo
   }
 
   /**
-   * List of instance selection options that the group will use when creating new VMs.
+   * Named instance selections configuring properties that the group will use when creating new VMs.
    * @param instanceSelectionLists instanceSelectionLists or {@code null} for none
    */
   public InstanceGroupManagerInstanceFlexibilityPolicy setInstanceSelectionLists(java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> instanceSelectionLists) {

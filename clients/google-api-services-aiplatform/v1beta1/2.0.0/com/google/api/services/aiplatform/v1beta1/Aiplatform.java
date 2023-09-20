@@ -55473,14 +55473,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. The ID to use for the PersistentResource, which become the final component of
            * the PersistentResource's resource name. The maximum length is 63 characters, and valid
-           * characters are /^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/.
+           * characters are `/^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String persistentResourceId;
 
           /** Required. The ID to use for the PersistentResource, which become the final component of the
          PersistentResource's resource name. The maximum length is 63 characters, and valid characters are
-         /^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/.
+         `/^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/`.
            */
           public java.lang.String getPersistentResourceId() {
             return persistentResourceId;
@@ -55489,7 +55489,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. The ID to use for the PersistentResource, which become the final component of
            * the PersistentResource's resource name. The maximum length is 63 characters, and valid
-           * characters are /^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/.
+           * characters are `/^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/`.
            */
           public Create setPersistentResourceId(java.lang.String persistentResourceId) {
             this.persistentResourceId = persistentResourceId;
@@ -57230,14 +57230,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           /**
            * The ID to use for the PipelineJob, which will become the final component of the
            * PipelineJob name. If not provided, an ID will be automatically generated. This value
-           * should be less than 128 characters, and valid characters are /a-z-/.
+           * should be less than 128 characters, and valid characters are `/a-z-/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String pipelineJobId;
 
           /** The ID to use for the PipelineJob, which will become the final component of the PipelineJob name.
          If not provided, an ID will be automatically generated. This value should be less than 128
-         characters, and valid characters are /a-z-/.
+         characters, and valid characters are `/a-z-/`.
            */
           public java.lang.String getPipelineJobId() {
             return pipelineJobId;
@@ -57246,7 +57246,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           /**
            * The ID to use for the PipelineJob, which will become the final component of the
            * PipelineJob name. If not provided, an ID will be automatically generated. This value
-           * should be less than 128 characters, and valid characters are /a-z-/.
+           * should be less than 128 characters, and valid characters are `/a-z-/`.
            */
           public Create setPipelineJobId(java.lang.String pipelineJobId) {
             this.pipelineJobId = pipelineJobId;
@@ -68500,14 +68500,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The ID to use for the Tensorboard experiment, which becomes the final
              * component of the Tensorboard experiment's resource name. This value should be 1-128
-             * characters, and valid characters are /a-z-/.
+             * characters, and valid characters are `/a-z-/`.
              */
             @com.google.api.client.util.Key
             private java.lang.String tensorboardExperimentId;
 
             /** Required. The ID to use for the Tensorboard experiment, which becomes the final component of the
            Tensorboard experiment's resource name. This value should be 1-128 characters, and valid characters
-           are /a-z-/.
+           are `/a-z-/`.
              */
             public java.lang.String getTensorboardExperimentId() {
               return tensorboardExperimentId;
@@ -68516,7 +68516,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The ID to use for the Tensorboard experiment, which becomes the final
              * component of the Tensorboard experiment's resource name. This value should be 1-128
-             * characters, and valid characters are /a-z-/.
+             * characters, and valid characters are `/a-z-/`.
              */
             public Create setTensorboardExperimentId(java.lang.String tensorboardExperimentId) {
               this.tensorboardExperimentId = tensorboardExperimentId;
@@ -70485,14 +70485,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The ID to use for the Tensorboard run, which becomes the final component
                * of the Tensorboard run's resource name. This value should be 1-128 characters, and
-               * valid characters are /a-z-/.
+               * valid characters are `/a-z-/`.
                */
               @com.google.api.client.util.Key
               private java.lang.String tensorboardRunId;
 
               /** Required. The ID to use for the Tensorboard run, which becomes the final component of the
              Tensorboard run's resource name. This value should be 1-128 characters, and valid characters are
-             /a-z-/.
+             `/a-z-/`.
                */
               public java.lang.String getTensorboardRunId() {
                 return tensorboardRunId;
@@ -70501,7 +70501,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The ID to use for the Tensorboard run, which becomes the final component
                * of the Tensorboard run's resource name. This value should be 1-128 characters, and
-               * valid characters are /a-z-/.
+               * valid characters are `/a-z-/`.
                */
               public Create setTensorboardRunId(java.lang.String tensorboardRunId) {
                 this.tensorboardRunId = tensorboardRunId;

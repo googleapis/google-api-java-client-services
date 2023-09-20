@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
  * A template that specifies runtime configurations such as machine type, runtime version, network
@@ -28,7 +28,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Timestamp when this NotebookRuntimeTemplate was created.
@@ -42,7 +42,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1PersistentDiskSpec dataPersistentDiskSpec;
+  private GoogleCloudAiplatformV1PersistentDiskSpec dataPersistentDiskSpec;
 
   /**
    * The description of the NotebookRuntimeTemplate.
@@ -72,7 +72,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1NotebookEucConfig eucConfig;
+  private GoogleCloudAiplatformV1NotebookEucConfig eucConfig;
 
   /**
    * The idle shutdown configuration of NotebookRuntimeTemplate. This config will only be set when
@@ -80,7 +80,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1NotebookIdleShutdownConfig idleShutdownConfig;
+  private GoogleCloudAiplatformV1NotebookIdleShutdownConfig idleShutdownConfig;
 
   /**
    * Output only. The default template to use if not specified.
@@ -104,7 +104,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1MachineSpec machineSpec;
+  private GoogleCloudAiplatformV1MachineSpec machineSpec;
 
   /**
    * Output only. The resource name of the NotebookRuntimeTemplate.
@@ -118,7 +118,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1NetworkSpec networkSpec;
+  private GoogleCloudAiplatformV1NetworkSpec networkSpec;
 
   /**
    * The service account that the runtime workload runs as. You can use any service account within
@@ -150,7 +150,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * Output only. Timestamp when this NotebookRuntimeTemplate was created.
    * @param createTime createTime or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setCreateTime(String createTime) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -159,7 +159,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * Optional. The specification of persistent disk attached to the runtime as data disk storage.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1PersistentDiskSpec getDataPersistentDiskSpec() {
+  public GoogleCloudAiplatformV1PersistentDiskSpec getDataPersistentDiskSpec() {
     return dataPersistentDiskSpec;
   }
 
@@ -167,7 +167,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * Optional. The specification of persistent disk attached to the runtime as data disk storage.
    * @param dataPersistentDiskSpec dataPersistentDiskSpec or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setDataPersistentDiskSpec(GoogleCloudAiplatformV1beta1PersistentDiskSpec dataPersistentDiskSpec) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setDataPersistentDiskSpec(GoogleCloudAiplatformV1PersistentDiskSpec dataPersistentDiskSpec) {
     this.dataPersistentDiskSpec = dataPersistentDiskSpec;
     return this;
   }
@@ -184,7 +184,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * The description of the NotebookRuntimeTemplate.
    * @param description description or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setDescription(java.lang.String description) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
@@ -203,7 +203,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * long and can consist of any UTF-8 characters.
    * @param displayName displayName or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setDisplayName(java.lang.String displayName) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
     return this;
   }
@@ -222,7 +222,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * happens.
    * @param etag etag or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setEtag(java.lang.String etag) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setEtag(java.lang.String etag) {
     this.etag = etag;
     return this;
   }
@@ -231,7 +231,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * EUC configuration of the NotebookRuntimeTemplate.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookEucConfig getEucConfig() {
+  public GoogleCloudAiplatformV1NotebookEucConfig getEucConfig() {
     return eucConfig;
   }
 
@@ -239,7 +239,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * EUC configuration of the NotebookRuntimeTemplate.
    * @param eucConfig eucConfig or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setEucConfig(GoogleCloudAiplatformV1beta1NotebookEucConfig eucConfig) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setEucConfig(GoogleCloudAiplatformV1NotebookEucConfig eucConfig) {
     this.eucConfig = eucConfig;
     return this;
   }
@@ -249,7 +249,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * idle shutdown is enabled.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookIdleShutdownConfig getIdleShutdownConfig() {
+  public GoogleCloudAiplatformV1NotebookIdleShutdownConfig getIdleShutdownConfig() {
     return idleShutdownConfig;
   }
 
@@ -258,7 +258,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * idle shutdown is enabled.
    * @param idleShutdownConfig idleShutdownConfig or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setIdleShutdownConfig(GoogleCloudAiplatformV1beta1NotebookIdleShutdownConfig idleShutdownConfig) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setIdleShutdownConfig(GoogleCloudAiplatformV1NotebookIdleShutdownConfig idleShutdownConfig) {
     this.idleShutdownConfig = idleShutdownConfig;
     return this;
   }
@@ -275,7 +275,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * Output only. The default template to use if not specified.
    * @param isDefault isDefault or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setIsDefault(java.lang.Boolean isDefault) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setIsDefault(java.lang.Boolean isDefault) {
     this.isDefault = isDefault;
     return this;
   }
@@ -298,7 +298,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * https://goo.gl/xmQnxf for more information and examples of labels.
    * @param labels labels or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setLabels(java.util.Map<String, java.lang.String> labels) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
@@ -307,7 +307,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * Optional. Immutable. The specification of a single machine for the template.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1MachineSpec getMachineSpec() {
+  public GoogleCloudAiplatformV1MachineSpec getMachineSpec() {
     return machineSpec;
   }
 
@@ -315,7 +315,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * Optional. Immutable. The specification of a single machine for the template.
    * @param machineSpec machineSpec or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setMachineSpec(GoogleCloudAiplatformV1beta1MachineSpec machineSpec) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setMachineSpec(GoogleCloudAiplatformV1MachineSpec machineSpec) {
     this.machineSpec = machineSpec;
     return this;
   }
@@ -332,7 +332,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * Output only. The resource name of the NotebookRuntimeTemplate.
    * @param name name or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setName(java.lang.String name) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -341,7 +341,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * Optional. Network spec.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NetworkSpec getNetworkSpec() {
+  public GoogleCloudAiplatformV1NetworkSpec getNetworkSpec() {
     return networkSpec;
   }
 
@@ -349,7 +349,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * Optional. Network spec.
    * @param networkSpec networkSpec or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setNetworkSpec(GoogleCloudAiplatformV1beta1NetworkSpec networkSpec) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setNetworkSpec(GoogleCloudAiplatformV1NetworkSpec networkSpec) {
     this.networkSpec = networkSpec;
     return this;
   }
@@ -374,7 +374,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * is used.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setServiceAccount(java.lang.String serviceAccount) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
     return this;
   }
@@ -391,19 +391,19 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    * Output only. Timestamp when this NotebookRuntimeTemplate was most recently updated.
    * @param updateTime updateTime or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setUpdateTime(String updateTime) {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1NotebookRuntimeTemplate) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate clone() {
-    return (GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate) super.clone();
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate clone() {
+    return (GoogleCloudAiplatformV1NotebookRuntimeTemplate) super.clone();
   }
 
 }

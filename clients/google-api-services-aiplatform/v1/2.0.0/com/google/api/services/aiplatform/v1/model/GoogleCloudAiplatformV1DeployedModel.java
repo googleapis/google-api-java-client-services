@@ -97,7 +97,7 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   /**
    * Immutable. The ID of the DeployedModel. If not provided upon deployment, Vertex AI will
    * generate a value for this ID. This value should be 1-10 characters, and valid characters are
-   * /[0-9]/.
+   * `/[0-9]/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -295,7 +295,7 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   /**
    * Immutable. The ID of the DeployedModel. If not provided upon deployment, Vertex AI will
    * generate a value for this ID. This value should be 1-10 characters, and valid characters are
-   * /[0-9]/.
+   * `/[0-9]/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -305,7 +305,7 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   /**
    * Immutable. The ID of the DeployedModel. If not provided upon deployment, Vertex AI will
    * generate a value for this ID. This value should be 1-10 characters, and valid characters are
-   * /[0-9]/.
+   * `/[0-9]/`.
    * @param id id or {@code null} for none
    */
   public GoogleCloudAiplatformV1DeployedModel setId(java.lang.String id) {

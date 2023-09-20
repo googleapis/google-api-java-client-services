@@ -146,7 +146,8 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
    * DeployedIndex. If set, we will deploy the index within the provided ip ranges. Otherwise, the
    * index might be deployed to any ip ranges under the provided VPC network. The value should be
    * the name of the address (https://cloud.google.com/compute/docs/reference/rest/v1/addresses)
-   * Example: 'vertex-ai-ip-range'.
+   * Example: ['vertex-ai-ip-range']. For more information about subnets and network IP ranges,
+   * please see https://cloud.google.com/vpc/docs/subnets#manually_created_subnet_ip_ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -414,7 +415,8 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
    * DeployedIndex. If set, we will deploy the index within the provided ip ranges. Otherwise, the
    * index might be deployed to any ip ranges under the provided VPC network. The value should be
    * the name of the address (https://cloud.google.com/compute/docs/reference/rest/v1/addresses)
-   * Example: 'vertex-ai-ip-range'.
+   * Example: ['vertex-ai-ip-range']. For more information about subnets and network IP ranges,
+   * please see https://cloud.google.com/vpc/docs/subnets#manually_created_subnet_ip_ranges.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReservedIpRanges() {
@@ -426,7 +428,8 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
    * DeployedIndex. If set, we will deploy the index within the provided ip ranges. Otherwise, the
    * index might be deployed to any ip ranges under the provided VPC network. The value should be
    * the name of the address (https://cloud.google.com/compute/docs/reference/rest/v1/addresses)
-   * Example: 'vertex-ai-ip-range'.
+   * Example: ['vertex-ai-ip-range']. For more information about subnets and network IP ranges,
+   * please see https://cloud.google.com/vpc/docs/subnets#manually_created_subnet_ip_ranges.
    * @param reservedIpRanges reservedIpRanges or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DeployedIndex setReservedIpRanges(java.util.List<java.lang.String> reservedIpRanges) {

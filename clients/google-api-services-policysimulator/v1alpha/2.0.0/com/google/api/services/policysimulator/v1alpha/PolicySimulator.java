@@ -2191,7 +2191,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the policysimulator server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent the violations are scoped to. Format: organizations/{organization}
+         * @param parent Required. The parent the violations are scoped to. Format:
+         *        `organizations/{organization}/locations/{location}` Example: `organizations/my-example-
+         *        org/locations/global`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2218,7 +2220,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent the violations are scoped to. Format: organizations/{organization}
+           * @param parent Required. The parent the violations are scoped to. Format:
+         *        `organizations/{organization}/locations/{location}` Example: `organizations/my-example-
+         *        org/locations/global`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2297,19 +2301,25 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent the violations are scoped to. Format: organizations/{organization}
+           * Required. The parent the violations are scoped to. Format:
+           * `organizations/{organization}/locations/{location}` Example: `organizations/my-example-
+           * org/locations/global`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent the violations are scoped to. Format: organizations/{organization}
+          /** Required. The parent the violations are scoped to. Format:
+         `organizations/{organization}/locations/{location}` Example: `organizations/my-example-
+         org/locations/global`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent the violations are scoped to. Format: organizations/{organization}
+           * Required. The parent the violations are scoped to. Format:
+           * `organizations/{organization}/locations/{location}` Example: `organizations/my-example-
+           * org/locations/global`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

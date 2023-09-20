@@ -32,7 +32,10 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay extends com
   /**
    * The OrgPolicy CustomConstraint changes to preview violations for. Any existing
    * CustomConstraints with the same name will be overridden in the simulation. That is, violations
-   * will be determined as if all custom constraints in the overlay were instantiated.
+   * will be determined as if all custom constraints in the overlay were instantiated. Only a single
+   * custom_constraint is supported in the overlay at a time. For evaluating multiple constraints,
+   * multiple `GenerateOrgPolicyViolationsPreview` requests are made, where each request evaluates a
+   * single constraint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +53,10 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay extends com
   /**
    * The OrgPolicy CustomConstraint changes to preview violations for. Any existing
    * CustomConstraints with the same name will be overridden in the simulation. That is, violations
-   * will be determined as if all custom constraints in the overlay were instantiated.
+   * will be determined as if all custom constraints in the overlay were instantiated. Only a single
+   * custom_constraint is supported in the overlay at a time. For evaluating multiple constraints,
+   * multiple `GenerateOrgPolicyViolationsPreview` requests are made, where each request evaluates a
+   * single constraint.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayCustomConstraintOverlay> getCustomConstraints() {
@@ -60,7 +66,10 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay extends com
   /**
    * The OrgPolicy CustomConstraint changes to preview violations for. Any existing
    * CustomConstraints with the same name will be overridden in the simulation. That is, violations
-   * will be determined as if all custom constraints in the overlay were instantiated.
+   * will be determined as if all custom constraints in the overlay were instantiated. Only a single
+   * custom_constraint is supported in the overlay at a time. For evaluating multiple constraints,
+   * multiple `GenerateOrgPolicyViolationsPreview` requests are made, where each request evaluates a
+   * single constraint.
    * @param customConstraints customConstraints or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay setCustomConstraints(java.util.List<GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayCustomConstraintOverlay> customConstraints) {

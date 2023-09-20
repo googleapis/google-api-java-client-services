@@ -38,12 +38,26 @@ public final class ComputeEngineDisksTargetDefaults extends com.google.api.clien
   private java.util.List<PersistentDiskDefaults> disks;
 
   /**
+   * Details of the disk only migration target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DisksMigrationDisksTargetDefaults disksTargetDefaults;
+
+  /**
    * The full path of the resource of type TargetProject which represents the Compute Engine project
    * in which to create the Persistent Disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetProject;
+
+  /**
+   * Details of the VM migration target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DisksMigrationVmTargetDefaults vmTargetDefaults;
 
   /**
    * The zone in which to create the Persistent Disks.
@@ -70,6 +84,23 @@ public final class ComputeEngineDisksTargetDefaults extends com.google.api.clien
   }
 
   /**
+   * Details of the disk only migration target.
+   * @return value or {@code null} for none
+   */
+  public DisksMigrationDisksTargetDefaults getDisksTargetDefaults() {
+    return disksTargetDefaults;
+  }
+
+  /**
+   * Details of the disk only migration target.
+   * @param disksTargetDefaults disksTargetDefaults or {@code null} for none
+   */
+  public ComputeEngineDisksTargetDefaults setDisksTargetDefaults(DisksMigrationDisksTargetDefaults disksTargetDefaults) {
+    this.disksTargetDefaults = disksTargetDefaults;
+    return this;
+  }
+
+  /**
    * The full path of the resource of type TargetProject which represents the Compute Engine project
    * in which to create the Persistent Disks.
    * @return value or {@code null} for none
@@ -85,6 +116,23 @@ public final class ComputeEngineDisksTargetDefaults extends com.google.api.clien
    */
   public ComputeEngineDisksTargetDefaults setTargetProject(java.lang.String targetProject) {
     this.targetProject = targetProject;
+    return this;
+  }
+
+  /**
+   * Details of the VM migration target.
+   * @return value or {@code null} for none
+   */
+  public DisksMigrationVmTargetDefaults getVmTargetDefaults() {
+    return vmTargetDefaults;
+  }
+
+  /**
+   * Details of the VM migration target.
+   * @param vmTargetDefaults vmTargetDefaults or {@code null} for none
+   */
+  public ComputeEngineDisksTargetDefaults setVmTargetDefaults(DisksMigrationVmTargetDefaults vmTargetDefaults) {
+    this.vmTargetDefaults = vmTargetDefaults;
     return this;
   }
 

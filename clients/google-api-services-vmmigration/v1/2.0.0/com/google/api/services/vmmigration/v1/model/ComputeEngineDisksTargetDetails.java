@@ -37,6 +37,20 @@ public final class ComputeEngineDisksTargetDetails extends com.google.api.client
   private java.util.List<PersistentDisk> disks;
 
   /**
+   * Details of the disks-only migration target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DisksMigrationDisksTargetDetails disksTargetDetails;
+
+  /**
+   * Details for the VM the migrated data disks are attached to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DisksMigrationVmTargetDetails vmTargetDetails;
+
+  /**
    * The details of each created Persistent Disk.
    * @return value or {@code null} for none
    */
@@ -50,6 +64,40 @@ public final class ComputeEngineDisksTargetDetails extends com.google.api.client
    */
   public ComputeEngineDisksTargetDetails setDisks(java.util.List<PersistentDisk> disks) {
     this.disks = disks;
+    return this;
+  }
+
+  /**
+   * Details of the disks-only migration target.
+   * @return value or {@code null} for none
+   */
+  public DisksMigrationDisksTargetDetails getDisksTargetDetails() {
+    return disksTargetDetails;
+  }
+
+  /**
+   * Details of the disks-only migration target.
+   * @param disksTargetDetails disksTargetDetails or {@code null} for none
+   */
+  public ComputeEngineDisksTargetDetails setDisksTargetDetails(DisksMigrationDisksTargetDetails disksTargetDetails) {
+    this.disksTargetDetails = disksTargetDetails;
+    return this;
+  }
+
+  /**
+   * Details for the VM the migrated data disks are attached to.
+   * @return value or {@code null} for none
+   */
+  public DisksMigrationVmTargetDetails getVmTargetDetails() {
+    return vmTargetDetails;
+  }
+
+  /**
+   * Details for the VM the migrated data disks are attached to.
+   * @param vmTargetDetails vmTargetDetails or {@code null} for none
+   */
+  public ComputeEngineDisksTargetDetails setVmTargetDetails(DisksMigrationVmTargetDetails vmTargetDetails) {
+    this.vmTargetDetails = vmTargetDetails;
     return this;
   }
 

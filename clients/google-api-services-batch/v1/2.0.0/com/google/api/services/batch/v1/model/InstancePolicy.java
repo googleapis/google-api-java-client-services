@@ -89,6 +89,14 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
   private java.lang.String provisioningModel;
 
   /**
+   * Optional. If specified, VMs will consume only the specified reservation. If not specified
+   * (default), VMs will consume any applicable reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservation;
+
+  /**
    * The accelerators attached to each VM instance.
    * @return value or {@code null} for none
    */
@@ -195,6 +203,25 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
    */
   public InstancePolicy setProvisioningModel(java.lang.String provisioningModel) {
     this.provisioningModel = provisioningModel;
+    return this;
+  }
+
+  /**
+   * Optional. If specified, VMs will consume only the specified reservation. If not specified
+   * (default), VMs will consume any applicable reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservation() {
+    return reservation;
+  }
+
+  /**
+   * Optional. If specified, VMs will consume only the specified reservation. If not specified
+   * (default), VMs will consume any applicable reservation.
+   * @param reservation reservation or {@code null} for none
+   */
+  public InstancePolicy setReservation(java.lang.String reservation) {
+    this.reservation = reservation;
     return this;
   }
 

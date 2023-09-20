@@ -357,7 +357,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredPrivateIpv6GoogleAccess;
 
   /**
-   * Enable/Disable Protect API features for the cluster.
+   * Deprecated: Use DesiredSecurityPostureConfig instead. Enable/Disable Protect API features for
+   * the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1242,7 +1243,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enable/Disable Protect API features for the cluster.
+   * Deprecated: Use DesiredSecurityPostureConfig instead. Enable/Disable Protect API features for
+   * the cluster.
    * @return value or {@code null} for none
    */
   public ProtectConfig getDesiredProtectConfig() {
@@ -1250,7 +1252,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enable/Disable Protect API features for the cluster.
+   * Deprecated: Use DesiredSecurityPostureConfig instead. Enable/Disable Protect API features for
+   * the cluster.
    * @param desiredProtectConfig desiredProtectConfig or {@code null} for none
    */
   public ClusterUpdate setDesiredProtectConfig(ProtectConfig desiredProtectConfig) {

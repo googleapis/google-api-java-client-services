@@ -40,6 +40,13 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> associatedNetworks;
 
   /**
+   * Optional. Project to bill on endpoint uptime usage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingProjectId;
+
+  /**
    * Output only. Create time stamp
    * The value may be {@code null}.
    */
@@ -101,6 +108,23 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
    */
   public FirewallEndpoint setAssociatedNetworks(java.util.List<java.lang.String> associatedNetworks) {
     this.associatedNetworks = associatedNetworks;
+    return this;
+  }
+
+  /**
+   * Optional. Project to bill on endpoint uptime usage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingProjectId() {
+    return billingProjectId;
+  }
+
+  /**
+   * Optional. Project to bill on endpoint uptime usage.
+   * @param billingProjectId billingProjectId or {@code null} for none
+   */
+  public FirewallEndpoint setBillingProjectId(java.lang.String billingProjectId) {
+    this.billingProjectId = billingProjectId;
     return this;
   }
 

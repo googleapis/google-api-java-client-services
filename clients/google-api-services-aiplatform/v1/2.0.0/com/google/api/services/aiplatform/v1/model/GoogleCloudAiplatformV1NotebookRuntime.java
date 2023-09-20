@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
  * A runtime is a virtual machine allocated to a particular user for a particular Notebook file on
@@ -28,7 +28,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Timestamp when this NotebookRuntime was created.
@@ -98,7 +98,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1NotebookRuntimeTemplateRef notebookRuntimeTemplateRef;
+  private GoogleCloudAiplatformV1NotebookRuntimeTemplateRef notebookRuntimeTemplateRef;
 
   /**
    * Output only. The proxy endpoint used to access the NotebookRuntime.
@@ -154,7 +154,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Output only. Timestamp when this NotebookRuntime was created.
    * @param createTime createTime or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setCreateTime(String createTime) {
+  public GoogleCloudAiplatformV1NotebookRuntime setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -171,7 +171,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * The description of the NotebookRuntime.
    * @param description description or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setDescription(java.lang.String description) {
+  public GoogleCloudAiplatformV1NotebookRuntime setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
@@ -190,7 +190,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * and can consist of any UTF-8 characters.
    * @param displayName displayName or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setDisplayName(java.lang.String displayName) {
+  public GoogleCloudAiplatformV1NotebookRuntime setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
     return this;
   }
@@ -213,7 +213,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * created runtime will be stopped and allowed for upgrade.
    * @param expirationTime expirationTime or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setExpirationTime(String expirationTime) {
+  public GoogleCloudAiplatformV1NotebookRuntime setExpirationTime(String expirationTime) {
     this.expirationTime = expirationTime;
     return this;
   }
@@ -230,7 +230,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Output only. The health state of the NotebookRuntime.
    * @param healthState healthState or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setHealthState(java.lang.String healthState) {
+  public GoogleCloudAiplatformV1NotebookRuntime setHealthState(java.lang.String healthState) {
     this.healthState = healthState;
     return this;
   }
@@ -267,7 +267,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * BigQuery or Vertex.
    * @param labels labels or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setLabels(java.util.Map<String, java.lang.String> labels) {
+  public GoogleCloudAiplatformV1NotebookRuntime setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
@@ -284,7 +284,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Output only. The resource name of the NotebookRuntime.
    * @param name name or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setName(java.lang.String name) {
+  public GoogleCloudAiplatformV1NotebookRuntime setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -293,7 +293,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Output only. The pointer to NotebookRuntimeTemplate this NotebookRuntime is created from.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplateRef getNotebookRuntimeTemplateRef() {
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplateRef getNotebookRuntimeTemplateRef() {
     return notebookRuntimeTemplateRef;
   }
 
@@ -301,7 +301,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Output only. The pointer to NotebookRuntimeTemplate this NotebookRuntime is created from.
    * @param notebookRuntimeTemplateRef notebookRuntimeTemplateRef or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setNotebookRuntimeTemplateRef(GoogleCloudAiplatformV1beta1NotebookRuntimeTemplateRef notebookRuntimeTemplateRef) {
+  public GoogleCloudAiplatformV1NotebookRuntime setNotebookRuntimeTemplateRef(GoogleCloudAiplatformV1NotebookRuntimeTemplateRef notebookRuntimeTemplateRef) {
     this.notebookRuntimeTemplateRef = notebookRuntimeTemplateRef;
     return this;
   }
@@ -318,7 +318,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Output only. The proxy endpoint used to access the NotebookRuntime.
    * @param proxyUri proxyUri or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setProxyUri(java.lang.String proxyUri) {
+  public GoogleCloudAiplatformV1NotebookRuntime setProxyUri(java.lang.String proxyUri) {
     this.proxyUri = proxyUri;
     return this;
   }
@@ -335,7 +335,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Output only. The runtime (instance) state of the NotebookRuntime.
    * @param runtimeState runtimeState or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setRuntimeState(java.lang.String runtimeState) {
+  public GoogleCloudAiplatformV1NotebookRuntime setRuntimeState(java.lang.String runtimeState) {
     this.runtimeState = runtimeState;
     return this;
   }
@@ -352,7 +352,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Required. The user email of the NotebookRuntime.
    * @param runtimeUser runtimeUser or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setRuntimeUser(java.lang.String runtimeUser) {
+  public GoogleCloudAiplatformV1NotebookRuntime setRuntimeUser(java.lang.String runtimeUser) {
     this.runtimeUser = runtimeUser;
     return this;
   }
@@ -369,7 +369,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Output only. The service account that the NotebookRuntime workload runs as.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setServiceAccount(java.lang.String serviceAccount) {
+  public GoogleCloudAiplatformV1NotebookRuntime setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
     return this;
   }
@@ -386,7 +386,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Output only. Timestamp when this NotebookRuntime was most recently updated.
    * @param updateTime updateTime or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setUpdateTime(String updateTime) {
+  public GoogleCloudAiplatformV1NotebookRuntime setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
@@ -403,19 +403,19 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    * Output only. The VM os image version of NotebookRuntime.
    * @param version version or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setVersion(java.lang.String version) {
+  public GoogleCloudAiplatformV1NotebookRuntime setVersion(java.lang.String version) {
     this.version = version;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1NotebookRuntime set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1NotebookRuntime) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1NotebookRuntime set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1NotebookRuntime) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1NotebookRuntime clone() {
-    return (GoogleCloudAiplatformV1beta1NotebookRuntime) super.clone();
+  public GoogleCloudAiplatformV1NotebookRuntime clone() {
+    return (GoogleCloudAiplatformV1NotebookRuntime) super.clone();
   }
 
 }

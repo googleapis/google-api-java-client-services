@@ -47,7 +47,7 @@ public final class GoogleCloudAiplatformV1beta1CreatePipelineJobRequest extends 
   /**
    * The ID to use for the PipelineJob, which will become the final component of the PipelineJob
    * name. If not provided, an ID will be automatically generated. This value should be less than
-   * 128 characters, and valid characters are /a-z-/.
+   * 128 characters, and valid characters are `/a-z-/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class GoogleCloudAiplatformV1beta1CreatePipelineJobRequest extends 
   /**
    * The ID to use for the PipelineJob, which will become the final component of the PipelineJob
    * name. If not provided, an ID will be automatically generated. This value should be less than
-   * 128 characters, and valid characters are /a-z-/.
+   * 128 characters, and valid characters are `/a-z-/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPipelineJobId() {
@@ -102,7 +102,7 @@ public final class GoogleCloudAiplatformV1beta1CreatePipelineJobRequest extends 
   /**
    * The ID to use for the PipelineJob, which will become the final component of the PipelineJob
    * name. If not provided, an ID will be automatically generated. This value should be less than
-   * 128 characters, and valid characters are /a-z-/.
+   * 128 characters, and valid characters are `/a-z-/`.
    * @param pipelineJobId pipelineJobId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CreatePipelineJobRequest setPipelineJobId(java.lang.String pipelineJobId) {

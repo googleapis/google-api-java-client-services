@@ -68,6 +68,13 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment fraudPreventionAssessment;
 
   /**
+   * Output only. Fraud Signals specific to the users involved in a payment transaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1FraudSignals fraudSignals;
+
+  /**
    * Output only. The resource name for the Assessment in the format
    * "projects/{project}/assessments/{assessment}".
    * The value may be {@code null}.
@@ -183,6 +190,23 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setFraudPreventionAssessment(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment fraudPreventionAssessment) {
     this.fraudPreventionAssessment = fraudPreventionAssessment;
+    return this;
+  }
+
+  /**
+   * Output only. Fraud Signals specific to the users involved in a payment transaction.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1FraudSignals getFraudSignals() {
+    return fraudSignals;
+  }
+
+  /**
+   * Output only. Fraud Signals specific to the users involved in a payment transaction.
+   * @param fraudSignals fraudSignals or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Assessment setFraudSignals(GoogleCloudRecaptchaenterpriseV1FraudSignals fraudSignals) {
+    this.fraudSignals = fraudSignals;
     return this;
   }
 

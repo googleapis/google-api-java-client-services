@@ -37,7 +37,7 @@ public final class CommitRepositoryChangesRequest extends com.google.api.client.
   private CommitMetadata commitMetadata;
 
   /**
-   * A map to the path of the file to the operation. The path is the ull file path including
+   * A map to the path of the file to the operation. The path is the full file path including
    * filename, from repository root.
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class CommitRepositoryChangesRequest extends com.google.api.client.
   }
 
   /**
-   * A map to the path of the file to the operation. The path is the ull file path including
+   * A map to the path of the file to the operation. The path is the full file path including
    * filename, from repository root.
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class CommitRepositoryChangesRequest extends com.google.api.client.
   }
 
   /**
-   * A map to the path of the file to the operation. The path is the ull file path including
+   * A map to the path of the file to the operation. The path is the full file path including
    * filename, from repository root.
    * @param fileOperations fileOperations or {@code null} for none
    */

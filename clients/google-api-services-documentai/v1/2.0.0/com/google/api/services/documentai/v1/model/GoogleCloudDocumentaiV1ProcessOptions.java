@@ -31,11 +31,83 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1ProcessOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Only process certain pages from the end, same as above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer fromEnd;
+
+  /**
+   * Only process certain pages from the start, process all if the document has less pages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer fromStart;
+
+  /**
+   * Which pages to process (1-indexed).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1ProcessOptionsIndividualPageSelector individualPageSelector;
+
+  /**
    * Only applicable to `OCR_PROCESSOR`. Returns error if set on other processor types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1OcrConfig ocrConfig;
+
+  /**
+   * Only process certain pages from the end, same as above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getFromEnd() {
+    return fromEnd;
+  }
+
+  /**
+   * Only process certain pages from the end, same as above.
+   * @param fromEnd fromEnd or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessOptions setFromEnd(java.lang.Integer fromEnd) {
+    this.fromEnd = fromEnd;
+    return this;
+  }
+
+  /**
+   * Only process certain pages from the start, process all if the document has less pages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getFromStart() {
+    return fromStart;
+  }
+
+  /**
+   * Only process certain pages from the start, process all if the document has less pages.
+   * @param fromStart fromStart or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessOptions setFromStart(java.lang.Integer fromStart) {
+    this.fromStart = fromStart;
+    return this;
+  }
+
+  /**
+   * Which pages to process (1-indexed).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessOptionsIndividualPageSelector getIndividualPageSelector() {
+    return individualPageSelector;
+  }
+
+  /**
+   * Which pages to process (1-indexed).
+   * @param individualPageSelector individualPageSelector or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessOptions setIndividualPageSelector(GoogleCloudDocumentaiV1ProcessOptionsIndividualPageSelector individualPageSelector) {
+    this.individualPageSelector = individualPageSelector;
+    return this;
+  }
 
   /**
    * Only applicable to `OCR_PROCESSOR`. Returns error if set on other processor types.

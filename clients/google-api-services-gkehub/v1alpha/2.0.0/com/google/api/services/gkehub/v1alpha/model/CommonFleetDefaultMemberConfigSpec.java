@@ -31,11 +31,35 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class CommonFleetDefaultMemberConfigSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Config Management-specific spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfigManagementMembershipSpec configmanagement;
+
+  /**
    * Identity Service-specific spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IdentityServiceMembershipSpec identityservice;
+
+  /**
+   * Config Management-specific spec.
+   * @return value or {@code null} for none
+   */
+  public ConfigManagementMembershipSpec getConfigmanagement() {
+    return configmanagement;
+  }
+
+  /**
+   * Config Management-specific spec.
+   * @param configmanagement configmanagement or {@code null} for none
+   */
+  public CommonFleetDefaultMemberConfigSpec setConfigmanagement(ConfigManagementMembershipSpec configmanagement) {
+    this.configmanagement = configmanagement;
+    return this;
+  }
 
   /**
    * Identity Service-specific spec.

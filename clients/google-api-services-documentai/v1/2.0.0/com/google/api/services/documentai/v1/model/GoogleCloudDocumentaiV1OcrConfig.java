@@ -41,11 +41,20 @@ public final class GoogleCloudDocumentaiV1OcrConfig extends com.google.api.clien
   private java.util.List<java.lang.String> advancedOcrOptions;
 
   /**
-   * Turn on font identification model and return font style information.
+   * Turn on font identification model and return font style information. Deprecated, use
+   * PremiumFeatures.compute_style_info instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean computeStyleInfo;
+
+  /**
+   * Turn off character box detector in OCR engine. Character box detection is enabled by default in
+   * OCR 2.0+ processors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableCharacterBoxesDetection;
 
   /**
    * Enables intelligent document quality scores after OCR. Can help with diagnosing why OCR
@@ -79,6 +88,13 @@ public final class GoogleCloudDocumentaiV1OcrConfig extends com.google.api.clien
   private GoogleCloudDocumentaiV1OcrConfigHints hints;
 
   /**
+   * Configurations for premium OCR features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1OcrConfigPremiumFeatures premiumFeatures;
+
+  /**
    * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: -
    * `legacy_layout`: a heuristics layout detection algorithm, which serves as an alternative to the
    * current ML-based layout detection algorithm. Customers can choose the best suitable layout
@@ -102,7 +118,8 @@ public final class GoogleCloudDocumentaiV1OcrConfig extends com.google.api.clien
   }
 
   /**
-   * Turn on font identification model and return font style information.
+   * Turn on font identification model and return font style information. Deprecated, use
+   * PremiumFeatures.compute_style_info instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getComputeStyleInfo() {
@@ -110,11 +127,31 @@ public final class GoogleCloudDocumentaiV1OcrConfig extends com.google.api.clien
   }
 
   /**
-   * Turn on font identification model and return font style information.
+   * Turn on font identification model and return font style information. Deprecated, use
+   * PremiumFeatures.compute_style_info instead.
    * @param computeStyleInfo computeStyleInfo or {@code null} for none
    */
   public GoogleCloudDocumentaiV1OcrConfig setComputeStyleInfo(java.lang.Boolean computeStyleInfo) {
     this.computeStyleInfo = computeStyleInfo;
+    return this;
+  }
+
+  /**
+   * Turn off character box detector in OCR engine. Character box detection is enabled by default in
+   * OCR 2.0+ processors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableCharacterBoxesDetection() {
+    return disableCharacterBoxesDetection;
+  }
+
+  /**
+   * Turn off character box detector in OCR engine. Character box detection is enabled by default in
+   * OCR 2.0+ processors.
+   * @param disableCharacterBoxesDetection disableCharacterBoxesDetection or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1OcrConfig setDisableCharacterBoxesDetection(java.lang.Boolean disableCharacterBoxesDetection) {
+    this.disableCharacterBoxesDetection = disableCharacterBoxesDetection;
     return this;
   }
 
@@ -189,6 +226,23 @@ public final class GoogleCloudDocumentaiV1OcrConfig extends com.google.api.clien
    */
   public GoogleCloudDocumentaiV1OcrConfig setHints(GoogleCloudDocumentaiV1OcrConfigHints hints) {
     this.hints = hints;
+    return this;
+  }
+
+  /**
+   * Configurations for premium OCR features.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1OcrConfigPremiumFeatures getPremiumFeatures() {
+    return premiumFeatures;
+  }
+
+  /**
+   * Configurations for premium OCR features.
+   * @param premiumFeatures premiumFeatures or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1OcrConfig setPremiumFeatures(GoogleCloudDocumentaiV1OcrConfigPremiumFeatures premiumFeatures) {
+    this.premiumFeatures = premiumFeatures;
     return this;
   }
 

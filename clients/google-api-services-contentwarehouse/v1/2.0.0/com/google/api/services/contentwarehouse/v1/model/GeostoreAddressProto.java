@@ -49,7 +49,7 @@ public final class GeostoreAddressProto extends com.google.api.client.json.Gener
   /**
    * The unparsed portion (lines) of the address. An address can have multiple unparsed portions.
    * Multiple unparsed portions sharing the same language should be modeled as one address_lines
-   * instance having multiple lines. Historically, we also supported uparsed portions in different
+   * instance having multiple lines. Historically, we also supported unparsed portions in different
    * languages, but we no longer do. Consequently, only one value is allowed for this field despite
    * the fact that it is repeated. See go/address-lines-multi-language for information about why we
    * made this change. If any components are filled in, this is supplemental to (i.e. disjoint from)
@@ -130,7 +130,7 @@ public final class GeostoreAddressProto extends com.google.api.client.json.Gener
   /**
    * The unparsed portion (lines) of the address. An address can have multiple unparsed portions.
    * Multiple unparsed portions sharing the same language should be modeled as one address_lines
-   * instance having multiple lines. Historically, we also supported uparsed portions in different
+   * instance having multiple lines. Historically, we also supported unparsed portions in different
    * languages, but we no longer do. Consequently, only one value is allowed for this field despite
    * the fact that it is repeated. See go/address-lines-multi-language for information about why we
    * made this change. If any components are filled in, this is supplemental to (i.e. disjoint from)
@@ -148,7 +148,7 @@ public final class GeostoreAddressProto extends com.google.api.client.json.Gener
   /**
    * The unparsed portion (lines) of the address. An address can have multiple unparsed portions.
    * Multiple unparsed portions sharing the same language should be modeled as one address_lines
-   * instance having multiple lines. Historically, we also supported uparsed portions in different
+   * instance having multiple lines. Historically, we also supported unparsed portions in different
    * languages, but we no longer do. Consequently, only one value is allowed for this field despite
    * the fact that it is repeated. See go/address-lines-multi-language for information about why we
    * made this change. If any components are filled in, this is supplemental to (i.e. disjoint from)

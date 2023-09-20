@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * These are the set of features that are supported by the device. It's a part of the
- * SoftwareCapabilities of the device. Next ID: 67
+ * SoftwareCapabilities of the device. Next ID: 68
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -120,6 +120,13 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean confirmationBeforeReadingMultipleMessagesSupported;
+
+  /**
+   * Whether the client can render conversational care responses. go/conversational-care
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean conversationalCareSupported;
 
   /**
    * Whether the client supports cross-device broadcast (i.e. on Torus).
@@ -741,6 +748,23 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
    */
   public AssistantApiSupportedFeatures setConfirmationBeforeReadingMultipleMessagesSupported(java.lang.Boolean confirmationBeforeReadingMultipleMessagesSupported) {
     this.confirmationBeforeReadingMultipleMessagesSupported = confirmationBeforeReadingMultipleMessagesSupported;
+    return this;
+  }
+
+  /**
+   * Whether the client can render conversational care responses. go/conversational-care
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getConversationalCareSupported() {
+    return conversationalCareSupported;
+  }
+
+  /**
+   * Whether the client can render conversational care responses. go/conversational-care
+   * @param conversationalCareSupported conversationalCareSupported or {@code null} for none
+   */
+  public AssistantApiSupportedFeatures setConversationalCareSupported(java.lang.Boolean conversationalCareSupported) {
+    this.conversationalCareSupported = conversationalCareSupported;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 18
+ * Features to be passed from Media GP to HGR. Next ID: 19
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -74,6 +74,14 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isCastVideo;
+
+  /**
+   * True if the media item in Binding Set is exclusively available on the provider in Binding set.
+   * Example: "Stranger things" is exclusive to "Netflix".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isExclusiveOriginalProvider;
 
   /**
    * True if the media search query is included in the entity name and artists.
@@ -265,6 +273,25 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setIsCastVideo(java.lang.Boolean isCastVideo) {
     this.isCastVideo = isCastVideo;
+    return this;
+  }
+
+  /**
+   * True if the media item in Binding Set is exclusively available on the provider in Binding set.
+   * Example: "Stranger things" is exclusive to "Netflix".
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsExclusiveOriginalProvider() {
+    return isExclusiveOriginalProvider;
+  }
+
+  /**
+   * True if the media item in Binding Set is exclusively available on the provider in Binding set.
+   * Example: "Stranger things" is exclusive to "Netflix".
+   * @param isExclusiveOriginalProvider isExclusiveOriginalProvider or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setIsExclusiveOriginalProvider(java.lang.Boolean isExclusiveOriginalProvider) {
+    this.isExclusiveOriginalProvider = isExclusiveOriginalProvider;
     return this;
   }
 

@@ -38,13 +38,6 @@ public final class RepositoryWebrefLinkKindInfo extends com.google.api.client.js
   private RepositoryWebrefLinkKindFlags flags;
 
   /**
-   * Link name extracted from Knowledge Card facts.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kcLinkName;
-
-  /**
    * If the link was extracted from a property, the name of the property. Can start with an
    * exclamation mark "!" to indicate that the inverse relationship is specified. (e.g.
    * "!/tv/tv_series_episode/series" is the inverse of "tv/tv_program/episodes").
@@ -67,23 +60,6 @@ public final class RepositoryWebrefLinkKindInfo extends com.google.api.client.js
    */
   public RepositoryWebrefLinkKindInfo setFlags(RepositoryWebrefLinkKindFlags flags) {
     this.flags = flags;
-    return this;
-  }
-
-  /**
-   * Link name extracted from Knowledge Card facts.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKcLinkName() {
-    return kcLinkName;
-  }
-
-  /**
-   * Link name extracted from Knowledge Card facts.
-   * @param kcLinkName kcLinkName or {@code null} for none
-   */
-  public RepositoryWebrefLinkKindInfo setKcLinkName(java.lang.String kcLinkName) {
-    this.kcLinkName = kcLinkName;
     return this;
   }
 

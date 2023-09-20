@@ -118,10 +118,10 @@ public final class HtmlrenderWebkitHeadlessProtoDOMTreeNode extends com.google.a
   private java.lang.String type;
 
   /**
-   * The node value is applicable for TEXT_NODEs, DOCUMENT_TYPE_NODEs, and user input elements such
-   * as , and . For DOCUMENT_TYPE_NODEs, the value contains the publicId and SystemId. For input
-   * elements, the value reflects the current value in the element at the time the snapshot was
-   * taken.
+   * The node value is applicable for TEXT_NODEs, DOCUMENT_TYPE_NODEs, COMMENT_NODEs, and user input
+   * elements such as , and . For DOCUMENT_TYPE_NODEs, the value contains the publicId and SystemId.
+   * For input elements, the value reflects the current value in the element at the time the
+   * snapshot was taken.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -329,10 +329,10 @@ public final class HtmlrenderWebkitHeadlessProtoDOMTreeNode extends com.google.a
   }
 
   /**
-   * The node value is applicable for TEXT_NODEs, DOCUMENT_TYPE_NODEs, and user input elements such
-   * as , and . For DOCUMENT_TYPE_NODEs, the value contains the publicId and SystemId. For input
-   * elements, the value reflects the current value in the element at the time the snapshot was
-   * taken.
+   * The node value is applicable for TEXT_NODEs, DOCUMENT_TYPE_NODEs, COMMENT_NODEs, and user input
+   * elements such as , and . For DOCUMENT_TYPE_NODEs, the value contains the publicId and SystemId.
+   * For input elements, the value reflects the current value in the element at the time the
+   * snapshot was taken.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -340,10 +340,10 @@ public final class HtmlrenderWebkitHeadlessProtoDOMTreeNode extends com.google.a
   }
 
   /**
-   * The node value is applicable for TEXT_NODEs, DOCUMENT_TYPE_NODEs, and user input elements such
-   * as , and . For DOCUMENT_TYPE_NODEs, the value contains the publicId and SystemId. For input
-   * elements, the value reflects the current value in the element at the time the snapshot was
-   * taken.
+   * The node value is applicable for TEXT_NODEs, DOCUMENT_TYPE_NODEs, COMMENT_NODEs, and user input
+   * elements such as , and . For DOCUMENT_TYPE_NODEs, the value contains the publicId and SystemId.
+   * For input elements, the value reflects the current value in the element at the time the
+   * snapshot was taken.
    * @param value value or {@code null} for none
    */
   public HtmlrenderWebkitHeadlessProtoDOMTreeNode setValue(java.lang.String value) {

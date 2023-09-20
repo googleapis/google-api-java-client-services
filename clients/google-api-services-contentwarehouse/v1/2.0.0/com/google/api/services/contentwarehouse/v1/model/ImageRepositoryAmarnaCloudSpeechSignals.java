@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next Tag: 9
+ * Next Tag: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -40,13 +40,23 @@ public final class ImageRepositoryAmarnaCloudSpeechSignals extends com.google.ap
   private java.lang.Boolean duplicateOfYtS3Asr;
 
   /**
-   * The language id input for creating this ASR without regional info. Same format as in
-   * go/ytlangid. This field is populated in Kronos Amarna Cloud Speech operator and passed to
-   * Amarna, but it is cleared before stored in Amarna's metadata table.
+   * DEPRECATED: Please switch to `langid_input`. The language id input for creating this ASR
+   * without regional info. Same format as in go/ytlangid. This field is populated in Kronos Amarna
+   * Cloud Speech operator and passed to Amarna, but it is cleared before stored in Amarna's
+   * metadata table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String langWithoutLocale;
+
+  /**
+   * The language identification input used to generate this ASR. This field is populated in Kronos
+   * Amarna Cloud Speech operator and passed to Amarna, but cleared before stored in Amarna's
+   * metadata table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageRepositoryLanguageIdentificationResult langidInput;
 
   /**
    * The value may be {@code null}.
@@ -98,9 +108,10 @@ public final class ImageRepositoryAmarnaCloudSpeechSignals extends com.google.ap
   }
 
   /**
-   * The language id input for creating this ASR without regional info. Same format as in
-   * go/ytlangid. This field is populated in Kronos Amarna Cloud Speech operator and passed to
-   * Amarna, but it is cleared before stored in Amarna's metadata table.
+   * DEPRECATED: Please switch to `langid_input`. The language id input for creating this ASR
+   * without regional info. Same format as in go/ytlangid. This field is populated in Kronos Amarna
+   * Cloud Speech operator and passed to Amarna, but it is cleared before stored in Amarna's
+   * metadata table.
    * @return value or {@code null} for none
    */
   public java.lang.String getLangWithoutLocale() {
@@ -108,13 +119,35 @@ public final class ImageRepositoryAmarnaCloudSpeechSignals extends com.google.ap
   }
 
   /**
-   * The language id input for creating this ASR without regional info. Same format as in
-   * go/ytlangid. This field is populated in Kronos Amarna Cloud Speech operator and passed to
-   * Amarna, but it is cleared before stored in Amarna's metadata table.
+   * DEPRECATED: Please switch to `langid_input`. The language id input for creating this ASR
+   * without regional info. Same format as in go/ytlangid. This field is populated in Kronos Amarna
+   * Cloud Speech operator and passed to Amarna, but it is cleared before stored in Amarna's
+   * metadata table.
    * @param langWithoutLocale langWithoutLocale or {@code null} for none
    */
   public ImageRepositoryAmarnaCloudSpeechSignals setLangWithoutLocale(java.lang.String langWithoutLocale) {
     this.langWithoutLocale = langWithoutLocale;
+    return this;
+  }
+
+  /**
+   * The language identification input used to generate this ASR. This field is populated in Kronos
+   * Amarna Cloud Speech operator and passed to Amarna, but cleared before stored in Amarna's
+   * metadata table.
+   * @return value or {@code null} for none
+   */
+  public ImageRepositoryLanguageIdentificationResult getLangidInput() {
+    return langidInput;
+  }
+
+  /**
+   * The language identification input used to generate this ASR. This field is populated in Kronos
+   * Amarna Cloud Speech operator and passed to Amarna, but cleared before stored in Amarna's
+   * metadata table.
+   * @param langidInput langidInput or {@code null} for none
+   */
+  public ImageRepositoryAmarnaCloudSpeechSignals setLangidInput(ImageRepositoryLanguageIdentificationResult langidInput) {
+    this.langidInput = langidInput;
     return this;
   }
 

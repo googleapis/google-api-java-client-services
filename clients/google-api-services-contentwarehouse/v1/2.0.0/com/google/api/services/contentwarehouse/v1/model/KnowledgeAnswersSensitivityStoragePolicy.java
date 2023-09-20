@@ -39,6 +39,20 @@ public final class KnowledgeAnswersSensitivityStoragePolicy extends com.google.a
   private java.lang.Boolean encryptArgumentValue;
 
   /**
+   * If true, triggers encryption of |value_term| [1] and move into |sensitive_value_term|. This is
+   * useful to support finer grain encryption controls for disambiguation, where the broader
+   * |encrypt_argument_value| is too restrictive. In particular, when we know that the values being
+   * disambiguated are non-sensitive (e.g. opaque event IDs), but the value_terms are sensitive
+   * (e.g. event titles), it can be helpful for debugging purposes to circulate the value
+   * unencrypted. This policy only has an effect when configured at argument-level. It has no effect
+   * in Intent or PreviousQuery stanzas. See go/delete-event-disambiguation-redaction-v2 for context
+   * and usage. [1]cs/s:quality.dialog_manager.IntentStateSignals.FieldCandidate.value_term
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean encryptFieldCandidateValueTerm;
+
+  /**
    * If this is set true, we encrypt QueryAnnotationDataProto prior to writing it to Footprint
    * ASSISTANT_EPHEMERAL corpus. This enables restricting ACL to the data.
    * The value may be {@code null}.
@@ -70,6 +84,37 @@ public final class KnowledgeAnswersSensitivityStoragePolicy extends com.google.a
    */
   public KnowledgeAnswersSensitivityStoragePolicy setEncryptArgumentValue(java.lang.Boolean encryptArgumentValue) {
     this.encryptArgumentValue = encryptArgumentValue;
+    return this;
+  }
+
+  /**
+   * If true, triggers encryption of |value_term| [1] and move into |sensitive_value_term|. This is
+   * useful to support finer grain encryption controls for disambiguation, where the broader
+   * |encrypt_argument_value| is too restrictive. In particular, when we know that the values being
+   * disambiguated are non-sensitive (e.g. opaque event IDs), but the value_terms are sensitive
+   * (e.g. event titles), it can be helpful for debugging purposes to circulate the value
+   * unencrypted. This policy only has an effect when configured at argument-level. It has no effect
+   * in Intent or PreviousQuery stanzas. See go/delete-event-disambiguation-redaction-v2 for context
+   * and usage. [1]cs/s:quality.dialog_manager.IntentStateSignals.FieldCandidate.value_term
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEncryptFieldCandidateValueTerm() {
+    return encryptFieldCandidateValueTerm;
+  }
+
+  /**
+   * If true, triggers encryption of |value_term| [1] and move into |sensitive_value_term|. This is
+   * useful to support finer grain encryption controls for disambiguation, where the broader
+   * |encrypt_argument_value| is too restrictive. In particular, when we know that the values being
+   * disambiguated are non-sensitive (e.g. opaque event IDs), but the value_terms are sensitive
+   * (e.g. event titles), it can be helpful for debugging purposes to circulate the value
+   * unencrypted. This policy only has an effect when configured at argument-level. It has no effect
+   * in Intent or PreviousQuery stanzas. See go/delete-event-disambiguation-redaction-v2 for context
+   * and usage. [1]cs/s:quality.dialog_manager.IntentStateSignals.FieldCandidate.value_term
+   * @param encryptFieldCandidateValueTerm encryptFieldCandidateValueTerm or {@code null} for none
+   */
+  public KnowledgeAnswersSensitivityStoragePolicy setEncryptFieldCandidateValueTerm(java.lang.Boolean encryptFieldCandidateValueTerm) {
+    this.encryptFieldCandidateValueTerm = encryptFieldCandidateValueTerm;
     return this;
   }
 

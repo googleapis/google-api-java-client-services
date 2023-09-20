@@ -154,13 +154,6 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String storagePoolType;
 
   /**
-   * Type of the storage pool
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
    * [Output Only] URL of the zone where the storage pool resides. You must specify this field as
    * part of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
@@ -499,23 +492,6 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setStoragePoolType(java.lang.String storagePoolType) {
     this.storagePoolType = storagePoolType;
-    return this;
-  }
-
-  /**
-   * Type of the storage pool
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
-
-  /**
-   * Type of the storage pool
-   * @param type type or {@code null} for none
-   */
-  public StoragePool setType(java.lang.String type) {
-    this.type = type;
     return this;
   }
 

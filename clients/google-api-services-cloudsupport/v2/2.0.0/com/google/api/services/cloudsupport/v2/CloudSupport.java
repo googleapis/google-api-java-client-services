@@ -2519,12 +2519,13 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        *
        * @param parent Required. The name of the case or Cloud resource to which the attachment should be attached.
        * @param content the {@link com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest} media metadata or {@code null} if none
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @since 1.13
        */
       protected Upload(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(CloudSupport.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.cloudsupport.v2.model.Attachment.class);
         this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

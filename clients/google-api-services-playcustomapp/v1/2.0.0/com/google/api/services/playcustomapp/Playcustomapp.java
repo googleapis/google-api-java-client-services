@@ -256,12 +256,13 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
          *
          * @param account Developer account ID.
          * @param content the {@link com.google.api.services.playcustomapp.model.CustomApp} media metadata or {@code null} if none
-         * @param mediaContent The media HTTP content or {@code null} if none.
+         * @param mediaContent The media HTTP content.
          * @since 1.13
          */
         protected Create(java.lang.Long account, com.google.api.services.playcustomapp.model.CustomApp content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
           super(Playcustomapp.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.playcustomapp.model.CustomApp.class);
           this.account = com.google.api.client.util.Preconditions.checkNotNull(account, "Required parameter account must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
           initializeMediaUpload(mediaContent);
         }
 

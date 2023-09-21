@@ -12012,7 +12012,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
          * </p>
          *
          * @param accountId Account Id associated with the upload.@param webPropertyId Web property UA-string associated with the upload.@param customDataSourceId Custom data source Id to which the data being uploaded belongs.
-         * @param mediaContent The media HTTP content or {@code null} if none.
+         * @param mediaContent The media HTTP content.
          * @since 1.13
          */
         protected UploadData(java.lang.String accountId, java.lang.String webPropertyId, java.lang.String customDataSourceId, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
@@ -12020,6 +12020,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
           this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
           this.webPropertyId = com.google.api.client.util.Preconditions.checkNotNull(webPropertyId, "Required parameter webPropertyId must be specified.");
           this.customDataSourceId = com.google.api.client.util.Preconditions.checkNotNull(customDataSourceId, "Required parameter customDataSourceId must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
           initializeMediaUpload(mediaContent);
         }
 

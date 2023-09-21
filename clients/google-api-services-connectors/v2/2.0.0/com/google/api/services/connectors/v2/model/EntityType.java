@@ -38,6 +38,13 @@ public final class EntityType extends com.google.api.client.json.GenericJson {
   private java.util.List<Field> fields;
 
   /**
+   * JsonSchema representation of this entity's schema
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema jsonSchema;
+
+  /**
    * The name of the entity type.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class EntityType extends com.google.api.client.json.GenericJson {
    */
   public EntityType setFields(java.util.List<Field> fields) {
     this.fields = fields;
+    return this;
+  }
+
+  /**
+   * JsonSchema representation of this entity's schema
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getJsonSchema() {
+    return jsonSchema;
+  }
+
+  /**
+   * JsonSchema representation of this entity's schema
+   * @param jsonSchema jsonSchema or {@code null} for none
+   */
+  public EntityType setJsonSchema(JsonSchema jsonSchema) {
+    this.jsonSchema = jsonSchema;
     return this;
   }
 

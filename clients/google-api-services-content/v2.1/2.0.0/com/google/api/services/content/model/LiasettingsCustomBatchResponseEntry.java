@@ -67,6 +67,13 @@ public final class LiasettingsCustomBatchResponseEntry extends com.google.api.cl
   private LiaSettings liaSettings;
 
   /**
+   * The updated omnichannel experience for a country.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiaOmnichannelExperience omnichannelExperience;
+
+  /**
    * The list of POS data providers.
    * The value may be {@code null}.
    */
@@ -157,6 +164,23 @@ public final class LiasettingsCustomBatchResponseEntry extends com.google.api.cl
    */
   public LiasettingsCustomBatchResponseEntry setLiaSettings(LiaSettings liaSettings) {
     this.liaSettings = liaSettings;
+    return this;
+  }
+
+  /**
+   * The updated omnichannel experience for a country.
+   * @return value or {@code null} for none
+   */
+  public LiaOmnichannelExperience getOmnichannelExperience() {
+    return omnichannelExperience;
+  }
+
+  /**
+   * The updated omnichannel experience for a country.
+   * @param omnichannelExperience omnichannelExperience or {@code null} for none
+   */
+  public LiasettingsCustomBatchResponseEntry setOmnichannelExperience(LiaOmnichannelExperience omnichannelExperience) {
+    this.omnichannelExperience = omnichannelExperience;
     return this;
   }
 

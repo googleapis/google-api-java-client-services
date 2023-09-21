@@ -30,6 +30,30 @@ package com.google.api.services.gkehub.v1.model;
 @SuppressWarnings("javadoc")
 public final class CommonFleetDefaultMemberConfigSpec extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Config Management-specific spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfigManagementMembershipSpec configmanagement;
+
+  /**
+   * Config Management-specific spec.
+   * @return value or {@code null} for none
+   */
+  public ConfigManagementMembershipSpec getConfigmanagement() {
+    return configmanagement;
+  }
+
+  /**
+   * Config Management-specific spec.
+   * @param configmanagement configmanagement or {@code null} for none
+   */
+  public CommonFleetDefaultMemberConfigSpec setConfigmanagement(ConfigManagementMembershipSpec configmanagement) {
+    this.configmanagement = configmanagement;
+    return this;
+  }
+
   @Override
   public CommonFleetDefaultMemberConfigSpec set(String fieldName, Object value) {
     return (CommonFleetDefaultMemberConfigSpec) super.set(fieldName, value);

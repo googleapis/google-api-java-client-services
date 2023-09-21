@@ -87,6 +87,14 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String diskType;
 
   /**
+   * Optional. Enable confidential storage on Hyperdisk. boot_disk_kms_key is required when
+   * enable_confidential_storage is true. This is only available for private preview.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialStorage;
+
+  /**
    * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by
    * the boot disk.
    * The value may be {@code null}.
@@ -455,6 +463,25 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Optional. Enable confidential storage on Hyperdisk. boot_disk_kms_key is required when
+   * enable_confidential_storage is true. This is only available for private preview.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialStorage() {
+    return enableConfidentialStorage;
+  }
+
+  /**
+   * Optional. Enable confidential storage on Hyperdisk. boot_disk_kms_key is required when
+   * enable_confidential_storage is true. This is only available for private preview.
+   * @param enableConfidentialStorage enableConfidentialStorage or {@code null} for none
+   */
+  public NodeConfig setEnableConfidentialStorage(java.lang.Boolean enableConfidentialStorage) {
+    this.enableConfidentialStorage = enableConfidentialStorage;
     return this;
   }
 

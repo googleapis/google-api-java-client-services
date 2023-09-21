@@ -45,7 +45,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The format of packages that are stored in the repository.
+   * Optional. The format of packages that are stored in the repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +142,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The format of packages that are stored in the repository.
+   * Optional. The format of packages that are stored in the repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormat() {
@@ -150,7 +150,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The format of packages that are stored in the repository.
+   * Optional. The format of packages that are stored in the repository.
    * @param format format or {@code null} for none
    */
   public Repository setFormat(java.lang.String format) {

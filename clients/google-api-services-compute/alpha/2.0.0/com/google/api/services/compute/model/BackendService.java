@@ -470,7 +470,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BackendServiceUsedBy> usedBys;
+  private java.util.List<BackendServiceUsedBy> usedBy;
 
   /**
    * The network scope of the backends that can be added to the backend service. This field can be
@@ -1498,15 +1498,15 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<BackendServiceUsedBy> getUsedBys() {
-    return usedBys;
+  public java.util.List<BackendServiceUsedBy> getUsedBy() {
+    return usedBy;
   }
 
   /**
-   * @param usedBys usedBys or {@code null} for none
+   * @param usedBy usedBy or {@code null} for none
    */
-  public BackendService setUsedBys(java.util.List<BackendServiceUsedBy> usedBys) {
-    this.usedBys = usedBys;
+  public BackendService setUsedBy(java.util.List<BackendServiceUsedBy> usedBy) {
+    this.usedBy = usedBy;
     return this;
   }
 

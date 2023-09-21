@@ -30,6 +30,16 @@ package com.google.api.services.vision.v1p2beta1.model;
 public final class GoogleCloudVisionV1p2beta1AsyncBatchAnnotateImagesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Required. The desired output location and metadata (e.g. format).
    * The value may be {@code null}.
    */
@@ -57,6 +67,29 @@ public final class GoogleCloudVisionV1p2beta1AsyncBatchAnnotateImagesRequest ext
     // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1AnnotateImageRequest used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1AnnotateImageRequest.class);
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudVisionV1p2beta1AsyncBatchAnnotateImagesRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
+    return this;
   }
 
   /**

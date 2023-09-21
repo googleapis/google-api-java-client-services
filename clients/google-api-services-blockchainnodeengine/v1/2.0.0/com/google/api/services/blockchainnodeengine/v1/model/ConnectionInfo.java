@@ -38,6 +38,14 @@ public final class ConnectionInfo extends com.google.api.client.json.GenericJson
   private EndpointInfo endpointInfo;
 
   /**
+   * Output only. A service attachment that exposes a node, and has the following format:
+   * projects/{project}/regions/{region}/serviceAttachments/{service_attachment_name}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAttachment;
+
+  /**
    * Output only. The endpoint information through which to interact with a blockchain node.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class ConnectionInfo extends com.google.api.client.json.GenericJson
    */
   public ConnectionInfo setEndpointInfo(EndpointInfo endpointInfo) {
     this.endpointInfo = endpointInfo;
+    return this;
+  }
+
+  /**
+   * Output only. A service attachment that exposes a node, and has the following format:
+   * projects/{project}/regions/{region}/serviceAttachments/{service_attachment_name}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAttachment() {
+    return serviceAttachment;
+  }
+
+  /**
+   * Output only. A service attachment that exposes a node, and has the following format:
+   * projects/{project}/regions/{region}/serviceAttachments/{service_attachment_name}
+   * @param serviceAttachment serviceAttachment or {@code null} for none
+   */
+  public ConnectionInfo setServiceAttachment(java.lang.String serviceAttachment) {
+    this.serviceAttachment = serviceAttachment;
     return this;
   }
 

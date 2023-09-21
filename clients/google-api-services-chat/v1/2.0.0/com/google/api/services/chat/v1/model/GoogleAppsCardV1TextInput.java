@@ -96,6 +96,15 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   private GoogleAppsCardV1Action onChangeAction;
 
   /**
+   * Text that appears in the text input field when the field is empty. Use this text to prompt
+   * users to enter a value. For example, `Enter a number from 0 to 100`. Supported by Google Chat
+   * apps, but not Google Workspace Add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String placeholderText;
+
+  /**
    * How a text input field appears in the user interface. For example, whether the field is single
    * or multi-line.
    * The value may be {@code null}.
@@ -249,6 +258,27 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    */
   public GoogleAppsCardV1TextInput setOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
     this.onChangeAction = onChangeAction;
+    return this;
+  }
+
+  /**
+   * Text that appears in the text input field when the field is empty. Use this text to prompt
+   * users to enter a value. For example, `Enter a number from 0 to 100`. Supported by Google Chat
+   * apps, but not Google Workspace Add-ons.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlaceholderText() {
+    return placeholderText;
+  }
+
+  /**
+   * Text that appears in the text input field when the field is empty. Use this text to prompt
+   * users to enter a value. For example, `Enter a number from 0 to 100`. Supported by Google Chat
+   * apps, but not Google Workspace Add-ons.
+   * @param placeholderText placeholderText or {@code null} for none
+   */
+  public GoogleAppsCardV1TextInput setPlaceholderText(java.lang.String placeholderText) {
+    this.placeholderText = placeholderText;
     return this;
   }
 

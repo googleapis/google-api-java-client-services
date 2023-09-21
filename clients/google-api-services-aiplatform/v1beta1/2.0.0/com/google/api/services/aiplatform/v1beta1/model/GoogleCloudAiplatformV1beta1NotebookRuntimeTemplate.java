@@ -100,7 +100,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Immutable. The specification of a single machine used by the prediction.
+   * Optional. Immutable. The specification of a single machine for the template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -304,7 +304,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   }
 
   /**
-   * Required. Immutable. The specification of a single machine used by the prediction.
+   * Optional. Immutable. The specification of a single machine for the template.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MachineSpec getMachineSpec() {
@@ -312,7 +312,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   }
 
   /**
-   * Required. Immutable. The specification of a single machine used by the prediction.
+   * Optional. Immutable. The specification of a single machine for the template.
    * @param machineSpec machineSpec or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setMachineSpec(GoogleCloudAiplatformV1beta1MachineSpec machineSpec) {

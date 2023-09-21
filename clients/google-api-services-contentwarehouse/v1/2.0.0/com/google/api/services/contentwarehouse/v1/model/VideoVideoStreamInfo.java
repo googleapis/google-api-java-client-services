@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * Note that when a VSI is from a user video, the information reflects the info in that source.
  * Fields like lengths, fps, etc. are not guaranteed to be the same as those of transcodes. If the
  * relevant info in source is too broken, the corresponding fields (e.g., lengths) could be unset or
- * with the default value, meaning VSI cannot compute them from the given info. Next id: 83
+ * with the default value, meaning VSI cannot compute them from the given info. Next id: 84
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -327,6 +327,14 @@ public final class VideoVideoStreamInfo extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean parsedByFfmpeg;
+
+  /**
+   * True if the file was successfully parsed by in-house parsers. Unset if parsing wasn't
+   * attepmted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean parsedByInHouseParsers;
 
   /**
    * By default we assume that the entire file was given computing the VSI - if that is not true
@@ -1265,6 +1273,25 @@ public final class VideoVideoStreamInfo extends com.google.api.client.json.Gener
    */
   public VideoVideoStreamInfo setParsedByFfmpeg(java.lang.Boolean parsedByFfmpeg) {
     this.parsedByFfmpeg = parsedByFfmpeg;
+    return this;
+  }
+
+  /**
+   * True if the file was successfully parsed by in-house parsers. Unset if parsing wasn't
+   * attepmted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getParsedByInHouseParsers() {
+    return parsedByInHouseParsers;
+  }
+
+  /**
+   * True if the file was successfully parsed by in-house parsers. Unset if parsing wasn't
+   * attepmted.
+   * @param parsedByInHouseParsers parsedByInHouseParsers or {@code null} for none
+   */
+  public VideoVideoStreamInfo setParsedByInHouseParsers(java.lang.Boolean parsedByInHouseParsers) {
+    this.parsedByInHouseParsers = parsedByInHouseParsers;
     return this;
   }
 

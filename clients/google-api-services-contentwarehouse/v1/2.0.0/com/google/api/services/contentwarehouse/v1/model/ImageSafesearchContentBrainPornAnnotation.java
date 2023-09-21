@@ -105,8 +105,6 @@ public final class ImageSafesearchContentBrainPornAnnotation extends com.google.
   private java.lang.Float spoofScore;
 
   /**
-   * This field is an experimental one with a quite vague meaning. Please contact safesearch@ before
-   * any meaningful use of it. There is no guarantee it will preserve its behavior in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -308,8 +306,6 @@ public final class ImageSafesearchContentBrainPornAnnotation extends com.google.
   }
 
   /**
-   * This field is an experimental one with a quite vague meaning. Please contact safesearch@ before
-   * any meaningful use of it. There is no guarantee it will preserve its behavior in the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -317,8 +313,6 @@ public final class ImageSafesearchContentBrainPornAnnotation extends com.google.
   }
 
   /**
-   * This field is an experimental one with a quite vague meaning. Please contact safesearch@ before
-   * any meaningful use of it. There is no guarantee it will preserve its behavior in the future.
    * @param version version or {@code null} for none
    */
   public ImageSafesearchContentBrainPornAnnotation setVersion(java.lang.String version) {

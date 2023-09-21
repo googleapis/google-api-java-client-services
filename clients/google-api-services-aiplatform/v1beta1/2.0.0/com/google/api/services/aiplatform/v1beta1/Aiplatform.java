@@ -26603,9 +26603,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the aiplatform server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format:
+             * @param parent Required. The resource name of the EntityType to create a Feature. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
              * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature}
              * @return the request
              */
@@ -26633,9 +26633,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format:
+               * @param parent Required. The resource name of the EntityType to create a Feature. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
                * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature}
                * @since 1.13
                */
@@ -26705,27 +26705,24 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Required. The resource name of the EntityType or FeatureGroup to create a Feature.
-               * Format: `projects/{project}/locations/{location}/featurestores/{featurestore}/entit
-               * yTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+               * Required. The resource name of the EntityType to create a Feature. Format: `project
+               * s/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_t
+               * ype}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format:
+              /** Required. The resource name of the EntityType to create a Feature. Format:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-             `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The resource name of the EntityType or FeatureGroup to create a Feature.
-               * Format: `projects/{project}/locations/{location}/featurestores/{featurestore}/entit
-               * yTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+               * Required. The resource name of the EntityType to create a Feature. Format: `project
+               * s/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_t
+               * ype}`
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -26741,14 +26738,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * Required. The ID to use for the Feature, which will become the final component of
                * the Feature's resource name. This value may be up to 128 characters, and valid
                * characters are `[a-z0-9_]`. The first character cannot be a number. The value must
-               * be unique within an EntityType/FeatureGroup.
+               * be unique within an EntityType .
                */
               @com.google.api.client.util.Key
               private java.lang.String featureId;
 
               /** Required. The ID to use for the Feature, which will become the final component of the Feature's
              resource name. This value may be up to 128 characters, and valid characters are `[a-z0-9_]`. The
-             first character cannot be a number. The value must be unique within an EntityType/FeatureGroup.
+             first character cannot be a number. The value must be unique within an EntityType .
                */
               public java.lang.String getFeatureId() {
                 return featureId;
@@ -26758,7 +26755,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * Required. The ID to use for the Feature, which will become the final component of
                * the Feature's resource name. This value may be up to 128 characters, and valid
                * characters are `[a-z0-9_]`. The first character cannot be a number. The value must
-               * be unique within an EntityType/FeatureGroup.
+               * be unique within an EntityType .
                */
               public Create setFeatureId(java.lang.String featureId) {
                 this.featureId = featureId;
@@ -26780,7 +26777,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/f
              *        eaturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
-             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -26809,7 +26805,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/f
              *        eaturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
-             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -26880,15 +26875,13 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Features to be deleted. Format: `projects/{project}/locat
                * ions/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{fe
-               * ature}` `projects/{project}/locations/{location}/featureGroups/{feature_group}/feat
-               * ures/{feature}`
+               * ature}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/
              featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
-             `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
                */
               public java.lang.String getName() {
                 return name;
@@ -26897,8 +26890,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Features to be deleted. Format: `projects/{project}/locat
                * ions/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{fe
-               * ature}` `projects/{project}/locations/{location}/featureGroups/{feature_group}/feat
-               * ures/{feature}`
+               * ature}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -26925,7 +26917,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The name of the Feature resource. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -26953,7 +26945,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The name of the Feature resource. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -27034,14 +27026,12 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Feature resource. Format: `projects/{project}/locations/{
                * location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The name of the Feature resource. Format:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-             `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getName() {
                 return name;
@@ -27050,7 +27040,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Feature resource. Format: `projects/{project}/locations/{
                * location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -27077,7 +27066,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param parent Required. The resource name of the Location to list Features. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -27105,7 +27094,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param parent Required. The resource name of the Location to list Features. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -27186,14 +27175,12 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The resource name of the Location to list Features. Format: `projects/{pr
                * oject}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the Location to list Features. Format:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-             `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getParent() {
                 return parent;
@@ -27202,7 +27189,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The resource name of the Location to list Features. Format: `projects/{pr
                * oject}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -27291,14 +27277,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `feature_id` * `value_type`
-               * * `create_time` * `update_time`
+               * (Not supported for FeatureRegistry Feature) * `create_time` * `update_time`
                */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
               /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
-             name for descending. Supported fields: * `feature_id` * `value_type` * `create_time` *
-             `update_time`
+             name for descending. Supported fields: * `feature_id` * `value_type` (Not supported for
+             FeatureRegistry Feature) * `create_time` * `update_time`
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
@@ -27307,7 +27293,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `feature_id` * `value_type`
-               * * `create_time` * `update_time`
+               * (Not supported for FeatureRegistry Feature) * `create_time` * `update_time`
                */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
@@ -51806,6 +51792,306 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * An accessor for creating requests from the NotebookExecutionJobs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+       *   {@code Aiplatform.NotebookExecutionJobs.List request = aiplatform.notebookExecutionJobs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public NotebookExecutionJobs notebookExecutionJobs() {
+        return new NotebookExecutionJobs();
+      }
+
+      /**
+       * The "notebookExecutionJobs" collection of methods.
+       */
+      public class NotebookExecutionJobs {
+
+        /**
+         * Internal only: Called from Compute Engine instance to obtain EUC for owner Anonymous access:
+         * authenticates caller using VM identity JWT. Design doc: go/colab-on-vertex-euc-dd
+         *
+         * Create a request for the method "notebookExecutionJobs.generateAccessToken".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link GenerateAccessToken#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the NotebookRuntime resource. Format:
+         *        `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateAccessTokenRequest}
+         * @return the request
+         */
+        public GenerateAccessToken generateAccessToken(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateAccessTokenRequest content) throws java.io.IOException {
+          GenerateAccessToken result = new GenerateAccessToken(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateAccessToken extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateAccessTokenResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:generateAccessToken";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebookExecutionJobs/[^/]+$");
+
+          /**
+           * Internal only: Called from Compute Engine instance to obtain EUC for owner Anonymous access:
+           * authenticates caller using VM identity JWT. Design doc: go/colab-on-vertex-euc-dd
+           *
+           * Create a request for the method "notebookExecutionJobs.generateAccessToken".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link GenerateAccessToken#execute()} method to invoke the remote
+           * operation. <p> {@link GenerateAccessToken#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The name of the NotebookRuntime resource. Format:
+         *        `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateAccessTokenRequest}
+           * @since 1.13
+           */
+          protected GenerateAccessToken(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateAccessTokenRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateAccessTokenResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notebookExecutionJobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateAccessToken set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateAccessToken) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateAccessToken setAccessToken(java.lang.String accessToken) {
+            return (GenerateAccessToken) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateAccessToken setAlt(java.lang.String alt) {
+            return (GenerateAccessToken) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateAccessToken setCallback(java.lang.String callback) {
+            return (GenerateAccessToken) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateAccessToken setFields(java.lang.String fields) {
+            return (GenerateAccessToken) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateAccessToken setKey(java.lang.String key) {
+            return (GenerateAccessToken) super.setKey(key);
+          }
+
+          @Override
+          public GenerateAccessToken setOauthToken(java.lang.String oauthToken) {
+            return (GenerateAccessToken) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateAccessToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateAccessToken) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateAccessToken setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateAccessToken) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateAccessToken setUploadType(java.lang.String uploadType) {
+            return (GenerateAccessToken) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateAccessToken setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateAccessToken) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the NotebookRuntime resource. Format:
+           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the NotebookRuntime resource. Format:
+         `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the NotebookRuntime resource. Format:
+           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           */
+          public GenerateAccessToken setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notebookExecutionJobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateAccessToken set(String parameterName, Object value) {
+            return (GenerateAccessToken) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Create a request for the method "notebookExecutionJobs.reportEvent".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link ReportEvent#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the NotebookRuntime resource. Format:
+         *        `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest}
+         * @return the request
+         */
+        public ReportEvent reportEvent(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest content) throws java.io.IOException {
+          ReportEvent result = new ReportEvent(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReportEvent extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:reportEvent";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebookExecutionJobs/[^/]+$");
+
+          /**
+           * Create a request for the method "notebookExecutionJobs.reportEvent".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link ReportEvent#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ReportEvent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the NotebookRuntime resource. Format:
+         *        `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest}
+           * @since 1.13
+           */
+          protected ReportEvent(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notebookExecutionJobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReportEvent set$Xgafv(java.lang.String $Xgafv) {
+            return (ReportEvent) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReportEvent setAccessToken(java.lang.String accessToken) {
+            return (ReportEvent) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReportEvent setAlt(java.lang.String alt) {
+            return (ReportEvent) super.setAlt(alt);
+          }
+
+          @Override
+          public ReportEvent setCallback(java.lang.String callback) {
+            return (ReportEvent) super.setCallback(callback);
+          }
+
+          @Override
+          public ReportEvent setFields(java.lang.String fields) {
+            return (ReportEvent) super.setFields(fields);
+          }
+
+          @Override
+          public ReportEvent setKey(java.lang.String key) {
+            return (ReportEvent) super.setKey(key);
+          }
+
+          @Override
+          public ReportEvent setOauthToken(java.lang.String oauthToken) {
+            return (ReportEvent) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReportEvent setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReportEvent) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReportEvent setQuotaUser(java.lang.String quotaUser) {
+            return (ReportEvent) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReportEvent setUploadType(java.lang.String uploadType) {
+            return (ReportEvent) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReportEvent setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReportEvent) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the NotebookRuntime resource. Format:
+           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the NotebookRuntime resource. Format:
+         `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the NotebookRuntime resource. Format:
+           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           */
+          public ReportEvent setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notebookExecutionJobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ReportEvent set(String parameterName, Object value) {
+            return (ReportEvent) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the NotebookRuntimeTemplates collection.
        *
        * <p>The typical use is:</p>
@@ -55187,14 +55473,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. The ID to use for the PersistentResource, which become the final component of
            * the PersistentResource's resource name. The maximum length is 63 characters, and valid
-           * characters are /^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/.
+           * characters are `/^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String persistentResourceId;
 
           /** Required. The ID to use for the PersistentResource, which become the final component of the
          PersistentResource's resource name. The maximum length is 63 characters, and valid characters are
-         /^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/.
+         `/^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/`.
            */
           public java.lang.String getPersistentResourceId() {
             return persistentResourceId;
@@ -55203,7 +55489,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. The ID to use for the PersistentResource, which become the final component of
            * the PersistentResource's resource name. The maximum length is 63 characters, and valid
-           * characters are /^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/.
+           * characters are `/^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$/`.
            */
           public Create setPersistentResourceId(java.lang.String persistentResourceId) {
             this.persistentResourceId = persistentResourceId;
@@ -55687,6 +55973,159 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a PersistentResource.
+         *
+         * Create a request for the method "persistentResources.patch".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. Resource name of a PersistentResource.
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1PersistentResource}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1PersistentResource content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/persistentResources/[^/]+$");
+
+          /**
+           * Updates a PersistentResource.
+           *
+           * Create a request for the method "persistentResources.patch".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. Resource name of a PersistentResource.
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1PersistentResource}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1PersistentResource content) {
+            super(Aiplatform.this, "PATCH", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/persistentResources/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Immutable. Resource name of a PersistentResource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. Resource name of a PersistentResource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Immutable. Resource name of a PersistentResource. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/persistentResources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Specify the fields to be overwritten in the PersistentResource by the update
+           * method.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Specify the fields to be overwritten in the PersistentResource by the update method.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Specify the fields to be overwritten in the PersistentResource by the update
+           * method.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -56791,14 +57230,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           /**
            * The ID to use for the PipelineJob, which will become the final component of the
            * PipelineJob name. If not provided, an ID will be automatically generated. This value
-           * should be less than 128 characters, and valid characters are /a-z-/.
+           * should be less than 128 characters, and valid characters are `/a-z-/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String pipelineJobId;
 
           /** The ID to use for the PipelineJob, which will become the final component of the PipelineJob name.
          If not provided, an ID will be automatically generated. This value should be less than 128
-         characters, and valid characters are /a-z-/.
+         characters, and valid characters are `/a-z-/`.
            */
           public java.lang.String getPipelineJobId() {
             return pipelineJobId;
@@ -56807,7 +57246,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           /**
            * The ID to use for the PipelineJob, which will become the final component of the
            * PipelineJob name. If not provided, an ID will be automatically generated. This value
-           * should be less than 128 characters, and valid characters are /a-z-/.
+           * should be less than 128 characters, and valid characters are `/a-z-/`.
            */
           public Create setPipelineJobId(java.lang.String pipelineJobId) {
             this.pipelineJobId = pipelineJobId;
@@ -68061,14 +68500,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The ID to use for the Tensorboard experiment, which becomes the final
              * component of the Tensorboard experiment's resource name. This value should be 1-128
-             * characters, and valid characters are /a-z-/.
+             * characters, and valid characters are `/a-z-/`.
              */
             @com.google.api.client.util.Key
             private java.lang.String tensorboardExperimentId;
 
             /** Required. The ID to use for the Tensorboard experiment, which becomes the final component of the
            Tensorboard experiment's resource name. This value should be 1-128 characters, and valid characters
-           are /a-z-/.
+           are `/a-z-/`.
              */
             public java.lang.String getTensorboardExperimentId() {
               return tensorboardExperimentId;
@@ -68077,7 +68516,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The ID to use for the Tensorboard experiment, which becomes the final
              * component of the Tensorboard experiment's resource name. This value should be 1-128
-             * characters, and valid characters are /a-z-/.
+             * characters, and valid characters are `/a-z-/`.
              */
             public Create setTensorboardExperimentId(java.lang.String tensorboardExperimentId) {
               this.tensorboardExperimentId = tensorboardExperimentId;
@@ -70046,14 +70485,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The ID to use for the Tensorboard run, which becomes the final component
                * of the Tensorboard run's resource name. This value should be 1-128 characters, and
-               * valid characters are /a-z-/.
+               * valid characters are `/a-z-/`.
                */
               @com.google.api.client.util.Key
               private java.lang.String tensorboardRunId;
 
               /** Required. The ID to use for the Tensorboard run, which becomes the final component of the
              Tensorboard run's resource name. This value should be 1-128 characters, and valid characters are
-             /a-z-/.
+             `/a-z-/`.
                */
               public java.lang.String getTensorboardRunId() {
                 return tensorboardRunId;
@@ -70062,7 +70501,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The ID to use for the Tensorboard run, which becomes the final component
                * of the Tensorboard run's resource name. This value should be 1-128 characters, and
-               * valid characters are /a-z-/.
+               * valid characters are `/a-z-/`.
                */
               public Create setTensorboardRunId(java.lang.String tensorboardRunId) {
                 this.tensorboardRunId = tensorboardRunId;

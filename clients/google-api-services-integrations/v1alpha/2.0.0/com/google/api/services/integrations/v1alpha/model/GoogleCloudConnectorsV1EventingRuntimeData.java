@@ -39,6 +39,14 @@ public final class GoogleCloudConnectorsV1EventingRuntimeData extends com.google
   private java.lang.String eventsListenerEndpoint;
 
   /**
+   * Output only. Events listener PSC Service attachment. The value will be populated after
+   * provisioning the events listener with private connectivity enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventsListenerPscSa;
+
+  /**
    * Output only. Current status of eventing.
    * The value may be {@code null}.
    */
@@ -61,6 +69,25 @@ public final class GoogleCloudConnectorsV1EventingRuntimeData extends com.google
    */
   public GoogleCloudConnectorsV1EventingRuntimeData setEventsListenerEndpoint(java.lang.String eventsListenerEndpoint) {
     this.eventsListenerEndpoint = eventsListenerEndpoint;
+    return this;
+  }
+
+  /**
+   * Output only. Events listener PSC Service attachment. The value will be populated after
+   * provisioning the events listener with private connectivity enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventsListenerPscSa() {
+    return eventsListenerPscSa;
+  }
+
+  /**
+   * Output only. Events listener PSC Service attachment. The value will be populated after
+   * provisioning the events listener with private connectivity enabled.
+   * @param eventsListenerPscSa eventsListenerPscSa or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingRuntimeData setEventsListenerPscSa(java.lang.String eventsListenerPscSa) {
+    this.eventsListenerPscSa = eventsListenerPscSa;
     return this;
   }
 

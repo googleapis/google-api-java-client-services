@@ -30,7 +30,7 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class VmwareVCenterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The vCenter IP address.
+   * Output only. The vCenter IP address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class VmwareVCenterConfig extends com.google.api.client.json.Generi
   private java.lang.String storagePolicyName;
 
   /**
-   * The vCenter IP address.
+   * Output only. The vCenter IP address.
    * @return value or {@code null} for none
    */
   public java.lang.String getAddress() {
@@ -94,7 +94,7 @@ public final class VmwareVCenterConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * The vCenter IP address.
+   * Output only. The vCenter IP address.
    * @param address address or {@code null} for none
    */
   public VmwareVCenterConfig setAddress(java.lang.String address) {

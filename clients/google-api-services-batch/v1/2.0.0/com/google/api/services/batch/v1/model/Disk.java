@@ -33,7 +33,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Local SSDs are available through both "SCSI" and "NVMe" interfaces. If not indicated, "NVMe"
-   * will be the default one for local ssds. We only support "SCSI" for persistent disks now.
+   * will be the default one for local ssds. This field is ignored for persistent disks as the
+   * interface is chosen automatically. See https://cloud.google.com/compute/docs/disks/persistent-
+   * disks#choose_an_interface.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +48,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * projects/{project}/global/images/{image_version} You can also use Batch customized image in
    * short names. The following image values are supported for a boot disk: * `batch-debian`: use
    * Batch Debian images. * `batch-centos`: use Batch CentOS images. * `batch-cos`: use Batch
-   * Container-Optimized images. * `batch-hpc-centos`: use Batch HPC CentOS images.
+   * Container-Optimized images. * `batch-hpc-centos`: use Batch HPC CentOS images. * `batch-hpc-
+   * rocky`: use Batch HPC Rocky Linux images.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +89,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Local SSDs are available through both "SCSI" and "NVMe" interfaces. If not indicated, "NVMe"
-   * will be the default one for local ssds. We only support "SCSI" for persistent disks now.
+   * will be the default one for local ssds. This field is ignored for persistent disks as the
+   * interface is chosen automatically. See https://cloud.google.com/compute/docs/disks/persistent-
+   * disks#choose_an_interface.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskInterface() {
@@ -95,7 +100,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Local SSDs are available through both "SCSI" and "NVMe" interfaces. If not indicated, "NVMe"
-   * will be the default one for local ssds. We only support "SCSI" for persistent disks now.
+   * will be the default one for local ssds. This field is ignored for persistent disks as the
+   * interface is chosen automatically. See https://cloud.google.com/compute/docs/disks/persistent-
+   * disks#choose_an_interface.
    * @param diskInterface diskInterface or {@code null} for none
    */
   public Disk setDiskInterface(java.lang.String diskInterface) {
@@ -110,7 +117,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * projects/{project}/global/images/{image_version} You can also use Batch customized image in
    * short names. The following image values are supported for a boot disk: * `batch-debian`: use
    * Batch Debian images. * `batch-centos`: use Batch CentOS images. * `batch-cos`: use Batch
-   * Container-Optimized images. * `batch-hpc-centos`: use Batch HPC CentOS images.
+   * Container-Optimized images. * `batch-hpc-centos`: use Batch HPC CentOS images. * `batch-hpc-
+   * rocky`: use Batch HPC Rocky Linux images.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -124,7 +132,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * projects/{project}/global/images/{image_version} You can also use Batch customized image in
    * short names. The following image values are supported for a boot disk: * `batch-debian`: use
    * Batch Debian images. * `batch-centos`: use Batch CentOS images. * `batch-cos`: use Batch
-   * Container-Optimized images. * `batch-hpc-centos`: use Batch HPC CentOS images.
+   * Container-Optimized images. * `batch-hpc-centos`: use Batch HPC CentOS images. * `batch-hpc-
+   * rocky`: use Batch HPC Rocky Linux images.
    * @param image image or {@code null} for none
    */
   public Disk setImage(java.lang.String image) {

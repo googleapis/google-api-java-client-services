@@ -32,13 +32,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Will use the machine from the first workerpool as the head node by default. For Ray-
-   * on-Vertex Experimental scope launch, we will only support one resource pool for Ray cluster and
-   * thus will not support head machine selection.
+   * Optional. This will be used to indicate which resource pool will serve as the Ray head node(the
+   * first node within that pool). Will use the machine from the first workerpool as the head node
+   * by default if this field is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1MachineSpec headMachineSpec;
+  private java.lang.String headNodeResourcePoolId;
 
   /**
    * Optional. Default image for user to choose a preferred ML framework(e.g. tensorflow or Pytorch)
@@ -52,23 +52,33 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   private java.lang.String imageUri;
 
   /**
-   * Optional. Will use the machine from the first workerpool as the head node by default. For Ray-
-   * on-Vertex Experimental scope launch, we will only support one resource pool for Ray cluster and
-   * thus will not support head machine selection.
+   * Optional. Required if image_uri is not set. A map of resource_pool_id to prebuild Ray image if
+   * user need to use different images for different head/worker pools. This map needs to cover all
+   * the resource pool ids. Example: { "ray_head_node_pool": "head image" "ray_worker_node_pool1":
+   * "worker image" "ray_worker_node_pool2": "another worker image" }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourcePoolImages;
+
+  /**
+   * Optional. This will be used to indicate which resource pool will serve as the Ray head node(the
+   * first node within that pool). Will use the machine from the first workerpool as the head node
+   * by default if this field is not set.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1MachineSpec getHeadMachineSpec() {
-    return headMachineSpec;
+  public java.lang.String getHeadNodeResourcePoolId() {
+    return headNodeResourcePoolId;
   }
 
   /**
-   * Optional. Will use the machine from the first workerpool as the head node by default. For Ray-
-   * on-Vertex Experimental scope launch, we will only support one resource pool for Ray cluster and
-   * thus will not support head machine selection.
-   * @param headMachineSpec headMachineSpec or {@code null} for none
+   * Optional. This will be used to indicate which resource pool will serve as the Ray head node(the
+   * first node within that pool). Will use the machine from the first workerpool as the head node
+   * by default if this field is not set.
+   * @param headNodeResourcePoolId headNodeResourcePoolId or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1RaySpec setHeadMachineSpec(GoogleCloudAiplatformV1beta1MachineSpec headMachineSpec) {
-    this.headMachineSpec = headMachineSpec;
+  public GoogleCloudAiplatformV1beta1RaySpec setHeadNodeResourcePoolId(java.lang.String headNodeResourcePoolId) {
+    this.headNodeResourcePoolId = headNodeResourcePoolId;
     return this;
   }
 
@@ -94,6 +104,29 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1RaySpec setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * Optional. Required if image_uri is not set. A map of resource_pool_id to prebuild Ray image if
+   * user need to use different images for different head/worker pools. This map needs to cover all
+   * the resource pool ids. Example: { "ray_head_node_pool": "head image" "ray_worker_node_pool1":
+   * "worker image" "ray_worker_node_pool2": "another worker image" }
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourcePoolImages() {
+    return resourcePoolImages;
+  }
+
+  /**
+   * Optional. Required if image_uri is not set. A map of resource_pool_id to prebuild Ray image if
+   * user need to use different images for different head/worker pools. This map needs to cover all
+   * the resource pool ids. Example: { "ray_head_node_pool": "head image" "ray_worker_node_pool1":
+   * "worker image" "ray_worker_node_pool2": "another worker image" }
+   * @param resourcePoolImages resourcePoolImages or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RaySpec setResourcePoolImages(java.util.Map<String, java.lang.String> resourcePoolImages) {
+    this.resourcePoolImages = resourcePoolImages;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A message representing the function call of an answers intent query. Next ID: 19 Important: If
+ * A message representing the function call of an answers intent query. Next ID: 21 Important: If
  * you add new fields that do not reflect signals data, but actual semantics of the FunctionCall,
  * please also update CreateFuncallCopyWithoutSignals and CreateFuncallCopyWithArgumentSignals in
  * function_call_utils. LINT.IfChange
@@ -52,6 +52,14 @@ public final class KnowledgeAnswersIntentQueryFunctionCall extends com.google.ap
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long catalogVersion;
+
+  /**
+   * Information about the corresponding Concept for this MRF Expression. For more details see go
+   * /concepts-roofshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KnowledgeAnswersIntentQueryConceptInfo conceptInfo;
 
   /**
    * Contextual Sensitivity (go/contextual-sensitivity) metadata indicating that a policy- or
@@ -183,6 +191,25 @@ public final class KnowledgeAnswersIntentQueryFunctionCall extends com.google.ap
    */
   public KnowledgeAnswersIntentQueryFunctionCall setCatalogVersion(java.lang.Long catalogVersion) {
     this.catalogVersion = catalogVersion;
+    return this;
+  }
+
+  /**
+   * Information about the corresponding Concept for this MRF Expression. For more details see go
+   * /concepts-roofshot.
+   * @return value or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryConceptInfo getConceptInfo() {
+    return conceptInfo;
+  }
+
+  /**
+   * Information about the corresponding Concept for this MRF Expression. For more details see go
+   * /concepts-roofshot.
+   * @param conceptInfo conceptInfo or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryFunctionCall setConceptInfo(KnowledgeAnswersIntentQueryConceptInfo conceptInfo) {
+    this.conceptInfo = conceptInfo;
     return this;
   }
 

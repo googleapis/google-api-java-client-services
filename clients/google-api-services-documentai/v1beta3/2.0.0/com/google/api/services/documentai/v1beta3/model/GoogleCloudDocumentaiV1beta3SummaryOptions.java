@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3SummaryOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * What format the summary should be in.
+   * The format the summary should be in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudDocumentaiV1beta3SummaryOptions extends com.google
   private java.lang.String length;
 
   /**
-   * What format the summary should be in.
+   * The format the summary should be in.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormat() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDocumentaiV1beta3SummaryOptions extends com.google
   }
 
   /**
-   * What format the summary should be in.
+   * The format the summary should be in.
    * @param format format or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3SummaryOptions setFormat(java.lang.String format) {

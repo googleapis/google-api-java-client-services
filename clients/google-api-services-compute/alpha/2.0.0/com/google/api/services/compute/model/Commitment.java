@@ -128,7 +128,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
-   * List of reservations in this commitment.
+   * List of create-on-create reseravtions for this commitment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -429,7 +429,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of reservations in this commitment.
+   * List of create-on-create reseravtions for this commitment.
    * @return value or {@code null} for none
    */
   public java.util.List<Reservation> getReservations() {
@@ -437,7 +437,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of reservations in this commitment.
+   * List of create-on-create reseravtions for this commitment.
    * @param reservations reservations or {@code null} for none
    */
   public Commitment setReservations(java.util.List<Reservation> reservations) {

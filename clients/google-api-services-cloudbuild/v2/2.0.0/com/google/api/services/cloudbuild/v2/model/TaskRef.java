@@ -31,13 +31,6 @@ package com.google.api.services.cloudbuild.v2.model;
 public final class TaskRef extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The CustomTask definition to use.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String customTask;
-
-  /**
    * Name of the task.
    * The value may be {@code null}.
    */
@@ -65,23 +58,6 @@ public final class TaskRef extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String resolver;
-
-  /**
-   * Optional. The CustomTask definition to use.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCustomTask() {
-    return customTask;
-  }
-
-  /**
-   * Optional. The CustomTask definition to use.
-   * @param customTask customTask or {@code null} for none
-   */
-  public TaskRef setCustomTask(java.lang.String customTask) {
-    this.customTask = customTask;
-    return this;
-  }
 
   /**
    * Name of the task.

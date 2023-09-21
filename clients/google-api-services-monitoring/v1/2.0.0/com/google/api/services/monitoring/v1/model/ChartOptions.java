@@ -30,11 +30,41 @@ package com.google.api.services.monitoring.v1.model;
 public final class ChartOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Preview: Configures whether the charted values are shown on the horizontal or vertical axis. By
+   * default, values are represented the vertical axis. This is a preview feature and may be subject
+   * to change before final release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean displayHorizontal;
+
+  /**
    * The chart mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mode;
+
+  /**
+   * Preview: Configures whether the charted values are shown on the horizontal or vertical axis. By
+   * default, values are represented the vertical axis. This is a preview feature and may be subject
+   * to change before final release.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisplayHorizontal() {
+    return displayHorizontal;
+  }
+
+  /**
+   * Preview: Configures whether the charted values are shown on the horizontal or vertical axis. By
+   * default, values are represented the vertical axis. This is a preview feature and may be subject
+   * to change before final release.
+   * @param displayHorizontal displayHorizontal or {@code null} for none
+   */
+  public ChartOptions setDisplayHorizontal(java.lang.Boolean displayHorizontal) {
+    this.displayHorizontal = displayHorizontal;
+    return this;
+  }
 
   /**
    * The chart mode.

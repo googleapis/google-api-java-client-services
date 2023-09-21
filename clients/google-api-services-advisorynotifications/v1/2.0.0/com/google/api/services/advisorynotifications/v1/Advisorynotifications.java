@@ -174,6 +174,297 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
     public class Locations {
 
       /**
+       * Get notification settings.
+       *
+       * Create a request for the method "locations.getSettings".
+       *
+       * This request holds the parameters needed by the advisorynotifications server.  After setting any
+       * optional parameters, call the {@link GetSettings#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The resource name of the settings to retrieve. Format:
+       *        organizations/{organization}/locations/{location}/settings.
+       * @return the request
+       */
+      public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
+        GetSettings result = new GetSettings(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetSettings extends AdvisorynotificationsRequest<com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Settings> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/settings$");
+
+        /**
+         * Get notification settings.
+         *
+         * Create a request for the method "locations.getSettings".
+         *
+         * This request holds the parameters needed by the the advisorynotifications server.  After
+         * setting any optional parameters, call the {@link GetSettings#execute()} method to invoke the
+         * remote operation. <p> {@link
+         * GetSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the settings to retrieve. Format:
+       *        organizations/{organization}/locations/{location}/settings.
+         * @since 1.13
+         */
+        protected GetSettings(java.lang.String name) {
+          super(Advisorynotifications.this, "GET", REST_PATH, null, com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Settings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+/settings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (GetSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetSettings setAccessToken(java.lang.String accessToken) {
+          return (GetSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetSettings setAlt(java.lang.String alt) {
+          return (GetSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public GetSettings setCallback(java.lang.String callback) {
+          return (GetSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public GetSettings setFields(java.lang.String fields) {
+          return (GetSettings) super.setFields(fields);
+        }
+
+        @Override
+        public GetSettings setKey(java.lang.String key) {
+          return (GetSettings) super.setKey(key);
+        }
+
+        @Override
+        public GetSettings setOauthToken(java.lang.String oauthToken) {
+          return (GetSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetSettings setQuotaUser(java.lang.String quotaUser) {
+          return (GetSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetSettings setUploadType(java.lang.String uploadType) {
+          return (GetSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the settings to retrieve. Format:
+         * organizations/{organization}/locations/{location}/settings.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the settings to retrieve. Format:
+       organizations/{organization}/locations/{location}/settings.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the settings to retrieve. Format:
+         * organizations/{organization}/locations/{location}/settings.
+         */
+        public GetSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+/settings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetSettings set(String parameterName, Object value) {
+          return (GetSettings) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update notification settings.
+       *
+       * Create a request for the method "locations.updateSettings".
+       *
+       * This request holds the parameters needed by the advisorynotifications server.  After setting any
+       * optional parameters, call the {@link UpdateSettings#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Output only. The resource name of the settings to retrieve. Format:
+       *        organizations/{organization}/locations/{location}/settings.
+       * @param content the {@link com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Settings}
+       * @return the request
+       */
+      public UpdateSettings updateSettings(java.lang.String name, com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Settings content) throws java.io.IOException {
+        UpdateSettings result = new UpdateSettings(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateSettings extends AdvisorynotificationsRequest<com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Settings> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/settings$");
+
+        /**
+         * Update notification settings.
+         *
+         * Create a request for the method "locations.updateSettings".
+         *
+         * This request holds the parameters needed by the the advisorynotifications server.  After
+         * setting any optional parameters, call the {@link UpdateSettings#execute()} method to invoke the
+         * remote operation. <p> {@link UpdateSettings#initialize(com.google.api.client.googleapis.service
+         * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Output only. The resource name of the settings to retrieve. Format:
+       *        organizations/{organization}/locations/{location}/settings.
+         * @param content the {@link com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Settings}
+         * @since 1.13
+         */
+        protected UpdateSettings(java.lang.String name, com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Settings content) {
+          super(Advisorynotifications.this, "PATCH", REST_PATH, content, com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Settings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+/settings$");
+          }
+        }
+
+        @Override
+        public UpdateSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateSettings setAccessToken(java.lang.String accessToken) {
+          return (UpdateSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateSettings setAlt(java.lang.String alt) {
+          return (UpdateSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateSettings setCallback(java.lang.String callback) {
+          return (UpdateSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateSettings setFields(java.lang.String fields) {
+          return (UpdateSettings) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateSettings setKey(java.lang.String key) {
+          return (UpdateSettings) super.setKey(key);
+        }
+
+        @Override
+        public UpdateSettings setOauthToken(java.lang.String oauthToken) {
+          return (UpdateSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateSettings setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateSettings setUploadType(java.lang.String uploadType) {
+          return (UpdateSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. The resource name of the settings to retrieve. Format:
+         * organizations/{organization}/locations/{location}/settings.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. The resource name of the settings to retrieve. Format:
+       organizations/{organization}/locations/{location}/settings.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. The resource name of the settings to retrieve. Format:
+         * organizations/{organization}/locations/{location}/settings.
+         */
+        public UpdateSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+/settings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public UpdateSettings set(String parameterName, Object value) {
+          return (UpdateSettings) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the Notifications collection.
        *
        * <p>The typical use is:</p>

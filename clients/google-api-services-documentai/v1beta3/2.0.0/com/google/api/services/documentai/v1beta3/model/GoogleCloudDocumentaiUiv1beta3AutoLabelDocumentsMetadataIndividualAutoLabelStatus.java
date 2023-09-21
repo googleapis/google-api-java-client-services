@@ -31,6 +31,13 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabelStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * The document id of the auto-labeled document. This will replace the gcs_uri.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiUiv1beta3DocumentId documentId;
+
+  /**
    * The gcs_uri of the auto-labeling document, which uniquely identifies a dataset document.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndiv
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus status;
+
+  /**
+   * The document id of the auto-labeled document. This will replace the gcs_uri.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3DocumentId getDocumentId() {
+    return documentId;
+  }
+
+  /**
+   * The document id of the auto-labeled document. This will replace the gcs_uri.
+   * @param documentId documentId or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabelStatus setDocumentId(GoogleCloudDocumentaiUiv1beta3DocumentId documentId) {
+    this.documentId = documentId;
+    return this;
+  }
 
   /**
    * The gcs_uri of the auto-labeling document, which uniquely identifies a dataset document.

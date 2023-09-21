@@ -48,7 +48,7 @@ public final class GoogleCloudAiplatformV1beta1CreateTensorboardRunRequest exten
   /**
    * Required. The ID to use for the Tensorboard run, which becomes the final component of the
    * Tensorboard run's resource name. This value should be 1-128 characters, and valid characters
-   * are /a-z-/.
+   * are `/a-z-/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class GoogleCloudAiplatformV1beta1CreateTensorboardRunRequest exten
   /**
    * Required. The ID to use for the Tensorboard run, which becomes the final component of the
    * Tensorboard run's resource name. This value should be 1-128 characters, and valid characters
-   * are /a-z-/.
+   * are `/a-z-/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTensorboardRunId() {
@@ -105,7 +105,7 @@ public final class GoogleCloudAiplatformV1beta1CreateTensorboardRunRequest exten
   /**
    * Required. The ID to use for the Tensorboard run, which becomes the final component of the
    * Tensorboard run's resource name. This value should be 1-128 characters, and valid characters
-   * are /a-z-/.
+   * are `/a-z-/`.
    * @param tensorboardRunId tensorboardRunId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CreateTensorboardRunRequest setTensorboardRunId(java.lang.String tensorboardRunId) {

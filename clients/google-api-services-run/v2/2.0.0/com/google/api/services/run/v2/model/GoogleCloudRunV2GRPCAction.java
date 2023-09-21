@@ -40,8 +40,8 @@ public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json
 
   /**
    * Service is the name of the service to place in the gRPC HealthCheckRequest (see
-   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the
-   * default behavior is defined by gRPC.
+   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If this is not specified,
+   * the default behavior is defined by gRPC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,8 @@ public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json
 
   /**
    * Service is the name of the service to place in the gRPC HealthCheckRequest (see
-   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the
-   * default behavior is defined by gRPC.
+   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If this is not specified,
+   * the default behavior is defined by gRPC.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -80,8 +80,8 @@ public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json
 
   /**
    * Service is the name of the service to place in the gRPC HealthCheckRequest (see
-   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the
-   * default behavior is defined by gRPC.
+   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If this is not specified,
+   * the default behavior is defined by gRPC.
    * @param service service or {@code null} for none
    */
   public GoogleCloudRunV2GRPCAction setService(java.lang.String service) {

@@ -167,7 +167,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
    * Optional. A precise, accurate address to describe your business location. PO boxes or mailboxes
    * located at remote locations are not acceptable. At this time, you can specify a maximum of five
    * `address_lines` values in the address. This field should only be set for businesses that have a
-   * storefront. This field should not be set for locations of type `CUSTOMER_LOCATION_ONLY`.
+   * storefront. This field should not be set for locations of type `CUSTOMER_LOCATION_ONLY` but if
+   * set, any value provided will be discarded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -512,7 +513,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
    * Optional. A precise, accurate address to describe your business location. PO boxes or mailboxes
    * located at remote locations are not acceptable. At this time, you can specify a maximum of five
    * `address_lines` values in the address. This field should only be set for businesses that have a
-   * storefront. This field should not be set for locations of type `CUSTOMER_LOCATION_ONLY`.
+   * storefront. This field should not be set for locations of type `CUSTOMER_LOCATION_ONLY` but if
+   * set, any value provided will be discarded.
    * @return value or {@code null} for none
    */
   public PostalAddress getStorefrontAddress() {
@@ -523,7 +525,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
    * Optional. A precise, accurate address to describe your business location. PO boxes or mailboxes
    * located at remote locations are not acceptable. At this time, you can specify a maximum of five
    * `address_lines` values in the address. This field should only be set for businesses that have a
-   * storefront. This field should not be set for locations of type `CUSTOMER_LOCATION_ONLY`.
+   * storefront. This field should not be set for locations of type `CUSTOMER_LOCATION_ONLY` but if
+   * set, any value provided will be discarded.
    * @param storefrontAddress storefrontAddress or {@code null} for none
    */
   public Location setStorefrontAddress(PostalAddress storefrontAddress) {

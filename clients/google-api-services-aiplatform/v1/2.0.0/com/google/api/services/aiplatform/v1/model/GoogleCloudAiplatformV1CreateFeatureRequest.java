@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Request message for FeaturestoreService.CreateFeature and FeatureRegistryService.CreateFeature.
+ * Request message for FeaturestoreService.CreateFeature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -39,17 +39,15 @@ public final class GoogleCloudAiplatformV1CreateFeatureRequest extends com.googl
   /**
    * Required. The ID to use for the Feature, which will become the final component of the Feature's
    * resource name. This value may be up to 128 characters, and valid characters are `[a-z0-9_]`.
-   * The first character cannot be a number. The value must be unique within an
-   * EntityType/FeatureGroup.
+   * The first character cannot be a number. The value must be unique within an EntityType .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String featureId;
 
   /**
-   * Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format: `pro
-   * jects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+   * Required. The resource name of the EntityType to create a Feature. Format: `projects/{project}/
+   * locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +73,7 @@ public final class GoogleCloudAiplatformV1CreateFeatureRequest extends com.googl
   /**
    * Required. The ID to use for the Feature, which will become the final component of the Feature's
    * resource name. This value may be up to 128 characters, and valid characters are `[a-z0-9_]`.
-   * The first character cannot be a number. The value must be unique within an
-   * EntityType/FeatureGroup.
+   * The first character cannot be a number. The value must be unique within an EntityType .
    * @return value or {@code null} for none
    */
   public java.lang.String getFeatureId() {
@@ -86,8 +83,7 @@ public final class GoogleCloudAiplatformV1CreateFeatureRequest extends com.googl
   /**
    * Required. The ID to use for the Feature, which will become the final component of the Feature's
    * resource name. This value may be up to 128 characters, and valid characters are `[a-z0-9_]`.
-   * The first character cannot be a number. The value must be unique within an
-   * EntityType/FeatureGroup.
+   * The first character cannot be a number. The value must be unique within an EntityType .
    * @param featureId featureId or {@code null} for none
    */
   public GoogleCloudAiplatformV1CreateFeatureRequest setFeatureId(java.lang.String featureId) {
@@ -96,9 +92,8 @@ public final class GoogleCloudAiplatformV1CreateFeatureRequest extends com.googl
   }
 
   /**
-   * Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format: `pro
-   * jects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+   * Required. The resource name of the EntityType to create a Feature. Format: `projects/{project}/
+   * locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -106,9 +101,8 @@ public final class GoogleCloudAiplatformV1CreateFeatureRequest extends com.googl
   }
 
   /**
-   * Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format: `pro
-   * jects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
-   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+   * Required. The resource name of the EntityType to create a Feature. Format: `projects/{project}/
+   * locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudAiplatformV1CreateFeatureRequest setParent(java.lang.String parent) {

@@ -33,6 +33,25 @@ package com.google.api.services.policysimulator.v1alpha.model;
 public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Time when this `OrgPolicyViolationsPreview` was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
+   * Output only. The names of the constraints against which all `OrgPolicyViolations` were
+   * evaluated. If `OrgPolicyOverlay` only contains `PolicyOverlay` then it contains the name of the
+   * configured custom constraint, applicable to the specified policies. Otherwise it contains the
+   * name of the constraint specified in `CustomConstraintOverlay`. Format:
+   * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
+   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> customConstraints;
+
+  /**
    * Output only. The resource name of the `OrgPolicyViolationsPreview`. It has the following
    * format: `organizations/{organization}/locations/{location}/orgPolicyViolationsPreviews/{orgPoli
    * cyViolationsPreview}` Example: `organizations/my-example-
@@ -73,6 +92,50 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview e
    */
   @com.google.api.client.util.Key
   private java.lang.Integer violationsCount;
+
+  /**
+   * Output only. Time when this `OrgPolicyViolationsPreview` was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. Time when this `OrgPolicyViolationsPreview` was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The names of the constraints against which all `OrgPolicyViolations` were
+   * evaluated. If `OrgPolicyOverlay` only contains `PolicyOverlay` then it contains the name of the
+   * configured custom constraint, applicable to the specified policies. Otherwise it contains the
+   * name of the constraint specified in `CustomConstraintOverlay`. Format:
+   * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
+   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCustomConstraints() {
+    return customConstraints;
+  }
+
+  /**
+   * Output only. The names of the constraints against which all `OrgPolicyViolations` were
+   * evaluated. If `OrgPolicyOverlay` only contains `PolicyOverlay` then it contains the name of the
+   * configured custom constraint, applicable to the specified policies. Otherwise it contains the
+   * name of the constraint specified in `CustomConstraintOverlay`. Format:
+   * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
+   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms`
+   * @param customConstraints customConstraints or {@code null} for none
+   */
+  public GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview setCustomConstraints(java.util.List<java.lang.String> customConstraints) {
+    this.customConstraints = customConstraints;
+    return this;
+  }
 
   /**
    * Output only. The resource name of the `OrgPolicyViolationsPreview`. It has the following

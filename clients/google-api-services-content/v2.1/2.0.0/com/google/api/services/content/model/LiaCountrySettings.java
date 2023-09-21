@@ -59,6 +59,13 @@ public final class LiaCountrySettings extends com.google.api.client.json.Generic
   private LiaInventorySettings inventory;
 
   /**
+   * The omnichannel experience configured for this country.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiaOmnichannelExperience omnichannelExperience;
+
+  /**
    * LIA "On Display To Order" settings.
    * The value may be {@code null}.
    */
@@ -144,6 +151,23 @@ public final class LiaCountrySettings extends com.google.api.client.json.Generic
    */
   public LiaCountrySettings setInventory(LiaInventorySettings inventory) {
     this.inventory = inventory;
+    return this;
+  }
+
+  /**
+   * The omnichannel experience configured for this country.
+   * @return value or {@code null} for none
+   */
+  public LiaOmnichannelExperience getOmnichannelExperience() {
+    return omnichannelExperience;
+  }
+
+  /**
+   * The omnichannel experience configured for this country.
+   * @param omnichannelExperience omnichannelExperience or {@code null} for none
+   */
+  public LiaCountrySettings setOmnichannelExperience(LiaOmnichannelExperience omnichannelExperience) {
+    this.omnichannelExperience = omnichannelExperience;
     return this;
   }
 

@@ -17,10 +17,8 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * VPC Access settings. For more information on creating a VPC Connector, visit
- * https://cloud.google.com/vpc/docs/configure-serverless-vpc-access For information on how to
- * configure Cloud Run with an existing VPC Connector, visit
- * https://cloud.google.com/run/docs/configuring/connecting-vpc
+ * VPC Access settings. For more information on sending traffic to a VPC network, visit
+ * https://cloud.google.com/run/docs/configuring/connecting-vpc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -35,7 +33,8 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   /**
    * VPC Access connector name. Format:
    * projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project
-   * id or number.
+   * id or number. For more information on sending traffic to a VPC network via a connector, visit
+   * https://cloud.google.com/run/docs/configuring/vpc-connectors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +48,23 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   private java.lang.String egress;
 
   /**
+   * Direct VPC egress settings. Currently only single network interface is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRunV2NetworkInterface> networkInterfaces;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRunV2NetworkInterface used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRunV2NetworkInterface.class);
+  }
+
+  /**
    * VPC Access connector name. Format:
    * projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project
-   * id or number.
+   * id or number. For more information on sending traffic to a VPC network via a connector, visit
+   * https://cloud.google.com/run/docs/configuring/vpc-connectors.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnector() {
@@ -61,7 +74,8 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   /**
    * VPC Access connector name. Format:
    * projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project
-   * id or number.
+   * id or number. For more information on sending traffic to a VPC network via a connector, visit
+   * https://cloud.google.com/run/docs/configuring/vpc-connectors.
    * @param connector connector or {@code null} for none
    */
   public GoogleCloudRunV2VpcAccess setConnector(java.lang.String connector) {
@@ -83,6 +97,23 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
    */
   public GoogleCloudRunV2VpcAccess setEgress(java.lang.String egress) {
     this.egress = egress;
+    return this;
+  }
+
+  /**
+   * Direct VPC egress settings. Currently only single network interface is supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRunV2NetworkInterface> getNetworkInterfaces() {
+    return networkInterfaces;
+  }
+
+  /**
+   * Direct VPC egress settings. Currently only single network interface is supported.
+   * @param networkInterfaces networkInterfaces or {@code null} for none
+   */
+  public GoogleCloudRunV2VpcAccess setNetworkInterfaces(java.util.List<GoogleCloudRunV2NetworkInterface> networkInterfaces) {
+    this.networkInterfaces = networkInterfaces;
     return this;
   }
 

@@ -89,6 +89,14 @@ public final class GoogleIdentityAccesscontextmanagerV1Condition extends com.goo
   private java.util.List<java.lang.String> requiredAccessLevels;
 
   /**
+   * The request must originate from one of the provided VPC networks in Google Cloud. Cannot
+   * specify this field together with `ip_subnetworks`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleIdentityAccesscontextmanagerV1VpcNetworkSource> vpcNetworkSources;
+
+  /**
    * Device specific restrictions, all restrictions must hold for the Condition to be true. If not
    * specified, all devices are allowed.
    * @return value or {@code null} for none
@@ -215,6 +223,25 @@ public final class GoogleIdentityAccesscontextmanagerV1Condition extends com.goo
    */
   public GoogleIdentityAccesscontextmanagerV1Condition setRequiredAccessLevels(java.util.List<java.lang.String> requiredAccessLevels) {
     this.requiredAccessLevels = requiredAccessLevels;
+    return this;
+  }
+
+  /**
+   * The request must originate from one of the provided VPC networks in Google Cloud. Cannot
+   * specify this field together with `ip_subnetworks`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleIdentityAccesscontextmanagerV1VpcNetworkSource> getVpcNetworkSources() {
+    return vpcNetworkSources;
+  }
+
+  /**
+   * The request must originate from one of the provided VPC networks in Google Cloud. Cannot
+   * specify this field together with `ip_subnetworks`.
+   * @param vpcNetworkSources vpcNetworkSources or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1Condition setVpcNetworkSources(java.util.List<GoogleIdentityAccesscontextmanagerV1VpcNetworkSource> vpcNetworkSources) {
+    this.vpcNetworkSources = vpcNetworkSources;
     return this;
   }
 

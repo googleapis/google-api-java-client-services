@@ -504,7 +504,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private PrivateClusterConfig privateClusterConfig;
 
   /**
-   * Enable/Disable Protect API features for the cluster.
+   * Deprecated: Use SecurityPostureConfig instead. Enable/Disable Protect API features for the
+   * cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1762,7 +1763,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable/Disable Protect API features for the cluster.
+   * Deprecated: Use SecurityPostureConfig instead. Enable/Disable Protect API features for the
+   * cluster.
    * @return value or {@code null} for none
    */
   public ProtectConfig getProtectConfig() {
@@ -1770,7 +1772,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable/Disable Protect API features for the cluster.
+   * Deprecated: Use SecurityPostureConfig instead. Enable/Disable Protect API features for the
+   * cluster.
    * @param protectConfig protectConfig or {@code null} for none
    */
   public Cluster setProtectConfig(ProtectConfig protectConfig) {

@@ -169,6 +169,14 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private FlexibleRuntimeSettings flexibleRuntimeSettings;
 
   /**
+   * Additional Google Generated Customer Metadata, this field won't be provided by default and can
+   * be requested by setting the IncludeExtraData field in GetVersionRequest
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> generatedCustomerMetadata;
+
+  /**
    * An ordered list of URL-matching patterns that should be applied to incoming requests. The first
    * matching URL handles the request and other request handlers are not attempted.Only returned in
    * GET requests if view=FULL is set.
@@ -684,6 +692,25 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setFlexibleRuntimeSettings(FlexibleRuntimeSettings flexibleRuntimeSettings) {
     this.flexibleRuntimeSettings = flexibleRuntimeSettings;
+    return this;
+  }
+
+  /**
+   * Additional Google Generated Customer Metadata, this field won't be provided by default and can
+   * be requested by setting the IncludeExtraData field in GetVersionRequest
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getGeneratedCustomerMetadata() {
+    return generatedCustomerMetadata;
+  }
+
+  /**
+   * Additional Google Generated Customer Metadata, this field won't be provided by default and can
+   * be requested by setting the IncludeExtraData field in GetVersionRequest
+   * @param generatedCustomerMetadata generatedCustomerMetadata or {@code null} for none
+   */
+  public Version setGeneratedCustomerMetadata(java.util.Map<String, java.lang.Object> generatedCustomerMetadata) {
+    this.generatedCustomerMetadata = generatedCustomerMetadata;
     return this;
   }
 

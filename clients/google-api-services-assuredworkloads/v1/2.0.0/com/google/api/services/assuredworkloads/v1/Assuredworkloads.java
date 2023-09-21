@@ -544,6 +544,267 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class Workloads {
 
         /**
+         * Analyzes a hypothetical move of a source resource to a target workload to surface compliance
+         * risks. The analysis is best effort and is not guaranteed to be exhaustive.
+         *
+         * Create a request for the method "workloads.analyzeWorkloadMove".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link AnalyzeWorkloadMove#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param target Required. The resource ID of the folder-based destination workload. This workload is where the
+         *        source resource will hypothetically be moved to. Specify the workload's relative resource
+         *        name, formatted as:
+         *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+         *        example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+         * @return the request
+         */
+        public AnalyzeWorkloadMove analyzeWorkloadMove(java.lang.String target) throws java.io.IOException {
+          AnalyzeWorkloadMove result = new AnalyzeWorkloadMove(target);
+          initialize(result);
+          return result;
+        }
+
+        public class AnalyzeWorkloadMove extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1AnalyzeWorkloadMoveResponse> {
+
+          private static final String REST_PATH = "v1/{+target}:analyzeWorkloadMove";
+
+          private final java.util.regex.Pattern TARGET_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+          /**
+           * Analyzes a hypothetical move of a source resource to a target workload to surface compliance
+           * risks. The analysis is best effort and is not guaranteed to be exhaustive.
+           *
+           * Create a request for the method "workloads.analyzeWorkloadMove".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link AnalyzeWorkloadMove#execute()} method to invoke the remote
+           * operation. <p> {@link AnalyzeWorkloadMove#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param target Required. The resource ID of the folder-based destination workload. This workload is where the
+         *        source resource will hypothetically be moved to. Specify the workload's relative resource
+         *        name, formatted as:
+         *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+         *        example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+           * @since 1.13
+           */
+          protected AnalyzeWorkloadMove(java.lang.String target) {
+            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1AnalyzeWorkloadMoveResponse.class);
+            this.target = com.google.api.client.util.Preconditions.checkNotNull(target, "Required parameter target must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TARGET_PATTERN.matcher(target).matches(),
+                  "Parameter target must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public AnalyzeWorkloadMove set$Xgafv(java.lang.String $Xgafv) {
+            return (AnalyzeWorkloadMove) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AnalyzeWorkloadMove setAccessToken(java.lang.String accessToken) {
+            return (AnalyzeWorkloadMove) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AnalyzeWorkloadMove setAlt(java.lang.String alt) {
+            return (AnalyzeWorkloadMove) super.setAlt(alt);
+          }
+
+          @Override
+          public AnalyzeWorkloadMove setCallback(java.lang.String callback) {
+            return (AnalyzeWorkloadMove) super.setCallback(callback);
+          }
+
+          @Override
+          public AnalyzeWorkloadMove setFields(java.lang.String fields) {
+            return (AnalyzeWorkloadMove) super.setFields(fields);
+          }
+
+          @Override
+          public AnalyzeWorkloadMove setKey(java.lang.String key) {
+            return (AnalyzeWorkloadMove) super.setKey(key);
+          }
+
+          @Override
+          public AnalyzeWorkloadMove setOauthToken(java.lang.String oauthToken) {
+            return (AnalyzeWorkloadMove) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AnalyzeWorkloadMove setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AnalyzeWorkloadMove) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AnalyzeWorkloadMove setQuotaUser(java.lang.String quotaUser) {
+            return (AnalyzeWorkloadMove) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AnalyzeWorkloadMove setUploadType(java.lang.String uploadType) {
+            return (AnalyzeWorkloadMove) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AnalyzeWorkloadMove setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AnalyzeWorkloadMove) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource ID of the folder-based destination workload. This workload is
+           * where the source resource will hypothetically be moved to. Specify the workload's
+           * relative resource name, formatted as:
+           * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+           * example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String target;
+
+          /** Required. The resource ID of the folder-based destination workload. This workload is where the
+         source resource will hypothetically be moved to. Specify the workload's relative resource name,
+         formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+         example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+           */
+          public java.lang.String getTarget() {
+            return target;
+          }
+
+          /**
+           * Required. The resource ID of the folder-based destination workload. This workload is
+           * where the source resource will hypothetically be moved to. Specify the workload's
+           * relative resource name, formatted as:
+           * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
+           * example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
+           */
+          public AnalyzeWorkloadMove setTarget(java.lang.String target) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TARGET_PATTERN.matcher(target).matches(),
+                  "Parameter target must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+            this.target = target;
+            return this;
+          }
+
+          /**
+           * Optional. List of asset types to be analyzed, including and under the source resource.
+           * If empty, all assets are analyzed. The complete list of asset types is available
+           * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
+           * types#searchable_asset_types).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> assetTypes;
+
+          /** Optional. List of asset types to be analyzed, including and under the source resource. If empty,
+         all assets are analyzed. The complete list of asset types is available
+         [here](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+           */
+          public java.util.List<java.lang.String> getAssetTypes() {
+            return assetTypes;
+          }
+
+          /**
+           * Optional. List of asset types to be analyzed, including and under the source resource.
+           * If empty, all assets are analyzed. The complete list of asset types is available
+           * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
+           * types#searchable_asset_types).
+           */
+          public AnalyzeWorkloadMove setAssetTypes(java.util.List<java.lang.String> assetTypes) {
+            this.assetTypes = assetTypes;
+            return this;
+          }
+
+          /** Optional. Page size. If a value is not specified, the default value of 10 is used. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Page size. If a value is not specified, the default value of 10 is used.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Page size. If a value is not specified, the default value of 10 is used. */
+          public AnalyzeWorkloadMove setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The page token from the previous response. It needs to be passed in the
+           * second and following requests.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token from the previous response. It needs to be passed in the second and
+         following requests.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The page token from the previous response. It needs to be passed in the
+           * second and following requests.
+           */
+          public AnalyzeWorkloadMove setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * The source type is a project. Specify the project's relative resource name, formatted
+           * as either a project number or a project ID: "projects/{PROJECT_NUMBER}" or
+           * "projects/{PROJECT_ID}" For example: "projects/951040570662" when specifying a project
+           * number, or "projects/my-project-123" when specifying a project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String project;
+
+          /** The source type is a project. Specify the project's relative resource name, formatted as either a
+         project number or a project ID: "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}" For example:
+         "projects/951040570662" when specifying a project number, or "projects/my-project-123" when
+         specifying a project ID.
+           */
+          public java.lang.String getProject() {
+            return project;
+          }
+
+          /**
+           * The source type is a project. Specify the project's relative resource name, formatted
+           * as either a project number or a project ID: "projects/{PROJECT_NUMBER}" or
+           * "projects/{PROJECT_ID}" For example: "projects/951040570662" when specifying a project
+           * number, or "projects/my-project-123" when specifying a project ID.
+           */
+          public AnalyzeWorkloadMove setProject(java.lang.String project) {
+            this.project = project;
+            return this;
+          }
+
+          @Override
+          public AnalyzeWorkloadMove set(String parameterName, Object value) {
+            return (AnalyzeWorkloadMove) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates Assured Workload.
          *
          * Create a request for the method "workloads.create".

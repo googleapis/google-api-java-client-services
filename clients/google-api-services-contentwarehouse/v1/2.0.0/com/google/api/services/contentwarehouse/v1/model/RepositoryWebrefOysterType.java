@@ -39,15 +39,6 @@ public final class RepositoryWebrefOysterType extends com.google.api.client.json
   private java.lang.Integer featureType;
 
   /**
-   * Geo Ontology GConcept Instances from the FeatureProto. - Design doc linked off
-   * http://wiki/Main/GeoOntology - Use the accessor library to read this field:
-   * geostore/base/public/gconcept_instance.h
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostoreOntologyRawGConceptInstanceContainerProto gconcepts;
-
-  /**
    * The Oyster feature type, which provides a rough categorization. This is a value of the enum
    * geostore.FeatureProto.TypeCategory.
    * @return value or {@code null} for none
@@ -63,27 +54,6 @@ public final class RepositoryWebrefOysterType extends com.google.api.client.json
    */
   public RepositoryWebrefOysterType setFeatureType(java.lang.Integer featureType) {
     this.featureType = featureType;
-    return this;
-  }
-
-  /**
-   * Geo Ontology GConcept Instances from the FeatureProto. - Design doc linked off
-   * http://wiki/Main/GeoOntology - Use the accessor library to read this field:
-   * geostore/base/public/gconcept_instance.h
-   * @return value or {@code null} for none
-   */
-  public GeostoreOntologyRawGConceptInstanceContainerProto getGconcepts() {
-    return gconcepts;
-  }
-
-  /**
-   * Geo Ontology GConcept Instances from the FeatureProto. - Design doc linked off
-   * http://wiki/Main/GeoOntology - Use the accessor library to read this field:
-   * geostore/base/public/gconcept_instance.h
-   * @param gconcepts gconcepts or {@code null} for none
-   */
-  public RepositoryWebrefOysterType setGconcepts(GeostoreOntologyRawGConceptInstanceContainerProto gconcepts) {
-    this.gconcepts = gconcepts;
     return this;
   }
 

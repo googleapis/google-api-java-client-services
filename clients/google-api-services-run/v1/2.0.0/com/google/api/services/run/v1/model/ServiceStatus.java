@@ -90,7 +90,7 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
 
   /**
    * URL that will distribute traffic over the provided traffic targets. It generally has the form
-   * https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
+   * `https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,7 +222,7 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
 
   /**
    * URL that will distribute traffic over the provided traffic targets. It generally has the form
-   * https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
+   * `https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app`
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -231,7 +231,7 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
 
   /**
    * URL that will distribute traffic over the provided traffic targets. It generally has the form
-   * https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
+   * `https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app`
    * @param url url or {@code null} for none
    */
   public ServiceStatus setUrl(java.lang.String url) {

@@ -32,29 +32,29 @@ package com.google.api.services.playintegrity.v1.model;
 public final class GuidanceDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * This shows when there is an issue with at least one of the integrity verdicts, and provides
-   * user remediation guidance.
+   * This shows when there is an issue with at least one of the integrity verdicts, which can be
+   * remedied by the user and provides additional details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> userRemediation;
+  private java.util.List<UserRemediationDetails> userRemediationDetails;
 
   /**
-   * This shows when there is an issue with at least one of the integrity verdicts, and provides
-   * user remediation guidance.
+   * This shows when there is an issue with at least one of the integrity verdicts, which can be
+   * remedied by the user and provides additional details.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getUserRemediation() {
-    return userRemediation;
+  public java.util.List<UserRemediationDetails> getUserRemediationDetails() {
+    return userRemediationDetails;
   }
 
   /**
-   * This shows when there is an issue with at least one of the integrity verdicts, and provides
-   * user remediation guidance.
-   * @param userRemediation userRemediation or {@code null} for none
+   * This shows when there is an issue with at least one of the integrity verdicts, which can be
+   * remedied by the user and provides additional details.
+   * @param userRemediationDetails userRemediationDetails or {@code null} for none
    */
-  public GuidanceDetails setUserRemediation(java.util.List<java.lang.String> userRemediation) {
-    this.userRemediation = userRemediation;
+  public GuidanceDetails setUserRemediationDetails(java.util.List<UserRemediationDetails> userRemediationDetails) {
+    this.userRemediationDetails = userRemediationDetails;
     return this;
   }
 

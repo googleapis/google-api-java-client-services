@@ -69,6 +69,15 @@ public final class ImageRepositoryVideoProperties extends com.google.api.client.
   private java.lang.Long firstProcessingTimestampSec;
 
   /**
+   * Proto to store vertical indexing information for the document. The video can be indexed to
+   * multiple verticals, including video search. It can also be indexed only in verticals, not in
+   * video search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ImageRepositoryVideoPropertiesVerticalIndexingInfoVideo> indexedVerticals;
+
+  /**
    * DEPRECATED: please use content_based_metadata.inline_playback. Metadata related to Inline
    * playback on the Interest Feed
    * The value may be {@code null}.
@@ -186,6 +195,27 @@ public final class ImageRepositoryVideoProperties extends com.google.api.client.
    */
   public ImageRepositoryVideoProperties setFirstProcessingTimestampSec(java.lang.Long firstProcessingTimestampSec) {
     this.firstProcessingTimestampSec = firstProcessingTimestampSec;
+    return this;
+  }
+
+  /**
+   * Proto to store vertical indexing information for the document. The video can be indexed to
+   * multiple verticals, including video search. It can also be indexed only in verticals, not in
+   * video search.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ImageRepositoryVideoPropertiesVerticalIndexingInfoVideo> getIndexedVerticals() {
+    return indexedVerticals;
+  }
+
+  /**
+   * Proto to store vertical indexing information for the document. The video can be indexed to
+   * multiple verticals, including video search. It can also be indexed only in verticals, not in
+   * video search.
+   * @param indexedVerticals indexedVerticals or {@code null} for none
+   */
+  public ImageRepositoryVideoProperties setIndexedVerticals(java.util.List<ImageRepositoryVideoPropertiesVerticalIndexingInfoVideo> indexedVerticals) {
+    this.indexedVerticals = indexedVerticals;
     return this;
   }
 

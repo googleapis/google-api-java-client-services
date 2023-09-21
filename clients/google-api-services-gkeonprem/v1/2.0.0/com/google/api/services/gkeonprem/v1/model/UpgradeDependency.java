@@ -44,6 +44,13 @@ public final class UpgradeDependency extends com.google.api.client.json.GenericJ
   private java.lang.String localName;
 
   /**
+   * Membership names are formatted as `projects//locations//memberships/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String membership;
+
+  /**
    * Resource name of the dependency.
    * The value may be {@code null}.
    */
@@ -89,6 +96,23 @@ public final class UpgradeDependency extends com.google.api.client.json.GenericJ
    */
   public UpgradeDependency setLocalName(java.lang.String localName) {
     this.localName = localName;
+    return this;
+  }
+
+  /**
+   * Membership names are formatted as `projects//locations//memberships/`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMembership() {
+    return membership;
+  }
+
+  /**
+   * Membership names are formatted as `projects//locations//memberships/`.
+   * @param membership membership or {@code null} for none
+   */
+  public UpgradeDependency setMembership(java.lang.String membership) {
+    this.membership = membership;
     return this;
   }
 

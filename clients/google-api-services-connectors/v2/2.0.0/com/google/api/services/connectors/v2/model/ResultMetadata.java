@@ -44,6 +44,13 @@ public final class ResultMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * JsonSchema of the result, applicable only if parameter is of type `STRUCT`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema jsonSchema;
+
+  /**
    * Name of the metadata field.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class ResultMetadata extends com.google.api.client.json.GenericJson
    */
   public ResultMetadata setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * JsonSchema of the result, applicable only if parameter is of type `STRUCT`
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getJsonSchema() {
+    return jsonSchema;
+  }
+
+  /**
+   * JsonSchema of the result, applicable only if parameter is of type `STRUCT`
+   * @param jsonSchema jsonSchema or {@code null} for none
+   */
+  public ResultMetadata setJsonSchema(JsonSchema jsonSchema) {
+    this.jsonSchema = jsonSchema;
     return this;
   }
 

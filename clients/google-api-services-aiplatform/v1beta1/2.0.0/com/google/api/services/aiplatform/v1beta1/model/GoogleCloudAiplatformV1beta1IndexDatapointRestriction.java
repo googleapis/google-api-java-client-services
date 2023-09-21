@@ -31,28 +31,28 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1IndexDatapointRestriction extends com.google.api.client.json.GenericJson {
 
   /**
-   * The attributes to allow in this namespace. eg: 'red'
+   * The attributes to allow in this namespace. e.g.: 'red'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowList;
 
   /**
-   * The attributes to deny in this namespace. eg: 'blue'
+   * The attributes to deny in this namespace. e.g.: 'blue'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> denyList;
 
   /**
-   * The namespace of this restriction. eg: color.
+   * The namespace of this restriction. e.g.: color.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String namespace;
 
   /**
-   * The attributes to allow in this namespace. eg: 'red'
+   * The attributes to allow in this namespace. e.g.: 'red'
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowList() {
@@ -60,7 +60,7 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapointRestriction extends
   }
 
   /**
-   * The attributes to allow in this namespace. eg: 'red'
+   * The attributes to allow in this namespace. e.g.: 'red'
    * @param allowList allowList or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1IndexDatapointRestriction setAllowList(java.util.List<java.lang.String> allowList) {
@@ -69,7 +69,7 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapointRestriction extends
   }
 
   /**
-   * The attributes to deny in this namespace. eg: 'blue'
+   * The attributes to deny in this namespace. e.g.: 'blue'
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDenyList() {
@@ -77,7 +77,7 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapointRestriction extends
   }
 
   /**
-   * The attributes to deny in this namespace. eg: 'blue'
+   * The attributes to deny in this namespace. e.g.: 'blue'
    * @param denyList denyList or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1IndexDatapointRestriction setDenyList(java.util.List<java.lang.String> denyList) {
@@ -86,7 +86,7 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapointRestriction extends
   }
 
   /**
-   * The namespace of this restriction. eg: color.
+   * The namespace of this restriction. e.g.: color.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespace() {
@@ -94,7 +94,7 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapointRestriction extends
   }
 
   /**
-   * The namespace of this restriction. eg: color.
+   * The namespace of this restriction. e.g.: color.
    * @param namespace namespace or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1IndexDatapointRestriction setNamespace(java.lang.String namespace) {

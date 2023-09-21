@@ -7518,7 +7518,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       public class Triggers {
 
         /**
-         * Creates a new `BuildTrigger`. This API is experimental.
+         * Creates a new `BuildTrigger`.
          *
          * Create a request for the method "triggers.create".
          *
@@ -7544,7 +7544,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new `BuildTrigger`. This API is experimental.
+           * Creates a new `BuildTrigger`.
            *
            * Create a request for the method "triggers.create".
            *
@@ -7674,7 +7674,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Deletes a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
+         * Deletes a `BuildTrigger` by its project ID and trigger ID.
          *
          * Create a request for the method "triggers.delete".
          *
@@ -7699,7 +7699,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
 
           /**
-           * Deletes a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
+           * Deletes a `BuildTrigger` by its project ID and trigger ID.
            *
            * Create a request for the method "triggers.delete".
            *
@@ -7844,7 +7844,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Returns information about a `BuildTrigger`. This API is experimental.
+         * Returns information about a `BuildTrigger`.
          *
          * Create a request for the method "triggers.get".
          *
@@ -7869,7 +7869,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
 
           /**
-           * Returns information about a `BuildTrigger`. This API is experimental.
+           * Returns information about a `BuildTrigger`.
            *
            * Create a request for the method "triggers.get".
            *
@@ -8023,7 +8023,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Lists existing `BuildTrigger`s. This API is experimental.
+         * Lists existing `BuildTrigger`s.
          *
          * Create a request for the method "triggers.list".
          *
@@ -8047,7 +8047,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists existing `BuildTrigger`s. This API is experimental.
+           * Lists existing `BuildTrigger`s.
            *
            * Create a request for the method "triggers.list".
            *
@@ -8215,7 +8215,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
+         * Updates a `BuildTrigger` by its project ID and trigger ID.
          *
          * Create a request for the method "triggers.patch".
          *
@@ -8241,7 +8241,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
 
           /**
-           * Updates a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
+           * Updates a `BuildTrigger` by its project ID and trigger ID.
            *
            * Create a request for the method "triggers.patch".
            *
@@ -9710,7 +9710,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
     public class Triggers {
 
       /**
-       * Creates a new `BuildTrigger`. This API is experimental.
+       * Creates a new `BuildTrigger`.
        *
        * Create a request for the method "triggers.create".
        *
@@ -9732,7 +9732,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers";
 
         /**
-         * Creates a new `BuildTrigger`. This API is experimental.
+         * Creates a new `BuildTrigger`.
          *
          * Create a request for the method "triggers.create".
          *
@@ -9851,7 +9851,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Deletes a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
+       * Deletes a `BuildTrigger` by its project ID and trigger ID.
        *
        * Create a request for the method "triggers.delete".
        *
@@ -9873,7 +9873,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers/{triggerId}";
 
         /**
-         * Deletes a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
+         * Deletes a `BuildTrigger` by its project ID and trigger ID.
          *
          * Create a request for the method "triggers.delete".
          *
@@ -10009,7 +10009,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Returns information about a `BuildTrigger`. This API is experimental.
+       * Returns information about a `BuildTrigger`.
        *
        * Create a request for the method "triggers.get".
        *
@@ -10031,7 +10031,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers/{triggerId}";
 
         /**
-         * Returns information about a `BuildTrigger`. This API is experimental.
+         * Returns information about a `BuildTrigger`.
          *
          * Create a request for the method "triggers.get".
          *
@@ -10176,7 +10176,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists existing `BuildTrigger`s. This API is experimental.
+       * Lists existing `BuildTrigger`s.
        *
        * Create a request for the method "triggers.list".
        *
@@ -10197,7 +10197,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers";
 
         /**
-         * Lists existing `BuildTrigger`s. This API is experimental.
+         * Lists existing `BuildTrigger`s.
          *
          * Create a request for the method "triggers.list".
          *
@@ -10355,7 +10355,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Updates a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
+       * Updates a `BuildTrigger` by its project ID and trigger ID.
        *
        * Create a request for the method "triggers.patch".
        *
@@ -10378,7 +10378,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers/{triggerId}";
 
         /**
-         * Updates a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
+         * Updates a `BuildTrigger` by its project ID and trigger ID.
          *
          * Create a request for the method "triggers.patch".
          *

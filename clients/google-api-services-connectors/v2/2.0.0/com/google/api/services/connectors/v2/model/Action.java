@@ -31,6 +31,13 @@ package com.google.api.services.connectors.v2.model;
 public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
+   * JsonSchema representation of this actions's input schema
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema inputJsonSchema;
+
+  /**
    * List containing input parameter metadata.
    * The value may be {@code null}.
    */
@@ -45,11 +52,35 @@ public final class Action extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * JsonSchema representation of this actions's result schema
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema resultJsonSchema;
+
+  /**
    * List containing the metadata of result fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ResultMetadata> resultMetadata;
+
+  /**
+   * JsonSchema representation of this actions's input schema
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getInputJsonSchema() {
+    return inputJsonSchema;
+  }
+
+  /**
+   * JsonSchema representation of this actions's input schema
+   * @param inputJsonSchema inputJsonSchema or {@code null} for none
+   */
+  public Action setInputJsonSchema(JsonSchema inputJsonSchema) {
+    this.inputJsonSchema = inputJsonSchema;
+    return this;
+  }
 
   /**
    * List containing input parameter metadata.
@@ -82,6 +113,23 @@ public final class Action extends com.google.api.client.json.GenericJson {
    */
   public Action setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * JsonSchema representation of this actions's result schema
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getResultJsonSchema() {
+    return resultJsonSchema;
+  }
+
+  /**
+   * JsonSchema representation of this actions's result schema
+   * @param resultJsonSchema resultJsonSchema or {@code null} for none
+   */
+  public Action setResultJsonSchema(JsonSchema resultJsonSchema) {
+    this.resultJsonSchema = resultJsonSchema;
     return this;
   }
 

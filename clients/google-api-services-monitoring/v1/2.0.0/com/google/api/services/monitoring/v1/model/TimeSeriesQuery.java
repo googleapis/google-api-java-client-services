@@ -31,6 +31,14 @@ package com.google.api.services.monitoring.v1.model;
 public final class TimeSeriesQuery extends com.google.api.client.json.GenericJson {
 
   /**
+   * Preview: A query used to fetch a time series, category series, or numeric series with SQL. This
+   * is a preview feature and may be subject to change before final release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OpsAnalyticsQuery opsAnalyticsQuery;
+
+  /**
    * Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period
    * so that there will be only 1 output value.*Note: This could override the configured alignment
    * period except for the cases where a series of data points are expected, like - XyChart -
@@ -77,6 +85,25 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String unitOverride;
+
+  /**
+   * Preview: A query used to fetch a time series, category series, or numeric series with SQL. This
+   * is a preview feature and may be subject to change before final release.
+   * @return value or {@code null} for none
+   */
+  public OpsAnalyticsQuery getOpsAnalyticsQuery() {
+    return opsAnalyticsQuery;
+  }
+
+  /**
+   * Preview: A query used to fetch a time series, category series, or numeric series with SQL. This
+   * is a preview feature and may be subject to change before final release.
+   * @param opsAnalyticsQuery opsAnalyticsQuery or {@code null} for none
+   */
+  public TimeSeriesQuery setOpsAnalyticsQuery(OpsAnalyticsQuery opsAnalyticsQuery) {
+    this.opsAnalyticsQuery = opsAnalyticsQuery;
+    return this;
+  }
 
   /**
    * Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period

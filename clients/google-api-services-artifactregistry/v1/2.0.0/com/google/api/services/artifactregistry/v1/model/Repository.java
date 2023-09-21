@@ -75,7 +75,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private DockerRepositoryConfig dockerConfig;
 
   /**
-   * The format of packages that are stored in the repository.
+   * Optional. The format of packages that are stored in the repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private MavenRepositoryConfig mavenConfig;
 
   /**
-   * The mode of the repository.
+   * Optional. The mode of the repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,7 +250,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The format of packages that are stored in the repository.
+   * Optional. The format of packages that are stored in the repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormat() {
@@ -258,7 +258,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The format of packages that are stored in the repository.
+   * Optional. The format of packages that are stored in the repository.
    * @param format format or {@code null} for none
    */
   public Repository setFormat(java.lang.String format) {
@@ -328,7 +328,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mode of the repository.
+   * Optional. The mode of the repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -336,7 +336,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mode of the repository.
+   * Optional. The mode of the repository.
    * @param mode mode or {@code null} for none
    */
   public Repository setMode(java.lang.String mode) {

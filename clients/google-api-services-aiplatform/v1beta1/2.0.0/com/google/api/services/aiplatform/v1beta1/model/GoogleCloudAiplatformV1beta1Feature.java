@@ -121,7 +121,7 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   private String updateTime;
 
   /**
-   * Required. Immutable. Type of Feature value.
+   * Immutable. Type of Feature value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -338,7 +338,7 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Required. Immutable. Type of Feature value.
+   * Immutable. Type of Feature value.
    * @return value or {@code null} for none
    */
   public java.lang.String getValueType() {
@@ -346,7 +346,7 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Required. Immutable. Type of Feature value.
+   * Immutable. Type of Feature value.
    * @param valueType valueType or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Feature setValueType(java.lang.String valueType) {

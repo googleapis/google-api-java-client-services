@@ -67,6 +67,13 @@ public final class Field extends com.google.api.client.json.GenericJson {
   private java.lang.String field;
 
   /**
+   * JsonSchema representation of this entity's schema
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema jsonSchema;
+
+  /**
    * The following boolean field specifies if the current Field acts as a primary key or id if the
    * parent is of type entity.
    * The value may be {@code null}.
@@ -174,6 +181,23 @@ public final class Field extends com.google.api.client.json.GenericJson {
    */
   public Field setField(java.lang.String field) {
     this.field = field;
+    return this;
+  }
+
+  /**
+   * JsonSchema representation of this entity's schema
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getJsonSchema() {
+    return jsonSchema;
+  }
+
+  /**
+   * JsonSchema representation of this entity's schema
+   * @param jsonSchema jsonSchema or {@code null} for none
+   */
+  public Field setJsonSchema(JsonSchema jsonSchema) {
+    this.jsonSchema = jsonSchema;
     return this;
   }
 

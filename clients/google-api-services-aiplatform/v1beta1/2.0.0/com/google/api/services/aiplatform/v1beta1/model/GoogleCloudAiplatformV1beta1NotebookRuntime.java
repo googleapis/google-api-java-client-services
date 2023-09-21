@@ -70,6 +70,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private java.lang.String healthState;
 
   /**
+   * The labels with user-defined metadata to organize your NotebookRuntime. Label keys and values
+   * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. No more than
+   * 64 user labels can be associated with one Dataset (System labels are excluded). See
+   * https://goo.gl/xmQnxf for more information and examples of labels. System reserved label keys
+   * are prefixed with "aiplatform.googleapis.com/" and are immutable. Following system labels exist
+   * for NotebookRuntime: * "aiplatform.googleapis.com/notebook_runtime_gce_instance_id": output
+   * only, its value is the Compute Engine instance id. *
+   * "aiplatform.googleapis.com/colab_enterprise_entry_service": its value is either "BigQuery" or
+   * "Vertex"; if absent, it should be "Vertex". This is to describe the entry service, either
+   * BigQuery or Vertex.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Output only. The resource name of the NotebookRuntime.
    * The value may be {@code null}.
    */
@@ -117,6 +134,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. The VM os image version of NotebookRuntime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
 
   /**
    * Output only. Timestamp when this NotebookRuntime was created.
@@ -208,6 +232,43 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setHealthState(java.lang.String healthState) {
     this.healthState = healthState;
+    return this;
+  }
+
+  /**
+   * The labels with user-defined metadata to organize your NotebookRuntime. Label keys and values
+   * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. No more than
+   * 64 user labels can be associated with one Dataset (System labels are excluded). See
+   * https://goo.gl/xmQnxf for more information and examples of labels. System reserved label keys
+   * are prefixed with "aiplatform.googleapis.com/" and are immutable. Following system labels exist
+   * for NotebookRuntime: * "aiplatform.googleapis.com/notebook_runtime_gce_instance_id": output
+   * only, its value is the Compute Engine instance id. *
+   * "aiplatform.googleapis.com/colab_enterprise_entry_service": its value is either "BigQuery" or
+   * "Vertex"; if absent, it should be "Vertex". This is to describe the entry service, either
+   * BigQuery or Vertex.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * The labels with user-defined metadata to organize your NotebookRuntime. Label keys and values
+   * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. No more than
+   * 64 user labels can be associated with one Dataset (System labels are excluded). See
+   * https://goo.gl/xmQnxf for more information and examples of labels. System reserved label keys
+   * are prefixed with "aiplatform.googleapis.com/" and are immutable. Following system labels exist
+   * for NotebookRuntime: * "aiplatform.googleapis.com/notebook_runtime_gce_instance_id": output
+   * only, its value is the Compute Engine instance id. *
+   * "aiplatform.googleapis.com/colab_enterprise_entry_service": its value is either "BigQuery" or
+   * "Vertex"; if absent, it should be "Vertex". This is to describe the entry service, either
+   * BigQuery or Vertex.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 
@@ -327,6 +388,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The VM os image version of NotebookRuntime.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Output only. The VM os image version of NotebookRuntime.
+   * @param version version or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

@@ -70,7 +70,10 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * Regardless of the task's `dispatch_deadline`, the app handler will not run for longer than than
    * the service's timeout. We recommend setting the `dispatch_deadline` to at most a few seconds
    * more than the app handler's timeout. For more information see
-   * [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts).
+   * [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts). The value
+   * must be given as a string that indicates the length of time (in seconds) followed by `s` (for
+   * "seconds"). For more information on the format, see the documentation for
+   * [Duration](https://protobuf.dev/reference/protobuf/google.protobuf/#duration).
    * `dispatch_deadline` will be truncated to the nearest millisecond. The deadline is an
    * approximate deadline.
    * The value may be {@code null}.
@@ -225,7 +228,10 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * Regardless of the task's `dispatch_deadline`, the app handler will not run for longer than than
    * the service's timeout. We recommend setting the `dispatch_deadline` to at most a few seconds
    * more than the app handler's timeout. For more information see
-   * [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts).
+   * [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts). The value
+   * must be given as a string that indicates the length of time (in seconds) followed by `s` (for
+   * "seconds"). For more information on the format, see the documentation for
+   * [Duration](https://protobuf.dev/reference/protobuf/google.protobuf/#duration).
    * `dispatch_deadline` will be truncated to the nearest millisecond. The deadline is an
    * approximate deadline.
    * @return value or {@code null} for none
@@ -251,7 +257,10 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * Regardless of the task's `dispatch_deadline`, the app handler will not run for longer than than
    * the service's timeout. We recommend setting the `dispatch_deadline` to at most a few seconds
    * more than the app handler's timeout. For more information see
-   * [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts).
+   * [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts). The value
+   * must be given as a string that indicates the length of time (in seconds) followed by `s` (for
+   * "seconds"). For more information on the format, see the documentation for
+   * [Duration](https://protobuf.dev/reference/protobuf/google.protobuf/#duration).
    * `dispatch_deadline` will be truncated to the nearest millisecond. The deadline is an
    * approximate deadline.
    * @param dispatchDeadline dispatchDeadline or {@code null} for none

@@ -17,8 +17,8 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Represents a collection of external workload identities. You can define IAM policies to grant
- * these identities access to Google Cloud resources.
+ * Represents a collection of workload identities. You can define IAM policies to grant these
+ * identities access to Google Cloud resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a

@@ -38,7 +38,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   private GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig conversationConfig;
 
   /**
-   * A cloud storage bucket source.
+   * A cloud storage bucket source. Note that any previously ingested objects from the source will
+   * be skipped to avoid duplication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +77,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   }
 
   /**
-   * A cloud storage bucket source.
+   * A cloud storage bucket source. Note that any previously ingested objects from the source will
+   * be skipped to avoid duplication.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSource getGcsSource() {
@@ -84,7 +86,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   }
 
   /**
-   * A cloud storage bucket source.
+   * A cloud storage bucket source. Note that any previously ingested objects from the source will
+   * be skipped to avoid duplication.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest setGcsSource(GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSource gcsSource) {

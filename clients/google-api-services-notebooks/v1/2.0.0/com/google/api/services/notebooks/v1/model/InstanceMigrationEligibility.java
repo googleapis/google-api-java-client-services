@@ -18,7 +18,7 @@ package com.google.api.services.notebooks.v1.model;
 
 /**
  * InstanceMigrationEligibility represents the feasibility information of a migration from UmN to
- * WbI. Next tag: 3
+ * WbI.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Notebooks API. For a detailed explanation see:

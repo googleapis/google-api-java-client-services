@@ -53,6 +53,18 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   private java.lang.String issuerUri;
 
   /**
+   * OIDC JWKs in JSON String format. For details on the definition of a JWK, see
+   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
+   * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
+   * and EC asymmetric keys are supported. The JWK must use following format and include only the
+   * following fields: { "keys": [ { "kty": "RSA/EC", "alg": "", "use": "sig", "kid": "", "n": "",
+   * "e": "", "x": "", "y": "", "crv": "" } ] }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jwksJson;
+
+  /**
    * Required. Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers
    * to console sign-in and gcloud sign-in through the browser.
    * The value may be {@code null}.
@@ -110,6 +122,33 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
    */
   public GoogleIamAdminV1WorkforcePoolProviderOidc setIssuerUri(java.lang.String issuerUri) {
     this.issuerUri = issuerUri;
+    return this;
+  }
+
+  /**
+   * OIDC JWKs in JSON String format. For details on the definition of a JWK, see
+   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
+   * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
+   * and EC asymmetric keys are supported. The JWK must use following format and include only the
+   * following fields: { "keys": [ { "kty": "RSA/EC", "alg": "", "use": "sig", "kid": "", "n": "",
+   * "e": "", "x": "", "y": "", "crv": "" } ] }
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJwksJson() {
+    return jwksJson;
+  }
+
+  /**
+   * OIDC JWKs in JSON String format. For details on the definition of a JWK, see
+   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
+   * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
+   * and EC asymmetric keys are supported. The JWK must use following format and include only the
+   * following fields: { "keys": [ { "kty": "RSA/EC", "alg": "", "use": "sig", "kid": "", "n": "",
+   * "e": "", "x": "", "y": "", "crv": "" } ] }
+   * @param jwksJson jwksJson or {@code null} for none
+   */
+  public GoogleIamAdminV1WorkforcePoolProviderOidc setJwksJson(java.lang.String jwksJson) {
+    this.jwksJson = jwksJson;
     return this;
   }
 

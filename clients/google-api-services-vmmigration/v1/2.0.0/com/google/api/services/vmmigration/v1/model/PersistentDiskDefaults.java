@@ -58,6 +58,14 @@ public final class PersistentDiskDefaults extends com.google.api.client.json.Gen
   private java.lang.Integer sourceDiskNumber;
 
   /**
+   * Optional. Details for attachment of the disk to a VM. Used when the disk is set to be attacked
+   * to a target VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmAttachmentDetails vmAttachmentDetails;
+
+  /**
    * A map of labels to associate with the Persistent Disk.
    * @return value or {@code null} for none
    */
@@ -122,6 +130,25 @@ public final class PersistentDiskDefaults extends com.google.api.client.json.Gen
    */
   public PersistentDiskDefaults setSourceDiskNumber(java.lang.Integer sourceDiskNumber) {
     this.sourceDiskNumber = sourceDiskNumber;
+    return this;
+  }
+
+  /**
+   * Optional. Details for attachment of the disk to a VM. Used when the disk is set to be attacked
+   * to a target VM.
+   * @return value or {@code null} for none
+   */
+  public VmAttachmentDetails getVmAttachmentDetails() {
+    return vmAttachmentDetails;
+  }
+
+  /**
+   * Optional. Details for attachment of the disk to a VM. Used when the disk is set to be attacked
+   * to a target VM.
+   * @param vmAttachmentDetails vmAttachmentDetails or {@code null} for none
+   */
+  public PersistentDiskDefaults setVmAttachmentDetails(VmAttachmentDetails vmAttachmentDetails) {
+    this.vmAttachmentDetails = vmAttachmentDetails;
     return this;
   }
 

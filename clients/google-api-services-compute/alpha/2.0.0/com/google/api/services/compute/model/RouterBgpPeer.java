@@ -119,6 +119,22 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean enableIpv6;
 
   /**
+   * List of export policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> exportPolicies;
+
+  /**
+   * List of import policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> importPolicies;
+
+  /**
    * Name of the interface the BGP peer is associated with.
    * The value may be {@code null}.
    */
@@ -407,6 +423,44 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   public RouterBgpPeer setEnableIpv6(java.lang.Boolean enableIpv6) {
     this.enableIpv6 = enableIpv6;
+    return this;
+  }
+
+  /**
+   * List of export policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExportPolicies() {
+    return exportPolicies;
+  }
+
+  /**
+   * List of export policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type.
+   * @param exportPolicies exportPolicies or {@code null} for none
+   */
+  public RouterBgpPeer setExportPolicies(java.util.List<java.lang.String> exportPolicies) {
+    this.exportPolicies = exportPolicies;
+    return this;
+  }
+
+  /**
+   * List of import policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getImportPolicies() {
+    return importPolicies;
+  }
+
+  /**
+   * List of import policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type.
+   * @param importPolicies importPolicies or {@code null} for none
+   */
+  public RouterBgpPeer setImportPolicies(java.util.List<java.lang.String> importPolicies) {
+    this.importPolicies = importPolicies;
     return this;
   }
 

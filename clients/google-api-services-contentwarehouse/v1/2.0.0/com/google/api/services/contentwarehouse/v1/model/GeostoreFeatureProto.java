@@ -219,6 +219,13 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreDisplayDataProto displayData;
 
   /**
+   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreDisputedAreaProto disputedArea;
+
+  /**
    * ** DEPRECATED **
    * The value may be {@code null}.
    */
@@ -304,6 +311,13 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Double geometryPrecisionMeters;
+
+  /**
+   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreGeopoliticalProto geopolitical;
 
   /**
    * Geopolitical (unsimplified) polygons for a feature for different geopolitical use cases.
@@ -1220,6 +1234,23 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
+   * RESERVED
+   * @return value or {@code null} for none
+   */
+  public GeostoreDisputedAreaProto getDisputedArea() {
+    return disputedArea;
+  }
+
+  /**
+   * RESERVED
+   * @param disputedArea disputedArea or {@code null} for none
+   */
+  public GeostoreFeatureProto setDisputedArea(GeostoreDisputedAreaProto disputedArea) {
+    this.disputedArea = disputedArea;
+    return this;
+  }
+
+  /**
    * ** DEPRECATED **
    * @return value or {@code null} for none
    */
@@ -1408,6 +1439,23 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
    */
   public GeostoreFeatureProto setGeometryPrecisionMeters(java.lang.Double geometryPrecisionMeters) {
     this.geometryPrecisionMeters = geometryPrecisionMeters;
+    return this;
+  }
+
+  /**
+   * RESERVED
+   * @return value or {@code null} for none
+   */
+  public GeostoreGeopoliticalProto getGeopolitical() {
+    return geopolitical;
+  }
+
+  /**
+   * RESERVED
+   * @param geopolitical geopolitical or {@code null} for none
+   */
+  public GeostoreFeatureProto setGeopolitical(GeostoreGeopoliticalProto geopolitical) {
+    this.geopolitical = geopolitical;
     return this;
   }
 

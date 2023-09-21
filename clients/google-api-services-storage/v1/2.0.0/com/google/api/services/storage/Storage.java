@@ -7257,12 +7257,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        * @param bucket Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket
      *        value, if any.
        * @param content the {@link com.google.api.services.storage.model.StorageObject} media metadata or {@code null} if none
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @since 1.13
        */
       protected Insert(java.lang.String bucket, com.google.api.services.storage.model.StorageObject content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(Storage.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.storage.model.StorageObject.class);
         this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

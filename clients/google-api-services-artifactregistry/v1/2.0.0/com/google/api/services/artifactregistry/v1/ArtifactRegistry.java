@@ -2791,12 +2791,13 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              *
              * @param parent The name of the parent resource where the artifacts will be uploaded.
              * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadAptArtifactRequest} media metadata or {@code null} if none
-             * @param mediaContent The media HTTP content or {@code null} if none.
+             * @param mediaContent The media HTTP content.
              * @since 1.13
              */
             protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadAptArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
               super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadAptArtifactMediaResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
               initializeMediaUpload(mediaContent);
             }
 
@@ -3736,12 +3737,13 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              *
              * @param parent The resource name of the repository where the Go module will be uploaded.
              * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadGoModuleRequest} media metadata or {@code null} if none
-             * @param mediaContent The media HTTP content or {@code null} if none.
+             * @param mediaContent The media HTTP content.
              * @since 1.13
              */
             protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadGoModuleRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
               super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadGoModuleMediaResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
               initializeMediaUpload(mediaContent);
             }
 
@@ -4083,12 +4085,13 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              *
              * @param parent The name of the parent resource where the artifacts will be uploaded.
              * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadGoogetArtifactRequest} media metadata or {@code null} if none
-             * @param mediaContent The media HTTP content or {@code null} if none.
+             * @param mediaContent The media HTTP content.
              * @since 1.13
              */
             protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadGoogetArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
               super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadGoogetArtifactMediaResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
               initializeMediaUpload(mediaContent);
             }
 
@@ -4294,12 +4297,13 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              *
              * @param parent The resource name of the repository where the KFP artifact will be uploaded.
              * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadKfpArtifactRequest} media metadata or {@code null} if none
-             * @param mediaContent The media HTTP content or {@code null} if none.
+             * @param mediaContent The media HTTP content.
              * @since 1.13
              */
             protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadKfpArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
               super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadKfpArtifactMediaResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
               initializeMediaUpload(mediaContent);
             }
 
@@ -7579,12 +7583,13 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              *
              * @param parent The name of the parent resource where the artifacts will be uploaded.
              * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadYumArtifactRequest} media metadata or {@code null} if none
-             * @param mediaContent The media HTTP content or {@code null} if none.
+             * @param mediaContent The media HTTP content.
              * @since 1.13
              */
             protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadYumArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
               super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadYumArtifactMediaResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
               initializeMediaUpload(mediaContent);
             }
 

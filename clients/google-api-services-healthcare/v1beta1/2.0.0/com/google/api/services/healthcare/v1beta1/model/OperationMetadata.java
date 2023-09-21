@@ -58,7 +58,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private String createTime;
 
   /**
-   * The time at which execution was completed.
+   * The time at which execution workloads were completed. Some tasks will complete after this time
+   * such as logging audit logs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,9 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   /**
    * A link to audit and error logs in the log viewer. Error logs are generated only by some
    * operations, listed at [Viewing error logs in Cloud
-   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging).
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging). The `end_time` specified in
+   * this URL may not match the end time on the metadata because logs are written asynchronously
+   * from execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +143,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The time at which execution was completed.
+   * The time at which execution workloads were completed. Some tasks will complete after this time
+   * such as logging audit logs.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -148,7 +152,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The time at which execution was completed.
+   * The time at which execution workloads were completed. Some tasks will complete after this time
+   * such as logging audit logs.
    * @param endTime endTime or {@code null} for none
    */
   public OperationMetadata setEndTime(String endTime) {
@@ -159,7 +164,9 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   /**
    * A link to audit and error logs in the log viewer. Error logs are generated only by some
    * operations, listed at [Viewing error logs in Cloud
-   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging).
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging). The `end_time` specified in
+   * this URL may not match the end time on the metadata because logs are written asynchronously
+   * from execution.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogsUrl() {
@@ -169,7 +176,9 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   /**
    * A link to audit and error logs in the log viewer. Error logs are generated only by some
    * operations, listed at [Viewing error logs in Cloud
-   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging).
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging). The `end_time` specified in
+   * this URL may not match the end time on the metadata because logs are written asynchronously
+   * from execution.
    * @param logsUrl logsUrl or {@code null} for none
    */
   public OperationMetadata setLogsUrl(java.lang.String logsUrl) {

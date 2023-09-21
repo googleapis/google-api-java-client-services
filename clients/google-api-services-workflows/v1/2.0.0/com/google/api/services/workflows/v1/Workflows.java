@@ -1754,7 +1754,7 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the workflows server.  After setting any optional
          * parameters, call the {@link ListRevisions#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Workflow from which the revisions should be listed. Format:
+         * @param name Required. Workflow for which the revisions should be listed. Format:
          *        projects/{project}/locations/{location}/workflows/{workflow}
          * @return the request
          */
@@ -1782,7 +1782,7 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name Required. Workflow from which the revisions should be listed. Format:
+           * @param name Required. Workflow for which the revisions should be listed. Format:
          *        projects/{project}/locations/{location}/workflows/{workflow}
            * @since 1.13
            */
@@ -1862,13 +1862,13 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Workflow from which the revisions should be listed. Format:
+           * Required. Workflow for which the revisions should be listed. Format:
            * projects/{project}/locations/{location}/workflows/{workflow}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Workflow from which the revisions should be listed. Format:
+          /** Required. Workflow for which the revisions should be listed. Format:
          projects/{project}/locations/{location}/workflows/{workflow}
            */
           public java.lang.String getName() {
@@ -1876,7 +1876,7 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Workflow from which the revisions should be listed. Format:
+           * Required. Workflow for which the revisions should be listed. Format:
            * projects/{project}/locations/{location}/workflows/{workflow}
            */
           public ListRevisions setName(java.lang.String name) {
@@ -1891,14 +1891,14 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The maximum number of revisions to return per page. If a value is not specified, a
-           * default value of 20 is used. The maximum permitted value is 100 and values greater than
-           * 100 coerced down to 100.
+           * default value of 20 is used. The maximum permitted value is 100. Values greater than
+           * 100 are coerced down to 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** The maximum number of revisions to return per page. If a value is not specified, a default value of
-         20 is used. The maximum permitted value is 100 and values greater than 100 coerced down to 100.
+         20 is used. The maximum permitted value is 100. Values greater than 100 are coerced down to 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -1906,8 +1906,8 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The maximum number of revisions to return per page. If a value is not specified, a
-           * default value of 20 is used. The maximum permitted value is 100 and values greater than
-           * 100 coerced down to 100.
+           * default value of 20 is used. The maximum permitted value is 100. Values greater than
+           * 100 are coerced down to 100.
            */
           public ListRevisions setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1953,7 +1953,8 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name The resource name of the workflow. Format:
-         *        projects/{project}/locations/{location}/workflows/{workflow}
+         *        projects/{project}/locations/{location}/workflows/{workflow}. This is a workflow-wide
+         *        field and is not tied to a specific revision.
          * @param content the {@link com.google.api.services.workflows.v1.model.Workflow}
          * @return the request
          */
@@ -1984,7 +1985,8 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The resource name of the workflow. Format:
-         *        projects/{project}/locations/{location}/workflows/{workflow}
+         *        projects/{project}/locations/{location}/workflows/{workflow}. This is a workflow-wide
+         *        field and is not tied to a specific revision.
            * @param content the {@link com.google.api.services.workflows.v1.model.Workflow}
            * @since 1.13
            */
@@ -2055,13 +2057,15 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The resource name of the workflow. Format:
-           * projects/{project}/locations/{location}/workflows/{workflow}
+           * projects/{project}/locations/{location}/workflows/{workflow}. This is a workflow-wide
+           * field and is not tied to a specific revision.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The resource name of the workflow. Format:
-         projects/{project}/locations/{location}/workflows/{workflow}
+         projects/{project}/locations/{location}/workflows/{workflow}. This is a workflow-wide field and is
+         not tied to a specific revision.
            */
           public java.lang.String getName() {
             return name;
@@ -2069,7 +2073,8 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The resource name of the workflow. Format:
-           * projects/{project}/locations/{location}/workflows/{workflow}
+           * projects/{project}/locations/{location}/workflows/{workflow}. This is a workflow-wide
+           * field and is not tied to a specific revision.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

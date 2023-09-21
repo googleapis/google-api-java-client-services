@@ -39,6 +39,13 @@ public final class WorkloadsConfig extends com.google.api.client.json.GenericJso
   private SchedulerResource scheduler;
 
   /**
+   * Optional. Resources used by Airflow triggerers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TriggererResource triggerer;
+
+  /**
    * Optional. Resources used by Airflow web server.
    * The value may be {@code null}.
    */
@@ -66,6 +73,23 @@ public final class WorkloadsConfig extends com.google.api.client.json.GenericJso
    */
   public WorkloadsConfig setScheduler(SchedulerResource scheduler) {
     this.scheduler = scheduler;
+    return this;
+  }
+
+  /**
+   * Optional. Resources used by Airflow triggerers.
+   * @return value or {@code null} for none
+   */
+  public TriggererResource getTriggerer() {
+    return triggerer;
+  }
+
+  /**
+   * Optional. Resources used by Airflow triggerers.
+   * @param triggerer triggerer or {@code null} for none
+   */
+  public WorkloadsConfig setTriggerer(TriggererResource triggerer) {
+    this.triggerer = triggerer;
     return this;
   }
 

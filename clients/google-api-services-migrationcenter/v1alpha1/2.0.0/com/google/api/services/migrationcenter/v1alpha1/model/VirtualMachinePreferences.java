@@ -48,12 +48,28 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
   private ComputeEnginePreferences computeEnginePreferences;
 
   /**
+   * Optional. Parameters that affect network cost estimations. If not set, default values will be
+   * used for the parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VirtualMachinePreferencesNetworkCostParameters networkCostParameters;
+
+  /**
    * Region preferences for assets using this preference set. If you are unsure which value to set,
    * the migration service API region is often a good value to start with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RegionPreferences regionPreferences;
+
+  /**
+   * Optional. Custom data to use for sizing optimizations. Relevant when SizingOptimizationStrategy
+   * is set to "custom".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VirtualMachinePreferencesSizingOptimizationCustomParameters sizingOptimizationCustomParameters;
 
   /**
    * Sizing optimization strategy specifies the preferred strategy used when extrapolating usage
@@ -125,6 +141,25 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
   }
 
   /**
+   * Optional. Parameters that affect network cost estimations. If not set, default values will be
+   * used for the parameters.
+   * @return value or {@code null} for none
+   */
+  public VirtualMachinePreferencesNetworkCostParameters getNetworkCostParameters() {
+    return networkCostParameters;
+  }
+
+  /**
+   * Optional. Parameters that affect network cost estimations. If not set, default values will be
+   * used for the parameters.
+   * @param networkCostParameters networkCostParameters or {@code null} for none
+   */
+  public VirtualMachinePreferences setNetworkCostParameters(VirtualMachinePreferencesNetworkCostParameters networkCostParameters) {
+    this.networkCostParameters = networkCostParameters;
+    return this;
+  }
+
+  /**
    * Region preferences for assets using this preference set. If you are unsure which value to set,
    * the migration service API region is often a good value to start with.
    * @return value or {@code null} for none
@@ -140,6 +175,25 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
    */
   public VirtualMachinePreferences setRegionPreferences(RegionPreferences regionPreferences) {
     this.regionPreferences = regionPreferences;
+    return this;
+  }
+
+  /**
+   * Optional. Custom data to use for sizing optimizations. Relevant when SizingOptimizationStrategy
+   * is set to "custom".
+   * @return value or {@code null} for none
+   */
+  public VirtualMachinePreferencesSizingOptimizationCustomParameters getSizingOptimizationCustomParameters() {
+    return sizingOptimizationCustomParameters;
+  }
+
+  /**
+   * Optional. Custom data to use for sizing optimizations. Relevant when SizingOptimizationStrategy
+   * is set to "custom".
+   * @param sizingOptimizationCustomParameters sizingOptimizationCustomParameters or {@code null} for none
+   */
+  public VirtualMachinePreferences setSizingOptimizationCustomParameters(VirtualMachinePreferencesSizingOptimizationCustomParameters sizingOptimizationCustomParameters) {
+    this.sizingOptimizationCustomParameters = sizingOptimizationCustomParameters;
     return this;
   }
 

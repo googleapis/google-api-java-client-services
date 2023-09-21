@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1.model;
 
 /**
- * An insight about an asset (experimental insight)
+ * A generic insight about an asset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -32,7 +32,7 @@ public final class GenericInsight extends com.google.api.client.json.GenericJson
   /**
    * Output only. Additional information about the insight, each entry can be a logical entry and
    * must make sense if it is displayed with line breaks between each entry. Text can contain md
-   * style links
+   * style links.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GenericInsight extends com.google.api.client.json.GenericJson
   /**
    * Output only. Additional information about the insight, each entry can be a logical entry and
    * must make sense if it is displayed with line breaks between each entry. Text can contain md
-   * style links
+   * style links.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdditionalInformation() {
@@ -68,7 +68,7 @@ public final class GenericInsight extends com.google.api.client.json.GenericJson
   /**
    * Output only. Additional information about the insight, each entry can be a logical entry and
    * must make sense if it is displayed with line breaks between each entry. Text can contain md
-   * style links
+   * style links.
    * @param additionalInformation additionalInformation or {@code null} for none
    */
   public GenericInsight setAdditionalInformation(java.util.List<java.lang.String> additionalInformation) {

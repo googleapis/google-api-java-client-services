@@ -1858,12 +1858,13 @@ public class ChecksService extends com.google.api.client.googleapis.services.jso
        *
        * @param parent Required. Resource name of the app. Example: `accounts/123/apps/456`
        * @param content the {@link com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaAnalyzeUploadRequest} media metadata or {@code null} if none
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @since 1.13
        */
       protected Upload(java.lang.String parent, com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaAnalyzeUploadRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(ChecksService.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.checks.v1alpha.model.Operation.class);
         this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

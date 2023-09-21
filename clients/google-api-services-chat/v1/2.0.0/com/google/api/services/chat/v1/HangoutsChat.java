@@ -421,12 +421,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * @param parent Required. Resource name of the Chat space in which the attachment is uploaded. Format
      *        "spaces/{space}".
        * @param content the {@link com.google.api.services.chat.v1.model.UploadAttachmentRequest} media metadata or {@code null} if none
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @since 1.13
        */
       protected Upload(java.lang.String parent, com.google.api.services.chat.v1.model.UploadAttachmentRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(HangoutsChat.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.chat.v1.model.UploadAttachmentResponse.class);
         this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

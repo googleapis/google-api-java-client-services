@@ -74,6 +74,13 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
   private String lastAnalysisTime;
 
   /**
+   * The last time this resource was scanned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastScanTime;
+
+  /**
    * The status of an SBOM generation.
    * The value may be {@code null}.
    */
@@ -181,6 +188,23 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
    */
   public Discovered setLastAnalysisTime(String lastAnalysisTime) {
     this.lastAnalysisTime = lastAnalysisTime;
+    return this;
+  }
+
+  /**
+   * The last time this resource was scanned.
+   * @return value or {@code null} for none
+   */
+  public String getLastScanTime() {
+    return lastScanTime;
+  }
+
+  /**
+   * The last time this resource was scanned.
+   * @param lastScanTime lastScanTime or {@code null} for none
+   */
+  public Discovered setLastScanTime(String lastScanTime) {
+    this.lastScanTime = lastScanTime;
     return this;
   }
 

@@ -39,7 +39,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private java.lang.String callLogLevel;
 
   /**
-   * Output only. The timestamp for when the workflow was created.
+   * Output only. The timestamp for when the workflow was created. This is a workflow-wide field and
+   * is not tied to a specific revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +58,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private java.lang.String cryptoKeyName;
 
   /**
-   * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
+   * Description of the workflow provided by the user. Must be at most 1000 Unicode characters long.
+   * This is a workflow-wide field and is not tied to a specific revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +69,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
    * Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values
    * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
    * underscores, and dashes. Label keys must start with a letter. International characters are
-   * allowed.
+   * allowed. This is a workflow-wide field and is not tied to a specific revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +77,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the workflow. Format:
-   * projects/{project}/locations/{location}/workflows/{workflow}
+   * projects/{project}/locations/{location}/workflows/{workflow}. This is a workflow-wide field and
+   * is not tied to a specific revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +137,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private StateError stateError;
 
   /**
-   * Output only. The timestamp for when the workflow was last updated.
+   * Output only. The timestamp for when the workflow was last updated. This is a workflow-wide
+   * field and is not tied to a specific revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +175,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp for when the workflow was created.
+   * Output only. The timestamp for when the workflow was created. This is a workflow-wide field and
+   * is not tied to a specific revision.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -179,7 +184,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp for when the workflow was created.
+   * Output only. The timestamp for when the workflow was created. This is a workflow-wide field and
+   * is not tied to a specific revision.
    * @param createTime createTime or {@code null} for none
    */
   public Workflow setCreateTime(String createTime) {
@@ -213,7 +219,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
+   * Description of the workflow provided by the user. Must be at most 1000 Unicode characters long.
+   * This is a workflow-wide field and is not tied to a specific revision.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -221,7 +228,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
+   * Description of the workflow provided by the user. Must be at most 1000 Unicode characters long.
+   * This is a workflow-wide field and is not tied to a specific revision.
    * @param description description or {@code null} for none
    */
   public Workflow setDescription(java.lang.String description) {
@@ -233,7 +241,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
    * Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values
    * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
    * underscores, and dashes. Label keys must start with a letter. International characters are
-   * allowed.
+   * allowed. This is a workflow-wide field and is not tied to a specific revision.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -244,7 +252,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
    * Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values
    * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
    * underscores, and dashes. Label keys must start with a letter. International characters are
-   * allowed.
+   * allowed. This is a workflow-wide field and is not tied to a specific revision.
    * @param labels labels or {@code null} for none
    */
   public Workflow setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -254,7 +262,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the workflow. Format:
-   * projects/{project}/locations/{location}/workflows/{workflow}
+   * projects/{project}/locations/{location}/workflows/{workflow}. This is a workflow-wide field and
+   * is not tied to a specific revision.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -263,7 +272,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the workflow. Format:
-   * projects/{project}/locations/{location}/workflows/{workflow}
+   * projects/{project}/locations/{location}/workflows/{workflow}. This is a workflow-wide field and
+   * is not tied to a specific revision.
    * @param name name or {@code null} for none
    */
   public Workflow setName(java.lang.String name) {
@@ -394,7 +404,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp for when the workflow was last updated.
+   * Output only. The timestamp for when the workflow was last updated. This is a workflow-wide
+   * field and is not tied to a specific revision.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -402,7 +413,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp for when the workflow was last updated.
+   * Output only. The timestamp for when the workflow was last updated. This is a workflow-wide
+   * field and is not tied to a specific revision.
    * @param updateTime updateTime or {@code null} for none
    */
   public Workflow setUpdateTime(String updateTime) {

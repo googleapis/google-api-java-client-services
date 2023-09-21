@@ -44,6 +44,20 @@ public final class ProgressCounter extends com.google.api.client.json.GenericJso
   private java.lang.Long pending;
 
   /**
+   * The number of secondary units that failed in the operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long secondaryFailure;
+
+  /**
+   * The number of secondary units that succeeded in the operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long secondarySuccess;
+
+  /**
    * The number of units that succeeded in the operation.
    * The value may be {@code null}.
    */
@@ -81,6 +95,40 @@ public final class ProgressCounter extends com.google.api.client.json.GenericJso
    */
   public ProgressCounter setPending(java.lang.Long pending) {
     this.pending = pending;
+    return this;
+  }
+
+  /**
+   * The number of secondary units that failed in the operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSecondaryFailure() {
+    return secondaryFailure;
+  }
+
+  /**
+   * The number of secondary units that failed in the operation.
+   * @param secondaryFailure secondaryFailure or {@code null} for none
+   */
+  public ProgressCounter setSecondaryFailure(java.lang.Long secondaryFailure) {
+    this.secondaryFailure = secondaryFailure;
+    return this;
+  }
+
+  /**
+   * The number of secondary units that succeeded in the operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSecondarySuccess() {
+    return secondarySuccess;
+  }
+
+  /**
+   * The number of secondary units that succeeded in the operation.
+   * @param secondarySuccess secondarySuccess or {@code null} for none
+   */
+  public ProgressCounter setSecondarySuccess(java.lang.Long secondarySuccess) {
+    this.secondarySuccess = secondarySuccess;
     return this;
   }
 

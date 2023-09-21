@@ -1562,12 +1562,13 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          *
          * @param advertiserId Required. The ID of the advertiser this asset belongs to.
          * @param content the {@link com.google.api.services.displayvideo.v2.model.CreateAssetRequest} media metadata or {@code null} if none
-         * @param mediaContent The media HTTP content or {@code null} if none.
+         * @param mediaContent The media HTTP content.
          * @since 1.13
          */
         protected Upload(java.lang.Long advertiserId, com.google.api.services.displayvideo.v2.model.CreateAssetRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
           super(DisplayVideo.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.displayvideo.v2.model.CreateAssetResponse.class);
           this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -26657,12 +26658,13 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        *
        * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
        * @param content the {@link com.google.api.services.displayvideo.v2.model.GoogleBytestreamMedia} media metadata or {@code null} if none
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @since 1.13
        */
       protected Upload(java.lang.String resourceName, com.google.api.services.displayvideo.v2.model.GoogleBytestreamMedia content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(DisplayVideo.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.displayvideo.v2.model.GoogleBytestreamMedia.class);
         this.resourceName = com.google.api.client.util.Preconditions.checkNotNull(resourceName, "Required parameter resourceName must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

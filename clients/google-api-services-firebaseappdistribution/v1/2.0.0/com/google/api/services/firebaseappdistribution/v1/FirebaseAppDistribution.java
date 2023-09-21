@@ -249,12 +249,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        *
        * @param app The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
        * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1UploadReleaseRequest} media metadata or {@code null} if none
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @since 1.13
        */
       protected Upload(java.lang.String app, com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1UploadReleaseRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(FirebaseAppDistribution.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.firebaseappdistribution.v1.model.GoogleLongrunningOperation.class);
         this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

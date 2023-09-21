@@ -644,12 +644,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * @param userId The user's email address. The special value `me` can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Draft} media metadata or {@code null} if none
-         * @param mediaContent The media HTTP content or {@code null} if none.
+         * @param mediaContent The media HTTP content.
          * @since 1.13
          */
         protected Create(java.lang.String userId, com.google.api.services.gmail.model.Draft content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
           super(Gmail.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.gmail.model.Draft.class);
           this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -1374,12 +1375,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * @param userId The user's email address. The special value `me` can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Draft} media metadata or {@code null} if none
-         * @param mediaContent The media HTTP content or {@code null} if none.
+         * @param mediaContent The media HTTP content.
          * @since 1.13
          */
         protected Send(java.lang.String userId, com.google.api.services.gmail.model.Draft content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
           super(Gmail.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.gmail.model.Message.class);
           this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -1554,13 +1556,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * @param userId The user's email address. The special value `me` can be used to indicate the authenticated user.
        *        [default: me]@param id The ID of the draft to update.
          * @param content the {@link com.google.api.services.gmail.model.Draft} media metadata or {@code null} if none
-         * @param mediaContent The media HTTP content or {@code null} if none.
+         * @param mediaContent The media HTTP content.
          * @since 1.13
          */
         protected Update(java.lang.String userId, java.lang.String id, com.google.api.services.gmail.model.Draft content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
           super(Gmail.this, "PUT", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.gmail.model.Draft.class);
           this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
           this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -3540,12 +3543,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * @param userId The user's email address. The special value `me` can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Message} media metadata or {@code null} if none
-         * @param mediaContent The media HTTP content or {@code null} if none.
+         * @param mediaContent The media HTTP content.
          * @since 1.13
          */
         protected GmailImport(java.lang.String userId, com.google.api.services.gmail.model.Message content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
           super(Gmail.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.gmail.model.Message.class);
           this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -3891,12 +3895,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * @param userId The user's email address. The special value `me` can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Message} media metadata or {@code null} if none
-         * @param mediaContent The media HTTP content or {@code null} if none.
+         * @param mediaContent The media HTTP content.
          * @since 1.13
          */
         protected Insert(java.lang.String userId, com.google.api.services.gmail.model.Message content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
           super(Gmail.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.gmail.model.Message.class);
           this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -4557,12 +4562,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * @param userId The user's email address. The special value `me` can be used to indicate the authenticated user.
        *        [default: me]
          * @param content the {@link com.google.api.services.gmail.model.Message} media metadata or {@code null} if none
-         * @param mediaContent The media HTTP content or {@code null} if none.
+         * @param mediaContent The media HTTP content.
          * @since 1.13
          */
         protected Send(java.lang.String userId, com.google.api.services.gmail.model.Message content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
           super(Gmail.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.gmail.model.Message.class);
           this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
           initializeMediaUpload(mediaContent);
         }
 

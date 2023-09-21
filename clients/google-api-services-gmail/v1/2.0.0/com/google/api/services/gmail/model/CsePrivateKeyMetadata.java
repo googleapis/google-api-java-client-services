@@ -30,6 +30,13 @@ package com.google.api.services.gmail.model;
 public final class CsePrivateKeyMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata for hardware keys.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HardwareKeyMetadata hardwareKeyMetadata;
+
+  /**
    * Metadata for a private key instance managed by an external key access control list service.
    * The value may be {@code null}.
    */
@@ -37,18 +44,28 @@ public final class CsePrivateKeyMetadata extends com.google.api.client.json.Gene
   private KaclsKeyMetadata kaclsKeyMetadata;
 
   /**
-   * Metadata for PIV card certificate.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PivKeyMetadata pivKeyMetadata;
-
-  /**
    * Output only. The immutable ID for the private key metadata instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privateKeyMetadataId;
+
+  /**
+   * Metadata for hardware keys.
+   * @return value or {@code null} for none
+   */
+  public HardwareKeyMetadata getHardwareKeyMetadata() {
+    return hardwareKeyMetadata;
+  }
+
+  /**
+   * Metadata for hardware keys.
+   * @param hardwareKeyMetadata hardwareKeyMetadata or {@code null} for none
+   */
+  public CsePrivateKeyMetadata setHardwareKeyMetadata(HardwareKeyMetadata hardwareKeyMetadata) {
+    this.hardwareKeyMetadata = hardwareKeyMetadata;
+    return this;
+  }
 
   /**
    * Metadata for a private key instance managed by an external key access control list service.
@@ -64,23 +81,6 @@ public final class CsePrivateKeyMetadata extends com.google.api.client.json.Gene
    */
   public CsePrivateKeyMetadata setKaclsKeyMetadata(KaclsKeyMetadata kaclsKeyMetadata) {
     this.kaclsKeyMetadata = kaclsKeyMetadata;
-    return this;
-  }
-
-  /**
-   * Metadata for PIV card certificate.
-   * @return value or {@code null} for none
-   */
-  public PivKeyMetadata getPivKeyMetadata() {
-    return pivKeyMetadata;
-  }
-
-  /**
-   * Metadata for PIV card certificate.
-   * @param pivKeyMetadata pivKeyMetadata or {@code null} for none
-   */
-  public CsePrivateKeyMetadata setPivKeyMetadata(PivKeyMetadata pivKeyMetadata) {
-    this.pivKeyMetadata = pivKeyMetadata;
     return this;
   }
 

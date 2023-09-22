@@ -4323,7 +4323,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      *
      *
      * @param content the {@link com.google.api.services.drive.model.File} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -4399,7 +4399,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        */
       protected Create(com.google.api.services.drive.model.File content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(Drive.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.drive.model.File.class);
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 
@@ -6767,7 +6767,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      *
      * @param fileId The ID of the file.
      * @param content the {@link com.google.api.services.drive.model.File} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -6836,7 +6836,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       protected Update(java.lang.String fileId, com.google.api.services.drive.model.File content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(Drive.this, "PATCH", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.drive.model.File.class);
         this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

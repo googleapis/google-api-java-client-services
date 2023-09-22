@@ -182,13 +182,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.String nationalPhoneNumber;
 
   /**
-   * Output only. The regular hours of operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleMapsPlacesV1PlaceOpeningHours openingHours;
-
-  /**
    * Output only. Plus code of the place location lat/long.
    * The value may be {@code null}.
    */
@@ -210,6 +203,24 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Double rating;
 
   /**
+   * Output only. The regular hours of operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlaceOpeningHours regularOpeningHours;
+
+  /**
+   * Output only. Contains an array of entries for information about regular secondary hours of a
+   * business. Secondary hours are different from a business's main hours. For example, a restaurant
+   * can specify drive through hours or delivery hours as its secondary hours. This field populates
+   * the type subfield, which draws from a predefined list of opening hours types (such as
+   * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleMapsPlacesV1PlaceOpeningHours> regularSecondaryOpeningHours;
+
+  /**
    * Output only. Specifies if the place supports reservations.
    * The value may be {@code null}.
    */
@@ -222,17 +233,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleMapsPlacesV1Review> reviews;
-
-  /**
-   * Output only. Contains an array of entries for information about regular secondary hours of a
-   * business. Secondary hours are different from a business's main hours. For example, a restaurant
-   * can specify drive through hours or delivery hours as its secondary hours. This field populates
-   * the type subfield, which draws from a predefined list of opening hours types (such as
-   * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleMapsPlacesV1PlaceOpeningHours> secondaryOpeningHours;
 
   /**
    * Output only. Specifies if the place serves beer.
@@ -328,14 +328,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String websiteUri;
-
-  /**
-   * Output only. [Deprecated!] Specifies if the place has an entrance that is wheelchair-
-   * accessible.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean wheelchairAccessibleEntrance;
 
   /**
    * Output only. Repeated components for each locality level.
@@ -702,23 +694,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The regular hours of operation.
-   * @return value or {@code null} for none
-   */
-  public GoogleMapsPlacesV1PlaceOpeningHours getOpeningHours() {
-    return openingHours;
-  }
-
-  /**
-   * Output only. The regular hours of operation.
-   * @param openingHours openingHours or {@code null} for none
-   */
-  public GoogleMapsPlacesV1Place setOpeningHours(GoogleMapsPlacesV1PlaceOpeningHours openingHours) {
-    this.openingHours = openingHours;
-    return this;
-  }
-
-  /**
    * Output only. Plus code of the place location lat/long.
    * @return value or {@code null} for none
    */
@@ -770,6 +745,48 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * Output only. The regular hours of operation.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceOpeningHours getRegularOpeningHours() {
+    return regularOpeningHours;
+  }
+
+  /**
+   * Output only. The regular hours of operation.
+   * @param regularOpeningHours regularOpeningHours or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setRegularOpeningHours(GoogleMapsPlacesV1PlaceOpeningHours regularOpeningHours) {
+    this.regularOpeningHours = regularOpeningHours;
+    return this;
+  }
+
+  /**
+   * Output only. Contains an array of entries for information about regular secondary hours of a
+   * business. Secondary hours are different from a business's main hours. For example, a restaurant
+   * can specify drive through hours or delivery hours as its secondary hours. This field populates
+   * the type subfield, which draws from a predefined list of opening hours types (such as
+   * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleMapsPlacesV1PlaceOpeningHours> getRegularSecondaryOpeningHours() {
+    return regularSecondaryOpeningHours;
+  }
+
+  /**
+   * Output only. Contains an array of entries for information about regular secondary hours of a
+   * business. Secondary hours are different from a business's main hours. For example, a restaurant
+   * can specify drive through hours or delivery hours as its secondary hours. This field populates
+   * the type subfield, which draws from a predefined list of opening hours types (such as
+   * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place.
+   * @param regularSecondaryOpeningHours regularSecondaryOpeningHours or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setRegularSecondaryOpeningHours(java.util.List<GoogleMapsPlacesV1PlaceOpeningHours> regularSecondaryOpeningHours) {
+    this.regularSecondaryOpeningHours = regularSecondaryOpeningHours;
+    return this;
+  }
+
+  /**
    * Output only. Specifies if the place supports reservations.
    * @return value or {@code null} for none
    */
@@ -800,31 +817,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setReviews(java.util.List<GoogleMapsPlacesV1Review> reviews) {
     this.reviews = reviews;
-    return this;
-  }
-
-  /**
-   * Output only. Contains an array of entries for information about regular secondary hours of a
-   * business. Secondary hours are different from a business's main hours. For example, a restaurant
-   * can specify drive through hours or delivery hours as its secondary hours. This field populates
-   * the type subfield, which draws from a predefined list of opening hours types (such as
-   * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleMapsPlacesV1PlaceOpeningHours> getSecondaryOpeningHours() {
-    return secondaryOpeningHours;
-  }
-
-  /**
-   * Output only. Contains an array of entries for information about regular secondary hours of a
-   * business. Secondary hours are different from a business's main hours. For example, a restaurant
-   * can specify drive through hours or delivery hours as its secondary hours. This field populates
-   * the type subfield, which draws from a predefined list of opening hours types (such as
-   * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place.
-   * @param secondaryOpeningHours secondaryOpeningHours or {@code null} for none
-   */
-  public GoogleMapsPlacesV1Place setSecondaryOpeningHours(java.util.List<GoogleMapsPlacesV1PlaceOpeningHours> secondaryOpeningHours) {
-    this.secondaryOpeningHours = secondaryOpeningHours;
     return this;
   }
 
@@ -1054,25 +1046,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setWebsiteUri(java.lang.String websiteUri) {
     this.websiteUri = websiteUri;
-    return this;
-  }
-
-  /**
-   * Output only. [Deprecated!] Specifies if the place has an entrance that is wheelchair-
-   * accessible.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getWheelchairAccessibleEntrance() {
-    return wheelchairAccessibleEntrance;
-  }
-
-  /**
-   * Output only. [Deprecated!] Specifies if the place has an entrance that is wheelchair-
-   * accessible.
-   * @param wheelchairAccessibleEntrance wheelchairAccessibleEntrance or {@code null} for none
-   */
-  public GoogleMapsPlacesV1Place setWheelchairAccessibleEntrance(java.lang.Boolean wheelchairAccessibleEntrance) {
-    this.wheelchairAccessibleEntrance = wheelchairAccessibleEntrance;
     return this;
   }
 

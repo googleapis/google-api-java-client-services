@@ -88,7 +88,7 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String keyPrefix;
 
   /**
-   * The location of the database. Available databases are listed at
+   * The location of the database. Available locations are listed at
    * https://cloud.google.com/firestore/docs/locations.
    * The value may be {@code null}.
    */
@@ -280,7 +280,7 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * The location of the database. Available databases are listed at
+   * The location of the database. Available locations are listed at
    * https://cloud.google.com/firestore/docs/locations.
    * @return value or {@code null} for none
    */
@@ -289,7 +289,7 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * The location of the database. Available databases are listed at
+   * The location of the database. Available locations are listed at
    * https://cloud.google.com/firestore/docs/locations.
    * @param locationId locationId or {@code null} for none
    */

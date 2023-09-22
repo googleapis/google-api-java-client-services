@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A Dataproc job for running Apache Flink (https://flink.apache.org/) applications on YARN.
+ * A Dataproc job for running Apache Flink applications on YARN.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -31,7 +31,7 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that
-   * can be set as job properties, since a collision may occur that causes an incorrect job
+   * can be set as job properties, since a collision might occur that causes an incorrect job
    * submission.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the driver's main class. The jar file that contains the class must be in the
-   * default CLASSPATH or specified in jar_file_uris.
+   * default CLASSPATH or specified in jarFileUris.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Flink. Properties that
-   * conflict with values set by the Dataproc API may beoverwritten. Can include properties set
+   * conflict with values set by the Dataproc API might beoverwritten. Can include properties set
    * in/etc/flink/conf/flink-defaults.conf and classes in user code.
    * The value may be {@code null}.
    */
@@ -77,7 +77,8 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> properties;
 
   /**
-   * Optional. HCFS URI of the savepoint which contains the last saved progress for this job
+   * Optional. HCFS URI of the savepoint, which contains the last saved progress for starting the
+   * current job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +86,7 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that
-   * can be set as job properties, since a collision may occur that causes an incorrect job
+   * can be set as job properties, since a collision might occur that causes an incorrect job
    * submission.
    * @return value or {@code null} for none
    */
@@ -95,7 +96,7 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that
-   * can be set as job properties, since a collision may occur that causes an incorrect job
+   * can be set as job properties, since a collision might occur that causes an incorrect job
    * submission.
    * @param args args or {@code null} for none
    */
@@ -140,7 +141,7 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the driver's main class. The jar file that contains the class must be in the
-   * default CLASSPATH or specified in jar_file_uris.
+   * default CLASSPATH or specified in jarFileUris.
    * @return value or {@code null} for none
    */
   public java.lang.String getMainClass() {
@@ -149,7 +150,7 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the driver's main class. The jar file that contains the class must be in the
-   * default CLASSPATH or specified in jar_file_uris.
+   * default CLASSPATH or specified in jarFileUris.
    * @param mainClass mainClass or {@code null} for none
    */
   public FlinkJob setMainClass(java.lang.String mainClass) {
@@ -176,7 +177,7 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Flink. Properties that
-   * conflict with values set by the Dataproc API may beoverwritten. Can include properties set
+   * conflict with values set by the Dataproc API might beoverwritten. Can include properties set
    * in/etc/flink/conf/flink-defaults.conf and classes in user code.
    * @return value or {@code null} for none
    */
@@ -186,7 +187,7 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Flink. Properties that
-   * conflict with values set by the Dataproc API may beoverwritten. Can include properties set
+   * conflict with values set by the Dataproc API might beoverwritten. Can include properties set
    * in/etc/flink/conf/flink-defaults.conf and classes in user code.
    * @param properties properties or {@code null} for none
    */
@@ -196,7 +197,8 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. HCFS URI of the savepoint which contains the last saved progress for this job
+   * Optional. HCFS URI of the savepoint, which contains the last saved progress for starting the
+   * current job.
    * @return value or {@code null} for none
    */
   public java.lang.String getSavepointUri() {
@@ -204,7 +206,8 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. HCFS URI of the savepoint which contains the last saved progress for this job
+   * Optional. HCFS URI of the savepoint, which contains the last saved progress for starting the
+   * current job.
    * @param savepointUri savepointUri or {@code null} for none
    */
   public FlinkJob setSavepointUri(java.lang.String savepointUri) {

@@ -97,6 +97,14 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   private String updateTime;
 
   /**
+   * Output only. A session template UUID (Unique Universal Identifier). The service generates this
+   * value when it creates the session template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uuid;
+
+  /**
    * Output only. The time when the template was created.
    * @return value or {@code null} for none
    */
@@ -254,6 +262,25 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
    */
   public SessionTemplate setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. A session template UUID (Unique Universal Identifier). The service generates this
+   * value when it creates the session template.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUuid() {
+    return uuid;
+  }
+
+  /**
+   * Output only. A session template UUID (Unique Universal Identifier). The service generates this
+   * value when it creates the session template.
+   * @param uuid uuid or {@code null} for none
+   */
+  public SessionTemplate setUuid(java.lang.String uuid) {
+    this.uuid = uuid;
     return this;
   }
 

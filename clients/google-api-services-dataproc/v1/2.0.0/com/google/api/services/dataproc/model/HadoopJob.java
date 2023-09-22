@@ -41,7 +41,7 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or
-   * -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an
+   * -Dfoo=bar, that can be set as job properties, since a collision might occur that causes an
    * incorrect job submission.
    * The value may be {@code null}.
    */
@@ -89,8 +89,8 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Hadoop. Properties that
-   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
-   * /etc/hadoop/conf-site and classes in user code.
+   * conflict with values set by the Dataproc API might be overwritten. Can include properties set
+   * in /etc/hadoop/conf-site and classes in user code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or
-   * -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an
+   * -Dfoo=bar, that can be set as job properties, since a collision might occur that causes an
    * incorrect job submission.
    * @return value or {@code null} for none
    */
@@ -127,7 +127,7 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or
-   * -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an
+   * -Dfoo=bar, that can be set as job properties, since a collision might occur that causes an
    * incorrect job submission.
    * @param args args or {@code null} for none
    */
@@ -231,8 +231,8 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Hadoop. Properties that
-   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
-   * /etc/hadoop/conf-site and classes in user code.
+   * conflict with values set by the Dataproc API might be overwritten. Can include properties set
+   * in /etc/hadoop/conf-site and classes in user code.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -241,8 +241,8 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Hadoop. Properties that
-   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
-   * /etc/hadoop/conf-site and classes in user code.
+   * conflict with values set by the Dataproc API might be overwritten. Can include properties set
+   * in /etc/hadoop/conf-site and classes in user code.
    * @param properties properties or {@code null} for none
    */
   public HadoopJob setProperties(java.util.Map<String, java.lang.String> properties) {

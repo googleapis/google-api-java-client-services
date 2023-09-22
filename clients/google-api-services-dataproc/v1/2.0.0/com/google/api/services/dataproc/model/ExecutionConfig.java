@@ -90,16 +90,16 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   private java.lang.String subnetworkUri;
 
   /**
-   * Optional. The duration after which the workload will be terminated. When the workload exceeds
-   * this duration, it will be unconditionally terminated without waiting for ongoing work to
-   * finish. If ttl is not specified for a batch workload, the workload will be allowed to run until
-   * it exits naturally (or runs forever without exiting). If ttl is not specified for an
-   * interactive session, it defaults to 24h. If ttl is not specified for a batch that uses 2.1+
-   * runtime version, it defaults to 4h. Minimum value is 10 minutes; maximum value is 14 days (see
-   * JSON representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)). If both ttl and idle_ttl are specified (for an interactive
-   * session), the conditions are treated as OR conditions: the workload will be terminated when it
-   * has been idle for idle_ttl or when ttl has been exceeded, whichever occurs first.
+   * Optional. The duration after which the workload will be terminated, specified as the JSON
+   * representation for Duration (https://protobuf.dev/programming-guides/proto3/#json). When the
+   * workload exceeds this duration, it will be unconditionally terminated without waiting for
+   * ongoing work to finish. If ttl is not specified for a batch workload, the workload will be
+   * allowed to run until it exits naturally (or run forever without exiting). If ttl is not
+   * specified for an interactive session, it defaults to 24 hours. If ttl is not specified for a
+   * batch that uses 2.1+ runtime version, it defaults to 4 hours. Minimum value is 10 minutes;
+   * maximum value is 14 days. If both ttl and idle_ttl are specified (for an interactive session),
+   * the conditions are treated as OR conditions: the workload will be terminated when it has been
+   * idle for idle_ttl or when ttl has been exceeded, whichever occurs first.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,16 +247,16 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The duration after which the workload will be terminated. When the workload exceeds
-   * this duration, it will be unconditionally terminated without waiting for ongoing work to
-   * finish. If ttl is not specified for a batch workload, the workload will be allowed to run until
-   * it exits naturally (or runs forever without exiting). If ttl is not specified for an
-   * interactive session, it defaults to 24h. If ttl is not specified for a batch that uses 2.1+
-   * runtime version, it defaults to 4h. Minimum value is 10 minutes; maximum value is 14 days (see
-   * JSON representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)). If both ttl and idle_ttl are specified (for an interactive
-   * session), the conditions are treated as OR conditions: the workload will be terminated when it
-   * has been idle for idle_ttl or when ttl has been exceeded, whichever occurs first.
+   * Optional. The duration after which the workload will be terminated, specified as the JSON
+   * representation for Duration (https://protobuf.dev/programming-guides/proto3/#json). When the
+   * workload exceeds this duration, it will be unconditionally terminated without waiting for
+   * ongoing work to finish. If ttl is not specified for a batch workload, the workload will be
+   * allowed to run until it exits naturally (or run forever without exiting). If ttl is not
+   * specified for an interactive session, it defaults to 24 hours. If ttl is not specified for a
+   * batch that uses 2.1+ runtime version, it defaults to 4 hours. Minimum value is 10 minutes;
+   * maximum value is 14 days. If both ttl and idle_ttl are specified (for an interactive session),
+   * the conditions are treated as OR conditions: the workload will be terminated when it has been
+   * idle for idle_ttl or when ttl has been exceeded, whichever occurs first.
    * @return value or {@code null} for none
    */
   public String getTtl() {
@@ -264,16 +264,16 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The duration after which the workload will be terminated. When the workload exceeds
-   * this duration, it will be unconditionally terminated without waiting for ongoing work to
-   * finish. If ttl is not specified for a batch workload, the workload will be allowed to run until
-   * it exits naturally (or runs forever without exiting). If ttl is not specified for an
-   * interactive session, it defaults to 24h. If ttl is not specified for a batch that uses 2.1+
-   * runtime version, it defaults to 4h. Minimum value is 10 minutes; maximum value is 14 days (see
-   * JSON representation of Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)). If both ttl and idle_ttl are specified (for an interactive
-   * session), the conditions are treated as OR conditions: the workload will be terminated when it
-   * has been idle for idle_ttl or when ttl has been exceeded, whichever occurs first.
+   * Optional. The duration after which the workload will be terminated, specified as the JSON
+   * representation for Duration (https://protobuf.dev/programming-guides/proto3/#json). When the
+   * workload exceeds this duration, it will be unconditionally terminated without waiting for
+   * ongoing work to finish. If ttl is not specified for a batch workload, the workload will be
+   * allowed to run until it exits naturally (or run forever without exiting). If ttl is not
+   * specified for an interactive session, it defaults to 24 hours. If ttl is not specified for a
+   * batch that uses 2.1+ runtime version, it defaults to 4 hours. Minimum value is 10 minutes;
+   * maximum value is 14 days. If both ttl and idle_ttl are specified (for an interactive session),
+   * the conditions are treated as OR conditions: the workload will be terminated when it has been
+   * idle for idle_ttl or when ttl has been exceeded, whichever occurs first.
    * @param ttl ttl or {@code null} for none
    */
   public ExecutionConfig setTtl(String ttl) {

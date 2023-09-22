@@ -39,9 +39,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean done;
 
   /**
-   * Output only. If present, the location of miscellaneous control files which may be used as part
-   * of job setup and handling. If not present, control files may be placed in the same location as
-   * driver_output_uri.
+   * Output only. If present, the location of miscellaneous control files which can be used as part
+   * of job setup and handling. If not present, control files might be placed in the same location
+   * as driver_output_uri.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A UUID that uniquely identifies a job within the project over time. This is in
-   * contrast to a user-settable reference.job_id that may be reused over time.
+   * contrast to a user-settable reference.job_id that might be reused over time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters,
-   * and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty,
+   * and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty,
    * but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
    * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
    * The value may be {@code null}.
@@ -166,7 +166,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private SparkSqlJob sparkSqlJob;
 
   /**
-   * Output only. The job status. Additional application-specific status information may be
+   * Output only. The job status. Additional application-specific status information might be
    * contained in the type_job and yarn_applications fields.
    * The value may be {@code null}.
    */
@@ -189,7 +189,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The collection of YARN applications spun up by this job.Beta Feature: This report
-   * is available for testing purposes only. It may be changed before final release.
+   * is available for testing purposes only. It might be changed before final release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,9 +217,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If present, the location of miscellaneous control files which may be used as part
-   * of job setup and handling. If not present, control files may be placed in the same location as
-   * driver_output_uri.
+   * Output only. If present, the location of miscellaneous control files which can be used as part
+   * of job setup and handling. If not present, control files might be placed in the same location
+   * as driver_output_uri.
    * @return value or {@code null} for none
    */
   public java.lang.String getDriverControlFilesUri() {
@@ -227,9 +227,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If present, the location of miscellaneous control files which may be used as part
-   * of job setup and handling. If not present, control files may be placed in the same location as
-   * driver_output_uri.
+   * Output only. If present, the location of miscellaneous control files which can be used as part
+   * of job setup and handling. If not present, control files might be placed in the same location
+   * as driver_output_uri.
    * @param driverControlFilesUri driverControlFilesUri or {@code null} for none
    */
   public Job setDriverControlFilesUri(java.lang.String driverControlFilesUri) {
@@ -324,7 +324,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A UUID that uniquely identifies a job within the project over time. This is in
-   * contrast to a user-settable reference.job_id that may be reused over time.
+   * contrast to a user-settable reference.job_id that might be reused over time.
    * @return value or {@code null} for none
    */
   public java.lang.String getJobUuid() {
@@ -333,7 +333,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A UUID that uniquely identifies a job within the project over time. This is in
-   * contrast to a user-settable reference.job_id that may be reused over time.
+   * contrast to a user-settable reference.job_id that might be reused over time.
    * @param jobUuid jobUuid or {@code null} for none
    */
   public Job setJobUuid(java.lang.String jobUuid) {
@@ -343,7 +343,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters,
-   * and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty,
+   * and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty,
    * but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
    * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
    * @return value or {@code null} for none
@@ -354,7 +354,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters,
-   * and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty,
+   * and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty,
    * but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
    * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
    * @param labels labels or {@code null} for none
@@ -522,7 +522,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The job status. Additional application-specific status information may be
+   * Output only. The job status. Additional application-specific status information might be
    * contained in the type_job and yarn_applications fields.
    * @return value or {@code null} for none
    */
@@ -531,7 +531,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The job status. Additional application-specific status information may be
+   * Output only. The job status. Additional application-specific status information might be
    * contained in the type_job and yarn_applications fields.
    * @param status status or {@code null} for none
    */
@@ -576,7 +576,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The collection of YARN applications spun up by this job.Beta Feature: This report
-   * is available for testing purposes only. It may be changed before final release.
+   * is available for testing purposes only. It might be changed before final release.
    * @return value or {@code null} for none
    */
   public java.util.List<YarnApplication> getYarnApplications() {
@@ -585,7 +585,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The collection of YARN applications spun up by this job.Beta Feature: This report
-   * is available for testing purposes only. It may be changed before final release.
+   * is available for testing purposes only. It might be changed before final release.
    * @param yarnApplications yarnApplications or {@code null} for none
    */
   public Job setYarnApplications(java.util.List<YarnApplication> yarnApplications) {

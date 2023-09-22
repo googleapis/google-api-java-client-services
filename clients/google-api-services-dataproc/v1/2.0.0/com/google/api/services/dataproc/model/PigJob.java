@@ -54,8 +54,8 @@ public final class PigJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Pig. Properties that
-   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
-   * /etc/hadoop/conf-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
+   * conflict with values set by the Dataproc API might be overwritten. Can include properties set
+   * in /etc/hadoop/conf-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +140,8 @@ public final class PigJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Pig. Properties that
-   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
-   * /etc/hadoop/conf-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
+   * conflict with values set by the Dataproc API might be overwritten. Can include properties set
+   * in /etc/hadoop/conf-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -150,8 +150,8 @@ public final class PigJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Pig. Properties that
-   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
-   * /etc/hadoop/conf-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
+   * conflict with values set by the Dataproc API might be overwritten. Can include properties set
+   * in /etc/hadoop/conf-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
    * @param properties properties or {@code null} for none
    */
   public PigJob setProperties(java.util.Map<String, java.lang.String> properties) {

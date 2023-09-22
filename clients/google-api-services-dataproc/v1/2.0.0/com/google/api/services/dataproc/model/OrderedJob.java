@@ -30,6 +30,13 @@ package com.google.api.services.dataproc.model;
 public final class OrderedJob extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Job is a Flink job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FlinkJob flinkJob;
+
+  /**
    * Optional. Job is a Hadoop job.
    * The value may be {@code null}.
    */
@@ -127,6 +134,23 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TrinoJob trinoJob;
+
+  /**
+   * Optional. Job is a Flink job.
+   * @return value or {@code null} for none
+   */
+  public FlinkJob getFlinkJob() {
+    return flinkJob;
+  }
+
+  /**
+   * Optional. Job is a Flink job.
+   * @param flinkJob flinkJob or {@code null} for none
+   */
+  public OrderedJob setFlinkJob(FlinkJob flinkJob) {
+    this.flinkJob = flinkJob;
+    return this;
+  }
 
   /**
    * Optional. Job is a Hadoop job.

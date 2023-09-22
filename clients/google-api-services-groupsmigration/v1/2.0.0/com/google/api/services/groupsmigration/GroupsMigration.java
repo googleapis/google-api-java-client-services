@@ -183,7 +183,7 @@ public class GroupsMigration extends com.google.api.client.googleapis.services.j
      * </p>
      *
      * @param groupId The group ID
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -238,7 +238,7 @@ public class GroupsMigration extends com.google.api.client.googleapis.services.j
       protected Insert(java.lang.String groupId, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(GroupsMigration.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, com.google.api.services.groupsmigration.model.Groups.class);
         this.groupId = com.google.api.client.util.Preconditions.checkNotNull(groupId, "Required parameter groupId must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

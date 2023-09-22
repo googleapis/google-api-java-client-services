@@ -1068,7 +1068,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      * @param part The *part* parameter specifies the caption resource parts that the API response will include. Set
      *        the parameter value to snippet.
      * @param content the {@link com.google.api.services.youtube.model.Caption} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -1125,7 +1125,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       protected Insert(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.Caption content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(YouTube.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.youtube.model.Caption.class);
         this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 
@@ -1562,7 +1562,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      *        API response will include. The part names that you can include in the parameter value are
      *        id and snippet.
      * @param content the {@link com.google.api.services.youtube.model.Caption} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -1623,7 +1623,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       protected Update(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.Caption content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(YouTube.this, "PUT", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.youtube.model.Caption.class);
         this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 
@@ -1848,7 +1848,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      *
      *
      * @param content the {@link com.google.api.services.youtube.model.ChannelBannerResource} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -1900,7 +1900,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        */
       protected Insert(com.google.api.services.youtube.model.ChannelBannerResource content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(YouTube.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.youtube.model.ChannelBannerResource.class);
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 
@@ -14145,7 +14145,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      * </p>
      *
      * @param videoId Returns the Thumbnail with the given video IDs for Stubby or Apiary.
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -14202,7 +14202,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       protected Set(java.lang.String videoId, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(YouTube.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, com.google.api.services.youtube.model.ThumbnailSetResponse.class);
         this.videoId = com.google.api.client.util.Preconditions.checkNotNull(videoId, "Required parameter videoId must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 
@@ -15096,7 +15096,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      *        specifies a part that does not contain mutable values, that part will still be included in
      *        the API response.
      * @param content the {@link com.google.api.services.youtube.model.Video} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -15163,7 +15163,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       protected Insert(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.Video content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(YouTube.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.youtube.model.Video.class);
         this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 
@@ -16418,7 +16418,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param channelId
      * @param content the {@link com.google.api.services.youtube.model.InvideoBranding} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -16473,7 +16473,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       protected Set(java.lang.String channelId, com.google.api.services.youtube.model.InvideoBranding content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(YouTube.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, Void.class);
         this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

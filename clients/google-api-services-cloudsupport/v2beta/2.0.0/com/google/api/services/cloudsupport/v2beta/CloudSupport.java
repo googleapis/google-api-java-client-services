@@ -154,15 +154,19 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
   public class CaseClassifications {
 
     /**
-     * Retrieve valid classifications to be used when creating a support case. The classications are
-     * hierarchical, with each classification containing all levels of the hierarchy, separated by `" >
-     * "`. For example `"Technical Issue > Compute > Compute Engine"`. Classification IDs returned by
-     * `caseClassifications.search` are guaranteed to be valid for at least six months. If a given
-     * classification is deactivated, it immediately stops being returned. After six months,
-     * `case.create` requests using the classification ID will fail. Here is an example of calling this
-     * endpoint using cURL: ```shell curl \ --header "Authorization: Bearer $(gcloud auth print-access-
-     * token)" \ 'https://cloudsupport.googleapis.com/v2/caseClassifications:search?query=display_name:"
-     * *Compute%20Engine*"' ```
+     * Retrieve valid classifications to use when creating a support case. Classifications are
+     * hierarchical. Each classification is a string containing all levels of the hierarchy separated by
+     * `" > "`. For example, `"Technical Issue > Compute > Compute Engine"`. Classification IDs returned
+     * by this endpoint are valid for at least six months. When a classification is deactivated, this
+     * endpoint immediately stops returning it. After six months, `case.create` requests using the
+     * classification will fail. EXAMPLES: cURL: ```shell curl \ --header "Authorization: Bearer
+     * $(gcloud auth print-access-token)" \ 'https://cloudsupport.googleapis.com/v2/caseClassifications:
+     * search?query=display_name:"*Compute%20Engine*"' ``` Python: ```python import
+     * googleapiclient.discovery supportApiService = googleapiclient.discovery.build(
+     * serviceName="cloudsupport", version="v2",
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version=v2", ) request
+     * = supportApiService.caseClassifications().search( query='display_name:"*Compute Engine*"' )
+     * print(request.execute()) ```
      *
      * Create a request for the method "caseClassifications.search".
      *
@@ -182,15 +186,19 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v2beta/caseClassifications:search";
 
       /**
-       * Retrieve valid classifications to be used when creating a support case. The classications are
-       * hierarchical, with each classification containing all levels of the hierarchy, separated by `"
-       * > "`. For example `"Technical Issue > Compute > Compute Engine"`. Classification IDs returned
-       * by `caseClassifications.search` are guaranteed to be valid for at least six months. If a given
-       * classification is deactivated, it immediately stops being returned. After six months,
-       * `case.create` requests using the classification ID will fail. Here is an example of calling
-       * this endpoint using cURL: ```shell curl \ --header "Authorization: Bearer $(gcloud auth print-
-       * access-token)" \ 'https://cloudsupport.googleapis.com/v2/caseClassifications:search?query=displ
-       * ay_name:"*Compute%20Engine*"' ```
+       * Retrieve valid classifications to use when creating a support case. Classifications are
+       * hierarchical. Each classification is a string containing all levels of the hierarchy separated
+       * by `" > "`. For example, `"Technical Issue > Compute > Compute Engine"`. Classification IDs
+       * returned by this endpoint are valid for at least six months. When a classification is
+       * deactivated, this endpoint immediately stops returning it. After six months, `case.create`
+       * requests using the classification will fail. EXAMPLES: cURL: ```shell curl \ --header
+       * "Authorization: Bearer $(gcloud auth print-access-token)" \ 'https://cloudsupport.googleapis.co
+       * m/v2/caseClassifications:search?query=display_name:"*Compute%20Engine*"' ``` Python: ```python
+       * import googleapiclient.discovery supportApiService = googleapiclient.discovery.build(
+       * serviceName="cloudsupport", version="v2",
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version=v2", )
+       * request = supportApiService.caseClassifications().search( query='display_name:"*Compute
+       * Engine*"' ) print(request.execute()) ```
        *
        * Create a request for the method "caseClassifications.search".
        *
@@ -271,17 +279,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Search) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The maximum number of cases fetched with each request. */
+      /** The maximum number of classifications fetched with each request. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of cases fetched with each request.
+      /** The maximum number of classifications fetched with each request.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** The maximum number of cases fetched with each request. */
+      /** The maximum number of classifications fetched with each request. */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -310,22 +318,22 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * An expression written in the Google Cloud filter language. If non-empty, then only cases
-       * whose fields match the filter are returned. If empty, then no messages are filtered out.
+       * An expression used to filter case classifications. If it's an empty string, then no
+       * filtering happens. Otherwise, case classifications will be returned that match the filter.
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** An expression written in the Google Cloud filter language. If non-empty, then only cases whose
-     fields match the filter are returned. If empty, then no messages are filtered out.
+      /** An expression used to filter case classifications. If it's an empty string, then no filtering
+     happens. Otherwise, case classifications will be returned that match the filter.
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * An expression written in the Google Cloud filter language. If non-empty, then only cases
-       * whose fields match the filter are returned. If empty, then no messages are filtered out.
+       * An expression used to filter case classifications. If it's an empty string, then no
+       * filtering happens. Otherwise, case classifications will be returned that match the filter.
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
@@ -361,17 +369,21 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
   public class Cases {
 
     /**
-     * Close the specified case. Here is an example of calling this endpoint using cURL: ```shell
-     * case="projects/some-project/cases/43595344" curl \ --request POST \ --header "Authorization:
-     * Bearer $(gcloud auth print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$case:close"
-     * ```
+     * Close a case. EXAMPLES: cURL: ```shell case="projects/some-project/cases/43595344" curl \
+     * --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+     * "https://cloudsupport.googleapis.com/v2/$case:close" ``` Python: ```python import
+     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+     * serviceName="cloudsupport", version=api_version,
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+     * ) request = supportApiService.cases().close( name="projects/some-project/cases/43595344" )
+     * print(request.execute()) ```
      *
      * Create a request for the method "cases.close".
      *
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Close#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The fully qualified name of the case resource to be closed.
+     * @param name Required. The name of the case to close.
      * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest}
      * @return the request
      */
@@ -389,10 +401,14 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
       /**
-       * Close the specified case. Here is an example of calling this endpoint using cURL: ```shell
-       * case="projects/some-project/cases/43595344" curl \ --request POST \ --header "Authorization:
-       * Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$case:close" ```
+       * Close a case. EXAMPLES: cURL: ```shell case="projects/some-project/cases/43595344" curl \
+       * --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+       * "https://cloudsupport.googleapis.com/v2/$case:close" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+       * = supportApiService.cases().close( name="projects/some-project/cases/43595344" )
+       * print(request.execute()) ```
        *
        * Create a request for the method "cases.close".
        *
@@ -402,7 +418,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Close#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The fully qualified name of the case resource to be closed.
+       * @param name Required. The name of the case to close.
        * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest}
        * @since 1.13
        */
@@ -471,17 +487,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Close) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The fully qualified name of the case resource to be closed. */
+      /** Required. The name of the case to close. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The fully qualified name of the case resource to be closed.
+      /** Required. The name of the case to close.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The fully qualified name of the case resource to be closed. */
+      /** Required. The name of the case to close. */
       public Close setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -498,24 +514,31 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Create a new case and associate it with a Google Cloud Resource. The case object must have the
-     * following fields set: `display_name`, `description`, `classification`, and `priority`. If you're
-     * just testing the API and don't want to route your case to an agent, set `testCase=true`. Here is
-     * an example of calling this endpoint using cURL: ```shell parent="projects/some-project" curl \
-     * --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header
-     * 'Content-Type: application/json' \ --data '{ "display_name": "Test case created by me.",
-     * "description": "a random test case, feel free to close", "classification": { "id": "100IK2AKCLHMG
-     * RJ9CDGMOCGP8DM6UTB4BT262T31BT1M2T31DHNMENPO6KS36CPJ786L2TBFEHGN6NPI64R3CDHN8880G08I1H3MURR7DHII0G
-     * RCDTQM8" }, "time_zone": "-07:00", "subscriber_email_addresses": [ "foo@domain.com",
-     * "bar@domain.com" ], "testCase": true, "priority": "P3" }' \
-     * "https://cloudsupport.googleapis.com/v2/$parent/cases" ```
+     * Create a new case and associate it with a parent. It must have the following fields set:
+     * `display_name`, `description`, `classification`, and `priority`. If you're just testing the API
+     * and don't want to route your case to an agent, set `testCase=true`. EXAMPLES: cURL: ```shell
+     * parent="projects/some-project" curl \ --request POST \ --header "Authorization: Bearer $(gcloud
+     * auth print-access-token)" \ --header 'Content-Type: application/json' \ --data '{ "display_name":
+     * "Test case created by me.", "description": "a random test case, feel free to close",
+     * "classification": { "id": "100IK2AKCLHMGRJ9CDGMOCGP8DM6UTB4BT262T31BT1M2T31DHNMENPO6KS36CPJ786L2T
+     * BFEHGN6NPI64R3CDHN8880G08I1H3MURR7DHII0GRCDTQM8" }, "time_zone": "-07:00",
+     * "subscriber_email_addresses": [ "foo@domain.com", "bar@domain.com" ], "testCase": true,
+     * "priority": "P3" }' \ "https://cloudsupport.googleapis.com/v2/$parent/cases" ``` Python:
+     * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+     * ) request = supportApiService.cases().create( parent="projects/some-project", body={
+     * "displayName": "A Test Case", "description": "This is a test case.", "testCase": True,
+     * "priority": "P2", "classification": { "id": "100IK2AKCLHMGRJ9CDGMOCGP8DM6UTB4BT262T31BT1M2T31DHNM
+     * ENPO6KS36CPJ786L2TBFEHGN6NPI64R3CDHN8880G08I1H3MURR7DHII0GRCDTQM8" }, }, )
+     * print(request.execute()) ```
      *
      * Create a request for the method "cases.create".
      *
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The name of the Google Cloud Resource under which the case should be created.
+     * @param parent Required. The name of the parent under which the case should be created.
      * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
      * @return the request
      */
@@ -533,17 +556,23 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Create a new case and associate it with a Google Cloud Resource. The case object must have the
-       * following fields set: `display_name`, `description`, `classification`, and `priority`. If
-       * you're just testing the API and don't want to route your case to an agent, set `testCase=true`.
-       * Here is an example of calling this endpoint using cURL: ```shell parent="projects/some-project"
-       * curl \ --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * --header 'Content-Type: application/json' \ --data '{ "display_name": "Test case created by
-       * me.", "description": "a random test case, feel free to close", "classification": { "id": "100IK
-       * 2AKCLHMGRJ9CDGMOCGP8DM6UTB4BT262T31BT1M2T31DHNMENPO6KS36CPJ786L2TBFEHGN6NPI64R3CDHN8880G08I1H3M
-       * URR7DHII0GRCDTQM8" }, "time_zone": "-07:00", "subscriber_email_addresses": [ "foo@domain.com",
-       * "bar@domain.com" ], "testCase": true, "priority": "P3" }' \
-       * "https://cloudsupport.googleapis.com/v2/$parent/cases" ```
+       * Create a new case and associate it with a parent. It must have the following fields set:
+       * `display_name`, `description`, `classification`, and `priority`. If you're just testing the API
+       * and don't want to route your case to an agent, set `testCase=true`. EXAMPLES: cURL: ```shell
+       * parent="projects/some-project" curl \ --request POST \ --header "Authorization: Bearer $(gcloud
+       * auth print-access-token)" \ --header 'Content-Type: application/json' \ --data '{
+       * "display_name": "Test case created by me.", "description": "a random test case, feel free to
+       * close", "classification": { "id": "100IK2AKCLHMGRJ9CDGMOCGP8DM6UTB4BT262T31BT1M2T31DHNMENPO6KS3
+       * 6CPJ786L2TBFEHGN6NPI64R3CDHN8880G08I1H3MURR7DHII0GRCDTQM8" }, "time_zone": "-07:00",
+       * "subscriber_email_addresses": [ "foo@domain.com", "bar@domain.com" ], "testCase": true,
+       * "priority": "P3" }' \ "https://cloudsupport.googleapis.com/v2/$parent/cases" ``` Python:
+       * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+       * = supportApiService.cases().create( parent="projects/some-project", body={ "displayName": "A
+       * Test Case", "description": "This is a test case.", "testCase": True, "priority": "P2",
+       * "classification": { "id": "100IK2AKCLHMGRJ9CDGMOCGP8DM6UTB4BT262T31BT1M2T31DHNMENPO6KS36CPJ786L
+       * 2TBFEHGN6NPI64R3CDHN8880G08I1H3MURR7DHII0GRCDTQM8" }, }, ) print(request.execute()) ```
        *
        * Create a request for the method "cases.create".
        *
@@ -553,7 +582,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The name of the Google Cloud Resource under which the case should be created.
+       * @param parent Required. The name of the parent under which the case should be created.
        * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
        * @since 1.13
        */
@@ -622,21 +651,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the Google Cloud Resource under which the case should be created.
-       */
+      /** Required. The name of the parent under which the case should be created. */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The name of the Google Cloud Resource under which the case should be created.
+      /** Required. The name of the parent under which the case should be created.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /**
-       * Required. The name of the Google Cloud Resource under which the case should be created.
-       */
+      /** Required. The name of the parent under which the case should be created. */
       public Create setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -653,21 +678,26 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Escalate a case. Escalating a case initiates the Google Cloud Support escalation management
-     * process. This operation is only available to certain Customer Care support services. Go to
-     * https://cloud.google.com/support and look for 'Technical support escalations' in the feature list
-     * to find out which support services let you perform escalations. Here is an example of calling
-     * this endpoint using cURL: ```shell case="projects/some-project/cases/43595344" curl \ --request
-     * POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header "Content-
-     * Type: application/json" \ --data '{ "escalation": { "reason": "BUSINESS_IMPACT", "justification":
-     * "This is a test escalation." } }' \ "https://cloudsupport.googleapis.com/v2/$case:escalate" ```
+     * Escalate a case, starting the Google Cloud Support escalation management process. This operation
+     * is only available for some support services. Go to https://cloud.google.com/support and look for
+     * 'Technical support escalations' in the feature list to find out which ones let you do that.
+     * EXAMPLES: cURL: ```shell case="projects/some-project/cases/43595344" curl \ --request POST \
+     * --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header "Content-Type:
+     * application/json" \ --data '{ "escalation": { "reason": "BUSINESS_IMPACT", "justification": "This
+     * is a test escalation." } }' \ "https://cloudsupport.googleapis.com/v2/$case:escalate" ``` Python:
+     * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+     * ) request = supportApiService.cases().escalate( name="projects/some-project/cases/43595344",
+     * body={ "escalation": { "reason": "BUSINESS_IMPACT", "justification": "This is a test
+     * escalation.", }, }, ) print(request.execute()) ```
      *
      * Create a request for the method "cases.escalate".
      *
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Escalate#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The fully qualified name of the Case resource to be escalated.
+     * @param name Required. The name of the case to be escalated.
      * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest}
      * @return the request
      */
@@ -685,15 +715,20 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
       /**
-       * Escalate a case. Escalating a case initiates the Google Cloud Support escalation management
-       * process. This operation is only available to certain Customer Care support services. Go to
-       * https://cloud.google.com/support and look for 'Technical support escalations' in the feature
-       * list to find out which support services let you perform escalations. Here is an example of
-       * calling this endpoint using cURL: ```shell case="projects/some-project/cases/43595344" curl \
-       * --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header
-       * "Content-Type: application/json" \ --data '{ "escalation": { "reason": "BUSINESS_IMPACT",
+       * Escalate a case, starting the Google Cloud Support escalation management process. This
+       * operation is only available for some support services. Go to https://cloud.google.com/support
+       * and look for 'Technical support escalations' in the feature list to find out which ones let you
+       * do that. EXAMPLES: cURL: ```shell case="projects/some-project/cases/43595344" curl \ --request
+       * POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header "Content-
+       * Type: application/json" \ --data '{ "escalation": { "reason": "BUSINESS_IMPACT",
        * "justification": "This is a test escalation." } }' \
-       * "https://cloudsupport.googleapis.com/v2/$case:escalate" ```
+       * "https://cloudsupport.googleapis.com/v2/$case:escalate" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+       * = supportApiService.cases().escalate( name="projects/some-project/cases/43595344", body={
+       * "escalation": { "reason": "BUSINESS_IMPACT", "justification": "This is a test escalation.", },
+       * }, ) print(request.execute()) ```
        *
        * Create a request for the method "cases.escalate".
        *
@@ -703,7 +738,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Escalate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The fully qualified name of the Case resource to be escalated.
+       * @param name Required. The name of the case to be escalated.
        * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest}
        * @since 1.13
        */
@@ -772,17 +807,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Escalate) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The fully qualified name of the Case resource to be escalated. */
+      /** Required. The name of the case to be escalated. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The fully qualified name of the Case resource to be escalated.
+      /** Required. The name of the case to be escalated.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The fully qualified name of the Case resource to be escalated. */
+      /** Required. The name of the case to be escalated. */
       public Escalate setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -799,16 +834,21 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Retrieve the specified case. Here is an example of calling this endpoint using cURL: ```shell
-     * case="projects/some-project/cases/16033687" curl \ --header "Authorization: Bearer $(gcloud auth
-     * print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$case" ```
+     * Retrieve a case. EXAMPLES: cURL: ```shell case="projects/some-project/cases/16033687" curl \
+     * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+     * "https://cloudsupport.googleapis.com/v2/$case" ``` Python: ```python import
+     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+     * serviceName="cloudsupport", version=api_version,
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+     * ) request = supportApiService.cases().get( name="projects/some-project/cases/43595344", )
+     * print(request.execute()) ```
      *
      * Create a request for the method "cases.get".
      *
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The fully qualified name of a case to be retrieved.
+     * @param name Required. The full name of a case to be retrieved.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -825,9 +865,14 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
       /**
-       * Retrieve the specified case. Here is an example of calling this endpoint using cURL: ```shell
-       * case="projects/some-project/cases/16033687" curl \ --header "Authorization: Bearer $(gcloud
-       * auth print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$case" ```
+       * Retrieve a case. EXAMPLES: cURL: ```shell case="projects/some-project/cases/16033687" curl \
+       * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+       * "https://cloudsupport.googleapis.com/v2/$case" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+       * = supportApiService.cases().get( name="projects/some-project/cases/43595344", )
+       * print(request.execute()) ```
        *
        * Create a request for the method "cases.get".
        *
@@ -836,7 +881,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The fully qualified name of a case to be retrieved.
+       * @param name Required. The full name of a case to be retrieved.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -914,17 +959,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The fully qualified name of a case to be retrieved. */
+      /** Required. The full name of a case to be retrieved. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The fully qualified name of a case to be retrieved.
+      /** Required. The full name of a case to be retrieved.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The fully qualified name of a case to be retrieved. */
+      /** Required. The full name of a case to be retrieved. */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -941,19 +986,23 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Retrieve all cases under the specified parent. Note: Listing cases under an organization returns
-     * only the cases directly parented by that organization. To retrieve all cases under an
-     * organization, including cases parented by projects under that organization, use `cases.search`.
-     * Here is an example of calling this endpoint using cURL: ```shell parent="projects/some-project"
-     * curl \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-     * "https://cloudsupport.googleapis.com/v2/$parent/cases" ```
+     * Retrieve all cases under a parent, but not its children. For example, listing cases under an
+     * organization only returns the cases that are directly parented by that organization. To retrieve
+     * cases under an organization and its projects, use `cases.search`. EXAMPLES: cURL: ```shell
+     * parent="projects/some-project" curl \ --header "Authorization: Bearer $(gcloud auth print-access-
+     * token)" \ "https://cloudsupport.googleapis.com/v2/$parent/cases" ``` Python: ```python import
+     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+     * serviceName="cloudsupport", version=api_version,
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+     * ) request = supportApiService.cases().list(parent="projects/some-project")
+     * print(request.execute()) ```
      *
      * Create a request for the method "cases.list".
      *
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The fully qualified name of parent resource to list cases under.
+     * @param parent Required. The name of a parent to list cases under.
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -970,12 +1019,15 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Retrieve all cases under the specified parent. Note: Listing cases under an organization
-       * returns only the cases directly parented by that organization. To retrieve all cases under an
-       * organization, including cases parented by projects under that organization, use `cases.search`.
-       * Here is an example of calling this endpoint using cURL: ```shell parent="projects/some-project"
-       * curl \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$parent/cases" ```
+       * Retrieve all cases under a parent, but not its children. For example, listing cases under an
+       * organization only returns the cases that are directly parented by that organization. To
+       * retrieve cases under an organization and its projects, use `cases.search`. EXAMPLES: cURL:
+       * ```shell parent="projects/some-project" curl \ --header "Authorization: Bearer $(gcloud auth
+       * print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$parent/cases" ``` Python:
+       * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+       * = supportApiService.cases().list(parent="projects/some-project") print(request.execute()) ```
        *
        * Create a request for the method "cases.list".
        *
@@ -984,7 +1036,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The fully qualified name of parent resource to list cases under.
+       * @param parent Required. The name of a parent to list cases under.
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -1062,17 +1114,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The fully qualified name of parent resource to list cases under. */
+      /** Required. The name of a parent to list cases under. */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The fully qualified name of parent resource to list cases under.
+      /** Required. The name of a parent to list cases under.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. The fully qualified name of parent resource to list cases under. */
+      /** Required. The name of a parent to list cases under. */
       public List setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1084,39 +1136,39 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * An expression written in filter language. If non-empty, the query returns the cases that
-       * match the filter. Else, the query doesn't filter the cases. Filter expressions use the
-       * following fields with the operators equals (`=`) and `AND`: - `state`: The accepted values
-       * are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or
-       * `P4`. You can specify multiple values for priority using the `OR` operator. For example,
-       * `priority=P1 OR priority=P2`. - `creator.email`: The email address of the case creator.
-       * Examples: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"` -
-       * `state=OPEN AND (priority=P0 OR priority=P1)`
+       * An expression used to filter cases. If it's an empty string, then no filtering happens.
+       * Otherwise, the endpoint returns the cases that match the filter. Expressions use the
+       * following fields separated by `AND` and specified with `=`: - `state`: Can be `OPEN` or
+       * `CLOSED`. - `priority`: Can be `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify multiple
+       * values for priority using the `OR` operator. For example, `priority=P1 OR priority=P2`. -
+       * `creator.email`: The email address of the case creator. EXAMPLES: - `state=CLOSED` -
+       * `state=OPEN AND creator.email="tester@example.com"` - `state=OPEN AND (priority=P0 OR
+       * priority=P1)`
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** An expression written in filter language. If non-empty, the query returns the cases that match the
-     filter. Else, the query doesn't filter the cases. Filter expressions use the following fields with
-     the operators equals (`=`) and `AND`: - `state`: The accepted values are `OPEN` or `CLOSED`. -
-     `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify multiple
-     values for priority using the `OR` operator. For example, `priority=P1 OR priority=P2`. -
-     `creator.email`: The email address of the case creator. Examples: - `state=CLOSED` - `state=OPEN
-     AND creator.email="tester@example.com"` - `state=OPEN AND (priority=P0 OR priority=P1)`
+      /** An expression used to filter cases. If it's an empty string, then no filtering happens. Otherwise,
+     the endpoint returns the cases that match the filter. Expressions use the following fields
+     separated by `AND` and specified with `=`: - `state`: Can be `OPEN` or `CLOSED`. - `priority`: Can
+     be `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify multiple values for priority using the `OR`
+     operator. For example, `priority=P1 OR priority=P2`. - `creator.email`: The email address of the
+     case creator. EXAMPLES: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"` -
+     `state=OPEN AND (priority=P0 OR priority=P1)`
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * An expression written in filter language. If non-empty, the query returns the cases that
-       * match the filter. Else, the query doesn't filter the cases. Filter expressions use the
-       * following fields with the operators equals (`=`) and `AND`: - `state`: The accepted values
-       * are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or
-       * `P4`. You can specify multiple values for priority using the `OR` operator. For example,
-       * `priority=P1 OR priority=P2`. - `creator.email`: The email address of the case creator.
-       * Examples: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"` -
-       * `state=OPEN AND (priority=P0 OR priority=P1)`
+       * An expression used to filter cases. If it's an empty string, then no filtering happens.
+       * Otherwise, the endpoint returns the cases that match the filter. Expressions use the
+       * following fields separated by `AND` and specified with `=`: - `state`: Can be `OPEN` or
+       * `CLOSED`. - `priority`: Can be `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify multiple
+       * values for priority using the `OR` operator. For example, `priority=P1 OR priority=P2`. -
+       * `creator.email`: The email address of the case creator. EXAMPLES: - `state=CLOSED` -
+       * `state=OPEN AND creator.email="tester@example.com"` - `state=OPEN AND (priority=P0 OR
+       * priority=P1)`
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1167,11 +1219,15 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Update the specified case. Only a subset of fields can be updated. Here is an example of calling
-     * this endpoint using cURL: ```shell case="projects/some-project/cases/43595344" curl \ --request
-     * PATCH \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header "Content-
-     * Type: application/json" \ --data '{ "priority": "P1" }' \
-     * "https://cloudsupport.googleapis.com/v2/$case?updateMask=priority" ```
+     * Update a case. Only some fields can be updated. EXAMPLES: cURL: ```shell case="projects/some-
+     * project/cases/43595344" curl \ --request PATCH \ --header "Authorization: Bearer $(gcloud auth
+     * print-access-token)" \ --header "Content-Type: application/json" \ --data '{ "priority": "P1" }'
+     * \ "https://cloudsupport.googleapis.com/v2/$case?updateMask=priority" ``` Python: ```python import
+     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+     * serviceName="cloudsupport", version=api_version,
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+     * ) request = supportApiService.cases().patch( name="projects/some-project/cases/43112854", body={
+     * "displayName": "This is Now a New Title", "priority": "P2", }, ) print(request.execute()) ```
      *
      * Create a request for the method "cases.patch".
      *
@@ -1196,11 +1252,15 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
       /**
-       * Update the specified case. Only a subset of fields can be updated. Here is an example of
-       * calling this endpoint using cURL: ```shell case="projects/some-project/cases/43595344" curl \
-       * --request PATCH \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header
-       * "Content-Type: application/json" \ --data '{ "priority": "P1" }' \
-       * "https://cloudsupport.googleapis.com/v2/$case?updateMask=priority" ```
+       * Update a case. Only some fields can be updated. EXAMPLES: cURL: ```shell case="projects/some-
+       * project/cases/43595344" curl \ --request PATCH \ --header "Authorization: Bearer $(gcloud auth
+       * print-access-token)" \ --header "Content-Type: application/json" \ --data '{ "priority": "P1"
+       * }' \ "https://cloudsupport.googleapis.com/v2/$case?updateMask=priority" ``` Python: ```python
+       * import googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+       * = supportApiService.cases().patch( name="projects/some-project/cases/43112854", body={
+       * "displayName": "This is Now a New Title", "priority": "P2", }, ) print(request.execute()) ```
        *
        * Create a request for the method "cases.patch".
        *
@@ -1301,34 +1361,33 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * A list of attributes of the case object that should be updated as part of this request.
-       * Supported values are `priority`, `display_name`, and `subscriber_email_addresses`. If no
-       * fields are specified, all supported fields are updated. WARNING: If you do not provide a
-       * field mask, then you might accidentally clear some fields. For example, if you leave the
-       * field mask empty and do not provide a value for `subscriber_email_addresses`, then
-       * `subscriber_email_addresses` is updated to empty.
+       * A list of attributes of the case that should be updated. Supported values are `priority`,
+       * `display_name`, and `subscriber_email_addresses`. If no fields are specified, all supported
+       * fields are updated. Be careful - if you do not provide a field mask, then you might
+       * accidentally clear some fields. For example, if you leave the field mask empty and do not
+       * provide a value for `subscriber_email_addresses`, then `subscriber_email_addresses` is
+       * updated to empty.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** A list of attributes of the case object that should be updated as part of this request. Supported
-     values are `priority`, `display_name`, and `subscriber_email_addresses`. If no fields are
-     specified, all supported fields are updated. WARNING: If you do not provide a field mask, then you
-     might accidentally clear some fields. For example, if you leave the field mask empty and do not
-     provide a value for `subscriber_email_addresses`, then `subscriber_email_addresses` is updated to
-     empty.
+      /** A list of attributes of the case that should be updated. Supported values are `priority`,
+     `display_name`, and `subscriber_email_addresses`. If no fields are specified, all supported fields
+     are updated. Be careful - if you do not provide a field mask, then you might accidentally clear
+     some fields. For example, if you leave the field mask empty and do not provide a value for
+     `subscriber_email_addresses`, then `subscriber_email_addresses` is updated to empty.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * A list of attributes of the case object that should be updated as part of this request.
-       * Supported values are `priority`, `display_name`, and `subscriber_email_addresses`. If no
-       * fields are specified, all supported fields are updated. WARNING: If you do not provide a
-       * field mask, then you might accidentally clear some fields. For example, if you leave the
-       * field mask empty and do not provide a value for `subscriber_email_addresses`, then
-       * `subscriber_email_addresses` is updated to empty.
+       * A list of attributes of the case that should be updated. Supported values are `priority`,
+       * `display_name`, and `subscriber_email_addresses`. If no fields are specified, all supported
+       * fields are updated. Be careful - if you do not provide a field mask, then you might
+       * accidentally clear some fields. For example, if you leave the field mask empty and do not
+       * provide a value for `subscriber_email_addresses`, then `subscriber_email_addresses` is
+       * updated to empty.
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -1341,9 +1400,14 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Search cases using the specified query. Here is an example of calling this endpoint using cURL:
-     * ```shell parent="projects/some-project" curl \ --header "Authorization: Bearer $(gcloud auth
-     * print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$parent/cases:search" ```
+     * Search for cases using a query. EXAMPLES: cURL: ```shell parent="projects/some-project" curl \
+     * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+     * "https://cloudsupport.googleapis.com/v2/$parent/cases:search" ``` Python: ```python import
+     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+     * serviceName="cloudsupport", version=api_version,
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+     * ) request = supportApiService.cases().search( parent="projects/some-project", query="state=OPEN"
+     * ) print(request.execute()) ```
      *
      * Create a request for the method "cases.search".
      *
@@ -1363,9 +1427,14 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v2beta/cases:search";
 
       /**
-       * Search cases using the specified query. Here is an example of calling this endpoint using cURL:
-       * ```shell parent="projects/some-project" curl \ --header "Authorization: Bearer $(gcloud auth
-       * print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$parent/cases:search" ```
+       * Search for cases using a query. EXAMPLES: cURL: ```shell parent="projects/some-project" curl \
+       * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+       * "https://cloudsupport.googleapis.com/v2/$parent/cases:search" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+       * = supportApiService.cases().search( parent="projects/some-project", query="state=OPEN" )
+       * print(request.execute()) ```
        *
        * Create a request for the method "cases.search".
        *
@@ -1484,34 +1553,34 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** The fully qualified name of parent resource to search cases under. */
+      /** The name of the parent resource to search for cases under. */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** The fully qualified name of parent resource to search cases under.
+      /** The name of the parent resource to search for cases under.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** The fully qualified name of parent resource to search cases under. */
+      /** The name of the parent resource to search for cases under. */
       public Search setParent(java.lang.String parent) {
         this.parent = parent;
         return this;
       }
 
       /**
-       * An expression written in filter language. A query uses the following fields with the
-       * operators equals (`=`) and `AND`: - `organization`: An organization name in the form
-       * `organizations/`. - `project`: A project name in the form `projects/`. - `state`: The
-       * accepted values are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`,
-       * `P2`, `P3`, or `P4`. You can specify multiple values for priority using the `OR` operator.
-       * For example, `priority=P1 OR priority=P2`. - `creator.email`: The email address of the case
-       * creator. - `billingAccount`: A billing account in the form `billingAccounts/` You must
-       * specify either `organization` or `project`. To search across `displayName`, `description`,
-       * and comments, use a global restriction with no keyword or operator. For example, `"my
-       * search"`. To search only cases updated after a certain date, use `update_time` restricted
-       * with that particular date, time, and timezone in ISO datetime format. For example,
+       * An expression used to filter cases. Expressions use the following fields separated by `AND`
+       * and specified with `=`: - `organization`: An organization name in the form
+       * `organizations/`. - `project`: A project name in the form `projects/`. - `state`: Can be
+       * `OPEN` or `CLOSED`. - `priority`: Can be `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify
+       * multiple values for priority using the `OR` operator. For example, `priority=P1 OR
+       * priority=P2`. - `creator.email`: The email address of the case creator. - `billingAccount`:
+       * A billing account in the form `billingAccounts/` You must specify either `organization` or
+       * `project`. To search across `displayName`, `description`, and comments, use a global
+       * restriction with no keyword or operator. For example, `"my search"`. To search only cases
+       * updated after a certain date, use `update_time` restricted with that particular date, time,
+       * and timezone in ISO datetime format. For example,
        * `update_time>"2020-01-01T00:00:00-05:00"`. `update_time` only supports the greater than
        * operator (`>`). Examples: - `organization="organizations/123456789"` - `project="projects
        * /my-project-id"` - `project="projects/123456789"` -
@@ -1523,16 +1592,16 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** An expression written in filter language. A query uses the following fields with the operators
-     equals (`=`) and `AND`: - `organization`: An organization name in the form `organizations/`. -
-     `project`: A project name in the form `projects/`. - `state`: The accepted values are `OPEN` or
-     `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify
-     multiple values for priority using the `OR` operator. For example, `priority=P1 OR priority=P2`. -
-     `creator.email`: The email address of the case creator. - `billingAccount`: A billing account in
-     the form `billingAccounts/` You must specify either `organization` or `project`. To search across
-     `displayName`, `description`, and comments, use a global restriction with no keyword or operator.
-     For example, `"my search"`. To search only cases updated after a certain date, use `update_time`
-     restricted with that particular date, time, and timezone in ISO datetime format. For example,
+      /** An expression used to filter cases. Expressions use the following fields separated by `AND` and
+     specified with `=`: - `organization`: An organization name in the form `organizations/`. -
+     `project`: A project name in the form `projects/`. - `state`: Can be `OPEN` or `CLOSED`. -
+     `priority`: Can be `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify multiple values for priority
+     using the `OR` operator. For example, `priority=P1 OR priority=P2`. - `creator.email`: The email
+     address of the case creator. - `billingAccount`: A billing account in the form `billingAccounts/`
+     You must specify either `organization` or `project`. To search across `displayName`, `description`,
+     and comments, use a global restriction with no keyword or operator. For example, `"my search"`. To
+     search only cases updated after a certain date, use `update_time` restricted with that particular
+     date, time, and timezone in ISO datetime format. For example,
      `update_time>"2020-01-01T00:00:00-05:00"`. `update_time` only supports the greater than operator
      (`>`). Examples: - `organization="organizations/123456789"` - `project="projects/my-project-id"` -
      `project="projects/123456789"` - `billing_account="billingAccounts/123456-A0B0C0-CUZ789"` -
@@ -1545,17 +1614,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * An expression written in filter language. A query uses the following fields with the
-       * operators equals (`=`) and `AND`: - `organization`: An organization name in the form
-       * `organizations/`. - `project`: A project name in the form `projects/`. - `state`: The
-       * accepted values are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`,
-       * `P2`, `P3`, or `P4`. You can specify multiple values for priority using the `OR` operator.
-       * For example, `priority=P1 OR priority=P2`. - `creator.email`: The email address of the case
-       * creator. - `billingAccount`: A billing account in the form `billingAccounts/` You must
-       * specify either `organization` or `project`. To search across `displayName`, `description`,
-       * and comments, use a global restriction with no keyword or operator. For example, `"my
-       * search"`. To search only cases updated after a certain date, use `update_time` restricted
-       * with that particular date, time, and timezone in ISO datetime format. For example,
+       * An expression used to filter cases. Expressions use the following fields separated by `AND`
+       * and specified with `=`: - `organization`: An organization name in the form
+       * `organizations/`. - `project`: A project name in the form `projects/`. - `state`: Can be
+       * `OPEN` or `CLOSED`. - `priority`: Can be `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify
+       * multiple values for priority using the `OR` operator. For example, `priority=P1 OR
+       * priority=P2`. - `creator.email`: The email address of the case creator. - `billingAccount`:
+       * A billing account in the form `billingAccounts/` You must specify either `organization` or
+       * `project`. To search across `displayName`, `description`, and comments, use a global
+       * restriction with no keyword or operator. For example, `"my search"`. To search only cases
+       * updated after a certain date, use `update_time` restricted with that particular date, time,
+       * and timezone in ISO datetime format. For example,
        * `update_time>"2020-01-01T00:00:00-05:00"`. `update_time` only supports the greater than
        * operator (`>`). Examples: - `organization="organizations/123456789"` - `project="projects
        * /my-project-id"` - `project="projects/123456789"` -
@@ -2420,7 +2489,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      *
      * @param parent Required. The name of the case or Cloud resource to which the attachment should be attached.
      * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -2509,7 +2578,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       protected Upload(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(CloudSupport.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.Attachment.class);
         this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

@@ -44,9 +44,8 @@ public final class SearchCaseClassificationsResponse extends com.google.api.clie
   }
 
   /**
-   * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `SearchCaseClassificationsRequest` message that is issued. If unspecified, there are
-   * no more results to retrieve.
+   * A token to retrieve the next page of results. Set this in the `page_token` field of subsequent
+   * `caseClassifications.list` requests. If unspecified, there are no more results to retrieve.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +69,8 @@ public final class SearchCaseClassificationsResponse extends com.google.api.clie
   }
 
   /**
-   * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `SearchCaseClassificationsRequest` message that is issued. If unspecified, there are
-   * no more results to retrieve.
+   * A token to retrieve the next page of results. Set this in the `page_token` field of subsequent
+   * `caseClassifications.list` requests. If unspecified, there are no more results to retrieve.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -80,9 +78,8 @@ public final class SearchCaseClassificationsResponse extends com.google.api.clie
   }
 
   /**
-   * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `SearchCaseClassificationsRequest` message that is issued. If unspecified, there are
-   * no more results to retrieve.
+   * A token to retrieve the next page of results. Set this in the `page_token` field of subsequent
+   * `caseClassifications.list` requests. If unspecified, there are no more results to retrieve.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public SearchCaseClassificationsResponse setNextPageToken(java.lang.String nextPageToken) {

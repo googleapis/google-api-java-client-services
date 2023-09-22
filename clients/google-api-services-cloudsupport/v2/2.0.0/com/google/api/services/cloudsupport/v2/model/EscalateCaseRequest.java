@@ -31,14 +31,14 @@ package com.google.api.services.cloudsupport.v2.model;
 public final class EscalateCaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The escalation object to be sent with the escalation request.
+   * The escalation information to be sent with the escalation request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Escalation escalation;
 
   /**
-   * The escalation object to be sent with the escalation request.
+   * The escalation information to be sent with the escalation request.
    * @return value or {@code null} for none
    */
   public Escalation getEscalation() {
@@ -46,7 +46,7 @@ public final class EscalateCaseRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The escalation object to be sent with the escalation request.
+   * The escalation information to be sent with the escalation request.
    * @param escalation escalation or {@code null} for none
    */
   public EscalateCaseRequest setEscalation(Escalation escalation) {

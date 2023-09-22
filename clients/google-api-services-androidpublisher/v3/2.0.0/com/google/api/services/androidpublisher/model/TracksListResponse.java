@@ -38,7 +38,7 @@ public final class TracksListResponse extends com.google.api.client.json.Generic
   private java.lang.String kind;
 
   /**
-   * All tracks.
+   * All tracks (including tracks with no releases).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class TracksListResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * All tracks.
+   * All tracks (including tracks with no releases).
    * @return value or {@code null} for none
    */
   public java.util.List<Track> getTracks() {
@@ -76,7 +76,7 @@ public final class TracksListResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * All tracks.
+   * All tracks (including tracks with no releases).
    * @param tracks tracks or {@code null} for none
    */
   public TracksListResponse setTracks(java.util.List<Track> tracks) {

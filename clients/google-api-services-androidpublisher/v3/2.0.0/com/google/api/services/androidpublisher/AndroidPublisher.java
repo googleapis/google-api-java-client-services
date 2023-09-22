@@ -1687,7 +1687,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * </p>
        *
        * @param packageName Package name of the app.@param editId Identifier of the edit.
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
        */
@@ -1745,7 +1745,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, com.google.api.services.androidpublisher.model.Apk.class);
           this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
           this.editId = com.google.api.client.util.Preconditions.checkNotNull(editId, "Required parameter editId must be specified.");
-          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -2044,7 +2044,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * </p>
        *
        * @param packageName Package name of the app.@param editId Identifier of the edit.
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
        */
@@ -2108,7 +2108,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, com.google.api.services.androidpublisher.model.Bundle.class);
           this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
           this.editId = com.google.api.client.util.Preconditions.checkNotNull(editId, "Required parameter editId must be specified.");
-          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -2490,7 +2490,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * </p>
        *
        * @param packageName Unique identifier for the Android app.@param editId Unique identifier for this edit.@param apkVersionCode The version code of the APK whose Deobfuscation File is being uploaded.@param deobfuscationFileType The type of the deobfuscation file.
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
        */
@@ -2554,7 +2554,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           this.editId = com.google.api.client.util.Preconditions.checkNotNull(editId, "Required parameter editId must be specified.");
           this.apkVersionCode = com.google.api.client.util.Preconditions.checkNotNull(apkVersionCode, "Required parameter apkVersionCode must be specified.");
           this.deobfuscationFileType = com.google.api.client.util.Preconditions.checkNotNull(deobfuscationFileType, "Required parameter deobfuscationFileType must be specified.");
-          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -3725,7 +3725,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * </p>
        *
        * @param packageName Package name of the app.@param editId Identifier of the edit.@param apkVersionCode The version code of the APK whose expansion file configuration is being read or modified.@param expansionFileType The file type of the expansion file configuration which is being updated.
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
        */
@@ -3789,7 +3789,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           this.editId = com.google.api.client.util.Preconditions.checkNotNull(editId, "Required parameter editId must be specified.");
           this.apkVersionCode = com.google.api.client.util.Preconditions.checkNotNull(apkVersionCode, "Required parameter apkVersionCode must be specified.");
           this.expansionFileType = com.google.api.client.util.Preconditions.checkNotNull(expansionFileType, "Required parameter expansionFileType must be specified.");
-          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -4557,7 +4557,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.@param editId Identifier of the edit.@param language Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German).
        *        Providing a language that is not supported by the App is a no-op.@param imageType Type of the Image.
-       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @param mediaContent The media HTTP content.
        * @return the request
        * @throws java.io.IOException if the initialization of the request fails
        */
@@ -4623,7 +4623,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           this.editId = com.google.api.client.util.Preconditions.checkNotNull(editId, "Required parameter editId must be specified.");
           this.language = com.google.api.client.util.Preconditions.checkNotNull(language, "Required parameter language must be specified.");
           this.imageType = com.google.api.client.util.Preconditions.checkNotNull(imageType, "Required parameter imageType must be specified.");
-          com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
           initializeMediaUpload(mediaContent);
         }
 
@@ -9245,7 +9245,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
      * </p>
      *
      * @param packageName Package name of the app.
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -9306,7 +9306,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       protected Uploadapk(java.lang.String packageName, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, com.google.api.services.androidpublisher.model.InternalAppSharingArtifact.class);
         this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 
@@ -9424,7 +9424,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
      * </p>
      *
      * @param packageName Package name of the app.
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -9485,7 +9485,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       protected Uploadbundle(java.lang.String packageName, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, com.google.api.services.androidpublisher.model.InternalAppSharingArtifact.class);
         this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

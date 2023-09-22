@@ -45,7 +45,7 @@ public final class SparkSqlJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf.
-   * Properties that conflict with values set by the Dataproc API may be overwritten.
+   * Properties that conflict with values set by the Dataproc API might be overwritten.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class SparkSqlJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf.
-   * Properties that conflict with values set by the Dataproc API may be overwritten.
+   * Properties that conflict with values set by the Dataproc API might be overwritten.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -118,7 +118,7 @@ public final class SparkSqlJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf.
-   * Properties that conflict with values set by the Dataproc API may be overwritten.
+   * Properties that conflict with values set by the Dataproc API might be overwritten.
    * @param properties properties or {@code null} for none
    */
   public SparkSqlJob setProperties(java.util.Map<String, java.lang.String> properties) {

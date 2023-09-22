@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2Error extends com.google.api.client.json.Ge
   private GoogleRpcStatus details;
 
   /**
-   * The times the error occurred.
+   * The times the error occurred. List includes the oldest timestamp, and the last 9 ones.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class GooglePrivacyDlpV2Error extends com.google.api.client.json.Ge
   }
 
   /**
-   * The times the error occurred.
+   * The times the error occurred. List includes the oldest timestamp, and the last 9 ones.
    * @return value or {@code null} for none
    */
   public java.util.List<String> getTimestamps() {
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2Error extends com.google.api.client.json.Ge
   }
 
   /**
-   * The times the error occurred.
+   * The times the error occurred. List includes the oldest timestamp, and the last 9 ones.
    * @param timestamps timestamps or {@code null} for none
    */
   public GooglePrivacyDlpV2Error setTimestamps(java.util.List<String> timestamps) {

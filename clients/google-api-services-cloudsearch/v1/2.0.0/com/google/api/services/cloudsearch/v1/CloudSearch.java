@@ -3343,7 +3343,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      *
      * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
      * @param content the {@link com.google.api.services.cloudsearch.v1.model.Media} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -3430,7 +3430,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       protected Upload(java.lang.String resourceName, com.google.api.services.cloudsearch.v1.model.Media content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(CloudSearch.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.cloudsearch.v1.model.Media.class);
         this.resourceName = com.google.api.client.util.Preconditions.checkNotNull(resourceName, "Required parameter resourceName must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

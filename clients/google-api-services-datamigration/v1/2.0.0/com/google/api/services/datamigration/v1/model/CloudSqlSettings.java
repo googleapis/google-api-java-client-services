@@ -74,7 +74,9 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private java.lang.String collation;
 
   /**
-   * Optional. Configuration for data cache.
+   * Optional. Data cache is an optional feature available for Cloud SQL for MySQL Enterprise Plus
+   * edition only. For more information on data cache, see [Data cache
+   * overview](https://cloud.google.com/sql/help/mysql-data-cache) in Cloud SQL documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -290,7 +292,9 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Configuration for data cache.
+   * Optional. Data cache is an optional feature available for Cloud SQL for MySQL Enterprise Plus
+   * edition only. For more information on data cache, see [Data cache
+   * overview](https://cloud.google.com/sql/help/mysql-data-cache) in Cloud SQL documentation.
    * @return value or {@code null} for none
    */
   public DataCacheConfig getDataCacheConfig() {
@@ -298,7 +302,9 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Configuration for data cache.
+   * Optional. Data cache is an optional feature available for Cloud SQL for MySQL Enterprise Plus
+   * edition only. For more information on data cache, see [Data cache
+   * overview](https://cloud.google.com/sql/help/mysql-data-cache) in Cloud SQL documentation.
    * @param dataCacheConfig dataCacheConfig or {@code null} for none
    */
   public CloudSqlSettings setDataCacheConfig(DataCacheConfig dataCacheConfig) {

@@ -186,7 +186,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      *
      * @param profileId User profile ID associated with this request.@param advertiserId Advertiser ID of this creative. This is a required field.
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeAssetMetadata} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -252,7 +252,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         super(Dfareporting.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.dfareporting.model.CreativeAssetMetadata.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
         this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

@@ -248,8 +248,8 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
   private ValidationCheck validationCheck;
 
   /**
-   * VmwareVCenterConfig specifies vCenter config for the user cluster. Inherited from the admin
-   * cluster.
+   * VmwareVCenterConfig specifies vCenter config for the user cluster. If unspecified, it is
+   * inherited from the admin cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -786,8 +786,8 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * VmwareVCenterConfig specifies vCenter config for the user cluster. Inherited from the admin
-   * cluster.
+   * VmwareVCenterConfig specifies vCenter config for the user cluster. If unspecified, it is
+   * inherited from the admin cluster.
    * @return value or {@code null} for none
    */
   public VmwareVCenterConfig getVcenter() {
@@ -795,8 +795,8 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * VmwareVCenterConfig specifies vCenter config for the user cluster. Inherited from the admin
-   * cluster.
+   * VmwareVCenterConfig specifies vCenter config for the user cluster. If unspecified, it is
+   * inherited from the admin cluster.
    * @param vcenter vcenter or {@code null} for none
    */
   public VmwareCluster setVcenter(VmwareVCenterConfig vcenter) {

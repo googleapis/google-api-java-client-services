@@ -2190,7 +2190,7 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
      *
      * @param customer Required. The customer for which the file upload will apply.
      * @param content the {@link com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileRequest} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -2257,7 +2257,7 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
       protected Upload(java.lang.String customer, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(ChromePolicy.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.chromepolicy.v1.model.GoogleChromePolicyVersionsV1UploadPolicyFileResponse.class);
         this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

@@ -1704,7 +1704,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param projectId Project ID of the project that will be billed for the job
      * @param content the {@link com.google.api.services.bigquery.model.Job} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @param mediaContent The media HTTP content.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
@@ -1761,7 +1761,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       protected Insert(java.lang.String projectId, com.google.api.services.bigquery.model.Job content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
         super(Bigquery.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.bigquery.model.Job.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
         initializeMediaUpload(mediaContent);
       }
 

@@ -2426,7 +2426,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            *
            * @param parent The name of the parent resource where the artifacts will be uploaded.
            * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.UploadAptArtifactRequest} media metadata or {@code null} if none
-           * @param mediaContent The media HTTP content or {@code null} if none.
+           * @param mediaContent The media HTTP content.
            * @return the request
            * @throws java.io.IOException if the initialization of the request fails
            */
@@ -2495,7 +2495,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1beta2.model.UploadAptArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
               super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1beta2.model.UploadAptArtifactMediaResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+              com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
               initializeMediaUpload(mediaContent);
             }
 
@@ -4964,7 +4964,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            *
            * @param parent The name of the parent resource where the artifacts will be uploaded.
            * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.UploadYumArtifactRequest} media metadata or {@code null} if none
-           * @param mediaContent The media HTTP content or {@code null} if none.
+           * @param mediaContent The media HTTP content.
            * @return the request
            * @throws java.io.IOException if the initialization of the request fails
            */
@@ -5033,7 +5033,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1beta2.model.UploadYumArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
               super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1beta2.model.UploadYumArtifactMediaResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              com.google.api.client.util.Preconditions.checkNotNull(, "Required parameter  must be specified.");
+              com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
               initializeMediaUpload(mediaContent);
             }
 

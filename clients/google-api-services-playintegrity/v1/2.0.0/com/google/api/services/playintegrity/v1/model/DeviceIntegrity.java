@@ -31,14 +31,14 @@ package com.google.api.services.playintegrity.v1.model;
 public final class DeviceIntegrity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details about the integrity of the device the app is running on
+   * Details about the integrity of the device the app is running on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> deviceRecognitionVerdict;
 
   /**
-   * Details about the integrity of the device the app is running on
+   * Details about the integrity of the device the app is running on.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDeviceRecognitionVerdict() {
@@ -46,7 +46,7 @@ public final class DeviceIntegrity extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Details about the integrity of the device the app is running on
+   * Details about the integrity of the device the app is running on.
    * @param deviceRecognitionVerdict deviceRecognitionVerdict or {@code null} for none
    */
   public DeviceIntegrity setDeviceRecognitionVerdict(java.util.List<java.lang.String> deviceRecognitionVerdict) {

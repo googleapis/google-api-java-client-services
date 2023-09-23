@@ -30,6 +30,33 @@ package com.google.api.services.prod_tt_sasportal.v1alpha1.model;
 @SuppressWarnings("javadoc")
 public final class SasPortalSetupSasAnalyticsRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. User id to setup analytics for, if not provided the user id associated with the
+   * project is used. optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userId;
+
+  /**
+   * Optional. User id to setup analytics for, if not provided the user id associated with the
+   * project is used. optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserId() {
+    return userId;
+  }
+
+  /**
+   * Optional. User id to setup analytics for, if not provided the user id associated with the
+   * project is used. optional
+   * @param userId userId or {@code null} for none
+   */
+  public SasPortalSetupSasAnalyticsRequest setUserId(java.lang.String userId) {
+    this.userId = userId;
+    return this;
+  }
+
   @Override
   public SasPortalSetupSasAnalyticsRequest set(String fieldName, Object value) {
     return (SasPortalSetupSasAnalyticsRequest) super.set(fieldName, value);

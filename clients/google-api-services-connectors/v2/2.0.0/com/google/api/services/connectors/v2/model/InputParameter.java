@@ -30,6 +30,14 @@ package com.google.api.services.connectors.v2.model;
 public final class InputParameter extends com.google.api.client.json.GenericJson {
 
   /**
+   * The following map contains fields that are not explicitly mentioned above,this give connectors
+   * the flexibility to add new metadata fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> additionalDetails;
+
+  /**
    * The data type of the Parameter
    * The value may be {@code null}.
    */
@@ -71,6 +79,25 @@ public final class InputParameter extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean nullable;
+
+  /**
+   * The following map contains fields that are not explicitly mentioned above,this give connectors
+   * the flexibility to add new metadata fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getAdditionalDetails() {
+    return additionalDetails;
+  }
+
+  /**
+   * The following map contains fields that are not explicitly mentioned above,this give connectors
+   * the flexibility to add new metadata fields.
+   * @param additionalDetails additionalDetails or {@code null} for none
+   */
+  public InputParameter setAdditionalDetails(java.util.Map<String, java.lang.Object> additionalDetails) {
+    this.additionalDetails = additionalDetails;
+    return this;
+  }
 
   /**
    * The data type of the Parameter

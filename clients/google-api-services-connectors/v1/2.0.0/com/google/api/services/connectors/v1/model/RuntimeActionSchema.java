@@ -37,6 +37,20 @@ public final class RuntimeActionSchema extends com.google.api.client.json.Generi
   private java.lang.String action;
 
   /**
+   * Output only. Brief Description of action
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Output only. Display Name of action to be shown on client side
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Output only. JsonSchema representation of this action's input metadata
    * The value may be {@code null}.
    */
@@ -90,6 +104,40 @@ public final class RuntimeActionSchema extends com.google.api.client.json.Generi
    */
   public RuntimeActionSchema setAction(java.lang.String action) {
     this.action = action;
+    return this;
+  }
+
+  /**
+   * Output only. Brief Description of action
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Output only. Brief Description of action
+   * @param description description or {@code null} for none
+   */
+  public RuntimeActionSchema setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. Display Name of action to be shown on client side
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. Display Name of action to be shown on client side
+   * @param displayName displayName or {@code null} for none
+   */
+  public RuntimeActionSchema setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

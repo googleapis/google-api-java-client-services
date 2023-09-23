@@ -39,7 +39,7 @@ public final class QueryParameter extends com.google.api.client.json.GenericJson
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String value;
+  private java.lang.Object value;
 
   /**
    * @return value or {@code null} for none
@@ -59,14 +59,14 @@ public final class QueryParameter extends com.google.api.client.json.GenericJson
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getValue() {
+  public java.lang.Object getValue() {
     return value;
   }
 
   /**
    * @param value value or {@code null} for none
    */
-  public QueryParameter setValue(java.lang.String value) {
+  public QueryParameter setValue(java.lang.Object value) {
     this.value = value;
     return this;
   }

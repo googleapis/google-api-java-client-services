@@ -64,18 +64,19 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean enrichmentEnabled;
 
   /**
+   * Optional. Ingress endpoint of the event listener. This is used only when private connectivity
+   * is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventsListenerIngressEndpoint;
+
+  /**
    * Optional. Private Connectivity Enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean privateConnectivityEnabled;
-
-  /**
-   * Optional. Public Events listener endpoint.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String publicEventsListenerEndpoint;
 
   /**
    * Registration endpoint for auto registration.
@@ -153,6 +154,25 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Optional. Ingress endpoint of the event listener. This is used only when private connectivity
+   * is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventsListenerIngressEndpoint() {
+    return eventsListenerIngressEndpoint;
+  }
+
+  /**
+   * Optional. Ingress endpoint of the event listener. This is used only when private connectivity
+   * is enabled.
+   * @param eventsListenerIngressEndpoint eventsListenerIngressEndpoint or {@code null} for none
+   */
+  public EventingConfig setEventsListenerIngressEndpoint(java.lang.String eventsListenerIngressEndpoint) {
+    this.eventsListenerIngressEndpoint = eventsListenerIngressEndpoint;
+    return this;
+  }
+
+  /**
    * Optional. Private Connectivity Enabled.
    * @return value or {@code null} for none
    */
@@ -166,23 +186,6 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   public EventingConfig setPrivateConnectivityEnabled(java.lang.Boolean privateConnectivityEnabled) {
     this.privateConnectivityEnabled = privateConnectivityEnabled;
-    return this;
-  }
-
-  /**
-   * Optional. Public Events listener endpoint.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPublicEventsListenerEndpoint() {
-    return publicEventsListenerEndpoint;
-  }
-
-  /**
-   * Optional. Public Events listener endpoint.
-   * @param publicEventsListenerEndpoint publicEventsListenerEndpoint or {@code null} for none
-   */
-  public EventingConfig setPublicEventsListenerEndpoint(java.lang.String publicEventsListenerEndpoint) {
-    this.publicEventsListenerEndpoint = publicEventsListenerEndpoint;
     return this;
   }
 

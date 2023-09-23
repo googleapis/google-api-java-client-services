@@ -31,6 +31,20 @@ package com.google.api.services.connectors.v2.model;
 public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
+   * Brief Description of action
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Display Name of action to be shown on client side
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * JsonSchema representation of this actions's input schema
    * The value may be {@code null}.
    */
@@ -64,6 +78,40 @@ public final class Action extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ResultMetadata> resultMetadata;
+
+  /**
+   * Brief Description of action
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Brief Description of action
+   * @param description description or {@code null} for none
+   */
+  public Action setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Display Name of action to be shown on client side
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Display Name of action to be shown on client side
+   * @param displayName displayName or {@code null} for none
+   */
+  public Action setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * JsonSchema representation of this actions's input schema

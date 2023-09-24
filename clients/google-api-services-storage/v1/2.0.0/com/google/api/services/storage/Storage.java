@@ -8394,6 +8394,29 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /**
+       * If true, copies the source object's ACL; otherwise, uses the bucket's default object ACL.
+       * The default is false.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean copySourceAcl;
+
+      /** If true, copies the source object's ACL; otherwise, uses the bucket's default object ACL. The
+     default is false.
+       */
+      public java.lang.Boolean getCopySourceAcl() {
+        return copySourceAcl;
+      }
+
+      /**
+       * If true, copies the source object's ACL; otherwise, uses the bucket's default object ACL.
+       * The default is false.
+       */
+      public Restore setCopySourceAcl(java.lang.Boolean copySourceAcl) {
+        this.copySourceAcl = copySourceAcl;
+        return this;
+      }
+
       /** Selects a specific revision of this object. */
       @com.google.api.client.util.Key
       private java.lang.Long generation;

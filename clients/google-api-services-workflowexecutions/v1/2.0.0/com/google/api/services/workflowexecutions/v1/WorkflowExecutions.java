@@ -644,14 +644,14 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
           }
           /**
            * Returns all metadata stored about an execution, excluding most data that is already accessible
-           * via other API methods.
+           * using other API methods.
            *
            * Create a request for the method "executions.exportData".
            *
            * This request holds the parameters needed by the workflowexecutions server.  After setting any
            * optional parameters, call the {@link ExportData#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the execution to be data exported. Format:
+           * @param name Required. Name of the execution for which data is to be exported. Format:
            *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
            * @return the request
            */
@@ -670,7 +670,7 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
 
             /**
              * Returns all metadata stored about an execution, excluding most data that is already accessible
-             * via other API methods.
+             * using other API methods.
              *
              * Create a request for the method "executions.exportData".
              *
@@ -680,7 +680,7 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
              * ExportData#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the execution to be data exported. Format:
+             * @param name Required. Name of the execution for which data is to be exported. Format:
            *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
              * @since 1.13
              */
@@ -760,13 +760,13 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             }
 
             /**
-             * Required. Name of the execution to be data exported. Format:
+             * Required. Name of the execution for which data is to be exported. Format:
              * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the execution to be data exported. Format:
+            /** Required. Name of the execution for which data is to be exported. Format:
            projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
              */
             public java.lang.String getName() {
@@ -774,7 +774,7 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             }
 
             /**
-             * Required. Name of the execution to be data exported. Format:
+             * Required. Name of the execution for which data is to be exported. Format:
              * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
              */
             public ExportData setName(java.lang.String name) {
@@ -1274,8 +1274,8 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
           public class Callbacks {
 
             /**
-             * Returns a list of active callbacks which belong to the execution with the given name. The
-             * returned callbacks are ordered by callback ID. first).
+             * Returns a list of active callbacks that belong to the execution with the given name. The returned
+             * callbacks are ordered by callback ID.
              *
              * Create a request for the method "callbacks.list".
              *
@@ -1300,8 +1300,8 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
 
               /**
-               * Returns a list of active callbacks which belong to the execution with the given name. The
-               * returned callbacks are ordered by callback ID. first).
+               * Returns a list of active callbacks that belong to the execution with the given name. The
+               * returned callbacks are ordered by callback ID.
                *
                * Create a request for the method "callbacks.list".
                *

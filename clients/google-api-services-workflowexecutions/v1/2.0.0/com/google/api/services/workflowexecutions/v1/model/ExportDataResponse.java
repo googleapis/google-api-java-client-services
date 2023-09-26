@@ -31,14 +31,14 @@ package com.google.api.services.workflowexecutions.v1.model;
 public final class ExportDataResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The JSON string with customer data and metadata of an execution of the given name
+   * The JSON string with customer data and metadata for an execution with the given name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String data;
 
   /**
-   * The JSON string with customer data and metadata of an execution of the given name
+   * The JSON string with customer data and metadata for an execution with the given name
    * @return value or {@code null} for none
    */
   public java.lang.String getData() {
@@ -46,7 +46,7 @@ public final class ExportDataResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The JSON string with customer data and metadata of an execution of the given name
+   * The JSON string with customer data and metadata for an execution with the given name
    * @param data data or {@code null} for none
    */
   public ExportDataResponse setData(java.lang.String data) {

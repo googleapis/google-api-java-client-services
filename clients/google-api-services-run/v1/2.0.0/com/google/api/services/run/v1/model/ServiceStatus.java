@@ -70,10 +70,9 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   private java.lang.String latestReadyRevisionName;
 
   /**
-   * Returns the generation last fully processed by the system. This will only match
-   * metadata.generation when reconciliation is complete. Clients polling for completed
-   * reconciliation should poll until observedGeneration = metadata.generation and the Ready
-   * condition's status is True or False.
+   * Returns the generation last seen by the system. Clients polling for completed reconciliation
+   * should poll until observedGeneration = metadata.generation and the Ready condition's status is
+   * True or False.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,10 +176,9 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Returns the generation last fully processed by the system. This will only match
-   * metadata.generation when reconciliation is complete. Clients polling for completed
-   * reconciliation should poll until observedGeneration = metadata.generation and the Ready
-   * condition's status is True or False.
+   * Returns the generation last seen by the system. Clients polling for completed reconciliation
+   * should poll until observedGeneration = metadata.generation and the Ready condition's status is
+   * True or False.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getObservedGeneration() {
@@ -188,10 +186,9 @@ public final class ServiceStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Returns the generation last fully processed by the system. This will only match
-   * metadata.generation when reconciliation is complete. Clients polling for completed
-   * reconciliation should poll until observedGeneration = metadata.generation and the Ready
-   * condition's status is True or False.
+   * Returns the generation last seen by the system. Clients polling for completed reconciliation
+   * should poll until observedGeneration = metadata.generation and the Ready condition's status is
+   * True or False.
    * @param observedGeneration observedGeneration or {@code null} for none
    */
   public ServiceStatus setObservedGeneration(java.lang.Integer observedGeneration) {

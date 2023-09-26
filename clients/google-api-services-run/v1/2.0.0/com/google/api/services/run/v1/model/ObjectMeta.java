@@ -41,7 +41,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
    * `run.googleapis.com/container-dependencies`: Revision. * `run.googleapis.com/cpu-throttling`:
    * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/description`:
-   * Service. * `run.googleapis.com/disable-default-uri`: Service. * `run.googleapis.com/encryption-
+   * Service. * `run.googleapis.com/disable-default-url`: Service. * `run.googleapis.com/encryption-
    * key-shutdown-hours`: Revision * `run.googleapis.com/encryption-key`: Revision, Execution. *
    * `run.googleapis.com/execution-environment`: Revision, Execution. * `run.googleapis.com/gc-
    * traffic-tags`: Service. * `run.googleapis.com/ingress`: Service. * `run.googleapis.com/launch-
@@ -174,7 +174,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
    * `run.googleapis.com/container-dependencies`: Revision. * `run.googleapis.com/cpu-throttling`:
    * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/description`:
-   * Service. * `run.googleapis.com/disable-default-uri`: Service. * `run.googleapis.com/encryption-
+   * Service. * `run.googleapis.com/disable-default-url`: Service. * `run.googleapis.com/encryption-
    * key-shutdown-hours`: Revision * `run.googleapis.com/encryption-key`: Revision, Execution. *
    * `run.googleapis.com/execution-environment`: Revision, Execution. * `run.googleapis.com/gc-
    * traffic-tags`: Service. * `run.googleapis.com/ingress`: Service. * `run.googleapis.com/launch-
@@ -201,7 +201,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
    * `run.googleapis.com/container-dependencies`: Revision. * `run.googleapis.com/cpu-throttling`:
    * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/description`:
-   * Service. * `run.googleapis.com/disable-default-uri`: Service. * `run.googleapis.com/encryption-
+   * Service. * `run.googleapis.com/disable-default-url`: Service. * `run.googleapis.com/encryption-
    * key-shutdown-hours`: Revision * `run.googleapis.com/encryption-key`: Revision, Execution. *
    * `run.googleapis.com/execution-environment`: Revision, Execution. * `run.googleapis.com/gc-
    * traffic-tags`: Service. * `run.googleapis.com/ingress`: Service. * `run.googleapis.com/launch-

@@ -38,6 +38,14 @@ public final class GoogleCloudRunV2RunJobRequest extends com.google.api.client.j
   private java.lang.String etag;
 
   /**
+   * Overrides specification for a given execution of a job. If provided, overrides will be applied
+   * to update the execution or task spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2Overrides overrides;
+
+  /**
    * Indicates that the request should be validated without actually deleting any resources.
    * The value may be {@code null}.
    */
@@ -60,6 +68,25 @@ public final class GoogleCloudRunV2RunJobRequest extends com.google.api.client.j
    */
   public GoogleCloudRunV2RunJobRequest setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Overrides specification for a given execution of a job. If provided, overrides will be applied
+   * to update the execution or task spec.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2Overrides getOverrides() {
+    return overrides;
+  }
+
+  /**
+   * Overrides specification for a given execution of a job. If provided, overrides will be applied
+   * to update the execution or task spec.
+   * @param overrides overrides or {@code null} for none
+   */
+  public GoogleCloudRunV2RunJobRequest setOverrides(GoogleCloudRunV2Overrides overrides) {
+    this.overrides = overrides;
     return this;
   }
 

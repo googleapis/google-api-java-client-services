@@ -16866,8 +16866,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the analyticsadmin server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Format: properties/{property_id}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
-         *        Example: properties/1234/dataStreams/5678/sKAdNetworkConversionValueSchema
+         * @param parent Required. The DataStream resource to list schemas for. Format:
+         *        properties/{property_id}/dataStreams/{dataStream} Example:
+         *        properties/1234/dataStreams/5678
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -16894,8 +16895,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Format: properties/{property_id}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
-         *        Example: properties/1234/dataStreams/5678/sKAdNetworkConversionValueSchema
+           * @param parent Required. The DataStream resource to list schemas for. Format:
+         *        properties/{property_id}/dataStreams/{dataStream} Example:
+         *        properties/1234/dataStreams/5678
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -16974,25 +16976,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Required. Format:
-           * properties/{property_id}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
-           * Example: properties/1234/dataStreams/5678/sKAdNetworkConversionValueSchema
+           * Required. The DataStream resource to list schemas for. Format:
+           * properties/{property_id}/dataStreams/{dataStream} Example:
+           * properties/1234/dataStreams/5678
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Format:
-         properties/{property_id}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema Example:
-         properties/1234/dataStreams/5678/sKAdNetworkConversionValueSchema
+          /** Required. The DataStream resource to list schemas for. Format:
+         properties/{property_id}/dataStreams/{dataStream} Example: properties/1234/dataStreams/5678
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. Format:
-           * properties/{property_id}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
-           * Example: properties/1234/dataStreams/5678/sKAdNetworkConversionValueSchema
+           * Required. The DataStream resource to list schemas for. Format:
+           * properties/{property_id}/dataStreams/{dataStream} Example:
+           * properties/1234/dataStreams/5678
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

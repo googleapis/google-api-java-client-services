@@ -31,6 +31,30 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The line items to be entitled. If unspecified, all line items will be entitled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequestLineItemEntitlementDetails> lineItemEntitlementDetails;
+
+  /**
+   * Optional. The line items to be entitled. If unspecified, all line items will be entitled.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequestLineItemEntitlementDetails> getLineItemEntitlementDetails() {
+    return lineItemEntitlementDetails;
+  }
+
+  /**
+   * Optional. The line items to be entitled. If unspecified, all line items will be entitled.
+   * @param lineItemEntitlementDetails lineItemEntitlementDetails or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequest setLineItemEntitlementDetails(java.util.List<GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequestLineItemEntitlementDetails> lineItemEntitlementDetails) {
+    this.lineItemEntitlementDetails = lineItemEntitlementDetails;
+    return this;
+  }
+
   @Override
   public GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequest set(String fieldName, Object value) {
     return (GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequest) super.set(fieldName, value);

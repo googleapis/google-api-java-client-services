@@ -56,7 +56,11 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   private java.lang.Boolean enableShadowRemovalNativePdf;
 
   /**
-   * Optional.
+   * Optional. File format conversion map to be applied to all input files. Map's key is the
+   * original mime_type. Map's value is the target mime_type of translated documents. Supported file
+   * format conversion includes: - `application/pdf` to `application/vnd.openxmlformats-
+   * officedocument.wordprocessingml.document` If nothing specified, output files will be in the
+   * same format as the original file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +185,11 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   }
 
   /**
-   * Optional.
+   * Optional. File format conversion map to be applied to all input files. Map's key is the
+   * original mime_type. Map's value is the target mime_type of translated documents. Supported file
+   * format conversion includes: - `application/pdf` to `application/vnd.openxmlformats-
+   * officedocument.wordprocessingml.document` If nothing specified, output files will be in the
+   * same format as the original file.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFormatConversions() {
@@ -189,7 +197,11 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   }
 
   /**
-   * Optional.
+   * Optional. File format conversion map to be applied to all input files. Map's key is the
+   * original mime_type. Map's value is the target mime_type of translated documents. Supported file
+   * format conversion includes: - `application/pdf` to `application/vnd.openxmlformats-
+   * officedocument.wordprocessingml.document` If nothing specified, output files will be in the
+   * same format as the original file.
    * @param formatConversions formatConversions or {@code null} for none
    */
   public BatchTranslateDocumentRequest setFormatConversions(java.util.Map<String, java.lang.String> formatConversions) {

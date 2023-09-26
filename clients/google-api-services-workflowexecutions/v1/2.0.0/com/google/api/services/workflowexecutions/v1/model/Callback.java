@@ -39,7 +39,7 @@ public final class Callback extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> availablePayloads;
 
   /**
-   * Output only. The method accepted by the callback. E.g. GET, POST, PUT.
+   * Output only. The method accepted by the callback. For example: GET, POST, PUT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class Callback extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The method accepted by the callback. E.g. GET, POST, PUT.
+   * Output only. The method accepted by the callback. For example: GET, POST, PUT.
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -88,7 +88,7 @@ public final class Callback extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The method accepted by the callback. E.g. GET, POST, PUT.
+   * Output only. The method accepted by the callback. For example: GET, POST, PUT.
    * @param method method or {@code null} for none
    */
   public Callback setMethod(java.lang.String method) {

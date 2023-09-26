@@ -19,8 +19,8 @@ package com.google.api.services.chat.v1.model;
 /**
  * An icon displayed in a widget on a card. For an example in Google Chat apps, see
  * [Icon](https://developers.google.com/chat/ui/widgets/icon). Supports [built-
- * in](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons) and
- * [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons) icons.
+ * in](https://developers.google.com/chat/format-messages#builtinicons) and
+ * [custom](https://developers.google.com/chat/format-messages#customicons) icons.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -65,8 +65,7 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   /**
    * Display one of the built-in icons provided by Google Workspace. For example, to display an
    * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
-   * icons, see [built-in icons](https://developers.google.com/chat/api/guides/message-
-   * formats/cards#builtinicons).
+   * icons, see [built-in icons](https://developers.google.com/chat/format-messages#builtinicons).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,8 +143,7 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   /**
    * Display one of the built-in icons provided by Google Workspace. For example, to display an
    * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
-   * icons, see [built-in icons](https://developers.google.com/chat/api/guides/message-
-   * formats/cards#builtinicons).
+   * icons, see [built-in icons](https://developers.google.com/chat/format-messages#builtinicons).
    * @return value or {@code null} for none
    */
   public java.lang.String getKnownIcon() {
@@ -155,8 +153,7 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   /**
    * Display one of the built-in icons provided by Google Workspace. For example, to display an
    * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
-   * icons, see [built-in icons](https://developers.google.com/chat/api/guides/message-
-   * formats/cards#builtinicons).
+   * icons, see [built-in icons](https://developers.google.com/chat/format-messages#builtinicons).
    * @param knownIcon knownIcon or {@code null} for none
    */
   public GoogleAppsCardV1Icon setKnownIcon(java.lang.String knownIcon) {

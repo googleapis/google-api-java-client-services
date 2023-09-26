@@ -988,8 +988,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * space](https://developers.google.com/chat/api/guides/v1/spaces/get). Requires
      * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
      * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts) and
-     * [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-     * authentication](https://developers.google.com/chat/api/guides/auth/users).
+     * [user authentication](https://developers.google.com/chat/api/guides/auth/users).
      *
      * Create a request for the method "spaces.get".
      *
@@ -1017,8 +1016,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * space](https://developers.google.com/chat/api/guides/v1/spaces/get). Requires
        * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
        * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts)
-       * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-       * authentication](https://developers.google.com/chat/api/guides/auth/users).
+       * and [user authentication](https://developers.google.com/chat/api/guides/auth/users).
        *
        * Create a request for the method "spaces.get".
        *

@@ -180,6 +180,22 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String fallbackText;
 
   /**
+   * Output only. Contains the message `text` with markups added to communicate formatting. This
+   * field might not capture all formatting visible in the UI, but includes the following: * [Markup
+   * syntax](https://developers.google.com/chat/format-messages) for bold, italic, strikethrough,
+   * monospace, and monospace block. * [User mentions](https://developers.google.com/chat/format-
+   * messages#messages-@mention) using the format ``. * Custom hyperlinks using the format
+   * `<{url}|{rendered_text}>` where the first string is the URL and the second is the rendered
+   * text—for example, ``. * Custom emoji using the format `:{emoji_name}:`—for example, `:smile:`.
+   * This doesn't apply to Unicode emoji, such as `U+1F600` for a grinning face emoji. For more
+   * information, see [View text formatting sent in a message](https://developers.google.com/chat
+   * /format-messages#view_text_formatting_sent_in_a_message)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String formattedText;
+
+  /**
    * Output only. The time at which the message was last edited by a user. If the message has never
    * been edited, this field is empty.
    * The value may be {@code null}.
@@ -239,9 +255,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Plain-text body of the message. The first link to an image, video, or web page generates a
    * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
-   * [@mention a Google Chat user](https://developers.google.com/chat/api/guides/message-
-   * formats/text#messages-@mention), or everyone in the space. To learn about creating text
-   * messages, see [Create a text message](https://developers.google.com/chat/api/guides/message-
+   * [@mention a Google Chat user](https://developers.google.com/chat/format-
+   * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
+   * see [Create a text message](https://developers.google.com/chat/api/guides/message-
    * formats/text).
    * The value may be {@code null}.
    */
@@ -535,6 +551,41 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Contains the message `text` with markups added to communicate formatting. This
+   * field might not capture all formatting visible in the UI, but includes the following: * [Markup
+   * syntax](https://developers.google.com/chat/format-messages) for bold, italic, strikethrough,
+   * monospace, and monospace block. * [User mentions](https://developers.google.com/chat/format-
+   * messages#messages-@mention) using the format ``. * Custom hyperlinks using the format
+   * `<{url}|{rendered_text}>` where the first string is the URL and the second is the rendered
+   * text—for example, ``. * Custom emoji using the format `:{emoji_name}:`—for example, `:smile:`.
+   * This doesn't apply to Unicode emoji, such as `U+1F600` for a grinning face emoji. For more
+   * information, see [View text formatting sent in a message](https://developers.google.com/chat
+   * /format-messages#view_text_formatting_sent_in_a_message)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFormattedText() {
+    return formattedText;
+  }
+
+  /**
+   * Output only. Contains the message `text` with markups added to communicate formatting. This
+   * field might not capture all formatting visible in the UI, but includes the following: * [Markup
+   * syntax](https://developers.google.com/chat/format-messages) for bold, italic, strikethrough,
+   * monospace, and monospace block. * [User mentions](https://developers.google.com/chat/format-
+   * messages#messages-@mention) using the format ``. * Custom hyperlinks using the format
+   * `<{url}|{rendered_text}>` where the first string is the URL and the second is the rendered
+   * text—for example, ``. * Custom emoji using the format `:{emoji_name}:`—for example, `:smile:`.
+   * This doesn't apply to Unicode emoji, such as `U+1F600` for a grinning face emoji. For more
+   * information, see [View text formatting sent in a message](https://developers.google.com/chat
+   * /format-messages#view_text_formatting_sent_in_a_message)
+   * @param formattedText formattedText or {@code null} for none
+   */
+  public Message setFormattedText(java.lang.String formattedText) {
+    this.formattedText = formattedText;
+    return this;
+  }
+
+  /**
    * Output only. The time at which the message was last edited by a user. If the message has never
    * been edited, this field is empty.
    * @return value or {@code null} for none
@@ -672,9 +723,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Plain-text body of the message. The first link to an image, video, or web page generates a
    * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
-   * [@mention a Google Chat user](https://developers.google.com/chat/api/guides/message-
-   * formats/text#messages-@mention), or everyone in the space. To learn about creating text
-   * messages, see [Create a text message](https://developers.google.com/chat/api/guides/message-
+   * [@mention a Google Chat user](https://developers.google.com/chat/format-
+   * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
+   * see [Create a text message](https://developers.google.com/chat/api/guides/message-
    * formats/text).
    * @return value or {@code null} for none
    */
@@ -685,9 +736,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Plain-text body of the message. The first link to an image, video, or web page generates a
    * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
-   * [@mention a Google Chat user](https://developers.google.com/chat/api/guides/message-
-   * formats/text#messages-@mention), or everyone in the space. To learn about creating text
-   * messages, see [Create a text message](https://developers.google.com/chat/api/guides/message-
+   * [@mention a Google Chat user](https://developers.google.com/chat/format-
+   * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
+   * see [Create a text message](https://developers.google.com/chat/api/guides/message-
    * formats/text).
    * @param text text or {@code null} for none
    */

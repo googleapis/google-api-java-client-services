@@ -80,6 +80,18 @@ public final class BitbucketServerConfig extends com.google.api.client.json.Gene
   private java.lang.String peeredNetwork;
 
   /**
+   * Immutable. IP range within the peered network. This is specified in CIDR notation with a slash
+   * and the subnet prefix size. You can optionally specify an IP address before the subnet prefix
+   * value. e.g. `192.168.0.0/29` would specify an IP range starting at 192.168.0.0 with a 29 bit
+   * prefix size. `/16` would specify a prefix size of 16 bits, with an automatically determined IP
+   * within the peered VPC. If unspecified, a value of `/24` will be used. The field only has an
+   * effect if peered_network is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peeredNetworkIpRange;
+
+  /**
    * Required. Secret Manager secrets needed by the config.
    * The value may be {@code null}.
    */
@@ -224,6 +236,33 @@ public final class BitbucketServerConfig extends com.google.api.client.json.Gene
    */
   public BitbucketServerConfig setPeeredNetwork(java.lang.String peeredNetwork) {
     this.peeredNetwork = peeredNetwork;
+    return this;
+  }
+
+  /**
+   * Immutable. IP range within the peered network. This is specified in CIDR notation with a slash
+   * and the subnet prefix size. You can optionally specify an IP address before the subnet prefix
+   * value. e.g. `192.168.0.0/29` would specify an IP range starting at 192.168.0.0 with a 29 bit
+   * prefix size. `/16` would specify a prefix size of 16 bits, with an automatically determined IP
+   * within the peered VPC. If unspecified, a value of `/24` will be used. The field only has an
+   * effect if peered_network is set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeeredNetworkIpRange() {
+    return peeredNetworkIpRange;
+  }
+
+  /**
+   * Immutable. IP range within the peered network. This is specified in CIDR notation with a slash
+   * and the subnet prefix size. You can optionally specify an IP address before the subnet prefix
+   * value. e.g. `192.168.0.0/29` would specify an IP range starting at 192.168.0.0 with a 29 bit
+   * prefix size. `/16` would specify a prefix size of 16 bits, with an automatically determined IP
+   * within the peered VPC. If unspecified, a value of `/24` will be used. The field only has an
+   * effect if peered_network is set.
+   * @param peeredNetworkIpRange peeredNetworkIpRange or {@code null} for none
+   */
+  public BitbucketServerConfig setPeeredNetworkIpRange(java.lang.String peeredNetworkIpRange) {
+    this.peeredNetworkIpRange = peeredNetworkIpRange;
     return this;
   }
 

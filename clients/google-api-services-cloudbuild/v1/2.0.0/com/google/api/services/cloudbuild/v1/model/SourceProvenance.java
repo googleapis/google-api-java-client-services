@@ -49,6 +49,21 @@ public final class SourceProvenance extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. A copy of the build's `source.connected_repository`, if exists, with any revisions
+   * resolved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConnectedRepository resolvedConnectedRepository;
+
+  /**
+   * Output only. A copy of the build's `source.git_source`, if exists, with any revisions resolved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GitSource resolvedGitSource;
+
+  /**
    * A copy of the build's `source.repo_source`, if exists, with any revisions resolved.
    * The value may be {@code null}.
    */
@@ -94,6 +109,42 @@ public final class SourceProvenance extends com.google.api.client.json.GenericJs
    */
   public SourceProvenance setFileHashes(java.util.Map<String, FileHashes> fileHashes) {
     this.fileHashes = fileHashes;
+    return this;
+  }
+
+  /**
+   * Output only. A copy of the build's `source.connected_repository`, if exists, with any revisions
+   * resolved.
+   * @return value or {@code null} for none
+   */
+  public ConnectedRepository getResolvedConnectedRepository() {
+    return resolvedConnectedRepository;
+  }
+
+  /**
+   * Output only. A copy of the build's `source.connected_repository`, if exists, with any revisions
+   * resolved.
+   * @param resolvedConnectedRepository resolvedConnectedRepository or {@code null} for none
+   */
+  public SourceProvenance setResolvedConnectedRepository(ConnectedRepository resolvedConnectedRepository) {
+    this.resolvedConnectedRepository = resolvedConnectedRepository;
+    return this;
+  }
+
+  /**
+   * Output only. A copy of the build's `source.git_source`, if exists, with any revisions resolved.
+   * @return value or {@code null} for none
+   */
+  public GitSource getResolvedGitSource() {
+    return resolvedGitSource;
+  }
+
+  /**
+   * Output only. A copy of the build's `source.git_source`, if exists, with any revisions resolved.
+   * @param resolvedGitSource resolvedGitSource or {@code null} for none
+   */
+  public SourceProvenance setResolvedGitSource(GitSource resolvedGitSource) {
+    this.resolvedGitSource = resolvedGitSource;
     return this;
   }
 

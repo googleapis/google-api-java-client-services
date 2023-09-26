@@ -1008,8 +1008,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Using suggestions generated from user-imported search events. * `document-
              * completable` - Using suggestions taken directly from user-imported document fields
              * marked as completable. Default values: * `document` is the default model for regular
-             * dataStores. * `search-history` is the default model for IndustryVertical.SITE_SEARCH
-             * dataStores.
+             * dataStores. * `search-history` is the default model for site search dataStores.
              */
             @com.google.api.client.util.Key
             private java.lang.String queryModel;
@@ -1020,7 +1019,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            traffic for Search API. * `user-event` - Using suggestions generated from user-imported search
            events. * `document-completable` - Using suggestions taken directly from user-imported document
            fields marked as completable. Default values: * `document` is the default model for regular
-           dataStores. * `search-history` is the default model for IndustryVertical.SITE_SEARCH dataStores.
+           dataStores. * `search-history` is the default model for site search dataStores.
              */
             public java.lang.String getQueryModel() {
               return queryModel;
@@ -1034,8 +1033,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Using suggestions generated from user-imported search events. * `document-
              * completable` - Using suggestions taken directly from user-imported document fields
              * marked as completable. Default values: * `document` is the default model for regular
-             * dataStores. * `search-history` is the default model for IndustryVertical.SITE_SEARCH
-             * dataStores.
+             * dataStores. * `search-history` is the default model for site search dataStores.
              */
             public CompleteQuery setQueryModel(java.lang.String queryModel) {
               this.queryModel = queryModel;
@@ -5941,6 +5939,148 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           public class SiteSearchEngine {
 
             /**
+             * Request on-demand recrawl for a list of URIs.
+             *
+             * Create a request for the method "siteSearchEngine.recrawlUris".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link RecrawlUris#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param siteSearchEngine Required. Full resource name of the SiteSearchEngine, such as
+             *        `projects/locations/collections/dataStores/siteSearchEngine`.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecrawlUrisRequest}
+             * @return the request
+             */
+            public RecrawlUris recrawlUris(java.lang.String siteSearchEngine, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecrawlUrisRequest content) throws java.io.IOException {
+              RecrawlUris result = new RecrawlUris(siteSearchEngine, content);
+              initialize(result);
+              return result;
+            }
+
+            public class RecrawlUris extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+siteSearchEngine}:recrawlUris";
+
+              private final java.util.regex.Pattern SITE_SEARCH_ENGINE_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/siteSearchEngine$");
+
+              /**
+               * Request on-demand recrawl for a list of URIs.
+               *
+               * Create a request for the method "siteSearchEngine.recrawlUris".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link RecrawlUris#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * RecrawlUris#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param siteSearchEngine Required. Full resource name of the SiteSearchEngine, such as
+             *        `projects/locations/collections/dataStores/siteSearchEngine`.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecrawlUrisRequest}
+               * @since 1.13
+               */
+              protected RecrawlUris(java.lang.String siteSearchEngine, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecrawlUrisRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                this.siteSearchEngine = com.google.api.client.util.Preconditions.checkNotNull(siteSearchEngine, "Required parameter siteSearchEngine must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SITE_SEARCH_ENGINE_PATTERN.matcher(siteSearchEngine).matches(),
+                      "Parameter siteSearchEngine must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/siteSearchEngine$");
+                }
+              }
+
+              @Override
+              public RecrawlUris set$Xgafv(java.lang.String $Xgafv) {
+                return (RecrawlUris) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public RecrawlUris setAccessToken(java.lang.String accessToken) {
+                return (RecrawlUris) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public RecrawlUris setAlt(java.lang.String alt) {
+                return (RecrawlUris) super.setAlt(alt);
+              }
+
+              @Override
+              public RecrawlUris setCallback(java.lang.String callback) {
+                return (RecrawlUris) super.setCallback(callback);
+              }
+
+              @Override
+              public RecrawlUris setFields(java.lang.String fields) {
+                return (RecrawlUris) super.setFields(fields);
+              }
+
+              @Override
+              public RecrawlUris setKey(java.lang.String key) {
+                return (RecrawlUris) super.setKey(key);
+              }
+
+              @Override
+              public RecrawlUris setOauthToken(java.lang.String oauthToken) {
+                return (RecrawlUris) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public RecrawlUris setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (RecrawlUris) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public RecrawlUris setQuotaUser(java.lang.String quotaUser) {
+                return (RecrawlUris) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public RecrawlUris setUploadType(java.lang.String uploadType) {
+                return (RecrawlUris) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public RecrawlUris setUploadProtocol(java.lang.String uploadProtocol) {
+                return (RecrawlUris) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full resource name of the SiteSearchEngine, such as
+               * `projects/locations/collections/dataStores/siteSearchEngine`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String siteSearchEngine;
+
+              /** Required. Full resource name of the SiteSearchEngine, such as
+             `projects/locations/collections/dataStores/siteSearchEngine`.
+               */
+              public java.lang.String getSiteSearchEngine() {
+                return siteSearchEngine;
+              }
+
+              /**
+               * Required. Full resource name of the SiteSearchEngine, such as
+               * `projects/locations/collections/dataStores/siteSearchEngine`.
+               */
+              public RecrawlUris setSiteSearchEngine(java.lang.String siteSearchEngine) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SITE_SEARCH_ENGINE_PATTERN.matcher(siteSearchEngine).matches(),
+                      "Parameter siteSearchEngine must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/siteSearchEngine$");
+                }
+                this.siteSearchEngine = siteSearchEngine;
+                return this;
+              }
+
+              @Override
+              public RecrawlUris set(String parameterName, Object value) {
+                return (RecrawlUris) super.set(parameterName, value);
+              }
+            }
+
+            /**
              * An accessor for creating requests from the Operations collection.
              *
              * <p>The typical use is:</p>
@@ -8289,7 +8429,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Using suggestions generated from user-imported search events. * `document-completable`
            * - Using suggestions taken directly from user-imported document fields marked as
            * completable. Default values: * `document` is the default model for regular dataStores.
-           * * `search-history` is the default model for IndustryVertical.SITE_SEARCH dataStores.
+           * * `search-history` is the default model for site search dataStores.
            */
           @com.google.api.client.util.Key
           private java.lang.String queryModel;
@@ -8300,7 +8440,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          traffic for Search API. * `user-event` - Using suggestions generated from user-imported search
          events. * `document-completable` - Using suggestions taken directly from user-imported document
          fields marked as completable. Default values: * `document` is the default model for regular
-         dataStores. * `search-history` is the default model for IndustryVertical.SITE_SEARCH dataStores.
+         dataStores. * `search-history` is the default model for site search dataStores.
            */
           public java.lang.String getQueryModel() {
             return queryModel;
@@ -8314,7 +8454,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Using suggestions generated from user-imported search events. * `document-completable`
            * - Using suggestions taken directly from user-imported document fields marked as
            * completable. Default values: * `document` is the default model for regular dataStores.
-           * * `search-history` is the default model for IndustryVertical.SITE_SEARCH dataStores.
+           * * `search-history` is the default model for site search dataStores.
            */
           public CompleteQuery setQueryModel(java.lang.String queryModel) {
             this.queryModel = queryModel;
@@ -12837,6 +12977,169 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public Search set(String parameterName, Object value) {
               return (Search) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the SiteSearchEngine collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.SiteSearchEngine.List request = discoveryengine.siteSearchEngine().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public SiteSearchEngine siteSearchEngine() {
+          return new SiteSearchEngine();
+        }
+
+        /**
+         * The "siteSearchEngine" collection of methods.
+         */
+        public class SiteSearchEngine {
+
+          /**
+           * Request on-demand recrawl for a list of URIs.
+           *
+           * Create a request for the method "siteSearchEngine.recrawlUris".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link RecrawlUris#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param siteSearchEngine Required. Full resource name of the SiteSearchEngine, such as
+           *        `projects/locations/collections/dataStores/siteSearchEngine`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecrawlUrisRequest}
+           * @return the request
+           */
+          public RecrawlUris recrawlUris(java.lang.String siteSearchEngine, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecrawlUrisRequest content) throws java.io.IOException {
+            RecrawlUris result = new RecrawlUris(siteSearchEngine, content);
+            initialize(result);
+            return result;
+          }
+
+          public class RecrawlUris extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+siteSearchEngine}:recrawlUris";
+
+            private final java.util.regex.Pattern SITE_SEARCH_ENGINE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/siteSearchEngine$");
+
+            /**
+             * Request on-demand recrawl for a list of URIs.
+             *
+             * Create a request for the method "siteSearchEngine.recrawlUris".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link RecrawlUris#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * RecrawlUris#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param siteSearchEngine Required. Full resource name of the SiteSearchEngine, such as
+           *        `projects/locations/collections/dataStores/siteSearchEngine`.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecrawlUrisRequest}
+             * @since 1.13
+             */
+            protected RecrawlUris(java.lang.String siteSearchEngine, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecrawlUrisRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+              this.siteSearchEngine = com.google.api.client.util.Preconditions.checkNotNull(siteSearchEngine, "Required parameter siteSearchEngine must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SITE_SEARCH_ENGINE_PATTERN.matcher(siteSearchEngine).matches(),
+                    "Parameter siteSearchEngine must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/siteSearchEngine$");
+              }
+            }
+
+            @Override
+            public RecrawlUris set$Xgafv(java.lang.String $Xgafv) {
+              return (RecrawlUris) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public RecrawlUris setAccessToken(java.lang.String accessToken) {
+              return (RecrawlUris) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public RecrawlUris setAlt(java.lang.String alt) {
+              return (RecrawlUris) super.setAlt(alt);
+            }
+
+            @Override
+            public RecrawlUris setCallback(java.lang.String callback) {
+              return (RecrawlUris) super.setCallback(callback);
+            }
+
+            @Override
+            public RecrawlUris setFields(java.lang.String fields) {
+              return (RecrawlUris) super.setFields(fields);
+            }
+
+            @Override
+            public RecrawlUris setKey(java.lang.String key) {
+              return (RecrawlUris) super.setKey(key);
+            }
+
+            @Override
+            public RecrawlUris setOauthToken(java.lang.String oauthToken) {
+              return (RecrawlUris) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public RecrawlUris setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (RecrawlUris) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public RecrawlUris setQuotaUser(java.lang.String quotaUser) {
+              return (RecrawlUris) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public RecrawlUris setUploadType(java.lang.String uploadType) {
+              return (RecrawlUris) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public RecrawlUris setUploadProtocol(java.lang.String uploadProtocol) {
+              return (RecrawlUris) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name of the SiteSearchEngine, such as
+             * `projects/locations/collections/dataStores/siteSearchEngine`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String siteSearchEngine;
+
+            /** Required. Full resource name of the SiteSearchEngine, such as
+           `projects/locations/collections/dataStores/siteSearchEngine`.
+             */
+            public java.lang.String getSiteSearchEngine() {
+              return siteSearchEngine;
+            }
+
+            /**
+             * Required. Full resource name of the SiteSearchEngine, such as
+             * `projects/locations/collections/dataStores/siteSearchEngine`.
+             */
+            public RecrawlUris setSiteSearchEngine(java.lang.String siteSearchEngine) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SITE_SEARCH_ENGINE_PATTERN.matcher(siteSearchEngine).matches(),
+                    "Parameter siteSearchEngine must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/siteSearchEngine$");
+              }
+              this.siteSearchEngine = siteSearchEngine;
+              return this;
+            }
+
+            @Override
+            public RecrawlUris set(String parameterName, Object value) {
+              return (RecrawlUris) super.set(parameterName, value);
             }
           }
 

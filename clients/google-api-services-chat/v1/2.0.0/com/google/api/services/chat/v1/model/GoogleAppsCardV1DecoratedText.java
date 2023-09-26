@@ -47,10 +47,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private GoogleAppsCardV1Button button;
 
   /**
-   * An icon displayed after the text. Supports [built-
-   * in](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons) and
-   * [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
-   * icons.
+   * An icon displayed after the text. Supports [built-in](https://developers.google.com/chat
+   * /format-messages#builtinicons) and [custom](https://developers.google.com/chat/format-
+   * messages#customicons) icons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,10 +143,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * An icon displayed after the text. Supports [built-
-   * in](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons) and
-   * [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
-   * icons.
+   * An icon displayed after the text. Supports [built-in](https://developers.google.com/chat
+   * /format-messages#builtinicons) and [custom](https://developers.google.com/chat/format-
+   * messages#customicons) icons.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Icon getEndIcon() {
@@ -155,10 +153,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * An icon displayed after the text. Supports [built-
-   * in](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons) and
-   * [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons)
-   * icons.
+   * An icon displayed after the text. Supports [built-in](https://developers.google.com/chat
+   * /format-messages#builtinicons) and [custom](https://developers.google.com/chat/format-
+   * messages#customicons) icons.
    * @param endIcon endIcon or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setEndIcon(GoogleAppsCardV1Icon endIcon) {

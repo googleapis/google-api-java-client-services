@@ -102,6 +102,26 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String displayName;
 
   /**
+   * The effective tags on this resource. All of the tags that are both attached to and inherited by
+   * a resource are collectively called the effective tags. For more information, see [tag
+   * inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance). To
+   * search against the `effective_tags`: * Use a field query. Example: -
+   * `effectiveTagKeys:"123456789/env*"` - `effectiveTagKeys="123456789/env"` -
+   * `effectiveTagKeys:"env"` - `effectiveTagValues:"env"` - `effectiveTagValues:"env/prod"` -
+   * `effectiveTagValues:"123456789/env/prod*"` - `effectiveTagValues="123456789/env/prod"` -
+   * `effectiveTagValueIds="tagValues/456"`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EffectiveTagDetails> effectiveTags;
+
+  static {
+    // hack to force ProGuard to consider EffectiveTagDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EffectiveTagDetails.class);
+  }
+
+  /**
    * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
    * is available when the resource belongs to one or more folders. To search against `folders`: *
    * Use a field query. Example: `folders:(123 OR 456)` * Use a free text query. Example: `123` *
@@ -270,8 +290,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String state;
 
   /**
-   * TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search against the
-   * `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
+   * This field is only present for the purpose of backward compatibility. Please use the `tags`
+   * field instead. TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To
+   * search against the `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
    * `tagKeys="123456789/env"` - `tagKeys:"env"` * Use a free text query. Example: - `env`
    * The value may be {@code null}.
    */
@@ -279,15 +300,18 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> tagKeys;
 
   /**
-   * TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the `tagValueIds`: *
-   * Use a field query. Example: - `tagValueIds="tagValues/456"`
+   * This field is only present for the purpose of backward compatibility. Please use the `tags`
+   * field instead. TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the
+   * `tagValueIds`: * Use a field query. Example: - `tagValueIds="tagValues/456"` * Use a free text
+   * query. Example: - `456`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tagValueIds;
 
   /**
-   * TagValue namespaced names, in the format of
+   * This field is only present for the purpose of backward compatibility. Please use the `tags`
+   * field instead. TagValue namespaced names, in the format of
    * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * Use
    * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
    * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` * Use a free text query.
@@ -296,6 +320,17 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tagValues;
+
+  /**
+   * The tags directly attached to this resource. To search against the `tags`: * Use a field query.
+   * Example: - `tagKeys:"123456789/env*"` - `tagKeys="123456789/env"` - `tagKeys:"env"` -
+   * `tagValues:"env"` - `tagValues:"env/prod"` - `tagValues:"123456789/env/prod*"` -
+   * `tagValues="123456789/env/prod"` - `tagValueIds="tagValues/456"` * Use a free text query.
+   * Example: - `env/prod`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Tag> tags;
 
   /**
    * The last update timestamp of this resource, at which the resource was last modified or deleted.
@@ -466,6 +501,37 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * The effective tags on this resource. All of the tags that are both attached to and inherited by
+   * a resource are collectively called the effective tags. For more information, see [tag
+   * inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance). To
+   * search against the `effective_tags`: * Use a field query. Example: -
+   * `effectiveTagKeys:"123456789/env*"` - `effectiveTagKeys="123456789/env"` -
+   * `effectiveTagKeys:"env"` - `effectiveTagValues:"env"` - `effectiveTagValues:"env/prod"` -
+   * `effectiveTagValues:"123456789/env/prod*"` - `effectiveTagValues="123456789/env/prod"` -
+   * `effectiveTagValueIds="tagValues/456"`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EffectiveTagDetails> getEffectiveTags() {
+    return effectiveTags;
+  }
+
+  /**
+   * The effective tags on this resource. All of the tags that are both attached to and inherited by
+   * a resource are collectively called the effective tags. For more information, see [tag
+   * inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance). To
+   * search against the `effective_tags`: * Use a field query. Example: -
+   * `effectiveTagKeys:"123456789/env*"` - `effectiveTagKeys="123456789/env"` -
+   * `effectiveTagKeys:"env"` - `effectiveTagValues:"env"` - `effectiveTagValues:"env/prod"` -
+   * `effectiveTagValues:"123456789/env/prod*"` - `effectiveTagValues="123456789/env/prod"` -
+   * `effectiveTagValueIds="tagValues/456"`
+   * @param effectiveTags effectiveTags or {@code null} for none
+   */
+  public ResourceSearchResult setEffectiveTags(java.util.List<EffectiveTagDetails> effectiveTags) {
+    this.effectiveTags = effectiveTags;
     return this;
   }
 
@@ -836,8 +902,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search against the
-   * `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
+   * This field is only present for the purpose of backward compatibility. Please use the `tags`
+   * field instead. TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To
+   * search against the `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
    * `tagKeys="123456789/env"` - `tagKeys:"env"` * Use a free text query. Example: - `env`
    * @return value or {@code null} for none
    */
@@ -846,8 +913,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search against the
-   * `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
+   * This field is only present for the purpose of backward compatibility. Please use the `tags`
+   * field instead. TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To
+   * search against the `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
    * `tagKeys="123456789/env"` - `tagKeys:"env"` * Use a free text query. Example: - `env`
    * @param tagKeys tagKeys or {@code null} for none
    */
@@ -857,8 +925,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the `tagValueIds`: *
-   * Use a field query. Example: - `tagValueIds="tagValues/456"`
+   * This field is only present for the purpose of backward compatibility. Please use the `tags`
+   * field instead. TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the
+   * `tagValueIds`: * Use a field query. Example: - `tagValueIds="tagValues/456"` * Use a free text
+   * query. Example: - `456`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTagValueIds() {
@@ -866,8 +936,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the `tagValueIds`: *
-   * Use a field query. Example: - `tagValueIds="tagValues/456"`
+   * This field is only present for the purpose of backward compatibility. Please use the `tags`
+   * field instead. TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the
+   * `tagValueIds`: * Use a field query. Example: - `tagValueIds="tagValues/456"` * Use a free text
+   * query. Example: - `456`
    * @param tagValueIds tagValueIds or {@code null} for none
    */
   public ResourceSearchResult setTagValueIds(java.util.List<java.lang.String> tagValueIds) {
@@ -876,7 +948,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * TagValue namespaced names, in the format of
+   * This field is only present for the purpose of backward compatibility. Please use the `tags`
+   * field instead. TagValue namespaced names, in the format of
    * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * Use
    * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
    * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` * Use a free text query.
@@ -888,7 +961,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * TagValue namespaced names, in the format of
+   * This field is only present for the purpose of backward compatibility. Please use the `tags`
+   * field instead. TagValue namespaced names, in the format of
    * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * Use
    * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
    * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` * Use a free text query.
@@ -897,6 +971,31 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setTagValues(java.util.List<java.lang.String> tagValues) {
     this.tagValues = tagValues;
+    return this;
+  }
+
+  /**
+   * The tags directly attached to this resource. To search against the `tags`: * Use a field query.
+   * Example: - `tagKeys:"123456789/env*"` - `tagKeys="123456789/env"` - `tagKeys:"env"` -
+   * `tagValues:"env"` - `tagValues:"env/prod"` - `tagValues:"123456789/env/prod*"` -
+   * `tagValues="123456789/env/prod"` - `tagValueIds="tagValues/456"` * Use a free text query.
+   * Example: - `env/prod`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Tag> getTags() {
+    return tags;
+  }
+
+  /**
+   * The tags directly attached to this resource. To search against the `tags`: * Use a field query.
+   * Example: - `tagKeys:"123456789/env*"` - `tagKeys="123456789/env"` - `tagKeys:"env"` -
+   * `tagValues:"env"` - `tagValues:"env/prod"` - `tagValues:"123456789/env/prod*"` -
+   * `tagValues="123456789/env/prod"` - `tagValueIds="tagValues/456"` * Use a free text query.
+   * Example: - `env/prod`
+   * @param tags tags or {@code null} for none
+   */
+  public ResourceSearchResult setTags(java.util.List<Tag> tags) {
+    this.tags = tags;
     return this;
   }
 

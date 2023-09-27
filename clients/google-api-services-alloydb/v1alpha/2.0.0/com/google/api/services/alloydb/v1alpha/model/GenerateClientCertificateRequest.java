@@ -40,7 +40,8 @@ public final class GenerateClientCertificateRequest extends com.google.api.clien
   private String certDuration;
 
   /**
-   * Optional. A pem-encoded X.509 certificate signing request (CSR).
+   * Optional. A pem-encoded X.509 certificate signing request (CSR). It is recommended to use
+   * public_key instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +100,8 @@ public final class GenerateClientCertificateRequest extends com.google.api.clien
   }
 
   /**
-   * Optional. A pem-encoded X.509 certificate signing request (CSR).
+   * Optional. A pem-encoded X.509 certificate signing request (CSR). It is recommended to use
+   * public_key instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPemCsr() {
@@ -107,7 +109,8 @@ public final class GenerateClientCertificateRequest extends com.google.api.clien
   }
 
   /**
-   * Optional. A pem-encoded X.509 certificate signing request (CSR).
+   * Optional. A pem-encoded X.509 certificate signing request (CSR). It is recommended to use
+   * public_key instead.
    * @param pemCsr pemCsr or {@code null} for none
    */
   public GenerateClientCertificateRequest setPemCsr(java.lang.String pemCsr) {

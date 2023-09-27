@@ -50,7 +50,7 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
 
   /**
    * Turn off character box detector in OCR engine. Character box detection is enabled by default in
-   * OCR 2.0+ processors.
+   * OCR 2.0 (and later) processors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +138,7 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
 
   /**
    * Turn off character box detector in OCR engine. Character box detection is enabled by default in
-   * OCR 2.0+ processors.
+   * OCR 2.0 (and later) processors.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableCharacterBoxesDetection() {
@@ -147,7 +147,7 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
 
   /**
    * Turn off character box detector in OCR engine. Character box detection is enabled by default in
-   * OCR 2.0+ processors.
+   * OCR 2.0 (and later) processors.
    * @param disableCharacterBoxesDetection disableCharacterBoxesDetection or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3OcrConfig setDisableCharacterBoxesDetection(java.lang.Boolean disableCharacterBoxesDetection) {

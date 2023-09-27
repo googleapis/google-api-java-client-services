@@ -3754,6 +3754,146 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
+           * Returns a list of documents present in the dataset.
+           *
+           * Create a request for the method "dataset.listDocuments".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link ListDocuments#execute()} method to invoke the remote operation.
+           *
+           * @param dataset Required. The resource name of the dataset to be listed. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}/dataset
+           * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ListDocumentsRequest}
+           * @return the request
+           */
+          public ListDocuments listDocuments(java.lang.String dataset, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ListDocumentsRequest content) throws java.io.IOException {
+            ListDocuments result = new ListDocuments(dataset, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ListDocuments extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ListDocumentsResponse> {
+
+            private static final String REST_PATH = "v1beta3/{+dataset}:listDocuments";
+
+            private final java.util.regex.Pattern DATASET_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+
+            /**
+             * Returns a list of documents present in the dataset.
+             *
+             * Create a request for the method "dataset.listDocuments".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link ListDocuments#execute()} method to invoke the remote
+             * operation. <p> {@link ListDocuments#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param dataset Required. The resource name of the dataset to be listed. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}/dataset
+             * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ListDocumentsRequest}
+             * @since 1.13
+             */
+            protected ListDocuments(java.lang.String dataset, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ListDocumentsRequest content) {
+              super(Document.this, "POST", REST_PATH, content, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ListDocumentsResponse.class);
+              this.dataset = com.google.api.client.util.Preconditions.checkNotNull(dataset, "Required parameter dataset must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                    "Parameter dataset must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+              }
+            }
+
+            @Override
+            public ListDocuments set$Xgafv(java.lang.String $Xgafv) {
+              return (ListDocuments) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ListDocuments setAccessToken(java.lang.String accessToken) {
+              return (ListDocuments) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ListDocuments setAlt(java.lang.String alt) {
+              return (ListDocuments) super.setAlt(alt);
+            }
+
+            @Override
+            public ListDocuments setCallback(java.lang.String callback) {
+              return (ListDocuments) super.setCallback(callback);
+            }
+
+            @Override
+            public ListDocuments setFields(java.lang.String fields) {
+              return (ListDocuments) super.setFields(fields);
+            }
+
+            @Override
+            public ListDocuments setKey(java.lang.String key) {
+              return (ListDocuments) super.setKey(key);
+            }
+
+            @Override
+            public ListDocuments setOauthToken(java.lang.String oauthToken) {
+              return (ListDocuments) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ListDocuments setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ListDocuments) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ListDocuments setQuotaUser(java.lang.String quotaUser) {
+              return (ListDocuments) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ListDocuments setUploadType(java.lang.String uploadType) {
+              return (ListDocuments) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ListDocuments setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ListDocuments) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the dataset to be listed. Format:
+             * projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataset;
+
+            /** Required. The resource name of the dataset to be listed. Format:
+           projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            public java.lang.String getDataset() {
+              return dataset;
+            }
+
+            /**
+             * Required. The resource name of the dataset to be listed. Format:
+             * projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            public ListDocuments setDataset(java.lang.String dataset) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                    "Parameter dataset must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+              }
+              this.dataset = dataset;
+              return this;
+            }
+
+            @Override
+            public ListDocuments set(String parameterName, Object value) {
+              return (ListDocuments) super.set(parameterName, value);
+            }
+          }
+          /**
            * Updates a `DatasetSchema`.
            *
            * Create a request for the method "dataset.updateDatasetSchema".

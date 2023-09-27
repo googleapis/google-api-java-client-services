@@ -92,6 +92,14 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
   private GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig;
 
   /**
+   * Optional. Default Speech-to-Text resources to be used while ingesting audio files. Optional,
+   * CCAI Insights will create a default if not provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig;
+
+  /**
    * Output only. The time at which the settings were last updated.
    * The value may be {@code null}.
    */
@@ -238,6 +246,25 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    */
   public GoogleCloudContactcenterinsightsV1Settings setRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig) {
     this.redactionConfig = redactionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Default Speech-to-Text resources to be used while ingesting audio files. Optional,
+   * CCAI Insights will create a default if not provided.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1SpeechConfig getSpeechConfig() {
+    return speechConfig;
+  }
+
+  /**
+   * Optional. Default Speech-to-Text resources to be used while ingesting audio files. Optional,
+   * CCAI Insights will create a default if not provided.
+   * @param speechConfig speechConfig or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Settings setSpeechConfig(GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig) {
+    this.speechConfig = speechConfig;
     return this;
   }
 

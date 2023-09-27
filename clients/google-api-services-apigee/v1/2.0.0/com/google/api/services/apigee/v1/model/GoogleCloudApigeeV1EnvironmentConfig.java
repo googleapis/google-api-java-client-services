@@ -30,6 +30,13 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1EnvironmentConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The latest runtime configurations for add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1RuntimeAddonsConfig addonsConfig;
+
+  /**
    * The location for the config blob of API Runtime Control, aka Envoy Adapter, for op-based
    * authentication as a URI, e.g. a Cloud Storage URI. This is only used by Envoy-based gateways.
    * The value may be {@code null}.
@@ -209,6 +216,23 @@ public final class GoogleCloudApigeeV1EnvironmentConfig extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
+
+  /**
+   * The latest runtime configurations for add-ons.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RuntimeAddonsConfig getAddonsConfig() {
+    return addonsConfig;
+  }
+
+  /**
+   * The latest runtime configurations for add-ons.
+   * @param addonsConfig addonsConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EnvironmentConfig setAddonsConfig(GoogleCloudApigeeV1RuntimeAddonsConfig addonsConfig) {
+    this.addonsConfig = addonsConfig;
+    return this;
+  }
 
   /**
    * The location for the config blob of API Runtime Control, aka Envoy Adapter, for op-based

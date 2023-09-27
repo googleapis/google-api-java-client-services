@@ -63,6 +63,14 @@ public final class GoogleCloudContactcenterinsightsV1UploadConversationRequest e
   private GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig;
 
   /**
+   * Optional. Default Speech-to-Text configuration. Optional, will default to the config specified
+   * in Settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig;
+
+  /**
    * Required. The conversation resource to create.
    * @return value or {@code null} for none
    */
@@ -135,6 +143,25 @@ public final class GoogleCloudContactcenterinsightsV1UploadConversationRequest e
    */
   public GoogleCloudContactcenterinsightsV1UploadConversationRequest setRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig) {
     this.redactionConfig = redactionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Default Speech-to-Text configuration. Optional, will default to the config specified
+   * in Settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1SpeechConfig getSpeechConfig() {
+    return speechConfig;
+  }
+
+  /**
+   * Optional. Default Speech-to-Text configuration. Optional, will default to the config specified
+   * in Settings.
+   * @param speechConfig speechConfig or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1UploadConversationRequest setSpeechConfig(GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig) {
+    this.speechConfig = speechConfig;
     return this;
   }
 

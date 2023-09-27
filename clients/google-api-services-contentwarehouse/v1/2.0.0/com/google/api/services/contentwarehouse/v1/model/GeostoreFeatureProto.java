@@ -835,7 +835,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreTransitLineVariantProto transitLineVariant;
 
   /**
-   * RESERVED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2595,7 +2594,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
    * @return value or {@code null} for none
    */
   public GeostoreTransitStationProto getTransitStation() {
@@ -2603,7 +2601,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
    * @param transitStation transitStation or {@code null} for none
    */
   public GeostoreFeatureProto setTransitStation(GeostoreTransitStationProto transitStation) {

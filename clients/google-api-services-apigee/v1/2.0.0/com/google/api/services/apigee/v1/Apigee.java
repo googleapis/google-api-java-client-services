@@ -21374,6 +21374,154 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
+       * Gets the add-ons config of an environment.
+       *
+       * Create a request for the method "environments.getAddonsConfig".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link GetAddonsConfig#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the add-ons config. Must be in the format of
+       *        `/organizations/{org}/environments/{env}/addonsConfig`
+       * @return the request
+       */
+      public GetAddonsConfig getAddonsConfig(java.lang.String name) throws java.io.IOException {
+        GetAddonsConfig result = new GetAddonsConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAddonsConfig extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AddonsConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/addonsConfig$");
+
+        /**
+         * Gets the add-ons config of an environment.
+         *
+         * Create a request for the method "environments.getAddonsConfig".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link GetAddonsConfig#execute()} method to invoke the remote operation.
+         * <p> {@link GetAddonsConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+         * lientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name Required. Name of the add-ons config. Must be in the format of
+       *        `/organizations/{org}/environments/{env}/addonsConfig`
+         * @since 1.13
+         */
+        protected GetAddonsConfig(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AddonsConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/environments/[^/]+/addonsConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAddonsConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAddonsConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAddonsConfig setAccessToken(java.lang.String accessToken) {
+          return (GetAddonsConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAddonsConfig setAlt(java.lang.String alt) {
+          return (GetAddonsConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAddonsConfig setCallback(java.lang.String callback) {
+          return (GetAddonsConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAddonsConfig setFields(java.lang.String fields) {
+          return (GetAddonsConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetAddonsConfig setKey(java.lang.String key) {
+          return (GetAddonsConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetAddonsConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetAddonsConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAddonsConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAddonsConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAddonsConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetAddonsConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAddonsConfig setUploadType(java.lang.String uploadType) {
+          return (GetAddonsConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAddonsConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAddonsConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the add-ons config. Must be in the format of
+         * `/organizations/{org}/environments/{env}/addonsConfig`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the add-ons config. Must be in the format of
+       `/organizations/{org}/environments/{env}/addonsConfig`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the add-ons config. Must be in the format of
+         * `/organizations/{org}/environments/{env}/addonsConfig`
+         */
+        public GetAddonsConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/environments/[^/]+/addonsConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetAddonsConfig set(String parameterName, Object value) {
+          return (GetAddonsConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets the API Security runtime configuration for an environment. This named
        * ApiSecurityRuntimeConfig to prevent conflicts with ApiSecurityConfig from addon config.
        *
@@ -22024,6 +22172,155 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         @Override
         public GetIamPolicy set(String parameterName, Object value) {
           return (GetIamPolicy) super.set(parameterName, value);
+        }
+      }
+      /**
+       * GetSecurityActionConfig returns the current SecurityActions configuration.
+       *
+       * Create a request for the method "environments.getSecurityActionsConfig".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link GetSecurityActionsConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the SecurityActionsConfig to retrieve. This will always be:
+       *        `organizations/{org}/environments/{env}/security_actions_config`
+       * @return the request
+       */
+      public GetSecurityActionsConfig getSecurityActionsConfig(java.lang.String name) throws java.io.IOException {
+        GetSecurityActionsConfig result = new GetSecurityActionsConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetSecurityActionsConfig extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityActionsConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityActionsConfig$");
+
+        /**
+         * GetSecurityActionConfig returns the current SecurityActions configuration.
+         *
+         * Create a request for the method "environments.getSecurityActionsConfig".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link GetSecurityActionsConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetSecurityActionsConfig#initialize(com.google.api.client.googleapis.serv
+         * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the SecurityActionsConfig to retrieve. This will always be:
+       *        `organizations/{org}/environments/{env}/security_actions_config`
+         * @since 1.13
+         */
+        protected GetSecurityActionsConfig(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityActionsConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/environments/[^/]+/securityActionsConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetSecurityActionsConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetSecurityActionsConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetSecurityActionsConfig setAccessToken(java.lang.String accessToken) {
+          return (GetSecurityActionsConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetSecurityActionsConfig setAlt(java.lang.String alt) {
+          return (GetSecurityActionsConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetSecurityActionsConfig setCallback(java.lang.String callback) {
+          return (GetSecurityActionsConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetSecurityActionsConfig setFields(java.lang.String fields) {
+          return (GetSecurityActionsConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetSecurityActionsConfig setKey(java.lang.String key) {
+          return (GetSecurityActionsConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetSecurityActionsConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetSecurityActionsConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetSecurityActionsConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetSecurityActionsConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetSecurityActionsConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetSecurityActionsConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetSecurityActionsConfig setUploadType(java.lang.String uploadType) {
+          return (GetSecurityActionsConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetSecurityActionsConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetSecurityActionsConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the SecurityActionsConfig to retrieve. This will always be:
+         * `organizations/{org}/environments/{env}/security_actions_config`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the SecurityActionsConfig to retrieve. This will always be:
+       `organizations/{org}/environments/{env}/security_actions_config`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the SecurityActionsConfig to retrieve. This will always be:
+         * `organizations/{org}/environments/{env}/security_actions_config`
+         */
+        public GetSecurityActionsConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/environments/[^/]+/securityActionsConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetSecurityActionsConfig set(String parameterName, Object value) {
+          return (GetSecurityActionsConfig) super.set(parameterName, value);
         }
       }
       /**
@@ -23381,6 +23678,170 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
+       * UpdateSecurityActionConfig updates the current SecurityActions configuration. This method is used
+       * to enable/disable the feature at the environment level.
+       *
+       * Create a request for the method "environments.updateSecurityActionsConfig".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link UpdateSecurityActionsConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name This is a singleton resource, the name will always be set by SecurityActions and any user input will
+       *        be ignored. The name is always:
+       *        `organizations/{org}/environments/{env}/security_actions_config`
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityActionsConfig}
+       * @return the request
+       */
+      public UpdateSecurityActionsConfig updateSecurityActionsConfig(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityActionsConfig content) throws java.io.IOException {
+        UpdateSecurityActionsConfig result = new UpdateSecurityActionsConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateSecurityActionsConfig extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityActionsConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityActionsConfig$");
+
+        /**
+         * UpdateSecurityActionConfig updates the current SecurityActions configuration. This method is
+         * used to enable/disable the feature at the environment level.
+         *
+         * Create a request for the method "environments.updateSecurityActionsConfig".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link UpdateSecurityActionsConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateSecurityActionsConfig#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name This is a singleton resource, the name will always be set by SecurityActions and any user input will
+       *        be ignored. The name is always:
+       *        `organizations/{org}/environments/{env}/security_actions_config`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityActionsConfig}
+         * @since 1.13
+         */
+        protected UpdateSecurityActionsConfig(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityActionsConfig content) {
+          super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityActionsConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/environments/[^/]+/securityActionsConfig$");
+          }
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateSecurityActionsConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateSecurityActionsConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig setAlt(java.lang.String alt) {
+          return (UpdateSecurityActionsConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig setCallback(java.lang.String callback) {
+          return (UpdateSecurityActionsConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig setFields(java.lang.String fields) {
+          return (UpdateSecurityActionsConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig setKey(java.lang.String key) {
+          return (UpdateSecurityActionsConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateSecurityActionsConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateSecurityActionsConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateSecurityActionsConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateSecurityActionsConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateSecurityActionsConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * This is a singleton resource, the name will always be set by SecurityActions and any user
+         * input will be ignored. The name is always:
+         * `organizations/{org}/environments/{env}/security_actions_config`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** This is a singleton resource, the name will always be set by SecurityActions and any user input
+       will be ignored. The name is always:
+       `organizations/{org}/environments/{env}/security_actions_config`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * This is a singleton resource, the name will always be set by SecurityActions and any user
+         * input will be ignored. The name is always:
+         * `organizations/{org}/environments/{env}/security_actions_config`
+         */
+        public UpdateSecurityActionsConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/environments/[^/]+/securityActionsConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The list of fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The list of fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** The list of fields to update. */
+        public UpdateSecurityActionsConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateSecurityActionsConfig set(String parameterName, Object value) {
+          return (UpdateSecurityActionsConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates the trace configurations in an environment. Note that the repeated fields have replace
        * semantics when included in the field mask and that they will be overwritten by the value of the
        * fields in the request body.
@@ -23541,6 +24002,168 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
 
+      /**
+       * An accessor for creating requests from the AddonsConfig collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Apigee apigee = new Apigee(...);}
+       *   {@code Apigee.AddonsConfig.List request = apigee.addonsConfig().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AddonsConfig addonsConfig() {
+        return new AddonsConfig();
+      }
+
+      /**
+       * The "addonsConfig" collection of methods.
+       */
+      public class AddonsConfig {
+
+        /**
+         * Updates an add-on enablement status of an environment.
+         *
+         * Create a request for the method "addonsConfig.setAddonEnablement".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link SetAddonEnablement#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the add-ons config. Must be in the format of
+         *        `/organizations/{org}/environments/{env}/addonsConfig`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SetAddonEnablementRequest}
+         * @return the request
+         */
+        public SetAddonEnablement setAddonEnablement(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SetAddonEnablementRequest content) throws java.io.IOException {
+          SetAddonEnablement result = new SetAddonEnablement(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetAddonEnablement extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}:setAddonEnablement";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/addonsConfig$");
+
+          /**
+           * Updates an add-on enablement status of an environment.
+           *
+           * Create a request for the method "addonsConfig.setAddonEnablement".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link SetAddonEnablement#execute()} method to invoke the remote
+           * operation. <p> {@link SetAddonEnablement#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Name of the add-ons config. Must be in the format of
+         *        `/organizations/{org}/environments/{env}/addonsConfig`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SetAddonEnablementRequest}
+           * @since 1.13
+           */
+          protected SetAddonEnablement(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SetAddonEnablementRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/addonsConfig$");
+            }
+          }
+
+          @Override
+          public SetAddonEnablement set$Xgafv(java.lang.String $Xgafv) {
+            return (SetAddonEnablement) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetAddonEnablement setAccessToken(java.lang.String accessToken) {
+            return (SetAddonEnablement) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetAddonEnablement setAlt(java.lang.String alt) {
+            return (SetAddonEnablement) super.setAlt(alt);
+          }
+
+          @Override
+          public SetAddonEnablement setCallback(java.lang.String callback) {
+            return (SetAddonEnablement) super.setCallback(callback);
+          }
+
+          @Override
+          public SetAddonEnablement setFields(java.lang.String fields) {
+            return (SetAddonEnablement) super.setFields(fields);
+          }
+
+          @Override
+          public SetAddonEnablement setKey(java.lang.String key) {
+            return (SetAddonEnablement) super.setKey(key);
+          }
+
+          @Override
+          public SetAddonEnablement setOauthToken(java.lang.String oauthToken) {
+            return (SetAddonEnablement) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetAddonEnablement setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetAddonEnablement) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetAddonEnablement setQuotaUser(java.lang.String quotaUser) {
+            return (SetAddonEnablement) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetAddonEnablement setUploadType(java.lang.String uploadType) {
+            return (SetAddonEnablement) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetAddonEnablement setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetAddonEnablement) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the add-ons config. Must be in the format of
+           * `/organizations/{org}/environments/{env}/addonsConfig`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the add-ons config. Must be in the format of
+         `/organizations/{org}/environments/{env}/addonsConfig`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the add-ons config. Must be in the format of
+           * `/organizations/{org}/environments/{env}/addonsConfig`
+           */
+          public SetAddonEnablement setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/addonsConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public SetAddonEnablement set(String parameterName, Object value) {
+            return (SetAddonEnablement) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the Analytics collection.
        *
@@ -24632,9 +25255,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * affected traffic is ready to receive it. This should only be necessary if the new
              * deployment will be capturing traffic from another environment under a shared
              * environment group or if traffic will be rerouted to a different environment due to a
-             * base path removal. The [generateDeployChangeReport API](generateDeployChangeReport)
-             * may be used to examine routing changes before issuing the deployment request, and its
-             * response will indicate if a sequenced rollout is recommended for the deployment.
+             * base path removal. The generateDeployChangeReport API may be used to examine routing
+             * changes before issuing the deployment request, and its response will indicate if a
+             * sequenced rollout is recommended for the deployment.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean sequencedRollout;
@@ -24645,9 +25268,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            routing before the new destination for the affected traffic is ready to receive it. This should
            only be necessary if the new deployment will be capturing traffic from another environment under a
            shared environment group or if traffic will be rerouted to a different environment due to a base
-           path removal. The [generateDeployChangeReport API](generateDeployChangeReport) may be used to
-           examine routing changes before issuing the deployment request, and its response will indicate if a
-           sequenced rollout is recommended for the deployment.
+           path removal. The generateDeployChangeReport API may be used to examine routing changes before
+           issuing the deployment request, and its response will indicate if a sequenced rollout is
+           recommended for the deployment.
              */
             public java.lang.Boolean getSequencedRollout() {
               return sequencedRollout;
@@ -24661,9 +25284,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * affected traffic is ready to receive it. This should only be necessary if the new
              * deployment will be capturing traffic from another environment under a shared
              * environment group or if traffic will be rerouted to a different environment due to a
-             * base path removal. The [generateDeployChangeReport API](generateDeployChangeReport)
-             * may be used to examine routing changes before issuing the deployment request, and its
-             * response will indicate if a sequenced rollout is recommended for the deployment.
+             * base path removal. The generateDeployChangeReport API may be used to examine routing
+             * changes before issuing the deployment request, and its response will indicate if a
+             * sequenced rollout is recommended for the deployment.
              */
             public Deploy setSequencedRollout(java.lang.Boolean sequencedRollout) {
               this.sequencedRollout = sequencedRollout;
@@ -24996,10 +25619,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * before removing the deployment from the runtime. This is likely to be a rare use
              * case; it is only needed when the intended effect of undeploying this proxy is to
              * cause the traffic it currently handles to be rerouted to some other existing proxy in
-             * the environment group. The [GenerateUndeployChangeReport
-             * API](GenerateUndeployChangeReport) may be used to examine routing changes before
-             * issuing the undeployment request, and its response will indicate if a sequenced
-             * rollout is recommended for the undeployment.
+             * the environment group. The GenerateUndeployChangeReport API may be used to examine
+             * routing changes before issuing the undeployment request, and its response will
+             * indicate if a sequenced rollout is recommended for the undeployment.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean sequencedRollout;
@@ -25008,10 +25630,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            routing rules corresponding to this deployment will be removed before removing the deployment from
            the runtime. This is likely to be a rare use case; it is only needed when the intended effect of
            undeploying this proxy is to cause the traffic it currently handles to be rerouted to some other
-           existing proxy in the environment group. The [GenerateUndeployChangeReport
-           API](GenerateUndeployChangeReport) may be used to examine routing changes before issuing the
-           undeployment request, and its response will indicate if a sequenced rollout is recommended for the
-           undeployment.
+           existing proxy in the environment group. The GenerateUndeployChangeReport API may be used to
+           examine routing changes before issuing the undeployment request, and its response will indicate if
+           a sequenced rollout is recommended for the undeployment.
              */
             public java.lang.Boolean getSequencedRollout() {
               return sequencedRollout;
@@ -25023,10 +25644,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * before removing the deployment from the runtime. This is likely to be a rare use
              * case; it is only needed when the intended effect of undeploying this proxy is to
              * cause the traffic it currently handles to be rerouted to some other existing proxy in
-             * the environment group. The [GenerateUndeployChangeReport
-             * API](GenerateUndeployChangeReport) may be used to examine routing changes before
-             * issuing the undeployment request, and its response will indicate if a sequenced
-             * rollout is recommended for the undeployment.
+             * the environment group. The GenerateUndeployChangeReport API may be used to examine
+             * routing changes before issuing the undeployment request, and its response will
+             * indicate if a sequenced rollout is recommended for the undeployment.
              */
             public Undeploy setSequencedRollout(java.lang.Boolean sequencedRollout) {
               this.sequencedRollout = sequencedRollout;
@@ -33739,6 +34359,853 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public Update set(String parameterName, Object value) {
             return (Update) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the SecurityActions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Apigee apigee = new Apigee(...);}
+       *   {@code Apigee.SecurityActions.List request = apigee.securityActions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SecurityActions securityActions() {
+        return new SecurityActions();
+      }
+
+      /**
+       * The "securityActions" collection of methods.
+       */
+      public class SecurityActions {
+
+        /**
+         * CreateSecurityAction creates a SecurityAction.
+         *
+         * Create a request for the method "securityActions.create".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The organization and environment that this SecurityAction applies to. Format:
+         *        organizations/{org}/environments/{env}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction> {
+
+          private static final String REST_PATH = "v1/{+parent}/securityActions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
+
+          /**
+           * CreateSecurityAction creates a SecurityAction.
+           *
+           * Create a request for the method "securityActions.create".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The organization and environment that this SecurityAction applies to. Format:
+         *        organizations/{org}/environments/{env}
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The organization and environment that this SecurityAction applies to. Format:
+           * organizations/{org}/environments/{env}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The organization and environment that this SecurityAction applies to. Format:
+         organizations/{org}/environments/{env}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The organization and environment that this SecurityAction applies to. Format:
+           * organizations/{org}/environments/{env}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the SecurityAction, which will become the final component
+           * of the action's resource name. This value should be 0-61 characters, and valid format
+           * is (^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String securityActionId;
+
+          /** Required. The ID to use for the SecurityAction, which will become the final component of the
+         action's resource name. This value should be 0-61 characters, and valid format is
+         (^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$).
+           */
+          public java.lang.String getSecurityActionId() {
+            return securityActionId;
+          }
+
+          /**
+           * Required. The ID to use for the SecurityAction, which will become the final component
+           * of the action's resource name. This value should be 0-61 characters, and valid format
+           * is (^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$).
+           */
+          public Create setSecurityActionId(java.lang.String securityActionId) {
+            this.securityActionId = securityActionId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Disable a SecurityAction. The `state` of the SecurityAction after disabling is `DISABLED`.
+         * `DisableSecurityAction` can be called on SecurityActions in the state `ENABLED`; SecurityActions
+         * in a different state (including `DISABLED`) return an error.
+         *
+         * Create a request for the method "securityActions.disable".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the SecurityAction to disable. Format:
+         *        organizations/{org}/environments/{env}/securityActions/{security_action}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DisableSecurityActionRequest}
+         * @return the request
+         */
+        public Disable disable(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DisableSecurityActionRequest content) throws java.io.IOException {
+          Disable result = new Disable(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Disable extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction> {
+
+          private static final String REST_PATH = "v1/{+name}:disable";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+
+          /**
+           * Disable a SecurityAction. The `state` of the SecurityAction after disabling is `DISABLED`.
+           * `DisableSecurityAction` can be called on SecurityActions in the state `ENABLED`;
+           * SecurityActions in a different state (including `DISABLED`) return an error.
+           *
+           * Create a request for the method "securityActions.disable".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Disable#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the SecurityAction to disable. Format:
+         *        organizations/{org}/environments/{env}/securityActions/{security_action}
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DisableSecurityActionRequest}
+           * @since 1.13
+           */
+          protected Disable(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DisableSecurityActionRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Disable set$Xgafv(java.lang.String $Xgafv) {
+            return (Disable) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Disable setAccessToken(java.lang.String accessToken) {
+            return (Disable) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Disable setAlt(java.lang.String alt) {
+            return (Disable) super.setAlt(alt);
+          }
+
+          @Override
+          public Disable setCallback(java.lang.String callback) {
+            return (Disable) super.setCallback(callback);
+          }
+
+          @Override
+          public Disable setFields(java.lang.String fields) {
+            return (Disable) super.setFields(fields);
+          }
+
+          @Override
+          public Disable setKey(java.lang.String key) {
+            return (Disable) super.setKey(key);
+          }
+
+          @Override
+          public Disable setOauthToken(java.lang.String oauthToken) {
+            return (Disable) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Disable setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Disable) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Disable setQuotaUser(java.lang.String quotaUser) {
+            return (Disable) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Disable setUploadType(java.lang.String uploadType) {
+            return (Disable) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Disable setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Disable) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the SecurityAction to disable. Format:
+           * organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the SecurityAction to disable. Format:
+         organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the SecurityAction to disable. Format:
+           * organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          public Disable setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Disable set(String parameterName, Object value) {
+            return (Disable) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Enable a SecurityAction. The `state` of the SecurityAction after enabling is `ENABLED`.
+         * `EnableSecurityAction` can be called on SecurityActions in the state `DISABLED`; SecurityActions
+         * in a different state (including `ENABLED) return an error.
+         *
+         * Create a request for the method "securityActions.enable".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the SecurityAction to enable. Format:
+         *        organizations/{org}/environments/{env}/securityActions/{security_action}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EnableSecurityActionRequest}
+         * @return the request
+         */
+        public Enable enable(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EnableSecurityActionRequest content) throws java.io.IOException {
+          Enable result = new Enable(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Enable extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction> {
+
+          private static final String REST_PATH = "v1/{+name}:enable";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+
+          /**
+           * Enable a SecurityAction. The `state` of the SecurityAction after enabling is `ENABLED`.
+           * `EnableSecurityAction` can be called on SecurityActions in the state `DISABLED`;
+           * SecurityActions in a different state (including `ENABLED) return an error.
+           *
+           * Create a request for the method "securityActions.enable".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Enable#execute()} method to invoke the remote operation. <p> {@link
+           * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the SecurityAction to enable. Format:
+         *        organizations/{org}/environments/{env}/securityActions/{security_action}
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EnableSecurityActionRequest}
+           * @since 1.13
+           */
+          protected Enable(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1EnableSecurityActionRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Enable set$Xgafv(java.lang.String $Xgafv) {
+            return (Enable) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Enable setAccessToken(java.lang.String accessToken) {
+            return (Enable) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Enable setAlt(java.lang.String alt) {
+            return (Enable) super.setAlt(alt);
+          }
+
+          @Override
+          public Enable setCallback(java.lang.String callback) {
+            return (Enable) super.setCallback(callback);
+          }
+
+          @Override
+          public Enable setFields(java.lang.String fields) {
+            return (Enable) super.setFields(fields);
+          }
+
+          @Override
+          public Enable setKey(java.lang.String key) {
+            return (Enable) super.setKey(key);
+          }
+
+          @Override
+          public Enable setOauthToken(java.lang.String oauthToken) {
+            return (Enable) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Enable setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Enable) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Enable setQuotaUser(java.lang.String quotaUser) {
+            return (Enable) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Enable setUploadType(java.lang.String uploadType) {
+            return (Enable) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Enable setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Enable) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the SecurityAction to enable. Format:
+           * organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the SecurityAction to enable. Format:
+         organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the SecurityAction to enable. Format:
+           * organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          public Enable setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Enable set(String parameterName, Object value) {
+            return (Enable) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get a SecurityAction by name.
+         *
+         * Create a request for the method "securityActions.get".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The fully qualified name of the SecurityAction to retrieve. Format:
+         *        organizations/{org}/environments/{env}/securityActions/{security_action}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+
+          /**
+           * Get a SecurityAction by name.
+           *
+           * Create a request for the method "securityActions.get".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The fully qualified name of the SecurityAction to retrieve. Format:
+         *        organizations/{org}/environments/{env}/securityActions/{security_action}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The fully qualified name of the SecurityAction to retrieve. Format:
+           * organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The fully qualified name of the SecurityAction to retrieve. Format:
+         organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The fully qualified name of the SecurityAction to retrieve. Format:
+           * organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a list of SecurityActions. This returns both enabled and disabled actions.
+         *
+         * Create a request for the method "securityActions.list".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of SecurityActions. Format:
+         *        organizations/{org}/environments/{env}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityActionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/securityActions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Returns a list of SecurityActions. This returns both enabled and disabled actions.
+           *
+           * Create a request for the method "securityActions.list".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of SecurityActions. Format:
+         *        organizations/{org}/environments/{env}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityActionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns this collection of SecurityActions. Format:
+           * organizations/{org}/environments/{env}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of SecurityActions. Format:
+         organizations/{org}/environments/{env}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns this collection of SecurityActions. Format:
+           * organizations/{org}/environments/{env}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The filter expression to filter List results. https://google.aip.dev/160. Allows for
+           * filtering over: state and api_proxies. E.g.: state = ACTIVE AND apiProxies:foo.
+           * Filtering by action is not supported https://github.com/aip-
+           * dev/google.aip.dev/issues/624
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter expression to filter List results. https://google.aip.dev/160. Allows for filtering
+         over: state and api_proxies. E.g.: state = ACTIVE AND apiProxies:foo. Filtering by action is not
+         supported https://github.com/aip-dev/google.aip.dev/issues/624
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * The filter expression to filter List results. https://google.aip.dev/160. Allows for
+           * filtering over: state and api_proxies. E.g.: state = ACTIVE AND apiProxies:foo.
+           * Filtering by action is not supported https://github.com/aip-
+           * dev/google.aip.dev/issues/624
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The maximum number of SecurityActions to return. If unspecified, at most 50
+           * SecurityActions will be returned. The maximum value is 1000; values above 1000 will be
+           * coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of SecurityActions to return. If unspecified, at most 50 SecurityActions will be
+         returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of SecurityActions to return. If unspecified, at most 50
+           * SecurityActions will be returned. The maximum value is 1000; values above 1000 will be
+           * coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListSecurityActions` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListSecurityActions` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListSecurityActions` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListSecurityActions` must match
+         the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListSecurityActions` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListSecurityActions` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 
@@ -45541,15 +47008,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Required. The ID to use for the SecurityProfile, which will become the final component of
-         * the action's resource name. This value should be 4-63 characters, and valid characters
-         * are /(^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$/.
+         * the action's resource name. This value should be 1-63 characters and validated by
+         * "(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)".
          */
         @com.google.api.client.util.Key
         private java.lang.String securityProfileId;
 
         /** Required. The ID to use for the SecurityProfile, which will become the final component of the
-       action's resource name. This value should be 4-63 characters, and valid characters are
-       /(^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$/.
+       action's resource name. This value should be 1-63 characters and validated by
+       "(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)".
          */
         public java.lang.String getSecurityProfileId() {
           return securityProfileId;
@@ -45557,8 +47024,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Required. The ID to use for the SecurityProfile, which will become the final component of
-         * the action's resource name. This value should be 4-63 characters, and valid characters
-         * are /(^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$/.
+         * the action's resource name. This value should be 1-63 characters and validated by
+         * "(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)".
          */
         public Create setSecurityProfileId(java.lang.String securityProfileId) {
           this.securityProfileId = securityProfileId;

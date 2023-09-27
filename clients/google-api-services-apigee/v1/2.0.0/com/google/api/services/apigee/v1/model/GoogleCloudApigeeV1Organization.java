@@ -243,6 +243,13 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String state;
 
   /**
+   * Output only. Subscription plan that the customer has purchased. Output only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subscriptionPlan;
+
+  /**
    * Output only. DEPRECATED: This will eventually be replaced by BillingType. Subscription type of
    * the Apigee organization. Valid values include trial (free, limited, and for evaluation purposes
    * only) or paid (full subscription has been purchased). See [Apigee
@@ -787,6 +794,23 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
    */
   public GoogleCloudApigeeV1Organization setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Subscription plan that the customer has purchased. Output only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubscriptionPlan() {
+    return subscriptionPlan;
+  }
+
+  /**
+   * Output only. Subscription plan that the customer has purchased. Output only.
+   * @param subscriptionPlan subscriptionPlan or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Organization setSubscriptionPlan(java.lang.String subscriptionPlan) {
+    this.subscriptionPlan = subscriptionPlan;
     return this;
   }
 

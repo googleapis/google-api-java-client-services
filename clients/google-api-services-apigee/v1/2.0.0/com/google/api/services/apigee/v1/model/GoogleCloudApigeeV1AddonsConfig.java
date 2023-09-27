@@ -37,6 +37,13 @@ public final class GoogleCloudApigeeV1AddonsConfig extends com.google.api.client
   private GoogleCloudApigeeV1AdvancedApiOpsConfig advancedApiOpsConfig;
 
   /**
+   * Configuration for the Analytics add-on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1AnalyticsConfig analyticsConfig;
+
+  /**
    * Configuration for the API Security add-on.
    * The value may be {@code null}.
    */
@@ -78,6 +85,23 @@ public final class GoogleCloudApigeeV1AddonsConfig extends com.google.api.client
    */
   public GoogleCloudApigeeV1AddonsConfig setAdvancedApiOpsConfig(GoogleCloudApigeeV1AdvancedApiOpsConfig advancedApiOpsConfig) {
     this.advancedApiOpsConfig = advancedApiOpsConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the Analytics add-on.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1AnalyticsConfig getAnalyticsConfig() {
+    return analyticsConfig;
+  }
+
+  /**
+   * Configuration for the Analytics add-on.
+   * @param analyticsConfig analyticsConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1AddonsConfig setAnalyticsConfig(GoogleCloudApigeeV1AnalyticsConfig analyticsConfig) {
+    this.analyticsConfig = analyticsConfig;
     return this;
   }
 

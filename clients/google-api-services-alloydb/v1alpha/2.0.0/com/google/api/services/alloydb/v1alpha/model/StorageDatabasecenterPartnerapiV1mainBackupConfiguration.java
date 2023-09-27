@@ -44,6 +44,14 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupConfiguration exte
   private StorageDatabasecenterPartnerapiV1mainRetentionSettings backupRetentionSettings;
 
   /**
+   * Whether point-in-time recovery is enabled. This is optional field, if the database service does
+   * not have this feature or metadata is not available in control plane, this can be omitted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pointInTimeRecoveryEnabled;
+
+  /**
    * Whether customer visible automated backups are enabled on the instance.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,25 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupConfiguration exte
    */
   public StorageDatabasecenterPartnerapiV1mainBackupConfiguration setBackupRetentionSettings(StorageDatabasecenterPartnerapiV1mainRetentionSettings backupRetentionSettings) {
     this.backupRetentionSettings = backupRetentionSettings;
+    return this;
+  }
+
+  /**
+   * Whether point-in-time recovery is enabled. This is optional field, if the database service does
+   * not have this feature or metadata is not available in control plane, this can be omitted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPointInTimeRecoveryEnabled() {
+    return pointInTimeRecoveryEnabled;
+  }
+
+  /**
+   * Whether point-in-time recovery is enabled. This is optional field, if the database service does
+   * not have this feature or metadata is not available in control plane, this can be omitted.
+   * @param pointInTimeRecoveryEnabled pointInTimeRecoveryEnabled or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainBackupConfiguration setPointInTimeRecoveryEnabled(java.lang.Boolean pointInTimeRecoveryEnabled) {
+    this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
     return this;
   }
 

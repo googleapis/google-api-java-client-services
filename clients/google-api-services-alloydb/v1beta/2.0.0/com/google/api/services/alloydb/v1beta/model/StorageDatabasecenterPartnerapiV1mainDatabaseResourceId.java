@@ -37,8 +37,16 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   private java.lang.String provider;
 
   /**
-   * Required. The type of resource this ID is identifying. Ex google.sqladmin.Instance,
-   * google.alloydb.cluster, google.sqladmin.Backup REQUIRED
+   * Optional. Needs to be used only when the provider is PROVIDER_OTHER.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String providerDescription;
+
+  /**
+   * Required. The type of resource this ID is identifying. Ex alloydb.googleapis.com/Cluster,
+   * alloydb.googleapis.com/Instance, spanner.googleapis.com/Instance REQUIRED Please refer go
+   * /condor-common-datamodel
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +78,26 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Required. The type of resource this ID is identifying. Ex google.sqladmin.Instance,
-   * google.alloydb.cluster, google.sqladmin.Backup REQUIRED
+   * Optional. Needs to be used only when the provider is PROVIDER_OTHER.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProviderDescription() {
+    return providerDescription;
+  }
+
+  /**
+   * Optional. Needs to be used only when the provider is PROVIDER_OTHER.
+   * @param providerDescription providerDescription or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId setProviderDescription(java.lang.String providerDescription) {
+    this.providerDescription = providerDescription;
+    return this;
+  }
+
+  /**
+   * Required. The type of resource this ID is identifying. Ex alloydb.googleapis.com/Cluster,
+   * alloydb.googleapis.com/Instance, spanner.googleapis.com/Instance REQUIRED Please refer go
+   * /condor-common-datamodel
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -79,8 +105,9 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Required. The type of resource this ID is identifying. Ex google.sqladmin.Instance,
-   * google.alloydb.cluster, google.sqladmin.Backup REQUIRED
+   * Required. The type of resource this ID is identifying. Ex alloydb.googleapis.com/Cluster,
+   * alloydb.googleapis.com/Instance, spanner.googleapis.com/Instance REQUIRED Please refer go
+   * /condor-common-datamodel
    * @param resourceType resourceType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId setResourceType(java.lang.String resourceType) {

@@ -66,7 +66,15 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   private java.lang.String currentState;
 
   /**
-   * The actual instance state.
+   * Any custom metadata associated with the resource (a JSON field)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> customMetadata;
+
+  /**
+   * The state that the instance is expected to be in. For example, an instance state can transition
+   * to UNHEALTHY due to wrong patch update, while the expected state will remain at the HEALTHY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,8 +102,9 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   private java.lang.String location;
 
   /**
-   * Unique identifier for this resource's immediate parent resource. This parent resource id would
-   * be used to build resource hierarchy in condor platform.
+   * Identifier for this resource's immediate parent/primary resource if the current resource is a
+   * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
+   * immediate parent exists when first time resource is getting ingested
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,17 +118,18 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   private StorageDatabasecenterProtoCommonProduct product;
 
   /**
-   * Closest parent Cloud Resource Manager container of this resource. It must either be resource
-   * name of a Cloud Resource Manager project, for ex: "projects/123".
+   * Closest parent Cloud Resource Manager container of this resource. It must be resource name of a
+   * Cloud Resource Manager project with the format of "provider//", such as "gcp/projects/123".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceContainer;
 
   /**
-   * Required. Different from unique_id, a resource name can be reused over time. That is after a
-   * resource named "ABC" is deleted, the name "ABC" can be used to to create a new resource within
-   * the same source.
+   * Required. Different from DatabaseResourceId.unique_id, a resource name can be reused over time.
+   * That is, after a resource named "ABC" is deleted, the name "ABC" can be used to to create a new
+   * resource within the same source. Resource name to follow CAIS resource_name format as noted
+   * here go/condor-common-datamodel
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,7 +237,25 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The actual instance state.
+   * Any custom metadata associated with the resource (a JSON field)
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getCustomMetadata() {
+    return customMetadata;
+  }
+
+  /**
+   * Any custom metadata associated with the resource (a JSON field)
+   * @param customMetadata customMetadata or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setCustomMetadata(java.util.Map<String, java.lang.Object> customMetadata) {
+    this.customMetadata = customMetadata;
+    return this;
+  }
+
+  /**
+   * The state that the instance is expected to be in. For example, an instance state can transition
+   * to UNHEALTHY due to wrong patch update, while the expected state will remain at the HEALTHY.
    * @return value or {@code null} for none
    */
   public java.lang.String getExpectedState() {
@@ -235,7 +263,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The actual instance state.
+   * The state that the instance is expected to be in. For example, an instance state can transition
+   * to UNHEALTHY due to wrong patch update, while the expected state will remain at the HEALTHY.
    * @param expectedState expectedState or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setExpectedState(java.lang.String expectedState) {
@@ -295,8 +324,9 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Unique identifier for this resource's immediate parent resource. This parent resource id would
-   * be used to build resource hierarchy in condor platform.
+   * Identifier for this resource's immediate parent/primary resource if the current resource is a
+   * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
+   * immediate parent exists when first time resource is getting ingested
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId getPrimaryResourceId() {
@@ -304,8 +334,9 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Unique identifier for this resource's immediate parent resource. This parent resource id would
-   * be used to build resource hierarchy in condor platform.
+   * Identifier for this resource's immediate parent/primary resource if the current resource is a
+   * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
+   * immediate parent exists when first time resource is getting ingested
    * @param primaryResourceId primaryResourceId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setPrimaryResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId primaryResourceId) {
@@ -331,8 +362,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Closest parent Cloud Resource Manager container of this resource. It must either be resource
-   * name of a Cloud Resource Manager project, for ex: "projects/123".
+   * Closest parent Cloud Resource Manager container of this resource. It must be resource name of a
+   * Cloud Resource Manager project with the format of "provider//", such as "gcp/projects/123".
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceContainer() {
@@ -340,8 +371,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Closest parent Cloud Resource Manager container of this resource. It must either be resource
-   * name of a Cloud Resource Manager project, for ex: "projects/123".
+   * Closest parent Cloud Resource Manager container of this resource. It must be resource name of a
+   * Cloud Resource Manager project with the format of "provider//", such as "gcp/projects/123".
    * @param resourceContainer resourceContainer or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setResourceContainer(java.lang.String resourceContainer) {
@@ -350,9 +381,10 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Required. Different from unique_id, a resource name can be reused over time. That is after a
-   * resource named "ABC" is deleted, the name "ABC" can be used to to create a new resource within
-   * the same source.
+   * Required. Different from DatabaseResourceId.unique_id, a resource name can be reused over time.
+   * That is, after a resource named "ABC" is deleted, the name "ABC" can be used to to create a new
+   * resource within the same source. Resource name to follow CAIS resource_name format as noted
+   * here go/condor-common-datamodel
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -360,9 +392,10 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Required. Different from unique_id, a resource name can be reused over time. That is after a
-   * resource named "ABC" is deleted, the name "ABC" can be used to to create a new resource within
-   * the same source.
+   * Required. Different from DatabaseResourceId.unique_id, a resource name can be reused over time.
+   * That is, after a resource named "ABC" is deleted, the name "ABC" can be used to to create a new
+   * resource within the same source. Resource name to follow CAIS resource_name format as noted
+   * here go/condor-common-datamodel
    * @param resourceName resourceName or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setResourceName(java.lang.String resourceName) {

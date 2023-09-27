@@ -2302,6 +2302,153 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Generate a client certificate signed by a Cluster CA. The sole purpose of this endpoint is to
+         * support AlloyDB connectors and the Auth Proxy client. The endpoint's behavior is subject to
+         * change without notice, so do not rely on its behavior remaining constant. Future changes will not
+         * break AlloyDB connectors or the Auth Proxy client.
+         *
+         * Create a request for the method "clusters.generateClientCertificate".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link GenerateClientCertificate#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The name of the parent resource. The required format is: *
+         *        projects/{project}/locations/{location}/clusters/{cluster}
+         * @param content the {@link com.google.api.services.alloydb.v1.model.GenerateClientCertificateRequest}
+         * @return the request
+         */
+        public GenerateClientCertificate generateClientCertificate(java.lang.String parent, com.google.api.services.alloydb.v1.model.GenerateClientCertificateRequest content) throws java.io.IOException {
+          GenerateClientCertificate result = new GenerateClientCertificate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateClientCertificate extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1.model.GenerateClientCertificateResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:generateClientCertificate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * Generate a client certificate signed by a Cluster CA. The sole purpose of this endpoint is to
+           * support AlloyDB connectors and the Auth Proxy client. The endpoint's behavior is subject to
+           * change without notice, so do not rely on its behavior remaining constant. Future changes will
+           * not break AlloyDB connectors or the Auth Proxy client.
+           *
+           * Create a request for the method "clusters.generateClientCertificate".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link GenerateClientCertificate#execute()} method to invoke the remote
+           * operation. <p> {@link GenerateClientCertificate#initialize(com.google.api.client.googleapis.ser
+           * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the parent resource. The required format is: *
+         *        projects/{project}/locations/{location}/clusters/{cluster}
+           * @param content the {@link com.google.api.services.alloydb.v1.model.GenerateClientCertificateRequest}
+           * @since 1.13
+           */
+          protected GenerateClientCertificate(java.lang.String parent, com.google.api.services.alloydb.v1.model.GenerateClientCertificateRequest content) {
+            super(CloudAlloyDBAdmin.this, "POST", REST_PATH, content, com.google.api.services.alloydb.v1.model.GenerateClientCertificateResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateClientCertificate set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateClientCertificate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateClientCertificate setAccessToken(java.lang.String accessToken) {
+            return (GenerateClientCertificate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateClientCertificate setAlt(java.lang.String alt) {
+            return (GenerateClientCertificate) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateClientCertificate setCallback(java.lang.String callback) {
+            return (GenerateClientCertificate) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateClientCertificate setFields(java.lang.String fields) {
+            return (GenerateClientCertificate) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateClientCertificate setKey(java.lang.String key) {
+            return (GenerateClientCertificate) super.setKey(key);
+          }
+
+          @Override
+          public GenerateClientCertificate setOauthToken(java.lang.String oauthToken) {
+            return (GenerateClientCertificate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateClientCertificate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateClientCertificate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateClientCertificate setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateClientCertificate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateClientCertificate setUploadType(java.lang.String uploadType) {
+            return (GenerateClientCertificate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateClientCertificate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateClientCertificate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the parent resource. The required format is: *
+           * projects/{project}/locations/{location}/clusters/{cluster}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the parent resource. The required format is: *
+         projects/{project}/locations/{location}/clusters/{cluster}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the parent resource. The required format is: *
+           * projects/{project}/locations/{location}/clusters/{cluster}
+           */
+          public GenerateClientCertificate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public GenerateClientCertificate set(String parameterName, Object value) {
+            return (GenerateClientCertificate) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets details of a single Cluster.
          *
          * Create a request for the method "clusters.get".
@@ -4242,6 +4389,197 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Get instance metadata used for a connection.
+           *
+           * Create a request for the method "instances.getConnectionInfo".
+           *
+           * This request holds the parameters needed by the alloydb server.  After setting any optional
+           * parameters, call the {@link GetConnectionInfo#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the parent resource. The required format is:
+           *        projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+           * @return the request
+           */
+          public GetConnectionInfo getConnectionInfo(java.lang.String parent) throws java.io.IOException {
+            GetConnectionInfo result = new GetConnectionInfo(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class GetConnectionInfo extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1.model.ConnectionInfo> {
+
+            private static final String REST_PATH = "v1/{+parent}/connectionInfo";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/instances/[^/]+$");
+
+            /**
+             * Get instance metadata used for a connection.
+             *
+             * Create a request for the method "instances.getConnectionInfo".
+             *
+             * This request holds the parameters needed by the the alloydb server.  After setting any optional
+             * parameters, call the {@link GetConnectionInfo#execute()} method to invoke the remote operation.
+             * <p> {@link GetConnectionInfo#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+             * eClientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param parent Required. The name of the parent resource. The required format is:
+           *        projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+             * @since 1.13
+             */
+            protected GetConnectionInfo(java.lang.String parent) {
+              super(CloudAlloyDBAdmin.this, "GET", REST_PATH, null, com.google.api.services.alloydb.v1.model.ConnectionInfo.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/instances/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetConnectionInfo set$Xgafv(java.lang.String $Xgafv) {
+              return (GetConnectionInfo) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetConnectionInfo setAccessToken(java.lang.String accessToken) {
+              return (GetConnectionInfo) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetConnectionInfo setAlt(java.lang.String alt) {
+              return (GetConnectionInfo) super.setAlt(alt);
+            }
+
+            @Override
+            public GetConnectionInfo setCallback(java.lang.String callback) {
+              return (GetConnectionInfo) super.setCallback(callback);
+            }
+
+            @Override
+            public GetConnectionInfo setFields(java.lang.String fields) {
+              return (GetConnectionInfo) super.setFields(fields);
+            }
+
+            @Override
+            public GetConnectionInfo setKey(java.lang.String key) {
+              return (GetConnectionInfo) super.setKey(key);
+            }
+
+            @Override
+            public GetConnectionInfo setOauthToken(java.lang.String oauthToken) {
+              return (GetConnectionInfo) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetConnectionInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetConnectionInfo) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetConnectionInfo setQuotaUser(java.lang.String quotaUser) {
+              return (GetConnectionInfo) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetConnectionInfo setUploadType(java.lang.String uploadType) {
+              return (GetConnectionInfo) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetConnectionInfo setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetConnectionInfo) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the parent resource. The required format is:
+             * projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the parent resource. The required format is:
+           projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the parent resource. The required format is:
+             * projects/{project}/locations/{location}/clusters/{cluster}/instances/{instance}
+             */
+            public GetConnectionInfo setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/instances/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes after the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public GetConnectionInfo setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public GetConnectionInfo set(String parameterName, Object value) {
+              return (GetConnectionInfo) super.set(parameterName, value);
             }
           }
           /**

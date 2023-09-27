@@ -45,6 +45,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   private java.lang.String feedType;
 
   /**
+   * More feed data would be added in subsequent CLs
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData resourceHealthSignalData;
+
+  /**
    * Required. Primary key associated with the Resource
    * The value may be {@code null}.
    */
@@ -52,7 +59,6 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId;
 
   /**
-   * More feed data would be added in subsequent CLs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,6 +99,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
+   * More feed data would be added in subsequent CLs
+   * @return value or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData getResourceHealthSignalData() {
+    return resourceHealthSignalData;
+  }
+
+  /**
+   * More feed data would be added in subsequent CLs
+   * @param resourceHealthSignalData resourceHealthSignalData or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setResourceHealthSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData resourceHealthSignalData) {
+    this.resourceHealthSignalData = resourceHealthSignalData;
+    return this;
+  }
+
+  /**
    * Required. Primary key associated with the Resource
    * @return value or {@code null} for none
    */
@@ -110,7 +133,6 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * More feed data would be added in subsequent CLs
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata getResourceMetadata() {
@@ -118,7 +140,6 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * More feed data would be added in subsequent CLs
    * @param resourceMetadata resourceMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setResourceMetadata(StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata resourceMetadata) {

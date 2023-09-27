@@ -44,7 +44,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * Required. The resource link for the VPC network in which cluster resources are created and from
    * which they are accessible via Private IP. The network must belong to the same project as the
    * cluster. It is specified in the form: "projects/{project_number}/global/networks/{network_id}".
-   * This is required to create a cluster. It can be updated, but it cannot be removed.
+   * This is required to create a cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * Required. The resource link for the VPC network in which cluster resources are created and from
    * which they are accessible via Private IP. The network must belong to the same project as the
    * cluster. It is specified in the form: "projects/{project_number}/global/networks/{network_id}".
-   * This is required to create a cluster. It can be updated, but it cannot be removed.
+   * This is required to create a cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -90,7 +90,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * Required. The resource link for the VPC network in which cluster resources are created and from
    * which they are accessible via Private IP. The network must belong to the same project as the
    * cluster. It is specified in the form: "projects/{project_number}/global/networks/{network_id}".
-   * This is required to create a cluster. It can be updated, but it cannot be removed.
+   * This is required to create a cluster.
    * @param network network or {@code null} for none
    */
   public NetworkConfig setNetwork(java.lang.String network) {

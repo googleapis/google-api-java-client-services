@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.alloydb.v1beta.model;
+package com.google.api.services.alloydb.v1.model;
 
 /**
  * Message for requests to generate a client certificate signed by the Cluster CA.
@@ -40,14 +40,6 @@ public final class GenerateClientCertificateRequest extends com.google.api.clien
   private String certDuration;
 
   /**
-   * Optional. A pem-encoded X.509 certificate signing request (CSR). It is recommended to use
-   * public_key instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String pemCsr;
-
-  /**
    * Optional. The public key from the client.
    * The value may be {@code null}.
    */
@@ -69,14 +61,6 @@ public final class GenerateClientCertificateRequest extends com.google.api.clien
   private java.lang.String requestId;
 
   /**
-   * Optional. An optional hint to the endpoint to generate a client ceritificate that can be used
-   * by AlloyDB connectors to exchange additional metadata with the server after TLS handshake.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean useMetadataExchange;
-
-  /**
    * Optional. An optional hint to the endpoint to generate the client certificate with the
    * requested duration. The duration can be from 1 hour to 24 hours. The endpoint may or may not
    * honor the hint. If the hint is left unspecified or is not honored, then the endpoint will pick
@@ -96,25 +80,6 @@ public final class GenerateClientCertificateRequest extends com.google.api.clien
    */
   public GenerateClientCertificateRequest setCertDuration(String certDuration) {
     this.certDuration = certDuration;
-    return this;
-  }
-
-  /**
-   * Optional. A pem-encoded X.509 certificate signing request (CSR). It is recommended to use
-   * public_key instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPemCsr() {
-    return pemCsr;
-  }
-
-  /**
-   * Optional. A pem-encoded X.509 certificate signing request (CSR). It is recommended to use
-   * public_key instead.
-   * @param pemCsr pemCsr or {@code null} for none
-   */
-  public GenerateClientCertificateRequest setPemCsr(java.lang.String pemCsr) {
-    this.pemCsr = pemCsr;
     return this;
   }
 
@@ -163,25 +128,6 @@ public final class GenerateClientCertificateRequest extends com.google.api.clien
    */
   public GenerateClientCertificateRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
-    return this;
-  }
-
-  /**
-   * Optional. An optional hint to the endpoint to generate a client ceritificate that can be used
-   * by AlloyDB connectors to exchange additional metadata with the server after TLS handshake.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getUseMetadataExchange() {
-    return useMetadataExchange;
-  }
-
-  /**
-   * Optional. An optional hint to the endpoint to generate a client ceritificate that can be used
-   * by AlloyDB connectors to exchange additional metadata with the server after TLS handshake.
-   * @param useMetadataExchange useMetadataExchange or {@code null} for none
-   */
-  public GenerateClientCertificateRequest setUseMetadataExchange(java.lang.Boolean useMetadataExchange) {
-    this.useMetadataExchange = useMetadataExchange;
     return this;
   }
 

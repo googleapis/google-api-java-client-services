@@ -17,9 +17,9 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * Policy Based Routes (PBR) are more powerful routes that allows GCP customers to route their L4
- * network traffic based on not just destination IP, but also source IP, protocol and more. A PBR
- * always take precedence when it conflicts with other types of routes. Next id: 22
+ * Policy-based routes route L4 network traffic based on not just destination IP address, but also
+ * source IP address, protocol, and more. If a policy-based route conflicts with other types of
+ * routes, the policy-based route always take precedence.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -33,7 +33,7 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class PolicyBasedRoute extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Time when the PolicyBasedRoute was created.
+   * Output only. Time when the policy-based route was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,15 +55,15 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   private Filter filter;
 
   /**
-   * Optional. The interconnect attachments to which this route applies to.
+   * Optional. The interconnect attachments that this policy-based route applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InterconnectAttachment interconnectAttachment;
 
   /**
-   * Output only. Type of this resource. Always networkconnectivity#policyBasedRoute for Policy
-   * Based Route resources.
+   * Output only. Type of this resource. Always networkconnectivity#policyBasedRoute for policy-
+   * based Route resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,16 +85,16 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Required. Fully-qualified URL of the network that this route applies to. e.g. projects/my-
-   * project/global/networks/my-network.
+   * Required. Fully-qualified URL of the network that this route applies to, for example: projects
+   * /my-project/global/networks/my-network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Optional. The IP of a global access enabled L4 ILB that should be the next hop to handle
-   * matching packets. For this version, only next_hop_ilb_ip is supported.
+   * Optional. The IP address of a global-access-enabled L4 ILB that is the next hop for matching
+   * packets. For this version, only nextHopIlbIp is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,9 +108,9 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   private java.lang.String nextHopOtherRoutes;
 
   /**
-   * Optional. The priority of this policy based route. Priority is used to break ties in cases
-   * where there are more than one matching policy based routes found. In cases where multiple
-   * policy based routes are matched, the one with the lowest-numbered priority value wins. The
+   * Optional. The priority of this policy-based route. Priority is used to break ties in cases
+   * where there are more than one matching policy-based routes found. In cases where multiple
+   * policy-based routes are matched, the one with the lowest-numbered priority value wins. The
    * default value is 1000. The priority value must be from 1 to 65535, inclusive.
    * The value may be {@code null}.
    */
@@ -125,14 +125,14 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   private java.lang.String selfLink;
 
   /**
-   * Output only. Time when the PolicyBasedRoute was updated.
+   * Output only. Time when the policy-based route was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. VM instances to which this policy based route applies to.
+   * Optional. VM instances to which this policy-based route applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   private java.util.List<Warnings> warnings;
 
   /**
-   * Output only. Time when the PolicyBasedRoute was created.
+   * Output only. Time when the policy-based route was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -155,7 +155,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Time when the PolicyBasedRoute was created.
+   * Output only. Time when the policy-based route was created.
    * @param createTime createTime or {@code null} for none
    */
   public PolicyBasedRoute setCreateTime(String createTime) {
@@ -200,7 +200,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The interconnect attachments to which this route applies to.
+   * Optional. The interconnect attachments that this policy-based route applies to.
    * @return value or {@code null} for none
    */
   public InterconnectAttachment getInterconnectAttachment() {
@@ -208,7 +208,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The interconnect attachments to which this route applies to.
+   * Optional. The interconnect attachments that this policy-based route applies to.
    * @param interconnectAttachment interconnectAttachment or {@code null} for none
    */
   public PolicyBasedRoute setInterconnectAttachment(InterconnectAttachment interconnectAttachment) {
@@ -217,8 +217,8 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Type of this resource. Always networkconnectivity#policyBasedRoute for Policy
-   * Based Route resources.
+   * Output only. Type of this resource. Always networkconnectivity#policyBasedRoute for policy-
+   * based Route resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -226,8 +226,8 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Type of this resource. Always networkconnectivity#policyBasedRoute for Policy
-   * Based Route resources.
+   * Output only. Type of this resource. Always networkconnectivity#policyBasedRoute for policy-
+   * based Route resources.
    * @param kind kind or {@code null} for none
    */
   public PolicyBasedRoute setKind(java.lang.String kind) {
@@ -272,8 +272,8 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Fully-qualified URL of the network that this route applies to. e.g. projects/my-
-   * project/global/networks/my-network.
+   * Required. Fully-qualified URL of the network that this route applies to, for example: projects
+   * /my-project/global/networks/my-network.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -281,8 +281,8 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Fully-qualified URL of the network that this route applies to. e.g. projects/my-
-   * project/global/networks/my-network.
+   * Required. Fully-qualified URL of the network that this route applies to, for example: projects
+   * /my-project/global/networks/my-network.
    * @param network network or {@code null} for none
    */
   public PolicyBasedRoute setNetwork(java.lang.String network) {
@@ -291,8 +291,8 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The IP of a global access enabled L4 ILB that should be the next hop to handle
-   * matching packets. For this version, only next_hop_ilb_ip is supported.
+   * Optional. The IP address of a global-access-enabled L4 ILB that is the next hop for matching
+   * packets. For this version, only nextHopIlbIp is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextHopIlbIp() {
@@ -300,8 +300,8 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The IP of a global access enabled L4 ILB that should be the next hop to handle
-   * matching packets. For this version, only next_hop_ilb_ip is supported.
+   * Optional. The IP address of a global-access-enabled L4 ILB that is the next hop for matching
+   * packets. For this version, only nextHopIlbIp is supported.
    * @param nextHopIlbIp nextHopIlbIp or {@code null} for none
    */
   public PolicyBasedRoute setNextHopIlbIp(java.lang.String nextHopIlbIp) {
@@ -327,9 +327,9 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The priority of this policy based route. Priority is used to break ties in cases
-   * where there are more than one matching policy based routes found. In cases where multiple
-   * policy based routes are matched, the one with the lowest-numbered priority value wins. The
+   * Optional. The priority of this policy-based route. Priority is used to break ties in cases
+   * where there are more than one matching policy-based routes found. In cases where multiple
+   * policy-based routes are matched, the one with the lowest-numbered priority value wins. The
    * default value is 1000. The priority value must be from 1 to 65535, inclusive.
    * @return value or {@code null} for none
    */
@@ -338,9 +338,9 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The priority of this policy based route. Priority is used to break ties in cases
-   * where there are more than one matching policy based routes found. In cases where multiple
-   * policy based routes are matched, the one with the lowest-numbered priority value wins. The
+   * Optional. The priority of this policy-based route. Priority is used to break ties in cases
+   * where there are more than one matching policy-based routes found. In cases where multiple
+   * policy-based routes are matched, the one with the lowest-numbered priority value wins. The
    * default value is 1000. The priority value must be from 1 to 65535, inclusive.
    * @param priority priority or {@code null} for none
    */
@@ -367,7 +367,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Time when the PolicyBasedRoute was updated.
+   * Output only. Time when the policy-based route was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -375,7 +375,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Time when the PolicyBasedRoute was updated.
+   * Output only. Time when the policy-based route was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public PolicyBasedRoute setUpdateTime(String updateTime) {
@@ -384,7 +384,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. VM instances to which this policy based route applies to.
+   * Optional. VM instances to which this policy-based route applies to.
    * @return value or {@code null} for none
    */
   public VirtualMachine getVirtualMachine() {
@@ -392,7 +392,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. VM instances to which this policy based route applies to.
+   * Optional. VM instances to which this policy-based route applies to.
    * @param virtualMachine virtualMachine or {@code null} for none
    */
   public PolicyBasedRoute setVirtualMachine(VirtualMachine virtualMachine) {

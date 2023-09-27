@@ -31,7 +31,7 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The destination IP range of outgoing packets that this policy based route applies to.
+   * Optional. The destination IP range of outgoing packets that this policy-based route applies to.
    * Default is "0.0.0.0/0" if protocol version is IPv4.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   private java.lang.String destRange;
 
   /**
-   * Optional. The IP protocol that this policy based route applies to. Valid values are 'TCP',
+   * Optional. The IP protocol that this policy-based route applies to. Valid values are 'TCP',
    * 'UDP', and 'ALL'. Default is 'ALL'.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   private java.lang.String ipProtocol;
 
   /**
-   * Required. Internet protocol versions this policy based route applies to. For this version, only
+   * Required. Internet protocol versions this policy-based route applies to. For this version, only
    * IPV4 is supported.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   private java.lang.String protocolVersion;
 
   /**
-   * Optional. The source IP range of outgoing packets that this policy based route applies to.
+   * Optional. The source IP range of outgoing packets that this policy-based route applies to.
    * Default is "0.0.0.0/0" if protocol version is IPv4.
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   private java.lang.String srcRange;
 
   /**
-   * Optional. The destination IP range of outgoing packets that this policy based route applies to.
+   * Optional. The destination IP range of outgoing packets that this policy-based route applies to.
    * Default is "0.0.0.0/0" if protocol version is IPv4.
    * @return value or {@code null} for none
    */
@@ -72,7 +72,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The destination IP range of outgoing packets that this policy based route applies to.
+   * Optional. The destination IP range of outgoing packets that this policy-based route applies to.
    * Default is "0.0.0.0/0" if protocol version is IPv4.
    * @param destRange destRange or {@code null} for none
    */
@@ -82,7 +82,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The IP protocol that this policy based route applies to. Valid values are 'TCP',
+   * Optional. The IP protocol that this policy-based route applies to. Valid values are 'TCP',
    * 'UDP', and 'ALL'. Default is 'ALL'.
    * @return value or {@code null} for none
    */
@@ -91,7 +91,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The IP protocol that this policy based route applies to. Valid values are 'TCP',
+   * Optional. The IP protocol that this policy-based route applies to. Valid values are 'TCP',
    * 'UDP', and 'ALL'. Default is 'ALL'.
    * @param ipProtocol ipProtocol or {@code null} for none
    */
@@ -101,7 +101,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Internet protocol versions this policy based route applies to. For this version, only
+   * Required. Internet protocol versions this policy-based route applies to. For this version, only
    * IPV4 is supported.
    * @return value or {@code null} for none
    */
@@ -110,7 +110,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Internet protocol versions this policy based route applies to. For this version, only
+   * Required. Internet protocol versions this policy-based route applies to. For this version, only
    * IPV4 is supported.
    * @param protocolVersion protocolVersion or {@code null} for none
    */
@@ -120,7 +120,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The source IP range of outgoing packets that this policy based route applies to.
+   * Optional. The source IP range of outgoing packets that this policy-based route applies to.
    * Default is "0.0.0.0/0" if protocol version is IPv4.
    * @return value or {@code null} for none
    */
@@ -129,7 +129,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The source IP range of outgoing packets that this policy based route applies to.
+   * Optional. The source IP range of outgoing packets that this policy-based route applies to.
    * Default is "0.0.0.0/0" if protocol version is IPv4.
    * @param srcRange srcRange or {@code null} for none
    */

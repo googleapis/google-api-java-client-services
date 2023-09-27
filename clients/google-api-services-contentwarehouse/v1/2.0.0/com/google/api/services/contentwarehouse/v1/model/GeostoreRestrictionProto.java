@@ -186,8 +186,9 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
   private java.util.List<java.lang.String> travelMode;
 
   /**
-   * clang-format on The type of restriction. This is not a condition, but rather tells you what
-   * kind of restriction it is. This field should always be set.
+   * LINT.ThenChange(//depot/google3/google/geo/entities/v1/fields/segment.proto) clang-format on
+   * The type of restriction. This is not a condition, but rather tells you what kind of restriction
+   * it is. This field should always be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -503,8 +504,9 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
   }
 
   /**
-   * clang-format on The type of restriction. This is not a condition, but rather tells you what
-   * kind of restriction it is. This field should always be set.
+   * LINT.ThenChange(//depot/google3/google/geo/entities/v1/fields/segment.proto) clang-format on
+   * The type of restriction. This is not a condition, but rather tells you what kind of restriction
+   * it is. This field should always be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -512,8 +514,9 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
   }
 
   /**
-   * clang-format on The type of restriction. This is not a condition, but rather tells you what
-   * kind of restriction it is. This field should always be set.
+   * LINT.ThenChange(//depot/google3/google/geo/entities/v1/fields/segment.proto) clang-format on
+   * The type of restriction. This is not a condition, but rather tells you what kind of restriction
+   * it is. This field should always be set.
    * @param type type or {@code null} for none
    */
   public GeostoreRestrictionProto setType(java.lang.String type) {

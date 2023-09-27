@@ -34,14 +34,15 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostoreInternalSegmentProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * RESERVED
+   * A list of lane connections that are explicitly not allowed to be added. NOTE: This should never
+   * reference existing lane connections on this segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> disallowedConnections;
 
   /**
-   * RESERVED
+   * A list of lane connections which cannot have the primary_connection bit set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +57,8 @@ public final class GeostoreInternalSegmentProto extends com.google.api.client.js
   private java.util.List<GeostoreRestrictionProto> travelAllowance;
 
   /**
-   * RESERVED
+   * A list of lane connections that are explicitly not allowed to be added. NOTE: This should never
+   * reference existing lane connections on this segment.
    * @return value or {@code null} for none
    */
   public java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> getDisallowedConnections() {
@@ -64,7 +66,8 @@ public final class GeostoreInternalSegmentProto extends com.google.api.client.js
   }
 
   /**
-   * RESERVED
+   * A list of lane connections that are explicitly not allowed to be added. NOTE: This should never
+   * reference existing lane connections on this segment.
    * @param disallowedConnections disallowedConnections or {@code null} for none
    */
   public GeostoreInternalSegmentProto setDisallowedConnections(java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> disallowedConnections) {
@@ -73,7 +76,7 @@ public final class GeostoreInternalSegmentProto extends com.google.api.client.js
   }
 
   /**
-   * RESERVED
+   * A list of lane connections which cannot have the primary_connection bit set.
    * @return value or {@code null} for none
    */
   public java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> getDisallowedPrimaryConnection() {
@@ -81,7 +84,7 @@ public final class GeostoreInternalSegmentProto extends com.google.api.client.js
   }
 
   /**
-   * RESERVED
+   * A list of lane connections which cannot have the primary_connection bit set.
    * @param disallowedPrimaryConnection disallowedPrimaryConnection or {@code null} for none
    */
   public GeostoreInternalSegmentProto setDisallowedPrimaryConnection(java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> disallowedPrimaryConnection) {

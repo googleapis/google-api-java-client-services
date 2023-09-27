@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * The states of the device. They are dynamic and may change based on the current context. Next ID:
- * 10
+ * 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -60,11 +60,38 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends
   private java.lang.Boolean hasPlayingMediaSession;
 
   /**
-   * Indicates whether or not the device is in the same structure as any local or hearing devices.
+   * Indicates whether or not the device is in the same room as any hearing devices. Does not
+   * consider the device itself or the local device as a hearing device. If no valid hearing
+   * devices, this field is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean hasSameStructure;
+  private java.lang.Boolean inSameRoomAsHearingDevice;
+
+  /**
+   * Indicates whether or not the device is in the same room as the local device. If the device is
+   * the local device, this field is not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean inSameRoomAsLocalDevice;
+
+  /**
+   * Indicates whether or not the device is in the same structure as any hearing devices. Does not
+   * consider the device itself or the local device as a hearing device. If no valid hearing
+   * devices, this field is not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean inSameStructureAsHearingDevice;
+
+  /**
+   * Indicates whether or not the device is in the same structure as the local device. If the device
+   * is the local device, this field is not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean inSameStructureAsLocalDevice;
 
   /**
    * Indicate whether the device is docked on a base.
@@ -169,19 +196,82 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends
   }
 
   /**
-   * Indicates whether or not the device is in the same structure as any local or hearing devices.
+   * Indicates whether or not the device is in the same room as any hearing devices. Does not
+   * consider the device itself or the local device as a hearing device. If no valid hearing
+   * devices, this field is not set.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getHasSameStructure() {
-    return hasSameStructure;
+  public java.lang.Boolean getInSameRoomAsHearingDevice() {
+    return inSameRoomAsHearingDevice;
   }
 
   /**
-   * Indicates whether or not the device is in the same structure as any local or hearing devices.
-   * @param hasSameStructure hasSameStructure or {@code null} for none
+   * Indicates whether or not the device is in the same room as any hearing devices. Does not
+   * consider the device itself or the local device as a hearing device. If no valid hearing
+   * devices, this field is not set.
+   * @param inSameRoomAsHearingDevice inSameRoomAsHearingDevice or {@code null} for none
    */
-  public AssistantGroundingRankerDeviceTargetingFeaturesStates setHasSameStructure(java.lang.Boolean hasSameStructure) {
-    this.hasSameStructure = hasSameStructure;
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setInSameRoomAsHearingDevice(java.lang.Boolean inSameRoomAsHearingDevice) {
+    this.inSameRoomAsHearingDevice = inSameRoomAsHearingDevice;
+    return this;
+  }
+
+  /**
+   * Indicates whether or not the device is in the same room as the local device. If the device is
+   * the local device, this field is not set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInSameRoomAsLocalDevice() {
+    return inSameRoomAsLocalDevice;
+  }
+
+  /**
+   * Indicates whether or not the device is in the same room as the local device. If the device is
+   * the local device, this field is not set.
+   * @param inSameRoomAsLocalDevice inSameRoomAsLocalDevice or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setInSameRoomAsLocalDevice(java.lang.Boolean inSameRoomAsLocalDevice) {
+    this.inSameRoomAsLocalDevice = inSameRoomAsLocalDevice;
+    return this;
+  }
+
+  /**
+   * Indicates whether or not the device is in the same structure as any hearing devices. Does not
+   * consider the device itself or the local device as a hearing device. If no valid hearing
+   * devices, this field is not set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInSameStructureAsHearingDevice() {
+    return inSameStructureAsHearingDevice;
+  }
+
+  /**
+   * Indicates whether or not the device is in the same structure as any hearing devices. Does not
+   * consider the device itself or the local device as a hearing device. If no valid hearing
+   * devices, this field is not set.
+   * @param inSameStructureAsHearingDevice inSameStructureAsHearingDevice or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setInSameStructureAsHearingDevice(java.lang.Boolean inSameStructureAsHearingDevice) {
+    this.inSameStructureAsHearingDevice = inSameStructureAsHearingDevice;
+    return this;
+  }
+
+  /**
+   * Indicates whether or not the device is in the same structure as the local device. If the device
+   * is the local device, this field is not set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInSameStructureAsLocalDevice() {
+    return inSameStructureAsLocalDevice;
+  }
+
+  /**
+   * Indicates whether or not the device is in the same structure as the local device. If the device
+   * is the local device, this field is not set.
+   * @param inSameStructureAsLocalDevice inSameStructureAsLocalDevice or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setInSameStructureAsLocalDevice(java.lang.Boolean inSameStructureAsLocalDevice) {
+    this.inSameStructureAsLocalDevice = inSameStructureAsLocalDevice;
     return this;
   }
 

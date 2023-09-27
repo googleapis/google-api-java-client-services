@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * InterconnectAttachment to which this route applies to.
+ * InterconnectAttachment that this route applies to.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class InterconnectAttachment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Cloud region to install this policy based route on interconnect attachment. Use `all`
+   * Optional. Cloud region to install this policy-based route on interconnect attachment. Use `all`
    * to install it on all interconnect attachments.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String region;
 
   /**
-   * Optional. Cloud region to install this policy based route on interconnect attachment. Use `all`
+   * Optional. Cloud region to install this policy-based route on interconnect attachment. Use `all`
    * to install it on all interconnect attachments.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Cloud region to install this policy based route on interconnect attachment. Use `all`
+   * Optional. Cloud region to install this policy-based route on interconnect attachment. Use `all`
    * to install it on all interconnect attachments.
    * @param region region or {@code null} for none
    */

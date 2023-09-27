@@ -39,7 +39,7 @@ public final class ListPolicyBasedRoutesResponse extends com.google.api.client.j
   private java.lang.String nextPageToken;
 
   /**
-   * Policy based routes to be returned.
+   * Policy-based routes to be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class ListPolicyBasedRoutesResponse extends com.google.api.client.j
   }
 
   /**
-   * Policy based routes to be returned.
+   * Policy-based routes to be returned.
    * @return value or {@code null} for none
    */
   public java.util.List<PolicyBasedRoute> getPolicyBasedRoutes() {
@@ -80,7 +80,7 @@ public final class ListPolicyBasedRoutesResponse extends com.google.api.client.j
   }
 
   /**
-   * Policy based routes to be returned.
+   * Policy-based routes to be returned.
    * @param policyBasedRoutes policyBasedRoutes or {@code null} for none
    */
   public ListPolicyBasedRoutesResponse setPolicyBasedRoutes(java.util.List<PolicyBasedRoute> policyBasedRoutes) {

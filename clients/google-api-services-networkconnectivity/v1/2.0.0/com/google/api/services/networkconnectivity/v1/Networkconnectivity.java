@@ -557,7 +557,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
         public class Hubs {
 
           /**
-           * Accepts a proposal to attach a Network Connectivity Center spoke to the hub.
+           * Accepts a proposal to attach a Network Connectivity Center spoke to a hub.
            *
            * Create a request for the method "hubs.acceptSpoke".
            *
@@ -565,7 +565,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * optional parameters, call the {@link AcceptSpoke#execute()} method to invoke the remote
            * operation.
            *
-           * @param name Required. The name of the hub.
+           * @param name Required. The name of the hub into which to accept the spoke.
            * @param content the {@link com.google.api.services.networkconnectivity.v1.model.AcceptHubSpokeRequest}
            * @return the request
            */
@@ -583,7 +583,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
 
             /**
-             * Accepts a proposal to attach a Network Connectivity Center spoke to the hub.
+             * Accepts a proposal to attach a Network Connectivity Center spoke to a hub.
              *
              * Create a request for the method "hubs.acceptSpoke".
              *
@@ -593,7 +593,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
              * AcceptSpoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the hub.
+             * @param name Required. The name of the hub into which to accept the spoke.
              * @param content the {@link com.google.api.services.networkconnectivity.v1.model.AcceptHubSpokeRequest}
              * @since 1.13
              */
@@ -662,17 +662,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               return (AcceptSpoke) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the hub. */
+            /** Required. The name of the hub into which to accept the spoke. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the hub.
+            /** Required. The name of the hub into which to accept the spoke.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The name of the hub. */
+            /** Required. The name of the hub into which to accept the spoke. */
             public AcceptSpoke setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -832,25 +832,25 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
             /**
              * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check to see whether the
-             * original operation was received. If it was, the server ignores the second request.
-             * This behavior prevents clients from mistakenly creating duplicate commitments. The
-             * request ID must be a valid UUID, with the exception that zero UUID is not supported
+             * you must retry your request, the server knows to ignore the request if it has already
+             * been completed. The server guarantees that a request doesn't result in creation of
+             * duplicate commitments for at least 60 minutes. For example, consider a situation
+             * where you make an initial request and the request times out. If you make the request
+             * again with the same request ID, the server can check to see whether the original
+             * operation was received. If it was, the server ignores the second request. This
+             * behavior prevents clients from mistakenly creating duplicate commitments. The request
+             * ID must be a valid UUID, with the exception that zero UUID is not supported
              * (00000000-0000-0000-0000-000000000000).
              */
             @com.google.api.client.util.Key
             private java.lang.String requestId;
 
             /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-           your request, the server will know to ignore the request if it has already been completed. The
-           server guarantees that a request doesn't result in creation of duplicate commitments for at least
-           60 minutes. For example, consider a situation where you make an initial request and the request
-           times out. If you make the request again with the same request ID, the server can check to see
-           whether the original operation was received. If it was, the server ignores the second request. This
+           your request, the server knows to ignore the request if it has already been completed. The server
+           guarantees that a request doesn't result in creation of duplicate commitments for at least 60
+           minutes. For example, consider a situation where you make an initial request and the request times
+           out. If you make the request again with the same request ID, the server can check to see whether
+           the original operation was received. If it was, the server ignores the second request. This
            behavior prevents clients from mistakenly creating duplicate commitments. The request ID must be a
            valid UUID, with the exception that zero UUID is not supported
            (00000000-0000-0000-0000-000000000000).
@@ -861,14 +861,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
             /**
              * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check to see whether the
-             * original operation was received. If it was, the server ignores the second request.
-             * This behavior prevents clients from mistakenly creating duplicate commitments. The
-             * request ID must be a valid UUID, with the exception that zero UUID is not supported
+             * you must retry your request, the server knows to ignore the request if it has already
+             * been completed. The server guarantees that a request doesn't result in creation of
+             * duplicate commitments for at least 60 minutes. For example, consider a situation
+             * where you make an initial request and the request times out. If you make the request
+             * again with the same request ID, the server can check to see whether the original
+             * operation was received. If it was, the server ignores the second request. This
+             * behavior prevents clients from mistakenly creating duplicate commitments. The request
+             * ID must be a valid UUID, with the exception that zero UUID is not supported
              * (00000000-0000-0000-0000-000000000000).
              */
             public Create setRequestId(java.lang.String requestId) {
@@ -1007,25 +1007,25 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
             /**
              * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check to see whether the
-             * original operation was received. If it was, the server ignores the second request.
-             * This behavior prevents clients from mistakenly creating duplicate commitments. The
-             * request ID must be a valid UUID, with the exception that zero UUID is not supported
+             * you must retry your request, the server knows to ignore the request if it has already
+             * been completed. The server guarantees that a request doesn't result in creation of
+             * duplicate commitments for at least 60 minutes. For example, consider a situation
+             * where you make an initial request and the request times out. If you make the request
+             * again with the same request ID, the server can check to see whether the original
+             * operation was received. If it was, the server ignores the second request. This
+             * behavior prevents clients from mistakenly creating duplicate commitments. The request
+             * ID must be a valid UUID, with the exception that zero UUID is not supported
              * (00000000-0000-0000-0000-000000000000).
              */
             @com.google.api.client.util.Key
             private java.lang.String requestId;
 
             /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-           your request, the server will know to ignore the request if it has already been completed. The
-           server guarantees that a request doesn't result in creation of duplicate commitments for at least
-           60 minutes. For example, consider a situation where you make an initial request and the request
-           times out. If you make the request again with the same request ID, the server can check to see
-           whether the original operation was received. If it was, the server ignores the second request. This
+           your request, the server knows to ignore the request if it has already been completed. The server
+           guarantees that a request doesn't result in creation of duplicate commitments for at least 60
+           minutes. For example, consider a situation where you make an initial request and the request times
+           out. If you make the request again with the same request ID, the server can check to see whether
+           the original operation was received. If it was, the server ignores the second request. This
            behavior prevents clients from mistakenly creating duplicate commitments. The request ID must be a
            valid UUID, with the exception that zero UUID is not supported
            (00000000-0000-0000-0000-000000000000).
@@ -1036,14 +1036,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
             /**
              * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check to see whether the
-             * original operation was received. If it was, the server ignores the second request.
-             * This behavior prevents clients from mistakenly creating duplicate commitments. The
-             * request ID must be a valid UUID, with the exception that zero UUID is not supported
+             * you must retry your request, the server knows to ignore the request if it has already
+             * been completed. The server guarantees that a request doesn't result in creation of
+             * duplicate commitments for at least 60 minutes. For example, consider a situation
+             * where you make an initial request and the request times out. If you make the request
+             * again with the same request ID, the server can check to see whether the original
+             * operation was received. If it was, the server ignores the second request. This
+             * behavior prevents clients from mistakenly creating duplicate commitments. The request
+             * ID must be a valid UUID, with the exception that zero UUID is not supported
              * (00000000-0000-0000-0000-000000000000).
              */
             public Delete setRequestId(java.lang.String requestId) {
@@ -1996,25 +1996,25 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
             /**
              * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check to see whether the
-             * original operation was received. If it was, the server ignores the second request.
-             * This behavior prevents clients from mistakenly creating duplicate commitments. The
-             * request ID must be a valid UUID, with the exception that zero UUID is not supported
+             * you must retry your request, the server knows to ignore the request if it has already
+             * been completed. The server guarantees that a request doesn't result in creation of
+             * duplicate commitments for at least 60 minutes. For example, consider a situation
+             * where you make an initial request and the request times out. If you make the request
+             * again with the same request ID, the server can check to see whether the original
+             * operation was received. If it was, the server ignores the second request. This
+             * behavior prevents clients from mistakenly creating duplicate commitments. The request
+             * ID must be a valid UUID, with the exception that zero UUID is not supported
              * (00000000-0000-0000-0000-000000000000).
              */
             @com.google.api.client.util.Key
             private java.lang.String requestId;
 
             /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-           your request, the server will know to ignore the request if it has already been completed. The
-           server guarantees that a request doesn't result in creation of duplicate commitments for at least
-           60 minutes. For example, consider a situation where you make an initial request and the request
-           times out. If you make the request again with the same request ID, the server can check to see
-           whether the original operation was received. If it was, the server ignores the second request. This
+           your request, the server knows to ignore the request if it has already been completed. The server
+           guarantees that a request doesn't result in creation of duplicate commitments for at least 60
+           minutes. For example, consider a situation where you make an initial request and the request times
+           out. If you make the request again with the same request ID, the server can check to see whether
+           the original operation was received. If it was, the server ignores the second request. This
            behavior prevents clients from mistakenly creating duplicate commitments. The request ID must be a
            valid UUID, with the exception that zero UUID is not supported
            (00000000-0000-0000-0000-000000000000).
@@ -2025,14 +2025,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
             /**
              * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check to see whether the
-             * original operation was received. If it was, the server ignores the second request.
-             * This behavior prevents clients from mistakenly creating duplicate commitments. The
-             * request ID must be a valid UUID, with the exception that zero UUID is not supported
+             * you must retry your request, the server knows to ignore the request if it has already
+             * been completed. The server guarantees that a request doesn't result in creation of
+             * duplicate commitments for at least 60 minutes. For example, consider a situation
+             * where you make an initial request and the request times out. If you make the request
+             * again with the same request ID, the server can check to see whether the original
+             * operation was received. If it was, the server ignores the second request. This
+             * behavior prevents clients from mistakenly creating duplicate commitments. The request
+             * ID must be a valid UUID, with the exception that zero UUID is not supported
              * (00000000-0000-0000-0000-000000000000).
              */
             public Patch setRequestId(java.lang.String requestId) {
@@ -2075,7 +2075,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Rejects a Network Connectivity Center spoke from being attached to the hub. If the spoke was
+           * Rejects a Network Connectivity Center spoke from being attached to a hub. If the spoke was
            * previously in the `ACTIVE` state, it transitions to the `INACTIVE` state and is no longer able to
            * connect to other spokes that are attached to the hub.
            *
@@ -2085,7 +2085,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * optional parameters, call the {@link RejectSpoke#execute()} method to invoke the remote
            * operation.
            *
-           * @param name Required. The name of the hub.
+           * @param name Required. The name of the hub from which to reject the spoke.
            * @param content the {@link com.google.api.services.networkconnectivity.v1.model.RejectHubSpokeRequest}
            * @return the request
            */
@@ -2103,7 +2103,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
 
             /**
-             * Rejects a Network Connectivity Center spoke from being attached to the hub. If the spoke was
+             * Rejects a Network Connectivity Center spoke from being attached to a hub. If the spoke was
              * previously in the `ACTIVE` state, it transitions to the `INACTIVE` state and is no longer able
              * to connect to other spokes that are attached to the hub.
              *
@@ -2115,7 +2115,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
              * RejectSpoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the hub.
+             * @param name Required. The name of the hub from which to reject the spoke.
              * @param content the {@link com.google.api.services.networkconnectivity.v1.model.RejectHubSpokeRequest}
              * @since 1.13
              */
@@ -2184,17 +2184,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               return (RejectSpoke) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the hub. */
+            /** Required. The name of the hub from which to reject the spoke. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the hub.
+            /** Required. The name of the hub from which to reject the spoke.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The name of the hub. */
+            /** Required. The name of the hub from which to reject the spoke. */
             public RejectSpoke setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4126,7 +4126,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
         public class PolicyBasedRoutes {
 
           /**
-           * Creates a new PolicyBasedRoute in a given project and location.
+           * Creates a new policy-based route in a given project and location.
            *
            * Create a request for the method "policyBasedRoutes.create".
            *
@@ -4151,7 +4151,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
 
             /**
-             * Creates a new PolicyBasedRoute in a given project and location.
+             * Creates a new policy-based route in a given project and location.
              *
              * Create a request for the method "policyBasedRoutes.create".
              *
@@ -4251,17 +4251,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               return this;
             }
 
-            /** Required. Unique id for the Policy Based Route to create. */
+            /** Required. Unique id for the policy-based route to create. */
             @com.google.api.client.util.Key
             private java.lang.String policyBasedRouteId;
 
-            /** Required. Unique id for the Policy Based Route to create.
+            /** Required. Unique id for the policy-based route to create.
              */
             public java.lang.String getPolicyBasedRouteId() {
               return policyBasedRouteId;
             }
 
-            /** Required. Unique id for the Policy Based Route to create. */
+            /** Required. Unique id for the policy-based route to create. */
             public Create setPolicyBasedRouteId(java.lang.String policyBasedRouteId) {
               this.policyBasedRouteId = policyBasedRouteId;
               return this;
@@ -4316,14 +4316,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Deletes a single PolicyBasedRoute.
+           * Deletes a single policy-based route.
            *
            * Create a request for the method "policyBasedRoutes.delete".
            *
            * This request holds the parameters needed by the networkconnectivity server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the PolicyBasedRoute resource to delete.
+           * @param name Required. Name of the policy-based route resource to delete.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4340,7 +4340,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/policyBasedRoutes/[^/]+$");
 
             /**
-             * Deletes a single PolicyBasedRoute.
+             * Deletes a single policy-based route.
              *
              * Create a request for the method "policyBasedRoutes.delete".
              *
@@ -4350,7 +4350,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the PolicyBasedRoute resource to delete.
+             * @param name Required. Name of the policy-based route resource to delete.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -4418,17 +4418,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Name of the PolicyBasedRoute resource to delete. */
+            /** Required. Name of the policy-based route resource to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the PolicyBasedRoute resource to delete.
+            /** Required. Name of the policy-based route resource to delete.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. Name of the PolicyBasedRoute resource to delete. */
+            /** Required. Name of the policy-based route resource to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4488,7 +4488,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Gets details of a single PolicyBasedRoute.
+           * Gets details of a single policy-based route.
            *
            * Create a request for the method "policyBasedRoutes.get".
            *
@@ -4512,7 +4512,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/policyBasedRoutes/[^/]+$");
 
             /**
-             * Gets details of a single PolicyBasedRoute.
+             * Gets details of a single policy-based route.
              *
              * Create a request for the method "policyBasedRoutes.get".
              *
@@ -4826,7 +4826,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Lists PolicyBasedRoutes in a given project and location.
+           * Lists policy-based routes in a given project and location.
            *
            * Create a request for the method "policyBasedRoutes.list".
            *
@@ -4850,7 +4850,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
 
             /**
-             * Lists PolicyBasedRoutes in a given project and location.
+             * Lists policy-based routes in a given project and location.
              *
              * Create a request for the method "policyBasedRoutes.list".
              *
@@ -12206,12 +12206,12 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
           /**
            * Optional. A request ID to identify requests. Specify a unique request ID so that if you
-           * must retry your request, the server will know to ignore the request if it has already
-           * been completed. The server guarantees that a request doesn't result in creation of
-           * duplicate commitments for at least 60 minutes. For example, consider a situation where
-           * you make an initial request and the request times out. If you make the request again
-           * with the same request ID, the server can check to see whether the original operation
-           * was received. If it was, the server ignores the second request. This behavior prevents
+           * must retry your request, the server knows to ignore the request if it has already been
+           * completed. The server guarantees that a request doesn't result in creation of duplicate
+           * commitments for at least 60 minutes. For example, consider a situation where you make
+           * an initial request and the request times out. If you make the request again with the
+           * same request ID, the server can check to see whether the original operation was
+           * received. If it was, the server ignores the second request. This behavior prevents
            * clients from mistakenly creating duplicate commitments. The request ID must be a valid
            * UUID, with the exception that zero UUID is not supported
            * (00000000-0000-0000-0000-000000000000).
@@ -12220,11 +12220,11 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           private java.lang.String requestId;
 
           /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-         your request, the server will know to ignore the request if it has already been completed. The
-         server guarantees that a request doesn't result in creation of duplicate commitments for at least
-         60 minutes. For example, consider a situation where you make an initial request and the request
-         times out. If you make the request again with the same request ID, the server can check to see
-         whether the original operation was received. If it was, the server ignores the second request. This
+         your request, the server knows to ignore the request if it has already been completed. The server
+         guarantees that a request doesn't result in creation of duplicate commitments for at least 60
+         minutes. For example, consider a situation where you make an initial request and the request times
+         out. If you make the request again with the same request ID, the server can check to see whether
+         the original operation was received. If it was, the server ignores the second request. This
          behavior prevents clients from mistakenly creating duplicate commitments. The request ID must be a
          valid UUID, with the exception that zero UUID is not supported
          (00000000-0000-0000-0000-000000000000).
@@ -12235,12 +12235,12 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
           /**
            * Optional. A request ID to identify requests. Specify a unique request ID so that if you
-           * must retry your request, the server will know to ignore the request if it has already
-           * been completed. The server guarantees that a request doesn't result in creation of
-           * duplicate commitments for at least 60 minutes. For example, consider a situation where
-           * you make an initial request and the request times out. If you make the request again
-           * with the same request ID, the server can check to see whether the original operation
-           * was received. If it was, the server ignores the second request. This behavior prevents
+           * must retry your request, the server knows to ignore the request if it has already been
+           * completed. The server guarantees that a request doesn't result in creation of duplicate
+           * commitments for at least 60 minutes. For example, consider a situation where you make
+           * an initial request and the request times out. If you make the request again with the
+           * same request ID, the server can check to see whether the original operation was
+           * received. If it was, the server ignores the second request. This behavior prevents
            * clients from mistakenly creating duplicate commitments. The request ID must be a valid
            * UUID, with the exception that zero UUID is not supported
            * (00000000-0000-0000-0000-000000000000).
@@ -12397,12 +12397,12 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
           /**
            * Optional. A request ID to identify requests. Specify a unique request ID so that if you
-           * must retry your request, the server will know to ignore the request if it has already
-           * been completed. The server guarantees that a request doesn't result in creation of
-           * duplicate commitments for at least 60 minutes. For example, consider a situation where
-           * you make an initial request and the request times out. If you make the request again
-           * with the same request ID, the server can check to see whether the original operation
-           * was received. If it was, the server ignores the second request. This behavior prevents
+           * must retry your request, the server knows to ignore the request if it has already been
+           * completed. The server guarantees that a request doesn't result in creation of duplicate
+           * commitments for at least 60 minutes. For example, consider a situation where you make
+           * an initial request and the request times out. If you make the request again with the
+           * same request ID, the server can check to see whether the original operation was
+           * received. If it was, the server ignores the second request. This behavior prevents
            * clients from mistakenly creating duplicate commitments. The request ID must be a valid
            * UUID, with the exception that zero UUID is not supported
            * (00000000-0000-0000-0000-000000000000).
@@ -12411,11 +12411,11 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           private java.lang.String requestId;
 
           /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-         your request, the server will know to ignore the request if it has already been completed. The
-         server guarantees that a request doesn't result in creation of duplicate commitments for at least
-         60 minutes. For example, consider a situation where you make an initial request and the request
-         times out. If you make the request again with the same request ID, the server can check to see
-         whether the original operation was received. If it was, the server ignores the second request. This
+         your request, the server knows to ignore the request if it has already been completed. The server
+         guarantees that a request doesn't result in creation of duplicate commitments for at least 60
+         minutes. For example, consider a situation where you make an initial request and the request times
+         out. If you make the request again with the same request ID, the server can check to see whether
+         the original operation was received. If it was, the server ignores the second request. This
          behavior prevents clients from mistakenly creating duplicate commitments. The request ID must be a
          valid UUID, with the exception that zero UUID is not supported
          (00000000-0000-0000-0000-000000000000).
@@ -12426,12 +12426,12 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
           /**
            * Optional. A request ID to identify requests. Specify a unique request ID so that if you
-           * must retry your request, the server will know to ignore the request if it has already
-           * been completed. The server guarantees that a request doesn't result in creation of
-           * duplicate commitments for at least 60 minutes. For example, consider a situation where
-           * you make an initial request and the request times out. If you make the request again
-           * with the same request ID, the server can check to see whether the original operation
-           * was received. If it was, the server ignores the second request. This behavior prevents
+           * must retry your request, the server knows to ignore the request if it has already been
+           * completed. The server guarantees that a request doesn't result in creation of duplicate
+           * commitments for at least 60 minutes. For example, consider a situation where you make
+           * an initial request and the request times out. If you make the request again with the
+           * same request ID, the server can check to see whether the original operation was
+           * received. If it was, the server ignores the second request. This behavior prevents
            * clients from mistakenly creating duplicate commitments. The request ID must be a valid
            * UUID, with the exception that zero UUID is not supported
            * (00000000-0000-0000-0000-000000000000).
@@ -13124,12 +13124,12 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
           /**
            * Optional. A request ID to identify requests. Specify a unique request ID so that if you
-           * must retry your request, the server will know to ignore the request if it has already
-           * been completed. The server guarantees that a request doesn't result in creation of
-           * duplicate commitments for at least 60 minutes. For example, consider a situation where
-           * you make an initial request and the request times out. If you make the request again
-           * with the same request ID, the server can check to see whether the original operation
-           * was received. If it was, the server ignores the second request. This behavior prevents
+           * must retry your request, the server knows to ignore the request if it has already been
+           * completed. The server guarantees that a request doesn't result in creation of duplicate
+           * commitments for at least 60 minutes. For example, consider a situation where you make
+           * an initial request and the request times out. If you make the request again with the
+           * same request ID, the server can check to see whether the original operation was
+           * received. If it was, the server ignores the second request. This behavior prevents
            * clients from mistakenly creating duplicate commitments. The request ID must be a valid
            * UUID, with the exception that zero UUID is not supported
            * (00000000-0000-0000-0000-000000000000).
@@ -13138,11 +13138,11 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           private java.lang.String requestId;
 
           /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-         your request, the server will know to ignore the request if it has already been completed. The
-         server guarantees that a request doesn't result in creation of duplicate commitments for at least
-         60 minutes. For example, consider a situation where you make an initial request and the request
-         times out. If you make the request again with the same request ID, the server can check to see
-         whether the original operation was received. If it was, the server ignores the second request. This
+         your request, the server knows to ignore the request if it has already been completed. The server
+         guarantees that a request doesn't result in creation of duplicate commitments for at least 60
+         minutes. For example, consider a situation where you make an initial request and the request times
+         out. If you make the request again with the same request ID, the server can check to see whether
+         the original operation was received. If it was, the server ignores the second request. This
          behavior prevents clients from mistakenly creating duplicate commitments. The request ID must be a
          valid UUID, with the exception that zero UUID is not supported
          (00000000-0000-0000-0000-000000000000).
@@ -13153,12 +13153,12 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
           /**
            * Optional. A request ID to identify requests. Specify a unique request ID so that if you
-           * must retry your request, the server will know to ignore the request if it has already
-           * been completed. The server guarantees that a request doesn't result in creation of
-           * duplicate commitments for at least 60 minutes. For example, consider a situation where
-           * you make an initial request and the request times out. If you make the request again
-           * with the same request ID, the server can check to see whether the original operation
-           * was received. If it was, the server ignores the second request. This behavior prevents
+           * must retry your request, the server knows to ignore the request if it has already been
+           * completed. The server guarantees that a request doesn't result in creation of duplicate
+           * commitments for at least 60 minutes. For example, consider a situation where you make
+           * an initial request and the request times out. If you make the request again with the
+           * same request ID, the server can check to see whether the original operation was
+           * received. If it was, the server ignores the second request. This behavior prevents
            * clients from mistakenly creating duplicate commitments. The request ID must be a valid
            * UUID, with the exception that zero UUID is not supported
            * (00000000-0000-0000-0000-000000000000).

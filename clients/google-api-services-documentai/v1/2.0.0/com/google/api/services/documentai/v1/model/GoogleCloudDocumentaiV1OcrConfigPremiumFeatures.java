@@ -45,7 +45,8 @@ public final class GoogleCloudDocumentaiV1OcrConfigPremiumFeatures extends com.g
   private java.lang.Boolean enableMathOcr;
 
   /**
-   * Turn on selection mark detector in OCR engine. Only available in OCR 2.0+ processors.
+   * Turn on selection mark detector in OCR engine. Only available in OCR 2.0 (and later)
+   * processors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,8 @@ public final class GoogleCloudDocumentaiV1OcrConfigPremiumFeatures extends com.g
   }
 
   /**
-   * Turn on selection mark detector in OCR engine. Only available in OCR 2.0+ processors.
+   * Turn on selection mark detector in OCR engine. Only available in OCR 2.0 (and later)
+   * processors.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSelectionMarkDetection() {
@@ -94,7 +96,8 @@ public final class GoogleCloudDocumentaiV1OcrConfigPremiumFeatures extends com.g
   }
 
   /**
-   * Turn on selection mark detector in OCR engine. Only available in OCR 2.0+ processors.
+   * Turn on selection mark detector in OCR engine. Only available in OCR 2.0 (and later)
+   * processors.
    * @param enableSelectionMarkDetection enableSelectionMarkDetection or {@code null} for none
    */
   public GoogleCloudDocumentaiV1OcrConfigPremiumFeatures setEnableSelectionMarkDetection(java.lang.Boolean enableSelectionMarkDetection) {

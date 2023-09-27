@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1ProcessOptions extends com.google.api.
   private java.lang.Integer fromEnd;
 
   /**
-   * Only process certain pages from the start, process all if the document has less pages.
+   * Only process certain pages from the start. Process all if the document has fewer pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class GoogleCloudDocumentaiV1ProcessOptions extends com.google.api.
   }
 
   /**
-   * Only process certain pages from the start, process all if the document has less pages.
+   * Only process certain pages from the start. Process all if the document has fewer pages.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFromStart() {
@@ -84,7 +84,7 @@ public final class GoogleCloudDocumentaiV1ProcessOptions extends com.google.api.
   }
 
   /**
-   * Only process certain pages from the start, process all if the document has less pages.
+   * Only process certain pages from the start. Process all if the document has fewer pages.
    * @param fromStart fromStart or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessOptions setFromStart(java.lang.Integer fromStart) {

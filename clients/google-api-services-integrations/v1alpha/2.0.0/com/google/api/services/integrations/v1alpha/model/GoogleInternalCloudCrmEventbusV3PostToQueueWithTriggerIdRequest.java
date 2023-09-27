@@ -17,7 +17,8 @@
 package com.google.api.services.integrations.v1alpha.model;
 
 /**
- * Use this request to post all workflows associated with a given trigger id. Next available id: 11
+ * LINT.IfChange Use this request to post all workflows associated with a given trigger id. Next
+ * available id: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed

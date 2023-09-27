@@ -47,6 +47,13 @@ public final class CseIdentity extends com.google.api.client.json.GenericJson {
   private java.lang.String primaryKeyPairId;
 
   /**
+   * The configuration of a CSE identity that uses different key pairs for signing and encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SignAndEncryptKeyPairs signAndEncryptKeyPairs;
+
+  /**
    * The email address for the sending identity. The email address must be the primary email address
    * of the authenticated user.
    * @return value or {@code null} for none
@@ -79,6 +86,23 @@ public final class CseIdentity extends com.google.api.client.json.GenericJson {
    */
   public CseIdentity setPrimaryKeyPairId(java.lang.String primaryKeyPairId) {
     this.primaryKeyPairId = primaryKeyPairId;
+    return this;
+  }
+
+  /**
+   * The configuration of a CSE identity that uses different key pairs for signing and encryption.
+   * @return value or {@code null} for none
+   */
+  public SignAndEncryptKeyPairs getSignAndEncryptKeyPairs() {
+    return signAndEncryptKeyPairs;
+  }
+
+  /**
+   * The configuration of a CSE identity that uses different key pairs for signing and encryption.
+   * @param signAndEncryptKeyPairs signAndEncryptKeyPairs or {@code null} for none
+   */
+  public CseIdentity setSignAndEncryptKeyPairs(SignAndEncryptKeyPairs signAndEncryptKeyPairs) {
+    this.signAndEncryptKeyPairs = signAndEncryptKeyPairs;
     return this;
   }
 

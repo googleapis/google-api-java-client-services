@@ -31,6 +31,13 @@ package com.google.api.services.tagmanager.model;
 public final class Entity extends com.google.api.client.json.GenericJson {
 
   /**
+   * The built in variable being represented by the entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BuiltInVariable builtInVariable;
+
+  /**
    * Represents how the entity has been changed in the workspace.
    * The value may be {@code null}.
    */
@@ -45,11 +52,25 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   private Client client;
 
   /**
+   * The custom template being represented by the entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomTemplate customTemplate;
+
+  /**
    * The folder being represented by the entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Folder folder;
+
+  /**
+   * The gtag config being represented by the entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GtagConfig gtagConfig;
 
   /**
    * The tag being represented by the entity.
@@ -78,6 +99,30 @@ public final class Entity extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Variable variable;
+
+  /**
+   * The zone being represented by the entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Zone zone;
+
+  /**
+   * The built in variable being represented by the entity.
+   * @return value or {@code null} for none
+   */
+  public BuiltInVariable getBuiltInVariable() {
+    return builtInVariable;
+  }
+
+  /**
+   * The built in variable being represented by the entity.
+   * @param builtInVariable builtInVariable or {@code null} for none
+   */
+  public Entity setBuiltInVariable(BuiltInVariable builtInVariable) {
+    this.builtInVariable = builtInVariable;
+    return this;
+  }
 
   /**
    * Represents how the entity has been changed in the workspace.
@@ -114,6 +159,23 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The custom template being represented by the entity.
+   * @return value or {@code null} for none
+   */
+  public CustomTemplate getCustomTemplate() {
+    return customTemplate;
+  }
+
+  /**
+   * The custom template being represented by the entity.
+   * @param customTemplate customTemplate or {@code null} for none
+   */
+  public Entity setCustomTemplate(CustomTemplate customTemplate) {
+    this.customTemplate = customTemplate;
+    return this;
+  }
+
+  /**
    * The folder being represented by the entity.
    * @return value or {@code null} for none
    */
@@ -127,6 +189,23 @@ public final class Entity extends com.google.api.client.json.GenericJson {
    */
   public Entity setFolder(Folder folder) {
     this.folder = folder;
+    return this;
+  }
+
+  /**
+   * The gtag config being represented by the entity.
+   * @return value or {@code null} for none
+   */
+  public GtagConfig getGtagConfig() {
+    return gtagConfig;
+  }
+
+  /**
+   * The gtag config being represented by the entity.
+   * @param gtagConfig gtagConfig or {@code null} for none
+   */
+  public Entity setGtagConfig(GtagConfig gtagConfig) {
+    this.gtagConfig = gtagConfig;
     return this;
   }
 
@@ -195,6 +274,23 @@ public final class Entity extends com.google.api.client.json.GenericJson {
    */
   public Entity setVariable(Variable variable) {
     this.variable = variable;
+    return this;
+  }
+
+  /**
+   * The zone being represented by the entity.
+   * @return value or {@code null} for none
+   */
+  public Zone getZone() {
+    return zone;
+  }
+
+  /**
+   * The zone being represented by the entity.
+   * @param zone zone or {@code null} for none
+   */
+  public Entity setZone(Zone zone) {
+    this.zone = zone;
     return this;
   }
 

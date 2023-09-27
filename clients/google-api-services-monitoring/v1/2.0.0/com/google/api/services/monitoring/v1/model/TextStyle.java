@@ -59,6 +59,13 @@ public final class TextStyle extends com.google.api.client.json.GenericJson {
   private java.lang.String padding;
 
   /**
+   * The pointer location for this widget (also sometimes called a "tail")
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pointerLocation;
+
+  /**
    * The text color as a hex string. "#RRGGBB" or "#RGB"
    * The value may be {@code null}.
    */
@@ -139,6 +146,23 @@ public final class TextStyle extends com.google.api.client.json.GenericJson {
    */
   public TextStyle setPadding(java.lang.String padding) {
     this.padding = padding;
+    return this;
+  }
+
+  /**
+   * The pointer location for this widget (also sometimes called a "tail")
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPointerLocation() {
+    return pointerLocation;
+  }
+
+  /**
+   * The pointer location for this widget (also sometimes called a "tail")
+   * @param pointerLocation pointerLocation or {@code null} for none
+   */
+  public TextStyle setPointerLocation(java.lang.String pointerLocation) {
+    this.pointerLocation = pointerLocation;
     return this;
   }
 

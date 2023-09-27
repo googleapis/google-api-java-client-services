@@ -30,11 +30,35 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityDimensionResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The dimension config specified in the DataQualitySpec, as is.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataQualityDimension dimension;
+
+  /**
    * Whether the dimension passed or failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean passed;
+
+  /**
+   * Output only. The dimension config specified in the DataQualitySpec, as is.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityDimension getDimension() {
+    return dimension;
+  }
+
+  /**
+   * Output only. The dimension config specified in the DataQualitySpec, as is.
+   * @param dimension dimension or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityDimensionResult setDimension(GoogleCloudDataplexV1DataQualityDimension dimension) {
+    this.dimension = dimension;
+    return this;
+  }
 
   /**
    * Whether the dimension passed or failed.

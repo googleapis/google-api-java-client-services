@@ -153,6 +153,14 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private java.lang.String preemptibility;
 
   /**
+   * Optional. Configuration to handle the startup of instances during cluster create and update
+   * process.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StartupConfig startupConfig;
+
+  /**
    * Optional. The Compute Engine accelerator configuration for these instances.
    * @return value or {@code null} for none
    */
@@ -420,6 +428,25 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    */
   public InstanceGroupConfig setPreemptibility(java.lang.String preemptibility) {
     this.preemptibility = preemptibility;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration to handle the startup of instances during cluster create and update
+   * process.
+   * @return value or {@code null} for none
+   */
+  public StartupConfig getStartupConfig() {
+    return startupConfig;
+  }
+
+  /**
+   * Optional. Configuration to handle the startup of instances during cluster create and update
+   * process.
+   * @param startupConfig startupConfig or {@code null} for none
+   */
+  public InstanceGroupConfig setStartupConfig(StartupConfig startupConfig) {
+    this.startupConfig = startupConfig;
     return this;
   }
 

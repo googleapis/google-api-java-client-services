@@ -39,6 +39,13 @@ public final class SparkStandaloneAutoscalingConfig extends com.google.api.clien
   private String gracefulDecommissionTimeout;
 
   /**
+   * Optional. Remove only idle workers when scaling down cluster
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean removeOnlyIdleWorkers;
+
+  /**
    * Required. Fraction of required executors to remove from Spark Serverless clusters. A scale-down
    * factor of 1.0 will result in scaling down so that there are no more executors for the Spark
    * Job.(more aggressive scaling). A scale-down factor closer to 0 will result in a smaller
@@ -96,6 +103,23 @@ public final class SparkStandaloneAutoscalingConfig extends com.google.api.clien
    */
   public SparkStandaloneAutoscalingConfig setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
     this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
+    return this;
+  }
+
+  /**
+   * Optional. Remove only idle workers when scaling down cluster
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRemoveOnlyIdleWorkers() {
+    return removeOnlyIdleWorkers;
+  }
+
+  /**
+   * Optional. Remove only idle workers when scaling down cluster
+   * @param removeOnlyIdleWorkers removeOnlyIdleWorkers or {@code null} for none
+   */
+  public SparkStandaloneAutoscalingConfig setRemoveOnlyIdleWorkers(java.lang.Boolean removeOnlyIdleWorkers) {
+    this.removeOnlyIdleWorkers = removeOnlyIdleWorkers;
     return this;
   }
 

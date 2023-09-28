@@ -31,6 +31,13 @@ package com.google.api.services.connectors.v1.model;
 public final class ConnectorInfraConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The window used for ratelimiting runtime requests to connections.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long connectionRatelimitWindowSeconds;
+
+  /**
    * HPA autoscaling config.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String sharedDeployment;
+
+  /**
+   * The window used for ratelimiting runtime requests to connections.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getConnectionRatelimitWindowSeconds() {
+    return connectionRatelimitWindowSeconds;
+  }
+
+  /**
+   * The window used for ratelimiting runtime requests to connections.
+   * @param connectionRatelimitWindowSeconds connectionRatelimitWindowSeconds or {@code null} for none
+   */
+  public ConnectorInfraConfig setConnectionRatelimitWindowSeconds(java.lang.Long connectionRatelimitWindowSeconds) {
+    this.connectionRatelimitWindowSeconds = connectionRatelimitWindowSeconds;
+    return this;
+  }
 
   /**
    * HPA autoscaling config.

@@ -142,6 +142,14 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   private java.lang.Long generation;
 
   /**
+   * This is the time (in the future) when the soft-deleted object will no longer be restorable. It
+   * is equal to the soft delete time plus the current soft delete retention duration of the bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private com.google.api.client.util.DateTime hardDeleteTime;
+
+  /**
    * The ID of the object, including the bucket name, object name, and generation number.
    * The value may be {@code null}.
    */
@@ -241,6 +249,13 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   private java.math.BigInteger size;
 
   /**
+   * The time at which the object became soft-deleted in RFC 3339 format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private com.google.api.client.util.DateTime softDeleteTime;
+
+  /**
    * Storage class of the object.
    * The value may be {@code null}.
    */
@@ -265,8 +280,8 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   private com.google.api.client.util.DateTime timeCreated;
 
   /**
-   * The deletion time of the object in RFC 3339 format. Will be returned if and only if this
-   * version of the object has been deleted.
+   * The time at which the object became noncurrent in RFC 3339 format. Will be returned if and only
+   * if this version of the object has been deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -556,6 +571,25 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * This is the time (in the future) when the soft-deleted object will no longer be restorable. It
+   * is equal to the soft delete time plus the current soft delete retention duration of the bucket.
+   * @return value or {@code null} for none
+   */
+  public com.google.api.client.util.DateTime getHardDeleteTime() {
+    return hardDeleteTime;
+  }
+
+  /**
+   * This is the time (in the future) when the soft-deleted object will no longer be restorable. It
+   * is equal to the soft delete time plus the current soft delete retention duration of the bucket.
+   * @param hardDeleteTime hardDeleteTime or {@code null} for none
+   */
+  public StorageObject setHardDeleteTime(com.google.api.client.util.DateTime hardDeleteTime) {
+    this.hardDeleteTime = hardDeleteTime;
+    return this;
+  }
+
+  /**
    * The ID of the object, including the bucket name, object name, and generation number.
    * @return value or {@code null} for none
    */
@@ -793,6 +827,23 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The time at which the object became soft-deleted in RFC 3339 format.
+   * @return value or {@code null} for none
+   */
+  public com.google.api.client.util.DateTime getSoftDeleteTime() {
+    return softDeleteTime;
+  }
+
+  /**
+   * The time at which the object became soft-deleted in RFC 3339 format.
+   * @param softDeleteTime softDeleteTime or {@code null} for none
+   */
+  public StorageObject setSoftDeleteTime(com.google.api.client.util.DateTime softDeleteTime) {
+    this.softDeleteTime = softDeleteTime;
+    return this;
+  }
+
+  /**
    * Storage class of the object.
    * @return value or {@code null} for none
    */
@@ -850,8 +901,8 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The deletion time of the object in RFC 3339 format. Will be returned if and only if this
-   * version of the object has been deleted.
+   * The time at which the object became noncurrent in RFC 3339 format. Will be returned if and only
+   * if this version of the object has been deleted.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getTimeDeleted() {
@@ -859,8 +910,8 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The deletion time of the object in RFC 3339 format. Will be returned if and only if this
-   * version of the object has been deleted.
+   * The time at which the object became noncurrent in RFC 3339 format. Will be returned if and only
+   * if this version of the object has been deleted.
    * @param timeDeleted timeDeleted or {@code null} for none
    */
   public StorageObject setTimeDeleted(com.google.api.client.util.DateTime timeDeleted) {

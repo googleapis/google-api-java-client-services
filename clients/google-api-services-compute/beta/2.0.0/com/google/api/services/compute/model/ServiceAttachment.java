@@ -161,7 +161,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * untouched regardless how the connection policy is modified . - If true, update will affect both
    * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
    * moved to REJECTED if its project is added to the reject list. For newly created service
-   * attachment, this boolean defaults to true.
+   * attachment, this boolean defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -533,7 +533,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * untouched regardless how the connection policy is modified . - If true, update will affect both
    * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
    * moved to REJECTED if its project is added to the reject list. For newly created service
-   * attachment, this boolean defaults to true.
+   * attachment, this boolean defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconcileConnections() {
@@ -547,7 +547,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * untouched regardless how the connection policy is modified . - If true, update will affect both
    * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
    * moved to REJECTED if its project is added to the reject list. For newly created service
-   * attachment, this boolean defaults to true.
+   * attachment, this boolean defaults to false.
    * @param reconcileConnections reconcileConnections or {@code null} for none
    */
   public ServiceAttachment setReconcileConnections(java.lang.Boolean reconcileConnections) {

@@ -60,7 +60,8 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The start time window of the maintenance disruption. DEPRECATED: Use
-   * window_start_time instead.
+   * window_start_time instead. TimeWindow is a container for two strings that represent timestamps
+   * in "yyyy-MM-dd'T'HH:mm:ssZ" text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,7 +170,8 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The start time window of the maintenance disruption. DEPRECATED: Use
-   * window_start_time instead.
+   * window_start_time instead. TimeWindow is a container for two strings that represent timestamps
+   * in "yyyy-MM-dd'T'HH:mm:ssZ" text format.
    * @return value or {@code null} for none
    */
   public UpcomingMaintenanceTimeWindow getStartTimeWindow() {
@@ -178,7 +180,8 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The start time window of the maintenance disruption. DEPRECATED: Use
-   * window_start_time instead.
+   * window_start_time instead. TimeWindow is a container for two strings that represent timestamps
+   * in "yyyy-MM-dd'T'HH:mm:ssZ" text format.
    * @param startTimeWindow startTimeWindow or {@code null} for none
    */
   public UpcomingMaintenance setStartTimeWindow(UpcomingMaintenanceTimeWindow startTimeWindow) {

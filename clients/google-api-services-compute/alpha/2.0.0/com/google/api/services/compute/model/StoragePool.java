@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class StoragePool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Provisioning type of the byte capacity of the pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String capacityProvisioningType;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -86,6 +93,14 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Provisioning type of the performance-related parameters of the pool, such as throughput and
+   * IOPS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String performanceProvisioningType;
 
   /**
    * Provsioned IOPS of the storage pool.
@@ -160,6 +175,23 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Provisioning type of the byte capacity of the pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCapacityProvisioningType() {
+    return capacityProvisioningType;
+  }
+
+  /**
+   * Provisioning type of the byte capacity of the pool.
+   * @param capacityProvisioningType capacityProvisioningType or {@code null} for none
+   */
+  public StoragePool setCapacityProvisioningType(java.lang.String capacityProvisioningType) {
+    this.capacityProvisioningType = capacityProvisioningType;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -333,6 +365,25 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Provisioning type of the performance-related parameters of the pool, such as throughput and
+   * IOPS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPerformanceProvisioningType() {
+    return performanceProvisioningType;
+  }
+
+  /**
+   * Provisioning type of the performance-related parameters of the pool, such as throughput and
+   * IOPS.
+   * @param performanceProvisioningType performanceProvisioningType or {@code null} for none
+   */
+  public StoragePool setPerformanceProvisioningType(java.lang.String performanceProvisioningType) {
+    this.performanceProvisioningType = performanceProvisioningType;
     return this;
   }
 

@@ -17,8 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a window of time using two timestamps: `earliest` and `latest`. This timestamp values
- * are in RFC3339 text format.
+ * Represents a window of time using two timestamps: `earliest` and `latest`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

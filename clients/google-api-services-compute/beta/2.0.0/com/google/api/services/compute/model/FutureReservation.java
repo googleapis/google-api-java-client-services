@@ -48,9 +48,9 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private Duration autoCreatedReservationsDuration;
 
   /**
-   * Setting for enabling or disabling automatic deletion for auto-created reservation. If omitted
-   * or set to true, auto-created reservations will be deleted at Future Reservation's end time
-   * (default) or at user's defined timestamp if any of the [auto_created_reservations_delete_time,
+   * Setting for enabling or disabling automatic deletion for auto-created reservation. If set to
+   * true, auto-created reservations will be deleted at Future Reservation's end time (default) or
+   * at user's defined timestamp if any of the [auto_created_reservations_delete_time,
    * auto_created_reservations_duration] values is specified. For keeping auto-created reservation
    * indefinitely, this value should be set to false.
    * The value may be {@code null}.
@@ -207,9 +207,9 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Setting for enabling or disabling automatic deletion for auto-created reservation. If omitted
-   * or set to true, auto-created reservations will be deleted at Future Reservation's end time
-   * (default) or at user's defined timestamp if any of the [auto_created_reservations_delete_time,
+   * Setting for enabling or disabling automatic deletion for auto-created reservation. If set to
+   * true, auto-created reservations will be deleted at Future Reservation's end time (default) or
+   * at user's defined timestamp if any of the [auto_created_reservations_delete_time,
    * auto_created_reservations_duration] values is specified. For keeping auto-created reservation
    * indefinitely, this value should be set to false.
    * @return value or {@code null} for none
@@ -219,9 +219,9 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Setting for enabling or disabling automatic deletion for auto-created reservation. If omitted
-   * or set to true, auto-created reservations will be deleted at Future Reservation's end time
-   * (default) or at user's defined timestamp if any of the [auto_created_reservations_delete_time,
+   * Setting for enabling or disabling automatic deletion for auto-created reservation. If set to
+   * true, auto-created reservations will be deleted at Future Reservation's end time (default) or
+   * at user's defined timestamp if any of the [auto_created_reservations_delete_time,
    * auto_created_reservations_duration] values is specified. For keeping auto-created reservation
    * indefinitely, this value should be set to false.
    * @param autoDeleteAutoCreatedReservations autoDeleteAutoCreatedReservations or {@code null} for none

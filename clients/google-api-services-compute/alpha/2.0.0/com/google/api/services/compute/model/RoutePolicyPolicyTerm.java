@@ -56,7 +56,7 @@ public final class RoutePolicyPolicyTerm extends com.google.api.client.json.Gene
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Long priority;
+  private java.lang.Integer priority;
 
   /**
    * CEL expressions to evaluate to modify a route when this term matches.
@@ -99,7 +99,7 @@ public final class RoutePolicyPolicyTerm extends com.google.api.client.json.Gene
    * (exclusive), and unique within the list.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getPriority() {
+  public java.lang.Integer getPriority() {
     return priority;
   }
 
@@ -108,7 +108,7 @@ public final class RoutePolicyPolicyTerm extends com.google.api.client.json.Gene
    * (exclusive), and unique within the list.
    * @param priority priority or {@code null} for none
    */
-  public RoutePolicyPolicyTerm setPriority(java.lang.Long priority) {
+  public RoutePolicyPolicyTerm setPriority(java.lang.Integer priority) {
     this.priority = priority;
     return this;
   }

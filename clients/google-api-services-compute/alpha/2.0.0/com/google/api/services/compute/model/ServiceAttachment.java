@@ -148,6 +148,15 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String producerForwardingRule;
 
   /**
+   * The number of VPCs to which this endpoint is allowed to be propagated per accept list resource
+   * (project or network). For ACCEPT_AUTOMATIC service attachment, this limit is default to per
+   * project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long propagatedConnectionLimit;
+
+  /**
    * [Output Only] An 128-bit global unique ID of the PSC service attachment.
    * The value may be {@code null}.
    */
@@ -161,7 +170,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * untouched regardless how the connection policy is modified . - If true, update will affect both
    * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
    * moved to REJECTED if its project is added to the reject list. For newly created service
-   * attachment, this boolean defaults to true.
+   * attachment, this boolean defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -510,6 +519,27 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The number of VPCs to which this endpoint is allowed to be propagated per accept list resource
+   * (project or network). For ACCEPT_AUTOMATIC service attachment, this limit is default to per
+   * project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPropagatedConnectionLimit() {
+    return propagatedConnectionLimit;
+  }
+
+  /**
+   * The number of VPCs to which this endpoint is allowed to be propagated per accept list resource
+   * (project or network). For ACCEPT_AUTOMATIC service attachment, this limit is default to per
+   * project.
+   * @param propagatedConnectionLimit propagatedConnectionLimit or {@code null} for none
+   */
+  public ServiceAttachment setPropagatedConnectionLimit(java.lang.Long propagatedConnectionLimit) {
+    this.propagatedConnectionLimit = propagatedConnectionLimit;
+    return this;
+  }
+
+  /**
    * [Output Only] An 128-bit global unique ID of the PSC service attachment.
    * @return value or {@code null} for none
    */
@@ -533,7 +563,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * untouched regardless how the connection policy is modified . - If true, update will affect both
    * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
    * moved to REJECTED if its project is added to the reject list. For newly created service
-   * attachment, this boolean defaults to true.
+   * attachment, this boolean defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconcileConnections() {
@@ -547,7 +577,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * untouched regardless how the connection policy is modified . - If true, update will affect both
    * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
    * moved to REJECTED if its project is added to the reject list. For newly created service
-   * attachment, this boolean defaults to true.
+   * attachment, this boolean defaults to false.
    * @param reconcileConnections reconcileConnections or {@code null} for none
    */
   public ServiceAttachment setReconcileConnections(java.lang.Boolean reconcileConnections) {

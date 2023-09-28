@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Configuration information for enabling Media Access Control security (MACsec) on this
+ * Configuration information for enabling Media Access Control security (MACsec) on this Cloud
  * Interconnect connection between Google and your on-premises router.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -43,9 +43,9 @@ public final class InterconnectMacsec extends com.google.api.client.json.Generic
 
   /**
    * Required. A keychain placeholder describing a set of named key objects along with their start
-   * times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will
-   * automatically pick the key with the most recent startTime when establishing or re-establishing
-   * a MACsec secure link.
+   * times. A MACsec CKN/CAK is generated for each key in the key chain. Google router automatically
+   * picks the key with the most recent startTime when establishing or re-establishing a MACsec
+   * secure link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,9 +78,9 @@ public final class InterconnectMacsec extends com.google.api.client.json.Generic
 
   /**
    * Required. A keychain placeholder describing a set of named key objects along with their start
-   * times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will
-   * automatically pick the key with the most recent startTime when establishing or re-establishing
-   * a MACsec secure link.
+   * times. A MACsec CKN/CAK is generated for each key in the key chain. Google router automatically
+   * picks the key with the most recent startTime when establishing or re-establishing a MACsec
+   * secure link.
    * @return value or {@code null} for none
    */
   public java.util.List<InterconnectMacsecPreSharedKey> getPreSharedKeys() {
@@ -89,9 +89,9 @@ public final class InterconnectMacsec extends com.google.api.client.json.Generic
 
   /**
    * Required. A keychain placeholder describing a set of named key objects along with their start
-   * times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will
-   * automatically pick the key with the most recent startTime when establishing or re-establishing
-   * a MACsec secure link.
+   * times. A MACsec CKN/CAK is generated for each key in the key chain. Google router automatically
+   * picks the key with the most recent startTime when establishing or re-establishing a MACsec
+   * secure link.
    * @param preSharedKeys preSharedKeys or {@code null} for none
    */
   public InterconnectMacsec setPreSharedKeys(java.util.List<InterconnectMacsecPreSharedKey> preSharedKeys) {

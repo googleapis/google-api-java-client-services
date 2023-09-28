@@ -138,6 +138,13 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   private InstanceConsumptionInfo totalResources;
 
   /**
+   * [Output Only] The information about an upcoming maintenance event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpcomingMaintenance upcomingMaintenance;
+
+  /**
    * Accelerators for this node.
    * @return value or {@code null} for none
    */
@@ -353,6 +360,23 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    */
   public NodeGroupNode setTotalResources(InstanceConsumptionInfo totalResources) {
     this.totalResources = totalResources;
+    return this;
+  }
+
+  /**
+   * [Output Only] The information about an upcoming maintenance event.
+   * @return value or {@code null} for none
+   */
+  public UpcomingMaintenance getUpcomingMaintenance() {
+    return upcomingMaintenance;
+  }
+
+  /**
+   * [Output Only] The information about an upcoming maintenance event.
+   * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
+   */
+  public NodeGroupNode setUpcomingMaintenance(UpcomingMaintenance upcomingMaintenance) {
+    this.upcomingMaintenance = upcomingMaintenance;
     return this;
   }
 

@@ -48,6 +48,14 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
   private java.lang.String bgpBestPathSelectionMode;
 
   /**
+   * Allows to define a preferred approach for handling inter-region cost in the selection process
+   * when using the STANDARD BGP best path selection algorithm. Can be DEFAULT or ADD_COST_TO_MED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bgpInterRegionCost;
+
+  /**
    * The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will
    * only advertise routes with subnets of this network in the same region as the router. If set to
    * GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network,
@@ -92,6 +100,25 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
    */
   public NetworkRoutingConfig setBgpBestPathSelectionMode(java.lang.String bgpBestPathSelectionMode) {
     this.bgpBestPathSelectionMode = bgpBestPathSelectionMode;
+    return this;
+  }
+
+  /**
+   * Allows to define a preferred approach for handling inter-region cost in the selection process
+   * when using the STANDARD BGP best path selection algorithm. Can be DEFAULT or ADD_COST_TO_MED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBgpInterRegionCost() {
+    return bgpInterRegionCost;
+  }
+
+  /**
+   * Allows to define a preferred approach for handling inter-region cost in the selection process
+   * when using the STANDARD BGP best path selection algorithm. Can be DEFAULT or ADD_COST_TO_MED.
+   * @param bgpInterRegionCost bgpInterRegionCost or {@code null} for none
+   */
+  public NetworkRoutingConfig setBgpInterRegionCost(java.lang.String bgpInterRegionCost) {
+    this.bgpInterRegionCost = bgpInterRegionCost;
     return this;
   }
 

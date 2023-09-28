@@ -271,10 +271,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional
    * backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
    * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this
-   * field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only
-   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
-   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If
+   * sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity
+   * settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend
+   * service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1029,10 +1030,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional
    * backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
    * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this
-   * field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only
-   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
-   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If
+   * sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity
+   * settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend
+   * service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalityLbPolicy() {
@@ -1055,10 +1057,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional
    * backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
    * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this
-   * field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only
-   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
-   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If
+   * sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity
+   * settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend
+   * service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * @param localityLbPolicy localityLbPolicy or {@code null} for none
    */
   public BackendService setLocalityLbPolicy(java.lang.String localityLbPolicy) {

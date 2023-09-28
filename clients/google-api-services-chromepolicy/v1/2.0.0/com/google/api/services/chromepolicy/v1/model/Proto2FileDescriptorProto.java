@@ -30,11 +30,12 @@ package com.google.api.services.chromepolicy.v1.model;
 public final class Proto2FileDescriptorProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * The edition of the proto file.
+   * BEGIN GOOGLE-INTERNAL TODO(b/297898292) Deprecate and remove this field in favor of enums. END
+   * GOOGLE-INTERNAL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String editionEnum;
+  private java.lang.String editionDeprecated;
 
   /**
    * The value may be {@code null}.
@@ -84,19 +85,21 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
   private java.lang.String syntax;
 
   /**
-   * The edition of the proto file.
+   * BEGIN GOOGLE-INTERNAL TODO(b/297898292) Deprecate and remove this field in favor of enums. END
+   * GOOGLE-INTERNAL
    * @return value or {@code null} for none
    */
-  public java.lang.String getEditionEnum() {
-    return editionEnum;
+  public java.lang.String getEditionDeprecated() {
+    return editionDeprecated;
   }
 
   /**
-   * The edition of the proto file.
-   * @param editionEnum editionEnum or {@code null} for none
+   * BEGIN GOOGLE-INTERNAL TODO(b/297898292) Deprecate and remove this field in favor of enums. END
+   * GOOGLE-INTERNAL
+   * @param editionDeprecated editionDeprecated or {@code null} for none
    */
-  public Proto2FileDescriptorProto setEditionEnum(java.lang.String editionEnum) {
-    this.editionEnum = editionEnum;
+  public Proto2FileDescriptorProto setEditionDeprecated(java.lang.String editionDeprecated) {
+    this.editionDeprecated = editionDeprecated;
     return this;
   }
 

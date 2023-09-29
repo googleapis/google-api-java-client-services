@@ -64,6 +64,13 @@ public final class GrpcRouteRouteAction extends com.google.api.client.json.Gener
   private GrpcRouteRetryPolicy retryPolicy;
 
   /**
+   * Optional. Specifies cookie-based stateful session affinity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GrpcRouteStatefulSessionAffinityPolicy statefulSessionAffinity;
+
+  /**
    * Optional. Specifies the timeout for selected route. Timeout is computed from the time the
    * request has been fully processed (i.e. end of stream) up until the response has been completely
    * processed. Timeout includes all retries.
@@ -134,6 +141,23 @@ public final class GrpcRouteRouteAction extends com.google.api.client.json.Gener
    */
   public GrpcRouteRouteAction setRetryPolicy(GrpcRouteRetryPolicy retryPolicy) {
     this.retryPolicy = retryPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies cookie-based stateful session affinity.
+   * @return value or {@code null} for none
+   */
+  public GrpcRouteStatefulSessionAffinityPolicy getStatefulSessionAffinity() {
+    return statefulSessionAffinity;
+  }
+
+  /**
+   * Optional. Specifies cookie-based stateful session affinity.
+   * @param statefulSessionAffinity statefulSessionAffinity or {@code null} for none
+   */
+  public GrpcRouteRouteAction setStatefulSessionAffinity(GrpcRouteStatefulSessionAffinityPolicy statefulSessionAffinity) {
+    this.statefulSessionAffinity = statefulSessionAffinity;
     return this;
   }
 

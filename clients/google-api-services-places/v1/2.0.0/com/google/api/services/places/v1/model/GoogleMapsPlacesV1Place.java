@@ -30,6 +30,13 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Information about the accessibility options a place offers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlaceAccessibilityOptions accessibilityOptions;
+
+  /**
    * Output only. Repeated components for each locality level.
    * The value may be {@code null}.
    */
@@ -328,6 +335,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String websiteUri;
+
+  /**
+   * Output only. Information about the accessibility options a place offers.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceAccessibilityOptions getAccessibilityOptions() {
+    return accessibilityOptions;
+  }
+
+  /**
+   * Output only. Information about the accessibility options a place offers.
+   * @param accessibilityOptions accessibilityOptions or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setAccessibilityOptions(GoogleMapsPlacesV1PlaceAccessibilityOptions accessibilityOptions) {
+    this.accessibilityOptions = accessibilityOptions;
+    return this;
+  }
 
   /**
    * Output only. Repeated components for each locality level.

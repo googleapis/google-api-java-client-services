@@ -60,8 +60,7 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
    * Optional. (Filtering parameter) Any resource subject to transformation must be contained within
    * one of the listed Kubernetes Namespace in the Backup. If this field is not provided, no
    * namespace filtering will be performed (all resources in all Namespaces, including all cluster-
-   * scoped resources, will be candidates for transformation). To mix cluster-scoped and namespaced
-   * resources in the same rule, use an empty string ("") as one of the target namespaces.
+   * scoped resources, will be candidates for transformation).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +116,7 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
    * Optional. (Filtering parameter) Any resource subject to transformation must be contained within
    * one of the listed Kubernetes Namespace in the Backup. If this field is not provided, no
    * namespace filtering will be performed (all resources in all Namespaces, including all cluster-
-   * scoped resources, will be candidates for transformation). To mix cluster-scoped and namespaced
-   * resources in the same rule, use an empty string ("") as one of the target namespaces.
+   * scoped resources, will be candidates for transformation).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNamespaces() {
@@ -129,8 +127,7 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
    * Optional. (Filtering parameter) Any resource subject to transformation must be contained within
    * one of the listed Kubernetes Namespace in the Backup. If this field is not provided, no
    * namespace filtering will be performed (all resources in all Namespaces, including all cluster-
-   * scoped resources, will be candidates for transformation). To mix cluster-scoped and namespaced
-   * resources in the same rule, use an empty string ("") as one of the target namespaces.
+   * scoped resources, will be candidates for transformation).
    * @param namespaces namespaces or {@code null} for none
    */
   public ResourceFilter setNamespaces(java.util.List<java.lang.String> namespaces) {

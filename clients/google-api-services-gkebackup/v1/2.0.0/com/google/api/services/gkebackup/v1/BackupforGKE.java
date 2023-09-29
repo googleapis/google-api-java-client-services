@@ -174,139 +174,6 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
     public class Locations {
 
       /**
-       * Deletes a long-running operation. This method indicates that the client is no longer interested
-       * in the operation result. It does not cancel the operation. If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-       *
-       * Create a request for the method "locations.deleteOperations".
-       *
-       * This request holds the parameters needed by the gkebackup server.  After setting any optional
-       * parameters, call the {@link DeleteOperations#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the operation resource to be deleted.
-       * @return the request
-       */
-      public DeleteOperations deleteOperations(java.lang.String name) throws java.io.IOException {
-        DeleteOperations result = new DeleteOperations(name);
-        initialize(result);
-        return result;
-      }
-
-      public class DeleteOperations extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.Empty> {
-
-        private static final String REST_PATH = "v1/{+name}/operations";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-        /**
-         * Deletes a long-running operation. This method indicates that the client is no longer interested
-         * in the operation result. It does not cancel the operation. If the server doesn't support this
-         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-         *
-         * Create a request for the method "locations.deleteOperations".
-         *
-         * This request holds the parameters needed by the the gkebackup server.  After setting any
-         * optional parameters, call the {@link DeleteOperations#execute()} method to invoke the remote
-         * operation. <p> {@link DeleteOperations#initialize(com.google.api.client.googleapis.services.Abs
-         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
-         * invoking the constructor. </p>
-         *
-         * @param name The name of the operation resource to be deleted.
-         * @since 1.13
-         */
-        protected DeleteOperations(java.lang.String name) {
-          super(BackupforGKE.this, "DELETE", REST_PATH, null, com.google.api.services.gkebackup.v1.model.Empty.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/locations/[^/]+$");
-          }
-        }
-
-        @Override
-        public DeleteOperations set$Xgafv(java.lang.String $Xgafv) {
-          return (DeleteOperations) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public DeleteOperations setAccessToken(java.lang.String accessToken) {
-          return (DeleteOperations) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public DeleteOperations setAlt(java.lang.String alt) {
-          return (DeleteOperations) super.setAlt(alt);
-        }
-
-        @Override
-        public DeleteOperations setCallback(java.lang.String callback) {
-          return (DeleteOperations) super.setCallback(callback);
-        }
-
-        @Override
-        public DeleteOperations setFields(java.lang.String fields) {
-          return (DeleteOperations) super.setFields(fields);
-        }
-
-        @Override
-        public DeleteOperations setKey(java.lang.String key) {
-          return (DeleteOperations) super.setKey(key);
-        }
-
-        @Override
-        public DeleteOperations setOauthToken(java.lang.String oauthToken) {
-          return (DeleteOperations) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public DeleteOperations setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (DeleteOperations) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public DeleteOperations setQuotaUser(java.lang.String quotaUser) {
-          return (DeleteOperations) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public DeleteOperations setUploadType(java.lang.String uploadType) {
-          return (DeleteOperations) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public DeleteOperations setUploadProtocol(java.lang.String uploadProtocol) {
-          return (DeleteOperations) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** The name of the operation resource to be deleted. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the operation resource to be deleted.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** The name of the operation resource to be deleted. */
-        public DeleteOperations setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/locations/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public DeleteOperations set(String parameterName, Object value) {
-          return (DeleteOperations) super.set(parameterName, value);
-        }
-      }
-      /**
        * Gets information about a location.
        *
        * Create a request for the method "locations.get".
@@ -4515,6 +4382,139 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           @Override
           public Cancel set(String parameterName, Object value) {
             return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a long-running operation. This method indicates that the client is no longer interested
+         * in the operation result. It does not cancel the operation. If the server doesn't support this
+         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+         *
+         * Create a request for the method "operations.delete".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be deleted.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Deletes a long-running operation. This method indicates that the client is no longer interested
+           * in the operation result. It does not cancel the operation. If the server doesn't support this
+           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+           *
+           * Create a request for the method "operations.delete".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be deleted.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(BackupforGKE.this, "DELETE", REST_PATH, null, com.google.api.services.gkebackup.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be deleted. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be deleted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be deleted. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
           }
         }
         /**

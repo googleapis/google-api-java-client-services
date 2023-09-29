@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Inspect text and transform sensitive text. Configurable using `TextConfig`. Supported [Value
+ * Inspect text and transform sensitive text. Configurable using TextConfig. Supported [Value
  * Representations]
  * (http://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): AE,
  * LO, LT, PN, SH, ST, UC, UT, DA, DT, AS

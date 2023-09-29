@@ -94,6 +94,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaCustomMetric customMetric;
 
   /**
+   * A snapshot of DataRedactionSettings resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaDataRedactionSettings dataRedactionSettings;
+
+  /**
    * A snapshot of a data retention settings resource in change history.
    * The value may be {@code null}.
    */
@@ -341,6 +348,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setCustomMetric(GoogleAnalyticsAdminV1alphaCustomMetric customMetric) {
     this.customMetric = customMetric;
+    return this;
+  }
+
+  /**
+   * A snapshot of DataRedactionSettings resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaDataRedactionSettings getDataRedactionSettings() {
+    return dataRedactionSettings;
+  }
+
+  /**
+   * A snapshot of DataRedactionSettings resource in change history.
+   * @param dataRedactionSettings dataRedactionSettings or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setDataRedactionSettings(GoogleAnalyticsAdminV1alphaDataRedactionSettings dataRedactionSettings) {
+    this.dataRedactionSettings = dataRedactionSettings;
     return this;
   }
 

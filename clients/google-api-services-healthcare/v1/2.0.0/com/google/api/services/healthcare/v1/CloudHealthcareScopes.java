@@ -23,6 +23,9 @@ package com.google.api.services.healthcare.v1;
  */
 public class CloudHealthcareScopes {
 
+  /** Read, write and manage healthcare data. */
+  public static final String CLOUD_HEALTHCARE = "https://www.googleapis.com/auth/cloud-healthcare";
+
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -33,6 +36,7 @@ public class CloudHealthcareScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLOUD_HEALTHCARE);
     set.add(CLOUD_PLATFORM);
     return java.util.Collections.unmodifiableSet(set);
   }

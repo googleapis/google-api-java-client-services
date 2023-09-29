@@ -13977,6 +13977,160 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
+       * Lookup for a single DataRedactionSettings.
+       *
+       * Create a request for the method "dataStreams.getDataRedactionSettings".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link GetDataRedactionSettings#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Required. The name of the settings to lookup. Format:
+       *        properties/{property}/dataStreams/{data_stream}/dataRedactionSettings Example:
+       *        "properties/1000/dataStreams/2000/dataRedactionSettings"
+       * @return the request
+       */
+      public GetDataRedactionSettings getDataRedactionSettings(java.lang.String name) throws java.io.IOException {
+        GetDataRedactionSettings result = new GetDataRedactionSettings(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetDataRedactionSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRedactionSettings> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/dataStreams/[^/]+/dataRedactionSettings$");
+
+        /**
+         * Lookup for a single DataRedactionSettings.
+         *
+         * Create a request for the method "dataStreams.getDataRedactionSettings".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link GetDataRedactionSettings#execute()} method to invoke the
+         * remote operation. <p> {@link GetDataRedactionSettings#initialize(com.google.api.client.googleap
+         * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the settings to lookup. Format:
+       *        properties/{property}/dataStreams/{data_stream}/dataRedactionSettings Example:
+       *        "properties/1000/dataStreams/2000/dataRedactionSettings"
+         * @since 1.13
+         */
+        protected GetDataRedactionSettings(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRedactionSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/dataStreams/[^/]+/dataRedactionSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetDataRedactionSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (GetDataRedactionSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetDataRedactionSettings setAccessToken(java.lang.String accessToken) {
+          return (GetDataRedactionSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetDataRedactionSettings setAlt(java.lang.String alt) {
+          return (GetDataRedactionSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public GetDataRedactionSettings setCallback(java.lang.String callback) {
+          return (GetDataRedactionSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public GetDataRedactionSettings setFields(java.lang.String fields) {
+          return (GetDataRedactionSettings) super.setFields(fields);
+        }
+
+        @Override
+        public GetDataRedactionSettings setKey(java.lang.String key) {
+          return (GetDataRedactionSettings) super.setKey(key);
+        }
+
+        @Override
+        public GetDataRedactionSettings setOauthToken(java.lang.String oauthToken) {
+          return (GetDataRedactionSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetDataRedactionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetDataRedactionSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetDataRedactionSettings setQuotaUser(java.lang.String quotaUser) {
+          return (GetDataRedactionSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetDataRedactionSettings setUploadType(java.lang.String uploadType) {
+          return (GetDataRedactionSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetDataRedactionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetDataRedactionSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the settings to lookup. Format:
+         * properties/{property}/dataStreams/{data_stream}/dataRedactionSettings Example:
+         * "properties/1000/dataStreams/2000/dataRedactionSettings"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the settings to lookup. Format:
+       properties/{property}/dataStreams/{data_stream}/dataRedactionSettings Example:
+       "properties/1000/dataStreams/2000/dataRedactionSettings"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the settings to lookup. Format:
+         * properties/{property}/dataStreams/{data_stream}/dataRedactionSettings Example:
+         * "properties/1000/dataStreams/2000/dataRedactionSettings"
+         */
+        public GetDataRedactionSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/dataStreams/[^/]+/dataRedactionSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetDataRedactionSettings set(String parameterName, Object value) {
+          return (GetDataRedactionSettings) super.set(parameterName, value);
+        }
+      }
+      /**
        * Returns the enhanced measurement settings for this data stream. Note that the stream must enable
        * enhanced measurement for these settings to take effect.
        *
@@ -14640,6 +14794,178 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a DataRedactionSettings on a property.
+       *
+       * Create a request for the method "dataStreams.updateDataRedactionSettings".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link UpdateDataRedactionSettings#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Output only. Name of this Data Redaction Settings resource. Format:
+       *        properties/{property_id}/dataStreams/{data_stream}/dataRedactionSettings Example:
+       *        "properties/1000/dataStreams/2000/dataRedactionSettings"
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRedactionSettings}
+       * @return the request
+       */
+      public UpdateDataRedactionSettings updateDataRedactionSettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRedactionSettings content) throws java.io.IOException {
+        UpdateDataRedactionSettings result = new UpdateDataRedactionSettings(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateDataRedactionSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRedactionSettings> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/dataStreams/[^/]+/dataRedactionSettings$");
+
+        /**
+         * Updates a DataRedactionSettings on a property.
+         *
+         * Create a request for the method "dataStreams.updateDataRedactionSettings".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link UpdateDataRedactionSettings#execute()} method to invoke
+         * the remote operation. <p> {@link UpdateDataRedactionSettings#initialize(com.google.api.client.g
+         * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Name of this Data Redaction Settings resource. Format:
+       *        properties/{property_id}/dataStreams/{data_stream}/dataRedactionSettings Example:
+       *        "properties/1000/dataStreams/2000/dataRedactionSettings"
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRedactionSettings}
+         * @since 1.13
+         */
+        protected UpdateDataRedactionSettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRedactionSettings content) {
+          super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRedactionSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/dataStreams/[^/]+/dataRedactionSettings$");
+          }
+        }
+
+        @Override
+        public UpdateDataRedactionSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateDataRedactionSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateDataRedactionSettings setAccessToken(java.lang.String accessToken) {
+          return (UpdateDataRedactionSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateDataRedactionSettings setAlt(java.lang.String alt) {
+          return (UpdateDataRedactionSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateDataRedactionSettings setCallback(java.lang.String callback) {
+          return (UpdateDataRedactionSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateDataRedactionSettings setFields(java.lang.String fields) {
+          return (UpdateDataRedactionSettings) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateDataRedactionSettings setKey(java.lang.String key) {
+          return (UpdateDataRedactionSettings) super.setKey(key);
+        }
+
+        @Override
+        public UpdateDataRedactionSettings setOauthToken(java.lang.String oauthToken) {
+          return (UpdateDataRedactionSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateDataRedactionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateDataRedactionSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateDataRedactionSettings setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateDataRedactionSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateDataRedactionSettings setUploadType(java.lang.String uploadType) {
+          return (UpdateDataRedactionSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateDataRedactionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateDataRedactionSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Name of this Data Redaction Settings resource. Format:
+         * properties/{property_id}/dataStreams/{data_stream}/dataRedactionSettings Example:
+         * "properties/1000/dataStreams/2000/dataRedactionSettings"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Name of this Data Redaction Settings resource. Format:
+       properties/{property_id}/dataStreams/{data_stream}/dataRedactionSettings Example:
+       "properties/1000/dataStreams/2000/dataRedactionSettings"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Name of this Data Redaction Settings resource. Format:
+         * properties/{property_id}/dataStreams/{data_stream}/dataRedactionSettings Example:
+         * "properties/1000/dataStreams/2000/dataRedactionSettings"
+         */
+        public UpdateDataRedactionSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/dataStreams/[^/]+/dataRedactionSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+       with the string "*" to match all fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        public UpdateDataRedactionSettings setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateDataRedactionSettings set(String parameterName, Object value) {
+          return (UpdateDataRedactionSettings) super.set(parameterName, value);
         }
       }
       /**

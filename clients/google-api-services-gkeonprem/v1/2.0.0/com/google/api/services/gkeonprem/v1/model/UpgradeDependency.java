@@ -37,13 +37,6 @@ public final class UpgradeDependency extends com.google.api.client.json.GenericJ
   private java.lang.String currentVersion;
 
   /**
-   * Local name of the dependency.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String localName;
-
-  /**
    * Membership names are formatted as `projects//locations//memberships/`.
    * The value may be {@code null}.
    */
@@ -79,23 +72,6 @@ public final class UpgradeDependency extends com.google.api.client.json.GenericJ
    */
   public UpgradeDependency setCurrentVersion(java.lang.String currentVersion) {
     this.currentVersion = currentVersion;
-    return this;
-  }
-
-  /**
-   * Local name of the dependency.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLocalName() {
-    return localName;
-  }
-
-  /**
-   * Local name of the dependency.
-   * @param localName localName or {@code null} for none
-   */
-  public UpgradeDependency setLocalName(java.lang.String localName) {
-    this.localName = localName;
     return this;
   }
 

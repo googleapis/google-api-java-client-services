@@ -4777,6 +4777,1966 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
       }
       /**
+       * An accessor for creating requests from the LbRouteExtensions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code NetworkServices networkservices = new NetworkServices(...);}
+       *   {@code NetworkServices.LbRouteExtensions.List request = networkservices.lbRouteExtensions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public LbRouteExtensions lbRouteExtensions() {
+        return new LbRouteExtensions();
+      }
+
+      /**
+       * The "lbRouteExtensions" collection of methods.
+       */
+      public class LbRouteExtensions {
+
+        /**
+         * Creates a new `LbRouteExtension` resource in a given project and location.
+         *
+         * Create a request for the method "lbRouteExtensions.create".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the `LbRouteExtension` resource. Must be in the format
+         *        `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbRouteExtension}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.networkservices.v1beta1.model.LbRouteExtension content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/lbRouteExtensions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new `LbRouteExtension` resource in a given project and location.
+           *
+           * Create a request for the method "lbRouteExtensions.create".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the `LbRouteExtension` resource. Must be in the format
+         *        `projects/{project}/locations/{location}`.
+           * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbRouteExtension}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.networkservices.v1beta1.model.LbRouteExtension content) {
+            super(NetworkServices.this, "POST", REST_PATH, content, com.google.api.services.networkservices.v1beta1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the `LbRouteExtension` resource. Must be in the format
+           * `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the `LbRouteExtension` resource. Must be in the format
+         `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the `LbRouteExtension` resource. Must be in the format
+           * `projects/{project}/locations/{location}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. User-provided ID of the `LbRouteExtension` resource to be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String lbRouteExtensionId;
+
+          /** Required. User-provided ID of the `LbRouteExtension` resource to be created.
+           */
+          public java.lang.String getLbRouteExtensionId() {
+            return lbRouteExtensionId;
+          }
+
+          /** Required. User-provided ID of the `LbRouteExtension` resource to be created. */
+          public Create setLbRouteExtensionId(java.lang.String lbRouteExtensionId) {
+            this.lbRouteExtensionId = lbRouteExtensionId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server can ignore the request if it has already been completed. The
+         server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, ignores the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the specified `LbRouteExtension` resource.
+         *
+         * Create a request for the method "lbRouteExtensions.delete".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the `LbRouteExtension` resource to delete. Must be in the format
+         *        `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/lbRouteExtensions/[^/]+$");
+
+          /**
+           * Deletes the specified `LbRouteExtension` resource.
+           *
+           * Create a request for the method "lbRouteExtensions.delete".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the `LbRouteExtension` resource to delete. Must be in the format
+         *        `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(NetworkServices.this, "DELETE", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbRouteExtensions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the `LbRouteExtension` resource to delete. Must be in the format
+           * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the `LbRouteExtension` resource to delete. Must be in the format
+         `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the `LbRouteExtension` resource to delete. Must be in the format
+           * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbRouteExtensions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes after the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server can ignore the request if it has already been completed. The
+         server guarantees that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, ignores the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes after the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of the specified `LbRouteExtension` resource.
+         *
+         * Create a request for the method "lbRouteExtensions.get".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the `LbRouteExtension` resource to get. Must be in the format
+         *        `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.LbRouteExtension> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/lbRouteExtensions/[^/]+$");
+
+          /**
+           * Gets details of the specified `LbRouteExtension` resource.
+           *
+           * Create a request for the method "lbRouteExtensions.get".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the `LbRouteExtension` resource to get. Must be in the format
+         *        `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(NetworkServices.this, "GET", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.LbRouteExtension.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbRouteExtensions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the `LbRouteExtension` resource to get. Must be in the format
+           * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the `LbRouteExtension` resource to get. Must be in the format
+         `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the `LbRouteExtension` resource to get. Must be in the format
+           * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbRouteExtensions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists `LbRouteExtension` resources in a given project and location.
+         *
+         * Create a request for the method "lbRouteExtensions.list".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location from which the `LbRouteExtension` resources are listed, specified
+         *        in the following format: `projects/{project}/locations/{location}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.ListLbRouteExtensionsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/lbRouteExtensions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists `LbRouteExtension` resources in a given project and location.
+           *
+           * Create a request for the method "lbRouteExtensions.list".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location from which the `LbRouteExtension` resources are listed, specified
+         *        in the following format: `projects/{project}/locations/{location}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(NetworkServices.this, "GET", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.ListLbRouteExtensionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location from which the `LbRouteExtension` resources are
+           * listed, specified in the following format: `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location from which the `LbRouteExtension` resources are listed,
+         specified in the following format: `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location from which the `LbRouteExtension` resources are
+           * listed, specified in the following format: `projects/{project}/locations/{location}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filtering results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filtering results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. The server might return fewer items than requested. If
+           * unspecified, the server picks an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. The server might return fewer items than requested. If unspecified,
+         the server picks an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. The server might return fewer items than requested. If
+           * unspecified, the server picks an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results that the server returns. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results that the server returns.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results that the server returns. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of the specified `LbRouteExtension` resource.
+         *
+         * Create a request for the method "lbRouteExtensions.patch".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the `LbRouteExtension` resource in the following format:
+         *        `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+         * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbRouteExtension}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.networkservices.v1beta1.model.LbRouteExtension content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/lbRouteExtensions/[^/]+$");
+
+          /**
+           * Updates the parameters of the specified `LbRouteExtension` resource.
+           *
+           * Create a request for the method "lbRouteExtensions.patch".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the `LbRouteExtension` resource in the following format:
+         *        `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbRouteExtension}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.networkservices.v1beta1.model.LbRouteExtension content) {
+            super(NetworkServices.this, "PATCH", REST_PATH, content, com.google.api.services.networkservices.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbRouteExtensions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the `LbRouteExtension` resource in the following format:
+           * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the `LbRouteExtension` resource in the following format:
+         `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the `LbRouteExtension` resource in the following format:
+           * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbRouteExtensions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server can ignore the request if it has already been completed. The
+         server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, ignores the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. Used to specify the fields to be overwritten in the `LbRouteExtension`
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field is overwritten if it is in the mask. If the
+           * user does not specify a mask, then all fields are overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Used to specify the fields to be overwritten in the `LbRouteExtension` resource by the
+         update. The fields specified in the update_mask are relative to the resource, not the full request.
+         A field is overwritten if it is in the mask. If the user does not specify a mask, then all fields
+         are overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Used to specify the fields to be overwritten in the `LbRouteExtension`
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field is overwritten if it is in the mask. If the
+           * user does not specify a mask, then all fields are overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the LbTrafficExtensions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code NetworkServices networkservices = new NetworkServices(...);}
+       *   {@code NetworkServices.LbTrafficExtensions.List request = networkservices.lbTrafficExtensions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public LbTrafficExtensions lbTrafficExtensions() {
+        return new LbTrafficExtensions();
+      }
+
+      /**
+       * The "lbTrafficExtensions" collection of methods.
+       */
+      public class LbTrafficExtensions {
+
+        /**
+         * Creates a new `LbTrafficExtension` resource in a given project and location.
+         *
+         * Create a request for the method "lbTrafficExtensions.create".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the `LbTrafficExtension` resource. Must be in the format
+         *        `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/lbTrafficExtensions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new `LbTrafficExtension` resource in a given project and location.
+           *
+           * Create a request for the method "lbTrafficExtensions.create".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the `LbTrafficExtension` resource. Must be in the format
+         *        `projects/{project}/locations/{location}`.
+           * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension content) {
+            super(NetworkServices.this, "POST", REST_PATH, content, com.google.api.services.networkservices.v1beta1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the `LbTrafficExtension` resource. Must be in the
+           * format `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the `LbTrafficExtension` resource. Must be in the format
+         `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the `LbTrafficExtension` resource. Must be in the
+           * format `projects/{project}/locations/{location}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. User-provided ID of the `LbTrafficExtension` resource to be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String lbTrafficExtensionId;
+
+          /** Required. User-provided ID of the `LbTrafficExtension` resource to be created.
+           */
+          public java.lang.String getLbTrafficExtensionId() {
+            return lbTrafficExtensionId;
+          }
+
+          /** Required. User-provided ID of the `LbTrafficExtension` resource to be created. */
+          public Create setLbTrafficExtensionId(java.lang.String lbTrafficExtensionId) {
+            this.lbTrafficExtensionId = lbTrafficExtensionId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server can ignore the request if it has already been completed. The
+         server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, ignores the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the specified `LbTrafficExtension` resource.
+         *
+         * Create a request for the method "lbTrafficExtensions.delete".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the `LbTrafficExtension` resource to delete. Must be in the format
+         *        `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/lbTrafficExtensions/[^/]+$");
+
+          /**
+           * Deletes the specified `LbTrafficExtension` resource.
+           *
+           * Create a request for the method "lbTrafficExtensions.delete".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the `LbTrafficExtension` resource to delete. Must be in the format
+         *        `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(NetworkServices.this, "DELETE", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbTrafficExtensions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the `LbTrafficExtension` resource to delete. Must be in the
+           * format
+           * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the `LbTrafficExtension` resource to delete. Must be in the format
+         `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the `LbTrafficExtension` resource to delete. Must be in the
+           * format
+           * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbTrafficExtensions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes after the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server can ignore the request if it has already been completed. The
+         server guarantees that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, ignores the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes after the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of the specified `LbTrafficExtension` resource.
+         *
+         * Create a request for the method "lbTrafficExtensions.get".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the `LbTrafficExtension` resource to get. Must be in the format
+         *        `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/lbTrafficExtensions/[^/]+$");
+
+          /**
+           * Gets details of the specified `LbTrafficExtension` resource.
+           *
+           * Create a request for the method "lbTrafficExtensions.get".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the `LbTrafficExtension` resource to get. Must be in the format
+         *        `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(NetworkServices.this, "GET", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbTrafficExtensions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the `LbTrafficExtension` resource to get. Must be in the format
+           * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the `LbTrafficExtension` resource to get. Must be in the format
+         `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the `LbTrafficExtension` resource to get. Must be in the format
+           * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbTrafficExtensions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists `LbTrafficExtension` resources in a given project and location.
+         *
+         * Create a request for the method "lbTrafficExtensions.list".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location from which the `LbTrafficExtension` resources are listed,
+         *        specified in the following format: `projects/{project}/locations/{location}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.ListLbTrafficExtensionsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/lbTrafficExtensions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists `LbTrafficExtension` resources in a given project and location.
+           *
+           * Create a request for the method "lbTrafficExtensions.list".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location from which the `LbTrafficExtension` resources are listed,
+         *        specified in the following format: `projects/{project}/locations/{location}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(NetworkServices.this, "GET", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.ListLbTrafficExtensionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location from which the `LbTrafficExtension` resources are
+           * listed, specified in the following format: `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location from which the `LbTrafficExtension` resources are listed,
+         specified in the following format: `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location from which the `LbTrafficExtension` resources are
+           * listed, specified in the following format: `projects/{project}/locations/{location}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filtering results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filtering results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. The server might return fewer items than requested. If
+           * unspecified, the server picks an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. The server might return fewer items than requested. If unspecified,
+         the server picks an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. The server might return fewer items than requested. If
+           * unspecified, the server picks an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results that the server returns. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results that the server returns.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results that the server returns. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of the specified `LbTrafficExtension` resource.
+         *
+         * Create a request for the method "lbTrafficExtensions.patch".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the `LbTrafficExtension` resource in the following format:
+         *        `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+         * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/lbTrafficExtensions/[^/]+$");
+
+          /**
+           * Updates the parameters of the specified `LbTrafficExtension` resource.
+           *
+           * Create a request for the method "lbTrafficExtensions.patch".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the `LbTrafficExtension` resource in the following format:
+         *        `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension content) {
+            super(NetworkServices.this, "PATCH", REST_PATH, content, com.google.api.services.networkservices.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbTrafficExtensions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the `LbTrafficExtension` resource in the following format:
+           * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the `LbTrafficExtension` resource in the following format:
+         `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the `LbTrafficExtension` resource in the following format:
+           * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/lbTrafficExtensions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server can ignore the request if it has already been completed. The
+         server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, ignores the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if original operation with the same request ID was received, and if
+           * so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. Used to specify the fields to be overwritten in the `LbTrafficExtension`
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field is overwritten if it is in the mask. If the
+           * user does not specify a mask, then all fields are overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Used to specify the fields to be overwritten in the `LbTrafficExtension` resource by the
+         update. The fields specified in the update_mask are relative to the resource, not the full request.
+         A field is overwritten if it is in the mask. If the user does not specify a mask, then all fields
+         are overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Used to specify the fields to be overwritten in the `LbTrafficExtension`
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field is overwritten if it is in the mask. If the
+           * user does not specify a mask, then all fields are overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Meshes collection.
        *
        * <p>The typical use is:</p>

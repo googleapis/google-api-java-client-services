@@ -257,8 +257,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
    * [@mention a Google Chat user](https://developers.google.com/chat/format-
    * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
-   * see [Create a text message](https://developers.google.com/chat/api/guides/message-
-   * formats/text).
+   * see [Send a text message](https://developers.google.com/chat/api/guides/v1/messages/create
+   * #create-text-messages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -725,8 +725,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
    * [@mention a Google Chat user](https://developers.google.com/chat/format-
    * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
-   * see [Create a text message](https://developers.google.com/chat/api/guides/message-
-   * formats/text).
+   * see [Send a text message](https://developers.google.com/chat/api/guides/v1/messages/create
+   * #create-text-messages).
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -738,8 +738,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
    * [@mention a Google Chat user](https://developers.google.com/chat/format-
    * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
-   * see [Create a text message](https://developers.google.com/chat/api/guides/message-
-   * formats/text).
+   * see [Send a text message](https://developers.google.com/chat/api/guides/v1/messages/create
+   * #create-text-messages).
    * @param text text or {@code null} for none
    */
   public Message setText(java.lang.String text) {

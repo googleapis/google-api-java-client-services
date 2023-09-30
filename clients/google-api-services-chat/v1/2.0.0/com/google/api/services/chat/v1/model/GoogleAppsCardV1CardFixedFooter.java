@@ -22,7 +22,7 @@ package com.google.api.services.chat.v1.model;
  * footer). Setting `fixedFooter` without specifying a `primaryButton` or a `secondaryButton` causes
  * an error. Supported by Google Workspace Add-ons and Chat apps. For Chat apps, you can use fixed
  * footers in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
- * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
+ * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

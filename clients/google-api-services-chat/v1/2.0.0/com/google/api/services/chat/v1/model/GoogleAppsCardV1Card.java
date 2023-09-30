@@ -73,7 +73,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
    * `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons
    * and Chat apps. For Chat apps, you can use fixed footers in
    * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
+   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +173,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
    * `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons
    * and Chat apps. For Chat apps, you can use fixed footers in
    * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
+   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create).
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1CardFixedFooter getFixedFooter() {
@@ -185,7 +185,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
    * `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons
    * and Chat apps. For Chat apps, you can use fixed footers in
    * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
-   * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
+   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create).
    * @param fixedFooter fixedFooter or {@code null} for none
    */
   public GoogleAppsCardV1Card setFixedFooter(GoogleAppsCardV1CardFixedFooter fixedFooter) {

@@ -85,8 +85,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
 
   /**
    * Required. The primary text. Supports simple formatting. For more information about formatting
-   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
-   * /message-formats/cards#card-formatting) and [Formatting text in Google Workspace Add-
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/format-
+   * messages#card-formatting) and [Formatting text in Google Workspace Add-
    * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
@@ -233,8 +233,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
 
   /**
    * Required. The primary text. Supports simple formatting. For more information about formatting
-   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
-   * /message-formats/cards#card-formatting) and [Formatting text in Google Workspace Add-
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/format-
+   * messages#card-formatting) and [Formatting text in Google Workspace Add-
    * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
@@ -244,8 +244,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
 
   /**
    * Required. The primary text. Supports simple formatting. For more information about formatting
-   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
-   * /message-formats/cards#card-formatting) and [Formatting text in Google Workspace Add-
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/format-
+   * messages#card-formatting) and [Formatting text in Google Workspace Add-
    * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @param text text or {@code null} for none
    */

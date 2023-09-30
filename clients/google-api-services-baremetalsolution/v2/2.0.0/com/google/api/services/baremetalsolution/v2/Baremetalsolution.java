@@ -1406,13 +1406,13 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
 
           /**
            * The list of fields to update. The currently supported fields are: `labels`
-           * `hyperthreading_enabled` `os_image`
+           * `hyperthreading_enabled` `os_image` `ssh_keys`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** The list of fields to update. The currently supported fields are: `labels` `hyperthreading_enabled`
-         `os_image`
+         `os_image` `ssh_keys`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1420,7 +1420,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
 
           /**
            * The list of fields to update. The currently supported fields are: `labels`
-           * `hyperthreading_enabled` `os_image`
+           * `hyperthreading_enabled` `os_image` `ssh_keys`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -3870,6 +3870,145 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
       public class OsImages {
 
         /**
+         * Get details of a single OS image.
+         *
+         * Create a request for the method "osImages.get".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the OS image.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.OSImage> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/osImages/[^/]+$");
+
+          /**
+           * Get details of a single OS image.
+           *
+           * Create a request for the method "osImages.get".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the OS image.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Baremetalsolution.this, "GET", REST_PATH, null, com.google.api.services.baremetalsolution.v2.model.OSImage.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/osImages/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the OS image. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the OS image.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the OS image. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/osImages/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Retrieves the list of OS images which are currently approved.
          *
          * Create a request for the method "osImages.list".
@@ -3877,7 +4016,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the baremetalsolution server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListProvisioningQuotasRequest.
+         * @param parent Required. Parent value for ListOSImagesRequest.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3904,7 +4043,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListProvisioningQuotasRequest.
+           * @param parent Required. Parent value for ListOSImagesRequest.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3982,17 +4121,17 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListProvisioningQuotasRequest. */
+          /** Required. Parent value for ListOSImagesRequest. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListProvisioningQuotasRequest.
+          /** Required. Parent value for ListOSImagesRequest.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListProvisioningQuotasRequest. */
+          /** Required. Parent value for ListOSImagesRequest. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

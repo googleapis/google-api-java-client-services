@@ -60,7 +60,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. Name of the SecurityProfileGroup resource. It matches pattern
+   * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
    * `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
    * The value may be {@code null}.
    */
@@ -155,7 +155,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Immutable. Name of the SecurityProfileGroup resource. It matches pattern
+   * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
    * `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
    * @return value or {@code null} for none
    */
@@ -164,7 +164,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Immutable. Name of the SecurityProfileGroup resource. It matches pattern
+   * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
    * `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
    * @param name name or {@code null} for none
    */

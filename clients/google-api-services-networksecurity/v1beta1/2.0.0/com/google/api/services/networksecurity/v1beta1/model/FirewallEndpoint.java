@@ -54,6 +54,13 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
+   * Optional. Description of the firewall endpoint. Max length 2048 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
@@ -142,6 +149,23 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
    */
   public FirewallEndpoint setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Description of the firewall endpoint. Max length 2048 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. Description of the firewall endpoint. Max length 2048 characters.
+   * @param description description or {@code null} for none
+   */
+  public FirewallEndpoint setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

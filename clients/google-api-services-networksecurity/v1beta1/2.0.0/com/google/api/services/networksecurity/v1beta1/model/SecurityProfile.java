@@ -60,7 +60,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. Name of the SecurityProfile resource. It matches pattern
+   * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
    * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
    * The value may be {@code null}.
    */
@@ -161,7 +161,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. Name of the SecurityProfile resource. It matches pattern
+   * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
    * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
    * @return value or {@code null} for none
    */
@@ -170,7 +170,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. Name of the SecurityProfile resource. It matches pattern
+   * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
    * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
    * @param name name or {@code null} for none
    */

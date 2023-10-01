@@ -4009,7 +4009,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Name of the SecurityProfileGroup resource. It matches pattern
+         * @param name Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
          *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
          *        }`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfileGroup}
@@ -4039,7 +4039,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Name of the SecurityProfileGroup resource. It matches pattern
+           * @param name Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
          *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
          *        }`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfileGroup}
@@ -4111,13 +4111,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. Name of the SecurityProfileGroup resource. It matches pattern `projects|orga
-           * nizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+           * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern `p
+           * rojects|organizations/locations/{location}/securityProfileGroups/{security_profile_grou
+           * p}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Name of the SecurityProfileGroup resource. It matches pattern
+          /** Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
          `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public java.lang.String getName() {
@@ -4125,8 +4126,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. Name of the SecurityProfileGroup resource. It matches pattern `projects|orga
-           * nizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+           * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern `p
+           * rojects|organizations/locations/{location}/securityProfileGroups/{security_profile_grou
+           * p}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4864,7 +4866,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Name of the SecurityProfile resource. It matches pattern
+         * @param name Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
          *        `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfile}
          * @return the request
@@ -4893,7 +4895,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Name of the SecurityProfile resource. It matches pattern
+           * @param name Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
          *        `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfile}
            * @since 1.13
@@ -4964,13 +4966,13 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. Name of the SecurityProfile resource. It matches pattern
+           * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
            * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Name of the SecurityProfile resource. It matches pattern
+          /** Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
          `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
            */
           public java.lang.String getName() {
@@ -4978,7 +4980,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. Name of the SecurityProfile resource. It matches pattern
+           * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
            * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
            */
           public Patch setName(java.lang.String name) {

@@ -39,6 +39,13 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsResponseMatchingD
   private GoogleCloudContentwarehouseV1Document document;
 
   /**
+   * Return the 1-based page indices where those pages have one or more matched tokens.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> matchedTokenPageIndices;
+
+  /**
    * Experimental. Additional result info if the question-answering feature is enabled.
    * The value may be {@code null}.
    */
@@ -73,6 +80,23 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsResponseMatchingD
    */
   public GoogleCloudContentwarehouseV1SearchDocumentsResponseMatchingDocument setDocument(GoogleCloudContentwarehouseV1Document document) {
     this.document = document;
+    return this;
+  }
+
+  /**
+   * Return the 1-based page indices where those pages have one or more matched tokens.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getMatchedTokenPageIndices() {
+    return matchedTokenPageIndices;
+  }
+
+  /**
+   * Return the 1-based page indices where those pages have one or more matched tokens.
+   * @param matchedTokenPageIndices matchedTokenPageIndices or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1SearchDocumentsResponseMatchingDocument setMatchedTokenPageIndices(java.util.List<java.lang.Long> matchedTokenPageIndices) {
+    this.matchedTokenPageIndices = matchedTokenPageIndices;
     return this;
   }
 

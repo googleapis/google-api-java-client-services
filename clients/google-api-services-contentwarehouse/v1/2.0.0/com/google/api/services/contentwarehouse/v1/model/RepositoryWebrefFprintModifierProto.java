@@ -32,18 +32,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefFprintModifierProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String capitalization;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String enclosing;
-
-  /**
    * i18.languages.Language enum defined in i18n/languages/proto/languages.proto UNKNOWN_LANGUAGE
    * The value may be {@code null}.
    */
@@ -55,72 +43,6 @@ public final class RepositoryWebrefFprintModifierProto extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String namespaceType;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String punctuation;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String sentence;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String sourceType;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String stemming;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String style;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String tokenType;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCapitalization() {
-    return capitalization;
-  }
-
-  /**
-   * @param capitalization capitalization or {@code null} for none
-   */
-  public RepositoryWebrefFprintModifierProto setCapitalization(java.lang.String capitalization) {
-    this.capitalization = capitalization;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEnclosing() {
-    return enclosing;
-  }
-
-  /**
-   * @param enclosing enclosing or {@code null} for none
-   */
-  public RepositoryWebrefFprintModifierProto setEnclosing(java.lang.String enclosing) {
-    this.enclosing = enclosing;
-    return this;
-  }
 
   /**
    * i18.languages.Language enum defined in i18n/languages/proto/languages.proto UNKNOWN_LANGUAGE
@@ -151,96 +73,6 @@ public final class RepositoryWebrefFprintModifierProto extends com.google.api.cl
    */
   public RepositoryWebrefFprintModifierProto setNamespaceType(java.lang.String namespaceType) {
     this.namespaceType = namespaceType;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPunctuation() {
-    return punctuation;
-  }
-
-  /**
-   * @param punctuation punctuation or {@code null} for none
-   */
-  public RepositoryWebrefFprintModifierProto setPunctuation(java.lang.String punctuation) {
-    this.punctuation = punctuation;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSentence() {
-    return sentence;
-  }
-
-  /**
-   * @param sentence sentence or {@code null} for none
-   */
-  public RepositoryWebrefFprintModifierProto setSentence(java.lang.String sentence) {
-    this.sentence = sentence;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSourceType() {
-    return sourceType;
-  }
-
-  /**
-   * @param sourceType sourceType or {@code null} for none
-   */
-  public RepositoryWebrefFprintModifierProto setSourceType(java.lang.String sourceType) {
-    this.sourceType = sourceType;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStemming() {
-    return stemming;
-  }
-
-  /**
-   * @param stemming stemming or {@code null} for none
-   */
-  public RepositoryWebrefFprintModifierProto setStemming(java.lang.String stemming) {
-    this.stemming = stemming;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStyle() {
-    return style;
-  }
-
-  /**
-   * @param style style or {@code null} for none
-   */
-  public RepositoryWebrefFprintModifierProto setStyle(java.lang.String style) {
-    this.style = style;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTokenType() {
-    return tokenType;
-  }
-
-  /**
-   * @param tokenType tokenType or {@code null} for none
-   */
-  public RepositoryWebrefFprintModifierProto setTokenType(java.lang.String tokenType) {
-    this.tokenType = tokenType;
     return this;
   }
 

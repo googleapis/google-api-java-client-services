@@ -163,7 +163,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata extend
    * The encoded id of the data source. The id is only unique within a single container type. This
    * field correlates to person.metadata.identity_info.source_id.id. This field may not be populated
    * in some special cases, where the id is not visible to the querying user. e.g.
-   * ListAutocompletions with full phone number query.
+   * ListAutocompletions with full phone number query. For value format, see
+   * google3/social/graph/api/proto/main_merged_person.proto?q=symbol:SourceIdentity.id
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -519,7 +520,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata extend
    * The encoded id of the data source. The id is only unique within a single container type. This
    * field correlates to person.metadata.identity_info.source_id.id. This field may not be populated
    * in some special cases, where the id is not visible to the querying user. e.g.
-   * ListAutocompletions with full phone number query.
+   * ListAutocompletions with full phone number query. For value format, see
+   * google3/social/graph/api/proto/main_merged_person.proto?q=symbol:SourceIdentity.id
    * @return value or {@code null} for none
    */
   public java.lang.String getEncodedContainerId() {
@@ -530,7 +532,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata extend
    * The encoded id of the data source. The id is only unique within a single container type. This
    * field correlates to person.metadata.identity_info.source_id.id. This field may not be populated
    * in some special cases, where the id is not visible to the querying user. e.g.
-   * ListAutocompletions with full phone number query.
+   * ListAutocompletions with full phone number query. For value format, see
+   * google3/social/graph/api/proto/main_merged_person.proto?q=symbol:SourceIdentity.id
    * @param encodedContainerId encodedContainerId or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata setEncodedContainerId(java.lang.String encodedContainerId) {

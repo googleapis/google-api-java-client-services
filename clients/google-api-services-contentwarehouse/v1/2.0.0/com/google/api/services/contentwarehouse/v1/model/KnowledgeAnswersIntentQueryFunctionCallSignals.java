@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 38
+ * Next ID: 39
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -59,6 +59,13 @@ public final class KnowledgeAnswersIntentQueryFunctionCallSignals extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.String conceptEntityMid;
+
+  /**
+   * Information about the corresponding Concept attached to the FunctionCall. go/concept-roofshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KnowledgeAnswersIntentQueryConceptSignals conceptSignals;
 
   /**
    * The value may be {@code null}.
@@ -364,6 +371,23 @@ public final class KnowledgeAnswersIntentQueryFunctionCallSignals extends com.go
    */
   public KnowledgeAnswersIntentQueryFunctionCallSignals setConceptEntityMid(java.lang.String conceptEntityMid) {
     this.conceptEntityMid = conceptEntityMid;
+    return this;
+  }
+
+  /**
+   * Information about the corresponding Concept attached to the FunctionCall. go/concept-roofshot.
+   * @return value or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryConceptSignals getConceptSignals() {
+    return conceptSignals;
+  }
+
+  /**
+   * Information about the corresponding Concept attached to the FunctionCall. go/concept-roofshot.
+   * @param conceptSignals conceptSignals or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryFunctionCallSignals setConceptSignals(KnowledgeAnswersIntentQueryConceptSignals conceptSignals) {
+    this.conceptSignals = conceptSignals;
     return this;
   }
 

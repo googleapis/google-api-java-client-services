@@ -40,7 +40,8 @@ public final class GeostorePoliticalProto extends com.google.api.client.json.Gen
   private GeostoreFeatureIdProto capital;
 
   /**
-   * RESERVED
+   * Feature IDs of the features claimed by this feature's government that are not necessarily
+   * included in the feature's geometry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +98,8 @@ public final class GeostorePoliticalProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * RESERVED
+   * Feature IDs of the features claimed by this feature's government that are not necessarily
+   * included in the feature's geometry.
    * @return value or {@code null} for none
    */
   public java.util.List<GeostoreFeatureIdProto> getClaim() {
@@ -105,7 +107,8 @@ public final class GeostorePoliticalProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * RESERVED
+   * Feature IDs of the features claimed by this feature's government that are not necessarily
+   * included in the feature's geometry.
    * @param claim claim or {@code null} for none
    */
   public GeostorePoliticalProto setClaim(java.util.List<GeostoreFeatureIdProto> claim) {

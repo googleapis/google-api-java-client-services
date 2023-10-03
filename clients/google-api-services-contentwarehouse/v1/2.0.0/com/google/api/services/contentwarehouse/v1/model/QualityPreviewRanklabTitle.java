@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * A collection of data corresponding to a single title candidate. This will be used as: - a
  * collection of signals to score and select titles in production - an input for training title
  * models NOTE: When adding a floating point value for Ranklab purposes, use float32 instead of
- * float64, because some of the Ranklab library still does not fully support float64. Next ID: 67
+ * float64, because some of the Ranklab library still does not fully support float64. Next ID: 68
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -343,6 +343,12 @@ public final class QualityPreviewRanklabTitle extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.Float queryRelevance;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sourceGeneratedTitle;
 
   /**
    * The value may be {@code null}.
@@ -1186,6 +1192,21 @@ public final class QualityPreviewRanklabTitle extends com.google.api.client.json
    */
   public QualityPreviewRanklabTitle setQueryRelevance(java.lang.Float queryRelevance) {
     this.queryRelevance = queryRelevance;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSourceGeneratedTitle() {
+    return sourceGeneratedTitle;
+  }
+
+  /**
+   * @param sourceGeneratedTitle sourceGeneratedTitle or {@code null} for none
+   */
+  public QualityPreviewRanklabTitle setSourceGeneratedTitle(java.lang.Boolean sourceGeneratedTitle) {
+    this.sourceGeneratedTitle = sourceGeneratedTitle;
     return this;
   }
 

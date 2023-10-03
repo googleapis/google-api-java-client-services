@@ -17,7 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for QualityOrbitAsteroidBeltImageIntentScores.
+ * These scores are for image scores *in the context of a landing page*, which is now a discouraged
+ * path of building image classifications. See go/orbit-for-images-v2 for an alternative.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

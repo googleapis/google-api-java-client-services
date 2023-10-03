@@ -50,8 +50,9 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.Long creationTime;
 
   /**
-   * Optional. Data governance specific option, if the value is DATA_MASKING, the function will be
-   * validated as masking functions.
+   * Optional. If set to `DATA_MASKING`, the function is validated and made available as a masking
+   * function. For more information, see [Create custom masking
+   * routines](https://cloud.google.com/bigquery/docs/user-defined-functions#custom-mask).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,8 +215,9 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Data governance specific option, if the value is DATA_MASKING, the function will be
-   * validated as masking functions.
+   * Optional. If set to `DATA_MASKING`, the function is validated and made available as a masking
+   * function. For more information, see [Create custom masking
+   * routines](https://cloud.google.com/bigquery/docs/user-defined-functions#custom-mask).
    * @return value or {@code null} for none
    */
   public java.lang.String getDataGovernanceType() {
@@ -223,8 +225,9 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Data governance specific option, if the value is DATA_MASKING, the function will be
-   * validated as masking functions.
+   * Optional. If set to `DATA_MASKING`, the function is validated and made available as a masking
+   * function. For more information, see [Create custom masking
+   * routines](https://cloud.google.com/bigquery/docs/user-defined-functions#custom-mask).
    * @param dataGovernanceType dataGovernanceType or {@code null} for none
    */
   public Routine setDataGovernanceType(java.lang.String dataGovernanceType) {

@@ -70,7 +70,7 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
    * [Optional] An custom string that will represent a NULL value in CSV import data.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("null_marker")
+  @com.google.api.client.util.Key
   private java.lang.String nullMarker;
 
   /**

@@ -68,6 +68,17 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean jobComplete;
 
   /**
+   * Optional. Only relevant when a job_reference is present in the response. If job_reference is
+   * not present it will always be unset. When job_reference is present, this field should be
+   * interpreted as follows: If set, it will provide the reason of why a Job was created. If not
+   * set, it should be treated as the default: REQUESTED. This feature is not yet available. Jobs
+   * will always be created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object jobCreationReason;
+
+  /**
    * Reference to the Job that was created to run the query. This field will be present even if the
    * original request timed out, in which case GetQueryResults can be used to read the results once
    * the query has completed. Since this API only returns the first page of results, subsequent
@@ -211,6 +222,31 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    */
   public QueryResponse setJobComplete(java.lang.Boolean jobComplete) {
     this.jobComplete = jobComplete;
+    return this;
+  }
+
+  /**
+   * Optional. Only relevant when a job_reference is present in the response. If job_reference is
+   * not present it will always be unset. When job_reference is present, this field should be
+   * interpreted as follows: If set, it will provide the reason of why a Job was created. If not
+   * set, it should be treated as the default: REQUESTED. This feature is not yet available. Jobs
+   * will always be created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getJobCreationReason() {
+    return jobCreationReason;
+  }
+
+  /**
+   * Optional. Only relevant when a job_reference is present in the response. If job_reference is
+   * not present it will always be unset. When job_reference is present, this field should be
+   * interpreted as follows: If set, it will provide the reason of why a Job was created. If not
+   * set, it should be treated as the default: REQUESTED. This feature is not yet available. Jobs
+   * will always be created.
+   * @param jobCreationReason jobCreationReason or {@code null} for none
+   */
+  public QueryResponse setJobCreationReason(java.lang.Object jobCreationReason) {
+    this.jobCreationReason = jobCreationReason;
     return this;
   }
 

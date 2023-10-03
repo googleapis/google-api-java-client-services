@@ -44,6 +44,16 @@ public final class Argument extends com.google.api.client.json.GenericJson {
   private StandardSqlDataType dataType;
 
   /**
+   * Optional. Whether the argument is an aggregate function parameter. Must be Unset for routine
+   * types other than AGGREGATE_FUNCTION. For AGGREGATE_FUNCTION, if set to false, it is equivalent
+   * to adding "NOT AGGREGATE" clause in DDL; Otherwise, it is equivalent to omitting "NOT
+   * AGGREGATE" clause in DDL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isAggregate;
+
+  /**
    * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
    * The value may be {@code null}.
    */
@@ -88,6 +98,29 @@ public final class Argument extends com.google.api.client.json.GenericJson {
    */
   public Argument setDataType(StandardSqlDataType dataType) {
     this.dataType = dataType;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the argument is an aggregate function parameter. Must be Unset for routine
+   * types other than AGGREGATE_FUNCTION. For AGGREGATE_FUNCTION, if set to false, it is equivalent
+   * to adding "NOT AGGREGATE" clause in DDL; Otherwise, it is equivalent to omitting "NOT
+   * AGGREGATE" clause in DDL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsAggregate() {
+    return isAggregate;
+  }
+
+  /**
+   * Optional. Whether the argument is an aggregate function parameter. Must be Unset for routine
+   * types other than AGGREGATE_FUNCTION. For AGGREGATE_FUNCTION, if set to false, it is equivalent
+   * to adding "NOT AGGREGATE" clause in DDL; Otherwise, it is equivalent to omitting "NOT
+   * AGGREGATE" clause in DDL.
+   * @param isAggregate isAggregate or {@code null} for none
+   */
+  public Argument setIsAggregate(java.lang.Boolean isAggregate) {
+    this.isAggregate = isAggregate;
     return this;
   }
 

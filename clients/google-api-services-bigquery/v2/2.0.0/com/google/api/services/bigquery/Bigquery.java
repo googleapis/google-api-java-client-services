@@ -414,6 +414,29 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * Specifies the view that determines which dataset information is returned. By default,
+       * metadata and ACL information are returned. Allowed values: METADATA, ACL, FULL.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetView;
+
+      /** Specifies the view that determines which dataset information is returned. By default, metadata and
+     ACL information are returned. Allowed values: METADATA, ACL, FULL.
+       */
+      public java.lang.String getDatasetView() {
+        return datasetView;
+      }
+
+      /**
+       * Specifies the view that determines which dataset information is returned. By default,
+       * metadata and ACL information are returned. Allowed values: METADATA, ACL, FULL.
+       */
+      public Get setDatasetView(java.lang.String datasetView) {
+        this.datasetView = datasetView;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);

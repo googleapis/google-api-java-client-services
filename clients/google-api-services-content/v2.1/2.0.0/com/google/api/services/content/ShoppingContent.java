@@ -9555,8 +9555,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Requests a review of free listings in a specific region. This method is only available to
-     * selected merchants.
+     * Requests a review of free listings in a specific region.
      *
      * Create a request for the method "freelistingsprogram.requestreview".
      *
@@ -9578,8 +9577,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/freelistingsprogram/requestreview";
 
       /**
-       * Requests a review of free listings in a specific region. This method is only available to
-       * selected merchants.
+       * Requests a review of free listings in a specific region.
        *
        * Create a request for the method "freelistingsprogram.requestreview".
        *
@@ -11321,7 +11319,10 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Sets the omnichannel experience for the specified country.
+     * Sets the omnichannel experience for the specified country. Only supported for merchants whose POS
+     * data provider is trusted to enable the corresponding experience. For more context, see these help
+     * articles [about LFP](https://support.google.com/merchants/answer/7676652) and [how to get
+     * started](https://support.google.com/merchants/answer/7676578) with it.
      *
      * Create a request for the method "liasettings.setomnichannelexperience".
      *
@@ -11346,7 +11347,10 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/setomnichannelexperience";
 
       /**
-       * Sets the omnichannel experience for the specified country.
+       * Sets the omnichannel experience for the specified country. Only supported for merchants whose
+       * POS data provider is trusted to enable the corresponding experience. For more context, see
+       * these help articles [about LFP](https://support.google.com/merchants/answer/7676652) and [how
+       * to get started](https://support.google.com/merchants/answer/7676578) with it.
        *
        * Create a request for the method "liasettings.setomnichannelexperience".
        *
@@ -28250,8 +28254,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Requests a review of Shopping ads in a specific region. This method is only available to selected
-     * merchants.
+     * Requests a review of Shopping ads in a specific region.
      *
      * Create a request for the method "shoppingadsprogram.requestreview".
      *
@@ -28273,8 +28276,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/shoppingadsprogram/requestreview";
 
       /**
-       * Requests a review of Shopping ads in a specific region. This method is only available to
-       * selected merchants.
+       * Requests a review of Shopping ads in a specific region.
        *
        * Create a request for the method "shoppingadsprogram.requestreview".
        *

@@ -78,6 +78,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean dryRun;
 
   /**
+   * Optional. If not set, jobs are always required. If set, the query request will follow the
+   * behavior described JobCreationMode. This feature is not yet available. Jobs will always be
+   * created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jobCreationMode;
+
+  /**
    * The resource type of the request.
    * The value may be {@code null}.
    */
@@ -305,6 +314,27 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setDryRun(java.lang.Boolean dryRun) {
     this.dryRun = dryRun;
+    return this;
+  }
+
+  /**
+   * Optional. If not set, jobs are always required. If set, the query request will follow the
+   * behavior described JobCreationMode. This feature is not yet available. Jobs will always be
+   * created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJobCreationMode() {
+    return jobCreationMode;
+  }
+
+  /**
+   * Optional. If not set, jobs are always required. If set, the query request will follow the
+   * behavior described JobCreationMode. This feature is not yet available. Jobs will always be
+   * created.
+   * @param jobCreationMode jobCreationMode or {@code null} for none
+   */
+  public QueryRequest setJobCreationMode(java.lang.String jobCreationMode) {
+    this.jobCreationMode = jobCreationMode;
     return this;
   }
 

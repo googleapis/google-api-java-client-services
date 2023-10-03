@@ -293,6 +293,17 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean requirePartitionFilter;
 
   /**
+   * [Optional] The tags associated with this table. Tag keys are globally unique. See additional
+   * information on [tags](https://cloud.google.com/iam/docs/tags-access-control#definitions). An
+   * object containing a list of "key": value pairs. The key is the namespaced friendly name of the
+   * tag key, e.g. "12345/environment" where 12345 is parent id. The value is the friendly short
+   * name of the tag value, e.g. "production".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourceTags;
+
+  /**
    * [Optional] Describes the schema of this table.
    * The value may be {@code null}.
    */
@@ -1046,6 +1057,31 @@ public final class Table extends com.google.api.client.json.GenericJson {
       return false;
     }
     return requirePartitionFilter;
+  }
+
+  /**
+   * [Optional] The tags associated with this table. Tag keys are globally unique. See additional
+   * information on [tags](https://cloud.google.com/iam/docs/tags-access-control#definitions). An
+   * object containing a list of "key": value pairs. The key is the namespaced friendly name of the
+   * tag key, e.g. "12345/environment" where 12345 is parent id. The value is the friendly short
+   * name of the tag value, e.g. "production".
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourceTags() {
+    return resourceTags;
+  }
+
+  /**
+   * [Optional] The tags associated with this table. Tag keys are globally unique. See additional
+   * information on [tags](https://cloud.google.com/iam/docs/tags-access-control#definitions). An
+   * object containing a list of "key": value pairs. The key is the namespaced friendly name of the
+   * tag key, e.g. "12345/environment" where 12345 is parent id. The value is the friendly short
+   * name of the tag value, e.g. "production".
+   * @param resourceTags resourceTags or {@code null} for none
+   */
+  public Table setResourceTags(java.util.Map<String, java.lang.String> resourceTags) {
+    this.resourceTags = resourceTags;
+    return this;
   }
 
   /**

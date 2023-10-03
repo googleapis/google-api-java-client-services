@@ -31,7 +31,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostoreFlowLineProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * RESERVED
+   * Curvature of the flowline. Note that, curvature can be present even if the flowline doesn't
+   * have a track. In which case, curvature will be derived from the segment polyline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class GeostoreFlowLineProto extends com.google.api.client.json.Gene
   private GeostoreTrackProto track;
 
   /**
-   * RESERVED
+   * Curvature of the flowline. Note that, curvature can be present even if the flowline doesn't
+   * have a track. In which case, curvature will be derived from the segment polyline.
    * @return value or {@code null} for none
    */
   public GeostoreCurvatureProto getCurvature() {
@@ -52,7 +54,8 @@ public final class GeostoreFlowLineProto extends com.google.api.client.json.Gene
   }
 
   /**
-   * RESERVED
+   * Curvature of the flowline. Note that, curvature can be present even if the flowline doesn't
+   * have a track. In which case, curvature will be derived from the segment polyline.
    * @param curvature curvature or {@code null} for none
    */
   public GeostoreFlowLineProto setCurvature(GeostoreCurvatureProto curvature) {

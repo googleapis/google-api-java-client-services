@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 65
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 66
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -250,6 +250,14 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isSageIntent;
+
+  /**
+   * Whether this intent is a score-based intent, relying on PFR for scoring and pruning to the top
+   * intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isScoreBasedIntent;
 
   /**
    * Whether the intent is a media object tvm intent.
@@ -987,6 +995,25 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsSageIntent(java.lang.Boolean isSageIntent) {
     this.isSageIntent = isSageIntent;
+    return this;
+  }
+
+  /**
+   * Whether this intent is a score-based intent, relying on PFR for scoring and pruning to the top
+   * intent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsScoreBasedIntent() {
+    return isScoreBasedIntent;
+  }
+
+  /**
+   * Whether this intent is a score-based intent, relying on PFR for scoring and pruning to the top
+   * intent.
+   * @param isScoreBasedIntent isScoreBasedIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsScoreBasedIntent(java.lang.Boolean isScoreBasedIntent) {
+    this.isScoreBasedIntent = isScoreBasedIntent;
     return this;
   }
 

@@ -219,7 +219,8 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreDisplayDataProto displayData;
 
   /**
-   * RESERVED
+   * Represents information about disputed areas. Only TYPE_DISPUTED_AREA features should have the
+   * field set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -313,7 +314,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private java.lang.Double geometryPrecisionMeters;
 
   /**
-   * RESERVED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1233,7 +1233,8 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * Represents information about disputed areas. Only TYPE_DISPUTED_AREA features should have the
+   * field set.
    * @return value or {@code null} for none
    */
   public GeostoreDisputedAreaProto getDisputedArea() {
@@ -1241,7 +1242,8 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * Represents information about disputed areas. Only TYPE_DISPUTED_AREA features should have the
+   * field set.
    * @param disputedArea disputedArea or {@code null} for none
    */
   public GeostoreFeatureProto setDisputedArea(GeostoreDisputedAreaProto disputedArea) {
@@ -1442,7 +1444,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
    * @return value or {@code null} for none
    */
   public GeostoreGeopoliticalProto getGeopolitical() {
@@ -1450,7 +1451,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
    * @param geopolitical geopolitical or {@code null} for none
    */
   public GeostoreFeatureProto setGeopolitical(GeostoreGeopoliticalProto geopolitical) {

@@ -87,7 +87,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo exten
    * The base64 serialized social.graph.peopleapi.proto.internal.RawDeviceContactId. This id should
    * be used to correlate to field.metadata.encoded_container_id when the
    * field.metadata.container_type is RAW_DEVICE_CONTACT The id also correlates to
-   * person.metadata.identity_info.source_id.id.
+   * person.metadata.identity_info.source_id.id. For value format, see
+   * google3/social/graph/api/proto/main_merged_person.proto?q=symbol:SourceIdentity.id
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,7 +246,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo exten
    * The base64 serialized social.graph.peopleapi.proto.internal.RawDeviceContactId. This id should
    * be used to correlate to field.metadata.encoded_container_id when the
    * field.metadata.container_type is RAW_DEVICE_CONTACT The id also correlates to
-   * person.metadata.identity_info.source_id.id.
+   * person.metadata.identity_info.source_id.id. For value format, see
+   * google3/social/graph/api/proto/main_merged_person.proto?q=symbol:SourceIdentity.id
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -256,7 +258,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo exten
    * The base64 serialized social.graph.peopleapi.proto.internal.RawDeviceContactId. This id should
    * be used to correlate to field.metadata.encoded_container_id when the
    * field.metadata.container_type is RAW_DEVICE_CONTACT The id also correlates to
-   * person.metadata.identity_info.source_id.id.
+   * person.metadata.identity_info.source_id.id. For value format, see
+   * google3/social/graph/api/proto/main_merged_person.proto?q=symbol:SourceIdentity.id
    * @param id id or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo setId(java.lang.String id) {

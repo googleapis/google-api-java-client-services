@@ -64,8 +64,8 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   private PackageNameList exemptionsToShowWorkContactsInPersonalProfile;
 
   /**
-   * Whether contacts stored in the work profile can be shown in personal profile contact searches
-   * and incoming calls.
+   * Whether personal apps can access contacts stored in the work profile.See also
+   * exemptions_to_show_work_contacts_in_personal_profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,8 +152,8 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether contacts stored in the work profile can be shown in personal profile contact searches
-   * and incoming calls.
+   * Whether personal apps can access contacts stored in the work profile.See also
+   * exemptions_to_show_work_contacts_in_personal_profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getShowWorkContactsInPersonalProfile() {
@@ -161,8 +161,8 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether contacts stored in the work profile can be shown in personal profile contact searches
-   * and incoming calls.
+   * Whether personal apps can access contacts stored in the work profile.See also
+   * exemptions_to_show_work_contacts_in_personal_profile.
    * @param showWorkContactsInPersonalProfile showWorkContactsInPersonalProfile or {@code null} for none
    */
   public CrossProfilePolicies setShowWorkContactsInPersonalProfile(java.lang.String showWorkContactsInPersonalProfile) {

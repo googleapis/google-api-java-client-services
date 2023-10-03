@@ -4804,6 +4804,206 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Create a roll-up property and all roll-up property source links.
+     *
+     * Create a request for the method "properties.createRollupProperty".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link CreateRollupProperty#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateRollupPropertyRequest}
+     * @return the request
+     */
+    public CreateRollupProperty createRollupProperty(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateRollupPropertyRequest content) throws java.io.IOException {
+      CreateRollupProperty result = new CreateRollupProperty(content);
+      initialize(result);
+      return result;
+    }
+
+    public class CreateRollupProperty extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateRollupPropertyResponse> {
+
+      private static final String REST_PATH = "v1alpha/properties:createRollupProperty";
+
+      /**
+       * Create a roll-up property and all roll-up property source links.
+       *
+       * Create a request for the method "properties.createRollupProperty".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link CreateRollupProperty#execute()} method to invoke the
+       * remote operation. <p> {@link CreateRollupProperty#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateRollupPropertyRequest}
+       * @since 1.13
+       */
+      protected CreateRollupProperty(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateRollupPropertyRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateRollupPropertyResponse.class);
+      }
+
+      @Override
+      public CreateRollupProperty set$Xgafv(java.lang.String $Xgafv) {
+        return (CreateRollupProperty) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CreateRollupProperty setAccessToken(java.lang.String accessToken) {
+        return (CreateRollupProperty) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CreateRollupProperty setAlt(java.lang.String alt) {
+        return (CreateRollupProperty) super.setAlt(alt);
+      }
+
+      @Override
+      public CreateRollupProperty setCallback(java.lang.String callback) {
+        return (CreateRollupProperty) super.setCallback(callback);
+      }
+
+      @Override
+      public CreateRollupProperty setFields(java.lang.String fields) {
+        return (CreateRollupProperty) super.setFields(fields);
+      }
+
+      @Override
+      public CreateRollupProperty setKey(java.lang.String key) {
+        return (CreateRollupProperty) super.setKey(key);
+      }
+
+      @Override
+      public CreateRollupProperty setOauthToken(java.lang.String oauthToken) {
+        return (CreateRollupProperty) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CreateRollupProperty setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CreateRollupProperty) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CreateRollupProperty setQuotaUser(java.lang.String quotaUser) {
+        return (CreateRollupProperty) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CreateRollupProperty setUploadType(java.lang.String uploadType) {
+        return (CreateRollupProperty) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CreateRollupProperty setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CreateRollupProperty) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public CreateRollupProperty set(String parameterName, Object value) {
+        return (CreateRollupProperty) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Create a subproperty and a subproperty event filter that applies to the created subproperty.
+     *
+     * Create a request for the method "properties.createSubproperty".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link CreateSubproperty#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest}
+     * @return the request
+     */
+    public CreateSubproperty createSubproperty(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest content) throws java.io.IOException {
+      CreateSubproperty result = new CreateSubproperty(content);
+      initialize(result);
+      return result;
+    }
+
+    public class CreateSubproperty extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse> {
+
+      private static final String REST_PATH = "v1alpha/properties:createSubproperty";
+
+      /**
+       * Create a subproperty and a subproperty event filter that applies to the created subproperty.
+       *
+       * Create a request for the method "properties.createSubproperty".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link CreateSubproperty#execute()} method to invoke the remote
+       * operation. <p> {@link CreateSubproperty#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest}
+       * @since 1.13
+       */
+      protected CreateSubproperty(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse.class);
+      }
+
+      @Override
+      public CreateSubproperty set$Xgafv(java.lang.String $Xgafv) {
+        return (CreateSubproperty) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CreateSubproperty setAccessToken(java.lang.String accessToken) {
+        return (CreateSubproperty) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CreateSubproperty setAlt(java.lang.String alt) {
+        return (CreateSubproperty) super.setAlt(alt);
+      }
+
+      @Override
+      public CreateSubproperty setCallback(java.lang.String callback) {
+        return (CreateSubproperty) super.setCallback(callback);
+      }
+
+      @Override
+      public CreateSubproperty setFields(java.lang.String fields) {
+        return (CreateSubproperty) super.setFields(fields);
+      }
+
+      @Override
+      public CreateSubproperty setKey(java.lang.String key) {
+        return (CreateSubproperty) super.setKey(key);
+      }
+
+      @Override
+      public CreateSubproperty setOauthToken(java.lang.String oauthToken) {
+        return (CreateSubproperty) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CreateSubproperty setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CreateSubproperty) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CreateSubproperty setQuotaUser(java.lang.String quotaUser) {
+        return (CreateSubproperty) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CreateSubproperty setUploadType(java.lang.String uploadType) {
+        return (CreateSubproperty) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CreateSubproperty setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CreateSubproperty) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public CreateSubproperty set(String parameterName, Object value) {
+        return (CreateSubproperty) super.set(parameterName, value);
+      }
+    }
+    /**
      * Marks target Property as soft-deleted (ie: "trashed") and returns it. This API does not have a
      * method to restore soft-deleted properties. However, they can be restored using the Trash Can UI.
      * If the properties are not restored before the expiration time, the Property and all child
@@ -21167,6 +21367,663 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
     }
     /**
+     * An accessor for creating requests from the RollupPropertySourceLinks collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleAnalyticsAdmin analyticsadmin = new GoogleAnalyticsAdmin(...);}
+     *   {@code GoogleAnalyticsAdmin.RollupPropertySourceLinks.List request = analyticsadmin.rollupPropertySourceLinks().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public RollupPropertySourceLinks rollupPropertySourceLinks() {
+      return new RollupPropertySourceLinks();
+    }
+
+    /**
+     * The "rollupPropertySourceLinks" collection of methods.
+     */
+    public class RollupPropertySourceLinks {
+
+      /**
+       * Creates a roll-up property source link. Only roll-up properties can have source links, so this
+       * method will throw an error if used on other types of properties.
+       *
+       * Create a request for the method "rollupPropertySourceLinks.create".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Format: properties/{property_id} Example: properties/1234
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRollupPropertySourceLink}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRollupPropertySourceLink content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRollupPropertySourceLink> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/rollupPropertySourceLinks";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Creates a roll-up property source link. Only roll-up properties can have source links, so this
+         * method will throw an error if used on other types of properties.
+         *
+         * Create a request for the method "rollupPropertySourceLinks.create".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Format: properties/{property_id} Example: properties/1234
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRollupPropertySourceLink}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRollupPropertySourceLink content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRollupPropertySourceLink.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: properties/{property_id} Example: properties/1234 */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Format: properties/{property_id} Example: properties/1234
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Format: properties/{property_id} Example: properties/1234 */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a roll-up property source link. Only roll-up properties can have source links, so this
+       * method will throw an error if used on other types of properties.
+       *
+       * Create a request for the method "rollupPropertySourceLinks.delete".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Format:
+       *        properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link_id}
+       *        Example: properties/1234/rollupPropertySourceLinks/5678
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/rollupPropertySourceLinks/[^/]+$");
+
+        /**
+         * Deletes a roll-up property source link. Only roll-up properties can have source links, so this
+         * method will throw an error if used on other types of properties.
+         *
+         * Create a request for the method "rollupPropertySourceLinks.delete".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Format:
+       *        properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link_id}
+       *        Example: properties/1234/rollupPropertySourceLinks/5678
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/rollupPropertySourceLinks/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Format:
+         * properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link_id}
+         * Example: properties/1234/rollupPropertySourceLinks/5678
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Format:
+       properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link_id} Example:
+       properties/1234/rollupPropertySourceLinks/5678
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Format:
+         * properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link_id}
+         * Example: properties/1234/rollupPropertySourceLinks/5678
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/rollupPropertySourceLinks/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lookup for a single roll-up property source Link. Only roll-up properties can have source links,
+       * so this method will throw an error if used on other types of properties.
+       *
+       * Create a request for the method "rollupPropertySourceLinks.get".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the roll-up property source link to lookup. Format:
+       *        properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link_id}
+       *        Example: properties/123/rollupPropertySourceLinks/456
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRollupPropertySourceLink> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/rollupPropertySourceLinks/[^/]+$");
+
+        /**
+         * Lookup for a single roll-up property source Link. Only roll-up properties can have source
+         * links, so this method will throw an error if used on other types of properties.
+         *
+         * Create a request for the method "rollupPropertySourceLinks.get".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the roll-up property source link to lookup. Format:
+       *        properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link_id}
+       *        Example: properties/123/rollupPropertySourceLinks/456
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaRollupPropertySourceLink.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/rollupPropertySourceLinks/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the roll-up property source link to lookup. Format:
+         * properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link_id}
+         * Example: properties/123/rollupPropertySourceLinks/456
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the roll-up property source link to lookup. Format:
+       properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link_id} Example:
+       properties/123/rollupPropertySourceLinks/456
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the roll-up property source link to lookup. Format:
+         * properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link_id}
+         * Example: properties/123/rollupPropertySourceLinks/456
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/rollupPropertySourceLinks/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists roll-up property source Links on a property. Only roll-up properties can have source links,
+       * so this method will throw an error if used on other types of properties.
+       *
+       * Create a request for the method "rollupPropertySourceLinks.list".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the roll-up property to list roll-up property source links under. Format:
+       *        properties/{property_id} Example: properties/1234
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListRollupPropertySourceLinksResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/rollupPropertySourceLinks";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Lists roll-up property source Links on a property. Only roll-up properties can have source
+         * links, so this method will throw an error if used on other types of properties.
+         *
+         * Create a request for the method "rollupPropertySourceLinks.list".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the roll-up property to list roll-up property source links under. Format:
+       *        properties/{property_id} Example: properties/1234
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListRollupPropertySourceLinksResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the roll-up property to list roll-up property source links under.
+         * Format: properties/{property_id} Example: properties/1234
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the roll-up property to list roll-up property source links under. Format:
+       properties/{property_id} Example: properties/1234
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the roll-up property to list roll-up property source links under.
+         * Format: properties/{property_id} Example: properties/1234
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of resources to return. The service may return fewer than
+         * this value, even if there are additional pages. If unspecified, at most 50 resources will
+         * be returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of resources to return. The service may return fewer than this value,
+       even if there are additional pages. If unspecified, at most 50 resources will be returned. The
+       maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of resources to return. The service may return fewer than
+         * this value, even if there are additional pages. If unspecified, at most 50 resources will
+         * be returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListRollupPropertySourceLinks` call.
+         * Provide this to retrieve the subsequent page. When paginating, all other parameters
+         * provided to `ListRollupPropertySourceLinks` must match the call that provided the page
+         * token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListRollupPropertySourceLinks` call. Provide this
+       to retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListRollupPropertySourceLinks` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListRollupPropertySourceLinks` call.
+         * Provide this to retrieve the subsequent page. When paginating, all other parameters
+         * provided to `ListRollupPropertySourceLinks` must match the call that provided the page
+         * token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the SearchAds360Links collection.
      *
      * <p>The typical use is:</p>
@@ -21946,6 +22803,835 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         /**
          * Required. The list of fields to be updated. Omitted fields will not be updated. To
          * replace the entire entity, use one path with the string "*" to match all fields.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the SubpropertyEventFilters collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleAnalyticsAdmin analyticsadmin = new GoogleAnalyticsAdmin(...);}
+     *   {@code GoogleAnalyticsAdmin.SubpropertyEventFilters.List request = analyticsadmin.subpropertyEventFilters().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SubpropertyEventFilters subpropertyEventFilters() {
+      return new SubpropertyEventFilters();
+    }
+
+    /**
+     * The "subpropertyEventFilters" collection of methods.
+     */
+    public class SubpropertyEventFilters {
+
+      /**
+       * Creates a subproperty Event Filter.
+       *
+       * Create a request for the method "subpropertyEventFilters.create".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The ordinary property for which to create a subproperty event filter. Format:
+       *        properties/property_id Example: properties/123
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/subpropertyEventFilters";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Creates a subproperty Event Filter.
+         *
+         * Create a request for the method "subpropertyEventFilters.create".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The ordinary property for which to create a subproperty event filter. Format:
+       *        properties/property_id Example: properties/123
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The ordinary property for which to create a subproperty event filter. Format:
+         * properties/property_id Example: properties/123
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The ordinary property for which to create a subproperty event filter. Format:
+       properties/property_id Example: properties/123
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The ordinary property for which to create a subproperty event filter. Format:
+         * properties/property_id Example: properties/123
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a subproperty event filter.
+       *
+       * Create a request for the method "subpropertyEventFilters.delete".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Resource name of the subproperty event filter to delete. Format:
+       *        properties/property_id/subpropertyEventFilters/subproperty_event_filter Example:
+       *        properties/123/subpropertyEventFilters/456
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/subpropertyEventFilters/[^/]+$");
+
+        /**
+         * Deletes a subproperty event filter.
+         *
+         * Create a request for the method "subpropertyEventFilters.delete".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Resource name of the subproperty event filter to delete. Format:
+       *        properties/property_id/subpropertyEventFilters/subproperty_event_filter Example:
+       *        properties/123/subpropertyEventFilters/456
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/subpropertyEventFilters/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the subproperty event filter to delete. Format:
+         * properties/property_id/subpropertyEventFilters/subproperty_event_filter Example:
+         * properties/123/subpropertyEventFilters/456
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Resource name of the subproperty event filter to delete. Format:
+       properties/property_id/subpropertyEventFilters/subproperty_event_filter Example:
+       properties/123/subpropertyEventFilters/456
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Resource name of the subproperty event filter to delete. Format:
+         * properties/property_id/subpropertyEventFilters/subproperty_event_filter Example:
+         * properties/123/subpropertyEventFilters/456
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/subpropertyEventFilters/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lookup for a single subproperty Event Filter.
+       *
+       * Create a request for the method "subpropertyEventFilters.get".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Resource name of the subproperty event filter to lookup. Format:
+       *        properties/property_id/subpropertyEventFilters/subproperty_event_filter Example:
+       *        properties/123/subpropertyEventFilters/456
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/subpropertyEventFilters/[^/]+$");
+
+        /**
+         * Lookup for a single subproperty Event Filter.
+         *
+         * Create a request for the method "subpropertyEventFilters.get".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Resource name of the subproperty event filter to lookup. Format:
+       *        properties/property_id/subpropertyEventFilters/subproperty_event_filter Example:
+       *        properties/123/subpropertyEventFilters/456
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/subpropertyEventFilters/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the subproperty event filter to lookup. Format:
+         * properties/property_id/subpropertyEventFilters/subproperty_event_filter Example:
+         * properties/123/subpropertyEventFilters/456
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Resource name of the subproperty event filter to lookup. Format:
+       properties/property_id/subpropertyEventFilters/subproperty_event_filter Example:
+       properties/123/subpropertyEventFilters/456
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Resource name of the subproperty event filter to lookup. Format:
+         * properties/property_id/subpropertyEventFilters/subproperty_event_filter Example:
+         * properties/123/subpropertyEventFilters/456
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/subpropertyEventFilters/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List all subproperty Event Filters on a property.
+       *
+       * Create a request for the method "subpropertyEventFilters.list".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the ordinary property. Format: properties/property_id Example:
+       *        properties/123
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListSubpropertyEventFiltersResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/subpropertyEventFilters";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * List all subproperty Event Filters on a property.
+         *
+         * Create a request for the method "subpropertyEventFilters.list".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the ordinary property. Format: properties/property_id Example:
+       *        properties/123
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListSubpropertyEventFiltersResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the ordinary property. Format: properties/property_id Example:
+         * properties/123
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the ordinary property. Format: properties/property_id Example:
+       properties/123
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the ordinary property. Format: properties/property_id Example:
+         * properties/123
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of resources to return. The service may return fewer than
+         * this value, even if there are additional pages. If unspecified, at most 50 resources will
+         * be returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of resources to return. The service may return fewer than this value,
+       even if there are additional pages. If unspecified, at most 50 resources will be returned. The
+       maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of resources to return. The service may return fewer than
+         * this value, even if there are additional pages. If unspecified, at most 50 resources will
+         * be returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListSubpropertyEventFilters` call.
+         * Provide this to retrieve the subsequent page. When paginating, all other parameters
+         * provided to `ListSubpropertyEventFilters` must match the call that provided the page
+         * token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListSubpropertyEventFilters` call. Provide this
+       to retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListSubpropertyEventFilters` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListSubpropertyEventFilters` call.
+         * Provide this to retrieve the subsequent page. When paginating, all other parameters
+         * provided to `ListSubpropertyEventFilters` must match the call that provided the page
+         * token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a subproperty Event Filter.
+       *
+       * Create a request for the method "subpropertyEventFilters.patch".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Format:
+       *        properties/{ordinary_property_id}/subpropertyEventFilters/{sub_property_event_filter}
+       *        Example: properties/1234/subpropertyEventFilters/5678
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/subpropertyEventFilters/[^/]+$");
+
+        /**
+         * Updates a subproperty Event Filter.
+         *
+         * Create a request for the method "subpropertyEventFilters.patch".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Format:
+       *        properties/{ordinary_property_id}/subpropertyEventFilters/{sub_property_event_filter}
+       *        Example: properties/1234/subpropertyEventFilters/5678
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter content) {
+          super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubpropertyEventFilter.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/subpropertyEventFilters/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Format:
+         * properties/{ordinary_property_id}/subpropertyEventFilters/{sub_property_event_filter}
+         * Example: properties/1234/subpropertyEventFilters/5678
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Format:
+       properties/{ordinary_property_id}/subpropertyEventFilters/{sub_property_event_filter} Example:
+       properties/1234/subpropertyEventFilters/5678
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Format:
+         * properties/{ordinary_property_id}/subpropertyEventFilters/{sub_property_event_filter}
+         * Example: properties/1234/subpropertyEventFilters/5678
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/subpropertyEventFilters/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to update. Field names must be in snake case (for example,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to update. Field names must be in snake case (for example,
+       "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+       with the string "*" to match all fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to update. Field names must be in snake case (for example,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

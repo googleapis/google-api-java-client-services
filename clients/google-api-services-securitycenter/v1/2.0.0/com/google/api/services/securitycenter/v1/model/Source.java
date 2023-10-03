@@ -33,9 +33,9 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
-   * The canonical name of the finding. It's either
+   * The canonical name of the finding source. It's either
    * "organizations/{organization_id}/sources/{source_id}",
-   * "folders/{folder_id}/sources/{source_id}" or "projects/{project_number}/sources/{source_id}",
+   * "folders/{folder_id}/sources/{source_id}", or "projects/{project_number}/sources/{source_id}",
    * depending on the closest CRM ancestor of the resource associated with the finding.
    * The value may be {@code null}.
    */
@@ -71,9 +71,9 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The canonical name of the finding. It's either
+   * The canonical name of the finding source. It's either
    * "organizations/{organization_id}/sources/{source_id}",
-   * "folders/{folder_id}/sources/{source_id}" or "projects/{project_number}/sources/{source_id}",
+   * "folders/{folder_id}/sources/{source_id}", or "projects/{project_number}/sources/{source_id}",
    * depending on the closest CRM ancestor of the resource associated with the finding.
    * @return value or {@code null} for none
    */
@@ -82,9 +82,9 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The canonical name of the finding. It's either
+   * The canonical name of the finding source. It's either
    * "organizations/{organization_id}/sources/{source_id}",
-   * "folders/{folder_id}/sources/{source_id}" or "projects/{project_number}/sources/{source_id}",
+   * "folders/{folder_id}/sources/{source_id}", or "projects/{project_number}/sources/{source_id}",
    * depending on the closest CRM ancestor of the resource associated with the finding.
    * @param canonicalName canonicalName or {@code null} for none
    */

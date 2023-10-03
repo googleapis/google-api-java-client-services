@@ -246,6 +246,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Kubernetes kubernetes;
 
   /**
+   * The load balancers associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LoadBalancer> loadBalancers;
+
+  /**
    * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
    * The value may be {@code null}.
    */
@@ -345,6 +352,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SecurityMarks securityMarks;
+
+  /**
+   * The security posture associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPosture securityPosture;
 
   /**
    * The severity of the finding. This field is managed by the source that writes the finding.
@@ -811,6 +825,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The load balancers associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LoadBalancer> getLoadBalancers() {
+    return loadBalancers;
+  }
+
+  /**
+   * The load balancers associated with the finding.
+   * @param loadBalancers loadBalancers or {@code null} for none
+   */
+  public Finding setLoadBalancers(java.util.List<LoadBalancer> loadBalancers) {
+    this.loadBalancers = loadBalancers;
+    return this;
+  }
+
+  /**
    * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
    * @return value or {@code null} for none
    */
@@ -1045,6 +1076,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setSecurityMarks(SecurityMarks securityMarks) {
     this.securityMarks = securityMarks;
+    return this;
+  }
+
+  /**
+   * The security posture associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public SecurityPosture getSecurityPosture() {
+    return securityPosture;
+  }
+
+  /**
+   * The security posture associated with the finding.
+   * @param securityPosture securityPosture or {@code null} for none
+   */
+  public Finding setSecurityPosture(SecurityPosture securityPosture) {
+    this.securityPosture = securityPosture;
     return this;
   }
 

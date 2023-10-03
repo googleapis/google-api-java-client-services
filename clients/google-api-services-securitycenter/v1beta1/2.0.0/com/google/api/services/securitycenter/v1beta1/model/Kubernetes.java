@@ -77,6 +77,13 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   private java.util.List<Node> nodes;
 
   /**
+   * Kubernetes objects related to the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecurityCommandCenterObject> objects;
+
+  /**
    * Kubernetes [Pods](https://cloud.google.com/kubernetes-engine/docs/concepts/pod) associated with
    * the finding. This field contains Pod records for each container that is owned by a Pod.
    * The value may be {@code null}.
@@ -170,6 +177,23 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
    */
   public Kubernetes setNodes(java.util.List<Node> nodes) {
     this.nodes = nodes;
+    return this;
+  }
+
+  /**
+   * Kubernetes objects related to the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecurityCommandCenterObject> getObjects() {
+    return objects;
+  }
+
+  /**
+   * Kubernetes objects related to the finding.
+   * @param objects objects or {@code null} for none
+   */
+  public Kubernetes setObjects(java.util.List<SecurityCommandCenterObject> objects) {
+    this.objects = objects;
     return this;
   }
 

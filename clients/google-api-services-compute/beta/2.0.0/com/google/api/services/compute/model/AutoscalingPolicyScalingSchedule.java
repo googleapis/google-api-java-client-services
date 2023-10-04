@@ -78,7 +78,7 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   /**
    * The time zone to use when interpreting the schedule. The value of this field must be a time
    * zone name from the tz database: https://en.wikipedia.org/wiki/Tz_database. This field is
-   * assigned a default value of “UTC” if left empty.
+   * assigned a default value of "UTC" if left empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,7 +190,7 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   /**
    * The time zone to use when interpreting the schedule. The value of this field must be a time
    * zone name from the tz database: https://en.wikipedia.org/wiki/Tz_database. This field is
-   * assigned a default value of “UTC” if left empty.
+   * assigned a default value of "UTC" if left empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -200,7 +200,7 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   /**
    * The time zone to use when interpreting the schedule. The value of this field must be a time
    * zone name from the tz database: https://en.wikipedia.org/wiki/Tz_database. This field is
-   * assigned a default value of “UTC” if left empty.
+   * assigned a default value of "UTC" if left empty.
    * @param timeZone timeZone or {@code null} for none
    */
   public AutoscalingPolicyScalingSchedule setTimeZone(java.lang.String timeZone) {

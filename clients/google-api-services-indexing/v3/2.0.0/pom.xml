@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-indexing</artifactId>
-  <version>v3-rev20200804-2.0.0</version>
-  <name>Indexing API v3-rev20200804-2.0.0</name>
+  <version>v3-rev20230927-2.0.0</version>
+  <name>Web Search Indexing API v3-rev20230927-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Indexing API ${project.version}</doctitle>
-          <windowtitle>Indexing API ${project.version}</windowtitle>
+          <doctitle>Web Search Indexing API ${project.version}</doctitle>
+          <windowtitle>Web Search Indexing API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.43.3/</link>

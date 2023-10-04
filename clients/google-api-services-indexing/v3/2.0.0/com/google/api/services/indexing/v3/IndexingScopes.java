@@ -17,7 +17,7 @@
 package com.google.api.services.indexing.v3;
 
 /**
- * Available OAuth 2.0 scopes for use with the Indexing API.
+ * Available OAuth 2.0 scopes for use with the Web Search Indexing API.
  *
  * @since 1.4
  */

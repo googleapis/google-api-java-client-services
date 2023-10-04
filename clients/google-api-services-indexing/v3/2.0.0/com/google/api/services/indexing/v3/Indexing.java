@@ -20,7 +20,7 @@ package com.google.api.services.indexing.v3;
  * Service definition for Indexing (v3).
  *
  * <p>
- * Notifies Google when your web pages change.
+ * Notifies Google Web Search when your web pages change.
  * </p>
  *
  * <p>
@@ -49,7 +49,7 @@ public class Indexing extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MAJOR_VERSION >= 2,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "2.0.0 of the Indexing API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "2.0.0 of the Web Search Indexing API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

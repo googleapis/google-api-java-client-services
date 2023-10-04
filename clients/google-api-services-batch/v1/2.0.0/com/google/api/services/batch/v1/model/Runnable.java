@@ -64,6 +64,15 @@ public final class Runnable extends com.google.api.client.json.GenericJson {
   private Container container;
 
   /**
+   * Optional. DisplayName is an optional field that can be provided by the caller. If provided, it
+   * will be used in logs and other outputs to identify the script, making it easier for users to
+   * understand the logs. If not provided the index of the runnable will be used for outputs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Environment variables for this Runnable (overrides variables set for the whole Task or
    * TaskGroup).
    * The value may be {@code null}.
@@ -177,6 +186,27 @@ public final class Runnable extends com.google.api.client.json.GenericJson {
    */
   public Runnable setContainer(Container container) {
     this.container = container;
+    return this;
+  }
+
+  /**
+   * Optional. DisplayName is an optional field that can be provided by the caller. If provided, it
+   * will be used in logs and other outputs to identify the script, making it easier for users to
+   * understand the logs. If not provided the index of the runnable will be used for outputs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. DisplayName is an optional field that can be provided by the caller. If provided, it
+   * will be used in logs and other outputs to identify the script, making it easier for users to
+   * understand the logs. If not provided the index of the runnable will be used for outputs.
+   * @param displayName displayName or {@code null} for none
+   */
+  public Runnable setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

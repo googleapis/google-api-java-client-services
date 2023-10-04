@@ -278,14 +278,6 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.util.List<GoogleCloudRunV2TrafficTargetStatus> trafficStatuses;
 
   /**
-   * Optional. Override the traffic tag threshold limit. Garbage collection will start cleaning up
-   * non-serving tagged traffic targets based on creation item. The default value is 2000.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long trafficTagsCleanupThreshold;
-
-  /**
    * Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and
    * guaranteed to remain unchanged until the resource is deleted.
    * The value may be {@code null}.
@@ -863,25 +855,6 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setTrafficStatuses(java.util.List<GoogleCloudRunV2TrafficTargetStatus> trafficStatuses) {
     this.trafficStatuses = trafficStatuses;
-    return this;
-  }
-
-  /**
-   * Optional. Override the traffic tag threshold limit. Garbage collection will start cleaning up
-   * non-serving tagged traffic targets based on creation item. The default value is 2000.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getTrafficTagsCleanupThreshold() {
-    return trafficTagsCleanupThreshold;
-  }
-
-  /**
-   * Optional. Override the traffic tag threshold limit. Garbage collection will start cleaning up
-   * non-serving tagged traffic targets based on creation item. The default value is 2000.
-   * @param trafficTagsCleanupThreshold trafficTagsCleanupThreshold or {@code null} for none
-   */
-  public GoogleCloudRunV2Service setTrafficTagsCleanupThreshold(java.lang.Long trafficTagsCleanupThreshold) {
-    this.trafficTagsCleanupThreshold = trafficTagsCleanupThreshold;
     return this;
   }
 

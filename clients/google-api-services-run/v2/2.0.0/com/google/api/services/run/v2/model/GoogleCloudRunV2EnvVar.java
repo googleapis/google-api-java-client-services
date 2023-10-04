@@ -30,8 +30,7 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2EnvVar extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of the environment variable. Must be a C_IDENTIFIER, and must not exceed 32768
-   * characters.
+   * Required. Name of the environment variable. Must not exceed 32768 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +55,7 @@ public final class GoogleCloudRunV2EnvVar extends com.google.api.client.json.Gen
   private GoogleCloudRunV2EnvVarSource valueSource;
 
   /**
-   * Required. Name of the environment variable. Must be a C_IDENTIFIER, and must not exceed 32768
-   * characters.
+   * Required. Name of the environment variable. Must not exceed 32768 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -65,8 +63,7 @@ public final class GoogleCloudRunV2EnvVar extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Name of the environment variable. Must be a C_IDENTIFIER, and must not exceed 32768
-   * characters.
+   * Required. Name of the environment variable. Must not exceed 32768 characters.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRunV2EnvVar setName(java.lang.String name) {

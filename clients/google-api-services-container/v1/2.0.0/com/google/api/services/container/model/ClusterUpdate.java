@@ -313,6 +313,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private NotificationConfig desiredNotificationConfig;
 
   /**
+   * The desired parent product config for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ParentProductConfig desiredParentProductConfig;
+
+  /**
    * The desired private cluster configuration.
    * The value may be {@code null}.
    */
@@ -1074,6 +1081,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNotificationConfig(NotificationConfig desiredNotificationConfig) {
     this.desiredNotificationConfig = desiredNotificationConfig;
+    return this;
+  }
+
+  /**
+   * The desired parent product config for the cluster.
+   * @return value or {@code null} for none
+   */
+  public ParentProductConfig getDesiredParentProductConfig() {
+    return desiredParentProductConfig;
+  }
+
+  /**
+   * The desired parent product config for the cluster.
+   * @param desiredParentProductConfig desiredParentProductConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredParentProductConfig(ParentProductConfig desiredParentProductConfig) {
+    this.desiredParentProductConfig = desiredParentProductConfig;
     return this;
   }
 

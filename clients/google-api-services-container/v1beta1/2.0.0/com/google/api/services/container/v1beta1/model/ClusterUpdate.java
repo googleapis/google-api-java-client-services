@@ -174,6 +174,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredImageType;
 
   /**
+   * Specify the details of in-transit encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String desiredInTransitEncryptionConfig;
+
+  /**
    * The desired config of Intra-node visibility.
    * The value may be {@code null}.
    */
@@ -334,6 +341,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private NotificationConfig desiredNotificationConfig;
+
+  /**
+   * The desired parent product config for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ParentProductConfig desiredParentProductConfig;
 
   /**
    * The desired configuration options for the PodSecurityPolicy feature.
@@ -811,6 +825,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Specify the details of in-transit encryption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDesiredInTransitEncryptionConfig() {
+    return desiredInTransitEncryptionConfig;
+  }
+
+  /**
+   * Specify the details of in-transit encryption.
+   * @param desiredInTransitEncryptionConfig desiredInTransitEncryptionConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredInTransitEncryptionConfig(java.lang.String desiredInTransitEncryptionConfig) {
+    this.desiredInTransitEncryptionConfig = desiredInTransitEncryptionConfig;
+    return this;
+  }
+
+  /**
    * The desired config of Intra-node visibility.
    * @return value or {@code null} for none
    */
@@ -1188,6 +1219,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNotificationConfig(NotificationConfig desiredNotificationConfig) {
     this.desiredNotificationConfig = desiredNotificationConfig;
+    return this;
+  }
+
+  /**
+   * The desired parent product config for the cluster.
+   * @return value or {@code null} for none
+   */
+  public ParentProductConfig getDesiredParentProductConfig() {
+    return desiredParentProductConfig;
+  }
+
+  /**
+   * The desired parent product config for the cluster.
+   * @param desiredParentProductConfig desiredParentProductConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredParentProductConfig(ParentProductConfig desiredParentProductConfig) {
+    this.desiredParentProductConfig = desiredParentProductConfig;
     return this;
   }
 

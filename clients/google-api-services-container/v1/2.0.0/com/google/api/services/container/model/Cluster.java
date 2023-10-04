@@ -457,6 +457,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
+   * The configuration of the parent product of the cluster. This field is used by Google internal
+   * products that are built on top of the GKE cluster and take the ownership of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ParentProductConfig parentProductConfig;
+
+  /**
    * Configuration for private cluster.
    * The value may be {@code null}.
    */
@@ -1578,6 +1586,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setNotificationConfig(NotificationConfig notificationConfig) {
     this.notificationConfig = notificationConfig;
+    return this;
+  }
+
+  /**
+   * The configuration of the parent product of the cluster. This field is used by Google internal
+   * products that are built on top of the GKE cluster and take the ownership of the cluster.
+   * @return value or {@code null} for none
+   */
+  public ParentProductConfig getParentProductConfig() {
+    return parentProductConfig;
+  }
+
+  /**
+   * The configuration of the parent product of the cluster. This field is used by Google internal
+   * products that are built on top of the GKE cluster and take the ownership of the cluster.
+   * @param parentProductConfig parentProductConfig or {@code null} for none
+   */
+  public Cluster setParentProductConfig(ParentProductConfig parentProductConfig) {
+    this.parentProductConfig = parentProductConfig;
     return this;
   }
 

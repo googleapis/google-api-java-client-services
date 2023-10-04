@@ -30,7 +30,7 @@ package com.google.api.services.run.v1.model;
 public final class EnvVar extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of the environment variable. Must be a C_IDENTIFIER.
+   * Required. Name of the environment variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   private EnvVarSource valueFrom;
 
   /**
-   * Required. Name of the environment variable. Must be a C_IDENTIFIER.
+   * Required. Name of the environment variable.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -61,7 +61,7 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the environment variable. Must be a C_IDENTIFIER.
+   * Required. Name of the environment variable.
    * @param name name or {@code null} for none
    */
   public EnvVar setName(java.lang.String name) {

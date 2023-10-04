@@ -80,6 +80,13 @@ public final class DocumentStyleSuggestionState extends com.google.api.client.js
   private java.lang.Boolean firstPageHeaderIdSuggested;
 
   /**
+   * Optional. Indicates if there was a suggested change to flip_page_orientation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean flipPageOrientationSuggested;
+
+  /**
    * Indicates if there was a suggested change to margin_bottom.
    * The value may be {@code null}.
    */
@@ -272,6 +279,23 @@ public final class DocumentStyleSuggestionState extends com.google.api.client.js
    */
   public DocumentStyleSuggestionState setFirstPageHeaderIdSuggested(java.lang.Boolean firstPageHeaderIdSuggested) {
     this.firstPageHeaderIdSuggested = firstPageHeaderIdSuggested;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if there was a suggested change to flip_page_orientation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFlipPageOrientationSuggested() {
+    return flipPageOrientationSuggested;
+  }
+
+  /**
+   * Optional. Indicates if there was a suggested change to flip_page_orientation.
+   * @param flipPageOrientationSuggested flipPageOrientationSuggested or {@code null} for none
+   */
+  public DocumentStyleSuggestionState setFlipPageOrientationSuggested(java.lang.Boolean flipPageOrientationSuggested) {
+    this.flipPageOrientationSuggested = flipPageOrientationSuggested;
     return this;
   }
 

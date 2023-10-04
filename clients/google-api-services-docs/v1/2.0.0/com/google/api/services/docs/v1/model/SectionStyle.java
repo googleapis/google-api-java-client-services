@@ -130,6 +130,17 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   private java.lang.String firstPageHeaderId;
 
   /**
+   * Optional. Indicates whether to flip the dimensions of DocumentStyle's page_size for this
+   * section, which allows changing the page orientation between portrait and landscape. If unset,
+   * the value inherits from DocumentStyle's flip_page_orientation. When updating this property,
+   * setting a concrete value is required. Unsetting this property results in a 400 bad request
+   * error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean flipPageOrientation;
+
+  /**
    * The bottom page margin of the section. If unset, the value defaults to margin_bottom from
    * DocumentStyle. When updating this property, setting a concrete value is required. Unsetting
    * this property results in a 400 bad request error.
@@ -431,6 +442,31 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    */
   public SectionStyle setFirstPageHeaderId(java.lang.String firstPageHeaderId) {
     this.firstPageHeaderId = firstPageHeaderId;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether to flip the dimensions of DocumentStyle's page_size for this
+   * section, which allows changing the page orientation between portrait and landscape. If unset,
+   * the value inherits from DocumentStyle's flip_page_orientation. When updating this property,
+   * setting a concrete value is required. Unsetting this property results in a 400 bad request
+   * error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFlipPageOrientation() {
+    return flipPageOrientation;
+  }
+
+  /**
+   * Optional. Indicates whether to flip the dimensions of DocumentStyle's page_size for this
+   * section, which allows changing the page orientation between portrait and landscape. If unset,
+   * the value inherits from DocumentStyle's flip_page_orientation. When updating this property,
+   * setting a concrete value is required. Unsetting this property results in a 400 bad request
+   * error.
+   * @param flipPageOrientation flipPageOrientation or {@code null} for none
+   */
+  public SectionStyle setFlipPageOrientation(java.lang.Boolean flipPageOrientation) {
+    this.flipPageOrientation = flipPageOrientation;
     return this;
   }
 

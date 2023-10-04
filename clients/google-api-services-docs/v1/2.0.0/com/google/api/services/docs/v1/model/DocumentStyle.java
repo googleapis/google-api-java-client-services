@@ -91,6 +91,14 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   private java.lang.String firstPageHeaderId;
 
   /**
+   * Optional. Indicates whether to flip the dimensions of the page_size, which allows changing the
+   * page orientation between portrait and landscape.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean flipPageOrientation;
+
+  /**
    * The bottom page margin. Updating the bottom page margin on the document style clears the bottom
    * page margin on all section styles.
    * The value may be {@code null}.
@@ -313,6 +321,25 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
    */
   public DocumentStyle setFirstPageHeaderId(java.lang.String firstPageHeaderId) {
     this.firstPageHeaderId = firstPageHeaderId;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether to flip the dimensions of the page_size, which allows changing the
+   * page orientation between portrait and landscape.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFlipPageOrientation() {
+    return flipPageOrientation;
+  }
+
+  /**
+   * Optional. Indicates whether to flip the dimensions of the page_size, which allows changing the
+   * page orientation between portrait and landscape.
+   * @param flipPageOrientation flipPageOrientation or {@code null} for none
+   */
+  public DocumentStyle setFlipPageOrientation(java.lang.Boolean flipPageOrientation) {
+    this.flipPageOrientation = flipPageOrientation;
     return this;
   }
 

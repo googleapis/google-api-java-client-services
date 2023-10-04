@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * VirtualMachinePreferences enables you to create sets of assumptions, for example, a geographical
+ * VirtualMachinePreferences enables you to create sets of preferences, for example, a geographical
  * location and pricing track, for your migrated virtual machines. The set of preferences influence
  * recommendations for migrating virtual machine assets.
  *

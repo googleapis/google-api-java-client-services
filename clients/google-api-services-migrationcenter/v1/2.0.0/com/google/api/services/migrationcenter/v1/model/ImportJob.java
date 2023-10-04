@@ -51,7 +51,7 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * User-friendly display name. Maximum length is 63 characters.
+   * Optional. User-friendly display name. Maximum length is 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-friendly display name. Maximum length is 63 characters.
+   * Optional. User-friendly display name. Maximum length is 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -159,7 +159,7 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-friendly display name. Maximum length is 63 characters.
+   * Optional. User-friendly display name. Maximum length is 256 characters.
    * @param displayName displayName or {@code null} for none
    */
   public ImportJob setDisplayName(java.lang.String displayName) {

@@ -165,6 +165,15 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
   private java.lang.String name;
 
   /**
+   * The type of snippet to display in UCS widget. - RESULT_DISPLAY_TYPE_UNSPECIFIED for existing
+   * users. - SNIPPET for new non-enterprise search users. - EXTRACTIVE_ANSWER for new enterprise
+   * search users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resultDisplayType;
+
+  /**
    * Required. Immutable. Specifies the solution type that this WidgetConfig can be used for.
    * The value may be {@code null}.
    */
@@ -499,6 +508,27 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The type of snippet to display in UCS widget. - RESULT_DISPLAY_TYPE_UNSPECIFIED for existing
+   * users. - SNIPPET for new non-enterprise search users. - EXTRACTIVE_ANSWER for new enterprise
+   * search users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResultDisplayType() {
+    return resultDisplayType;
+  }
+
+  /**
+   * The type of snippet to display in UCS widget. - RESULT_DISPLAY_TYPE_UNSPECIFIED for existing
+   * users. - SNIPPET for new non-enterprise search users. - EXTRACTIVE_ANSWER for new enterprise
+   * search users.
+   * @param resultDisplayType resultDisplayType or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfig setResultDisplayType(java.lang.String resultDisplayType) {
+    this.resultDisplayType = resultDisplayType;
     return this;
   }
 

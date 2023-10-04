@@ -61,6 +61,12 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
   private java.util.List<GoogleCloudDiscoveryengineV1betaSearchResponseFacet> facets;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1betaSearchResponseGeoSearchDebugInfo> geoSearchDebugInfo;
+
+  /**
    * Guided search result.
    * The value may be {@code null}.
    */
@@ -184,6 +190,21 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponse setFacets(java.util.List<GoogleCloudDiscoveryengineV1betaSearchResponseFacet> facets) {
     this.facets = facets;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1betaSearchResponseGeoSearchDebugInfo> getGeoSearchDebugInfo() {
+    return geoSearchDebugInfo;
+  }
+
+  /**
+   * @param geoSearchDebugInfo geoSearchDebugInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponse setGeoSearchDebugInfo(java.util.List<GoogleCloudDiscoveryengineV1betaSearchResponseGeoSearchDebugInfo> geoSearchDebugInfo) {
+    this.geoSearchDebugInfo = geoSearchDebugInfo;
     return this;
   }
 

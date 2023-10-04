@@ -32,6 +32,21 @@ package com.google.api.services.binaryauthorization.v1.model;
 public final class PkixPublicKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The ID of this public key. Signatures verified by Binary Authorization must include
+   * the ID of the public key that can be used to verify them, and that ID must match the contents
+   * of this field exactly. This may be explicitly provided by the caller, but it MUST be a valid
+   * RFC3986 URI. If `key_id` is left blank and this `PkixPublicKey` is not used in the context of a
+   * wrapper (see next paragraph), a default key ID will be computed based on the digest of the DER
+   * encoding of the public key. If this `PkixPublicKey` is used in the context of a wrapper that
+   * has its own notion of key ID (e.g. `AttestorPublicKey`), then this field can either: * Match
+   * that value exactly. * Or be left blank, in which case it behaves exactly as though it is equal
+   * to that wrapper value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyId;
+
+  /**
    * A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
    * The value may be {@code null}.
    */
@@ -46,6 +61,39 @@ public final class PkixPublicKey extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String signatureAlgorithm;
+
+  /**
+   * Optional. The ID of this public key. Signatures verified by Binary Authorization must include
+   * the ID of the public key that can be used to verify them, and that ID must match the contents
+   * of this field exactly. This may be explicitly provided by the caller, but it MUST be a valid
+   * RFC3986 URI. If `key_id` is left blank and this `PkixPublicKey` is not used in the context of a
+   * wrapper (see next paragraph), a default key ID will be computed based on the digest of the DER
+   * encoding of the public key. If this `PkixPublicKey` is used in the context of a wrapper that
+   * has its own notion of key ID (e.g. `AttestorPublicKey`), then this field can either: * Match
+   * that value exactly. * Or be left blank, in which case it behaves exactly as though it is equal
+   * to that wrapper value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyId() {
+    return keyId;
+  }
+
+  /**
+   * Optional. The ID of this public key. Signatures verified by Binary Authorization must include
+   * the ID of the public key that can be used to verify them, and that ID must match the contents
+   * of this field exactly. This may be explicitly provided by the caller, but it MUST be a valid
+   * RFC3986 URI. If `key_id` is left blank and this `PkixPublicKey` is not used in the context of a
+   * wrapper (see next paragraph), a default key ID will be computed based on the digest of the DER
+   * encoding of the public key. If this `PkixPublicKey` is used in the context of a wrapper that
+   * has its own notion of key ID (e.g. `AttestorPublicKey`), then this field can either: * Match
+   * that value exactly. * Or be left blank, in which case it behaves exactly as though it is equal
+   * to that wrapper value.
+   * @param keyId keyId or {@code null} for none
+   */
+  public PkixPublicKey setKeyId(java.lang.String keyId) {
+    this.keyId = keyId;
+    return this;
+  }
 
   /**
    * A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13

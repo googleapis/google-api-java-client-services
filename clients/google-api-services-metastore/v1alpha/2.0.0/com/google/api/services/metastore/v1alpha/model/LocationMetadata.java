@@ -31,6 +31,13 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class LocationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * The multi-region metadata if the current region is a multi-region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiRegionMetadata multiRegionMetadata;
+
+  /**
    * The versions of Hive Metastore that can be used when creating a new metastore service in this
    * location. The server guarantees that exactly one HiveMetastoreVersion in the list will set
    * is_default.
@@ -43,6 +50,23 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
     // hack to force ProGuard to consider HiveMetastoreVersion used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(HiveMetastoreVersion.class);
+  }
+
+  /**
+   * The multi-region metadata if the current region is a multi-region.
+   * @return value or {@code null} for none
+   */
+  public MultiRegionMetadata getMultiRegionMetadata() {
+    return multiRegionMetadata;
+  }
+
+  /**
+   * The multi-region metadata if the current region is a multi-region.
+   * @param multiRegionMetadata multiRegionMetadata or {@code null} for none
+   */
+  public LocationMetadata setMultiRegionMetadata(MultiRegionMetadata multiRegionMetadata) {
+    this.multiRegionMetadata = multiRegionMetadata;
+    return this;
   }
 
   /**

@@ -9555,7 +9555,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Requests a review of free listings in a specific region.
+     * Requests a review of free listings in a specific region. This method deprecated. Use the
+     * `MerchantSupportService` to view product and account issues and request a review.
      *
      * Create a request for the method "freelistingsprogram.requestreview".
      *
@@ -9577,7 +9578,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/freelistingsprogram/requestreview";
 
       /**
-       * Requests a review of free listings in a specific region.
+       * Requests a review of free listings in a specific region. This method deprecated. Use the
+       * `MerchantSupportService` to view product and account issues and request a review.
        *
        * Create a request for the method "freelistingsprogram.requestreview".
        *
@@ -28254,7 +28256,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Requests a review of Shopping ads in a specific region.
+     * Requests a review of Shopping ads in a specific region. This method deprecated. Use the
+     * `MerchantSupportService` to view product and account issues and request a review.
      *
      * Create a request for the method "shoppingadsprogram.requestreview".
      *
@@ -28276,7 +28279,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/shoppingadsprogram/requestreview";
 
       /**
-       * Requests a review of Shopping ads in a specific region.
+       * Requests a review of Shopping ads in a specific region. This method deprecated. Use the
+       * `MerchantSupportService` to view product and account issues and request a review.
        *
        * Create a request for the method "shoppingadsprogram.requestreview".
        *

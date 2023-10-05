@@ -9305,6 +9305,857 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * An accessor for creating requests from the DatasetVersions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+         *   {@code Aiplatform.DatasetVersions.List request = aiplatform.datasetVersions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public DatasetVersions datasetVersions() {
+          return new DatasetVersions();
+        }
+
+        /**
+         * The "datasetVersions" collection of methods.
+         */
+        public class DatasetVersions {
+
+          /**
+           * Create a version from a Dataset.
+           *
+           * Create a request for the method "datasetVersions.create".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the Dataset resource. Format:
+           *        `projects/{project}/locations/{location}/datasets/{dataset}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1DatasetVersion}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1DatasetVersion content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/datasetVersions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Create a version from a Dataset.
+             *
+             * Create a request for the method "datasetVersions.create".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the Dataset resource. Format:
+           *        `projects/{project}/locations/{location}/datasets/{dataset}`
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1DatasetVersion}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1DatasetVersion content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Dataset resource. Format:
+             * `projects/{project}/locations/{location}/datasets/{dataset}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the Dataset resource. Format:
+           `projects/{project}/locations/{location}/datasets/{dataset}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the Dataset resource. Format:
+             * `projects/{project}/locations/{location}/datasets/{dataset}`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a Dataset version.
+           *
+           * Create a request for the method "datasetVersions.delete".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Dataset version to delete. Format:
+           *        `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_versi
+           *        on}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/datasetVersions/[^/]+$");
+
+            /**
+             * Deletes a Dataset version.
+             *
+             * Create a request for the method "datasetVersions.delete".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Dataset version to delete. Format:
+           *        `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_versi
+           *        on}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/datasetVersions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Dataset version to delete. Format: `projects/{proj
+             * ect}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Dataset version to delete. Format:
+           `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Dataset version to delete. Format: `projects/{proj
+             * ect}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/datasetVersions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a Dataset version.
+           *
+           * Create a request for the method "datasetVersions.get".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Dataset version to delete. Format:
+           *        `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_versi
+           *        on}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1DatasetVersion> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/datasetVersions/[^/]+$");
+
+            /**
+             * Gets a Dataset version.
+             *
+             * Create a request for the method "datasetVersions.get".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Dataset version to delete. Format:
+           *        `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_versi
+           *        on}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1DatasetVersion.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/datasetVersions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Dataset version to delete. Format: `projects/{proj
+             * ect}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Dataset version to delete. Format:
+           `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Dataset version to delete. Format: `projects/{proj
+             * ect}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/datasetVersions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Mask specifying which fields to read. */
+            @com.google.api.client.util.Key
+            private String readMask;
+
+            /** Mask specifying which fields to read.
+             */
+            public String getReadMask() {
+              return readMask;
+            }
+
+            /** Mask specifying which fields to read. */
+            public Get setReadMask(String readMask) {
+              this.readMask = readMask;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists DatasetVersions in a Dataset.
+           *
+           * Create a request for the method "datasetVersions.list".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the Dataset to list DatasetVersions from. Format:
+           *        `projects/{project}/locations/{location}/datasets/{dataset}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListDatasetVersionsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/datasetVersions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Lists DatasetVersions in a Dataset.
+             *
+             * Create a request for the method "datasetVersions.list".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the Dataset to list DatasetVersions from. Format:
+           *        `projects/{project}/locations/{location}/datasets/{dataset}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListDatasetVersionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Dataset to list DatasetVersions from. Format:
+             * `projects/{project}/locations/{location}/datasets/{dataset}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the Dataset to list DatasetVersions from. Format:
+           `projects/{project}/locations/{location}/datasets/{dataset}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the Dataset to list DatasetVersions from. Format:
+             * `projects/{project}/locations/{location}/datasets/{dataset}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. The standard list filter. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. The standard list filter.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. The standard list filter. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. A comma-separated list of fields to order by, sorted in ascending order.
+             * Use "desc" after a field name for descending.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after
+           a field name for descending.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. A comma-separated list of fields to order by, sorted in ascending order.
+             * Use "desc" after a field name for descending.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /** Optional. The standard list page size. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The standard list page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. The standard list page size. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. The standard list page token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The standard list page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. The standard list page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Optional. Mask specifying which fields to read. */
+            @com.google.api.client.util.Key
+            private String readMask;
+
+            /** Optional. Mask specifying which fields to read.
+             */
+            public String getReadMask() {
+              return readMask;
+            }
+
+            /** Optional. Mask specifying which fields to read. */
+            public List setReadMask(String readMask) {
+              this.readMask = readMask;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Restores a dataset version.
+           *
+           * Create a request for the method "datasetVersions.restore".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the DatasetVersion resource. Format:
+           *        `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_versi
+           *        on}`
+           * @return the request
+           */
+          public Restore restore(java.lang.String name) throws java.io.IOException {
+            Restore result = new Restore(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Restore extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:restore";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/datasetVersions/[^/]+$");
+
+            /**
+             * Restores a dataset version.
+             *
+             * Create a request for the method "datasetVersions.restore".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the DatasetVersion resource. Format:
+           *        `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_versi
+           *        on}`
+             * @since 1.13
+             */
+            protected Restore(java.lang.String name) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/datasetVersions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Restore set$Xgafv(java.lang.String $Xgafv) {
+              return (Restore) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Restore setAccessToken(java.lang.String accessToken) {
+              return (Restore) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Restore setAlt(java.lang.String alt) {
+              return (Restore) super.setAlt(alt);
+            }
+
+            @Override
+            public Restore setCallback(java.lang.String callback) {
+              return (Restore) super.setCallback(callback);
+            }
+
+            @Override
+            public Restore setFields(java.lang.String fields) {
+              return (Restore) super.setFields(fields);
+            }
+
+            @Override
+            public Restore setKey(java.lang.String key) {
+              return (Restore) super.setKey(key);
+            }
+
+            @Override
+            public Restore setOauthToken(java.lang.String oauthToken) {
+              return (Restore) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Restore setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Restore) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Restore setQuotaUser(java.lang.String quotaUser) {
+              return (Restore) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Restore setUploadType(java.lang.String uploadType) {
+              return (Restore) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Restore setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Restore) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the DatasetVersion resource. Format: `projects/{project}/locati
+             * ons/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the DatasetVersion resource. Format:
+           `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the DatasetVersion resource. Format: `projects/{project}/locati
+             * ons/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
+             */
+            public Restore setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/datasetVersions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Restore set(String parameterName, Object value) {
+              return (Restore) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Operations collection.
          *
          * <p>The typical use is:</p>
@@ -19490,6 +20341,910 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
       public class FeatureGroups {
 
         /**
+         * Creates a new FeatureGroup in a given project and location.
+         *
+         * Create a request for the method "featureGroups.create".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the Location to create FeatureGroups. Format:
+         *        `projects/{project}/locations/{location}'`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureGroup}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureGroup content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/featureGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new FeatureGroup in a given project and location.
+           *
+           * Create a request for the method "featureGroups.create".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the Location to create FeatureGroups. Format:
+         *        `projects/{project}/locations/{location}'`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureGroup}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureGroup content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Location to create FeatureGroups. Format:
+           * `projects/{project}/locations/{location}'`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the Location to create FeatureGroups. Format:
+         `projects/{project}/locations/{location}'`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the Location to create FeatureGroups. Format:
+           * `projects/{project}/locations/{location}'`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for this FeatureGroup, which will become the final component of
+           * the FeatureGroup's resource name. This value may be up to 60 characters, and valid
+           * characters are `[a-z0-9_]`. The first character cannot be a number. The value must be
+           * unique within the project and location.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String featureGroupId;
+
+          /** Required. The ID to use for this FeatureGroup, which will become the final component of the
+         FeatureGroup's resource name. This value may be up to 60 characters, and valid characters are
+         `[a-z0-9_]`. The first character cannot be a number. The value must be unique within the project
+         and location.
+           */
+          public java.lang.String getFeatureGroupId() {
+            return featureGroupId;
+          }
+
+          /**
+           * Required. The ID to use for this FeatureGroup, which will become the final component of
+           * the FeatureGroup's resource name. This value may be up to 60 characters, and valid
+           * characters are `[a-z0-9_]`. The first character cannot be a number. The value must be
+           * unique within the project and location.
+           */
+          public Create setFeatureGroupId(java.lang.String featureGroupId) {
+            this.featureGroupId = featureGroupId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single FeatureGroup.
+         *
+         * Create a request for the method "featureGroups.delete".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the FeatureGroup to be deleted. Format:
+         *        `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+
+          /**
+           * Deletes a single FeatureGroup.
+           *
+           * Create a request for the method "featureGroups.delete".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the FeatureGroup to be deleted. Format:
+         *        `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the FeatureGroup to be deleted. Format:
+           * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the FeatureGroup to be deleted. Format:
+         `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the FeatureGroup to be deleted. Format:
+           * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * If set to true, any Features under this FeatureGroup will also be deleted. (Otherwise,
+           * the request will only work if the FeatureGroup has no Features.)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** If set to true, any Features under this FeatureGroup will also be deleted. (Otherwise, the request
+         will only work if the FeatureGroup has no Features.)
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * If set to true, any Features under this FeatureGroup will also be deleted. (Otherwise,
+           * the request will only work if the FeatureGroup has no Features.)
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single FeatureGroup.
+         *
+         * Create a request for the method "featureGroups.get".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the FeatureGroup resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureGroup> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+
+          /**
+           * Gets details of a single FeatureGroup.
+           *
+           * Create a request for the method "featureGroups.get".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the FeatureGroup resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureGroup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the FeatureGroup resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the FeatureGroup resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the FeatureGroup resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists FeatureGroups in a given project and location.
+         *
+         * Create a request for the method "featureGroups.list".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the Location to list FeatureGroups. Format:
+         *        `projects/{project}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFeatureGroupsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/featureGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists FeatureGroups in a given project and location.
+           *
+           * Create a request for the method "featureGroups.list".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the Location to list FeatureGroups. Format:
+         *        `projects/{project}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFeatureGroupsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Location to list FeatureGroups. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the Location to list FeatureGroups. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the Location to list FeatureGroups. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Lists the FeatureGroups that match the filter expression. The following fields are
+           * supported: * `create_time`: Supports `=`, `!=`, `<`, `>`, `<=`, and `>=` comparisons.
+           * Values must be in RFC 3339 format. * `update_time`: Supports `=`, `!=`, `<`, `>`, `<=`,
+           * and `>=` comparisons. Values must be in RFC 3339 format. * `labels`: Supports key-value
+           * equality and key presence. Examples: * `create_time > "2020-01-01" OR update_time >
+           * "2020-01-01"` FeatureGroups created or updated after 2020-01-01. * `labels.env =
+           * "prod"` FeatureGroups with label "env" set to "prod".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Lists the FeatureGroups that match the filter expression. The following fields are supported: *
+         `create_time`: Supports `=`, `!=`, `<`, `>`, `<=`, and `>=` comparisons. Values must be in RFC 3339
+         format. * `update_time`: Supports `=`, `!=`, `<`, `>`, `<=`, and `>=` comparisons. Values must be
+         in RFC 3339 format. * `labels`: Supports key-value equality and key presence. Examples: *
+         `create_time > "2020-01-01" OR update_time > "2020-01-01"` FeatureGroups created or updated after
+         2020-01-01. * `labels.env = "prod"` FeatureGroups with label "env" set to "prod".
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Lists the FeatureGroups that match the filter expression. The following fields are
+           * supported: * `create_time`: Supports `=`, `!=`, `<`, `>`, `<=`, and `>=` comparisons.
+           * Values must be in RFC 3339 format. * `update_time`: Supports `=`, `!=`, `<`, `>`, `<=`,
+           * and `>=` comparisons. Values must be in RFC 3339 format. * `labels`: Supports key-value
+           * equality and key presence. Examples: * `create_time > "2020-01-01" OR update_time >
+           * "2020-01-01"` FeatureGroups created or updated after 2020-01-01. * `labels.env =
+           * "prod"` FeatureGroups with label "env" set to "prod".
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
+           * after a field name for descending. Supported Fields: * `create_time` * `update_time`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
+         name for descending. Supported Fields: * `create_time` * `update_time`
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
+           * after a field name for descending. Supported Fields: * `create_time` * `update_time`
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * The maximum number of FeatureGroups to return. The service may return fewer than this
+           * value. If unspecified, at most 100 FeatureGroups will be returned. The maximum value is
+           * 100; any value greater than 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of FeatureGroups to return. The service may return fewer than this value. If
+         unspecified, at most 100 FeatureGroups will be returned. The maximum value is 100; any value
+         greater than 100 will be coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of FeatureGroups to return. The service may return fewer than this
+           * value. If unspecified, at most 100 FeatureGroups will be returned. The maximum value is
+           * 100; any value greater than 100 will be coerced to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous FeatureGroupAdminService.ListFeatureGroups call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to FeatureGroupAdminService.ListFeatureGroups must match the call that
+           * provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous FeatureGroupAdminService.ListFeatureGroups call. Provide
+         this to retrieve the subsequent page. When paginating, all other parameters provided to
+         FeatureGroupAdminService.ListFeatureGroups must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous FeatureGroupAdminService.ListFeatureGroups call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to FeatureGroupAdminService.ListFeatureGroups must match the call that
+           * provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single FeatureGroup.
+         *
+         * Create a request for the method "featureGroups.patch".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Name of the FeatureGroup. Format:
+         *        `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureGroup}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureGroup content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+
+          /**
+           * Updates the parameters of a single FeatureGroup.
+           *
+           * Create a request for the method "featureGroups.patch".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Name of the FeatureGroup. Format:
+         *        `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureGroup}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureGroup content) {
+            super(Aiplatform.this, "PATCH", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Name of the FeatureGroup. Format:
+           * `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Name of the FeatureGroup. Format:
+         `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Name of the FeatureGroup. Format:
+           * `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Field mask is used to specify the fields to be overwritten in the FeatureGroup resource
+           * by the update. The fields specified in the update_mask are relative to the resource,
+           * not the full request. A field will be overwritten if it is in the mask. If the user
+           * does not provide a mask then only the non-empty fields present in the request will be
+           * overwritten. Set the update_mask to `*` to override all fields. Updatable fields: *
+           * `labels`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Field mask is used to specify the fields to be overwritten in the FeatureGroup resource by the
+         update. The fields specified in the update_mask are relative to the resource, not the full request.
+         A field will be overwritten if it is in the mask. If the user does not provide a mask then only the
+         non-empty fields present in the request will be overwritten. Set the update_mask to `*` to override
+         all fields. Updatable fields: * `labels`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Field mask is used to specify the fields to be overwritten in the FeatureGroup resource
+           * by the update. The fields specified in the update_mask are relative to the resource,
+           * not the full request. A field will be overwritten if it is in the mask. If the user
+           * does not provide a mask then only the non-empty fields present in the request will be
+           * overwritten. Set the update_mask to `*` to override all fields. Updatable fields: *
+           * `labels`
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Features collection.
          *
          * <p>The typical use is:</p>
@@ -19508,6 +21263,969 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * The "features" collection of methods.
          */
         public class Features {
+
+          /**
+           * Creates a new Feature in a given FeatureGroup.
+           *
+           * Create a request for the method "features.create".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/features";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+
+            /**
+             * Creates a new Feature in a given FeatureGroup.
+             *
+             * Create a request for the method "features.create".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /**
+
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the Feature, which will become the final component of the
+             * Feature's resource name. This value may be up to 128 characters, and valid characters
+             * are `[a-z0-9_]`. The first character cannot be a number. The value must be unique
+             * within an EntityType/FeatureGroup.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String featureId;
+
+            /** Required. The ID to use for the Feature, which will become the final component of the Feature's
+           resource name. This value may be up to 128 characters, and valid characters are `[a-z0-9_]`. The
+           first character cannot be a number. The value must be unique within an EntityType/FeatureGroup.
+             */
+            public java.lang.String getFeatureId() {
+              return featureId;
+            }
+
+            /**
+             * Required. The ID to use for the Feature, which will become the final component of the
+             * Feature's resource name. This value may be up to 128 characters, and valid characters
+             * are `[a-z0-9_]`. The first character cannot be a number. The value must be unique
+             * within an EntityType/FeatureGroup.
+             */
+            public Create setFeatureId(java.lang.String featureId) {
+              this.featureId = featureId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a single Feature.
+           *
+           * Create a request for the method "features.delete".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/f
+           *        eaturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+           *        `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+/features/[^/]+$");
+
+            /**
+             * Deletes a single Feature.
+             *
+             * Create a request for the method "features.delete".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/f
+           *        eaturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+           *        `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+/features/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Features to be deleted. Format: `projects/{project}/locatio
+             * ns/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{featur
+             * e}` `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{
+             * feature}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/
+           featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+           `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the Features to be deleted. Format: `projects/{project}/locatio
+             * ns/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{featur
+             * e}` `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{
+             * feature}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+/features/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single Feature.
+           *
+           * Create a request for the method "features.get".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the Feature resource. Format:
+           *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
+           *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+/features/[^/]+$");
+
+            /**
+             * Gets details of a single Feature.
+             *
+             * Create a request for the method "features.get".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the Feature resource. Format:
+           *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
+           *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+/features/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Feature resource. Format: `projects/{project}/locations/{lo
+             * cation}/featurestores/{featurestore}/entityTypes/{entity_type}`
+             * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the Feature resource. Format:
+           `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+           `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the Feature resource. Format: `projects/{project}/locations/{lo
+             * cation}/featurestores/{featurestore}/entityTypes/{entity_type}`
+             * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+/features/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists Features in a given FeatureGroup.
+           *
+           * Create a request for the method "features.list".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the Location to list Features. Format:
+           *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
+           *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFeaturesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/features";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+
+            /**
+             * Lists Features in a given FeatureGroup.
+             *
+             * Create a request for the method "features.list".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the Location to list Features. Format:
+           *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
+           *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFeaturesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Location to list Features. Format: `projects/{proj
+             * ect}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+             * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the Location to list Features. Format:
+           `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+           `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the Location to list Features. Format: `projects/{proj
+             * ect}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+             * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Lists the Features that match the filter expression. The following filters are
+             * supported: * `value_type`: Supports = and != comparisons. * `create_time`: Supports
+             * =, !=, <, >, >=, and <= comparisons. Values must be in RFC 3339 format. *
+             * `update_time`: Supports =, !=, <, >, >=, and <= comparisons. Values must be in RFC
+             * 3339 format. * `labels`: Supports key-value equality as well as key presence.
+             * Examples: * `value_type = DOUBLE` --> Features whose type is DOUBLE. * `create_time >
+             * \"2020-01-31T15:30:00.000000Z\" OR update_time > \"2020-01-31T15:30:00.000000Z\"` -->
+             * EntityTypes created or updated after 2020-01-31T15:30:00.000000Z. * `labels.active =
+             * yes AND labels.env = prod` --> Features having both (active: yes) and (env: prod)
+             * labels. * `labels.env: *` --> Any Feature which has a label with 'env' as the key.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Lists the Features that match the filter expression. The following filters are supported: *
+           `value_type`: Supports = and != comparisons. * `create_time`: Supports =, !=, <, >, >=, and <=
+           comparisons. Values must be in RFC 3339 format. * `update_time`: Supports =, !=, <, >, >=, and <=
+           comparisons. Values must be in RFC 3339 format. * `labels`: Supports key-value equality as well as
+           key presence. Examples: * `value_type = DOUBLE` --> Features whose type is DOUBLE. * `create_time >
+           \"2020-01-31T15:30:00.000000Z\" OR update_time > \"2020-01-31T15:30:00.000000Z\"` --> EntityTypes
+           created or updated after 2020-01-31T15:30:00.000000Z. * `labels.active = yes AND labels.env = prod`
+           --> Features having both (active: yes) and (env: prod) labels. * `labels.env: *` --> Any Feature
+           which has a label with 'env' as the key.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Lists the Features that match the filter expression. The following filters are
+             * supported: * `value_type`: Supports = and != comparisons. * `create_time`: Supports
+             * =, !=, <, >, >=, and <= comparisons. Values must be in RFC 3339 format. *
+             * `update_time`: Supports =, !=, <, >, >=, and <= comparisons. Values must be in RFC
+             * 3339 format. * `labels`: Supports key-value equality as well as key presence.
+             * Examples: * `value_type = DOUBLE` --> Features whose type is DOUBLE. * `create_time >
+             * \"2020-01-31T15:30:00.000000Z\" OR update_time > \"2020-01-31T15:30:00.000000Z\"` -->
+             * EntityTypes created or updated after 2020-01-31T15:30:00.000000Z. * `labels.active =
+             * yes AND labels.env = prod` --> Features having both (active: yes) and (env: prod)
+             * labels. * `labels.env: *` --> Any Feature which has a label with 'env' as the key.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * If set, return the most recent ListFeaturesRequest.latest_stats_count of stats for
+             * each Feature in response. Valid value is [0, 10]. If number of stats exists <
+             * ListFeaturesRequest.latest_stats_count, return all existing stats.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer latestStatsCount;
+
+            /** If set, return the most recent ListFeaturesRequest.latest_stats_count of stats for each Feature in
+           response. Valid value is [0, 10]. If number of stats exists <
+           ListFeaturesRequest.latest_stats_count, return all existing stats.
+             */
+            public java.lang.Integer getLatestStatsCount() {
+              return latestStatsCount;
+            }
+
+            /**
+             * If set, return the most recent ListFeaturesRequest.latest_stats_count of stats for
+             * each Feature in response. Valid value is [0, 10]. If number of stats exists <
+             * ListFeaturesRequest.latest_stats_count, return all existing stats.
+             */
+            public List setLatestStatsCount(java.lang.Integer latestStatsCount) {
+              this.latestStatsCount = latestStatsCount;
+              return this;
+            }
+
+            /**
+             * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
+             * after a field name for descending. Supported fields: * `feature_id` * `value_type`
+             * (Not supported for FeatureRegistry Feature) * `create_time` * `update_time`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
+           name for descending. Supported fields: * `feature_id` * `value_type` (Not supported for
+           FeatureRegistry Feature) * `create_time` * `update_time`
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
+             * after a field name for descending. Supported fields: * `feature_id` * `value_type`
+             * (Not supported for FeatureRegistry Feature) * `create_time` * `update_time`
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * The maximum number of Features to return. The service may return fewer than this
+             * value. If unspecified, at most 1000 Features will be returned. The maximum value is
+             * 1000; any value greater than 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of Features to return. The service may return fewer than this value. If
+           unspecified, at most 1000 Features will be returned. The maximum value is 1000; any value greater
+           than 1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of Features to return. The service may return fewer than this
+             * value. If unspecified, at most 1000 Features will be returned. The maximum value is
+             * 1000; any value greater than 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous FeaturestoreService.ListFeatures call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to FeaturestoreService.ListFeatures must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous FeaturestoreService.ListFeatures call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           FeaturestoreService.ListFeatures must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous FeaturestoreService.ListFeatures call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to FeaturestoreService.ListFeatures must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Mask specifying which fields to read. */
+            @com.google.api.client.util.Key
+            private String readMask;
+
+            /** Mask specifying which fields to read.
+             */
+            public String getReadMask() {
+              return readMask;
+            }
+
+            /** Mask specifying which fields to read. */
+            public List setReadMask(String readMask) {
+              this.readMask = readMask;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the parameters of a single Feature.
+           *
+           * Create a request for the method "features.patch".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/featurestores/{feat
+           *        urestore}/entityTypes/{entity_type}/features/{feature}` The last part feature is assigned
+           *        by the client. The feature can be up to 64 characters long and can consist only of ASCII
+           *        Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The
+           *        value will be unique given an entity type.
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+/features/[^/]+$");
+
+            /**
+             * Updates the parameters of a single Feature.
+             *
+             * Create a request for the method "features.patch".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/featurestores/{feat
+           *        urestore}/entityTypes/{entity_type}/features/{feature}` The last part feature is assigned
+           *        by the client. The feature can be up to 64 characters long and can consist only of ASCII
+           *        Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The
+           *        value will be unique given an entity type.
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature content) {
+              super(Aiplatform.this, "PATCH", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+/features/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/feat
+             * urestores/{featurestore}/entityTypes/{entity_type}/features/{feature}` The last part
+             * feature is assigned by the client. The feature can be up to 64 characters long and
+             * can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits
+             * 0-9 starting with a letter. The value will be unique given an entity type.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/featurestores/{fea
+           turestore}/entityTypes/{entity_type}/features/{feature}` The last part feature is assigned by the
+           client. The feature can be up to 64 characters long and can consist only of ASCII Latin letters A-Z
+           and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The value will be unique given
+           an entity type.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/feat
+             * urestores/{featurestore}/entityTypes/{entity_type}/features/{feature}` The last part
+             * feature is assigned by the client. The feature can be up to 64 characters long and
+             * can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits
+             * 0-9 starting with a letter. The value will be unique given an entity type.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+/features/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Field mask is used to specify the fields to be overwritten in the Features resource
+             * by the update. The fields specified in the update_mask are relative to the resource,
+             * not the full request. A field will be overwritten if it is in the mask. If the user
+             * does not provide a mask then only the non-empty fields present in the request will be
+             * overwritten. Set the update_mask to `*` to override all fields. Updatable fields: *
+             * `description` * `labels` * `disable_monitoring`
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Field mask is used to specify the fields to be overwritten in the Features resource by the update.
+           The fields specified in the update_mask are relative to the resource, not the full request. A field
+           will be overwritten if it is in the mask. If the user does not provide a mask then only the non-
+           empty fields present in the request will be overwritten. Set the update_mask to `*` to override all
+           fields. Updatable fields: * `description` * `labels` * `disable_monitoring`
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Field mask is used to specify the fields to be overwritten in the Features resource
+             * by the update. The fields specified in the update_mask are relative to the resource,
+             * not the full request. A field will be overwritten if it is in the mask. If the user
+             * does not provide a mask then only the non-empty fields present in the request will be
+             * overwritten. Set the update_mask to `*` to override all fields. Updatable fields: *
+             * `description` * `labels` * `disable_monitoring`
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
 
           /**
            * An accessor for creating requests from the Operations collection.
@@ -20830,6 +23548,915 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
       public class FeatureOnlineStores {
 
         /**
+         * Creates a new FeatureOnlineStore in a given project and location.
+         *
+         * Create a request for the method "featureOnlineStores.create".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the Location to create FeatureOnlineStores. Format:
+         *        `projects/{project}/locations/{location}'`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/featureOnlineStores";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new FeatureOnlineStore in a given project and location.
+           *
+           * Create a request for the method "featureOnlineStores.create".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the Location to create FeatureOnlineStores. Format:
+         *        `projects/{project}/locations/{location}'`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Location to create FeatureOnlineStores. Format:
+           * `projects/{project}/locations/{location}'`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the Location to create FeatureOnlineStores. Format:
+         `projects/{project}/locations/{location}'`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the Location to create FeatureOnlineStores. Format:
+           * `projects/{project}/locations/{location}'`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for this FeatureOnlineStore, which will become the final
+           * component of the FeatureOnlineStore's resource name. This value may be up to 60
+           * characters, and valid characters are `[a-z0-9_]`. The first character cannot be a
+           * number. The value must be unique within the project and location.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String featureOnlineStoreId;
+
+          /** Required. The ID to use for this FeatureOnlineStore, which will become the final component of the
+         FeatureOnlineStore's resource name. This value may be up to 60 characters, and valid characters are
+         `[a-z0-9_]`. The first character cannot be a number. The value must be unique within the project
+         and location.
+           */
+          public java.lang.String getFeatureOnlineStoreId() {
+            return featureOnlineStoreId;
+          }
+
+          /**
+           * Required. The ID to use for this FeatureOnlineStore, which will become the final
+           * component of the FeatureOnlineStore's resource name. This value may be up to 60
+           * characters, and valid characters are `[a-z0-9_]`. The first character cannot be a
+           * number. The value must be unique within the project and location.
+           */
+          public Create setFeatureOnlineStoreId(java.lang.String featureOnlineStoreId) {
+            this.featureOnlineStoreId = featureOnlineStoreId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single FeatureOnlineStore. The FeatureOnlineStore must not contain any FeatureViews.
+         *
+         * Create a request for the method "featureOnlineStores.delete".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the FeatureOnlineStore to be deleted. Format:
+         *        `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+
+          /**
+           * Deletes a single FeatureOnlineStore. The FeatureOnlineStore must not contain any FeatureViews.
+           *
+           * Create a request for the method "featureOnlineStores.delete".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the FeatureOnlineStore to be deleted. Format:
+         *        `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the FeatureOnlineStore to be deleted. Format:
+           * `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the FeatureOnlineStore to be deleted. Format:
+         `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the FeatureOnlineStore to be deleted. Format:
+           * `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * If set to true, any FeatureViews and Features for this FeatureOnlineStore will also be
+           * deleted. (Otherwise, the request will only work if the FeatureOnlineStore has no
+           * FeatureViews.)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** If set to true, any FeatureViews and Features for this FeatureOnlineStore will also be deleted.
+         (Otherwise, the request will only work if the FeatureOnlineStore has no FeatureViews.)
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * If set to true, any FeatureViews and Features for this FeatureOnlineStore will also be
+           * deleted. (Otherwise, the request will only work if the FeatureOnlineStore has no
+           * FeatureViews.)
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single FeatureOnlineStore.
+         *
+         * Create a request for the method "featureOnlineStores.get".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the FeatureOnlineStore resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+
+          /**
+           * Gets details of a single FeatureOnlineStore.
+           *
+           * Create a request for the method "featureOnlineStores.get".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the FeatureOnlineStore resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the FeatureOnlineStore resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the FeatureOnlineStore resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the FeatureOnlineStore resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists FeatureOnlineStores in a given project and location.
+         *
+         * Create a request for the method "featureOnlineStores.list".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the Location to list FeatureOnlineStores. Format:
+         *        `projects/{project}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFeatureOnlineStoresResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/featureOnlineStores";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists FeatureOnlineStores in a given project and location.
+           *
+           * Create a request for the method "featureOnlineStores.list".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the Location to list FeatureOnlineStores. Format:
+         *        `projects/{project}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFeatureOnlineStoresResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Location to list FeatureOnlineStores. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the Location to list FeatureOnlineStores. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the Location to list FeatureOnlineStores. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Lists the FeatureOnlineStores that match the filter expression. The following fields
+           * are supported: * `create_time`: Supports `=`, `!=`, `<`, `>`, `<=`, and `>=`
+           * comparisons. Values must be in RFC 3339 format. * `update_time`: Supports `=`, `!=`,
+           * `<`, `>`, `<=`, and `>=` comparisons. Values must be in RFC 3339 format. * `labels`:
+           * Supports key-value equality and key presence. Examples: * `create_time > "2020-01-01"
+           * OR update_time > "2020-01-01"` FeatureOnlineStores created or updated after 2020-01-01.
+           * * `labels.env = "prod"` FeatureOnlineStores with label "env" set to "prod".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Lists the FeatureOnlineStores that match the filter expression. The following fields are supported:
+         * `create_time`: Supports `=`, `!=`, `<`, `>`, `<=`, and `>=` comparisons. Values must be in RFC
+         3339 format. * `update_time`: Supports `=`, `!=`, `<`, `>`, `<=`, and `>=` comparisons. Values must
+         be in RFC 3339 format. * `labels`: Supports key-value equality and key presence. Examples: *
+         `create_time > "2020-01-01" OR update_time > "2020-01-01"` FeatureOnlineStores created or updated
+         after 2020-01-01. * `labels.env = "prod"` FeatureOnlineStores with label "env" set to "prod".
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Lists the FeatureOnlineStores that match the filter expression. The following fields
+           * are supported: * `create_time`: Supports `=`, `!=`, `<`, `>`, `<=`, and `>=`
+           * comparisons. Values must be in RFC 3339 format. * `update_time`: Supports `=`, `!=`,
+           * `<`, `>`, `<=`, and `>=` comparisons. Values must be in RFC 3339 format. * `labels`:
+           * Supports key-value equality and key presence. Examples: * `create_time > "2020-01-01"
+           * OR update_time > "2020-01-01"` FeatureOnlineStores created or updated after 2020-01-01.
+           * * `labels.env = "prod"` FeatureOnlineStores with label "env" set to "prod".
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
+           * after a field name for descending. Supported Fields: * `create_time` * `update_time`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
+         name for descending. Supported Fields: * `create_time` * `update_time`
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
+           * after a field name for descending. Supported Fields: * `create_time` * `update_time`
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * The maximum number of FeatureOnlineStores to return. The service may return fewer than
+           * this value. If unspecified, at most 100 FeatureOnlineStores will be returned. The
+           * maximum value is 100; any value greater than 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of FeatureOnlineStores to return. The service may return fewer than this value.
+         If unspecified, at most 100 FeatureOnlineStores will be returned. The maximum value is 100; any
+         value greater than 100 will be coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of FeatureOnlineStores to return. The service may return fewer than
+           * this value. If unspecified, at most 100 FeatureOnlineStores will be returned. The
+           * maximum value is 100; any value greater than 100 will be coerced to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous
+           * FeatureOnlineStoreAdminService.ListFeatureOnlineStores call. Provide this to retrieve
+           * the subsequent page. When paginating, all other parameters provided to
+           * FeatureOnlineStoreAdminService.ListFeatureOnlineStores must match the call that
+           * provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous FeatureOnlineStoreAdminService.ListFeatureOnlineStores call.
+         Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
+         FeatureOnlineStoreAdminService.ListFeatureOnlineStores must match the call that provided the page
+         token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous
+           * FeatureOnlineStoreAdminService.ListFeatureOnlineStores call. Provide this to retrieve
+           * the subsequent page. When paginating, all other parameters provided to
+           * FeatureOnlineStoreAdminService.ListFeatureOnlineStores must match the call that
+           * provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single FeatureOnlineStore.
+         *
+         * Create a request for the method "featureOnlineStores.patch".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Name of the FeatureOnlineStore. Format:
+         *        `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+
+          /**
+           * Updates the parameters of a single FeatureOnlineStore.
+           *
+           * Create a request for the method "featureOnlineStores.patch".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Name of the FeatureOnlineStore. Format:
+         *        `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore content) {
+            super(Aiplatform.this, "PATCH", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Name of the FeatureOnlineStore. Format:
+           * `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Name of the FeatureOnlineStore. Format:
+         `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Name of the FeatureOnlineStore. Format:
+           * `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Field mask is used to specify the fields to be overwritten in the FeatureOnlineStore
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then only the non-empty fields present in the request
+           * will be overwritten. Set the update_mask to `*` to override all fields. Updatable
+           * fields: * `big_query_source` * `labels` * `sync_config`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Field mask is used to specify the fields to be overwritten in the FeatureOnlineStore resource by
+         the update. The fields specified in the update_mask are relative to the resource, not the full
+         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+         only the non-empty fields present in the request will be overwritten. Set the update_mask to `*` to
+         override all fields. Updatable fields: * `big_query_source` * `labels` * `sync_config`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Field mask is used to specify the fields to be overwritten in the FeatureOnlineStore
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then only the non-empty fields present in the request
+           * will be overwritten. Set the update_mask to `*` to override all fields. Updatable
+           * fields: * `big_query_source` * `labels` * `sync_config`
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the FeatureViews collection.
          *
          * <p>The typical use is:</p>
@@ -20849,6 +24476,1791 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          */
         public class FeatureViews {
 
+          /**
+           * Creates a new FeatureView in a given FeatureOnlineStore.
+           *
+           * Create a request for the method "featureViews.create".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the FeatureOnlineStore to create FeatureViews. Format:
+           *        `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureView}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureView content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/featureViews";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+
+            /**
+             * Creates a new FeatureView in a given FeatureOnlineStore.
+             *
+             * Create a request for the method "featureViews.create".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the FeatureOnlineStore to create FeatureViews. Format:
+           *        `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureView}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureView content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the FeatureOnlineStore to create FeatureViews. Format:
+             * `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the FeatureOnlineStore to create FeatureViews. Format:
+           `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the FeatureOnlineStore to create FeatureViews. Format:
+             * `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the FeatureView, which will become the final component of
+             * the FeatureView's resource name. This value may be up to 60 characters, and valid
+             * characters are `[a-z0-9_]`. The first character cannot be a number. The value must be
+             * unique within a FeatureOnlineStore.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String featureViewId;
+
+            /** Required. The ID to use for the FeatureView, which will become the final component of the
+           FeatureView's resource name. This value may be up to 60 characters, and valid characters are
+           `[a-z0-9_]`. The first character cannot be a number. The value must be unique within a
+           FeatureOnlineStore.
+             */
+            public java.lang.String getFeatureViewId() {
+              return featureViewId;
+            }
+
+            /**
+             * Required. The ID to use for the FeatureView, which will become the final component of
+             * the FeatureView's resource name. This value may be up to 60 characters, and valid
+             * characters are `[a-z0-9_]`. The first character cannot be a number. The value must be
+             * unique within a FeatureOnlineStore.
+             */
+            public Create setFeatureViewId(java.lang.String featureViewId) {
+              this.featureViewId = featureViewId;
+              return this;
+            }
+
+            /**
+             * Immutable. If set to true, one on demand sync will be run immediately, regardless
+             * whether the FeatureView.sync_config is configured or not.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean runSyncImmediately;
+
+            /** Immutable. If set to true, one on demand sync will be run immediately, regardless whether the
+           FeatureView.sync_config is configured or not.
+             */
+            public java.lang.Boolean getRunSyncImmediately() {
+              return runSyncImmediately;
+            }
+
+            /**
+             * Immutable. If set to true, one on demand sync will be run immediately, regardless
+             * whether the FeatureView.sync_config is configured or not.
+             */
+            public Create setRunSyncImmediately(java.lang.Boolean runSyncImmediately) {
+              this.runSyncImmediately = runSyncImmediately;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a single FeatureView.
+           *
+           * Create a request for the method "featureViews.delete".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FeatureView to be deleted. Format: `projects/{project}/locations/{location
+           *        }/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+
+            /**
+             * Deletes a single FeatureView.
+             *
+             * Create a request for the method "featureViews.delete".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the FeatureView to be deleted. Format: `projects/{project}/locations/{location
+           *        }/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FeatureView to be deleted. Format: `projects/{project}/loca
+             * tions/{location}/featureOnlineStores/{feature_online_store}/featureViews/{feature_vie
+             * w}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FeatureView to be deleted. Format: `projects/{project}/locations/{locatio
+           n}/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FeatureView to be deleted. Format: `projects/{project}/loca
+             * tions/{location}/featureOnlineStores/{feature_online_store}/featureViews/{feature_vie
+             * w}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetch feature values under a FeatureView.
+           *
+           * Create a request for the method "featureViews.fetchFeatureValues".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link FetchFeatureValues#execute()} method to invoke the remote operation.
+           *
+           * @param featureView Required. FeatureView resource format `projects/{project}/locations/{location}/featureOnlineStores/{
+           *        featureOnlineStore}/featureViews/{featureView}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FetchFeatureValuesRequest}
+           * @return the request
+           */
+          public FetchFeatureValues fetchFeatureValues(java.lang.String featureView, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FetchFeatureValuesRequest content) throws java.io.IOException {
+            FetchFeatureValues result = new FetchFeatureValues(featureView, content);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchFeatureValues extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FetchFeatureValuesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+featureView}:fetchFeatureValues";
+
+            private final java.util.regex.Pattern FEATURE_VIEW_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+
+            /**
+             * Fetch feature values under a FeatureView.
+             *
+             * Create a request for the method "featureViews.fetchFeatureValues".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link FetchFeatureValues#execute()} method to invoke the remote
+             * operation. <p> {@link FetchFeatureValues#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param featureView Required. FeatureView resource format `projects/{project}/locations/{location}/featureOnlineStores/{
+           *        featureOnlineStore}/featureViews/{featureView}`
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FetchFeatureValuesRequest}
+             * @since 1.13
+             */
+            protected FetchFeatureValues(java.lang.String featureView, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FetchFeatureValuesRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FetchFeatureValuesResponse.class);
+              this.featureView = com.google.api.client.util.Preconditions.checkNotNull(featureView, "Required parameter featureView must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FEATURE_VIEW_PATTERN.matcher(featureView).matches(),
+                    "Parameter featureView must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public FetchFeatureValues set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchFeatureValues) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchFeatureValues setAccessToken(java.lang.String accessToken) {
+              return (FetchFeatureValues) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchFeatureValues setAlt(java.lang.String alt) {
+              return (FetchFeatureValues) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchFeatureValues setCallback(java.lang.String callback) {
+              return (FetchFeatureValues) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchFeatureValues setFields(java.lang.String fields) {
+              return (FetchFeatureValues) super.setFields(fields);
+            }
+
+            @Override
+            public FetchFeatureValues setKey(java.lang.String key) {
+              return (FetchFeatureValues) super.setKey(key);
+            }
+
+            @Override
+            public FetchFeatureValues setOauthToken(java.lang.String oauthToken) {
+              return (FetchFeatureValues) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchFeatureValues setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchFeatureValues) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchFeatureValues setQuotaUser(java.lang.String quotaUser) {
+              return (FetchFeatureValues) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchFeatureValues setUploadType(java.lang.String uploadType) {
+              return (FetchFeatureValues) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchFeatureValues setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchFeatureValues) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. FeatureView resource format `projects/{project}/locations/{location}/featur
+             * eOnlineStores/{featureOnlineStore}/featureViews/{featureView}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String featureView;
+
+            /** Required. FeatureView resource format `projects/{project}/locations/{location}/featureOnlineStores/
+           {featureOnlineStore}/featureViews/{featureView}`
+             */
+            public java.lang.String getFeatureView() {
+              return featureView;
+            }
+
+            /**
+             * Required. FeatureView resource format `projects/{project}/locations/{location}/featur
+             * eOnlineStores/{featureOnlineStore}/featureViews/{featureView}`
+             */
+            public FetchFeatureValues setFeatureView(java.lang.String featureView) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FEATURE_VIEW_PATTERN.matcher(featureView).matches(),
+                    "Parameter featureView must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+              this.featureView = featureView;
+              return this;
+            }
+
+            @Override
+            public FetchFeatureValues set(String parameterName, Object value) {
+              return (FetchFeatureValues) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single FeatureView.
+           *
+           * Create a request for the method "featureViews.get".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FeatureView resource. Format: `projects/{project}/locations/{location}/fea
+           *        tureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureView> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+
+            /**
+             * Gets details of a single FeatureView.
+             *
+             * Create a request for the method "featureViews.get".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the FeatureView resource. Format: `projects/{project}/locations/{location}/fea
+           *        tureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureView.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FeatureView resource. Format: `projects/{project}/locations
+             * /{location}/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FeatureView resource. Format: `projects/{project}/locations/{location}/fe
+           atureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FeatureView resource. Format: `projects/{project}/locations
+             * /{location}/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists FeatureViews in a given FeatureOnlineStore.
+           *
+           * Create a request for the method "featureViews.list".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the FeatureOnlineStore to list FeatureViews. Format:
+           *        `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFeatureViewsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/featureViews";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+
+            /**
+             * Lists FeatureViews in a given FeatureOnlineStore.
+             *
+             * Create a request for the method "featureViews.list".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the FeatureOnlineStore to list FeatureViews. Format:
+           *        `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFeatureViewsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the FeatureOnlineStore to list FeatureViews. Format:
+             * `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the FeatureOnlineStore to list FeatureViews. Format:
+           `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the FeatureOnlineStore to list FeatureViews. Format:
+             * `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Lists the FeatureViews that match the filter expression. The following filters are
+             * supported: * `create_time`: Supports `=`, `!=`, `<`, `>`, `>=`, and `<=` comparisons.
+             * Values must be in RFC 3339 format. * `update_time`: Supports `=`, `!=`, `<`, `>`,
+             * `>=`, and `<=` comparisons. Values must be in RFC 3339 format. * `labels`: Supports
+             * key-value equality as well as key presence. Examples: * `create_time >
+             * \"2020-01-31T15:30:00.000000Z\" OR update_time > \"2020-01-31T15:30:00.000000Z\"` -->
+             * FeatureViews created or updated after 2020-01-31T15:30:00.000000Z. * `labels.active =
+             * yes AND labels.env = prod` --> FeatureViews having both (active: yes) and (env: prod)
+             * labels. * `labels.env: *` --> Any FeatureView which has a label with 'env' as the
+             * key.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Lists the FeatureViews that match the filter expression. The following filters are supported: *
+           `create_time`: Supports `=`, `!=`, `<`, `>`, `>=`, and `<=` comparisons. Values must be in RFC 3339
+           format. * `update_time`: Supports `=`, `!=`, `<`, `>`, `>=`, and `<=` comparisons. Values must be
+           in RFC 3339 format. * `labels`: Supports key-value equality as well as key presence. Examples: *
+           `create_time > \"2020-01-31T15:30:00.000000Z\" OR update_time > \"2020-01-31T15:30:00.000000Z\"`
+           --> FeatureViews created or updated after 2020-01-31T15:30:00.000000Z. * `labels.active = yes AND
+           labels.env = prod` --> FeatureViews having both (active: yes) and (env: prod) labels. *
+           `labels.env: *` --> Any FeatureView which has a label with 'env' as the key.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Lists the FeatureViews that match the filter expression. The following filters are
+             * supported: * `create_time`: Supports `=`, `!=`, `<`, `>`, `>=`, and `<=` comparisons.
+             * Values must be in RFC 3339 format. * `update_time`: Supports `=`, `!=`, `<`, `>`,
+             * `>=`, and `<=` comparisons. Values must be in RFC 3339 format. * `labels`: Supports
+             * key-value equality as well as key presence. Examples: * `create_time >
+             * \"2020-01-31T15:30:00.000000Z\" OR update_time > \"2020-01-31T15:30:00.000000Z\"` -->
+             * FeatureViews created or updated after 2020-01-31T15:30:00.000000Z. * `labels.active =
+             * yes AND labels.env = prod` --> FeatureViews having both (active: yes) and (env: prod)
+             * labels. * `labels.env: *` --> Any FeatureView which has a label with 'env' as the
+             * key.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
+             * after a field name for descending. Supported fields: * `feature_view_id` *
+             * `create_time` * `update_time`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
+           name for descending. Supported fields: * `feature_view_id` * `create_time` * `update_time`
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
+             * after a field name for descending. Supported fields: * `feature_view_id` *
+             * `create_time` * `update_time`
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * The maximum number of FeatureViews to return. The service may return fewer than this
+             * value. If unspecified, at most 1000 FeatureViews will be returned. The maximum value
+             * is 1000; any value greater than 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of FeatureViews to return. The service may return fewer than this value. If
+           unspecified, at most 1000 FeatureViews will be returned. The maximum value is 1000; any value
+           greater than 1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of FeatureViews to return. The service may return fewer than this
+             * value. If unspecified, at most 1000 FeatureViews will be returned. The maximum value
+             * is 1000; any value greater than 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous
+             * FeatureOnlineStoreAdminService.ListFeatureViews call. Provide this to retrieve the
+             * subsequent page. When paginating, all other parameters provided to
+             * FeatureOnlineStoreAdminService.ListFeatureViews must match the call that provided the
+             * page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous FeatureOnlineStoreAdminService.ListFeatureViews call.
+           Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
+           FeatureOnlineStoreAdminService.ListFeatureViews must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous
+             * FeatureOnlineStoreAdminService.ListFeatureViews call. Provide this to retrieve the
+             * subsequent page. When paginating, all other parameters provided to
+             * FeatureOnlineStoreAdminService.ListFeatureViews must match the call that provided the
+             * page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the parameters of a single FeatureView.
+           *
+           * Create a request for the method "featureViews.patch".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOnline
+           *        Stores/{feature_online_store}/featureViews/{feature_view}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureView}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureView content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+
+            /**
+             * Updates the parameters of a single FeatureView.
+             *
+             * Create a request for the method "featureViews.patch".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOnline
+           *        Stores/{feature_online_store}/featureViews/{feature_view}`
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureView}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureView content) {
+              super(Aiplatform.this, "PATCH", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location
+             * }/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOnlin
+           eStores/{feature_online_store}/featureViews/{feature_view}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location
+             * }/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Field mask is used to specify the fields to be overwritten in the FeatureView
+             * resource by the update. The fields specified in the update_mask are relative to the
+             * resource, not the full request. A field will be overwritten if it is in the mask. If
+             * the user does not provide a mask then only the non-empty fields present in the
+             * request will be overwritten. Set the update_mask to `*` to override all fields.
+             * Updatable fields: * `labels`
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Field mask is used to specify the fields to be overwritten in the FeatureView resource by the
+           update. The fields specified in the update_mask are relative to the resource, not the full request.
+           A field will be overwritten if it is in the mask. If the user does not provide a mask then only the
+           non-empty fields present in the request will be overwritten. Set the update_mask to `*` to override
+           all fields. Updatable fields: * `labels`
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Field mask is used to specify the fields to be overwritten in the FeatureView
+             * resource by the update. The fields specified in the update_mask are relative to the
+             * resource, not the full request. A field will be overwritten if it is in the mask. If
+             * the user does not provide a mask then only the non-empty fields present in the
+             * request will be overwritten. Set the update_mask to `*` to override all fields.
+             * Updatable fields: * `labels`
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Search the nearest entities under a FeatureView. Search only works for indexable feature view; if
+           * a feature view isn't indexable, returns Invalid argument response.
+           *
+           * Create a request for the method "featureViews.searchNearestEntities".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link SearchNearestEntities#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param featureView Required. FeatureView resource format `projects/{project}/locations/{location}/featureOnlineStores/{
+           *        featureOnlineStore}/featureViews/{featureView}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SearchNearestEntitiesRequest}
+           * @return the request
+           */
+          public SearchNearestEntities searchNearestEntities(java.lang.String featureView, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SearchNearestEntitiesRequest content) throws java.io.IOException {
+            SearchNearestEntities result = new SearchNearestEntities(featureView, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchNearestEntities extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SearchNearestEntitiesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+featureView}:searchNearestEntities";
+
+            private final java.util.regex.Pattern FEATURE_VIEW_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+
+            /**
+             * Search the nearest entities under a FeatureView. Search only works for indexable feature view;
+             * if a feature view isn't indexable, returns Invalid argument response.
+             *
+             * Create a request for the method "featureViews.searchNearestEntities".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link SearchNearestEntities#execute()} method to invoke the
+             * remote operation. <p> {@link SearchNearestEntities#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param featureView Required. FeatureView resource format `projects/{project}/locations/{location}/featureOnlineStores/{
+           *        featureOnlineStore}/featureViews/{featureView}`
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SearchNearestEntitiesRequest}
+             * @since 1.13
+             */
+            protected SearchNearestEntities(java.lang.String featureView, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SearchNearestEntitiesRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SearchNearestEntitiesResponse.class);
+              this.featureView = com.google.api.client.util.Preconditions.checkNotNull(featureView, "Required parameter featureView must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FEATURE_VIEW_PATTERN.matcher(featureView).matches(),
+                    "Parameter featureView must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public SearchNearestEntities set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchNearestEntities) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchNearestEntities setAccessToken(java.lang.String accessToken) {
+              return (SearchNearestEntities) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchNearestEntities setAlt(java.lang.String alt) {
+              return (SearchNearestEntities) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchNearestEntities setCallback(java.lang.String callback) {
+              return (SearchNearestEntities) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchNearestEntities setFields(java.lang.String fields) {
+              return (SearchNearestEntities) super.setFields(fields);
+            }
+
+            @Override
+            public SearchNearestEntities setKey(java.lang.String key) {
+              return (SearchNearestEntities) super.setKey(key);
+            }
+
+            @Override
+            public SearchNearestEntities setOauthToken(java.lang.String oauthToken) {
+              return (SearchNearestEntities) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchNearestEntities setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchNearestEntities) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchNearestEntities setQuotaUser(java.lang.String quotaUser) {
+              return (SearchNearestEntities) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchNearestEntities setUploadType(java.lang.String uploadType) {
+              return (SearchNearestEntities) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchNearestEntities setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchNearestEntities) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. FeatureView resource format `projects/{project}/locations/{location}/featur
+             * eOnlineStores/{featureOnlineStore}/featureViews/{featureView}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String featureView;
+
+            /** Required. FeatureView resource format `projects/{project}/locations/{location}/featureOnlineStores/
+           {featureOnlineStore}/featureViews/{featureView}`
+             */
+            public java.lang.String getFeatureView() {
+              return featureView;
+            }
+
+            /**
+             * Required. FeatureView resource format `projects/{project}/locations/{location}/featur
+             * eOnlineStores/{featureOnlineStore}/featureViews/{featureView}`
+             */
+            public SearchNearestEntities setFeatureView(java.lang.String featureView) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FEATURE_VIEW_PATTERN.matcher(featureView).matches(),
+                    "Parameter featureView must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+              this.featureView = featureView;
+              return this;
+            }
+
+            @Override
+            public SearchNearestEntities set(String parameterName, Object value) {
+              return (SearchNearestEntities) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Triggers on-demand sync for the FeatureView.
+           *
+           * Create a request for the method "featureViews.sync".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Sync#execute()} method to invoke the remote operation.
+           *
+           * @param featureView Required. Format: `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store
+           *        }/featureViews/{feature_view}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SyncFeatureViewRequest}
+           * @return the request
+           */
+          public Sync sync(java.lang.String featureView, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SyncFeatureViewRequest content) throws java.io.IOException {
+            Sync result = new Sync(featureView, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Sync extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SyncFeatureViewResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+featureView}:sync";
+
+            private final java.util.regex.Pattern FEATURE_VIEW_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+
+            /**
+             * Triggers on-demand sync for the FeatureView.
+             *
+             * Create a request for the method "featureViews.sync".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Sync#execute()} method to invoke the remote operation. <p>
+             * {@link Sync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param featureView Required. Format: `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_store
+           *        }/featureViews/{feature_view}`
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SyncFeatureViewRequest}
+             * @since 1.13
+             */
+            protected Sync(java.lang.String featureView, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SyncFeatureViewRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1SyncFeatureViewResponse.class);
+              this.featureView = com.google.api.client.util.Preconditions.checkNotNull(featureView, "Required parameter featureView must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FEATURE_VIEW_PATTERN.matcher(featureView).matches(),
+                    "Parameter featureView must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public Sync set$Xgafv(java.lang.String $Xgafv) {
+              return (Sync) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Sync setAccessToken(java.lang.String accessToken) {
+              return (Sync) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Sync setAlt(java.lang.String alt) {
+              return (Sync) super.setAlt(alt);
+            }
+
+            @Override
+            public Sync setCallback(java.lang.String callback) {
+              return (Sync) super.setCallback(callback);
+            }
+
+            @Override
+            public Sync setFields(java.lang.String fields) {
+              return (Sync) super.setFields(fields);
+            }
+
+            @Override
+            public Sync setKey(java.lang.String key) {
+              return (Sync) super.setKey(key);
+            }
+
+            @Override
+            public Sync setOauthToken(java.lang.String oauthToken) {
+              return (Sync) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Sync setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Sync) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Sync setQuotaUser(java.lang.String quotaUser) {
+              return (Sync) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Sync setUploadType(java.lang.String uploadType) {
+              return (Sync) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Sync setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Sync) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Format: `projects/{project}/locations/{location}/featureOnlineStores/{featu
+             * re_online_store}/featureViews/{feature_view}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String featureView;
+
+            /** Required. Format: `projects/{project}/locations/{location}/featureOnlineStores/{feature_online_stor
+           e}/featureViews/{feature_view}`
+             */
+            public java.lang.String getFeatureView() {
+              return featureView;
+            }
+
+            /**
+             * Required. Format: `projects/{project}/locations/{location}/featureOnlineStores/{featu
+             * re_online_store}/featureViews/{feature_view}`
+             */
+            public Sync setFeatureView(java.lang.String featureView) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FEATURE_VIEW_PATTERN.matcher(featureView).matches(),
+                    "Parameter featureView must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+              }
+              this.featureView = featureView;
+              return this;
+            }
+
+            @Override
+            public Sync set(String parameterName, Object value) {
+              return (Sync) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the FeatureViewSyncs collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+           *   {@code Aiplatform.FeatureViewSyncs.List request = aiplatform.featureViewSyncs().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public FeatureViewSyncs featureViewSyncs() {
+            return new FeatureViewSyncs();
+          }
+
+          /**
+           * The "featureViewSyncs" collection of methods.
+           */
+          public class FeatureViewSyncs {
+
+            /**
+             * Gets details of a single FeatureViewSync.
+             *
+             * Create a request for the method "featureViewSyncs.get".
+             *
+             * This request holds the parameters needed by the aiplatform server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the FeatureViewSync resource. Format: `projects/{project}/locations/{location}
+             *        /featureOnlineStores/{feature_online_store}/featureViews/{feature_view}/featureViewSyncs/{
+             *        feature_view_sync}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureViewSync> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+/featureViewSyncs/[^/]+$");
+
+              /**
+               * Gets details of a single FeatureViewSync.
+               *
+               * Create a request for the method "featureViewSyncs.get".
+               *
+               * This request holds the parameters needed by the the aiplatform server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the FeatureViewSync resource. Format: `projects/{project}/locations/{location}
+             *        /featureOnlineStores/{feature_online_store}/featureViews/{feature_view}/featureViewSyncs/{
+             *        feature_view_sync}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureViewSync.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+/featureViewSyncs/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the FeatureViewSync resource. Format: `projects/{project}/loc
+               * ations/{location}/featureOnlineStores/{feature_online_store}/featureViews/{feature_
+               * view}/featureViewSyncs/{feature_view_sync}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the FeatureViewSync resource. Format: `projects/{project}/locations/{location
+             }/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}/featureViewSyncs/{feature_
+             view_sync}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the FeatureViewSync resource. Format: `projects/{project}/loc
+               * ations/{location}/featureOnlineStores/{feature_online_store}/featureViews/{feature_
+               * view}/featureViewSyncs/{feature_view_sync}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+/featureViewSyncs/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists FeatureViewSyncs in a given FeatureView.
+             *
+             * Create a request for the method "featureViewSyncs.list".
+             *
+             * This request holds the parameters needed by the aiplatform server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name of the FeatureView to list FeatureViewSyncs. Format: `projects/{project}
+             *        /locations/{location}/featureOnlineStores/{feature_online_store}/featureViews/{feature_vie
+             *        w}`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFeatureViewSyncsResponse> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/featureViewSyncs";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+
+              /**
+               * Lists FeatureViewSyncs in a given FeatureView.
+               *
+               * Create a request for the method "featureViewSyncs.list".
+               *
+               * This request holds the parameters needed by the the aiplatform server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name of the FeatureView to list FeatureViewSyncs. Format: `projects/{project}
+             *        /locations/{location}/featureOnlineStores/{feature_online_store}/featureViews/{feature_vie
+             *        w}`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFeatureViewSyncsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the FeatureView to list FeatureViewSyncs. Format: `p
+               * rojects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}/f
+               * eatureViews/{feature_view}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name of the FeatureView to list FeatureViewSyncs. Format: `projects/{project
+             }/locations/{location}/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name of the FeatureView to list FeatureViewSyncs. Format: `p
+               * rojects/{project}/locations/{location}/featureOnlineStores/{feature_online_store}/f
+               * eatureViews/{feature_view}`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/featureOnlineStores/[^/]+/featureViews/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Lists the FeatureViewSyncs that match the filter expression. The following filters
+               * are supported: * `create_time`: Supports `=`, `!=`, `<`, `>`, `>=`, and `<=`
+               * comparisons. Values must be in RFC 3339 format. Examples: * `create_time >
+               * \"2020-01-31T15:30:00.000000Z\"` --> FeatureViewSyncs created after
+               * 2020-01-31T15:30:00.000000Z.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Lists the FeatureViewSyncs that match the filter expression. The following filters are supported: *
+             `create_time`: Supports `=`, `!=`, `<`, `>`, `>=`, and `<=` comparisons. Values must be in RFC 3339
+             format. Examples: * `create_time > \"2020-01-31T15:30:00.000000Z\"` --> FeatureViewSyncs created
+             after 2020-01-31T15:30:00.000000Z.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Lists the FeatureViewSyncs that match the filter expression. The following filters
+               * are supported: * `create_time`: Supports `=`, `!=`, `<`, `>`, `>=`, and `<=`
+               * comparisons. Values must be in RFC 3339 format. Examples: * `create_time >
+               * \"2020-01-31T15:30:00.000000Z\"` --> FeatureViewSyncs created after
+               * 2020-01-31T15:30:00.000000Z.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
+               * after a field name for descending. Supported fields: * `create_time`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
+             name for descending. Supported fields: * `create_time`
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /**
+               * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
+               * after a field name for descending. Supported fields: * `create_time`
+               */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /**
+               * The maximum number of FeatureViewSyncs to return. The service may return fewer than
+               * this value. If unspecified, at most 1000 FeatureViewSyncs will be returned. The
+               * maximum value is 1000; any value greater than 1000 will be coerced to 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** The maximum number of FeatureViewSyncs to return. The service may return fewer than this value. If
+             unspecified, at most 1000 FeatureViewSyncs will be returned. The maximum value is 1000; any value
+             greater than 1000 will be coerced to 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * The maximum number of FeatureViewSyncs to return. The service may return fewer than
+               * this value. If unspecified, at most 1000 FeatureViewSyncs will be returned. The
+               * maximum value is 1000; any value greater than 1000 will be coerced to 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A page token, received from a previous
+               * FeatureOnlineStoreAdminService.ListFeatureViewSyncs call. Provide this to retrieve
+               * the subsequent page. When paginating, all other parameters provided to
+               * FeatureOnlineStoreAdminService.ListFeatureViewSyncs must match the call that
+               * provided the page token.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A page token, received from a previous FeatureOnlineStoreAdminService.ListFeatureViewSyncs call.
+             Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
+             FeatureOnlineStoreAdminService.ListFeatureViewSyncs must match the call that provided the page
+             token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A page token, received from a previous
+               * FeatureOnlineStoreAdminService.ListFeatureViewSyncs call. Provide this to retrieve
+               * the subsequent page. When paginating, all other parameters provided to
+               * FeatureOnlineStoreAdminService.ListFeatureViewSyncs must match the call that
+               * provided the page token.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
           /**
            * An accessor for creating requests from the Operations collection.
            *
@@ -26603,9 +32015,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the aiplatform server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the EntityType to create a Feature. Format:
-             *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}`
+             * @param parent
              * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature}
              * @return the request
              */
@@ -26633,9 +32043,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the EntityType to create a Feature. Format:
-             *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}`
+               * @param parent
                * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1Feature}
                * @since 1.13
                */
@@ -26704,26 +32112,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The resource name of the EntityType to create a Feature. Format: `project
-               * s/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_t
-               * ype}`
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name of the EntityType to create a Feature. Format:
-             `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The resource name of the EntityType to create a Feature. Format: `project
-               * s/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_t
-               * ype}`
-               */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -26738,14 +32136,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * Required. The ID to use for the Feature, which will become the final component of
                * the Feature's resource name. This value may be up to 128 characters, and valid
                * characters are `[a-z0-9_]`. The first character cannot be a number. The value must
-               * be unique within an EntityType .
+               * be unique within an EntityType/FeatureGroup.
                */
               @com.google.api.client.util.Key
               private java.lang.String featureId;
 
               /** Required. The ID to use for the Feature, which will become the final component of the Feature's
              resource name. This value may be up to 128 characters, and valid characters are `[a-z0-9_]`. The
-             first character cannot be a number. The value must be unique within an EntityType .
+             first character cannot be a number. The value must be unique within an EntityType/FeatureGroup.
                */
               public java.lang.String getFeatureId() {
                 return featureId;
@@ -26755,7 +32153,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * Required. The ID to use for the Feature, which will become the final component of
                * the Feature's resource name. This value may be up to 128 characters, and valid
                * characters are `[a-z0-9_]`. The first character cannot be a number. The value must
-               * be unique within an EntityType .
+               * be unique within an EntityType/FeatureGroup.
                */
               public Create setFeatureId(java.lang.String featureId) {
                 this.featureId = featureId;
@@ -26777,6 +32175,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/f
              *        eaturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -26805,6 +32204,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/f
              *        eaturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -26875,13 +32275,15 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Features to be deleted. Format: `projects/{project}/locat
                * ions/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{fe
-               * ature}`
+               * ature}` `projects/{project}/locations/{location}/featureGroups/{feature_group}/feat
+               * ures/{feature}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The name of the Features to be deleted. Format: `projects/{project}/locations/{location}/
              featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+             `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
                */
               public java.lang.String getName() {
                 return name;
@@ -26890,7 +32292,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Features to be deleted. Format: `projects/{project}/locat
                * ions/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{fe
-               * ature}`
+               * ature}` `projects/{project}/locations/{location}/featureGroups/{feature_group}/feat
+               * ures/{feature}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -26917,7 +32320,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The name of the Feature resource. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}`
+             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -26945,7 +32348,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The name of the Feature resource. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}`
+             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -27026,12 +32429,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Feature resource. Format: `projects/{project}/locations/{
                * location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The name of the Feature resource. Format:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+             `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getName() {
                 return name;
@@ -27040,6 +32445,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The name of the Feature resource. Format: `projects/{project}/locations/{
                * location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -27066,7 +32472,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param parent Required. The resource name of the Location to list Features. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}`
+             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -27094,7 +32500,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param parent Required. The resource name of the Location to list Features. Format:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}`
+             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -27175,12 +32581,14 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The resource name of the Location to list Features. Format: `projects/{pr
                * oject}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the Location to list Features. Format:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+             `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getParent() {
                 return parent;
@@ -27189,6 +32597,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The resource name of the Location to list Features. Format: `projects/{pr
                * oject}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -51820,8 +57229,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the aiplatform server.  After setting any optional
          * parameters, call the {@link GenerateAccessToken#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the NotebookRuntime resource. Format:
+         * @param name Required. The name of the resource requesting the OAuth2 token. Format:
          *        `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+         *        `projects/{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_job}`
          * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateAccessTokenRequest}
          * @return the request
          */
@@ -51850,8 +57260,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. The name of the NotebookRuntime resource. Format:
+           * @param name Required. The name of the resource requesting the OAuth2 token. Format:
          *        `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+         *        `projects/{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_job}`
            * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateAccessTokenRequest}
            * @since 1.13
            */
@@ -51921,22 +57332,25 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. The name of the NotebookRuntime resource. Format:
-           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           * Required. The name of the resource requesting the OAuth2 token. Format:
+           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}` `projects
+           * /{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_job}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the NotebookRuntime resource. Format:
+          /** Required. The name of the resource requesting the OAuth2 token. Format:
          `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+         `projects/{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_job}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the NotebookRuntime resource. Format:
-           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           * Required. The name of the resource requesting the OAuth2 token. Format:
+           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}` `projects
+           * /{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_job}`
            */
           public GenerateAccessToken setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -51959,18 +57373,18 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the aiplatform server.  After setting any optional
          * parameters, call the {@link ReportEvent#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the NotebookRuntime resource. Format:
-         *        `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
-         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest}
+         * @param name Required. The name of the NotebookExecutionJob resource. Format:
+         *        `projects/{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_jobs}`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportExecutionEventRequest}
          * @return the request
          */
-        public ReportEvent reportEvent(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest content) throws java.io.IOException {
+        public ReportEvent reportEvent(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportExecutionEventRequest content) throws java.io.IOException {
           ReportEvent result = new ReportEvent(name, content);
           initialize(result);
           return result;
         }
 
-        public class ReportEvent extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventResponse> {
+        public class ReportEvent extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportExecutionEventResponse> {
 
           private static final String REST_PATH = "v1beta1/{+name}:reportEvent";
 
@@ -51986,13 +57400,13 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * ReportEvent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the NotebookRuntime resource. Format:
-         *        `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
-           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest}
+           * @param name Required. The name of the NotebookExecutionJob resource. Format:
+         *        `projects/{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_jobs}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportExecutionEventRequest}
            * @since 1.13
            */
-          protected ReportEvent(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest content) {
-            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportRuntimeEventResponse.class);
+          protected ReportEvent(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportExecutionEventRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ReportExecutionEventResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -52057,22 +57471,22 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. The name of the NotebookRuntime resource. Format:
-           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           * Required. The name of the NotebookExecutionJob resource. Format: `projects/{project}/lo
+           * cations/{location}/notebookExecutionJobs/{notebook_execution_jobs}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the NotebookRuntime resource. Format:
-         `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+          /** Required. The name of the NotebookExecutionJob resource. Format:
+         `projects/{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_jobs}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the NotebookRuntime resource. Format:
-           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           * Required. The name of the NotebookExecutionJob resource. Format: `projects/{project}/lo
+           * cations/{location}/notebookExecutionJobs/{notebook_execution_jobs}`
            */
           public ReportEvent setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -52895,9 +58309,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * segment of the NotebookRuntimeTemplate's resource name. * `display_name` supports = and
            * != * `labels` supports general map functions that is: * `labels.key=value` - key:value
            * equality * `labels.key:* or labels:key - key existence * A key including a space must
-           * be quoted. `labels."a key"`. Some examples: *
+           * be quoted. `labels."a key"`. * `notebookRuntimeType` supports = and !=.
+           * notebookRuntimeType enum: [USER_DEFINED, ONE_CLICK]. Some examples: *
            * `notebookRuntimeTemplate=notebookRuntimeTemplate123` * `displayName="myDisplayName"` *
-           * `labels.myKey="myValue"`
+           * `labels.myKey="myValue"` * `notebookRuntimeType=USER_DEFINED`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -52907,9 +58322,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          `notebookRuntimeTemplate` represents the NotebookRuntimeTemplate ID, i.e. the last segment of the
          NotebookRuntimeTemplate's resource name. * `display_name` supports = and != * `labels` supports
          general map functions that is: * `labels.key=value` - key:value equality * `labels.key:* or
-         labels:key - key existence * A key including a space must be quoted. `labels."a key"`. Some
+         labels:key - key existence * A key including a space must be quoted. `labels."a key"`. *
+         `notebookRuntimeType` supports = and !=. notebookRuntimeType enum: [USER_DEFINED, ONE_CLICK]. Some
          examples: * `notebookRuntimeTemplate=notebookRuntimeTemplate123` * `displayName="myDisplayName"` *
-         `labels.myKey="myValue"`
+         `labels.myKey="myValue"` * `notebookRuntimeType=USER_DEFINED`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -52922,9 +58338,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * segment of the NotebookRuntimeTemplate's resource name. * `display_name` supports = and
            * != * `labels` supports general map functions that is: * `labels.key=value` - key:value
            * equality * `labels.key:* or labels:key - key existence * A key including a space must
-           * be quoted. `labels."a key"`. Some examples: *
+           * be quoted. `labels."a key"`. * `notebookRuntimeType` supports = and !=.
+           * notebookRuntimeType enum: [USER_DEFINED, ONE_CLICK]. Some examples: *
            * `notebookRuntimeTemplate=notebookRuntimeTemplate123` * `displayName="myDisplayName"` *
-           * `labels.myKey="myValue"`
+           * `labels.myKey="myValue"` * `notebookRuntimeType=USER_DEFINED`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -53658,8 +59075,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the aiplatform server.  After setting any optional
          * parameters, call the {@link GenerateAccessToken#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the NotebookRuntime resource. Format:
+         * @param name Required. The name of the resource requesting the OAuth2 token. Format:
          *        `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+         *        `projects/{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_job}`
          * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateAccessTokenRequest}
          * @return the request
          */
@@ -53688,8 +59106,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. The name of the NotebookRuntime resource. Format:
+           * @param name Required. The name of the resource requesting the OAuth2 token. Format:
          *        `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+         *        `projects/{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_job}`
            * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateAccessTokenRequest}
            * @since 1.13
            */
@@ -53759,22 +59178,25 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. The name of the NotebookRuntime resource. Format:
-           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           * Required. The name of the resource requesting the OAuth2 token. Format:
+           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}` `projects
+           * /{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_job}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the NotebookRuntime resource. Format:
+          /** Required. The name of the resource requesting the OAuth2 token. Format:
          `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+         `projects/{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_job}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the NotebookRuntime resource. Format:
-           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}`
+           * Required. The name of the resource requesting the OAuth2 token. Format:
+           * `projects/{project}/locations/{location}/notebookRuntimes/{notebook_runtime}` `projects
+           * /{project}/locations/{location}/notebookExecutionJobs/{notebook_execution_job}`
            */
           public GenerateAccessToken setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -54098,12 +59520,13 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * BEING_UPGRADED]. * `runtimeUser` supports = and !=. * API version is UI only: `uiState`
            * supports = and !=. uiState enum: [UI_RESOURCE_STATE_UNSPECIFIED,
            * UI_RESOURCE_STATE_BEING_CREATED, UI_RESOURCE_STATE_ACTIVE,
-           * UI_RESOURCE_STATE_BEING_DELETED, UI_RESOURCE_STATE_CREATION_FAILED]. Some examples: *
-           * `notebookRuntime="notebookRuntime123"` * `displayName="myDisplayName"` and
-           * `displayName=~"myDisplayNameRegex"` *
+           * UI_RESOURCE_STATE_BEING_DELETED, UI_RESOURCE_STATE_CREATION_FAILED]. *
+           * `notebookRuntimeType` supports = and !=. notebookRuntimeType enum: [USER_DEFINED,
+           * ONE_CLICK]. Some examples: * `notebookRuntime="notebookRuntime123"` *
+           * `displayName="myDisplayName"` and `displayName=~"myDisplayNameRegex"` *
            * `notebookRuntimeTemplate="notebookRuntimeTemplate321"` * `healthState=HEALTHY` *
            * `runtimeState=RUNNING` * `runtimeUser="test@google.com"` *
-           * `uiState=UI_RESOURCE_STATE_BEING_DELETED`
+           * `uiState=UI_RESOURCE_STATE_BEING_DELETED` * `notebookRuntimeType=USER_DEFINED`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -54118,11 +59541,12 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          enum: [RUNTIME_STATE_UNSPECIFIED, RUNNING, BEING_STARTED, BEING_STOPPED, STOPPED, BEING_UPGRADED].
          * `runtimeUser` supports = and !=. * API version is UI only: `uiState` supports = and !=. uiState
          enum: [UI_RESOURCE_STATE_UNSPECIFIED, UI_RESOURCE_STATE_BEING_CREATED, UI_RESOURCE_STATE_ACTIVE,
-         UI_RESOURCE_STATE_BEING_DELETED, UI_RESOURCE_STATE_CREATION_FAILED]. Some examples: *
+         UI_RESOURCE_STATE_BEING_DELETED, UI_RESOURCE_STATE_CREATION_FAILED]. * `notebookRuntimeType`
+         supports = and !=. notebookRuntimeType enum: [USER_DEFINED, ONE_CLICK]. Some examples: *
          `notebookRuntime="notebookRuntime123"` * `displayName="myDisplayName"` and
          `displayName=~"myDisplayNameRegex"` * `notebookRuntimeTemplate="notebookRuntimeTemplate321"` *
          `healthState=HEALTHY` * `runtimeState=RUNNING` * `runtimeUser="test@google.com"` *
-         `uiState=UI_RESOURCE_STATE_BEING_DELETED`
+         `uiState=UI_RESOURCE_STATE_BEING_DELETED` * `notebookRuntimeType=USER_DEFINED`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -54141,12 +59565,13 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * BEING_UPGRADED]. * `runtimeUser` supports = and !=. * API version is UI only: `uiState`
            * supports = and !=. uiState enum: [UI_RESOURCE_STATE_UNSPECIFIED,
            * UI_RESOURCE_STATE_BEING_CREATED, UI_RESOURCE_STATE_ACTIVE,
-           * UI_RESOURCE_STATE_BEING_DELETED, UI_RESOURCE_STATE_CREATION_FAILED]. Some examples: *
-           * `notebookRuntime="notebookRuntime123"` * `displayName="myDisplayName"` and
-           * `displayName=~"myDisplayNameRegex"` *
+           * UI_RESOURCE_STATE_BEING_DELETED, UI_RESOURCE_STATE_CREATION_FAILED]. *
+           * `notebookRuntimeType` supports = and !=. notebookRuntimeType enum: [USER_DEFINED,
+           * ONE_CLICK]. Some examples: * `notebookRuntime="notebookRuntime123"` *
+           * `displayName="myDisplayName"` and `displayName=~"myDisplayNameRegex"` *
            * `notebookRuntimeTemplate="notebookRuntimeTemplate321"` * `healthState=HEALTHY` *
            * `runtimeState=RUNNING` * `runtimeUser="test@google.com"` *
-           * `uiState=UI_RESOURCE_STATE_BEING_DELETED`
+           * `uiState=UI_RESOURCE_STATE_BEING_DELETED` * `notebookRuntimeType=USER_DEFINED`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -77423,6 +82848,275 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists publisher models in Model Garden.
+       *
+       * Create a request for the method "models.list".
+       *
+       * This request holds the parameters needed by the aiplatform server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the Publisher from which to list the PublisherModels. Format:
+       *        `publishers/{publisher}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListPublisherModelsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/models";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^publishers/[^/]+$");
+
+        /**
+         * Lists publisher models in Model Garden.
+         *
+         * Create a request for the method "models.list".
+         *
+         * This request holds the parameters needed by the the aiplatform server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the Publisher from which to list the PublisherModels. Format:
+       *        `publishers/{publisher}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListPublisherModelsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^publishers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Publisher from which to list the PublisherModels. Format:
+         * `publishers/{publisher}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the Publisher from which to list the PublisherModels. Format:
+       `publishers/{publisher}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the Publisher from which to list the PublisherModels. Format:
+         * `publishers/{publisher}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^publishers/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Optional. The standard list filter. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. The standard list filter.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** Optional. The standard list filter. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The IETF BCP-47 language code representing the language in which the publisher
+         * models' text information should be written in (see go/bcp47). If not set, by default
+         * English (en).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String languageCode;
+
+        /** Optional. The IETF BCP-47 language code representing the language in which the publisher models'
+       text information should be written in (see go/bcp47). If not set, by default English (en).
+         */
+        public java.lang.String getLanguageCode() {
+          return languageCode;
+        }
+
+        /**
+         * Optional. The IETF BCP-47 language code representing the language in which the publisher
+         * models' text information should be written in (see go/bcp47). If not set, by default
+         * English (en).
+         */
+        public List setLanguageCode(java.lang.String languageCode) {
+          this.languageCode = languageCode;
+          return this;
+        }
+
+        /**
+         * Optional. A comma-separated list of fields to order by, sorted in ascending order. Use
+         * "desc" after a field name for descending.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after
+       a field name for descending.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. A comma-separated list of fields to order by, sorted in ascending order. Use
+         * "desc" after a field name for descending.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /** Optional. The standard list page size. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The standard list page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. The standard list page size. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. The standard list page token. Typically obtained via
+         * ListPublisherModelsResponse.next_page_token of the previous
+         * ModelGardenService.ListPublisherModels call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The standard list page token. Typically obtained via
+       ListPublisherModelsResponse.next_page_token of the previous ModelGardenService.ListPublisherModels
+       call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. The standard list page token. Typically obtained via
+         * ListPublisherModelsResponse.next_page_token of the previous
+         * ModelGardenService.ListPublisherModels call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /** Optional. PublisherModel view specifying which fields to read. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Optional. PublisherModel view specifying which fields to read.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Optional. PublisherModel view specifying which fields to read. */
+        public List setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
         }
       }
 

@@ -73,13 +73,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    * The labels with user-defined metadata to organize your NotebookRuntime. Label keys and values
    * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
    * numeric characters, underscores and dashes. International characters are allowed. No more than
-   * 64 user labels can be associated with one Dataset (System labels are excluded). See
+   * 64 user labels can be associated with one NotebookRuntime (System labels are excluded). See
    * https://goo.gl/xmQnxf for more information and examples of labels. System reserved label keys
    * are prefixed with "aiplatform.googleapis.com/" and are immutable. Following system labels exist
    * for NotebookRuntime: * "aiplatform.googleapis.com/notebook_runtime_gce_instance_id": output
    * only, its value is the Compute Engine instance id. *
-   * "aiplatform.googleapis.com/colab_enterprise_entry_service": its value is either "BigQuery" or
-   * "Vertex"; if absent, it should be "Vertex". This is to describe the entry service, either
+   * "aiplatform.googleapis.com/colab_enterprise_entry_service": its value is either "bigquery" or
+   * "vertex"; if absent, it should be "vertex". This is to describe the entry service, either
    * BigQuery or Vertex.
    * The value may be {@code null}.
    */
@@ -99,6 +99,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1NotebookRuntimeTemplateRef notebookRuntimeTemplateRef;
+
+  /**
+   * Output only. The type of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notebookRuntimeType;
 
   /**
    * Output only. The proxy endpoint used to access the NotebookRuntime.
@@ -239,13 +246,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    * The labels with user-defined metadata to organize your NotebookRuntime. Label keys and values
    * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
    * numeric characters, underscores and dashes. International characters are allowed. No more than
-   * 64 user labels can be associated with one Dataset (System labels are excluded). See
+   * 64 user labels can be associated with one NotebookRuntime (System labels are excluded). See
    * https://goo.gl/xmQnxf for more information and examples of labels. System reserved label keys
    * are prefixed with "aiplatform.googleapis.com/" and are immutable. Following system labels exist
    * for NotebookRuntime: * "aiplatform.googleapis.com/notebook_runtime_gce_instance_id": output
    * only, its value is the Compute Engine instance id. *
-   * "aiplatform.googleapis.com/colab_enterprise_entry_service": its value is either "BigQuery" or
-   * "Vertex"; if absent, it should be "Vertex". This is to describe the entry service, either
+   * "aiplatform.googleapis.com/colab_enterprise_entry_service": its value is either "bigquery" or
+   * "vertex"; if absent, it should be "vertex". This is to describe the entry service, either
    * BigQuery or Vertex.
    * @return value or {@code null} for none
    */
@@ -257,13 +264,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    * The labels with user-defined metadata to organize your NotebookRuntime. Label keys and values
    * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
    * numeric characters, underscores and dashes. International characters are allowed. No more than
-   * 64 user labels can be associated with one Dataset (System labels are excluded). See
+   * 64 user labels can be associated with one NotebookRuntime (System labels are excluded). See
    * https://goo.gl/xmQnxf for more information and examples of labels. System reserved label keys
    * are prefixed with "aiplatform.googleapis.com/" and are immutable. Following system labels exist
    * for NotebookRuntime: * "aiplatform.googleapis.com/notebook_runtime_gce_instance_id": output
    * only, its value is the Compute Engine instance id. *
-   * "aiplatform.googleapis.com/colab_enterprise_entry_service": its value is either "BigQuery" or
-   * "Vertex"; if absent, it should be "Vertex". This is to describe the entry service, either
+   * "aiplatform.googleapis.com/colab_enterprise_entry_service": its value is either "bigquery" or
+   * "vertex"; if absent, it should be "vertex". This is to describe the entry service, either
    * BigQuery or Vertex.
    * @param labels labels or {@code null} for none
    */
@@ -303,6 +310,23 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    */
   public GoogleCloudAiplatformV1NotebookRuntime setNotebookRuntimeTemplateRef(GoogleCloudAiplatformV1NotebookRuntimeTemplateRef notebookRuntimeTemplateRef) {
     this.notebookRuntimeTemplateRef = notebookRuntimeTemplateRef;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotebookRuntimeType() {
+    return notebookRuntimeType;
+  }
+
+  /**
+   * Output only. The type of the notebook runtime.
+   * @param notebookRuntimeType notebookRuntimeType or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookRuntime setNotebookRuntimeType(java.lang.String notebookRuntimeType) {
+    this.notebookRuntimeType = notebookRuntimeType;
     return this;
   }
 

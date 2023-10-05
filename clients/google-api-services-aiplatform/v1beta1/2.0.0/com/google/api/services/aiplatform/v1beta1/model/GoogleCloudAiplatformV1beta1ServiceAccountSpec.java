@@ -30,9 +30,9 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ServiceAccountSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. If true, custom user-managed service account is enforced to run any workloads (e.g.
-   * Vertex Jobs) on the resource; Otherwise, will always use [Vertex AI Custom Code Service
-   * Agent](https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents)
+   * Required. If true, custom user-managed service account is enforced to run any workloads (for
+   * example, Vertex Jobs) on the resource. Otherwise, uses the [Vertex AI Custom Code Service
+   * Agent](https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,10 +40,10 @@ public final class GoogleCloudAiplatformV1beta1ServiceAccountSpec extends com.go
 
   /**
    * Optional. Default service account that this PersistentResource's workloads run as. The
-   * workloads include: * Any runtime specified via `ResourceRuntimeSpec` on creation time, e.g.
-   * Ray; * Jobs submitted to PersistentResource, if no other service account specified in the job
-   * specs. Only works when custom service account is enabled and users have the
-   * `iam.serviceAccounts.actAs` permission on this service account. Required if any containers
+   * workloads include: * Any runtime specified via `ResourceRuntimeSpec` on creation time, for
+   * example, Ray. * Jobs submitted to PersistentResource, if no other service account specified in
+   * the job specs. Only works when custom service account is enabled and users have the
+   * `iam.serviceAccounts.actAs` permission on this service account. Required if any containers are
    * specified in `ResourceRuntimeSpec`.
    * The value may be {@code null}.
    */
@@ -51,9 +51,9 @@ public final class GoogleCloudAiplatformV1beta1ServiceAccountSpec extends com.go
   private java.lang.String serviceAccount;
 
   /**
-   * Required. If true, custom user-managed service account is enforced to run any workloads (e.g.
-   * Vertex Jobs) on the resource; Otherwise, will always use [Vertex AI Custom Code Service
-   * Agent](https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents)
+   * Required. If true, custom user-managed service account is enforced to run any workloads (for
+   * example, Vertex Jobs) on the resource. Otherwise, uses the [Vertex AI Custom Code Service
+   * Agent](https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableCustomServiceAccount() {
@@ -61,9 +61,9 @@ public final class GoogleCloudAiplatformV1beta1ServiceAccountSpec extends com.go
   }
 
   /**
-   * Required. If true, custom user-managed service account is enforced to run any workloads (e.g.
-   * Vertex Jobs) on the resource; Otherwise, will always use [Vertex AI Custom Code Service
-   * Agent](https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents)
+   * Required. If true, custom user-managed service account is enforced to run any workloads (for
+   * example, Vertex Jobs) on the resource. Otherwise, uses the [Vertex AI Custom Code Service
+   * Agent](https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents).
    * @param enableCustomServiceAccount enableCustomServiceAccount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ServiceAccountSpec setEnableCustomServiceAccount(java.lang.Boolean enableCustomServiceAccount) {
@@ -73,10 +73,10 @@ public final class GoogleCloudAiplatformV1beta1ServiceAccountSpec extends com.go
 
   /**
    * Optional. Default service account that this PersistentResource's workloads run as. The
-   * workloads include: * Any runtime specified via `ResourceRuntimeSpec` on creation time, e.g.
-   * Ray; * Jobs submitted to PersistentResource, if no other service account specified in the job
-   * specs. Only works when custom service account is enabled and users have the
-   * `iam.serviceAccounts.actAs` permission on this service account. Required if any containers
+   * workloads include: * Any runtime specified via `ResourceRuntimeSpec` on creation time, for
+   * example, Ray. * Jobs submitted to PersistentResource, if no other service account specified in
+   * the job specs. Only works when custom service account is enabled and users have the
+   * `iam.serviceAccounts.actAs` permission on this service account. Required if any containers are
    * specified in `ResourceRuntimeSpec`.
    * @return value or {@code null} for none
    */
@@ -86,10 +86,10 @@ public final class GoogleCloudAiplatformV1beta1ServiceAccountSpec extends com.go
 
   /**
    * Optional. Default service account that this PersistentResource's workloads run as. The
-   * workloads include: * Any runtime specified via `ResourceRuntimeSpec` on creation time, e.g.
-   * Ray; * Jobs submitted to PersistentResource, if no other service account specified in the job
-   * specs. Only works when custom service account is enabled and users have the
-   * `iam.serviceAccounts.actAs` permission on this service account. Required if any containers
+   * workloads include: * Any runtime specified via `ResourceRuntimeSpec` on creation time, for
+   * example, Ray. * Jobs submitted to PersistentResource, if no other service account specified in
+   * the job specs. Only works when custom service account is enabled and users have the
+   * `iam.serviceAccounts.actAs` permission on this service account. Required if any containers are
    * specified in `ResourceRuntimeSpec`.
    * @param serviceAccount serviceAccount or {@code null} for none
    */

@@ -46,6 +46,14 @@ public final class GoogleCloudAiplatformV1ModelMonitoringAlertConfig extends com
   private java.lang.Boolean enableLogging;
 
   /**
+   * Resource names of the NotificationChannels to send alert. Must be of the format
+   * `projects//notificationChannels/`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> notificationChannels;
+
+  /**
    * Email alert config.
    * @return value or {@code null} for none
    */
@@ -80,6 +88,25 @@ public final class GoogleCloudAiplatformV1ModelMonitoringAlertConfig extends com
    */
   public GoogleCloudAiplatformV1ModelMonitoringAlertConfig setEnableLogging(java.lang.Boolean enableLogging) {
     this.enableLogging = enableLogging;
+    return this;
+  }
+
+  /**
+   * Resource names of the NotificationChannels to send alert. Must be of the format
+   * `projects//notificationChannels/`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNotificationChannels() {
+    return notificationChannels;
+  }
+
+  /**
+   * Resource names of the NotificationChannels to send alert. Must be of the format
+   * `projects//notificationChannels/`
+   * @param notificationChannels notificationChannels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelMonitoringAlertConfig setNotificationChannels(java.util.List<java.lang.String> notificationChannels) {
+    this.notificationChannels = notificationChannels;
     return this;
   }
 

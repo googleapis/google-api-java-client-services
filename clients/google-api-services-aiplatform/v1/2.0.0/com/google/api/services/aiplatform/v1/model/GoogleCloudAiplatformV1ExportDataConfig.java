@@ -39,6 +39,13 @@ public final class GoogleCloudAiplatformV1ExportDataConfig extends com.google.ap
   private java.lang.String annotationsFilter;
 
   /**
+   * Split based on the provided filters for each set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ExportFilterSplit filterSplit;
+
+  /**
    * Split based on fractions defining the size of each set.
    * The value may be {@code null}.
    */
@@ -73,6 +80,23 @@ public final class GoogleCloudAiplatformV1ExportDataConfig extends com.google.ap
    */
   public GoogleCloudAiplatformV1ExportDataConfig setAnnotationsFilter(java.lang.String annotationsFilter) {
     this.annotationsFilter = annotationsFilter;
+    return this;
+  }
+
+  /**
+   * Split based on the provided filters for each set.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ExportFilterSplit getFilterSplit() {
+    return filterSplit;
+  }
+
+  /**
+   * Split based on the provided filters for each set.
+   * @param filterSplit filterSplit or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ExportDataConfig setFilterSplit(GoogleCloudAiplatformV1ExportFilterSplit filterSplit) {
+    this.filterSplit = filterSplit;
     return this;
   }
 

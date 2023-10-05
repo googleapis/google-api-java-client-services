@@ -30,11 +30,25 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Number of candidates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long candidateCount;
+
+  /**
    * The Google Cloud Storage URI that stores the prompt data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsUri;
+
+  /**
+   * Grounding checking configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig groundingConfig;
 
   /**
    * Value of the maximum number of tokens generated set when the dataset was saved.
@@ -49,6 +63,13 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   @com.google.api.client.util.Key
   private java.lang.String promptType;
+
+  /**
+   * Customized stop sequences.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> stopSequences;
 
   /**
    * Temperature value used for sampling set when the dataset was saved. This value is used to tune
@@ -82,6 +103,23 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
   private java.lang.Float topP;
 
   /**
+   * Number of candidates.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCandidateCount() {
+    return candidateCount;
+  }
+
+  /**
+   * Number of candidates.
+   * @param candidateCount candidateCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setCandidateCount(java.lang.Long candidateCount) {
+    this.candidateCount = candidateCount;
+    return this;
+  }
+
+  /**
    * The Google Cloud Storage URI that stores the prompt data.
    * @return value or {@code null} for none
    */
@@ -95,6 +133,23 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setGcsUri(java.lang.String gcsUri) {
     this.gcsUri = gcsUri;
+    return this;
+  }
+
+  /**
+   * Grounding checking configuration.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig getGroundingConfig() {
+    return groundingConfig;
+  }
+
+  /**
+   * Grounding checking configuration.
+   * @param groundingConfig groundingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setGroundingConfig(GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig groundingConfig) {
+    this.groundingConfig = groundingConfig;
     return this;
   }
 
@@ -129,6 +184,23 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setPromptType(java.lang.String promptType) {
     this.promptType = promptType;
+    return this;
+  }
+
+  /**
+   * Customized stop sequences.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getStopSequences() {
+    return stopSequences;
+  }
+
+  /**
+   * Customized stop sequences.
+   * @param stopSequences stopSequences or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setStopSequences(java.util.List<java.lang.String> stopSequences) {
+    this.stopSequences = stopSequences;
     return this;
   }
 

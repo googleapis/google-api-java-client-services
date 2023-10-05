@@ -175,6 +175,8 @@ public final class GoogleCloudAiplatformV1PipelineJob extends com.google.api.cli
 
   /**
    * A template uri from where the PipelineJob.pipeline_spec, if empty, will be downloaded.
+   * Currently, only uri from Vertex Template Registry & Gallery is supported. Reference to
+   * https://cloud.google.com/vertex-ai/docs/pipelines/create-pipeline-template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -528,6 +530,8 @@ public final class GoogleCloudAiplatformV1PipelineJob extends com.google.api.cli
 
   /**
    * A template uri from where the PipelineJob.pipeline_spec, if empty, will be downloaded.
+   * Currently, only uri from Vertex Template Registry & Gallery is supported. Reference to
+   * https://cloud.google.com/vertex-ai/docs/pipelines/create-pipeline-template.
    * @return value or {@code null} for none
    */
   public java.lang.String getTemplateUri() {
@@ -536,6 +540,8 @@ public final class GoogleCloudAiplatformV1PipelineJob extends com.google.api.cli
 
   /**
    * A template uri from where the PipelineJob.pipeline_spec, if empty, will be downloaded.
+   * Currently, only uri from Vertex Template Registry & Gallery is supported. Reference to
+   * https://cloud.google.com/vertex-ai/docs/pipelines/create-pipeline-template.
    * @param templateUri templateUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1PipelineJob setTemplateUri(java.lang.String templateUri) {

@@ -86,17 +86,17 @@ public final class GoogleCloudAiplatformV1beta1PersistentResource extends com.go
    * `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in
    * `12345`, and {network} is a network name. To specify this field, you must have already
    * [configured VPC Network Peering for Vertex AI](https://cloud.google.com/vertex-ai/docs/general
-   * /vpc-peering). If this field is left unspecified, the resources is not peered with any network.
+   * /vpc-peering). If this field is left unspecified, the resources aren't peered with any network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Optional. A list of names for the reserved ip ranges under the VPC network that can be used for
-   * this persistent resource. If set, we will deploy the persistent resource within the provided ip
-   * ranges. Otherwise, the persistent resource will be deployed to any ip ranges under the provided
-   * VPC network. Example: ['vertex-ai-ip-range'].
+   * Optional. A list of names for the reserved IP ranges under the VPC network that can be used for
+   * this persistent resource. If set, we will deploy the persistent resource within the provided IP
+   * ranges. Otherwise, the persistent resource is deployed to any IP ranges under the provided VPC
+   * network. Example: ['vertex-ai-ip-range'].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class GoogleCloudAiplatformV1beta1PersistentResource extends com.go
   private GoogleCloudAiplatformV1beta1ResourceRuntime resourceRuntime;
 
   /**
-   * Optional. Persistent Resource runtime spec. Used for e.g. Ray cluster configuration.
+   * Optional. Persistent Resource runtime spec. For example, used for Ray cluster configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -266,7 +266,7 @@ public final class GoogleCloudAiplatformV1beta1PersistentResource extends com.go
    * `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in
    * `12345`, and {network} is a network name. To specify this field, you must have already
    * [configured VPC Network Peering for Vertex AI](https://cloud.google.com/vertex-ai/docs/general
-   * /vpc-peering). If this field is left unspecified, the resources is not peered with any network.
+   * /vpc-peering). If this field is left unspecified, the resources aren't peered with any network.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -281,7 +281,7 @@ public final class GoogleCloudAiplatformV1beta1PersistentResource extends com.go
    * `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in
    * `12345`, and {network} is a network name. To specify this field, you must have already
    * [configured VPC Network Peering for Vertex AI](https://cloud.google.com/vertex-ai/docs/general
-   * /vpc-peering). If this field is left unspecified, the resources is not peered with any network.
+   * /vpc-peering). If this field is left unspecified, the resources aren't peered with any network.
    * @param network network or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PersistentResource setNetwork(java.lang.String network) {
@@ -290,10 +290,10 @@ public final class GoogleCloudAiplatformV1beta1PersistentResource extends com.go
   }
 
   /**
-   * Optional. A list of names for the reserved ip ranges under the VPC network that can be used for
-   * this persistent resource. If set, we will deploy the persistent resource within the provided ip
-   * ranges. Otherwise, the persistent resource will be deployed to any ip ranges under the provided
-   * VPC network. Example: ['vertex-ai-ip-range'].
+   * Optional. A list of names for the reserved IP ranges under the VPC network that can be used for
+   * this persistent resource. If set, we will deploy the persistent resource within the provided IP
+   * ranges. Otherwise, the persistent resource is deployed to any IP ranges under the provided VPC
+   * network. Example: ['vertex-ai-ip-range'].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReservedIpRanges() {
@@ -301,10 +301,10 @@ public final class GoogleCloudAiplatformV1beta1PersistentResource extends com.go
   }
 
   /**
-   * Optional. A list of names for the reserved ip ranges under the VPC network that can be used for
-   * this persistent resource. If set, we will deploy the persistent resource within the provided ip
-   * ranges. Otherwise, the persistent resource will be deployed to any ip ranges under the provided
-   * VPC network. Example: ['vertex-ai-ip-range'].
+   * Optional. A list of names for the reserved IP ranges under the VPC network that can be used for
+   * this persistent resource. If set, we will deploy the persistent resource within the provided IP
+   * ranges. Otherwise, the persistent resource is deployed to any IP ranges under the provided VPC
+   * network. Example: ['vertex-ai-ip-range'].
    * @param reservedIpRanges reservedIpRanges or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PersistentResource setReservedIpRanges(java.util.List<java.lang.String> reservedIpRanges) {
@@ -347,7 +347,7 @@ public final class GoogleCloudAiplatformV1beta1PersistentResource extends com.go
   }
 
   /**
-   * Optional. Persistent Resource runtime spec. Used for e.g. Ray cluster configuration.
+   * Optional. Persistent Resource runtime spec. For example, used for Ray cluster configuration.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ResourceRuntimeSpec getResourceRuntimeSpec() {
@@ -355,7 +355,7 @@ public final class GoogleCloudAiplatformV1beta1PersistentResource extends com.go
   }
 
   /**
-   * Optional. Persistent Resource runtime spec. Used for e.g. Ray cluster configuration.
+   * Optional. Persistent Resource runtime spec. For example, used for Ray cluster configuration.
    * @param resourceRuntimeSpec resourceRuntimeSpec or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PersistentResource setResourceRuntimeSpec(GoogleCloudAiplatformV1beta1ResourceRuntimeSpec resourceRuntimeSpec) {

@@ -17,8 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Configure runtime on a PersistentResource instance, including but may not limited to: * Service
- * accounts used to run the workloads; * Whether make it a dedicated Ray Cluster;
+ * Configuration for the runtime on a PersistentResource instance, including but not limited to: *
+ * Service accounts used to run the workloads. * Whether to make it a dedicated Ray Cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

@@ -34,25 +34,25 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   /**
    * Optional. This will be used to indicate which resource pool will serve as the Ray head node(the
    * first node within that pool). Will use the machine from the first workerpool as the head node
-   * by default if this field is not set.
+   * by default if this field isn't set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String headNodeResourcePoolId;
 
   /**
-   * Optional. Default image for user to choose a preferred ML framework(e.g. tensorflow or Pytorch)
-   * by choosing from Vertex prebuild images(https://cloud.google.com/vertex-ai/docs/training/pre-
-   * built-containers). Either this or the resource_pool_images is required. Use this field if you
-   * need all the resource pools to have the same Ray image, Otherwise, use the {@code
-   * resource_pool_images} field.
+   * Optional. Default image for user to choose a preferred ML framework (for example, TensorFlow or
+   * Pytorch) by choosing from [Vertex prebuilt images](https://cloud.google.com/vertex-
+   * ai/docs/training/pre-built-containers). Either this or the resource_pool_images is required.
+   * Use this field if you need all the resource pools to have the same Ray image. Otherwise, use
+   * the {@code resource_pool_images} field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUri;
 
   /**
-   * Optional. Required if image_uri is not set. A map of resource_pool_id to prebuild Ray image if
+   * Optional. Required if image_uri isn't set. A map of resource_pool_id to prebuild Ray image if
    * user need to use different images for different head/worker pools. This map needs to cover all
    * the resource pool ids. Example: { "ray_head_node_pool": "head image" "ray_worker_node_pool1":
    * "worker image" "ray_worker_node_pool2": "another worker image" }
@@ -64,7 +64,7 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   /**
    * Optional. This will be used to indicate which resource pool will serve as the Ray head node(the
    * first node within that pool). Will use the machine from the first workerpool as the head node
-   * by default if this field is not set.
+   * by default if this field isn't set.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeadNodeResourcePoolId() {
@@ -74,7 +74,7 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   /**
    * Optional. This will be used to indicate which resource pool will serve as the Ray head node(the
    * first node within that pool). Will use the machine from the first workerpool as the head node
-   * by default if this field is not set.
+   * by default if this field isn't set.
    * @param headNodeResourcePoolId headNodeResourcePoolId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RaySpec setHeadNodeResourcePoolId(java.lang.String headNodeResourcePoolId) {
@@ -83,11 +83,11 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   }
 
   /**
-   * Optional. Default image for user to choose a preferred ML framework(e.g. tensorflow or Pytorch)
-   * by choosing from Vertex prebuild images(https://cloud.google.com/vertex-ai/docs/training/pre-
-   * built-containers). Either this or the resource_pool_images is required. Use this field if you
-   * need all the resource pools to have the same Ray image, Otherwise, use the {@code
-   * resource_pool_images} field.
+   * Optional. Default image for user to choose a preferred ML framework (for example, TensorFlow or
+   * Pytorch) by choosing from [Vertex prebuilt images](https://cloud.google.com/vertex-
+   * ai/docs/training/pre-built-containers). Either this or the resource_pool_images is required.
+   * Use this field if you need all the resource pools to have the same Ray image. Otherwise, use
+   * the {@code resource_pool_images} field.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -95,11 +95,11 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   }
 
   /**
-   * Optional. Default image for user to choose a preferred ML framework(e.g. tensorflow or Pytorch)
-   * by choosing from Vertex prebuild images(https://cloud.google.com/vertex-ai/docs/training/pre-
-   * built-containers). Either this or the resource_pool_images is required. Use this field if you
-   * need all the resource pools to have the same Ray image, Otherwise, use the {@code
-   * resource_pool_images} field.
+   * Optional. Default image for user to choose a preferred ML framework (for example, TensorFlow or
+   * Pytorch) by choosing from [Vertex prebuilt images](https://cloud.google.com/vertex-
+   * ai/docs/training/pre-built-containers). Either this or the resource_pool_images is required.
+   * Use this field if you need all the resource pools to have the same Ray image. Otherwise, use
+   * the {@code resource_pool_images} field.
    * @param imageUri imageUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RaySpec setImageUri(java.lang.String imageUri) {
@@ -108,7 +108,7 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   }
 
   /**
-   * Optional. Required if image_uri is not set. A map of resource_pool_id to prebuild Ray image if
+   * Optional. Required if image_uri isn't set. A map of resource_pool_id to prebuild Ray image if
    * user need to use different images for different head/worker pools. This map needs to cover all
    * the resource pool ids. Example: { "ray_head_node_pool": "head image" "ray_worker_node_pool1":
    * "worker image" "ray_worker_node_pool2": "another worker image" }
@@ -119,7 +119,7 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   }
 
   /**
-   * Optional. Required if image_uri is not set. A map of resource_pool_id to prebuild Ray image if
+   * Optional. Required if image_uri isn't set. A map of resource_pool_id to prebuild Ray image if
    * user need to use different images for different head/worker pools. This map needs to cover all
    * the resource pool ids. Example: { "ray_head_node_pool": "head image" "ray_worker_node_pool1":
    * "worker image" "ray_worker_node_pool2": "another worker image" }

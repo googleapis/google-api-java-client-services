@@ -113,6 +113,14 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
   private GoogleCloudAiplatformV1beta1ExplanationSpec explanationSpec;
 
   /**
+   * Optional. Used to specify the source of the Model Garden model or Genie models. Only present
+   * for models created or tuned from Model Garden and Genie.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ModelGeneratedModelSource generatedModelSource;
+
+  /**
    * The labels with user-defined metadata to organize your Models. Label keys and values can be no
    * longer than 64 characters (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed. See
@@ -477,6 +485,25 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Model setExplanationSpec(GoogleCloudAiplatformV1beta1ExplanationSpec explanationSpec) {
     this.explanationSpec = explanationSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Used to specify the source of the Model Garden model or Genie models. Only present
+   * for models created or tuned from Model Garden and Genie.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ModelGeneratedModelSource getGeneratedModelSource() {
+    return generatedModelSource;
+  }
+
+  /**
+   * Optional. Used to specify the source of the Model Garden model or Genie models. Only present
+   * for models created or tuned from Model Garden and Genie.
+   * @param generatedModelSource generatedModelSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Model setGeneratedModelSource(GoogleCloudAiplatformV1beta1ModelGeneratedModelSource generatedModelSource) {
+    this.generatedModelSource = generatedModelSource;
     return this;
   }
 

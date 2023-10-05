@@ -17,8 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Represents the spec a group of resources of same type, e.g. machine, disk and accelerators, in a
- * PersistentResource.
+ * Represents the spec of a group of resources of the same type, for example machine type, disk, and
+ * accelerators, in a PersistentResource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -45,8 +45,8 @@ public final class GoogleCloudAiplatformV1beta1ResourcePool extends com.google.a
   private GoogleCloudAiplatformV1beta1DiskSpec diskSpec;
 
   /**
-   * Immutable. The unique ID in a PersistentResource to refer the this resource pool. User can
-   * specify it if need to use it, otherwise we will generate it automatically.
+   * Immutable. The unique ID in a PersistentResource for referring to this resource pool. User can
+   * specify it if necessary. Otherwise, it's generated automatically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +109,8 @@ public final class GoogleCloudAiplatformV1beta1ResourcePool extends com.google.a
   }
 
   /**
-   * Immutable. The unique ID in a PersistentResource to refer the this resource pool. User can
-   * specify it if need to use it, otherwise we will generate it automatically.
+   * Immutable. The unique ID in a PersistentResource for referring to this resource pool. User can
+   * specify it if necessary. Otherwise, it's generated automatically.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -118,8 +118,8 @@ public final class GoogleCloudAiplatformV1beta1ResourcePool extends com.google.a
   }
 
   /**
-   * Immutable. The unique ID in a PersistentResource to refer the this resource pool. User can
-   * specify it if need to use it, otherwise we will generate it automatically.
+   * Immutable. The unique ID in a PersistentResource for referring to this resource pool. User can
+   * specify it if necessary. Otherwise, it's generated automatically.
    * @param id id or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ResourcePool setId(java.lang.String id) {

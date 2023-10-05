@@ -338,7 +338,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * Marks target Account as soft-deleted (ie: "trashed") and returns it. This API does not have a
      * method to restore soft-deleted accounts. However, they can be restored using the Trash Can UI. If
      * the accounts are not restored before the expiration time, the account and all child resources
-     * (eg: Properties, GoogleAdsLinks, Streams, UserLinks) will be permanently purged.
+     * (eg: Properties, GoogleAdsLinks, Streams, AccessBindings) will be permanently purged.
      * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not found.
      *
      * Create a request for the method "accounts.delete".
@@ -366,7 +366,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * Marks target Account as soft-deleted (ie: "trashed") and returns it. This API does not have a
        * method to restore soft-deleted accounts. However, they can be restored using the Trash Can UI.
        * If the accounts are not restored before the expiration time, the account and all child
-       * resources (eg: Properties, GoogleAdsLinks, Streams, UserLinks) will be permanently purged.
+       * resources (eg: Properties, GoogleAdsLinks, Streams, AccessBindings) will be permanently purged.
        * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not
        * found.
        *
@@ -1786,7 +1786,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * Marks target Property as soft-deleted (ie: "trashed") and returns it. This API does not have a
      * method to restore soft-deleted properties. However, they can be restored using the Trash Can UI.
      * If the properties are not restored before the expiration time, the Property and all child
-     * resources (eg: GoogleAdsLinks, Streams, UserLinks) will be permanently purged.
+     * resources (eg: GoogleAdsLinks, Streams, AccessBindings) will be permanently purged.
      * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not found,
      * or is not a GA4 Property.
      *
@@ -1816,7 +1816,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * Marks target Property as soft-deleted (ie: "trashed") and returns it. This API does not have a
        * method to restore soft-deleted properties. However, they can be restored using the Trash Can
        * UI. If the properties are not restored before the expiration time, the Property and all child
-       * resources (eg: GoogleAdsLinks, Streams, UserLinks) will be permanently purged.
+       * resources (eg: GoogleAdsLinks, Streams, AccessBindings) will be permanently purged.
        * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not
        * found, or is not a GA4 Property.
        *

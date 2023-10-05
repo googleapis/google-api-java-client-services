@@ -44,6 +44,13 @@ public final class ResizeNodeGroupRequest extends com.google.api.client.json.Gen
   private String gracefulDecommissionTimeout;
 
   /**
+   * Optional. operation id of the parent operation sending the resize request
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentOperationId;
+
+  /**
    * Optional. A unique ID used to identify the request. If the server receives two
    * ResizeNodeGroupRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.datap
    * roc.v1#google.cloud.dataproc.v1.ResizeNodeGroupRequests) with the same ID, the second request
@@ -93,6 +100,23 @@ public final class ResizeNodeGroupRequest extends com.google.api.client.json.Gen
    */
   public ResizeNodeGroupRequest setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
     this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
+    return this;
+  }
+
+  /**
+   * Optional. operation id of the parent operation sending the resize request
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentOperationId() {
+    return parentOperationId;
+  }
+
+  /**
+   * Optional. operation id of the parent operation sending the resize request
+   * @param parentOperationId parentOperationId or {@code null} for none
+   */
+  public ResizeNodeGroupRequest setParentOperationId(java.lang.String parentOperationId) {
+    this.parentOperationId = parentOperationId;
     return this;
   }
 

@@ -10266,6 +10266,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
+            /** Optional. operation id of the parent operation sending the create request */
+            @com.google.api.client.util.Key
+            private java.lang.String parentOperationId;
+
+            /** Optional. operation id of the parent operation sending the create request
+             */
+            public java.lang.String getParentOperationId() {
+              return parentOperationId;
+            }
+
+            /** Optional. operation id of the parent operation sending the create request */
+            public Create setParentOperationId(java.lang.String parentOperationId) {
+              this.parentOperationId = parentOperationId;
+              return this;
+            }
+
             /**
              * Optional. A unique ID used to identify the request. If the server receives two
              * CreateNodeGroupRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.c

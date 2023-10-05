@@ -17,7 +17,7 @@
 package com.google.api.services.analyticshub.v1beta1.model;
 
 /**
- * Represents the metadata of the long-running operation.
+ * Represents the metadata of a long-running operation in Analytics Hub.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:
@@ -37,15 +37,6 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String apiVersion;
 
   /**
-   * Output only. Identifies whether the user has requested cancellation of the operation.
-   * Operations that have been cancelled successfully have Operation.error value with a
-   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean cancelRequested;
-
-  /**
    * Output only. The time the operation was created.
    * The value may be {@code null}.
    */
@@ -60,11 +51,20 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private String endTime;
 
   /**
+   * Output only. Identifies whether the user has requested cancellation of the operation.
+   * Operations that have successfully been cancelled have Operation.error value with a
+   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requestedCancellation;
+
+  /**
    * Output only. Human-readable status of the operation, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String statusDetail;
+  private java.lang.String statusMessage;
 
   /**
    * Output only. Server-defined resource path for the target of the operation.
@@ -94,27 +94,6 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    */
   public OperationMetadata setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
-    return this;
-  }
-
-  /**
-   * Output only. Identifies whether the user has requested cancellation of the operation.
-   * Operations that have been cancelled successfully have Operation.error value with a
-   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getCancelRequested() {
-    return cancelRequested;
-  }
-
-  /**
-   * Output only. Identifies whether the user has requested cancellation of the operation.
-   * Operations that have been cancelled successfully have Operation.error value with a
-   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-   * @param cancelRequested cancelRequested or {@code null} for none
-   */
-  public OperationMetadata setCancelRequested(java.lang.Boolean cancelRequested) {
-    this.cancelRequested = cancelRequested;
     return this;
   }
 
@@ -153,19 +132,40 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Human-readable status of the operation, if any.
+   * Output only. Identifies whether the user has requested cancellation of the operation.
+   * Operations that have successfully been cancelled have Operation.error value with a
+   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getStatusDetail() {
-    return statusDetail;
+  public java.lang.Boolean getRequestedCancellation() {
+    return requestedCancellation;
+  }
+
+  /**
+   * Output only. Identifies whether the user has requested cancellation of the operation.
+   * Operations that have successfully been cancelled have Operation.error value with a
+   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+   * @param requestedCancellation requestedCancellation or {@code null} for none
+   */
+  public OperationMetadata setRequestedCancellation(java.lang.Boolean requestedCancellation) {
+    this.requestedCancellation = requestedCancellation;
+    return this;
   }
 
   /**
    * Output only. Human-readable status of the operation, if any.
-   * @param statusDetail statusDetail or {@code null} for none
+   * @return value or {@code null} for none
    */
-  public OperationMetadata setStatusDetail(java.lang.String statusDetail) {
-    this.statusDetail = statusDetail;
+  public java.lang.String getStatusMessage() {
+    return statusMessage;
+  }
+
+  /**
+   * Output only. Human-readable status of the operation, if any.
+   * @param statusMessage statusMessage or {@code null} for none
+   */
+  public OperationMetadata setStatusMessage(java.lang.String statusMessage) {
+    this.statusMessage = statusMessage;
     return this;
   }
 

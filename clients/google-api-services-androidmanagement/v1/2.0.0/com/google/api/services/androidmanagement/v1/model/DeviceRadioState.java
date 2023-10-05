@@ -38,6 +38,20 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   private java.lang.String airplaneModeState;
 
   /**
+   * Controls whether cellular 2G setting can be toggled by the user or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cellularTwoGState;
+
+  /**
+   * Controls the state of the ultra wideband setting and whether the user can toggle it on or off.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ultraWidebandState;
+
+  /**
    * Controls current state of Wi-Fi and if user can change its state.
    * The value may be {@code null}.
    */
@@ -58,6 +72,40 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
    */
   public DeviceRadioState setAirplaneModeState(java.lang.String airplaneModeState) {
     this.airplaneModeState = airplaneModeState;
+    return this;
+  }
+
+  /**
+   * Controls whether cellular 2G setting can be toggled by the user or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCellularTwoGState() {
+    return cellularTwoGState;
+  }
+
+  /**
+   * Controls whether cellular 2G setting can be toggled by the user or not.
+   * @param cellularTwoGState cellularTwoGState or {@code null} for none
+   */
+  public DeviceRadioState setCellularTwoGState(java.lang.String cellularTwoGState) {
+    this.cellularTwoGState = cellularTwoGState;
+    return this;
+  }
+
+  /**
+   * Controls the state of the ultra wideband setting and whether the user can toggle it on or off.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUltraWidebandState() {
+    return ultraWidebandState;
+  }
+
+  /**
+   * Controls the state of the ultra wideband setting and whether the user can toggle it on or off.
+   * @param ultraWidebandState ultraWidebandState or {@code null} for none
+   */
+  public DeviceRadioState setUltraWidebandState(java.lang.String ultraWidebandState) {
+    this.ultraWidebandState = ultraWidebandState;
     return this;
   }
 

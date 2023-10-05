@@ -30,17 +30,6 @@ package com.google.api.services.eventarc.v1.model;
 public final class HttpEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Forwards DNS requests to the VPC specified by network config to resolve the HTTP
-   * endpoint. Default to false. If set to true, Eventarc will create a peering zone to the consumer
-   * VPC and forward DNS requests. See: https://cloud.google.com/dns/docs/zones/zones-
-   * overview#peering_zones Enable this if the URI uses an internal DNS name or a private Cloud DNS
-   * zone.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean forwardDnsRequests;
-
-  /**
    * Required. The URI of the HTTP enpdoint. The value must be a RFC2396 URI string. Examples:
    * `http://10.10.10.8:80/route`, `http://svc.us-central1.p.local:8080/`. Only HTTP and HTTPS
    * protocols are supported. The host can be either a static IP addressable from the VPC specified
@@ -49,31 +38,6 @@ public final class HttpEndpoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
-
-  /**
-   * Optional. Forwards DNS requests to the VPC specified by network config to resolve the HTTP
-   * endpoint. Default to false. If set to true, Eventarc will create a peering zone to the consumer
-   * VPC and forward DNS requests. See: https://cloud.google.com/dns/docs/zones/zones-
-   * overview#peering_zones Enable this if the URI uses an internal DNS name or a private Cloud DNS
-   * zone.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getForwardDnsRequests() {
-    return forwardDnsRequests;
-  }
-
-  /**
-   * Optional. Forwards DNS requests to the VPC specified by network config to resolve the HTTP
-   * endpoint. Default to false. If set to true, Eventarc will create a peering zone to the consumer
-   * VPC and forward DNS requests. See: https://cloud.google.com/dns/docs/zones/zones-
-   * overview#peering_zones Enable this if the URI uses an internal DNS name or a private Cloud DNS
-   * zone.
-   * @param forwardDnsRequests forwardDnsRequests or {@code null} for none
-   */
-  public HttpEndpoint setForwardDnsRequests(java.lang.Boolean forwardDnsRequests) {
-    this.forwardDnsRequests = forwardDnsRequests;
-    return this;
-  }
 
   /**
    * Required. The URI of the HTTP enpdoint. The value must be a RFC2396 URI string. Examples:

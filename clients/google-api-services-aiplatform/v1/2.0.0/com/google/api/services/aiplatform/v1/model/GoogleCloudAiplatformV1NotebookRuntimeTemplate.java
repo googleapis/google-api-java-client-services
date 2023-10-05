@@ -121,6 +121,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends com.go
   private GoogleCloudAiplatformV1NetworkSpec networkSpec;
 
   /**
+   * Optional. Immutable. The type of the notebook runtime template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notebookRuntimeType;
+
+  /**
    * The service account that the runtime workload runs as. You can use any service account within
    * the same project, but you must have the service account user permission to use the instance. If
    * not specified, the [Compute Engine default service
@@ -351,6 +358,23 @@ public final class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends com.go
    */
   public GoogleCloudAiplatformV1NotebookRuntimeTemplate setNetworkSpec(GoogleCloudAiplatformV1NetworkSpec networkSpec) {
     this.networkSpec = networkSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The type of the notebook runtime template.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotebookRuntimeType() {
+    return notebookRuntimeType;
+  }
+
+  /**
+   * Optional. Immutable. The type of the notebook runtime template.
+   * @param notebookRuntimeType notebookRuntimeType or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setNotebookRuntimeType(java.lang.String notebookRuntimeType) {
+    this.notebookRuntimeType = notebookRuntimeType;
     return this;
   }
 

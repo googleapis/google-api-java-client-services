@@ -79,6 +79,13 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   private java.lang.String jobTriggerName;
 
   /**
+   * Time when the job was last modified by the system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastModified;
+
+  /**
    * The server-assigned name.
    * The value may be {@code null}.
    */
@@ -212,6 +219,23 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
    */
   public GooglePrivacyDlpV2DlpJob setJobTriggerName(java.lang.String jobTriggerName) {
     this.jobTriggerName = jobTriggerName;
+    return this;
+  }
+
+  /**
+   * Time when the job was last modified by the system.
+   * @return value or {@code null} for none
+   */
+  public String getLastModified() {
+    return lastModified;
+  }
+
+  /**
+   * Time when the job was last modified by the system.
+   * @param lastModified lastModified or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DlpJob setLastModified(String lastModified) {
+    this.lastModified = lastModified;
     return this;
   }
 

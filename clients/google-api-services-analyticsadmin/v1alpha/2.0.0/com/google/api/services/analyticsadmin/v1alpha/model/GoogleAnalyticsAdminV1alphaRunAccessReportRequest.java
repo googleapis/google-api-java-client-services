@@ -71,6 +71,25 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
   }
 
   /**
+   * Optional. Decides whether to return the users within user groups. This field works only when
+   * include_all_users is set to true. If true, it will return all users with access to the
+   * specified property or account. If false, only the users with direct access will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean expandGroups;
+
+  /**
+   * Optional. Determines whether to include users who have never made an API call in the response.
+   * If true, all users with access to the specified property or account are included in the
+   * response, regardless of whether they have made an API call or not. If false, only the users who
+   * have made an API call will be included.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeAllUsers;
+
+  /**
    * The number of rows to return. If unspecified, 10,000 rows are returned. The API returns a
    * maximum of 100,000 rows per request, no matter how many you ask for. `limit` must be positive.
    * The API may return fewer rows than the requested `limit`, if there aren't as many remaining
@@ -208,6 +227,50 @@ public final class GoogleAnalyticsAdminV1alphaRunAccessReportRequest extends com
    */
   public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setDimensions(java.util.List<GoogleAnalyticsAdminV1alphaAccessDimension> dimensions) {
     this.dimensions = dimensions;
+    return this;
+  }
+
+  /**
+   * Optional. Decides whether to return the users within user groups. This field works only when
+   * include_all_users is set to true. If true, it will return all users with access to the
+   * specified property or account. If false, only the users with direct access will be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExpandGroups() {
+    return expandGroups;
+  }
+
+  /**
+   * Optional. Decides whether to return the users within user groups. This field works only when
+   * include_all_users is set to true. If true, it will return all users with access to the
+   * specified property or account. If false, only the users with direct access will be returned.
+   * @param expandGroups expandGroups or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setExpandGroups(java.lang.Boolean expandGroups) {
+    this.expandGroups = expandGroups;
+    return this;
+  }
+
+  /**
+   * Optional. Determines whether to include users who have never made an API call in the response.
+   * If true, all users with access to the specified property or account are included in the
+   * response, regardless of whether they have made an API call or not. If false, only the users who
+   * have made an API call will be included.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeAllUsers() {
+    return includeAllUsers;
+  }
+
+  /**
+   * Optional. Determines whether to include users who have never made an API call in the response.
+   * If true, all users with access to the specified property or account are included in the
+   * response, regardless of whether they have made an API call or not. If false, only the users who
+   * have made an API call will be included.
+   * @param includeAllUsers includeAllUsers or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaRunAccessReportRequest setIncludeAllUsers(java.lang.Boolean includeAllUsers) {
+    this.includeAllUsers = includeAllUsers;
     return this;
   }
 

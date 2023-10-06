@@ -30,10 +30,10 @@ package com.google.api.services.sqladmin.model;
 public final class PscConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of consumer projects that are allow-listed for PSC connections to this instance. This
-   * instance can be connected to with PSC from any network in these projects. Each consumer project
-   * in this list may be represented by a project number (numeric) or by a project id
-   * (alphanumeric).
+   * Optional. The list of consumer projects that are allow-listed for PSC connections to this
+   * instance. This instance can be connected to with PSC from any network in these projects. Each
+   * consumer project in this list may be represented by a project number (numeric) or by a project
+   * id (alphanumeric).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,10 +47,10 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean pscEnabled;
 
   /**
-   * List of consumer projects that are allow-listed for PSC connections to this instance. This
-   * instance can be connected to with PSC from any network in these projects. Each consumer project
-   * in this list may be represented by a project number (numeric) or by a project id
-   * (alphanumeric).
+   * Optional. The list of consumer projects that are allow-listed for PSC connections to this
+   * instance. This instance can be connected to with PSC from any network in these projects. Each
+   * consumer project in this list may be represented by a project number (numeric) or by a project
+   * id (alphanumeric).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedConsumerProjects() {
@@ -58,10 +58,10 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of consumer projects that are allow-listed for PSC connections to this instance. This
-   * instance can be connected to with PSC from any network in these projects. Each consumer project
-   * in this list may be represented by a project number (numeric) or by a project id
-   * (alphanumeric).
+   * Optional. The list of consumer projects that are allow-listed for PSC connections to this
+   * instance. This instance can be connected to with PSC from any network in these projects. Each
+   * consumer project in this list may be represented by a project number (numeric) or by a project
+   * id (alphanumeric).
    * @param allowedConsumerProjects allowedConsumerProjects or {@code null} for none
    */
   public PscConfig setAllowedConsumerProjects(java.util.List<java.lang.String> allowedConsumerProjects) {

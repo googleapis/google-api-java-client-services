@@ -30,6 +30,14 @@ package com.google.api.services.sqladmin.model;
 public final class ReplicaConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies if a SQL Server replica is a cascadable replica. A cascadable replica is a
+   * SQL Server cross region replica that supports replica(s) under it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean cascadableReplica;
+
+  /**
    * Specifies if the replica is the failover target. If the field is set to `true`, the replica
    * will be designated as a failover replica. In case the primary instance fails, the replica
    * instance will be promoted as the new primary instance. Only one replica can be specified as
@@ -56,6 +64,25 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private MySqlReplicaConfiguration mysqlReplicaConfiguration;
+
+  /**
+   * Optional. Specifies if a SQL Server replica is a cascadable replica. A cascadable replica is a
+   * SQL Server cross region replica that supports replica(s) under it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCascadableReplica() {
+    return cascadableReplica;
+  }
+
+  /**
+   * Optional. Specifies if a SQL Server replica is a cascadable replica. A cascadable replica is a
+   * SQL Server cross region replica that supports replica(s) under it.
+   * @param cascadableReplica cascadableReplica or {@code null} for none
+   */
+  public ReplicaConfiguration setCascadableReplica(java.lang.Boolean cascadableReplica) {
+    this.cascadableReplica = cascadableReplica;
+    return this;
+  }
 
   /**
    * Specifies if the replica is the failover target. If the field is set to `true`, the replica

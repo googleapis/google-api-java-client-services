@@ -62,6 +62,15 @@ public final class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends com.go
   private java.lang.String policyApiLifecycleStage;
 
   /**
+   * Corresponding to deprecated_in_favor_of, the fully qualified namespace(s) of the old policies
+   * that will be deprecated because of introduction of this policy. This field should not be
+   * manually set but will be set and exposed through PolicyAPI automatically.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> scheduledToDeprecatePolicies;
+
+  /**
    * In the event that this policy was deprecated in favor of another policy, the fully qualified
    * namespace(s) of the new policies as they will show in PolicyAPI. Could only be set if
    * policy_api_lifecycle_stage is API_DEPRECATED.
@@ -134,6 +143,27 @@ public final class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends com.go
    */
   public GoogleChromePolicyVersionsV1PolicyApiLifecycle setPolicyApiLifecycleStage(java.lang.String policyApiLifecycleStage) {
     this.policyApiLifecycleStage = policyApiLifecycleStage;
+    return this;
+  }
+
+  /**
+   * Corresponding to deprecated_in_favor_of, the fully qualified namespace(s) of the old policies
+   * that will be deprecated because of introduction of this policy. This field should not be
+   * manually set but will be set and exposed through PolicyAPI automatically.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getScheduledToDeprecatePolicies() {
+    return scheduledToDeprecatePolicies;
+  }
+
+  /**
+   * Corresponding to deprecated_in_favor_of, the fully qualified namespace(s) of the old policies
+   * that will be deprecated because of introduction of this policy. This field should not be
+   * manually set but will be set and exposed through PolicyAPI automatically.
+   * @param scheduledToDeprecatePolicies scheduledToDeprecatePolicies or {@code null} for none
+   */
+  public GoogleChromePolicyVersionsV1PolicyApiLifecycle setScheduledToDeprecatePolicies(java.util.List<java.lang.String> scheduledToDeprecatePolicies) {
+    this.scheduledToDeprecatePolicies = scheduledToDeprecatePolicies;
     return this;
   }
 

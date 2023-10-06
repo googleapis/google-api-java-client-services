@@ -1122,17 +1122,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** The repository id to use for this repository. */
+          /** Required. The repository id to use for this repository. */
           @com.google.api.client.util.Key
           private java.lang.String repositoryId;
 
-          /** The repository id to use for this repository.
+          /** Required. The repository id to use for this repository.
            */
           public java.lang.String getRepositoryId() {
             return repositoryId;
           }
 
-          /** The repository id to use for this repository. */
+          /** Required. The repository id to use for this repository. */
           public Create setRepositoryId(java.lang.String repositoryId) {
             this.repositoryId = repositoryId;
             return this;

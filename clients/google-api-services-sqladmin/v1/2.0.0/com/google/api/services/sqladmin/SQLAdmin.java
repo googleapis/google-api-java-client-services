@@ -4106,6 +4106,32 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * Set to true if the promote operation should attempt to re-add the original primary as a
+       * replica when it comes back online. Otherwise, if this value is false or not set, the
+       * original primary will be a standalone instance.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean failover;
+
+      /** Set to true if the promote operation should attempt to re-add the original primary as a replica
+     when it comes back online. Otherwise, if this value is false or not set, the original primary will
+     be a standalone instance.
+       */
+      public java.lang.Boolean getFailover() {
+        return failover;
+      }
+
+      /**
+       * Set to true if the promote operation should attempt to re-add the original primary as a
+       * replica when it comes back online. Otherwise, if this value is false or not set, the
+       * original primary will be a standalone instance.
+       */
+      public PromoteReplica setFailover(java.lang.Boolean failover) {
+        this.failover = failover;
+        return this;
+      }
+
       @Override
       public PromoteReplica set(String parameterName, Object value) {
         return (PromoteReplica) super.set(parameterName, value);
@@ -5064,6 +5090,166 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public StopReplica set(String parameterName, Object value) {
         return (StopReplica) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Switches over from the primary instance to the replica instance.
+     *
+     * Create a request for the method "instances.switchover".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Switchover#execute()} method to invoke the remote operation.
+     *
+     * @param project ID of the project that contains the replica.
+     * @param instance Cloud SQL read replica instance name.
+     * @return the request
+     */
+    public Switchover switchover(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+      Switchover result = new Switchover(project, instance);
+      initialize(result);
+      return result;
+    }
+
+    public class Switchover extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/switchover";
+
+      /**
+       * Switches over from the primary instance to the replica instance.
+       *
+       * Create a request for the method "instances.switchover".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Switchover#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Switchover#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project ID of the project that contains the replica.
+       * @param instance Cloud SQL read replica instance name.
+       * @since 1.13
+       */
+      protected Switchover(java.lang.String project, java.lang.String instance) {
+        super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public Switchover set$Xgafv(java.lang.String $Xgafv) {
+        return (Switchover) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Switchover setAccessToken(java.lang.String accessToken) {
+        return (Switchover) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Switchover setAlt(java.lang.String alt) {
+        return (Switchover) super.setAlt(alt);
+      }
+
+      @Override
+      public Switchover setCallback(java.lang.String callback) {
+        return (Switchover) super.setCallback(callback);
+      }
+
+      @Override
+      public Switchover setFields(java.lang.String fields) {
+        return (Switchover) super.setFields(fields);
+      }
+
+      @Override
+      public Switchover setKey(java.lang.String key) {
+        return (Switchover) super.setKey(key);
+      }
+
+      @Override
+      public Switchover setOauthToken(java.lang.String oauthToken) {
+        return (Switchover) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Switchover setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Switchover) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Switchover setQuotaUser(java.lang.String quotaUser) {
+        return (Switchover) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Switchover setUploadType(java.lang.String uploadType) {
+        return (Switchover) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Switchover setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Switchover) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** ID of the project that contains the replica. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** ID of the project that contains the replica.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** ID of the project that contains the replica. */
+      public Switchover setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Cloud SQL read replica instance name. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Cloud SQL read replica instance name.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Cloud SQL read replica instance name. */
+      public Switchover setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      /**
+       * Optional. (MySQL only) Cloud SQL instance operations timeout, which is a sum of all
+       * database operations. Default value is 10 minutes and can be modified to a maximum value of
+       * 24 hours.
+       */
+      @com.google.api.client.util.Key
+      private String dbTimeout;
+
+      /** Optional. (MySQL only) Cloud SQL instance operations timeout, which is a sum of all database
+     operations. Default value is 10 minutes and can be modified to a maximum value of 24 hours.
+       */
+      public String getDbTimeout() {
+        return dbTimeout;
+      }
+
+      /**
+       * Optional. (MySQL only) Cloud SQL instance operations timeout, which is a sum of all
+       * database operations. Default value is 10 minutes and can be modified to a maximum value of
+       * 24 hours.
+       */
+      public Switchover setDbTimeout(String dbTimeout) {
+        this.dbTimeout = dbTimeout;
+        return this;
+      }
+
+      @Override
+      public Switchover set(String parameterName, Object value) {
+        return (Switchover) super.set(parameterName, value);
       }
     }
     /**

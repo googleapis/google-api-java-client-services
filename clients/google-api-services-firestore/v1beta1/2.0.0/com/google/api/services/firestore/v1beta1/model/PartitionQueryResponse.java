@@ -46,7 +46,7 @@ public final class PartitionQueryResponse extends com.google.api.client.json.Gen
    * PartitionQuery request returns partition cursors A and B, running the following three queries
    * will return the entire result set of the original query: * query, end_at A * query, start_at A,
    * end_at B * query, start_at B An empty result may indicate that the query has too few results to
-   * be partitioned.
+   * be partitioned, or that the query is not yet supported for partitioning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +87,7 @@ public final class PartitionQueryResponse extends com.google.api.client.json.Gen
    * PartitionQuery request returns partition cursors A and B, running the following three queries
    * will return the entire result set of the original query: * query, end_at A * query, start_at A,
    * end_at B * query, start_at B An empty result may indicate that the query has too few results to
-   * be partitioned.
+   * be partitioned, or that the query is not yet supported for partitioning.
    * @return value or {@code null} for none
    */
   public java.util.List<Cursor> getPartitions() {
@@ -102,7 +102,7 @@ public final class PartitionQueryResponse extends com.google.api.client.json.Gen
    * PartitionQuery request returns partition cursors A and B, running the following three queries
    * will return the entire result set of the original query: * query, end_at A * query, start_at A,
    * end_at B * query, start_at B An empty result may indicate that the query has too few results to
-   * be partitioned.
+   * be partitioned, or that the query is not yet supported for partitioning.
    * @param partitions partitions or {@code null} for none
    */
   public PartitionQueryResponse setPartitions(java.util.List<Cursor> partitions) {

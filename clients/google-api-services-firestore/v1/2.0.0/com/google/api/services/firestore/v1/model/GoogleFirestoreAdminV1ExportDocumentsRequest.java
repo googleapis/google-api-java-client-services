@@ -60,9 +60,11 @@ public final class GoogleFirestoreAdminV1ExportDocumentsRequest extends com.goog
 
   /**
    * The timestamp that corresponds to the version of the database to be exported. The timestamp
-   * must be rounded to the minute, in the past, and not older than 1 hour. If specified, then the
-   * exported documents will represent a consistent view of the database at the provided time.
-   * Otherwise, there are no guarantees about the consistency of the exported documents.
+   * must be rounded to the minute, in the past, and not older than 5 days. Please choose a
+   * reasonable timestamp based on prior knowledge on how long exports take as data at provided
+   * snapshot timestamp can expire during export. If specified, then the exported documents will
+   * represent a consistent view of the database at the provided time. Otherwise, there are no
+   * guarantees about the consistency of the exported documents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,9 +139,11 @@ public final class GoogleFirestoreAdminV1ExportDocumentsRequest extends com.goog
 
   /**
    * The timestamp that corresponds to the version of the database to be exported. The timestamp
-   * must be rounded to the minute, in the past, and not older than 1 hour. If specified, then the
-   * exported documents will represent a consistent view of the database at the provided time.
-   * Otherwise, there are no guarantees about the consistency of the exported documents.
+   * must be rounded to the minute, in the past, and not older than 5 days. Please choose a
+   * reasonable timestamp based on prior knowledge on how long exports take as data at provided
+   * snapshot timestamp can expire during export. If specified, then the exported documents will
+   * represent a consistent view of the database at the provided time. Otherwise, there are no
+   * guarantees about the consistency of the exported documents.
    * @return value or {@code null} for none
    */
   public String getSnapshotTime() {
@@ -148,9 +152,11 @@ public final class GoogleFirestoreAdminV1ExportDocumentsRequest extends com.goog
 
   /**
    * The timestamp that corresponds to the version of the database to be exported. The timestamp
-   * must be rounded to the minute, in the past, and not older than 1 hour. If specified, then the
-   * exported documents will represent a consistent view of the database at the provided time.
-   * Otherwise, there are no guarantees about the consistency of the exported documents.
+   * must be rounded to the minute, in the past, and not older than 5 days. Please choose a
+   * reasonable timestamp based on prior knowledge on how long exports take as data at provided
+   * snapshot timestamp can expire during export. If specified, then the exported documents will
+   * represent a consistent view of the database at the provided time. Otherwise, there are no
+   * guarantees about the consistency of the exported documents.
    * @param snapshotTime snapshotTime or {@code null} for none
    */
   public GoogleFirestoreAdminV1ExportDocumentsRequest setSnapshotTime(String snapshotTime) {

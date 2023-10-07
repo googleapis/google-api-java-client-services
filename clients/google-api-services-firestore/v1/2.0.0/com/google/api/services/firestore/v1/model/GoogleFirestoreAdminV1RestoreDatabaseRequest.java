@@ -30,7 +30,7 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Backup to restore from. Must be from the same project as the parent. Format is:
+   * Backup to restore from. Must be from the same project as the parent. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
    * The value may be {@code null}.
    */
@@ -49,7 +49,7 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   private java.lang.String databaseId;
 
   /**
-   * Required. Backup to restore from. Must be from the same project as the parent. Format is:
+   * Backup to restore from. Must be from the same project as the parent. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
    * @return value or {@code null} for none
    */
@@ -58,7 +58,7 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   }
 
   /**
-   * Required. Backup to restore from. Must be from the same project as the parent. Format is:
+   * Backup to restore from. Must be from the same project as the parent. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
    * @param backup backup or {@code null} for none
    */

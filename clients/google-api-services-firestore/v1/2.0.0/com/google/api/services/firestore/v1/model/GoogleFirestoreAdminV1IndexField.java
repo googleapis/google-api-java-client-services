@@ -54,6 +54,13 @@ public final class GoogleFirestoreAdminV1IndexField extends com.google.api.clien
   private java.lang.String order;
 
   /**
+   * Indicates that this field supports nearest neighbors and distance operations on vector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirestoreAdminV1VectorConfig vectorConfig;
+
+  /**
    * Indicates that this field supports operations on `array_value`s.
    * @return value or {@code null} for none
    */
@@ -105,6 +112,23 @@ public final class GoogleFirestoreAdminV1IndexField extends com.google.api.clien
    */
   public GoogleFirestoreAdminV1IndexField setOrder(java.lang.String order) {
     this.order = order;
+    return this;
+  }
+
+  /**
+   * Indicates that this field supports nearest neighbors and distance operations on vector.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1VectorConfig getVectorConfig() {
+    return vectorConfig;
+  }
+
+  /**
+   * Indicates that this field supports nearest neighbors and distance operations on vector.
+   * @param vectorConfig vectorConfig or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1IndexField setVectorConfig(GoogleFirestoreAdminV1VectorConfig vectorConfig) {
+    this.vectorConfig = vectorConfig;
     return this;
   }
 

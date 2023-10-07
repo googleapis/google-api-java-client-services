@@ -31,7 +31,7 @@ package com.google.api.services.playintegrity.v1.model;
 public final class AccountDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details about the account activity for the user in the scope.
+   * (Restricted Access) Details about the account activity for the user in the scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class AccountDetails extends com.google.api.client.json.GenericJson
   private java.lang.String appLicensingVerdict;
 
   /**
-   * Details about the account activity for the user in the scope.
+   * (Restricted Access) Details about the account activity for the user in the scope.
    * @return value or {@code null} for none
    */
   public AccountActivity getAccountActivity() {
@@ -53,7 +53,7 @@ public final class AccountDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Details about the account activity for the user in the scope.
+   * (Restricted Access) Details about the account activity for the user in the scope.
    * @param accountActivity accountActivity or {@code null} for none
    */
   public AccountDetails setAccountActivity(AccountActivity accountActivity) {

@@ -205,7 +205,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private SqlOutOfDiskReport outOfDiskReport;
 
   /**
-   * Output only. The dns name of the primary instance in a replication group.
+   * Output only. DEPRECATED: please use write_endpoint instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -322,6 +322,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> suspensionReason;
+
+  /**
+   * Output only. The dns name of the primary instance in a replication group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String writeEndpoint;
 
   /**
    * Output only. List all maintenance versions applicable on the instance
@@ -743,7 +750,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The dns name of the primary instance in a replication group.
+   * Output only. DEPRECATED: please use write_endpoint instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryDnsName() {
@@ -751,7 +758,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The dns name of the primary instance in a replication group.
+   * Output only. DEPRECATED: please use write_endpoint instead.
    * @param primaryDnsName primaryDnsName or {@code null} for none
    */
   public DatabaseInstance setPrimaryDnsName(java.lang.String primaryDnsName) {
@@ -1025,6 +1032,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setSuspensionReason(java.util.List<java.lang.String> suspensionReason) {
     this.suspensionReason = suspensionReason;
+    return this;
+  }
+
+  /**
+   * Output only. The dns name of the primary instance in a replication group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWriteEndpoint() {
+    return writeEndpoint;
+  }
+
+  /**
+   * Output only. The dns name of the primary instance in a replication group.
+   * @param writeEndpoint writeEndpoint or {@code null} for none
+   */
+  public DatabaseInstance setWriteEndpoint(java.lang.String writeEndpoint) {
+    this.writeEndpoint = writeEndpoint;
     return this;
   }
 

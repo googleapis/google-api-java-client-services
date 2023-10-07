@@ -85,11 +85,34 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   private PscConfig pscConfig;
 
   /**
-   * Whether SSL connections over IP are enforced or not.
+   * LINT.IfChange(require_ssl_deprecate) Whether SSL/TLS connections over IP are enforced or not.
+   * If set to false, allow both non-SSL/non-TLS and SSL/TLS connections. For SSL/TLS connections,
+   * the client certificate will not be verified. If set to true, only allow connections encrypted
+   * with SSL/TLS and with valid client certificates. If you want to enforce SSL/TLS without
+   * enforcing the requirement for valid client certificates, use the `ssl_mode` flag instead of the
+   * legacy `require_ssl` flag. LINT.ThenChange(//depot/google3/java/com/google/storage/speckle/boss
+   * /admin/actions/InstanceUpdateAction.java:update_api_temp_fix)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requireSsl;
+
+  /**
+   * Specify how SSL/TLS will be enforced in database connections. This flag is only supported for
+   * PostgreSQL. Use the legacy `require_ssl` flag for enforcing SSL/TLS in MySQL and SQL Server.
+   * But, for PostgreSQL, it is recommended to use the `ssl_mode` flag instead of the legacy
+   * `require_ssl` flag. To avoid the conflict between those flags in PostgreSQL, only the following
+   * value pairs are valid: ssl_mode=ALLOW_UNENCRYPTED_AND_ENCRYPTED, require_ssl=false;
+   * ssl_mode=ENCRYPTED_ONLY, require_ssl=false; ssl_mode=TRUSTED_CLIENT_CERTIFICATE_REQUIRED,
+   * require_ssl=true; Note that the value of `ssl_mode` gets priority over the value of the legacy
+   * `require_ssl`. For example, for the pair `ssl_mode=ENCRYPTED_ONLY, require_ssl=false`, the
+   * `ssl_mode=ENCRYPTED_ONLY` means "only accepts SSL connection", while the `require_ssl=false`
+   * means "both non-SSL and SSL connections are allowed". The database will respect `ssl_mode` in
+   * this case and only accept SSL connections.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sslMode;
 
   /**
    * The name of the allocated ip range for the private ip Cloud SQL instance. For example: "google-
@@ -208,7 +231,13 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether SSL connections over IP are enforced or not.
+   * LINT.IfChange(require_ssl_deprecate) Whether SSL/TLS connections over IP are enforced or not.
+   * If set to false, allow both non-SSL/non-TLS and SSL/TLS connections. For SSL/TLS connections,
+   * the client certificate will not be verified. If set to true, only allow connections encrypted
+   * with SSL/TLS and with valid client certificates. If you want to enforce SSL/TLS without
+   * enforcing the requirement for valid client certificates, use the `ssl_mode` flag instead of the
+   * legacy `require_ssl` flag. LINT.ThenChange(//depot/google3/java/com/google/storage/speckle/boss
+   * /admin/actions/InstanceUpdateAction.java:update_api_temp_fix)
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequireSsl() {
@@ -216,11 +245,54 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether SSL connections over IP are enforced or not.
+   * LINT.IfChange(require_ssl_deprecate) Whether SSL/TLS connections over IP are enforced or not.
+   * If set to false, allow both non-SSL/non-TLS and SSL/TLS connections. For SSL/TLS connections,
+   * the client certificate will not be verified. If set to true, only allow connections encrypted
+   * with SSL/TLS and with valid client certificates. If you want to enforce SSL/TLS without
+   * enforcing the requirement for valid client certificates, use the `ssl_mode` flag instead of the
+   * legacy `require_ssl` flag. LINT.ThenChange(//depot/google3/java/com/google/storage/speckle/boss
+   * /admin/actions/InstanceUpdateAction.java:update_api_temp_fix)
    * @param requireSsl requireSsl or {@code null} for none
    */
   public IpConfiguration setRequireSsl(java.lang.Boolean requireSsl) {
     this.requireSsl = requireSsl;
+    return this;
+  }
+
+  /**
+   * Specify how SSL/TLS will be enforced in database connections. This flag is only supported for
+   * PostgreSQL. Use the legacy `require_ssl` flag for enforcing SSL/TLS in MySQL and SQL Server.
+   * But, for PostgreSQL, it is recommended to use the `ssl_mode` flag instead of the legacy
+   * `require_ssl` flag. To avoid the conflict between those flags in PostgreSQL, only the following
+   * value pairs are valid: ssl_mode=ALLOW_UNENCRYPTED_AND_ENCRYPTED, require_ssl=false;
+   * ssl_mode=ENCRYPTED_ONLY, require_ssl=false; ssl_mode=TRUSTED_CLIENT_CERTIFICATE_REQUIRED,
+   * require_ssl=true; Note that the value of `ssl_mode` gets priority over the value of the legacy
+   * `require_ssl`. For example, for the pair `ssl_mode=ENCRYPTED_ONLY, require_ssl=false`, the
+   * `ssl_mode=ENCRYPTED_ONLY` means "only accepts SSL connection", while the `require_ssl=false`
+   * means "both non-SSL and SSL connections are allowed". The database will respect `ssl_mode` in
+   * this case and only accept SSL connections.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSslMode() {
+    return sslMode;
+  }
+
+  /**
+   * Specify how SSL/TLS will be enforced in database connections. This flag is only supported for
+   * PostgreSQL. Use the legacy `require_ssl` flag for enforcing SSL/TLS in MySQL and SQL Server.
+   * But, for PostgreSQL, it is recommended to use the `ssl_mode` flag instead of the legacy
+   * `require_ssl` flag. To avoid the conflict between those flags in PostgreSQL, only the following
+   * value pairs are valid: ssl_mode=ALLOW_UNENCRYPTED_AND_ENCRYPTED, require_ssl=false;
+   * ssl_mode=ENCRYPTED_ONLY, require_ssl=false; ssl_mode=TRUSTED_CLIENT_CERTIFICATE_REQUIRED,
+   * require_ssl=true; Note that the value of `ssl_mode` gets priority over the value of the legacy
+   * `require_ssl`. For example, for the pair `ssl_mode=ENCRYPTED_ONLY, require_ssl=false`, the
+   * `ssl_mode=ENCRYPTED_ONLY` means "only accepts SSL connection", while the `require_ssl=false`
+   * means "both non-SSL and SSL connections are allowed". The database will respect `ssl_mode` in
+   * this case and only accept SSL connections.
+   * @param sslMode sslMode or {@code null} for none
+   */
+  public IpConfiguration setSslMode(java.lang.String sslMode) {
+    this.sslMode = sslMode;
     return this;
   }
 

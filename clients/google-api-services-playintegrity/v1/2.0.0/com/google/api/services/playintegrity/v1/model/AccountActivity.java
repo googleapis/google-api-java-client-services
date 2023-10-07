@@ -17,9 +17,8 @@
 package com.google.api.services.playintegrity.v1.model;
 
 /**
- * Contains a signal helping apps differentiating between likely genuine users and likely non-
- * genuine traffic (such as accounts being used for fraud, accounts used by automated traffic, or
- * accounts used in device farms) based on the presence and volume of Play store activity.
+ * (Restricted Access) Contains a signal helping apps differentiating between likely genuine and
+ * likely non-genuine user traffic.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Integrity API. For a detailed explanation

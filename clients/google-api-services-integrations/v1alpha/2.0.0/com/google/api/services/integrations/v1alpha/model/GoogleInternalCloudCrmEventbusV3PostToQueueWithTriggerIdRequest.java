@@ -18,7 +18,7 @@ package com.google.api.services.integrations.v1alpha.model;
 
 /**
  * LINT.IfChange Use this request to post all workflows associated with a given trigger id. Next
- * available id: 11
+ * available id: 12
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -103,6 +103,15 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerId;
+
+  /**
+   * This is a unique id provided by the method caller. If provided this will be used as the
+   * execution_id when a new execution info is created. This is a string representation of a UUID.
+   * Must have no more than 36 characters and contain only alphanumeric characters and hyphens.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userGeneratedExecutionId;
 
   /**
    * Optional. If provided, the workflow_name is used to filter all the matched workflows having
@@ -283,6 +292,27 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
    */
   public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setTriggerId(java.lang.String triggerId) {
     this.triggerId = triggerId;
+    return this;
+  }
+
+  /**
+   * This is a unique id provided by the method caller. If provided this will be used as the
+   * execution_id when a new execution info is created. This is a string representation of a UUID.
+   * Must have no more than 36 characters and contain only alphanumeric characters and hyphens.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserGeneratedExecutionId() {
+    return userGeneratedExecutionId;
+  }
+
+  /**
+   * This is a unique id provided by the method caller. If provided this will be used as the
+   * execution_id when a new execution info is created. This is a string representation of a UUID.
+   * Must have no more than 36 characters and contain only alphanumeric characters and hyphens.
+   * @param userGeneratedExecutionId userGeneratedExecutionId or {@code null} for none
+   */
+  public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setUserGeneratedExecutionId(java.lang.String userGeneratedExecutionId) {
+    this.userGeneratedExecutionId = userGeneratedExecutionId;
     return this;
   }
 

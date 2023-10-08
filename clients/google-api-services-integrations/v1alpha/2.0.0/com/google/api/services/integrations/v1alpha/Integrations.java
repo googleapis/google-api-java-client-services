@@ -4262,7 +4262,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           public class Suspensions {
 
             /**
-             * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided
+             * * Lifts suspension for the Suspension task. Fetch corresponding suspension with provided
              * suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
              *
              * Create a request for the method "suspensions.lift".
@@ -4290,7 +4290,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+/suspensions/[^/]+$");
 
               /**
-               * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided
+               * * Lifts suspension for the Suspension task. Fetch corresponding suspension with provided
                * suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
                *
                * Create a request for the method "suspensions.lift".
@@ -10926,7 +10926,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             public class Suspensions {
 
               /**
-               * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided
+               * * Lifts suspension for the Suspension task. Fetch corresponding suspension with provided
                * suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
                *
                * Create a request for the method "suspensions.lift".
@@ -10954,7 +10954,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/executions/[^/]+/suspensions/[^/]+$");
 
                 /**
-                 * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided
+                 * * Lifts suspension for the Suspension task. Fetch corresponding suspension with provided
                  * suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
                  *
                  * Create a request for the method "suspensions.lift".

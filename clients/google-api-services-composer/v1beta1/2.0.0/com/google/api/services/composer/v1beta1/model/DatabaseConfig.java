@@ -40,6 +40,16 @@ public final class DatabaseConfig extends com.google.api.client.json.GenericJson
   private java.lang.String machineType;
 
   /**
+   * Optional. The Compute Engine zone where the Airflow database is created. If zone is provided,
+   * it must be in the region selected for the environment. If zone is not provided, a zone is
+   * automatically selected. The zone can only be set during environment creation. Supported for
+   * Cloud Composer environments in versions composer-2.*.*-airflow-*.*.*.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String zone;
+
+  /**
    * Optional. Cloud SQL machine type used by Airflow database. It has to be one of:
    * db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified,
    * db-n1-standard-2 will be used. Supported for Cloud Composer environments in versions
@@ -59,6 +69,29 @@ public final class DatabaseConfig extends com.google.api.client.json.GenericJson
    */
   public DatabaseConfig setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Optional. The Compute Engine zone where the Airflow database is created. If zone is provided,
+   * it must be in the region selected for the environment. If zone is not provided, a zone is
+   * automatically selected. The zone can only be set during environment creation. Supported for
+   * Cloud Composer environments in versions composer-2.*.*-airflow-*.*.*.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getZone() {
+    return zone;
+  }
+
+  /**
+   * Optional. The Compute Engine zone where the Airflow database is created. If zone is provided,
+   * it must be in the region selected for the environment. If zone is not provided, a zone is
+   * automatically selected. The zone can only be set during environment creation. Supported for
+   * Cloud Composer environments in versions composer-2.*.*-airflow-*.*.*.
+   * @param zone zone or {@code null} for none
+   */
+  public DatabaseConfig setZone(java.lang.String zone) {
+    this.zone = zone;
     return this;
   }
 

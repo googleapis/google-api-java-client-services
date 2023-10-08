@@ -29,6 +29,30 @@ package com.google.api.services.composer.v1.model;
 @SuppressWarnings("javadoc")
 public final class StorageConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The name of the Cloud Storage bucket used by the environment. No `gs://` prefix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bucket;
+
+  /**
+   * Optional. The name of the Cloud Storage bucket used by the environment. No `gs://` prefix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBucket() {
+    return bucket;
+  }
+
+  /**
+   * Optional. The name of the Cloud Storage bucket used by the environment. No `gs://` prefix.
+   * @param bucket bucket or {@code null} for none
+   */
+  public StorageConfig setBucket(java.lang.String bucket) {
+    this.bucket = bucket;
+    return this;
+  }
+
   @Override
   public StorageConfig set(String fieldName, Object value) {
     return (StorageConfig) super.set(fieldName, value);

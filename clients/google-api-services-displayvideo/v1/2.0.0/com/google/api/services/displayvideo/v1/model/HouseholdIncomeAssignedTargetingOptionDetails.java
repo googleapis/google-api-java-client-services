@@ -32,7 +32,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class HouseholdIncomeAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The household income of the audience. Output only in v1. Required in v2.
+   * Required. The household income of the audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class HouseholdIncomeAssignedTargetingOptionDetails extends com.goo
   private java.lang.String targetingOptionId;
 
   /**
-   * The household income of the audience. Output only in v1. Required in v2.
+   * Required. The household income of the audience.
    * @return value or {@code null} for none
    */
   public java.lang.String getHouseholdIncome() {
@@ -55,7 +55,7 @@ public final class HouseholdIncomeAssignedTargetingOptionDetails extends com.goo
   }
 
   /**
-   * The household income of the audience. Output only in v1. Required in v2.
+   * Required. The household income of the audience.
    * @param householdIncome householdIncome or {@code null} for none
    */
   public HouseholdIncomeAssignedTargetingOptionDetails setHouseholdIncome(java.lang.String householdIncome) {

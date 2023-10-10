@@ -12017,9 +12017,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Bulk edits multiple assignments between locations and a single location list. The operation will
-         * delete the assigned locations provided in
-         * BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned
-         * locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
+         * delete the assigned locations provided in deletedAssignedLocations and then create the assigned
+         * locations provided in createdAssignedLocations.
          *
          * Create a request for the method "assignedLocations.bulkEdit".
          *
@@ -12046,9 +12045,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Bulk edits multiple assignments between locations and a single location list. The operation
-           * will delete the assigned locations provided in
-           * BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned
-           * locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
+           * will delete the assigned locations provided in deletedAssignedLocations and then create the
+           * assigned locations provided in createdAssignedLocations.
            *
            * Create a request for the method "assignedLocations.bulkEdit".
            *

@@ -54,8 +54,8 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The time period in which the pacing budget will be spent. When automatic budget
-   * allocation is enabled at the insertion order via auto_budget_allocation, this field is output
-   * only and defaults to `PACING_PERIOD_FLIGHT`.
+   * allocation is enabled at the insertion order via automationType, this field is output only and
+   * defaults to `PACING_PERIOD_FLIGHT`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,8 +121,8 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The time period in which the pacing budget will be spent. When automatic budget
-   * allocation is enabled at the insertion order via auto_budget_allocation, this field is output
-   * only and defaults to `PACING_PERIOD_FLIGHT`.
+   * allocation is enabled at the insertion order via automationType, this field is output only and
+   * defaults to `PACING_PERIOD_FLIGHT`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPacingPeriod() {
@@ -131,8 +131,8 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The time period in which the pacing budget will be spent. When automatic budget
-   * allocation is enabled at the insertion order via auto_budget_allocation, this field is output
-   * only and defaults to `PACING_PERIOD_FLIGHT`.
+   * allocation is enabled at the insertion order via automationType, this field is output only and
+   * defaults to `PACING_PERIOD_FLIGHT`.
    * @param pacingPeriod pacingPeriod or {@code null} for none
    */
   public Pacing setPacingPeriod(java.lang.String pacingPeriod) {

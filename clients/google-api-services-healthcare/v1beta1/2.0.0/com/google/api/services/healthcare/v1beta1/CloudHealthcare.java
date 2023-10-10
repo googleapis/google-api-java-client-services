@@ -11564,6 +11564,146 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Gets metrics associated with the DICOM store.
+           *
+           * Create a request for the method "dicomStores.getDICOMStoreMetrics".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link GetDICOMStoreMetrics#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name The resource name of the DICOM store to get metrics for.
+           * @return the request
+           */
+          public GetDICOMStoreMetrics getDICOMStoreMetrics(java.lang.String name) throws java.io.IOException {
+            GetDICOMStoreMetrics result = new GetDICOMStoreMetrics(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetDICOMStoreMetrics extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.DicomStoreMetrics> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:getDICOMStoreMetrics";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+
+            /**
+             * Gets metrics associated with the DICOM store.
+             *
+             * Create a request for the method "dicomStores.getDICOMStoreMetrics".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link GetDICOMStoreMetrics#execute()} method to invoke the
+             * remote operation. <p> {@link GetDICOMStoreMetrics#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name The resource name of the DICOM store to get metrics for.
+             * @since 1.13
+             */
+            protected GetDICOMStoreMetrics(java.lang.String name) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.DicomStoreMetrics.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetDICOMStoreMetrics set$Xgafv(java.lang.String $Xgafv) {
+              return (GetDICOMStoreMetrics) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetDICOMStoreMetrics setAccessToken(java.lang.String accessToken) {
+              return (GetDICOMStoreMetrics) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetDICOMStoreMetrics setAlt(java.lang.String alt) {
+              return (GetDICOMStoreMetrics) super.setAlt(alt);
+            }
+
+            @Override
+            public GetDICOMStoreMetrics setCallback(java.lang.String callback) {
+              return (GetDICOMStoreMetrics) super.setCallback(callback);
+            }
+
+            @Override
+            public GetDICOMStoreMetrics setFields(java.lang.String fields) {
+              return (GetDICOMStoreMetrics) super.setFields(fields);
+            }
+
+            @Override
+            public GetDICOMStoreMetrics setKey(java.lang.String key) {
+              return (GetDICOMStoreMetrics) super.setKey(key);
+            }
+
+            @Override
+            public GetDICOMStoreMetrics setOauthToken(java.lang.String oauthToken) {
+              return (GetDICOMStoreMetrics) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetDICOMStoreMetrics setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetDICOMStoreMetrics) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetDICOMStoreMetrics setQuotaUser(java.lang.String quotaUser) {
+              return (GetDICOMStoreMetrics) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetDICOMStoreMetrics setUploadType(java.lang.String uploadType) {
+              return (GetDICOMStoreMetrics) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetDICOMStoreMetrics setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetDICOMStoreMetrics) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The resource name of the DICOM store to get metrics for. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the DICOM store to get metrics for.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The resource name of the DICOM store to get metrics for. */
+            public GetDICOMStoreMetrics setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetDICOMStoreMetrics set(String parameterName, Object value) {
+              return (GetDICOMStoreMetrics) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
@@ -13426,6 +13566,371 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
 
+          /**
+           * An accessor for creating requests from the DicomWeb collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.DicomWeb.List request = healthcare.dicomWeb().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public DicomWeb dicomWeb() {
+            return new DicomWeb();
+          }
+
+          /**
+           * The "dicomWeb" collection of methods.
+           */
+          public class DicomWeb {
+
+            /**
+             * An accessor for creating requests from the Studies collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+             *   {@code CloudHealthcare.Studies.List request = healthcare.studies().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Studies studies() {
+              return new Studies();
+            }
+
+            /**
+             * The "studies" collection of methods.
+             */
+            public class Studies {
+
+              /**
+               * GetStudyMetrics returns metrics for a study.
+               *
+               * Create a request for the method "studies.getStudyMetrics".
+               *
+               * This request holds the parameters needed by the healthcare server.  After setting any optional
+               * parameters, call the {@link GetStudyMetrics#execute()} method to invoke the remote operation.
+               *
+               * @param study The study resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{datas
+               *        et_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}`.
+               * @return the request
+               */
+              public GetStudyMetrics getStudyMetrics(java.lang.String study) throws java.io.IOException {
+                GetStudyMetrics result = new GetStudyMetrics(study);
+                initialize(result);
+                return result;
+              }
+
+              public class GetStudyMetrics extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.StudyMetrics> {
+
+                private static final String REST_PATH = "v1beta1/{+study}:getStudyMetrics";
+
+                private final java.util.regex.Pattern STUDY_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+$");
+
+                /**
+                 * GetStudyMetrics returns metrics for a study.
+                 *
+                 * Create a request for the method "studies.getStudyMetrics".
+                 *
+                 * This request holds the parameters needed by the the healthcare server.  After setting any
+                 * optional parameters, call the {@link GetStudyMetrics#execute()} method to invoke the remote
+                 * operation. <p> {@link GetStudyMetrics#initialize(com.google.api.client.googleapis.services.Abst
+                 * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+                 * the constructor. </p>
+                 *
+                 * @param study The study resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{datas
+               *        et_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}`.
+                 * @since 1.13
+                 */
+                protected GetStudyMetrics(java.lang.String study) {
+                  super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.StudyMetrics.class);
+                  this.study = com.google.api.client.util.Preconditions.checkNotNull(study, "Required parameter study must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(STUDY_PATTERN.matcher(study).matches(),
+                        "Parameter study must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public GetStudyMetrics set$Xgafv(java.lang.String $Xgafv) {
+                  return (GetStudyMetrics) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public GetStudyMetrics setAccessToken(java.lang.String accessToken) {
+                  return (GetStudyMetrics) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public GetStudyMetrics setAlt(java.lang.String alt) {
+                  return (GetStudyMetrics) super.setAlt(alt);
+                }
+
+                @Override
+                public GetStudyMetrics setCallback(java.lang.String callback) {
+                  return (GetStudyMetrics) super.setCallback(callback);
+                }
+
+                @Override
+                public GetStudyMetrics setFields(java.lang.String fields) {
+                  return (GetStudyMetrics) super.setFields(fields);
+                }
+
+                @Override
+                public GetStudyMetrics setKey(java.lang.String key) {
+                  return (GetStudyMetrics) super.setKey(key);
+                }
+
+                @Override
+                public GetStudyMetrics setOauthToken(java.lang.String oauthToken) {
+                  return (GetStudyMetrics) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public GetStudyMetrics setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (GetStudyMetrics) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public GetStudyMetrics setQuotaUser(java.lang.String quotaUser) {
+                  return (GetStudyMetrics) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public GetStudyMetrics setUploadType(java.lang.String uploadType) {
+                  return (GetStudyMetrics) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public GetStudyMetrics setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (GetStudyMetrics) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * The study resource path. For example, `projects/{project_id}/locations/{location_
+                 * id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_ui
+                 * d}`.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String study;
+
+                /** The study resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{data
+               set_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}`.
+                 */
+                public java.lang.String getStudy() {
+                  return study;
+                }
+
+                /**
+                 * The study resource path. For example, `projects/{project_id}/locations/{location_
+                 * id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_ui
+                 * d}`.
+                 */
+                public GetStudyMetrics setStudy(java.lang.String study) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(STUDY_PATTERN.matcher(study).matches(),
+                        "Parameter study must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+$");
+                  }
+                  this.study = study;
+                  return this;
+                }
+
+                @Override
+                public GetStudyMetrics set(String parameterName, Object value) {
+                  return (GetStudyMetrics) super.set(parameterName, value);
+                }
+              }
+
+              /**
+               * An accessor for creating requests from the Series collection.
+               *
+               * <p>The typical use is:</p>
+               * <pre>
+               *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+               *   {@code CloudHealthcare.Series.List request = healthcare.series().list(parameters ...)}
+               * </pre>
+               *
+               * @return the resource collection
+               */
+              public Series series() {
+                return new Series();
+              }
+
+              /**
+               * The "series" collection of methods.
+               */
+              public class Series {
+
+                /**
+                 * GetSeriesMetrics returns metrics for a series.
+                 *
+                 * Create a request for the method "series.getSeriesMetrics".
+                 *
+                 * This request holds the parameters needed by the healthcare server.  After setting any optional
+                 * parameters, call the {@link GetSeriesMetrics#execute()} method to invoke the remote operation.
+                 *
+                 * @param series The series resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{data
+                 *        set_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}/series/{series_uid}`.
+                 * @return the request
+                 */
+                public GetSeriesMetrics getSeriesMetrics(java.lang.String series) throws java.io.IOException {
+                  GetSeriesMetrics result = new GetSeriesMetrics(series);
+                  initialize(result);
+                  return result;
+                }
+
+                public class GetSeriesMetrics extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.SeriesMetrics> {
+
+                  private static final String REST_PATH = "v1beta1/{+series}:getSeriesMetrics";
+
+                  private final java.util.regex.Pattern SERIES_PATTERN =
+                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+/series/[^/]+$");
+
+                  /**
+                   * GetSeriesMetrics returns metrics for a series.
+                   *
+                   * Create a request for the method "series.getSeriesMetrics".
+                   *
+                   * This request holds the parameters needed by the the healthcare server.  After setting any
+                   * optional parameters, call the {@link GetSeriesMetrics#execute()} method to invoke the remote
+                   * operation. <p> {@link GetSeriesMetrics#initialize(com.google.api.client.googleapis.services.Abs
+                   * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+                   * invoking the constructor. </p>
+                   *
+                   * @param series The series resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{data
+                 *        set_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}/series/{series_uid}`.
+                   * @since 1.13
+                   */
+                  protected GetSeriesMetrics(java.lang.String series) {
+                    super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.SeriesMetrics.class);
+                    this.series = com.google.api.client.util.Preconditions.checkNotNull(series, "Required parameter series must be specified.");
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(SERIES_PATTERN.matcher(series).matches(),
+                          "Parameter series must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+/series/[^/]+$");
+                    }
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                    return super.executeUsingHead();
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                    return super.buildHttpRequestUsingHead();
+                  }
+
+                  @Override
+                  public GetSeriesMetrics set$Xgafv(java.lang.String $Xgafv) {
+                    return (GetSeriesMetrics) super.set$Xgafv($Xgafv);
+                  }
+
+                  @Override
+                  public GetSeriesMetrics setAccessToken(java.lang.String accessToken) {
+                    return (GetSeriesMetrics) super.setAccessToken(accessToken);
+                  }
+
+                  @Override
+                  public GetSeriesMetrics setAlt(java.lang.String alt) {
+                    return (GetSeriesMetrics) super.setAlt(alt);
+                  }
+
+                  @Override
+                  public GetSeriesMetrics setCallback(java.lang.String callback) {
+                    return (GetSeriesMetrics) super.setCallback(callback);
+                  }
+
+                  @Override
+                  public GetSeriesMetrics setFields(java.lang.String fields) {
+                    return (GetSeriesMetrics) super.setFields(fields);
+                  }
+
+                  @Override
+                  public GetSeriesMetrics setKey(java.lang.String key) {
+                    return (GetSeriesMetrics) super.setKey(key);
+                  }
+
+                  @Override
+                  public GetSeriesMetrics setOauthToken(java.lang.String oauthToken) {
+                    return (GetSeriesMetrics) super.setOauthToken(oauthToken);
+                  }
+
+                  @Override
+                  public GetSeriesMetrics setPrettyPrint(java.lang.Boolean prettyPrint) {
+                    return (GetSeriesMetrics) super.setPrettyPrint(prettyPrint);
+                  }
+
+                  @Override
+                  public GetSeriesMetrics setQuotaUser(java.lang.String quotaUser) {
+                    return (GetSeriesMetrics) super.setQuotaUser(quotaUser);
+                  }
+
+                  @Override
+                  public GetSeriesMetrics setUploadType(java.lang.String uploadType) {
+                    return (GetSeriesMetrics) super.setUploadType(uploadType);
+                  }
+
+                  @Override
+                  public GetSeriesMetrics setUploadProtocol(java.lang.String uploadProtocol) {
+                    return (GetSeriesMetrics) super.setUploadProtocol(uploadProtocol);
+                  }
+
+                  /**
+                   * The series resource path. For example, `projects/{project_id}/locations/{locati
+                   * on_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{stu
+                   * dy_uid}/series/{series_uid}`.
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String series;
+
+                  /** The series resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{dat
+                 aset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}/series/{series_uid}`.
+                   */
+                  public java.lang.String getSeries() {
+                    return series;
+                  }
+
+                  /**
+                   * The series resource path. For example, `projects/{project_id}/locations/{locati
+                   * on_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{stu
+                   * dy_uid}/series/{series_uid}`.
+                   */
+                  public GetSeriesMetrics setSeries(java.lang.String series) {
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(SERIES_PATTERN.matcher(series).matches(),
+                          "Parameter series must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+/series/[^/]+$");
+                    }
+                    this.series = series;
+                    return this;
+                  }
+
+                  @Override
+                  public GetSeriesMetrics set(String parameterName, Object value) {
+                    return (GetSeriesMetrics) super.set(parameterName, value);
+                  }
+                }
+
+              }
+            }
+          }
           /**
            * An accessor for creating requests from the Studies collection.
            *
@@ -24629,6 +25134,157 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets metrics asssociated with the HL7v2 store.
+           *
+           * Create a request for the method "hl7V2Stores.getHL7v2StoreMetrics".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link GetHL7v2StoreMetrics#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name The resource name of the HL7v2 store to get metrics for, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_st
+           *        ore_id}`.
+           * @return the request
+           */
+          public GetHL7v2StoreMetrics getHL7v2StoreMetrics(java.lang.String name) throws java.io.IOException {
+            GetHL7v2StoreMetrics result = new GetHL7v2StoreMetrics(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetHL7v2StoreMetrics extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Hl7V2StoreMetrics> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:getHL7v2StoreMetrics";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+
+            /**
+             * Gets metrics asssociated with the HL7v2 store.
+             *
+             * Create a request for the method "hl7V2Stores.getHL7v2StoreMetrics".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link GetHL7v2StoreMetrics#execute()} method to invoke the
+             * remote operation. <p> {@link GetHL7v2StoreMetrics#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name The resource name of the HL7v2 store to get metrics for, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_st
+           *        ore_id}`.
+             * @since 1.13
+             */
+            protected GetHL7v2StoreMetrics(java.lang.String name) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Hl7V2StoreMetrics.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics set$Xgafv(java.lang.String $Xgafv) {
+              return (GetHL7v2StoreMetrics) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics setAccessToken(java.lang.String accessToken) {
+              return (GetHL7v2StoreMetrics) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics setAlt(java.lang.String alt) {
+              return (GetHL7v2StoreMetrics) super.setAlt(alt);
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics setCallback(java.lang.String callback) {
+              return (GetHL7v2StoreMetrics) super.setCallback(callback);
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics setFields(java.lang.String fields) {
+              return (GetHL7v2StoreMetrics) super.setFields(fields);
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics setKey(java.lang.String key) {
+              return (GetHL7v2StoreMetrics) super.setKey(key);
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics setOauthToken(java.lang.String oauthToken) {
+              return (GetHL7v2StoreMetrics) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetHL7v2StoreMetrics) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics setQuotaUser(java.lang.String quotaUser) {
+              return (GetHL7v2StoreMetrics) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics setUploadType(java.lang.String uploadType) {
+              return (GetHL7v2StoreMetrics) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetHL7v2StoreMetrics) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the HL7v2 store to get metrics for, in the format `projects/{pro
+             * ject_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the HL7v2 store to get metrics for, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the HL7v2 store to get metrics for, in the format `projects/{pro
+             * ject_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+             */
+            public GetHL7v2StoreMetrics setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetHL7v2StoreMetrics set(String parameterName, Object value) {
+              return (GetHL7v2StoreMetrics) super.set(parameterName, value);
             }
           }
           /**

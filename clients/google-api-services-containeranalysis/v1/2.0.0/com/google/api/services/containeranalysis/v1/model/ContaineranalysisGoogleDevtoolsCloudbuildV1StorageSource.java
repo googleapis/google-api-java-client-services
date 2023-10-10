@@ -55,6 +55,13 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource exte
   private java.lang.String object__;
 
   /**
+   * Optional. Option to specify the tool to fetch the source file for the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceFetcher;
+
+  /**
    * Cloud Storage bucket containing the source (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
    * @return value or {@code null} for none
@@ -108,6 +115,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource exte
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource setObject(java.lang.String object__) {
     this.object__ = object__;
+    return this;
+  }
+
+  /**
+   * Optional. Option to specify the tool to fetch the source file for the build.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceFetcher() {
+    return sourceFetcher;
+  }
+
+  /**
+   * Optional. Option to specify the tool to fetch the source file for the build.
+   * @param sourceFetcher sourceFetcher or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource setSourceFetcher(java.lang.String sourceFetcher) {
+    this.sourceFetcher = sourceFetcher;
     return this;
   }
 

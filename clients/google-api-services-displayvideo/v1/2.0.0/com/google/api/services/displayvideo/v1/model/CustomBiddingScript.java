@@ -60,7 +60,7 @@ public final class CustomBiddingScript extends com.google.api.client.json.Generi
 
   /**
    * Output only. Error details of a rejected custom bidding script. This field will only be
-   * populated when Script.state is REJECTED.
+   * populated when state is REJECTED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class CustomBiddingScript extends com.google.api.client.json.Generi
 
   /**
    * Output only. Error details of a rejected custom bidding script. This field will only be
-   * populated when Script.state is REJECTED.
+   * populated when state is REJECTED.
    * @return value or {@code null} for none
    */
   public java.util.List<ScriptError> getErrors() {
@@ -166,7 +166,7 @@ public final class CustomBiddingScript extends com.google.api.client.json.Generi
 
   /**
    * Output only. Error details of a rejected custom bidding script. This field will only be
-   * populated when Script.state is REJECTED.
+   * populated when state is REJECTED.
    * @param errors errors or {@code null} for none
    */
   public CustomBiddingScript setErrors(java.util.List<ScriptError> errors) {

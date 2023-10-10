@@ -32,7 +32,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ParentalStatusAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The parental status of the audience. Output only in v1. Required in v2.
+   * Required. The parental status of the audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class ParentalStatusAssignedTargetingOptionDetails extends com.goog
   private java.lang.String targetingOptionId;
 
   /**
-   * The parental status of the audience. Output only in v1. Required in v2.
+   * Required. The parental status of the audience.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentalStatus() {
@@ -55,7 +55,7 @@ public final class ParentalStatusAssignedTargetingOptionDetails extends com.goog
   }
 
   /**
-   * The parental status of the audience. Output only in v1. Required in v2.
+   * Required. The parental status of the audience.
    * @param parentalStatus parentalStatus or {@code null} for none
    */
   public ParentalStatusAssignedTargetingOptionDetails setParentalStatus(java.lang.String parentalStatus) {

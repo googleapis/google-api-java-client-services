@@ -289,6 +289,149 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
+     * Gets the LoggingConfig of the requested project.
+     *
+     * Create a request for the method "projects.getLoggingConfig".
+     *
+     * This request holds the parameters needed by the retail server.  After setting any optional
+     * parameters, call the {@link GetLoggingConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Full LoggingConfig resource name. Format: projects/{project_number}/loggingConfig
+     * @return the request
+     */
+    public GetLoggingConfig getLoggingConfig(java.lang.String name) throws java.io.IOException {
+      GetLoggingConfig result = new GetLoggingConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetLoggingConfig extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaLoggingConfig> {
+
+      private static final String REST_PATH = "v2alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/loggingConfig$");
+
+      /**
+       * Gets the LoggingConfig of the requested project.
+       *
+       * Create a request for the method "projects.getLoggingConfig".
+       *
+       * This request holds the parameters needed by the the retail server.  After setting any optional
+       * parameters, call the {@link GetLoggingConfig#execute()} method to invoke the remote operation.
+       * <p> {@link GetLoggingConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+       * ClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. Full LoggingConfig resource name. Format: projects/{project_number}/loggingConfig
+       * @since 1.13
+       */
+      protected GetLoggingConfig(java.lang.String name) {
+        super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaLoggingConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/loggingConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetLoggingConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetLoggingConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetLoggingConfig setAccessToken(java.lang.String accessToken) {
+        return (GetLoggingConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetLoggingConfig setAlt(java.lang.String alt) {
+        return (GetLoggingConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetLoggingConfig setCallback(java.lang.String callback) {
+        return (GetLoggingConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetLoggingConfig setFields(java.lang.String fields) {
+        return (GetLoggingConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetLoggingConfig setKey(java.lang.String key) {
+        return (GetLoggingConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetLoggingConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetLoggingConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetLoggingConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetLoggingConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetLoggingConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetLoggingConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetLoggingConfig setUploadType(java.lang.String uploadType) {
+        return (GetLoggingConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetLoggingConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetLoggingConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Full LoggingConfig resource name. Format: projects/{project_number}/loggingConfig
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Full LoggingConfig resource name. Format: projects/{project_number}/loggingConfig
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Full LoggingConfig resource name. Format: projects/{project_number}/loggingConfig
+       */
+      public GetLoggingConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/loggingConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetLoggingConfig set(String parameterName, Object value) {
+        return (GetLoggingConfig) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the project. Throws `NOT_FOUND` if the project wasn't initialized for the Retail API
      * service.
      *
@@ -574,6 +717,172 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
       @Override
       public ListEnrolledSolutions set(String parameterName, Object value) {
         return (ListEnrolledSolutions) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the LoggingConfig of the requested project.
+     *
+     * Create a request for the method "projects.updateLoggingConfig".
+     *
+     * This request holds the parameters needed by the retail server.  After setting any optional
+     * parameters, call the {@link UpdateLoggingConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Immutable. The name of the LoggingConfig singleton resource. Format:
+     *        projects/loggingConfig
+     * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaLoggingConfig}
+     * @return the request
+     */
+    public UpdateLoggingConfig updateLoggingConfig(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaLoggingConfig content) throws java.io.IOException {
+      UpdateLoggingConfig result = new UpdateLoggingConfig(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateLoggingConfig extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaLoggingConfig> {
+
+      private static final String REST_PATH = "v2alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/loggingConfig$");
+
+      /**
+       * Updates the LoggingConfig of the requested project.
+       *
+       * Create a request for the method "projects.updateLoggingConfig".
+       *
+       * This request holds the parameters needed by the the retail server.  After setting any optional
+       * parameters, call the {@link UpdateLoggingConfig#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateLoggingConfig#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. Immutable. The name of the LoggingConfig singleton resource. Format:
+     *        projects/loggingConfig
+       * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaLoggingConfig}
+       * @since 1.13
+       */
+      protected UpdateLoggingConfig(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaLoggingConfig content) {
+        super(CloudRetail.this, "PATCH", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaLoggingConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/loggingConfig$");
+        }
+      }
+
+      @Override
+      public UpdateLoggingConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateLoggingConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateLoggingConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateLoggingConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateLoggingConfig setAlt(java.lang.String alt) {
+        return (UpdateLoggingConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateLoggingConfig setCallback(java.lang.String callback) {
+        return (UpdateLoggingConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateLoggingConfig setFields(java.lang.String fields) {
+        return (UpdateLoggingConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateLoggingConfig setKey(java.lang.String key) {
+        return (UpdateLoggingConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateLoggingConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateLoggingConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateLoggingConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateLoggingConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateLoggingConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateLoggingConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateLoggingConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateLoggingConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateLoggingConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateLoggingConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Immutable. The name of the LoggingConfig singleton resource. Format:
+       * projects/loggingConfig
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Immutable. The name of the LoggingConfig singleton resource. Format:
+     projects/loggingConfig
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Immutable. The name of the LoggingConfig singleton resource. Format:
+       * projects/loggingConfig
+       */
+      public UpdateLoggingConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/loggingConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Indicates which fields in the provided LoggingConfig to update. The following are the only
+       * supported fields: * default_log_generation_rule * per_service_log_generation_rules If not
+       * set, all supported fields are updated.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Indicates which fields in the provided LoggingConfig to update. The following are the only
+     supported fields: * default_log_generation_rule * per_service_log_generation_rules If not set, all
+     supported fields are updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Indicates which fields in the provided LoggingConfig to update. The following are the only
+       * supported fields: * default_log_generation_rule * per_service_log_generation_rules If not
+       * set, all supported fields are updated.
+       */
+      public UpdateLoggingConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateLoggingConfig set(String parameterName, Object value) {
+        return (UpdateLoggingConfig) super.set(parameterName, value);
       }
     }
 

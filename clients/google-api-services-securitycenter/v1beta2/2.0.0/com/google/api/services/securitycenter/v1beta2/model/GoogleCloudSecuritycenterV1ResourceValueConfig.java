@@ -17,8 +17,8 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * A resource value config is a mapping configuration of user's tag values to resource values. Used
- * by the attack path simulation.
+ * A resource value config (RVC) is a mapping configuration of user's resources to resource values.
+ * Used in Attack path simulations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

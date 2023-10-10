@@ -208,6 +208,13 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   private GoogleCloudRunV2RevisionScaling scaling;
 
   /**
+   * Output only. The current effective scaling settings for the revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2RevisionScalingStatus scalingStatus;
+
+  /**
    * Output only. The name of the parent service.
    * The value may be {@code null}.
    */
@@ -657,6 +664,23 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Revision setScaling(GoogleCloudRunV2RevisionScaling scaling) {
     this.scaling = scaling;
+    return this;
+  }
+
+  /**
+   * Output only. The current effective scaling settings for the revision.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionScalingStatus getScalingStatus() {
+    return scalingStatus;
+  }
+
+  /**
+   * Output only. The current effective scaling settings for the revision.
+   * @param scalingStatus scalingStatus or {@code null} for none
+   */
+  public GoogleCloudRunV2Revision setScalingStatus(GoogleCloudRunV2RevisionScalingStatus scalingStatus) {
+    this.scalingStatus = scalingStatus;
     return this;
   }
 

@@ -38,7 +38,7 @@ package com.google.api.services.kitch_sink;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public class KitchSink extends com.google.api.client.googleapis.services.json.AbstractGoogleJsonClient {
+public class FooKitchSink extends com.google.api.client.googleapis.services.json.AbstractGoogleJsonClient {
 
   // Note: Leave this static initializer at the top of the file.
   static {

@@ -39,8 +39,9 @@ public final class GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest extends com
   private java.lang.String debugToken;
 
   /**
-   * Forces a short lived token with a 5 minute TTL. Useful when the client wishes to self impose
-   * stricter TTL requirements for this exchange. Default: false.
+   * Specifies whether this attestation is for use in a *limited use* (`true`) or *session based*
+   * (`false`) context. To enable this attestation to be used with the *replay protection* feature,
+   * set this to `true`. The default value is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +67,9 @@ public final class GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest extends com
   }
 
   /**
-   * Forces a short lived token with a 5 minute TTL. Useful when the client wishes to self impose
-   * stricter TTL requirements for this exchange. Default: false.
+   * Specifies whether this attestation is for use in a *limited use* (`true`) or *session based*
+   * (`false`) context. To enable this attestation to be used with the *replay protection* feature,
+   * set this to `true`. The default value is `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLimitedUse() {
@@ -75,8 +77,9 @@ public final class GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest extends com
   }
 
   /**
-   * Forces a short lived token with a 5 minute TTL. Useful when the client wishes to self impose
-   * stricter TTL requirements for this exchange. Default: false.
+   * Specifies whether this attestation is for use in a *limited use* (`true`) or *session based*
+   * (`false`) context. To enable this attestation to be used with the *replay protection* feature,
+   * set this to `true`. The default value is `false`.
    * @param limitedUse limitedUse or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest setLimitedUse(java.lang.Boolean limitedUse) {

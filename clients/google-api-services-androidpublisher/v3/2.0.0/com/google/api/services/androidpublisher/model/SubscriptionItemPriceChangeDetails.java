@@ -32,7 +32,8 @@ public final class SubscriptionItemPriceChangeDetails extends com.google.api.cli
 
   /**
    * The renewal time at which the price change will become effective for the user. This is subject
-   * to change(to a future time) due to cases where the renewal time shifts like pause.
+   * to change(to a future time) due to cases where the renewal time shifts like pause. This field
+   * is only populated if the price change has not taken effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class SubscriptionItemPriceChangeDetails extends com.google.api.cli
 
   /**
    * The renewal time at which the price change will become effective for the user. This is subject
-   * to change(to a future time) due to cases where the renewal time shifts like pause.
+   * to change(to a future time) due to cases where the renewal time shifts like pause. This field
+   * is only populated if the price change has not taken effect.
    * @return value or {@code null} for none
    */
   public String getExpectedNewPriceChargeTime() {
@@ -70,7 +72,8 @@ public final class SubscriptionItemPriceChangeDetails extends com.google.api.cli
 
   /**
    * The renewal time at which the price change will become effective for the user. This is subject
-   * to change(to a future time) due to cases where the renewal time shifts like pause.
+   * to change(to a future time) due to cases where the renewal time shifts like pause. This field
+   * is only populated if the price change has not taken effect.
    * @param expectedNewPriceChargeTime expectedNewPriceChargeTime or {@code null} for none
    */
   public SubscriptionItemPriceChangeDetails setExpectedNewPriceChargeTime(String expectedNewPriceChargeTime) {

@@ -12755,9 +12755,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Bulk edits multiple assignments between locations and a single location list. The operation will
-         * delete the assigned locations provided in
-         * BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned
-         * locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
+         * delete the assigned locations provided in deletedAssignedLocations and then create the assigned
+         * locations provided in createdAssignedLocations.
          *
          * Create a request for the method "assignedLocations.bulkEdit".
          *
@@ -12784,9 +12783,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Bulk edits multiple assignments between locations and a single location list. The operation
-           * will delete the assigned locations provided in
-           * BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned
-           * locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
+           * will delete the assigned locations provided in deletedAssignedLocations and then create the
+           * assigned locations provided in createdAssignedLocations.
            *
            * Create a request for the method "assignedLocations.bulkEdit".
            *
@@ -17583,8 +17581,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class YoutubeAdGroups {
 
       /**
-       * Lists assigned targeting options for multiple YouTube ad groups across targeting types.
-       * Inherieted assigned targeting options are not included.
+       * Lists assigned targeting options for multiple YouTube ad groups across targeting types. Inherited
+       * assigned targeting options are not included.
        *
        * Create a request for the method "youtubeAdGroups.bulkListAdGroupAssignedTargetingOptions".
        *
@@ -17610,7 +17608,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Lists assigned targeting options for multiple YouTube ad groups across targeting types.
-         * Inherieted assigned targeting options are not included.
+         * Inherited assigned targeting options are not included.
          *
          * Create a request for the method "youtubeAdGroups.bulkListAdGroupAssignedTargetingOptions".
          *
@@ -17756,28 +17754,26 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId`
-         * (acceptable in v2) * `adGroupId` (acceptable in v3) *
-         * `assignedTargetingOption.targetingType` The default sorting order is ascending. To
+         * Optional. Field by which to sort the list. Acceptable values are: * `adGroupId` (default)
+         * * `assignedTargetingOption.targetingType` The default sorting order is ascending. To
          * specify descending order for a field, a suffix "desc" should be added to the field name.
          * Example: `targetingType desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional. Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId` (acceptable
-       in v2) * `adGroupId` (acceptable in v3) * `assignedTargetingOption.targetingType` The default
-       sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
-       added to the field name. Example: `targetingType desc`.
+        /** Optional. Field by which to sort the list. Acceptable values are: * `adGroupId` (default) *
+       `assignedTargetingOption.targetingType` The default sorting order is ascending. To specify
+       descending order for a field, a suffix "desc" should be added to the field name. Example:
+       `targetingType desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Optional. Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId`
-         * (acceptable in v2) * `adGroupId` (acceptable in v3) *
-         * `assignedTargetingOption.targetingType` The default sorting order is ascending. To
+         * Optional. Field by which to sort the list. Acceptable values are: * `adGroupId` (default)
+         * * `assignedTargetingOption.targetingType` The default sorting order is ascending. To
          * specify descending order for a field, a suffix "desc" should be added to the field name.
          * Example: `targetingType desc`.
          */

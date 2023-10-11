@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * Wrapper object associating an assigned_targeting_option resource and the youtube ad group it is
+ * Wrapper object associating an AssignedTargetingOption resource and the youtube ad group it is
  * assigned to.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

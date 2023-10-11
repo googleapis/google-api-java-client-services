@@ -32,14 +32,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class ViewabilityAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The predicted viewability percentage. Output only in v1. Required in v2.
+   * Required. The predicted viewability percentage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String viewability;
 
   /**
-   * The predicted viewability percentage. Output only in v1. Required in v2.
+   * Required. The predicted viewability percentage.
    * @return value or {@code null} for none
    */
   public java.lang.String getViewability() {
@@ -47,7 +47,7 @@ public final class ViewabilityAssignedTargetingOptionDetails extends com.google.
   }
 
   /**
-   * The predicted viewability percentage. Output only in v1. Required in v2.
+   * Required. The predicted viewability percentage.
    * @param viewability viewability or {@code null} for none
    */
   public ViewabilityAssignedTargetingOptionDetails setViewability(java.lang.String viewability) {

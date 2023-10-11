@@ -32,14 +32,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class GenderAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The gender of the audience. Output only in v1. Required in v2.
+   * Required. The gender of the audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gender;
 
   /**
-   * The gender of the audience. Output only in v1. Required in v2.
+   * Required. The gender of the audience.
    * @return value or {@code null} for none
    */
   public java.lang.String getGender() {
@@ -47,7 +47,7 @@ public final class GenderAssignedTargetingOptionDetails extends com.google.api.c
   }
 
   /**
-   * The gender of the audience. Output only in v1. Required in v2.
+   * Required. The gender of the audience.
    * @param gender gender or {@code null} for none
    */
   public GenderAssignedTargetingOptionDetails setGender(java.lang.String gender) {

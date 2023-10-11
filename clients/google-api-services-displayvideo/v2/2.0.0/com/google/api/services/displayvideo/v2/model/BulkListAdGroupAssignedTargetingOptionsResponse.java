@@ -33,8 +33,8 @@ public final class BulkListAdGroupAssignedTargetingOptionsResponse extends com.g
   /**
    * A token identifying the next page of results. This value should be specified as the pageToken
    * in a subsequent call to `BulkListAdGroupAssignedTargetingOptions` to fetch the next page of
-   * results. This token will be absent if there are no more
-   * youtube_ad_group_assigned_targeting_options or ad_group_assigned_targeting_options to return.
+   * results. This token will be absent if there are no more AdGroupAssignedTargetingOption
+   * resources to return.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +51,8 @@ public final class BulkListAdGroupAssignedTargetingOptionsResponse extends com.g
   /**
    * A token identifying the next page of results. This value should be specified as the pageToken
    * in a subsequent call to `BulkListAdGroupAssignedTargetingOptions` to fetch the next page of
-   * results. This token will be absent if there are no more
-   * youtube_ad_group_assigned_targeting_options or ad_group_assigned_targeting_options to return.
+   * results. This token will be absent if there are no more AdGroupAssignedTargetingOption
+   * resources to return.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -62,8 +62,8 @@ public final class BulkListAdGroupAssignedTargetingOptionsResponse extends com.g
   /**
    * A token identifying the next page of results. This value should be specified as the pageToken
    * in a subsequent call to `BulkListAdGroupAssignedTargetingOptions` to fetch the next page of
-   * results. This token will be absent if there are no more
-   * youtube_ad_group_assigned_targeting_options or ad_group_assigned_targeting_options to return.
+   * results. This token will be absent if there are no more AdGroupAssignedTargetingOption
+   * resources to return.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public BulkListAdGroupAssignedTargetingOptionsResponse setNextPageToken(java.lang.String nextPageToken) {

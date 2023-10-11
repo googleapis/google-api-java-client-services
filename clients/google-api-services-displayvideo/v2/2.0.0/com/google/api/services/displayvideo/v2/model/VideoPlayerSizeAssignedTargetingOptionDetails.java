@@ -34,14 +34,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class VideoPlayerSizeAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The video player size. Output only in v1. Required in v2.
+   * Required. The video player size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String videoPlayerSize;
 
   /**
-   * The video player size. Output only in v1. Required in v2.
+   * Required. The video player size.
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoPlayerSize() {
@@ -49,7 +49,7 @@ public final class VideoPlayerSizeAssignedTargetingOptionDetails extends com.goo
   }
 
   /**
-   * The video player size. Output only in v1. Required in v2.
+   * Required. The video player size.
    * @param videoPlayerSize videoPlayerSize or {@code null} for none
    */
   public VideoPlayerSizeAssignedTargetingOptionDetails setVideoPlayerSize(java.lang.String videoPlayerSize) {

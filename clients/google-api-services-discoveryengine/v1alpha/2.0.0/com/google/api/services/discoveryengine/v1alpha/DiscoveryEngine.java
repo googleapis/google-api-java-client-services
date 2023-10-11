@@ -7855,6 +7855,324 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
           }
+          /**
+           * An accessor for creating requests from the ServingConfigs collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.ServingConfigs.List request = discoveryengine.servingConfigs().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public ServingConfigs servingConfigs() {
+            return new ServingConfigs();
+          }
+
+          /**
+           * The "servingConfigs" collection of methods.
+           */
+          public class ServingConfigs {
+
+            /**
+             * Makes a recommendation, which requires a contextual user event.
+             *
+             * Create a request for the method "servingConfigs.recommend".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Recommend#execute()} method to invoke the remote operation.
+             *
+             * @param servingConfig Required. Full resource name of the format:
+             *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
+             *        recommendations from your model, you must create at least one serving config for it.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
+             * @return the request
+             */
+            public Recommend recommend(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest content) throws java.io.IOException {
+              Recommend result = new Recommend(servingConfig, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Recommend extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+servingConfig}:recommend";
+
+              private final java.util.regex.Pattern SERVING_CONFIG_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/servingConfigs/[^/]+$");
+
+              /**
+               * Makes a recommendation, which requires a contextual user event.
+               *
+               * Create a request for the method "servingConfigs.recommend".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Recommend#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Recommend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param servingConfig Required. Full resource name of the format:
+             *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
+             *        recommendations from your model, you must create at least one serving config for it.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
+               * @since 1.13
+               */
+              protected Recommend(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendResponse.class);
+                this.servingConfig = com.google.api.client.util.Preconditions.checkNotNull(servingConfig, "Required parameter servingConfig must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                      "Parameter servingConfig must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/servingConfigs/[^/]+$");
+                }
+              }
+
+              @Override
+              public Recommend set$Xgafv(java.lang.String $Xgafv) {
+                return (Recommend) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Recommend setAccessToken(java.lang.String accessToken) {
+                return (Recommend) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Recommend setAlt(java.lang.String alt) {
+                return (Recommend) super.setAlt(alt);
+              }
+
+              @Override
+              public Recommend setCallback(java.lang.String callback) {
+                return (Recommend) super.setCallback(callback);
+              }
+
+              @Override
+              public Recommend setFields(java.lang.String fields) {
+                return (Recommend) super.setFields(fields);
+              }
+
+              @Override
+              public Recommend setKey(java.lang.String key) {
+                return (Recommend) super.setKey(key);
+              }
+
+              @Override
+              public Recommend setOauthToken(java.lang.String oauthToken) {
+                return (Recommend) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Recommend setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Recommend) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Recommend setQuotaUser(java.lang.String quotaUser) {
+                return (Recommend) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Recommend setUploadType(java.lang.String uploadType) {
+                return (Recommend) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Recommend setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Recommend) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full resource name of the format:
+               * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
+               * request recommendations from your model, you must create at least one serving
+               * config for it.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String servingConfig;
+
+              /** Required. Full resource name of the format:
+             `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
+             recommendations from your model, you must create at least one serving config for it.
+               */
+              public java.lang.String getServingConfig() {
+                return servingConfig;
+              }
+
+              /**
+               * Required. Full resource name of the format:
+               * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
+               * request recommendations from your model, you must create at least one serving
+               * config for it.
+               */
+              public Recommend setServingConfig(java.lang.String servingConfig) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                      "Parameter servingConfig must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/servingConfigs/[^/]+$");
+                }
+                this.servingConfig = servingConfig;
+                return this;
+              }
+
+              @Override
+              public Recommend set(String parameterName, Object value) {
+                return (Recommend) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Performs a search.
+             *
+             * Create a request for the method "servingConfigs.search".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+             *
+             * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
+             *        ions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
+             *        g`. This field is used to identify the serving configuration name, set of models used to
+             *        make the search.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSearchRequest}
+             * @return the request
+             */
+            public Search search(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSearchRequest content) throws java.io.IOException {
+              Search result = new Search(servingConfig, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Search extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSearchResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+servingConfig}:search";
+
+              private final java.util.regex.Pattern SERVING_CONFIG_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/servingConfigs/[^/]+$");
+
+              /**
+               * Performs a search.
+               *
+               * Create a request for the method "servingConfigs.search".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
+             *        ions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
+             *        g`. This field is used to identify the serving configuration name, set of models used to
+             *        make the search.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSearchRequest}
+               * @since 1.13
+               */
+              protected Search(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSearchRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSearchResponse.class);
+                this.servingConfig = com.google.api.client.util.Preconditions.checkNotNull(servingConfig, "Required parameter servingConfig must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                      "Parameter servingConfig must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/servingConfigs/[^/]+$");
+                }
+              }
+
+              @Override
+              public Search set$Xgafv(java.lang.String $Xgafv) {
+                return (Search) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Search setAccessToken(java.lang.String accessToken) {
+                return (Search) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Search setAlt(java.lang.String alt) {
+                return (Search) super.setAlt(alt);
+              }
+
+              @Override
+              public Search setCallback(java.lang.String callback) {
+                return (Search) super.setCallback(callback);
+              }
+
+              @Override
+              public Search setFields(java.lang.String fields) {
+                return (Search) super.setFields(fields);
+              }
+
+              @Override
+              public Search setKey(java.lang.String key) {
+                return (Search) super.setKey(key);
+              }
+
+              @Override
+              public Search setOauthToken(java.lang.String oauthToken) {
+                return (Search) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Search) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Search setQuotaUser(java.lang.String quotaUser) {
+                return (Search) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Search setUploadType(java.lang.String uploadType) {
+                return (Search) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Search setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Search) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Search serving config, such as `projects/locatio
+               * ns/global/collections/default_collection/dataStores/default_data_store/servingConfi
+               * gs/default_serving_config`. This field is used to identify the serving
+               * configuration name, set of models used to make the search.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String servingConfig;
+
+              /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
+             tions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_config`. This
+             field is used to identify the serving configuration name, set of models used to make the search.
+               */
+              public java.lang.String getServingConfig() {
+                return servingConfig;
+              }
+
+              /**
+               * Required. The resource name of the Search serving config, such as `projects/locatio
+               * ns/global/collections/default_collection/dataStores/default_data_store/servingConfi
+               * gs/default_serving_config`. This field is used to identify the serving
+               * configuration name, set of models used to make the search.
+               */
+              public Search setServingConfig(java.lang.String servingConfig) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                      "Parameter servingConfig must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/servingConfigs/[^/]+$");
+                }
+                this.servingConfig = servingConfig;
+                return this;
+              }
+
+              @Override
+              public Search set(String parameterName, Object value) {
+                return (Search) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
         /**
          * An accessor for creating requests from the Operations collection.

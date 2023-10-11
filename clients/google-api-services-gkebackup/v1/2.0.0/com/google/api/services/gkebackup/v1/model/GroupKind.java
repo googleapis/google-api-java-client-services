@@ -40,7 +40,8 @@ public final class GroupKind extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceGroup;
 
   /**
-   * Optional. Kind of a Kubernetes resource, e.g. "CustomResourceDefinition", "StorageClass", etc.
+   * Optional. Kind of a Kubernetes resource, must be in UpperCamelCase (PascalCase) and singular
+   * form. E.g. "CustomResourceDefinition", "StorageClass", etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +67,8 @@ public final class GroupKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Kind of a Kubernetes resource, e.g. "CustomResourceDefinition", "StorageClass", etc.
+   * Optional. Kind of a Kubernetes resource, must be in UpperCamelCase (PascalCase) and singular
+   * form. E.g. "CustomResourceDefinition", "StorageClass", etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceKind() {
@@ -74,7 +76,8 @@ public final class GroupKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Kind of a Kubernetes resource, e.g. "CustomResourceDefinition", "StorageClass", etc.
+   * Optional. Kind of a Kubernetes resource, must be in UpperCamelCase (PascalCase) and singular
+   * form. E.g. "CustomResourceDefinition", "StorageClass", etc.
    * @param resourceKind resourceKind or {@code null} for none
    */
   public GroupKind setResourceKind(java.lang.String resourceKind) {

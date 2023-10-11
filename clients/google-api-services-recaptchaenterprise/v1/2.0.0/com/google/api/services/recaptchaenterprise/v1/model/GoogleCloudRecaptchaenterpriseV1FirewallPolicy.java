@@ -31,10 +31,10 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The actions that the caller should take regarding user access. There should be at most one
-   * terminal action. A terminal action is any action that forces a response, such as AllowAction,
-   * BlockAction or SubstituteAction. Zero or more non-terminal actions such as SetHeader might be
-   * specified. A single policy can contain up to 16 actions.
+   * Optional. The actions that the caller should take regarding user access. There should be at
+   * most one terminal action. A terminal action is any action that forces a response, such as
+   * `AllowAction`, `BlockAction` or `SubstituteAction`. Zero or more non-terminal actions such as
+   * `SetHeader` might be specified. A single policy can contain up to 16 actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,11 +47,11 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   }
 
   /**
-   * A CEL (Common Expression Language) conditional expression that specifies if this policy applies
-   * to an incoming user request. If this condition evaluates to true and the requested path matched
-   * the path pattern, the associated actions should be executed by the caller. The condition string
-   * is checked for CEL syntax correctness on creation. For more information, see the [CEL
-   * spec](https://github.com/google/cel-spec) and its [language
+   * Optional. A CEL (Common Expression Language) conditional expression that specifies if this
+   * policy applies to an incoming user request. If this condition evaluates to true and the
+   * requested path matched the path pattern, the associated actions should be executed by the
+   * caller. The condition string is checked for CEL syntax correctness on creation. For more
+   * information, see the [CEL spec](https://github.com/google/cel-spec) and its [language
    * definition](https://github.com/google/cel-spec/blob/master/doc/langdef.md). A condition has a
    * max length of 500 characters.
    * The value may be {@code null}.
@@ -60,8 +60,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   private java.lang.String condition;
 
   /**
-   * A description of what this policy aims to achieve, for convenience purposes. The description
-   * can at most include 256 UTF-8 characters.
+   * Optional. A description of what this policy aims to achieve, for convenience purposes. The
+   * description can at most include 256 UTF-8 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,26 +69,26 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
 
   /**
    * The resource name for the FirewallPolicy in the format
-   * "projects/{project}/firewallpolicies/{firewallpolicy}".
+   * `projects/{project}/firewallpolicies/{firewallpolicy}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The path for which this policy applies, specified as a glob pattern. For more information on
-   * glob, see the [manual page](https://man7.org/linux/man-pages/man7/glob.7.html). A path has a
-   * max length of 200 characters.
+   * Optional. The path for which this policy applies, specified as a glob pattern. For more
+   * information on glob, see the [manual page](https://man7.org/linux/man-pages/man7/glob.7.html).
+   * A path has a max length of 200 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * The actions that the caller should take regarding user access. There should be at most one
-   * terminal action. A terminal action is any action that forces a response, such as AllowAction,
-   * BlockAction or SubstituteAction. Zero or more non-terminal actions such as SetHeader might be
-   * specified. A single policy can contain up to 16 actions.
+   * Optional. The actions that the caller should take regarding user access. There should be at
+   * most one terminal action. A terminal action is any action that forces a response, such as
+   * `AllowAction`, `BlockAction` or `SubstituteAction`. Zero or more non-terminal actions such as
+   * `SetHeader` might be specified. A single policy can contain up to 16 actions.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRecaptchaenterpriseV1FirewallAction> getActions() {
@@ -96,10 +96,10 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   }
 
   /**
-   * The actions that the caller should take regarding user access. There should be at most one
-   * terminal action. A terminal action is any action that forces a response, such as AllowAction,
-   * BlockAction or SubstituteAction. Zero or more non-terminal actions such as SetHeader might be
-   * specified. A single policy can contain up to 16 actions.
+   * Optional. The actions that the caller should take regarding user access. There should be at
+   * most one terminal action. A terminal action is any action that forces a response, such as
+   * `AllowAction`, `BlockAction` or `SubstituteAction`. Zero or more non-terminal actions such as
+   * `SetHeader` might be specified. A single policy can contain up to 16 actions.
    * @param actions actions or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallPolicy setActions(java.util.List<GoogleCloudRecaptchaenterpriseV1FirewallAction> actions) {
@@ -108,11 +108,11 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   }
 
   /**
-   * A CEL (Common Expression Language) conditional expression that specifies if this policy applies
-   * to an incoming user request. If this condition evaluates to true and the requested path matched
-   * the path pattern, the associated actions should be executed by the caller. The condition string
-   * is checked for CEL syntax correctness on creation. For more information, see the [CEL
-   * spec](https://github.com/google/cel-spec) and its [language
+   * Optional. A CEL (Common Expression Language) conditional expression that specifies if this
+   * policy applies to an incoming user request. If this condition evaluates to true and the
+   * requested path matched the path pattern, the associated actions should be executed by the
+   * caller. The condition string is checked for CEL syntax correctness on creation. For more
+   * information, see the [CEL spec](https://github.com/google/cel-spec) and its [language
    * definition](https://github.com/google/cel-spec/blob/master/doc/langdef.md). A condition has a
    * max length of 500 characters.
    * @return value or {@code null} for none
@@ -122,11 +122,11 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   }
 
   /**
-   * A CEL (Common Expression Language) conditional expression that specifies if this policy applies
-   * to an incoming user request. If this condition evaluates to true and the requested path matched
-   * the path pattern, the associated actions should be executed by the caller. The condition string
-   * is checked for CEL syntax correctness on creation. For more information, see the [CEL
-   * spec](https://github.com/google/cel-spec) and its [language
+   * Optional. A CEL (Common Expression Language) conditional expression that specifies if this
+   * policy applies to an incoming user request. If this condition evaluates to true and the
+   * requested path matched the path pattern, the associated actions should be executed by the
+   * caller. The condition string is checked for CEL syntax correctness on creation. For more
+   * information, see the [CEL spec](https://github.com/google/cel-spec) and its [language
    * definition](https://github.com/google/cel-spec/blob/master/doc/langdef.md). A condition has a
    * max length of 500 characters.
    * @param condition condition or {@code null} for none
@@ -137,8 +137,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   }
 
   /**
-   * A description of what this policy aims to achieve, for convenience purposes. The description
-   * can at most include 256 UTF-8 characters.
+   * Optional. A description of what this policy aims to achieve, for convenience purposes. The
+   * description can at most include 256 UTF-8 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -146,8 +146,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   }
 
   /**
-   * A description of what this policy aims to achieve, for convenience purposes. The description
-   * can at most include 256 UTF-8 characters.
+   * Optional. A description of what this policy aims to achieve, for convenience purposes. The
+   * description can at most include 256 UTF-8 characters.
    * @param description description or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallPolicy setDescription(java.lang.String description) {
@@ -157,7 +157,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
 
   /**
    * The resource name for the FirewallPolicy in the format
-   * "projects/{project}/firewallpolicies/{firewallpolicy}".
+   * `projects/{project}/firewallpolicies/{firewallpolicy}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -166,7 +166,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
 
   /**
    * The resource name for the FirewallPolicy in the format
-   * "projects/{project}/firewallpolicies/{firewallpolicy}".
+   * `projects/{project}/firewallpolicies/{firewallpolicy}`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallPolicy setName(java.lang.String name) {
@@ -175,9 +175,9 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   }
 
   /**
-   * The path for which this policy applies, specified as a glob pattern. For more information on
-   * glob, see the [manual page](https://man7.org/linux/man-pages/man7/glob.7.html). A path has a
-   * max length of 200 characters.
+   * Optional. The path for which this policy applies, specified as a glob pattern. For more
+   * information on glob, see the [manual page](https://man7.org/linux/man-pages/man7/glob.7.html).
+   * A path has a max length of 200 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -185,9 +185,9 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   }
 
   /**
-   * The path for which this policy applies, specified as a glob pattern. For more information on
-   * glob, see the [manual page](https://man7.org/linux/man-pages/man7/glob.7.html). A path has a
-   * max length of 200 characters.
+   * Optional. The path for which this policy applies, specified as a glob pattern. For more
+   * information on glob, see the [manual page](https://man7.org/linux/man-pages/man7/glob.7.html).
+   * A path has a max length of 200 characters.
    * @param path path or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallPolicy setPath(java.lang.String path) {

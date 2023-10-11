@@ -48,7 +48,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
   private java.lang.String encryptedUserCredentialsHash;
 
   /**
-   * Optional. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized username. It is used
+   * Required. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized username. It is used
    * to look up password leaks associated with that hash prefix.
    * The value may be {@code null}.
    */
@@ -134,7 +134,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
   }
 
   /**
-   * Optional. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized username. It is used
+   * Required. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized username. It is used
    * to look up password leaks associated with that hash prefix.
    * @see #decodeLookupHashPrefix()
    * @return value or {@code null} for none
@@ -144,7 +144,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
   }
 
   /**
-   * Optional. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized username. It is used
+   * Required. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized username. It is used
    * to look up password leaks associated with that hash prefix.
    * @see #getLookupHashPrefix()
    * @return Base64 decoded value or {@code null} for none
@@ -156,7 +156,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
   }
 
   /**
-   * Optional. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized username. It is used
+   * Required. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized username. It is used
    * to look up password leaks associated with that hash prefix.
    * @see #encodeLookupHashPrefix()
    * @param lookupHashPrefix lookupHashPrefix or {@code null} for none
@@ -167,7 +167,7 @@ public final class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificati
   }
 
   /**
-   * Optional. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized username. It is used
+   * Required. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized username. It is used
    * to look up password leaks associated with that hash prefix.
    * @see #setLookupHashPrefix()
    *

@@ -31,38 +31,38 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * AVS response code from the gateway (available only when reCAPTCHA Enterprise is called after
-   * authorization).
+   * Optional. AVS response code from the gateway (available only when reCAPTCHA Enterprise is
+   * called after authorization).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String avsResponseCode;
 
   /**
-   * CVV response code from the gateway (available only when reCAPTCHA Enterprise is called after
-   * authorization).
+   * Optional. CVV response code from the gateway (available only when reCAPTCHA Enterprise is
+   * called after authorization).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cvvResponseCode;
 
   /**
-   * Gateway response code describing the state of the transaction.
+   * Optional. Gateway response code describing the state of the transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gatewayResponseCode;
 
   /**
-   * Name of the gateway service (for example, stripe, square, paypal).
+   * Optional. Name of the gateway service (for example, stripe, square, paypal).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * AVS response code from the gateway (available only when reCAPTCHA Enterprise is called after
-   * authorization).
+   * Optional. AVS response code from the gateway (available only when reCAPTCHA Enterprise is
+   * called after authorization).
    * @return value or {@code null} for none
    */
   public java.lang.String getAvsResponseCode() {
@@ -70,8 +70,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo ex
   }
 
   /**
-   * AVS response code from the gateway (available only when reCAPTCHA Enterprise is called after
-   * authorization).
+   * Optional. AVS response code from the gateway (available only when reCAPTCHA Enterprise is
+   * called after authorization).
    * @param avsResponseCode avsResponseCode or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo setAvsResponseCode(java.lang.String avsResponseCode) {
@@ -80,8 +80,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo ex
   }
 
   /**
-   * CVV response code from the gateway (available only when reCAPTCHA Enterprise is called after
-   * authorization).
+   * Optional. CVV response code from the gateway (available only when reCAPTCHA Enterprise is
+   * called after authorization).
    * @return value or {@code null} for none
    */
   public java.lang.String getCvvResponseCode() {
@@ -89,8 +89,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo ex
   }
 
   /**
-   * CVV response code from the gateway (available only when reCAPTCHA Enterprise is called after
-   * authorization).
+   * Optional. CVV response code from the gateway (available only when reCAPTCHA Enterprise is
+   * called after authorization).
    * @param cvvResponseCode cvvResponseCode or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo setCvvResponseCode(java.lang.String cvvResponseCode) {
@@ -99,7 +99,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo ex
   }
 
   /**
-   * Gateway response code describing the state of the transaction.
+   * Optional. Gateway response code describing the state of the transaction.
    * @return value or {@code null} for none
    */
   public java.lang.String getGatewayResponseCode() {
@@ -107,7 +107,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo ex
   }
 
   /**
-   * Gateway response code describing the state of the transaction.
+   * Optional. Gateway response code describing the state of the transaction.
    * @param gatewayResponseCode gatewayResponseCode or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo setGatewayResponseCode(java.lang.String gatewayResponseCode) {
@@ -116,7 +116,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo ex
   }
 
   /**
-   * Name of the gateway service (for example, stripe, square, paypal).
+   * Optional. Name of the gateway service (for example, stripe, square, paypal).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -124,7 +124,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo ex
   }
 
   /**
-   * Name of the gateway service (for example, stripe, square, paypal).
+   * Optional. Name of the gateway service (for example, stripe, square, paypal).
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo setName(java.lang.String name) {

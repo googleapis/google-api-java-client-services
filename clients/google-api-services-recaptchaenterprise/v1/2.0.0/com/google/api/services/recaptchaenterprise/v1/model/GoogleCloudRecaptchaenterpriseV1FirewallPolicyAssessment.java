@@ -31,8 +31,8 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the processing of a policy config fails, an error will be populated and the firewall_policy
-   * will be left empty.
+   * Output only. If the processing of a policy config fails, an error will be populated and the
+   * firewall_policy will be left empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment exte
   private GoogleCloudRecaptchaenterpriseV1FirewallPolicy firewallPolicy;
 
   /**
-   * If the processing of a policy config fails, an error will be populated and the firewall_policy
-   * will be left empty.
+   * Output only. If the processing of a policy config fails, an error will be populated and the
+   * firewall_policy will be left empty.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getError() {
@@ -57,8 +57,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment exte
   }
 
   /**
-   * If the processing of a policy config fails, an error will be populated and the firewall_policy
-   * will be left empty.
+   * Output only. If the processing of a policy config fails, an error will be populated and the
+   * firewall_policy will be left empty.
    * @param error error or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment setError(GoogleRpcStatus error) {

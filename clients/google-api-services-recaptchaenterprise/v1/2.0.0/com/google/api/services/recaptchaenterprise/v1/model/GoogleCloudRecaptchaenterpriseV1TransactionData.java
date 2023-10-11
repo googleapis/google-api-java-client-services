@@ -17,8 +17,7 @@
 package com.google.api.services.recaptchaenterprise.v1.model;
 
 /**
- * Transaction data associated with a payment protected by reCAPTCHA Enterprise. All fields are
- * optional.
+ * Transaction data associated with a payment protected by reCAPTCHA Enterprise.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the reCAPTCHA Enterprise API. For a detailed explanation
@@ -32,72 +31,72 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Address associated with the payment method when applicable.
+   * Optional. Address associated with the payment method when applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1TransactionDataAddress billingAddress;
 
   /**
-   * The Bank Identification Number - generally the first 6 or 8 digits of the card.
+   * Optional. The Bank Identification Number - generally the first 6 or 8 digits of the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cardBin;
 
   /**
-   * The last four digits of the card.
+   * Optional. The last four digits of the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cardLastFour;
 
   /**
-   * The currency code in ISO-4217 format.
+   * Optional. The currency code in ISO-4217 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currencyCode;
 
   /**
-   * Information about the payment gateway's response to the transaction.
+   * Optional. Information about the payment gateway's response to the transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo gatewayInfo;
 
   /**
-   * Items purchased in this transaction.
+   * Optional. Items purchased in this transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudRecaptchaenterpriseV1TransactionDataItem> items;
 
   /**
-   * Information about the user or users fulfilling the transaction.
+   * Optional. Information about the user or users fulfilling the transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudRecaptchaenterpriseV1TransactionDataUser> merchants;
 
   /**
-   * The payment method for the transaction. The allowed values are: * credit-card * debit-card *
-   * gift-card * processor-{name} (If a third-party is used, for example, processor-paypal) *
-   * custom-{name} (If an alternative method is used, for example, custom-crypto)
+   * Optional. The payment method for the transaction. The allowed values are: * credit-card *
+   * debit-card * gift-card * processor-{name} (If a third-party is used, for example, processor-
+   * paypal) * custom-{name} (If an alternative method is used, for example, custom-crypto)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String paymentMethod;
 
   /**
-   * Destination address if this transaction involves shipping a physical item.
+   * Optional. Destination address if this transaction involves shipping a physical item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1TransactionDataAddress shippingAddress;
 
   /**
-   * The value of shipping in the specified currency. 0 for free or no shipping.
+   * Optional. The value of shipping in the specified currency. 0 for free or no shipping.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,21 +112,21 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   private java.lang.String transactionId;
 
   /**
-   * Information about the user paying/initiating the transaction.
+   * Optional. Information about the user paying/initiating the transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1TransactionDataUser user;
 
   /**
-   * The decimal value of the transaction in the specified currency.
+   * Optional. The decimal value of the transaction in the specified currency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double value;
 
   /**
-   * Address associated with the payment method when applicable.
+   * Optional. Address associated with the payment method when applicable.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress getBillingAddress() {
@@ -135,7 +134,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Address associated with the payment method when applicable.
+   * Optional. Address associated with the payment method when applicable.
    * @param billingAddress billingAddress or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setBillingAddress(GoogleCloudRecaptchaenterpriseV1TransactionDataAddress billingAddress) {
@@ -144,7 +143,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The Bank Identification Number - generally the first 6 or 8 digits of the card.
+   * Optional. The Bank Identification Number - generally the first 6 or 8 digits of the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getCardBin() {
@@ -152,7 +151,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The Bank Identification Number - generally the first 6 or 8 digits of the card.
+   * Optional. The Bank Identification Number - generally the first 6 or 8 digits of the card.
    * @param cardBin cardBin or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setCardBin(java.lang.String cardBin) {
@@ -161,7 +160,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The last four digits of the card.
+   * Optional. The last four digits of the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getCardLastFour() {
@@ -169,7 +168,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The last four digits of the card.
+   * Optional. The last four digits of the card.
    * @param cardLastFour cardLastFour or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setCardLastFour(java.lang.String cardLastFour) {
@@ -178,7 +177,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The currency code in ISO-4217 format.
+   * Optional. The currency code in ISO-4217 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrencyCode() {
@@ -186,7 +185,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The currency code in ISO-4217 format.
+   * Optional. The currency code in ISO-4217 format.
    * @param currencyCode currencyCode or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setCurrencyCode(java.lang.String currencyCode) {
@@ -195,7 +194,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Information about the payment gateway's response to the transaction.
+   * Optional. Information about the payment gateway's response to the transaction.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo getGatewayInfo() {
@@ -203,7 +202,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Information about the payment gateway's response to the transaction.
+   * Optional. Information about the payment gateway's response to the transaction.
    * @param gatewayInfo gatewayInfo or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setGatewayInfo(GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo gatewayInfo) {
@@ -212,7 +211,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Items purchased in this transaction.
+   * Optional. Items purchased in this transaction.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRecaptchaenterpriseV1TransactionDataItem> getItems() {
@@ -220,7 +219,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Items purchased in this transaction.
+   * Optional. Items purchased in this transaction.
    * @param items items or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setItems(java.util.List<GoogleCloudRecaptchaenterpriseV1TransactionDataItem> items) {
@@ -229,7 +228,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Information about the user or users fulfilling the transaction.
+   * Optional. Information about the user or users fulfilling the transaction.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRecaptchaenterpriseV1TransactionDataUser> getMerchants() {
@@ -237,7 +236,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Information about the user or users fulfilling the transaction.
+   * Optional. Information about the user or users fulfilling the transaction.
    * @param merchants merchants or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setMerchants(java.util.List<GoogleCloudRecaptchaenterpriseV1TransactionDataUser> merchants) {
@@ -246,9 +245,9 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The payment method for the transaction. The allowed values are: * credit-card * debit-card *
-   * gift-card * processor-{name} (If a third-party is used, for example, processor-paypal) *
-   * custom-{name} (If an alternative method is used, for example, custom-crypto)
+   * Optional. The payment method for the transaction. The allowed values are: * credit-card *
+   * debit-card * gift-card * processor-{name} (If a third-party is used, for example, processor-
+   * paypal) * custom-{name} (If an alternative method is used, for example, custom-crypto)
    * @return value or {@code null} for none
    */
   public java.lang.String getPaymentMethod() {
@@ -256,9 +255,9 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The payment method for the transaction. The allowed values are: * credit-card * debit-card *
-   * gift-card * processor-{name} (If a third-party is used, for example, processor-paypal) *
-   * custom-{name} (If an alternative method is used, for example, custom-crypto)
+   * Optional. The payment method for the transaction. The allowed values are: * credit-card *
+   * debit-card * gift-card * processor-{name} (If a third-party is used, for example, processor-
+   * paypal) * custom-{name} (If an alternative method is used, for example, custom-crypto)
    * @param paymentMethod paymentMethod or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setPaymentMethod(java.lang.String paymentMethod) {
@@ -267,7 +266,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Destination address if this transaction involves shipping a physical item.
+   * Optional. Destination address if this transaction involves shipping a physical item.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress getShippingAddress() {
@@ -275,7 +274,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Destination address if this transaction involves shipping a physical item.
+   * Optional. Destination address if this transaction involves shipping a physical item.
    * @param shippingAddress shippingAddress or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setShippingAddress(GoogleCloudRecaptchaenterpriseV1TransactionDataAddress shippingAddress) {
@@ -284,7 +283,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The value of shipping in the specified currency. 0 for free or no shipping.
+   * Optional. The value of shipping in the specified currency. 0 for free or no shipping.
    * @return value or {@code null} for none
    */
   public java.lang.Double getShippingValue() {
@@ -292,7 +291,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The value of shipping in the specified currency. 0 for free or no shipping.
+   * Optional. The value of shipping in the specified currency. 0 for free or no shipping.
    * @param shippingValue shippingValue or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setShippingValue(java.lang.Double shippingValue) {
@@ -322,7 +321,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Information about the user paying/initiating the transaction.
+   * Optional. Information about the user paying/initiating the transaction.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataUser getUser() {
@@ -330,7 +329,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * Information about the user paying/initiating the transaction.
+   * Optional. Information about the user paying/initiating the transaction.
    * @param user user or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setUser(GoogleCloudRecaptchaenterpriseV1TransactionDataUser user) {
@@ -339,7 +338,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The decimal value of the transaction in the specified currency.
+   * Optional. The decimal value of the transaction in the specified currency.
    * @return value or {@code null} for none
    */
   public java.lang.Double getValue() {
@@ -347,7 +346,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionData extends com.g
   }
 
   /**
-   * The decimal value of the transaction in the specified currency.
+   * Optional. The decimal value of the transaction in the specified currency.
    * @param value value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionData setValue(java.lang.Double value) {

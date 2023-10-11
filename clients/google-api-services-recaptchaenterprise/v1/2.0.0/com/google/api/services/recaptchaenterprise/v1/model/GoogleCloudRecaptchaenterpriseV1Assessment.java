@@ -31,37 +31,37 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Assessment returned by account defender when a hashed_account_id is provided.
+   * Output only. Assessment returned by account defender when a hashed_account_id is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment accountDefenderAssessment;
 
   /**
-   * Account verification information for identity verification. The assessment event must include a
-   * token and site key to use this feature.
+   * Optional. Account verification information for identity verification. The assessment event must
+   * include a token and site key to use this feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo accountVerification;
 
   /**
-   * The event being assessed.
+   * Optional. The event being assessed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1Event event;
 
   /**
-   * Assessment returned when firewall policies belonging to the project are evaluated using the
-   * field firewall_policy_evaluation.
+   * Output only. Assessment returned when firewall policies belonging to the project are evaluated
+   * using the field firewall_policy_evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment firewallPolicyAssessment;
 
   /**
-   * Assessment returned by Fraud Prevention when TransactionData is provided.
+   * Output only. Assessment returned by Fraud Prevention when TransactionData is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,15 +76,15 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
 
   /**
    * Output only. The resource name for the Assessment in the format
-   * "projects/{project}/assessments/{assessment}".
+   * `projects/{project}/assessments/{assessment}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The private password leak verification field contains the parameters that are used to to check
-   * for leaks privately without sharing user credentials.
+   * Optional. The private password leak verification field contains the parameters that are used to
+   * to check for leaks privately without sharing user credentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private GoogleCloudRecaptchaenterpriseV1TokenProperties tokenProperties;
 
   /**
-   * Assessment returned by account defender when a hashed_account_id is provided.
+   * Output only. Assessment returned by account defender when a hashed_account_id is provided.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment getAccountDefenderAssessment() {
@@ -113,7 +113,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Assessment returned by account defender when a hashed_account_id is provided.
+   * Output only. Assessment returned by account defender when a hashed_account_id is provided.
    * @param accountDefenderAssessment accountDefenderAssessment or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setAccountDefenderAssessment(GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment accountDefenderAssessment) {
@@ -122,8 +122,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Account verification information for identity verification. The assessment event must include a
-   * token and site key to use this feature.
+   * Optional. Account verification information for identity verification. The assessment event must
+   * include a token and site key to use this feature.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo getAccountVerification() {
@@ -131,8 +131,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Account verification information for identity verification. The assessment event must include a
-   * token and site key to use this feature.
+   * Optional. Account verification information for identity verification. The assessment event must
+   * include a token and site key to use this feature.
    * @param accountVerification accountVerification or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setAccountVerification(GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo accountVerification) {
@@ -141,7 +141,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * The event being assessed.
+   * Optional. The event being assessed.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event getEvent() {
@@ -149,7 +149,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * The event being assessed.
+   * Optional. The event being assessed.
    * @param event event or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setEvent(GoogleCloudRecaptchaenterpriseV1Event event) {
@@ -158,8 +158,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Assessment returned when firewall policies belonging to the project are evaluated using the
-   * field firewall_policy_evaluation.
+   * Output only. Assessment returned when firewall policies belonging to the project are evaluated
+   * using the field firewall_policy_evaluation.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment getFirewallPolicyAssessment() {
@@ -167,8 +167,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Assessment returned when firewall policies belonging to the project are evaluated using the
-   * field firewall_policy_evaluation.
+   * Output only. Assessment returned when firewall policies belonging to the project are evaluated
+   * using the field firewall_policy_evaluation.
    * @param firewallPolicyAssessment firewallPolicyAssessment or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setFirewallPolicyAssessment(GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment firewallPolicyAssessment) {
@@ -177,7 +177,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Assessment returned by Fraud Prevention when TransactionData is provided.
+   * Output only. Assessment returned by Fraud Prevention when TransactionData is provided.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment getFraudPreventionAssessment() {
@@ -185,7 +185,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Assessment returned by Fraud Prevention when TransactionData is provided.
+   * Output only. Assessment returned by Fraud Prevention when TransactionData is provided.
    * @param fraudPreventionAssessment fraudPreventionAssessment or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setFraudPreventionAssessment(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment fraudPreventionAssessment) {
@@ -212,7 +212,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
 
   /**
    * Output only. The resource name for the Assessment in the format
-   * "projects/{project}/assessments/{assessment}".
+   * `projects/{project}/assessments/{assessment}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -221,7 +221,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
 
   /**
    * Output only. The resource name for the Assessment in the format
-   * "projects/{project}/assessments/{assessment}".
+   * `projects/{project}/assessments/{assessment}`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setName(java.lang.String name) {
@@ -230,8 +230,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * The private password leak verification field contains the parameters that are used to to check
-   * for leaks privately without sharing user credentials.
+   * Optional. The private password leak verification field contains the parameters that are used to
+   * to check for leaks privately without sharing user credentials.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification getPrivatePasswordLeakVerification() {
@@ -239,8 +239,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * The private password leak verification field contains the parameters that are used to to check
-   * for leaks privately without sharing user credentials.
+   * Optional. The private password leak verification field contains the parameters that are used to
+   * to check for leaks privately without sharing user credentials.
    * @param privatePasswordLeakVerification privatePasswordLeakVerification or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setPrivatePasswordLeakVerification(GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification privatePasswordLeakVerification) {

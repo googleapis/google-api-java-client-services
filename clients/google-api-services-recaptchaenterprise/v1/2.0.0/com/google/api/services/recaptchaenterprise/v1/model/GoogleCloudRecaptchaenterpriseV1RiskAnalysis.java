@@ -31,31 +31,31 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.google.api.client.json.GenericJson {
 
   /**
-   * Extended verdict reasons to be used for experimentation only. The set of possible reasons is
-   * subject to change.
+   * Output only. Extended verdict reasons to be used for experimentation only. The set of possible
+   * reasons is subject to change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> extendedVerdictReasons;
 
   /**
-   * Reasons contributing to the risk analysis verdict.
+   * Output only. Reasons contributing to the risk analysis verdict.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> reasons;
 
   /**
-   * Legitimate event score from 0.0 to 1.0. (1.0 means very likely legitimate traffic while 0.0
-   * means very likely non-legitimate traffic).
+   * Output only. Legitimate event score from 0.0 to 1.0. (1.0 means very likely legitimate traffic
+   * while 0.0 means very likely non-legitimate traffic).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
 
   /**
-   * Extended verdict reasons to be used for experimentation only. The set of possible reasons is
-   * subject to change.
+   * Output only. Extended verdict reasons to be used for experimentation only. The set of possible
+   * reasons is subject to change.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExtendedVerdictReasons() {
@@ -63,8 +63,8 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Extended verdict reasons to be used for experimentation only. The set of possible reasons is
-   * subject to change.
+   * Output only. Extended verdict reasons to be used for experimentation only. The set of possible
+   * reasons is subject to change.
    * @param extendedVerdictReasons extendedVerdictReasons or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setExtendedVerdictReasons(java.util.List<java.lang.String> extendedVerdictReasons) {
@@ -73,7 +73,7 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Reasons contributing to the risk analysis verdict.
+   * Output only. Reasons contributing to the risk analysis verdict.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReasons() {
@@ -81,7 +81,7 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Reasons contributing to the risk analysis verdict.
+   * Output only. Reasons contributing to the risk analysis verdict.
    * @param reasons reasons or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setReasons(java.util.List<java.lang.String> reasons) {
@@ -90,8 +90,8 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Legitimate event score from 0.0 to 1.0. (1.0 means very likely legitimate traffic while 0.0
-   * means very likely non-legitimate traffic).
+   * Output only. Legitimate event score from 0.0 to 1.0. (1.0 means very likely legitimate traffic
+   * while 0.0 means very likely non-legitimate traffic).
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -99,8 +99,8 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Legitimate event score from 0.0 to 1.0. (1.0 means very likely legitimate traffic while 0.0
-   * means very likely non-legitimate traffic).
+   * Output only. Legitimate event score from 0.0 to 1.0. (1.0 means very likely legitimate traffic
+   * while 0.0 means very likely non-legitimate traffic).
    * @param score score or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setScore(java.lang.Float score) {

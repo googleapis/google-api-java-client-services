@@ -32,21 +32,21 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * The header key to set in the request to the backend server.
+   * Optional. The header key to set in the request to the backend server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * The header value to set in the request to the backend server.
+   * Optional. The header value to set in the request to the backend server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * The header key to set in the request to the backend server.
+   * Optional. The header key to set in the request to the backend server.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -54,7 +54,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction
   }
 
   /**
-   * The header key to set in the request to the backend server.
+   * Optional. The header key to set in the request to the backend server.
    * @param key key or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction setKey(java.lang.String key) {
@@ -63,7 +63,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction
   }
 
   /**
-   * The header value to set in the request to the backend server.
+   * Optional. The header value to set in the request to the backend server.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -71,7 +71,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction
   }
 
   /**
-   * The header value to set in the request to the backend server.
+   * Optional. The header value to set in the request to the backend server.
    * @param value value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction setValue(java.lang.String value) {

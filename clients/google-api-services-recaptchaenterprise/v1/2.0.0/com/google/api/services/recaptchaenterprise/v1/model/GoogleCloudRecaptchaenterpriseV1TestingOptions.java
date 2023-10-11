@@ -31,24 +31,24 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will
-   * return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+   * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this
+   * site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String testingChallenge;
 
   /**
-   * All assessments for this Key will return this score. Must be between 0 (likely not legitimate)
-   * and 1 (likely legitimate) inclusive.
+   * Optional. All assessments for this Key will return this score. Must be between 0 (likely not
+   * legitimate) and 1 (likely legitimate) inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float testingScore;
 
   /**
-   * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will
-   * return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+   * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this
+   * site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
    * @return value or {@code null} for none
    */
   public java.lang.String getTestingChallenge() {
@@ -56,8 +56,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.go
   }
 
   /**
-   * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will
-   * return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+   * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this
+   * site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
    * @param testingChallenge testingChallenge or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TestingOptions setTestingChallenge(java.lang.String testingChallenge) {
@@ -66,8 +66,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.go
   }
 
   /**
-   * All assessments for this Key will return this score. Must be between 0 (likely not legitimate)
-   * and 1 (likely legitimate) inclusive.
+   * Optional. All assessments for this Key will return this score. Must be between 0 (likely not
+   * legitimate) and 1 (likely legitimate) inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Float getTestingScore() {
@@ -75,8 +75,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.go
   }
 
   /**
-   * All assessments for this Key will return this score. Must be between 0 (likely not legitimate)
-   * and 1 (likely legitimate) inclusive.
+   * Optional. All assessments for this Key will return this score. Must be between 0 (likely not
+   * legitimate) and 1 (likely legitimate) inclusive.
    * @param testingScore testingScore or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TestingOptions setTestingScore(java.lang.Float testingScore) {

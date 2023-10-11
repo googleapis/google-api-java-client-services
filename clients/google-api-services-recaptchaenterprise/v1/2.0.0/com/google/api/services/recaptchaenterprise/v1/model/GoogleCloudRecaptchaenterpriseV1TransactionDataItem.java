@@ -31,37 +31,38 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1TransactionDataItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * When a merchant is specified, its corresponding account_id. Necessary to populate marketplace-
-   * style transactions.
+   * Optional. When a merchant is specified, its corresponding account_id. Necessary to populate
+   * marketplace-style transactions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String merchantAccountId;
 
   /**
-   * The full name of the item.
+   * Optional. The full name of the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The quantity of this item that is being purchased.
+   * Optional. The quantity of this item that is being purchased.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long quantity;
 
   /**
-   * The value per item that the user is paying, in the transaction currency, after discounts.
+   * Optional. The value per item that the user is paying, in the transaction currency, after
+   * discounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double value;
 
   /**
-   * When a merchant is specified, its corresponding account_id. Necessary to populate marketplace-
-   * style transactions.
+   * Optional. When a merchant is specified, its corresponding account_id. Necessary to populate
+   * marketplace-style transactions.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantAccountId() {
@@ -69,8 +70,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataItem extends c
   }
 
   /**
-   * When a merchant is specified, its corresponding account_id. Necessary to populate marketplace-
-   * style transactions.
+   * Optional. When a merchant is specified, its corresponding account_id. Necessary to populate
+   * marketplace-style transactions.
    * @param merchantAccountId merchantAccountId or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataItem setMerchantAccountId(java.lang.String merchantAccountId) {
@@ -79,7 +80,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataItem extends c
   }
 
   /**
-   * The full name of the item.
+   * Optional. The full name of the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -87,7 +88,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataItem extends c
   }
 
   /**
-   * The full name of the item.
+   * Optional. The full name of the item.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataItem setName(java.lang.String name) {
@@ -96,7 +97,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataItem extends c
   }
 
   /**
-   * The quantity of this item that is being purchased.
+   * Optional. The quantity of this item that is being purchased.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuantity() {
@@ -104,7 +105,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataItem extends c
   }
 
   /**
-   * The quantity of this item that is being purchased.
+   * Optional. The quantity of this item that is being purchased.
    * @param quantity quantity or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataItem setQuantity(java.lang.Long quantity) {
@@ -113,7 +114,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataItem extends c
   }
 
   /**
-   * The value per item that the user is paying, in the transaction currency, after discounts.
+   * Optional. The value per item that the user is paying, in the transaction currency, after
+   * discounts.
    * @return value or {@code null} for none
    */
   public java.lang.Double getValue() {
@@ -121,7 +123,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataItem extends c
   }
 
   /**
-   * The value per item that the user is paying, in the transaction currency, after discounts.
+   * Optional. The value per item that the user is paying, in the transaction currency, after
+   * discounts.
    * @param value value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataItem setValue(java.lang.Double value) {

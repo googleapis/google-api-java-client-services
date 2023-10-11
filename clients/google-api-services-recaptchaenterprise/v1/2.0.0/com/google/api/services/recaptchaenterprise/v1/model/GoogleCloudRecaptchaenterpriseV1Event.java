@@ -71,7 +71,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.util.List<java.lang.String> headers;
 
   /**
-   * Optional. Optional JA3 fingerprint for SSL clients.
+   * Optional. JA3 fingerprint for SSL clients.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,7 +257,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Optional JA3 fingerprint for SSL clients.
+   * Optional. JA3 fingerprint for SSL clients.
    * @return value or {@code null} for none
    */
   public java.lang.String getJa3() {
@@ -265,7 +265,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Optional JA3 fingerprint for SSL clients.
+   * Optional. JA3 fingerprint for SSL clients.
    * @param ja3 ja3 or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event setJa3(java.lang.String ja3) {

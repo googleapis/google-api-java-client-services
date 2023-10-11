@@ -31,36 +31,36 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Assessment of this transaction for behavioral trust.
+   * Output only. Assessment of this transaction for behavioral trust.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict behavioralTrustVerdict;
 
   /**
-   * Assessment of this transaction for risk of being part of a card testing attack.
+   * Output only. Assessment of this transaction for risk of being part of a card testing attack.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict cardTestingVerdict;
 
   /**
-   * Assessment of this transaction for risk of a stolen instrument.
+   * Output only. Assessment of this transaction for risk of a stolen instrument.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict stolenInstrumentVerdict;
 
   /**
-   * Probability of this transaction being fraudulent. Summarizes the combined risk of attack
-   * vectors below. Values are from 0.0 (lowest) to 1.0 (highest).
+   * Output only. Probability of this transaction being fraudulent. Summarizes the combined risk of
+   * attack vectors below. Values are from 0.0 (lowest) to 1.0 (highest).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float transactionRisk;
 
   /**
-   * Assessment of this transaction for behavioral trust.
+   * Output only. Assessment of this transaction for behavioral trust.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict getBehavioralTrustVerdict() {
@@ -68,7 +68,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   }
 
   /**
-   * Assessment of this transaction for behavioral trust.
+   * Output only. Assessment of this transaction for behavioral trust.
    * @param behavioralTrustVerdict behavioralTrustVerdict or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment setBehavioralTrustVerdict(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict behavioralTrustVerdict) {
@@ -77,7 +77,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   }
 
   /**
-   * Assessment of this transaction for risk of being part of a card testing attack.
+   * Output only. Assessment of this transaction for risk of being part of a card testing attack.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict getCardTestingVerdict() {
@@ -85,7 +85,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   }
 
   /**
-   * Assessment of this transaction for risk of being part of a card testing attack.
+   * Output only. Assessment of this transaction for risk of being part of a card testing attack.
    * @param cardTestingVerdict cardTestingVerdict or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment setCardTestingVerdict(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict cardTestingVerdict) {
@@ -94,7 +94,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   }
 
   /**
-   * Assessment of this transaction for risk of a stolen instrument.
+   * Output only. Assessment of this transaction for risk of a stolen instrument.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict getStolenInstrumentVerdict() {
@@ -102,7 +102,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   }
 
   /**
-   * Assessment of this transaction for risk of a stolen instrument.
+   * Output only. Assessment of this transaction for risk of a stolen instrument.
    * @param stolenInstrumentVerdict stolenInstrumentVerdict or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment setStolenInstrumentVerdict(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict stolenInstrumentVerdict) {
@@ -111,8 +111,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   }
 
   /**
-   * Probability of this transaction being fraudulent. Summarizes the combined risk of attack
-   * vectors below. Values are from 0.0 (lowest) to 1.0 (highest).
+   * Output only. Probability of this transaction being fraudulent. Summarizes the combined risk of
+   * attack vectors below. Values are from 0.0 (lowest) to 1.0 (highest).
    * @return value or {@code null} for none
    */
   public java.lang.Float getTransactionRisk() {
@@ -120,8 +120,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   }
 
   /**
-   * Probability of this transaction being fraudulent. Summarizes the combined risk of attack
-   * vectors below. Values are from 0.0 (lowest) to 1.0 (highest).
+   * Output only. Probability of this transaction being fraudulent. Summarizes the combined risk of
+   * attack vectors below. Values are from 0.0 (lowest) to 1.0 (highest).
    * @param transactionRisk transactionRisk or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment setTransactionRisk(java.lang.Float transactionRisk) {

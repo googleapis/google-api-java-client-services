@@ -156,6 +156,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
   private java.lang.Boolean llmEnabled;
 
   /**
+   * Output only. Whether the customer accepted data use terms.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean minimumDataTermAccepted;
+
+  /**
    * Immutable. The full resource name of the widget config. Format: `projects/{project}/locations/{
    * location}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_i
    * d}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
@@ -487,6 +494,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfig setLlmEnabled(java.lang.Boolean llmEnabled) {
     this.llmEnabled = llmEnabled;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the customer accepted data use terms.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMinimumDataTermAccepted() {
+    return minimumDataTermAccepted;
+  }
+
+  /**
+   * Output only. Whether the customer accepted data use terms.
+   * @param minimumDataTermAccepted minimumDataTermAccepted or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfig setMinimumDataTermAccepted(java.lang.Boolean minimumDataTermAccepted) {
+    this.minimumDataTermAccepted = minimumDataTermAccepted;
     return this;
   }
 

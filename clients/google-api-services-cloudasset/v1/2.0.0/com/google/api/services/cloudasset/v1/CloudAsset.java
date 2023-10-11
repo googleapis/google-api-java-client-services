@@ -5736,9 +5736,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * relationships of type `INSTANCE_TO_INSTANCEGROUP`. *
        * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find Compute Engine instances
        * that have relationships with `instance-group-1` in the Compute Engine instance group
-       * resource name, for relationship type `INSTANCE_TO_INSTANCEGROUP`. * `state:ACTIVE` to find
-       * Google Cloud resources whose state contains `ACTIVE` as a word. * `NOT state:ACTIVE` to
-       * find Google Cloud resources whose state doesn't contain `ACTIVE` as a word. *
+       * resource name, for relationship type `INSTANCE_TO_INSTANCEGROUP`. *
+       * `sccSecurityMarks.key=value` to find Cloud resources that are attached with security marks
+       * whose key is `key` and value is `value'. * `sccSecurityMarks.key:*` to find Cloud resources
+       * that are attached with security marks whose key is `key`. * `state:ACTIVE` to find Google
+       * Cloud resources whose state contains `ACTIVE` as a word. * `NOT state:ACTIVE` to find
+       * Google Cloud resources whose state doesn't contain `ACTIVE` as a word. *
        * `createTime<1609459200` to find Google Cloud resources that were created before `2021-01-01
        * 00:00:00 UTC`. `1609459200` is the epoch timestamp of `2021-01-01 00:00:00 UTC` in seconds.
        * * `updateTime>1609459200` to find Google Cloud resources that were updated after
@@ -5790,17 +5793,20 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      relationships of type `INSTANCE_TO_INSTANCEGROUP`. * `relationships.INSTANCE_TO_INSTANCEGROUP
      :instance-group-1` to find Compute Engine instances that have relationships with `instance-group-1`
      in the Compute Engine instance group resource name, for relationship type
-     `INSTANCE_TO_INSTANCEGROUP`. * `state:ACTIVE` to find Google Cloud resources whose state contains
-     `ACTIVE` as a word. * `NOT state:ACTIVE` to find Google Cloud resources whose state doesn't contain
-     `ACTIVE` as a word. * `createTime<1609459200` to find Google Cloud resources that were created
-     before `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of `2021-01-01 00:00:00 UTC`
-     in seconds. * `updateTime>1609459200` to find Google Cloud resources that were updated after
-     `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of `2021-01-01 00:00:00 UTC` in
-     seconds. * `Important` to find Google Cloud resources that contain `Important` as a word in any of
-     the searchable fields. * `Impor*` to find Google Cloud resources that contain `Impor` as a prefix
-     of any word in any of the searchable fields. * `Important location:(us-west1 OR global)` to find
-     Google Cloud resources that contain `Important` as a word in any of the searchable fields and are
-     also located in the `us-west1` region or the `global` location.
+     `INSTANCE_TO_INSTANCEGROUP`. * `sccSecurityMarks.key=value` to find Cloud resources that are
+     attached with security marks whose key is `key` and value is `value'. * `sccSecurityMarks.key:*` to
+     find Cloud resources that are attached with security marks whose key is `key`. * `state:ACTIVE` to
+     find Google Cloud resources whose state contains `ACTIVE` as a word. * `NOT state:ACTIVE` to find
+     Google Cloud resources whose state doesn't contain `ACTIVE` as a word. * `createTime<1609459200` to
+     find Google Cloud resources that were created before `2021-01-01 00:00:00 UTC`. `1609459200` is the
+     epoch timestamp of `2021-01-01 00:00:00 UTC` in seconds. * `updateTime>1609459200` to find Google
+     Cloud resources that were updated after `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch
+     timestamp of `2021-01-01 00:00:00 UTC` in seconds. * `Important` to find Google Cloud resources
+     that contain `Important` as a word in any of the searchable fields. * `Impor*` to find Google Cloud
+     resources that contain `Impor` as a prefix of any word in any of the searchable fields. *
+     `Important location:(us-west1 OR global)` to find Google Cloud resources that contain `Important`
+     as a word in any of the searchable fields and are also located in the `us-west1` region or the
+     `global` location.
        */
       public java.lang.String getQuery() {
         return query;
@@ -5847,9 +5853,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * relationships of type `INSTANCE_TO_INSTANCEGROUP`. *
        * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find Compute Engine instances
        * that have relationships with `instance-group-1` in the Compute Engine instance group
-       * resource name, for relationship type `INSTANCE_TO_INSTANCEGROUP`. * `state:ACTIVE` to find
-       * Google Cloud resources whose state contains `ACTIVE` as a word. * `NOT state:ACTIVE` to
-       * find Google Cloud resources whose state doesn't contain `ACTIVE` as a word. *
+       * resource name, for relationship type `INSTANCE_TO_INSTANCEGROUP`. *
+       * `sccSecurityMarks.key=value` to find Cloud resources that are attached with security marks
+       * whose key is `key` and value is `value'. * `sccSecurityMarks.key:*` to find Cloud resources
+       * that are attached with security marks whose key is `key`. * `state:ACTIVE` to find Google
+       * Cloud resources whose state contains `ACTIVE` as a word. * `NOT state:ACTIVE` to find
+       * Google Cloud resources whose state doesn't contain `ACTIVE` as a word. *
        * `createTime<1609459200` to find Google Cloud resources that were created before `2021-01-01
        * 00:00:00 UTC`. `1609459200` is the epoch timestamp of `2021-01-01 00:00:00 UTC` in seconds.
        * * `updateTime>1609459200` to find Google Cloud resources that were updated after

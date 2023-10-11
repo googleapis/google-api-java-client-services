@@ -38,6 +38,15 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
   private java.lang.String ipAddress;
 
   /**
+   * The IPv6 address assigned to the producer instance network interface. This is only assigned
+   * when the stack types of both the instance network interface and the consumer subnet are
+   * IPv4_IPv6.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6Address;
+
+  /**
    * The project id or number of the interface to which the IP was assigned.
    * The value may be {@code null}.
    */
@@ -66,6 +75,13 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
   private java.lang.String subnetwork;
 
   /**
+   * [Output Only] The CIDR range of the subnet from which the IPv4 internal IP was allocated from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subnetworkCidrRange;
+
+  /**
    * The IPv4 address assigned to the producer instance network interface. This value will be a
    * range in case of Serverless.
    * @return value or {@code null} for none
@@ -81,6 +97,27 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
    */
   public NetworkAttachmentConnectedEndpoint setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * The IPv6 address assigned to the producer instance network interface. This is only assigned
+   * when the stack types of both the instance network interface and the consumer subnet are
+   * IPv4_IPv6.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6Address() {
+    return ipv6Address;
+  }
+
+  /**
+   * The IPv6 address assigned to the producer instance network interface. This is only assigned
+   * when the stack types of both the instance network interface and the consumer subnet are
+   * IPv4_IPv6.
+   * @param ipv6Address ipv6Address or {@code null} for none
+   */
+  public NetworkAttachmentConnectedEndpoint setIpv6Address(java.lang.String ipv6Address) {
+    this.ipv6Address = ipv6Address;
     return this;
   }
 
@@ -149,6 +186,23 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
    */
   public NetworkAttachmentConnectedEndpoint setSubnetwork(java.lang.String subnetwork) {
     this.subnetwork = subnetwork;
+    return this;
+  }
+
+  /**
+   * [Output Only] The CIDR range of the subnet from which the IPv4 internal IP was allocated from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubnetworkCidrRange() {
+    return subnetworkCidrRange;
+  }
+
+  /**
+   * [Output Only] The CIDR range of the subnet from which the IPv4 internal IP was allocated from.
+   * @param subnetworkCidrRange subnetworkCidrRange or {@code null} for none
+   */
+  public NetworkAttachmentConnectedEndpoint setSubnetworkCidrRange(java.lang.String subnetworkCidrRange) {
+    this.subnetworkCidrRange = subnetworkCidrRange;
     return this;
   }
 

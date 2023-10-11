@@ -85,6 +85,14 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private QueuingPolicy queuingPolicy;
 
   /**
+   * Requested run duration for instances that will be created by this request. If specified, the
+   * instance termination action will be performed at the end of the run duration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration requestedRunDuration;
+
+  /**
    * The number of instances to be created by this resize request. The group's target size will be
    * increased by this number.
    * The value may be {@code null}.
@@ -250,6 +258,25 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
    */
   public InstanceGroupManagerResizeRequest setQueuingPolicy(QueuingPolicy queuingPolicy) {
     this.queuingPolicy = queuingPolicy;
+    return this;
+  }
+
+  /**
+   * Requested run duration for instances that will be created by this request. If specified, the
+   * instance termination action will be performed at the end of the run duration.
+   * @return value or {@code null} for none
+   */
+  public Duration getRequestedRunDuration() {
+    return requestedRunDuration;
+  }
+
+  /**
+   * Requested run duration for instances that will be created by this request. If specified, the
+   * instance termination action will be performed at the end of the run duration.
+   * @param requestedRunDuration requestedRunDuration or {@code null} for none
+   */
+  public InstanceGroupManagerResizeRequest setRequestedRunDuration(Duration requestedRunDuration) {
+    this.requestedRunDuration = requestedRunDuration;
     return this;
   }
 

@@ -31,14 +31,15 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Endpoints that can be used for identity verification.
+   * Optional. Endpoints that can be used for identity verification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo> endpoints;
 
   /**
-   * Language code preference for the verification message, set as a IETF BCP 47 language code.
+   * Optional. Language code preference for the verification message, set as a IETF BCP 47 language
+   * code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +61,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo exten
   private java.lang.String username;
 
   /**
-   * Endpoints that can be used for identity verification.
+   * Optional. Endpoints that can be used for identity verification.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo> getEndpoints() {
@@ -68,7 +69,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo exten
   }
 
   /**
-   * Endpoints that can be used for identity verification.
+   * Optional. Endpoints that can be used for identity verification.
    * @param endpoints endpoints or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo setEndpoints(java.util.List<GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo> endpoints) {
@@ -77,7 +78,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo exten
   }
 
   /**
-   * Language code preference for the verification message, set as a IETF BCP 47 language code.
+   * Optional. Language code preference for the verification message, set as a IETF BCP 47 language
+   * code.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -85,7 +87,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo exten
   }
 
   /**
-   * Language code preference for the verification message, set as a IETF BCP 47 language code.
+   * Optional. Language code preference for the verification message, set as a IETF BCP 47 language
+   * code.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo setLanguageCode(java.lang.String languageCode) {

@@ -31,59 +31,60 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Action name provided at token generation.
+   * Output only. Action name provided at token generation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * The name of the Android package with which the token was generated (Android keys only).
+   * Output only. The name of the Android package with which the token was generated (Android keys
+   * only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String androidPackageName;
 
   /**
-   * The timestamp corresponding to the generation of the token.
+   * Output only. The timestamp corresponding to the generation of the token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The hostname of the page on which the token was generated (Web keys only).
+   * Output only. The hostname of the page on which the token was generated (Web keys only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hostname;
 
   /**
-   * Reason associated with the response when valid = false.
+   * Output only. Reason associated with the response when valid = false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String invalidReason;
 
   /**
-   * The ID of the iOS bundle with which the token was generated (iOS keys only).
+   * Output only. The ID of the iOS bundle with which the token was generated (iOS keys only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String iosBundleId;
 
   /**
-   * Whether the provided user response token is valid. When valid = false, the reason could be
-   * specified in invalid_reason or it could also be due to a user failing to solve a challenge or a
-   * sitekey mismatch (i.e the sitekey used to generate the token was different than the one
-   * specified in the assessment).
+   * Output only. Whether the provided user response token is valid. When valid = false, the reason
+   * could be specified in invalid_reason or it could also be due to a user failing to solve a
+   * challenge or a sitekey mismatch (i.e the sitekey used to generate the token was different than
+   * the one specified in the assessment).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean valid;
 
   /**
-   * Action name provided at token generation.
+   * Output only. Action name provided at token generation.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -91,7 +92,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * Action name provided at token generation.
+   * Output only. Action name provided at token generation.
    * @param action action or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setAction(java.lang.String action) {
@@ -100,7 +101,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * The name of the Android package with which the token was generated (Android keys only).
+   * Output only. The name of the Android package with which the token was generated (Android keys
+   * only).
    * @return value or {@code null} for none
    */
   public java.lang.String getAndroidPackageName() {
@@ -108,7 +110,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * The name of the Android package with which the token was generated (Android keys only).
+   * Output only. The name of the Android package with which the token was generated (Android keys
+   * only).
    * @param androidPackageName androidPackageName or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setAndroidPackageName(java.lang.String androidPackageName) {
@@ -117,7 +120,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * The timestamp corresponding to the generation of the token.
+   * Output only. The timestamp corresponding to the generation of the token.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -125,7 +128,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * The timestamp corresponding to the generation of the token.
+   * Output only. The timestamp corresponding to the generation of the token.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setCreateTime(String createTime) {
@@ -134,7 +137,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * The hostname of the page on which the token was generated (Web keys only).
+   * Output only. The hostname of the page on which the token was generated (Web keys only).
    * @return value or {@code null} for none
    */
   public java.lang.String getHostname() {
@@ -142,7 +145,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * The hostname of the page on which the token was generated (Web keys only).
+   * Output only. The hostname of the page on which the token was generated (Web keys only).
    * @param hostname hostname or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setHostname(java.lang.String hostname) {
@@ -151,7 +154,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * Reason associated with the response when valid = false.
+   * Output only. Reason associated with the response when valid = false.
    * @return value or {@code null} for none
    */
   public java.lang.String getInvalidReason() {
@@ -159,7 +162,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * Reason associated with the response when valid = false.
+   * Output only. Reason associated with the response when valid = false.
    * @param invalidReason invalidReason or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setInvalidReason(java.lang.String invalidReason) {
@@ -168,7 +171,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * The ID of the iOS bundle with which the token was generated (iOS keys only).
+   * Output only. The ID of the iOS bundle with which the token was generated (iOS keys only).
    * @return value or {@code null} for none
    */
   public java.lang.String getIosBundleId() {
@@ -176,7 +179,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * The ID of the iOS bundle with which the token was generated (iOS keys only).
+   * Output only. The ID of the iOS bundle with which the token was generated (iOS keys only).
    * @param iosBundleId iosBundleId or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setIosBundleId(java.lang.String iosBundleId) {
@@ -185,10 +188,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * Whether the provided user response token is valid. When valid = false, the reason could be
-   * specified in invalid_reason or it could also be due to a user failing to solve a challenge or a
-   * sitekey mismatch (i.e the sitekey used to generate the token was different than the one
-   * specified in the assessment).
+   * Output only. Whether the provided user response token is valid. When valid = false, the reason
+   * could be specified in invalid_reason or it could also be due to a user failing to solve a
+   * challenge or a sitekey mismatch (i.e the sitekey used to generate the token was different than
+   * the one specified in the assessment).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValid() {
@@ -196,10 +199,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * Whether the provided user response token is valid. When valid = false, the reason could be
-   * specified in invalid_reason or it could also be due to a user failing to solve a challenge or a
-   * sitekey mismatch (i.e the sitekey used to generate the token was different than the one
-   * specified in the assessment).
+   * Output only. Whether the provided user response token is valid. When valid = false, the reason
+   * could be specified in invalid_reason or it could also be due to a user failing to solve a
+   * challenge or a sitekey mismatch (i.e the sitekey used to generate the token was different than
+   * the one specified in the assessment).
    * @param valid valid or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setValid(java.lang.Boolean valid) {

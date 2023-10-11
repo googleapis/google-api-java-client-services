@@ -31,51 +31,52 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unique account identifier for this user. If using account defender, this should match the
-   * hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
+   * Optional. Unique account identifier for this user. If using account defender, this should match
+   * the hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountId;
 
   /**
-   * The epoch milliseconds of the user's account creation.
+   * Optional. The epoch milliseconds of the user's account creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long creationMs;
 
   /**
-   * The email address of the user.
+   * Optional. The email address of the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
 
   /**
-   * Whether the email has been verified to be accessible by the user (OTP or similar).
+   * Optional. Whether the email has been verified to be accessible by the user (OTP or similar).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean emailVerified;
 
   /**
-   * The phone number of the user, with country code.
+   * Optional. The phone number of the user, with country code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneNumber;
 
   /**
-   * Whether the phone number has been verified to be accessible by the user (OTP or similar).
+   * Optional. Whether the phone number has been verified to be accessible by the user (OTP or
+   * similar).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean phoneVerified;
 
   /**
-   * Unique account identifier for this user. If using account defender, this should match the
-   * hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
+   * Optional. Unique account identifier for this user. If using account defender, this should match
+   * the hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountId() {
@@ -83,8 +84,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * Unique account identifier for this user. If using account defender, this should match the
-   * hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
+   * Optional. Unique account identifier for this user. If using account defender, this should match
+   * the hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
    * @param accountId accountId or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataUser setAccountId(java.lang.String accountId) {
@@ -93,7 +94,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * The epoch milliseconds of the user's account creation.
+   * Optional. The epoch milliseconds of the user's account creation.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCreationMs() {
@@ -101,7 +102,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * The epoch milliseconds of the user's account creation.
+   * Optional. The epoch milliseconds of the user's account creation.
    * @param creationMs creationMs or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataUser setCreationMs(java.lang.Long creationMs) {
@@ -110,7 +111,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * The email address of the user.
+   * Optional. The email address of the user.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -118,7 +119,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * The email address of the user.
+   * Optional. The email address of the user.
    * @param email email or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataUser setEmail(java.lang.String email) {
@@ -127,7 +128,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * Whether the email has been verified to be accessible by the user (OTP or similar).
+   * Optional. Whether the email has been verified to be accessible by the user (OTP or similar).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEmailVerified() {
@@ -135,7 +136,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * Whether the email has been verified to be accessible by the user (OTP or similar).
+   * Optional. Whether the email has been verified to be accessible by the user (OTP or similar).
    * @param emailVerified emailVerified or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataUser setEmailVerified(java.lang.Boolean emailVerified) {
@@ -144,7 +145,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * The phone number of the user, with country code.
+   * Optional. The phone number of the user, with country code.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -152,7 +153,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * The phone number of the user, with country code.
+   * Optional. The phone number of the user, with country code.
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataUser setPhoneNumber(java.lang.String phoneNumber) {
@@ -161,7 +162,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * Whether the phone number has been verified to be accessible by the user (OTP or similar).
+   * Optional. Whether the phone number has been verified to be accessible by the user (OTP or
+   * similar).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPhoneVerified() {
@@ -169,7 +171,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * Whether the phone number has been verified to be accessible by the user (OTP or similar).
+   * Optional. Whether the phone number has been verified to be accessible by the user (OTP or
+   * similar).
    * @param phoneVerified phoneVerified or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataUser setPhoneVerified(java.lang.Boolean phoneVerified) {

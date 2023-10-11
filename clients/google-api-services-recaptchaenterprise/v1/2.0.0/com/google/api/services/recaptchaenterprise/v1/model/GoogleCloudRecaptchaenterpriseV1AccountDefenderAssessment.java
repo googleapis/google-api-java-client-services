@@ -31,14 +31,14 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Labels for this request.
+   * Output only. Labels for this request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> labels;
 
   /**
-   * Labels for this request.
+   * Output only. Labels for this request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLabels() {
@@ -46,7 +46,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment ext
   }
 
   /**
-   * Labels for this request.
+   * Output only. Labels for this request.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment setLabels(java.util.List<java.lang.String> labels) {

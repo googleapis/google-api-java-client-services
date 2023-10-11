@@ -31,31 +31,32 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to true, allowed_bundle_ids are not enforced.
+   * Optional. If set to true, allowed_bundle_ids are not enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowAllBundleIds;
 
   /**
-   * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
+   * Optional. iOS bundle ids of apps allowed to use the key. Example:
+   * 'com.companyname.productname.appname'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedBundleIds;
 
   /**
-   * Apple Developer account details for the app that is protected by the reCAPTCHA Key. reCAPTCHA
-   * Enterprise leverages platform-specific checks like Apple App Attest and Apple DeviceCheck to
-   * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
-   * assessment of the integrity of your app.
+   * Optional. Apple Developer account details for the app that is protected by the reCAPTCHA Key.
+   * reCAPTCHA Enterprise leverages platform-specific checks like Apple App Attest and Apple
+   * DeviceCheck to protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise
+   * to get a better assessment of the integrity of your app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1AppleDeveloperId appleDeveloperId;
 
   /**
-   * If set to true, allowed_bundle_ids are not enforced.
+   * Optional. If set to true, allowed_bundle_ids are not enforced.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowAllBundleIds() {
@@ -63,7 +64,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   }
 
   /**
-   * If set to true, allowed_bundle_ids are not enforced.
+   * Optional. If set to true, allowed_bundle_ids are not enforced.
    * @param allowAllBundleIds allowAllBundleIds or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1IOSKeySettings setAllowAllBundleIds(java.lang.Boolean allowAllBundleIds) {
@@ -72,7 +73,8 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   }
 
   /**
-   * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
+   * Optional. iOS bundle ids of apps allowed to use the key. Example:
+   * 'com.companyname.productname.appname'
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedBundleIds() {
@@ -80,7 +82,8 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   }
 
   /**
-   * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
+   * Optional. iOS bundle ids of apps allowed to use the key. Example:
+   * 'com.companyname.productname.appname'
    * @param allowedBundleIds allowedBundleIds or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1IOSKeySettings setAllowedBundleIds(java.util.List<java.lang.String> allowedBundleIds) {
@@ -89,10 +92,10 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   }
 
   /**
-   * Apple Developer account details for the app that is protected by the reCAPTCHA Key. reCAPTCHA
-   * Enterprise leverages platform-specific checks like Apple App Attest and Apple DeviceCheck to
-   * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
-   * assessment of the integrity of your app.
+   * Optional. Apple Developer account details for the app that is protected by the reCAPTCHA Key.
+   * reCAPTCHA Enterprise leverages platform-specific checks like Apple App Attest and Apple
+   * DeviceCheck to protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise
+   * to get a better assessment of the integrity of your app.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AppleDeveloperId getAppleDeveloperId() {
@@ -100,10 +103,10 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   }
 
   /**
-   * Apple Developer account details for the app that is protected by the reCAPTCHA Key. reCAPTCHA
-   * Enterprise leverages platform-specific checks like Apple App Attest and Apple DeviceCheck to
-   * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
-   * assessment of the integrity of your app.
+   * Optional. Apple Developer account details for the app that is protected by the reCAPTCHA Key.
+   * reCAPTCHA Enterprise leverages platform-specific checks like Apple App Attest and Apple
+   * DeviceCheck to protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise
+   * to get a better assessment of the integrity of your app.
    * @param appleDeveloperId appleDeveloperId or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1IOSKeySettings setAppleDeveloperId(GoogleCloudRecaptchaenterpriseV1AppleDeveloperId appleDeveloperId) {

@@ -46,7 +46,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   private String createTime;
 
   /**
-   * Human-readable display name of this key. Modifiable by user.
+   * Required. Human-readable display name of this key. Modifiable by user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,28 +60,29 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   private GoogleCloudRecaptchaenterpriseV1IOSKeySettings iosSettings;
 
   /**
-   * See Creating and managing labels.
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/recaptcha-
+   * enterprise/docs/labels).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The resource name for the Key in the format "projects/{project}/keys/{key}".
+   * The resource name for the Key in the format `projects/{project}/keys/{key}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Options for user acceptance testing.
+   * Optional. Options for user acceptance testing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1TestingOptions testingOptions;
 
   /**
-   * Settings for WAF
+   * Optional. Settings for WAF
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +130,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * Human-readable display name of this key. Modifiable by user.
+   * Required. Human-readable display name of this key. Modifiable by user.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -137,7 +138,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * Human-readable display name of this key. Modifiable by user.
+   * Required. Human-readable display name of this key. Modifiable by user.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Key setDisplayName(java.lang.String displayName) {
@@ -163,7 +164,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * See Creating and managing labels.
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/recaptcha-
+   * enterprise/docs/labels).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -171,7 +173,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * See Creating and managing labels.
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/recaptcha-
+   * enterprise/docs/labels).
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Key setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -180,7 +183,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * The resource name for the Key in the format "projects/{project}/keys/{key}".
+   * The resource name for the Key in the format `projects/{project}/keys/{key}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -188,7 +191,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * The resource name for the Key in the format "projects/{project}/keys/{key}".
+   * The resource name for the Key in the format `projects/{project}/keys/{key}`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Key setName(java.lang.String name) {
@@ -197,7 +200,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * Options for user acceptance testing.
+   * Optional. Options for user acceptance testing.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TestingOptions getTestingOptions() {
@@ -205,7 +208,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * Options for user acceptance testing.
+   * Optional. Options for user acceptance testing.
    * @param testingOptions testingOptions or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Key setTestingOptions(GoogleCloudRecaptchaenterpriseV1TestingOptions testingOptions) {
@@ -214,7 +217,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * Settings for WAF
+   * Optional. Settings for WAF
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WafSettings getWafSettings() {
@@ -222,7 +225,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * Settings for WAF
+   * Optional. Settings for WAF
    * @param wafSettings wafSettings or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Key setWafSettings(GoogleCloudRecaptchaenterpriseV1WafSettings wafSettings) {

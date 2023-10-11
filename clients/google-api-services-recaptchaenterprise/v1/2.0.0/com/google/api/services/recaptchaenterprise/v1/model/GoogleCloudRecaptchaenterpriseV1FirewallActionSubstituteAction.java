@@ -31,16 +31,16 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * The address to redirect to. The target is a relative path in the current host. Example:
-   * "/blog/404.html".
+   * Optional. The address to redirect to. The target is a relative path in the current host.
+   * Example: "/blog/404.html".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * The address to redirect to. The target is a relative path in the current host. Example:
-   * "/blog/404.html".
+   * Optional. The address to redirect to. The target is a relative path in the current host.
+   * Example: "/blog/404.html".
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -48,8 +48,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteActio
   }
 
   /**
-   * The address to redirect to. The target is a relative path in the current host. Example:
-   * "/blog/404.html".
+   * Optional. The address to redirect to. The target is a relative path in the current host.
+   * Example: "/blog/404.html".
    * @param path path or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteAction setPath(java.lang.String path) {

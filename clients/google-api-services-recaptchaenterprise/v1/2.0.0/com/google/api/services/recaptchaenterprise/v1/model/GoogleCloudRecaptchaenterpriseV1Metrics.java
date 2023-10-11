@@ -45,7 +45,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   }
 
   /**
-   * Output only. The name of the metrics, in the format "projects/{project}/keys/{key}/metrics".
+   * Output only. The name of the metrics, in the format `projects/{project}/keys/{key}/metrics`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   }
 
   /**
-   * Output only. The name of the metrics, in the format "projects/{project}/keys/{key}/metrics".
+   * Output only. The name of the metrics, in the format `projects/{project}/keys/{key}/metrics`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -94,7 +94,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   }
 
   /**
-   * Output only. The name of the metrics, in the format "projects/{project}/keys/{key}/metrics".
+   * Output only. The name of the metrics, in the format `projects/{project}/keys/{key}/metrics`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Metrics setName(java.lang.String name) {

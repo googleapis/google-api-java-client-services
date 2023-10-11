@@ -31,51 +31,51 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extends com.google.api.client.json.GenericJson {
 
   /**
-   * The first lines of the address. The first line generally contains the street name and number,
-   * and further lines may include information such as an apartment number.
+   * Optional. The first lines of the address. The first line generally contains the street name and
+   * number, and further lines may include information such as an apartment number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> address;
 
   /**
-   * The state, province, or otherwise administrative area of the address.
+   * Optional. The state, province, or otherwise administrative area of the address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String administrativeArea;
 
   /**
-   * The town/city of the address.
+   * Optional. The town/city of the address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locality;
 
   /**
-   * The postal or ZIP code of the address.
+   * Optional. The postal or ZIP code of the address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String postalCode;
 
   /**
-   * The recipient name, potentially including information such as "care of".
+   * Optional. The recipient name, potentially including information such as "care of".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String recipient;
 
   /**
-   * The CLDR country/region of the address.
+   * Optional. The CLDR country/region of the address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
 
   /**
-   * The first lines of the address. The first line generally contains the street name and number,
-   * and further lines may include information such as an apartment number.
+   * Optional. The first lines of the address. The first line generally contains the street name and
+   * number, and further lines may include information such as an apartment number.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAddress() {
@@ -83,8 +83,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The first lines of the address. The first line generally contains the street name and number,
-   * and further lines may include information such as an apartment number.
+   * Optional. The first lines of the address. The first line generally contains the street name and
+   * number, and further lines may include information such as an apartment number.
    * @param address address or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress setAddress(java.util.List<java.lang.String> address) {
@@ -93,7 +93,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The state, province, or otherwise administrative area of the address.
+   * Optional. The state, province, or otherwise administrative area of the address.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdministrativeArea() {
@@ -101,7 +101,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The state, province, or otherwise administrative area of the address.
+   * Optional. The state, province, or otherwise administrative area of the address.
    * @param administrativeArea administrativeArea or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress setAdministrativeArea(java.lang.String administrativeArea) {
@@ -110,7 +110,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The town/city of the address.
+   * Optional. The town/city of the address.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocality() {
@@ -118,7 +118,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The town/city of the address.
+   * Optional. The town/city of the address.
    * @param locality locality or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress setLocality(java.lang.String locality) {
@@ -127,7 +127,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The postal or ZIP code of the address.
+   * Optional. The postal or ZIP code of the address.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostalCode() {
@@ -135,7 +135,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The postal or ZIP code of the address.
+   * Optional. The postal or ZIP code of the address.
    * @param postalCode postalCode or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress setPostalCode(java.lang.String postalCode) {
@@ -144,7 +144,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The recipient name, potentially including information such as "care of".
+   * Optional. The recipient name, potentially including information such as "care of".
    * @return value or {@code null} for none
    */
   public java.lang.String getRecipient() {
@@ -152,7 +152,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The recipient name, potentially including information such as "care of".
+   * Optional. The recipient name, potentially including information such as "care of".
    * @param recipient recipient or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress setRecipient(java.lang.String recipient) {
@@ -161,7 +161,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The CLDR country/region of the address.
+   * Optional. The CLDR country/region of the address.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -169,7 +169,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extend
   }
 
   /**
-   * The CLDR country/region of the address.
+   * Optional. The CLDR country/region of the address.
    * @param regionCode regionCode or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress setRegionCode(java.lang.String regionCode) {

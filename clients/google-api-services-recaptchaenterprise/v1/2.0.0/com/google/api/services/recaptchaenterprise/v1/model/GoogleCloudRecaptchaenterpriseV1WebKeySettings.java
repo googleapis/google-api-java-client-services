@@ -31,32 +31,32 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to true, it means allowed_domains will not be enforced.
+   * Optional. If set to true, it means allowed_domains will not be enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowAllDomains;
 
   /**
-   * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is
-   * supported only for the SCORE integration type.
+   * Optional. If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This
+   * is supported only for the SCORE integration type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowAmpTraffic;
 
   /**
-   * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain
-   * are automatically allowed. A valid domain requires a host and must not include any path, port,
-   * query or fragment. Examples: 'example.com' or 'subdomain.example.com'
+   * Optional. Domains or subdomains of websites allowed to use the key. All subdomains of an
+   * allowed domain are automatically allowed. A valid domain requires a host and must not include
+   * any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedDomains;
 
   /**
-   * Settings for the frequency and difficulty at which this key triggers captcha challenges. This
-   * should only be specified for IntegrationTypes CHECKBOX and INVISIBLE.
+   * Optional. Settings for the frequency and difficulty at which this key triggers captcha
+   * challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   private java.lang.String integrationType;
 
   /**
-   * If set to true, it means allowed_domains will not be enforced.
+   * Optional. If set to true, it means allowed_domains will not be enforced.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowAllDomains() {
@@ -78,7 +78,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   }
 
   /**
-   * If set to true, it means allowed_domains will not be enforced.
+   * Optional. If set to true, it means allowed_domains will not be enforced.
    * @param allowAllDomains allowAllDomains or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WebKeySettings setAllowAllDomains(java.lang.Boolean allowAllDomains) {
@@ -87,8 +87,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   }
 
   /**
-   * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is
-   * supported only for the SCORE integration type.
+   * Optional. If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This
+   * is supported only for the SCORE integration type.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowAmpTraffic() {
@@ -96,8 +96,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   }
 
   /**
-   * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is
-   * supported only for the SCORE integration type.
+   * Optional. If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This
+   * is supported only for the SCORE integration type.
    * @param allowAmpTraffic allowAmpTraffic or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WebKeySettings setAllowAmpTraffic(java.lang.Boolean allowAmpTraffic) {
@@ -106,9 +106,9 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   }
 
   /**
-   * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain
-   * are automatically allowed. A valid domain requires a host and must not include any path, port,
-   * query or fragment. Examples: 'example.com' or 'subdomain.example.com'
+   * Optional. Domains or subdomains of websites allowed to use the key. All subdomains of an
+   * allowed domain are automatically allowed. A valid domain requires a host and must not include
+   * any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedDomains() {
@@ -116,9 +116,9 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   }
 
   /**
-   * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain
-   * are automatically allowed. A valid domain requires a host and must not include any path, port,
-   * query or fragment. Examples: 'example.com' or 'subdomain.example.com'
+   * Optional. Domains or subdomains of websites allowed to use the key. All subdomains of an
+   * allowed domain are automatically allowed. A valid domain requires a host and must not include
+   * any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
    * @param allowedDomains allowedDomains or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WebKeySettings setAllowedDomains(java.util.List<java.lang.String> allowedDomains) {
@@ -127,8 +127,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   }
 
   /**
-   * Settings for the frequency and difficulty at which this key triggers captcha challenges. This
-   * should only be specified for IntegrationTypes CHECKBOX and INVISIBLE.
+   * Optional. Settings for the frequency and difficulty at which this key triggers captcha
+   * challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE.
    * @return value or {@code null} for none
    */
   public java.lang.String getChallengeSecurityPreference() {
@@ -136,8 +136,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   }
 
   /**
-   * Settings for the frequency and difficulty at which this key triggers captcha challenges. This
-   * should only be specified for IntegrationTypes CHECKBOX and INVISIBLE.
+   * Optional. Settings for the frequency and difficulty at which this key triggers captcha
+   * challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE.
    * @param challengeSecurityPreference challengeSecurityPreference or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WebKeySettings setChallengeSecurityPreference(java.lang.String challengeSecurityPreference) {

@@ -48,6 +48,15 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. The desired number of instances running this revision. For Cloud Run, this only
+   * includes instances provisioned using the minScale annotation. It does not include instances
+   * created by autoscaling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer desiredReplicas;
+
+  /**
    * ImageDigest holds the resolved digest for the image specified within .Spec.Container.Image. The
    * digest is resolved during the creation of Revision. This field holds the digest value
    * regardless of whether a tag or digest was originally specified in the Container object.
@@ -104,6 +113,27 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
    */
   public RevisionStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {
     this.conditions = conditions;
+    return this;
+  }
+
+  /**
+   * Output only. The desired number of instances running this revision. For Cloud Run, this only
+   * includes instances provisioned using the minScale annotation. It does not include instances
+   * created by autoscaling.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDesiredReplicas() {
+    return desiredReplicas;
+  }
+
+  /**
+   * Output only. The desired number of instances running this revision. For Cloud Run, this only
+   * includes instances provisioned using the minScale annotation. It does not include instances
+   * created by autoscaling.
+   * @param desiredReplicas desiredReplicas or {@code null} for none
+   */
+  public RevisionStatus setDesiredReplicas(java.lang.Integer desiredReplicas) {
+    this.desiredReplicas = desiredReplicas;
     return this;
   }
 

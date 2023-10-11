@@ -17,7 +17,7 @@
 package com.google.api.services.appengine.v1.model;
 
 /**
- * Projects transition between and within states based on reasons sent from various systems. CCFE
+ * Containers transition between and within states based on reasons sent from various systems. CCFE
  * will provide the CLH with reasons for the current state per system.The current systems that CCFE
  * supports are: Service Management (Inception) Data Governance (Wipeout) Abuse (Ares) Billing
  * (Internal Cloud Billing API)

@@ -54,7 +54,7 @@ public final class ProjectEvent extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ProjectState state;
+  private ContainerState state;
 
   /**
    * The unique ID for this project event. CLHs can use this value to dedup repeated calls. required
@@ -109,7 +109,7 @@ public final class ProjectEvent extends com.google.api.client.json.GenericJson {
    * The state of the project that led to this event.
    * @return value or {@code null} for none
    */
-  public ProjectState getState() {
+  public ContainerState getState() {
     return state;
   }
 
@@ -117,7 +117,7 @@ public final class ProjectEvent extends com.google.api.client.json.GenericJson {
    * The state of the project that led to this event.
    * @param state state or {@code null} for none
    */
-  public ProjectEvent setState(ProjectState state) {
+  public ProjectEvent setState(ContainerState state) {
     this.state = state;
     return this;
   }

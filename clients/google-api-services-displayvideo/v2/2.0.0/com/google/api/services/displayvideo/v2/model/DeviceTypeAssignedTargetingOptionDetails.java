@@ -32,7 +32,7 @@ package com.google.api.services.displayvideo.v2.model;
 public final class DeviceTypeAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The display name of the device type. Output only in v1. Required in v2.
+   * Required. The display name of the device type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class DeviceTypeAssignedTargetingOptionDetails extends com.google.a
   private java.lang.Double youtubeAndPartnersBidMultiplier;
 
   /**
-   * The display name of the device type. Output only in v1. Required in v2.
+   * Required. The display name of the device type.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceType() {
@@ -59,7 +59,7 @@ public final class DeviceTypeAssignedTargetingOptionDetails extends com.google.a
   }
 
   /**
-   * The display name of the device type. Output only in v1. Required in v2.
+   * Required. The display name of the device type.
    * @param deviceType deviceType or {@code null} for none
    */
   public DeviceTypeAssignedTargetingOptionDetails setDeviceType(java.lang.String deviceType) {

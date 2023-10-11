@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class YoutubeAndPartnersBiddingStrategy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Source of the effective targetCpa value for AdGroup.
+   * Output only. Source of the effective target CPA value for ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adGroupEffectiveTargetCpaSource;
 
   /**
-   * Output only. The effective targetCpa for AdGroup, in micros of advertiser's currency.
+   * Output only. The effective target CPA for ad group, in micros of advertiser's currency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -69,7 +69,7 @@ public final class YoutubeAndPartnersBiddingStrategy extends com.google.api.clie
   private java.lang.Long value;
 
   /**
-   * Output only. Source of the effective targetCpa value for AdGroup.
+   * Output only. Source of the effective target CPA value for ad group.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdGroupEffectiveTargetCpaSource() {
@@ -77,7 +77,7 @@ public final class YoutubeAndPartnersBiddingStrategy extends com.google.api.clie
   }
 
   /**
-   * Output only. Source of the effective targetCpa value for AdGroup.
+   * Output only. Source of the effective target CPA value for ad group.
    * @param adGroupEffectiveTargetCpaSource adGroupEffectiveTargetCpaSource or {@code null} for none
    */
   public YoutubeAndPartnersBiddingStrategy setAdGroupEffectiveTargetCpaSource(java.lang.String adGroupEffectiveTargetCpaSource) {
@@ -86,7 +86,7 @@ public final class YoutubeAndPartnersBiddingStrategy extends com.google.api.clie
   }
 
   /**
-   * Output only. The effective targetCpa for AdGroup, in micros of advertiser's currency.
+   * Output only. The effective target CPA for ad group, in micros of advertiser's currency.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdGroupEffectiveTargetCpaValue() {
@@ -94,7 +94,7 @@ public final class YoutubeAndPartnersBiddingStrategy extends com.google.api.clie
   }
 
   /**
-   * Output only. The effective targetCpa for AdGroup, in micros of advertiser's currency.
+   * Output only. The effective target CPA for ad group, in micros of advertiser's currency.
    * @param adGroupEffectiveTargetCpaValue adGroupEffectiveTargetCpaValue or {@code null} for none
    */
   public YoutubeAndPartnersBiddingStrategy setAdGroupEffectiveTargetCpaValue(java.lang.Long adGroupEffectiveTargetCpaValue) {

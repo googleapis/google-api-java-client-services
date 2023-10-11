@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v2.model;
 public final class BulkEditAssignedLocationsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The assigned locations to create in bulk, specified as a list of AssignedLocations.
+   * The assigned locations to create in bulk, specified as a list of AssignedLocation resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,15 +44,15 @@ public final class BulkEditAssignedLocationsRequest extends com.google.api.clien
   }
 
   /**
-   * The IDs of the assigned locations to delete in bulk, specified as a list of
-   * assigned_location_ids.
+   * The IDs of the assigned locations to delete in bulk, specified as a list of assignedLocationId
+   * values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> deletedAssignedLocations;
 
   /**
-   * The assigned locations to create in bulk, specified as a list of AssignedLocations.
+   * The assigned locations to create in bulk, specified as a list of AssignedLocation resources.
    * @return value or {@code null} for none
    */
   public java.util.List<AssignedLocation> getCreatedAssignedLocations() {
@@ -60,7 +60,7 @@ public final class BulkEditAssignedLocationsRequest extends com.google.api.clien
   }
 
   /**
-   * The assigned locations to create in bulk, specified as a list of AssignedLocations.
+   * The assigned locations to create in bulk, specified as a list of AssignedLocation resources.
    * @param createdAssignedLocations createdAssignedLocations or {@code null} for none
    */
   public BulkEditAssignedLocationsRequest setCreatedAssignedLocations(java.util.List<AssignedLocation> createdAssignedLocations) {
@@ -69,8 +69,8 @@ public final class BulkEditAssignedLocationsRequest extends com.google.api.clien
   }
 
   /**
-   * The IDs of the assigned locations to delete in bulk, specified as a list of
-   * assigned_location_ids.
+   * The IDs of the assigned locations to delete in bulk, specified as a list of assignedLocationId
+   * values.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getDeletedAssignedLocations() {
@@ -78,8 +78,8 @@ public final class BulkEditAssignedLocationsRequest extends com.google.api.clien
   }
 
   /**
-   * The IDs of the assigned locations to delete in bulk, specified as a list of
-   * assigned_location_ids.
+   * The IDs of the assigned locations to delete in bulk, specified as a list of assignedLocationId
+   * values.
    * @param deletedAssignedLocations deletedAssignedLocations or {@code null} for none
    */
   public BulkEditAssignedLocationsRequest setDeletedAssignedLocations(java.util.List<java.lang.Long> deletedAssignedLocations) {

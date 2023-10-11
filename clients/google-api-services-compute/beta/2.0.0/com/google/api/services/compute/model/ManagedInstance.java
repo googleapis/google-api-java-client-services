@@ -102,8 +102,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstanceLastAttempt lastAttempt;
 
   /**
-   * [Output Only] The name of the instance. The name will always exist even if the instance has not
-   * yet been created.
+   * [Output Only] The name of the instance. The name always exists even if the instance has not yet
+   * been created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -299,8 +299,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The name of the instance. The name will always exist even if the instance has not
-   * yet been created.
+   * [Output Only] The name of the instance. The name always exists even if the instance has not yet
+   * been created.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -308,8 +308,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The name of the instance. The name will always exist even if the instance has not
-   * yet been created.
+   * [Output Only] The name of the instance. The name always exists even if the instance has not yet
+   * been created.
    * @param name name or {@code null} for none
    */
   public ManagedInstance setName(java.lang.String name) {

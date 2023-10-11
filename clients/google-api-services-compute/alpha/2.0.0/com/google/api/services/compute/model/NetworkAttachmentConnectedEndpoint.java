@@ -75,6 +75,13 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
   private java.lang.String subnetwork;
 
   /**
+   * [Output Only] The CIDR range of the subnet from which the IPv4 internal IP was allocated from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subnetworkCidrRange;
+
+  /**
    * The IPv4 address assigned to the producer instance network interface. This value will be a
    * range in case of Serverless.
    * @return value or {@code null} for none
@@ -179,6 +186,23 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
    */
   public NetworkAttachmentConnectedEndpoint setSubnetwork(java.lang.String subnetwork) {
     this.subnetwork = subnetwork;
+    return this;
+  }
+
+  /**
+   * [Output Only] The CIDR range of the subnet from which the IPv4 internal IP was allocated from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubnetworkCidrRange() {
+    return subnetworkCidrRange;
+  }
+
+  /**
+   * [Output Only] The CIDR range of the subnet from which the IPv4 internal IP was allocated from.
+   * @param subnetworkCidrRange subnetworkCidrRange or {@code null} for none
+   */
+  public NetworkAttachmentConnectedEndpoint setSubnetworkCidrRange(java.lang.String subnetworkCidrRange) {
+    this.subnetworkCidrRange = subnetworkCidrRange;
     return this;
   }
 

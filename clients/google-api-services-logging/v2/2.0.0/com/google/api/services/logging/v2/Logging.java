@@ -6921,16 +6921,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -6938,9 +6939,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Patch setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -7187,16 +7188,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -7204,9 +7206,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Update setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -15597,16 +15599,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -15614,9 +15617,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Patch setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -15863,16 +15866,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -15880,9 +15884,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Update setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -27677,16 +27681,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -27694,9 +27699,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Patch setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -27943,16 +27948,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -27960,9 +27966,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Update setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -35621,16 +35627,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -35638,9 +35645,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Patch setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -35887,16 +35894,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -35904,9 +35912,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Update setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -36911,16 +36919,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Optional. A service account provided by the caller that will be used to write the log
-       * entries. Must be of format serviceAccount:some@email. This can only be specified if writing
-       * to a destination outside the sink's project. If not specified, a p4 service account will
-       * automatically be generated.
+       * entries. The format must be serviceAccount:some@email. This field can only be specified if
+       * you are routing logs to a destination outside this sink's project. If not specified, a
+       * Logging service account will automatically be generated.
        */
       @com.google.api.client.util.Key
       private java.lang.String customWriterIdentity;
 
-      /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-     be of format serviceAccount:some@email. This can only be specified if writing to a destination
-     outside the sink's project. If not specified, a p4 service account will automatically be generated.
+      /** Optional. A service account provided by the caller that will be used to write the log entries. The
+     format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+     to a destination outside this sink's project. If not specified, a Logging service account will
+     automatically be generated.
        */
       public java.lang.String getCustomWriterIdentity() {
         return customWriterIdentity;
@@ -36928,9 +36937,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Optional. A service account provided by the caller that will be used to write the log
-       * entries. Must be of format serviceAccount:some@email. This can only be specified if writing
-       * to a destination outside the sink's project. If not specified, a p4 service account will
-       * automatically be generated.
+       * entries. The format must be serviceAccount:some@email. This field can only be specified if
+       * you are routing logs to a destination outside this sink's project. If not specified, a
+       * Logging service account will automatically be generated.
        */
       public Update setCustomWriterIdentity(java.lang.String customWriterIdentity) {
         this.customWriterIdentity = customWriterIdentity;

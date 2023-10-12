@@ -57,6 +57,14 @@ public final class GoogleCloudAiplatformV1MachineSpec extends com.google.api.cli
   private java.lang.String machineType;
 
   /**
+   * Immutable. The topology of the TPUs. Corresponds to the TPU topologies available from GKE.
+   * (Example: tpu_topology: "2x2x1").
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tpuTopology;
+
+  /**
    * The number of accelerators to attach to the machine.
    * @return value or {@code null} for none
    */
@@ -116,6 +124,25 @@ public final class GoogleCloudAiplatformV1MachineSpec extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1MachineSpec setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Immutable. The topology of the TPUs. Corresponds to the TPU topologies available from GKE.
+   * (Example: tpu_topology: "2x2x1").
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTpuTopology() {
+    return tpuTopology;
+  }
+
+  /**
+   * Immutable. The topology of the TPUs. Corresponds to the TPU topologies available from GKE.
+   * (Example: tpu_topology: "2x2x1").
+   * @param tpuTopology tpuTopology or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1MachineSpec setTpuTopology(java.lang.String tpuTopology) {
+    this.tpuTopology = tpuTopology;
     return this;
   }
 

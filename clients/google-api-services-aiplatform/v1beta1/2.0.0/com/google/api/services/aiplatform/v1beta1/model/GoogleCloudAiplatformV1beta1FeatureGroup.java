@@ -30,7 +30,9 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1FeatureGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates that features for this group come from BigQuery.
+   * Indicates that features for this group come from BigQuery Table/View. By default treats the
+   * source as a sparse time series source, which is required to have an entity_id and a
+   * feature_timestamp column in the source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +88,9 @@ public final class GoogleCloudAiplatformV1beta1FeatureGroup extends com.google.a
   private String updateTime;
 
   /**
-   * Indicates that features for this group come from BigQuery.
+   * Indicates that features for this group come from BigQuery Table/View. By default treats the
+   * source as a sparse time series source, which is required to have an entity_id and a
+   * feature_timestamp column in the source.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureGroupBigQuery getBigQuery() {
@@ -94,7 +98,9 @@ public final class GoogleCloudAiplatformV1beta1FeatureGroup extends com.google.a
   }
 
   /**
-   * Indicates that features for this group come from BigQuery.
+   * Indicates that features for this group come from BigQuery Table/View. By default treats the
+   * source as a sparse time series source, which is required to have an entity_id and a
+   * feature_timestamp column in the source.
    * @param bigQuery bigQuery or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureGroup setBigQuery(GoogleCloudAiplatformV1beta1FeatureGroupBigQuery bigQuery) {

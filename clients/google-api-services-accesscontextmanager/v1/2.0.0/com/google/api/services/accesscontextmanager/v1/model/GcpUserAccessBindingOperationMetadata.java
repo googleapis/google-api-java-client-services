@@ -17,9 +17,7 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * Currently, a completed operation means nothing. In the future, this metadata and a completed
- * operation may indicate that the binding has taken effect and is affecting access decisions for
- * all users.
+ * Metadata of GCP Access Binding Long Running Operations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed

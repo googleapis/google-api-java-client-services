@@ -3104,6 +3104,141 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Migrates an existing User-Managed Notebook to Workbench Instances.
+         *
+         * Create a request for the method "instances.migrate".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Migrate#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.MigrateInstanceRequest}
+         * @return the request
+         */
+        public Migrate migrate(java.lang.String name, com.google.api.services.notebooks.v1.model.MigrateInstanceRequest content) throws java.io.IOException {
+          Migrate result = new Migrate(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Migrate extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:migrate";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Migrates an existing User-Managed Notebook to Workbench Instances.
+           *
+           * Create a request for the method "instances.migrate".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Migrate#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Migrate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.MigrateInstanceRequest}
+           * @since 1.13
+           */
+          protected Migrate(java.lang.String name, com.google.api.services.notebooks.v1.model.MigrateInstanceRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Migrate set$Xgafv(java.lang.String $Xgafv) {
+            return (Migrate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Migrate setAccessToken(java.lang.String accessToken) {
+            return (Migrate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Migrate setAlt(java.lang.String alt) {
+            return (Migrate) super.setAlt(alt);
+          }
+
+          @Override
+          public Migrate setCallback(java.lang.String callback) {
+            return (Migrate) super.setCallback(callback);
+          }
+
+          @Override
+          public Migrate setFields(java.lang.String fields) {
+            return (Migrate) super.setFields(fields);
+          }
+
+          @Override
+          public Migrate setKey(java.lang.String key) {
+            return (Migrate) super.setKey(key);
+          }
+
+          @Override
+          public Migrate setOauthToken(java.lang.String oauthToken) {
+            return (Migrate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Migrate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Migrate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Migrate setQuotaUser(java.lang.String quotaUser) {
+            return (Migrate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Migrate setUploadType(java.lang.String uploadType) {
+            return (Migrate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Migrate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Migrate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Migrate setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Migrate set(String parameterName, Object value) {
+            return (Migrate) super.set(parameterName, value);
+          }
+        }
+        /**
          * Registers an existing legacy notebook instance to the Notebooks API server. Legacy instances are
          * instances created with the legacy Compute Engine calls. They are not manageable by the Notebooks
          * API out of the box. This call makes these instances manageable by the Notebooks API.
@@ -7073,6 +7208,141 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Migrate an existing Runtime to a new Workbench Instance.
+         *
+         * Create a request for the method "runtimes.migrate".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Migrate#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.MigrateRuntimeRequest}
+         * @return the request
+         */
+        public Migrate migrate(java.lang.String name, com.google.api.services.notebooks.v1.model.MigrateRuntimeRequest content) throws java.io.IOException {
+          Migrate result = new Migrate(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Migrate extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:migrate";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+
+          /**
+           * Migrate an existing Runtime to a new Workbench Instance.
+           *
+           * Create a request for the method "runtimes.migrate".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Migrate#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Migrate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.MigrateRuntimeRequest}
+           * @since 1.13
+           */
+          protected Migrate(java.lang.String name, com.google.api.services.notebooks.v1.model.MigrateRuntimeRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Migrate set$Xgafv(java.lang.String $Xgafv) {
+            return (Migrate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Migrate setAccessToken(java.lang.String accessToken) {
+            return (Migrate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Migrate setAlt(java.lang.String alt) {
+            return (Migrate) super.setAlt(alt);
+          }
+
+          @Override
+          public Migrate setCallback(java.lang.String callback) {
+            return (Migrate) super.setCallback(callback);
+          }
+
+          @Override
+          public Migrate setFields(java.lang.String fields) {
+            return (Migrate) super.setFields(fields);
+          }
+
+          @Override
+          public Migrate setKey(java.lang.String key) {
+            return (Migrate) super.setKey(key);
+          }
+
+          @Override
+          public Migrate setOauthToken(java.lang.String oauthToken) {
+            return (Migrate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Migrate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Migrate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Migrate setQuotaUser(java.lang.String quotaUser) {
+            return (Migrate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Migrate setUploadType(java.lang.String uploadType) {
+            return (Migrate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Migrate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Migrate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          public Migrate setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Migrate set(String parameterName, Object value) {
+            return (Migrate) super.set(parameterName, value);
           }
         }
         /**

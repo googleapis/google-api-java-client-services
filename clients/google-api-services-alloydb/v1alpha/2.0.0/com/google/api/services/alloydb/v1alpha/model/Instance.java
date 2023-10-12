@@ -165,7 +165,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private QueryInsightsInstanceConfig queryInsightsConfig;
 
   /**
-   * Read pool specific config.
+   * Read pool instance configuration. This is required if the value of instanceType is READ_POOL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +182,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean reconciling;
 
   /**
-   * Reserved for future use.
+   * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -543,7 +543,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read pool specific config.
+   * Read pool instance configuration. This is required if the value of instanceType is READ_POOL.
    * @return value or {@code null} for none
    */
   public ReadPoolConfig getReadPoolConfig() {
@@ -551,7 +551,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read pool specific config.
+   * Read pool instance configuration. This is required if the value of instanceType is READ_POOL.
    * @param readPoolConfig readPoolConfig or {@code null} for none
    */
   public Instance setReadPoolConfig(ReadPoolConfig readPoolConfig) {
@@ -583,7 +583,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reserved for future use.
+   * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -591,7 +591,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reserved for future use.
+   * Output only. Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Instance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {

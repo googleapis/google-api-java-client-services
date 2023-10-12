@@ -165,7 +165,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private QueryInsightsInstanceConfig queryInsightsConfig;
 
   /**
-   * Read pool specific config.
+   * Read pool instance configuration. This is required if the value of instanceType is READ_POOL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -536,7 +536,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read pool specific config.
+   * Read pool instance configuration. This is required if the value of instanceType is READ_POOL.
    * @return value or {@code null} for none
    */
   public ReadPoolConfig getReadPoolConfig() {
@@ -544,7 +544,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read pool specific config.
+   * Read pool instance configuration. This is required if the value of instanceType is READ_POOL.
    * @param readPoolConfig readPoolConfig or {@code null} for none
    */
   public Instance setReadPoolConfig(ReadPoolConfig readPoolConfig) {

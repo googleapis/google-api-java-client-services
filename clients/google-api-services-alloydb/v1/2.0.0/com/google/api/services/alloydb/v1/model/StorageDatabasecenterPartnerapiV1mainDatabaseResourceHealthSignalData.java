@@ -61,7 +61,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   private java.lang.String description;
 
   /**
-   * The last time at which the event described by this signal took place
+   * Required. The last time at which the event described by this signal took place
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   private java.lang.String externalUri;
 
   /**
-   * The name of the signal, ex: PUBLIC_SQL_INSTANCE, SQL_LOG_ERROR_VERBOSITY etc.
+   * Required. The name of the signal, ex: PUBLIC_SQL_INSTANCE, SQL_LOG_ERROR_VERBOSITY etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,27 +99,35 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   private java.lang.String resourceContainer;
 
   /**
-   * Database resource name associated with the signal. Resource name to follow CAIS resource_name
-   * format as noted here go/condor-common-datamodel
+   * Required. Database resource name associated with the signal. Resource name to follow CAIS
+   * resource_name format as noted here go/condor-common-datamodel
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * The class of the signal, such as if it's a THREAT or VULNERABILITY.
+   * Required. The class of the signal, such as if it's a THREAT or VULNERABILITY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signalClass;
 
   /**
-   * Unique identifier for the signal. This is an unique id which would be mainatined by partner to
-   * identify a signal.
+   * Required. Unique identifier for the signal. This is an unique id which would be mainatined by
+   * partner to identify a signal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signalId;
+
+  /**
+   * Required. Type of signal, for example, `AVAILABLE_IN_MULTIPLE_ZONES`, `LOGGING_MOST_ERRORS`,
+   * etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String signalType;
 
   /**
    * The value may be {@code null}.
@@ -187,7 +195,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * The last time at which the event described by this signal took place
+   * Required. The last time at which the event described by this signal took place
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -195,7 +203,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * The last time at which the event described by this signal took place
+   * Required. The last time at which the event described by this signal took place
    * @param eventTime eventTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setEventTime(String eventTime) {
@@ -223,7 +231,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * The name of the signal, ex: PUBLIC_SQL_INSTANCE, SQL_LOG_ERROR_VERBOSITY etc.
+   * Required. The name of the signal, ex: PUBLIC_SQL_INSTANCE, SQL_LOG_ERROR_VERBOSITY etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -231,7 +239,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * The name of the signal, ex: PUBLIC_SQL_INSTANCE, SQL_LOG_ERROR_VERBOSITY etc.
+   * Required. The name of the signal, ex: PUBLIC_SQL_INSTANCE, SQL_LOG_ERROR_VERBOSITY etc.
    * @param name name or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setName(java.lang.String name) {
@@ -278,8 +286,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Database resource name associated with the signal. Resource name to follow CAIS resource_name
-   * format as noted here go/condor-common-datamodel
+   * Required. Database resource name associated with the signal. Resource name to follow CAIS
+   * resource_name format as noted here go/condor-common-datamodel
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -287,8 +295,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Database resource name associated with the signal. Resource name to follow CAIS resource_name
-   * format as noted here go/condor-common-datamodel
+   * Required. Database resource name associated with the signal. Resource name to follow CAIS
+   * resource_name format as noted here go/condor-common-datamodel
    * @param resourceName resourceName or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setResourceName(java.lang.String resourceName) {
@@ -297,7 +305,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * The class of the signal, such as if it's a THREAT or VULNERABILITY.
+   * Required. The class of the signal, such as if it's a THREAT or VULNERABILITY.
    * @return value or {@code null} for none
    */
   public java.lang.String getSignalClass() {
@@ -305,7 +313,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * The class of the signal, such as if it's a THREAT or VULNERABILITY.
+   * Required. The class of the signal, such as if it's a THREAT or VULNERABILITY.
    * @param signalClass signalClass or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setSignalClass(java.lang.String signalClass) {
@@ -314,8 +322,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Unique identifier for the signal. This is an unique id which would be mainatined by partner to
-   * identify a signal.
+   * Required. Unique identifier for the signal. This is an unique id which would be mainatined by
+   * partner to identify a signal.
    * @return value or {@code null} for none
    */
   public java.lang.String getSignalId() {
@@ -323,12 +331,31 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Unique identifier for the signal. This is an unique id which would be mainatined by partner to
-   * identify a signal.
+   * Required. Unique identifier for the signal. This is an unique id which would be mainatined by
+   * partner to identify a signal.
    * @param signalId signalId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setSignalId(java.lang.String signalId) {
     this.signalId = signalId;
+    return this;
+  }
+
+  /**
+   * Required. Type of signal, for example, `AVAILABLE_IN_MULTIPLE_ZONES`, `LOGGING_MOST_ERRORS`,
+   * etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSignalType() {
+    return signalType;
+  }
+
+  /**
+   * Required. Type of signal, for example, `AVAILABLE_IN_MULTIPLE_ZONES`, `LOGGING_MOST_ERRORS`,
+   * etc.
+   * @param signalType signalType or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setSignalType(java.lang.String signalType) {
+    this.signalType = signalType;
     return this;
   }
 

@@ -33,8 +33,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * Optional. Name of the allocated IP range for the private IP AlloyDB cluster, for example:
    * "google-managed-services-default". If set, the instance IPs for this cluster will be created in
    * the allocated range. The range name must comply with RFC 1035. Specifically, the name must be
-   * 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?. Field name is
-   * intended to be consistent with CloudSQL.
+   * 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. Field name
+   * is intended to be consistent with Cloud SQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * Optional. Name of the allocated IP range for the private IP AlloyDB cluster, for example:
    * "google-managed-services-default". If set, the instance IPs for this cluster will be created in
    * the allocated range. The range name must comply with RFC 1035. Specifically, the name must be
-   * 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?. Field name is
-   * intended to be consistent with CloudSQL.
+   * 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. Field name
+   * is intended to be consistent with Cloud SQL.
    * @return value or {@code null} for none
    */
   public java.lang.String getAllocatedIpRange() {
@@ -66,8 +66,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * Optional. Name of the allocated IP range for the private IP AlloyDB cluster, for example:
    * "google-managed-services-default". If set, the instance IPs for this cluster will be created in
    * the allocated range. The range name must comply with RFC 1035. Specifically, the name must be
-   * 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?. Field name is
-   * intended to be consistent with CloudSQL.
+   * 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. Field name
+   * is intended to be consistent with Cloud SQL.
    * @param allocatedIpRange allocatedIpRange or {@code null} for none
    */
   public NetworkConfig setAllocatedIpRange(java.lang.String allocatedIpRange) {

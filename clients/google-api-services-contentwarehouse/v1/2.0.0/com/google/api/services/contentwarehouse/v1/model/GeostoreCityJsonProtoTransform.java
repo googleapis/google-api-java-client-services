@@ -44,7 +44,7 @@ public final class GeostoreCityJsonProtoTransform extends com.google.api.client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GeostoreCityJsonProtoTransformXyzVector translate;
+  private GeostoreCityJsonProtoTransformTranslate translate;
 
   /**
    * Relative scale of the vertices in the new coordinate system relative to the old coordinate
@@ -69,7 +69,7 @@ public final class GeostoreCityJsonProtoTransform extends com.google.api.client.
    * Offset of each vertex in the new coordinate system relative to the old coordinate system.
    * @return value or {@code null} for none
    */
-  public GeostoreCityJsonProtoTransformXyzVector getTranslate() {
+  public GeostoreCityJsonProtoTransformTranslate getTranslate() {
     return translate;
   }
 
@@ -77,7 +77,7 @@ public final class GeostoreCityJsonProtoTransform extends com.google.api.client.
    * Offset of each vertex in the new coordinate system relative to the old coordinate system.
    * @param translate translate or {@code null} for none
    */
-  public GeostoreCityJsonProtoTransform setTranslate(GeostoreCityJsonProtoTransformXyzVector translate) {
+  public GeostoreCityJsonProtoTransform setTranslate(GeostoreCityJsonProtoTransformTranslate translate) {
     this.translate = translate;
     return this;
   }

@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Information about the state of the device. This contains any state that Assistant may need to
- * know about in order to fulfill requests, for example which timers and alarms are set. Next ID: 11
+ * know about in order to fulfill requests, for example which timers and alarms are set. Next ID: 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -86,6 +86,20 @@ public final class GoogleAssistantAccessoryV1DeviceState extends com.google.api.
    */
   @com.google.api.client.util.Key
   private GoogleAssistantEmbeddedV1FitnessActivities fitnessActivitiesState;
+
+  /**
+   * Information about apps currently installed on device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAssistantAccessoryV1DeviceStateInstalledAppsState installedApps;
+
+  /**
+   * This contains a zlib-compressed binary-encoded `InstalledAppsState` proto message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String installedAppsZlib;
 
   /**
    * *Optional* Information about on-device timers. For devices that support timers, all on-device
@@ -262,6 +276,68 @@ public final class GoogleAssistantAccessoryV1DeviceState extends com.google.api.
    */
   public GoogleAssistantAccessoryV1DeviceState setFitnessActivitiesState(GoogleAssistantEmbeddedV1FitnessActivities fitnessActivitiesState) {
     this.fitnessActivitiesState = fitnessActivitiesState;
+    return this;
+  }
+
+  /**
+   * Information about apps currently installed on device.
+   * @return value or {@code null} for none
+   */
+  public GoogleAssistantAccessoryV1DeviceStateInstalledAppsState getInstalledApps() {
+    return installedApps;
+  }
+
+  /**
+   * Information about apps currently installed on device.
+   * @param installedApps installedApps or {@code null} for none
+   */
+  public GoogleAssistantAccessoryV1DeviceState setInstalledApps(GoogleAssistantAccessoryV1DeviceStateInstalledAppsState installedApps) {
+    this.installedApps = installedApps;
+    return this;
+  }
+
+  /**
+   * This contains a zlib-compressed binary-encoded `InstalledAppsState` proto message.
+   * @see #decodeInstalledAppsZlib()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstalledAppsZlib() {
+    return installedAppsZlib;
+  }
+
+  /**
+   * This contains a zlib-compressed binary-encoded `InstalledAppsState` proto message.
+   * @see #getInstalledAppsZlib()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeInstalledAppsZlib() {
+    return com.google.api.client.util.Base64.decodeBase64(installedAppsZlib);
+  }
+
+  /**
+   * This contains a zlib-compressed binary-encoded `InstalledAppsState` proto message.
+   * @see #encodeInstalledAppsZlib()
+   * @param installedAppsZlib installedAppsZlib or {@code null} for none
+   */
+  public GoogleAssistantAccessoryV1DeviceState setInstalledAppsZlib(java.lang.String installedAppsZlib) {
+    this.installedAppsZlib = installedAppsZlib;
+    return this;
+  }
+
+  /**
+   * This contains a zlib-compressed binary-encoded `InstalledAppsState` proto message.
+   * @see #setInstalledAppsZlib()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleAssistantAccessoryV1DeviceState encodeInstalledAppsZlib(byte[] installedAppsZlib) {
+    this.installedAppsZlib = com.google.api.client.util.Base64.encodeBase64URLSafeString(installedAppsZlib);
     return this;
   }
 

@@ -182,6 +182,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * ContactCreateContextInfo has a timestamp timestamp and additional metadata (e.g. the source of
+   * the creation) for when the contact was created. See also `ContactEditContextInfo`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,6 +196,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * ContactEditContextInfo is a timestamp and additional metadata (e.g. the source of the edit) for
+   * the last 'human initiated edit'. See also `ContactCreateContextInfo`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1020,6 +1024,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * ContactCreateContextInfo has a timestamp timestamp and additional metadata (e.g. the source of
+   * the creation) for when the contact was created. See also `ContactEditContextInfo`.
    * @return value or {@code null} for none
    */
   public java.util.List<AppsPeopleOzExternalMergedpeopleapiContactCreateContextInfo> getContactCreateContextInfo() {
@@ -1027,6 +1033,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * ContactCreateContextInfo has a timestamp timestamp and additional metadata (e.g. the source of
+   * the creation) for when the contact was created. See also `ContactEditContextInfo`.
    * @param contactCreateContextInfo contactCreateContextInfo or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setContactCreateContextInfo(java.util.List<AppsPeopleOzExternalMergedpeopleapiContactCreateContextInfo> contactCreateContextInfo) {
@@ -1035,6 +1043,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * ContactEditContextInfo is a timestamp and additional metadata (e.g. the source of the edit) for
+   * the last 'human initiated edit'. See also `ContactCreateContextInfo`.
    * @return value or {@code null} for none
    */
   public java.util.List<AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo> getContactEditContextInfo() {
@@ -1042,6 +1052,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * ContactEditContextInfo is a timestamp and additional metadata (e.g. the source of the edit) for
+   * the last 'human initiated edit'. See also `ContactCreateContextInfo`.
    * @param contactEditContextInfo contactEditContextInfo or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setContactEditContextInfo(java.util.List<AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo> contactEditContextInfo) {

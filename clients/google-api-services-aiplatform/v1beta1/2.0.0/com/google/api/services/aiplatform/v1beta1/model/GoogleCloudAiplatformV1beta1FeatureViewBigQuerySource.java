@@ -37,7 +37,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewBigQuerySource extends
   private java.util.List<java.lang.String> entityIdColumns;
 
   /**
-   * Required. The Bigquery View URI that will be materialized on each sync trigger based on
+   * Required. The BigQuery view URI that will be materialized on each sync trigger based on
    * FeatureView.SyncConfig.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewBigQuerySource extends
   }
 
   /**
-   * Required. The Bigquery View URI that will be materialized on each sync trigger based on
+   * Required. The BigQuery view URI that will be materialized on each sync trigger based on
    * FeatureView.SyncConfig.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewBigQuerySource extends
   }
 
   /**
-   * Required. The Bigquery View URI that will be materialized on each sync trigger based on
+   * Required. The BigQuery view URI that will be materialized on each sync trigger based on
    * FeatureView.SyncConfig.
    * @param uri uri or {@code null} for none
    */

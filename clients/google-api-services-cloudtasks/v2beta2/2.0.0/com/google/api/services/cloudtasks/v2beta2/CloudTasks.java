@@ -841,20 +841,23 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudtasks server.  After setting any optional
        * parameters, call the {@link UpdateCmekConfig#execute()} method to invoke the remote operation.
        *
-       * @param projectsId
-       * @param locationsId
+       * @param name Output only. The config resource name which includes the project and location and must end in
+       *        'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
        * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.CmekConfig}
        * @return the request
        */
-      public UpdateCmekConfig updateCmekConfig(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.cloudtasks.v2beta2.model.CmekConfig content) throws java.io.IOException {
-        UpdateCmekConfig result = new UpdateCmekConfig(projectsId, locationsId, content);
+      public UpdateCmekConfig updateCmekConfig(java.lang.String name, com.google.api.services.cloudtasks.v2beta2.model.CmekConfig content) throws java.io.IOException {
+        UpdateCmekConfig result = new UpdateCmekConfig(name, content);
         initialize(result);
         return result;
       }
 
       public class UpdateCmekConfig extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.CmekConfig> {
 
-        private static final String REST_PATH = "v2beta2/projects/{projectsId}/locations/{locationsId}/cmekConfig";
+        private static final String REST_PATH = "v2beta2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cmekConfig$");
 
         /**
          * Creates or Updates a CMEK config. Updates the Customer Managed Encryption Key assotiated with
@@ -869,15 +872,19 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * tractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param projectsId
-         * @param locationsId
+         * @param name Output only. The config resource name which includes the project and location and must end in
+       *        'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
          * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.CmekConfig}
          * @since 1.13
          */
-        protected UpdateCmekConfig(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.cloudtasks.v2beta2.model.CmekConfig content) {
+        protected UpdateCmekConfig(java.lang.String name, com.google.api.services.cloudtasks.v2beta2.model.CmekConfig content) {
           super(CloudTasks.this, "PATCH", REST_PATH, content, com.google.api.services.cloudtasks.v2beta2.model.CmekConfig.class);
-          this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
-          this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
         }
 
         @Override
@@ -935,33 +942,31 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           return (UpdateCmekConfig) super.setUploadProtocol(uploadProtocol);
         }
 
+        /**
+         * Output only. The config resource name which includes the project and location and must
+         * end in 'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+         */
         @com.google.api.client.util.Key
-        private java.lang.String projectsId;
+        private java.lang.String name;
+
+        /** Output only. The config resource name which includes the project and location and must end in
+       'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
 
         /**
-
+         * Output only. The config resource name which includes the project and location and must
+         * end in 'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
          */
-        public java.lang.String getProjectsId() {
-          return projectsId;
-        }
-
-        public UpdateCmekConfig setProjectsId(java.lang.String projectsId) {
-          this.projectsId = projectsId;
-          return this;
-        }
-
-        @com.google.api.client.util.Key
-        private java.lang.String locationsId;
-
-        /**
-
-         */
-        public java.lang.String getLocationsId() {
-          return locationsId;
-        }
-
-        public UpdateCmekConfig setLocationsId(java.lang.String locationsId) {
-          this.locationsId = locationsId;
+        public UpdateCmekConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+          this.name = name;
           return this;
         }
 

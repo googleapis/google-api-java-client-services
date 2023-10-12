@@ -62,6 +62,13 @@ public final class RepositoryWebrefSubSegmentIndex extends com.google.api.client
   private RepositoryWebrefJuggernautIndices jgnIndex;
 
   /**
+   * Informs about the 'name' attribute of the referenced tag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RepositoryWebrefMetaTagIndices metaTagIndex;
+
+  /**
    * Pointer to the exact set of queries in the cdoc.
    * The value may be {@code null}.
    */
@@ -133,6 +140,23 @@ public final class RepositoryWebrefSubSegmentIndex extends com.google.api.client
    */
   public RepositoryWebrefSubSegmentIndex setJgnIndex(RepositoryWebrefJuggernautIndices jgnIndex) {
     this.jgnIndex = jgnIndex;
+    return this;
+  }
+
+  /**
+   * Informs about the 'name' attribute of the referenced tag.
+   * @return value or {@code null} for none
+   */
+  public RepositoryWebrefMetaTagIndices getMetaTagIndex() {
+    return metaTagIndex;
+  }
+
+  /**
+   * Informs about the 'name' attribute of the referenced tag.
+   * @param metaTagIndex metaTagIndex or {@code null} for none
+   */
+  public RepositoryWebrefSubSegmentIndex setMetaTagIndex(RepositoryWebrefMetaTagIndices metaTagIndex) {
+    this.metaTagIndex = metaTagIndex;
     return this;
   }
 

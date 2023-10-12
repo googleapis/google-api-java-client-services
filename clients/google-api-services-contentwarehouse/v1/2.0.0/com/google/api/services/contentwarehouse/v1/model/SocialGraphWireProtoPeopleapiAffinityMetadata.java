@@ -54,6 +54,13 @@ public final class SocialGraphWireProtoPeopleapiAffinityMetadata extends com.goo
   private java.lang.Double cloudScore;
 
   /**
+   * Indicator of the confidence in suggestion relevance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String suggestionConfidence;
+
+  /**
    * Information regarding client interactions.
    * @return value or {@code null} for none
    */
@@ -101,6 +108,23 @@ public final class SocialGraphWireProtoPeopleapiAffinityMetadata extends com.goo
    */
   public SocialGraphWireProtoPeopleapiAffinityMetadata setCloudScore(java.lang.Double cloudScore) {
     this.cloudScore = cloudScore;
+    return this;
+  }
+
+  /**
+   * Indicator of the confidence in suggestion relevance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSuggestionConfidence() {
+    return suggestionConfidence;
+  }
+
+  /**
+   * Indicator of the confidence in suggestion relevance.
+   * @param suggestionConfidence suggestionConfidence or {@code null} for none
+   */
+  public SocialGraphWireProtoPeopleapiAffinityMetadata setSuggestionConfidence(java.lang.String suggestionConfidence) {
+    this.suggestionConfidence = suggestionConfidence;
     return this;
   }
 

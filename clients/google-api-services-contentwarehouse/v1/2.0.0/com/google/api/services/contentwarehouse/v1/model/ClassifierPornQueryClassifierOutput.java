@@ -38,15 +38,6 @@ public final class ClassifierPornQueryClassifierOutput extends com.google.api.cl
   private java.lang.String csaiClassification;
 
   /**
-   * DO NOT USE: This field is temporary and should be used only for the CSAI Onebox. This field is
-   * the result of the regular expression classifier alone as opposed to a combination with Seti
-   * classifier as in csai_classification field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String csaiRegexpHighConfidenceClassification;
-
-  /**
    * Human-readable debug information about the classification. This field is only set if
    * output_debug is set in the classification input.
    * The value may be {@code null}.
@@ -83,27 +74,6 @@ public final class ClassifierPornQueryClassifierOutput extends com.google.api.cl
    */
   public ClassifierPornQueryClassifierOutput setCsaiClassification(java.lang.String csaiClassification) {
     this.csaiClassification = csaiClassification;
-    return this;
-  }
-
-  /**
-   * DO NOT USE: This field is temporary and should be used only for the CSAI Onebox. This field is
-   * the result of the regular expression classifier alone as opposed to a combination with Seti
-   * classifier as in csai_classification field.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCsaiRegexpHighConfidenceClassification() {
-    return csaiRegexpHighConfidenceClassification;
-  }
-
-  /**
-   * DO NOT USE: This field is temporary and should be used only for the CSAI Onebox. This field is
-   * the result of the regular expression classifier alone as opposed to a combination with Seti
-   * classifier as in csai_classification field.
-   * @param csaiRegexpHighConfidenceClassification csaiRegexpHighConfidenceClassification or {@code null} for none
-   */
-  public ClassifierPornQueryClassifierOutput setCsaiRegexpHighConfidenceClassification(java.lang.String csaiRegexpHighConfidenceClassification) {
-    this.csaiRegexpHighConfidenceClassification = csaiRegexpHighConfidenceClassification;
     return this;
   }
 

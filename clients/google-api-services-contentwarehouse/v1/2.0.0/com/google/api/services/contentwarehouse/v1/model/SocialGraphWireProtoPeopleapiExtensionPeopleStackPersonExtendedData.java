@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * NEXT_ID: 5
+ * NEXT_ID: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -69,6 +69,12 @@ public final class SocialGraphWireProtoPeopleapiExtensionPeopleStackPersonExtend
    */
   @com.google.api.client.util.Key
   private java.lang.String hideType;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String suggestionConfidence;
 
   /**
    * Whether the person has birthday field populated.
@@ -147,6 +153,21 @@ public final class SocialGraphWireProtoPeopleapiExtensionPeopleStackPersonExtend
    */
   public SocialGraphWireProtoPeopleapiExtensionPeopleStackPersonExtendedData setHideType(java.lang.String hideType) {
     this.hideType = hideType;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSuggestionConfidence() {
+    return suggestionConfidence;
+  }
+
+  /**
+   * @param suggestionConfidence suggestionConfidence or {@code null} for none
+   */
+  public SocialGraphWireProtoPeopleapiExtensionPeopleStackPersonExtendedData setSuggestionConfidence(java.lang.String suggestionConfidence) {
+    this.suggestionConfidence = suggestionConfidence;
     return this;
   }
 

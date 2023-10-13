@@ -12818,7 +12818,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   public class Orders {
 
     /**
-     * Refunds a user's subscription or in-app purchase order. Orders older than 1 year cannot be
+     * Refunds a user's subscription or in-app purchase order. Orders older than 3 years cannot be
      * refunded.
      *
      * Create a request for the method "orders.refund".
@@ -12842,7 +12842,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/orders/{orderId}:refund";
 
       /**
-       * Refunds a user's subscription or in-app purchase order. Orders older than 1 year cannot be
+       * Refunds a user's subscription or in-app purchase order. Orders older than 3 years cannot be
        * refunded.
        *
        * Create a request for the method "orders.refund".

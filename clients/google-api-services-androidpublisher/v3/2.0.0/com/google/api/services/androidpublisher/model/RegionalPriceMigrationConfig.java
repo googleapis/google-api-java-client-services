@@ -32,10 +32,10 @@ public final class RegionalPriceMigrationConfig extends com.google.api.client.js
 
   /**
    * Required. The cutoff time for historical prices that subscribers can remain paying. Subscribers
-   * who are on a price that was created before this cutoff time will be migrated to the currently-
-   * offered price. These subscribers will receive a notification that they will be paying a
-   * different price. Subscribers who do not agree to the new price will have their subscription
-   * ended at the next renewal.
+   * on prices which were available at this cutoff time or later will stay on their existing price.
+   * Subscribers on older prices will be migrated to the currently-offered price. The migrated
+   * subscribers will receive a notification that they will be paying a different price. Subscribers
+   * who do not agree to the new price will have their subscription ended at the next renewal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,10 +59,10 @@ public final class RegionalPriceMigrationConfig extends com.google.api.client.js
 
   /**
    * Required. The cutoff time for historical prices that subscribers can remain paying. Subscribers
-   * who are on a price that was created before this cutoff time will be migrated to the currently-
-   * offered price. These subscribers will receive a notification that they will be paying a
-   * different price. Subscribers who do not agree to the new price will have their subscription
-   * ended at the next renewal.
+   * on prices which were available at this cutoff time or later will stay on their existing price.
+   * Subscribers on older prices will be migrated to the currently-offered price. The migrated
+   * subscribers will receive a notification that they will be paying a different price. Subscribers
+   * who do not agree to the new price will have their subscription ended at the next renewal.
    * @return value or {@code null} for none
    */
   public String getOldestAllowedPriceVersionTime() {
@@ -71,10 +71,10 @@ public final class RegionalPriceMigrationConfig extends com.google.api.client.js
 
   /**
    * Required. The cutoff time for historical prices that subscribers can remain paying. Subscribers
-   * who are on a price that was created before this cutoff time will be migrated to the currently-
-   * offered price. These subscribers will receive a notification that they will be paying a
-   * different price. Subscribers who do not agree to the new price will have their subscription
-   * ended at the next renewal.
+   * on prices which were available at this cutoff time or later will stay on their existing price.
+   * Subscribers on older prices will be migrated to the currently-offered price. The migrated
+   * subscribers will receive a notification that they will be paying a different price. Subscribers
+   * who do not agree to the new price will have their subscription ended at the next renewal.
    * @param oldestAllowedPriceVersionTime oldestAllowedPriceVersionTime or {@code null} for none
    */
   public RegionalPriceMigrationConfig setOldestAllowedPriceVersionTime(String oldestAllowedPriceVersionTime) {

@@ -17,7 +17,8 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for SparkLoggingInfo.
+ * Represents privacy policy that contains the privacy requirements specified by the data owner.
+ * Currently, this is only supported on views.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -27,64 +28,40 @@ package com.google.api.services.bigquery.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SparkLoggingInfo extends com.google.api.client.json.GenericJson {
+public final class PrivacyPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] Project ID used for logging
+   * Optional. Policy used for aggregation thresholds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String projectId;
+  private AggregationThresholdPolicy aggregationThresholdPolicy;
 
   /**
-   * [Output-only] Resource type used for logging
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String resourceType;
-
-  /**
-   * [Output-only] Project ID used for logging
+   * Optional. Policy used for aggregation thresholds.
    * @return value or {@code null} for none
    */
-  public java.lang.String getProjectId() {
-    return projectId;
+  public AggregationThresholdPolicy getAggregationThresholdPolicy() {
+    return aggregationThresholdPolicy;
   }
 
   /**
-   * [Output-only] Project ID used for logging
-   * @param projectId projectId or {@code null} for none
+   * Optional. Policy used for aggregation thresholds.
+   * @param aggregationThresholdPolicy aggregationThresholdPolicy or {@code null} for none
    */
-  public SparkLoggingInfo setProjectId(java.lang.String projectId) {
-    this.projectId = projectId;
-    return this;
-  }
-
-  /**
-   * [Output-only] Resource type used for logging
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getResourceType() {
-    return resourceType;
-  }
-
-  /**
-   * [Output-only] Resource type used for logging
-   * @param resourceType resourceType or {@code null} for none
-   */
-  public SparkLoggingInfo setResourceType(java.lang.String resourceType) {
-    this.resourceType = resourceType;
+  public PrivacyPolicy setAggregationThresholdPolicy(AggregationThresholdPolicy aggregationThresholdPolicy) {
+    this.aggregationThresholdPolicy = aggregationThresholdPolicy;
     return this;
   }
 
   @Override
-  public SparkLoggingInfo set(String fieldName, Object value) {
-    return (SparkLoggingInfo) super.set(fieldName, value);
+  public PrivacyPolicy set(String fieldName, Object value) {
+    return (PrivacyPolicy) super.set(fieldName, value);
   }
 
   @Override
-  public SparkLoggingInfo clone() {
-    return (SparkLoggingInfo) super.clone();
+  public PrivacyPolicy clone() {
+    return (PrivacyPolicy) super.clone();
   }
 
 }

@@ -100,17 +100,19 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   private GooglePrivacyDlpV2FindingLimits limits;
 
   /**
-   * Only returns findings equal or above this threshold. The default is POSSIBLE. See
-   * https://cloud.google.com/dlp/docs/likelihood to learn more.
+   * Only returns findings equal to or above this threshold. The default is POSSIBLE. In general,
+   * the highest likelihood setting yields the fewest findings in results and the lowest chance of a
+   * false positive. For more information, see [Match
+   * likelihood](https://cloud.google.com/dlp/docs/likelihood).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String minLikelihood;
 
   /**
-   * Per infotype likelihoods. For each infotype, a user can specify a minimum likelihood, and only
-   * return that infotype if it is above that threshold. If an infotype is not included, it uses the
-   * InspectConfig min_likelihood.
+   * Minimum likelihood per infotype. For each infotype, a user can specify a minimum likelihood.
+   * The system only returns a finding if its likelihood is above this threshold. If this field is
+   * not set, the system uses the InspectConfig min_likelihood.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,8 +264,10 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * Only returns findings equal or above this threshold. The default is POSSIBLE. See
-   * https://cloud.google.com/dlp/docs/likelihood to learn more.
+   * Only returns findings equal to or above this threshold. The default is POSSIBLE. In general,
+   * the highest likelihood setting yields the fewest findings in results and the lowest chance of a
+   * false positive. For more information, see [Match
+   * likelihood](https://cloud.google.com/dlp/docs/likelihood).
    * @return value or {@code null} for none
    */
   public java.lang.String getMinLikelihood() {
@@ -271,8 +275,10 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * Only returns findings equal or above this threshold. The default is POSSIBLE. See
-   * https://cloud.google.com/dlp/docs/likelihood to learn more.
+   * Only returns findings equal to or above this threshold. The default is POSSIBLE. In general,
+   * the highest likelihood setting yields the fewest findings in results and the lowest chance of a
+   * false positive. For more information, see [Match
+   * likelihood](https://cloud.google.com/dlp/docs/likelihood).
    * @param minLikelihood minLikelihood or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setMinLikelihood(java.lang.String minLikelihood) {
@@ -281,9 +287,9 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * Per infotype likelihoods. For each infotype, a user can specify a minimum likelihood, and only
-   * return that infotype if it is above that threshold. If an infotype is not included, it uses the
-   * InspectConfig min_likelihood.
+   * Minimum likelihood per infotype. For each infotype, a user can specify a minimum likelihood.
+   * The system only returns a finding if its likelihood is above this threshold. If this field is
+   * not set, the system uses the InspectConfig min_likelihood.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2InfoTypeLikelihood> getMinLikelihoodPerInfoType() {
@@ -291,9 +297,9 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * Per infotype likelihoods. For each infotype, a user can specify a minimum likelihood, and only
-   * return that infotype if it is above that threshold. If an infotype is not included, it uses the
-   * InspectConfig min_likelihood.
+   * Minimum likelihood per infotype. For each infotype, a user can specify a minimum likelihood.
+   * The system only returns a finding if its likelihood is above this threshold. If this field is
+   * not set, the system uses the InspectConfig min_likelihood.
    * @param minLikelihoodPerInfoType minLikelihoodPerInfoType or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setMinLikelihoodPerInfoType(java.util.List<GooglePrivacyDlpV2InfoTypeLikelihood> minLikelihoodPerInfoType) {

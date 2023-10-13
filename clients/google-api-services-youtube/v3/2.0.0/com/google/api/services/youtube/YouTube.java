@@ -3119,22 +3119,6 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Return the channel associated with a YouTube handle. UNIMPLEMENTED. */
-      @com.google.api.client.util.Key
-      private java.lang.String forHandle;
-
-      /** Return the channel associated with a YouTube handle. UNIMPLEMENTED.
-       */
-      public java.lang.String getForHandle() {
-        return forHandle;
-      }
-
-      /** Return the channel associated with a YouTube handle. UNIMPLEMENTED. */
-      public List setForHandle(java.lang.String forHandle) {
-        this.forHandle = forHandle;
-        return this;
-      }
-
       /** Return the channel associated with a YouTube username. */
       @com.google.api.client.util.Key
       private java.lang.String forUsername;
@@ -9866,6 +9850,848 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the PlaylistImages collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code YouTube youtube = new YouTube(...);}
+   *   {@code YouTube.PlaylistImages.List request = youtube.playlistImages().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public PlaylistImages playlistImages() {
+    return new PlaylistImages();
+  }
+
+  /**
+   * The "playlistImages" collection of methods.
+   */
+  public class PlaylistImages {
+
+    /**
+     * Deletes a resource.
+     *
+     * Create a request for the method "playlistImages.delete".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public Delete delete() throws java.io.IOException {
+      Delete result = new Delete();
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends YouTubeRequest<Void> {
+
+      private static final String REST_PATH = "youtube/v3/playlistImages";
+
+      /**
+       * Deletes a resource.
+       *
+       * Create a request for the method "playlistImages.delete".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected Delete() {
+        super(YouTube.this, "DELETE", REST_PATH, null, Void.class);
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Id to identify this image. This is returned from by the List method. */
+      @com.google.api.client.util.Key
+      private java.lang.String id;
+
+      /** Id to identify this image. This is returned from by the List method.
+       */
+      public java.lang.String getId() {
+        return id;
+      }
+
+      /** Id to identify this image. This is returned from by the List method. */
+      public Delete setId(java.lang.String id) {
+        this.id = id;
+        return this;
+      }
+
+      /**
+       * *Note:* This parameter is intended exclusively for YouTube content partners. The
+       * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials
+       * identify a YouTube CMS user who is acting on behalf of the content owner specified in the
+       * parameter value. This parameter is intended for YouTube content partners that own and
+       * manage many different YouTube channels. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The CMS account that the user authenticates with
+       * must be linked to the specified YouTube content owner.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String onBehalfOfContentOwner;
+
+      /*** Note:* This parameter is intended exclusively for YouTube content partners. The
+    * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials identify
+    * a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value.
+    * This parameter is intended for YouTube content partners that own and manage many different YouTube
+    * channels. It allows content owners to authenticate once and get access to all their video and
+    * channel data, without having to provide authentication credentials for each individual channel.
+    * The CMS account that the user authenticates with must be linked to the specified YouTube content
+    * owner.
+    *
+
+       */
+      public java.lang.String getOnBehalfOfContentOwner() {
+        return onBehalfOfContentOwner;
+      }
+
+      /**
+       * *Note:* This parameter is intended exclusively for YouTube content partners. The
+       * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials
+       * identify a YouTube CMS user who is acting on behalf of the content owner specified in the
+       * parameter value. This parameter is intended for YouTube content partners that own and
+       * manage many different YouTube channels. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The CMS account that the user authenticates with
+       * must be linked to the specified YouTube content owner.
+       */
+      public Delete setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
+        this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Inserts a new resource into this collection.
+     *
+     * Create a request for the method "playlistImages.insert".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.youtube.model.PlaylistImage}
+     * @return the request
+     */
+    public Insert insert(com.google.api.services.youtube.model.PlaylistImage content) throws java.io.IOException {
+      Insert result = new Insert(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends YouTubeRequest<com.google.api.services.youtube.model.PlaylistImage> {
+
+      private static final String REST_PATH = "youtube/v3/playlistImages";
+
+      /**
+       * Inserts a new resource into this collection.
+       *
+       * Create a request for the method "playlistImages.insert".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.youtube.model.PlaylistImage}
+       * @since 1.13
+       */
+      protected Insert(com.google.api.services.youtube.model.PlaylistImage content) {
+        super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.PlaylistImage.class);
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * *Note:* This parameter is intended exclusively for YouTube content partners. The
+       * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials
+       * identify a YouTube CMS user who is acting on behalf of the content owner specified in the
+       * parameter value. This parameter is intended for YouTube content partners that own and
+       * manage many different YouTube channels. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The CMS account that the user authenticates with
+       * must be linked to the specified YouTube content owner.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String onBehalfOfContentOwner;
+
+      /*** Note:* This parameter is intended exclusively for YouTube content partners. The
+    * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials identify
+    * a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value.
+    * This parameter is intended for YouTube content partners that own and manage many different YouTube
+    * channels. It allows content owners to authenticate once and get access to all their video and
+    * channel data, without having to provide authentication credentials for each individual channel.
+    * The CMS account that the user authenticates with must be linked to the specified YouTube content
+    * owner.
+    *
+
+       */
+      public java.lang.String getOnBehalfOfContentOwner() {
+        return onBehalfOfContentOwner;
+      }
+
+      /**
+       * *Note:* This parameter is intended exclusively for YouTube content partners. The
+       * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials
+       * identify a YouTube CMS user who is acting on behalf of the content owner specified in the
+       * parameter value. This parameter is intended for YouTube content partners that own and
+       * manage many different YouTube channels. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The CMS account that the user authenticates with
+       * must be linked to the specified YouTube content owner.
+       */
+      public Insert setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
+        this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+        return this;
+      }
+
+      /**
+       * This parameter can only be used in a properly authorized request. *Note:* This parameter is
+       * intended exclusively for YouTube content partners. The *onBehalfOfContentOwnerChannel*
+       * parameter specifies the YouTube channel ID of the channel to which a video is being added.
+       * This parameter is required when a request specifies a value for the onBehalfOfContentOwner
+       * parameter, and it can only be used in conjunction with that parameter. In addition, the
+       * request must be authorized using a CMS account that is linked to the content owner that the
+       * onBehalfOfContentOwner parameter specifies. Finally, the channel that the
+       * onBehalfOfContentOwnerChannel parameter value specifies must be linked to the content owner
+       * that the onBehalfOfContentOwner parameter specifies. This parameter is intended for YouTube
+       * content partners that own and manage many different YouTube channels. It allows content
+       * owners to authenticate once and perform actions on behalf of the channel specified in the
+       * parameter value, without having to provide authentication credentials for each separate
+       * channel.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String onBehalfOfContentOwnerChannel;
+
+      /** This parameter can only be used in a properly authorized request. *Note:* This parameter is
+     intended exclusively for YouTube content partners. The *onBehalfOfContentOwnerChannel* parameter
+     specifies the YouTube channel ID of the channel to which a video is being added. This parameter is
+     required when a request specifies a value for the onBehalfOfContentOwner parameter, and it can only
+     be used in conjunction with that parameter. In addition, the request must be authorized using a CMS
+     account that is linked to the content owner that the onBehalfOfContentOwner parameter specifies.
+     Finally, the channel that the onBehalfOfContentOwnerChannel parameter value specifies must be
+     linked to the content owner that the onBehalfOfContentOwner parameter specifies. This parameter is
+     intended for YouTube content partners that own and manage many different YouTube channels. It
+     allows content owners to authenticate once and perform actions on behalf of the channel specified
+     in the parameter value, without having to provide authentication credentials for each separate
+     channel.
+       */
+      public java.lang.String getOnBehalfOfContentOwnerChannel() {
+        return onBehalfOfContentOwnerChannel;
+      }
+
+      /**
+       * This parameter can only be used in a properly authorized request. *Note:* This parameter is
+       * intended exclusively for YouTube content partners. The *onBehalfOfContentOwnerChannel*
+       * parameter specifies the YouTube channel ID of the channel to which a video is being added.
+       * This parameter is required when a request specifies a value for the onBehalfOfContentOwner
+       * parameter, and it can only be used in conjunction with that parameter. In addition, the
+       * request must be authorized using a CMS account that is linked to the content owner that the
+       * onBehalfOfContentOwner parameter specifies. Finally, the channel that the
+       * onBehalfOfContentOwnerChannel parameter value specifies must be linked to the content owner
+       * that the onBehalfOfContentOwner parameter specifies. This parameter is intended for YouTube
+       * content partners that own and manage many different YouTube channels. It allows content
+       * owners to authenticate once and perform actions on behalf of the channel specified in the
+       * parameter value, without having to provide authentication credentials for each separate
+       * channel.
+       */
+      public Insert setOnBehalfOfContentOwnerChannel(java.lang.String onBehalfOfContentOwnerChannel) {
+        this.onBehalfOfContentOwnerChannel = onBehalfOfContentOwnerChannel;
+        return this;
+      }
+
+      /** The *part* parameter specifies the properties that the API response will include. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> part;
+
+      /** The *part* parameter specifies the properties that the API response will include.
+       */
+      public java.util.List<java.lang.String> getPart() {
+        return part;
+      }
+
+      /** The *part* parameter specifies the properties that the API response will include. */
+      public Insert setPart(java.util.List<java.lang.String> part) {
+        this.part = part;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a list of resources, possibly filtered.
+     *
+     * Create a request for the method "playlistImages.list".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends YouTubeRequest<com.google.api.services.youtube.model.PlaylistImageListResponse> {
+
+      private static final String REST_PATH = "youtube/v3/playlistImages";
+
+      /**
+       * Retrieves a list of resources, possibly filtered.
+       *
+       * Create a request for the method "playlistImages.list".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.PlaylistImageListResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The *maxResults* parameter specifies the maximum number of items that should be returned in
+       * the result set.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
+     result set. [default: 5] [minimum: 0] [maximum: 50]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The *maxResults* parameter specifies the maximum number of items that should be returned in
+       * the result set.
+       */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * *Note:* This parameter is intended exclusively for YouTube content partners. The
+       * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials
+       * identify a YouTube CMS user who is acting on behalf of the content owner specified in the
+       * parameter value. This parameter is intended for YouTube content partners that own and
+       * manage many different YouTube channels. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The CMS account that the user authenticates with
+       * must be linked to the specified YouTube content owner.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String onBehalfOfContentOwner;
+
+      /*** Note:* This parameter is intended exclusively for YouTube content partners. The
+    * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials identify
+    * a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value.
+    * This parameter is intended for YouTube content partners that own and manage many different YouTube
+    * channels. It allows content owners to authenticate once and get access to all their video and
+    * channel data, without having to provide authentication credentials for each individual channel.
+    * The CMS account that the user authenticates with must be linked to the specified YouTube content
+    * owner.
+    *
+
+       */
+      public java.lang.String getOnBehalfOfContentOwner() {
+        return onBehalfOfContentOwner;
+      }
+
+      /**
+       * *Note:* This parameter is intended exclusively for YouTube content partners. The
+       * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials
+       * identify a YouTube CMS user who is acting on behalf of the content owner specified in the
+       * parameter value. This parameter is intended for YouTube content partners that own and
+       * manage many different YouTube channels. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The CMS account that the user authenticates with
+       * must be linked to the specified YouTube content owner.
+       */
+      public List setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
+        this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+        return this;
+      }
+
+      /**
+       * This parameter can only be used in a properly authorized request. *Note:* This parameter is
+       * intended exclusively for YouTube content partners. The *onBehalfOfContentOwnerChannel*
+       * parameter specifies the YouTube channel ID of the channel to which a video is being added.
+       * This parameter is required when a request specifies a value for the onBehalfOfContentOwner
+       * parameter, and it can only be used in conjunction with that parameter. In addition, the
+       * request must be authorized using a CMS account that is linked to the content owner that the
+       * onBehalfOfContentOwner parameter specifies. Finally, the channel that the
+       * onBehalfOfContentOwnerChannel parameter value specifies must be linked to the content owner
+       * that the onBehalfOfContentOwner parameter specifies. This parameter is intended for YouTube
+       * content partners that own and manage many different YouTube channels. It allows content
+       * owners to authenticate once and perform actions on behalf of the channel specified in the
+       * parameter value, without having to provide authentication credentials for each separate
+       * channel.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String onBehalfOfContentOwnerChannel;
+
+      /** This parameter can only be used in a properly authorized request. *Note:* This parameter is
+     intended exclusively for YouTube content partners. The *onBehalfOfContentOwnerChannel* parameter
+     specifies the YouTube channel ID of the channel to which a video is being added. This parameter is
+     required when a request specifies a value for the onBehalfOfContentOwner parameter, and it can only
+     be used in conjunction with that parameter. In addition, the request must be authorized using a CMS
+     account that is linked to the content owner that the onBehalfOfContentOwner parameter specifies.
+     Finally, the channel that the onBehalfOfContentOwnerChannel parameter value specifies must be
+     linked to the content owner that the onBehalfOfContentOwner parameter specifies. This parameter is
+     intended for YouTube content partners that own and manage many different YouTube channels. It
+     allows content owners to authenticate once and perform actions on behalf of the channel specified
+     in the parameter value, without having to provide authentication credentials for each separate
+     channel.
+       */
+      public java.lang.String getOnBehalfOfContentOwnerChannel() {
+        return onBehalfOfContentOwnerChannel;
+      }
+
+      /**
+       * This parameter can only be used in a properly authorized request. *Note:* This parameter is
+       * intended exclusively for YouTube content partners. The *onBehalfOfContentOwnerChannel*
+       * parameter specifies the YouTube channel ID of the channel to which a video is being added.
+       * This parameter is required when a request specifies a value for the onBehalfOfContentOwner
+       * parameter, and it can only be used in conjunction with that parameter. In addition, the
+       * request must be authorized using a CMS account that is linked to the content owner that the
+       * onBehalfOfContentOwner parameter specifies. Finally, the channel that the
+       * onBehalfOfContentOwnerChannel parameter value specifies must be linked to the content owner
+       * that the onBehalfOfContentOwner parameter specifies. This parameter is intended for YouTube
+       * content partners that own and manage many different YouTube channels. It allows content
+       * owners to authenticate once and perform actions on behalf of the channel specified in the
+       * parameter value, without having to provide authentication credentials for each separate
+       * channel.
+       */
+      public List setOnBehalfOfContentOwnerChannel(java.lang.String onBehalfOfContentOwnerChannel) {
+        this.onBehalfOfContentOwnerChannel = onBehalfOfContentOwnerChannel;
+        return this;
+      }
+
+      /**
+       * The *pageToken* parameter identifies a specific page in the result set that should be
+       * returned. In an API response, the nextPageToken and prevPageToken properties identify other
+       * pages that could be retrieved.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The *pageToken* parameter identifies a specific page in the result set that should be returned. In
+     an API response, the nextPageToken and prevPageToken properties identify other pages that could be
+     retrieved.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * The *pageToken* parameter identifies a specific page in the result set that should be
+       * returned. In an API response, the nextPageToken and prevPageToken properties identify other
+       * pages that could be retrieved.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /** Return PlaylistImages for this playlist id. */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Return PlaylistImages for this playlist id.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Return PlaylistImages for this playlist id. */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * The *part* parameter specifies a comma-separated list of one or more playlistImage resource
+       * properties that the API response will include. If the parameter identifies a property that
+       * contains child properties, the child properties will be included in the response.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> part;
+
+      /** The *part* parameter specifies a comma-separated list of one or more playlistImage resource
+     properties that the API response will include. If the parameter identifies a property that contains
+     child properties, the child properties will be included in the response.
+       */
+      public java.util.List<java.lang.String> getPart() {
+        return part;
+      }
+
+      /**
+       * The *part* parameter specifies a comma-separated list of one or more playlistImage resource
+       * properties that the API response will include. If the parameter identifies a property that
+       * contains child properties, the child properties will be included in the response.
+       */
+      public List setPart(java.util.List<java.lang.String> part) {
+        this.part = part;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing resource.
+     *
+     * Create a request for the method "playlistImages.update".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.youtube.model.PlaylistImage}
+     * @return the request
+     */
+    public Update update(com.google.api.services.youtube.model.PlaylistImage content) throws java.io.IOException {
+      Update result = new Update(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends YouTubeRequest<com.google.api.services.youtube.model.PlaylistImage> {
+
+      private static final String REST_PATH = "youtube/v3/playlistImages";
+
+      /**
+       * Updates an existing resource.
+       *
+       * Create a request for the method "playlistImages.update".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.youtube.model.PlaylistImage}
+       * @since 1.13
+       */
+      protected Update(com.google.api.services.youtube.model.PlaylistImage content) {
+        super(YouTube.this, "PUT", REST_PATH, content, com.google.api.services.youtube.model.PlaylistImage.class);
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * *Note:* This parameter is intended exclusively for YouTube content partners. The
+       * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials
+       * identify a YouTube CMS user who is acting on behalf of the content owner specified in the
+       * parameter value. This parameter is intended for YouTube content partners that own and
+       * manage many different YouTube channels. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The CMS account that the user authenticates with
+       * must be linked to the specified YouTube content owner.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String onBehalfOfContentOwner;
+
+      /*** Note:* This parameter is intended exclusively for YouTube content partners. The
+    * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials identify
+    * a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value.
+    * This parameter is intended for YouTube content partners that own and manage many different YouTube
+    * channels. It allows content owners to authenticate once and get access to all their video and
+    * channel data, without having to provide authentication credentials for each individual channel.
+    * The CMS account that the user authenticates with must be linked to the specified YouTube content
+    * owner.
+    *
+
+       */
+      public java.lang.String getOnBehalfOfContentOwner() {
+        return onBehalfOfContentOwner;
+      }
+
+      /**
+       * *Note:* This parameter is intended exclusively for YouTube content partners. The
+       * *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials
+       * identify a YouTube CMS user who is acting on behalf of the content owner specified in the
+       * parameter value. This parameter is intended for YouTube content partners that own and
+       * manage many different YouTube channels. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The CMS account that the user authenticates with
+       * must be linked to the specified YouTube content owner.
+       */
+      public Update setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
+        this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+        return this;
+      }
+
+      /** The *part* parameter specifies the properties that the API response will include. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> part;
+
+      /** The *part* parameter specifies the properties that the API response will include.
+       */
+      public java.util.List<java.lang.String> getPart() {
+        return part;
+      }
+
+      /** The *part* parameter specifies the properties that the API response will include. */
+      public Update setPart(java.util.List<java.lang.String> part) {
+        this.part = part;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the PlaylistItems collection.
    *
    * <p>The typical use is:</p>
@@ -12135,22 +12961,6 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       /** Display the content as seen by viewers in this country. */
       public List setRegionCode(java.lang.String regionCode) {
         this.regionCode = regionCode;
-        return this;
-      }
-
-      /** Search related to a resource. */
-      @com.google.api.client.util.Key
-      private java.lang.String relatedToVideoId;
-
-      /** Search related to a resource.
-       */
-      public java.lang.String getRelatedToVideoId() {
-        return relatedToVideoId;
-      }
-
-      /** Search related to a resource. */
-      public List setRelatedToVideoId(java.lang.String relatedToVideoId) {
-        this.relatedToVideoId = relatedToVideoId;
         return this;
       }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.cloudbuild.v2.model;
 
 /**
- * A connection to a SCM like GitHub, GitHub Enterprise, Bitbucket Server or GitLab.
+ * A connection to a SCM like GitHub, GitHub Enterprise, Bitbucket Data Center or GitLab.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

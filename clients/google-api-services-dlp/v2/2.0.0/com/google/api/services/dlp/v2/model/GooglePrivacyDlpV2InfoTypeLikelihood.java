@@ -17,9 +17,10 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Configuration to control custom minimum likelihoods per infotype. Used when certain infotypes
- * need to return with higher or lower precision than the baseline, i.e. when wanting PERSON_NAME to
- * return all possible names without lowering the precision of other infotypes.
+ * Configuration for setting a minimum likelihood per infotype. Used to customize the minimum
+ * likelihood level for specific infotypes in the request. For example, use this if you want to
+ * lower the precision for PERSON_NAME without lowering the precision for the other infotypes in the
+ * request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
@@ -41,7 +42,7 @@ public final class GooglePrivacyDlpV2InfoTypeLikelihood extends com.google.api.c
   private GooglePrivacyDlpV2InfoType infoType;
 
   /**
-   * Only returns findings equal or above this threshold. This field is required or else the
+   * Only returns findings equal to or above this threshold. This field is required or else the
    * configuration fails.
    * The value may be {@code null}.
    */
@@ -68,7 +69,7 @@ public final class GooglePrivacyDlpV2InfoTypeLikelihood extends com.google.api.c
   }
 
   /**
-   * Only returns findings equal or above this threshold. This field is required or else the
+   * Only returns findings equal to or above this threshold. This field is required or else the
    * configuration fails.
    * @return value or {@code null} for none
    */
@@ -77,7 +78,7 @@ public final class GooglePrivacyDlpV2InfoTypeLikelihood extends com.google.api.c
   }
 
   /**
-   * Only returns findings equal or above this threshold. This field is required or else the
+   * Only returns findings equal to or above this threshold. This field is required or else the
    * configuration fails.
    * @param minLikelihood minLikelihood or {@code null} for none
    */

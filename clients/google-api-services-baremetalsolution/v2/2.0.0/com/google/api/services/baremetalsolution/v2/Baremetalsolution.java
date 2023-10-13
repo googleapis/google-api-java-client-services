@@ -1406,13 +1406,13 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
 
           /**
            * The list of fields to update. The currently supported fields are: `labels`
-           * `hyperthreading_enabled` `os_image` `ssh_keys`
+           * `hyperthreading_enabled` `os_image` `ssh_keys` `kms_key_version`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** The list of fields to update. The currently supported fields are: `labels` `hyperthreading_enabled`
-         `os_image` `ssh_keys`
+         `os_image` `ssh_keys` `kms_key_version`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1420,7 +1420,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
 
           /**
            * The list of fields to update. The currently supported fields are: `labels`
-           * `hyperthreading_enabled` `os_image` `ssh_keys`
+           * `hyperthreading_enabled` `os_image` `ssh_keys` `kms_key_version`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

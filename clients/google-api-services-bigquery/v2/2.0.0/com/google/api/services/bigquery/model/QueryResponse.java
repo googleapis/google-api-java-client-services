@@ -111,6 +111,14 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.String pageToken;
 
   /**
+   * Query ID for the completed query. This ID will be auto-generated. This field is not yet
+   * available and it is currently not guaranteed to be populated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String queryId;
+
+  /**
    * An object with as many results as can be contained within the maximum permitted reply size. To
    * get any additional rows, you can call GetQueryResults and specify the jobReference returned
    * above.
@@ -323,6 +331,25 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    */
   public QueryResponse setPageToken(java.lang.String pageToken) {
     this.pageToken = pageToken;
+    return this;
+  }
+
+  /**
+   * Query ID for the completed query. This ID will be auto-generated. This field is not yet
+   * available and it is currently not guaranteed to be populated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQueryId() {
+    return queryId;
+  }
+
+  /**
+   * Query ID for the completed query. This ID will be auto-generated. This field is not yet
+   * available and it is currently not guaranteed to be populated.
+   * @param queryId queryId or {@code null} for none
+   */
+  public QueryResponse setQueryId(java.lang.String queryId) {
+    this.queryId = queryId;
     return this;
   }
 

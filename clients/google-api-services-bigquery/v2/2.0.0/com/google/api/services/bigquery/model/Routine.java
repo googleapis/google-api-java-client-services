@@ -164,6 +164,14 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.String routineType;
 
   /**
+   * Optional. The security mode of the routine, if defined. If not defined, the security mode is
+   * automatically determined from the routine's configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securityMode;
+
+  /**
    * Optional. Spark specific options.
    * The value may be {@code null}.
    */
@@ -478,6 +486,25 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   public Routine setRoutineType(java.lang.String routineType) {
     this.routineType = routineType;
+    return this;
+  }
+
+  /**
+   * Optional. The security mode of the routine, if defined. If not defined, the security mode is
+   * automatically determined from the routine's configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecurityMode() {
+    return securityMode;
+  }
+
+  /**
+   * Optional. The security mode of the routine, if defined. If not defined, the security mode is
+   * automatically determined from the routine's configuration.
+   * @param securityMode securityMode or {@code null} for none
+   */
+  public Routine setSecurityMode(java.lang.String securityMode) {
+    this.securityMode = securityMode;
     return this;
   }
 

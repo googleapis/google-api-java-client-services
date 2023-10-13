@@ -17,7 +17,12 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for SparkLoggingInfo.
+ * Reason about why a Job was created from a
+ * [`jobs.query`](https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/query) method when
+ * used with `JOB_CREATION_OPTIONAL` Job creation mode. For
+ * [`jobs.insert`](https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/insert) method
+ * calls it will always be `REQUESTED`. This feature is not yet available. Jobs will always be
+ * created.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -27,64 +32,40 @@ package com.google.api.services.bigquery.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SparkLoggingInfo extends com.google.api.client.json.GenericJson {
+public final class JobCreationReason extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] Project ID used for logging
+   * Output only. Specifies the high level reason why a Job was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String projectId;
+  private java.lang.String code;
 
   /**
-   * [Output-only] Resource type used for logging
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String resourceType;
-
-  /**
-   * [Output-only] Project ID used for logging
+   * Output only. Specifies the high level reason why a Job was created.
    * @return value or {@code null} for none
    */
-  public java.lang.String getProjectId() {
-    return projectId;
+  public java.lang.String getCode() {
+    return code;
   }
 
   /**
-   * [Output-only] Project ID used for logging
-   * @param projectId projectId or {@code null} for none
+   * Output only. Specifies the high level reason why a Job was created.
+   * @param code code or {@code null} for none
    */
-  public SparkLoggingInfo setProjectId(java.lang.String projectId) {
-    this.projectId = projectId;
-    return this;
-  }
-
-  /**
-   * [Output-only] Resource type used for logging
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getResourceType() {
-    return resourceType;
-  }
-
-  /**
-   * [Output-only] Resource type used for logging
-   * @param resourceType resourceType or {@code null} for none
-   */
-  public SparkLoggingInfo setResourceType(java.lang.String resourceType) {
-    this.resourceType = resourceType;
+  public JobCreationReason setCode(java.lang.String code) {
+    this.code = code;
     return this;
   }
 
   @Override
-  public SparkLoggingInfo set(String fieldName, Object value) {
-    return (SparkLoggingInfo) super.set(fieldName, value);
+  public JobCreationReason set(String fieldName, Object value) {
+    return (JobCreationReason) super.set(fieldName, value);
   }
 
   @Override
-  public SparkLoggingInfo clone() {
-    return (SparkLoggingInfo) super.clone();
+  public JobCreationReason clone() {
+    return (JobCreationReason) super.clone();
   }
 
 }

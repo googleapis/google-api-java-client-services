@@ -34,7 +34,7 @@ public final class RepricingRuleEligibleOfferMatcherStringMatcher extends com.go
    * String attributes, as long as such attribute of an offer is one of the string attribute values,
    * the offer is considered as passing the matcher. The string matcher checks an offer for
    * inclusivity in the string attributes, not equality. Only literal string matching is supported,
-   * no regex.
+   * no regular expressions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class RepricingRuleEligibleOfferMatcherStringMatcher extends com.go
    * String attributes, as long as such attribute of an offer is one of the string attribute values,
    * the offer is considered as passing the matcher. The string matcher checks an offer for
    * inclusivity in the string attributes, not equality. Only literal string matching is supported,
-   * no regex.
+   * no regular expressions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStrAttributes() {
@@ -55,7 +55,7 @@ public final class RepricingRuleEligibleOfferMatcherStringMatcher extends com.go
    * String attributes, as long as such attribute of an offer is one of the string attribute values,
    * the offer is considered as passing the matcher. The string matcher checks an offer for
    * inclusivity in the string attributes, not equality. Only literal string matching is supported,
-   * no regex.
+   * no regular expressions.
    * @param strAttributes strAttributes or {@code null} for none
    */
   public RepricingRuleEligibleOfferMatcherStringMatcher setStrAttributes(java.util.List<java.lang.String> strAttributes) {

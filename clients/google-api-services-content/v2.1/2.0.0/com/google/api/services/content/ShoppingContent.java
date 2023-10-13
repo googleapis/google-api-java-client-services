@@ -23989,14 +23989,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * [CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (e.g.
-       * "US"), used as a filter on repricing rules.
+       * [CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (for
+       * example, "US"), used as a filter on repricing rules.
        */
       @com.google.api.client.util.Key
       private java.lang.String countryCode;
 
-      /**[ CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (e.g. "US"),
-    [ used as a filter on repricing rules.
+      /**[ CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (for example,
+    [ "US"), used as a filter on repricing rules.
     [
 
        */
@@ -24005,8 +24005,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * [CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (e.g.
-       * "US"), used as a filter on repricing rules.
+       * [CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (for
+       * example, "US"), used as a filter on repricing rules.
        */
       public List setCountryCode(java.lang.String countryCode) {
         this.countryCode = countryCode;
@@ -24256,7 +24256,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     public class Repricingreports {
 
       /**
-       * Lists the metrics report for a given Repricing rule.
+       * *Deprecated*: New merchants can't start using this service. Lists the metrics report for a given
+       * Repricing rule.
        *
        * Create a request for the method "repricingreports.list".
        *
@@ -24278,7 +24279,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         private static final String REST_PATH = "{merchantId}/repricingrules/{ruleId}/repricingreports";
 
         /**
-         * Lists the metrics report for a given Repricing rule.
+         * *Deprecated*: New merchants can't start using this service. Lists the metrics report for a
+         * given Repricing rule.
          *
          * Create a request for the method "repricingreports.list".
          *

@@ -17,8 +17,9 @@
 package com.google.api.services.content.model;
 
 /**
- * Represents a repricing rule. A repricing rule is used by shopping serving to adjust transactable
- * offer prices if conditions are met.
+ * *Deprecated*: New merchants can't start using this resource. Represents a repricing rule. A
+ * repricing rule is used by shopping serving to adjust transactable offer prices if conditions are
+ * met.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -40,7 +41,7 @@ public final class RepricingRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Immutable. [CLDR country
-   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (e.g. "US").
+   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (for example, "US").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +138,7 @@ public final class RepricingRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Immutable. [CLDR country
-   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (e.g. "US").
+   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (for example, "US").
    * @return value or {@code null} for none
    */
   public java.lang.String getCountryCode() {
@@ -146,7 +147,7 @@ public final class RepricingRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Immutable. [CLDR country
-   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (e.g. "US").
+   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (for example, "US").
    * @param countryCode countryCode or {@code null} for none
    */
   public RepricingRule setCountryCode(java.lang.String countryCode) {

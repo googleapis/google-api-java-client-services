@@ -39,7 +39,7 @@ public final class RepricingRuleCostOfGoodsSaleRule extends com.google.api.clien
   private java.lang.Integer percentageDelta;
 
   /**
-   * The price delta against the COGS. E.g. 2 means $2 more of the COGS.
+   * The price delta against the COGS. For example, 2 means $2 more of the COGS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class RepricingRuleCostOfGoodsSaleRule extends com.google.api.clien
   }
 
   /**
-   * The price delta against the COGS. E.g. 2 means $2 more of the COGS.
+   * The price delta against the COGS. For example, 2 means $2 more of the COGS.
    * @return value or {@code null} for none
    */
   public java.lang.String getPriceDelta() {
@@ -73,7 +73,7 @@ public final class RepricingRuleCostOfGoodsSaleRule extends com.google.api.clien
   }
 
   /**
-   * The price delta against the COGS. E.g. 2 means $2 more of the COGS.
+   * The price delta against the COGS. For example, 2 means $2 more of the COGS.
    * @param priceDelta priceDelta or {@code null} for none
    */
   public RepricingRuleCostOfGoodsSaleRule setPriceDelta(java.lang.String priceDelta) {

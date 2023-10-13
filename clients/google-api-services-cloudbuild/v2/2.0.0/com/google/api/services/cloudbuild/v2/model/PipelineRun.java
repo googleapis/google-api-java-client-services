@@ -113,7 +113,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   private PipelineRef pipelineRef;
 
   /**
-   * Status of the PipelineRun.
+   * Pipelinerun status the user can provide. Used for cancellation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -355,7 +355,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the PipelineRun.
+   * Pipelinerun status the user can provide. Used for cancellation.
    * @return value or {@code null} for none
    */
   public java.lang.String getPipelineRunStatus() {
@@ -363,7 +363,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the PipelineRun.
+   * Pipelinerun status the user can provide. Used for cancellation.
    * @param pipelineRunStatus pipelineRunStatus or {@code null} for none
    */
   public PipelineRun setPipelineRunStatus(java.lang.String pipelineRunStatus) {

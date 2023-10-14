@@ -1843,7 +1843,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the workstations server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Full name of this workstation cluster.
+         * @param name Identifier. Full name of this workstation cluster.
          * @param content the {@link com.google.api.services.workstations.v1.model.WorkstationCluster}
          * @return the request
          */
@@ -1871,7 +1871,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Full name of this workstation cluster.
+           * @param name Identifier. Full name of this workstation cluster.
            * @param content the {@link com.google.api.services.workstations.v1.model.WorkstationCluster}
            * @since 1.13
            */
@@ -1940,17 +1940,17 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Full name of this workstation cluster. */
+          /** Identifier. Full name of this workstation cluster. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Full name of this workstation cluster.
+          /** Identifier. Full name of this workstation cluster.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Full name of this workstation cluster. */
+          /** Identifier. Full name of this workstation cluster. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3109,7 +3109,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the workstations server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Full name of this workstation configuration.
+           * @param name Identifier. Full name of this workstation configuration.
            * @param content the {@link com.google.api.services.workstations.v1.model.WorkstationConfig}
            * @return the request
            */
@@ -3137,7 +3137,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Full name of this workstation configuration.
+             * @param name Identifier. Full name of this workstation configuration.
              * @param content the {@link com.google.api.services.workstations.v1.model.WorkstationConfig}
              * @since 1.13
              */
@@ -3206,17 +3206,17 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Full name of this workstation configuration. */
+            /** Identifier. Full name of this workstation configuration. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Full name of this workstation configuration.
+            /** Identifier. Full name of this workstation configuration.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Full name of this workstation configuration. */
+            /** Identifier. Full name of this workstation configuration. */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4787,7 +4787,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
              * This request holds the parameters needed by the workstations server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Full name of this workstation.
+             * @param name Identifier. Full name of this workstation.
              * @param content the {@link com.google.api.services.workstations.v1.model.Workstation}
              * @return the request
              */
@@ -4815,7 +4815,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Full name of this workstation.
+               * @param name Identifier. Full name of this workstation.
                * @param content the {@link com.google.api.services.workstations.v1.model.Workstation}
                * @since 1.13
                */
@@ -4884,17 +4884,17 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Full name of this workstation. */
+              /** Identifier. Full name of this workstation. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Full name of this workstation.
+              /** Identifier. Full name of this workstation.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Full name of this workstation. */
+              /** Identifier. Full name of this workstation. */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

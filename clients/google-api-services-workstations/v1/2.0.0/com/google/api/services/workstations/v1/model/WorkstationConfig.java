@@ -145,7 +145,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Full name of this workstation configuration.
+   * Identifier. Full name of this workstation configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -471,7 +471,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Full name of this workstation configuration.
+   * Identifier. Full name of this workstation configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -479,7 +479,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Full name of this workstation configuration.
+   * Identifier. Full name of this workstation configuration.
    * @param name name or {@code null} for none
    */
   public WorkstationConfig setName(java.lang.String name) {

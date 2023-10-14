@@ -56,8 +56,8 @@ public final class GcePersistentDisk extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Name of the snapshot to use as the source for the disk. Must be empty if source_image
-   * is set. Updating source_snapshot will update content in the ephemeral directory after the
-   * workstation is restarted. This field is mutable.
+   * is set. Must be empty if read_only is false. Updating source_snapshot will update content in
+   * the ephemeral directory after the workstation is restarted. This field is mutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,8 +122,8 @@ public final class GcePersistentDisk extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Name of the snapshot to use as the source for the disk. Must be empty if source_image
-   * is set. Updating source_snapshot will update content in the ephemeral directory after the
-   * workstation is restarted. This field is mutable.
+   * is set. Must be empty if read_only is false. Updating source_snapshot will update content in
+   * the ephemeral directory after the workstation is restarted. This field is mutable.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -132,8 +132,8 @@ public final class GcePersistentDisk extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Name of the snapshot to use as the source for the disk. Must be empty if source_image
-   * is set. Updating source_snapshot will update content in the ephemeral directory after the
-   * workstation is restarted. This field is mutable.
+   * is set. Must be empty if read_only is false. Updating source_snapshot will update content in
+   * the ephemeral directory after the workstation is restarted. This field is mutable.
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public GcePersistentDisk setSourceSnapshot(java.lang.String sourceSnapshot) {

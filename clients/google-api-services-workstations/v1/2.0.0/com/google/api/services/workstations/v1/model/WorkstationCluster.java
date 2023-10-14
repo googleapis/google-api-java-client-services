@@ -107,7 +107,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Full name of this workstation cluster.
+   * Identifier. Full name of this workstation cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -325,7 +325,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Full name of this workstation cluster.
+   * Identifier. Full name of this workstation cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -333,7 +333,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Full name of this workstation cluster.
+   * Identifier. Full name of this workstation cluster.
    * @param name name or {@code null} for none
    */
   public WorkstationCluster setName(java.lang.String name) {

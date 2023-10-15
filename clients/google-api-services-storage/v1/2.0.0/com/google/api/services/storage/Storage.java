@@ -3775,6 +3775,1101 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the ManagedFolders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Storage storage = new Storage(...);}
+   *   {@code Storage.ManagedFolders.List request = storage.managedFolders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public ManagedFolders managedFolders() {
+    return new ManagedFolders();
+  }
+
+  /**
+   * The "managedFolders" collection of methods.
+   */
+  public class ManagedFolders {
+
+    /**
+     * Permanently deletes a managed folder.
+     *
+     * Create a request for the method "managedFolders.delete".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket containing the managed folder.
+     * @param managedFolder The managed folder name/path.
+     * @return the request
+     */
+    public Delete delete(java.lang.String bucket, java.lang.String managedFolder) throws java.io.IOException {
+      Delete result = new Delete(bucket, managedFolder);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends StorageRequest<Void> {
+
+      private static final String REST_PATH = "b/{bucket}/managedFolders/{managedFolder}";
+
+      /**
+       * Permanently deletes a managed folder.
+       *
+       * Create a request for the method "managedFolders.delete".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket containing the managed folder.
+       * @param managedFolder The managed folder name/path.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String bucket, java.lang.String managedFolder) {
+        super(Storage.this, "DELETE", REST_PATH, null, Void.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.managedFolder = com.google.api.client.util.Preconditions.checkNotNull(managedFolder, "Required parameter managedFolder must be specified.");
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket containing the managed folder.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      public Delete setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The managed folder name/path. */
+      @com.google.api.client.util.Key
+      private java.lang.String managedFolder;
+
+      /** The managed folder name/path.
+       */
+      public java.lang.String getManagedFolder() {
+        return managedFolder;
+      }
+
+      /** The managed folder name/path. */
+      public Delete setManagedFolder(java.lang.String managedFolder) {
+        this.managedFolder = managedFolder;
+        return this;
+      }
+
+      /** If set, only deletes the managed folder if its metageneration matches this value. */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationMatch;
+
+      /** If set, only deletes the managed folder if its metageneration matches this value.
+       */
+      public java.lang.Long getIfMetagenerationMatch() {
+        return ifMetagenerationMatch;
+      }
+
+      /** If set, only deletes the managed folder if its metageneration matches this value. */
+      public Delete setIfMetagenerationMatch(java.lang.Long ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+      }
+
+      /**
+       * If set, only deletes the managed folder if its metageneration does not match this value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationNotMatch;
+
+      /** If set, only deletes the managed folder if its metageneration does not match this value.
+       */
+      public java.lang.Long getIfMetagenerationNotMatch() {
+        return ifMetagenerationNotMatch;
+      }
+
+      /**
+       * If set, only deletes the managed folder if its metageneration does not match this value.
+       */
+      public Delete setIfMetagenerationNotMatch(java.lang.Long ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns metadata of the specified managed folder.
+     *
+     * Create a request for the method "managedFolders.get".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket containing the managed folder.
+     * @param managedFolder The managed folder name/path.
+     * @return the request
+     */
+    public Get get(java.lang.String bucket, java.lang.String managedFolder) throws java.io.IOException {
+      Get result = new Get(bucket, managedFolder);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends StorageRequest<com.google.api.services.storage.model.ManagedFolder> {
+
+      private static final String REST_PATH = "b/{bucket}/managedFolders/{managedFolder}";
+
+      /**
+       * Returns metadata of the specified managed folder.
+       *
+       * Create a request for the method "managedFolders.get".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket containing the managed folder.
+       * @param managedFolder The managed folder name/path.
+       * @since 1.13
+       */
+      protected Get(java.lang.String bucket, java.lang.String managedFolder) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.ManagedFolder.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.managedFolder = com.google.api.client.util.Preconditions.checkNotNull(managedFolder, "Required parameter managedFolder must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket containing the managed folder.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      public Get setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The managed folder name/path. */
+      @com.google.api.client.util.Key
+      private java.lang.String managedFolder;
+
+      /** The managed folder name/path.
+       */
+      public java.lang.String getManagedFolder() {
+        return managedFolder;
+      }
+
+      /** The managed folder name/path. */
+      public Get setManagedFolder(java.lang.String managedFolder) {
+        this.managedFolder = managedFolder;
+        return this;
+      }
+
+      /**
+       * Makes the return of the managed folder metadata conditional on whether the managed folder's
+       * current metageneration matches the given value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationMatch;
+
+      /** Makes the return of the managed folder metadata conditional on whether the managed folder's current
+     metageneration matches the given value.
+       */
+      public java.lang.Long getIfMetagenerationMatch() {
+        return ifMetagenerationMatch;
+      }
+
+      /**
+       * Makes the return of the managed folder metadata conditional on whether the managed folder's
+       * current metageneration matches the given value.
+       */
+      public Get setIfMetagenerationMatch(java.lang.Long ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+      }
+
+      /**
+       * Makes the return of the managed folder metadata conditional on whether the managed folder's
+       * current metageneration does not match the given value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationNotMatch;
+
+      /** Makes the return of the managed folder metadata conditional on whether the managed folder's current
+     metageneration does not match the given value.
+       */
+      public java.lang.Long getIfMetagenerationNotMatch() {
+        return ifMetagenerationNotMatch;
+      }
+
+      /**
+       * Makes the return of the managed folder metadata conditional on whether the managed folder's
+       * current metageneration does not match the given value.
+       */
+      public Get setIfMetagenerationNotMatch(java.lang.Long ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns an IAM policy for the specified managed folder.
+     *
+     * Create a request for the method "managedFolders.getIamPolicy".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket containing the managed folder.
+     * @param managedFolder The managed folder name/path.
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String bucket, java.lang.String managedFolder) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(bucket, managedFolder);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends StorageRequest<com.google.api.services.storage.model.Policy> {
+
+      private static final String REST_PATH = "b/{bucket}/managedFolders/{managedFolder}/iam";
+
+      /**
+       * Returns an IAM policy for the specified managed folder.
+       *
+       * Create a request for the method "managedFolders.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket containing the managed folder.
+       * @param managedFolder The managed folder name/path.
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String bucket, java.lang.String managedFolder) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.Policy.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.managedFolder = com.google.api.client.util.Preconditions.checkNotNull(managedFolder, "Required parameter managedFolder must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUserIp(java.lang.String userIp) {
+        return (GetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket containing the managed folder.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      public GetIamPolicy setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The managed folder name/path. */
+      @com.google.api.client.util.Key
+      private java.lang.String managedFolder;
+
+      /** The managed folder name/path.
+       */
+      public java.lang.String getManagedFolder() {
+        return managedFolder;
+      }
+
+      /** The managed folder name/path. */
+      public GetIamPolicy setManagedFolder(java.lang.String managedFolder) {
+        this.managedFolder = managedFolder;
+        return this;
+      }
+
+      /**
+       * The IAM policy format version to be returned. If the optionsRequestedPolicyVersion is for
+       * an older version that doesn't support part of the requested IAM policy, the request fails.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer optionsRequestedPolicyVersion;
+
+      /** The IAM policy format version to be returned. If the optionsRequestedPolicyVersion is for an older
+     version that doesn't support part of the requested IAM policy, the request fails.
+
+     [minimum: 1]
+       */
+      public java.lang.Integer getOptionsRequestedPolicyVersion() {
+        return optionsRequestedPolicyVersion;
+      }
+
+      /**
+       * The IAM policy format version to be returned. If the optionsRequestedPolicyVersion is for
+       * an older version that doesn't support part of the requested IAM policy, the request fails.
+       */
+      public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+        return this;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      @com.google.api.client.util.Key
+      private java.lang.String userProject;
+
+      /** The project to be billed for this request. Required for Requester Pays buckets.
+       */
+      public java.lang.String getUserProject() {
+        return userProject;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      public GetIamPolicy setUserProject(java.lang.String userProject) {
+        this.userProject = userProject;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a new managed folder.
+     *
+     * Create a request for the method "managedFolders.insert".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket containing the managed folder.
+     * @param content the {@link com.google.api.services.storage.model.ManagedFolder}
+     * @return the request
+     */
+    public Insert insert(java.lang.String bucket, com.google.api.services.storage.model.ManagedFolder content) throws java.io.IOException {
+      Insert result = new Insert(bucket, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends StorageRequest<com.google.api.services.storage.model.ManagedFolder> {
+
+      private static final String REST_PATH = "b/{bucket}/managedFolders";
+
+      /**
+       * Creates a new managed folder.
+       *
+       * Create a request for the method "managedFolders.insert".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket containing the managed folder.
+       * @param content the {@link com.google.api.services.storage.model.ManagedFolder}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String bucket, com.google.api.services.storage.model.ManagedFolder content) {
+        super(Storage.this, "POST", REST_PATH, content, com.google.api.services.storage.model.ManagedFolder.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket containing the managed folder.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      public Insert setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists managed folders in the given bucket.
+     *
+     * Create a request for the method "managedFolders.list".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket containing the managed folder.
+     * @return the request
+     */
+    public List list(java.lang.String bucket) throws java.io.IOException {
+      List result = new List(bucket);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends StorageRequest<com.google.api.services.storage.model.ManagedFolders> {
+
+      private static final String REST_PATH = "b/{bucket}/managedFolders";
+
+      /**
+       * Lists managed folders in the given bucket.
+       *
+       * Create a request for the method "managedFolders.list".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket containing the managed folder.
+       * @since 1.13
+       */
+      protected List(java.lang.String bucket) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.ManagedFolders.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket containing the managed folder.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      public List setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** Maximum number of items return in a single page of responses. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Maximum number of items return in a single page of responses.
+
+     [minimum: 0]
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Maximum number of items return in a single page of responses. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A previously-returned page token representing part of the larger set of results to view.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A previously-returned page token representing part of the larger set of results to view.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A previously-returned page token representing part of the larger set of results to view.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /** The managed folder name/path prefix to filter the output list of results. */
+      @com.google.api.client.util.Key
+      private java.lang.String prefix;
+
+      /** The managed folder name/path prefix to filter the output list of results.
+       */
+      public java.lang.String getPrefix() {
+        return prefix;
+      }
+
+      /** The managed folder name/path prefix to filter the output list of results. */
+      public List setPrefix(java.lang.String prefix) {
+        this.prefix = prefix;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an IAM policy for the specified managed folder.
+     *
+     * Create a request for the method "managedFolders.setIamPolicy".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket containing the managed folder.
+     * @param managedFolder The managed folder name/path.
+     * @param content the {@link com.google.api.services.storage.model.Policy}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String bucket, java.lang.String managedFolder, com.google.api.services.storage.model.Policy content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(bucket, managedFolder, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends StorageRequest<com.google.api.services.storage.model.Policy> {
+
+      private static final String REST_PATH = "b/{bucket}/managedFolders/{managedFolder}/iam";
+
+      /**
+       * Updates an IAM policy for the specified managed folder.
+       *
+       * Create a request for the method "managedFolders.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket containing the managed folder.
+       * @param managedFolder The managed folder name/path.
+       * @param content the {@link com.google.api.services.storage.model.Policy}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String bucket, java.lang.String managedFolder, com.google.api.services.storage.model.Policy content) {
+        super(Storage.this, "PUT", REST_PATH, content, com.google.api.services.storage.model.Policy.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.managedFolder = com.google.api.client.util.Preconditions.checkNotNull(managedFolder, "Required parameter managedFolder must be specified.");
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUserIp(java.lang.String userIp) {
+        return (SetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket containing the managed folder.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      public SetIamPolicy setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The managed folder name/path. */
+      @com.google.api.client.util.Key
+      private java.lang.String managedFolder;
+
+      /** The managed folder name/path.
+       */
+      public java.lang.String getManagedFolder() {
+        return managedFolder;
+      }
+
+      /** The managed folder name/path. */
+      public SetIamPolicy setManagedFolder(java.lang.String managedFolder) {
+        this.managedFolder = managedFolder;
+        return this;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      @com.google.api.client.util.Key
+      private java.lang.String userProject;
+
+      /** The project to be billed for this request. Required for Requester Pays buckets.
+       */
+      public java.lang.String getUserProject() {
+        return userProject;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      public SetIamPolicy setUserProject(java.lang.String userProject) {
+        this.userProject = userProject;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Tests a set of permissions on the given managed folder to see which, if any, are held by the
+     * caller.
+     *
+     * Create a request for the method "managedFolders.testIamPermissions".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket containing the managed folder.
+     * @param managedFolder The managed folder name/path.
+     * @param permissions Permissions to test.
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String bucket, java.lang.String managedFolder, java.util.List<java.lang.String> permissions) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(bucket, managedFolder, permissions);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends StorageRequest<com.google.api.services.storage.model.TestIamPermissionsResponse> {
+
+      private static final String REST_PATH = "b/{bucket}/managedFolders/{managedFolder}/iam/testPermissions";
+
+      /**
+       * Tests a set of permissions on the given managed folder to see which, if any, are held by the
+       * caller.
+       *
+       * Create a request for the method "managedFolders.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+       * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket containing the managed folder.
+       * @param managedFolder The managed folder name/path.
+       * @param permissions Permissions to test.
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String bucket, java.lang.String managedFolder, java.util.List<java.lang.String> permissions) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.TestIamPermissionsResponse.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.managedFolder = com.google.api.client.util.Preconditions.checkNotNull(managedFolder, "Required parameter managedFolder must be specified.");
+        this.permissions = com.google.api.client.util.Preconditions.checkNotNull(permissions, "Required parameter permissions must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUserIp(java.lang.String userIp) {
+        return (TestIamPermissions) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket containing the managed folder.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket containing the managed folder. */
+      public TestIamPermissions setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The managed folder name/path. */
+      @com.google.api.client.util.Key
+      private java.lang.String managedFolder;
+
+      /** The managed folder name/path.
+       */
+      public java.lang.String getManagedFolder() {
+        return managedFolder;
+      }
+
+      /** The managed folder name/path. */
+      public TestIamPermissions setManagedFolder(java.lang.String managedFolder) {
+        this.managedFolder = managedFolder;
+        return this;
+      }
+
+      /** Permissions to test. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> permissions;
+
+      /** Permissions to test.
+       */
+      public java.util.List<java.lang.String> getPermissions() {
+        return permissions;
+      }
+
+      /** Permissions to test. */
+      public TestIamPermissions setPermissions(java.util.List<java.lang.String> permissions) {
+        this.permissions = permissions;
+        return this;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      @com.google.api.client.util.Key
+      private java.lang.String userProject;
+
+      /** The project to be billed for this request. Required for Requester Pays buckets.
+       */
+      public java.lang.String getUserProject() {
+        return userProject;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      public TestIamPermissions setUserProject(java.lang.String userProject) {
+        this.userProject = userProject;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Notifications collection.
    *
    * <p>The typical use is:</p>
@@ -7727,6 +8822,29 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setEndOffset(java.lang.String endOffset) {
         this.endOffset = endOffset;
+        return this;
+      }
+
+      /**
+       * Only applicable if delimiter is set to '/'. If true, will also include folders and managed
+       * folders (besides objects) in the returned prefixes.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeFoldersAsPrefixes;
+
+      /** Only applicable if delimiter is set to '/'. If true, will also include folders and managed folders
+     (besides objects) in the returned prefixes.
+       */
+      public java.lang.Boolean getIncludeFoldersAsPrefixes() {
+        return includeFoldersAsPrefixes;
+      }
+
+      /**
+       * Only applicable if delimiter is set to '/'. If true, will also include folders and managed
+       * folders (besides objects) in the returned prefixes.
+       */
+      public List setIncludeFoldersAsPrefixes(java.lang.Boolean includeFoldersAsPrefixes) {
+        this.includeFoldersAsPrefixes = includeFoldersAsPrefixes;
         return this;
       }
 

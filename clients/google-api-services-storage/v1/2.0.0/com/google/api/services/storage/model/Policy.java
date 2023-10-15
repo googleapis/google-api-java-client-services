@@ -17,7 +17,7 @@
 package com.google.api.services.storage.model;
 
 /**
- * A bucket/object IAM policy.
+ * A bucket/object/managedFolder IAM policy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Storage JSON API. For a detailed explanation
@@ -61,10 +61,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the resource to which this policy belongs. Will be of the form
-   * projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for
-   * objects. A specific generation may be specified by appending #generationNumber to the end of
-   * the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation
-   * can be denoted with #0. This field is ignored on input.
+   * projects/_/buckets/bucket for buckets, projects/_/buckets/bucket/objects/object for objects,
+   * and projects/_/buckets/bucket/managedFolders/managedFolder. A specific generation may be
+   * specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets
+   * /my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is
+   * ignored on input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,10 +163,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the resource to which this policy belongs. Will be of the form
-   * projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for
-   * objects. A specific generation may be specified by appending #generationNumber to the end of
-   * the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation
-   * can be denoted with #0. This field is ignored on input.
+   * projects/_/buckets/bucket for buckets, projects/_/buckets/bucket/objects/object for objects,
+   * and projects/_/buckets/bucket/managedFolders/managedFolder. A specific generation may be
+   * specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets
+   * /my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is
+   * ignored on input.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceId() {
@@ -174,10 +176,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the resource to which this policy belongs. Will be of the form
-   * projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for
-   * objects. A specific generation may be specified by appending #generationNumber to the end of
-   * the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation
-   * can be denoted with #0. This field is ignored on input.
+   * projects/_/buckets/bucket for buckets, projects/_/buckets/bucket/objects/object for objects,
+   * and projects/_/buckets/bucket/managedFolders/managedFolder. A specific generation may be
+   * specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets
+   * /my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is
+   * ignored on input.
    * @param resourceId resourceId or {@code null} for none
    */
   public Policy setResourceId(java.lang.String resourceId) {

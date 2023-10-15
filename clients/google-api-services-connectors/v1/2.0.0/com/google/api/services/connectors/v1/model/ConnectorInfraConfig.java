@@ -38,6 +38,13 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private java.lang.Long connectionRatelimitWindowSeconds;
 
   /**
+   * Indicate whether connector is deployed on GKE/CloudRun
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentModel;
+
+  /**
    * HPA autoscaling config.
    * The value may be {@code null}.
    */
@@ -93,6 +100,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setConnectionRatelimitWindowSeconds(java.lang.Long connectionRatelimitWindowSeconds) {
     this.connectionRatelimitWindowSeconds = connectionRatelimitWindowSeconds;
+    return this;
+  }
+
+  /**
+   * Indicate whether connector is deployed on GKE/CloudRun
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentModel() {
+    return deploymentModel;
+  }
+
+  /**
+   * Indicate whether connector is deployed on GKE/CloudRun
+   * @param deploymentModel deploymentModel or {@code null} for none
+   */
+  public ConnectorInfraConfig setDeploymentModel(java.lang.String deploymentModel) {
+    this.deploymentModel = deploymentModel;
     return this;
   }
 

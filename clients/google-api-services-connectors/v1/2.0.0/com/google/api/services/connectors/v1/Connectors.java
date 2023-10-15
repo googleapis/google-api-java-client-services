@@ -312,6 +312,145 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * GetRegionalSettings gets settings of a region. RegionalSettings is a singleton resource.
+       *
+       * Create a request for the method "locations.getRegionalSettings".
+       *
+       * This request holds the parameters needed by the connectors server.  After setting any optional
+       * parameters, call the {@link GetRegionalSettings#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the Regional Settings.
+       * @return the request
+       */
+      public GetRegionalSettings getRegionalSettings(java.lang.String name) throws java.io.IOException {
+        GetRegionalSettings result = new GetRegionalSettings(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetRegionalSettings extends ConnectorsRequest<com.google.api.services.connectors.v1.model.RegionalSettings> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/regionalSettings$");
+
+        /**
+         * GetRegionalSettings gets settings of a region. RegionalSettings is a singleton resource.
+         *
+         * Create a request for the method "locations.getRegionalSettings".
+         *
+         * This request holds the parameters needed by the the connectors server.  After setting any
+         * optional parameters, call the {@link GetRegionalSettings#execute()} method to invoke the remote
+         * operation. <p> {@link GetRegionalSettings#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the Regional Settings.
+         * @since 1.13
+         */
+        protected GetRegionalSettings(java.lang.String name) {
+          super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.RegionalSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/regionalSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetRegionalSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (GetRegionalSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetRegionalSettings setAccessToken(java.lang.String accessToken) {
+          return (GetRegionalSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetRegionalSettings setAlt(java.lang.String alt) {
+          return (GetRegionalSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public GetRegionalSettings setCallback(java.lang.String callback) {
+          return (GetRegionalSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public GetRegionalSettings setFields(java.lang.String fields) {
+          return (GetRegionalSettings) super.setFields(fields);
+        }
+
+        @Override
+        public GetRegionalSettings setKey(java.lang.String key) {
+          return (GetRegionalSettings) super.setKey(key);
+        }
+
+        @Override
+        public GetRegionalSettings setOauthToken(java.lang.String oauthToken) {
+          return (GetRegionalSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetRegionalSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetRegionalSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetRegionalSettings setQuotaUser(java.lang.String quotaUser) {
+          return (GetRegionalSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetRegionalSettings setUploadType(java.lang.String uploadType) {
+          return (GetRegionalSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetRegionalSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetRegionalSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name of the Regional Settings. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the Regional Settings.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name of the Regional Settings. */
+        public GetRegionalSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/regionalSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetRegionalSettings set(String parameterName, Object value) {
+          return (GetRegionalSettings) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets the runtimeConfig of a location. RuntimeConfig is a singleton resource for each location.
        *
        * Create a request for the method "locations.getRuntimeConfig".
@@ -650,6 +789,163 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update the settings of a region.
+       *
+       * Create a request for the method "locations.updateRegionalSettings".
+       *
+       * This request holds the parameters needed by the connectors server.  After setting any optional
+       * parameters, call the {@link UpdateRegionalSettings#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Output only. Resource name of the Connection. Format:
+       *        projects/{project}/locations/{location}/regionalSettings
+       * @param content the {@link com.google.api.services.connectors.v1.model.RegionalSettings}
+       * @return the request
+       */
+      public UpdateRegionalSettings updateRegionalSettings(java.lang.String name, com.google.api.services.connectors.v1.model.RegionalSettings content) throws java.io.IOException {
+        UpdateRegionalSettings result = new UpdateRegionalSettings(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateRegionalSettings extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/regionalSettings$");
+
+        /**
+         * Update the settings of a region.
+         *
+         * Create a request for the method "locations.updateRegionalSettings".
+         *
+         * This request holds the parameters needed by the the connectors server.  After setting any
+         * optional parameters, call the {@link UpdateRegionalSettings#execute()} method to invoke the
+         * remote operation. <p> {@link UpdateRegionalSettings#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Output only. Resource name of the Connection. Format:
+       *        projects/{project}/locations/{location}/regionalSettings
+         * @param content the {@link com.google.api.services.connectors.v1.model.RegionalSettings}
+         * @since 1.13
+         */
+        protected UpdateRegionalSettings(java.lang.String name, com.google.api.services.connectors.v1.model.RegionalSettings content) {
+          super(Connectors.this, "PATCH", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/regionalSettings$");
+          }
+        }
+
+        @Override
+        public UpdateRegionalSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateRegionalSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateRegionalSettings setAccessToken(java.lang.String accessToken) {
+          return (UpdateRegionalSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateRegionalSettings setAlt(java.lang.String alt) {
+          return (UpdateRegionalSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateRegionalSettings setCallback(java.lang.String callback) {
+          return (UpdateRegionalSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateRegionalSettings setFields(java.lang.String fields) {
+          return (UpdateRegionalSettings) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateRegionalSettings setKey(java.lang.String key) {
+          return (UpdateRegionalSettings) super.setKey(key);
+        }
+
+        @Override
+        public UpdateRegionalSettings setOauthToken(java.lang.String oauthToken) {
+          return (UpdateRegionalSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateRegionalSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateRegionalSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateRegionalSettings setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateRegionalSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateRegionalSettings setUploadType(java.lang.String uploadType) {
+          return (UpdateRegionalSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateRegionalSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateRegionalSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Resource name of the Connection. Format:
+         * projects/{project}/locations/{location}/regionalSettings
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Resource name of the Connection. Format:
+       projects/{project}/locations/{location}/regionalSettings
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Resource name of the Connection. Format:
+         * projects/{project}/locations/{location}/regionalSettings
+         */
+        public UpdateRegionalSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/regionalSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Required. The list of fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The list of fields to update. */
+        public UpdateRegionalSettings setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateRegionalSettings set(String parameterName, Object value) {
+          return (UpdateRegionalSettings) super.set(parameterName, value);
         }
       }
 

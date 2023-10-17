@@ -52,7 +52,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttributeFacetConfigIgnoredFac
   /**
    * List of facet values to ignore for the following time range. The facet values are the same as
    * the attribute values. There is a limit of 10 values per instance of IgnoredFacetValues. Each
-   * value can have at most 60 characters.
+   * value can have at most 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttributeFacetConfigIgnoredFac
   /**
    * List of facet values to ignore for the following time range. The facet values are the same as
    * the attribute values. There is a limit of 10 values per instance of IgnoredFacetValues. Each
-   * value can have at most 60 characters.
+   * value can have at most 128 characters.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -115,7 +115,7 @@ public final class GoogleCloudRetailV2alphaCatalogAttributeFacetConfigIgnoredFac
   /**
    * List of facet values to ignore for the following time range. The facet values are the same as
    * the attribute values. There is a limit of 10 values per instance of IgnoredFacetValues. Each
-   * value can have at most 60 characters.
+   * value can have at most 128 characters.
    * @param values values or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCatalogAttributeFacetConfigIgnoredFacetValues setValues(java.util.List<java.lang.String> values) {

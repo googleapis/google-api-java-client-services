@@ -17,8 +17,9 @@
 package com.google.api.services.retail.v2beta.model;
 
 /**
- * Replaces a set of facet values by the same (possibly different) merged facet value. Each facet
- * value should appear at most once as a value per CatalogAttribute.
+ * Replaces a set of textual facet values by the same (possibly different) merged facet value. Each
+ * facet value should appear at most once as a value per CatalogAttribute. This feature is available
+ * only for textual custom attributes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -32,7 +33,7 @@ public final class GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet
 
   /**
    * All the previous values are replaced by this merged facet value. This merged_value must be non-
-   * empty and can have up to 60 characters.
+   * empty and can have up to 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +41,7 @@ public final class GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet
 
   /**
    * All the facet values that are replaces by the same merged_value that follows. The maximum
-   * number of values per MergedFacetValue is 25. Each value can have up to 60 characters.
+   * number of values per MergedFacetValue is 25. Each value can have up to 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,7 @@ public final class GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet
 
   /**
    * All the previous values are replaced by this merged facet value. This merged_value must be non-
-   * empty and can have up to 60 characters.
+   * empty and can have up to 128 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getMergedValue() {
@@ -57,7 +58,7 @@ public final class GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet
 
   /**
    * All the previous values are replaced by this merged facet value. This merged_value must be non-
-   * empty and can have up to 60 characters.
+   * empty and can have up to 128 characters.
    * @param mergedValue mergedValue or {@code null} for none
    */
   public GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacetValue setMergedValue(java.lang.String mergedValue) {
@@ -67,7 +68,7 @@ public final class GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet
 
   /**
    * All the facet values that are replaces by the same merged_value that follows. The maximum
-   * number of values per MergedFacetValue is 25. Each value can have up to 60 characters.
+   * number of values per MergedFacetValue is 25. Each value can have up to 128 characters.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -76,7 +77,7 @@ public final class GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet
 
   /**
    * All the facet values that are replaces by the same merged_value that follows. The maximum
-   * number of values per MergedFacetValue is 25. Each value can have up to 60 characters.
+   * number of values per MergedFacetValue is 25. Each value can have up to 128 characters.
    * @param values values or {@code null} for none
    */
   public GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacetValue setValues(java.util.List<java.lang.String> values) {

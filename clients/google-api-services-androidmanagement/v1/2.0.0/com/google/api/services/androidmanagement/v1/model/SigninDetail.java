@@ -18,17 +18,17 @@ package com.google.api.services.androidmanagement.v1.model;
 
 /**
  * A resource containing sign in details for an enterprise. Use enterprises to manage SigninDetails
- * for a given enterprise. For an enterprise, we can have any number of SigninDetails that is
+ * for a given enterprise.For an enterprise, we can have any number of SigninDetails that is
  * uniquely identified by combination of the following three fields (signin_url,
  * allow_personal_usage, token_tag). One cannot create two SigninDetails with the same (signin_url,
- * allow_personal_usage, token_tag). (token_tag is an optional field) Patch: The operation updates
+ * allow_personal_usage, token_tag). (token_tag is an optional field).Patch: The operation updates
  * the current list of SigninDetails with the new list of SigninDetails. If the stored SigninDetail
  * configuration is passed, it returns the same signin_enrollment_token and qr_code. If we pass
  * multiple identical SigninDetail configurations that are not stored, it will store the first one
- * amongst those SigninDetail configurations and if the configuration already exists we cannot
- * request it more than once in a particular patch API call, otherwise it will give a duplicate key
- * error and the whole operation will fail. If we remove certain SigninDetail configuration from the
- * request then it will get removed from the storage. And then we can request for another
+ * amongst those SigninDetail configurations. if the configuration already exists we cannot request
+ * it more than once in a particular patch API call, otherwise it will give a duplicate key error
+ * and the whole operation will fail. If we remove certain SigninDetail configuration from the
+ * request then it will get removed from the storage. We can then request another
  * signin_enrollment_token and qr_code for the same SigninDetail configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -83,7 +83,7 @@ public final class SigninDetail extends com.google.api.client.json.GenericJson {
   private java.lang.String signinUrl;
 
   /**
-   * An EMM-specified tag to distinguish between instances of SigninDetail.
+   * An EMM-specified metadata to distinguish between instances of SigninDetail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +182,7 @@ public final class SigninDetail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An EMM-specified tag to distinguish between instances of SigninDetail.
+   * An EMM-specified metadata to distinguish between instances of SigninDetail.
    * @return value or {@code null} for none
    */
   public java.lang.String getTokenTag() {
@@ -190,7 +190,7 @@ public final class SigninDetail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An EMM-specified tag to distinguish between instances of SigninDetail.
+   * An EMM-specified metadata to distinguish between instances of SigninDetail.
    * @param tokenTag tokenTag or {@code null} for none
    */
   public SigninDetail setTokenTag(java.lang.String tokenTag) {

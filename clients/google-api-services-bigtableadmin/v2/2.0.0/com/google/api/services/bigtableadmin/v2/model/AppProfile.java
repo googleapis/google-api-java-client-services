@@ -65,11 +65,27 @@ public final class AppProfile extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * This field has been deprecated in favor of `standard_isolation.priority`. If you set this
+   * field, `standard_isolation.priority` will be set instead. The priority of requests sent using
+   * this app profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String priority;
+
+  /**
    * Use a single-cluster routing policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SingleClusterRouting singleClusterRouting;
+
+  /**
+   * The standard options used for isolating this app profile's traffic from other use cases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StandardIsolation standardIsolation;
 
   /**
    * Long form description of the use case for this AppProfile.
@@ -150,6 +166,27 @@ public final class AppProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * This field has been deprecated in favor of `standard_isolation.priority`. If you set this
+   * field, `standard_isolation.priority` will be set instead. The priority of requests sent using
+   * this app profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPriority() {
+    return priority;
+  }
+
+  /**
+   * This field has been deprecated in favor of `standard_isolation.priority`. If you set this
+   * field, `standard_isolation.priority` will be set instead. The priority of requests sent using
+   * this app profile.
+   * @param priority priority or {@code null} for none
+   */
+  public AppProfile setPriority(java.lang.String priority) {
+    this.priority = priority;
+    return this;
+  }
+
+  /**
    * Use a single-cluster routing policy.
    * @return value or {@code null} for none
    */
@@ -163,6 +200,23 @@ public final class AppProfile extends com.google.api.client.json.GenericJson {
    */
   public AppProfile setSingleClusterRouting(SingleClusterRouting singleClusterRouting) {
     this.singleClusterRouting = singleClusterRouting;
+    return this;
+  }
+
+  /**
+   * The standard options used for isolating this app profile's traffic from other use cases.
+   * @return value or {@code null} for none
+   */
+  public StandardIsolation getStandardIsolation() {
+    return standardIsolation;
+  }
+
+  /**
+   * The standard options used for isolating this app profile's traffic from other use cases.
+   * @param standardIsolation standardIsolation or {@code null} for none
+   */
+  public AppProfile setStandardIsolation(StandardIsolation standardIsolation) {
+    this.standardIsolation = standardIsolation;
     return this;
   }
 

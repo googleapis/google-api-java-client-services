@@ -55,7 +55,8 @@ public final class GoogleCloudRetailV2CatalogAttributeFacetConfig extends com.go
    * in any list, then it will stay the same. To avoid conflicts, only paths of length 1 are
    * accepted. In other words, if "dark_blue" merged into "BLUE", then the latter can't merge into
    * "blues" because this would create a path of length 2. The maximum number of instances of
-   * MergedFacetValue per CatalogAttribute is 100.
+   * MergedFacetValue per CatalogAttribute is 100. This feature is available only for textual custom
+   * attributes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +115,8 @@ public final class GoogleCloudRetailV2CatalogAttributeFacetConfig extends com.go
    * in any list, then it will stay the same. To avoid conflicts, only paths of length 1 are
    * accepted. In other words, if "dark_blue" merged into "BLUE", then the latter can't merge into
    * "blues" because this would create a path of length 2. The maximum number of instances of
-   * MergedFacetValue per CatalogAttribute is 100.
+   * MergedFacetValue per CatalogAttribute is 100. This feature is available only for textual custom
+   * attributes.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue> getMergedFacetValues() {
@@ -126,7 +128,8 @@ public final class GoogleCloudRetailV2CatalogAttributeFacetConfig extends com.go
    * in any list, then it will stay the same. To avoid conflicts, only paths of length 1 are
    * accepted. In other words, if "dark_blue" merged into "BLUE", then the latter can't merge into
    * "blues" because this would create a path of length 2. The maximum number of instances of
-   * MergedFacetValue per CatalogAttribute is 100.
+   * MergedFacetValue per CatalogAttribute is 100. This feature is available only for textual custom
+   * attributes.
    * @param mergedFacetValues mergedFacetValues or {@code null} for none
    */
   public GoogleCloudRetailV2CatalogAttributeFacetConfig setMergedFacetValues(java.util.List<GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue> mergedFacetValues) {

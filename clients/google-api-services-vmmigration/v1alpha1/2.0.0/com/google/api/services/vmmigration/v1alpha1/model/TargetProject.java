@@ -52,7 +52,7 @@ public final class TargetProject extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * The target project ID (number) or project name.
+   * Required. The target project ID (number) or project name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class TargetProject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The target project ID (number) or project name.
+   * Required. The target project ID (number) or project name.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -127,7 +127,7 @@ public final class TargetProject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The target project ID (number) or project name.
+   * Required. The target project ID (number) or project name.
    * @param project project or {@code null} for none
    */
   public TargetProject setProject(java.lang.String project) {

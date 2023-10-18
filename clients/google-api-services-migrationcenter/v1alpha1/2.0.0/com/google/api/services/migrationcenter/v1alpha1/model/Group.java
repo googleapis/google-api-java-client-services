@@ -39,14 +39,14 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The description of the resource.
+   * Optional. The description of the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * User-friendly display name.
+   * Optional. User-friendly display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The description of the resource.
+   * Optional. The description of the group.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -99,7 +99,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The description of the resource.
+   * Optional. The description of the group.
    * @param description description or {@code null} for none
    */
   public Group setDescription(java.lang.String description) {
@@ -108,7 +108,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-friendly display name.
+   * Optional. User-friendly display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -116,7 +116,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-friendly display name.
+   * Optional. User-friendly display name.
    * @param displayName displayName or {@code null} for none
    */
   public Group setDisplayName(java.lang.String displayName) {

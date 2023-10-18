@@ -30,6 +30,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class CloudRunMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The name of the Cloud Run job that is associated with a `Rollout`. Format is
+   * projects/{project}/locations/{location}/jobs/{job_name}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String job;
+
+  /**
    * Output only. The Cloud Run Revision id associated with a `Rollout`.
    * The value may be {@code null}.
    */
@@ -50,6 +58,25 @@ public final class CloudRunMetadata extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> serviceUrls;
+
+  /**
+   * Output only. The name of the Cloud Run job that is associated with a `Rollout`. Format is
+   * projects/{project}/locations/{location}/jobs/{job_name}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJob() {
+    return job;
+  }
+
+  /**
+   * Output only. The name of the Cloud Run job that is associated with a `Rollout`. Format is
+   * projects/{project}/locations/{location}/jobs/{job_name}.
+   * @param job job or {@code null} for none
+   */
+  public CloudRunMetadata setJob(java.lang.String job) {
+    this.job = job;
+    return this;
+  }
 
   /**
    * Output only. The Cloud Run Revision id associated with a `Rollout`.

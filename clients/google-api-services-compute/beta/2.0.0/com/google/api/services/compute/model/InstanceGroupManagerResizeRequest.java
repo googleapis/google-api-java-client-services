@@ -77,6 +77,14 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.String name;
 
   /**
+   * The number of instances to be created by this resize request. The group's target size will be
+   * increased by this number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer resizeBy;
+
+  /**
    * [Output Only] The URL for this resize request. The server defines this URL.
    * The value may be {@code null}.
    */
@@ -215,6 +223,25 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
    */
   public InstanceGroupManagerResizeRequest setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The number of instances to be created by this resize request. The group's target size will be
+   * increased by this number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getResizeBy() {
+    return resizeBy;
+  }
+
+  /**
+   * The number of instances to be created by this resize request. The group's target size will be
+   * increased by this number.
+   * @param resizeBy resizeBy or {@code null} for none
+   */
+  public InstanceGroupManagerResizeRequest setResizeBy(java.lang.Integer resizeBy) {
+    this.resizeBy = resizeBy;
     return this;
   }
 

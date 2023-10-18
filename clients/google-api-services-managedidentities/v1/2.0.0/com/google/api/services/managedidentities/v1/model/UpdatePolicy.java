@@ -39,8 +39,8 @@ public final class UpdatePolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Deny Maintenance Period that is applied to resource to indicate when maintenance is forbidden.
-   * User can specify zero or more non-overlapping deny periods. Maximum number of
-   * deny_maintenance_periods expected is one.
+   * The protocol supports zero-to-many such periods, but the current SLM Rollout implementation
+   * only supports zero-to-one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +78,8 @@ public final class UpdatePolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Deny Maintenance Period that is applied to resource to indicate when maintenance is forbidden.
-   * User can specify zero or more non-overlapping deny periods. Maximum number of
-   * deny_maintenance_periods expected is one.
+   * The protocol supports zero-to-many such periods, but the current SLM Rollout implementation
+   * only supports zero-to-one.
    * @return value or {@code null} for none
    */
   public java.util.List<DenyMaintenancePeriod> getDenyMaintenancePeriods() {
@@ -88,8 +88,8 @@ public final class UpdatePolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Deny Maintenance Period that is applied to resource to indicate when maintenance is forbidden.
-   * User can specify zero or more non-overlapping deny periods. Maximum number of
-   * deny_maintenance_periods expected is one.
+   * The protocol supports zero-to-many such periods, but the current SLM Rollout implementation
+   * only supports zero-to-one.
    * @param denyMaintenancePeriods denyMaintenancePeriods or {@code null} for none
    */
   public UpdatePolicy setDenyMaintenancePeriods(java.util.List<DenyMaintenancePeriod> denyMaintenancePeriods) {

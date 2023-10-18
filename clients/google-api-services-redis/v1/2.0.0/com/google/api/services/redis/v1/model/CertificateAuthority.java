@@ -37,6 +37,15 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   private ManagedCertificateAuthority managedServerCa;
 
   /**
+   * Identifier. Unique name of the resource in this scope including project, location and cluster
+   * using the form:
+   * `projects/{project}/locations/{location}/clusters/{cluster}/certificateAuthority`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * @return value or {@code null} for none
    */
   public ManagedCertificateAuthority getManagedServerCa() {
@@ -48,6 +57,27 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
    */
   public CertificateAuthority setManagedServerCa(ManagedCertificateAuthority managedServerCa) {
     this.managedServerCa = managedServerCa;
+    return this;
+  }
+
+  /**
+   * Identifier. Unique name of the resource in this scope including project, location and cluster
+   * using the form:
+   * `projects/{project}/locations/{location}/clusters/{cluster}/certificateAuthority`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Identifier. Unique name of the resource in this scope including project, location and cluster
+   * using the form:
+   * `projects/{project}/locations/{location}/clusters/{cluster}/certificateAuthority`
+   * @param name name or {@code null} for none
+   */
+  public CertificateAuthority setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

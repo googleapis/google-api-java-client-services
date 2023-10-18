@@ -17,7 +17,9 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * the Api category resource.
+ * `ApiCategoryData` represents an API category. Catalog items can be tagged with API categories;
+ * users viewing the API catalog in the portal will have the option to browse the catalog by
+ * category.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -28,13 +30,6 @@ package com.google.api.services.apigee.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudApigeeV1ApiCategoryData extends com.google.api.client.json.GenericJson {
-
-  /**
-   * GCP name of api category resource.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String gcpResource;
 
   /**
    * ID of the category (a UUID).
@@ -63,23 +58,6 @@ public final class GoogleCloudApigeeV1ApiCategoryData extends com.google.api.cli
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long updateTime;
-
-  /**
-   * GCP name of api category resource.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getGcpResource() {
-    return gcpResource;
-  }
-
-  /**
-   * GCP name of api category resource.
-   * @param gcpResource gcpResource or {@code null} for none
-   */
-  public GoogleCloudApigeeV1ApiCategoryData setGcpResource(java.lang.String gcpResource) {
-    this.gcpResource = gcpResource;
-    return this;
-  }
 
   /**
    * ID of the category (a UUID).

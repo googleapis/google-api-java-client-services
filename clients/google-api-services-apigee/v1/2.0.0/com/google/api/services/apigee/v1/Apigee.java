@@ -8723,14 +8723,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Updates an appGroup. This API replaces the existing appGroup details with those specified in the
+       * Updates an AppGroup. This API replaces the existing AppGroup details with those specified in the
        * request. Include or exclude any existing details that you want to retain or delete, respectively.
        * Note that the state of the AppGroup should be updated using `action`, and not via AppGroup.
-       * **Note**: OAuth access tokens and Key Management Service (KMS) entities (apps, developers, and
-       * API products) are cached for 180 seconds (current default). Any custom attributes associated with
-       * these entities are cached for at least 180 seconds after the entity is accessed at runtime.
-       * Therefore, an `ExpiresIn` element on the OAuthV2 policy won't be able to expire an access token
-       * in less than 180 seconds.
        *
        * Create a request for the method "appgroups.update".
        *
@@ -8756,14 +8751,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+$");
 
         /**
-         * Updates an appGroup. This API replaces the existing appGroup details with those specified in
+         * Updates an AppGroup. This API replaces the existing AppGroup details with those specified in
          * the request. Include or exclude any existing details that you want to retain or delete,
          * respectively. Note that the state of the AppGroup should be updated using `action`, and not via
-         * AppGroup. **Note**: OAuth access tokens and Key Management Service (KMS) entities (apps,
-         * developers, and API products) are cached for 180 seconds (current default). Any custom
-         * attributes associated with these entities are cached for at least 180 seconds after the entity
-         * is accessed at runtime. Therefore, an `ExpiresIn` element on the OAuthV2 policy won't be able
-         * to expire an access token in less than 180 seconds.
+         * AppGroup.
          *
          * Create a request for the method "appgroups.update".
          *
@@ -8871,13 +8862,13 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Activate or de-activate the appGroup by setting the action as `active` or `inactive`. The
+         * Activate or de-activate the AppGroup by setting the action as `active` or `inactive`. The
          * `Content-Type` header must be set to `application/octet-stream`, with empty body.
          */
         @com.google.api.client.util.Key
         private java.lang.String action;
 
-        /** Activate or de-activate the appGroup by setting the action as `active` or `inactive`. The `Content-
+        /** Activate or de-activate the AppGroup by setting the action as `active` or `inactive`. The `Content-
        Type` header must be set to `application/octet-stream`, with empty body.
          */
         public java.lang.String getAction() {
@@ -8885,7 +8876,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Activate or de-activate the appGroup by setting the action as `active` or `inactive`. The
+         * Activate or de-activate the AppGroup by setting the action as `active` or `inactive`. The
          * `Content-Type` header must be set to `application/octet-stream`, with empty body.
          */
         public Update setAction(java.lang.String action) {
@@ -49869,7 +49860,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       public class Apicategories {
 
         /**
-         * Creates a new category on the portal.
+         * Creates a new API category.
          *
          * Create a request for the method "apicategories.create".
          *
@@ -49895,7 +49886,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+$");
 
           /**
-           * Creates a new category on the portal.
+           * Creates a new API category.
            *
            * Create a request for the method "apicategories.create".
            *
@@ -50008,7 +49999,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Deletes a category from the portal.
+         * Deletes an API category.
          *
          * Create a request for the method "apicategories.delete".
          *
@@ -50033,7 +50024,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+/apicategories/[^/]+$");
 
           /**
-           * Deletes a category from the portal.
+           * Deletes an API category.
            *
            * Create a request for the method "apicategories.delete".
            *
@@ -50145,7 +50136,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Gets a category on the portal.
+         * Gets an API category.
          *
          * Create a request for the method "apicategories.get".
          *
@@ -50170,7 +50161,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+/apicategories/[^/]+$");
 
           /**
-           * Gets a category on the portal.
+           * Gets an API category.
            *
            * Create a request for the method "apicategories.get".
            *
@@ -50292,7 +50283,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Lists the categories on the portal.
+         * Returns the API categories associated with a portal.
          *
          * Create a request for the method "apicategories.list".
          *
@@ -50317,7 +50308,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+$");
 
           /**
-           * Lists the categories on the portal.
+           * Returns the API categories associated with a portal.
            *
            * Create a request for the method "apicategories.list".
            *
@@ -50439,7 +50430,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Updates a category on the portal.
+         * Updates an API category.
          *
          * Create a request for the method "apicategories.patch".
          *
@@ -50465,7 +50456,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+/apicategories/[^/]+$");
 
           /**
-           * Updates a category on the portal.
+           * Updates an API category.
            *
            * Create a request for the method "apicategories.patch".
            *

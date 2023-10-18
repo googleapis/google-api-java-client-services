@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Wrapper to hold data related to a lane’s track, extendable for future data.
+ * Model definition for ResearchVisionFace2cartoonChinLengthClassifierResults.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,61 +28,58 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GeostoreFlowLineProto extends com.google.api.client.json.GenericJson {
-
-  /**
-   * RESERVED
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostoreCurvatureProto curvature;
+public final class ResearchVisionFace2cartoonChinLengthClassifierResults extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GeostoreTrackProto track;
+  private java.lang.String chinLength;
 
   /**
-   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float confidence;
+
+  /**
    * @return value or {@code null} for none
    */
-  public GeostoreCurvatureProto getCurvature() {
-    return curvature;
+  public java.lang.String getChinLength() {
+    return chinLength;
   }
 
   /**
-   * RESERVED
-   * @param curvature curvature or {@code null} for none
+   * @param chinLength chinLength or {@code null} for none
    */
-  public GeostoreFlowLineProto setCurvature(GeostoreCurvatureProto curvature) {
-    this.curvature = curvature;
+  public ResearchVisionFace2cartoonChinLengthClassifierResults setChinLength(java.lang.String chinLength) {
+    this.chinLength = chinLength;
     return this;
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public GeostoreTrackProto getTrack() {
-    return track;
+  public java.lang.Float getConfidence() {
+    return confidence;
   }
 
   /**
-   * @param track track or {@code null} for none
+   * @param confidence confidence or {@code null} for none
    */
-  public GeostoreFlowLineProto setTrack(GeostoreTrackProto track) {
-    this.track = track;
+  public ResearchVisionFace2cartoonChinLengthClassifierResults setConfidence(java.lang.Float confidence) {
+    this.confidence = confidence;
     return this;
   }
 
   @Override
-  public GeostoreFlowLineProto set(String fieldName, Object value) {
-    return (GeostoreFlowLineProto) super.set(fieldName, value);
+  public ResearchVisionFace2cartoonChinLengthClassifierResults set(String fieldName, Object value) {
+    return (ResearchVisionFace2cartoonChinLengthClassifierResults) super.set(fieldName, value);
   }
 
   @Override
-  public GeostoreFlowLineProto clone() {
-    return (GeostoreFlowLineProto) super.clone();
+  public ResearchVisionFace2cartoonChinLengthClassifierResults clone() {
+    return (ResearchVisionFace2cartoonChinLengthClassifierResults) super.clone();
   }
 
 }

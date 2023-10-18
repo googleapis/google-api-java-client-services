@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This defines the per-doc data which is extracted from thumbnails and propagated over to indexing.
- * It contains all information that can be used for restricts. Next tag id: 131
+ * It contains all information that can be used for restricts. Next tag id: 132
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -228,6 +228,13 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private PhotosImageMetadata extendedExif;
+
+  /**
+   * Face Detection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReneFaceResponse faceDetection;
 
   /**
    * Properties used in featured imagesearch project. inspiration_score indicates how well an image
@@ -1218,6 +1225,23 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   public ImageData setExtendedExif(PhotosImageMetadata extendedExif) {
     this.extendedExif = extendedExif;
+    return this;
+  }
+
+  /**
+   * Face Detection.
+   * @return value or {@code null} for none
+   */
+  public ReneFaceResponse getFaceDetection() {
+    return faceDetection;
+  }
+
+  /**
+   * Face Detection.
+   * @param faceDetection faceDetection or {@code null} for none
+   */
+  public ImageData setFaceDetection(ReneFaceResponse faceDetection) {
+    this.faceDetection = faceDetection;
     return this;
   }
 

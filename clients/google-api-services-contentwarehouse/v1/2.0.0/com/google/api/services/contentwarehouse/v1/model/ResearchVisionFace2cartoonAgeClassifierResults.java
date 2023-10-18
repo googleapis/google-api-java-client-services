@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Wrapper to hold data related to a lane’s track, extendable for future data.
+ * Model definition for ResearchVisionFace2cartoonAgeClassifierResults.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,61 +28,58 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GeostoreFlowLineProto extends com.google.api.client.json.GenericJson {
-
-  /**
-   * RESERVED
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostoreCurvatureProto curvature;
+public final class ResearchVisionFace2cartoonAgeClassifierResults extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GeostoreTrackProto track;
+  private java.lang.String age;
 
   /**
-   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float predictedAge;
+
+  /**
    * @return value or {@code null} for none
    */
-  public GeostoreCurvatureProto getCurvature() {
-    return curvature;
+  public java.lang.String getAge() {
+    return age;
   }
 
   /**
-   * RESERVED
-   * @param curvature curvature or {@code null} for none
+   * @param age age or {@code null} for none
    */
-  public GeostoreFlowLineProto setCurvature(GeostoreCurvatureProto curvature) {
-    this.curvature = curvature;
+  public ResearchVisionFace2cartoonAgeClassifierResults setAge(java.lang.String age) {
+    this.age = age;
     return this;
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public GeostoreTrackProto getTrack() {
-    return track;
+  public java.lang.Float getPredictedAge() {
+    return predictedAge;
   }
 
   /**
-   * @param track track or {@code null} for none
+   * @param predictedAge predictedAge or {@code null} for none
    */
-  public GeostoreFlowLineProto setTrack(GeostoreTrackProto track) {
-    this.track = track;
+  public ResearchVisionFace2cartoonAgeClassifierResults setPredictedAge(java.lang.Float predictedAge) {
+    this.predictedAge = predictedAge;
     return this;
   }
 
   @Override
-  public GeostoreFlowLineProto set(String fieldName, Object value) {
-    return (GeostoreFlowLineProto) super.set(fieldName, value);
+  public ResearchVisionFace2cartoonAgeClassifierResults set(String fieldName, Object value) {
+    return (ResearchVisionFace2cartoonAgeClassifierResults) super.set(fieldName, value);
   }
 
   @Override
-  public GeostoreFlowLineProto clone() {
-    return (GeostoreFlowLineProto) super.clone();
+  public ResearchVisionFace2cartoonAgeClassifierResults clone() {
+    return (ResearchVisionFace2cartoonAgeClassifierResults) super.clone();
   }
 
 }

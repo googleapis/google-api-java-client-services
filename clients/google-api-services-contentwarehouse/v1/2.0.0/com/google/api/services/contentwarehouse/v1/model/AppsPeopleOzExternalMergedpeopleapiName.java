@@ -123,13 +123,15 @@ public final class AppsPeopleOzExternalMergedpeopleapiName extends com.google.ap
   private SocialGraphApiProtoPronunciations pronunciations;
 
   /**
-   * Read-only. A possibly shorter version of the user's name. - The purpose of this field is to
-   * address the needs of UIs where a full display name might be too large to fit. Instead of
-   * relying on `first_name`, which might not be present, `short_display_name` is preferred. - This
-   * is only available for PROFILE and DOMAIN_PROFILE container types. - About the actual content in
-   * this field: will be the first name when it's visible to the requester, or the same as
-   * `display_name`, otherwise. A sample scenario where the first name may not be visible is when
-   * the limited profile is returned. For more info, see: http://shortn/_9iV7TJ33la
+   * NOTE: this is currently NOT IMPLEMENTED due to changed priorities. Clients usually rely on
+   * "first name" instead, when a short name is needed. Read-only. A possibly shorter version of the
+   * user's name. - The purpose of this field is to address the needs of UIs where a full display
+   * name might be too large to fit. Instead of relying on `first_name`, which might not be present,
+   * `short_display_name` is preferred. - This is only available for PROFILE and DOMAIN_PROFILE
+   * container types. - About the actual content in this field: will be the first name when it's
+   * visible to the requester, or the same as `display_name`, otherwise. A sample scenario where the
+   * first name may not be visible is when the limited profile is returned. For more info, see:
+   * http://shortn/_9iV7TJ33la
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -373,13 +375,15 @@ public final class AppsPeopleOzExternalMergedpeopleapiName extends com.google.ap
   }
 
   /**
-   * Read-only. A possibly shorter version of the user's name. - The purpose of this field is to
-   * address the needs of UIs where a full display name might be too large to fit. Instead of
-   * relying on `first_name`, which might not be present, `short_display_name` is preferred. - This
-   * is only available for PROFILE and DOMAIN_PROFILE container types. - About the actual content in
-   * this field: will be the first name when it's visible to the requester, or the same as
-   * `display_name`, otherwise. A sample scenario where the first name may not be visible is when
-   * the limited profile is returned. For more info, see: http://shortn/_9iV7TJ33la
+   * NOTE: this is currently NOT IMPLEMENTED due to changed priorities. Clients usually rely on
+   * "first name" instead, when a short name is needed. Read-only. A possibly shorter version of the
+   * user's name. - The purpose of this field is to address the needs of UIs where a full display
+   * name might be too large to fit. Instead of relying on `first_name`, which might not be present,
+   * `short_display_name` is preferred. - This is only available for PROFILE and DOMAIN_PROFILE
+   * container types. - About the actual content in this field: will be the first name when it's
+   * visible to the requester, or the same as `display_name`, otherwise. A sample scenario where the
+   * first name may not be visible is when the limited profile is returned. For more info, see:
+   * http://shortn/_9iV7TJ33la
    * @return value or {@code null} for none
    */
   public java.lang.String getShortDisplayName() {
@@ -387,13 +391,15 @@ public final class AppsPeopleOzExternalMergedpeopleapiName extends com.google.ap
   }
 
   /**
-   * Read-only. A possibly shorter version of the user's name. - The purpose of this field is to
-   * address the needs of UIs where a full display name might be too large to fit. Instead of
-   * relying on `first_name`, which might not be present, `short_display_name` is preferred. - This
-   * is only available for PROFILE and DOMAIN_PROFILE container types. - About the actual content in
-   * this field: will be the first name when it's visible to the requester, or the same as
-   * `display_name`, otherwise. A sample scenario where the first name may not be visible is when
-   * the limited profile is returned. For more info, see: http://shortn/_9iV7TJ33la
+   * NOTE: this is currently NOT IMPLEMENTED due to changed priorities. Clients usually rely on
+   * "first name" instead, when a short name is needed. Read-only. A possibly shorter version of the
+   * user's name. - The purpose of this field is to address the needs of UIs where a full display
+   * name might be too large to fit. Instead of relying on `first_name`, which might not be present,
+   * `short_display_name` is preferred. - This is only available for PROFILE and DOMAIN_PROFILE
+   * container types. - About the actual content in this field: will be the first name when it's
+   * visible to the requester, or the same as `display_name`, otherwise. A sample scenario where the
+   * first name may not be visible is when the limited profile is returned. For more info, see:
+   * http://shortn/_9iV7TJ33la
    * @param shortDisplayName shortDisplayName or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiName setShortDisplayName(java.lang.String shortDisplayName) {

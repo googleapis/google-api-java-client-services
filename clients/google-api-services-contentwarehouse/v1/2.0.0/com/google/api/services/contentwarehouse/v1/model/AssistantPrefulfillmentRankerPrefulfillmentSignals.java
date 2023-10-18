@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 66
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 68
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -206,6 +206,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isMediaControlIntent;
+
+  /**
+   * Whether this interpretation was genearted by NSP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isNspIntent;
 
   /**
    * Whether the intent is a PlayGenericMusic-type intent.
@@ -462,6 +469,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Float topHypothesisConfidence;
+
+  /**
+   * Whether the interpretation should run through grounding box or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean usesGroundingBox;
 
   /**
    * Horizontal feature that stores information about confidence scores for each resolution within
@@ -889,6 +903,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsMediaControlIntent(java.lang.Boolean isMediaControlIntent) {
     this.isMediaControlIntent = isMediaControlIntent;
+    return this;
+  }
+
+  /**
+   * Whether this interpretation was genearted by NSP.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsNspIntent() {
+    return isNspIntent;
+  }
+
+  /**
+   * Whether this interpretation was genearted by NSP.
+   * @param isNspIntent isNspIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsNspIntent(java.lang.Boolean isNspIntent) {
+    this.isNspIntent = isNspIntent;
     return this;
   }
 
@@ -1503,6 +1534,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setTopHypothesisConfidence(java.lang.Float topHypothesisConfidence) {
     this.topHypothesisConfidence = topHypothesisConfidence;
+    return this;
+  }
+
+  /**
+   * Whether the interpretation should run through grounding box or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUsesGroundingBox() {
+    return usesGroundingBox;
+  }
+
+  /**
+   * Whether the interpretation should run through grounding box or not.
+   * @param usesGroundingBox usesGroundingBox or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setUsesGroundingBox(java.lang.Boolean usesGroundingBox) {
+    this.usesGroundingBox = usesGroundingBox;
     return this;
   }
 

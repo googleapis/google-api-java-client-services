@@ -25,7 +25,7 @@ package com.google.api.services.backupdr.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/backup-disaster-recovery" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

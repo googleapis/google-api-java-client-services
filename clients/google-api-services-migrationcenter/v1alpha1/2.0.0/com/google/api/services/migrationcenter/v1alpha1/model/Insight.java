@@ -44,6 +44,13 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   private MigrationInsight migrationInsight;
 
   /**
+   * Output only. An insight regarding software detected on an asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SoftwareInsight softwareInsight;
+
+  /**
    * Output only. A generic insight about an asset.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class Insight extends com.google.api.client.json.GenericJson {
    */
   public Insight setMigrationInsight(MigrationInsight migrationInsight) {
     this.migrationInsight = migrationInsight;
+    return this;
+  }
+
+  /**
+   * Output only. An insight regarding software detected on an asset.
+   * @return value or {@code null} for none
+   */
+  public SoftwareInsight getSoftwareInsight() {
+    return softwareInsight;
+  }
+
+  /**
+   * Output only. An insight regarding software detected on an asset.
+   * @param softwareInsight softwareInsight or {@code null} for none
+   */
+  public Insight setSoftwareInsight(SoftwareInsight softwareInsight) {
+    this.softwareInsight = softwareInsight;
     return this;
   }
 

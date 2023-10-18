@@ -3759,30 +3759,34 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * The expression to filter AnalyzeOrgPoliciesResponse.org_policy_results. The only supported
-       * field is `consolidated_policy.attached_resource`, and the only supported operator is `=`.
-       * Example:
+       * The expression to filter AnalyzeOrgPoliciesResponse.org_policy_results. Filtering is
+       * currently available for bare literal values and the following fields: *
+       * consolidated_policy.attached_resource * consolidated_policy.rules.enforce When filtering by
+       * a specific field, the only supported operator is `=`. For example, filtering by
        * consolidated_policy.attached_resource="//cloudresourcemanager.googleapis.com/folders/001"
-       * will return the org policy results of"folders/001".
+       * will return all the Organization Policy results attached to "folders/001".
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** The expression to filter AnalyzeOrgPoliciesResponse.org_policy_results. The only supported field is
-     `consolidated_policy.attached_resource`, and the only supported operator is `=`. Example:
+      /** The expression to filter AnalyzeOrgPoliciesResponse.org_policy_results. Filtering is currently
+     available for bare literal values and the following fields: * consolidated_policy.attached_resource
+     * consolidated_policy.rules.enforce When filtering by a specific field, the only supported operator
+     is `=`. For example, filtering by
      consolidated_policy.attached_resource="//cloudresourcemanager.googleapis.com/folders/001" will
-     return the org policy results of"folders/001".
+     return all the Organization Policy results attached to "folders/001".
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * The expression to filter AnalyzeOrgPoliciesResponse.org_policy_results. The only supported
-       * field is `consolidated_policy.attached_resource`, and the only supported operator is `=`.
-       * Example:
+       * The expression to filter AnalyzeOrgPoliciesResponse.org_policy_results. Filtering is
+       * currently available for bare literal values and the following fields: *
+       * consolidated_policy.attached_resource * consolidated_policy.rules.enforce When filtering by
+       * a specific field, the only supported operator is `=`. For example, filtering by
        * consolidated_policy.attached_resource="//cloudresourcemanager.googleapis.com/folders/001"
-       * will return the org policy results of"folders/001".
+       * will return all the Organization Policy results attached to "folders/001".
        */
       public AnalyzeOrgPolicies setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -4026,40 +4030,60 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * The expression to filter the governed assets in result. The only supported fields for
-       * governed resources are `governed_resource.project` and `governed_resource.folders`. The
-       * only supported fields for governed iam policies are `governed_iam_policy.project` and
-       * `governed_iam_policy.folders`. The only supported operator is `=`. Example 1:
-       * governed_resource.project="projects/12345678" filter will return all governed resources
-       * under projects/12345678 including the project ifself, if applicable. Example 2:
-       * governed_iam_policy.folders="folders/12345678" filter will return all governed iam policies
-       * under folders/12345678, if applicable.
+       * The expression to filter AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets. For
+       * governed resources, filtering is currently available for bare literal values and the
+       * following fields: * governed_resource.project * governed_resource.folders *
+       * consolidated_policy.rules.enforce When filtering by `governed_resource.project` or
+       * `consolidated_policy.rules.enforce`, the only supported operator is `=`. When filtering by
+       * `governed_resource.folders`, the supported operators are `=` and `:`. For example,
+       * filtering by `governed_resource.project="projects/12345678"` will return all the governed
+       * resources under "projects/12345678", including the project itself if applicable. For
+       * governed IAM policies, filtering is currently available for bare literal values and the
+       * following fields: * governed_iam_policy.project * governed_iam_policy.folders *
+       * consolidated_policy.rules.enforce When filtering by `governed_iam_policy.project` or
+       * `consolidated_policy.rules.enforce`, the only supported operator is `=`. When filtering by
+       * `governed_iam_policy.folders`, the supported operators are `=` and `:`. For example,
+       * filtering by `governed_iam_policy.folders:"folders/12345678"` will return all the governed
+       * IAM policies under "folders/001".
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** The expression to filter the governed assets in result. The only supported fields for governed
-     resources are `governed_resource.project` and `governed_resource.folders`. The only supported
-     fields for governed iam policies are `governed_iam_policy.project` and
-     `governed_iam_policy.folders`. The only supported operator is `=`. Example 1:
-     governed_resource.project="projects/12345678" filter will return all governed resources under
-     projects/12345678 including the project ifself, if applicable. Example 2:
-     governed_iam_policy.folders="folders/12345678" filter will return all governed iam policies under
-     folders/12345678, if applicable.
+      /** The expression to filter AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets. For governed
+     resources, filtering is currently available for bare literal values and the following fields: *
+     governed_resource.project * governed_resource.folders * consolidated_policy.rules.enforce When
+     filtering by `governed_resource.project` or `consolidated_policy.rules.enforce`, the only supported
+     operator is `=`. When filtering by `governed_resource.folders`, the supported operators are `=` and
+     `:`. For example, filtering by `governed_resource.project="projects/12345678"` will return all the
+     governed resources under "projects/12345678", including the project itself if applicable. For
+     governed IAM policies, filtering is currently available for bare literal values and the following
+     fields: * governed_iam_policy.project * governed_iam_policy.folders *
+     consolidated_policy.rules.enforce When filtering by `governed_iam_policy.project` or
+     `consolidated_policy.rules.enforce`, the only supported operator is `=`. When filtering by
+     `governed_iam_policy.folders`, the supported operators are `=` and `:`. For example, filtering by
+     `governed_iam_policy.folders:"folders/12345678"` will return all the governed IAM policies under
+     "folders/001".
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * The expression to filter the governed assets in result. The only supported fields for
-       * governed resources are `governed_resource.project` and `governed_resource.folders`. The
-       * only supported fields for governed iam policies are `governed_iam_policy.project` and
-       * `governed_iam_policy.folders`. The only supported operator is `=`. Example 1:
-       * governed_resource.project="projects/12345678" filter will return all governed resources
-       * under projects/12345678 including the project ifself, if applicable. Example 2:
-       * governed_iam_policy.folders="folders/12345678" filter will return all governed iam policies
-       * under folders/12345678, if applicable.
+       * The expression to filter AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets. For
+       * governed resources, filtering is currently available for bare literal values and the
+       * following fields: * governed_resource.project * governed_resource.folders *
+       * consolidated_policy.rules.enforce When filtering by `governed_resource.project` or
+       * `consolidated_policy.rules.enforce`, the only supported operator is `=`. When filtering by
+       * `governed_resource.folders`, the supported operators are `=` and `:`. For example,
+       * filtering by `governed_resource.project="projects/12345678"` will return all the governed
+       * resources under "projects/12345678", including the project itself if applicable. For
+       * governed IAM policies, filtering is currently available for bare literal values and the
+       * following fields: * governed_iam_policy.project * governed_iam_policy.folders *
+       * consolidated_policy.rules.enforce When filtering by `governed_iam_policy.project` or
+       * `consolidated_policy.rules.enforce`, the only supported operator is `=`. When filtering by
+       * `governed_iam_policy.folders`, the supported operators are `=` and `:`. For example,
+       * filtering by `governed_iam_policy.folders:"folders/12345678"` will return all the governed
+       * IAM policies under "folders/001".
        */
       public AnalyzeOrgPolicyGovernedAssets setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -4292,28 +4316,33 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * The expression to filter the governed containers in result. The only supported field is
-       * `parent`, and the only supported operator is `=`. Example:
-       * parent="//cloudresourcemanager.googleapis.com/folders/001" will return all containers under
-       * "folders/001".
+       * The expression to filter AnalyzeOrgPolicyGovernedContainersResponse.governed_containers.
+       * Filtering is currently available for bare literal values and the following fields: * parent
+       * * consolidated_policy.rules.enforce When filtering by a specific field, the only supported
+       * operator is `=`. For example, filtering by
+       * parent="//cloudresourcemanager.googleapis.com/folders/001" will return all the containers
+       * under "folders/001".
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** The expression to filter the governed containers in result. The only supported field is `parent`,
-     and the only supported operator is `=`. Example:
-     parent="//cloudresourcemanager.googleapis.com/folders/001" will return all containers under
-     "folders/001".
+      /** The expression to filter AnalyzeOrgPolicyGovernedContainersResponse.governed_containers. Filtering
+     is currently available for bare literal values and the following fields: * parent *
+     consolidated_policy.rules.enforce When filtering by a specific field, the only supported operator
+     is `=`. For example, filtering by parent="//cloudresourcemanager.googleapis.com/folders/001" will
+     return all the containers under "folders/001".
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * The expression to filter the governed containers in result. The only supported field is
-       * `parent`, and the only supported operator is `=`. Example:
-       * parent="//cloudresourcemanager.googleapis.com/folders/001" will return all containers under
-       * "folders/001".
+       * The expression to filter AnalyzeOrgPolicyGovernedContainersResponse.governed_containers.
+       * Filtering is currently available for bare literal values and the following fields: * parent
+       * * consolidated_policy.rules.enforce When filtering by a specific field, the only supported
+       * operator is `=`. For example, filtering by
+       * parent="//cloudresourcemanager.googleapis.com/folders/001" will return all the containers
+       * under "folders/001".
        */
       public AnalyzeOrgPolicyGovernedContainers setFilter(java.lang.String filter) {
         this.filter = filter;

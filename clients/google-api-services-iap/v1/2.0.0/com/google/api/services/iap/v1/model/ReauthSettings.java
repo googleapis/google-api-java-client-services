@@ -45,7 +45,7 @@ public final class ReauthSettings extends com.google.api.client.json.GenericJson
   private java.lang.String method;
 
   /**
-   * How IAP determines the effective policy in cases of hierarchial policies. Policies are merged
+   * How IAP determines the effective policy in cases of hierarchical policies. Policies are merged
    * from higher in the hierarchy to lower in the hierarchy.
    * The value may be {@code null}.
    */
@@ -87,7 +87,7 @@ public final class ReauthSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * How IAP determines the effective policy in cases of hierarchial policies. Policies are merged
+   * How IAP determines the effective policy in cases of hierarchical policies. Policies are merged
    * from higher in the hierarchy to lower in the hierarchy.
    * @return value or {@code null} for none
    */
@@ -96,7 +96,7 @@ public final class ReauthSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * How IAP determines the effective policy in cases of hierarchial policies. Policies are merged
+   * How IAP determines the effective policy in cases of hierarchical policies. Policies are merged
    * from higher in the hierarchy to lower in the hierarchy.
    * @param policyType policyType or {@code null} for none
    */

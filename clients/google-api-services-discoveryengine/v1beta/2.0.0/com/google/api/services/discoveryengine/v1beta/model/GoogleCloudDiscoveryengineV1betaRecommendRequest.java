@@ -33,11 +33,15 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * Filter for restricting recommendation results with a length limit of 5,000 characters.
    * Currently, only filter expressions on the `filter_tags` attribute is supported. Examples: *
    * `(filter_tags: ANY("Red", "Blue") OR filter_tags: ANY("Hot", "Cold"))` * `(filter_tags:
-   * ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))` If your filter blocks all results, the
-   * API will return generic (unfiltered) popular Documents. If you only want results strictly
-   * matching the filters, set `strictFiltering` to True in RecommendRequest.params to receive empty
-   * results instead. Note that the API will never return Documents with `storageStatus` of
-   * `EXPIRED` or `DELETED` regardless of filter choices.
+   * ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))` If `attributeFilteringSyntax` is set
+   * to true under the `params` field, then attribute-based expressions are expected instead of the
+   * above described tag-based syntax. Examples: * (launguage: ANY("en", "es")) AND NOT (categories:
+   * ANY("Movie")) * (available: true) AND (launguage: ANY("en", "es")) OR (categories:
+   * ANY("Movie")) If your filter blocks all results, the API will return generic (unfiltered)
+   * popular Documents. If you only want results strictly matching the filters, set
+   * `strictFiltering` to True in RecommendRequest.params to receive empty results instead. Note
+   * that the API will never return Documents with `storageStatus` of `EXPIRED` or `DELETED`
+   * regardless of filter choices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +67,9 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * instead of empty if your filter blocks all recommendation results. * `diversityLevel`: String.
    * Default empty. If set to be non-empty, then it needs to be one of: * `no-diversity` * `low-
    * diversity` * `medium-diversity` * `high-diversity` * `auto-diversity` This gives request-level
-   * control and adjusts recommendation results based on Document category.
+   * control and adjusts recommendation results based on Document category. *
+   * `attributeFilteringSyntax`: Boolean. False by default. If set to true, the `filter` field is
+   * interpreted according to the new, attribute-based syntax.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,11 +117,15 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * Filter for restricting recommendation results with a length limit of 5,000 characters.
    * Currently, only filter expressions on the `filter_tags` attribute is supported. Examples: *
    * `(filter_tags: ANY("Red", "Blue") OR filter_tags: ANY("Hot", "Cold"))` * `(filter_tags:
-   * ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))` If your filter blocks all results, the
-   * API will return generic (unfiltered) popular Documents. If you only want results strictly
-   * matching the filters, set `strictFiltering` to True in RecommendRequest.params to receive empty
-   * results instead. Note that the API will never return Documents with `storageStatus` of
-   * `EXPIRED` or `DELETED` regardless of filter choices.
+   * ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))` If `attributeFilteringSyntax` is set
+   * to true under the `params` field, then attribute-based expressions are expected instead of the
+   * above described tag-based syntax. Examples: * (launguage: ANY("en", "es")) AND NOT (categories:
+   * ANY("Movie")) * (available: true) AND (launguage: ANY("en", "es")) OR (categories:
+   * ANY("Movie")) If your filter blocks all results, the API will return generic (unfiltered)
+   * popular Documents. If you only want results strictly matching the filters, set
+   * `strictFiltering` to True in RecommendRequest.params to receive empty results instead. Note
+   * that the API will never return Documents with `storageStatus` of `EXPIRED` or `DELETED`
+   * regardless of filter choices.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -126,11 +136,15 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * Filter for restricting recommendation results with a length limit of 5,000 characters.
    * Currently, only filter expressions on the `filter_tags` attribute is supported. Examples: *
    * `(filter_tags: ANY("Red", "Blue") OR filter_tags: ANY("Hot", "Cold"))` * `(filter_tags:
-   * ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))` If your filter blocks all results, the
-   * API will return generic (unfiltered) popular Documents. If you only want results strictly
-   * matching the filters, set `strictFiltering` to True in RecommendRequest.params to receive empty
-   * results instead. Note that the API will never return Documents with `storageStatus` of
-   * `EXPIRED` or `DELETED` regardless of filter choices.
+   * ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))` If `attributeFilteringSyntax` is set
+   * to true under the `params` field, then attribute-based expressions are expected instead of the
+   * above described tag-based syntax. Examples: * (launguage: ANY("en", "es")) AND NOT (categories:
+   * ANY("Movie")) * (available: true) AND (launguage: ANY("en", "es")) OR (categories:
+   * ANY("Movie")) If your filter blocks all results, the API will return generic (unfiltered)
+   * popular Documents. If you only want results strictly matching the filters, set
+   * `strictFiltering` to True in RecommendRequest.params to receive empty results instead. Note
+   * that the API will never return Documents with `storageStatus` of `EXPIRED` or `DELETED`
+   * regardless of filter choices.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaRecommendRequest setFilter(java.lang.String filter) {
@@ -170,7 +184,9 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * instead of empty if your filter blocks all recommendation results. * `diversityLevel`: String.
    * Default empty. If set to be non-empty, then it needs to be one of: * `no-diversity` * `low-
    * diversity` * `medium-diversity` * `high-diversity` * `auto-diversity` This gives request-level
-   * control and adjusts recommendation results based on Document category.
+   * control and adjusts recommendation results based on Document category. *
+   * `attributeFilteringSyntax`: Boolean. False by default. If set to true, the `filter` field is
+   * interpreted according to the new, attribute-based syntax.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -188,7 +204,9 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * instead of empty if your filter blocks all recommendation results. * `diversityLevel`: String.
    * Default empty. If set to be non-empty, then it needs to be one of: * `no-diversity` * `low-
    * diversity` * `medium-diversity` * `high-diversity` * `auto-diversity` This gives request-level
-   * control and adjusts recommendation results based on Document category.
+   * control and adjusts recommendation results based on Document category. *
+   * `attributeFilteringSyntax`: Boolean. False by default. If set to true, the `filter` field is
+   * interpreted according to the new, attribute-based syntax.
    * @param params params or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaRecommendRequest setParams(java.util.Map<String, java.lang.Object> params) {

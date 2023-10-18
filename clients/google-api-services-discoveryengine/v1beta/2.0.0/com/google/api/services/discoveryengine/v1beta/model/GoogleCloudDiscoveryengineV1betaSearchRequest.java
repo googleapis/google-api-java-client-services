@@ -30,7 +30,8 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Boost specification to boost certain documents.
+   * Boost specification to boost certain documents. For more information on boosting, see
+   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +76,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the documents being filtered. Filter expression is case-sensitive. If this field
-   * is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * is unrecognizable, an `INVALID_ARGUMENT` is returned. Filtering in Vertex AI Search is done by
+   * mapping the LHS filter key to a key property defined in the Vertex AI Search backend -- this
+   * mapping is defined by the customer in their schema. For example a media customer might have a
+   * field 'name' in their schema. In this case the filter would look like this: filter -->
+   * name:'ANY("king kong")' For more information about filtering including syntax and filter
+   * operators, see [Filter](https://cloud.google.com/generative-ai-app-builder/docs/filter-search-
+   * metadata)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +107,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
 
   /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
-   * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. If
-   * this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
+   * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
+   * order#order) If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,7 +228,8 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   private java.lang.String userPseudoId;
 
   /**
-   * Boost specification to boost certain documents.
+   * Boost specification to boost certain documents. For more information on boosting, see
+   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec getBoostSpec() {
@@ -228,7 +237,8 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   }
 
   /**
-   * Boost specification to boost certain documents.
+   * Boost specification to boost certain documents. For more information on boosting, see
+   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
    * @param boostSpec boostSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setBoostSpec(GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec boostSpec) {
@@ -323,7 +333,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the documents being filtered. Filter expression is case-sensitive. If this field
-   * is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * is unrecognizable, an `INVALID_ARGUMENT` is returned. Filtering in Vertex AI Search is done by
+   * mapping the LHS filter key to a key property defined in the Vertex AI Search backend -- this
+   * mapping is defined by the customer in their schema. For example a media customer might have a
+   * field 'name' in their schema. In this case the filter would look like this: filter -->
+   * name:'ANY("king kong")' For more information about filtering including syntax and filter
+   * operators, see [Filter](https://cloud.google.com/generative-ai-app-builder/docs/filter-search-
+   * metadata)
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -333,7 +349,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the documents being filtered. Filter expression is case-sensitive. If this field
-   * is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * is unrecognizable, an `INVALID_ARGUMENT` is returned. Filtering in Vertex AI Search is done by
+   * mapping the LHS filter key to a key property defined in the Vertex AI Search backend -- this
+   * mapping is defined by the customer in their schema. For example a media customer might have a
+   * field 'name' in their schema. In this case the filter would look like this: filter -->
+   * name:'ANY("king kong")' For more information about filtering including syntax and filter
+   * operators, see [Filter](https://cloud.google.com/generative-ai-app-builder/docs/filter-search-
+   * metadata)
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setFilter(java.lang.String filter) {
@@ -383,8 +405,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
 
   /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
-   * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. If
-   * this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
+   * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
+   * order#order) If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -393,8 +416,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
 
   /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
-   * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. If
-   * this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
+   * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
+   * order#order) If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setOrderBy(java.lang.String orderBy) {

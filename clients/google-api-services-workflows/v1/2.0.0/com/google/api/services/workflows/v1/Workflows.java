@@ -1645,17 +1645,26 @@ public class Workflows extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Filter to restrict results to specific workflows. */
+          /**
+           * Filter to restrict results to specific workflows. For details, see AIP-160. For
+           * example, if you are using the Google APIs Explorer: `state="SUCCEEDED"` or
+           * `createTime>"2023-08-01" AND state="FAILED"`
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter to restrict results to specific workflows.
+          /** Filter to restrict results to specific workflows. For details, see AIP-160. For example, if you are
+         using the Google APIs Explorer: `state="SUCCEEDED"` or `createTime>"2023-08-01" AND state="FAILED"`
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter to restrict results to specific workflows. */
+          /**
+           * Filter to restrict results to specific workflows. For details, see AIP-160. For
+           * example, if you are using the Google APIs Explorer: `state="SUCCEEDED"` or
+           * `createTime>"2023-08-01" AND state="FAILED"`
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;

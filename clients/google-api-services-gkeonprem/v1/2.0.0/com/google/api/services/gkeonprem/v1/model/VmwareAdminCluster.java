@@ -168,7 +168,8 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
   private VmwarePlatformConfig platformConfig;
 
   /**
-   * The VMware admin cluster prepared secrets configuration.
+   * Output only. The VMware admin cluster prepared secrets configuration. It should always be
+   * enabled by the Central API, instead of letting users set it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -547,7 +548,8 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * The VMware admin cluster prepared secrets configuration.
+   * Output only. The VMware admin cluster prepared secrets configuration. It should always be
+   * enabled by the Central API, instead of letting users set it.
    * @return value or {@code null} for none
    */
   public VmwareAdminPreparedSecretsConfig getPreparedSecrets() {
@@ -555,7 +557,8 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * The VMware admin cluster prepared secrets configuration.
+   * Output only. The VMware admin cluster prepared secrets configuration. It should always be
+   * enabled by the Central API, instead of letting users set it.
    * @param preparedSecrets preparedSecrets or {@code null} for none
    */
   public VmwareAdminCluster setPreparedSecrets(VmwareAdminPreparedSecretsConfig preparedSecrets) {

@@ -58,6 +58,13 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
   private IdentityServiceMembershipState identityservice;
 
   /**
+   * Policycontroller-specific state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyControllerMembershipState policycontroller;
+
+  /**
    * Service Mesh-specific state.
    * The value may be {@code null}.
    */
@@ -136,6 +143,23 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
    */
   public MembershipFeatureState setIdentityservice(IdentityServiceMembershipState identityservice) {
     this.identityservice = identityservice;
+    return this;
+  }
+
+  /**
+   * Policycontroller-specific state.
+   * @return value or {@code null} for none
+   */
+  public PolicyControllerMembershipState getPolicycontroller() {
+    return policycontroller;
+  }
+
+  /**
+   * Policycontroller-specific state.
+   * @param policycontroller policycontroller or {@code null} for none
+   */
+  public MembershipFeatureState setPolicycontroller(PolicyControllerMembershipState policycontroller) {
+    this.policycontroller = policycontroller;
     return this;
   }
 

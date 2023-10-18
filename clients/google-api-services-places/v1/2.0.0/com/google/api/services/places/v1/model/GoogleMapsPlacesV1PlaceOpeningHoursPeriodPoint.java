@@ -30,45 +30,45 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Date in the local timezone for the place.
+   * Date in the local timezone for the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate date;
 
   /**
-   * Output only. A day of the week, as an integer in the range 0-6. 0 is Sunday, 1 is Monday, etc.
+   * A day of the week, as an integer in the range 0-6. 0 is Sunday, 1 is Monday, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer day;
 
   /**
-   * Output only. The hour in 2 digits. Ranges from 00 to 23.
+   * The hour in 2 digits. Ranges from 00 to 23.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer hour;
 
   /**
-   * Output only. The minute in 2 digits. Ranges from 00 to 59.
+   * The minute in 2 digits. Ranges from 00 to 59.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minute;
 
   /**
-   * Output only. Whether or not this endpoint was truncated. Truncation occurs when the real hours
-   * are outside the times we are willing to return hours between, so we truncate the hours back to
-   * these boundaries. This ensures that at most 24 * 7 hours from midnight of the day of the
-   * request are returned.
+   * Whether or not this endpoint was truncated. Truncation occurs when the real hours are outside
+   * the times we are willing to return hours between, so we truncate the hours back to these
+   * boundaries. This ensures that at most 24 * 7 hours from midnight of the day of the request are
+   * returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean truncated;
 
   /**
-   * Output only. Date in the local timezone for the place.
+   * Date in the local timezone for the place.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getDate() {
@@ -76,7 +76,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * Output only. Date in the local timezone for the place.
+   * Date in the local timezone for the place.
    * @param date date or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint setDate(GoogleTypeDate date) {
@@ -85,7 +85,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * Output only. A day of the week, as an integer in the range 0-6. 0 is Sunday, 1 is Monday, etc.
+   * A day of the week, as an integer in the range 0-6. 0 is Sunday, 1 is Monday, etc.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDay() {
@@ -93,7 +93,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * Output only. A day of the week, as an integer in the range 0-6. 0 is Sunday, 1 is Monday, etc.
+   * A day of the week, as an integer in the range 0-6. 0 is Sunday, 1 is Monday, etc.
    * @param day day or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint setDay(java.lang.Integer day) {
@@ -102,7 +102,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * Output only. The hour in 2 digits. Ranges from 00 to 23.
+   * The hour in 2 digits. Ranges from 00 to 23.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHour() {
@@ -110,7 +110,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * Output only. The hour in 2 digits. Ranges from 00 to 23.
+   * The hour in 2 digits. Ranges from 00 to 23.
    * @param hour hour or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint setHour(java.lang.Integer hour) {
@@ -119,7 +119,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * Output only. The minute in 2 digits. Ranges from 00 to 59.
+   * The minute in 2 digits. Ranges from 00 to 59.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinute() {
@@ -127,7 +127,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * Output only. The minute in 2 digits. Ranges from 00 to 59.
+   * The minute in 2 digits. Ranges from 00 to 59.
    * @param minute minute or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint setMinute(java.lang.Integer minute) {
@@ -136,10 +136,10 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * Output only. Whether or not this endpoint was truncated. Truncation occurs when the real hours
-   * are outside the times we are willing to return hours between, so we truncate the hours back to
-   * these boundaries. This ensures that at most 24 * 7 hours from midnight of the day of the
-   * request are returned.
+   * Whether or not this endpoint was truncated. Truncation occurs when the real hours are outside
+   * the times we are willing to return hours between, so we truncate the hours back to these
+   * boundaries. This ensures that at most 24 * 7 hours from midnight of the day of the request are
+   * returned.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTruncated() {
@@ -147,10 +147,10 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * Output only. Whether or not this endpoint was truncated. Truncation occurs when the real hours
-   * are outside the times we are willing to return hours between, so we truncate the hours back to
-   * these boundaries. This ensures that at most 24 * 7 hours from midnight of the day of the
-   * request are returned.
+   * Whether or not this endpoint was truncated. Truncation occurs when the real hours are outside
+   * the times we are willing to return hours between, so we truncate the hours back to these
+   * boundaries. This ensures that at most 24 * 7 hours from midnight of the day of the request are
+   * returned.
    * @param truncated truncated or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint setTruncated(java.lang.Boolean truncated) {

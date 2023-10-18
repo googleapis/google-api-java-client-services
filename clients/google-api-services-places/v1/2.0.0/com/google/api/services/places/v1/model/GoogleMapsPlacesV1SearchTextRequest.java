@@ -31,7 +31,8 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
 
   /**
    * The requested place type. Full list of types supported:
-   * https://developers.google.com/places/supported_types. Only support one included type.
+   * https://developers.google.com/maps/documentation/places/web-service/place-types. Only support
+   * one included type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +85,7 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   private java.lang.Double minRating;
 
   /**
-   * Used to restrict the search to places that are open at a specific time. open_now marks if a
-   * business is currently open.
+   * Used to restrict the search to places that are currently open.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,8 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
 
   /**
    * The requested place type. Full list of types supported:
-   * https://developers.google.com/places/supported_types. Only support one included type.
+   * https://developers.google.com/maps/documentation/places/web-service/place-types. Only support
+   * one included type.
    * @return value or {@code null} for none
    */
   public java.lang.String getIncludedType() {
@@ -143,7 +144,8 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
 
   /**
    * The requested place type. Full list of types supported:
-   * https://developers.google.com/places/supported_types. Only support one included type.
+   * https://developers.google.com/maps/documentation/places/web-service/place-types. Only support
+   * one included type.
    * @param includedType includedType or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequest setIncludedType(java.lang.String includedType) {
@@ -259,8 +261,7 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * Used to restrict the search to places that are open at a specific time. open_now marks if a
-   * business is currently open.
+   * Used to restrict the search to places that are currently open.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOpenNow() {
@@ -268,8 +269,7 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * Used to restrict the search to places that are open at a specific time. open_now marks if a
-   * business is currently open.
+   * Used to restrict the search to places that are currently open.
    * @param openNow openNow or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequest setOpenNow(java.lang.Boolean openNow) {

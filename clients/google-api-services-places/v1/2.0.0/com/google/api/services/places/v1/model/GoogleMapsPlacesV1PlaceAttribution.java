@@ -30,21 +30,21 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlaceAttribution extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Name of the Place's data provider.
+   * Name of the Place's data provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String provider;
 
   /**
-   * Output only. URI to the Place's data provider.
+   * URI to the Place's data provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String providerUri;
 
   /**
-   * Output only. Name of the Place's data provider.
+   * Name of the Place's data provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getProvider() {
@@ -52,7 +52,7 @@ public final class GoogleMapsPlacesV1PlaceAttribution extends com.google.api.cli
   }
 
   /**
-   * Output only. Name of the Place's data provider.
+   * Name of the Place's data provider.
    * @param provider provider or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceAttribution setProvider(java.lang.String provider) {
@@ -61,7 +61,7 @@ public final class GoogleMapsPlacesV1PlaceAttribution extends com.google.api.cli
   }
 
   /**
-   * Output only. URI to the Place's data provider.
+   * URI to the Place's data provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getProviderUri() {
@@ -69,7 +69,7 @@ public final class GoogleMapsPlacesV1PlaceAttribution extends com.google.api.cli
   }
 
   /**
-   * Output only. URI to the Place's data provider.
+   * URI to the Place's data provider.
    * @param providerUri providerUri or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceAttribution setProviderUri(java.lang.String providerUri) {

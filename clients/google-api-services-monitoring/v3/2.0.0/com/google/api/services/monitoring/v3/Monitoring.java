@@ -10490,13 +10490,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The ServiceLevelObjective id to use for this ServiceLevelObjective. If omitted,
-         * an id will be generated instead. Must match the pattern [a-z0-9\-]+
+         * an id will be generated instead. Must match the pattern ^[a-zA-Z0-9-_:.]+$
          */
         @com.google.api.client.util.Key
         private java.lang.String serviceLevelObjectiveId;
 
         /** Optional. The ServiceLevelObjective id to use for this ServiceLevelObjective. If omitted, an id
-       will be generated instead. Must match the pattern [a-z0-9\-]+
+       will be generated instead. Must match the pattern ^[a-zA-Z0-9-_:.]+$
          */
         public java.lang.String getServiceLevelObjectiveId() {
           return serviceLevelObjectiveId;
@@ -10504,7 +10504,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The ServiceLevelObjective id to use for this ServiceLevelObjective. If omitted,
-         * an id will be generated instead. Must match the pattern [a-z0-9\-]+
+         * an id will be generated instead. Must match the pattern ^[a-zA-Z0-9-_:.]+$
          */
         public Create setServiceLevelObjectiveId(java.lang.String serviceLevelObjectiveId) {
           this.serviceLevelObjectiveId = serviceLevelObjectiveId;

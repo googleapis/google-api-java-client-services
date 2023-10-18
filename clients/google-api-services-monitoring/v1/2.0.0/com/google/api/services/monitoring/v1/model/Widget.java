@@ -53,6 +53,21 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private CollapsibleGroup collapsibleGroup;
 
   /**
+   * A widget that displays a list of error groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ErrorReportingPanel errorReportingPanel;
+
+  /**
+   * Optional. The widget id. Ids may be made up of alphanumerics, dashes and underscores. Widget
+   * ids are optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * A widget that shows list of incidents.
    * The value may be {@code null}.
    */
@@ -158,6 +173,42 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setCollapsibleGroup(CollapsibleGroup collapsibleGroup) {
     this.collapsibleGroup = collapsibleGroup;
+    return this;
+  }
+
+  /**
+   * A widget that displays a list of error groups.
+   * @return value or {@code null} for none
+   */
+  public ErrorReportingPanel getErrorReportingPanel() {
+    return errorReportingPanel;
+  }
+
+  /**
+   * A widget that displays a list of error groups.
+   * @param errorReportingPanel errorReportingPanel or {@code null} for none
+   */
+  public Widget setErrorReportingPanel(ErrorReportingPanel errorReportingPanel) {
+    this.errorReportingPanel = errorReportingPanel;
+    return this;
+  }
+
+  /**
+   * Optional. The widget id. Ids may be made up of alphanumerics, dashes and underscores. Widget
+   * ids are optional.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Optional. The widget id. Ids may be made up of alphanumerics, dashes and underscores. Widget
+   * ids are optional.
+   * @param id id or {@code null} for none
+   */
+  public Widget setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 

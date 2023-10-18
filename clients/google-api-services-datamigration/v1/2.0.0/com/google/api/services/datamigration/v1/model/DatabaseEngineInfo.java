@@ -38,7 +38,7 @@ public final class DatabaseEngineInfo extends com.google.api.client.json.Generic
   private java.lang.String engine;
 
   /**
-   * Required. Engine named version, for example 12.c.1.
+   * Required. Engine version, for example "12.c.1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class DatabaseEngineInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Engine named version, for example 12.c.1.
+   * Required. Engine version, for example "12.c.1".
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -70,7 +70,7 @@ public final class DatabaseEngineInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Engine named version, for example 12.c.1.
+   * Required. Engine version, for example "12.c.1".
    * @param version version or {@code null} for none
    */
   public DatabaseEngineInfo setVersion(java.lang.String version) {

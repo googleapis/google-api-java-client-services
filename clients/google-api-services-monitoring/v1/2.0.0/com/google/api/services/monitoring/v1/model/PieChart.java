@@ -51,21 +51,6 @@ public final class PieChart extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean showLabels;
 
   /**
-   * Optional. Indicates whether or not donut chart should show the total in the middle
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean showTotal;
-
-  /**
-   * Optional. If slices's values are smaller than this value, they will be combined into other
-   * category
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float sliceAggregatedThreshold;
-
-  /**
    * Required. Indicates the visualization type for the PieChart.
    * @return value or {@code null} for none
    */
@@ -113,42 +98,6 @@ public final class PieChart extends com.google.api.client.json.GenericJson {
    */
   public PieChart setShowLabels(java.lang.Boolean showLabels) {
     this.showLabels = showLabels;
-    return this;
-  }
-
-  /**
-   * Optional. Indicates whether or not donut chart should show the total in the middle
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getShowTotal() {
-    return showTotal;
-  }
-
-  /**
-   * Optional. Indicates whether or not donut chart should show the total in the middle
-   * @param showTotal showTotal or {@code null} for none
-   */
-  public PieChart setShowTotal(java.lang.Boolean showTotal) {
-    this.showTotal = showTotal;
-    return this;
-  }
-
-  /**
-   * Optional. If slices's values are smaller than this value, they will be combined into other
-   * category
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getSliceAggregatedThreshold() {
-    return sliceAggregatedThreshold;
-  }
-
-  /**
-   * Optional. If slices's values are smaller than this value, they will be combined into other
-   * category
-   * @param sliceAggregatedThreshold sliceAggregatedThreshold or {@code null} for none
-   */
-  public PieChart setSliceAggregatedThreshold(java.lang.Float sliceAggregatedThreshold) {
-    this.sliceAggregatedThreshold = sliceAggregatedThreshold;
     return this;
   }
 

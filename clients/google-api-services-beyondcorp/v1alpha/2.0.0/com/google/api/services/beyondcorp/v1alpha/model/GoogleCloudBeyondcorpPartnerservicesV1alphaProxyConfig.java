@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1alpha.model;
 
 /**
- * Proxy Configuration of a Tenant.
+ * Proxy Configuration of a PartnerTenant.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -56,13 +56,6 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extend
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * Optional. Protocol config data for the Proxy.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudBeyondcorpPartnerservicesV1alphaProxyProtocolConfig proxyProtocolConfig;
 
   /**
    * Required. The URI of the proxy server.
@@ -157,23 +150,6 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extend
    */
   public GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Optional. Protocol config data for the Proxy.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpPartnerservicesV1alphaProxyProtocolConfig getProxyProtocolConfig() {
-    return proxyProtocolConfig;
-  }
-
-  /**
-   * Optional. Protocol config data for the Proxy.
-   * @param proxyProtocolConfig proxyProtocolConfig or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig setProxyProtocolConfig(GoogleCloudBeyondcorpPartnerservicesV1alphaProxyProtocolConfig proxyProtocolConfig) {
-    this.proxyProtocolConfig = proxyProtocolConfig;
     return this;
   }
 

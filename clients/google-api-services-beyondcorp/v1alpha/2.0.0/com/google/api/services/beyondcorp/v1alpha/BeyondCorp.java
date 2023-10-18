@@ -1245,6 +1245,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
              * PartnerTenant resource by the update. The fields specified in the update_mask are
              * relative to the resource, not the full request. A field will be overwritten if it is
              * in the mask. If the user does not provide a mask then all fields will be overwritten.
+             * Mutable fields: display_name, partner_metadata, group_information.
              */
             @com.google.api.client.util.Key
             private String updateMask;
@@ -1252,7 +1253,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             /** Required. Field mask is used to specify the fields to be overwritten in the PartnerTenant resource
            by the update. The fields specified in the update_mask are relative to the resource, not the full
            request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
-           all fields will be overwritten.
+           all fields will be overwritten. Mutable fields: display_name, partner_metadata, group_information.
              */
             public String getUpdateMask() {
               return updateMask;
@@ -1263,6 +1264,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
              * PartnerTenant resource by the update. The fields specified in the update_mask are
              * relative to the resource, not the full request. A field will be overwritten if it is
              * in the mask. If the user does not provide a mask then all fields will be overwritten.
+             * Mutable fields: display_name, partner_metadata, group_information.
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -2990,8 +2992,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the beyondcorp server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the Tenant using the form:
-             *        `organizations/{organization_id}/locations/global/tenants/{tenant_id}`
+             * @param parent Required. The resource name of the parent PartnerTenant using the form:
+             *        `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
              * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig}
              * @return the request
              */
@@ -3020,8 +3022,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the Tenant using the form:
-             *        `organizations/{organization_id}/locations/global/tenants/{tenant_id}`
+               * @param parent Required. The resource name of the parent PartnerTenant using the form:
+             *        `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
                * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig}
                * @since 1.13
                */
@@ -3091,22 +3093,22 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Required. The resource name of the Tenant using the form:
-               * `organizations/{organization_id}/locations/global/tenants/{tenant_id}`
+               * Required. The resource name of the parent PartnerTenant using the form: `organizati
+               * ons/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name of the Tenant using the form:
-             `organizations/{organization_id}/locations/global/tenants/{tenant_id}`
+              /** Required. The resource name of the parent PartnerTenant using the form:
+             `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The resource name of the Tenant using the form:
-               * `organizations/{organization_id}/locations/global/tenants/{tenant_id}`
+               * Required. The resource name of the parent PartnerTenant using the form: `organizati
+               * ons/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -3351,7 +3353,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The resource name of the ProxyConfig using the form: `organizations/{organization_id}/loca
-             *        tions/global/tenants/{tenant_id}/proxyConfigs/{proxy_config_id}`
+             *        tions/global/partnerTenants/{partner_tenant_id}/proxyConfigs/{proxy_config_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -3378,7 +3380,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The resource name of the ProxyConfig using the form: `organizations/{organization_id}/loca
-             *        tions/global/tenants/{tenant_id}/proxyConfigs/{proxy_config_id}`
+             *        tions/global/partnerTenants/{partner_tenant_id}/proxyConfigs/{proxy_config_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -3458,13 +3460,14 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
 
               /**
                * Required. The resource name of the ProxyConfig using the form: `organizations/{orga
-               * nization_id}/locations/global/tenants/{tenant_id}/proxyConfigs/{proxy_config_id}`
+               * nization_id}/locations/global/partnerTenants/{partner_tenant_id}/proxyConfigs/{prox
+               * y_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The resource name of the ProxyConfig using the form: `organizations/{organization_id}/loc
-             ations/global/tenants/{tenant_id}/proxyConfigs/{proxy_config_id}`
+             ations/global/partnerTenants/{partner_tenant_id}/proxyConfigs/{proxy_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -3472,7 +3475,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
 
               /**
                * Required. The resource name of the ProxyConfig using the form: `organizations/{orga
-               * nization_id}/locations/global/tenants/{tenant_id}/proxyConfigs/{proxy_config_id}`
+               * nization_id}/locations/global/partnerTenants/{partner_tenant_id}/proxyConfigs/{prox
+               * y_config_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

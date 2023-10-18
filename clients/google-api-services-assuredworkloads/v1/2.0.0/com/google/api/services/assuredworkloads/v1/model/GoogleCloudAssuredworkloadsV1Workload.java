@@ -160,6 +160,15 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   private java.lang.String provisionedResourcesParent;
 
   /**
+   * Output only. Indicates whether resource monitoring is enabled for workload or not. It is true
+   * when Resource feed is subscribed to AWM topic and AWM Service Agent Role is binded to AW
+   * Service Account for resource Assured workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean resourceMonitoringEnabled;
+
+  /**
    * Input only. Resource properties that are used to customize workload resources. These properties
    * (such as custom project id) will be used to create workload resources if possible. This field
    * is optional.
@@ -499,6 +508,27 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    */
   public GoogleCloudAssuredworkloadsV1Workload setProvisionedResourcesParent(java.lang.String provisionedResourcesParent) {
     this.provisionedResourcesParent = provisionedResourcesParent;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether resource monitoring is enabled for workload or not. It is true
+   * when Resource feed is subscribed to AWM topic and AWM Service Agent Role is binded to AW
+   * Service Account for resource Assured workload.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getResourceMonitoringEnabled() {
+    return resourceMonitoringEnabled;
+  }
+
+  /**
+   * Output only. Indicates whether resource monitoring is enabled for workload or not. It is true
+   * when Resource feed is subscribed to AWM topic and AWM Service Agent Role is binded to AW
+   * Service Account for resource Assured workload.
+   * @param resourceMonitoringEnabled resourceMonitoringEnabled or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1Workload setResourceMonitoringEnabled(java.lang.Boolean resourceMonitoringEnabled) {
+    this.resourceMonitoringEnabled = resourceMonitoringEnabled;
     return this;
   }
 

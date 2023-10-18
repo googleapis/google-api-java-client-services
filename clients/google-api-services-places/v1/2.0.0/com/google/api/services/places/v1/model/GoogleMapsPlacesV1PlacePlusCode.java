@@ -32,24 +32,24 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlacePlusCode extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Place's compound code, such as "33GV+HQ, Ramberg, Norway", containing the suffix
-   * of the global code and replacing the prefix with a formatted name of a reference entity.
+   * Place's compound code, such as "33GV+HQ, Ramberg, Norway", containing the suffix of the global
+   * code and replacing the prefix with a formatted name of a reference entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String compoundCode;
 
   /**
-   * Output only. Place's global (full) code, such as "9FWM33GV+HQ", representing an 1/8000 by
-   * 1/8000 degree area (~14 by 14 meters).
+   * Place's global (full) code, such as "9FWM33GV+HQ", representing an 1/8000 by 1/8000 degree area
+   * (~14 by 14 meters).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String globalCode;
 
   /**
-   * Output only. Place's compound code, such as "33GV+HQ, Ramberg, Norway", containing the suffix
-   * of the global code and replacing the prefix with a formatted name of a reference entity.
+   * Place's compound code, such as "33GV+HQ, Ramberg, Norway", containing the suffix of the global
+   * code and replacing the prefix with a formatted name of a reference entity.
    * @return value or {@code null} for none
    */
   public java.lang.String getCompoundCode() {
@@ -57,8 +57,8 @@ public final class GoogleMapsPlacesV1PlacePlusCode extends com.google.api.client
   }
 
   /**
-   * Output only. Place's compound code, such as "33GV+HQ, Ramberg, Norway", containing the suffix
-   * of the global code and replacing the prefix with a formatted name of a reference entity.
+   * Place's compound code, such as "33GV+HQ, Ramberg, Norway", containing the suffix of the global
+   * code and replacing the prefix with a formatted name of a reference entity.
    * @param compoundCode compoundCode or {@code null} for none
    */
   public GoogleMapsPlacesV1PlacePlusCode setCompoundCode(java.lang.String compoundCode) {
@@ -67,8 +67,8 @@ public final class GoogleMapsPlacesV1PlacePlusCode extends com.google.api.client
   }
 
   /**
-   * Output only. Place's global (full) code, such as "9FWM33GV+HQ", representing an 1/8000 by
-   * 1/8000 degree area (~14 by 14 meters).
+   * Place's global (full) code, such as "9FWM33GV+HQ", representing an 1/8000 by 1/8000 degree area
+   * (~14 by 14 meters).
    * @return value or {@code null} for none
    */
   public java.lang.String getGlobalCode() {
@@ -76,8 +76,8 @@ public final class GoogleMapsPlacesV1PlacePlusCode extends com.google.api.client
   }
 
   /**
-   * Output only. Place's global (full) code, such as "9FWM33GV+HQ", representing an 1/8000 by
-   * 1/8000 degree area (~14 by 14 meters).
+   * Place's global (full) code, such as "9FWM33GV+HQ", representing an 1/8000 by 1/8000 degree area
+   * (~14 by 14 meters).
    * @param globalCode globalCode or {@code null} for none
    */
   public GoogleMapsPlacesV1PlacePlusCode setGlobalCode(java.lang.String globalCode) {

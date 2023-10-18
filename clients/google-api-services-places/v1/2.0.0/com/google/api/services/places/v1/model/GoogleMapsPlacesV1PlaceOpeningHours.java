@@ -30,52 +30,51 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Is this place open right now? Always present unless we lack time-of-day or
-   * timezone data for these opening hours.
+   * Is this place open right now? Always present unless we lack time-of-day or timezone data for
+   * these opening hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean openNow;
 
   /**
-   * Output only. The periods that this place is open during the week. The periods are in
-   * chronological order, starting with Sunday in the place-local timezone. An empty (but not
-   * absent) value indicates a place that is never open, e.g. because it is closed temporarily for
-   * renovations.
+   * The periods that this place is open during the week. The periods are in chronological order,
+   * starting with Sunday in the place-local timezone. An empty (but not absent) value indicates a
+   * place that is never open, e.g. because it is closed temporarily for renovations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleMapsPlacesV1PlaceOpeningHoursPeriod> periods;
 
   /**
-   * Output only. A type string used to identify the type of secondary hours.
+   * A type string used to identify the type of secondary hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secondaryHoursType;
 
   /**
-   * Output only. Structured information for special days that fall within the period that the
-   * returned opening hours cover. Special days are days that could impact the business hours of a
-   * place, e.g. Christmas day. Set for current_opening_hours and current_secondary_opening_hours if
-   * there are exceptional hours.
+   * Structured information for special days that fall within the period that the returned opening
+   * hours cover. Special days are days that could impact the business hours of a place, e.g.
+   * Christmas day. Set for current_opening_hours and current_secondary_opening_hours if there are
+   * exceptional hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleMapsPlacesV1PlaceOpeningHoursSpecialDay> specialDays;
 
   /**
-   * Output only. Localized strings describing the opening hours of this place, one string for each
-   * day of the week. Will be empty if the hours are unknown or could not be converted to localized
-   * text. Example: "Sun: 18:00–06:00"
+   * Localized strings describing the opening hours of this place, one string for each day of the
+   * week. Will be empty if the hours are unknown or could not be converted to localized text.
+   * Example: "Sun: 18:00–06:00"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> weekdayDescriptions;
 
   /**
-   * Output only. Is this place open right now? Always present unless we lack time-of-day or
-   * timezone data for these opening hours.
+   * Is this place open right now? Always present unless we lack time-of-day or timezone data for
+   * these opening hours.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOpenNow() {
@@ -83,8 +82,8 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * Output only. Is this place open right now? Always present unless we lack time-of-day or
-   * timezone data for these opening hours.
+   * Is this place open right now? Always present unless we lack time-of-day or timezone data for
+   * these opening hours.
    * @param openNow openNow or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours setOpenNow(java.lang.Boolean openNow) {
@@ -93,10 +92,9 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * Output only. The periods that this place is open during the week. The periods are in
-   * chronological order, starting with Sunday in the place-local timezone. An empty (but not
-   * absent) value indicates a place that is never open, e.g. because it is closed temporarily for
-   * renovations.
+   * The periods that this place is open during the week. The periods are in chronological order,
+   * starting with Sunday in the place-local timezone. An empty (but not absent) value indicates a
+   * place that is never open, e.g. because it is closed temporarily for renovations.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1PlaceOpeningHoursPeriod> getPeriods() {
@@ -104,10 +102,9 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * Output only. The periods that this place is open during the week. The periods are in
-   * chronological order, starting with Sunday in the place-local timezone. An empty (but not
-   * absent) value indicates a place that is never open, e.g. because it is closed temporarily for
-   * renovations.
+   * The periods that this place is open during the week. The periods are in chronological order,
+   * starting with Sunday in the place-local timezone. An empty (but not absent) value indicates a
+   * place that is never open, e.g. because it is closed temporarily for renovations.
    * @param periods periods or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours setPeriods(java.util.List<GoogleMapsPlacesV1PlaceOpeningHoursPeriod> periods) {
@@ -116,7 +113,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * Output only. A type string used to identify the type of secondary hours.
+   * A type string used to identify the type of secondary hours.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryHoursType() {
@@ -124,7 +121,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * Output only. A type string used to identify the type of secondary hours.
+   * A type string used to identify the type of secondary hours.
    * @param secondaryHoursType secondaryHoursType or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours setSecondaryHoursType(java.lang.String secondaryHoursType) {
@@ -133,10 +130,10 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * Output only. Structured information for special days that fall within the period that the
-   * returned opening hours cover. Special days are days that could impact the business hours of a
-   * place, e.g. Christmas day. Set for current_opening_hours and current_secondary_opening_hours if
-   * there are exceptional hours.
+   * Structured information for special days that fall within the period that the returned opening
+   * hours cover. Special days are days that could impact the business hours of a place, e.g.
+   * Christmas day. Set for current_opening_hours and current_secondary_opening_hours if there are
+   * exceptional hours.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1PlaceOpeningHoursSpecialDay> getSpecialDays() {
@@ -144,10 +141,10 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * Output only. Structured information for special days that fall within the period that the
-   * returned opening hours cover. Special days are days that could impact the business hours of a
-   * place, e.g. Christmas day. Set for current_opening_hours and current_secondary_opening_hours if
-   * there are exceptional hours.
+   * Structured information for special days that fall within the period that the returned opening
+   * hours cover. Special days are days that could impact the business hours of a place, e.g.
+   * Christmas day. Set for current_opening_hours and current_secondary_opening_hours if there are
+   * exceptional hours.
    * @param specialDays specialDays or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours setSpecialDays(java.util.List<GoogleMapsPlacesV1PlaceOpeningHoursSpecialDay> specialDays) {
@@ -156,9 +153,9 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * Output only. Localized strings describing the opening hours of this place, one string for each
-   * day of the week. Will be empty if the hours are unknown or could not be converted to localized
-   * text. Example: "Sun: 18:00–06:00"
+   * Localized strings describing the opening hours of this place, one string for each day of the
+   * week. Will be empty if the hours are unknown or could not be converted to localized text.
+   * Example: "Sun: 18:00–06:00"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getWeekdayDescriptions() {
@@ -166,9 +163,9 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * Output only. Localized strings describing the opening hours of this place, one string for each
-   * day of the week. Will be empty if the hours are unknown or could not be converted to localized
-   * text. Example: "Sun: 18:00–06:00"
+   * Localized strings describing the opening hours of this place, one string for each day of the
+   * week. Will be empty if the hours are unknown or could not be converted to localized text.
+   * Example: "Sun: 18:00–06:00"
    * @param weekdayDescriptions weekdayDescriptions or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours setWeekdayDescriptions(java.util.List<java.lang.String> weekdayDescriptions) {

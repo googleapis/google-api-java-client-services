@@ -30,21 +30,21 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriod extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time that the place starts to be closed.
+   * The time that the place starts to be closed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint close;
 
   /**
-   * Output only. The time that the place starts to be open.
+   * The time that the place starts to be open.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint open;
 
   /**
-   * Output only. The time that the place starts to be closed.
+   * The time that the place starts to be closed.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint getClose() {
@@ -52,7 +52,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriod extends com.google.
   }
 
   /**
-   * Output only. The time that the place starts to be closed.
+   * The time that the place starts to be closed.
    * @param close close or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriod setClose(GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint close) {
@@ -61,7 +61,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriod extends com.google.
   }
 
   /**
-   * Output only. The time that the place starts to be open.
+   * The time that the place starts to be open.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint getOpen() {
@@ -69,7 +69,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriod extends com.google.
   }
 
   /**
-   * Output only. The time that the place starts to be open.
+   * The time that the place starts to be open.
    * @param open open or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriod setOpen(GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint open) {

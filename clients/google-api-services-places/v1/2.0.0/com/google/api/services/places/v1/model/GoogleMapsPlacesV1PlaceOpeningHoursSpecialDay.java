@@ -32,14 +32,14 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlaceOpeningHoursSpecialDay extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The date of this special day.
+   * The date of this special day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate date;
 
   /**
-   * Output only. The date of this special day.
+   * The date of this special day.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getDate() {
@@ -47,7 +47,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursSpecialDay extends com.goo
   }
 
   /**
-   * Output only. The date of this special day.
+   * The date of this special day.
    * @param date date or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursSpecialDay setDate(GoogleTypeDate date) {

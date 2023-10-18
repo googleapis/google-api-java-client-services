@@ -30,197 +30,206 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Information about the accessibility options a place offers.
+   * Information about the accessibility options a place offers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleMapsPlacesV1PlaceAccessibilityOptions accessibilityOptions;
 
   /**
-   * Output only. Repeated components for each locality level.
+   * Repeated components for each locality level. Note the following facts about the
+   * address_components[] array: - The array of address components may contain more components than
+   * the formatted_address. - The array does not necessarily include all the political entities that
+   * contain an address, apart from those included in the formatted_address. To retrieve all the
+   * political entities that contain a specific address, you should use reverse geocoding, passing
+   * the latitude/longitude of the address as a parameter to the request. - The format of the
+   * response is not guaranteed to remain the same between requests. In particular, the number of
+   * address_components varies based on the address requested and can change over time for the same
+   * address. A component can change position in the array. The type of the component can change. A
+   * particular component may be missing in a later response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleMapsPlacesV1PlaceAddressComponent> addressComponents;
 
   /**
-   * Output only. The place's address in adr microformat: http://microformats.org/wiki/adr.
+   * The place's address in adr microformat: http://microformats.org/wiki/adr.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adrFormatAddress;
 
   /**
-   * Output only. A set of data provider that must be shown with this result.
+   * A set of data provider that must be shown with this result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleMapsPlacesV1PlaceAttribution> attributions;
 
   /**
-   * Output only. The business status for the place.
+   * The business status for the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String businessStatus;
 
   /**
-   * Output only. Specifies if the business supports curbside pickup.
+   * Specifies if the business supports curbside pickup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean curbsidePickup;
 
   /**
-   * Output only. The hours of operation for the next seven days (including today). The time period
-   * starts at midnight on the date of the request and ends at 11:59 pm six days later. This field
-   * includes the special_days subfield of all hours, set for dates that have exceptional hours.
+   * The hours of operation for the next seven days (including today). The time period starts at
+   * midnight on the date of the request and ends at 11:59 pm six days later. This field includes
+   * the special_days subfield of all hours, set for dates that have exceptional hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleMapsPlacesV1PlaceOpeningHours currentOpeningHours;
 
   /**
-   * Output only. Contains an array of entries for the next seven days including information about
-   * secondary hours of a business. Secondary hours are different from a business's main hours. For
-   * example, a restaurant can specify drive through hours or delivery hours as its secondary hours.
-   * This field populates the type subfield, which draws from a predefined list of opening hours
-   * types (such as DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place. This field
-   * includes the special_days subfield of all hours, set for dates that have exceptional hours.
+   * Contains an array of entries for the next seven days including information about secondary
+   * hours of a business. Secondary hours are different from a business's main hours. For example, a
+   * restaurant can specify drive through hours or delivery hours as its secondary hours. This field
+   * populates the type subfield, which draws from a predefined list of opening hours types (such as
+   * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place. This field includes the
+   * special_days subfield of all hours, set for dates that have exceptional hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleMapsPlacesV1PlaceOpeningHours> currentSecondaryOpeningHours;
 
   /**
-   * Output only. Specifies if the business supports delivery.
+   * Specifies if the business supports delivery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean delivery;
 
   /**
-   * Output only. Specifies if the business supports indoor or outdoor seating options.
+   * Specifies if the business supports indoor or outdoor seating options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dineIn;
 
   /**
-   * Output only. The localized name of the place, suitable as a short human-readable description.
-   * For example, "Google Sydney", "Starbucks", "Pyrmont", etc.
+   * The localized name of the place, suitable as a short human-readable description. For example,
+   * "Google Sydney", "Starbucks", "Pyrmont", etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeLocalizedText displayName;
 
   /**
-   * Output only. Contains a summary of the place. A summary is comprised of a textual overview, and
-   * also includes the language code for these if applicable. Summary text must be presented as-is
-   * and can not be modified or altered.
+   * Contains a summary of the place. A summary is comprised of a textual overview, and also
+   * includes the language code for these if applicable. Summary text must be presented as-is and
+   * can not be modified or altered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeLocalizedText editorialSummary;
 
   /**
-   * Output only. A full, human-readable address for this place.
+   * A full, human-readable address for this place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String formattedAddress;
 
   /**
-   * Output only. A URL providing more information about this place.
+   * A URL providing more information about this place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String googleMapsUri;
 
   /**
-   * Output only. Background color for icon_mask in hex format, e.g. #909CE1.
+   * Background color for icon_mask in hex format, e.g. #909CE1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String iconBackgroundColor;
 
   /**
-   * Output only. A truncated URL to an v2 icon mask. User can access different icon type by
-   * appending type suffix to the end (eg, ".svg" or ".png").
+   * A truncated URL to an v2 icon mask. User can access different icon type by appending type
+   * suffix to the end (eg, ".svg" or ".png").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String iconMaskBaseUri;
 
   /**
-   * Output only. The unique identifier of a place.
+   * The unique identifier of a place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Output only. A human-readable phone number for the place, in international format.
+   * A human-readable phone number for the place, in international format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String internationalPhoneNumber;
 
   /**
-   * Output only. The position of this place.
+   * The position of this place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeLatLng location;
 
   /**
-   * Output only. An ID representing this place which may be used to look up this place again
-   * (a.k.a. the API "resource" name: places/).
+   * An ID representing this place which may be used to look up this place again (a.k.a. the API
+   * "resource" name: places/place_id).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. A human-readable phone number for the place, in national format.
+   * A human-readable phone number for the place, in national format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nationalPhoneNumber;
 
   /**
-   * Output only. Plus code of the place location lat/long.
+   * Plus code of the place location lat/long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleMapsPlacesV1PlacePlusCode plusCode;
 
   /**
-   * Output only. Price level of the place.
+   * Price level of the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String priceLevel;
 
   /**
-   * Output only. A rating between 1.0 and 5.0, based on user reviews of this place.
+   * A rating between 1.0 and 5.0, based on user reviews of this place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double rating;
 
   /**
-   * Output only. The regular hours of operation.
+   * The regular hours of operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleMapsPlacesV1PlaceOpeningHours regularOpeningHours;
 
   /**
-   * Output only. Contains an array of entries for information about regular secondary hours of a
-   * business. Secondary hours are different from a business's main hours. For example, a restaurant
-   * can specify drive through hours or delivery hours as its secondary hours. This field populates
-   * the type subfield, which draws from a predefined list of opening hours types (such as
+   * Contains an array of entries for information about regular secondary hours of a business.
+   * Secondary hours are different from a business's main hours. For example, a restaurant can
+   * specify drive through hours or delivery hours as its secondary hours. This field populates the
+   * type subfield, which draws from a predefined list of opening hours types (such as
    * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place.
    * The value may be {@code null}.
    */
@@ -228,116 +237,117 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.util.List<GoogleMapsPlacesV1PlaceOpeningHours> regularSecondaryOpeningHours;
 
   /**
-   * Output only. Specifies if the place supports reservations.
+   * Specifies if the place supports reservations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reservable;
 
   /**
-   * Output only. List of reviews about this place.
+   * List of reviews about this place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleMapsPlacesV1Review> reviews;
 
   /**
-   * Output only. Specifies if the place serves beer.
+   * Specifies if the place serves beer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean servesBeer;
 
   /**
-   * Output only. Specifies if the place serves breakfast.
+   * Specifies if the place serves breakfast.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean servesBreakfast;
 
   /**
-   * Output only. Specifies if the place serves brunch.
+   * Specifies if the place serves brunch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean servesBrunch;
 
   /**
-   * Output only. Specifies if the place serves dinner.
+   * Specifies if the place serves dinner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean servesDinner;
 
   /**
-   * Output only. Specifies if the place serves lunch.
+   * Specifies if the place serves lunch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean servesLunch;
 
   /**
-   * Output only. Specifies if the place serves vegetarian food.
+   * Specifies if the place serves vegetarian food.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean servesVegetarianFood;
 
   /**
-   * Output only. Specifies if the place serves wine.
+   * Specifies if the place serves wine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean servesWine;
 
   /**
-   * Output only. Specifies if the business supports takeout.
+   * Specifies if the business supports takeout.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean takeout;
 
   /**
-   * Output only. A set of type tags for this result. For example, "political" and "locality".
+   * A set of type tags for this result. For example, "political" and "locality". See:
+   * https://developers.google.com/maps/documentation/places/web-service/place-types
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> types;
 
   /**
-   * Output only. The total number of reviews (with or without text) for this place.
+   * The total number of reviews (with or without text) for this place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer userRatingCount;
 
   /**
-   * Output only. Number of minutes this place's timezone is currently offset from UTC. This is
-   * expressed in minutes to support timezones that are offset by fractions of an hour, e.g. X hours
-   * and 15 minutes.
+   * Number of minutes this place's timezone is currently offset from UTC. This is expressed in
+   * minutes to support timezones that are offset by fractions of an hour, e.g. X hours and 15
+   * minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer utcOffsetMinutes;
 
   /**
-   * Output only. A viewport suitable for displaying the place on an average-sized map.
+   * A viewport suitable for displaying the place on an average-sized map.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleGeoTypeViewport viewport;
 
   /**
-   * Output only. The authoritative website for this place, e.g. a business' homepage. Note that for
-   * places that are part of a chain (e.g. an IKEA store), this will usually be the website for the
-   * individual store, not the overall chain.
+   * The authoritative website for this place, e.g. a business' homepage. Note that for places that
+   * are part of a chain (e.g. an IKEA store), this will usually be the website for the individual
+   * store, not the overall chain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String websiteUri;
 
   /**
-   * Output only. Information about the accessibility options a place offers.
+   * Information about the accessibility options a place offers.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceAccessibilityOptions getAccessibilityOptions() {
@@ -345,7 +355,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Information about the accessibility options a place offers.
+   * Information about the accessibility options a place offers.
    * @param accessibilityOptions accessibilityOptions or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setAccessibilityOptions(GoogleMapsPlacesV1PlaceAccessibilityOptions accessibilityOptions) {
@@ -354,7 +364,16 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Repeated components for each locality level.
+   * Repeated components for each locality level. Note the following facts about the
+   * address_components[] array: - The array of address components may contain more components than
+   * the formatted_address. - The array does not necessarily include all the political entities that
+   * contain an address, apart from those included in the formatted_address. To retrieve all the
+   * political entities that contain a specific address, you should use reverse geocoding, passing
+   * the latitude/longitude of the address as a parameter to the request. - The format of the
+   * response is not guaranteed to remain the same between requests. In particular, the number of
+   * address_components varies based on the address requested and can change over time for the same
+   * address. A component can change position in the array. The type of the component can change. A
+   * particular component may be missing in a later response.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1PlaceAddressComponent> getAddressComponents() {
@@ -362,7 +381,16 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Repeated components for each locality level.
+   * Repeated components for each locality level. Note the following facts about the
+   * address_components[] array: - The array of address components may contain more components than
+   * the formatted_address. - The array does not necessarily include all the political entities that
+   * contain an address, apart from those included in the formatted_address. To retrieve all the
+   * political entities that contain a specific address, you should use reverse geocoding, passing
+   * the latitude/longitude of the address as a parameter to the request. - The format of the
+   * response is not guaranteed to remain the same between requests. In particular, the number of
+   * address_components varies based on the address requested and can change over time for the same
+   * address. A component can change position in the array. The type of the component can change. A
+   * particular component may be missing in a later response.
    * @param addressComponents addressComponents or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setAddressComponents(java.util.List<GoogleMapsPlacesV1PlaceAddressComponent> addressComponents) {
@@ -371,7 +399,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The place's address in adr microformat: http://microformats.org/wiki/adr.
+   * The place's address in adr microformat: http://microformats.org/wiki/adr.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdrFormatAddress() {
@@ -379,7 +407,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The place's address in adr microformat: http://microformats.org/wiki/adr.
+   * The place's address in adr microformat: http://microformats.org/wiki/adr.
    * @param adrFormatAddress adrFormatAddress or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setAdrFormatAddress(java.lang.String adrFormatAddress) {
@@ -388,7 +416,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A set of data provider that must be shown with this result.
+   * A set of data provider that must be shown with this result.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1PlaceAttribution> getAttributions() {
@@ -396,7 +424,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A set of data provider that must be shown with this result.
+   * A set of data provider that must be shown with this result.
    * @param attributions attributions or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setAttributions(java.util.List<GoogleMapsPlacesV1PlaceAttribution> attributions) {
@@ -405,7 +433,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The business status for the place.
+   * The business status for the place.
    * @return value or {@code null} for none
    */
   public java.lang.String getBusinessStatus() {
@@ -413,7 +441,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The business status for the place.
+   * The business status for the place.
    * @param businessStatus businessStatus or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setBusinessStatus(java.lang.String businessStatus) {
@@ -422,7 +450,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the business supports curbside pickup.
+   * Specifies if the business supports curbside pickup.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCurbsidePickup() {
@@ -430,7 +458,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the business supports curbside pickup.
+   * Specifies if the business supports curbside pickup.
    * @param curbsidePickup curbsidePickup or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setCurbsidePickup(java.lang.Boolean curbsidePickup) {
@@ -439,9 +467,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The hours of operation for the next seven days (including today). The time period
-   * starts at midnight on the date of the request and ends at 11:59 pm six days later. This field
-   * includes the special_days subfield of all hours, set for dates that have exceptional hours.
+   * The hours of operation for the next seven days (including today). The time period starts at
+   * midnight on the date of the request and ends at 11:59 pm six days later. This field includes
+   * the special_days subfield of all hours, set for dates that have exceptional hours.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours getCurrentOpeningHours() {
@@ -449,9 +477,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The hours of operation for the next seven days (including today). The time period
-   * starts at midnight on the date of the request and ends at 11:59 pm six days later. This field
-   * includes the special_days subfield of all hours, set for dates that have exceptional hours.
+   * The hours of operation for the next seven days (including today). The time period starts at
+   * midnight on the date of the request and ends at 11:59 pm six days later. This field includes
+   * the special_days subfield of all hours, set for dates that have exceptional hours.
    * @param currentOpeningHours currentOpeningHours or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setCurrentOpeningHours(GoogleMapsPlacesV1PlaceOpeningHours currentOpeningHours) {
@@ -460,12 +488,12 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Contains an array of entries for the next seven days including information about
-   * secondary hours of a business. Secondary hours are different from a business's main hours. For
-   * example, a restaurant can specify drive through hours or delivery hours as its secondary hours.
-   * This field populates the type subfield, which draws from a predefined list of opening hours
-   * types (such as DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place. This field
-   * includes the special_days subfield of all hours, set for dates that have exceptional hours.
+   * Contains an array of entries for the next seven days including information about secondary
+   * hours of a business. Secondary hours are different from a business's main hours. For example, a
+   * restaurant can specify drive through hours or delivery hours as its secondary hours. This field
+   * populates the type subfield, which draws from a predefined list of opening hours types (such as
+   * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place. This field includes the
+   * special_days subfield of all hours, set for dates that have exceptional hours.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1PlaceOpeningHours> getCurrentSecondaryOpeningHours() {
@@ -473,12 +501,12 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Contains an array of entries for the next seven days including information about
-   * secondary hours of a business. Secondary hours are different from a business's main hours. For
-   * example, a restaurant can specify drive through hours or delivery hours as its secondary hours.
-   * This field populates the type subfield, which draws from a predefined list of opening hours
-   * types (such as DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place. This field
-   * includes the special_days subfield of all hours, set for dates that have exceptional hours.
+   * Contains an array of entries for the next seven days including information about secondary
+   * hours of a business. Secondary hours are different from a business's main hours. For example, a
+   * restaurant can specify drive through hours or delivery hours as its secondary hours. This field
+   * populates the type subfield, which draws from a predefined list of opening hours types (such as
+   * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place. This field includes the
+   * special_days subfield of all hours, set for dates that have exceptional hours.
    * @param currentSecondaryOpeningHours currentSecondaryOpeningHours or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setCurrentSecondaryOpeningHours(java.util.List<GoogleMapsPlacesV1PlaceOpeningHours> currentSecondaryOpeningHours) {
@@ -487,7 +515,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the business supports delivery.
+   * Specifies if the business supports delivery.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDelivery() {
@@ -495,7 +523,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the business supports delivery.
+   * Specifies if the business supports delivery.
    * @param delivery delivery or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setDelivery(java.lang.Boolean delivery) {
@@ -504,7 +532,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the business supports indoor or outdoor seating options.
+   * Specifies if the business supports indoor or outdoor seating options.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDineIn() {
@@ -512,7 +540,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the business supports indoor or outdoor seating options.
+   * Specifies if the business supports indoor or outdoor seating options.
    * @param dineIn dineIn or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setDineIn(java.lang.Boolean dineIn) {
@@ -521,8 +549,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The localized name of the place, suitable as a short human-readable description.
-   * For example, "Google Sydney", "Starbucks", "Pyrmont", etc.
+   * The localized name of the place, suitable as a short human-readable description. For example,
+   * "Google Sydney", "Starbucks", "Pyrmont", etc.
    * @return value or {@code null} for none
    */
   public GoogleTypeLocalizedText getDisplayName() {
@@ -530,8 +558,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The localized name of the place, suitable as a short human-readable description.
-   * For example, "Google Sydney", "Starbucks", "Pyrmont", etc.
+   * The localized name of the place, suitable as a short human-readable description. For example,
+   * "Google Sydney", "Starbucks", "Pyrmont", etc.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setDisplayName(GoogleTypeLocalizedText displayName) {
@@ -540,9 +568,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Contains a summary of the place. A summary is comprised of a textual overview, and
-   * also includes the language code for these if applicable. Summary text must be presented as-is
-   * and can not be modified or altered.
+   * Contains a summary of the place. A summary is comprised of a textual overview, and also
+   * includes the language code for these if applicable. Summary text must be presented as-is and
+   * can not be modified or altered.
    * @return value or {@code null} for none
    */
   public GoogleTypeLocalizedText getEditorialSummary() {
@@ -550,9 +578,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Contains a summary of the place. A summary is comprised of a textual overview, and
-   * also includes the language code for these if applicable. Summary text must be presented as-is
-   * and can not be modified or altered.
+   * Contains a summary of the place. A summary is comprised of a textual overview, and also
+   * includes the language code for these if applicable. Summary text must be presented as-is and
+   * can not be modified or altered.
    * @param editorialSummary editorialSummary or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setEditorialSummary(GoogleTypeLocalizedText editorialSummary) {
@@ -561,7 +589,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A full, human-readable address for this place.
+   * A full, human-readable address for this place.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedAddress() {
@@ -569,7 +597,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A full, human-readable address for this place.
+   * A full, human-readable address for this place.
    * @param formattedAddress formattedAddress or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setFormattedAddress(java.lang.String formattedAddress) {
@@ -578,7 +606,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A URL providing more information about this place.
+   * A URL providing more information about this place.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleMapsUri() {
@@ -586,7 +614,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A URL providing more information about this place.
+   * A URL providing more information about this place.
    * @param googleMapsUri googleMapsUri or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setGoogleMapsUri(java.lang.String googleMapsUri) {
@@ -595,7 +623,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Background color for icon_mask in hex format, e.g. #909CE1.
+   * Background color for icon_mask in hex format, e.g. #909CE1.
    * @return value or {@code null} for none
    */
   public java.lang.String getIconBackgroundColor() {
@@ -603,7 +631,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Background color for icon_mask in hex format, e.g. #909CE1.
+   * Background color for icon_mask in hex format, e.g. #909CE1.
    * @param iconBackgroundColor iconBackgroundColor or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setIconBackgroundColor(java.lang.String iconBackgroundColor) {
@@ -612,8 +640,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A truncated URL to an v2 icon mask. User can access different icon type by
-   * appending type suffix to the end (eg, ".svg" or ".png").
+   * A truncated URL to an v2 icon mask. User can access different icon type by appending type
+   * suffix to the end (eg, ".svg" or ".png").
    * @return value or {@code null} for none
    */
   public java.lang.String getIconMaskBaseUri() {
@@ -621,8 +649,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A truncated URL to an v2 icon mask. User can access different icon type by
-   * appending type suffix to the end (eg, ".svg" or ".png").
+   * A truncated URL to an v2 icon mask. User can access different icon type by appending type
+   * suffix to the end (eg, ".svg" or ".png").
    * @param iconMaskBaseUri iconMaskBaseUri or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setIconMaskBaseUri(java.lang.String iconMaskBaseUri) {
@@ -631,7 +659,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The unique identifier of a place.
+   * The unique identifier of a place.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -639,7 +667,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The unique identifier of a place.
+   * The unique identifier of a place.
    * @param id id or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setId(java.lang.String id) {
@@ -648,7 +676,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A human-readable phone number for the place, in international format.
+   * A human-readable phone number for the place, in international format.
    * @return value or {@code null} for none
    */
   public java.lang.String getInternationalPhoneNumber() {
@@ -656,7 +684,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A human-readable phone number for the place, in international format.
+   * A human-readable phone number for the place, in international format.
    * @param internationalPhoneNumber internationalPhoneNumber or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setInternationalPhoneNumber(java.lang.String internationalPhoneNumber) {
@@ -665,7 +693,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The position of this place.
+   * The position of this place.
    * @return value or {@code null} for none
    */
   public GoogleTypeLatLng getLocation() {
@@ -673,7 +701,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The position of this place.
+   * The position of this place.
    * @param location location or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setLocation(GoogleTypeLatLng location) {
@@ -682,8 +710,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. An ID representing this place which may be used to look up this place again
-   * (a.k.a. the API "resource" name: places/).
+   * An ID representing this place which may be used to look up this place again (a.k.a. the API
+   * "resource" name: places/place_id).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -691,8 +719,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. An ID representing this place which may be used to look up this place again
-   * (a.k.a. the API "resource" name: places/).
+   * An ID representing this place which may be used to look up this place again (a.k.a. the API
+   * "resource" name: places/place_id).
    * @param name name or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setName(java.lang.String name) {
@@ -701,7 +729,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A human-readable phone number for the place, in national format.
+   * A human-readable phone number for the place, in national format.
    * @return value or {@code null} for none
    */
   public java.lang.String getNationalPhoneNumber() {
@@ -709,7 +737,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A human-readable phone number for the place, in national format.
+   * A human-readable phone number for the place, in national format.
    * @param nationalPhoneNumber nationalPhoneNumber or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setNationalPhoneNumber(java.lang.String nationalPhoneNumber) {
@@ -718,7 +746,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Plus code of the place location lat/long.
+   * Plus code of the place location lat/long.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1PlacePlusCode getPlusCode() {
@@ -726,7 +754,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Plus code of the place location lat/long.
+   * Plus code of the place location lat/long.
    * @param plusCode plusCode or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setPlusCode(GoogleMapsPlacesV1PlacePlusCode plusCode) {
@@ -735,7 +763,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Price level of the place.
+   * Price level of the place.
    * @return value or {@code null} for none
    */
   public java.lang.String getPriceLevel() {
@@ -743,7 +771,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Price level of the place.
+   * Price level of the place.
    * @param priceLevel priceLevel or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setPriceLevel(java.lang.String priceLevel) {
@@ -752,7 +780,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A rating between 1.0 and 5.0, based on user reviews of this place.
+   * A rating between 1.0 and 5.0, based on user reviews of this place.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRating() {
@@ -760,7 +788,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A rating between 1.0 and 5.0, based on user reviews of this place.
+   * A rating between 1.0 and 5.0, based on user reviews of this place.
    * @param rating rating or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setRating(java.lang.Double rating) {
@@ -769,7 +797,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The regular hours of operation.
+   * The regular hours of operation.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours getRegularOpeningHours() {
@@ -777,7 +805,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The regular hours of operation.
+   * The regular hours of operation.
    * @param regularOpeningHours regularOpeningHours or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setRegularOpeningHours(GoogleMapsPlacesV1PlaceOpeningHours regularOpeningHours) {
@@ -786,10 +814,10 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Contains an array of entries for information about regular secondary hours of a
-   * business. Secondary hours are different from a business's main hours. For example, a restaurant
-   * can specify drive through hours or delivery hours as its secondary hours. This field populates
-   * the type subfield, which draws from a predefined list of opening hours types (such as
+   * Contains an array of entries for information about regular secondary hours of a business.
+   * Secondary hours are different from a business's main hours. For example, a restaurant can
+   * specify drive through hours or delivery hours as its secondary hours. This field populates the
+   * type subfield, which draws from a predefined list of opening hours types (such as
    * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place.
    * @return value or {@code null} for none
    */
@@ -798,10 +826,10 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Contains an array of entries for information about regular secondary hours of a
-   * business. Secondary hours are different from a business's main hours. For example, a restaurant
-   * can specify drive through hours or delivery hours as its secondary hours. This field populates
-   * the type subfield, which draws from a predefined list of opening hours types (such as
+   * Contains an array of entries for information about regular secondary hours of a business.
+   * Secondary hours are different from a business's main hours. For example, a restaurant can
+   * specify drive through hours or delivery hours as its secondary hours. This field populates the
+   * type subfield, which draws from a predefined list of opening hours types (such as
    * DRIVE_THROUGH, PICKUP, or TAKEOUT) based on the types of the place.
    * @param regularSecondaryOpeningHours regularSecondaryOpeningHours or {@code null} for none
    */
@@ -811,7 +839,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place supports reservations.
+   * Specifies if the place supports reservations.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReservable() {
@@ -819,7 +847,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place supports reservations.
+   * Specifies if the place supports reservations.
    * @param reservable reservable or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setReservable(java.lang.Boolean reservable) {
@@ -828,7 +856,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. List of reviews about this place.
+   * List of reviews about this place.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1Review> getReviews() {
@@ -836,7 +864,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. List of reviews about this place.
+   * List of reviews about this place.
    * @param reviews reviews or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setReviews(java.util.List<GoogleMapsPlacesV1Review> reviews) {
@@ -845,7 +873,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves beer.
+   * Specifies if the place serves beer.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getServesBeer() {
@@ -853,7 +881,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves beer.
+   * Specifies if the place serves beer.
    * @param servesBeer servesBeer or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setServesBeer(java.lang.Boolean servesBeer) {
@@ -862,7 +890,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves breakfast.
+   * Specifies if the place serves breakfast.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getServesBreakfast() {
@@ -870,7 +898,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves breakfast.
+   * Specifies if the place serves breakfast.
    * @param servesBreakfast servesBreakfast or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setServesBreakfast(java.lang.Boolean servesBreakfast) {
@@ -879,7 +907,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves brunch.
+   * Specifies if the place serves brunch.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getServesBrunch() {
@@ -887,7 +915,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves brunch.
+   * Specifies if the place serves brunch.
    * @param servesBrunch servesBrunch or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setServesBrunch(java.lang.Boolean servesBrunch) {
@@ -896,7 +924,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves dinner.
+   * Specifies if the place serves dinner.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getServesDinner() {
@@ -904,7 +932,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves dinner.
+   * Specifies if the place serves dinner.
    * @param servesDinner servesDinner or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setServesDinner(java.lang.Boolean servesDinner) {
@@ -913,7 +941,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves lunch.
+   * Specifies if the place serves lunch.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getServesLunch() {
@@ -921,7 +949,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves lunch.
+   * Specifies if the place serves lunch.
    * @param servesLunch servesLunch or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setServesLunch(java.lang.Boolean servesLunch) {
@@ -930,7 +958,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves vegetarian food.
+   * Specifies if the place serves vegetarian food.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getServesVegetarianFood() {
@@ -938,7 +966,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves vegetarian food.
+   * Specifies if the place serves vegetarian food.
    * @param servesVegetarianFood servesVegetarianFood or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setServesVegetarianFood(java.lang.Boolean servesVegetarianFood) {
@@ -947,7 +975,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves wine.
+   * Specifies if the place serves wine.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getServesWine() {
@@ -955,7 +983,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the place serves wine.
+   * Specifies if the place serves wine.
    * @param servesWine servesWine or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setServesWine(java.lang.Boolean servesWine) {
@@ -964,7 +992,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the business supports takeout.
+   * Specifies if the business supports takeout.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTakeout() {
@@ -972,7 +1000,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Specifies if the business supports takeout.
+   * Specifies if the business supports takeout.
    * @param takeout takeout or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setTakeout(java.lang.Boolean takeout) {
@@ -981,7 +1009,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A set of type tags for this result. For example, "political" and "locality".
+   * A set of type tags for this result. For example, "political" and "locality". See:
+   * https://developers.google.com/maps/documentation/places/web-service/place-types
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTypes() {
@@ -989,7 +1018,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A set of type tags for this result. For example, "political" and "locality".
+   * A set of type tags for this result. For example, "political" and "locality". See:
+   * https://developers.google.com/maps/documentation/places/web-service/place-types
    * @param types types or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setTypes(java.util.List<java.lang.String> types) {
@@ -998,7 +1028,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The total number of reviews (with or without text) for this place.
+   * The total number of reviews (with or without text) for this place.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUserRatingCount() {
@@ -1006,7 +1036,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The total number of reviews (with or without text) for this place.
+   * The total number of reviews (with or without text) for this place.
    * @param userRatingCount userRatingCount or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setUserRatingCount(java.lang.Integer userRatingCount) {
@@ -1015,9 +1045,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Number of minutes this place's timezone is currently offset from UTC. This is
-   * expressed in minutes to support timezones that are offset by fractions of an hour, e.g. X hours
-   * and 15 minutes.
+   * Number of minutes this place's timezone is currently offset from UTC. This is expressed in
+   * minutes to support timezones that are offset by fractions of an hour, e.g. X hours and 15
+   * minutes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUtcOffsetMinutes() {
@@ -1025,9 +1055,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Number of minutes this place's timezone is currently offset from UTC. This is
-   * expressed in minutes to support timezones that are offset by fractions of an hour, e.g. X hours
-   * and 15 minutes.
+   * Number of minutes this place's timezone is currently offset from UTC. This is expressed in
+   * minutes to support timezones that are offset by fractions of an hour, e.g. X hours and 15
+   * minutes.
    * @param utcOffsetMinutes utcOffsetMinutes or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setUtcOffsetMinutes(java.lang.Integer utcOffsetMinutes) {
@@ -1036,7 +1066,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A viewport suitable for displaying the place on an average-sized map.
+   * A viewport suitable for displaying the place on an average-sized map.
    * @return value or {@code null} for none
    */
   public GoogleGeoTypeViewport getViewport() {
@@ -1044,7 +1074,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A viewport suitable for displaying the place on an average-sized map.
+   * A viewport suitable for displaying the place on an average-sized map.
    * @param viewport viewport or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setViewport(GoogleGeoTypeViewport viewport) {
@@ -1053,9 +1083,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The authoritative website for this place, e.g. a business' homepage. Note that for
-   * places that are part of a chain (e.g. an IKEA store), this will usually be the website for the
-   * individual store, not the overall chain.
+   * The authoritative website for this place, e.g. a business' homepage. Note that for places that
+   * are part of a chain (e.g. an IKEA store), this will usually be the website for the individual
+   * store, not the overall chain.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebsiteUri() {
@@ -1063,9 +1093,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The authoritative website for this place, e.g. a business' homepage. Note that for
-   * places that are part of a chain (e.g. an IKEA store), this will usually be the website for the
-   * individual store, not the overall chain.
+   * The authoritative website for this place, e.g. a business' homepage. Note that for places that
+   * are part of a chain (e.g. an IKEA store), this will usually be the website for the individual
+   * store, not the overall chain.
    * @param websiteUri websiteUri or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setWebsiteUri(java.lang.String websiteUri) {

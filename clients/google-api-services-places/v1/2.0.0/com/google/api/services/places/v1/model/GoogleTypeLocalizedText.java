@@ -38,7 +38,7 @@ public final class GoogleTypeLocalizedText extends com.google.api.client.json.Ge
   private java.lang.String languageCode;
 
   /**
-   * Localized string in the language corresponding to `language_code' below.
+   * Localized string in the language corresponding to language_code below.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class GoogleTypeLocalizedText extends com.google.api.client.json.Ge
   }
 
   /**
-   * Localized string in the language corresponding to `language_code' below.
+   * Localized string in the language corresponding to language_code below.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -72,7 +72,7 @@ public final class GoogleTypeLocalizedText extends com.google.api.client.json.Ge
   }
 
   /**
-   * Localized string in the language corresponding to `language_code' below.
+   * Localized string in the language corresponding to language_code below.
    * @param text text or {@code null} for none
    */
   public GoogleTypeLocalizedText setText(java.lang.String text) {

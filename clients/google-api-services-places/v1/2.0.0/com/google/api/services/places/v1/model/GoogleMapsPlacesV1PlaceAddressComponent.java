@@ -30,37 +30,37 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlaceAddressComponent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The language used to format this components, in CLDR notation.
+   * The language used to format this components, in CLDR notation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Output only. The full text description or name of the address component. For example, an
-   * address component for the country Australia may have a long_name of "Australia".
+   * The full text description or name of the address component. For example, an address component
+   * for the country Australia may have a long_name of "Australia".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String longText;
 
   /**
-   * Output only. An abbreviated textual name for the address component, if available. For example,
-   * an address component for the country of Australia may have a short_name of "AU".
+   * An abbreviated textual name for the address component, if available. For example, an address
+   * component for the country of Australia may have a short_name of "AU".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String shortText;
 
   /**
-   * Output only. An array indicating the type(s) of the address component.
+   * An array indicating the type(s) of the address component.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> types;
 
   /**
-   * Output only. The language used to format this components, in CLDR notation.
+   * The language used to format this components, in CLDR notation.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -68,7 +68,7 @@ public final class GoogleMapsPlacesV1PlaceAddressComponent extends com.google.ap
   }
 
   /**
-   * Output only. The language used to format this components, in CLDR notation.
+   * The language used to format this components, in CLDR notation.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceAddressComponent setLanguageCode(java.lang.String languageCode) {
@@ -77,8 +77,8 @@ public final class GoogleMapsPlacesV1PlaceAddressComponent extends com.google.ap
   }
 
   /**
-   * Output only. The full text description or name of the address component. For example, an
-   * address component for the country Australia may have a long_name of "Australia".
+   * The full text description or name of the address component. For example, an address component
+   * for the country Australia may have a long_name of "Australia".
    * @return value or {@code null} for none
    */
   public java.lang.String getLongText() {
@@ -86,8 +86,8 @@ public final class GoogleMapsPlacesV1PlaceAddressComponent extends com.google.ap
   }
 
   /**
-   * Output only. The full text description or name of the address component. For example, an
-   * address component for the country Australia may have a long_name of "Australia".
+   * The full text description or name of the address component. For example, an address component
+   * for the country Australia may have a long_name of "Australia".
    * @param longText longText or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceAddressComponent setLongText(java.lang.String longText) {
@@ -96,8 +96,8 @@ public final class GoogleMapsPlacesV1PlaceAddressComponent extends com.google.ap
   }
 
   /**
-   * Output only. An abbreviated textual name for the address component, if available. For example,
-   * an address component for the country of Australia may have a short_name of "AU".
+   * An abbreviated textual name for the address component, if available. For example, an address
+   * component for the country of Australia may have a short_name of "AU".
    * @return value or {@code null} for none
    */
   public java.lang.String getShortText() {
@@ -105,8 +105,8 @@ public final class GoogleMapsPlacesV1PlaceAddressComponent extends com.google.ap
   }
 
   /**
-   * Output only. An abbreviated textual name for the address component, if available. For example,
-   * an address component for the country of Australia may have a short_name of "AU".
+   * An abbreviated textual name for the address component, if available. For example, an address
+   * component for the country of Australia may have a short_name of "AU".
    * @param shortText shortText or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceAddressComponent setShortText(java.lang.String shortText) {
@@ -115,7 +115,7 @@ public final class GoogleMapsPlacesV1PlaceAddressComponent extends com.google.ap
   }
 
   /**
-   * Output only. An array indicating the type(s) of the address component.
+   * An array indicating the type(s) of the address component.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTypes() {
@@ -123,7 +123,7 @@ public final class GoogleMapsPlacesV1PlaceAddressComponent extends com.google.ap
   }
 
   /**
-   * Output only. An array indicating the type(s) of the address component.
+   * An array indicating the type(s) of the address component.
    * @param types types or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceAddressComponent setTypes(java.util.List<java.lang.String> types) {

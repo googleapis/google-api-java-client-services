@@ -1064,10 +1064,10 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
         public class GetCertificateAuthority extends CloudRedisRequest<com.google.api.services.redis.v1.model.CertificateAuthority> {
 
-          private static final String REST_PATH = "v1/{+name}/certificateAuthority";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/certificateAuthority$");
 
           /**
            * Gets the details of certificate authority information for Redis cluster.
@@ -1091,7 +1091,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/certificateAuthority$");
             }
           }
 
@@ -1185,7 +1185,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/certificateAuthority$");
             }
             this.name = name;
             return this;

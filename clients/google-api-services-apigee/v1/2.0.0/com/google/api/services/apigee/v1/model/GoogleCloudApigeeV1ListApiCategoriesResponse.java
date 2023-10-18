@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * the response for ListApiCategoriesRequest.
+ * The response for `ListApiCategoriesRequest`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details of categories.
+   * Details of the categories.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
   }
 
   /**
-   * ID that can be used to find errors in the log files.
+   * Unique error code for the request, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
   private java.lang.String message;
 
   /**
-   * ID that can be used to find request details in the log files.
+   * Unique ID of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
   private java.lang.String status;
 
   /**
-   * Details of categories.
+   * Details of the categories.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1ApiCategoryData> getData() {
@@ -79,7 +79,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
   }
 
   /**
-   * Details of categories.
+   * Details of the categories.
    * @param data data or {@code null} for none
    */
   public GoogleCloudApigeeV1ListApiCategoriesResponse setData(java.util.List<GoogleCloudApigeeV1ApiCategoryData> data) {
@@ -88,7 +88,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
   }
 
   /**
-   * ID that can be used to find errors in the log files.
+   * Unique error code for the request, if any.
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorCode() {
@@ -96,7 +96,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
   }
 
   /**
-   * ID that can be used to find errors in the log files.
+   * Unique error code for the request, if any.
    * @param errorCode errorCode or {@code null} for none
    */
   public GoogleCloudApigeeV1ListApiCategoriesResponse setErrorCode(java.lang.String errorCode) {
@@ -122,7 +122,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
   }
 
   /**
-   * ID that can be used to find request details in the log files.
+   * Unique ID of the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -130,7 +130,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
   }
 
   /**
-   * ID that can be used to find request details in the log files.
+   * Unique ID of the request.
    * @param requestId requestId or {@code null} for none
    */
   public GoogleCloudApigeeV1ListApiCategoriesResponse setRequestId(java.lang.String requestId) {

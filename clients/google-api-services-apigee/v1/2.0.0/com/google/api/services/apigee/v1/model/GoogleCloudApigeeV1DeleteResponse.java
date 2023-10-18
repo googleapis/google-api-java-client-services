@@ -30,14 +30,14 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1DeleteResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID that can be used to find errors in the log files.
+   * Unique error code for the request, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String errorCode;
 
   /**
-   * GCP name of deleted resource.
+   * Google Cloud name of deleted resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class GoogleCloudApigeeV1DeleteResponse extends com.google.api.clie
   private java.lang.String message;
 
   /**
-   * ID that can be used to find request details in the log files.
+   * Unique ID of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class GoogleCloudApigeeV1DeleteResponse extends com.google.api.clie
   private java.lang.String status;
 
   /**
-   * ID that can be used to find errors in the log files.
+   * Unique error code for the request, if any.
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorCode() {
@@ -73,7 +73,7 @@ public final class GoogleCloudApigeeV1DeleteResponse extends com.google.api.clie
   }
 
   /**
-   * ID that can be used to find errors in the log files.
+   * Unique error code for the request, if any.
    * @param errorCode errorCode or {@code null} for none
    */
   public GoogleCloudApigeeV1DeleteResponse setErrorCode(java.lang.String errorCode) {
@@ -82,7 +82,7 @@ public final class GoogleCloudApigeeV1DeleteResponse extends com.google.api.clie
   }
 
   /**
-   * GCP name of deleted resource.
+   * Google Cloud name of deleted resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpResource() {
@@ -90,7 +90,7 @@ public final class GoogleCloudApigeeV1DeleteResponse extends com.google.api.clie
   }
 
   /**
-   * GCP name of deleted resource.
+   * Google Cloud name of deleted resource.
    * @param gcpResource gcpResource or {@code null} for none
    */
   public GoogleCloudApigeeV1DeleteResponse setGcpResource(java.lang.String gcpResource) {
@@ -116,7 +116,7 @@ public final class GoogleCloudApigeeV1DeleteResponse extends com.google.api.clie
   }
 
   /**
-   * ID that can be used to find request details in the log files.
+   * Unique ID of the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -124,7 +124,7 @@ public final class GoogleCloudApigeeV1DeleteResponse extends com.google.api.clie
   }
 
   /**
-   * ID that can be used to find request details in the log files.
+   * Unique ID of the request.
    * @param requestId requestId or {@code null} for none
    */
   public GoogleCloudApigeeV1DeleteResponse setRequestId(java.lang.String requestId) {

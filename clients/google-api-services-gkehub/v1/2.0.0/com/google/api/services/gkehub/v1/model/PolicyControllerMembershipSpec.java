@@ -17,8 +17,8 @@
 package com.google.api.services.gkehub.v1.model;
 
 /**
- * CommonFleetDefaultMemberConfigSpec contains default configuration information for memberships of
- * a fleet
+ * **Policy Controller**: Configuration for a single cluster. Intended to parallel the
+ * PolicyController CR.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -28,64 +28,64 @@ package com.google.api.services.gkehub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CommonFleetDefaultMemberConfigSpec extends com.google.api.client.json.GenericJson {
+public final class PolicyControllerMembershipSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Config Management-specific spec.
+   * Policy Controller configuration for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ConfigManagementMembershipSpec configmanagement;
+  private PolicyControllerHubConfig policyControllerHubConfig;
 
   /**
-   * Policy Controller spec.
+   * Version of Policy Controller installed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerMembershipSpec policycontroller;
+  private java.lang.String version;
 
   /**
-   * Config Management-specific spec.
+   * Policy Controller configuration for the cluster.
    * @return value or {@code null} for none
    */
-  public ConfigManagementMembershipSpec getConfigmanagement() {
-    return configmanagement;
+  public PolicyControllerHubConfig getPolicyControllerHubConfig() {
+    return policyControllerHubConfig;
   }
 
   /**
-   * Config Management-specific spec.
-   * @param configmanagement configmanagement or {@code null} for none
+   * Policy Controller configuration for the cluster.
+   * @param policyControllerHubConfig policyControllerHubConfig or {@code null} for none
    */
-  public CommonFleetDefaultMemberConfigSpec setConfigmanagement(ConfigManagementMembershipSpec configmanagement) {
-    this.configmanagement = configmanagement;
+  public PolicyControllerMembershipSpec setPolicyControllerHubConfig(PolicyControllerHubConfig policyControllerHubConfig) {
+    this.policyControllerHubConfig = policyControllerHubConfig;
     return this;
   }
 
   /**
-   * Policy Controller spec.
+   * Version of Policy Controller installed.
    * @return value or {@code null} for none
    */
-  public PolicyControllerMembershipSpec getPolicycontroller() {
-    return policycontroller;
+  public java.lang.String getVersion() {
+    return version;
   }
 
   /**
-   * Policy Controller spec.
-   * @param policycontroller policycontroller or {@code null} for none
+   * Version of Policy Controller installed.
+   * @param version version or {@code null} for none
    */
-  public CommonFleetDefaultMemberConfigSpec setPolicycontroller(PolicyControllerMembershipSpec policycontroller) {
-    this.policycontroller = policycontroller;
+  public PolicyControllerMembershipSpec setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 
   @Override
-  public CommonFleetDefaultMemberConfigSpec set(String fieldName, Object value) {
-    return (CommonFleetDefaultMemberConfigSpec) super.set(fieldName, value);
+  public PolicyControllerMembershipSpec set(String fieldName, Object value) {
+    return (PolicyControllerMembershipSpec) super.set(fieldName, value);
   }
 
   @Override
-  public CommonFleetDefaultMemberConfigSpec clone() {
-    return (CommonFleetDefaultMemberConfigSpec) super.clone();
+  public PolicyControllerMembershipSpec clone() {
+    return (PolicyControllerMembershipSpec) super.clone();
   }
 
 }

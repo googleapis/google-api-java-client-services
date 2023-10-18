@@ -17,8 +17,7 @@
 package com.google.api.services.gkehub.v1.model;
 
 /**
- * CommonFleetDefaultMemberConfigSpec contains default configuration information for memberships of
- * a fleet
+ * OnClusterState represents the state of a sub-component of Policy Controller.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -28,64 +27,64 @@ package com.google.api.services.gkehub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CommonFleetDefaultMemberConfigSpec extends com.google.api.client.json.GenericJson {
+public final class PolicyControllerOnClusterState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Config Management-specific spec.
+   * Surface potential errors or information logs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ConfigManagementMembershipSpec configmanagement;
+  private java.lang.String details;
 
   /**
-   * Policy Controller spec.
+   * The lifecycle state of this component.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerMembershipSpec policycontroller;
+  private java.lang.String state;
 
   /**
-   * Config Management-specific spec.
+   * Surface potential errors or information logs.
    * @return value or {@code null} for none
    */
-  public ConfigManagementMembershipSpec getConfigmanagement() {
-    return configmanagement;
+  public java.lang.String getDetails() {
+    return details;
   }
 
   /**
-   * Config Management-specific spec.
-   * @param configmanagement configmanagement or {@code null} for none
+   * Surface potential errors or information logs.
+   * @param details details or {@code null} for none
    */
-  public CommonFleetDefaultMemberConfigSpec setConfigmanagement(ConfigManagementMembershipSpec configmanagement) {
-    this.configmanagement = configmanagement;
+  public PolicyControllerOnClusterState setDetails(java.lang.String details) {
+    this.details = details;
     return this;
   }
 
   /**
-   * Policy Controller spec.
+   * The lifecycle state of this component.
    * @return value or {@code null} for none
    */
-  public PolicyControllerMembershipSpec getPolicycontroller() {
-    return policycontroller;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * Policy Controller spec.
-   * @param policycontroller policycontroller or {@code null} for none
+   * The lifecycle state of this component.
+   * @param state state or {@code null} for none
    */
-  public CommonFleetDefaultMemberConfigSpec setPolicycontroller(PolicyControllerMembershipSpec policycontroller) {
-    this.policycontroller = policycontroller;
+  public PolicyControllerOnClusterState setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
   @Override
-  public CommonFleetDefaultMemberConfigSpec set(String fieldName, Object value) {
-    return (CommonFleetDefaultMemberConfigSpec) super.set(fieldName, value);
+  public PolicyControllerOnClusterState set(String fieldName, Object value) {
+    return (PolicyControllerOnClusterState) super.set(fieldName, value);
   }
 
   @Override
-  public CommonFleetDefaultMemberConfigSpec clone() {
-    return (CommonFleetDefaultMemberConfigSpec) super.clone();
+  public PolicyControllerOnClusterState clone() {
+    return (PolicyControllerOnClusterState) super.clone();
   }
 
 }

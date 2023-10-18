@@ -17,8 +17,7 @@
 package com.google.api.services.gkehub.v1.model;
 
 /**
- * CommonFleetDefaultMemberConfigSpec contains default configuration information for memberships of
- * a fleet
+ * ResourceList contains container resource requirements.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -28,64 +27,64 @@ package com.google.api.services.gkehub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CommonFleetDefaultMemberConfigSpec extends com.google.api.client.json.GenericJson {
+public final class PolicyControllerResourceList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Config Management-specific spec.
+   * CPU requirement expressed in Kubernetes resource units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ConfigManagementMembershipSpec configmanagement;
+  private java.lang.String cpu;
 
   /**
-   * Policy Controller spec.
+   * Memory requirement expressed in Kubernetes resource units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerMembershipSpec policycontroller;
+  private java.lang.String memory;
 
   /**
-   * Config Management-specific spec.
+   * CPU requirement expressed in Kubernetes resource units.
    * @return value or {@code null} for none
    */
-  public ConfigManagementMembershipSpec getConfigmanagement() {
-    return configmanagement;
+  public java.lang.String getCpu() {
+    return cpu;
   }
 
   /**
-   * Config Management-specific spec.
-   * @param configmanagement configmanagement or {@code null} for none
+   * CPU requirement expressed in Kubernetes resource units.
+   * @param cpu cpu or {@code null} for none
    */
-  public CommonFleetDefaultMemberConfigSpec setConfigmanagement(ConfigManagementMembershipSpec configmanagement) {
-    this.configmanagement = configmanagement;
+  public PolicyControllerResourceList setCpu(java.lang.String cpu) {
+    this.cpu = cpu;
     return this;
   }
 
   /**
-   * Policy Controller spec.
+   * Memory requirement expressed in Kubernetes resource units.
    * @return value or {@code null} for none
    */
-  public PolicyControllerMembershipSpec getPolicycontroller() {
-    return policycontroller;
+  public java.lang.String getMemory() {
+    return memory;
   }
 
   /**
-   * Policy Controller spec.
-   * @param policycontroller policycontroller or {@code null} for none
+   * Memory requirement expressed in Kubernetes resource units.
+   * @param memory memory or {@code null} for none
    */
-  public CommonFleetDefaultMemberConfigSpec setPolicycontroller(PolicyControllerMembershipSpec policycontroller) {
-    this.policycontroller = policycontroller;
+  public PolicyControllerResourceList setMemory(java.lang.String memory) {
+    this.memory = memory;
     return this;
   }
 
   @Override
-  public CommonFleetDefaultMemberConfigSpec set(String fieldName, Object value) {
-    return (CommonFleetDefaultMemberConfigSpec) super.set(fieldName, value);
+  public PolicyControllerResourceList set(String fieldName, Object value) {
+    return (PolicyControllerResourceList) super.set(fieldName, value);
   }
 
   @Override
-  public CommonFleetDefaultMemberConfigSpec clone() {
-    return (CommonFleetDefaultMemberConfigSpec) super.clone();
+  public PolicyControllerResourceList clone() {
+    return (PolicyControllerResourceList) super.clone();
   }
 
 }

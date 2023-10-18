@@ -68,6 +68,13 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private Origin origin;
 
   /**
+   * Policy Controller spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyControllerMembershipSpec policycontroller;
+
+  /**
    * Config Management-specific spec.
    * @return value or {@code null} for none
    */
@@ -153,6 +160,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setOrigin(Origin origin) {
     this.origin = origin;
+    return this;
+  }
+
+  /**
+   * Policy Controller spec.
+   * @return value or {@code null} for none
+   */
+  public PolicyControllerMembershipSpec getPolicycontroller() {
+    return policycontroller;
+  }
+
+  /**
+   * Policy Controller spec.
+   * @param policycontroller policycontroller or {@code null} for none
+   */
+  public MembershipFeatureSpec setPolicycontroller(PolicyControllerMembershipSpec policycontroller) {
+    this.policycontroller = policycontroller;
     return this;
   }
 

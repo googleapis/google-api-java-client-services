@@ -45,6 +45,13 @@ public final class CommonFleetDefaultMemberConfigSpec extends com.google.api.cli
   private IdentityServiceMembershipSpec identityservice;
 
   /**
+   * Policy Controller spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyControllerMembershipSpec policycontroller;
+
+  /**
    * Config Management-specific spec.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class CommonFleetDefaultMemberConfigSpec extends com.google.api.cli
    */
   public CommonFleetDefaultMemberConfigSpec setIdentityservice(IdentityServiceMembershipSpec identityservice) {
     this.identityservice = identityservice;
+    return this;
+  }
+
+  /**
+   * Policy Controller spec.
+   * @return value or {@code null} for none
+   */
+  public PolicyControllerMembershipSpec getPolicycontroller() {
+    return policycontroller;
+  }
+
+  /**
+   * Policy Controller spec.
+   * @param policycontroller policycontroller or {@code null} for none
+   */
+  public CommonFleetDefaultMemberConfigSpec setPolicycontroller(PolicyControllerMembershipSpec policycontroller) {
+    this.policycontroller = policycontroller;
     return this;
   }
 

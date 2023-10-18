@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Wrapper to hold data related to a lane’s track, extendable for future data.
+ * Model definition for SafesearchImageOffensiveAnnotation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,61 +28,37 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GeostoreFlowLineProto extends com.google.api.client.json.GenericJson {
-
-  /**
-   * RESERVED
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostoreCurvatureProto curvature;
+public final class SafesearchImageOffensiveAnnotation extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GeostoreTrackProto track;
-
-  /**
-   * RESERVED
-   * @return value or {@code null} for none
-   */
-  public GeostoreCurvatureProto getCurvature() {
-    return curvature;
-  }
-
-  /**
-   * RESERVED
-   * @param curvature curvature or {@code null} for none
-   */
-  public GeostoreFlowLineProto setCurvature(GeostoreCurvatureProto curvature) {
-    this.curvature = curvature;
-    return this;
-  }
+  private java.lang.Float hatefulDerogatoryScore;
 
   /**
    * @return value or {@code null} for none
    */
-  public GeostoreTrackProto getTrack() {
-    return track;
+  public java.lang.Float getHatefulDerogatoryScore() {
+    return hatefulDerogatoryScore;
   }
 
   /**
-   * @param track track or {@code null} for none
+   * @param hatefulDerogatoryScore hatefulDerogatoryScore or {@code null} for none
    */
-  public GeostoreFlowLineProto setTrack(GeostoreTrackProto track) {
-    this.track = track;
+  public SafesearchImageOffensiveAnnotation setHatefulDerogatoryScore(java.lang.Float hatefulDerogatoryScore) {
+    this.hatefulDerogatoryScore = hatefulDerogatoryScore;
     return this;
   }
 
   @Override
-  public GeostoreFlowLineProto set(String fieldName, Object value) {
-    return (GeostoreFlowLineProto) super.set(fieldName, value);
+  public SafesearchImageOffensiveAnnotation set(String fieldName, Object value) {
+    return (SafesearchImageOffensiveAnnotation) super.set(fieldName, value);
   }
 
   @Override
-  public GeostoreFlowLineProto clone() {
-    return (GeostoreFlowLineProto) super.clone();
+  public SafesearchImageOffensiveAnnotation clone() {
+    return (SafesearchImageOffensiveAnnotation) super.clone();
   }
 
 }

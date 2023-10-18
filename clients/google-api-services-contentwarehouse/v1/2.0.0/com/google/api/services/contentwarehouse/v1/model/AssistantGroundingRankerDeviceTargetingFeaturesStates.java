@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * The states of the device. They are dynamic and may change based on the current context. Next ID:
- * 13
+ * 15
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -126,6 +126,20 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isTethered;
+
+  /**
+   * Indicates the state of media focus from a separate non-local hearing device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mediaFocusStateFromHearingDevice;
+
+  /**
+   * Indicates the state of media focus from a separate local device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mediaFocusStateFromLocalDevice;
 
   /**
    * The distance of the device relative to others that hear the user's OKG.
@@ -352,6 +366,40 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends
    */
   public AssistantGroundingRankerDeviceTargetingFeaturesStates setIsTethered(java.lang.Boolean isTethered) {
     this.isTethered = isTethered;
+    return this;
+  }
+
+  /**
+   * Indicates the state of media focus from a separate non-local hearing device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMediaFocusStateFromHearingDevice() {
+    return mediaFocusStateFromHearingDevice;
+  }
+
+  /**
+   * Indicates the state of media focus from a separate non-local hearing device.
+   * @param mediaFocusStateFromHearingDevice mediaFocusStateFromHearingDevice or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setMediaFocusStateFromHearingDevice(java.lang.String mediaFocusStateFromHearingDevice) {
+    this.mediaFocusStateFromHearingDevice = mediaFocusStateFromHearingDevice;
+    return this;
+  }
+
+  /**
+   * Indicates the state of media focus from a separate local device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMediaFocusStateFromLocalDevice() {
+    return mediaFocusStateFromLocalDevice;
+  }
+
+  /**
+   * Indicates the state of media focus from a separate local device.
+   * @param mediaFocusStateFromLocalDevice mediaFocusStateFromLocalDevice or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setMediaFocusStateFromLocalDevice(java.lang.String mediaFocusStateFromLocalDevice) {
+    this.mediaFocusStateFromLocalDevice = mediaFocusStateFromLocalDevice;
     return this;
   }
 

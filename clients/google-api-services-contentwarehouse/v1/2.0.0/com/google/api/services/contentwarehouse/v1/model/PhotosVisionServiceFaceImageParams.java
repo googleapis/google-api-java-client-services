@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Wrapper to hold data related to a lane’s track, extendable for future data.
+ * ImageParams are a collection of parameters of the image on which face detection was performed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,61 +28,58 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GeostoreFlowLineProto extends com.google.api.client.json.GenericJson {
-
-  /**
-   * RESERVED
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostoreCurvatureProto curvature;
+public final class PhotosVisionServiceFaceImageParams extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GeostoreTrackProto track;
+  private java.lang.Integer height;
 
   /**
-   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer width;
+
+  /**
    * @return value or {@code null} for none
    */
-  public GeostoreCurvatureProto getCurvature() {
-    return curvature;
+  public java.lang.Integer getHeight() {
+    return height;
   }
 
   /**
-   * RESERVED
-   * @param curvature curvature or {@code null} for none
+   * @param height height or {@code null} for none
    */
-  public GeostoreFlowLineProto setCurvature(GeostoreCurvatureProto curvature) {
-    this.curvature = curvature;
+  public PhotosVisionServiceFaceImageParams setHeight(java.lang.Integer height) {
+    this.height = height;
     return this;
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public GeostoreTrackProto getTrack() {
-    return track;
+  public java.lang.Integer getWidth() {
+    return width;
   }
 
   /**
-   * @param track track or {@code null} for none
+   * @param width width or {@code null} for none
    */
-  public GeostoreFlowLineProto setTrack(GeostoreTrackProto track) {
-    this.track = track;
+  public PhotosVisionServiceFaceImageParams setWidth(java.lang.Integer width) {
+    this.width = width;
     return this;
   }
 
   @Override
-  public GeostoreFlowLineProto set(String fieldName, Object value) {
-    return (GeostoreFlowLineProto) super.set(fieldName, value);
+  public PhotosVisionServiceFaceImageParams set(String fieldName, Object value) {
+    return (PhotosVisionServiceFaceImageParams) super.set(fieldName, value);
   }
 
   @Override
-  public GeostoreFlowLineProto clone() {
-    return (GeostoreFlowLineProto) super.clone();
+  public PhotosVisionServiceFaceImageParams clone() {
+    return (PhotosVisionServiceFaceImageParams) super.clone();
   }
 
 }

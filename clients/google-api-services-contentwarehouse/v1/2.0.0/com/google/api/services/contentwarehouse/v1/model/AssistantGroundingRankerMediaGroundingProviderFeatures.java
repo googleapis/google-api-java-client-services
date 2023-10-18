@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 19
+ * Features to be passed from Media GP to HGR. Next ID: 20
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -116,6 +116,13 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isYoutubeMusicSeeking;
+
+  /**
+   * Account Type of the user for the provider
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mediaAccountType;
 
   /**
    * MediaAquaAction::media_content_type from interpretation. It can be used for cross-content type
@@ -375,6 +382,23 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setIsYoutubeMusicSeeking(java.lang.Boolean isYoutubeMusicSeeking) {
     this.isYoutubeMusicSeeking = isYoutubeMusicSeeking;
+    return this;
+  }
+
+  /**
+   * Account Type of the user for the provider
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMediaAccountType() {
+    return mediaAccountType;
+  }
+
+  /**
+   * Account Type of the user for the provider
+   * @param mediaAccountType mediaAccountType or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setMediaAccountType(java.lang.String mediaAccountType) {
+    this.mediaAccountType = mediaAccountType;
     return this;
   }
 

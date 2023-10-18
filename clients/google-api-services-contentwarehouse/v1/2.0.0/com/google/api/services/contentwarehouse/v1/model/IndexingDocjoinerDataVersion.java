@@ -29,7 +29,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * their code. Please also see the comment of FieldProjector above. There are also some fields in
  * DataInfo that annotate who generates the data, the Index Signals or Goldmine annotator name for
  * the fields already onboarded or being onboarded to FDP. Fields without annotation of signal_names
- * or goldmine_annotator_names are not onboarded. Next ID: 538
+ * or goldmine_annotator_names are not onboarded. Next ID: 539
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -451,11 +451,17 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   private IndexingDocjoinerDataVersionVersionInfo imageStockStockImageAnnotation;
 
   /**
-   * END DATA FIELDS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo imageembed;
+
+  /**
+   * END DATA FIELDS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo imageembedDomainNorm;
 
   /**
    * The value may be {@code null}.
@@ -4257,7 +4263,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * END DATA FIELDS
    * @return value or {@code null} for none
    */
   public IndexingDocjoinerDataVersionVersionInfo getImageembed() {
@@ -4265,11 +4270,27 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * END DATA FIELDS
    * @param imageembed imageembed or {@code null} for none
    */
   public IndexingDocjoinerDataVersion setImageembed(IndexingDocjoinerDataVersionVersionInfo imageembed) {
     this.imageembed = imageembed;
+    return this;
+  }
+
+  /**
+   * END DATA FIELDS
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getImageembedDomainNorm() {
+    return imageembedDomainNorm;
+  }
+
+  /**
+   * END DATA FIELDS
+   * @param imageembedDomainNorm imageembedDomainNorm or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setImageembedDomainNorm(IndexingDocjoinerDataVersionVersionInfo imageembedDomainNorm) {
+    this.imageembedDomainNorm = imageembedDomainNorm;
     return this;
   }
 

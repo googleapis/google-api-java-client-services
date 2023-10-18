@@ -37,6 +37,12 @@ public final class SafesearchInternalImageSignals extends com.google.api.client.
   private java.lang.Float imageEntitiesViolenceScore;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SafesearchImageOffensiveAnnotation offensiveAnnotation;
+
+  /**
    * Additional SafeSearch signals that are used to compute final scores.
    * The value may be {@code null}.
    */
@@ -61,6 +67,21 @@ public final class SafesearchInternalImageSignals extends com.google.api.client.
    */
   public SafesearchInternalImageSignals setImageEntitiesViolenceScore(java.lang.Float imageEntitiesViolenceScore) {
     this.imageEntitiesViolenceScore = imageEntitiesViolenceScore;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SafesearchImageOffensiveAnnotation getOffensiveAnnotation() {
+    return offensiveAnnotation;
+  }
+
+  /**
+   * @param offensiveAnnotation offensiveAnnotation or {@code null} for none
+   */
+  public SafesearchInternalImageSignals setOffensiveAnnotation(SafesearchImageOffensiveAnnotation offensiveAnnotation) {
+    this.offensiveAnnotation = offensiveAnnotation;
     return this;
   }
 

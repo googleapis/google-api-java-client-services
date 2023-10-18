@@ -17,7 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Wrapper to hold data related to a lane’s track, extendable for future data.
+ * The measurement underlying this assumes fixed ear positions, so applying this combined with the
+ * FaceWidthClassifierResults may have an unintended outcome.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,61 +29,58 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GeostoreFlowLineProto extends com.google.api.client.json.GenericJson {
-
-  /**
-   * RESERVED
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostoreCurvatureProto curvature;
+public final class ResearchVisionFace2cartoonEyeEyebrowDistanceClassifierResults extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GeostoreTrackProto track;
+  private java.lang.Float confidence;
 
   /**
-   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eyeEyebrowDistance;
+
+  /**
    * @return value or {@code null} for none
    */
-  public GeostoreCurvatureProto getCurvature() {
-    return curvature;
+  public java.lang.Float getConfidence() {
+    return confidence;
   }
 
   /**
-   * RESERVED
-   * @param curvature curvature or {@code null} for none
+   * @param confidence confidence or {@code null} for none
    */
-  public GeostoreFlowLineProto setCurvature(GeostoreCurvatureProto curvature) {
-    this.curvature = curvature;
+  public ResearchVisionFace2cartoonEyeEyebrowDistanceClassifierResults setConfidence(java.lang.Float confidence) {
+    this.confidence = confidence;
     return this;
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public GeostoreTrackProto getTrack() {
-    return track;
+  public java.lang.String getEyeEyebrowDistance() {
+    return eyeEyebrowDistance;
   }
 
   /**
-   * @param track track or {@code null} for none
+   * @param eyeEyebrowDistance eyeEyebrowDistance or {@code null} for none
    */
-  public GeostoreFlowLineProto setTrack(GeostoreTrackProto track) {
-    this.track = track;
+  public ResearchVisionFace2cartoonEyeEyebrowDistanceClassifierResults setEyeEyebrowDistance(java.lang.String eyeEyebrowDistance) {
+    this.eyeEyebrowDistance = eyeEyebrowDistance;
     return this;
   }
 
   @Override
-  public GeostoreFlowLineProto set(String fieldName, Object value) {
-    return (GeostoreFlowLineProto) super.set(fieldName, value);
+  public ResearchVisionFace2cartoonEyeEyebrowDistanceClassifierResults set(String fieldName, Object value) {
+    return (ResearchVisionFace2cartoonEyeEyebrowDistanceClassifierResults) super.set(fieldName, value);
   }
 
   @Override
-  public GeostoreFlowLineProto clone() {
-    return (GeostoreFlowLineProto) super.clone();
+  public ResearchVisionFace2cartoonEyeEyebrowDistanceClassifierResults clone() {
+    return (ResearchVisionFace2cartoonEyeEyebrowDistanceClassifierResults) super.clone();
   }
 
 }

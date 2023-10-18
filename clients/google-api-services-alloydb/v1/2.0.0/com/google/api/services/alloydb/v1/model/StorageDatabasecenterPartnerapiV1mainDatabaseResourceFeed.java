@@ -52,7 +52,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData resourceHealthSignalData;
 
   /**
-   * Required. Primary key associated with the Resource
+   * Primary key associated with the Resource. resource_id is available in individual feed level as
+   * well.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +117,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Required. Primary key associated with the Resource
+   * Primary key associated with the Resource. resource_id is available in individual feed level as
+   * well.
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId getResourceId() {
@@ -124,7 +126,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Required. Primary key associated with the Resource
+   * Primary key associated with the Resource. resource_id is available in individual feed level as
+   * well.
    * @param resourceId resourceId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId) {

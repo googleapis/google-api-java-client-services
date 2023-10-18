@@ -92,7 +92,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   /**
    * Closest parent container of this resource. In GCP, 'container' refers to a Cloud Resource
    * Manager project. It must be resource name of a Cloud Resource Manager project with the format
-   * of "provider//", such as "gcp/projects/123".
+   * of "provider//", such as "gcp/projects/123". For GCP provided resources, number should be
+   * project number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,7 +268,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   /**
    * Closest parent container of this resource. In GCP, 'container' refers to a Cloud Resource
    * Manager project. It must be resource name of a Cloud Resource Manager project with the format
-   * of "provider//", such as "gcp/projects/123".
+   * of "provider//", such as "gcp/projects/123". For GCP provided resources, number should be
+   * project number.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceContainer() {
@@ -277,7 +279,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   /**
    * Closest parent container of this resource. In GCP, 'container' refers to a Cloud Resource
    * Manager project. It must be resource name of a Cloud Resource Manager project with the format
-   * of "provider//", such as "gcp/projects/123".
+   * of "provider//", such as "gcp/projects/123". For GCP provided resources, number should be
+   * project number.
    * @param resourceContainer resourceContainer or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setResourceContainer(java.lang.String resourceContainer) {

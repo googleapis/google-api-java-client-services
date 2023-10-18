@@ -1602,6 +1602,40 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /**
+           * Optional. The optional version of the function whose details should be obtained. The
+           * version of a 1st Gen function is an integer that starts from 1 and gets incremented on
+           * redeployments. Each deployment creates a config version of the underlying function. GCF
+           * may keep historical configs for old versions. This field can be specified to fetch the
+           * historical configs. Leave it blank or set to 0 to get the latest version of the
+           * function.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long versionId;
+
+          /** Optional. The optional version of the function whose details should be obtained. The version of a
+         1st Gen function is an integer that starts from 1 and gets incremented on redeployments. Each
+         deployment creates a config version of the underlying function. GCF may keep historical configs for
+         old versions. This field can be specified to fetch the historical configs. Leave it blank or set to
+         0 to get the latest version of the function.
+           */
+          public java.lang.Long getVersionId() {
+            return versionId;
+          }
+
+          /**
+           * Optional. The optional version of the function whose details should be obtained. The
+           * version of a 1st Gen function is an integer that starts from 1 and gets incremented on
+           * redeployments. Each deployment creates a config version of the underlying function. GCF
+           * may keep historical configs for old versions. This field can be specified to fetch the
+           * historical configs. Leave it blank or set to 0 to get the latest version of the
+           * function.
+           */
+          public Get setVersionId(java.lang.Long versionId) {
+            this.versionId = versionId;
+            return this;
+          }
+
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);

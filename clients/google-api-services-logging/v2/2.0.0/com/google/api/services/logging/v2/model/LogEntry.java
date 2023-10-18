@@ -30,6 +30,17 @@ package com.google.api.services.logging.v2.model;
 public final class LogEntry extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The Cloud Error Reporting (https://cloud.google.com/error-reporting) error groups
+   * associated with this LogEntry. Cloud Error Reporting sets the values for this field during
+   * error group creation.For more information, see View error details( http://cloud/error-
+   * reporting/docs/viewing-errors#view_error_details)This field isn't available during log routing
+   * (https://cloud.google.com/logging/docs/routing/overview)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LogErrorGroup> errorGroups;
+
+  /**
    * Optional. Information about the HTTP request associated with this log entry, if applicable.
    * The value may be {@code null}.
    */
@@ -213,6 +224,31 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean traceSampled;
+
+  /**
+   * Output only. The Cloud Error Reporting (https://cloud.google.com/error-reporting) error groups
+   * associated with this LogEntry. Cloud Error Reporting sets the values for this field during
+   * error group creation.For more information, see View error details( http://cloud/error-
+   * reporting/docs/viewing-errors#view_error_details)This field isn't available during log routing
+   * (https://cloud.google.com/logging/docs/routing/overview)
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LogErrorGroup> getErrorGroups() {
+    return errorGroups;
+  }
+
+  /**
+   * Output only. The Cloud Error Reporting (https://cloud.google.com/error-reporting) error groups
+   * associated with this LogEntry. Cloud Error Reporting sets the values for this field during
+   * error group creation.For more information, see View error details( http://cloud/error-
+   * reporting/docs/viewing-errors#view_error_details)This field isn't available during log routing
+   * (https://cloud.google.com/logging/docs/routing/overview)
+   * @param errorGroups errorGroups or {@code null} for none
+   */
+  public LogEntry setErrorGroups(java.util.List<LogErrorGroup> errorGroups) {
+    this.errorGroups = errorGroups;
+    return this;
+  }
 
   /**
    * Optional. Information about the HTTP request associated with this log entry, if applicable.

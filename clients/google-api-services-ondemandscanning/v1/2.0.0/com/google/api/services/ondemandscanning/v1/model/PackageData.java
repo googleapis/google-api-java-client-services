@@ -102,6 +102,16 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String hashDigest;
 
   /**
+   * The list of licenses found that are related to a given package. Note that licenses may also be
+   * stored on the BinarySourceInfo. If there is no BinarySourceInfo (because there's no concept of
+   * source vs binary), then it will be stored here, while if there are BinarySourceInfos, it will
+   * be stored there, as one source can have multiple binaries with different licenses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> licenses;
+
+  /**
    * The maintainer of the package.
    * The value may be {@code null}.
    */
@@ -287,6 +297,29 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setHashDigest(java.lang.String hashDigest) {
     this.hashDigest = hashDigest;
+    return this;
+  }
+
+  /**
+   * The list of licenses found that are related to a given package. Note that licenses may also be
+   * stored on the BinarySourceInfo. If there is no BinarySourceInfo (because there's no concept of
+   * source vs binary), then it will be stored here, while if there are BinarySourceInfos, it will
+   * be stored there, as one source can have multiple binaries with different licenses.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLicenses() {
+    return licenses;
+  }
+
+  /**
+   * The list of licenses found that are related to a given package. Note that licenses may also be
+   * stored on the BinarySourceInfo. If there is no BinarySourceInfo (because there's no concept of
+   * source vs binary), then it will be stored here, while if there are BinarySourceInfos, it will
+   * be stored there, as one source can have multiple binaries with different licenses.
+   * @param licenses licenses or {@code null} for none
+   */
+  public PackageData setLicenses(java.util.List<java.lang.String> licenses) {
+    this.licenses = licenses;
     return this;
   }
 

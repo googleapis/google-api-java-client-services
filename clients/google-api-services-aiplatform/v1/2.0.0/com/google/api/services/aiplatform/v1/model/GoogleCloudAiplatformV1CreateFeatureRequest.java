@@ -48,6 +48,10 @@ public final class GoogleCloudAiplatformV1CreateFeatureRequest extends com.googl
   private java.lang.String featureId;
 
   /**
+   * Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format for
+   * entity_type as parent: `projects/{project}/locations/{location}/featurestores/{featurestore}/en
+   * tityTypes/{entity_type}` Format for feature_group as parent:
+   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,6 +98,10 @@ public final class GoogleCloudAiplatformV1CreateFeatureRequest extends com.googl
   }
 
   /**
+   * Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format for
+   * entity_type as parent: `projects/{project}/locations/{location}/featurestores/{featurestore}/en
+   * tityTypes/{entity_type}` Format for feature_group as parent:
+   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -101,6 +109,10 @@ public final class GoogleCloudAiplatformV1CreateFeatureRequest extends com.googl
   }
 
   /**
+   * Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format for
+   * entity_type as parent: `projects/{project}/locations/{location}/featurestores/{featurestore}/en
+   * tityTypes/{entity_type}` Format for feature_group as parent:
+   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudAiplatformV1CreateFeatureRequest setParent(java.lang.String parent) {

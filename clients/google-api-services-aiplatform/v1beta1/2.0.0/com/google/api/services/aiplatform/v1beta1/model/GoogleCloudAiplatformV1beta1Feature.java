@@ -17,8 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Feature Metadata information that describes an attribute of an entity type. For example, apple is
- * an entity type, and color is a feature that describes apple.
+ * Feature Metadata information. For example, color is a feature that describes an apple.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -31,7 +30,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Timestamp when this EntityType was created.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). Timestamp when this
+   * EntityType was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,10 +45,10 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   private java.lang.String description;
 
   /**
-   * Optional. If not set, use the monitoring_config defined for the EntityType this Feature belongs
-   * to. Only Features with type (Feature.ValueType) BOOL, STRING, DOUBLE or INT64 can enable
-   * monitoring. If set to true, all types of data monitoring are disabled despite the config on
-   * EntityType.
+   * Optional. Only applicable for Vertex AI Feature Store (Legacy). If not set, use the
+   * monitoring_config defined for the EntityType this Feature belongs to. Only Features with type
+   * (Feature.ValueType) BOOL, STRING, DOUBLE or INT64 can enable monitoring. If set to true, all
+   * types of data monitoring are disabled despite the config on EntityType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,10 +75,11 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Deprecated: The custom monitoring configuration for this Feature, if not set, use the
-   * monitoring_config defined for the EntityType this Feature belongs to. Only Features with type
-   * (Feature.ValueType) BOOL, STRING, DOUBLE or INT64 can enable monitoring. If this is populated
-   * with FeaturestoreMonitoringConfig.disabled = true, snapshot analysis monitoring is disabled; if
+   * Optional. Only applicable for Vertex AI Feature Store (Legacy). Deprecated: The custom
+   * monitoring configuration for this Feature, if not set, use the monitoring_config defined for
+   * the EntityType this Feature belongs to. Only Features with type (Feature.ValueType) BOOL,
+   * STRING, DOUBLE or INT64 can enable monitoring. If this is populated with
+   * FeaturestoreMonitoringConfig.disabled = true, snapshot analysis monitoring is disabled; if
    * FeaturestoreMonitoringConfig.monitoring_interval specified, snapshot analysis monitoring is
    * enabled. Otherwise, snapshot analysis monitoring config is same as the EntityType's this
    * Feature belongs to.
@@ -88,15 +89,16 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   private GoogleCloudAiplatformV1beta1FeaturestoreMonitoringConfig monitoringConfig;
 
   /**
-   * Output only. A list of historical SnapshotAnalysis stats requested by user, sorted by
-   * FeatureStatsAnomaly.start_time descending.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). A list of historical
+   * SnapshotAnalysis stats requested by user, sorted by FeatureStatsAnomaly.start_time descending.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1FeatureStatsAnomaly> monitoringStats;
 
   /**
-   * Output only. The list of historical stats and anomalies with specified objectives.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). The list of historical stats
+   * and anomalies with specified objectives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,31 +106,34 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
 
   /**
    * Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/featurestores/
-   * {featurestore}/entityTypes/{entity_type}/features/{feature}` The last part feature is assigned
-   * by the client. The feature can be up to 64 characters long and can consist only of ASCII Latin
-   * letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The value will
-   * be unique given an entity type.
+   * {featurestore}/entityTypes/{entity_type}/features/{feature}`
+   * `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}` The
+   * last part feature is assigned by the client. The feature can be up to 64 characters long and
+   * can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9
+   * starting with a letter. The value will be unique given an entity type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Timestamp when this EntityType was most recently updated.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). Timestamp when this
+   * EntityType was most recently updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Immutable. Type of Feature value.
+   * Immutable. Only applicable for Vertex AI Feature Store (Legacy). Type of Feature value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String valueType;
 
   /**
-   * Output only. Timestamp when this EntityType was created.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). Timestamp when this
+   * EntityType was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -136,7 +141,8 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Output only. Timestamp when this EntityType was created.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). Timestamp when this
+   * EntityType was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Feature setCreateTime(String createTime) {
@@ -162,10 +168,10 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Optional. If not set, use the monitoring_config defined for the EntityType this Feature belongs
-   * to. Only Features with type (Feature.ValueType) BOOL, STRING, DOUBLE or INT64 can enable
-   * monitoring. If set to true, all types of data monitoring are disabled despite the config on
-   * EntityType.
+   * Optional. Only applicable for Vertex AI Feature Store (Legacy). If not set, use the
+   * monitoring_config defined for the EntityType this Feature belongs to. Only Features with type
+   * (Feature.ValueType) BOOL, STRING, DOUBLE or INT64 can enable monitoring. If set to true, all
+   * types of data monitoring are disabled despite the config on EntityType.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableMonitoring() {
@@ -173,10 +179,10 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Optional. If not set, use the monitoring_config defined for the EntityType this Feature belongs
-   * to. Only Features with type (Feature.ValueType) BOOL, STRING, DOUBLE or INT64 can enable
-   * monitoring. If set to true, all types of data monitoring are disabled despite the config on
-   * EntityType.
+   * Optional. Only applicable for Vertex AI Feature Store (Legacy). If not set, use the
+   * monitoring_config defined for the EntityType this Feature belongs to. Only Features with type
+   * (Feature.ValueType) BOOL, STRING, DOUBLE or INT64 can enable monitoring. If set to true, all
+   * types of data monitoring are disabled despite the config on EntityType.
    * @param disableMonitoring disableMonitoring or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Feature setDisableMonitoring(java.lang.Boolean disableMonitoring) {
@@ -231,10 +237,11 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Optional. Deprecated: The custom monitoring configuration for this Feature, if not set, use the
-   * monitoring_config defined for the EntityType this Feature belongs to. Only Features with type
-   * (Feature.ValueType) BOOL, STRING, DOUBLE or INT64 can enable monitoring. If this is populated
-   * with FeaturestoreMonitoringConfig.disabled = true, snapshot analysis monitoring is disabled; if
+   * Optional. Only applicable for Vertex AI Feature Store (Legacy). Deprecated: The custom
+   * monitoring configuration for this Feature, if not set, use the monitoring_config defined for
+   * the EntityType this Feature belongs to. Only Features with type (Feature.ValueType) BOOL,
+   * STRING, DOUBLE or INT64 can enable monitoring. If this is populated with
+   * FeaturestoreMonitoringConfig.disabled = true, snapshot analysis monitoring is disabled; if
    * FeaturestoreMonitoringConfig.monitoring_interval specified, snapshot analysis monitoring is
    * enabled. Otherwise, snapshot analysis monitoring config is same as the EntityType's this
    * Feature belongs to.
@@ -245,10 +252,11 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Optional. Deprecated: The custom monitoring configuration for this Feature, if not set, use the
-   * monitoring_config defined for the EntityType this Feature belongs to. Only Features with type
-   * (Feature.ValueType) BOOL, STRING, DOUBLE or INT64 can enable monitoring. If this is populated
-   * with FeaturestoreMonitoringConfig.disabled = true, snapshot analysis monitoring is disabled; if
+   * Optional. Only applicable for Vertex AI Feature Store (Legacy). Deprecated: The custom
+   * monitoring configuration for this Feature, if not set, use the monitoring_config defined for
+   * the EntityType this Feature belongs to. Only Features with type (Feature.ValueType) BOOL,
+   * STRING, DOUBLE or INT64 can enable monitoring. If this is populated with
+   * FeaturestoreMonitoringConfig.disabled = true, snapshot analysis monitoring is disabled; if
    * FeaturestoreMonitoringConfig.monitoring_interval specified, snapshot analysis monitoring is
    * enabled. Otherwise, snapshot analysis monitoring config is same as the EntityType's this
    * Feature belongs to.
@@ -260,8 +268,8 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Output only. A list of historical SnapshotAnalysis stats requested by user, sorted by
-   * FeatureStatsAnomaly.start_time descending.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). A list of historical
+   * SnapshotAnalysis stats requested by user, sorted by FeatureStatsAnomaly.start_time descending.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1FeatureStatsAnomaly> getMonitoringStats() {
@@ -269,8 +277,8 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Output only. A list of historical SnapshotAnalysis stats requested by user, sorted by
-   * FeatureStatsAnomaly.start_time descending.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). A list of historical
+   * SnapshotAnalysis stats requested by user, sorted by FeatureStatsAnomaly.start_time descending.
    * @param monitoringStats monitoringStats or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Feature setMonitoringStats(java.util.List<GoogleCloudAiplatformV1beta1FeatureStatsAnomaly> monitoringStats) {
@@ -279,7 +287,8 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Output only. The list of historical stats and anomalies with specified objectives.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). The list of historical stats
+   * and anomalies with specified objectives.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1FeatureMonitoringStatsAnomaly> getMonitoringStatsAnomalies() {
@@ -287,7 +296,8 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Output only. The list of historical stats and anomalies with specified objectives.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). The list of historical stats
+   * and anomalies with specified objectives.
    * @param monitoringStatsAnomalies monitoringStatsAnomalies or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Feature setMonitoringStatsAnomalies(java.util.List<GoogleCloudAiplatformV1beta1FeatureMonitoringStatsAnomaly> monitoringStatsAnomalies) {
@@ -297,10 +307,11 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
 
   /**
    * Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/featurestores/
-   * {featurestore}/entityTypes/{entity_type}/features/{feature}` The last part feature is assigned
-   * by the client. The feature can be up to 64 characters long and can consist only of ASCII Latin
-   * letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The value will
-   * be unique given an entity type.
+   * {featurestore}/entityTypes/{entity_type}/features/{feature}`
+   * `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}` The
+   * last part feature is assigned by the client. The feature can be up to 64 characters long and
+   * can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9
+   * starting with a letter. The value will be unique given an entity type.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -309,10 +320,11 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
 
   /**
    * Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/featurestores/
-   * {featurestore}/entityTypes/{entity_type}/features/{feature}` The last part feature is assigned
-   * by the client. The feature can be up to 64 characters long and can consist only of ASCII Latin
-   * letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The value will
-   * be unique given an entity type.
+   * {featurestore}/entityTypes/{entity_type}/features/{feature}`
+   * `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}` The
+   * last part feature is assigned by the client. The feature can be up to 64 characters long and
+   * can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9
+   * starting with a letter. The value will be unique given an entity type.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Feature setName(java.lang.String name) {
@@ -321,7 +333,8 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Output only. Timestamp when this EntityType was most recently updated.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). Timestamp when this
+   * EntityType was most recently updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -329,7 +342,8 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Output only. Timestamp when this EntityType was most recently updated.
+   * Output only. Only applicable for Vertex AI Feature Store (Legacy). Timestamp when this
+   * EntityType was most recently updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Feature setUpdateTime(String updateTime) {
@@ -338,7 +352,7 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Immutable. Type of Feature value.
+   * Immutable. Only applicable for Vertex AI Feature Store (Legacy). Type of Feature value.
    * @return value or {@code null} for none
    */
   public java.lang.String getValueType() {
@@ -346,7 +360,7 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   }
 
   /**
-   * Immutable. Type of Feature value.
+   * Immutable. Only applicable for Vertex AI Feature Store (Legacy). Type of Feature value.
    * @param valueType valueType or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Feature setValueType(java.lang.String valueType) {

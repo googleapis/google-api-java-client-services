@@ -20147,7 +20147,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the aiplatform server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent
+             * @param parent Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format for
+             *        entity_type as parent: `projects/{project}/locations/{location}/featurestores/{featurestor
+             *        e}/entityTypes/{entity_type}` Format for feature_group as parent:
+             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}`
              * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1Feature}
              * @return the request
              */
@@ -20175,7 +20178,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent
+               * @param parent Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format for
+             *        entity_type as parent: `projects/{project}/locations/{location}/featurestores/{featurestor
+             *        e}/entityTypes/{entity_type}` Format for feature_group as parent:
+             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1Feature}
                * @since 1.13
                */
@@ -20244,16 +20250,31 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
+              /**
+               * Required. The resource name of the EntityType or FeatureGroup to create a Feature.
+               * Format for entity_type as parent: `projects/{project}/locations/{location}/features
+               * tores/{featurestore}/entityTypes/{entity_type}` Format for feature_group as parent:
+               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /**
-
+              /** Required. The resource name of the EntityType or FeatureGroup to create a Feature. Format for
+             entity_type as parent:
+             `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+             Format for feature_group as parent:
+             `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
+              /**
+               * Required. The resource name of the EntityType or FeatureGroup to create a Feature.
+               * Format for entity_type as parent: `projects/{project}/locations/{location}/features
+               * tores/{featurestore}/entityTypes/{entity_type}` Format for feature_group as parent:
+               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+               */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20450,9 +20471,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the aiplatform server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the Feature resource. Format:
+             * @param name Required. The name of the Feature resource. Format for entity_type as parent:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}` Format for feature_group as parent:
+             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -20478,9 +20500,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the Feature resource. Format:
+               * @param name Required. The name of the Feature resource. Format for entity_type as parent:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}` Format for feature_group as parent:
+             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -20559,15 +20582,17 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Required. The name of the Feature resource. Format: `projects/{project}/locations/{
-               * location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+               * Required. The name of the Feature resource. Format for entity_type as parent: `proj
+               * ects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entit
+               * y_type}` Format for feature_group as parent:
                * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the Feature resource. Format:
+              /** Required. The name of the Feature resource. Format for entity_type as parent:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+             Format for feature_group as parent:
              `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getName() {
@@ -20575,8 +20600,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Required. The name of the Feature resource. Format: `projects/{project}/locations/{
-               * location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+               * Required. The name of the Feature resource. Format for entity_type as parent: `proj
+               * ects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entit
+               * y_type}` Format for feature_group as parent:
                * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public Get setName(java.lang.String name) {
@@ -20602,9 +20628,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the aiplatform server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the Location to list Features. Format:
+             * @param parent Required. The resource name of the Location to list Features. Format for entity_type as parent:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}` Format for feature_group as parent:
+             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -20630,9 +20657,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the Location to list Features. Format:
+               * @param parent Required. The resource name of the Location to list Features. Format for entity_type as parent:
              *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             *        type}` Format for feature_group as parent:
+             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -20711,15 +20739,17 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Required. The resource name of the Location to list Features. Format: `projects/{pr
-               * oject}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+               * Required. The resource name of the Location to list Features. Format for
+               * entity_type as parent: `projects/{project}/locations/{location}/featurestores/{feat
+               * urestore}/entityTypes/{entity_type}` Format for feature_group as parent:
                * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name of the Location to list Features. Format:
+              /** Required. The resource name of the Location to list Features. Format for entity_type as parent:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+             Format for feature_group as parent:
              `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getParent() {
@@ -20727,8 +20757,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Required. The resource name of the Location to list Features. Format: `projects/{pr
-               * oject}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+               * Required. The resource name of the Location to list Features. Format for
+               * entity_type as parent: `projects/{project}/locations/{location}/featurestores/{feat
+               * urestore}/entityTypes/{entity_type}` Format for feature_group as parent:
                * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public List setParent(java.lang.String parent) {
@@ -20790,24 +20821,26 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * If set, return the most recent ListFeaturesRequest.latest_stats_count of stats for
-               * each Feature in response. Valid value is [0, 10]. If number of stats exists <
+               * Only applicable for Vertex AI Feature Store (Legacy). If set, return the most
+               * recent ListFeaturesRequest.latest_stats_count of stats for each Feature in
+               * response. Valid value is [0, 10]. If number of stats exists <
                * ListFeaturesRequest.latest_stats_count, return all existing stats.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer latestStatsCount;
 
-              /** If set, return the most recent ListFeaturesRequest.latest_stats_count of stats for each Feature in
-             response. Valid value is [0, 10]. If number of stats exists <
-             ListFeaturesRequest.latest_stats_count, return all existing stats.
+              /** Only applicable for Vertex AI Feature Store (Legacy). If set, return the most recent
+             ListFeaturesRequest.latest_stats_count of stats for each Feature in response. Valid value is [0,
+             10]. If number of stats exists < ListFeaturesRequest.latest_stats_count, return all existing stats.
                */
               public java.lang.Integer getLatestStatsCount() {
                 return latestStatsCount;
               }
 
               /**
-               * If set, return the most recent ListFeaturesRequest.latest_stats_count of stats for
-               * each Feature in response. Valid value is [0, 10]. If number of stats exists <
+               * Only applicable for Vertex AI Feature Store (Legacy). If set, return the most
+               * recent ListFeaturesRequest.latest_stats_count of stats for each Feature in
+               * response. Valid value is [0, 10]. If number of stats exists <
                * ListFeaturesRequest.latest_stats_count, return all existing stats.
                */
               public List setLatestStatsCount(java.lang.Integer latestStatsCount) {
@@ -20868,27 +20901,30 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * A page token, received from a previous FeaturestoreService.ListFeatures call.
-               * Provide this to retrieve the subsequent page. When paginating, all other parameters
-               * provided to FeaturestoreService.ListFeatures must match the call that provided the
-               * page token.
+               * A page token, received from a previous FeaturestoreService.ListFeatures call or
+               * FeatureRegistryService.ListFeatures call. Provide this to retrieve the subsequent
+               * page. When paginating, all other parameters provided to
+               * FeaturestoreService.ListFeatures or or FeatureRegistryService.ListFeatures must
+               * match the call that provided the page token.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** A page token, received from a previous FeaturestoreService.ListFeatures call. Provide this to
-             retrieve the subsequent page. When paginating, all other parameters provided to
-             FeaturestoreService.ListFeatures must match the call that provided the page token.
+              /** A page token, received from a previous FeaturestoreService.ListFeatures call or
+             FeatureRegistryService.ListFeatures call. Provide this to retrieve the subsequent page. When
+             paginating, all other parameters provided to FeaturestoreService.ListFeatures or or
+             FeatureRegistryService.ListFeatures must match the call that provided the page token.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * A page token, received from a previous FeaturestoreService.ListFeatures call.
-               * Provide this to retrieve the subsequent page. When paginating, all other parameters
-               * provided to FeaturestoreService.ListFeatures must match the call that provided the
-               * page token.
+               * A page token, received from a previous FeaturestoreService.ListFeatures call or
+               * FeatureRegistryService.ListFeatures call. Provide this to retrieve the subsequent
+               * page. When paginating, all other parameters provided to
+               * FeaturestoreService.ListFeatures or or FeatureRegistryService.ListFeatures must
+               * match the call that provided the page token.
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
@@ -20925,10 +20961,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/featurestores/{feat
-             *        urestore}/entityTypes/{entity_type}/features/{feature}` The last part feature is assigned
-             *        by the client. The feature can be up to 64 characters long and can consist only of ASCII
-             *        Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The
-             *        value will be unique given an entity type.
+             *        urestore}/entityTypes/{entity_type}/features/{feature}`
+             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
+             *        The last part feature is assigned by the client. The feature can be up to 64 characters
+             *        long and can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII
+             *        digits 0-9 starting with a letter. The value will be unique given an entity type.
              * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1Feature}
              * @return the request
              */
@@ -20957,10 +20994,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/featurestores/{feat
-             *        urestore}/entityTypes/{entity_type}/features/{feature}` The last part feature is assigned
-             *        by the client. The feature can be up to 64 characters long and can consist only of ASCII
-             *        Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The
-             *        value will be unique given an entity type.
+             *        urestore}/entityTypes/{entity_type}/features/{feature}`
+             *        `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
+             *        The last part feature is assigned by the client. The feature can be up to 64 characters
+             *        long and can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII
+             *        digits 0-9 starting with a letter. The value will be unique given an entity type.
                * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1Feature}
                * @since 1.13
                */
@@ -21031,19 +21069,22 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
               /**
                * Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/fe
-               * aturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}` The last
-               * part feature is assigned by the client. The feature can be up to 64 characters long
-               * and can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII
-               * digits 0-9 starting with a letter. The value will be unique given an entity type.
+               * aturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}` `projects/
+               * {project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
+               * The last part feature is assigned by the client. The feature can be up to 64
+               * characters long and can consist only of ASCII Latin letters A-Z and a-z,
+               * underscore(_), and ASCII digits 0-9 starting with a letter. The value will be
+               * unique given an entity type.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/featurestores/{fea
-             turestore}/entityTypes/{entity_type}/features/{feature}` The last part feature is assigned by the
-             client. The feature can be up to 64 characters long and can consist only of ASCII Latin letters A-Z
-             and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The value will be unique given
-             an entity type.
+             turestore}/entityTypes/{entity_type}/features/{feature}`
+             `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}` The last
+             part feature is assigned by the client. The feature can be up to 64 characters long and can consist
+             only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a
+             letter. The value will be unique given an entity type.
                */
               public java.lang.String getName() {
                 return name;
@@ -21051,10 +21092,12 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
               /**
                * Immutable. Name of the Feature. Format: `projects/{project}/locations/{location}/fe
-               * aturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}` The last
-               * part feature is assigned by the client. The feature can be up to 64 characters long
-               * and can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII
-               * digits 0-9 starting with a letter. The value will be unique given an entity type.
+               * aturestores/{featurestore}/entityTypes/{entity_type}/features/{feature}` `projects/
+               * {project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
+               * The last part feature is assigned by the client. The feature can be up to 64
+               * characters long and can consist only of ASCII Latin letters A-Z and a-z,
+               * underscore(_), and ASCII digits 0-9 starting with a letter. The value will be
+               * unique given an entity type.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -21072,7 +21115,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * resource, not the full request. A field will be overwritten if it is in the mask.
                * If the user does not provide a mask then only the non-empty fields present in the
                * request will be overwritten. Set the update_mask to `*` to override all fields.
-               * Updatable fields: * `description` * `labels` * `disable_monitoring`
+               * Updatable fields: * `description` * `labels` * `disable_monitoring` (Not supported
+               * for FeatureRegistry Feature)
                */
               @com.google.api.client.util.Key
               private String updateMask;
@@ -21081,7 +21125,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              The fields specified in the update_mask are relative to the resource, not the full request. A field
              will be overwritten if it is in the mask. If the user does not provide a mask then only the non-
              empty fields present in the request will be overwritten. Set the update_mask to `*` to override all
-             fields. Updatable fields: * `description` * `labels` * `disable_monitoring`
+             fields. Updatable fields: * `description` * `labels` * `disable_monitoring` (Not supported for
+             FeatureRegistry Feature)
                */
               public String getUpdateMask() {
                 return updateMask;
@@ -21093,7 +21138,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * resource, not the full request. A field will be overwritten if it is in the mask.
                * If the user does not provide a mask then only the non-empty fields present in the
                * request will be overwritten. Set the update_mask to `*` to override all fields.
-               * Updatable fields: * `description` * `labels` * `disable_monitoring`
+               * Updatable fields: * `description` * `labels` * `disable_monitoring` (Not supported
+               * for FeatureRegistry Feature)
                */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;

@@ -95,6 +95,16 @@ public final class GoogleCloudAiplatformV1CustomJobSpec extends com.google.api.c
   private java.lang.String network;
 
   /**
+   * The ID of the location to store protected artifacts. e.g. us-central1. Populate only when the
+   * location is different than CustomJob location. For unprotected artifacts, the value of this
+   * field is ignored. List of supported locations: https://cloud.google.com/vertex-
+   * ai/docs/general/locations
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protectedArtifactLocationId;
+
+  /**
    * Optional. A list of names for the reserved ip ranges under the VPC network that can be used for
    * this job. If set, we will deploy the job within the provided ip ranges. Otherwise, the job will
    * be deployed to any ip ranges under the provided VPC network. Example: ['vertex-ai-ip-range'].
@@ -281,6 +291,29 @@ public final class GoogleCloudAiplatformV1CustomJobSpec extends com.google.api.c
    */
   public GoogleCloudAiplatformV1CustomJobSpec setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * The ID of the location to store protected artifacts. e.g. us-central1. Populate only when the
+   * location is different than CustomJob location. For unprotected artifacts, the value of this
+   * field is ignored. List of supported locations: https://cloud.google.com/vertex-
+   * ai/docs/general/locations
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtectedArtifactLocationId() {
+    return protectedArtifactLocationId;
+  }
+
+  /**
+   * The ID of the location to store protected artifacts. e.g. us-central1. Populate only when the
+   * location is different than CustomJob location. For unprotected artifacts, the value of this
+   * field is ignored. List of supported locations: https://cloud.google.com/vertex-
+   * ai/docs/general/locations
+   * @param protectedArtifactLocationId protectedArtifactLocationId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CustomJobSpec setProtectedArtifactLocationId(java.lang.String protectedArtifactLocationId) {
+    this.protectedArtifactLocationId = protectedArtifactLocationId;
     return this;
   }
 

@@ -20,6 +20,8 @@ SERVICE=$1
 VARIANT=$2
 ROOT_DIR=$(realpath $(dirname "${BASH_SOURCE[0]}")/../../../)
 
+LATEST_VARIANT=2.0.0
+
 if [[ -z "${SERVICE}" ]]
 then
   echo "Usage: ${0} <service> [variant]"
@@ -28,7 +30,7 @@ fi
 
 if [[ -z "${VARIANT}" ]]
 then
-  VARIANT=2.0.0
+  VARIANT=${LATEST_VARIANT}
 fi
 
 # Install the local generator without dependencies first and then install the dependencies with hash checking.
@@ -51,4 +53,7 @@ do
       --language=java \
       --language_variant=${VARIANT} \
       --package_path=api/services
+
+  # copy the latest README to the main service location
+  cp ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${LATEST_VARIANT}/README.md ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/README.md
 done

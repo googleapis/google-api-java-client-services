@@ -90,6 +90,13 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   private java.lang.String displayName;
 
   /**
+   * Optional. Configuration options for a custom domain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DomainConfig domainConfig;
+
+  /**
    * Optional. Checksum computed by the server. May be sent on update and delete requests to make
    * sure that the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -281,6 +288,23 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
    */
   public WorkstationCluster setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration options for a custom domain.
+   * @return value or {@code null} for none
+   */
+  public DomainConfig getDomainConfig() {
+    return domainConfig;
+  }
+
+  /**
+   * Optional. Configuration options for a custom domain.
+   * @param domainConfig domainConfig or {@code null} for none
+   */
+  public WorkstationCluster setDomainConfig(DomainConfig domainConfig) {
+    this.domainConfig = domainConfig;
     return this;
   }
 

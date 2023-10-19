@@ -31,6 +31,16 @@ package com.google.api.services.ondemandscanning.v1beta1.model;
 public final class PackageVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * The licenses associated with this package. Note that this has to go on the PackageVersion
+   * level, because we can have cases with images with the same source having different licences.
+   * E.g. in Alpine, musl and musl-utils both have the same origin musl, but have different sets of
+   * licenses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> licenses;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,6 +51,29 @@ public final class PackageVersion extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * The licenses associated with this package. Note that this has to go on the PackageVersion
+   * level, because we can have cases with images with the same source having different licences.
+   * E.g. in Alpine, musl and musl-utils both have the same origin musl, but have different sets of
+   * licenses.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLicenses() {
+    return licenses;
+  }
+
+  /**
+   * The licenses associated with this package. Note that this has to go on the PackageVersion
+   * level, because we can have cases with images with the same source having different licences.
+   * E.g. in Alpine, musl and musl-utils both have the same origin musl, but have different sets of
+   * licenses.
+   * @param licenses licenses or {@code null} for none
+   */
+  public PackageVersion setLicenses(java.util.List<java.lang.String> licenses) {
+    this.licenses = licenses;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

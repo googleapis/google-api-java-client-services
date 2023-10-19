@@ -38,8 +38,9 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Max number of tasks that can run in parallel. Default to min(task_count, 1000). Field
-   * parallelism must be 1 if the scheduling_policy is IN_ORDER.
+   * Max number of tasks that can run in parallel. Default to min(task_count, parallel tasks per job
+   * limit). See: [Job Limits](https://cloud.google.com/batch/quotas#job_limits). Field parallelism
+   * must be 1 if the scheduling_policy is IN_ORDER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -128,8 +129,9 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Max number of tasks that can run in parallel. Default to min(task_count, 1000). Field
-   * parallelism must be 1 if the scheduling_policy is IN_ORDER.
+   * Max number of tasks that can run in parallel. Default to min(task_count, parallel tasks per job
+   * limit). See: [Job Limits](https://cloud.google.com/batch/quotas#job_limits). Field parallelism
+   * must be 1 if the scheduling_policy is IN_ORDER.
    * @return value or {@code null} for none
    */
   public java.lang.Long getParallelism() {
@@ -137,8 +139,9 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Max number of tasks that can run in parallel. Default to min(task_count, 1000). Field
-   * parallelism must be 1 if the scheduling_policy is IN_ORDER.
+   * Max number of tasks that can run in parallel. Default to min(task_count, parallel tasks per job
+   * limit). See: [Job Limits](https://cloud.google.com/batch/quotas#job_limits). Field parallelism
+   * must be 1 if the scheduling_policy is IN_ORDER.
    * @param parallelism parallelism or {@code null} for none
    */
   public TaskGroup setParallelism(java.lang.Long parallelism) {

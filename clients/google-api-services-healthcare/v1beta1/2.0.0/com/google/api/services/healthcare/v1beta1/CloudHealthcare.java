@@ -19425,6 +19425,161 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Rolls back resources from the FHIR store to the specified time. This method returns an Operation
+           * that can be used to track the status of the rollback by calling GetOperation. Immediate fatal
+           * errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing error
+           * logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise,
+           * when the operation finishes, a detailed response of type RollbackFhirResourcesResponse is
+           * returned in the response field. The metadata field type for this operation is OperationMetadata.
+           *
+           * Create a request for the method "fhirStores.rollback".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FHIR store to rollback, in the format of
+           *        "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+           *        /fhirStores/{fhir_store_id}".
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RollbackFhirResourcesRequest}
+           * @return the request
+           */
+          public Rollback rollback(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.RollbackFhirResourcesRequest content) throws java.io.IOException {
+            Rollback result = new Rollback(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Rollback extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:rollback";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Rolls back resources from the FHIR store to the specified time. This method returns an
+             * Operation that can be used to track the status of the rollback by calling GetOperation.
+             * Immediate fatal errors appear in the error field, errors are also logged to Cloud Logging (see
+             * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+             * tos/logging)). Otherwise, when the operation finishes, a detailed response of type
+             * RollbackFhirResourcesResponse is returned in the response field. The metadata field type for
+             * this operation is OperationMetadata.
+             *
+             * Create a request for the method "fhirStores.rollback".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the FHIR store to rollback, in the format of
+           *        "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+           *        /fhirStores/{fhir_store_id}".
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RollbackFhirResourcesRequest}
+             * @since 1.13
+             */
+            protected Rollback(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.RollbackFhirResourcesRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Rollback set$Xgafv(java.lang.String $Xgafv) {
+              return (Rollback) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Rollback setAccessToken(java.lang.String accessToken) {
+              return (Rollback) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Rollback setAlt(java.lang.String alt) {
+              return (Rollback) super.setAlt(alt);
+            }
+
+            @Override
+            public Rollback setCallback(java.lang.String callback) {
+              return (Rollback) super.setCallback(callback);
+            }
+
+            @Override
+            public Rollback setFields(java.lang.String fields) {
+              return (Rollback) super.setFields(fields);
+            }
+
+            @Override
+            public Rollback setKey(java.lang.String key) {
+              return (Rollback) super.setKey(key);
+            }
+
+            @Override
+            public Rollback setOauthToken(java.lang.String oauthToken) {
+              return (Rollback) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Rollback setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Rollback) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Rollback setQuotaUser(java.lang.String quotaUser) {
+              return (Rollback) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Rollback setUploadType(java.lang.String uploadType) {
+              return (Rollback) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Rollback setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Rollback) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FHIR store to rollback, in the format of
+             * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+             * /fhirStores/{fhir_store_id}".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FHIR store to rollback, in the format of
+           "projects/{project_id}/locations/{location_id}/datasets/{dataset_id} /fhirStores/{fhir_store_id}".
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FHIR store to rollback, in the format of
+             * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+             * /fhirStores/{fhir_store_id}".
+             */
+            public Rollback setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Rollback set(String parameterName, Object value) {
+              return (Rollback) super.set(parameterName, value);
+            }
+          }
+          /**
            * Sets the access control policy on the specified resource. Replaces any existing policy. Can
            * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
@@ -23795,10 +23950,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
              * be fully searchable as the server might trim its generated search index in those cases. Note:
              * FHIR resources are indexed asynchronously, so there might be a slight delay between the time a
-             * resource is created or changes and when the change is reflected in search results. For samples
-             * and detailed information, see [Searching for FHIR
-             * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
-             * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+             * resource is created or changed, and the time when the change reflects in search results. The only
+             * exception is resource identifier data, which is indexed synchronously as a special index. As a
+             * result, searching using resource identifier is not subject to indexing delay. To use the special
+             * synchronous index, the search term for identifier should be in the pattern
+             * `identifier=[system]|[value]` or `identifier=[value]`, and any of the following search result
+             * parameters can be used: * `_count` * `_include` * `_revinclude` * `_summary` * `_elements` If
+             * your query contains any other search parameters, the standard asynchronous index will be used
+             * instead. Note that searching against the special index is optimized for resolving a small number
+             * of matches. The search isn't optimized if your identifier search criteria matches a large number
+             * (i.e. more than 2,000) of resources. For a search query that will match a large number of
+             * resources, you can avoiding using the special synchronous index by including an additional
+             * `_sort` parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the default
+             * sorting order. Note: The special synchronous identifier index are currently disabled for
+             * DocumentReference and DocumentManifest searches. For samples and detailed information, see
+             * [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and
+             * [Advanced FHIR search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-
+             * search).
              *
              * Create a request for the method "fhir.search".
              *
@@ -23859,10 +24027,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * that can be used to retrieve the next page. Resources with a total size larger than 5MB or a
                * field count larger than 50,000 might not be fully searchable as the server might trim its
                * generated search index in those cases. Note: FHIR resources are indexed asynchronously, so
-               * there might be a slight delay between the time a resource is created or changes and when the
-               * change is reflected in search results. For samples and detailed information, see [Searching for
-               * FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced
-               * FHIR search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+               * there might be a slight delay between the time a resource is created or changed, and the time
+               * when the change reflects in search results. The only exception is resource identifier data,
+               * which is indexed synchronously as a special index. As a result, searching using resource
+               * identifier is not subject to indexing delay. To use the special synchronous index, the search
+               * term for identifier should be in the pattern `identifier=[system]|[value]` or
+               * `identifier=[value]`, and any of the following search result parameters can be used: * `_count`
+               * * `_include` * `_revinclude` * `_summary` * `_elements` If your query contains any other search
+               * parameters, the standard asynchronous index will be used instead. Note that searching against
+               * the special index is optimized for resolving a small number of matches. The search isn't
+               * optimized if your identifier search criteria matches a large number (i.e. more than 2,000) of
+               * resources. For a search query that will match a large number of resources, you can avoiding
+               * using the special synchronous index by including an additional `_sort` parameter in your query.
+               * Use `_sort=-_lastUpdated` if you want to keep the default sorting order. Note: The special
+               * synchronous identifier index are currently disabled for DocumentReference and DocumentManifest
+               * searches. For samples and detailed information, see [Searching for FHIR
+               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
+               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search".
                *
@@ -24004,10 +24185,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
              * be fully searchable as the server might trim its generated search index in those cases. Note:
              * FHIR resources are indexed asynchronously, so there might be a slight delay between the time a
-             * resource is created or changes and when the change is reflected in search results. For samples
-             * and detailed information, see [Searching for FHIR
-             * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
-             * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+             * resource is created or changed, and the time when the change reflects in search results. The only
+             * exception is resource identifier data, which is indexed synchronously as a special index. As a
+             * result, searching using resource identifier is not subject to indexing delay. To use the special
+             * synchronous index, the search term for identifier should be in the pattern
+             * `identifier=[system]|[value]` or `identifier=[value]`, and any of the following search result
+             * parameters can be used: * `_count` * `_include` * `_revinclude` * `_summary` * `_elements` If
+             * your query contains any other search parameters, the standard asynchronous index will be used
+             * instead. Note that searching against the special index is optimized for resolving a small number
+             * of matches. The search isn't optimized if your identifier search criteria matches a large number
+             * (i.e. more than 2,000) of resources. For a search query that will match a large number of
+             * resources, you can avoiding using the special synchronous index by including an additional
+             * `_sort` parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the default
+             * sorting order. Note: The special synchronous identifier index are currently disabled for
+             * DocumentReference and DocumentManifest searches. For samples and detailed information, see
+             * [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and
+             * [Advanced FHIR search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-
+             * search).
              *
              * Create a request for the method "fhir.search-type".
              *
@@ -24072,10 +24266,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * that can be used to retrieve the next page. Resources with a total size larger than 5MB or a
                * field count larger than 50,000 might not be fully searchable as the server might trim its
                * generated search index in those cases. Note: FHIR resources are indexed asynchronously, so
-               * there might be a slight delay between the time a resource is created or changes and when the
-               * change is reflected in search results. For samples and detailed information, see [Searching for
-               * FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced
-               * FHIR search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+               * there might be a slight delay between the time a resource is created or changed, and the time
+               * when the change reflects in search results. The only exception is resource identifier data,
+               * which is indexed synchronously as a special index. As a result, searching using resource
+               * identifier is not subject to indexing delay. To use the special synchronous index, the search
+               * term for identifier should be in the pattern `identifier=[system]|[value]` or
+               * `identifier=[value]`, and any of the following search result parameters can be used: * `_count`
+               * * `_include` * `_revinclude` * `_summary` * `_elements` If your query contains any other search
+               * parameters, the standard asynchronous index will be used instead. Note that searching against
+               * the special index is optimized for resolving a small number of matches. The search isn't
+               * optimized if your identifier search criteria matches a large number (i.e. more than 2,000) of
+               * resources. For a search query that will match a large number of resources, you can avoiding
+               * using the special synchronous index by including an additional `_sort` parameter in your query.
+               * Use `_sort=-_lastUpdated` if you want to keep the default sorting order. Note: The special
+               * synchronous identifier index are currently disabled for DocumentReference and DocumentManifest
+               * searches. For samples and detailed information, see [Searching for FHIR
+               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
+               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search-type".
                *

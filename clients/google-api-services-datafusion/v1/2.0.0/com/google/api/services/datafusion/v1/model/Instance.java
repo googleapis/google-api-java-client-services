@@ -184,6 +184,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String p4ServiceAccount;
 
   /**
+   * Optional. Current patch revision of the Data Fusion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String patchRevision;
+
+  /**
    * Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion
    * nodes will have private IP addresses and will not be able to access the public internet.
    * The value may be {@code null}.
@@ -254,6 +261,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * Output only. Endpoint on which the Data Fusion UI is accessible to third-party users
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workforceIdentityServiceEndpoint;
 
   /**
    * Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances
@@ -618,6 +632,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Current patch revision of the Data Fusion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPatchRevision() {
+    return patchRevision;
+  }
+
+  /**
+   * Optional. Current patch revision of the Data Fusion.
+   * @param patchRevision patchRevision or {@code null} for none
+   */
+  public Instance setPatchRevision(java.lang.String patchRevision) {
+    this.patchRevision = patchRevision;
+    return this;
+  }
+
+  /**
    * Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion
    * nodes will have private IP addresses and will not be able to access the public internet.
    * @return value or {@code null} for none
@@ -788,6 +819,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setVersion(java.lang.String version) {
     this.version = version;
+    return this;
+  }
+
+  /**
+   * Output only. Endpoint on which the Data Fusion UI is accessible to third-party users
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkforceIdentityServiceEndpoint() {
+    return workforceIdentityServiceEndpoint;
+  }
+
+  /**
+   * Output only. Endpoint on which the Data Fusion UI is accessible to third-party users
+   * @param workforceIdentityServiceEndpoint workforceIdentityServiceEndpoint or {@code null} for none
+   */
+  public Instance setWorkforceIdentityServiceEndpoint(java.lang.String workforceIdentityServiceEndpoint) {
+    this.workforceIdentityServiceEndpoint = workforceIdentityServiceEndpoint;
     return this;
   }
 

@@ -66,6 +66,17 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
   private java.lang.Boolean disableWebhook;
 
   /**
+   * Optional. Information about the end-user to improve the relevance and accuracy of generative
+   * answers. This will be interpreted and used by a language model, so, for good results, the data
+   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
+   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
+   * Pixel Tablet"} ] } ```
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> endUserMetadata;
+
+  /**
    * A list of flow versions to override for the request. Format:
    * `projects//locations//agents//flows//versions/`. If version 1 of flow X is included in this
    * list, the traffic of flow X will go through version 1 regardless of the version configuration
@@ -227,6 +238,31 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
    */
   public GoogleCloudDialogflowCxV3QueryParameters setDisableWebhook(java.lang.Boolean disableWebhook) {
     this.disableWebhook = disableWebhook;
+    return this;
+  }
+
+  /**
+   * Optional. Information about the end-user to improve the relevance and accuracy of generative
+   * answers. This will be interpreted and used by a language model, so, for good results, the data
+   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
+   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
+   * Pixel Tablet"} ] } ```
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getEndUserMetadata() {
+    return endUserMetadata;
+  }
+
+  /**
+   * Optional. Information about the end-user to improve the relevance and accuracy of generative
+   * answers. This will be interpreted and used by a language model, so, for good results, the data
+   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
+   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
+   * Pixel Tablet"} ] } ```
+   * @param endUserMetadata endUserMetadata or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3QueryParameters setEndUserMetadata(java.util.Map<String, java.lang.Object> endUserMetadata) {
+    this.endUserMetadata = endUserMetadata;
     return this;
   }
 

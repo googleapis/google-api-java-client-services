@@ -44,6 +44,14 @@ public final class QueryPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The advices/recommendations for a query. Currently this field will be serving index
+   * recommendations for a query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueryAdvisorResult queryAdvice;
+
+  /**
    * The nodes in the query plan. Plan nodes are returned in pre-order starting with the plan root.
    * Each PlanNode's `id` corresponds to its index in `plan_nodes`.
    * @return value or {@code null} for none
@@ -59,6 +67,25 @@ public final class QueryPlan extends com.google.api.client.json.GenericJson {
    */
   public QueryPlan setPlanNodes(java.util.List<PlanNode> planNodes) {
     this.planNodes = planNodes;
+    return this;
+  }
+
+  /**
+   * Optional. The advices/recommendations for a query. Currently this field will be serving index
+   * recommendations for a query.
+   * @return value or {@code null} for none
+   */
+  public QueryAdvisorResult getQueryAdvice() {
+    return queryAdvice;
+  }
+
+  /**
+   * Optional. The advices/recommendations for a query. Currently this field will be serving index
+   * recommendations for a query.
+   * @param queryAdvice queryAdvice or {@code null} for none
+   */
+  public QueryPlan setQueryAdvice(QueryAdvisorResult queryAdvice) {
+    this.queryAdvice = queryAdvice;
     return this;
   }
 

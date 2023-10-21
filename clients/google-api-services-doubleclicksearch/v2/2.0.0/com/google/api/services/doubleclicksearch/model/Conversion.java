@@ -44,6 +44,13 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Long adId;
 
   /**
+   * Ad user data consent for this conversion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String adUserDataConsent;
+
+  /**
    * DS advertiser ID.
    * The value may be {@code null}.
    */
@@ -315,6 +322,23 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    */
   public Conversion setAdId(java.lang.Long adId) {
     this.adId = adId;
+    return this;
+  }
+
+  /**
+   * Ad user data consent for this conversion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdUserDataConsent() {
+    return adUserDataConsent;
+  }
+
+  /**
+   * Ad user data consent for this conversion.
+   * @param adUserDataConsent adUserDataConsent or {@code null} for none
+   */
+  public Conversion setAdUserDataConsent(java.lang.String adUserDataConsent) {
+    this.adUserDataConsent = adUserDataConsent;
     return this;
   }
 

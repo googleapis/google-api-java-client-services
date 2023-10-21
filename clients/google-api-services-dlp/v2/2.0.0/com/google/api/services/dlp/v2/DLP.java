@@ -3423,6 +3423,838 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       }
       /**
+       * An accessor for creating requests from the DiscoveryConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.DiscoveryConfigs.List request = dlp.discoveryConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DiscoveryConfigs discoveryConfigs() {
+        return new DiscoveryConfigs();
+      }
+
+      /**
+       * The "discoveryConfigs" collection of methods.
+       */
+      public class DiscoveryConfigs {
+
+        /**
+         * Creates a config for Discovery to scan and profile storage.
+         *
+         * Create a request for the method "discoveryConfigs.create".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent resource name. The format of this value is as follows:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDiscoveryConfigRequest}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDiscoveryConfigRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig> {
+
+          private static final String REST_PATH = "v2/{+parent}/discoveryConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a config for Discovery to scan and profile storage.
+           *
+           * Create a request for the method "discoveryConfigs.create".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent resource name. The format of this value is as follows:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
+           * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDiscoveryConfigRequest}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDiscoveryConfigRequest content) {
+            super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent resource name. The format of this value is as follows:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent resource name. The format of this value is as follows:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent resource name. The format of this value is as follows:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a Discovery configuration.
+         *
+         * Create a request for the method "discoveryConfigs.delete".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the project and the config, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DLPRequest<com.google.api.services.dlp.v2.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+
+          /**
+           * Deletes a Discovery configuration.
+           *
+           * Create a request for the method "discoveryConfigs.delete".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the project and the config, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DLP.this, "DELETE", REST_PATH, null, com.google.api.services.dlp.v2.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the project and the config, for example `projects/dlp-test-
+           * project/discoveryConfigs/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the project and the config, for example `projects/dlp-test-
+         project/discoveryConfigs/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the project and the config, for example `projects/dlp-test-
+           * project/discoveryConfigs/53234423`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a Discovery configuration.
+         *
+         * Create a request for the method "discoveryConfigs.get".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+
+          /**
+           * Gets a Discovery configuration.
+           *
+           * Create a request for the method "discoveryConfigs.get".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the project and the configuration, for example `projects
+           * /dlp-test-project/discoveryConfigs/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         project/discoveryConfigs/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the project and the configuration, for example `projects
+           * /dlp-test-project/discoveryConfigs/53234423`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Discovery configurations.
+         *
+         * Create a request for the method "discoveryConfigs.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent resource name. The format of this value is as follows:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDiscoveryConfigsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/discoveryConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Discovery configurations.
+           *
+           * Create a request for the method "discoveryConfigs.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent resource name. The format of this value is as follows:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDiscoveryConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent resource name. The format of this value is as follows:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent resource name. The format of this value is as follows:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent resource name. The format of this value is as follows:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Comma separated list of config fields to order by, followed by `asc` or `desc` postfix.
+           * This list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `last_run_time`: corresponds to the last time the
+           * DiscoveryConfig ran. - `name`: corresponds to the DiscoveryConfig's name. - `status`:
+           * corresponds to DiscoveryConfig's status.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Comma separated list of config fields to order by, followed by `asc` or `desc` postfix. This list
+         is case-insensitive, default sorting order is ascending, redundant space characters are
+         insignificant. Example: `name asc,update_time, create_time desc` Supported fields are: -
+         `last_run_time`: corresponds to the last time the DiscoveryConfig ran. - `name`: corresponds to the
+         DiscoveryConfig's name. - `status`: corresponds to DiscoveryConfig's status.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Comma separated list of config fields to order by, followed by `asc` or `desc` postfix.
+           * This list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `last_run_time`: corresponds to the last time the
+           * DiscoveryConfig ran. - `name`: corresponds to the DiscoveryConfig's name. - `status`:
+           * corresponds to DiscoveryConfig's status.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** Size of the page, can be limited by a server. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Size of the page, can be limited by a server.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Size of the page, can be limited by a server. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Page token to continue retrieval. Comes from previous call to ListDiscoveryConfigs.
+           * `order_by` field must not change for subsequent calls.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token to continue retrieval. Comes from previous call to ListDiscoveryConfigs. `order_by`
+         field must not change for subsequent calls.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Page token to continue retrieval. Comes from previous call to ListDiscoveryConfigs.
+           * `order_by` field must not change for subsequent calls.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a Discovery configuration.
+         *
+         * Create a request for the method "discoveryConfigs.patch".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDiscoveryConfigRequest}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDiscoveryConfigRequest content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+
+          /**
+           * Updates a Discovery configuration.
+           *
+           * Create a request for the method "discoveryConfigs.patch".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+           * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDiscoveryConfigRequest}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDiscoveryConfigRequest content) {
+            super(DLP.this, "PATCH", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the project and the configuration, for example `projects
+           * /dlp-test-project/discoveryConfigs/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         project/discoveryConfigs/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the project and the configuration, for example `projects
+           * /dlp-test-project/discoveryConfigs/53234423`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the DlpJobs collection.
        *
        * <p>The typical use is:</p>
@@ -13611,6 +14443,838 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
                   "^projects/[^/]+/locations/[^/]+/deidentifyTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the DiscoveryConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.DiscoveryConfigs.List request = dlp.discoveryConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DiscoveryConfigs discoveryConfigs() {
+        return new DiscoveryConfigs();
+      }
+
+      /**
+       * The "discoveryConfigs" collection of methods.
+       */
+      public class DiscoveryConfigs {
+
+        /**
+         * Creates a config for Discovery to scan and profile storage.
+         *
+         * Create a request for the method "discoveryConfigs.create".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent resource name. The format of this value is as follows:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDiscoveryConfigRequest}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDiscoveryConfigRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig> {
+
+          private static final String REST_PATH = "v2/{+parent}/discoveryConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a config for Discovery to scan and profile storage.
+           *
+           * Create a request for the method "discoveryConfigs.create".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent resource name. The format of this value is as follows:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
+           * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDiscoveryConfigRequest}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDiscoveryConfigRequest content) {
+            super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent resource name. The format of this value is as follows:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent resource name. The format of this value is as follows:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent resource name. The format of this value is as follows:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a Discovery configuration.
+         *
+         * Create a request for the method "discoveryConfigs.delete".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the project and the config, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DLPRequest<com.google.api.services.dlp.v2.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+
+          /**
+           * Deletes a Discovery configuration.
+           *
+           * Create a request for the method "discoveryConfigs.delete".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the project and the config, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DLP.this, "DELETE", REST_PATH, null, com.google.api.services.dlp.v2.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the project and the config, for example `projects/dlp-test-
+           * project/discoveryConfigs/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the project and the config, for example `projects/dlp-test-
+         project/discoveryConfigs/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the project and the config, for example `projects/dlp-test-
+           * project/discoveryConfigs/53234423`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a Discovery configuration.
+         *
+         * Create a request for the method "discoveryConfigs.get".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+
+          /**
+           * Gets a Discovery configuration.
+           *
+           * Create a request for the method "discoveryConfigs.get".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the project and the configuration, for example `projects
+           * /dlp-test-project/discoveryConfigs/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         project/discoveryConfigs/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the project and the configuration, for example `projects
+           * /dlp-test-project/discoveryConfigs/53234423`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Discovery configurations.
+         *
+         * Create a request for the method "discoveryConfigs.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent resource name. The format of this value is as follows:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDiscoveryConfigsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/discoveryConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Discovery configurations.
+           *
+           * Create a request for the method "discoveryConfigs.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent resource name. The format of this value is as follows:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDiscoveryConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent resource name. The format of this value is as follows:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent resource name. The format of this value is as follows:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent resource name. The format of this value is as follows:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Comma separated list of config fields to order by, followed by `asc` or `desc` postfix.
+           * This list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `last_run_time`: corresponds to the last time the
+           * DiscoveryConfig ran. - `name`: corresponds to the DiscoveryConfig's name. - `status`:
+           * corresponds to DiscoveryConfig's status.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Comma separated list of config fields to order by, followed by `asc` or `desc` postfix. This list
+         is case-insensitive, default sorting order is ascending, redundant space characters are
+         insignificant. Example: `name asc,update_time, create_time desc` Supported fields are: -
+         `last_run_time`: corresponds to the last time the DiscoveryConfig ran. - `name`: corresponds to the
+         DiscoveryConfig's name. - `status`: corresponds to DiscoveryConfig's status.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Comma separated list of config fields to order by, followed by `asc` or `desc` postfix.
+           * This list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `last_run_time`: corresponds to the last time the
+           * DiscoveryConfig ran. - `name`: corresponds to the DiscoveryConfig's name. - `status`:
+           * corresponds to DiscoveryConfig's status.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** Size of the page, can be limited by a server. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Size of the page, can be limited by a server.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Size of the page, can be limited by a server. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Page token to continue retrieval. Comes from previous call to ListDiscoveryConfigs.
+           * `order_by` field must not change for subsequent calls.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token to continue retrieval. Comes from previous call to ListDiscoveryConfigs. `order_by`
+         field must not change for subsequent calls.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Page token to continue retrieval. Comes from previous call to ListDiscoveryConfigs.
+           * `order_by` field must not change for subsequent calls.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a Discovery configuration.
+         *
+         * Create a request for the method "discoveryConfigs.patch".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDiscoveryConfigRequest}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDiscoveryConfigRequest content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+
+          /**
+           * Updates a Discovery configuration.
+           *
+           * Create a request for the method "discoveryConfigs.patch".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         *        project/discoveryConfigs/53234423`.
+           * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDiscoveryConfigRequest}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDiscoveryConfigRequest content) {
+            super(DLP.this, "PATCH", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DiscoveryConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the project and the configuration, for example `projects
+           * /dlp-test-project/discoveryConfigs/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the project and the configuration, for example `projects/dlp-test-
+         project/discoveryConfigs/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the project and the configuration, for example `projects
+           * /dlp-test-project/discoveryConfigs/53234423`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryConfigs/[^/]+$");
             }
             this.name = name;
             return this;

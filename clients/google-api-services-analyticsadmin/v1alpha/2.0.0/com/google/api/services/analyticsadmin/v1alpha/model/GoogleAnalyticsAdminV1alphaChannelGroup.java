@@ -60,7 +60,8 @@ public final class GoogleAnalyticsAdminV1alphaChannelGroup extends com.google.ap
   private java.lang.String name;
 
   /**
-   * Output only. Default Channel Group defined by Google, which cannot be updated.
+   * Output only. If true, then this channel group is the Default Channel Group predefined by Google
+   * Analytics. Display name and grouping rules cannot be updated for this channel group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +138,8 @@ public final class GoogleAnalyticsAdminV1alphaChannelGroup extends com.google.ap
   }
 
   /**
-   * Output only. Default Channel Group defined by Google, which cannot be updated.
+   * Output only. If true, then this channel group is the Default Channel Group predefined by Google
+   * Analytics. Display name and grouping rules cannot be updated for this channel group.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSystemDefined() {
@@ -145,7 +147,8 @@ public final class GoogleAnalyticsAdminV1alphaChannelGroup extends com.google.ap
   }
 
   /**
-   * Output only. Default Channel Group defined by Google, which cannot be updated.
+   * Output only. If true, then this channel group is the Default Channel Group predefined by Google
+   * Analytics. Display name and grouping rules cannot be updated for this channel group.
    * @param systemDefined systemDefined or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaChannelGroup setSystemDefined(java.lang.Boolean systemDefined) {

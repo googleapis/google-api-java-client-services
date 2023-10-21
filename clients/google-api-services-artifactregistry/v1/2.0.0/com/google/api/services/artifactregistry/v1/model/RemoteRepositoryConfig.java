@@ -73,6 +73,13 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
   private PythonRepository pythonRepository;
 
   /**
+   * Optional. The credentials used to access the remote repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpstreamCredentials upstreamCredentials;
+
+  /**
    * Specific settings for a Yum remote repository.
    * The value may be {@code null}.
    */
@@ -178,6 +185,23 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
    */
   public RemoteRepositoryConfig setPythonRepository(PythonRepository pythonRepository) {
     this.pythonRepository = pythonRepository;
+    return this;
+  }
+
+  /**
+   * Optional. The credentials used to access the remote repository.
+   * @return value or {@code null} for none
+   */
+  public UpstreamCredentials getUpstreamCredentials() {
+    return upstreamCredentials;
+  }
+
+  /**
+   * Optional. The credentials used to access the remote repository.
+   * @param upstreamCredentials upstreamCredentials or {@code null} for none
+   */
+  public RemoteRepositoryConfig setUpstreamCredentials(UpstreamCredentials upstreamCredentials) {
+    this.upstreamCredentials = upstreamCredentials;
     return this;
   }
 

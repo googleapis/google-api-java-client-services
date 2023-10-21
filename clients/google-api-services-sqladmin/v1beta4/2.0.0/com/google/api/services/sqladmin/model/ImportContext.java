@@ -258,15 +258,17 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     private java.lang.Boolean recoveryOnly;
 
     /**
-     * Optional. StopAt keyword for transaction log import, Applies to Cloud SQL for SQL Server only
+     * Optional. The timestamp when the import should stop. This timestamp is in the [RFC
+     * 3339](https://tools.ietf.org/html/rfc3339) format (for example, `2023-10-01T16:19:00.094`).
+     * This field is equivalent to the STOPAT keyword and applies to Cloud SQL for SQL Server only.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private String stopAt;
 
     /**
-     * Optional. StopAtMark keyword for transaction log import, Applies to Cloud SQL for SQL Server
-     * only
+     * Optional. The marked transaction where the import should stop. This field is equivalent to the
+     * STOPATMARK keyword and applies to Cloud SQL for SQL Server only.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -353,7 +355,9 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Optional. StopAt keyword for transaction log import, Applies to Cloud SQL for SQL Server only
+     * Optional. The timestamp when the import should stop. This timestamp is in the [RFC
+     * 3339](https://tools.ietf.org/html/rfc3339) format (for example, `2023-10-01T16:19:00.094`).
+     * This field is equivalent to the STOPAT keyword and applies to Cloud SQL for SQL Server only.
      * @return value or {@code null} for none
      */
     public String getStopAt() {
@@ -361,7 +365,9 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Optional. StopAt keyword for transaction log import, Applies to Cloud SQL for SQL Server only
+     * Optional. The timestamp when the import should stop. This timestamp is in the [RFC
+     * 3339](https://tools.ietf.org/html/rfc3339) format (for example, `2023-10-01T16:19:00.094`).
+     * This field is equivalent to the STOPAT keyword and applies to Cloud SQL for SQL Server only.
      * @param stopAt stopAt or {@code null} for none
      */
     public BakImportOptions setStopAt(String stopAt) {
@@ -370,8 +376,8 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Optional. StopAtMark keyword for transaction log import, Applies to Cloud SQL for SQL Server
-     * only
+     * Optional. The marked transaction where the import should stop. This field is equivalent to the
+     * STOPATMARK keyword and applies to Cloud SQL for SQL Server only.
      * @return value or {@code null} for none
      */
     public java.lang.String getStopAtMark() {
@@ -379,8 +385,8 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Optional. StopAtMark keyword for transaction log import, Applies to Cloud SQL for SQL Server
-     * only
+     * Optional. The marked transaction where the import should stop. This field is equivalent to the
+     * STOPATMARK keyword and applies to Cloud SQL for SQL Server only.
      * @param stopAtMark stopAtMark or {@code null} for none
      */
     public BakImportOptions setStopAtMark(java.lang.String stopAtMark) {

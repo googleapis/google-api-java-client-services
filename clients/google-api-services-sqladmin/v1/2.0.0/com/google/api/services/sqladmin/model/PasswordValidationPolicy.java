@@ -37,13 +37,6 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
   private java.lang.String complexity;
 
   /**
-   * Disallow credentials that have been previously compromised by a public data breach.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean disallowCompromisedCredentials;
-
-  /**
    * Disallow username as a part of the password.
    * The value may be {@code null}.
    */
@@ -93,23 +86,6 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
    */
   public PasswordValidationPolicy setComplexity(java.lang.String complexity) {
     this.complexity = complexity;
-    return this;
-  }
-
-  /**
-   * Disallow credentials that have been previously compromised by a public data breach.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getDisallowCompromisedCredentials() {
-    return disallowCompromisedCredentials;
-  }
-
-  /**
-   * Disallow credentials that have been previously compromised by a public data breach.
-   * @param disallowCompromisedCredentials disallowCompromisedCredentials or {@code null} for none
-   */
-  public PasswordValidationPolicy setDisallowCompromisedCredentials(java.lang.Boolean disallowCompromisedCredentials) {
-    this.disallowCompromisedCredentials = disallowCompromisedCredentials;
     return this;
   }
 

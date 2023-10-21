@@ -47,7 +47,7 @@ public final class SmartSharding extends com.google.api.client.json.GenericJson 
    * minutes for virtual), or that you use the custom test timeout value that you set. This approach
    * avoids cancelling the shard before all tests can finish. Note that there is a limit for maximum
    * number of shards. When you select one or more physical devices, the number of shards must be <=
-   * 50. When you select one or more ARM virtual devices, it must be <= 100. When you select only
+   * 50. When you select one or more ARM virtual devices, it must be <= 200. When you select only
    * x86 virtual devices, it must be <= 500. To guarantee at least one test case for per shard, the
    * number of shards will not exceed the number of test cases. Each shard created counts toward
    * daily test quota.
@@ -74,7 +74,7 @@ public final class SmartSharding extends com.google.api.client.json.GenericJson 
    * minutes for virtual), or that you use the custom test timeout value that you set. This approach
    * avoids cancelling the shard before all tests can finish. Note that there is a limit for maximum
    * number of shards. When you select one or more physical devices, the number of shards must be <=
-   * 50. When you select one or more ARM virtual devices, it must be <= 100. When you select only
+   * 50. When you select one or more ARM virtual devices, it must be <= 200. When you select only
    * x86 virtual devices, it must be <= 500. To guarantee at least one test case for per shard, the
    * number of shards will not exceed the number of test cases. Each shard created counts toward
    * daily test quota.
@@ -102,7 +102,7 @@ public final class SmartSharding extends com.google.api.client.json.GenericJson 
    * minutes for virtual), or that you use the custom test timeout value that you set. This approach
    * avoids cancelling the shard before all tests can finish. Note that there is a limit for maximum
    * number of shards. When you select one or more physical devices, the number of shards must be <=
-   * 50. When you select one or more ARM virtual devices, it must be <= 100. When you select only
+   * 50. When you select one or more ARM virtual devices, it must be <= 200. When you select only
    * x86 virtual devices, it must be <= 500. To guarantee at least one test case for per shard, the
    * number of shards will not exceed the number of test cases. Each shard created counts toward
    * daily test quota.

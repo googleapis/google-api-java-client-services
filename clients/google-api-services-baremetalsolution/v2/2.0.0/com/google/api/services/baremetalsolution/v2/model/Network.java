@@ -140,11 +140,19 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String vlanId;
 
   /**
-   * The vrf for the Network.
+   * The Vrf for the Network. Use this only if a new Vrf needs to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VRF vrf;
+
+  /**
+   * Optional. The name of a pre-existing Vrf that the network should be attached to. Format is
+   * `vrfs/{vrf}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vrfAttachment;
 
   /**
    * The cidr of the Network.
@@ -410,7 +418,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The vrf for the Network.
+   * The Vrf for the Network. Use this only if a new Vrf needs to be created.
    * @return value or {@code null} for none
    */
   public VRF getVrf() {
@@ -418,11 +426,30 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The vrf for the Network.
+   * The Vrf for the Network. Use this only if a new Vrf needs to be created.
    * @param vrf vrf or {@code null} for none
    */
   public Network setVrf(VRF vrf) {
     this.vrf = vrf;
+    return this;
+  }
+
+  /**
+   * Optional. The name of a pre-existing Vrf that the network should be attached to. Format is
+   * `vrfs/{vrf}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVrfAttachment() {
+    return vrfAttachment;
+  }
+
+  /**
+   * Optional. The name of a pre-existing Vrf that the network should be attached to. Format is
+   * `vrfs/{vrf}`.
+   * @param vrfAttachment vrfAttachment or {@code null} for none
+   */
+  public Network setVrfAttachment(java.lang.String vrfAttachment) {
+    this.vrfAttachment = vrfAttachment;
     return this;
   }
 

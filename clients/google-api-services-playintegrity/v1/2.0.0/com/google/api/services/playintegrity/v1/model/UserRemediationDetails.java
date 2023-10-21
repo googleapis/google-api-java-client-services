@@ -31,14 +31,14 @@ package com.google.api.services.playintegrity.v1.model;
 public final class UserRemediationDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Description of the user remediation action. Required.
+   * Description of the user remediation action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String remediation;
 
   /**
-   * Description of the user remediation action. Required.
+   * Description of the user remediation action.
    * @return value or {@code null} for none
    */
   public java.lang.String getRemediation() {
@@ -46,7 +46,7 @@ public final class UserRemediationDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * Description of the user remediation action. Required.
+   * Description of the user remediation action.
    * @param remediation remediation or {@code null} for none
    */
   public UserRemediationDetails setRemediation(java.lang.String remediation) {

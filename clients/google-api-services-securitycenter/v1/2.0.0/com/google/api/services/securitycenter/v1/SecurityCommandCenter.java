@@ -2022,6 +2022,554 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
     }
     /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.Locations.List request = securitycenter.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the MuteConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+       *   {@code SecurityCommandCenter.MuteConfigs.List request = securitycenter.muteConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public MuteConfigs muteConfigs() {
+        return new MuteConfigs();
+      }
+
+      /**
+       * The "muteConfigs" collection of methods.
+       */
+      public class MuteConfigs {
+
+        /**
+         * Deletes an existing mute config.
+         *
+         * Create a request for the method "muteConfigs.delete".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the mute config to delete. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+
+          /**
+           * Deletes an existing mute config.
+           *
+           * Create a request for the method "muteConfigs.delete".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the mute config to delete. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(SecurityCommandCenter.this, "DELETE", REST_PATH, null, com.google.api.services.securitycenter.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the mute config to delete. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the mute config to delete. Its format is
+         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+         projects/{project}/muteConfigs/{config_id},
+         organizations/{organization}/locations/global/muteConfigs/{config_id},
+         folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the mute config to delete. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a mute config.
+         *
+         * Create a request for the method "muteConfigs.get".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the mute config to retrieve. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+
+          /**
+           * Gets a mute config.
+           *
+           * Create a request for the method "muteConfigs.get".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the mute config to retrieve. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the mute config to retrieve. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the mute config to retrieve. Its format is
+         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+         projects/{project}/muteConfigs/{config_id},
+         organizations/{organization}/locations/global/muteConfigs/{config_id},
+         folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the mute config to retrieve. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a mute config.
+         *
+         * Create a request for the method "muteConfigs.patch".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name This field will be ignored if provided on config creation. Format
+         *        "organizations/{organization}/muteConfigs/{mute_config}"
+         *        "folders/{folder}/muteConfigs/{mute_config}"
+         *        "projects/{project}/muteConfigs/{mute_config}"
+         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+
+          /**
+           * Updates a mute config.
+           *
+           * Create a request for the method "muteConfigs.patch".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name This field will be ignored if provided on config creation. Format
+         *        "organizations/{organization}/muteConfigs/{mute_config}"
+         *        "folders/{folder}/muteConfigs/{mute_config}"
+         *        "projects/{project}/muteConfigs/{mute_config}"
+         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) {
+            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * This field will be ignored if provided on config creation. Format
+           * "organizations/{organization}/muteConfigs/{mute_config}"
+           * "folders/{folder}/muteConfigs/{mute_config}"
+           * "projects/{project}/muteConfigs/{mute_config}"
+           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** This field will be ignored if provided on config creation. Format
+         "organizations/{organization}/muteConfigs/{mute_config}"
+         "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
+         "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * This field will be ignored if provided on config creation. Format
+           * "organizations/{organization}/muteConfigs/{mute_config}"
+           * "folders/{folder}/muteConfigs/{mute_config}"
+           * "projects/{project}/muteConfigs/{mute_config}"
+           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the MuteConfigs collection.
      *
      * <p>The typical use is:</p>
@@ -2217,7 +2765,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param name Required. Name of the mute config to delete. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2246,7 +2797,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. Name of the mute config to delete. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2317,14 +2871,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to delete. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to delete. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id}, or
-       projects/{project}/muteConfigs/{config_id}
+       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+       projects/{project}/muteConfigs/{config_id},
+       organizations/{organization}/locations/global/muteConfigs/{config_id},
+       folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public java.lang.String getName() {
           return name;
@@ -2333,7 +2893,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to delete. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2360,7 +2923,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param name Required. Name of the mute config to retrieve. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2388,7 +2954,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. Name of the mute config to retrieve. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2469,14 +3038,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to retrieve. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to retrieve. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id}, or
-       projects/{project}/muteConfigs/{config_id}
+       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+       projects/{project}/muteConfigs/{config_id},
+       organizations/{organization}/locations/global/muteConfigs/{config_id},
+       folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public java.lang.String getName() {
           return name;
@@ -2485,7 +3060,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to retrieve. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2713,6 +3291,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *        "organizations/{organization}/muteConfigs/{mute_config}"
        *        "folders/{folder}/muteConfigs/{mute_config}"
        *        "projects/{project}/muteConfigs/{mute_config}"
+       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -2744,6 +3325,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *        "organizations/{organization}/muteConfigs/{mute_config}"
        *        "folders/{folder}/muteConfigs/{mute_config}"
        *        "projects/{project}/muteConfigs/{mute_config}"
+       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -2817,6 +3401,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * "organizations/{organization}/muteConfigs/{mute_config}"
          * "folders/{folder}/muteConfigs/{mute_config}"
          * "projects/{project}/muteConfigs/{mute_config}"
+         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -2824,6 +3411,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /** This field will be ignored if provided on config creation. Format
        "organizations/{organization}/muteConfigs/{mute_config}"
        "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
+       "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+       "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+       "projects/{project}/locations/global/muteConfigs/{mute_config}"
          */
         public java.lang.String getName() {
           return name;
@@ -2834,6 +3424,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * "organizations/{organization}/muteConfigs/{mute_config}"
          * "folders/{folder}/muteConfigs/{mute_config}"
          * "projects/{project}/muteConfigs/{mute_config}"
+         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4819,6 +5412,151 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+         *
+         * Create a request for the method "customModules.simulate".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The relative resource name of the organization, project, or folder. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
+         *        "organizations/{organization_id}".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
+         * @return the request
+         */
+        public Simulate simulate(java.lang.String parent, com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest content) throws java.io.IOException {
+          Simulate result = new Simulate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Simulate extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/customModules:simulate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings$");
+
+          /**
+           * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+           *
+           * Create a request for the method "customModules.simulate".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Simulate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The relative resource name of the organization, project, or folder. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
+         *        "organizations/{organization_id}".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
+           * @since 1.13
+           */
+          protected Simulate(java.lang.String parent, com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/securityHealthAnalyticsSettings$");
+            }
+          }
+
+          @Override
+          public Simulate set$Xgafv(java.lang.String $Xgafv) {
+            return (Simulate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Simulate setAccessToken(java.lang.String accessToken) {
+            return (Simulate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Simulate setAlt(java.lang.String alt) {
+            return (Simulate) super.setAlt(alt);
+          }
+
+          @Override
+          public Simulate setCallback(java.lang.String callback) {
+            return (Simulate) super.setCallback(callback);
+          }
+
+          @Override
+          public Simulate setFields(java.lang.String fields) {
+            return (Simulate) super.setFields(fields);
+          }
+
+          @Override
+          public Simulate setKey(java.lang.String key) {
+            return (Simulate) super.setKey(key);
+          }
+
+          @Override
+          public Simulate setOauthToken(java.lang.String oauthToken) {
+            return (Simulate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Simulate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Simulate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Simulate setQuotaUser(java.lang.String quotaUser) {
+            return (Simulate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Simulate setUploadType(java.lang.String uploadType) {
+            return (Simulate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Simulate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Simulate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the organization, project, or folder. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
+           * is: "organizations/{organization_id}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The relative resource name of the organization, project, or folder. See:
+         https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
+         "organizations/{organization_id}".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The relative resource name of the organization, project, or folder. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
+           * is: "organizations/{organization_id}".
+           */
+          public Simulate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/securityHealthAnalyticsSettings$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Simulate set(String parameterName, Object value) {
+            return (Simulate) super.set(parameterName, value);
           }
         }
 
@@ -10308,6 +11046,554 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
     }
     /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.Locations.List request = securitycenter.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the MuteConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+       *   {@code SecurityCommandCenter.MuteConfigs.List request = securitycenter.muteConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public MuteConfigs muteConfigs() {
+        return new MuteConfigs();
+      }
+
+      /**
+       * The "muteConfigs" collection of methods.
+       */
+      public class MuteConfigs {
+
+        /**
+         * Deletes an existing mute config.
+         *
+         * Create a request for the method "muteConfigs.delete".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the mute config to delete. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+
+          /**
+           * Deletes an existing mute config.
+           *
+           * Create a request for the method "muteConfigs.delete".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the mute config to delete. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(SecurityCommandCenter.this, "DELETE", REST_PATH, null, com.google.api.services.securitycenter.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the mute config to delete. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the mute config to delete. Its format is
+         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+         projects/{project}/muteConfigs/{config_id},
+         organizations/{organization}/locations/global/muteConfigs/{config_id},
+         folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the mute config to delete. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a mute config.
+         *
+         * Create a request for the method "muteConfigs.get".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the mute config to retrieve. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+
+          /**
+           * Gets a mute config.
+           *
+           * Create a request for the method "muteConfigs.get".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the mute config to retrieve. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the mute config to retrieve. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the mute config to retrieve. Its format is
+         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+         projects/{project}/muteConfigs/{config_id},
+         organizations/{organization}/locations/global/muteConfigs/{config_id},
+         folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the mute config to retrieve. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a mute config.
+         *
+         * Create a request for the method "muteConfigs.patch".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name This field will be ignored if provided on config creation. Format
+         *        "organizations/{organization}/muteConfigs/{mute_config}"
+         *        "folders/{folder}/muteConfigs/{mute_config}"
+         *        "projects/{project}/muteConfigs/{mute_config}"
+         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+
+          /**
+           * Updates a mute config.
+           *
+           * Create a request for the method "muteConfigs.patch".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name This field will be ignored if provided on config creation. Format
+         *        "organizations/{organization}/muteConfigs/{mute_config}"
+         *        "folders/{folder}/muteConfigs/{mute_config}"
+         *        "projects/{project}/muteConfigs/{mute_config}"
+         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) {
+            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * This field will be ignored if provided on config creation. Format
+           * "organizations/{organization}/muteConfigs/{mute_config}"
+           * "folders/{folder}/muteConfigs/{mute_config}"
+           * "projects/{project}/muteConfigs/{mute_config}"
+           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** This field will be ignored if provided on config creation. Format
+         "organizations/{organization}/muteConfigs/{mute_config}"
+         "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
+         "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * This field will be ignored if provided on config creation. Format
+           * "organizations/{organization}/muteConfigs/{mute_config}"
+           * "folders/{folder}/muteConfigs/{mute_config}"
+           * "projects/{project}/muteConfigs/{mute_config}"
+           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the MuteConfigs collection.
      *
      * <p>The typical use is:</p>
@@ -10503,7 +11789,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param name Required. Name of the mute config to delete. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -10532,7 +11821,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. Name of the mute config to delete. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -10603,14 +11895,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to delete. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to delete. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id}, or
-       projects/{project}/muteConfigs/{config_id}
+       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+       projects/{project}/muteConfigs/{config_id},
+       organizations/{organization}/locations/global/muteConfigs/{config_id},
+       folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public java.lang.String getName() {
           return name;
@@ -10619,7 +11917,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to delete. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -10646,7 +11947,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param name Required. Name of the mute config to retrieve. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -10674,7 +11978,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. Name of the mute config to retrieve. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -10755,14 +12062,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to retrieve. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to retrieve. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id}, or
-       projects/{project}/muteConfigs/{config_id}
+       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+       projects/{project}/muteConfigs/{config_id},
+       organizations/{organization}/locations/global/muteConfigs/{config_id},
+       folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public java.lang.String getName() {
           return name;
@@ -10771,7 +12084,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to retrieve. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -10999,6 +12315,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *        "organizations/{organization}/muteConfigs/{mute_config}"
        *        "folders/{folder}/muteConfigs/{mute_config}"
        *        "projects/{project}/muteConfigs/{mute_config}"
+       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -11030,6 +12349,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *        "organizations/{organization}/muteConfigs/{mute_config}"
        *        "folders/{folder}/muteConfigs/{mute_config}"
        *        "projects/{project}/muteConfigs/{mute_config}"
+       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -11103,6 +12425,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * "organizations/{organization}/muteConfigs/{mute_config}"
          * "folders/{folder}/muteConfigs/{mute_config}"
          * "projects/{project}/muteConfigs/{mute_config}"
+         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -11110,6 +12435,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /** This field will be ignored if provided on config creation. Format
        "organizations/{organization}/muteConfigs/{mute_config}"
        "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
+       "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+       "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+       "projects/{project}/locations/global/muteConfigs/{mute_config}"
          */
         public java.lang.String getName() {
           return name;
@@ -11120,6 +12448,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * "organizations/{organization}/muteConfigs/{mute_config}"
          * "folders/{folder}/muteConfigs/{mute_config}"
          * "projects/{project}/muteConfigs/{mute_config}"
+         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -14519,6 +15850,151 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+         *
+         * Create a request for the method "customModules.simulate".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The relative resource name of the organization, project, or folder. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
+         *        "organizations/{organization_id}".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
+         * @return the request
+         */
+        public Simulate simulate(java.lang.String parent, com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest content) throws java.io.IOException {
+          Simulate result = new Simulate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Simulate extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/customModules:simulate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings$");
+
+          /**
+           * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+           *
+           * Create a request for the method "customModules.simulate".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Simulate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The relative resource name of the organization, project, or folder. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
+         *        "organizations/{organization_id}".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
+           * @since 1.13
+           */
+          protected Simulate(java.lang.String parent, com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/securityHealthAnalyticsSettings$");
+            }
+          }
+
+          @Override
+          public Simulate set$Xgafv(java.lang.String $Xgafv) {
+            return (Simulate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Simulate setAccessToken(java.lang.String accessToken) {
+            return (Simulate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Simulate setAlt(java.lang.String alt) {
+            return (Simulate) super.setAlt(alt);
+          }
+
+          @Override
+          public Simulate setCallback(java.lang.String callback) {
+            return (Simulate) super.setCallback(callback);
+          }
+
+          @Override
+          public Simulate setFields(java.lang.String fields) {
+            return (Simulate) super.setFields(fields);
+          }
+
+          @Override
+          public Simulate setKey(java.lang.String key) {
+            return (Simulate) super.setKey(key);
+          }
+
+          @Override
+          public Simulate setOauthToken(java.lang.String oauthToken) {
+            return (Simulate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Simulate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Simulate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Simulate setQuotaUser(java.lang.String quotaUser) {
+            return (Simulate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Simulate setUploadType(java.lang.String uploadType) {
+            return (Simulate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Simulate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Simulate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the organization, project, or folder. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
+           * is: "organizations/{organization_id}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The relative resource name of the organization, project, or folder. See:
+         https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
+         "organizations/{organization_id}".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The relative resource name of the organization, project, or folder. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
+           * is: "organizations/{organization_id}".
+           */
+          public Simulate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/securityHealthAnalyticsSettings$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Simulate set(String parameterName, Object value) {
+            return (Simulate) super.set(parameterName, value);
           }
         }
 
@@ -21068,6 +22544,554 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
     }
     /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.Locations.List request = securitycenter.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the MuteConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+       *   {@code SecurityCommandCenter.MuteConfigs.List request = securitycenter.muteConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public MuteConfigs muteConfigs() {
+        return new MuteConfigs();
+      }
+
+      /**
+       * The "muteConfigs" collection of methods.
+       */
+      public class MuteConfigs {
+
+        /**
+         * Deletes an existing mute config.
+         *
+         * Create a request for the method "muteConfigs.delete".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the mute config to delete. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+
+          /**
+           * Deletes an existing mute config.
+           *
+           * Create a request for the method "muteConfigs.delete".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the mute config to delete. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(SecurityCommandCenter.this, "DELETE", REST_PATH, null, com.google.api.services.securitycenter.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the mute config to delete. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the mute config to delete. Its format is
+         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+         projects/{project}/muteConfigs/{config_id},
+         organizations/{organization}/locations/global/muteConfigs/{config_id},
+         folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the mute config to delete. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a mute config.
+         *
+         * Create a request for the method "muteConfigs.get".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the mute config to retrieve. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+
+          /**
+           * Gets a mute config.
+           *
+           * Create a request for the method "muteConfigs.get".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the mute config to retrieve. Its format is
+         *        organizations/{organization}/muteConfigs/{config_id},
+         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the mute config to retrieve. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the mute config to retrieve. Its format is
+         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+         projects/{project}/muteConfigs/{config_id},
+         organizations/{organization}/locations/global/muteConfigs/{config_id},
+         folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the mute config to retrieve. Its format is
+           * organizations/{organization}/muteConfigs/{config_id},
+           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+           * organizations/{organization}/locations/global/muteConfigs/{config_id},
+           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a mute config.
+         *
+         * Create a request for the method "muteConfigs.patch".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name This field will be ignored if provided on config creation. Format
+         *        "organizations/{organization}/muteConfigs/{mute_config}"
+         *        "folders/{folder}/muteConfigs/{mute_config}"
+         *        "projects/{project}/muteConfigs/{mute_config}"
+         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+
+          /**
+           * Updates a mute config.
+           *
+           * Create a request for the method "muteConfigs.patch".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name This field will be ignored if provided on config creation. Format
+         *        "organizations/{organization}/muteConfigs/{mute_config}"
+         *        "folders/{folder}/muteConfigs/{mute_config}"
+         *        "projects/{project}/muteConfigs/{mute_config}"
+         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) {
+            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * This field will be ignored if provided on config creation. Format
+           * "organizations/{organization}/muteConfigs/{mute_config}"
+           * "folders/{folder}/muteConfigs/{mute_config}"
+           * "projects/{project}/muteConfigs/{mute_config}"
+           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** This field will be ignored if provided on config creation. Format
+         "organizations/{organization}/muteConfigs/{mute_config}"
+         "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
+         "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * This field will be ignored if provided on config creation. Format
+           * "organizations/{organization}/muteConfigs/{mute_config}"
+           * "folders/{folder}/muteConfigs/{mute_config}"
+           * "projects/{project}/muteConfigs/{mute_config}"
+           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the MuteConfigs collection.
      *
      * <p>The typical use is:</p>
@@ -21263,7 +23287,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param name Required. Name of the mute config to delete. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -21292,7 +23319,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. Name of the mute config to delete. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -21363,14 +23393,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to delete. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to delete. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id}, or
-       projects/{project}/muteConfigs/{config_id}
+       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+       projects/{project}/muteConfigs/{config_id},
+       organizations/{organization}/locations/global/muteConfigs/{config_id},
+       folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public java.lang.String getName() {
           return name;
@@ -21379,7 +23415,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to delete. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -21406,7 +23445,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param name Required. Name of the mute config to retrieve. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -21434,7 +23476,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param name Required. Name of the mute config to retrieve. Its format is
        *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
+       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       *        projects/{project}/locations/global/muteConfigs/{config_id}.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -21515,14 +23560,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to retrieve. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to retrieve. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id}, or
-       projects/{project}/muteConfigs/{config_id}
+       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
+       projects/{project}/muteConfigs/{config_id},
+       organizations/{organization}/locations/global/muteConfigs/{config_id},
+       folders/{folder}/locations/global/muteConfigs/{config_id}, or
+       projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public java.lang.String getName() {
           return name;
@@ -21531,7 +23582,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. Name of the mute config to retrieve. Its format is
          * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, or projects/{project}/muteConfigs/{config_id}
+         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
+         * organizations/{organization}/locations/global/muteConfigs/{config_id},
+         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+         * projects/{project}/locations/global/muteConfigs/{config_id}.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -21759,6 +23813,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *        "organizations/{organization}/muteConfigs/{mute_config}"
        *        "folders/{folder}/muteConfigs/{mute_config}"
        *        "projects/{project}/muteConfigs/{mute_config}"
+       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -21790,6 +23847,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *        "organizations/{organization}/muteConfigs/{mute_config}"
        *        "folders/{folder}/muteConfigs/{mute_config}"
        *        "projects/{project}/muteConfigs/{mute_config}"
+       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -21863,6 +23923,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * "organizations/{organization}/muteConfigs/{mute_config}"
          * "folders/{folder}/muteConfigs/{mute_config}"
          * "projects/{project}/muteConfigs/{mute_config}"
+         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -21870,6 +23933,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /** This field will be ignored if provided on config creation. Format
        "organizations/{organization}/muteConfigs/{mute_config}"
        "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
+       "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+       "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+       "projects/{project}/locations/global/muteConfigs/{mute_config}"
          */
         public java.lang.String getName() {
           return name;
@@ -21880,6 +23946,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * "organizations/{organization}/muteConfigs/{mute_config}"
          * "folders/{folder}/muteConfigs/{mute_config}"
          * "projects/{project}/muteConfigs/{mute_config}"
+         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -23865,6 +25934,151 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+         *
+         * Create a request for the method "customModules.simulate".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The relative resource name of the organization, project, or folder. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
+         *        "organizations/{organization_id}".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
+         * @return the request
+         */
+        public Simulate simulate(java.lang.String parent, com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest content) throws java.io.IOException {
+          Simulate result = new Simulate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Simulate extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/customModules:simulate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings$");
+
+          /**
+           * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
+           *
+           * Create a request for the method "customModules.simulate".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Simulate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The relative resource name of the organization, project, or folder. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
+         *        "organizations/{organization_id}".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
+           * @since 1.13
+           */
+          protected Simulate(java.lang.String parent, com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/securityHealthAnalyticsSettings$");
+            }
+          }
+
+          @Override
+          public Simulate set$Xgafv(java.lang.String $Xgafv) {
+            return (Simulate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Simulate setAccessToken(java.lang.String accessToken) {
+            return (Simulate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Simulate setAlt(java.lang.String alt) {
+            return (Simulate) super.setAlt(alt);
+          }
+
+          @Override
+          public Simulate setCallback(java.lang.String callback) {
+            return (Simulate) super.setCallback(callback);
+          }
+
+          @Override
+          public Simulate setFields(java.lang.String fields) {
+            return (Simulate) super.setFields(fields);
+          }
+
+          @Override
+          public Simulate setKey(java.lang.String key) {
+            return (Simulate) super.setKey(key);
+          }
+
+          @Override
+          public Simulate setOauthToken(java.lang.String oauthToken) {
+            return (Simulate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Simulate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Simulate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Simulate setQuotaUser(java.lang.String quotaUser) {
+            return (Simulate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Simulate setUploadType(java.lang.String uploadType) {
+            return (Simulate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Simulate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Simulate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the organization, project, or folder. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
+           * is: "organizations/{organization_id}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The relative resource name of the organization, project, or folder. See:
+         https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
+         "organizations/{organization_id}".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The relative resource name of the organization, project, or folder. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
+           * is: "organizations/{organization_id}".
+           */
+          public Simulate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/securityHealthAnalyticsSettings$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Simulate set(String parameterName, Object value) {
+            return (Simulate) super.set(parameterName, value);
           }
         }
 

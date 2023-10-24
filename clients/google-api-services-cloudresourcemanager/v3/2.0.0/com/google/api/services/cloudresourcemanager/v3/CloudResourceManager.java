@@ -3205,7 +3205,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * Searches organization resources that are visible to the user and satisfy the specified filter.
      * This method returns organizations in an unspecified order. New organizations do not necessarily
      * appear at the end of the results, and may take a small amount of time to appear. Search will only
-     * return organizations on which the user has the permission `resourcemanager.organizations.get`
+     * return organizations on which the user has the permission `resourcemanager.organizations.get` or
+     * has super admin privileges.
      *
      * Create a request for the method "organizations.search".
      *
@@ -3229,7 +3230,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * This method returns organizations in an unspecified order. New organizations do not necessarily
        * appear at the end of the results, and may take a small amount of time to appear. Search will
        * only return organizations on which the user has the permission
-       * `resourcemanager.organizations.get`
+       * `resourcemanager.organizations.get` or has super admin privileges.
        *
        * Create a request for the method "organizations.search".
        *
@@ -4791,7 +4792,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Search for projects that the caller has both `resourcemanager.projects.get` permission on, and
+     * Search for projects that the caller has the `resourcemanager.projects.get` permission on, and
      * also satisfy the specified query. This method returns projects in an unspecified order. This
      * method is eventually consistent with project mutations; this means that a newly created project
      * may not appear in the results or recent updates to an existing project may not be reflected in
@@ -4815,7 +4816,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v3/projects:search";
 
       /**
-       * Search for projects that the caller has both `resourcemanager.projects.get` permission on, and
+       * Search for projects that the caller has the `resourcemanager.projects.get` permission on, and
        * also satisfy the specified query. This method returns projects in an unspecified order. This
        * method is eventually consistent with project mutations; this means that a newly created project
        * may not appear in the results or recent updates to an existing project may not be reflected in

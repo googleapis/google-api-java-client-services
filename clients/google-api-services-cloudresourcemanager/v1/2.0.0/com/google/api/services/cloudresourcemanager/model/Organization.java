@@ -39,9 +39,9 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   private String creationTime;
 
   /**
-   * A human-readable string that refers to the Organization in the GCP Console UI. This string is
-   * set by the server and cannot be changed. The string will be set to the primary domain (for
-   * example, "google.com") of the G Suite customer that owns the organization.
+   * A human-readable string that refers to the Organization in the Google Cloud console. This
+   * string is set by the server and cannot be changed. The string will be set to the primary domain
+   * (for example, "google.com") of the G Suite customer that owns the organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,9 +88,9 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-readable string that refers to the Organization in the GCP Console UI. This string is
-   * set by the server and cannot be changed. The string will be set to the primary domain (for
-   * example, "google.com") of the G Suite customer that owns the organization.
+   * A human-readable string that refers to the Organization in the Google Cloud console. This
+   * string is set by the server and cannot be changed. The string will be set to the primary domain
+   * (for example, "google.com") of the G Suite customer that owns the organization.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -98,9 +98,9 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-readable string that refers to the Organization in the GCP Console UI. This string is
-   * set by the server and cannot be changed. The string will be set to the primary domain (for
-   * example, "google.com") of the G Suite customer that owns the organization.
+   * A human-readable string that refers to the Organization in the Google Cloud console. This
+   * string is set by the server and cannot be changed. The string will be set to the primary domain
+   * (for example, "google.com") of the G Suite customer that owns the organization.
    * @param displayName displayName or {@code null} for none
    */
   public Organization setDisplayName(java.lang.String displayName) {

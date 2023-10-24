@@ -110,8 +110,8 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
    * The Unicode country/region code (CLDR) of the location where the request is coming from. This
    * parameter is used to display the place details, like region-specific place name, if available.
    * The parameter can affect results based on applicable law. For more information, see
-   * http://www.unicode.org/reports/tr35/#unicode_region_subtag. Note that 3-digit region codes are
-   * not currently supported.
+   * https://www.unicode.org/cldr/charts/latest/supplemental/territory_language_information.html.
+   * Note that 3-digit region codes are not currently supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,8 +317,8 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
    * The Unicode country/region code (CLDR) of the location where the request is coming from. This
    * parameter is used to display the place details, like region-specific place name, if available.
    * The parameter can affect results based on applicable law. For more information, see
-   * http://www.unicode.org/reports/tr35/#unicode_region_subtag. Note that 3-digit region codes are
-   * not currently supported.
+   * https://www.unicode.org/cldr/charts/latest/supplemental/territory_language_information.html.
+   * Note that 3-digit region codes are not currently supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -329,8 +329,8 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
    * The Unicode country/region code (CLDR) of the location where the request is coming from. This
    * parameter is used to display the place details, like region-specific place name, if available.
    * The parameter can affect results based on applicable law. For more information, see
-   * http://www.unicode.org/reports/tr35/#unicode_region_subtag. Note that 3-digit region codes are
-   * not currently supported.
+   * https://www.unicode.org/cldr/charts/latest/supplemental/territory_language_information.html.
+   * Note that 3-digit region codes are not currently supported.
    * @param regionCode regionCode or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequest setRegionCode(java.lang.String regionCode) {

@@ -59,8 +59,15 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
   private String requestTime;
 
   /**
-   * The requested expiration for the approval. If the request is approved, access will be granted
-   * from the time of approval until the expiration time.
+   * The requested access duration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String requestedDuration;
+
+  /**
+   * The original requested expiration for the approval. Calculated by adding the requested_duration
+   * to the request_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,8 +176,25 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The requested expiration for the approval. If the request is approved, access will be granted
-   * from the time of approval until the expiration time.
+   * The requested access duration.
+   * @return value or {@code null} for none
+   */
+  public String getRequestedDuration() {
+    return requestedDuration;
+  }
+
+  /**
+   * The requested access duration.
+   * @param requestedDuration requestedDuration or {@code null} for none
+   */
+  public ApprovalRequest setRequestedDuration(String requestedDuration) {
+    this.requestedDuration = requestedDuration;
+    return this;
+  }
+
+  /**
+   * The original requested expiration for the approval. Calculated by adding the requested_duration
+   * to the request_time.
    * @return value or {@code null} for none
    */
   public String getRequestedExpiration() {
@@ -178,8 +202,8 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The requested expiration for the approval. If the request is approved, access will be granted
-   * from the time of approval until the expiration time.
+   * The original requested expiration for the approval. Calculated by adding the requested_duration
+   * to the request_time.
    * @param requestedExpiration requestedExpiration or {@code null} for none
    */
   public ApprovalRequest setRequestedExpiration(String requestedExpiration) {

@@ -47,7 +47,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   /**
    * Controls how long the work profile can stay off. The minimum duration must be at least 3 days.
    * Other details are as follows: - If the duration is set to 0, the feature is turned off. - If
-   * the duration is set to any value between 1-2 days, the feature is automatically set to 3 days.
+   * the duration is set to a value smaller than the minimum duration, the feature returns an error.
    * *Note:* If you want to avoid personal profiles being suspended during long periods of off-time,
    * you can temporarily set a large value for this parameter.
    * The value may be {@code null}.
@@ -120,7 +120,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   /**
    * Controls how long the work profile can stay off. The minimum duration must be at least 3 days.
    * Other details are as follows: - If the duration is set to 0, the feature is turned off. - If
-   * the duration is set to any value between 1-2 days, the feature is automatically set to 3 days.
+   * the duration is set to a value smaller than the minimum duration, the feature returns an error.
    * *Note:* If you want to avoid personal profiles being suspended during long periods of off-time,
    * you can temporarily set a large value for this parameter.
    * @return value or {@code null} for none
@@ -132,7 +132,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   /**
    * Controls how long the work profile can stay off. The minimum duration must be at least 3 days.
    * Other details are as follows: - If the duration is set to 0, the feature is turned off. - If
-   * the duration is set to any value between 1-2 days, the feature is automatically set to 3 days.
+   * the duration is set to a value smaller than the minimum duration, the feature returns an error.
    * *Note:* If you want to avoid personal profiles being suspended during long periods of off-time,
    * you can temporarily set a large value for this parameter.
    * @param maxDaysWithWorkOff maxDaysWithWorkOff or {@code null} for none

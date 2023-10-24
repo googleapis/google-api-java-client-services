@@ -38,7 +38,7 @@ public final class CustomVoiceParams extends com.google.api.client.json.GenericJ
   private java.lang.String model;
 
   /**
-   * Optional. The usage of the synthesized audio to be reported.
+   * Optional. Deprecated. The usage of the synthesized audio to be reported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class CustomVoiceParams extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The usage of the synthesized audio to be reported.
+   * Optional. Deprecated. The usage of the synthesized audio to be reported.
    * @return value or {@code null} for none
    */
   public java.lang.String getReportedUsage() {
@@ -70,7 +70,7 @@ public final class CustomVoiceParams extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The usage of the synthesized audio to be reported.
+   * Optional. Deprecated. The usage of the synthesized audio to be reported.
    * @param reportedUsage reportedUsage or {@code null} for none
    */
   public CustomVoiceParams setReportedUsage(java.lang.String reportedUsage) {

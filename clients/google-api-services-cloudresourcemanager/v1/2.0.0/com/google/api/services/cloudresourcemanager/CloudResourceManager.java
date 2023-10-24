@@ -2704,7 +2704,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * Searches Organization resources that are visible to the user and satisfy the specified filter.
      * This method returns Organizations in an unspecified order. New Organizations do not necessarily
      * appear at the end of the results. Search will only return organizations on which the user has the
-     * permission `resourcemanager.organizations.get`
+     * permission `resourcemanager.organizations.get` or has super admin privileges.
      *
      * Create a request for the method "organizations.search".
      *
@@ -2728,7 +2728,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Searches Organization resources that are visible to the user and satisfy the specified filter.
        * This method returns Organizations in an unspecified order. New Organizations do not necessarily
        * appear at the end of the results. Search will only return organizations on which the user has
-       * the permission `resourcemanager.organizations.get`
+       * the permission `resourcemanager.organizations.get` or has super admin privileges.
        *
        * Create a request for the method "organizations.search".
        *
@@ -4829,12 +4829,12 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * as an owner, a user must be invited via Cloud Platform console and must accept the invitation. +
      * A user cannot be granted the owner role using `setIamPolicy()`. The user must be granted the
      * owner role using the Cloud Platform Console and must explicitly accept the invitation. + You can
-     * only grant ownership of a project to a member by using the GCP Console. Inviting a member will
-     * deliver an invitation email that they must accept. An invitation email is not generated if you
-     * are granting a role other than owner, or if both the member you are inviting and the project are
-     * part of your organization. + If the project is not part of an organization, there must be at
-     * least one owner who has accepted the Terms of Service (ToS) agreement in the policy. Calling
-     * `setIamPolicy()` to remove the last ToS-accepted owner from the policy will fail. This
+     * only grant ownership of a project to a member by using the Google Cloud console. Inviting a
+     * member will deliver an invitation email that they must accept. An invitation email is not
+     * generated if you are granting a role other than owner, or if both the member you are inviting and
+     * the project are part of your organization. + If the project is not part of an organization, there
+     * must be at least one owner who has accepted the Terms of Service (ToS) agreement in the policy.
+     * Calling `setIamPolicy()` to remove the last ToS-accepted owner from the policy will fail. This
      * restriction also applies to legacy projects that no longer have owners who have accepted the ToS.
      * Edits to IAM policies will be rejected until the lack of a ToS-accepting owner is rectified. If
      * the project is part of an organization, you can remove all owners, potentially making the
@@ -4880,13 +4880,13 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * added as an owner, a user must be invited via Cloud Platform console and must accept the
        * invitation. + A user cannot be granted the owner role using `setIamPolicy()`. The user must be
        * granted the owner role using the Cloud Platform Console and must explicitly accept the
-       * invitation. + You can only grant ownership of a project to a member by using the GCP Console.
-       * Inviting a member will deliver an invitation email that they must accept. An invitation email
-       * is not generated if you are granting a role other than owner, or if both the member you are
-       * inviting and the project are part of your organization. + If the project is not part of an
-       * organization, there must be at least one owner who has accepted the Terms of Service (ToS)
-       * agreement in the policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner from
-       * the policy will fail. This restriction also applies to legacy projects that no longer have
+       * invitation. + You can only grant ownership of a project to a member by using the Google Cloud
+       * console. Inviting a member will deliver an invitation email that they must accept. An
+       * invitation email is not generated if you are granting a role other than owner, or if both the
+       * member you are inviting and the project are part of your organization. + If the project is not
+       * part of an organization, there must be at least one owner who has accepted the Terms of Service
+       * (ToS) agreement in the policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
+       * from the policy will fail. This restriction also applies to legacy projects that no longer have
        * owners who have accepted the ToS. Edits to IAM policies will be rejected until the lack of a
        * ToS-accepting owner is rectified. If the project is part of an organization, you can remove all
        * owners, potentially making the organization inaccessible. Authorization requires the Google IAM

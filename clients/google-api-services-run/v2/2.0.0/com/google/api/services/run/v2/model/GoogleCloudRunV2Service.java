@@ -246,6 +246,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * Optional. Specifies service-level scaling settings
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2ServiceScaling scaling;
+
+  /**
    * Required. The template used to create revisions for this Service.
    * The value may be {@code null}.
    */
@@ -779,6 +786,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies service-level scaling settings
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2ServiceScaling getScaling() {
+    return scaling;
+  }
+
+  /**
+   * Optional. Specifies service-level scaling settings
+   * @param scaling scaling or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setScaling(GoogleCloudRunV2ServiceScaling scaling) {
+    this.scaling = scaling;
     return this;
   }
 

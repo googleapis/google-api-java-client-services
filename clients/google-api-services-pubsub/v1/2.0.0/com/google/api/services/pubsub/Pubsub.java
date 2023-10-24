@@ -442,14 +442,15 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * The ID to use for the schema, which will become the final component of the schema's
-         * resource name. See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-         * name constraints.
+         * resource name. See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+         * resource name constraints.
          */
         @com.google.api.client.util.Key
         private java.lang.String schemaId;
 
         /** The ID to use for the schema, which will become the final component of the schema's resource name.
-       See https://cloud.google.com/pubsub/docs/admin#resource_names for resource name constraints.
+       See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for resource name
+       constraints.
          */
         public java.lang.String getSchemaId() {
           return schemaId;
@@ -457,8 +458,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * The ID to use for the schema, which will become the final component of the schema's
-         * resource name. See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-         * name constraints.
+         * resource name. See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+         * resource name constraints.
          */
         public Create setSchemaId(java.lang.String schemaId) {
           this.schemaId = schemaId;
@@ -2270,9 +2271,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * than 1 hour -- then `FAILED_PRECONDITION` is returned. See also the `Snapshot.expire_time` field.
        * If the name is not provided in the request, the server will assign a random name for this
        * snapshot on the same project as the subscription, conforming to the [resource name format]
-       * (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated name is populated in
-       * the returned Snapshot object. Note that for REST API requests, you must specify a name in the
-       * request.
+       * (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The generated name is
+       * populated in the returned Snapshot object. Note that for REST API requests, you must specify a
+       * name in the request.
        *
        * Create a request for the method "snapshots.create".
        *
@@ -2282,7 +2283,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * @param name Required. User-provided name for this snapshot. If the name is not provided in the request, the
        *        server will assign a random name for this snapshot on the same project as the
        *        subscription. Note that for REST API requests, you must specify a name. See the [resource
-       *        name rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format is
+       *        name rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). Format is
        *        `projects/{project}/snapshots/{snap}`.
        * @param content the {@link com.google.api.services.pubsub.model.CreateSnapshotRequest}
        * @return the request
@@ -2310,9 +2311,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned. See also the
          * `Snapshot.expire_time` field. If the name is not provided in the request, the server will
          * assign a random name for this snapshot on the same project as the subscription, conforming to
-         * the [resource name format] (https://cloud.google.com/pubsub/docs/admin#resource_names). The
-         * generated name is populated in the returned Snapshot object. Note that for REST API requests,
-         * you must specify a name in the request.
+         * the [resource name format] (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+         * The generated name is populated in the returned Snapshot object. Note that for REST API
+         * requests, you must specify a name in the request.
          *
          * Create a request for the method "snapshots.create".
          *
@@ -2324,7 +2325,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * @param name Required. User-provided name for this snapshot. If the name is not provided in the request, the
        *        server will assign a random name for this snapshot on the same project as the
        *        subscription. Note that for REST API requests, you must specify a name. See the [resource
-       *        name rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format is
+       *        name rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). Format is
        *        `projects/{project}/snapshots/{snap}`.
          * @param content the {@link com.google.api.services.pubsub.model.CreateSnapshotRequest}
          * @since 1.13
@@ -2398,8 +2399,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Required. User-provided name for this snapshot. If the name is not provided in the
          * request, the server will assign a random name for this snapshot on the same project as
          * the subscription. Note that for REST API requests, you must specify a name. See the
-         * [resource name rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
-         * is `projects/{project}/snapshots/{snap}`.
+         * [resource name rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+         * Format is `projects/{project}/snapshots/{snap}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -2407,7 +2408,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         /** Required. User-provided name for this snapshot. If the name is not provided in the request, the
        server will assign a random name for this snapshot on the same project as the subscription. Note
        that for REST API requests, you must specify a name. See the [resource name
-       rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format is
+       rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). Format is
        `projects/{project}/snapshots/{snap}`.
          */
         public java.lang.String getName() {
@@ -2418,8 +2419,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Required. User-provided name for this snapshot. If the name is not provided in the
          * request, the server will assign a random name for this snapshot on the same project as
          * the subscription. Note that for REST API requests, you must specify a name. See the
-         * [resource name rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format
-         * is `projects/{project}/snapshots/{snap}`.
+         * [resource name rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+         * Format is `projects/{project}/snapshots/{snap}`.
          */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3726,13 +3727,13 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       }
       /**
        * Creates a subscription to a given topic. See the [resource name rules]
-       * (https://cloud.google.com/pubsub/docs/admin#resource_names). If the subscription already exists,
-       * returns `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns `NOT_FOUND`. If the
-       * name is not provided in the request, the server will assign a random name for this subscription
-       * on the same project as the topic, conforming to the [resource name format]
-       * (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated name is populated in
-       * the returned Subscription object. Note that for REST API requests, you must specify a name in the
-       * request.
+       * (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). If the subscription already
+       * exists, returns `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns `NOT_FOUND`.
+       * If the name is not provided in the request, the server will assign a random name for this
+       * subscription on the same project as the topic, conforming to the [resource name format]
+       * (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The generated name is
+       * populated in the returned Subscription object. Note that for REST API requests, you must specify
+       * a name in the request.
        *
        * Create a request for the method "subscriptions.create".
        *
@@ -3762,12 +3763,12 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Creates a subscription to a given topic. See the [resource name rules]
-         * (https://cloud.google.com/pubsub/docs/admin#resource_names). If the subscription already
-         * exists, returns `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns
+         * (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). If the subscription
+         * already exists, returns `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns
          * `NOT_FOUND`. If the name is not provided in the request, the server will assign a random name
          * for this subscription on the same project as the topic, conforming to the [resource name
-         * format] (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated name is
-         * populated in the returned Subscription object. Note that for REST API requests, you must
+         * format] (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). The generated name
+         * is populated in the returned Subscription object. Note that for REST API requests, you must
          * specify a name in the request.
          *
          * Create a request for the method "subscriptions.create".
@@ -5738,7 +5739,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Creates the given topic with the given name. See the [resource name rules]
-       * (https://cloud.google.com/pubsub/docs/admin#resource_names).
+       * (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
        *
        * Create a request for the method "topics.create".
        *
@@ -5768,7 +5769,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Creates the given topic with the given name. See the [resource name rules]
-         * (https://cloud.google.com/pubsub/docs/admin#resource_names).
+         * (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
          *
          * Create a request for the method "topics.create".
          *

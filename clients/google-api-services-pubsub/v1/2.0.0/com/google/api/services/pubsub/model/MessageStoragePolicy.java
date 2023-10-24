@@ -30,20 +30,22 @@ package com.google.api.services.pubsub.model;
 public final class MessageStoragePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A list of IDs of GCP regions where messages that are published to the topic may be
-   * persisted in storage. Messages published by publishers running in non-allowed GCP regions (or
-   * running outside of GCP altogether) will be routed for storage in one of the allowed regions. An
-   * empty list means that no regions are allowed, and is not a valid configuration.
+   * Optional. A list of IDs of Google Cloud regions where messages that are published to the topic
+   * may be persisted in storage. Messages published by publishers running in non-allowed Google
+   * Cloud regions (or running outside of Google Cloud altogether) are routed for storage in one of
+   * the allowed regions. An empty list means that no regions are allowed, and is not a valid
+   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedPersistenceRegions;
 
   /**
-   * Optional. A list of IDs of GCP regions where messages that are published to the topic may be
-   * persisted in storage. Messages published by publishers running in non-allowed GCP regions (or
-   * running outside of GCP altogether) will be routed for storage in one of the allowed regions. An
-   * empty list means that no regions are allowed, and is not a valid configuration.
+   * Optional. A list of IDs of Google Cloud regions where messages that are published to the topic
+   * may be persisted in storage. Messages published by publishers running in non-allowed Google
+   * Cloud regions (or running outside of Google Cloud altogether) are routed for storage in one of
+   * the allowed regions. An empty list means that no regions are allowed, and is not a valid
+   * configuration.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedPersistenceRegions() {
@@ -51,10 +53,11 @@ public final class MessageStoragePolicy extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. A list of IDs of GCP regions where messages that are published to the topic may be
-   * persisted in storage. Messages published by publishers running in non-allowed GCP regions (or
-   * running outside of GCP altogether) will be routed for storage in one of the allowed regions. An
-   * empty list means that no regions are allowed, and is not a valid configuration.
+   * Optional. A list of IDs of Google Cloud regions where messages that are published to the topic
+   * may be persisted in storage. Messages published by publishers running in non-allowed Google
+   * Cloud regions (or running outside of Google Cloud altogether) are routed for storage in one of
+   * the allowed regions. An empty list means that no regions are allowed, and is not a valid
+   * configuration.
    * @param allowedPersistenceRegions allowedPersistenceRegions or {@code null} for none
    */
   public MessageStoragePolicy setAllowedPersistenceRegions(java.util.List<java.lang.String> allowedPersistenceRegions) {

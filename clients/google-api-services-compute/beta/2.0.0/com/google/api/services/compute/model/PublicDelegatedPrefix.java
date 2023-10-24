@@ -33,6 +33,13 @@ package com.google.api.services.compute.model;
 public final class PublicDelegatedPrefix extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] The version of BYOIP API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String byoipApiVersion;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -138,6 +145,23 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * [Output Only] The version of BYOIP API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getByoipApiVersion() {
+    return byoipApiVersion;
+  }
+
+  /**
+   * [Output Only] The version of BYOIP API.
+   * @param byoipApiVersion byoipApiVersion or {@code null} for none
+   */
+  public PublicDelegatedPrefix setByoipApiVersion(java.lang.String byoipApiVersion) {
+    this.byoipApiVersion = byoipApiVersion;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.

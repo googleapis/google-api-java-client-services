@@ -59,7 +59,7 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    * Output only. Urls for services which are compliant for this Assured Workload, but which are
    * currently disallowed by the ResourceUsageRestriction org policy. Invoke
    * RestrictAllowedResources endpoint to allow your project developers to use these services in
-   * their environment."
+   * their environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   private java.lang.String displayName;
 
   /**
-   * Optional. Represents the Ekm Provisioning State of the given workload.
+   * Output only. Represents the Ekm Provisioning State of the given workload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,7 +268,7 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    * Output only. Urls for services which are compliant for this Assured Workload, but which are
    * currently disallowed by the ResourceUsageRestriction org policy. Invoke
    * RestrictAllowedResources endpoint to allow your project developers to use these services in
-   * their environment."
+   * their environment.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCompliantButDisallowedServices() {
@@ -279,7 +279,7 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    * Output only. Urls for services which are compliant for this Assured Workload, but which are
    * currently disallowed by the ResourceUsageRestriction org policy. Invoke
    * RestrictAllowedResources endpoint to allow your project developers to use these services in
-   * their environment."
+   * their environment.
    * @param compliantButDisallowedServices compliantButDisallowedServices or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1Workload setCompliantButDisallowedServices(java.util.List<java.lang.String> compliantButDisallowedServices) {
@@ -326,7 +326,7 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   }
 
   /**
-   * Optional. Represents the Ekm Provisioning State of the given workload.
+   * Output only. Represents the Ekm Provisioning State of the given workload.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse getEkmProvisioningResponse() {
@@ -334,7 +334,7 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   }
 
   /**
-   * Optional. Represents the Ekm Provisioning State of the given workload.
+   * Output only. Represents the Ekm Provisioning State of the given workload.
    * @param ekmProvisioningResponse ekmProvisioningResponse or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1Workload setEkmProvisioningResponse(GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse ekmProvisioningResponse) {

@@ -283,6 +283,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> resourceLabels;
 
   /**
+   * A map of resource manager tag keys and values to be attached to the nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceManagerTags resourceManagerTags;
+
+  /**
    * Sandbox configuration for this node.
    * The value may be {@code null}.
    */
@@ -921,6 +928,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setResourceLabels(java.util.Map<String, java.lang.String> resourceLabels) {
     this.resourceLabels = resourceLabels;
+    return this;
+  }
+
+  /**
+   * A map of resource manager tag keys and values to be attached to the nodes.
+   * @return value or {@code null} for none
+   */
+  public ResourceManagerTags getResourceManagerTags() {
+    return resourceManagerTags;
+  }
+
+  /**
+   * A map of resource manager tag keys and values to be attached to the nodes.
+   * @param resourceManagerTags resourceManagerTags or {@code null} for none
+   */
+  public NodeConfig setResourceManagerTags(ResourceManagerTags resourceManagerTags) {
+    this.resourceManagerTags = resourceManagerTags;
     return this;
   }
 

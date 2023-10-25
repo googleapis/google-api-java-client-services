@@ -41,6 +41,14 @@ public final class NodePoolAutoConfig extends com.google.api.client.json.Generic
   private NetworkTags networkTags;
 
   /**
+   * Resource manager tag keys and values to be attached to the nodes for managing Compute Engine
+   * firewalls using Network Firewall Policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceManagerTags resourceManagerTags;
+
+  /**
    * The list of instance tags applied to all nodes. Tags are used to identify valid sources or
    * targets for network firewalls and are specified by the client during cluster creation. Each tag
    * within the list must comply with RFC1035.
@@ -58,6 +66,25 @@ public final class NodePoolAutoConfig extends com.google.api.client.json.Generic
    */
   public NodePoolAutoConfig setNetworkTags(NetworkTags networkTags) {
     this.networkTags = networkTags;
+    return this;
+  }
+
+  /**
+   * Resource manager tag keys and values to be attached to the nodes for managing Compute Engine
+   * firewalls using Network Firewall Policies.
+   * @return value or {@code null} for none
+   */
+  public ResourceManagerTags getResourceManagerTags() {
+    return resourceManagerTags;
+  }
+
+  /**
+   * Resource manager tag keys and values to be attached to the nodes for managing Compute Engine
+   * firewalls using Network Firewall Policies.
+   * @param resourceManagerTags resourceManagerTags or {@code null} for none
+   */
+  public NodePoolAutoConfig setResourceManagerTags(ResourceManagerTags resourceManagerTags) {
+    this.resourceManagerTags = resourceManagerTags;
     return this;
   }
 

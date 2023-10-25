@@ -204,6 +204,15 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private ResourceLabels resourceLabels;
 
   /**
+   * Desired resource manager tag keys and values to be attached to the nodes for managing Compute
+   * Engine firewalls using Network Firewall Policies. Existing tags will be replaced with new
+   * values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceManagerTags resourceManagerTags;
+
+  /**
    * The desired network tags to be applied to all nodes in the node pool. If this field is not
    * present, the tags will not be changed. Otherwise, the existing network tags will be *replaced*
    * with the provided tags.
@@ -657,6 +666,27 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setResourceLabels(ResourceLabels resourceLabels) {
     this.resourceLabels = resourceLabels;
+    return this;
+  }
+
+  /**
+   * Desired resource manager tag keys and values to be attached to the nodes for managing Compute
+   * Engine firewalls using Network Firewall Policies. Existing tags will be replaced with new
+   * values.
+   * @return value or {@code null} for none
+   */
+  public ResourceManagerTags getResourceManagerTags() {
+    return resourceManagerTags;
+  }
+
+  /**
+   * Desired resource manager tag keys and values to be attached to the nodes for managing Compute
+   * Engine firewalls using Network Firewall Policies. Existing tags will be replaced with new
+   * values.
+   * @param resourceManagerTags resourceManagerTags or {@code null} for none
+   */
+  public UpdateNodePoolRequest setResourceManagerTags(ResourceManagerTags resourceManagerTags) {
+    this.resourceManagerTags = resourceManagerTags;
     return this;
   }
 

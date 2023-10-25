@@ -59,6 +59,14 @@ public final class GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversati
   private java.lang.Integer failedAnalysesCount;
 
   /**
+   * Output only. Partial errors during ingest operation that might cause the operation output to be
+   * incomplete.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleRpcStatus> partialErrors;
+
+  /**
    * The original request for bulk analyze.
    * The value may be {@code null}.
    */
@@ -138,6 +146,25 @@ public final class GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversati
    */
   public GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversationsMetadata setFailedAnalysesCount(java.lang.Integer failedAnalysesCount) {
     this.failedAnalysesCount = failedAnalysesCount;
+    return this;
+  }
+
+  /**
+   * Output only. Partial errors during ingest operation that might cause the operation output to be
+   * incomplete.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleRpcStatus> getPartialErrors() {
+    return partialErrors;
+  }
+
+  /**
+   * Output only. Partial errors during ingest operation that might cause the operation output to be
+   * incomplete.
+   * @param partialErrors partialErrors or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversationsMetadata setPartialErrors(java.util.List<GoogleRpcStatus> partialErrors) {
+    this.partialErrors = partialErrors;
     return this;
   }
 

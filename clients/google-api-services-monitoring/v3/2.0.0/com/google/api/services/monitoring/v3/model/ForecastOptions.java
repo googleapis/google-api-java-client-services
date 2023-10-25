@@ -34,7 +34,7 @@ public final class ForecastOptions extends com.google.api.client.json.GenericJso
    * Required. The length of time into the future to forecast whether a time series will violate the
    * threshold. If the predicted value is found to violate the threshold, and the violation is
    * observed in all forecasts made for the configured duration, then the time series is considered
-   * to be failing.
+   * to be failing. The forecast horizon can range from 1 hour to 60 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class ForecastOptions extends com.google.api.client.json.GenericJso
    * Required. The length of time into the future to forecast whether a time series will violate the
    * threshold. If the predicted value is found to violate the threshold, and the violation is
    * observed in all forecasts made for the configured duration, then the time series is considered
-   * to be failing.
+   * to be failing. The forecast horizon can range from 1 hour to 60 hours.
    * @return value or {@code null} for none
    */
   public String getForecastHorizon() {
@@ -55,7 +55,7 @@ public final class ForecastOptions extends com.google.api.client.json.GenericJso
    * Required. The length of time into the future to forecast whether a time series will violate the
    * threshold. If the predicted value is found to violate the threshold, and the violation is
    * observed in all forecasts made for the configured duration, then the time series is considered
-   * to be failing.
+   * to be failing. The forecast horizon can range from 1 hour to 60 hours.
    * @param forecastHorizon forecastHorizon or {@code null} for none
    */
   public ForecastOptions setForecastHorizon(String forecastHorizon) {

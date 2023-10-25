@@ -46,6 +46,14 @@ public final class ListWorkflowTemplatesResponse extends com.google.api.client.j
   private java.util.List<WorkflowTemplate> templates;
 
   /**
+   * Output only. List of workflow templates that could not be included in the response. Attempting
+   * to get one of these resources may indicate why it was not included in the list response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * Output only. This token is included in the response if there are more results to fetch. To
    * fetch additional results, provide this value as the page_token in a subsequent
    * ListWorkflowTemplatesRequest.
@@ -80,6 +88,25 @@ public final class ListWorkflowTemplatesResponse extends com.google.api.client.j
    */
   public ListWorkflowTemplatesResponse setTemplates(java.util.List<WorkflowTemplate> templates) {
     this.templates = templates;
+    return this;
+  }
+
+  /**
+   * Output only. List of workflow templates that could not be included in the response. Attempting
+   * to get one of these resources may indicate why it was not included in the list response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Output only. List of workflow templates that could not be included in the response. Attempting
+   * to get one of these resources may indicate why it was not included in the list response.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListWorkflowTemplatesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

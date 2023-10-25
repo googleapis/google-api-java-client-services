@@ -31,6 +31,15 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A stable account identifier to apply to the assessment. This is an alternative to
+   * setting `account_id` in `CreateAssessment`, for example when a stable account identifier is not
+   * yet known in the initial request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accountId;
+
+  /**
    * Optional. The annotation that will be assigned to the Event. This field can be left empty to
    * provide reasons that apply to an event without concluding whether the event is legitimate or
    * fraudulent.
@@ -40,10 +49,9 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   private java.lang.String annotation;
 
   /**
-   * Optional. Unique stable hashed user identifier to apply to the assessment. This is an
-   * alternative to setting the hashed_account_id in CreateAssessment, for example when the account
-   * identifier is not yet known in the initial request. It is recommended that the identifier is
-   * hashed using hmac-sha256 with stable secret.
+   * Optional. A stable hashed account identifier to apply to the assessment. This is an alternative
+   * to setting `hashed_account_id` in `CreateAssessment`, for example when a stable account
+   * identifier is not yet known in the initial request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,6 +71,27 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1TransactionEvent transactionEvent;
+
+  /**
+   * Optional. A stable account identifier to apply to the assessment. This is an alternative to
+   * setting `account_id` in `CreateAssessment`, for example when a stable account identifier is not
+   * yet known in the initial request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccountId() {
+    return accountId;
+  }
+
+  /**
+   * Optional. A stable account identifier to apply to the assessment. This is an alternative to
+   * setting `account_id` in `CreateAssessment`, for example when a stable account identifier is not
+   * yet known in the initial request.
+   * @param accountId accountId or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest setAccountId(java.lang.String accountId) {
+    this.accountId = accountId;
+    return this;
+  }
 
   /**
    * Optional. The annotation that will be assigned to the Event. This field can be left empty to
@@ -86,10 +115,9 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. Unique stable hashed user identifier to apply to the assessment. This is an
-   * alternative to setting the hashed_account_id in CreateAssessment, for example when the account
-   * identifier is not yet known in the initial request. It is recommended that the identifier is
-   * hashed using hmac-sha256 with stable secret.
+   * Optional. A stable hashed account identifier to apply to the assessment. This is an alternative
+   * to setting `hashed_account_id` in `CreateAssessment`, for example when a stable account
+   * identifier is not yet known in the initial request.
    * @see #decodeHashedAccountId()
    * @return value or {@code null} for none
    */
@@ -98,10 +126,9 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. Unique stable hashed user identifier to apply to the assessment. This is an
-   * alternative to setting the hashed_account_id in CreateAssessment, for example when the account
-   * identifier is not yet known in the initial request. It is recommended that the identifier is
-   * hashed using hmac-sha256 with stable secret.
+   * Optional. A stable hashed account identifier to apply to the assessment. This is an alternative
+   * to setting `hashed_account_id` in `CreateAssessment`, for example when a stable account
+   * identifier is not yet known in the initial request.
    * @see #getHashedAccountId()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -112,10 +139,9 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. Unique stable hashed user identifier to apply to the assessment. This is an
-   * alternative to setting the hashed_account_id in CreateAssessment, for example when the account
-   * identifier is not yet known in the initial request. It is recommended that the identifier is
-   * hashed using hmac-sha256 with stable secret.
+   * Optional. A stable hashed account identifier to apply to the assessment. This is an alternative
+   * to setting `hashed_account_id` in `CreateAssessment`, for example when a stable account
+   * identifier is not yet known in the initial request.
    * @see #encodeHashedAccountId()
    * @param hashedAccountId hashedAccountId or {@code null} for none
    */
@@ -125,10 +151,9 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. Unique stable hashed user identifier to apply to the assessment. This is an
-   * alternative to setting the hashed_account_id in CreateAssessment, for example when the account
-   * identifier is not yet known in the initial request. It is recommended that the identifier is
-   * hashed using hmac-sha256 with stable secret.
+   * Optional. A stable hashed account identifier to apply to the assessment. This is an alternative
+   * to setting `hashed_account_id` in `CreateAssessment`, for example when a stable account
+   * identifier is not yet known in the initial request.
    * @see #setHashedAccountId()
    *
    * <p>

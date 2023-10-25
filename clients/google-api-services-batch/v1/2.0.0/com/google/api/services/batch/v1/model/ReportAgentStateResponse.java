@@ -57,6 +57,14 @@ public final class ReportAgentStateResponse extends com.google.api.client.json.G
   }
 
   /**
+   * If true, the cloud logging for batch agent will use batch.googleapis.com/Job as monitored
+   * resource for Batch job related logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useBatchMonitoredResource;
+
+  /**
    * Default report interval override
    * @return value or {@code null} for none
    */
@@ -104,6 +112,25 @@ public final class ReportAgentStateResponse extends com.google.api.client.json.G
    */
   public ReportAgentStateResponse setTasks(java.util.List<AgentTask> tasks) {
     this.tasks = tasks;
+    return this;
+  }
+
+  /**
+   * If true, the cloud logging for batch agent will use batch.googleapis.com/Job as monitored
+   * resource for Batch job related logging.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseBatchMonitoredResource() {
+    return useBatchMonitoredResource;
+  }
+
+  /**
+   * If true, the cloud logging for batch agent will use batch.googleapis.com/Job as monitored
+   * resource for Batch job related logging.
+   * @param useBatchMonitoredResource useBatchMonitoredResource or {@code null} for none
+   */
+  public ReportAgentStateResponse setUseBatchMonitoredResource(java.lang.Boolean useBatchMonitoredResource) {
+    this.useBatchMonitoredResource = useBatchMonitoredResource;
     return this;
   }
 

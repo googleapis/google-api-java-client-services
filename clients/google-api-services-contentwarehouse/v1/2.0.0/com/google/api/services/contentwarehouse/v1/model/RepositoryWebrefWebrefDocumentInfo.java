@@ -46,13 +46,6 @@ public final class RepositoryWebrefWebrefDocumentInfo extends com.google.api.cli
   private Proto2BridgeMessageSet extensions;
 
   /**
-   * Information about the outlinks of this document.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RepositoryWebrefWebrefOutlinkInfos outlinkInfos;
-
-  /**
    * The content (CONTENT section 0) as parsed by WebrefParser. Only used by
    * //r/w/postprocessing/idf/idf-pipeline for document ngram idf computation. Populated when the
    * annotator is run with webref_populate_parsed_content Each webref_parsed_content_sentence
@@ -96,23 +89,6 @@ public final class RepositoryWebrefWebrefDocumentInfo extends com.google.api.cli
    */
   public RepositoryWebrefWebrefDocumentInfo setExtensions(Proto2BridgeMessageSet extensions) {
     this.extensions = extensions;
-    return this;
-  }
-
-  /**
-   * Information about the outlinks of this document.
-   * @return value or {@code null} for none
-   */
-  public RepositoryWebrefWebrefOutlinkInfos getOutlinkInfos() {
-    return outlinkInfos;
-  }
-
-  /**
-   * Information about the outlinks of this document.
-   * @param outlinkInfos outlinkInfos or {@code null} for none
-   */
-  public RepositoryWebrefWebrefDocumentInfo setOutlinkInfos(RepositoryWebrefWebrefOutlinkInfos outlinkInfos) {
-    this.outlinkInfos = outlinkInfos;
     return this;
   }
 

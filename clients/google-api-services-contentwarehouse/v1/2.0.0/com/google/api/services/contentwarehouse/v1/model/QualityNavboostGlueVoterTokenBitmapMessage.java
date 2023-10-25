@@ -17,7 +17,11 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * LINT.IfChange
+ * Used for aggregating query unique voter_token during merging. We use 4 uint64(s) as a 256-bit
+ * bitmap to aggregate distinct voter_tokens in Glue model pipeline. Number of elements should
+ * always be either 0 or 4. As an optimization, we store the voter_token as a single uint64 if only
+ * one bit is set. See quality/navboost/speedy_glue/util/voter_token_bitmap.h for the class that
+ * manages operations on these bitmaps.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,64 +32,58 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AssistantApiCoreTypesDeviceUserIdentity extends com.google.api.client.json.GenericJson {
+public final class QualityNavboostGlueVoterTokenBitmapMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The identifier of the device.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AssistantApiCoreTypesDeviceId deviceId;
-
-  /**
-   * The identifier of the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long gaiaId;
+  private java.util.List<java.math.BigInteger> subRange;
 
   /**
-   * The identifier of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger voterToken;
+
+  /**
    * @return value or {@code null} for none
    */
-  public AssistantApiCoreTypesDeviceId getDeviceId() {
-    return deviceId;
+  public java.util.List<java.math.BigInteger> getSubRange() {
+    return subRange;
   }
 
   /**
-   * The identifier of the device.
-   * @param deviceId deviceId or {@code null} for none
+   * @param subRange subRange or {@code null} for none
    */
-  public AssistantApiCoreTypesDeviceUserIdentity setDeviceId(AssistantApiCoreTypesDeviceId deviceId) {
-    this.deviceId = deviceId;
+  public QualityNavboostGlueVoterTokenBitmapMessage setSubRange(java.util.List<java.math.BigInteger> subRange) {
+    this.subRange = subRange;
     return this;
   }
 
   /**
-   * The identifier of the user.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getGaiaId() {
-    return gaiaId;
+  public java.math.BigInteger getVoterToken() {
+    return voterToken;
   }
 
   /**
-   * The identifier of the user.
-   * @param gaiaId gaiaId or {@code null} for none
+   * @param voterToken voterToken or {@code null} for none
    */
-  public AssistantApiCoreTypesDeviceUserIdentity setGaiaId(java.lang.Long gaiaId) {
-    this.gaiaId = gaiaId;
+  public QualityNavboostGlueVoterTokenBitmapMessage setVoterToken(java.math.BigInteger voterToken) {
+    this.voterToken = voterToken;
     return this;
   }
 
   @Override
-  public AssistantApiCoreTypesDeviceUserIdentity set(String fieldName, Object value) {
-    return (AssistantApiCoreTypesDeviceUserIdentity) super.set(fieldName, value);
+  public QualityNavboostGlueVoterTokenBitmapMessage set(String fieldName, Object value) {
+    return (QualityNavboostGlueVoterTokenBitmapMessage) super.set(fieldName, value);
   }
 
   @Override
-  public AssistantApiCoreTypesDeviceUserIdentity clone() {
-    return (AssistantApiCoreTypesDeviceUserIdentity) super.clone();
+  public QualityNavboostGlueVoterTokenBitmapMessage clone() {
+    return (QualityNavboostGlueVoterTokenBitmapMessage) super.clone();
   }
 
 }

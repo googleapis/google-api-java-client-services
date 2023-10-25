@@ -18,14 +18,11 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * An absolute point in time independent of timezone or calendar, based on the proto3 Timestamp
- * (//google/protobuf/timestamp.proto). IMPORTANT: The definition of Timestamp proto is being moved
- * to //assistant/api/core_types/governed/datetime_type.proto. All existing references will be
- * updated to point to the new location. If you are adding a reference, use the new one instead.
- * NOTE: THIS IS NO LONGER RECOMMENDED TO BE USED. It was originally defined separately from
- * google.protobuf.Timestamp due to incompatibility with proto2 syntax. The incompatibility issues
- * have since been resolved and so the Google-wide standard representation of
- * google.protobuf.Timestamp should be preferred. In fact, google.protobuf.* protos in general are
- * now recommended to be used in new APIs.
+ * (//google/protobuf/timestamp.proto). NOTE: THIS IS NO LONGER RECOMMENDED TO BE USED. It was
+ * originally defined separately from google.protobuf.Timestamp due to incompatibility with proto2
+ * syntax. The incompatibility issues have since been resolved and so the Google-wide standard
+ * representation of google.protobuf.Timestamp should be preferred. In fact, google.protobuf.*
+ * protos in general are now recommended to be used in new APIs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

@@ -17,8 +17,11 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Representation of geometry. Geometries vary both in type and in level-of-detail, enabling
- * representation of any shape at any level of granularity.
+ * Representation of geometry including geometric primitives which are used as building blocks to
+ * construct geometries of varying complexity. Geometries vary both in type and in level-of-detail,
+ * enabling representation of any shape at any level of granularity. All geometries are ultimately
+ * composed of `MultiPoint`s, which reference the actual vertices. Only linear and planar shapes are
+ * allowed, no curves or parametric surfaces.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

@@ -19,7 +19,9 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * The identification information for third party devices that integrates with the assistant. All of
  * these fields will be populated by the third party when the query is sent from the third party
- * device. Next Id: 5
+ * device. IMPORTANT: The definition of DeviceConfig proto is being moved to
+ * //assistant/api/core_types/device_type.proto. All existing references will be updated to point to
+ * the new location. If you are adding a reference, use the new one instead. Next Id: 5
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

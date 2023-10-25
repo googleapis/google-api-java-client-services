@@ -17,9 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A time zone. Conceptually, a time zone is a set of rules associated with a location that
- * describes a UTC offset and how it changes over time (e.g. Daylight Saving Time). The offset is
- * used to compute the local date and time.
+ * A representation of a range of time with start and end datetime specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -30,40 +28,64 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AssistantApiTimeZone extends com.google.api.client.json.GenericJson {
+public final class AssistantApiDateTimeRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Time zone in IANA format, e.g. America/Los_Angeles for USA Pacific Time.
+   * End date of the range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String ianaId;
+  private AssistantApiDateTime endDate;
 
   /**
-   * Time zone in IANA format, e.g. America/Los_Angeles for USA Pacific Time.
+   * Start date of the range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantApiDateTime startDate;
+
+  /**
+   * End date of the range.
    * @return value or {@code null} for none
    */
-  public java.lang.String getIanaId() {
-    return ianaId;
+  public AssistantApiDateTime getEndDate() {
+    return endDate;
   }
 
   /**
-   * Time zone in IANA format, e.g. America/Los_Angeles for USA Pacific Time.
-   * @param ianaId ianaId or {@code null} for none
+   * End date of the range.
+   * @param endDate endDate or {@code null} for none
    */
-  public AssistantApiTimeZone setIanaId(java.lang.String ianaId) {
-    this.ianaId = ianaId;
+  public AssistantApiDateTimeRange setEndDate(AssistantApiDateTime endDate) {
+    this.endDate = endDate;
+    return this;
+  }
+
+  /**
+   * Start date of the range.
+   * @return value or {@code null} for none
+   */
+  public AssistantApiDateTime getStartDate() {
+    return startDate;
+  }
+
+  /**
+   * Start date of the range.
+   * @param startDate startDate or {@code null} for none
+   */
+  public AssistantApiDateTimeRange setStartDate(AssistantApiDateTime startDate) {
+    this.startDate = startDate;
     return this;
   }
 
   @Override
-  public AssistantApiTimeZone set(String fieldName, Object value) {
-    return (AssistantApiTimeZone) super.set(fieldName, value);
+  public AssistantApiDateTimeRange set(String fieldName, Object value) {
+    return (AssistantApiDateTimeRange) super.set(fieldName, value);
   }
 
   @Override
-  public AssistantApiTimeZone clone() {
-    return (AssistantApiTimeZone) super.clone();
+  public AssistantApiDateTimeRange clone() {
+    return (AssistantApiDateTimeRange) super.clone();
   }
 
 }

@@ -20,9 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * Date-based recurrences specify repeating events. Conceptually, a recurrence is a (possibly
  * unbounded) sequence of dates on which an event falls, described by a list of constraints. A date
  * is in a recurrence if and only if it satisfies all of the constraints. Note that devices may
- * support some constraints, but not all. IMPORTANT: The definition of Recurrence proto is being
- * moved to //assistant/api/core_types/governed/datetime_type.proto. All existing references will be
- * updated to point to the new location. If you are adding a reference, use the new one instead.
+ * support some constraints, but not all.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -48,7 +46,13 @@ public final class AssistantApiRecurrence extends com.google.api.client.json.Gen
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<AssistantApiRecurrenceDatetimeRange> blacklistedRanges;
+  private java.util.List<AssistantApiDateTimeRange> blacklistedRanges;
+
+  static {
+    // hack to force ProGuard to consider AssistantApiDateTimeRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AssistantApiDateTimeRange.class);
+  }
 
   /**
    * Specifies the date in a month. For example, if day_of_month is 15, then it represent the 15th
@@ -128,7 +132,7 @@ public final class AssistantApiRecurrence extends com.google.api.client.json.Gen
    * A list of blacklisted dates to skip the alarm on.
    * @return value or {@code null} for none
    */
-  public java.util.List<AssistantApiRecurrenceDatetimeRange> getBlacklistedRanges() {
+  public java.util.List<AssistantApiDateTimeRange> getBlacklistedRanges() {
     return blacklistedRanges;
   }
 
@@ -136,7 +140,7 @@ public final class AssistantApiRecurrence extends com.google.api.client.json.Gen
    * A list of blacklisted dates to skip the alarm on.
    * @param blacklistedRanges blacklistedRanges or {@code null} for none
    */
-  public AssistantApiRecurrence setBlacklistedRanges(java.util.List<AssistantApiRecurrenceDatetimeRange> blacklistedRanges) {
+  public AssistantApiRecurrence setBlacklistedRanges(java.util.List<AssistantApiDateTimeRange> blacklistedRanges) {
     this.blacklistedRanges = blacklistedRanges;
     return this;
   }

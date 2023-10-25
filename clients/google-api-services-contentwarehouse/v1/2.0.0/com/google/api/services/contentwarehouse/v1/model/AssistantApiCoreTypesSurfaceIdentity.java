@@ -20,11 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * The set of information that helps the server identify the surface. This replaces the User-Agent
  * string within the Assistant Server. Note: The SurfaceIdentity proto should only be used to derive
  * the capabilities of a surface. It should not be accessed outside of the CapabilityBuilder or
- * CapabilityChecker. NEXT ID: 6 IMPORTANT: The definitions of the SurfaceIdentity and
- * SurfaceVersion protos are being moved to
- * //assistant/api/core_types/governed/surface_identity.proto All existing references will be
- * updated to point to the new location. If you are adding a reference, use the new SurfaceIdentity
- * and SurfaceVersion protos instead of the protos defined here. LINT.IfChange
+ * CapabilityChecker. NEXT ID: 6 LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -63,8 +59,8 @@ public final class AssistantApiCoreTypesSurfaceIdentity extends com.google.api.c
   private java.lang.String surfaceType;
 
   /**
-   * DEPRECATED. assistant.api.core_types.governed.SurfaceIdentity.surface_type field should be used
-   * instead. The device's surface type. This is the string version of the
+   * DEPRECATED. The legacy device's surface type string. NOTE: Prefer using the ontological
+   * `surface_type` field. The device's surface type. This is the string version of the
    * assistant.api.core_types.SurfaceType enum. The server should not use this field, rather it
    * should use the SurfaceType value derived from this string.
    * The value may be {@code null}.
@@ -139,8 +135,8 @@ public final class AssistantApiCoreTypesSurfaceIdentity extends com.google.api.c
   }
 
   /**
-   * DEPRECATED. assistant.api.core_types.governed.SurfaceIdentity.surface_type field should be used
-   * instead. The device's surface type. This is the string version of the
+   * DEPRECATED. The legacy device's surface type string. NOTE: Prefer using the ontological
+   * `surface_type` field. The device's surface type. This is the string version of the
    * assistant.api.core_types.SurfaceType enum. The server should not use this field, rather it
    * should use the SurfaceType value derived from this string.
    * @return value or {@code null} for none
@@ -150,8 +146,8 @@ public final class AssistantApiCoreTypesSurfaceIdentity extends com.google.api.c
   }
 
   /**
-   * DEPRECATED. assistant.api.core_types.governed.SurfaceIdentity.surface_type field should be used
-   * instead. The device's surface type. This is the string version of the
+   * DEPRECATED. The legacy device's surface type string. NOTE: Prefer using the ontological
+   * `surface_type` field. The device's surface type. This is the string version of the
    * assistant.api.core_types.SurfaceType enum. The server should not use this field, rather it
    * should use the SurfaceType value derived from this string.
    * @param surfaceTypeString surfaceTypeString or {@code null} for none

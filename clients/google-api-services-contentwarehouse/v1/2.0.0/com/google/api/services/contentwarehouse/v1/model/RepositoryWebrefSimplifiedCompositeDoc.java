@@ -99,12 +99,6 @@ public final class RepositoryWebrefSimplifiedCompositeDoc extends com.google.api
   private RepositoryWebrefWebrefOutlinkInfos webrefOutlinkInfos;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Proto2BridgeMessageSet webrefOutlinksLegacy;
-
-  /**
    * The composite doc anchors trimmed and transformed in a smaller data structure and aggregated
    * (if they have the exact same text).
    * @return value or {@code null} for none
@@ -262,21 +256,6 @@ public final class RepositoryWebrefSimplifiedCompositeDoc extends com.google.api
    */
   public RepositoryWebrefSimplifiedCompositeDoc setWebrefOutlinkInfos(RepositoryWebrefWebrefOutlinkInfos webrefOutlinkInfos) {
     this.webrefOutlinkInfos = webrefOutlinkInfos;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public Proto2BridgeMessageSet getWebrefOutlinksLegacy() {
-    return webrefOutlinksLegacy;
-  }
-
-  /**
-   * @param webrefOutlinksLegacy webrefOutlinksLegacy or {@code null} for none
-   */
-  public RepositoryWebrefSimplifiedCompositeDoc setWebrefOutlinksLegacy(Proto2BridgeMessageSet webrefOutlinksLegacy) {
-    this.webrefOutlinksLegacy = webrefOutlinksLegacy;
     return this;
   }
 

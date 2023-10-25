@@ -17,7 +17,10 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Represents a color in the RGBA color space. This message mirrors google.type.Color.
+ * LINT.IfChange Represents a color in the RGBA color space. This message mirrors google.type.Color.
+ * IMPORTANT: The definition of Color proto is being moved to
+ * //assistant/api/core_types/color_type.proto. All existing references will be updated to point to
+ * the new location. If you are adding a reference, use the new one instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

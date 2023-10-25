@@ -20,10 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * This empty type allows us to publish sensitive calendar events to go/attentional-entities, while
  * maintaining BUILD visibility protection for their contents. The BUILD-visibility-protected
  * extension to this message is defined at
- * http://google3/assistant/verticals/calendar/proto/multi_account_calendar_event.proto IMPORTANT:
- * The definition of CalendarEventWrapper proto is being moved to
- * //assistant/api/core_types/governed/calendar_event_type.proto. All existing references will be
- * updated to point to the new location. If you are adding a reference, use the new one instead.
+ * http://google3/assistant/verticals/calendar/proto/multi_account_calendar_event.proto
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

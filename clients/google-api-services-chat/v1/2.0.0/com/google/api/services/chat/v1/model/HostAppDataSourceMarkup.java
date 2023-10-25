@@ -17,9 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Chat apps only. For a `SelectionInput` widget that uses a multi-select menu, a data source from a
- * Google Workspace host application. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * Chat apps only. For a `SelectionInput` widget that uses a multiselect menu, a data source from a
+ * Google Workspace application. The data source populates selection items for the multiselect menu.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -32,16 +31,14 @@ package com.google.api.services.chat.v1.model;
 public final class HostAppDataSourceMarkup extends com.google.api.client.json.GenericJson {
 
   /**
-   * The data source is Google Chat. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source from Google Chat.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ChatClientDataSourceMarkup chatDataSource;
 
   /**
-   * The data source is Google Chat. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source from Google Chat.
    * @return value or {@code null} for none
    */
   public ChatClientDataSourceMarkup getChatDataSource() {
@@ -49,8 +46,7 @@ public final class HostAppDataSourceMarkup extends com.google.api.client.json.Ge
   }
 
   /**
-   * The data source is Google Chat. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source from Google Chat.
    * @param chatDataSource chatDataSource or {@code null} for none
    */
   public HostAppDataSourceMarkup setChatDataSource(ChatClientDataSourceMarkup chatDataSource) {

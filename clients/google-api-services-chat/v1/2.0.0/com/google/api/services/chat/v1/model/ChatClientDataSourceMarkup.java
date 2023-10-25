@@ -17,9 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Chat apps only. For a `SelectionInput` widget that uses a multi-select menu, a data source from
- * Google Chat. For example, a list of Google Chat spaces of which the user is a member. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * Chat apps only. For a `SelectionInput` widget that uses a multiselect menu, a data source from
+ * Google Chat. The data source populates selection items for the multiselect menu. For example, a
+ * user can select Google Chat spaces that they're a member of.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -32,16 +32,14 @@ package com.google.api.services.chat.v1.model;
 public final class ChatClientDataSourceMarkup extends com.google.api.client.json.GenericJson {
 
   /**
-   * A data source representing a Google Chat space. Format: spaces/{space} [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Google Chat spaces that the user is a member of.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SpaceDataSource spaceDataSource;
 
   /**
-   * A data source representing a Google Chat space. Format: spaces/{space} [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Google Chat spaces that the user is a member of.
    * @return value or {@code null} for none
    */
   public SpaceDataSource getSpaceDataSource() {
@@ -49,8 +47,7 @@ public final class ChatClientDataSourceMarkup extends com.google.api.client.json
   }
 
   /**
-   * A data source representing a Google Chat space. Format: spaces/{space} [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Google Chat spaces that the user is a member of.
    * @param spaceDataSource spaceDataSource or {@code null} for none
    */
   public ChatClientDataSourceMarkup setSpaceDataSource(SpaceDataSource spaceDataSource) {

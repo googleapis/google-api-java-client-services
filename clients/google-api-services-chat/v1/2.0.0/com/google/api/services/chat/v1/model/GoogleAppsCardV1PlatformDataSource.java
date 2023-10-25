@@ -17,11 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Chat apps only. For a `SelectionInput` widget that uses a multi-select menu, the data from a
- * [Google Workspace host
- * application](https://developers.google.com/chat/api/reference/rest/v1/HostApp). Used to populate
- * the items in the multi-select menu. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * Chat apps only. For a `SelectionInput` widget that uses a multiselect menu, a data source from
+ * Google Workspace. Used to populate items in a multiselect menu.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -34,27 +31,23 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1PlatformDataSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * For a `SelectionInput` widget that uses a multi-select menu, a data source shared by all Google
-   * Workspace host applications, such as users in a Google Workspace organization. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source shared by all Google Workspace applications, such as users in a Google Workspace
+   * organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String commonDataSource;
 
   /**
-   * A data source that's unique to a Google Workspace host application, such as Gmail emails,
-   * Google Calendar events, or Google Chat messages. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source that's unique to a Google Workspace host application, such spaces in Google Chat.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HostAppDataSourceMarkup hostAppDataSource;
 
   /**
-   * For a `SelectionInput` widget that uses a multi-select menu, a data source shared by all Google
-   * Workspace host applications, such as users in a Google Workspace organization. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source shared by all Google Workspace applications, such as users in a Google Workspace
+   * organization.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommonDataSource() {
@@ -62,9 +55,8 @@ public final class GoogleAppsCardV1PlatformDataSource extends com.google.api.cli
   }
 
   /**
-   * For a `SelectionInput` widget that uses a multi-select menu, a data source shared by all Google
-   * Workspace host applications, such as users in a Google Workspace organization. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source shared by all Google Workspace applications, such as users in a Google Workspace
+   * organization.
    * @param commonDataSource commonDataSource or {@code null} for none
    */
   public GoogleAppsCardV1PlatformDataSource setCommonDataSource(java.lang.String commonDataSource) {
@@ -73,9 +65,7 @@ public final class GoogleAppsCardV1PlatformDataSource extends com.google.api.cli
   }
 
   /**
-   * A data source that's unique to a Google Workspace host application, such as Gmail emails,
-   * Google Calendar events, or Google Chat messages. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source that's unique to a Google Workspace host application, such spaces in Google Chat.
    * @return value or {@code null} for none
    */
   public HostAppDataSourceMarkup getHostAppDataSource() {
@@ -83,9 +73,7 @@ public final class GoogleAppsCardV1PlatformDataSource extends com.google.api.cli
   }
 
   /**
-   * A data source that's unique to a Google Workspace host application, such as Gmail emails,
-   * Google Calendar events, or Google Chat messages. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source that's unique to a Google Workspace host application, such spaces in Google Chat.
    * @param hostAppDataSource hostAppDataSource or {@code null} for none
    */
   public GoogleAppsCardV1PlatformDataSource setHostAppDataSource(HostAppDataSourceMarkup hostAppDataSource) {

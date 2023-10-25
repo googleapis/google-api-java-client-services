@@ -37,6 +37,27 @@ public final class GoogleMapsPlacesV1PlaceAccessibilityOptions extends com.googl
   private java.lang.Boolean wheelchairAccessibleEntrance;
 
   /**
+   * Place offers wheelchair accessible parking.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean wheelchairAccessibleParking;
+
+  /**
+   * Place has wheelchair accessible restroom.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean wheelchairAccessibleRestroom;
+
+  /**
+   * Place has wheelchair accessible seating.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean wheelchairAccessibleSeating;
+
+  /**
    * Places has wheelchair accessible entrance.
    * @return value or {@code null} for none
    */
@@ -50,6 +71,57 @@ public final class GoogleMapsPlacesV1PlaceAccessibilityOptions extends com.googl
    */
   public GoogleMapsPlacesV1PlaceAccessibilityOptions setWheelchairAccessibleEntrance(java.lang.Boolean wheelchairAccessibleEntrance) {
     this.wheelchairAccessibleEntrance = wheelchairAccessibleEntrance;
+    return this;
+  }
+
+  /**
+   * Place offers wheelchair accessible parking.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWheelchairAccessibleParking() {
+    return wheelchairAccessibleParking;
+  }
+
+  /**
+   * Place offers wheelchair accessible parking.
+   * @param wheelchairAccessibleParking wheelchairAccessibleParking or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceAccessibilityOptions setWheelchairAccessibleParking(java.lang.Boolean wheelchairAccessibleParking) {
+    this.wheelchairAccessibleParking = wheelchairAccessibleParking;
+    return this;
+  }
+
+  /**
+   * Place has wheelchair accessible restroom.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWheelchairAccessibleRestroom() {
+    return wheelchairAccessibleRestroom;
+  }
+
+  /**
+   * Place has wheelchair accessible restroom.
+   * @param wheelchairAccessibleRestroom wheelchairAccessibleRestroom or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceAccessibilityOptions setWheelchairAccessibleRestroom(java.lang.Boolean wheelchairAccessibleRestroom) {
+    this.wheelchairAccessibleRestroom = wheelchairAccessibleRestroom;
+    return this;
+  }
+
+  /**
+   * Place has wheelchair accessible seating.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWheelchairAccessibleSeating() {
+    return wheelchairAccessibleSeating;
+  }
+
+  /**
+   * Place has wheelchair accessible seating.
+   * @param wheelchairAccessibleSeating wheelchairAccessibleSeating or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceAccessibilityOptions setWheelchairAccessibleSeating(java.lang.Boolean wheelchairAccessibleSeating) {
+    this.wheelchairAccessibleSeating = wheelchairAccessibleSeating;
     return this;
   }
 

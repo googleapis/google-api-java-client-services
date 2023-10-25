@@ -38,6 +38,13 @@ public final class HostMaintenancePolicy extends com.google.api.client.json.Gene
   private java.lang.String maintenanceInterval;
 
   /**
+   * Strategy that will trigger maintenance on behalf of the customer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OpportunisticMaintenanceStrategy opportunisticMaintenanceStrategy;
+
+  /**
    * Specifies the frequency of planned maintenance events.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class HostMaintenancePolicy extends com.google.api.client.json.Gene
    */
   public HostMaintenancePolicy setMaintenanceInterval(java.lang.String maintenanceInterval) {
     this.maintenanceInterval = maintenanceInterval;
+    return this;
+  }
+
+  /**
+   * Strategy that will trigger maintenance on behalf of the customer.
+   * @return value or {@code null} for none
+   */
+  public OpportunisticMaintenanceStrategy getOpportunisticMaintenanceStrategy() {
+    return opportunisticMaintenanceStrategy;
+  }
+
+  /**
+   * Strategy that will trigger maintenance on behalf of the customer.
+   * @param opportunisticMaintenanceStrategy opportunisticMaintenanceStrategy or {@code null} for none
+   */
+  public HostMaintenancePolicy setOpportunisticMaintenanceStrategy(OpportunisticMaintenanceStrategy opportunisticMaintenanceStrategy) {
+    this.opportunisticMaintenanceStrategy = opportunisticMaintenanceStrategy;
     return this;
   }
 

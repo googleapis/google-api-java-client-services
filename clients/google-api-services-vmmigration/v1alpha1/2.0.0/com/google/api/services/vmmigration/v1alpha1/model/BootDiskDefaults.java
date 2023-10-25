@@ -55,6 +55,13 @@ public final class BootDiskDefaults extends com.google.api.client.json.GenericJs
   private java.lang.String diskType;
 
   /**
+   * Optional. The encryption to apply to the boot disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Encryption encryption;
+
+  /**
    * The image to use when creating the disk.
    * The value may be {@code null}.
    */
@@ -117,6 +124,23 @@ public final class BootDiskDefaults extends com.google.api.client.json.GenericJs
    */
   public BootDiskDefaults setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Optional. The encryption to apply to the boot disk.
+   * @return value or {@code null} for none
+   */
+  public Encryption getEncryption() {
+    return encryption;
+  }
+
+  /**
+   * Optional. The encryption to apply to the boot disk.
+   * @param encryption encryption or {@code null} for none
+   */
+  public BootDiskDefaults setEncryption(Encryption encryption) {
+    this.encryption = encryption;
     return this;
   }
 

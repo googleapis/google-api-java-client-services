@@ -51,6 +51,13 @@ public final class DisksMigrationVmTargetDefaults extends com.google.api.client.
   private ComputeScheduling computeScheduling;
 
   /**
+   * Optional. The encryption to apply to the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Encryption encryption;
+
+  /**
    * Optional. The hostname to assign to the VM.
    * The value may be {@code null}.
    */
@@ -169,6 +176,23 @@ public final class DisksMigrationVmTargetDefaults extends com.google.api.client.
    */
   public DisksMigrationVmTargetDefaults setComputeScheduling(ComputeScheduling computeScheduling) {
     this.computeScheduling = computeScheduling;
+    return this;
+  }
+
+  /**
+   * Optional. The encryption to apply to the VM.
+   * @return value or {@code null} for none
+   */
+  public Encryption getEncryption() {
+    return encryption;
+  }
+
+  /**
+   * Optional. The encryption to apply to the VM.
+   * @param encryption encryption or {@code null} for none
+   */
+  public DisksMigrationVmTargetDefaults setEncryption(Encryption encryption) {
+    this.encryption = encryption;
     return this;
   }
 

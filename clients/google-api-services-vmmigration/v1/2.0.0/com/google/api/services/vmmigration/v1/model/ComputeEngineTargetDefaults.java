@@ -66,6 +66,13 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   private java.lang.String diskType;
 
   /**
+   * Optional. Immutable. The encryption to apply to the VM disks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Encryption encryption;
+
+  /**
    * The hostname to assign to the VM.
    * The value may be {@code null}.
    */
@@ -240,6 +247,23 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
    */
   public ComputeEngineTargetDefaults setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The encryption to apply to the VM disks.
+   * @return value or {@code null} for none
+   */
+  public Encryption getEncryption() {
+    return encryption;
+  }
+
+  /**
+   * Optional. Immutable. The encryption to apply to the VM disks.
+   * @param encryption encryption or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setEncryption(Encryption encryption) {
+    this.encryption = encryption;
     return this;
   }
 

@@ -61,8 +61,8 @@ public final class AccountBusinessIdentity extends com.google.api.client.json.Ge
 
   /**
    * Specifies whether the business identifies itself as a small business. This optional field is
-   * only available for merchants with a business country set to "US". This field is not allowed for
-   * marketplaces or marketplace sellers.
+   * only available for merchants with a business country set to "US". It is also not allowed for
+   * marketplaces, but it is allowed to marketplace sellers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,8 +153,8 @@ public final class AccountBusinessIdentity extends com.google.api.client.json.Ge
 
   /**
    * Specifies whether the business identifies itself as a small business. This optional field is
-   * only available for merchants with a business country set to "US". This field is not allowed for
-   * marketplaces or marketplace sellers.
+   * only available for merchants with a business country set to "US". It is also not allowed for
+   * marketplaces, but it is allowed to marketplace sellers.
    * @return value or {@code null} for none
    */
   public AccountIdentityType getSmallBusiness() {
@@ -163,8 +163,8 @@ public final class AccountBusinessIdentity extends com.google.api.client.json.Ge
 
   /**
    * Specifies whether the business identifies itself as a small business. This optional field is
-   * only available for merchants with a business country set to "US". This field is not allowed for
-   * marketplaces or marketplace sellers.
+   * only available for merchants with a business country set to "US". It is also not allowed for
+   * marketplaces, but it is allowed to marketplace sellers.
    * @param smallBusiness smallBusiness or {@code null} for none
    */
   public AccountBusinessIdentity setSmallBusiness(AccountIdentityType smallBusiness) {

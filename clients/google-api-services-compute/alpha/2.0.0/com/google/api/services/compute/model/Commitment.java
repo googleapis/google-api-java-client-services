@@ -74,6 +74,16 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String endTimestamp;
 
   /**
+   * Specifies the already existing reservations to attach to the Commitment. This field is
+   * optional, and it can be a full or partial URL. For example, the following are valid URLs to an
+   * reservation: - https://www.googleapis.com/compute/v1/projects/project/zones/zone
+   * /reservations/reservation - projects/project/zones/zone/reservations/reservation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> existingReservations;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -296,6 +306,29 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   public Commitment setEndTimestamp(java.lang.String endTimestamp) {
     this.endTimestamp = endTimestamp;
+    return this;
+  }
+
+  /**
+   * Specifies the already existing reservations to attach to the Commitment. This field is
+   * optional, and it can be a full or partial URL. For example, the following are valid URLs to an
+   * reservation: - https://www.googleapis.com/compute/v1/projects/project/zones/zone
+   * /reservations/reservation - projects/project/zones/zone/reservations/reservation
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExistingReservations() {
+    return existingReservations;
+  }
+
+  /**
+   * Specifies the already existing reservations to attach to the Commitment. This field is
+   * optional, and it can be a full or partial URL. For example, the following are valid URLs to an
+   * reservation: - https://www.googleapis.com/compute/v1/projects/project/zones/zone
+   * /reservations/reservation - projects/project/zones/zone/reservations/reservation
+   * @param existingReservations existingReservations or {@code null} for none
+   */
+  public Commitment setExistingReservations(java.util.List<java.lang.String> existingReservations) {
+    this.existingReservations = existingReservations;
     return this;
   }
 

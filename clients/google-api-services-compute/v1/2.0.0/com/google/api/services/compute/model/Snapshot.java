@@ -209,6 +209,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey sourceDiskEncryptionKey;
 
   /**
+   * The source disk whose recovery checkpoint will be used to create this snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceDiskForRecoveryCheckpoint;
+
+  /**
    * [Output Only] The ID value of the disk used to create this snapshot. This value may be used to
    * determine whether the snapshot was taken from the current or a previous instance of a given
    * disk name.
@@ -721,6 +728,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setSourceDiskEncryptionKey(CustomerEncryptionKey sourceDiskEncryptionKey) {
     this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
+    return this;
+  }
+
+  /**
+   * The source disk whose recovery checkpoint will be used to create this snapshot.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceDiskForRecoveryCheckpoint() {
+    return sourceDiskForRecoveryCheckpoint;
+  }
+
+  /**
+   * The source disk whose recovery checkpoint will be used to create this snapshot.
+   * @param sourceDiskForRecoveryCheckpoint sourceDiskForRecoveryCheckpoint or {@code null} for none
+   */
+  public Snapshot setSourceDiskForRecoveryCheckpoint(java.lang.String sourceDiskForRecoveryCheckpoint) {
+    this.sourceDiskForRecoveryCheckpoint = sourceDiskForRecoveryCheckpoint;
     return this;
   }
 

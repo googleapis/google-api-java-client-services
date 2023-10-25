@@ -31,6 +31,13 @@ package com.google.api.services.compute.model;
 public final class ResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] Contains last termination details why the instance was terminated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceStatusLastInstanceTerminationDetails lastInstanceTerminationDetails;
+
+  /**
    * [Output Only] An opaque ID of the host on which the VM is running.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, ResourceStatusServiceIntegrationStatus> serviceIntegrationStatuses;
+
+  /**
+   * [Output Only] Contains last termination details why the instance was terminated.
+   * @return value or {@code null} for none
+   */
+  public ResourceStatusLastInstanceTerminationDetails getLastInstanceTerminationDetails() {
+    return lastInstanceTerminationDetails;
+  }
+
+  /**
+   * [Output Only] Contains last termination details why the instance was terminated.
+   * @param lastInstanceTerminationDetails lastInstanceTerminationDetails or {@code null} for none
+   */
+  public ResourceStatus setLastInstanceTerminationDetails(ResourceStatusLastInstanceTerminationDetails lastInstanceTerminationDetails) {
+    this.lastInstanceTerminationDetails = lastInstanceTerminationDetails;
+    return this;
+  }
 
   /**
    * [Output Only] An opaque ID of the host on which the VM is running.

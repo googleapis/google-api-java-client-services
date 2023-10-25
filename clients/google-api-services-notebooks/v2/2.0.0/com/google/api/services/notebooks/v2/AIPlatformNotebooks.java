@@ -1267,6 +1267,150 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Gets general backend configurations that might also affect the frontend. Location is required by
+         * CCFE. Although we could bypass it to send location- less request directly to the backend job, we
+         * would need CPE (go/cloud-cpe). Having the location might also be useful depending on the query.
+         *
+         * Create a request for the method "instances.getConfig".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}`
+         * @return the request
+         */
+        public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
+          GetConfig result = new GetConfig(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetConfig extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Config> {
+
+          private static final String REST_PATH = "v2/{+name}/instances:getConfig";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Gets general backend configurations that might also affect the frontend. Location is required
+           * by CCFE. Although we could bypass it to send location- less request directly to the backend
+           * job, we would need CPE (go/cloud-cpe). Having the location might also be useful depending on
+           * the query.
+           *
+           * Create a request for the method "instances.getConfig".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link GetConfig#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}`
+           * @since 1.13
+           */
+          protected GetConfig(java.lang.String name) {
+            super(AIPlatformNotebooks.this, "GET", REST_PATH, null, com.google.api.services.notebooks.v2.model.Config.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (GetConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetConfig setAccessToken(java.lang.String accessToken) {
+            return (GetConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetConfig setAlt(java.lang.String alt) {
+            return (GetConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public GetConfig setCallback(java.lang.String callback) {
+            return (GetConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public GetConfig setFields(java.lang.String fields) {
+            return (GetConfig) super.setFields(fields);
+          }
+
+          @Override
+          public GetConfig setKey(java.lang.String key) {
+            return (GetConfig) super.setKey(key);
+          }
+
+          @Override
+          public GetConfig setOauthToken(java.lang.String oauthToken) {
+            return (GetConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetConfig setQuotaUser(java.lang.String quotaUser) {
+            return (GetConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetConfig setUploadType(java.lang.String uploadType) {
+            return (GetConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Format: `projects/{project_id}/locations/{location}` */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Format: `projects/{project_id}/locations/{location}` */
+          public GetConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetConfig set(String parameterName, Object value) {
+            return (GetConfig) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *

@@ -30,8 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * For multi-select menus, a text description or label that's displayed below the item's `text`
-   * field. [Developer Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, a text description or label that's displayed below the item's `text`
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,10 +46,9 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   private java.lang.Boolean selected;
 
   /**
-   * For multi-select menus, the URL for the icon displayed next to the item's `text` field.
-   * Supports PNG and JPEG files. Must be an `HTTPS` URL. For example,
-   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, the URL for the icon displayed next to the item's `text` field. Supports
+   * PNG and JPEG files. Must be an `HTTPS` URL. For example,
+   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +71,8 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   private java.lang.String value;
 
   /**
-   * For multi-select menus, a text description or label that's displayed below the item's `text`
-   * field. [Developer Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, a text description or label that's displayed below the item's `text`
+   * field.
    * @return value or {@code null} for none
    */
   public java.lang.String getBottomText() {
@@ -81,8 +80,8 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * For multi-select menus, a text description or label that's displayed below the item's `text`
-   * field. [Developer Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, a text description or label that's displayed below the item's `text`
+   * field.
    * @param bottomText bottomText or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setBottomText(java.lang.String bottomText) {
@@ -110,10 +109,9 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * For multi-select menus, the URL for the icon displayed next to the item's `text` field.
-   * Supports PNG and JPEG files. Must be an `HTTPS` URL. For example,
-   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, the URL for the icon displayed next to the item's `text` field. Supports
+   * PNG and JPEG files. Must be an `HTTPS` URL. For example,
+   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartIconUri() {
@@ -121,10 +119,9 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * For multi-select menus, the URL for the icon displayed next to the item's `text` field.
-   * Supports PNG and JPEG files. Must be an `HTTPS` URL. For example,
-   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, the URL for the icon displayed next to the item's `text` field. Supports
+   * PNG and JPEG files. Must be an `HTTPS` URL. For example,
+   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`.
    * @param startIconUri startIconUri or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setStartIconUri(java.lang.String startIconUri) {

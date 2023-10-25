@@ -2063,8 +2063,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * membership](https://developers.google.com/chat/api/guides/v1/members/get). Requires
        * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
        * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts) and
-       * [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-       * authentication](https://developers.google.com/chat/api/guides/auth/users).
+       * [user authentication](https://developers.google.com/chat/api/guides/auth/users).
        *
        * Create a request for the method "members.get".
        *
@@ -2097,8 +2096,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * membership](https://developers.google.com/chat/api/guides/v1/members/get). Requires
          * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
          * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts)
-         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-         * authentication](https://developers.google.com/chat/api/guides/auth/users).
+         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users).
          *
          * Create a request for the method "members.get".
          *
@@ -2245,8 +2243,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * spaces that the authenticated user has access to. Requires
        * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
        * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts) and
-       * [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-       * authentication](https://developers.google.com/chat/api/guides/auth/users).
+       * [user authentication](https://developers.google.com/chat/api/guides/auth/users).
        *
        * Create a request for the method "members.list".
        *
@@ -2280,8 +2277,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * spaces that the authenticated user has access to. Requires
          * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
          * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts)
-         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-         * authentication](https://developers.google.com/chat/api/guides/auth/users).
+         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users).
          *
          * Create a request for the method "members.list".
          *
@@ -2837,9 +2833,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * message](https://developers.google.com/chat/api/guides/v1/messages/delete). Requires
        * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
        * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts) and
-       * [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-       * authentication](https://developers.google.com/chat/api/guides/auth/users). Requests authenticated
-       * with service accounts can only delete messages created by the calling Chat app.
+       * [user authentication](https://developers.google.com/chat/api/guides/auth/users). Requests
+       * authenticated with service accounts can only delete messages created by the calling Chat app.
        *
        * Create a request for the method "messages.delete".
        *
@@ -2868,8 +2863,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * message](https://developers.google.com/chat/api/guides/v1/messages/delete). Requires
          * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
          * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts)
-         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-         * authentication](https://developers.google.com/chat/api/guides/auth/users). Requests
+         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). Requests
          * authenticated with service accounts can only delete messages created by the calling Chat app.
          *
          * Create a request for the method "messages.delete".
@@ -3017,9 +3011,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * message](https://developers.google.com/chat/api/guides/v1/messages/get). Requires
        * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
        * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts) and
-       * [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-       * authentication](https://developers.google.com/chat/api/guides/auth/users). Note: Might return a
-       * message from a blocked member or space.
+       * [user authentication](https://developers.google.com/chat/api/guides/auth/users). Note: Might
+       * return a message from a blocked member or space.
        *
        * Create a request for the method "messages.get".
        *
@@ -3051,9 +3044,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * message](https://developers.google.com/chat/api/guides/v1/messages/get). Requires
          * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
          * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts)
-         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-         * authentication](https://developers.google.com/chat/api/guides/auth/users). Note: Might return a
-         * message from a blocked member or space.
+         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). Note:
+         * Might return a message from a blocked member or space.
          *
          * Create a request for the method "messages.get".
          *
@@ -3510,9 +3502,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * message](https://developers.google.com/chat/api/guides/v1/messages/update). Requires
        * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
        * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts) and
-       * [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-       * authentication](https://developers.google.com/chat/api/guides/auth/users). Requests authenticated
-       * with service accounts can only update messages created by the calling Chat app.
+       * [user authentication](https://developers.google.com/chat/api/guides/auth/users). Requests
+       * authenticated with service accounts can only update messages created by the calling Chat app.
        *
        * Create a request for the method "messages.patch".
        *
@@ -3544,8 +3535,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * message](https://developers.google.com/chat/api/guides/v1/messages/update). Requires
          * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
          * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts)
-         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-         * authentication](https://developers.google.com/chat/api/guides/auth/users). Requests
+         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). Requests
          * authenticated with service accounts can only update messages created by the calling Chat app.
          *
          * Create a request for the method "messages.patch".
@@ -3723,9 +3713,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * message](https://developers.google.com/chat/api/guides/v1/messages/update). Requires
        * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
        * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts) and
-       * [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-       * authentication](https://developers.google.com/chat/api/guides/auth/users). Requests authenticated
-       * with service accounts can only update messages created by the calling Chat app.
+       * [user authentication](https://developers.google.com/chat/api/guides/auth/users). Requests
+       * authenticated with service accounts can only update messages created by the calling Chat app.
        *
        * Create a request for the method "messages.update".
        *
@@ -3757,8 +3746,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * message](https://developers.google.com/chat/api/guides/v1/messages/update). Requires
          * [authentication](https://developers.google.com/chat/api/guides/auth). Fully supports [service
          * account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts)
-         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). [User
-         * authentication](https://developers.google.com/chat/api/guides/auth/users). Requests
+         * and [user authentication](https://developers.google.com/chat/api/guides/auth/users). Requests
          * authenticated with service accounts can only update messages created by the calling Chat app.
          *
          * Create a request for the method "messages.update".

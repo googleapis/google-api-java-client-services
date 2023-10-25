@@ -36,8 +36,7 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * An external data source, such as a relational data base. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * An external data source, such as a relational data base.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,19 +61,17 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   private java.lang.String label;
 
   /**
-   * For multi-select menus, the maximum number of items that a user can select. Minimum value is 1
-   * item. If unspecified, set to 3 items. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, the maximum number of items that a user can select. Minimum value is 1
+   * item. If unspecified, defaults to 3 items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer multiSelectMaxSelectedItems;
 
   /**
-   * For multi-select menus, the number of text characters that a user inputs before the Chat app
-   * queries autocomplete and displays suggested items on the card. If unspecified, set to 0
-   * characters for static data sources and 3 characters for external data sources. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, the number of text characters that a user inputs before the Chat app
+   * queries autocomplete and displays suggested items in the menu. If unspecified, defaults to 0
+   * characters for static data sources and 3 characters for external data sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,9 +96,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   private GoogleAppsCardV1Action onChangeAction;
 
   /**
-   * A data source from a [Google Workspace host
-   * application](https://developers.google.com/chat/api/reference/rest/v1/HostApp). [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source from Google Workspace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +112,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   private java.lang.String type;
 
   /**
-   * An external data source, such as a relational data base. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * An external data source, such as a relational data base.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getExternalDataSource() {
@@ -126,8 +120,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * An external data source, such as a relational data base. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * An external data source, such as a relational data base.
    * @param externalDataSource externalDataSource or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setExternalDataSource(GoogleAppsCardV1Action externalDataSource) {
@@ -178,9 +171,8 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * For multi-select menus, the maximum number of items that a user can select. Minimum value is 1
-   * item. If unspecified, set to 3 items. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, the maximum number of items that a user can select. Minimum value is 1
+   * item. If unspecified, defaults to 3 items.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMultiSelectMaxSelectedItems() {
@@ -188,9 +180,8 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * For multi-select menus, the maximum number of items that a user can select. Minimum value is 1
-   * item. If unspecified, set to 3 items. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, the maximum number of items that a user can select. Minimum value is 1
+   * item. If unspecified, defaults to 3 items.
    * @param multiSelectMaxSelectedItems multiSelectMaxSelectedItems or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setMultiSelectMaxSelectedItems(java.lang.Integer multiSelectMaxSelectedItems) {
@@ -199,10 +190,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * For multi-select menus, the number of text characters that a user inputs before the Chat app
-   * queries autocomplete and displays suggested items on the card. If unspecified, set to 0
-   * characters for static data sources and 3 characters for external data sources. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, the number of text characters that a user inputs before the Chat app
+   * queries autocomplete and displays suggested items in the menu. If unspecified, defaults to 0
+   * characters for static data sources and 3 characters for external data sources.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMultiSelectMinQueryLength() {
@@ -210,10 +200,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * For multi-select menus, the number of text characters that a user inputs before the Chat app
-   * queries autocomplete and displays suggested items on the card. If unspecified, set to 0
-   * characters for static data sources and 3 characters for external data sources. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * For multiselect menus, the number of text characters that a user inputs before the Chat app
+   * queries autocomplete and displays suggested items in the menu. If unspecified, defaults to 0
+   * characters for static data sources and 3 characters for external data sources.
    * @param multiSelectMinQueryLength multiSelectMinQueryLength or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setMultiSelectMinQueryLength(java.lang.Integer multiSelectMinQueryLength) {
@@ -264,9 +253,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * A data source from a [Google Workspace host
-   * application](https://developers.google.com/chat/api/reference/rest/v1/HostApp). [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source from Google Workspace.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1PlatformDataSource getPlatformDataSource() {
@@ -274,9 +261,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * A data source from a [Google Workspace host
-   * application](https://developers.google.com/chat/api/reference/rest/v1/HostApp). [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * A data source from Google Workspace.
    * @param platformDataSource platformDataSource or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setPlatformDataSource(GoogleAppsCardV1PlatformDataSource platformDataSource) {

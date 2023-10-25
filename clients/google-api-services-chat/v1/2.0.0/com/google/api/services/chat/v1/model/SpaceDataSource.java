@@ -17,8 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A data source representing a Google Chat space. Format: spaces/{space} [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * A data source that populates Google Chat spaces as selection items for a multiselect menu. Only
+ * populates spaces that the user is a member of.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,16 +31,16 @@ package com.google.api.services.chat.v1.model;
 public final class SpaceDataSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * When `true`, uses the card's Google Chat space as the default selection. The default value is
-   * `false`. [Developer Preview](https://developers.google.com/workspace/preview).
+   * If set to `true`, the multiselect menu selects the current Google Chat space as an item by
+   * default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean defaultToCurrentSpace;
 
   /**
-   * When `true`, uses the card's Google Chat space as the default selection. The default value is
-   * `false`. [Developer Preview](https://developers.google.com/workspace/preview).
+   * If set to `true`, the multiselect menu selects the current Google Chat space as an item by
+   * default.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDefaultToCurrentSpace() {
@@ -48,8 +48,8 @@ public final class SpaceDataSource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * When `true`, uses the card's Google Chat space as the default selection. The default value is
-   * `false`. [Developer Preview](https://developers.google.com/workspace/preview).
+   * If set to `true`, the multiselect menu selects the current Google Chat space as an item by
+   * default.
    * @param defaultToCurrentSpace defaultToCurrentSpace or {@code null} for none
    */
   public SpaceDataSource setDefaultToCurrentSpace(java.lang.Boolean defaultToCurrentSpace) {

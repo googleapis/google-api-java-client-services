@@ -56,8 +56,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.lang.Boolean firewallPolicyEvaluation;
 
   /**
-   * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
-   * using hmac-sha256 with stable secret.
+   * Optional. Deprecated: use `user_info.account_id` instead. Unique stable hashed user identifier
+   * for the request. The identifier must be hashed using hmac-sha256 with stable secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,6 +115,15 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String userAgent;
+
+  /**
+   * Optional. Information about the user that generates this event, when they can be identified.
+   * They are often identified through the use of an account for logged-in requests or
+   * login/registration requests, or by providing user identifiers for guest actions like checkout.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1UserInfo userInfo;
 
   /**
    * Optional. The IP address in the request from the user's device related to this event.
@@ -191,8 +200,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
-   * using hmac-sha256 with stable secret.
+   * Optional. Deprecated: use `user_info.account_id` instead. Unique stable hashed user identifier
+   * for the request. The identifier must be hashed using hmac-sha256 with stable secret.
    * @see #decodeHashedAccountId()
    * @return value or {@code null} for none
    */
@@ -201,8 +210,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
-   * using hmac-sha256 with stable secret.
+   * Optional. Deprecated: use `user_info.account_id` instead. Unique stable hashed user identifier
+   * for the request. The identifier must be hashed using hmac-sha256 with stable secret.
    * @see #getHashedAccountId()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -213,8 +222,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
-   * using hmac-sha256 with stable secret.
+   * Optional. Deprecated: use `user_info.account_id` instead. Unique stable hashed user identifier
+   * for the request. The identifier must be hashed using hmac-sha256 with stable secret.
    * @see #encodeHashedAccountId()
    * @param hashedAccountId hashedAccountId or {@code null} for none
    */
@@ -224,8 +233,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Unique stable hashed user identifier for the request. The identifier must be hashed
-   * using hmac-sha256 with stable secret.
+   * Optional. Deprecated: use `user_info.account_id` instead. Unique stable hashed user identifier
+   * for the request. The identifier must be hashed using hmac-sha256 with stable secret.
    * @see #setHashedAccountId()
    *
    * <p>
@@ -363,6 +372,27 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
    */
   public GoogleCloudRecaptchaenterpriseV1Event setUserAgent(java.lang.String userAgent) {
     this.userAgent = userAgent;
+    return this;
+  }
+
+  /**
+   * Optional. Information about the user that generates this event, when they can be identified.
+   * They are often identified through the use of an account for logged-in requests or
+   * login/registration requests, or by providing user identifiers for guest actions like checkout.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1UserInfo getUserInfo() {
+    return userInfo;
+  }
+
+  /**
+   * Optional. Information about the user that generates this event, when they can be identified.
+   * They are often identified through the use of an account for logged-in requests or
+   * login/registration requests, or by providing user identifiers for guest actions like checkout.
+   * @param userInfo userInfo or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setUserInfo(GoogleCloudRecaptchaenterpriseV1UserInfo userInfo) {
+    this.userInfo = userInfo;
     return this;
   }
 

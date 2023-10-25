@@ -31,7 +31,7 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Assessment returned by account defender when a hashed_account_id is provided.
+   * Output only. Assessment returned by account defender when an account identifier is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private GoogleCloudRecaptchaenterpriseV1TokenProperties tokenProperties;
 
   /**
-   * Output only. Assessment returned by account defender when a hashed_account_id is provided.
+   * Output only. Assessment returned by account defender when an account identifier is provided.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment getAccountDefenderAssessment() {
@@ -113,7 +113,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Output only. Assessment returned by account defender when a hashed_account_id is provided.
+   * Output only. Assessment returned by account defender when an account identifier is provided.
    * @param accountDefenderAssessment accountDefenderAssessment or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setAccountDefenderAssessment(GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment accountDefenderAssessment) {

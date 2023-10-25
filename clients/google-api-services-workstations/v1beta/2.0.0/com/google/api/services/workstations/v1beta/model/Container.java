@@ -57,8 +57,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * /preconfigured-base-images), but you can create your own [custom container
    * images](https://cloud.google.com/workstations/docs/custom-container-images). If using a private
    * image, the `host.gceInstance.serviceAccount` field must be specified in the workstation
-   * configuration and must have permission to pull the specified image. Otherwise, the image must
-   * be publicly accessible.
+   * configuration. If using a custom container image, the service account must have [Artifact
+   * Registry Reader](https://cloud.google.com/artifact-registry/docs/access-control#roles)
+   * permission to pull the specified image. Otherwise, the image must be publicly accessible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,8 +136,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * /preconfigured-base-images), but you can create your own [custom container
    * images](https://cloud.google.com/workstations/docs/custom-container-images). If using a private
    * image, the `host.gceInstance.serviceAccount` field must be specified in the workstation
-   * configuration and must have permission to pull the specified image. Otherwise, the image must
-   * be publicly accessible.
+   * configuration. If using a custom container image, the service account must have [Artifact
+   * Registry Reader](https://cloud.google.com/artifact-registry/docs/access-control#roles)
+   * permission to pull the specified image. Otherwise, the image must be publicly accessible.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -149,8 +151,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * /preconfigured-base-images), but you can create your own [custom container
    * images](https://cloud.google.com/workstations/docs/custom-container-images). If using a private
    * image, the `host.gceInstance.serviceAccount` field must be specified in the workstation
-   * configuration and must have permission to pull the specified image. Otherwise, the image must
-   * be publicly accessible.
+   * configuration. If using a custom container image, the service account must have [Artifact
+   * Registry Reader](https://cloud.google.com/artifact-registry/docs/access-control#roles)
+   * permission to pull the specified image. Otherwise, the image must be publicly accessible.
    * @param image image or {@code null} for none
    */
   public Container setImage(java.lang.String image) {

@@ -30,6 +30,21 @@ package com.google.api.services.dataproc.model;
 public final class UsageSnapshot extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Accelerator type being used, if any
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String acceleratorType;
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator. (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing))
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliAccelerator;
+
+  /**
    * Optional. Milli (one-thousandth) Dataproc Compute Units (DCUs) (see Dataproc Serverless pricing
    * (https://cloud.google.com/dataproc-serverless/pricing)).
    * The value may be {@code null}.
@@ -67,6 +82,42 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private String snapshotTime;
+
+  /**
+   * Optional. Accelerator type being used, if any
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAcceleratorType() {
+    return acceleratorType;
+  }
+
+  /**
+   * Optional. Accelerator type being used, if any
+   * @param acceleratorType acceleratorType or {@code null} for none
+   */
+  public UsageSnapshot setAcceleratorType(java.lang.String acceleratorType) {
+    this.acceleratorType = acceleratorType;
+    return this;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator. (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing))
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliAccelerator() {
+    return milliAccelerator;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator. (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing))
+   * @param milliAccelerator milliAccelerator or {@code null} for none
+   */
+  public UsageSnapshot setMilliAccelerator(java.lang.Long milliAccelerator) {
+    this.milliAccelerator = milliAccelerator;
+    return this;
+  }
 
   /**
    * Optional. Milli (one-thousandth) Dataproc Compute Units (DCUs) (see Dataproc Serverless pricing

@@ -49,6 +49,13 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   private String dagTimeout;
 
   /**
+   * Optional. Encryption settings for the encrypting customer core content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataprocV1WorkflowTemplateEncryptionConfig encryptionConfig;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,6 +179,23 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
    */
   public WorkflowTemplate setDagTimeout(String dagTimeout) {
     this.dagTimeout = dagTimeout;
+    return this;
+  }
+
+  /**
+   * Optional. Encryption settings for the encrypting customer core content.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataprocV1WorkflowTemplateEncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
+  }
+
+  /**
+   * Optional. Encryption settings for the encrypting customer core content.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
+   */
+  public WorkflowTemplate setEncryptionConfig(GoogleCloudDataprocV1WorkflowTemplateEncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
     return this;
   }
 

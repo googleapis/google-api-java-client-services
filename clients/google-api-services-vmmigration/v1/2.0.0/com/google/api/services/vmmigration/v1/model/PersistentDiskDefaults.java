@@ -51,6 +51,13 @@ public final class PersistentDiskDefaults extends com.google.api.client.json.Gen
   private java.lang.String diskType;
 
   /**
+   * Optional. The encryption to apply to the disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Encryption encryption;
+
+  /**
    * Required. The ordinal number of the source VM disk.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class PersistentDiskDefaults extends com.google.api.client.json.Gen
    */
   public PersistentDiskDefaults setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Optional. The encryption to apply to the disk.
+   * @return value or {@code null} for none
+   */
+  public Encryption getEncryption() {
+    return encryption;
+  }
+
+  /**
+   * Optional. The encryption to apply to the disk.
+   * @param encryption encryption or {@code null} for none
+   */
+  public PersistentDiskDefaults setEncryption(Encryption encryption) {
+    this.encryption = encryption;
     return this;
   }
 

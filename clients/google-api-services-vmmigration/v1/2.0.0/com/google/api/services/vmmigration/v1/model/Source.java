@@ -59,6 +59,13 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Immutable. The encryption details of the source data stored by the service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Encryption encryption;
+
+  /**
    * The labels of the source.
    * The value may be {@code null}.
    */
@@ -151,6 +158,23 @@ public final class Source extends com.google.api.client.json.GenericJson {
    */
   public Source setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The encryption details of the source data stored by the service.
+   * @return value or {@code null} for none
+   */
+  public Encryption getEncryption() {
+    return encryption;
+  }
+
+  /**
+   * Optional. Immutable. The encryption details of the source data stored by the service.
+   * @param encryption encryption or {@code null} for none
+   */
+  public Source setEncryption(Encryption encryption) {
+    this.encryption = encryption;
     return this;
   }
 

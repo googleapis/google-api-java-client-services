@@ -17,9 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A Gregorian calendar date. IMPORTANT: The definition of Date proto is being moved to
- * //assistant/api/core_types/governed/datetime_type.proto. All existing references will be updated
- * to point to the new location. If you are adding a reference, use the new one instead.
+ * A Gregorian calendar date.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

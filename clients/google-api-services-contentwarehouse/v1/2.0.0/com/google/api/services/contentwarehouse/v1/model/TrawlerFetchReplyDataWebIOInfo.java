@@ -17,9 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A time zone. Conceptually, a time zone is a set of rules associated with a location that
- * describes a UTC offset and how it changes over time (e.g. Daylight Saving Time). The offset is
- * used to compute the local date and time.
+ * WebIO is the new hostload model introduced in 2023. It measures the occupancy of 1 outgoing fetch
+ * connection for 1 minute.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -30,40 +29,58 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AssistantApiTimeZone extends com.google.api.client.json.GenericJson {
+public final class TrawlerFetchReplyDataWebIOInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Time zone in IANA format, e.g. America/Los_Angeles for USA Pacific Time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String ianaId;
+  private java.lang.Float webio;
 
   /**
-   * Time zone in IANA format, e.g. America/Los_Angeles for USA Pacific Time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String webioPercentageTier;
+
+  /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getIanaId() {
-    return ianaId;
+  public java.lang.Float getWebio() {
+    return webio;
   }
 
   /**
-   * Time zone in IANA format, e.g. America/Los_Angeles for USA Pacific Time.
-   * @param ianaId ianaId or {@code null} for none
+   * @param webio webio or {@code null} for none
    */
-  public AssistantApiTimeZone setIanaId(java.lang.String ianaId) {
-    this.ianaId = ianaId;
+  public TrawlerFetchReplyDataWebIOInfo setWebio(java.lang.Float webio) {
+    this.webio = webio;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWebioPercentageTier() {
+    return webioPercentageTier;
+  }
+
+  /**
+   * @param webioPercentageTier webioPercentageTier or {@code null} for none
+   */
+  public TrawlerFetchReplyDataWebIOInfo setWebioPercentageTier(java.lang.String webioPercentageTier) {
+    this.webioPercentageTier = webioPercentageTier;
     return this;
   }
 
   @Override
-  public AssistantApiTimeZone set(String fieldName, Object value) {
-    return (AssistantApiTimeZone) super.set(fieldName, value);
+  public TrawlerFetchReplyDataWebIOInfo set(String fieldName, Object value) {
+    return (TrawlerFetchReplyDataWebIOInfo) super.set(fieldName, value);
   }
 
   @Override
-  public AssistantApiTimeZone clone() {
-    return (AssistantApiTimeZone) super.clone();
+  public TrawlerFetchReplyDataWebIOInfo clone() {
+    return (TrawlerFetchReplyDataWebIOInfo) super.clone();
   }
 
 }

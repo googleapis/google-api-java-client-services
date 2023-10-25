@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * LINT.IfChanged Identifier for an application provider. NOTE: AppProviderId contains surface-
+ * LINT.IfChange Identifier for an application provider. NOTE: AppProviderId contains surface-
  * specific info, such as the Android package name of the application. This was necessary for
  * supporting current use cases that rely on surface-specific info in feature code. Eventually we
  * want to deprecate AppProviderId and fetch surface-specific info in some other way (e.g. in a

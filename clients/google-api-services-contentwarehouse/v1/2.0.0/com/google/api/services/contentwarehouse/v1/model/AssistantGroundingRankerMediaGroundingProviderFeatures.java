@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 20
+ * Features to be passed from Media GP to HGR. Next ID: 21
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -109,6 +109,14 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isSeedRadioRequest;
+
+  /**
+   * Provider is a self(user) reported subscripted provider
+   * https://g3doc.corp.google.com/knowledge/g3doc/ump/development/GetProviderAffinity.md?cl=head
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isSelfReportedSvodProvider;
 
   /**
    * Indicates whether this is youtube content seeking music.
@@ -365,6 +373,25 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setIsSeedRadioRequest(java.lang.Boolean isSeedRadioRequest) {
     this.isSeedRadioRequest = isSeedRadioRequest;
+    return this;
+  }
+
+  /**
+   * Provider is a self(user) reported subscripted provider
+   * https://g3doc.corp.google.com/knowledge/g3doc/ump/development/GetProviderAffinity.md?cl=head
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsSelfReportedSvodProvider() {
+    return isSelfReportedSvodProvider;
+  }
+
+  /**
+   * Provider is a self(user) reported subscripted provider
+   * https://g3doc.corp.google.com/knowledge/g3doc/ump/development/GetProviderAffinity.md?cl=head
+   * @param isSelfReportedSvodProvider isSelfReportedSvodProvider or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setIsSelfReportedSvodProvider(java.lang.Boolean isSelfReportedSvodProvider) {
+    this.isSelfReportedSvodProvider = isSelfReportedSvodProvider;
     return this;
   }
 

@@ -70,6 +70,15 @@ public final class QualityNavboostCrapsFeatureCrapsData extends com.google.api.c
   private QualityNavboostCrapsCrapsClickSignals signals;
 
   /**
+   * The set of voter tokens of the sessions that contributed to this feature's stats. Voter tokens
+   * are not unique per user, so it is a lower bound on the number of distinct users. Used for
+   * privacy-related filtering.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityNavboostGlueVoterTokenBitmapMessage voterTokenBitmap;
+
+  /**
    * Country, like "us". If not present, it's an aggregation for all countries. This is the same
    * format as one used in Glue.
    * @return value or {@code null} for none
@@ -159,6 +168,27 @@ public final class QualityNavboostCrapsFeatureCrapsData extends com.google.api.c
    */
   public QualityNavboostCrapsFeatureCrapsData setSignals(QualityNavboostCrapsCrapsClickSignals signals) {
     this.signals = signals;
+    return this;
+  }
+
+  /**
+   * The set of voter tokens of the sessions that contributed to this feature's stats. Voter tokens
+   * are not unique per user, so it is a lower bound on the number of distinct users. Used for
+   * privacy-related filtering.
+   * @return value or {@code null} for none
+   */
+  public QualityNavboostGlueVoterTokenBitmapMessage getVoterTokenBitmap() {
+    return voterTokenBitmap;
+  }
+
+  /**
+   * The set of voter tokens of the sessions that contributed to this feature's stats. Voter tokens
+   * are not unique per user, so it is a lower bound on the number of distinct users. Used for
+   * privacy-related filtering.
+   * @param voterTokenBitmap voterTokenBitmap or {@code null} for none
+   */
+  public QualityNavboostCrapsFeatureCrapsData setVoterTokenBitmap(QualityNavboostGlueVoterTokenBitmapMessage voterTokenBitmap) {
+    this.voterTokenBitmap = voterTokenBitmap;
     return this;
   }
 

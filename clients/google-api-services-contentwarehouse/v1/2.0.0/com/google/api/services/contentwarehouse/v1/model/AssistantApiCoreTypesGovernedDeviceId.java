@@ -26,7 +26,10 @@ package com.google.api.services.contentwarehouse.v1.model;
  * http://google3/assistant/assistant_server/util/device_id_util.cc;l=23;rcl=421295740 * Dart:
  * http://google3/assistant/context/util/lib/device_id.dart;l=26;rcl=442126145 * Java: http://google
  * 3/java/com/google/assistant/assistantserver/utils/DeviceIdHelper.java;l=9;rcl=390378522 See
- * http://go/deviceid-equality for more details. Next ID: 14
+ * http://go/deviceid-equality for more details. IMPORTANT: The definition of DeviceId proto is
+ * being moved to //assistant/api/core_types/device_type.proto. All existing references will be
+ * updated to point to the new location. If you are adding a reference, use the new one instead.
+ * Next ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

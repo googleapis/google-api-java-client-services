@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * NEXT TAG: 27
+ * NEXT TAG: 28
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -190,6 +190,14 @@ public final class QualityNavboostCrapsCrapsData extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
+
+  /**
+   * The number of distinct voter tokens (a lower bound on the number of distinct users that
+   * contributed to the entry, used for privacy-related filtering).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer voterTokenCount;
 
   /**
    * Contains counter for Aging signal (go/freshness-aging). It's used internally by Craps/Aging
@@ -606,6 +614,25 @@ public final class QualityNavboostCrapsCrapsData extends com.google.api.client.j
    */
   public QualityNavboostCrapsCrapsData setUrl(java.lang.String url) {
     this.url = url;
+    return this;
+  }
+
+  /**
+   * The number of distinct voter tokens (a lower bound on the number of distinct users that
+   * contributed to the entry, used for privacy-related filtering).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVoterTokenCount() {
+    return voterTokenCount;
+  }
+
+  /**
+   * The number of distinct voter tokens (a lower bound on the number of distinct users that
+   * contributed to the entry, used for privacy-related filtering).
+   * @param voterTokenCount voterTokenCount or {@code null} for none
+   */
+  public QualityNavboostCrapsCrapsData setVoterTokenCount(java.lang.Integer voterTokenCount) {
+    this.voterTokenCount = voterTokenCount;
     return this;
   }
 

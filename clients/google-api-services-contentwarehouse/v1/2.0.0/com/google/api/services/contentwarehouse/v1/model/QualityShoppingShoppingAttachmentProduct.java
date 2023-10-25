@@ -126,13 +126,6 @@ public final class QualityShoppingShoppingAttachmentProduct extends com.google.a
   private java.math.BigInteger productClusterMid;
 
   /**
-   * Organic product popularity.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double productPopularity;
-
-  /**
    * Relevance embedding from ShoppingAnnotation.Product
    * The value may be {@code null}.
    */
@@ -369,23 +362,6 @@ public final class QualityShoppingShoppingAttachmentProduct extends com.google.a
    */
   public QualityShoppingShoppingAttachmentProduct setProductClusterMid(java.math.BigInteger productClusterMid) {
     this.productClusterMid = productClusterMid;
-    return this;
-  }
-
-  /**
-   * Organic product popularity.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getProductPopularity() {
-    return productPopularity;
-  }
-
-  /**
-   * Organic product popularity.
-   * @param productPopularity productPopularity or {@code null} for none
-   */
-  public QualityShoppingShoppingAttachmentProduct setProductPopularity(java.lang.Double productPopularity) {
-    this.productPopularity = productPopularity;
     return this;
   }
 

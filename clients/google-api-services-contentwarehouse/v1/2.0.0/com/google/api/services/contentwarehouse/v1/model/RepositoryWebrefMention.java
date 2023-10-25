@@ -238,24 +238,6 @@ public final class RepositoryWebrefMention extends com.google.api.client.json.Ge
   private RepositoryWebrefSubSegmentIndex subsegmentIndex;
 
   /**
-   * Confidence for the time_offset_ms annotation, quantized to values in range 0-127 (see
-   * speech::VideoASRServerUtil::ConfidenceQuantize for how the quantization was done). Confidence
-   * can be empty for special characters (e.g. spaces).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer timeOffsetConfidence;
-
-  /**
-   * Timestamp that this mention appeared in the video. The field is only populated for
-   * VIDEO_TRANSCRIPT when the byte offset is the same. It is extracted from
-   * cdoc.doc_videos.content_based_metadata.transcript_asr.transcript.timestamp.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer timeOffsetMs;
-
-  /**
    * Confidence that this name is a trusted name of the entity. This is set only in case the
    * confidence is higher than an internal threshold (see ConceptProbability).
    * The value may be {@code null}.
@@ -741,48 +723,6 @@ public final class RepositoryWebrefMention extends com.google.api.client.json.Ge
    */
   public RepositoryWebrefMention setSubsegmentIndex(RepositoryWebrefSubSegmentIndex subsegmentIndex) {
     this.subsegmentIndex = subsegmentIndex;
-    return this;
-  }
-
-  /**
-   * Confidence for the time_offset_ms annotation, quantized to values in range 0-127 (see
-   * speech::VideoASRServerUtil::ConfidenceQuantize for how the quantization was done). Confidence
-   * can be empty for special characters (e.g. spaces).
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getTimeOffsetConfidence() {
-    return timeOffsetConfidence;
-  }
-
-  /**
-   * Confidence for the time_offset_ms annotation, quantized to values in range 0-127 (see
-   * speech::VideoASRServerUtil::ConfidenceQuantize for how the quantization was done). Confidence
-   * can be empty for special characters (e.g. spaces).
-   * @param timeOffsetConfidence timeOffsetConfidence or {@code null} for none
-   */
-  public RepositoryWebrefMention setTimeOffsetConfidence(java.lang.Integer timeOffsetConfidence) {
-    this.timeOffsetConfidence = timeOffsetConfidence;
-    return this;
-  }
-
-  /**
-   * Timestamp that this mention appeared in the video. The field is only populated for
-   * VIDEO_TRANSCRIPT when the byte offset is the same. It is extracted from
-   * cdoc.doc_videos.content_based_metadata.transcript_asr.transcript.timestamp.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getTimeOffsetMs() {
-    return timeOffsetMs;
-  }
-
-  /**
-   * Timestamp that this mention appeared in the video. The field is only populated for
-   * VIDEO_TRANSCRIPT when the byte offset is the same. It is extracted from
-   * cdoc.doc_videos.content_based_metadata.transcript_asr.transcript.timestamp.
-   * @param timeOffsetMs timeOffsetMs or {@code null} for none
-   */
-  public RepositoryWebrefMention setTimeOffsetMs(java.lang.Integer timeOffsetMs) {
-    this.timeOffsetMs = timeOffsetMs;
     return this;
   }
 

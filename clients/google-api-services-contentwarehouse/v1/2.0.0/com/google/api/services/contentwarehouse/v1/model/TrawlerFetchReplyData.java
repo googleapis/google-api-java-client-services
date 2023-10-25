@@ -23,7 +23,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * FetchReplies. Trawler: When adding new fields here, it is recommended that at least the following
  * be rebuilt and pushed: - cron_fetcher_index mapreduces: so that UrlReplyIndex, etc. retain the
  * new fields - tlookup, tlookup_server: want to be able to return the new fields - logviewer,
- * fetchutil: annoying to get back 'tag88:' in results -------------------------- Next Tag: 124
+ * fetchutil: annoying to get back 'tag88:' in results -------------------------- Next Tag: 125
  * -----------------------
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -526,6 +526,12 @@ public final class TrawlerFetchReplyData extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String trafficType;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TrawlerFetchReplyDataWebIOInfo webioInfo;
 
   /**
    * This field, if non-empty, contains the SSL certificate chain from the server. The filed should
@@ -1804,6 +1810,21 @@ public final class TrawlerFetchReplyData extends com.google.api.client.json.Gene
    */
   public TrawlerFetchReplyData setTrafficType(java.lang.String trafficType) {
     this.trafficType = trafficType;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public TrawlerFetchReplyDataWebIOInfo getWebioInfo() {
+    return webioInfo;
+  }
+
+  /**
+   * @param webioInfo webioInfo or {@code null} for none
+   */
+  public TrawlerFetchReplyData setWebioInfo(TrawlerFetchReplyDataWebIOInfo webioInfo) {
+    this.webioInfo = webioInfo;
     return this;
   }
 

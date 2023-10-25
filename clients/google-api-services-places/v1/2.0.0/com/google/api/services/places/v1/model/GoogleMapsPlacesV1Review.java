@@ -37,6 +37,14 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   private GoogleMapsPlacesV1AuthorAttribution authorAttribution;
 
   /**
+   * Output only. A reference representing this place review which may be used to look up this place
+   * review again (a.k.a. the API "resource" name: places/{place_id}/reviews/{review}).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Output only. The review text in its original language.
    * The value may be {@code null}.
    */
@@ -86,6 +94,25 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
    */
   public GoogleMapsPlacesV1Review setAuthorAttribution(GoogleMapsPlacesV1AuthorAttribution authorAttribution) {
     this.authorAttribution = authorAttribution;
+    return this;
+  }
+
+  /**
+   * Output only. A reference representing this place review which may be used to look up this place
+   * review again (a.k.a. the API "resource" name: places/{place_id}/reviews/{review}).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Output only. A reference representing this place review which may be used to look up this place
+   * review again (a.k.a. the API "resource" name: places/{place_id}/reviews/{review}).
+   * @param name name or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Review setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

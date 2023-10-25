@@ -154,6 +154,307 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
   public class Places {
 
     /**
+     * Get a Place with a place id (in a name) string.
+     *
+     * Create a request for the method "places.get".
+     *
+     * This request holds the parameters needed by the places server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name in the
+     *        same Place. Format: places/place_id.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends MapsPlacesRequest<com.google.api.services.places.v1.model.GoogleMapsPlacesV1Place> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^places/[^/]+$");
+
+      /**
+       * Get a Place with a place id (in a name) string.
+       *
+       * Create a request for the method "places.get".
+       *
+       * This request holds the parameters needed by the the places server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name in the
+     *        same Place. Format: places/place_id.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(MapsPlaces.this, "GET", REST_PATH, null, com.google.api.services.places.v1.model.GoogleMapsPlacesV1Place.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^places/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name
+       * in the same Place. Format: places/place_id.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name in the
+     same Place. Format: places/place_id.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name
+       * in the same Place. Format: places/place_id.
+       */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^places/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. Place details will be displayed with the preferred language if available. Current
+       * list of supported languages: https://developers.google.com/maps/faq#languagesupport.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** Optional. Place details will be displayed with the preferred language if available. Current list of
+     supported languages: https://developers.google.com/maps/faq#languagesupport.
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * Optional. Place details will be displayed with the preferred language if available. Current
+       * list of supported languages: https://developers.google.com/maps/faq#languagesupport.
+       */
+      public Get setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
+       * Optional. The Unicode country/region code (CLDR) of the location where the request is
+       * coming from. This parameter is used to display the place details, like region-specific
+       * place name, if available. The parameter can affect results based on applicable law. For
+       * more information, see https://www.unicode.org/cldr/charts/latest/supplemental/territory_lan
+       * guage_information.html. Note that 3-digit region codes are not currently supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String regionCode;
+
+      /** Optional. The Unicode country/region code (CLDR) of the location where the request is coming from.
+     This parameter is used to display the place details, like region-specific place name, if available.
+     The parameter can affect results based on applicable law. For more information, see
+     https://www.unicode.org/cldr/charts/latest/supplemental/territory_language_information.html. Note
+     that 3-digit region codes are not currently supported.
+       */
+      public java.lang.String getRegionCode() {
+        return regionCode;
+      }
+
+      /**
+       * Optional. The Unicode country/region code (CLDR) of the location where the request is
+       * coming from. This parameter is used to display the place details, like region-specific
+       * place name, if available. The parameter can affect results based on applicable law. For
+       * more information, see https://www.unicode.org/cldr/charts/latest/supplemental/territory_lan
+       * guage_information.html. Note that 3-digit region codes are not currently supported.
+       */
+      public Get setRegionCode(java.lang.String regionCode) {
+        this.regionCode = regionCode;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Search for places near locations.
+     *
+     * Create a request for the method "places.searchNearby".
+     *
+     * This request holds the parameters needed by the places server.  After setting any optional
+     * parameters, call the {@link SearchNearby#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.places.v1.model.GoogleMapsPlacesV1SearchNearbyRequest}
+     * @return the request
+     */
+    public SearchNearby searchNearby(com.google.api.services.places.v1.model.GoogleMapsPlacesV1SearchNearbyRequest content) throws java.io.IOException {
+      SearchNearby result = new SearchNearby(content);
+      initialize(result);
+      return result;
+    }
+
+    public class SearchNearby extends MapsPlacesRequest<com.google.api.services.places.v1.model.GoogleMapsPlacesV1SearchNearbyResponse> {
+
+      private static final String REST_PATH = "v1/places:searchNearby";
+
+      /**
+       * Search for places near locations.
+       *
+       * Create a request for the method "places.searchNearby".
+       *
+       * This request holds the parameters needed by the the places server.  After setting any optional
+       * parameters, call the {@link SearchNearby#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * SearchNearby#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.places.v1.model.GoogleMapsPlacesV1SearchNearbyRequest}
+       * @since 1.13
+       */
+      protected SearchNearby(com.google.api.services.places.v1.model.GoogleMapsPlacesV1SearchNearbyRequest content) {
+        super(MapsPlaces.this, "POST", REST_PATH, content, com.google.api.services.places.v1.model.GoogleMapsPlacesV1SearchNearbyResponse.class);
+      }
+
+      @Override
+      public SearchNearby set$Xgafv(java.lang.String $Xgafv) {
+        return (SearchNearby) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SearchNearby setAccessToken(java.lang.String accessToken) {
+        return (SearchNearby) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SearchNearby setAlt(java.lang.String alt) {
+        return (SearchNearby) super.setAlt(alt);
+      }
+
+      @Override
+      public SearchNearby setCallback(java.lang.String callback) {
+        return (SearchNearby) super.setCallback(callback);
+      }
+
+      @Override
+      public SearchNearby setFields(java.lang.String fields) {
+        return (SearchNearby) super.setFields(fields);
+      }
+
+      @Override
+      public SearchNearby setKey(java.lang.String key) {
+        return (SearchNearby) super.setKey(key);
+      }
+
+      @Override
+      public SearchNearby setOauthToken(java.lang.String oauthToken) {
+        return (SearchNearby) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SearchNearby setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SearchNearby) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SearchNearby setQuotaUser(java.lang.String quotaUser) {
+        return (SearchNearby) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SearchNearby setUploadType(java.lang.String uploadType) {
+        return (SearchNearby) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SearchNearby setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SearchNearby) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public SearchNearby set(String parameterName, Object value) {
+        return (SearchNearby) super.set(parameterName, value);
+      }
+    }
+    /**
      * Text query based place search.
      *
      * Create a request for the method "places.searchText".
@@ -253,6 +554,284 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
       }
     }
 
+    /**
+     * An accessor for creating requests from the Photos collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code MapsPlaces places = new MapsPlaces(...);}
+     *   {@code MapsPlaces.Photos.List request = places.photos().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Photos photos() {
+      return new Photos();
+    }
+
+    /**
+     * The "photos" collection of methods.
+     */
+    public class Photos {
+
+      /**
+       * Get a photo media with a photo reference string.
+       *
+       * Create a request for the method "photos.getMedia".
+       *
+       * This request holds the parameters needed by the places server.  After setting any optional
+       * parameters, call the {@link GetMedia#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of a photo as returned in a Place object's photos.name field. Format:
+       *        places/place_id/photos/photo_reference.
+       * @return the request
+       */
+      public GetMedia getMedia(java.lang.String name) throws java.io.IOException {
+        GetMedia result = new GetMedia(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetMedia extends MapsPlacesRequest<com.google.api.services.places.v1.model.GoogleMapsPlacesV1PhotoMedia> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^places/[^/]+/photos/[^/]+/media$");
+
+        /**
+         * Get a photo media with a photo reference string.
+         *
+         * Create a request for the method "photos.getMedia".
+         *
+         * This request holds the parameters needed by the the places server.  After setting any optional
+         * parameters, call the {@link GetMedia#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * GetMedia#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of a photo as returned in a Place object's photos.name field. Format:
+       *        places/place_id/photos/photo_reference.
+         * @since 1.13
+         */
+        protected GetMedia(java.lang.String name) {
+          super(MapsPlaces.this, "GET", REST_PATH, null, com.google.api.services.places.v1.model.GoogleMapsPlacesV1PhotoMedia.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^places/[^/]+/photos/[^/]+/media$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetMedia set$Xgafv(java.lang.String $Xgafv) {
+          return (GetMedia) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetMedia setAccessToken(java.lang.String accessToken) {
+          return (GetMedia) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetMedia setAlt(java.lang.String alt) {
+          return (GetMedia) super.setAlt(alt);
+        }
+
+        @Override
+        public GetMedia setCallback(java.lang.String callback) {
+          return (GetMedia) super.setCallback(callback);
+        }
+
+        @Override
+        public GetMedia setFields(java.lang.String fields) {
+          return (GetMedia) super.setFields(fields);
+        }
+
+        @Override
+        public GetMedia setKey(java.lang.String key) {
+          return (GetMedia) super.setKey(key);
+        }
+
+        @Override
+        public GetMedia setOauthToken(java.lang.String oauthToken) {
+          return (GetMedia) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetMedia setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetMedia) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetMedia setQuotaUser(java.lang.String quotaUser) {
+          return (GetMedia) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetMedia setUploadType(java.lang.String uploadType) {
+          return (GetMedia) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetMedia setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetMedia) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of a photo as returned in a Place object's photos.name field.
+         * Format: places/place_id/photos/photo_reference.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of a photo as returned in a Place object's photos.name field. Format:
+       places/place_id/photos/photo_reference.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of a photo as returned in a Place object's photos.name field.
+         * Format: places/place_id/photos/photo_reference.
+         */
+        public GetMedia setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^places/[^/]+/photos/[^/]+/media$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. Specifies the maximum desired height, in pixels, of the image. If the image is
+         * smaller than the values specified, the original image will be returned. If the image is
+         * larger in either dimension, it will be scaled to match the smaller of the two dimensions,
+         * restricted to its original aspect ratio. Both the max_height_px and max_width_px
+         * properties accept an integer between 1 and 4800, inclusively. If the value is not within
+         * the allowed range, an INVALID_ARGUMENT error will be returned. At least one of
+         * max_height_px or max_width_px needs to be specified. If neither max_height_px nor
+         * max_width_px is specified, an INVALID_ARGUMENT error will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer maxHeightPx;
+
+        /** Optional. Specifies the maximum desired height, in pixels, of the image. If the image is smaller
+       than the values specified, the original image will be returned. If the image is larger in either
+       dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original
+       aspect ratio. Both the max_height_px and max_width_px properties accept an integer between 1 and
+       4800, inclusively. If the value is not within the allowed range, an INVALID_ARGUMENT error will be
+       returned. At least one of max_height_px or max_width_px needs to be specified. If neither
+       max_height_px nor max_width_px is specified, an INVALID_ARGUMENT error will be returned.
+         */
+        public java.lang.Integer getMaxHeightPx() {
+          return maxHeightPx;
+        }
+
+        /**
+         * Optional. Specifies the maximum desired height, in pixels, of the image. If the image is
+         * smaller than the values specified, the original image will be returned. If the image is
+         * larger in either dimension, it will be scaled to match the smaller of the two dimensions,
+         * restricted to its original aspect ratio. Both the max_height_px and max_width_px
+         * properties accept an integer between 1 and 4800, inclusively. If the value is not within
+         * the allowed range, an INVALID_ARGUMENT error will be returned. At least one of
+         * max_height_px or max_width_px needs to be specified. If neither max_height_px nor
+         * max_width_px is specified, an INVALID_ARGUMENT error will be returned.
+         */
+        public GetMedia setMaxHeightPx(java.lang.Integer maxHeightPx) {
+          this.maxHeightPx = maxHeightPx;
+          return this;
+        }
+
+        /**
+         * Optional. Specifies the maximum desired width, in pixels, of the image. If the image is
+         * smaller than the values specified, the original image will be returned. If the image is
+         * larger in either dimension, it will be scaled to match the smaller of the two dimensions,
+         * restricted to its original aspect ratio. Both the max_height_px and max_width_px
+         * properties accept an integer between 1 and 4800, inclusively. If the value is not within
+         * the allowed range, an INVALID_ARGUMENT error will be returned. At least one of
+         * max_height_px or max_width_px needs to be specified. If neither max_height_px nor
+         * max_width_px is specified, an INVALID_ARGUMENT error will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer maxWidthPx;
+
+        /** Optional. Specifies the maximum desired width, in pixels, of the image. If the image is smaller
+       than the values specified, the original image will be returned. If the image is larger in either
+       dimension, it will be scaled to match the smaller of the two dimensions, restricted to its original
+       aspect ratio. Both the max_height_px and max_width_px properties accept an integer between 1 and
+       4800, inclusively. If the value is not within the allowed range, an INVALID_ARGUMENT error will be
+       returned. At least one of max_height_px or max_width_px needs to be specified. If neither
+       max_height_px nor max_width_px is specified, an INVALID_ARGUMENT error will be returned.
+         */
+        public java.lang.Integer getMaxWidthPx() {
+          return maxWidthPx;
+        }
+
+        /**
+         * Optional. Specifies the maximum desired width, in pixels, of the image. If the image is
+         * smaller than the values specified, the original image will be returned. If the image is
+         * larger in either dimension, it will be scaled to match the smaller of the two dimensions,
+         * restricted to its original aspect ratio. Both the max_height_px and max_width_px
+         * properties accept an integer between 1 and 4800, inclusively. If the value is not within
+         * the allowed range, an INVALID_ARGUMENT error will be returned. At least one of
+         * max_height_px or max_width_px needs to be specified. If neither max_height_px nor
+         * max_width_px is specified, an INVALID_ARGUMENT error will be returned.
+         */
+        public GetMedia setMaxWidthPx(java.lang.Integer maxWidthPx) {
+          this.maxWidthPx = maxWidthPx;
+          return this;
+        }
+
+        /**
+         * Optional. If set, skip the default HTTP redirect behavior and render a text format (for
+         * example, in JSON format for HTTP use case) response. If not set, an HTTP redirect will be
+         * issued to redirect the call to the image midea. This option is ignored for non-HTTP
+         * requests.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean skipHttpRedirect;
+
+        /** Optional. If set, skip the default HTTP redirect behavior and render a text format (for example, in
+       JSON format for HTTP use case) response. If not set, an HTTP redirect will be issued to redirect
+       the call to the image midea. This option is ignored for non-HTTP requests.
+         */
+        public java.lang.Boolean getSkipHttpRedirect() {
+          return skipHttpRedirect;
+        }
+
+        /**
+         * Optional. If set, skip the default HTTP redirect behavior and render a text format (for
+         * example, in JSON format for HTTP use case) response. If not set, an HTTP redirect will be
+         * issued to redirect the call to the image midea. This option is ignored for non-HTTP
+         * requests.
+         */
+        public GetMedia setSkipHttpRedirect(java.lang.Boolean skipHttpRedirect) {
+          this.skipHttpRedirect = skipHttpRedirect;
+          return this;
+        }
+
+        @Override
+        public GetMedia set(String parameterName, Object value) {
+          return (GetMedia) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

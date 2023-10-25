@@ -60,6 +60,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.String adrFormatAddress;
 
   /**
+   * Place allows dogs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowsDogs;
+
+  /**
    * A set of data provider that must be shown with this result.
    * The value may be {@code null}.
    */
@@ -133,11 +140,47 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private GoogleTypeLocalizedText editorialSummary;
 
   /**
+   * Information of ev charging options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1EVChargeOptions evChargeOptions;
+
+  /**
    * A full, human-readable address for this place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String formattedAddress;
+
+  /**
+   * The most recent information about fuel options in a gas station. This information is updated
+   * regularly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1FuelOptions fuelOptions;
+
+  /**
+   * Place is good for children.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean goodForChildren;
+
+  /**
+   * Place accommodates groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean goodForGroups;
+
+  /**
+   * Place is suitable for watching sports.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean goodForWatchingSports;
 
   /**
    * A URL providing more information about this place.
@@ -176,11 +219,25 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.String internationalPhoneNumber;
 
   /**
+   * Place provides live music.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean liveMusic;
+
+  /**
    * The position of this place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeLatLng location;
+
+  /**
+   * Place has a children's menu.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean menuForChildren;
 
   /**
    * An ID representing this place which may be used to look up this place again (a.k.a. the API
@@ -198,6 +255,41 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.String nationalPhoneNumber;
 
   /**
+   * Place provides outdoor seating.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean outdoorSeating;
+
+  /**
+   * Options of parking provided by the place.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlaceParkingOptions parkingOptions;
+
+  /**
+   * Payment options the place accepts. If a payment option data is not available, the payment
+   * option field will be unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlacePaymentOptions paymentOptions;
+
+  /**
+   * Information (including references) about photos of this place.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleMapsPlacesV1Photo> photos;
+
+  static {
+    // hack to force ProGuard to consider GoogleMapsPlacesV1Photo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleMapsPlacesV1Photo.class);
+  }
+
+  /**
    * Plus code of the place location lat/long.
    * The value may be {@code null}.
    */
@@ -210,6 +302,21 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String priceLevel;
+
+  /**
+   * The primary type of the given result. This type must one of the Places API supported types. For
+   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String primaryType;
+
+  /**
+   * The display name of the primary type, localized to the request language if applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeLocalizedText primaryTypeDisplayName;
 
   /**
    * A rating between 1.0 and 5.0, based on user reviews of this place.
@@ -244,6 +351,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Boolean reservable;
 
   /**
+   * Place has restroom.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean restroom;
+
+  /**
    * List of reviews about this place.
    * The value may be {@code null}.
    */
@@ -272,6 +386,27 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Boolean servesBrunch;
 
   /**
+   * Place serves cocktails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean servesCocktails;
+
+  /**
+   * Place serves coffee.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean servesCoffee;
+
+  /**
+   * Place serves dessert.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean servesDessert;
+
+  /**
    * Specifies if the place serves dinner.
    * The value may be {@code null}.
    */
@@ -298,6 +433,20 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean servesWine;
+
+  /**
+   * A short, human-readable address for this place.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shortFormattedAddress;
+
+  /**
+   * A list of sub destinations related to the place.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleMapsPlacesV1PlaceSubDestination> subDestinations;
 
   /**
    * Specifies if the business supports takeout.
@@ -412,6 +561,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setAdrFormatAddress(java.lang.String adrFormatAddress) {
     this.adrFormatAddress = adrFormatAddress;
+    return this;
+  }
+
+  /**
+   * Place allows dogs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowsDogs() {
+    return allowsDogs;
+  }
+
+  /**
+   * Place allows dogs.
+   * @param allowsDogs allowsDogs or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setAllowsDogs(java.lang.Boolean allowsDogs) {
+    this.allowsDogs = allowsDogs;
     return this;
   }
 
@@ -589,6 +755,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * Information of ev charging options.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1EVChargeOptions getEvChargeOptions() {
+    return evChargeOptions;
+  }
+
+  /**
+   * Information of ev charging options.
+   * @param evChargeOptions evChargeOptions or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setEvChargeOptions(GoogleMapsPlacesV1EVChargeOptions evChargeOptions) {
+    this.evChargeOptions = evChargeOptions;
+    return this;
+  }
+
+  /**
    * A full, human-readable address for this place.
    * @return value or {@code null} for none
    */
@@ -602,6 +785,76 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setFormattedAddress(java.lang.String formattedAddress) {
     this.formattedAddress = formattedAddress;
+    return this;
+  }
+
+  /**
+   * The most recent information about fuel options in a gas station. This information is updated
+   * regularly.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1FuelOptions getFuelOptions() {
+    return fuelOptions;
+  }
+
+  /**
+   * The most recent information about fuel options in a gas station. This information is updated
+   * regularly.
+   * @param fuelOptions fuelOptions or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setFuelOptions(GoogleMapsPlacesV1FuelOptions fuelOptions) {
+    this.fuelOptions = fuelOptions;
+    return this;
+  }
+
+  /**
+   * Place is good for children.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGoodForChildren() {
+    return goodForChildren;
+  }
+
+  /**
+   * Place is good for children.
+   * @param goodForChildren goodForChildren or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setGoodForChildren(java.lang.Boolean goodForChildren) {
+    this.goodForChildren = goodForChildren;
+    return this;
+  }
+
+  /**
+   * Place accommodates groups.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGoodForGroups() {
+    return goodForGroups;
+  }
+
+  /**
+   * Place accommodates groups.
+   * @param goodForGroups goodForGroups or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setGoodForGroups(java.lang.Boolean goodForGroups) {
+    this.goodForGroups = goodForGroups;
+    return this;
+  }
+
+  /**
+   * Place is suitable for watching sports.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGoodForWatchingSports() {
+    return goodForWatchingSports;
+  }
+
+  /**
+   * Place is suitable for watching sports.
+   * @param goodForWatchingSports goodForWatchingSports or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setGoodForWatchingSports(java.lang.Boolean goodForWatchingSports) {
+    this.goodForWatchingSports = goodForWatchingSports;
     return this;
   }
 
@@ -693,6 +946,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * Place provides live music.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLiveMusic() {
+    return liveMusic;
+  }
+
+  /**
+   * Place provides live music.
+   * @param liveMusic liveMusic or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setLiveMusic(java.lang.Boolean liveMusic) {
+    this.liveMusic = liveMusic;
+    return this;
+  }
+
+  /**
    * The position of this place.
    * @return value or {@code null} for none
    */
@@ -706,6 +976,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setLocation(GoogleTypeLatLng location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Place has a children's menu.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMenuForChildren() {
+    return menuForChildren;
+  }
+
+  /**
+   * Place has a children's menu.
+   * @param menuForChildren menuForChildren or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setMenuForChildren(java.lang.Boolean menuForChildren) {
+    this.menuForChildren = menuForChildren;
     return this;
   }
 
@@ -746,6 +1033,76 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * Place provides outdoor seating.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOutdoorSeating() {
+    return outdoorSeating;
+  }
+
+  /**
+   * Place provides outdoor seating.
+   * @param outdoorSeating outdoorSeating or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setOutdoorSeating(java.lang.Boolean outdoorSeating) {
+    this.outdoorSeating = outdoorSeating;
+    return this;
+  }
+
+  /**
+   * Options of parking provided by the place.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceParkingOptions getParkingOptions() {
+    return parkingOptions;
+  }
+
+  /**
+   * Options of parking provided by the place.
+   * @param parkingOptions parkingOptions or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setParkingOptions(GoogleMapsPlacesV1PlaceParkingOptions parkingOptions) {
+    this.parkingOptions = parkingOptions;
+    return this;
+  }
+
+  /**
+   * Payment options the place accepts. If a payment option data is not available, the payment
+   * option field will be unset.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlacePaymentOptions getPaymentOptions() {
+    return paymentOptions;
+  }
+
+  /**
+   * Payment options the place accepts. If a payment option data is not available, the payment
+   * option field will be unset.
+   * @param paymentOptions paymentOptions or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setPaymentOptions(GoogleMapsPlacesV1PlacePaymentOptions paymentOptions) {
+    this.paymentOptions = paymentOptions;
+    return this;
+  }
+
+  /**
+   * Information (including references) about photos of this place.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleMapsPlacesV1Photo> getPhotos() {
+    return photos;
+  }
+
+  /**
+   * Information (including references) about photos of this place.
+   * @param photos photos or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setPhotos(java.util.List<GoogleMapsPlacesV1Photo> photos) {
+    this.photos = photos;
+    return this;
+  }
+
+  /**
    * Plus code of the place location lat/long.
    * @return value or {@code null} for none
    */
@@ -776,6 +1133,42 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setPriceLevel(java.lang.String priceLevel) {
     this.priceLevel = priceLevel;
+    return this;
+  }
+
+  /**
+   * The primary type of the given result. This type must one of the Places API supported types. For
+   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrimaryType() {
+    return primaryType;
+  }
+
+  /**
+   * The primary type of the given result. This type must one of the Places API supported types. For
+   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type.
+   * @param primaryType primaryType or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setPrimaryType(java.lang.String primaryType) {
+    this.primaryType = primaryType;
+    return this;
+  }
+
+  /**
+   * The display name of the primary type, localized to the request language if applicable.
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeLocalizedText getPrimaryTypeDisplayName() {
+    return primaryTypeDisplayName;
+  }
+
+  /**
+   * The display name of the primary type, localized to the request language if applicable.
+   * @param primaryTypeDisplayName primaryTypeDisplayName or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setPrimaryTypeDisplayName(GoogleTypeLocalizedText primaryTypeDisplayName) {
+    this.primaryTypeDisplayName = primaryTypeDisplayName;
     return this;
   }
 
@@ -856,6 +1249,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * Place has restroom.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRestroom() {
+    return restroom;
+  }
+
+  /**
+   * Place has restroom.
+   * @param restroom restroom or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setRestroom(java.lang.Boolean restroom) {
+    this.restroom = restroom;
+    return this;
+  }
+
+  /**
    * List of reviews about this place.
    * @return value or {@code null} for none
    */
@@ -924,6 +1334,57 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * Place serves cocktails.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getServesCocktails() {
+    return servesCocktails;
+  }
+
+  /**
+   * Place serves cocktails.
+   * @param servesCocktails servesCocktails or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setServesCocktails(java.lang.Boolean servesCocktails) {
+    this.servesCocktails = servesCocktails;
+    return this;
+  }
+
+  /**
+   * Place serves coffee.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getServesCoffee() {
+    return servesCoffee;
+  }
+
+  /**
+   * Place serves coffee.
+   * @param servesCoffee servesCoffee or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setServesCoffee(java.lang.Boolean servesCoffee) {
+    this.servesCoffee = servesCoffee;
+    return this;
+  }
+
+  /**
+   * Place serves dessert.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getServesDessert() {
+    return servesDessert;
+  }
+
+  /**
+   * Place serves dessert.
+   * @param servesDessert servesDessert or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setServesDessert(java.lang.Boolean servesDessert) {
+    this.servesDessert = servesDessert;
+    return this;
+  }
+
+  /**
    * Specifies if the place serves dinner.
    * @return value or {@code null} for none
    */
@@ -988,6 +1449,40 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setServesWine(java.lang.Boolean servesWine) {
     this.servesWine = servesWine;
+    return this;
+  }
+
+  /**
+   * A short, human-readable address for this place.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShortFormattedAddress() {
+    return shortFormattedAddress;
+  }
+
+  /**
+   * A short, human-readable address for this place.
+   * @param shortFormattedAddress shortFormattedAddress or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setShortFormattedAddress(java.lang.String shortFormattedAddress) {
+    this.shortFormattedAddress = shortFormattedAddress;
+    return this;
+  }
+
+  /**
+   * A list of sub destinations related to the place.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleMapsPlacesV1PlaceSubDestination> getSubDestinations() {
+    return subDestinations;
+  }
+
+  /**
+   * A list of sub destinations related to the place.
+   * @param subDestinations subDestinations or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setSubDestinations(java.util.List<GoogleMapsPlacesV1PlaceSubDestination> subDestinations) {
+    this.subDestinations = subDestinations;
     return this;
   }
 

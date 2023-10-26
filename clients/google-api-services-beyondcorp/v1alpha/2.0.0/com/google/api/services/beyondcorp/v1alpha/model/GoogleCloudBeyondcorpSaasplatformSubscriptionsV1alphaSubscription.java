@@ -60,7 +60,7 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   private java.lang.String name;
 
   /**
-   * Output only. Number of seats in the subscription.
+   * Optional. Number of seats in the subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -165,7 +165,7 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   }
 
   /**
-   * Output only. Number of seats in the subscription.
+   * Optional. Number of seats in the subscription.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSeatCount() {
@@ -173,7 +173,7 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   }
 
   /**
-   * Output only. Number of seats in the subscription.
+   * Optional. Number of seats in the subscription.
    * @param seatCount seatCount or {@code null} for none
    */
   public GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription setSeatCount(java.lang.Long seatCount) {

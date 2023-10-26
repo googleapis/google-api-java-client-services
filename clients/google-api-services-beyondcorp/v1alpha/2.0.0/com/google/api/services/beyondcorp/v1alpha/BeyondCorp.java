@@ -1057,6 +1057,123 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
+            /**
+             * Optional. A filter specifying constraints of a list operation. All fields in the
+             * PartnerTenant message are supported. For example, the following query will return the
+             * PartnerTenants with displayName "test-tenant"
+             * organizations/${ORG_ID}/locations/${LOCATION}/partnerTenants?filter=displayName
+             * ="test-tenant" Nested fields are also supported. The follow query will return
+             * PartnerTenants with internal_tenant_id "1234" organizations/${ORG_ID}/locations/${LOC
+             * ATION}/partnerTenants?filter=partnerMetadata.internalTenantId="1234" For more
+             * information, please refer to https://google.aip.dev/160.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. A filter specifying constraints of a list operation. All fields in the PartnerTenant
+           message are supported. For example, the following query will return the PartnerTenants with
+           displayName "test-tenant"
+           organizations/${ORG_ID}/locations/${LOCATION}/partnerTenants?filter=displayName="test-tenant"
+           Nested fields are also supported. The follow query will return PartnerTenants with
+           internal_tenant_id "1234" organizations/${ORG_ID}/locations/${LOCATION}/partnerTenants?filter=partn
+           erMetadata.internalTenantId="1234" For more information, please refer to
+           https://google.aip.dev/160.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. A filter specifying constraints of a list operation. All fields in the
+             * PartnerTenant message are supported. For example, the following query will return the
+             * PartnerTenants with displayName "test-tenant"
+             * organizations/${ORG_ID}/locations/${LOCATION}/partnerTenants?filter=displayName
+             * ="test-tenant" Nested fields are also supported. The follow query will return
+             * PartnerTenants with internal_tenant_id "1234" organizations/${ORG_ID}/locations/${LOC
+             * ATION}/partnerTenants?filter=partnerMetadata.internalTenantId="1234" For more
+             * information, please refer to https://google.aip.dev/160.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Specifies the ordering of results. See [Sorting
+             * order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more
+             * information.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Specifies the ordering of results. See [Sorting
+           order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more information.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Specifies the ordering of results. See [Sorting
+             * order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more
+             * information.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. If not specified, a default value of
+             * 50 will be used by the service. Regardless of the page_size value, the response may
+             * include a partial list and a caller should only rely on response's next_page_token to
+             * determine if there are more instances left to be queried.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of items to return. If not specified, a default value of 50 will be
+           used by the service. Regardless of the page_size value, the response may include a partial list and
+           a caller should only rely on response's next_page_token to determine if there are more instances
+           left to be queried.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. If not specified, a default value of
+             * 50 will be used by the service. Regardless of the page_size value, the response may
+             * include a partial list and a caller should only rely on response's next_page_token to
+             * determine if there are more instances left to be queried.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous
+             * ListPartnerTenantsResponse, if any.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous ListPartnerTenantsResponse, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous
+             * ListPartnerTenantsResponse, if any.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
@@ -3832,6 +3949,122 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                       "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
                 }
                 this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. A filter specifying constraints of a list operation. All fields in the
+               * ProxyConfig message are supported. For example, the following query will return the
+               * ProxyConfigs with displayName "test-config" organizations/${ORG_ID}/locations/globa
+               * l/partnerTenants/${PARTNER_TENANT_ID}/proxyConfigs?filter=displayName="test-config"
+               * Nested fields are also supported. The follow query will return ProxyConfigs with
+               * pacUri "example.com/pac.pac" organizations/${ORG_ID}/locations/global/partnerTenant
+               * s/${PARTNER_TENANT_ID}/proxyConfigs?filter=routingInfo.pacUri="example.com/pac.pac"
+               * For more information, please refer to https://google.aip.dev/160.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. A filter specifying constraints of a list operation. All fields in the ProxyConfig
+             message are supported. For example, the following query will return the ProxyConfigs with
+             displayName "test-config" organizations/${ORG_ID}/locations/global/partnerTenants/${PARTNER_TENANT_
+             ID}/proxyConfigs?filter=displayName="test-config" Nested fields are also supported. The follow
+             query will return ProxyConfigs with pacUri "example.com/pac.pac" organizations/${ORG_ID}/locations/
+             global/partnerTenants/${PARTNER_TENANT_ID}/proxyConfigs?filter=routingInfo.pacUri="example.com/pac.
+             pac" For more information, please refer to https://google.aip.dev/160.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. A filter specifying constraints of a list operation. All fields in the
+               * ProxyConfig message are supported. For example, the following query will return the
+               * ProxyConfigs with displayName "test-config" organizations/${ORG_ID}/locations/globa
+               * l/partnerTenants/${PARTNER_TENANT_ID}/proxyConfigs?filter=displayName="test-config"
+               * Nested fields are also supported. The follow query will return ProxyConfigs with
+               * pacUri "example.com/pac.pac" organizations/${ORG_ID}/locations/global/partnerTenant
+               * s/${PARTNER_TENANT_ID}/proxyConfigs?filter=routingInfo.pacUri="example.com/pac.pac"
+               * For more information, please refer to https://google.aip.dev/160.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. Specifies the ordering of results. See [Sorting
+               * order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more
+               * information.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Optional. Specifies the ordering of results. See [Sorting
+             order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more information.
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /**
+               * Optional. Specifies the ordering of results. See [Sorting
+               * order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more
+               * information.
+               */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of items to return. If not specified, a default value
+               * of 50 will be used by the service. Regardless of the page_size value, the response
+               * may include a partial list and a caller should only rely on response's
+               * next_page_token to determine if there are more instances left to be queried.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of items to return. If not specified, a default value of 50 will be
+             used by the service. Regardless of the page_size value, the response may include a partial list and
+             a caller should only rely on response's next_page_token to determine if there are more instances
+             left to be queried.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of items to return. If not specified, a default value
+               * of 50 will be used by the service. Regardless of the page_size value, the response
+               * may include a partial list and a caller should only rely on response's
+               * next_page_token to determine if there are more instances left to be queried.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. The next_page_token value returned from a previous
+               * ListProxyConfigsRequest, if any.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The next_page_token value returned from a previous ListProxyConfigsRequest, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. The next_page_token value returned from a previous
+               * ListProxyConfigsRequest, if any.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
                 return this;
               }
 

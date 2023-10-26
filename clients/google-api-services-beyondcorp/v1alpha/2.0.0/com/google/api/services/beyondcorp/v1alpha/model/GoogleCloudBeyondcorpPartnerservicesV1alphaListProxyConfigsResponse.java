@@ -30,11 +30,38 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpPartnerservicesV1alphaListProxyConfigsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * A token to retrieve the next page of results, or empty if there are no more results in the
+   * list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
    * The list of ProxyConfig objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig> proxyConfigs;
+
+  /**
+   * A token to retrieve the next page of results, or empty if there are no more results in the
+   * list.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * A token to retrieve the next page of results, or empty if there are no more results in the
+   * list.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaListProxyConfigsResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
+    return this;
+  }
 
   /**
    * The list of ProxyConfig objects.

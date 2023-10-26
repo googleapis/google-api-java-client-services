@@ -28,6 +28,7 @@ then
   exit 1
 fi
 
+# Default to use the latest variant
 if [[ -z "${VARIANT}" ]]
 then
   VARIANT=${LATEST_VARIANT}
@@ -54,6 +55,7 @@ do
       --language_variant=${VARIANT} \
       --package_path=api/services
 
-  # copy the latest README to the main service location
+  # Copy the latest variant's README to the main service location
+  # Generation of libraries with older variants should not update the root README
   cp ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${LATEST_VARIANT}/README.md ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/README.md
 done

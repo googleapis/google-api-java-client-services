@@ -30,7 +30,7 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. This photo's authors.
+   * This photo's authors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +43,14 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The maximum available height, in pixels.
+   * The maximum available height, in pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer heightPx;
 
   /**
-   * Output only. A reference representing this place photo which may be used to look up this place
+   * Identifier. A reference representing this place photo which may be used to look up this place
    * photo again (a.k.a. the API "resource" name: places/{place_id}/photos/{photo}).
    * The value may be {@code null}.
    */
@@ -58,14 +58,14 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
   private java.lang.String name;
 
   /**
-   * Output only. The maximum available width, in pixels.
+   * The maximum available width, in pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer widthPx;
 
   /**
-   * Output only. This photo's authors.
+   * This photo's authors.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1AuthorAttribution> getAuthorAttributions() {
@@ -73,7 +73,7 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. This photo's authors.
+   * This photo's authors.
    * @param authorAttributions authorAttributions or {@code null} for none
    */
   public GoogleMapsPlacesV1Photo setAuthorAttributions(java.util.List<GoogleMapsPlacesV1AuthorAttribution> authorAttributions) {
@@ -82,7 +82,7 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The maximum available height, in pixels.
+   * The maximum available height, in pixels.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHeightPx() {
@@ -90,7 +90,7 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The maximum available height, in pixels.
+   * The maximum available height, in pixels.
    * @param heightPx heightPx or {@code null} for none
    */
   public GoogleMapsPlacesV1Photo setHeightPx(java.lang.Integer heightPx) {
@@ -99,7 +99,7 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A reference representing this place photo which may be used to look up this place
+   * Identifier. A reference representing this place photo which may be used to look up this place
    * photo again (a.k.a. the API "resource" name: places/{place_id}/photos/{photo}).
    * @return value or {@code null} for none
    */
@@ -108,7 +108,7 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A reference representing this place photo which may be used to look up this place
+   * Identifier. A reference representing this place photo which may be used to look up this place
    * photo again (a.k.a. the API "resource" name: places/{place_id}/photos/{photo}).
    * @param name name or {@code null} for none
    */
@@ -118,7 +118,7 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The maximum available width, in pixels.
+   * The maximum available width, in pixels.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWidthPx() {
@@ -126,7 +126,7 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The maximum available width, in pixels.
+   * The maximum available width, in pixels.
    * @param widthPx widthPx or {@code null} for none
    */
   public GoogleMapsPlacesV1Photo setWidthPx(java.lang.Integer widthPx) {

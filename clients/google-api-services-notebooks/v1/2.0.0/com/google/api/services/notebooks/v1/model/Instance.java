@@ -178,7 +178,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String machineType;
 
   /**
-   * Custom metadata to apply to this instance.
+   * Custom metadata to apply to this instance. For example, to specify a Cloud Storage bucket for
+   * automatic backup, you can use the `gcs-data-bucket` metadata tag. Format: `"--metadata=gcs-
+   * data-bucket=``BUCKET''"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -672,7 +674,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom metadata to apply to this instance.
+   * Custom metadata to apply to this instance. For example, to specify a Cloud Storage bucket for
+   * automatic backup, you can use the `gcs-data-bucket` metadata tag. Format: `"--metadata=gcs-
+   * data-bucket=``BUCKET''"`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -680,7 +684,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom metadata to apply to this instance.
+   * Custom metadata to apply to this instance. For example, to specify a Cloud Storage bucket for
+   * automatic backup, you can use the `gcs-data-bucket` metadata tag. Format: `"--metadata=gcs-
+   * data-bucket=``BUCKET''"`.
    * @param metadata metadata or {@code null} for none
    */
   public Instance setMetadata(java.util.Map<String, java.lang.String> metadata) {

@@ -30,58 +30,58 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. This review's author.
+   * This review's author.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleMapsPlacesV1AuthorAttribution authorAttribution;
 
   /**
-   * Output only. A reference representing this place review which may be used to look up this place
-   * review again (a.k.a. the API "resource" name: places/{place_id}/reviews/{review}).
+   * A reference representing this place review which may be used to look up this place review again
+   * (also called the API "resource" name: places/place_id/reviews/review).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The review text in its original language.
+   * The review text in its original language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeLocalizedText originalText;
 
   /**
-   * Output only. Timestamp for the review.
+   * Timestamp for the review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String publishTime;
 
   /**
-   * Output only. A number between 1.0 and 5.0, a.k.a. the number of stars.
+   * A number between 1.0 and 5.0, also called the number of stars.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double rating;
 
   /**
-   * Output only. A string of formatted recent time, expressing the review time relative to the
-   * current time in a form appropriate for the language and country.
+   * A string of formatted recent time, expressing the review time relative to the current time in a
+   * form appropriate for the language and country.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String relativePublishTimeDescription;
 
   /**
-   * Output only. The localized text of the review.
+   * The localized text of the review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeLocalizedText text;
 
   /**
-   * Output only. This review's author.
+   * This review's author.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1AuthorAttribution getAuthorAttribution() {
@@ -89,7 +89,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. This review's author.
+   * This review's author.
    * @param authorAttribution authorAttribution or {@code null} for none
    */
   public GoogleMapsPlacesV1Review setAuthorAttribution(GoogleMapsPlacesV1AuthorAttribution authorAttribution) {
@@ -98,8 +98,8 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. A reference representing this place review which may be used to look up this place
-   * review again (a.k.a. the API "resource" name: places/{place_id}/reviews/{review}).
+   * A reference representing this place review which may be used to look up this place review again
+   * (also called the API "resource" name: places/place_id/reviews/review).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -107,8 +107,8 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. A reference representing this place review which may be used to look up this place
-   * review again (a.k.a. the API "resource" name: places/{place_id}/reviews/{review}).
+   * A reference representing this place review which may be used to look up this place review again
+   * (also called the API "resource" name: places/place_id/reviews/review).
    * @param name name or {@code null} for none
    */
   public GoogleMapsPlacesV1Review setName(java.lang.String name) {
@@ -117,7 +117,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The review text in its original language.
+   * The review text in its original language.
    * @return value or {@code null} for none
    */
   public GoogleTypeLocalizedText getOriginalText() {
@@ -125,7 +125,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The review text in its original language.
+   * The review text in its original language.
    * @param originalText originalText or {@code null} for none
    */
   public GoogleMapsPlacesV1Review setOriginalText(GoogleTypeLocalizedText originalText) {
@@ -134,7 +134,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. Timestamp for the review.
+   * Timestamp for the review.
    * @return value or {@code null} for none
    */
   public String getPublishTime() {
@@ -142,7 +142,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. Timestamp for the review.
+   * Timestamp for the review.
    * @param publishTime publishTime or {@code null} for none
    */
   public GoogleMapsPlacesV1Review setPublishTime(String publishTime) {
@@ -151,7 +151,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. A number between 1.0 and 5.0, a.k.a. the number of stars.
+   * A number between 1.0 and 5.0, also called the number of stars.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRating() {
@@ -159,7 +159,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. A number between 1.0 and 5.0, a.k.a. the number of stars.
+   * A number between 1.0 and 5.0, also called the number of stars.
    * @param rating rating or {@code null} for none
    */
   public GoogleMapsPlacesV1Review setRating(java.lang.Double rating) {
@@ -168,8 +168,8 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. A string of formatted recent time, expressing the review time relative to the
-   * current time in a form appropriate for the language and country.
+   * A string of formatted recent time, expressing the review time relative to the current time in a
+   * form appropriate for the language and country.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelativePublishTimeDescription() {
@@ -177,8 +177,8 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. A string of formatted recent time, expressing the review time relative to the
-   * current time in a form appropriate for the language and country.
+   * A string of formatted recent time, expressing the review time relative to the current time in a
+   * form appropriate for the language and country.
    * @param relativePublishTimeDescription relativePublishTimeDescription or {@code null} for none
    */
   public GoogleMapsPlacesV1Review setRelativePublishTimeDescription(java.lang.String relativePublishTimeDescription) {
@@ -187,7 +187,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The localized text of the review.
+   * The localized text of the review.
    * @return value or {@code null} for none
    */
   public GoogleTypeLocalizedText getText() {
@@ -195,7 +195,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The localized text of the review.
+   * The localized text of the review.
    * @param text text or {@code null} for none
    */
   public GoogleMapsPlacesV1Review setText(GoogleTypeLocalizedText text) {

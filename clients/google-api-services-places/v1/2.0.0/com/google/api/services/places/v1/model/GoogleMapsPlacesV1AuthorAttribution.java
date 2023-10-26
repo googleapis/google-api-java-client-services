@@ -30,28 +30,28 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1AuthorAttribution extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Name of the author of the Photo or Review.
+   * Name of the author of the Photo or Review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. Profile photo URI of the author of the Photo or Review.
+   * Profile photo URI of the author of the Photo or Review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String photoUri;
 
   /**
-   * Output only. URI of the author of the Photo or Review.
+   * URI of the author of the Photo or Review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Output only. Name of the author of the Photo or Review.
+   * Name of the author of the Photo or Review.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -59,7 +59,7 @@ public final class GoogleMapsPlacesV1AuthorAttribution extends com.google.api.cl
   }
 
   /**
-   * Output only. Name of the author of the Photo or Review.
+   * Name of the author of the Photo or Review.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleMapsPlacesV1AuthorAttribution setDisplayName(java.lang.String displayName) {
@@ -68,7 +68,7 @@ public final class GoogleMapsPlacesV1AuthorAttribution extends com.google.api.cl
   }
 
   /**
-   * Output only. Profile photo URI of the author of the Photo or Review.
+   * Profile photo URI of the author of the Photo or Review.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhotoUri() {
@@ -76,7 +76,7 @@ public final class GoogleMapsPlacesV1AuthorAttribution extends com.google.api.cl
   }
 
   /**
-   * Output only. Profile photo URI of the author of the Photo or Review.
+   * Profile photo URI of the author of the Photo or Review.
    * @param photoUri photoUri or {@code null} for none
    */
   public GoogleMapsPlacesV1AuthorAttribution setPhotoUri(java.lang.String photoUri) {
@@ -85,7 +85,7 @@ public final class GoogleMapsPlacesV1AuthorAttribution extends com.google.api.cl
   }
 
   /**
-   * Output only. URI of the author of the Photo or Review.
+   * URI of the author of the Photo or Review.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -93,7 +93,7 @@ public final class GoogleMapsPlacesV1AuthorAttribution extends com.google.api.cl
   }
 
   /**
-   * Output only. URI of the author of the Photo or Review.
+   * URI of the author of the Photo or Review.
    * @param uri uri or {@code null} for none
    */
   public GoogleMapsPlacesV1AuthorAttribution setUri(java.lang.String uri) {

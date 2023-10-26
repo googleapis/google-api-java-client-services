@@ -305,14 +305,18 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
 
   /**
    * The primary type of the given result. This type must one of the Places API supported types. For
-   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type.
+   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type. For
+   * the complete list of possible values, see Table A and Table B at
+   * https://developers.google.com/maps/documentation/places/web-service/place-types
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryType;
 
   /**
-   * The display name of the primary type, localized to the request language if applicable.
+   * The display name of the primary type, localized to the request language if applicable. For the
+   * complete list of possible values, see Table A and Table B at
+   * https://developers.google.com/maps/documentation/places/web-service/place-types
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -358,7 +362,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Boolean restroom;
 
   /**
-   * List of reviews about this place.
+   * List of reviews about this place, sorted by relevance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -456,7 +460,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Boolean takeout;
 
   /**
-   * A set of type tags for this result. For example, "political" and "locality". See:
+   * A set of type tags for this result. For example, "political" and "locality". For the complete
+   * list of possible values, see Table A and Table B at
    * https://developers.google.com/maps/documentation/places/web-service/place-types
    * The value may be {@code null}.
    */
@@ -1138,7 +1143,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
 
   /**
    * The primary type of the given result. This type must one of the Places API supported types. For
-   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type.
+   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type. For
+   * the complete list of possible values, see Table A and Table B at
+   * https://developers.google.com/maps/documentation/places/web-service/place-types
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryType() {
@@ -1147,7 +1154,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
 
   /**
    * The primary type of the given result. This type must one of the Places API supported types. For
-   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type.
+   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type. For
+   * the complete list of possible values, see Table A and Table B at
+   * https://developers.google.com/maps/documentation/places/web-service/place-types
    * @param primaryType primaryType or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setPrimaryType(java.lang.String primaryType) {
@@ -1156,7 +1165,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * The display name of the primary type, localized to the request language if applicable.
+   * The display name of the primary type, localized to the request language if applicable. For the
+   * complete list of possible values, see Table A and Table B at
+   * https://developers.google.com/maps/documentation/places/web-service/place-types
    * @return value or {@code null} for none
    */
   public GoogleTypeLocalizedText getPrimaryTypeDisplayName() {
@@ -1164,7 +1175,9 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * The display name of the primary type, localized to the request language if applicable.
+   * The display name of the primary type, localized to the request language if applicable. For the
+   * complete list of possible values, see Table A and Table B at
+   * https://developers.google.com/maps/documentation/places/web-service/place-types
    * @param primaryTypeDisplayName primaryTypeDisplayName or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setPrimaryTypeDisplayName(GoogleTypeLocalizedText primaryTypeDisplayName) {
@@ -1266,7 +1279,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * List of reviews about this place.
+   * List of reviews about this place, sorted by relevance.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1Review> getReviews() {
@@ -1274,7 +1287,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * List of reviews about this place.
+   * List of reviews about this place, sorted by relevance.
    * @param reviews reviews or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setReviews(java.util.List<GoogleMapsPlacesV1Review> reviews) {
@@ -1504,7 +1517,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * A set of type tags for this result. For example, "political" and "locality". See:
+   * A set of type tags for this result. For example, "political" and "locality". For the complete
+   * list of possible values, see Table A and Table B at
    * https://developers.google.com/maps/documentation/places/web-service/place-types
    * @return value or {@code null} for none
    */
@@ -1513,7 +1527,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * A set of type tags for this result. For example, "political" and "locality". See:
+   * A set of type tags for this result. For example, "political" and "locality". For the complete
+   * list of possible values, see Table A and Table B at
    * https://developers.google.com/maps/documentation/places/web-service/place-types
    * @param types types or {@code null} for none
    */

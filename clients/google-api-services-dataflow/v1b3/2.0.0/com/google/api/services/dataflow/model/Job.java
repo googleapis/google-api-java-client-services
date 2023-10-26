@@ -185,6 +185,14 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private RuntimeUpdatableParams runtimeUpdatableParams;
 
   /**
+   * Output only. Reserved for future use. This field is set only in responses from the server; it
+   * is ignored if it is set in any requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
    * Reserved for future use. This field is set only in responses from the server; it is ignored if
    * it is set in any requests.
    * The value may be {@code null}.
@@ -614,6 +622,25 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setRuntimeUpdatableParams(RuntimeUpdatableParams runtimeUpdatableParams) {
     this.runtimeUpdatableParams = runtimeUpdatableParams;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use. This field is set only in responses from the server; it
+   * is ignored if it is set in any requests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use. This field is set only in responses from the server; it
+   * is ignored if it is set in any requests.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public Job setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
     return this;
   }
 

@@ -87,6 +87,14 @@ public final class GoogleCloudAiplatformV1StudySpec extends com.google.api.clien
   private java.util.List<GoogleCloudAiplatformV1StudySpecParameterSpec> parameters;
 
   /**
+   * Conditions for automated stopping of a Study. Enable automated stopping by configuring at least
+   * one condition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1StudySpecStudyStoppingConfig studyStoppingConfig;
+
+  /**
    * The search algorithm specified for the Study.
    * @return value or {@code null} for none
    */
@@ -221,6 +229,25 @@ public final class GoogleCloudAiplatformV1StudySpec extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1StudySpec setParameters(java.util.List<GoogleCloudAiplatformV1StudySpecParameterSpec> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Conditions for automated stopping of a Study. Enable automated stopping by configuring at least
+   * one condition.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1StudySpecStudyStoppingConfig getStudyStoppingConfig() {
+    return studyStoppingConfig;
+  }
+
+  /**
+   * Conditions for automated stopping of a Study. Enable automated stopping by configuring at least
+   * one condition.
+   * @param studyStoppingConfig studyStoppingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1StudySpec setStudyStoppingConfig(GoogleCloudAiplatformV1StudySpecStudyStoppingConfig studyStoppingConfig) {
+    this.studyStoppingConfig = studyStoppingConfig;
     return this;
   }
 

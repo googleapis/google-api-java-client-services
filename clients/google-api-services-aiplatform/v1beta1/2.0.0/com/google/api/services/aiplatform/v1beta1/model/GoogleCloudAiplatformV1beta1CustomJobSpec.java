@@ -106,9 +106,8 @@ public final class GoogleCloudAiplatformV1beta1CustomJobSpec extends com.google.
 
   /**
    * The ID of the location to store protected artifacts. e.g. us-central1. Populate only when the
-   * location is different than CustomJob location. For unprotected artifacts, the value of this
-   * field is ignored. List of supported locations: https://cloud.google.com/vertex-
-   * ai/docs/general/locations
+   * location is different than CustomJob location. List of supported locations:
+   * https://cloud.google.com/vertex-ai/docs/general/locations
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -329,9 +328,8 @@ public final class GoogleCloudAiplatformV1beta1CustomJobSpec extends com.google.
 
   /**
    * The ID of the location to store protected artifacts. e.g. us-central1. Populate only when the
-   * location is different than CustomJob location. For unprotected artifacts, the value of this
-   * field is ignored. List of supported locations: https://cloud.google.com/vertex-
-   * ai/docs/general/locations
+   * location is different than CustomJob location. List of supported locations:
+   * https://cloud.google.com/vertex-ai/docs/general/locations
    * @return value or {@code null} for none
    */
   public java.lang.String getProtectedArtifactLocationId() {
@@ -340,9 +338,8 @@ public final class GoogleCloudAiplatformV1beta1CustomJobSpec extends com.google.
 
   /**
    * The ID of the location to store protected artifacts. e.g. us-central1. Populate only when the
-   * location is different than CustomJob location. For unprotected artifacts, the value of this
-   * field is ignored. List of supported locations: https://cloud.google.com/vertex-
-   * ai/docs/general/locations
+   * location is different than CustomJob location. List of supported locations:
+   * https://cloud.google.com/vertex-ai/docs/general/locations
    * @param protectedArtifactLocationId protectedArtifactLocationId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CustomJobSpec setProtectedArtifactLocationId(java.lang.String protectedArtifactLocationId) {

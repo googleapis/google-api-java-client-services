@@ -94,6 +94,14 @@ public final class GoogleCloudAiplatformV1beta1StudySpec extends com.google.api.
   private java.util.List<GoogleCloudAiplatformV1beta1StudySpecParameterSpec> parameters;
 
   /**
+   * Conditions for automated stopping of a Study. Enable automated stopping by configuring at least
+   * one condition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1StudySpecStudyStoppingConfig studyStoppingConfig;
+
+  /**
    * The configuration info/options for transfer learning. Currently supported for Vertex AI Vizier
    * service, not HyperParameterTuningJob
    * The value may be {@code null}.
@@ -253,6 +261,25 @@ public final class GoogleCloudAiplatformV1beta1StudySpec extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1StudySpec setParameters(java.util.List<GoogleCloudAiplatformV1beta1StudySpecParameterSpec> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Conditions for automated stopping of a Study. Enable automated stopping by configuring at least
+   * one condition.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1StudySpecStudyStoppingConfig getStudyStoppingConfig() {
+    return studyStoppingConfig;
+  }
+
+  /**
+   * Conditions for automated stopping of a Study. Enable automated stopping by configuring at least
+   * one condition.
+   * @param studyStoppingConfig studyStoppingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1StudySpec setStudyStoppingConfig(GoogleCloudAiplatformV1beta1StudySpecStudyStoppingConfig studyStoppingConfig) {
+    this.studyStoppingConfig = studyStoppingConfig;
     return this;
   }
 

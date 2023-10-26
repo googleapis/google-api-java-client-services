@@ -30,6 +30,13 @@ package com.google.api.services.gmail.model;
 public final class CsePrivateKeyMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata for hardware keys.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HardwareKeyMetadata hardwareKeyMetadata;
+
+  /**
    * Metadata for a private key instance managed by an external key access control list service.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class CsePrivateKeyMetadata extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String privateKeyMetadataId;
+
+  /**
+   * Metadata for hardware keys.
+   * @return value or {@code null} for none
+   */
+  public HardwareKeyMetadata getHardwareKeyMetadata() {
+    return hardwareKeyMetadata;
+  }
+
+  /**
+   * Metadata for hardware keys.
+   * @param hardwareKeyMetadata hardwareKeyMetadata or {@code null} for none
+   */
+  public CsePrivateKeyMetadata setHardwareKeyMetadata(HardwareKeyMetadata hardwareKeyMetadata) {
+    this.hardwareKeyMetadata = hardwareKeyMetadata;
+    return this;
+  }
 
   /**
    * Metadata for a private key instance managed by an external key access control list service.

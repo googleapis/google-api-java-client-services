@@ -51,6 +51,13 @@ public final class EventSubscription extends com.google.api.client.json.GenericJ
   private java.lang.String eventTypeId;
 
   /**
+   * Optional. JMS is the source for the event listener.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JMS jms;
+
+  /**
    * Required. Resource name of the EventSubscription. Format: projects/{project}/locations/{locatio
    * n}/connections/{connection}/eventSubscriptions/{event_subscription}
    * The value may be {@code null}.
@@ -134,6 +141,23 @@ public final class EventSubscription extends com.google.api.client.json.GenericJ
    */
   public EventSubscription setEventTypeId(java.lang.String eventTypeId) {
     this.eventTypeId = eventTypeId;
+    return this;
+  }
+
+  /**
+   * Optional. JMS is the source for the event listener.
+   * @return value or {@code null} for none
+   */
+  public JMS getJms() {
+    return jms;
+  }
+
+  /**
+   * Optional. JMS is the source for the event listener.
+   * @param jms jms or {@code null} for none
+   */
+  public EventSubscription setJms(JMS jms) {
+    this.jms = jms;
     return this;
   }
 

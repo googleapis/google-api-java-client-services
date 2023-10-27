@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2ListStoredInfoTypesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the next page is available then the next page token to be used in following
+   * If the next page is available then the next page token to be used in the following
    * ListStoredInfoTypes request.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2ListStoredInfoTypesResponse extends com.goo
   private java.util.List<GooglePrivacyDlpV2StoredInfoType> storedInfoTypes;
 
   /**
-   * If the next page is available then the next page token to be used in following
+   * If the next page is available then the next page token to be used in the following
    * ListStoredInfoTypes request.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2ListStoredInfoTypesResponse extends com.goo
   }
 
   /**
-   * If the next page is available then the next page token to be used in following
+   * If the next page is available then the next page token to be used in the following
    * ListStoredInfoTypes request.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2UpdateDiscoveryConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * New DiscoveryConfig value.
+   * Required. New DiscoveryConfig value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2UpdateDiscoveryConfigRequest extends com.go
   private String updateMask;
 
   /**
-   * New DiscoveryConfig value.
+   * Required. New DiscoveryConfig value.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DiscoveryConfig getDiscoveryConfig() {
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2UpdateDiscoveryConfigRequest extends com.go
   }
 
   /**
-   * New DiscoveryConfig value.
+   * Required. New DiscoveryConfig value.
    * @param discoveryConfig discoveryConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2UpdateDiscoveryConfigRequest setDiscoveryConfig(GooglePrivacyDlpV2DiscoveryConfig discoveryConfig) {

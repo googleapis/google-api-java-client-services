@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CreateDiscoveryConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The config id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it
+   * The config ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it
    * must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can
    * be empty to allow the system to generate one.
    * The value may be {@code null}.
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2CreateDiscoveryConfigRequest extends com.go
   private GooglePrivacyDlpV2DiscoveryConfig discoveryConfig;
 
   /**
-   * The config id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it
+   * The config ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it
    * must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can
    * be empty to allow the system to generate one.
    * @return value or {@code null} for none
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2CreateDiscoveryConfigRequest extends com.go
   }
 
   /**
-   * The config id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it
+   * The config ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it
    * must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can
    * be empty to allow the system to generate one.
    * @param configId configId or {@code null} for none

@@ -17,8 +17,10 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Requirements that must be true before a table is scanned in Discovery for the first time. There
- * is an AND relationship between the top-level attributes.
+ * Requirements that must be true before a table is scanned in discovery for the first time. There
+ * is an AND relationship between the top-level attributes. Additionally, minimum conditions with an
+ * OR relationship that must be met before Cloud DLP scans a table can be set (like a minimum row
+ * count or a minimum table age).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
@@ -46,14 +48,14 @@ public final class GooglePrivacyDlpV2DiscoveryBigQueryConditions extends com.goo
   private GooglePrivacyDlpV2OrConditions orConditions;
 
   /**
-   * Restrict Discovery to categories of table types.
+   * Restrict discovery to categories of table types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String typeCollection;
 
   /**
-   * Restrict Discovery to specific table types.
+   * Restrict discovery to specific table types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +96,7 @@ public final class GooglePrivacyDlpV2DiscoveryBigQueryConditions extends com.goo
   }
 
   /**
-   * Restrict Discovery to categories of table types.
+   * Restrict discovery to categories of table types.
    * @return value or {@code null} for none
    */
   public java.lang.String getTypeCollection() {
@@ -102,7 +104,7 @@ public final class GooglePrivacyDlpV2DiscoveryBigQueryConditions extends com.goo
   }
 
   /**
-   * Restrict Discovery to categories of table types.
+   * Restrict discovery to categories of table types.
    * @param typeCollection typeCollection or {@code null} for none
    */
   public GooglePrivacyDlpV2DiscoveryBigQueryConditions setTypeCollection(java.lang.String typeCollection) {
@@ -111,7 +113,7 @@ public final class GooglePrivacyDlpV2DiscoveryBigQueryConditions extends com.goo
   }
 
   /**
-   * Restrict Discovery to specific table types.
+   * Restrict discovery to specific table types.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryTableTypes getTypes() {
@@ -119,7 +121,7 @@ public final class GooglePrivacyDlpV2DiscoveryBigQueryConditions extends com.goo
   }
 
   /**
-   * Restrict Discovery to specific table types.
+   * Restrict discovery to specific table types.
    * @param types types or {@code null} for none
    */
   public GooglePrivacyDlpV2DiscoveryBigQueryConditions setTypes(GooglePrivacyDlpV2BigQueryTableTypes types) {

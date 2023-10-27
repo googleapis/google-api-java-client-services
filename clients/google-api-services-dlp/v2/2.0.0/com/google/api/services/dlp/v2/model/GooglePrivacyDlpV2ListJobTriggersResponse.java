@@ -44,8 +44,8 @@ public final class GooglePrivacyDlpV2ListJobTriggersResponse extends com.google.
   }
 
   /**
-   * If the next page is available then the next page token to be used in following ListJobTriggers
-   * request.
+   * If the next page is available then the next page token to be used in the following
+   * ListJobTriggers request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class GooglePrivacyDlpV2ListJobTriggersResponse extends com.google.
   }
 
   /**
-   * If the next page is available then the next page token to be used in following ListJobTriggers
-   * request.
+   * If the next page is available then the next page token to be used in the following
+   * ListJobTriggers request.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,8 +78,8 @@ public final class GooglePrivacyDlpV2ListJobTriggersResponse extends com.google.
   }
 
   /**
-   * If the next page is available then the next page token to be used in following ListJobTriggers
-   * request.
+   * If the next page is available then the next page token to be used in the following
+   * ListJobTriggers request.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GooglePrivacyDlpV2ListJobTriggersResponse setNextPageToken(java.lang.String nextPageToken) {

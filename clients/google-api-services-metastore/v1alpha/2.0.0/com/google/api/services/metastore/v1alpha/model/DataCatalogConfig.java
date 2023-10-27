@@ -31,16 +31,16 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class DataCatalogConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Defines whether the metastore metadata should be synced to Data Catalog. The default value is
-   * to disable syncing metastore metadata to Data Catalog.
+   * Optional. Defines whether the metastore metadata should be synced to Data Catalog. The default
+   * value is to disable syncing metastore metadata to Data Catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Defines whether the metastore metadata should be synced to Data Catalog. The default value is
-   * to disable syncing metastore metadata to Data Catalog.
+   * Optional. Defines whether the metastore metadata should be synced to Data Catalog. The default
+   * value is to disable syncing metastore metadata to Data Catalog.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -48,8 +48,8 @@ public final class DataCatalogConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Defines whether the metastore metadata should be synced to Data Catalog. The default value is
-   * to disable syncing metastore metadata to Data Catalog.
+   * Optional. Defines whether the metastore metadata should be synced to Data Catalog. The default
+   * value is to disable syncing metastore metadata to Data Catalog.
    * @param enabled enabled or {@code null} for none
    */
   public DataCatalogConfig setEnabled(java.lang.Boolean enabled) {

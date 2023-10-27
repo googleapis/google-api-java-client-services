@@ -31,7 +31,7 @@ package com.google.api.services.metastore.v1beta.model;
 public final class MetadataIntegration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The integration config for the Data Catalog service.
+   * Optional. The integration config for the Data Catalog service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class MetadataIntegration extends com.google.api.client.json.Generi
   private DataplexConfig dataplexConfig;
 
   /**
-   * The integration config for the Data Catalog service.
+   * Optional. The integration config for the Data Catalog service.
    * @return value or {@code null} for none
    */
   public DataCatalogConfig getDataCatalogConfig() {
@@ -53,7 +53,7 @@ public final class MetadataIntegration extends com.google.api.client.json.Generi
   }
 
   /**
-   * The integration config for the Data Catalog service.
+   * Optional. The integration config for the Data Catalog service.
    * @param dataCatalogConfig dataCatalogConfig or {@code null} for none
    */
   public MetadataIntegration setDataCatalogConfig(DataCatalogConfig dataCatalogConfig) {

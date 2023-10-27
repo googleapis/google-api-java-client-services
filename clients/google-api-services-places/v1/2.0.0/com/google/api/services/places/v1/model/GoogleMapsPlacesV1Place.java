@@ -197,8 +197,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.String iconBackgroundColor;
 
   /**
-   * A truncated URL to an v2 icon mask. User can access different icon type by appending type
-   * suffix to the end (eg, ".svg" or ".png").
+   * A truncated URL to an icon mask. User can access different icon type by appending type suffix
+   * to the end (eg, ".svg" or ".png").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -898,8 +898,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * A truncated URL to an v2 icon mask. User can access different icon type by appending type
-   * suffix to the end (eg, ".svg" or ".png").
+   * A truncated URL to an icon mask. User can access different icon type by appending type suffix
+   * to the end (eg, ".svg" or ".png").
    * @return value or {@code null} for none
    */
   public java.lang.String getIconMaskBaseUri() {
@@ -907,8 +907,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * A truncated URL to an v2 icon mask. User can access different icon type by appending type
-   * suffix to the end (eg, ".svg" or ".png").
+   * A truncated URL to an icon mask. User can access different icon type by appending type suffix
+   * to the end (eg, ".svg" or ".png").
    * @param iconMaskBaseUri iconMaskBaseUri or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setIconMaskBaseUri(java.lang.String iconMaskBaseUri) {

@@ -65,9 +65,9 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   private GoogleMapsPlacesV1SearchTextRequestLocationRestriction locationRestriction;
 
   /**
-   * Maximum number of results to return. It must be between 1 and 20, inclusively. If the number is
-   * unset, it falls back to the upper limit. If the number is set to negative or exceeds the upper
-   * limit, an INVALID_ARGUMENT error is returned.
+   * Maximum number of results to return. It must be between 1 and 20, inclusively. The default is
+   * 20. If the number is unset, it falls back to the upper limit. If the number is set to negative
+   * or exceeds the upper limit, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   private java.lang.Double minRating;
 
   /**
-   * Used to restrict the search to places that are currently open.
+   * Used to restrict the search to places that are currently open. The default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,9 +215,9 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * Maximum number of results to return. It must be between 1 and 20, inclusively. If the number is
-   * unset, it falls back to the upper limit. If the number is set to negative or exceeds the upper
-   * limit, an INVALID_ARGUMENT error is returned.
+   * Maximum number of results to return. It must be between 1 and 20, inclusively. The default is
+   * 20. If the number is unset, it falls back to the upper limit. If the number is set to negative
+   * or exceeds the upper limit, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxResultCount() {
@@ -225,9 +225,9 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * Maximum number of results to return. It must be between 1 and 20, inclusively. If the number is
-   * unset, it falls back to the upper limit. If the number is set to negative or exceeds the upper
-   * limit, an INVALID_ARGUMENT error is returned.
+   * Maximum number of results to return. It must be between 1 and 20, inclusively. The default is
+   * 20. If the number is unset, it falls back to the upper limit. If the number is set to negative
+   * or exceeds the upper limit, an INVALID_ARGUMENT error is returned.
    * @param maxResultCount maxResultCount or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequest setMaxResultCount(java.lang.Integer maxResultCount) {
@@ -261,7 +261,7 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * Used to restrict the search to places that are currently open.
+   * Used to restrict the search to places that are currently open. The default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOpenNow() {
@@ -269,7 +269,7 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * Used to restrict the search to places that are currently open.
+   * Used to restrict the search to places that are currently open. The default is false.
    * @param openNow openNow or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequest setOpenNow(java.lang.Boolean openNow) {

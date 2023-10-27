@@ -38,7 +38,8 @@ public final class GoogleMapsPlacesV1Circle extends com.google.api.client.json.G
   private GoogleTypeLatLng center;
 
   /**
-   * Required. Radius measured in meters. The radius must be within [0.0, 50000.0].
+   * Required. Radius measured in meters. The radius must be within [0.0, 50000.0]. The default
+   * radius is 0.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class GoogleMapsPlacesV1Circle extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Radius measured in meters. The radius must be within [0.0, 50000.0].
+   * Required. Radius measured in meters. The radius must be within [0.0, 50000.0]. The default
+   * radius is 0.0.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRadius() {
@@ -72,7 +74,8 @@ public final class GoogleMapsPlacesV1Circle extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Radius measured in meters. The radius must be within [0.0, 50000.0].
+   * Required. Radius measured in meters. The radius must be within [0.0, 50000.0]. The default
+   * radius is 0.0.
    * @param radius radius or {@code null} for none
    */
   public GoogleMapsPlacesV1Circle setRadius(java.lang.Double radius) {

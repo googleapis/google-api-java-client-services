@@ -44,13 +44,6 @@ public final class DeviceSession extends com.google.api.client.json.GenericJson 
   private AndroidDevice androidDevice;
 
   /**
-   * Optional. The list of requested devices. At most two devices may be simultaneously requested.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AndroidDeviceList androidDeviceList;
-
-  /**
    * Output only. The time that the Session was created.
    * The value may be {@code null}.
    */
@@ -104,7 +97,7 @@ public final class DeviceSession extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The amount of time that a device will be initially allocated for. This can eventually
-   * be extended with the ExtendDeviceSession RPC. Default: 30 minutes.
+   * be extended with the UpdateDeviceSession RPC. Default: 30 minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,23 +134,6 @@ public final class DeviceSession extends com.google.api.client.json.GenericJson 
    */
   public DeviceSession setAndroidDevice(AndroidDevice androidDevice) {
     this.androidDevice = androidDevice;
-    return this;
-  }
-
-  /**
-   * Optional. The list of requested devices. At most two devices may be simultaneously requested.
-   * @return value or {@code null} for none
-   */
-  public AndroidDeviceList getAndroidDeviceList() {
-    return androidDeviceList;
-  }
-
-  /**
-   * Optional. The list of requested devices. At most two devices may be simultaneously requested.
-   * @param androidDeviceList androidDeviceList or {@code null} for none
-   */
-  public DeviceSession setAndroidDeviceList(AndroidDeviceList androidDeviceList) {
-    this.androidDeviceList = androidDeviceList;
     return this;
   }
 
@@ -288,7 +264,7 @@ public final class DeviceSession extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The amount of time that a device will be initially allocated for. This can eventually
-   * be extended with the ExtendDeviceSession RPC. Default: 30 minutes.
+   * be extended with the UpdateDeviceSession RPC. Default: 30 minutes.
    * @return value or {@code null} for none
    */
   public String getTtl() {
@@ -297,7 +273,7 @@ public final class DeviceSession extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The amount of time that a device will be initially allocated for. This can eventually
-   * be extended with the ExtendDeviceSession RPC. Default: 30 minutes.
+   * be extended with the UpdateDeviceSession RPC. Default: 30 minutes.
    * @param ttl ttl or {@code null} for none
    */
   public DeviceSession setTtl(String ttl) {

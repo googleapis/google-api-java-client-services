@@ -264,6 +264,32 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * Optional. The parent to create a billing account from. Format: -
+       * organizations/{organization_id} eg organizations/12345678 -
+       * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
+     organizations/12345678 - billingAccounts/{billing_account_id} eg
+     `billingAccounts/012345-567890-ABCDEF`
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Optional. The parent to create a billing account from. Format: -
+       * organizations/{organization_id} eg organizations/12345678 -
+       * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       */
+      public Create setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
       @Override
       public Create set(String parameterName, Object value) {
         return (Create) super.set(parameterName, value);
@@ -793,9 +819,183 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /**
+       * Optional. The parent resource to list billing accounts from. Format: -
+       * organizations/{organization_id} eg organizations/12345678 -
+       * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Optional. The parent resource to list billing accounts from. Format: -
+     organizations/{organization_id} eg organizations/12345678 - billingAccounts/{billing_account_id} eg
+     `billingAccounts/012345-567890-ABCDEF`
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Optional. The parent resource to list billing accounts from. Format: -
+       * organizations/{organization_id} eg organizations/12345678 -
+       * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Changes which parent organization a billing account belongs to.
+     *
+     * Create a request for the method "billingAccounts.move".
+     *
+     * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+     * parameters, call the {@link Move#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the billing account to move. Must be of the form
+     *        `billingAccounts/{billing_account_id}`. The specified billing account cannot be a
+     *        subaccount, since a subaccount always belongs to the same organization as its parent
+     *        account.
+     * @param content the {@link com.google.api.services.cloudbilling.model.MoveBillingAccountRequest}
+     * @return the request
+     */
+    public Move move(java.lang.String name, com.google.api.services.cloudbilling.model.MoveBillingAccountRequest content) throws java.io.IOException {
+      Move result = new Move(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Move extends CloudbillingRequest<com.google.api.services.cloudbilling.model.BillingAccount> {
+
+      private static final String REST_PATH = "v1/{+name}:move";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
+
+      /**
+       * Changes which parent organization a billing account belongs to.
+       *
+       * Create a request for the method "billingAccounts.move".
+       *
+       * This request holds the parameters needed by the the cloudbilling server.  After setting any
+       * optional parameters, call the {@link Move#execute()} method to invoke the remote operation. <p>
+       * {@link Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the billing account to move. Must be of the form
+     *        `billingAccounts/{billing_account_id}`. The specified billing account cannot be a
+     *        subaccount, since a subaccount always belongs to the same organization as its parent
+     *        account.
+       * @param content the {@link com.google.api.services.cloudbilling.model.MoveBillingAccountRequest}
+       * @since 1.13
+       */
+      protected Move(java.lang.String name, com.google.api.services.cloudbilling.model.MoveBillingAccountRequest content) {
+        super(Cloudbilling.this, "POST", REST_PATH, content, com.google.api.services.cloudbilling.model.BillingAccount.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^billingAccounts/[^/]+$");
+        }
+      }
+
+      @Override
+      public Move set$Xgafv(java.lang.String $Xgafv) {
+        return (Move) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Move setAccessToken(java.lang.String accessToken) {
+        return (Move) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Move setAlt(java.lang.String alt) {
+        return (Move) super.setAlt(alt);
+      }
+
+      @Override
+      public Move setCallback(java.lang.String callback) {
+        return (Move) super.setCallback(callback);
+      }
+
+      @Override
+      public Move setFields(java.lang.String fields) {
+        return (Move) super.setFields(fields);
+      }
+
+      @Override
+      public Move setKey(java.lang.String key) {
+        return (Move) super.setKey(key);
+      }
+
+      @Override
+      public Move setOauthToken(java.lang.String oauthToken) {
+        return (Move) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Move) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Move setQuotaUser(java.lang.String quotaUser) {
+        return (Move) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Move setUploadType(java.lang.String uploadType) {
+        return (Move) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Move setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Move) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the billing account to move. Must be of the form
+       * `billingAccounts/{billing_account_id}`. The specified billing account cannot be a
+       * subaccount, since a subaccount always belongs to the same organization as its parent
+       * account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the billing account to move. Must be of the form
+     `billingAccounts/{billing_account_id}`. The specified billing account cannot be a subaccount, since
+     a subaccount always belongs to the same organization as its parent account.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the billing account to move. Must be of the form
+       * `billingAccounts/{billing_account_id}`. The specified billing account cannot be a
+       * subaccount, since a subaccount always belongs to the same organization as its parent
+       * account.
+       */
+      public Move setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^billingAccounts/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Move set(String parameterName, Object value) {
+        return (Move) super.set(parameterName, value);
       }
     }
     /**
@@ -1463,6 +1663,1045 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the SubAccounts collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+     *   {@code Cloudbilling.SubAccounts.List request = cloudbilling.subAccounts().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SubAccounts subAccounts() {
+      return new SubAccounts();
+    }
+
+    /**
+     * The "subAccounts" collection of methods.
+     */
+    public class SubAccounts {
+
+      /**
+       * This method creates [billing
+       * subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts). Google Cloud resellers
+       * should use the Channel Services APIs, [accounts.customers.create](https://cloud.google.com/channe
+       * l/docs/reference/rest/v1/accounts.customers/create) and [accounts.customers.entitlements.create](
+       * https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+       * When creating a subaccount, the current authenticated user must have the
+       * `billing.accounts.update` IAM permission on the parent account, which is typically given to
+       * billing account [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
+       * This method will return an error if the parent account has not been provisioned for subaccounts.
+       *
+       * Create a request for the method "subAccounts.create".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
+       *        organizations/12345678 - billingAccounts/{billing_account_id} eg
+       *        `billingAccounts/012345-567890-ABCDEF`
+       * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.cloudbilling.model.BillingAccount content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudbillingRequest<com.google.api.services.cloudbilling.model.BillingAccount> {
+
+        private static final String REST_PATH = "v1/{+parent}/subAccounts";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
+
+        /**
+         * This method creates [billing
+         * subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts). Google Cloud
+         * resellers should use the Channel Services APIs, [accounts.customers.create](https://cloud.googl
+         * e.com/channel/docs/reference/rest/v1/accounts.customers/create) and [accounts.customers.entitle
+         * ments.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitl
+         * ements/create). When creating a subaccount, the current authenticated user must have the
+         * `billing.accounts.update` IAM permission on the parent account, which is typically given to
+         * billing account [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
+         * This method will return an error if the parent account has not been provisioned for
+         * subaccounts.
+         *
+         * Create a request for the method "subAccounts.create".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
+       *        organizations/12345678 - billingAccounts/{billing_account_id} eg
+       *        `billingAccounts/012345-567890-ABCDEF`
+         * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.cloudbilling.model.BillingAccount content) {
+          super(Cloudbilling.this, "POST", REST_PATH, content, com.google.api.services.cloudbilling.model.BillingAccount.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Optional. The parent to create a billing account from. Format: -
+         * organizations/{organization_id} eg organizations/12345678 -
+         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
+       organizations/12345678 - billingAccounts/{billing_account_id} eg
+       `billingAccounts/012345-567890-ABCDEF`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Optional. The parent to create a billing account from. Format: -
+         * organizations/{organization_id} eg organizations/12345678 -
+         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists the billing accounts that the current authenticated user has permission to
+       * [view](https://cloud.google.com/billing/docs/how-to/billing-access).
+       *
+       * Create a request for the method "subAccounts.list".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Optional. The parent resource to list billing accounts from. Format: -
+       *        organizations/{organization_id} eg organizations/12345678 -
+       *        billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.model.ListBillingAccountsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/subAccounts";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
+
+        /**
+         * Lists the billing accounts that the current authenticated user has permission to
+         * [view](https://cloud.google.com/billing/docs/how-to/billing-access).
+         *
+         * Create a request for the method "subAccounts.list".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Optional. The parent resource to list billing accounts from. Format: -
+       *        organizations/{organization_id} eg organizations/12345678 -
+       *        billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.model.ListBillingAccountsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Optional. The parent resource to list billing accounts from. Format: -
+         * organizations/{organization_id} eg organizations/12345678 -
+         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Optional. The parent resource to list billing accounts from. Format: -
+       organizations/{organization_id} eg organizations/12345678 - billingAccounts/{billing_account_id} eg
+       `billingAccounts/012345-567890-ABCDEF`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Optional. The parent resource to list billing accounts from. Format: -
+         * organizations/{organization_id} eg organizations/12345678 -
+         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Options for how to filter the returned billing accounts. This only supports filtering for
+         * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
+         * parent billing account. (e.g.
+         * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
+         * fields are not currently supported.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Options for how to filter the returned billing accounts. This only supports filtering for
+       [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided parent
+       billing account. (e.g. "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean
+       algebra and other fields are not currently supported.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Options for how to filter the returned billing accounts. This only supports filtering for
+         * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
+         * parent billing account. (e.g.
+         * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
+         * fields are not currently supported.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** Requested page size. The maximum page size is 100; this is also the default. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The maximum page size is 100; this is also the default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Requested page size. The maximum page size is 100; this is also the default. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results to return. This should be a `next_page_token` value
+         * returned from a previous `ListBillingAccounts` call. If unspecified, the first page of
+         * results is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results to return. This should be a `next_page_token` value returned
+       from a previous `ListBillingAccounts` call. If unspecified, the first page of results is returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results to return. This should be a `next_page_token` value
+         * returned from a previous `ListBillingAccounts` call. If unspecified, the first page of
+         * results is returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+   *   {@code Cloudbilling.Organizations.List request = cloudbilling.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the BillingAccounts collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+     *   {@code Cloudbilling.BillingAccounts.List request = cloudbilling.billingAccounts().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public BillingAccounts billingAccounts() {
+      return new BillingAccounts();
+    }
+
+    /**
+     * The "billingAccounts" collection of methods.
+     */
+    public class BillingAccounts {
+
+      /**
+       * This method creates [billing
+       * subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts). Google Cloud resellers
+       * should use the Channel Services APIs, [accounts.customers.create](https://cloud.google.com/channe
+       * l/docs/reference/rest/v1/accounts.customers/create) and [accounts.customers.entitlements.create](
+       * https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitlements/create).
+       * When creating a subaccount, the current authenticated user must have the
+       * `billing.accounts.update` IAM permission on the parent account, which is typically given to
+       * billing account [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
+       * This method will return an error if the parent account has not been provisioned for subaccounts.
+       *
+       * Create a request for the method "billingAccounts.create".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
+       *        organizations/12345678 - billingAccounts/{billing_account_id} eg
+       *        `billingAccounts/012345-567890-ABCDEF`
+       * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.cloudbilling.model.BillingAccount content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudbillingRequest<com.google.api.services.cloudbilling.model.BillingAccount> {
+
+        private static final String REST_PATH = "v1/{+parent}/billingAccounts";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * This method creates [billing
+         * subaccounts](https://cloud.google.com/billing/docs/concepts#subaccounts). Google Cloud
+         * resellers should use the Channel Services APIs, [accounts.customers.create](https://cloud.googl
+         * e.com/channel/docs/reference/rest/v1/accounts.customers/create) and [accounts.customers.entitle
+         * ments.create](https://cloud.google.com/channel/docs/reference/rest/v1/accounts.customers.entitl
+         * ements/create). When creating a subaccount, the current authenticated user must have the
+         * `billing.accounts.update` IAM permission on the parent account, which is typically given to
+         * billing account [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
+         * This method will return an error if the parent account has not been provisioned for
+         * subaccounts.
+         *
+         * Create a request for the method "billingAccounts.create".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
+       *        organizations/12345678 - billingAccounts/{billing_account_id} eg
+       *        `billingAccounts/012345-567890-ABCDEF`
+         * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.cloudbilling.model.BillingAccount content) {
+          super(Cloudbilling.this, "POST", REST_PATH, content, com.google.api.services.cloudbilling.model.BillingAccount.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Optional. The parent to create a billing account from. Format: -
+         * organizations/{organization_id} eg organizations/12345678 -
+         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
+       organizations/12345678 - billingAccounts/{billing_account_id} eg
+       `billingAccounts/012345-567890-ABCDEF`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Optional. The parent to create a billing account from. Format: -
+         * organizations/{organization_id} eg organizations/12345678 -
+         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists the billing accounts that the current authenticated user has permission to
+       * [view](https://cloud.google.com/billing/docs/how-to/billing-access).
+       *
+       * Create a request for the method "billingAccounts.list".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Optional. The parent resource to list billing accounts from. Format: -
+       *        organizations/{organization_id} eg organizations/12345678 -
+       *        billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.model.ListBillingAccountsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/billingAccounts";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists the billing accounts that the current authenticated user has permission to
+         * [view](https://cloud.google.com/billing/docs/how-to/billing-access).
+         *
+         * Create a request for the method "billingAccounts.list".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Optional. The parent resource to list billing accounts from. Format: -
+       *        organizations/{organization_id} eg organizations/12345678 -
+       *        billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.model.ListBillingAccountsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Optional. The parent resource to list billing accounts from. Format: -
+         * organizations/{organization_id} eg organizations/12345678 -
+         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Optional. The parent resource to list billing accounts from. Format: -
+       organizations/{organization_id} eg organizations/12345678 - billingAccounts/{billing_account_id} eg
+       `billingAccounts/012345-567890-ABCDEF`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Optional. The parent resource to list billing accounts from. Format: -
+         * organizations/{organization_id} eg organizations/12345678 -
+         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Options for how to filter the returned billing accounts. This only supports filtering for
+         * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
+         * parent billing account. (e.g.
+         * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
+         * fields are not currently supported.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Options for how to filter the returned billing accounts. This only supports filtering for
+       [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided parent
+       billing account. (e.g. "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean
+       algebra and other fields are not currently supported.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Options for how to filter the returned billing accounts. This only supports filtering for
+         * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
+         * parent billing account. (e.g.
+         * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
+         * fields are not currently supported.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** Requested page size. The maximum page size is 100; this is also the default. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The maximum page size is 100; this is also the default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Requested page size. The maximum page size is 100; this is also the default. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results to return. This should be a `next_page_token` value
+         * returned from a previous `ListBillingAccounts` call. If unspecified, the first page of
+         * results is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results to return. This should be a `next_page_token` value returned
+       from a previous `ListBillingAccounts` call. If unspecified, the first page of results is returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results to return. This should be a `next_page_token` value
+         * returned from a previous `ListBillingAccounts` call. If unspecified, the first page of
+         * results is returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Changes which parent organization a billing account belongs to.
+       *
+       * Create a request for the method "billingAccounts.move".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link Move#execute()} method to invoke the remote operation.
+       *
+       * @param destinationParent Required. The resource name of the Organization to reparent the billing account under. Must be of
+       *        the form `organizations/{organization_id}`.
+       * @param name Required. The resource name of the billing account to move. Must be of the form
+       *        `billingAccounts/{billing_account_id}`. The specified billing account cannot be a
+       *        subaccount, since a subaccount always belongs to the same organization as its parent
+       *        account.
+       * @return the request
+       */
+      public Move move(java.lang.String destinationParent, java.lang.String name) throws java.io.IOException {
+        Move result = new Move(destinationParent, name);
+        initialize(result);
+        return result;
+      }
+
+      public class Move extends CloudbillingRequest<com.google.api.services.cloudbilling.model.BillingAccount> {
+
+        private static final String REST_PATH = "v1/{+destinationParent}/{+name}:move";
+
+        private final java.util.regex.Pattern DESTINATION_PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
+
+        /**
+         * Changes which parent organization a billing account belongs to.
+         *
+         * Create a request for the method "billingAccounts.move".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link Move#execute()} method to invoke the remote operation. <p>
+         * {@link Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param destinationParent Required. The resource name of the Organization to reparent the billing account under. Must be of
+       *        the form `organizations/{organization_id}`.
+         * @param name Required. The resource name of the billing account to move. Must be of the form
+       *        `billingAccounts/{billing_account_id}`. The specified billing account cannot be a
+       *        subaccount, since a subaccount always belongs to the same organization as its parent
+       *        account.
+         * @since 1.13
+         */
+        protected Move(java.lang.String destinationParent, java.lang.String name) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.model.BillingAccount.class);
+          this.destinationParent = com.google.api.client.util.Preconditions.checkNotNull(destinationParent, "Required parameter destinationParent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(DESTINATION_PARENT_PATTERN.matcher(destinationParent).matches(),
+                "Parameter destinationParent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Move set$Xgafv(java.lang.String $Xgafv) {
+          return (Move) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Move setAccessToken(java.lang.String accessToken) {
+          return (Move) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Move setAlt(java.lang.String alt) {
+          return (Move) super.setAlt(alt);
+        }
+
+        @Override
+        public Move setCallback(java.lang.String callback) {
+          return (Move) super.setCallback(callback);
+        }
+
+        @Override
+        public Move setFields(java.lang.String fields) {
+          return (Move) super.setFields(fields);
+        }
+
+        @Override
+        public Move setKey(java.lang.String key) {
+          return (Move) super.setKey(key);
+        }
+
+        @Override
+        public Move setOauthToken(java.lang.String oauthToken) {
+          return (Move) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Move) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Move setQuotaUser(java.lang.String quotaUser) {
+          return (Move) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Move setUploadType(java.lang.String uploadType) {
+          return (Move) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Move setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Move) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the Organization to reparent the billing account under.
+         * Must be of the form `organizations/{organization_id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String destinationParent;
+
+        /** Required. The resource name of the Organization to reparent the billing account under. Must be of
+       the form `organizations/{organization_id}`.
+         */
+        public java.lang.String getDestinationParent() {
+          return destinationParent;
+        }
+
+        /**
+         * Required. The resource name of the Organization to reparent the billing account under.
+         * Must be of the form `organizations/{organization_id}`.
+         */
+        public Move setDestinationParent(java.lang.String destinationParent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(DESTINATION_PARENT_PATTERN.matcher(destinationParent).matches(),
+                "Parameter destinationParent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.destinationParent = destinationParent;
+          return this;
+        }
+
+        /**
+         * Required. The resource name of the billing account to move. Must be of the form
+         * `billingAccounts/{billing_account_id}`. The specified billing account cannot be a
+         * subaccount, since a subaccount always belongs to the same organization as its parent
+         * account.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the billing account to move. Must be of the form
+       `billingAccounts/{billing_account_id}`. The specified billing account cannot be a subaccount, since
+       a subaccount always belongs to the same organization as its parent account.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the billing account to move. Must be of the form
+         * `billingAccounts/{billing_account_id}`. The specified billing account cannot be a
+         * subaccount, since a subaccount always belongs to the same organization as its parent
+         * account.
+         */
+        public Move setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Move set(String parameterName, Object value) {
+          return (Move) super.set(parameterName, value);
         }
       }
 

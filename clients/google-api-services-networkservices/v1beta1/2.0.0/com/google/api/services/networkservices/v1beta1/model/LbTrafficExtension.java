@@ -63,8 +63,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
 
   /**
    * Required. A list of references to the forwarding rules to which this service extension is
-   * attach to. At least one forwarding rule is required. There can be only one `LBTrafficExtension`
-   * resource per forwarding rule.
+   * attached to. At least one forwarding rule is required. There can be only one
+   * `LBTrafficExtension` resource per forwarding rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,8 +162,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
 
   /**
    * Required. A list of references to the forwarding rules to which this service extension is
-   * attach to. At least one forwarding rule is required. There can be only one `LBTrafficExtension`
-   * resource per forwarding rule.
+   * attached to. At least one forwarding rule is required. There can be only one
+   * `LBTrafficExtension` resource per forwarding rule.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getForwardingRules() {
@@ -172,8 +172,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
 
   /**
    * Required. A list of references to the forwarding rules to which this service extension is
-   * attach to. At least one forwarding rule is required. There can be only one `LBTrafficExtension`
-   * resource per forwarding rule.
+   * attached to. At least one forwarding rule is required. There can be only one
+   * `LBTrafficExtension` resource per forwarding rule.
    * @param forwardingRules forwardingRules or {@code null} for none
    */
   public LbTrafficExtension setForwardingRules(java.util.List<java.lang.String> forwardingRules) {

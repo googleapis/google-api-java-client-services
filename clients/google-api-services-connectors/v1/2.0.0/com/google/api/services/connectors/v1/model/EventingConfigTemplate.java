@@ -84,6 +84,13 @@ public final class EventingConfigTemplate extends com.google.api.client.json.Gen
   private java.lang.Boolean enrichmentSupported;
 
   /**
+   * The type of the event listener for a specific connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventListenerType;
+
+  /**
    * Is Eventing Supported.
    * The value may be {@code null}.
    */
@@ -196,6 +203,23 @@ public final class EventingConfigTemplate extends com.google.api.client.json.Gen
    */
   public EventingConfigTemplate setEnrichmentSupported(java.lang.Boolean enrichmentSupported) {
     this.enrichmentSupported = enrichmentSupported;
+    return this;
+  }
+
+  /**
+   * The type of the event listener for a specific connector.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventListenerType() {
+    return eventListenerType;
+  }
+
+  /**
+   * The type of the event listener for a specific connector.
+   * @param eventListenerType eventListenerType or {@code null} for none
+   */
+  public EventingConfigTemplate setEventListenerType(java.lang.String eventListenerType) {
+    this.eventListenerType = eventListenerType;
     return this;
   }
 

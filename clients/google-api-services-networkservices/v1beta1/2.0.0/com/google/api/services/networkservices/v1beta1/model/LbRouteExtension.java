@@ -62,7 +62,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
 
   /**
    * Required. A list of references to the forwarding rules to which this service extension is
-   * attach to. At least one forwarding rule is required. There can be only one `LbRouteExtension`
+   * attached to. At least one forwarding rule is required. There can be only one `LbRouteExtension`
    * resource per forwarding rule.
    * The value may be {@code null}.
    */
@@ -79,7 +79,9 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
 
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`.
+   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
+   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-balancing/docs
+   * /backend-service).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +161,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
 
   /**
    * Required. A list of references to the forwarding rules to which this service extension is
-   * attach to. At least one forwarding rule is required. There can be only one `LbRouteExtension`
+   * attached to. At least one forwarding rule is required. There can be only one `LbRouteExtension`
    * resource per forwarding rule.
    * @return value or {@code null} for none
    */
@@ -169,7 +171,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
 
   /**
    * Required. A list of references to the forwarding rules to which this service extension is
-   * attach to. At least one forwarding rule is required. There can be only one `LbRouteExtension`
+   * attached to. At least one forwarding rule is required. There can be only one `LbRouteExtension`
    * resource per forwarding rule.
    * @param forwardingRules forwardingRules or {@code null} for none
    */
@@ -199,7 +201,9 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
 
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`.
+   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
+   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-balancing/docs
+   * /backend-service).
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -208,7 +212,9 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
 
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`.
+   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
+   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-balancing/docs
+   * /backend-service).
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public LbRouteExtension setLoadBalancingScheme(java.lang.String loadBalancingScheme) {

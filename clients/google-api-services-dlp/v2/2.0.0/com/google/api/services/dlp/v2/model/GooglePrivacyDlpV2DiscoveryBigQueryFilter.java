@@ -19,8 +19,6 @@ package com.google.api.services.dlp.v2.model;
 /**
  * Determines what tables will have profiles generated within an organization or project. Includes
  * the ability to filter by regular expression patterns on project ID, dataset ID, and table ID.
- * Also lets you set minimum conditions that must be met before Cloud DLP scans a table (like a
- * minimum row count or a minimum table age).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed

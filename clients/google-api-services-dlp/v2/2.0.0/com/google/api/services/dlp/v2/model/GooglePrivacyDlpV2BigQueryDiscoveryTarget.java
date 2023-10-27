@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Target used to match against for Discovery with BigQuery tables
+ * Target used to match against for discovery with BigQuery tables
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2BigQueryDiscoveryTarget extends com.google.
   private GooglePrivacyDlpV2Disabled disabled;
 
   /**
-   * Required. The tables the Discovery cadence applies to. The first target with a matching filter
+   * Required. The tables the discovery cadence applies to. The first target with a matching filter
    * will be the one to apply to a table.
    * The value may be {@code null}.
    */
@@ -117,7 +117,7 @@ public final class GooglePrivacyDlpV2BigQueryDiscoveryTarget extends com.google.
   }
 
   /**
-   * Required. The tables the Discovery cadence applies to. The first target with a matching filter
+   * Required. The tables the discovery cadence applies to. The first target with a matching filter
    * will be the one to apply to a table.
    * @return value or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class GooglePrivacyDlpV2BigQueryDiscoveryTarget extends com.google.
   }
 
   /**
-   * Required. The tables the Discovery cadence applies to. The first target with a matching filter
+   * Required. The tables the discovery cadence applies to. The first target with a matching filter
    * will be the one to apply to a table.
    * @param filter filter or {@code null} for none
    */

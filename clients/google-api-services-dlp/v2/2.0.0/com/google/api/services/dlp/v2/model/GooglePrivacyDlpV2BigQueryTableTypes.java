@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * The types of bigquery tables supported by Cloud DLP.
+ * The types of BigQuery tables supported by Cloud DLP.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
@@ -31,14 +31,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2BigQueryTableTypes extends com.google.api.client.json.GenericJson {
 
   /**
-   * A set of bigquery table types.
+   * A set of BigQuery table types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> types;
 
   /**
-   * A set of bigquery table types.
+   * A set of BigQuery table types.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTypes() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2BigQueryTableTypes extends com.google.api.c
   }
 
   /**
-   * A set of bigquery table types.
+   * A set of BigQuery table types.
    * @param types types or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryTableTypes setTypes(java.util.List<java.lang.String> types) {

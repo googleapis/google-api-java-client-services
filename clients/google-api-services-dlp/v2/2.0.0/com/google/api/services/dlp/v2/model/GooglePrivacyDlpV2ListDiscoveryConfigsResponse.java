@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2ListDiscoveryConfigsResponse extends com.go
   }
 
   /**
-   * If the next page is available then the next page token to be used in following
+   * If the next page is available then the next page token to be used in the following
    * ListDiscoveryConfigs request.
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2ListDiscoveryConfigsResponse extends com.go
   }
 
   /**
-   * If the next page is available then the next page token to be used in following
+   * If the next page is available then the next page token to be used in the following
    * ListDiscoveryConfigs request.
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class GooglePrivacyDlpV2ListDiscoveryConfigsResponse extends com.go
   }
 
   /**
-   * If the next page is available then the next page token to be used in following
+   * If the next page is available then the next page token to be used in the following
    * ListDiscoveryConfigs request.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

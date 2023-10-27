@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * The location to begin a Discovery scan. Denotes an organization ID or folder ID within an
+ * The location to begin a discovery scan. Denotes an organization ID or folder ID within an
  * organization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

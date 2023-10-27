@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2DataProfileJobConfig extends com.google.api
    * template. If no region-specific template is specified, but a "global" template is specified, it
    * will be copied to that region and used instead. If no global or region-specific template is
    * provided for a region with data, that region's data will not be scanned. For more information,
-   * see https://cloud.google.com/dlp/docs/data-profiles#data_residency.
+   * see https://cloud.google.com/dlp/docs/data-profiles#data-residency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class GooglePrivacyDlpV2DataProfileJobConfig extends com.google.api
    * template. If no region-specific template is specified, but a "global" template is specified, it
    * will be copied to that region and used instead. If no global or region-specific template is
    * provided for a region with data, that region's data will not be scanned. For more information,
-   * see https://cloud.google.com/dlp/docs/data-profiles#data_residency.
+   * see https://cloud.google.com/dlp/docs/data-profiles#data-residency.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInspectTemplates() {
@@ -115,7 +115,7 @@ public final class GooglePrivacyDlpV2DataProfileJobConfig extends com.google.api
    * template. If no region-specific template is specified, but a "global" template is specified, it
    * will be copied to that region and used instead. If no global or region-specific template is
    * provided for a region with data, that region's data will not be scanned. For more information,
-   * see https://cloud.google.com/dlp/docs/data-profiles#data_residency.
+   * see https://cloud.google.com/dlp/docs/data-profiles#data-residency.
    * @param inspectTemplates inspectTemplates or {@code null} for none
    */
   public GooglePrivacyDlpV2DataProfileJobConfig setInspectTemplates(java.util.List<java.lang.String> inspectTemplates) {

@@ -1,6 +1,6 @@
 # VM Migration API Client Library for Java
 
-Use the Migrate for Compute Engine API to programmatically migrate workloads. 
+Use the Migrate to Virtual Machines API to programmatically migrate workloads. 
 
 This page contains information about getting started with the VM Migration API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-vmmigration</artifactId>
-      <version>v1-rev20211207-1.32.1</version>
+      <version>v1-rev20231019-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-vmmigration:v1-rev20211207-1.32.1'
+  implementation 'com.google.apis:google-api-services-vmmigration:v1-rev20231019-2.0.0'
 }
 ```
 

@@ -1,6 +1,6 @@
 # Google Analytics Data API Client Library for Java
 
-Accesses report data in Google Analytics.
+Accesses report data in Google Analytics. Warning: Creating multiple Customer Applications, Accounts, or Projects to simulate or act as a single Customer Application, Account, or Project (respectively) or to circumvent Service-specific usage limits or quotas is a direct violation of Google Cloud Platform Terms of Service as well as Google APIs Terms of Service. These actions can result in immediate termination of your GCP project(s) without any warning. 
 
 This page contains information about getting started with the Google Analytics Data API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-analyticsdata</artifactId>
-      <version>v1beta-rev20211230-1.32.1</version>
+      <version>v1beta-rev20230917-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-analyticsdata:v1beta-rev20211230-1.32.1'
+  implementation 'com.google.apis:google-api-services-analyticsdata:v1beta-rev20230917-2.0.0'
 }
 ```
 

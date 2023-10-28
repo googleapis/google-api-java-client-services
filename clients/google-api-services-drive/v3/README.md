@@ -1,14 +1,14 @@
-# Drive API Client Library for Java
+# Google Drive API Client Library for Java
 
-Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
+The Google Drive API allows clients to access resources from Google Drive.
 
-This page contains information about getting started with the Drive API
+This page contains information about getting started with the Google Drive API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Drive API][javadoc]
+* Browse the [Javadoc reference for the Google Drive API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Drive API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Google Drive API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-drive</artifactId>
-      <version>v3-rev20211107-1.32.1</version>
+      <version>v3-rev20230822-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-drive:v3-rev20211107-1.32.1'
+  implementation 'com.google.apis:google-api-services-drive:v3-rev20230822-2.0.0'
 }
 ```
 

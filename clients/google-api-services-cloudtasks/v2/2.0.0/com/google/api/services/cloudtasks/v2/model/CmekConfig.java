@@ -17,8 +17,8 @@
 package com.google.api.services.cloudtasks.v2.model;
 
 /**
- * CMEK, or Customer Managed Encryption Keys, enables GCP products to put control over encryption
- * and key management in their customer’s hands.
+ * Describes the customer-managed encryption key (CMEK) configuration associated with a project and
+ * location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tasks API. For a detailed explanation see:

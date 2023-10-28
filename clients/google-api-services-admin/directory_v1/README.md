@@ -6,7 +6,7 @@ This page contains information about getting started with the Admin SDK API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Use dropdown to browse the [Javadoc reference for the Admin SDK API][javadoc]
+* Browse the [Javadoc reference for the Admin SDK API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
 * Interact with this API in your browser using the [APIs Explorer for the Admin SDK API][api-explorer]
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-admin-directory</artifactId>
-      <version>directory_v1-rev20211221-1.32.1</version>
+      <version>directory_v1-rev20231005-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,10 +35,10 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-admin-directory:directory_v1-rev20211221-1.32.1'
+  implementation 'com.google.apis:google-api-services-admin-directory:directory_v1-rev20231005-2.0.0'
 }
 ```
 
-[javadoc]: https://googleapis.dev/java/google-api-services-admin/latest/index.html
+[javadoc]: https://googleapis.dev/java/google-api-services-admin-directory/latest/index.html
 [google-api-client]: https://github.com/googleapis/google-api-java-client/
 [api-explorer]: https://developers.google.com/apis-explorer/#p/admin/v1/

@@ -1,6 +1,6 @@
 # Google Workspace Alert Center API Client Library for Java
 
-Manages alerts on issues affecting your domain.
+Manages alerts on issues affecting your domain. Note: The current version of this API (v1beta1) is available to all Google Workspace customers. 
 
 This page contains information about getting started with the Google Workspace Alert Center API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-alertcenter</artifactId>
-      <version>v1beta1-rev20211214-1.32.1</version>
+      <version>v1beta1-rev20230821-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-alertcenter:v1beta1-rev20211214-1.32.1'
+  implementation 'com.google.apis:google-api-services-alertcenter:v1beta1-rev20230821-2.0.0'
 }
 ```
 

@@ -1,6 +1,6 @@
 # My Business Notifications API Client Library for Java
 
-The My Business Notification Settings API enables managing notification settings for business accounts.
+The My Business Notification Settings API enables managing notification settings for business accounts. Note - If you have a quota of 0 after enabling the API, please request for GBP API access.
 
 This page contains information about getting started with the My Business Notifications API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-mybusinessnotifications</artifactId>
-      <version>v1-rev20210723-1.32.1</version>
+      <version>v1-rev20230702-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-mybusinessnotifications:v1-rev20210723-1.32.1'
+  implementation 'com.google.apis:google-api-services-mybusinessnotifications:v1-rev20230702-2.0.0'
 }
 ```
 

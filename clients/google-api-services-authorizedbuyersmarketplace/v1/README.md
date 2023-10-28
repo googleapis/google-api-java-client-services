@@ -1,6 +1,6 @@
 # Authorized Buyers Marketplace API Client Library for Java
 
-The Authorized Buyers Marketplace API allows buyers programmatically discover inventory; propose, retrieve and negotiate deals with publishers.
+The Authorized Buyers Marketplace API lets buyers programmatically discover inventory; propose, retrieve and negotiate deals with publishers.
 
 This page contains information about getting started with the Authorized Buyers Marketplace API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-authorizedbuyersmarketplace</artifactId>
-      <version>v1-rev20211123-1.32.1</version>
+      <version>v1-rev20230831-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-authorizedbuyersmarketplace:v1-rev20211123-1.32.1'
+  implementation 'com.google.apis:google-api-services-authorizedbuyersmarketplace:v1-rev20230831-2.0.0'
 }
 ```
 

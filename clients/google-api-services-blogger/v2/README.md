@@ -1,14 +1,14 @@
-# Blogger API v3 Client Library for Java
+# Blogger API Client Library for Java
 
 The Blogger API provides access to posts, comments and pages of a Blogger blog.
 
-This page contains information about getting started with the Blogger API v3
+This page contains information about getting started with the Blogger API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Blogger API v3][javadoc]
+* Browse the [Javadoc reference for the Blogger API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Blogger API v3][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Blogger API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-blogger</artifactId>
-      <version>v2-rev20200801-1.32.1</version>
+      <version>v2-rev20220727-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-blogger:v2-rev20200801-1.32.1'
+  implementation 'com.google.apis:google-api-services-blogger:v2-rev20220727-2.0.0'
 }
 ```
 

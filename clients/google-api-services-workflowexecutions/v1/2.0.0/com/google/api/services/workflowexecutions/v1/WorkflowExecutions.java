@@ -1484,6 +1484,458 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             }
 
           }
+          /**
+           * An accessor for creating requests from the StepEntries collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code WorkflowExecutions workflowexecutions = new WorkflowExecutions(...);}
+           *   {@code WorkflowExecutions.StepEntries.List request = workflowexecutions.stepEntries().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public StepEntries stepEntries() {
+            return new StepEntries();
+          }
+
+          /**
+           * The "stepEntries" collection of methods.
+           */
+          public class StepEntries {
+
+            /**
+             * Gets a step entry.
+             *
+             * Create a request for the method "stepEntries.get".
+             *
+             * This request holds the parameters needed by the workflowexecutions server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the step entry to retrieve. Format: projects/{project}/locations/{location}/wo
+             *        rkflows/{workflow}/executions/{execution}/stepEntries/{step_entry}
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends WorkflowExecutionsRequest<com.google.api.services.workflowexecutions.v1.model.StepEntry> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+/stepEntries/[^/]+$");
+
+              /**
+               * Gets a step entry.
+               *
+               * Create a request for the method "stepEntries.get".
+               *
+               * This request holds the parameters needed by the the workflowexecutions server.  After setting
+               * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the step entry to retrieve. Format: projects/{project}/locations/{location}/wo
+             *        rkflows/{workflow}/executions/{execution}/stepEntries/{step_entry}
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(WorkflowExecutions.this, "GET", REST_PATH, null, com.google.api.services.workflowexecutions.v1.model.StepEntry.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+/stepEntries/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the step entry to retrieve. Format: projects/{project}/locati
+               * ons/{location}/workflows/{workflow}/executions/{execution}/stepEntries/{step_entry}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the step entry to retrieve. Format: projects/{project}/locations/{location}/w
+             orkflows/{workflow}/executions/{execution}/stepEntries/{step_entry}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the step entry to retrieve. Format: projects/{project}/locati
+               * ons/{location}/workflows/{workflow}/executions/{execution}/stepEntries/{step_entry}
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+/stepEntries/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists step entries for the corresponding workflow execution. Returned entries are ordered by
+             * their create_time.
+             *
+             * Create a request for the method "stepEntries.list".
+             *
+             * This request holds the parameters needed by the workflowexecutions server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the workflow execution to list entries for. Format:
+             *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}/stepEn
+             *        tries/
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends WorkflowExecutionsRequest<com.google.api.services.workflowexecutions.v1.model.ListStepEntriesResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/stepEntries";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+
+              /**
+               * Lists step entries for the corresponding workflow execution. Returned entries are ordered by
+               * their create_time.
+               *
+               * Create a request for the method "stepEntries.list".
+               *
+               * This request holds the parameters needed by the the workflowexecutions server.  After setting
+               * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the workflow execution to list entries for. Format:
+             *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}/stepEn
+             *        tries/
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(WorkflowExecutions.this, "GET", REST_PATH, null, com.google.api.services.workflowexecutions.v1.model.ListStepEntriesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Name of the workflow execution to list entries for. Format: projects/{pro
+               * ject}/locations/{location}/workflows/{workflow}/executions/{execution}/stepEntries/
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the workflow execution to list entries for. Format:
+             projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}/stepEntries/
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Name of the workflow execution to list entries for. Format: projects/{pro
+               * ject}/locations/{location}/workflows/{workflow}/executions/{execution}/stepEntries/
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. Filters applied to the `[StepEntries.ListStepEntries]` results. The
+               * following fields are supported for filtering: `entryId`, `createTime`,
+               * `updateTime`, `routine`, `step`, `stepType`, `state`. For details, see AIP-160. For
+               * example, if you are using the Google APIs Explorer: `state="SUCCEEDED"` or
+               * `createTime>"2023-08-01" AND state="FAILED"`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Filters applied to the `[StepEntries.ListStepEntries]` results. The following fields are
+             supported for filtering: `entryId`, `createTime`, `updateTime`, `routine`, `step`, `stepType`,
+             `state`. For details, see AIP-160. For example, if you are using the Google APIs Explorer:
+             `state="SUCCEEDED"` or `createTime>"2023-08-01" AND state="FAILED"`
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. Filters applied to the `[StepEntries.ListStepEntries]` results. The
+               * following fields are supported for filtering: `entryId`, `createTime`,
+               * `updateTime`, `routine`, `step`, `stepType`, `state`. For details, see AIP-160. For
+               * example, if you are using the Google APIs Explorer: `state="SUCCEEDED"` or
+               * `createTime>"2023-08-01" AND state="FAILED"`
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. Comma-separated list of fields that specify the ordering applied to the
+               * `[StepEntries.ListStepEntries]` results. By default the ordering is based on
+               * ascending `entryId`. The following fields are supported for ordering: `entryId`,
+               * `createTime`, `updateTime`, `routine`, `step`, `stepType`, `state`. For details,
+               * see AIP-132.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Optional. Comma-separated list of fields that specify the ordering applied to the
+             `[StepEntries.ListStepEntries]` results. By default the ordering is based on ascending `entryId`.
+             The following fields are supported for ordering: `entryId`, `createTime`, `updateTime`, `routine`,
+             `step`, `stepType`, `state`. For details, see AIP-132.
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /**
+               * Optional. Comma-separated list of fields that specify the ordering applied to the
+               * `[StepEntries.ListStepEntries]` results. By default the ordering is based on
+               * ascending `entryId`. The following fields are supported for ordering: `entryId`,
+               * `createTime`, `updateTime`, `routine`, `step`, `stepType`, `state`. For details,
+               * see AIP-132.
+               */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /** Optional. Number of step entries to return per call. The default max is 1000. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. Number of step entries to return per call. The default max is 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** Optional. Number of step entries to return per call. The default max is 1000. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. A page token, received from a previous `ListStepEntries` call. Provide
+               * this to retrieve the subsequent page. When paginating, all other parameters
+               * provided to `ListStepEntries` must match the call that provided the page token.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. A page token, received from a previous `ListStepEntries` call. Provide this to retrieve
+             the subsequent page. When paginating, all other parameters provided to `ListStepEntries` must match
+             the call that provided the page token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. A page token, received from a previous `ListStepEntries` call. Provide
+               * this to retrieve the subsequent page. When paginating, all other parameters
+               * provided to `ListStepEntries` must match the call that provided the page token.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Optional. The number of step entries to skip. It can be used with or without a
+               * pageToken. If used with a pageToken, then it indicates the number of step entries
+               * to skip starting from the requested page.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer skip;
+
+              /** Optional. The number of step entries to skip. It can be used with or without a pageToken. If used
+             with a pageToken, then it indicates the number of step entries to skip starting from the requested
+             page.
+               */
+              public java.lang.Integer getSkip() {
+                return skip;
+              }
+
+              /**
+               * Optional. The number of step entries to skip. It can be used with or without a
+               * pageToken. If used with a pageToken, then it indicates the number of step entries
+               * to skip starting from the requested page.
+               */
+              public List setSkip(java.lang.Integer skip) {
+                this.skip = skip;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
     }

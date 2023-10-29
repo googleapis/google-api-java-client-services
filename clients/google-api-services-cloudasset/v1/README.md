@@ -1,6 +1,6 @@
 # Cloud Asset API Client Library for Java
 
-The cloud asset API manages the history and inventory of cloud resources.
+The Cloud Asset API manages the history and inventory of Google Cloud resources.
 
 This page contains information about getting started with the Cloud Asset API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudasset</artifactId>
-      <version>v1-rev20211125-1.32.1</version>
+      <version>v1-rev20231013-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudasset:v1-rev20211125-1.32.1'
+  implementation 'com.google.apis:google-api-services-cloudasset:v1-rev20231013-2.0.0'
 }
 ```
 

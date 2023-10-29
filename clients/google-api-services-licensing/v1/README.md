@@ -1,6 +1,6 @@
 # Enterprise License Manager API Client Library for Java
 
-The Google Enterprise License Manager API's allows you to license apps for all the users of a domain managed by you.
+The Google Enterprise License Manager API lets you manage Google Workspace and related licenses for all users of a customer that you manage.
 
 This page contains information about getting started with the Enterprise License Manager API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-licensing</artifactId>
-      <version>v1-rev20201116-1.32.1</version>
+      <version>v1-rev20220430-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-licensing:v1-rev20201116-1.32.1'
+  implementation 'com.google.apis:google-api-services-licensing:v1-rev20220430-2.0.0'
 }
 ```
 

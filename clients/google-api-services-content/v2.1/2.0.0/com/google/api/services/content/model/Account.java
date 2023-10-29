@@ -71,14 +71,6 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.util.List<java.math.BigInteger> automaticLabelIds;
 
   /**
-   * The business identity attributes can be used to self-declare attributes that let customers know
-   * more about your business.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AccountBusinessIdentity businessIdentity;
-
-  /**
    * The business information of the account.
    * The value may be {@code null}.
    */
@@ -257,25 +249,6 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   public Account setAutomaticLabelIds(java.util.List<java.math.BigInteger> automaticLabelIds) {
     this.automaticLabelIds = automaticLabelIds;
-    return this;
-  }
-
-  /**
-   * The business identity attributes can be used to self-declare attributes that let customers know
-   * more about your business.
-   * @return value or {@code null} for none
-   */
-  public AccountBusinessIdentity getBusinessIdentity() {
-    return businessIdentity;
-  }
-
-  /**
-   * The business identity attributes can be used to self-declare attributes that let customers know
-   * more about your business.
-   * @param businessIdentity businessIdentity or {@code null} for none
-   */
-  public Account setBusinessIdentity(AccountBusinessIdentity businessIdentity) {
-    this.businessIdentity = businessIdentity;
     return this;
   }
 

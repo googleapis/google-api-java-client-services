@@ -91,6 +91,14 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private MaintenanceWindow maintenanceWindow;
 
   /**
+   * Optional. The setting that defines how metastore metadata should be integrated with external
+   * services and systems.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MetadataIntegration metadataIntegration;
+
+  /**
    * Output only. The metadata management activities of the metastore service.
    * The value may be {@code null}.
    */
@@ -326,6 +334,25 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
     this.maintenanceWindow = maintenanceWindow;
+    return this;
+  }
+
+  /**
+   * Optional. The setting that defines how metastore metadata should be integrated with external
+   * services and systems.
+   * @return value or {@code null} for none
+   */
+  public MetadataIntegration getMetadataIntegration() {
+    return metadataIntegration;
+  }
+
+  /**
+   * Optional. The setting that defines how metastore metadata should be integrated with external
+   * services and systems.
+   * @param metadataIntegration metadataIntegration or {@code null} for none
+   */
+  public Service setMetadataIntegration(MetadataIntegration metadataIntegration) {
+    this.metadataIntegration = metadataIntegration;
     return this;
   }
 

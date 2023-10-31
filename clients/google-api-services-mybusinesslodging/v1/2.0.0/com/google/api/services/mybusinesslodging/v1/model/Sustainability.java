@@ -38,7 +38,8 @@ public final class Sustainability extends com.google.api.client.json.GenericJson
   private EnergyEfficiency energyEfficiency;
 
   /**
-   * Sustainability certifications the hotel has been awarded.
+   * Sustainability certifications the hotel has been awarded. Deprecated: this field is no longer
+   * populated. All certification data is now provided by BeCause.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +84,8 @@ public final class Sustainability extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Sustainability certifications the hotel has been awarded.
+   * Sustainability certifications the hotel has been awarded. Deprecated: this field is no longer
+   * populated. All certification data is now provided by BeCause.
    * @return value or {@code null} for none
    */
   public SustainabilityCertifications getSustainabilityCertifications() {
@@ -91,7 +93,8 @@ public final class Sustainability extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Sustainability certifications the hotel has been awarded.
+   * Sustainability certifications the hotel has been awarded. Deprecated: this field is no longer
+   * populated. All certification data is now provided by BeCause.
    * @param sustainabilityCertifications sustainabilityCertifications or {@code null} for none
    */
   public Sustainability setSustainabilityCertifications(SustainabilityCertifications sustainabilityCertifications) {

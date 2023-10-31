@@ -120,7 +120,8 @@ public final class EnergyEfficiency extends com.google.api.client.json.GenericJs
   private java.lang.String energySavingThermostatsException;
 
   /**
-   * Output only. Green building design. True if BREEAM-* or LEED-* certified.
+   * Output only. Green building design. True if the property has been awarded a relevant
+   * certification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,7 +364,8 @@ public final class EnergyEfficiency extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Green building design. True if BREEAM-* or LEED-* certified.
+   * Output only. Green building design. True if the property has been awarded a relevant
+   * certification.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGreenBuildingDesign() {
@@ -371,7 +373,8 @@ public final class EnergyEfficiency extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Green building design. True if BREEAM-* or LEED-* certified.
+   * Output only. Green building design. True if the property has been awarded a relevant
+   * certification.
    * @param greenBuildingDesign greenBuildingDesign or {@code null} for none
    */
   public EnergyEfficiency setGreenBuildingDesign(java.lang.Boolean greenBuildingDesign) {

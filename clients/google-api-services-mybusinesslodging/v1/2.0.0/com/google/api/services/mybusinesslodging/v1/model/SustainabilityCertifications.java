@@ -17,7 +17,8 @@
 package com.google.api.services.mybusinesslodging.v1.model;
 
 /**
- * Sustainability certifications the hotel has been awarded.
+ * Sustainability certifications the hotel has been awarded. Deprecated: this message is no longer
+ * populated. All certification data is now provided by BeCause.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the My Business Lodging API. For a detailed explanation
@@ -58,16 +59,14 @@ public final class SustainabilityCertifications extends com.google.api.client.js
   }
 
   /**
-   * LEED certification. Deprecated: this field is no longer populated. LEED certification status is
-   * now provided directly by USGBC.
+   * LEED certification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String leedCertification;
 
   /**
-   * LEED certification exception. Deprecated: this field is no longer populated. LEED certification
-   * status is now provided directly by USGBC.
+   * LEED certification exception.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +124,7 @@ public final class SustainabilityCertifications extends com.google.api.client.js
   }
 
   /**
-   * LEED certification. Deprecated: this field is no longer populated. LEED certification status is
-   * now provided directly by USGBC.
+   * LEED certification.
    * @return value or {@code null} for none
    */
   public java.lang.String getLeedCertification() {
@@ -134,8 +132,7 @@ public final class SustainabilityCertifications extends com.google.api.client.js
   }
 
   /**
-   * LEED certification. Deprecated: this field is no longer populated. LEED certification status is
-   * now provided directly by USGBC.
+   * LEED certification.
    * @param leedCertification leedCertification or {@code null} for none
    */
   public SustainabilityCertifications setLeedCertification(java.lang.String leedCertification) {
@@ -144,8 +141,7 @@ public final class SustainabilityCertifications extends com.google.api.client.js
   }
 
   /**
-   * LEED certification exception. Deprecated: this field is no longer populated. LEED certification
-   * status is now provided directly by USGBC.
+   * LEED certification exception.
    * @return value or {@code null} for none
    */
   public java.lang.String getLeedCertificationException() {
@@ -153,8 +149,7 @@ public final class SustainabilityCertifications extends com.google.api.client.js
   }
 
   /**
-   * LEED certification exception. Deprecated: this field is no longer populated. LEED certification
-   * status is now provided directly by USGBC.
+   * LEED certification exception.
    * @param leedCertificationException leedCertificationException or {@code null} for none
    */
   public SustainabilityCertifications setLeedCertificationException(java.lang.String leedCertificationException) {

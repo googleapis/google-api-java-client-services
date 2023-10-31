@@ -31,6 +31,14 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class ClaimDeviceRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The unique identifier of the configuration (internally known as profile) to set for
+   * the section.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long configurationId;
+
+  /**
    * The ID of the customer for whom the device is being claimed.
    * The value may be {@code null}.
    */
@@ -73,12 +81,30 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
   private java.lang.String sectionType;
 
   /**
-   * Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK.
-   * The unique identifier of the SimLock profile.
+   * Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long simlockProfileId;
+
+  /**
+   * Optional. The unique identifier of the configuration (internally known as profile) to set for
+   * the section.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getConfigurationId() {
+    return configurationId;
+  }
+
+  /**
+   * Optional. The unique identifier of the configuration (internally known as profile) to set for
+   * the section.
+   * @param configurationId configurationId or {@code null} for none
+   */
+  public ClaimDeviceRequest setConfigurationId(java.lang.Long configurationId) {
+    this.configurationId = configurationId;
+    return this;
+  }
 
   /**
    * The ID of the customer for whom the device is being claimed.
@@ -183,8 +209,7 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK.
-   * The unique identifier of the SimLock profile.
+   * Optional.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSimlockProfileId() {
@@ -192,8 +217,7 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK.
-   * The unique identifier of the SimLock profile.
+   * Optional.
    * @param simlockProfileId simlockProfileId or {@code null} for none
    */
   public ClaimDeviceRequest setSimlockProfileId(java.lang.Long simlockProfileId) {

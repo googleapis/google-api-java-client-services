@@ -30,7 +30,8 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PhotoMedia extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of a photo in the format: places/place_id/photos/photo_reference.
+   * The resource name of a photo media in the format:
+   * `places/place_id/photos/photo_reference/media`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class GoogleMapsPlacesV1PhotoMedia extends com.google.api.client.js
   private java.lang.String photoUri;
 
   /**
-   * The resource name of a photo in the format: places/place_id/photos/photo_reference.
+   * The resource name of a photo media in the format:
+   * `places/place_id/photos/photo_reference/media`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -52,7 +54,8 @@ public final class GoogleMapsPlacesV1PhotoMedia extends com.google.api.client.js
   }
 
   /**
-   * The resource name of a photo in the format: places/place_id/photos/photo_reference.
+   * The resource name of a photo media in the format:
+   * `places/place_id/photos/photo_reference/media`.
    * @param name name or {@code null} for none
    */
   public GoogleMapsPlacesV1PhotoMedia setName(java.lang.String name) {

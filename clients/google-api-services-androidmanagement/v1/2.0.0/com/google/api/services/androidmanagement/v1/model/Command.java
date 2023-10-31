@@ -74,7 +74,9 @@ public final class Command extends com.google.api.client.json.GenericJson {
   private java.lang.String errorCode;
 
   /**
-   * For commands of type RESET_PASSWORD, optionally specifies the new password.
+   * For commands of type RESET_PASSWORD, optionally specifies the new password. Note: The new
+   * password must be at least 6 characters long if it is numeric in case of Android 14 devices.
+   * Else the command will fail with INVALID_VALUE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,7 +243,9 @@ public final class Command extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For commands of type RESET_PASSWORD, optionally specifies the new password.
+   * For commands of type RESET_PASSWORD, optionally specifies the new password. Note: The new
+   * password must be at least 6 characters long if it is numeric in case of Android 14 devices.
+   * Else the command will fail with INVALID_VALUE.
    * @return value or {@code null} for none
    */
   public java.lang.String getNewPassword() {
@@ -249,7 +253,9 @@ public final class Command extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For commands of type RESET_PASSWORD, optionally specifies the new password.
+   * For commands of type RESET_PASSWORD, optionally specifies the new password. Note: The new
+   * password must be at least 6 characters long if it is numeric in case of Android 14 devices.
+   * Else the command will fail with INVALID_VALUE.
    * @param newPassword newPassword or {@code null} for none
    */
   public Command setNewPassword(java.lang.String newPassword) {

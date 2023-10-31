@@ -65,7 +65,7 @@ public final class GoogleCloudDocumentaiV1beta3ListDocumentsRequest extends com.
   private java.lang.String pageToken;
 
   /**
-   * Optional. Controls if the ListDocuments request requires a total size of matched documents. See
+   * Optional. Controls if the request requires a total size of matched documents. See
    * ListDocumentsResponse.total_size. Enabling this flag may adversely impact performance. Defaults
    * to false.
    * The value may be {@code null}.
@@ -76,9 +76,9 @@ public final class GoogleCloudDocumentaiV1beta3ListDocumentsRequest extends com.
   /**
    * Optional. Number of results to skip beginning from the `page_token` if provided.
    * https://google.aip.dev/158#skipping-results. It must be a non-negative integer. Negative values
-   * wil be rejected. Note that this is not the number of pages to skip. If this value causes the
-   * cursor to move past the end of results, `ListDocumentsResponse.document_metadata` and
-   * `ListDocumentsResponse.next_page_token` will be empty.
+   * will be rejected. Note that this is not the number of pages to skip. If this value causes the
+   * cursor to move past the end of results, ListDocumentsResponse.document_metadata and
+   * ListDocumentsResponse.next_page_token will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class GoogleCloudDocumentaiV1beta3ListDocumentsRequest extends com.
   }
 
   /**
-   * Optional. Controls if the ListDocuments request requires a total size of matched documents. See
+   * Optional. Controls if the request requires a total size of matched documents. See
    * ListDocumentsResponse.total_size. Enabling this flag may adversely impact performance. Defaults
    * to false.
    * @return value or {@code null} for none
@@ -172,7 +172,7 @@ public final class GoogleCloudDocumentaiV1beta3ListDocumentsRequest extends com.
   }
 
   /**
-   * Optional. Controls if the ListDocuments request requires a total size of matched documents. See
+   * Optional. Controls if the request requires a total size of matched documents. See
    * ListDocumentsResponse.total_size. Enabling this flag may adversely impact performance. Defaults
    * to false.
    * @param returnTotalSize returnTotalSize or {@code null} for none
@@ -185,9 +185,9 @@ public final class GoogleCloudDocumentaiV1beta3ListDocumentsRequest extends com.
   /**
    * Optional. Number of results to skip beginning from the `page_token` if provided.
    * https://google.aip.dev/158#skipping-results. It must be a non-negative integer. Negative values
-   * wil be rejected. Note that this is not the number of pages to skip. If this value causes the
-   * cursor to move past the end of results, `ListDocumentsResponse.document_metadata` and
-   * `ListDocumentsResponse.next_page_token` will be empty.
+   * will be rejected. Note that this is not the number of pages to skip. If this value causes the
+   * cursor to move past the end of results, ListDocumentsResponse.document_metadata and
+   * ListDocumentsResponse.next_page_token will be empty.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSkip() {
@@ -197,9 +197,9 @@ public final class GoogleCloudDocumentaiV1beta3ListDocumentsRequest extends com.
   /**
    * Optional. Number of results to skip beginning from the `page_token` if provided.
    * https://google.aip.dev/158#skipping-results. It must be a non-negative integer. Negative values
-   * wil be rejected. Note that this is not the number of pages to skip. If this value causes the
-   * cursor to move past the end of results, `ListDocumentsResponse.document_metadata` and
-   * `ListDocumentsResponse.next_page_token` will be empty.
+   * will be rejected. Note that this is not the number of pages to skip. If this value causes the
+   * cursor to move past the end of results, ListDocumentsResponse.document_metadata and
+   * ListDocumentsResponse.next_page_token will be empty.
    * @param skip skip or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ListDocumentsRequest setSkip(java.lang.Integer skip) {

@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividual
 
   /**
    * The status of resyncing the document with regards to the detected inconsistency. Empty if
-   * `validate_only` is true in the request.
+   * ResyncDatasetRequest.validate_only is `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividual
 
   /**
    * The status of resyncing the document with regards to the detected inconsistency. Empty if
-   * `validate_only` is true in the request.
+   * ResyncDatasetRequest.validate_only is `true`.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getStatus() {
@@ -97,7 +97,7 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividual
 
   /**
    * The status of resyncing the document with regards to the detected inconsistency. Empty if
-   * `validate_only` is true in the request.
+   * ResyncDatasetRequest.validate_only is `true`.
    * @param status status or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus setStatus(GoogleRpcStatus status) {

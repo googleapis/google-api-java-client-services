@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Document AI Warehouse-based dataset configuration.
+   * Optional. Derepcated. Warehouse-based dataset configuration is not supported today.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   private GoogleCloudDocumentaiV1beta3DatasetUnmanagedDatasetConfig unmanagedDatasetConfig;
 
   /**
-   * Optional. Document AI Warehouse-based dataset configuration.
+   * Optional. Derepcated. Warehouse-based dataset configuration is not supported today.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig getDocumentWarehouseConfig() {
@@ -85,7 +85,7 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   }
 
   /**
-   * Optional. Document AI Warehouse-based dataset configuration.
+   * Optional. Derepcated. Warehouse-based dataset configuration is not supported today.
    * @param documentWarehouseConfig documentWarehouseConfig or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Dataset setDocumentWarehouseConfig(GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig documentWarehouseConfig) {

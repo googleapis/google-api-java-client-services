@@ -134,6 +134,887 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the AnywhereCache collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Storage storage = new Storage(...);}
+   *   {@code Storage.AnywhereCache.List request = storage.anywhereCache().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public AnywhereCache anywhereCache() {
+    return new AnywhereCache();
+  }
+
+  /**
+   * The "anywhereCache" collection of methods.
+   */
+  public class AnywhereCache {
+
+    /**
+     * Disables an Anywhere Cache instance.
+     *
+     * Create a request for the method "anywhereCache.disable".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the partent bucket
+     * @param anywhereCacheId The ID of requested Anywhere Cache instance.
+     * @return the request
+     */
+    public Disable disable(java.lang.String bucket, java.lang.String anywhereCacheId) throws java.io.IOException {
+      Disable result = new Disable(bucket, anywhereCacheId);
+      initialize(result);
+      return result;
+    }
+
+    public class Disable extends StorageRequest<com.google.api.services.storage.model.AnywhereCache> {
+
+      private static final String REST_PATH = "b/{bucket}/anywhereCaches/{anywhereCacheId}/disable";
+
+      /**
+       * Disables an Anywhere Cache instance.
+       *
+       * Create a request for the method "anywhereCache.disable".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Disable#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the partent bucket
+       * @param anywhereCacheId The ID of requested Anywhere Cache instance.
+       * @since 1.13
+       */
+      protected Disable(java.lang.String bucket, java.lang.String anywhereCacheId) {
+        super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.AnywhereCache.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.anywhereCacheId = com.google.api.client.util.Preconditions.checkNotNull(anywhereCacheId, "Required parameter anywhereCacheId must be specified.");
+      }
+
+      @Override
+      public Disable setAlt(java.lang.String alt) {
+        return (Disable) super.setAlt(alt);
+      }
+
+      @Override
+      public Disable setFields(java.lang.String fields) {
+        return (Disable) super.setFields(fields);
+      }
+
+      @Override
+      public Disable setKey(java.lang.String key) {
+        return (Disable) super.setKey(key);
+      }
+
+      @Override
+      public Disable setOauthToken(java.lang.String oauthToken) {
+        return (Disable) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Disable setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Disable) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Disable setQuotaUser(java.lang.String quotaUser) {
+        return (Disable) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Disable setUploadType(java.lang.String uploadType) {
+        return (Disable) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Disable setUserIp(java.lang.String userIp) {
+        return (Disable) super.setUserIp(userIp);
+      }
+
+      /** Name of the partent bucket */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the partent bucket
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the partent bucket */
+      public Disable setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The ID of requested Anywhere Cache instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String anywhereCacheId;
+
+      /** The ID of requested Anywhere Cache instance.
+       */
+      public java.lang.String getAnywhereCacheId() {
+        return anywhereCacheId;
+      }
+
+      /** The ID of requested Anywhere Cache instance. */
+      public Disable setAnywhereCacheId(java.lang.String anywhereCacheId) {
+        this.anywhereCacheId = anywhereCacheId;
+        return this;
+      }
+
+      @Override
+      public Disable set(String parameterName, Object value) {
+        return (Disable) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns the metadata of an Anywhere Cache instance.
+     *
+     * Create a request for the method "anywhereCache.get".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the partent bucket
+     * @param anywhereCacheId The ID of requested Anywhere Cache instance.
+     * @return the request
+     */
+    public Get get(java.lang.String bucket, java.lang.String anywhereCacheId) throws java.io.IOException {
+      Get result = new Get(bucket, anywhereCacheId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends StorageRequest<com.google.api.services.storage.model.AnywhereCache> {
+
+      private static final String REST_PATH = "b/{bucket}/anywhereCaches/{anywhereCacheId}";
+
+      /**
+       * Returns the metadata of an Anywhere Cache instance.
+       *
+       * Create a request for the method "anywhereCache.get".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the partent bucket
+       * @param anywhereCacheId The ID of requested Anywhere Cache instance.
+       * @since 1.13
+       */
+      protected Get(java.lang.String bucket, java.lang.String anywhereCacheId) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.AnywhereCache.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.anywhereCacheId = com.google.api.client.util.Preconditions.checkNotNull(anywhereCacheId, "Required parameter anywhereCacheId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Name of the partent bucket */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the partent bucket
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the partent bucket */
+      public Get setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The ID of requested Anywhere Cache instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String anywhereCacheId;
+
+      /** The ID of requested Anywhere Cache instance.
+       */
+      public java.lang.String getAnywhereCacheId() {
+        return anywhereCacheId;
+      }
+
+      /** The ID of requested Anywhere Cache instance. */
+      public Get setAnywhereCacheId(java.lang.String anywhereCacheId) {
+        this.anywhereCacheId = anywhereCacheId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates an Anywhere Cache instance.
+     *
+     * Create a request for the method "anywhereCache.insert".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the partent bucket
+     * @param content the {@link com.google.api.services.storage.model.AnywhereCache}
+     * @return the request
+     */
+    public Insert insert(java.lang.String bucket, com.google.api.services.storage.model.AnywhereCache content) throws java.io.IOException {
+      Insert result = new Insert(bucket, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "b/{bucket}/anywhereCaches";
+
+      /**
+       * Creates an Anywhere Cache instance.
+       *
+       * Create a request for the method "anywhereCache.insert".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the partent bucket
+       * @param content the {@link com.google.api.services.storage.model.AnywhereCache}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String bucket, com.google.api.services.storage.model.AnywhereCache content) {
+        super(Storage.this, "POST", REST_PATH, content, com.google.api.services.storage.model.GoogleLongrunningOperation.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /** Name of the partent bucket */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the partent bucket
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the partent bucket */
+      public Insert setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns a list of Anywhere Cache instances of the bucket matching the criteria.
+     *
+     * Create a request for the method "anywhereCache.list".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the partent bucket
+     * @return the request
+     */
+    public List list(java.lang.String bucket) throws java.io.IOException {
+      List result = new List(bucket);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends StorageRequest<com.google.api.services.storage.model.AnywhereCaches> {
+
+      private static final String REST_PATH = "b/{bucket}/anywhereCache";
+
+      /**
+       * Returns a list of Anywhere Cache instances of the bucket matching the criteria.
+       *
+       * Create a request for the method "anywhereCache.list".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the partent bucket
+       * @since 1.13
+       */
+      protected List(java.lang.String bucket) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.AnywhereCaches.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Name of the partent bucket */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the partent bucket
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the partent bucket */
+      public List setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** Maximum number of items return in a single page of responses. Maximum 1000. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Maximum number of items return in a single page of responses. Maximum 1000.
+
+     [minimum: 0]
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Maximum number of items return in a single page of responses. Maximum 1000. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A previously-returned page token representing part of the larger set of results to view.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A previously-returned page token representing part of the larger set of results to view.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A previously-returned page token representing part of the larger set of results to view.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Pauses an Anywhere Cache instance.
+     *
+     * Create a request for the method "anywhereCache.pause".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the partent bucket
+     * @param anywhereCacheId The ID of requested Anywhere Cache instance.
+     * @return the request
+     */
+    public Pause pause(java.lang.String bucket, java.lang.String anywhereCacheId) throws java.io.IOException {
+      Pause result = new Pause(bucket, anywhereCacheId);
+      initialize(result);
+      return result;
+    }
+
+    public class Pause extends StorageRequest<com.google.api.services.storage.model.AnywhereCache> {
+
+      private static final String REST_PATH = "b/{bucket}/anywhereCaches/{anywhereCacheId}/pause";
+
+      /**
+       * Pauses an Anywhere Cache instance.
+       *
+       * Create a request for the method "anywhereCache.pause".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Pause#execute()} method to invoke the remote operation. <p> {@link
+       * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the partent bucket
+       * @param anywhereCacheId The ID of requested Anywhere Cache instance.
+       * @since 1.13
+       */
+      protected Pause(java.lang.String bucket, java.lang.String anywhereCacheId) {
+        super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.AnywhereCache.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.anywhereCacheId = com.google.api.client.util.Preconditions.checkNotNull(anywhereCacheId, "Required parameter anywhereCacheId must be specified.");
+      }
+
+      @Override
+      public Pause setAlt(java.lang.String alt) {
+        return (Pause) super.setAlt(alt);
+      }
+
+      @Override
+      public Pause setFields(java.lang.String fields) {
+        return (Pause) super.setFields(fields);
+      }
+
+      @Override
+      public Pause setKey(java.lang.String key) {
+        return (Pause) super.setKey(key);
+      }
+
+      @Override
+      public Pause setOauthToken(java.lang.String oauthToken) {
+        return (Pause) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Pause setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Pause) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Pause setQuotaUser(java.lang.String quotaUser) {
+        return (Pause) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Pause setUploadType(java.lang.String uploadType) {
+        return (Pause) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Pause setUserIp(java.lang.String userIp) {
+        return (Pause) super.setUserIp(userIp);
+      }
+
+      /** Name of the partent bucket */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the partent bucket
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the partent bucket */
+      public Pause setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The ID of requested Anywhere Cache instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String anywhereCacheId;
+
+      /** The ID of requested Anywhere Cache instance.
+       */
+      public java.lang.String getAnywhereCacheId() {
+        return anywhereCacheId;
+      }
+
+      /** The ID of requested Anywhere Cache instance. */
+      public Pause setAnywhereCacheId(java.lang.String anywhereCacheId) {
+        this.anywhereCacheId = anywhereCacheId;
+        return this;
+      }
+
+      @Override
+      public Pause set(String parameterName, Object value) {
+        return (Pause) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Resumes a paused or disabled Anywhere Cache instance.
+     *
+     * Create a request for the method "anywhereCache.resume".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the partent bucket
+     * @param anywhereCacheId The ID of requested Anywhere Cache instance.
+     * @return the request
+     */
+    public Resume resume(java.lang.String bucket, java.lang.String anywhereCacheId) throws java.io.IOException {
+      Resume result = new Resume(bucket, anywhereCacheId);
+      initialize(result);
+      return result;
+    }
+
+    public class Resume extends StorageRequest<com.google.api.services.storage.model.AnywhereCache> {
+
+      private static final String REST_PATH = "b/{bucket}/anywhereCaches/{anywhereCacheId}/resume";
+
+      /**
+       * Resumes a paused or disabled Anywhere Cache instance.
+       *
+       * Create a request for the method "anywhereCache.resume".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Resume#execute()} method to invoke the remote operation. <p> {@link
+       * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the partent bucket
+       * @param anywhereCacheId The ID of requested Anywhere Cache instance.
+       * @since 1.13
+       */
+      protected Resume(java.lang.String bucket, java.lang.String anywhereCacheId) {
+        super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.AnywhereCache.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.anywhereCacheId = com.google.api.client.util.Preconditions.checkNotNull(anywhereCacheId, "Required parameter anywhereCacheId must be specified.");
+      }
+
+      @Override
+      public Resume setAlt(java.lang.String alt) {
+        return (Resume) super.setAlt(alt);
+      }
+
+      @Override
+      public Resume setFields(java.lang.String fields) {
+        return (Resume) super.setFields(fields);
+      }
+
+      @Override
+      public Resume setKey(java.lang.String key) {
+        return (Resume) super.setKey(key);
+      }
+
+      @Override
+      public Resume setOauthToken(java.lang.String oauthToken) {
+        return (Resume) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Resume) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Resume setQuotaUser(java.lang.String quotaUser) {
+        return (Resume) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Resume setUploadType(java.lang.String uploadType) {
+        return (Resume) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Resume setUserIp(java.lang.String userIp) {
+        return (Resume) super.setUserIp(userIp);
+      }
+
+      /** Name of the partent bucket */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the partent bucket
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the partent bucket */
+      public Resume setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The ID of requested Anywhere Cache instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String anywhereCacheId;
+
+      /** The ID of requested Anywhere Cache instance.
+       */
+      public java.lang.String getAnywhereCacheId() {
+        return anywhereCacheId;
+      }
+
+      /** The ID of requested Anywhere Cache instance. */
+      public Resume setAnywhereCacheId(java.lang.String anywhereCacheId) {
+        this.anywhereCacheId = anywhereCacheId;
+        return this;
+      }
+
+      @Override
+      public Resume set(String parameterName, Object value) {
+        return (Resume) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the config(ttl and admissionPolicy) of an Anywhere Cache instance.
+     *
+     * Create a request for the method "anywhereCache.update".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the partent bucket
+     * @param anywhereCacheId The ID of requested Anywhere Cache instance.
+     * @param content the {@link com.google.api.services.storage.model.AnywhereCache}
+     * @return the request
+     */
+    public Update update(java.lang.String bucket, java.lang.String anywhereCacheId, com.google.api.services.storage.model.AnywhereCache content) throws java.io.IOException {
+      Update result = new Update(bucket, anywhereCacheId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "b/{bucket}/anywhereCaches/{anywhereCacheId}";
+
+      /**
+       * Updates the config(ttl and admissionPolicy) of an Anywhere Cache instance.
+       *
+       * Create a request for the method "anywhereCache.update".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the partent bucket
+       * @param anywhereCacheId The ID of requested Anywhere Cache instance.
+       * @param content the {@link com.google.api.services.storage.model.AnywhereCache}
+       * @since 1.13
+       */
+      protected Update(java.lang.String bucket, java.lang.String anywhereCacheId, com.google.api.services.storage.model.AnywhereCache content) {
+        super(Storage.this, "PATCH", REST_PATH, content, com.google.api.services.storage.model.GoogleLongrunningOperation.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.anywhereCacheId = com.google.api.client.util.Preconditions.checkNotNull(anywhereCacheId, "Required parameter anywhereCacheId must be specified.");
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUserIp(java.lang.String userIp) {
+        return (Update) super.setUserIp(userIp);
+      }
+
+      /** Name of the partent bucket */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the partent bucket
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the partent bucket */
+      public Update setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The ID of requested Anywhere Cache instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String anywhereCacheId;
+
+      /** The ID of requested Anywhere Cache instance.
+       */
+      public java.lang.String getAnywhereCacheId() {
+        return anywhereCacheId;
+      }
+
+      /** The ID of requested Anywhere Cache instance. */
+      public Update setAnywhereCacheId(java.lang.String anywhereCacheId) {
+        this.anywhereCacheId = anywhereCacheId;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the BucketAccessControls collection.
    *
    * <p>The typical use is:</p>

@@ -48,8 +48,9 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   private java.lang.Double predictedConversionsChangeFraction;
 
   /**
-   * The predicted change in gross profit as a fraction after introducing the suggested price
-   * compared to current active price. For example, 0.05 is a 5% predicted increase in gross profit.
+   * *Deprecated*: This field is no longer supported and will start returning 0. The predicted
+   * change in gross profit as a fraction after introducing the suggested price compared to current
+   * active price. For example, 0.05 is a 5% predicted increase in gross profit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,6 +65,7 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   private java.lang.Double predictedImpressionsChangeFraction;
 
   /**
+   * *Deprecated*: This field is no longer supported and will start returning USD for all requests.
    * The predicted monthly gross profit change currency (ISO 4217 code).
    * The value may be {@code null}.
    */
@@ -71,8 +73,9 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   private java.lang.String predictedMonthlyGrossProfitChangeCurrencyCode;
 
   /**
-   * The predicted change in gross profit in micros (1 millionth of a standard unit, 1 USD = 1000000
-   * micros) after introducing the suggested price for a month compared to current active price.
+   * *Deprecated*: This field is no longer supported and will start returning 0. The predicted
+   * change in gross profit in micros (1 millionth of a standard unit, 1 USD = 1000000 micros) after
+   * introducing the suggested price for a month compared to current active price.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -132,8 +135,9 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The predicted change in gross profit as a fraction after introducing the suggested price
-   * compared to current active price. For example, 0.05 is a 5% predicted increase in gross profit.
+   * *Deprecated*: This field is no longer supported and will start returning 0. The predicted
+   * change in gross profit as a fraction after introducing the suggested price compared to current
+   * active price. For example, 0.05 is a 5% predicted increase in gross profit.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPredictedGrossProfitChangeFraction() {
@@ -141,8 +145,9 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The predicted change in gross profit as a fraction after introducing the suggested price
-   * compared to current active price. For example, 0.05 is a 5% predicted increase in gross profit.
+   * *Deprecated*: This field is no longer supported and will start returning 0. The predicted
+   * change in gross profit as a fraction after introducing the suggested price compared to current
+   * active price. For example, 0.05 is a 5% predicted increase in gross profit.
    * @param predictedGrossProfitChangeFraction predictedGrossProfitChangeFraction or {@code null} for none
    */
   public PriceInsights setPredictedGrossProfitChangeFraction(java.lang.Double predictedGrossProfitChangeFraction) {
@@ -170,6 +175,7 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * *Deprecated*: This field is no longer supported and will start returning USD for all requests.
    * The predicted monthly gross profit change currency (ISO 4217 code).
    * @return value or {@code null} for none
    */
@@ -178,6 +184,7 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * *Deprecated*: This field is no longer supported and will start returning USD for all requests.
    * The predicted monthly gross profit change currency (ISO 4217 code).
    * @param predictedMonthlyGrossProfitChangeCurrencyCode predictedMonthlyGrossProfitChangeCurrencyCode or {@code null} for none
    */
@@ -187,8 +194,9 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The predicted change in gross profit in micros (1 millionth of a standard unit, 1 USD = 1000000
-   * micros) after introducing the suggested price for a month compared to current active price.
+   * *Deprecated*: This field is no longer supported and will start returning 0. The predicted
+   * change in gross profit in micros (1 millionth of a standard unit, 1 USD = 1000000 micros) after
+   * introducing the suggested price for a month compared to current active price.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPredictedMonthlyGrossProfitChangeMicros() {
@@ -196,8 +204,9 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The predicted change in gross profit in micros (1 millionth of a standard unit, 1 USD = 1000000
-   * micros) after introducing the suggested price for a month compared to current active price.
+   * *Deprecated*: This field is no longer supported and will start returning 0. The predicted
+   * change in gross profit in micros (1 millionth of a standard unit, 1 USD = 1000000 micros) after
+   * introducing the suggested price for a month compared to current active price.
    * @param predictedMonthlyGrossProfitChangeMicros predictedMonthlyGrossProfitChangeMicros or {@code null} for none
    */
   public PriceInsights setPredictedMonthlyGrossProfitChangeMicros(java.lang.Long predictedMonthlyGrossProfitChangeMicros) {

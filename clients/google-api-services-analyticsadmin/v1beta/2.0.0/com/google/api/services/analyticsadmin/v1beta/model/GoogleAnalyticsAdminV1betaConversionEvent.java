@@ -57,6 +57,13 @@ public final class GoogleAnalyticsAdminV1betaConversionEvent extends com.google.
   private java.lang.Boolean custom;
 
   /**
+   * Optional. Defines a default value/currency for a conversion event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1betaConversionEventDefaultConversionValue defaultConversionValue;
+
+  /**
    * Output only. If set, this event can currently be deleted with DeleteConversionEvent.
    * The value may be {@code null}.
    */
@@ -136,6 +143,23 @@ public final class GoogleAnalyticsAdminV1betaConversionEvent extends com.google.
    */
   public GoogleAnalyticsAdminV1betaConversionEvent setCustom(java.lang.Boolean custom) {
     this.custom = custom;
+    return this;
+  }
+
+  /**
+   * Optional. Defines a default value/currency for a conversion event.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1betaConversionEventDefaultConversionValue getDefaultConversionValue() {
+    return defaultConversionValue;
+  }
+
+  /**
+   * Optional. Defines a default value/currency for a conversion event.
+   * @param defaultConversionValue defaultConversionValue or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1betaConversionEvent setDefaultConversionValue(GoogleAnalyticsAdminV1betaConversionEventDefaultConversionValue defaultConversionValue) {
+    this.defaultConversionValue = defaultConversionValue;
     return this;
   }
 

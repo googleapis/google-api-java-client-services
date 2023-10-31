@@ -17,7 +17,8 @@
 package com.google.api.services.mybusinesslodging.v1.model;
 
 /**
- * An eco certificate awarded to the hotel.
+ * An eco certificate awarded to the hotel. Deprecated: this message is no longer populated. All
+ * certification data is now provided by BeCause.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the My Business Lodging API. For a detailed explanation

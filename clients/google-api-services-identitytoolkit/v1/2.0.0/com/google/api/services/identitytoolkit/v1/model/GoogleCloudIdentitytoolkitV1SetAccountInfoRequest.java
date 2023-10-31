@@ -97,7 +97,10 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   /**
    * The user's new email to be updated in the account's attributes. The length of email should be
    * less than 256 characters and in the format of `name@domain.tld`. The email should also match
-   * the [RFC 822](https://tools.ietf.org/html/rfc822) addr-spec production.
+   * the [RFC 822](https://tools.ietf.org/html/rfc822) addr-spec production. If [email enumeration
+   * protection](https://cloud.google.com/identity-platform/docs/admin/email-enumeration-protection)
+   * is enabled, the email cannot be changed by the user without verifying the email first, but it
+   * can be changed by an administrator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -400,7 +403,10 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   /**
    * The user's new email to be updated in the account's attributes. The length of email should be
    * less than 256 characters and in the format of `name@domain.tld`. The email should also match
-   * the [RFC 822](https://tools.ietf.org/html/rfc822) addr-spec production.
+   * the [RFC 822](https://tools.ietf.org/html/rfc822) addr-spec production. If [email enumeration
+   * protection](https://cloud.google.com/identity-platform/docs/admin/email-enumeration-protection)
+   * is enabled, the email cannot be changed by the user without verifying the email first, but it
+   * can be changed by an administrator.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -410,7 +416,10 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   /**
    * The user's new email to be updated in the account's attributes. The length of email should be
    * less than 256 characters and in the format of `name@domain.tld`. The email should also match
-   * the [RFC 822](https://tools.ietf.org/html/rfc822) addr-spec production.
+   * the [RFC 822](https://tools.ietf.org/html/rfc822) addr-spec production. If [email enumeration
+   * protection](https://cloud.google.com/identity-platform/docs/admin/email-enumeration-protection)
+   * is enabled, the email cannot be changed by the user without verifying the email first, but it
+   * can be changed by an administrator.
    * @param email email or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SetAccountInfoRequest setEmail(java.lang.String email) {

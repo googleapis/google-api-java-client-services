@@ -89,6 +89,16 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.String description;
 
   /**
+   * Optional. The url of an Internal Range. Eg: `projects//locations/global/internalRanges/`. If
+   * specified, it means that the subnetwork cidr will be created using the combination of
+   * requested_address/ip_prefix_length. Note that the subnet cidr has to be within the cidr range
+   * of this Internal Range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String internalRange;
+
+  /**
    * Required. The prefix length of the subnet's IP address range. Use CIDR range notation, such as
    * `29` to provision a subnet with an `x.x.x.x/29` CIDR range. The IP address range is drawn from
    * a pool of available ranges in the service consumer's allocated range. GCE disallows subnets
@@ -330,6 +340,29 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   public AddSubnetworkRequest setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. The url of an Internal Range. Eg: `projects//locations/global/internalRanges/`. If
+   * specified, it means that the subnetwork cidr will be created using the combination of
+   * requested_address/ip_prefix_length. Note that the subnet cidr has to be within the cidr range
+   * of this Internal Range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInternalRange() {
+    return internalRange;
+  }
+
+  /**
+   * Optional. The url of an Internal Range. Eg: `projects//locations/global/internalRanges/`. If
+   * specified, it means that the subnetwork cidr will be created using the combination of
+   * requested_address/ip_prefix_length. Note that the subnet cidr has to be within the cidr range
+   * of this Internal Range.
+   * @param internalRange internalRange or {@code null} for none
+   */
+  public AddSubnetworkRequest setInternalRange(java.lang.String internalRange) {
+    this.internalRange = internalRange;
     return this;
   }
 

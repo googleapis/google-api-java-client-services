@@ -3728,6 +3728,181 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
             }
           }
           /**
+           * Consumers use this method to find out the state of VPC Service Controls. The controls could be
+           * enabled or disabled for a connection.
+           *
+           * Create a request for the method "networks.getVpcServiceControls".
+           *
+           * This request holds the parameters needed by the servicenetworking server.  After setting any
+           * optional parameters, call the {@link GetVpcServiceControls#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. Name of the VPC Service Controls config to retrieve in the format:
+           *        `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+           *        peering service that is managing connectivity for the service producer's organization. For
+           *        Google services that support this functionality, this value is
+           *        `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+           *        contains the service consumer's VPC network. {network} is the name of the service
+           *        consumer's VPC network.
+           * @return the request
+           */
+          public GetVpcServiceControls getVpcServiceControls(java.lang.String name) throws java.io.IOException {
+            GetVpcServiceControls result = new GetVpcServiceControls(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetVpcServiceControls extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.VpcServiceControls> {
+
+            private static final String REST_PATH = "v1/{+name}/vpcServiceControls";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+
+            /**
+             * Consumers use this method to find out the state of VPC Service Controls. The controls could be
+             * enabled or disabled for a connection.
+             *
+             * Create a request for the method "networks.getVpcServiceControls".
+             *
+             * This request holds the parameters needed by the the servicenetworking server.  After setting
+             * any optional parameters, call the {@link GetVpcServiceControls#execute()} method to invoke the
+             * remote operation. <p> {@link GetVpcServiceControls#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the VPC Service Controls config to retrieve in the format:
+           *        `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+           *        peering service that is managing connectivity for the service producer's organization. For
+           *        Google services that support this functionality, this value is
+           *        `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+           *        contains the service consumer's VPC network. {network} is the name of the service
+           *        consumer's VPC network.
+             * @since 1.13
+             */
+            protected GetVpcServiceControls(java.lang.String name) {
+              super(ServiceNetworking.this, "GET", REST_PATH, null, com.google.api.services.servicenetworking.v1.model.VpcServiceControls.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetVpcServiceControls set$Xgafv(java.lang.String $Xgafv) {
+              return (GetVpcServiceControls) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetVpcServiceControls setAccessToken(java.lang.String accessToken) {
+              return (GetVpcServiceControls) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetVpcServiceControls setAlt(java.lang.String alt) {
+              return (GetVpcServiceControls) super.setAlt(alt);
+            }
+
+            @Override
+            public GetVpcServiceControls setCallback(java.lang.String callback) {
+              return (GetVpcServiceControls) super.setCallback(callback);
+            }
+
+            @Override
+            public GetVpcServiceControls setFields(java.lang.String fields) {
+              return (GetVpcServiceControls) super.setFields(fields);
+            }
+
+            @Override
+            public GetVpcServiceControls setKey(java.lang.String key) {
+              return (GetVpcServiceControls) super.setKey(key);
+            }
+
+            @Override
+            public GetVpcServiceControls setOauthToken(java.lang.String oauthToken) {
+              return (GetVpcServiceControls) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetVpcServiceControls setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetVpcServiceControls) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetVpcServiceControls setQuotaUser(java.lang.String quotaUser) {
+              return (GetVpcServiceControls) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetVpcServiceControls setUploadType(java.lang.String uploadType) {
+              return (GetVpcServiceControls) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetVpcServiceControls setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetVpcServiceControls) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the VPC Service Controls config to retrieve in the format:
+             * `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+             * peering service that is managing connectivity for the service producer's
+             * organization. For Google services that support this functionality, this value is
+             * `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+             * contains the service consumer's VPC network. {network} is the name of the service
+             * consumer's VPC network.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the VPC Service Controls config to retrieve in the format:
+           `services/{service}/projects/{project}/global/networks/{network}`. {service} is the peering service
+           that is managing connectivity for the service producer's organization. For Google services that
+           support this functionality, this value is `servicenetworking.googleapis.com`. {project} is a
+           project number e.g. `12345` that contains the service consumer's VPC network. {network} is the name
+           of the service consumer's VPC network.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the VPC Service Controls config to retrieve in the format:
+             * `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+             * peering service that is managing connectivity for the service producer's
+             * organization. For Google services that support this functionality, this value is
+             * `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+             * contains the service consumer's VPC network. {network} is the name of the service
+             * consumer's VPC network.
+             */
+            public GetVpcServiceControls setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetVpcServiceControls set(String parameterName, Object value) {
+              return (GetVpcServiceControls) super.set(parameterName, value);
+            }
+          }
+          /**
            * Service producers use this method to update the configuration of their connection including the
            * import/export of custom routes and subnetwork routes with public IP.
            *

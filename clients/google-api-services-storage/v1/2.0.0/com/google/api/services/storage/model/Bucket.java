@@ -2336,8 +2336,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     private com.google.api.client.util.DateTime effectiveTime;
 
     /**
-     * The period of time in seconds, that soft-deleted objects in the bucket will be retained and
-     * cannot be permanently deleted.
+     * The duration in seconds that soft-deleted objects in the bucket will be retained and cannot be
+     * permanently deleted.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -2363,8 +2363,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The period of time in seconds, that soft-deleted objects in the bucket will be retained and
-     * cannot be permanently deleted.
+     * The duration in seconds that soft-deleted objects in the bucket will be retained and cannot be
+     * permanently deleted.
      * @return value or {@code null} for none
      */
     public java.lang.Long getRetentionDurationSeconds() {
@@ -2372,8 +2372,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The period of time in seconds, that soft-deleted objects in the bucket will be retained and
-     * cannot be permanently deleted.
+     * The duration in seconds that soft-deleted objects in the bucket will be retained and cannot be
+     * permanently deleted.
      * @param retentionDurationSeconds retentionDurationSeconds or {@code null} for none
      */
     public SoftDeletePolicy setRetentionDurationSeconds(java.lang.Long retentionDurationSeconds) {

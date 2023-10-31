@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * The metadata proto of ResyncDataset method.
+ * The metadata proto of `ResyncDataset` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -38,8 +38,8 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends c
   private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
-   * The list of dataset resync statuses. Not checked when `dataset_documents` is specified in
-   * ResyncRequest.
+   * The list of dataset resync statuses. Not checked when ResyncDatasetRequest.dataset_documents is
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends c
   }
 
   /**
-   * The list of dataset resync statuses. Not checked when `dataset_documents` is specified in
-   * ResyncRequest.
+   * The list of dataset resync statuses. Not checked when ResyncDatasetRequest.dataset_documents is
+   * specified.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus> getDatasetResyncStatuses() {
@@ -80,8 +80,8 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends c
   }
 
   /**
-   * The list of dataset resync statuses. Not checked when `dataset_documents` is specified in
-   * ResyncRequest.
+   * The list of dataset resync statuses. Not checked when ResyncDatasetRequest.dataset_documents is
+   * specified.
    * @param datasetResyncStatuses datasetResyncStatuses or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata setDatasetResyncStatuses(java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus> datasetResyncStatuses) {

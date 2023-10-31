@@ -52,7 +52,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentMetadata extends com.goog
   private GoogleCloudDocumentaiV1beta3DocumentId documentId;
 
   /**
-   * Labelling state of the document.
+   * Labeling state of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentMetadata extends com.goog
   }
 
   /**
-   * Labelling state of the document.
+   * Labeling state of the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabelingState() {
@@ -125,7 +125,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentMetadata extends com.goog
   }
 
   /**
-   * Labelling state of the document.
+   * Labeling state of the document.
    * @param labelingState labelingState or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentMetadata setLabelingState(java.lang.String labelingState) {

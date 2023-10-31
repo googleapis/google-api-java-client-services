@@ -44,8 +44,8 @@ public final class GoogleCloudDocumentaiV1beta3ListDocumentsResponse extends com
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token, which can be sent as ListDocumentsRequest.page_token to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +76,8 @@ public final class GoogleCloudDocumentaiV1beta3ListDocumentsResponse extends com
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token, which can be sent as ListDocumentsRequest.page_token to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -85,8 +85,8 @@ public final class GoogleCloudDocumentaiV1beta3ListDocumentsResponse extends com
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token, which can be sent as ListDocumentsRequest.page_token to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ListDocumentsResponse setNextPageToken(java.lang.String nextPageToken) {

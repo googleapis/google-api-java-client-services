@@ -32,6 +32,13 @@ package com.google.api.services.chromeuxreport.v1.model;
 public final class Metric extends com.google.api.client.json.GenericJson {
 
   /**
+   * For enum metrics, provides fractions which add up to approximately 1.0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Double> fractions;
+
+  /**
    * The histogram of user experiences for a metric. The histogram will have at least one bin and
    * the densities of all bins will add up to ~1.
    * The value may be {@code null}.
@@ -52,6 +59,23 @@ public final class Metric extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Percentiles percentiles;
+
+  /**
+   * For enum metrics, provides fractions which add up to approximately 1.0.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Double> getFractions() {
+    return fractions;
+  }
+
+  /**
+   * For enum metrics, provides fractions which add up to approximately 1.0.
+   * @param fractions fractions or {@code null} for none
+   */
+  public Metric setFractions(java.util.Map<String, java.lang.Double> fractions) {
+    this.fractions = fractions;
+    return this;
+  }
 
   /**
    * The histogram of user experiences for a metric. The histogram will have at least one bin and

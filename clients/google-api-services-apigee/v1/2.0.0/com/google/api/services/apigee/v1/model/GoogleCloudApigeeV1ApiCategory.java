@@ -17,7 +17,10 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * The API category resource wrapped with response status, error_code, etc.
+ * `ApiCategory` represents an API category. [Catalog
+ * items](/apigee/docs/reference/apis/apigee/rest/v1/organizations.sites.apidocs) can be tagged with
+ * API categories; users viewing the API catalog in the portal will have the option to browse the
+ * catalog by category.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -30,122 +33,98 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1ApiCategory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details of the category.
+   * ID of the category (a UUID).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudApigeeV1ApiCategoryData data;
+  private java.lang.String id;
 
   /**
-   * Unique error code for the request, if any.
+   * Name of the category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String errorCode;
+  private java.lang.String name;
 
   /**
-   * Description of the operation.
+   * Name of the portal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String message;
+  private java.lang.String siteId;
 
   /**
-   * Unique ID of the request.
+   * Time the category was last modified in milliseconds since epoch.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.lang.String requestId;
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long updateTime;
 
   /**
-   * Status of the operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String status;
-
-  /**
-   * Details of the category.
+   * ID of the category (a UUID).
    * @return value or {@code null} for none
    */
-  public GoogleCloudApigeeV1ApiCategoryData getData() {
-    return data;
+  public java.lang.String getId() {
+    return id;
   }
 
   /**
-   * Details of the category.
-   * @param data data or {@code null} for none
+   * ID of the category (a UUID).
+   * @param id id or {@code null} for none
    */
-  public GoogleCloudApigeeV1ApiCategory setData(GoogleCloudApigeeV1ApiCategoryData data) {
-    this.data = data;
+  public GoogleCloudApigeeV1ApiCategory setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 
   /**
-   * Unique error code for the request, if any.
+   * Name of the category.
    * @return value or {@code null} for none
    */
-  public java.lang.String getErrorCode() {
-    return errorCode;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Unique error code for the request, if any.
-   * @param errorCode errorCode or {@code null} for none
+   * Name of the category.
+   * @param name name or {@code null} for none
    */
-  public GoogleCloudApigeeV1ApiCategory setErrorCode(java.lang.String errorCode) {
-    this.errorCode = errorCode;
+  public GoogleCloudApigeeV1ApiCategory setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * Description of the operation.
+   * Name of the portal.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMessage() {
-    return message;
+  public java.lang.String getSiteId() {
+    return siteId;
   }
 
   /**
-   * Description of the operation.
-   * @param message message or {@code null} for none
+   * Name of the portal.
+   * @param siteId siteId or {@code null} for none
    */
-  public GoogleCloudApigeeV1ApiCategory setMessage(java.lang.String message) {
-    this.message = message;
+  public GoogleCloudApigeeV1ApiCategory setSiteId(java.lang.String siteId) {
+    this.siteId = siteId;
     return this;
   }
 
   /**
-   * Unique ID of the request.
+   * Time the category was last modified in milliseconds since epoch.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRequestId() {
-    return requestId;
+  public java.lang.Long getUpdateTime() {
+    return updateTime;
   }
 
   /**
-   * Unique ID of the request.
-   * @param requestId requestId or {@code null} for none
+   * Time the category was last modified in milliseconds since epoch.
+   * @param updateTime updateTime or {@code null} for none
    */
-  public GoogleCloudApigeeV1ApiCategory setRequestId(java.lang.String requestId) {
-    this.requestId = requestId;
-    return this;
-  }
-
-  /**
-   * Status of the operation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStatus() {
-    return status;
-  }
-
-  /**
-   * Status of the operation.
-   * @param status status or {@code null} for none
-   */
-  public GoogleCloudApigeeV1ApiCategory setStatus(java.lang.String status) {
-    this.status = status;
+  public GoogleCloudApigeeV1ApiCategory setUpdateTime(java.lang.Long updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

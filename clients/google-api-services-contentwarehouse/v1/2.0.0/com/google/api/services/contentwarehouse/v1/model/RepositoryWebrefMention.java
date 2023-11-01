@@ -175,14 +175,6 @@ public final class RepositoryWebrefMention extends com.google.api.client.json.Ge
   private RepositoryWebrefConceptNameMetadata nameMetadata;
 
   /**
-   * Whether the mention is a non-locational reference to a geographical entity. Ranges from 0
-   * (locational) to 1 (non-locational).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float nonLocationalScore;
-
-  /**
    * Provides concised access to all matched MatchedLightweightToken.
    * The value may be {@code null}.
    */
@@ -573,25 +565,6 @@ public final class RepositoryWebrefMention extends com.google.api.client.json.Ge
    */
   public RepositoryWebrefMention setNameMetadata(RepositoryWebrefConceptNameMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
-    return this;
-  }
-
-  /**
-   * Whether the mention is a non-locational reference to a geographical entity. Ranges from 0
-   * (locational) to 1 (non-locational).
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNonLocationalScore() {
-    return nonLocationalScore;
-  }
-
-  /**
-   * Whether the mention is a non-locational reference to a geographical entity. Ranges from 0
-   * (locational) to 1 (non-locational).
-   * @param nonLocationalScore nonLocationalScore or {@code null} for none
-   */
-  public RepositoryWebrefMention setNonLocationalScore(java.lang.Float nonLocationalScore) {
-    this.nonLocationalScore = nonLocationalScore;
     return this;
   }
 

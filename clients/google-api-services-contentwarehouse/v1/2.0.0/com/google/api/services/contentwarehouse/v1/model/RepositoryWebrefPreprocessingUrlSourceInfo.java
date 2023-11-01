@@ -34,18 +34,6 @@ public final class RepositoryWebrefPreprocessingUrlSourceInfo extends com.google
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private RepositoryWebrefPreprocessingUrlSourceInfoOldSchema deprecatedOldSchema;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RepositoryWebrefPreprocessingUrlSourceInfoNewSchema newSchema;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.lang.String originalUrl;
 
   /**
@@ -53,36 +41,6 @@ public final class RepositoryWebrefPreprocessingUrlSourceInfo extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public RepositoryWebrefPreprocessingUrlSourceInfoOldSchema getDeprecatedOldSchema() {
-    return deprecatedOldSchema;
-  }
-
-  /**
-   * @param deprecatedOldSchema deprecatedOldSchema or {@code null} for none
-   */
-  public RepositoryWebrefPreprocessingUrlSourceInfo setDeprecatedOldSchema(RepositoryWebrefPreprocessingUrlSourceInfoOldSchema deprecatedOldSchema) {
-    this.deprecatedOldSchema = deprecatedOldSchema;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public RepositoryWebrefPreprocessingUrlSourceInfoNewSchema getNewSchema() {
-    return newSchema;
-  }
-
-  /**
-   * @param newSchema newSchema or {@code null} for none
-   */
-  public RepositoryWebrefPreprocessingUrlSourceInfo setNewSchema(RepositoryWebrefPreprocessingUrlSourceInfoNewSchema newSchema) {
-    this.newSchema = newSchema;
-    return this;
-  }
 
   /**
    * @return value or {@code null} for none

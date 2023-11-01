@@ -32,6 +32,15 @@ package com.google.api.services.iam.v1.model;
 public final class WorkforcePool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configure access restrictions on the workforce pool users. This is an optional field.
+   * If specified web sign-in can be restricted to given set of services or programmatic sign-in can
+   * be disabled for pool users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccessRestrictions accessRestrictions;
+
+  /**
    * A user-specified description of the pool. Cannot exceed 256 characters.
    * The value may be {@code null}.
    */
@@ -93,6 +102,27 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. Configure access restrictions on the workforce pool users. This is an optional field.
+   * If specified web sign-in can be restricted to given set of services or programmatic sign-in can
+   * be disabled for pool users.
+   * @return value or {@code null} for none
+   */
+  public AccessRestrictions getAccessRestrictions() {
+    return accessRestrictions;
+  }
+
+  /**
+   * Optional. Configure access restrictions on the workforce pool users. This is an optional field.
+   * If specified web sign-in can be restricted to given set of services or programmatic sign-in can
+   * be disabled for pool users.
+   * @param accessRestrictions accessRestrictions or {@code null} for none
+   */
+  public WorkforcePool setAccessRestrictions(AccessRestrictions accessRestrictions) {
+    this.accessRestrictions = accessRestrictions;
+    return this;
+  }
 
   /**
    * A user-specified description of the pool. Cannot exceed 256 characters.

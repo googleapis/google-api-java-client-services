@@ -30,9 +30,9 @@ package com.google.api.services.logging.v2.model;
 public final class LogEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The Cloud Error Reporting (https://cloud.google.com/error-reporting) error groups
-   * associated with this LogEntry. Cloud Error Reporting sets the values for this field during
-   * error group creation.For more information, see View error details( http://cloud/error-
+   * Output only. The Error Reporting (https://cloud.google.com/error-reporting) error groups
+   * associated with this LogEntry. Error Reporting sets the values for this field during error
+   * group creation.For more information, see View error details( https://cloud.google.com/error-
    * reporting/docs/viewing-errors#view_error_details)This field isn't available during log routing
    * (https://cloud.google.com/logging/docs/routing/overview)
    * The value may be {@code null}.
@@ -226,9 +226,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean traceSampled;
 
   /**
-   * Output only. The Cloud Error Reporting (https://cloud.google.com/error-reporting) error groups
-   * associated with this LogEntry. Cloud Error Reporting sets the values for this field during
-   * error group creation.For more information, see View error details( http://cloud/error-
+   * Output only. The Error Reporting (https://cloud.google.com/error-reporting) error groups
+   * associated with this LogEntry. Error Reporting sets the values for this field during error
+   * group creation.For more information, see View error details( https://cloud.google.com/error-
    * reporting/docs/viewing-errors#view_error_details)This field isn't available during log routing
    * (https://cloud.google.com/logging/docs/routing/overview)
    * @return value or {@code null} for none
@@ -238,9 +238,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Cloud Error Reporting (https://cloud.google.com/error-reporting) error groups
-   * associated with this LogEntry. Cloud Error Reporting sets the values for this field during
-   * error group creation.For more information, see View error details( http://cloud/error-
+   * Output only. The Error Reporting (https://cloud.google.com/error-reporting) error groups
+   * associated with this LogEntry. Error Reporting sets the values for this field during error
+   * group creation.For more information, see View error details( https://cloud.google.com/error-
    * reporting/docs/viewing-errors#view_error_details)This field isn't available during log routing
    * (https://cloud.google.com/logging/docs/routing/overview)
    * @param errorGroups errorGroups or {@code null} for none

@@ -17,7 +17,7 @@
 package com.google.api.services.logging.v2.model;
 
 /**
- * Contains metadata that associates the LogEntry to Cloud Error Reporting error groups.
+ * Contains metadata that associates the LogEntry to Error Reporting error groups.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:

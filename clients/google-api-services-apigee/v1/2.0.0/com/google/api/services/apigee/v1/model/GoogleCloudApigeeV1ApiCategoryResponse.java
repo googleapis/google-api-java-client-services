@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * The response for `ListApiCategoriesRequest`.
+ * The API category resource wrapped with response status, error_code, etc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -27,20 +27,14 @@ package com.google.api.services.apigee.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudApigeeV1ApiCategoryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API category resources.
+   * The API category resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudApigeeV1ApiCategory> data;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudApigeeV1ApiCategory used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudApigeeV1ApiCategory.class);
-  }
+  private GoogleCloudApigeeV1ApiCategory data;
 
   /**
    * Unique error code for the request, if any.
@@ -71,18 +65,18 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
   private java.lang.String status;
 
   /**
-   * The API category resources.
+   * The API category resource.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudApigeeV1ApiCategory> getData() {
+  public GoogleCloudApigeeV1ApiCategory getData() {
     return data;
   }
 
   /**
-   * The API category resources.
+   * The API category resource.
    * @param data data or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListApiCategoriesResponse setData(java.util.List<GoogleCloudApigeeV1ApiCategory> data) {
+  public GoogleCloudApigeeV1ApiCategoryResponse setData(GoogleCloudApigeeV1ApiCategory data) {
     this.data = data;
     return this;
   }
@@ -99,7 +93,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
    * Unique error code for the request, if any.
    * @param errorCode errorCode or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListApiCategoriesResponse setErrorCode(java.lang.String errorCode) {
+  public GoogleCloudApigeeV1ApiCategoryResponse setErrorCode(java.lang.String errorCode) {
     this.errorCode = errorCode;
     return this;
   }
@@ -116,7 +110,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
    * Description of the operation.
    * @param message message or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListApiCategoriesResponse setMessage(java.lang.String message) {
+  public GoogleCloudApigeeV1ApiCategoryResponse setMessage(java.lang.String message) {
     this.message = message;
     return this;
   }
@@ -133,7 +127,7 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
    * Unique ID of the request.
    * @param requestId requestId or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListApiCategoriesResponse setRequestId(java.lang.String requestId) {
+  public GoogleCloudApigeeV1ApiCategoryResponse setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
     return this;
   }
@@ -150,19 +144,19 @@ public final class GoogleCloudApigeeV1ListApiCategoriesResponse extends com.goog
    * Status of the operation.
    * @param status status or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListApiCategoriesResponse setStatus(java.lang.String status) {
+  public GoogleCloudApigeeV1ApiCategoryResponse setStatus(java.lang.String status) {
     this.status = status;
     return this;
   }
 
   @Override
-  public GoogleCloudApigeeV1ListApiCategoriesResponse set(String fieldName, Object value) {
-    return (GoogleCloudApigeeV1ListApiCategoriesResponse) super.set(fieldName, value);
+  public GoogleCloudApigeeV1ApiCategoryResponse set(String fieldName, Object value) {
+    return (GoogleCloudApigeeV1ApiCategoryResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudApigeeV1ListApiCategoriesResponse clone() {
-    return (GoogleCloudApigeeV1ListApiCategoriesResponse) super.clone();
+  public GoogleCloudApigeeV1ApiCategoryResponse clone() {
+    return (GoogleCloudApigeeV1ApiCategoryResponse) super.clone();
   }
 
 }

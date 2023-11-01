@@ -49869,16 +49869,16 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          *
          * @param parent Required. Name of the portal. Use the following structure in your request:
          *        `organizations/{org}/sites/{site}`
-         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryData}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory}
          * @return the request
          */
-        public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryData content) throws java.io.IOException {
+        public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory content) throws java.io.IOException {
           Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
-        public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory> {
+        public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryResponse> {
 
           private static final String REST_PATH = "v1/{+parent}/apicategories";
 
@@ -49897,11 +49897,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            *
            * @param parent Required. Name of the portal. Use the following structure in your request:
          *        `organizations/{org}/sites/{site}`
-           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryData}
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryData content) {
-            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory.class);
+          protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -50153,7 +50153,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return result;
         }
 
-        public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory> {
+        public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryResponse> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -50175,7 +50175,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * @since 1.13
            */
           protected Get(java.lang.String name) {
-            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory.class);
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -50439,16 +50439,16 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          *
          * @param name Required. Name of the category. Use the following structure in your request:
          *        `organizations/{org}/sites/{site}/apicategories/{apicategory}`
-         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryData}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory}
          * @return the request
          */
-        public Patch patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryData content) throws java.io.IOException {
+        public Patch patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory content) throws java.io.IOException {
           Patch result = new Patch(name, content);
           initialize(result);
           return result;
         }
 
-        public class Patch extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory> {
+        public class Patch extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryResponse> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -50467,11 +50467,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            *
            * @param name Required. Name of the category. Use the following structure in your request:
          *        `organizations/{org}/sites/{site}/apicategories/{apicategory}`
-           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryData}
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory}
            * @since 1.13
            */
-          protected Patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryData content) {
-            super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory.class);
+          protected Patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategory content) {
+            super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiCategoryResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

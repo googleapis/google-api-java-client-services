@@ -402,6 +402,152 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
+     * Lists all the available runtimes for the application.
+     *
+     * Create a request for the method "apps.listRuntimes".
+     *
+     * This request holds the parameters needed by the appengine server.  After setting any optional
+     * parameters, call the {@link ListRuntimes#execute()} method to invoke the remote operation.
+     *
+     * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+     * @return the request
+     */
+    public ListRuntimes listRuntimes(java.lang.String appsId) throws java.io.IOException {
+      ListRuntimes result = new ListRuntimes(appsId);
+      initialize(result);
+      return result;
+    }
+
+    public class ListRuntimes extends AppengineRequest<com.google.api.services.appengine.v1.model.ListRuntimesResponse> {
+
+      private static final String REST_PATH = "v1/apps/{appsId}:listRuntimes";
+
+      /**
+       * Lists all the available runtimes for the application.
+       *
+       * Create a request for the method "apps.listRuntimes".
+       *
+       * This request holds the parameters needed by the the appengine server.  After setting any
+       * optional parameters, call the {@link ListRuntimes#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * ListRuntimes#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+       * @since 1.13
+       */
+      protected ListRuntimes(java.lang.String appsId) {
+        super(Appengine.this, "GET", REST_PATH, null, com.google.api.services.appengine.v1.model.ListRuntimesResponse.class);
+        this.appsId = com.google.api.client.util.Preconditions.checkNotNull(appsId, "Required parameter appsId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ListRuntimes set$Xgafv(java.lang.String $Xgafv) {
+        return (ListRuntimes) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListRuntimes setAccessToken(java.lang.String accessToken) {
+        return (ListRuntimes) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ListRuntimes setAlt(java.lang.String alt) {
+        return (ListRuntimes) super.setAlt(alt);
+      }
+
+      @Override
+      public ListRuntimes setCallback(java.lang.String callback) {
+        return (ListRuntimes) super.setCallback(callback);
+      }
+
+      @Override
+      public ListRuntimes setFields(java.lang.String fields) {
+        return (ListRuntimes) super.setFields(fields);
+      }
+
+      @Override
+      public ListRuntimes setKey(java.lang.String key) {
+        return (ListRuntimes) super.setKey(key);
+      }
+
+      @Override
+      public ListRuntimes setOauthToken(java.lang.String oauthToken) {
+        return (ListRuntimes) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListRuntimes setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListRuntimes) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListRuntimes setQuotaUser(java.lang.String quotaUser) {
+        return (ListRuntimes) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListRuntimes setUploadType(java.lang.String uploadType) {
+        return (ListRuntimes) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListRuntimes setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListRuntimes) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String appsId;
+
+      /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+       */
+      public java.lang.String getAppsId() {
+        return appsId;
+      }
+
+      /**
+       * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+       */
+      public ListRuntimes setAppsId(java.lang.String appsId) {
+        this.appsId = appsId;
+        return this;
+      }
+
+      /** Optional. The environment of the Application. */
+      @com.google.api.client.util.Key
+      private java.lang.String environment;
+
+      /** Optional. The environment of the Application.
+       */
+      public java.lang.String getEnvironment() {
+        return environment;
+      }
+
+      /** Optional. The environment of the Application. */
+      public ListRuntimes setEnvironment(java.lang.String environment) {
+        this.environment = environment;
+        return this;
+      }
+
+      @Override
+      public ListRuntimes set(String parameterName, Object value) {
+        return (ListRuntimes) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates the specified Application resource. You can update the following fields: auth_domain -
      * Google authentication domain for controlling user access to the application.
      * default_cookie_expiration - Cookie expiration policy for the application. iap - Identity-Aware

@@ -106,9 +106,9 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private RestoreInfo restoreInfo;
 
   /**
-   * Only available with STATS_VIEW, this includes summary statistics about the entire table
-   * contents. For statistics about a specific column family, see ColumnFamilyStats in the mapped
-   * ColumnFamily collection above.
+   * Output only. Only available with STATS_VIEW, this includes summary statistics about the entire
+   * table contents. For statistics about a specific column family, see ColumnFamilyStats in the
+   * mapped ColumnFamily collection above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,9 +260,9 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only available with STATS_VIEW, this includes summary statistics about the entire table
-   * contents. For statistics about a specific column family, see ColumnFamilyStats in the mapped
-   * ColumnFamily collection above.
+   * Output only. Only available with STATS_VIEW, this includes summary statistics about the entire
+   * table contents. For statistics about a specific column family, see ColumnFamilyStats in the
+   * mapped ColumnFamily collection above.
    * @return value or {@code null} for none
    */
   public TableStats getStats() {
@@ -270,9 +270,9 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only available with STATS_VIEW, this includes summary statistics about the entire table
-   * contents. For statistics about a specific column family, see ColumnFamilyStats in the mapped
-   * ColumnFamily collection above.
+   * Output only. Only available with STATS_VIEW, this includes summary statistics about the entire
+   * table contents. For statistics about a specific column family, see ColumnFamilyStats in the
+   * mapped ColumnFamily collection above.
    * @param stats stats or {@code null} for none
    */
   public Table setStats(TableStats stats) {

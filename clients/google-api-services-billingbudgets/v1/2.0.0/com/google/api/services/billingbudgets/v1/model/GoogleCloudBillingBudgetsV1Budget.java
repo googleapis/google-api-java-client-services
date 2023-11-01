@@ -80,6 +80,12 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
   private GoogleCloudBillingBudgetsV1NotificationsRule notificationsRule;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ownershipScope;
+
+  /**
    * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend
    * exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications.
    * Required if using email notifications.
@@ -195,6 +201,21 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
    */
   public GoogleCloudBillingBudgetsV1Budget setNotificationsRule(GoogleCloudBillingBudgetsV1NotificationsRule notificationsRule) {
     this.notificationsRule = notificationsRule;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOwnershipScope() {
+    return ownershipScope;
+  }
+
+  /**
+   * @param ownershipScope ownershipScope or {@code null} for none
+   */
+  public GoogleCloudBillingBudgetsV1Budget setOwnershipScope(java.lang.String ownershipScope) {
+    this.ownershipScope = ownershipScope;
     return this;
   }
 

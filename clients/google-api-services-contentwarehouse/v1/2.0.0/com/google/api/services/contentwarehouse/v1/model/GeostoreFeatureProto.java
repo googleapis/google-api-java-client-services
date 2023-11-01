@@ -89,6 +89,19 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreAnchoredGeometryProto anchoredGeometry;
 
   /**
+   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeostoreFeatureIdProto> associatedEvChargingStation;
+
+  static {
+    // hack to force ProGuard to consider GeostoreFeatureIdProto used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GeostoreFeatureIdProto.class);
+  }
+
+  /**
    * The collection of attachments for this feature. Documentation: http://go/geo-attachments
    * The value may be {@code null}.
    */
@@ -969,6 +982,23 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
    */
   public GeostoreFeatureProto setAnchoredGeometry(GeostoreAnchoredGeometryProto anchoredGeometry) {
     this.anchoredGeometry = anchoredGeometry;
+    return this;
+  }
+
+  /**
+   * RESERVED
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeostoreFeatureIdProto> getAssociatedEvChargingStation() {
+    return associatedEvChargingStation;
+  }
+
+  /**
+   * RESERVED
+   * @param associatedEvChargingStation associatedEvChargingStation or {@code null} for none
+   */
+  public GeostoreFeatureProto setAssociatedEvChargingStation(java.util.List<GeostoreFeatureIdProto> associatedEvChargingStation) {
+    this.associatedEvChargingStation = associatedEvChargingStation;
     return this;
   }
 

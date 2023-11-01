@@ -50,7 +50,17 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
   private java.lang.Boolean closed;
 
   /**
-   * RESERVED
+   * The earliest known date of this feature's "end" (e.g. an establishment's permanent closure), if
+   * the actual date is unknown; i.e. the best known upper bound of the day end_date would
+   * represent. end_as_of_date must be in local (civil) time and of PRECISION_DAY. For example,
+   * given an establishment: * Without any end_as_of_date, the permanent closure definitely isn't
+   * now and isn't known to start at any point in the future. * With an end_as_of_date of 2023-04-05
+   * but without any end_date, the permanent closure definitely starts at latest 2023-04-05 but may
+   * start before 2023-04-05. * With an end_as_of_date of 2023-04-05 and an end_date of 2023 (at
+   * just PRECISION_YEAR), the permanent closure definitely starts at earliest 2023-01-01 (i.e. the
+   * first day of 2023) and at latest 2023-04-05, but may start at any day between 2023-01-01 and
+   * 2023-04-05. IMPORTANT: Generally for Geo Schema-internal use only. If you believe you need to
+   * use this field directly, please go/contact-geo-schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +161,17 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * RESERVED
+   * The earliest known date of this feature's "end" (e.g. an establishment's permanent closure), if
+   * the actual date is unknown; i.e. the best known upper bound of the day end_date would
+   * represent. end_as_of_date must be in local (civil) time and of PRECISION_DAY. For example,
+   * given an establishment: * Without any end_as_of_date, the permanent closure definitely isn't
+   * now and isn't known to start at any point in the future. * With an end_as_of_date of 2023-04-05
+   * but without any end_date, the permanent closure definitely starts at latest 2023-04-05 but may
+   * start before 2023-04-05. * With an end_as_of_date of 2023-04-05 and an end_date of 2023 (at
+   * just PRECISION_YEAR), the permanent closure definitely starts at earliest 2023-01-01 (i.e. the
+   * first day of 2023) and at latest 2023-04-05, but may start at any day between 2023-01-01 and
+   * 2023-04-05. IMPORTANT: Generally for Geo Schema-internal use only. If you believe you need to
+   * use this field directly, please go/contact-geo-schema.
    * @return value or {@code null} for none
    */
   public GeostoreDateTimeProto getEndAsOfDate() {
@@ -159,7 +179,17 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * RESERVED
+   * The earliest known date of this feature's "end" (e.g. an establishment's permanent closure), if
+   * the actual date is unknown; i.e. the best known upper bound of the day end_date would
+   * represent. end_as_of_date must be in local (civil) time and of PRECISION_DAY. For example,
+   * given an establishment: * Without any end_as_of_date, the permanent closure definitely isn't
+   * now and isn't known to start at any point in the future. * With an end_as_of_date of 2023-04-05
+   * but without any end_date, the permanent closure definitely starts at latest 2023-04-05 but may
+   * start before 2023-04-05. * With an end_as_of_date of 2023-04-05 and an end_date of 2023 (at
+   * just PRECISION_YEAR), the permanent closure definitely starts at earliest 2023-01-01 (i.e. the
+   * first day of 2023) and at latest 2023-04-05, but may start at any day between 2023-01-01 and
+   * 2023-04-05. IMPORTANT: Generally for Geo Schema-internal use only. If you believe you need to
+   * use this field directly, please go/contact-geo-schema.
    * @param endAsOfDate endAsOfDate or {@code null} for none
    */
   public GeostoreExistenceProto setEndAsOfDate(GeostoreDateTimeProto endAsOfDate) {

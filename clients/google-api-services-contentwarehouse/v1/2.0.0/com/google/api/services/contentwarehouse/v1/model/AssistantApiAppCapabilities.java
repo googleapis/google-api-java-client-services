@@ -84,6 +84,13 @@ public final class AssistantApiAppCapabilities extends com.google.api.client.jso
   private java.lang.Boolean searchableOnServer;
 
   /**
+   * Indicates whether the provider supports playback of 3P(externally hosted) podcasts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supports3pPodcastPlayback;
+
+  /**
    * This provider has an app that supports starting new media playback when there is no screen
    * (e.g. by integrating with the Bisto SDK).
    * The value may be {@code null}.
@@ -223,6 +230,23 @@ public final class AssistantApiAppCapabilities extends com.google.api.client.jso
    */
   public AssistantApiAppCapabilities setSearchableOnServer(java.lang.Boolean searchableOnServer) {
     this.searchableOnServer = searchableOnServer;
+    return this;
+  }
+
+  /**
+   * Indicates whether the provider supports playback of 3P(externally hosted) podcasts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupports3pPodcastPlayback() {
+    return supports3pPodcastPlayback;
+  }
+
+  /**
+   * Indicates whether the provider supports playback of 3P(externally hosted) podcasts.
+   * @param supports3pPodcastPlayback supports3pPodcastPlayback or {@code null} for none
+   */
+  public AssistantApiAppCapabilities setSupports3pPodcastPlayback(java.lang.Boolean supports3pPodcastPlayback) {
+    this.supports3pPodcastPlayback = supports3pPodcastPlayback;
     return this;
   }
 

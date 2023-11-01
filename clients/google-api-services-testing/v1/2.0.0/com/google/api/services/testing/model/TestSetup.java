@@ -96,6 +96,20 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Initial setup APKs to install before the app under test is installed. Currently
+   * capped at 100.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Apk> initialSetupApks;
+
+  static {
+    // hack to force ProGuard to consider Apk used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Apk.class);
+  }
+
+  /**
    * The network traffic profile used for running the test. Available network profiles can be
    * queried by using the NETWORK_CONFIGURATION environment type when calling
    * TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
@@ -224,6 +238,25 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
    */
   public TestSetup setFilesToPush(java.util.List<DeviceFile> filesToPush) {
     this.filesToPush = filesToPush;
+    return this;
+  }
+
+  /**
+   * Optional. Initial setup APKs to install before the app under test is installed. Currently
+   * capped at 100.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Apk> getInitialSetupApks() {
+    return initialSetupApks;
+  }
+
+  /**
+   * Optional. Initial setup APKs to install before the app under test is installed. Currently
+   * capped at 100.
+   * @param initialSetupApks initialSetupApks or {@code null} for none
+   */
+  public TestSetup setInitialSetupApks(java.util.List<Apk> initialSetupApks) {
+    this.initialSetupApks = initialSetupApks;
     return this;
   }
 

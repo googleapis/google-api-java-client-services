@@ -58,6 +58,14 @@ public final class AgentTaskSpec extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * User account on the VM to run the runnables in the agentTaskSpec. If not set, the runnable will
+   * be run under root user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentTaskUserAccount userAccount;
+
+  /**
    * Environment variables to set before running the Task.
    * @return value or {@code null} for none
    */
@@ -107,6 +115,25 @@ public final class AgentTaskSpec extends com.google.api.client.json.GenericJson 
    */
   public AgentTaskSpec setRunnables(java.util.List<AgentTaskRunnable> runnables) {
     this.runnables = runnables;
+    return this;
+  }
+
+  /**
+   * User account on the VM to run the runnables in the agentTaskSpec. If not set, the runnable will
+   * be run under root user.
+   * @return value or {@code null} for none
+   */
+  public AgentTaskUserAccount getUserAccount() {
+    return userAccount;
+  }
+
+  /**
+   * User account on the VM to run the runnables in the agentTaskSpec. If not set, the runnable will
+   * be run under root user.
+   * @param userAccount userAccount or {@code null} for none
+   */
+  public AgentTaskSpec setUserAccount(AgentTaskUserAccount userAccount) {
+    this.userAccount = userAccount;
     return this;
   }
 

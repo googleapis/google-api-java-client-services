@@ -40,8 +40,8 @@ public final class ColumnFamily extends com.google.api.client.json.GenericJson {
   private GcRule gcRule;
 
   /**
-   * Only available with STATS_VIEW, this includes summary statistics about column family contents.
-   * For statistics over an entire table, see TableStats above.
+   * Output only. Only available with STATS_VIEW, this includes summary statistics about column
+   * family contents. For statistics over an entire table, see TableStats above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class ColumnFamily extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only available with STATS_VIEW, this includes summary statistics about column family contents.
-   * For statistics over an entire table, see TableStats above.
+   * Output only. Only available with STATS_VIEW, this includes summary statistics about column
+   * family contents. For statistics over an entire table, see TableStats above.
    * @return value or {@code null} for none
    */
   public ColumnFamilyStats getStats() {
@@ -78,8 +78,8 @@ public final class ColumnFamily extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only available with STATS_VIEW, this includes summary statistics about column family contents.
-   * For statistics over an entire table, see TableStats above.
+   * Output only. Only available with STATS_VIEW, this includes summary statistics about column
+   * family contents. For statistics over an entire table, see TableStats above.
    * @param stats stats or {@code null} for none
    */
   public ColumnFamily setStats(ColumnFamilyStats stats) {

@@ -30,6 +30,33 @@ package com.google.api.services.content.model;
 @SuppressWarnings("javadoc")
 public final class AccountIdentityType extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Indicates that the business identifies itself with a given identity type. Setting
+   * this field does not automatically mean eligibility for promotions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean selfIdentified;
+
+  /**
+   * Optional. Indicates that the business identifies itself with a given identity type. Setting
+   * this field does not automatically mean eligibility for promotions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSelfIdentified() {
+    return selfIdentified;
+  }
+
+  /**
+   * Optional. Indicates that the business identifies itself with a given identity type. Setting
+   * this field does not automatically mean eligibility for promotions.
+   * @param selfIdentified selfIdentified or {@code null} for none
+   */
+  public AccountIdentityType setSelfIdentified(java.lang.Boolean selfIdentified) {
+    this.selfIdentified = selfIdentified;
+    return this;
+  }
+
   @Override
   public AccountIdentityType set(String fieldName, Object value) {
     return (AccountIdentityType) super.set(fieldName, value);

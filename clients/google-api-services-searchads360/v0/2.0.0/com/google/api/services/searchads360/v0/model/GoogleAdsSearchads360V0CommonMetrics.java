@@ -205,6 +205,148 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double clientAccountConversionsValue;
 
   /**
+   * Client account cross-sell cost of goods sold (COGS) is the total cost of products sold as a
+   * result of advertising a different product. How it works: You report conversions with cart data
+   * for completed purchases on your website. If the ad that was interacted with before the purchase
+   * has an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell cost of goods sold is the
+   * total cost of the products sold that weren't advertised. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
+   * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
+   * order is $5. This metric is only available if you report conversions with cart data. This
+   * metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long clientAccountCrossSellCostOfGoodsSoldMicros;
+
+  /**
+   * Client account cross-sell gross profit is the profit you made from products sold as a result of
+   * advertising a different product, minus cost of goods sold (COGS). How it works: You report
+   * conversions with cart data for completed purchases on your website. If the ad that was
+   * interacted with before the purchase has an associated product (see Shopping Ads) then this
+   * product is considered the advertised product. Any product included in the purchase is a sold
+   * product. If these products don't match then this is considered cross-sell. Cross-sell gross
+   * profit is the revenue you made from cross-sell attributed to your ads minus the cost of the
+   * goods sold. Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a
+   * shirt. The shirt is priced $20 and has a cost of goods sold value of $5. The cross-sell gross
+   * profit of this order is $15 = $20 - $5. This metric is only available if you report conversions
+   * with cart data. This metric is a monetary value and returned in the customer's currency by
+   * default. See the metrics_currency parameter at https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long clientAccountCrossSellGrossProfitMicros;
+
+  /**
+   * Client account cross-sell revenue is the total amount you made from products sold as a result
+   * of advertising a different product. How it works: You report conversions with cart data for
+   * completed purchases on your website. If the ad that was interacted with before the purchase has
+   * an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell revenue is the total value
+   * you made from cross-sell attributed to your ads. Example: Someone clicked on a Shopping ad for
+   * a hat then bought the same hat and a shirt. The hat is priced $10 and the shirt is priced $20.
+   * The cross-sell revenue of this order is $20. This metric is only available if you report
+   * conversions with cart data. This metric is a monetary value and returned in the customer's
+   * currency by default. See the metrics_currency parameter at https://developers.google.com
+   * /search-ads/reporting/query/query-structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long clientAccountCrossSellRevenueMicros;
+
+  /**
+   * Client account cross-sell units sold is the total number of products sold as a result of
+   * advertising a different product. How it works: You report conversions with cart data for
+   * completed purchases on your website. If the ad that was interacted with before the purchase has
+   * an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell units sold is the total
+   * number of cross-sold products from all orders attributed to your ads. Example: Someone clicked
+   * on a Shopping ad for a hat then bought the same hat, a shirt and a jacket. The cross-sell units
+   * sold in this order is 2. This metric is only available if you report conversions with cart
+   * data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double clientAccountCrossSellUnitsSold;
+
+  /**
+   * Client account lead cost of goods sold (COGS) is the total cost of products sold as a result of
+   * advertising the same product. How it works: You report conversions with cart data for completed
+   * purchases on your website. If the ad that was interacted with has an associated product (see
+   * Shopping Ads) then this product is considered the advertised product. Any product included in
+   * the order the customer places is a sold product. If the advertised and sold products match,
+   * then the cost of these goods is counted under lead cost of goods sold. Example: Someone clicked
+   * on a Shopping ad for a hat then bought the same hat and a shirt. The hat has a cost of goods
+   * sold value of $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold
+   * for this order is $3. This metric is only available if you report conversions with cart data.
+   * This metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long clientAccountLeadCostOfGoodsSoldMicros;
+
+  /**
+   * Client account lead gross profit is the profit you made from products sold as a result of
+   * advertising the same product, minus cost of goods sold (COGS). How it works: You report
+   * conversions with cart data for completed purchases on your website. If the ad that was
+   * interacted with before the purchase has an associated product (see Shopping Ads) then this
+   * product is considered the advertised product. Any product included in the order the customer
+   * places is a sold product. If the advertised and sold products match, then the revenue you made
+   * from these sales minus the cost of goods sold is your lead gross profit. Example: Someone
+   * clicked on a Shopping ad for a hat then bought the same hat and a shirt. The hat is priced $10
+   * and has a cost of goods sold value of $3. The lead gross profit of this order is $7 = $10 - $3.
+   * This metric is only available if you report conversions with cart data. This metric is a
+   * monetary value and returned in the customer's currency by default. See the metrics_currency
+   * parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long clientAccountLeadGrossProfitMicros;
+
+  /**
+   * Client account lead revenue is the total amount you made from products sold as a result of
+   * advertising the same product. How it works: You report conversions with cart data for completed
+   * purchases on your website. If the ad that was interacted with before the purchase has an
+   * associated product (see Shopping Ads) then this product is considered the advertised product.
+   * Any product included in the order the customer places is a sold product. If the advertised and
+   * sold products match, then the total value you made from the sales of these products is shown
+   * under lead revenue. Example: Someone clicked on a Shopping ad for a hat then bought the same
+   * hat and a shirt. The hat is priced $10 and the shirt is priced $20. The lead revenue of this
+   * order is $10. This metric is only available if you report conversions with cart data. This
+   * metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long clientAccountLeadRevenueMicros;
+
+  /**
+   * Client account lead units sold is the total number of products sold as a result of advertising
+   * the same product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with before the purchase has an associated
+   * product (see Shopping Ads) then this product is considered the advertised product. Any product
+   * included in the order the customer places is a sold product. If the advertised and sold
+   * products match, then the total number of these products sold is shown under lead units sold.
+   * Example: Someone clicked on a Shopping ad for a hat then bought the same hat, a shirt and a
+   * jacket. The lead units sold in this order is 1. This metric is only available if you report
+   * conversions with cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double clientAccountLeadUnitsSold;
+
+  /**
    * The total number of view-through conversions. These happen when a customer sees an image or
    * rich media ad, then later completes a conversion on your site without interacting with (for
    * example, clicking on) another ad.
@@ -347,6 +489,77 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double crossDeviceConversionsValue;
 
   /**
+   * Cross-sell cost of goods sold (COGS) is the total cost of products sold as a result of
+   * advertising a different product. How it works: You report conversions with cart data for
+   * completed purchases on your website. If the ad that was interacted with before the purchase has
+   * an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell cost of goods sold is the
+   * total cost of the products sold that weren't advertised. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
+   * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
+   * order is $5. This metric is only available if you report conversions with cart data. This
+   * metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long crossSellCostOfGoodsSoldMicros;
+
+  /**
+   * Cross-sell gross profit is the profit you made from products sold as a result of advertising a
+   * different product, minus cost of goods sold (COGS). How it works: You report conversions with
+   * cart data for completed purchases on your website. If the ad that was interacted with before
+   * the purchase has an associated product (see Shopping Ads) then this product is considered the
+   * advertised product. Any product included in the purchase is a sold product. If these products
+   * don't match then this is considered cross-sell. Cross-sell gross profit is the revenue you made
+   * from cross-sell attributed to your ads minus the cost of the goods sold. Example: Someone
+   * clicked on a Shopping ad for a hat then bought the same hat and a shirt. The shirt is priced
+   * $20 and has a cost of goods sold value of $5. The cross-sell gross profit of this order is $15
+   * = $20 - $5. This metric is only available if you report conversions with cart data. This metric
+   * is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long crossSellGrossProfitMicros;
+
+  /**
+   * Cross-sell revenue is the total amount you made from products sold as a result of advertising a
+   * different product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with before the purchase has an associated
+   * product (see Shopping Ads) then this product is considered the advertised product. Any product
+   * included in the order the customer places is a sold product. If these products don't match then
+   * this is considered cross-sell. Cross-sell revenue is the total value you made from cross-sell
+   * attributed to your ads. Example: Someone clicked on a Shopping ad for a hat then bought the
+   * same hat and a shirt. The hat is priced $10 and the shirt is priced $20. The cross-sell revenue
+   * of this order is $20. This metric is only available if you report conversions with cart data.
+   * This metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long crossSellRevenueMicros;
+
+  /**
+   * Cross-sell units sold is the total number of products sold as a result of advertising a
+   * different product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with before the purchase has an associated
+   * product (see Shopping Ads) then this product is considered the advertised product. Any product
+   * included in the order the customer places is a sold product. If these products don't match then
+   * this is considered cross-sell. Cross-sell units sold is the total number of cross-sold products
+   * from all orders attributed to your ads. Example: Someone clicked on a Shopping ad for a hat
+   * then bought the same hat, a shirt and a jacket. The cross-sell units sold in this order is 2.
+   * This metric is only available if you report conversions with cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double crossSellUnitsSold;
+
+  /**
    * The number of clicks your ad receives (Clicks) divided by the number of times your ad is shown
    * (Impressions).
    * The value may be {@code null}.
@@ -427,6 +640,74 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long invalidClicks;
+
+  /**
+   * Lead cost of goods sold (COGS) is the total cost of products sold as a result of advertising
+   * the same product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with has an associated product (see Shopping
+   * Ads) then this product is considered the advertised product. Any product included in the order
+   * the customer places is a sold product. If the advertised and sold products match, then the cost
+   * of these goods is counted under lead cost of goods sold. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
+   * $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold for this order
+   * is $3. This metric is only available if you report conversions with cart data. This metric is a
+   * monetary value and returned in the customer's currency by default. See the metrics_currency
+   * parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long leadCostOfGoodsSoldMicros;
+
+  /**
+   * Lead gross profit is the profit you made from products sold as a result of advertising the same
+   * product, minus cost of goods sold (COGS). How it works: You report conversions with cart data
+   * for completed purchases on your website. If the ad that was interacted with before the purchase
+   * has an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If the
+   * advertised and sold products match, then the revenue you made from these sales minus the cost
+   * of goods sold is your lead gross profit. Example: Someone clicked on a Shopping ad for a hat
+   * then bought the same hat and a shirt. The hat is priced $10 and has a cost of goods sold value
+   * of $3. The lead gross profit of this order is $7 = $10 - $3. This metric is only available if
+   * you report conversions with cart data. This metric is a monetary value and returned in the
+   * customer's currency by default. See the metrics_currency parameter at
+   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long leadGrossProfitMicros;
+
+  /**
+   * Lead revenue is the total amount you made from products sold as a result of advertising the
+   * same product. How it works: You report conversions with cart data for completed purchases on
+   * your website. If the ad that was interacted with before the purchase has an associated product
+   * (see Shopping Ads) then this product is considered the advertised product. Any product included
+   * in the order the customer places is a sold product. If the advertised and sold products match,
+   * then the total value you made from the sales of these products is shown under lead revenue.
+   * Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a shirt. The
+   * hat is priced $10 and the shirt is priced $20. The lead revenue of this order is $10. This
+   * metric is only available if you report conversions with cart data. This metric is a monetary
+   * value and returned in the customer's currency by default. See the metrics_currency parameter at
+   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long leadRevenueMicros;
+
+  /**
+   * Lead units sold is the total number of products sold as a result of advertising the same
+   * product. How it works: You report conversions with cart data for completed purchases on your
+   * website. If the ad that was interacted with before the purchase has an associated product (see
+   * Shopping Ads) then this product is considered the advertised product. Any product included in
+   * the order the customer places is a sold product. If the advertised and sold products match,
+   * then the total number of these products sold is shown under lead units sold. Example: Someone
+   * clicked on a Shopping ad for a hat then bought the same hat, a shirt and a jacket. The lead
+   * units sold in this order is 1. This metric is only available if you report conversions with
+   * cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double leadUnitsSold;
 
   /**
    * The percentage of mobile clicks that go to a mobile-friendly page.
@@ -998,6 +1279,314 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
+   * Client account cross-sell cost of goods sold (COGS) is the total cost of products sold as a
+   * result of advertising a different product. How it works: You report conversions with cart data
+   * for completed purchases on your website. If the ad that was interacted with before the purchase
+   * has an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell cost of goods sold is the
+   * total cost of the products sold that weren't advertised. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
+   * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
+   * order is $5. This metric is only available if you report conversions with cart data. This
+   * metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getClientAccountCrossSellCostOfGoodsSoldMicros() {
+    return clientAccountCrossSellCostOfGoodsSoldMicros;
+  }
+
+  /**
+   * Client account cross-sell cost of goods sold (COGS) is the total cost of products sold as a
+   * result of advertising a different product. How it works: You report conversions with cart data
+   * for completed purchases on your website. If the ad that was interacted with before the purchase
+   * has an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell cost of goods sold is the
+   * total cost of the products sold that weren't advertised. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
+   * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
+   * order is $5. This metric is only available if you report conversions with cart data. This
+   * metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @param clientAccountCrossSellCostOfGoodsSoldMicros clientAccountCrossSellCostOfGoodsSoldMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setClientAccountCrossSellCostOfGoodsSoldMicros(java.lang.Long clientAccountCrossSellCostOfGoodsSoldMicros) {
+    this.clientAccountCrossSellCostOfGoodsSoldMicros = clientAccountCrossSellCostOfGoodsSoldMicros;
+    return this;
+  }
+
+  /**
+   * Client account cross-sell gross profit is the profit you made from products sold as a result of
+   * advertising a different product, minus cost of goods sold (COGS). How it works: You report
+   * conversions with cart data for completed purchases on your website. If the ad that was
+   * interacted with before the purchase has an associated product (see Shopping Ads) then this
+   * product is considered the advertised product. Any product included in the purchase is a sold
+   * product. If these products don't match then this is considered cross-sell. Cross-sell gross
+   * profit is the revenue you made from cross-sell attributed to your ads minus the cost of the
+   * goods sold. Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a
+   * shirt. The shirt is priced $20 and has a cost of goods sold value of $5. The cross-sell gross
+   * profit of this order is $15 = $20 - $5. This metric is only available if you report conversions
+   * with cart data. This metric is a monetary value and returned in the customer's currency by
+   * default. See the metrics_currency parameter at https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getClientAccountCrossSellGrossProfitMicros() {
+    return clientAccountCrossSellGrossProfitMicros;
+  }
+
+  /**
+   * Client account cross-sell gross profit is the profit you made from products sold as a result of
+   * advertising a different product, minus cost of goods sold (COGS). How it works: You report
+   * conversions with cart data for completed purchases on your website. If the ad that was
+   * interacted with before the purchase has an associated product (see Shopping Ads) then this
+   * product is considered the advertised product. Any product included in the purchase is a sold
+   * product. If these products don't match then this is considered cross-sell. Cross-sell gross
+   * profit is the revenue you made from cross-sell attributed to your ads minus the cost of the
+   * goods sold. Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a
+   * shirt. The shirt is priced $20 and has a cost of goods sold value of $5. The cross-sell gross
+   * profit of this order is $15 = $20 - $5. This metric is only available if you report conversions
+   * with cart data. This metric is a monetary value and returned in the customer's currency by
+   * default. See the metrics_currency parameter at https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause
+   * @param clientAccountCrossSellGrossProfitMicros clientAccountCrossSellGrossProfitMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setClientAccountCrossSellGrossProfitMicros(java.lang.Long clientAccountCrossSellGrossProfitMicros) {
+    this.clientAccountCrossSellGrossProfitMicros = clientAccountCrossSellGrossProfitMicros;
+    return this;
+  }
+
+  /**
+   * Client account cross-sell revenue is the total amount you made from products sold as a result
+   * of advertising a different product. How it works: You report conversions with cart data for
+   * completed purchases on your website. If the ad that was interacted with before the purchase has
+   * an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell revenue is the total value
+   * you made from cross-sell attributed to your ads. Example: Someone clicked on a Shopping ad for
+   * a hat then bought the same hat and a shirt. The hat is priced $10 and the shirt is priced $20.
+   * The cross-sell revenue of this order is $20. This metric is only available if you report
+   * conversions with cart data. This metric is a monetary value and returned in the customer's
+   * currency by default. See the metrics_currency parameter at https://developers.google.com
+   * /search-ads/reporting/query/query-structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getClientAccountCrossSellRevenueMicros() {
+    return clientAccountCrossSellRevenueMicros;
+  }
+
+  /**
+   * Client account cross-sell revenue is the total amount you made from products sold as a result
+   * of advertising a different product. How it works: You report conversions with cart data for
+   * completed purchases on your website. If the ad that was interacted with before the purchase has
+   * an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell revenue is the total value
+   * you made from cross-sell attributed to your ads. Example: Someone clicked on a Shopping ad for
+   * a hat then bought the same hat and a shirt. The hat is priced $10 and the shirt is priced $20.
+   * The cross-sell revenue of this order is $20. This metric is only available if you report
+   * conversions with cart data. This metric is a monetary value and returned in the customer's
+   * currency by default. See the metrics_currency parameter at https://developers.google.com
+   * /search-ads/reporting/query/query-structure#parameters_clause
+   * @param clientAccountCrossSellRevenueMicros clientAccountCrossSellRevenueMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setClientAccountCrossSellRevenueMicros(java.lang.Long clientAccountCrossSellRevenueMicros) {
+    this.clientAccountCrossSellRevenueMicros = clientAccountCrossSellRevenueMicros;
+    return this;
+  }
+
+  /**
+   * Client account cross-sell units sold is the total number of products sold as a result of
+   * advertising a different product. How it works: You report conversions with cart data for
+   * completed purchases on your website. If the ad that was interacted with before the purchase has
+   * an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell units sold is the total
+   * number of cross-sold products from all orders attributed to your ads. Example: Someone clicked
+   * on a Shopping ad for a hat then bought the same hat, a shirt and a jacket. The cross-sell units
+   * sold in this order is 2. This metric is only available if you report conversions with cart
+   * data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getClientAccountCrossSellUnitsSold() {
+    return clientAccountCrossSellUnitsSold;
+  }
+
+  /**
+   * Client account cross-sell units sold is the total number of products sold as a result of
+   * advertising a different product. How it works: You report conversions with cart data for
+   * completed purchases on your website. If the ad that was interacted with before the purchase has
+   * an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell units sold is the total
+   * number of cross-sold products from all orders attributed to your ads. Example: Someone clicked
+   * on a Shopping ad for a hat then bought the same hat, a shirt and a jacket. The cross-sell units
+   * sold in this order is 2. This metric is only available if you report conversions with cart
+   * data.
+   * @param clientAccountCrossSellUnitsSold clientAccountCrossSellUnitsSold or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setClientAccountCrossSellUnitsSold(java.lang.Double clientAccountCrossSellUnitsSold) {
+    this.clientAccountCrossSellUnitsSold = clientAccountCrossSellUnitsSold;
+    return this;
+  }
+
+  /**
+   * Client account lead cost of goods sold (COGS) is the total cost of products sold as a result of
+   * advertising the same product. How it works: You report conversions with cart data for completed
+   * purchases on your website. If the ad that was interacted with has an associated product (see
+   * Shopping Ads) then this product is considered the advertised product. Any product included in
+   * the order the customer places is a sold product. If the advertised and sold products match,
+   * then the cost of these goods is counted under lead cost of goods sold. Example: Someone clicked
+   * on a Shopping ad for a hat then bought the same hat and a shirt. The hat has a cost of goods
+   * sold value of $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold
+   * for this order is $3. This metric is only available if you report conversions with cart data.
+   * This metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getClientAccountLeadCostOfGoodsSoldMicros() {
+    return clientAccountLeadCostOfGoodsSoldMicros;
+  }
+
+  /**
+   * Client account lead cost of goods sold (COGS) is the total cost of products sold as a result of
+   * advertising the same product. How it works: You report conversions with cart data for completed
+   * purchases on your website. If the ad that was interacted with has an associated product (see
+   * Shopping Ads) then this product is considered the advertised product. Any product included in
+   * the order the customer places is a sold product. If the advertised and sold products match,
+   * then the cost of these goods is counted under lead cost of goods sold. Example: Someone clicked
+   * on a Shopping ad for a hat then bought the same hat and a shirt. The hat has a cost of goods
+   * sold value of $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold
+   * for this order is $3. This metric is only available if you report conversions with cart data.
+   * This metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @param clientAccountLeadCostOfGoodsSoldMicros clientAccountLeadCostOfGoodsSoldMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setClientAccountLeadCostOfGoodsSoldMicros(java.lang.Long clientAccountLeadCostOfGoodsSoldMicros) {
+    this.clientAccountLeadCostOfGoodsSoldMicros = clientAccountLeadCostOfGoodsSoldMicros;
+    return this;
+  }
+
+  /**
+   * Client account lead gross profit is the profit you made from products sold as a result of
+   * advertising the same product, minus cost of goods sold (COGS). How it works: You report
+   * conversions with cart data for completed purchases on your website. If the ad that was
+   * interacted with before the purchase has an associated product (see Shopping Ads) then this
+   * product is considered the advertised product. Any product included in the order the customer
+   * places is a sold product. If the advertised and sold products match, then the revenue you made
+   * from these sales minus the cost of goods sold is your lead gross profit. Example: Someone
+   * clicked on a Shopping ad for a hat then bought the same hat and a shirt. The hat is priced $10
+   * and has a cost of goods sold value of $3. The lead gross profit of this order is $7 = $10 - $3.
+   * This metric is only available if you report conversions with cart data. This metric is a
+   * monetary value and returned in the customer's currency by default. See the metrics_currency
+   * parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getClientAccountLeadGrossProfitMicros() {
+    return clientAccountLeadGrossProfitMicros;
+  }
+
+  /**
+   * Client account lead gross profit is the profit you made from products sold as a result of
+   * advertising the same product, minus cost of goods sold (COGS). How it works: You report
+   * conversions with cart data for completed purchases on your website. If the ad that was
+   * interacted with before the purchase has an associated product (see Shopping Ads) then this
+   * product is considered the advertised product. Any product included in the order the customer
+   * places is a sold product. If the advertised and sold products match, then the revenue you made
+   * from these sales minus the cost of goods sold is your lead gross profit. Example: Someone
+   * clicked on a Shopping ad for a hat then bought the same hat and a shirt. The hat is priced $10
+   * and has a cost of goods sold value of $3. The lead gross profit of this order is $7 = $10 - $3.
+   * This metric is only available if you report conversions with cart data. This metric is a
+   * monetary value and returned in the customer's currency by default. See the metrics_currency
+   * parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @param clientAccountLeadGrossProfitMicros clientAccountLeadGrossProfitMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setClientAccountLeadGrossProfitMicros(java.lang.Long clientAccountLeadGrossProfitMicros) {
+    this.clientAccountLeadGrossProfitMicros = clientAccountLeadGrossProfitMicros;
+    return this;
+  }
+
+  /**
+   * Client account lead revenue is the total amount you made from products sold as a result of
+   * advertising the same product. How it works: You report conversions with cart data for completed
+   * purchases on your website. If the ad that was interacted with before the purchase has an
+   * associated product (see Shopping Ads) then this product is considered the advertised product.
+   * Any product included in the order the customer places is a sold product. If the advertised and
+   * sold products match, then the total value you made from the sales of these products is shown
+   * under lead revenue. Example: Someone clicked on a Shopping ad for a hat then bought the same
+   * hat and a shirt. The hat is priced $10 and the shirt is priced $20. The lead revenue of this
+   * order is $10. This metric is only available if you report conversions with cart data. This
+   * metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getClientAccountLeadRevenueMicros() {
+    return clientAccountLeadRevenueMicros;
+  }
+
+  /**
+   * Client account lead revenue is the total amount you made from products sold as a result of
+   * advertising the same product. How it works: You report conversions with cart data for completed
+   * purchases on your website. If the ad that was interacted with before the purchase has an
+   * associated product (see Shopping Ads) then this product is considered the advertised product.
+   * Any product included in the order the customer places is a sold product. If the advertised and
+   * sold products match, then the total value you made from the sales of these products is shown
+   * under lead revenue. Example: Someone clicked on a Shopping ad for a hat then bought the same
+   * hat and a shirt. The hat is priced $10 and the shirt is priced $20. The lead revenue of this
+   * order is $10. This metric is only available if you report conversions with cart data. This
+   * metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @param clientAccountLeadRevenueMicros clientAccountLeadRevenueMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setClientAccountLeadRevenueMicros(java.lang.Long clientAccountLeadRevenueMicros) {
+    this.clientAccountLeadRevenueMicros = clientAccountLeadRevenueMicros;
+    return this;
+  }
+
+  /**
+   * Client account lead units sold is the total number of products sold as a result of advertising
+   * the same product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with before the purchase has an associated
+   * product (see Shopping Ads) then this product is considered the advertised product. Any product
+   * included in the order the customer places is a sold product. If the advertised and sold
+   * products match, then the total number of these products sold is shown under lead units sold.
+   * Example: Someone clicked on a Shopping ad for a hat then bought the same hat, a shirt and a
+   * jacket. The lead units sold in this order is 1. This metric is only available if you report
+   * conversions with cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getClientAccountLeadUnitsSold() {
+    return clientAccountLeadUnitsSold;
+  }
+
+  /**
+   * Client account lead units sold is the total number of products sold as a result of advertising
+   * the same product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with before the purchase has an associated
+   * product (see Shopping Ads) then this product is considered the advertised product. Any product
+   * included in the order the customer places is a sold product. If the advertised and sold
+   * products match, then the total number of these products sold is shown under lead units sold.
+   * Example: Someone clicked on a Shopping ad for a hat then bought the same hat, a shirt and a
+   * jacket. The lead units sold in this order is 1. This metric is only available if you report
+   * conversions with cart data.
+   * @param clientAccountLeadUnitsSold clientAccountLeadUnitsSold or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setClientAccountLeadUnitsSold(java.lang.Double clientAccountLeadUnitsSold) {
+    this.clientAccountLeadUnitsSold = clientAccountLeadUnitsSold;
+    return this;
+  }
+
+  /**
    * The total number of view-through conversions. These happen when a customer sees an image or
    * rich media ad, then later completes a conversion on your site without interacting with (for
    * example, clicking on) another ad.
@@ -1333,6 +1922,160 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
+   * Cross-sell cost of goods sold (COGS) is the total cost of products sold as a result of
+   * advertising a different product. How it works: You report conversions with cart data for
+   * completed purchases on your website. If the ad that was interacted with before the purchase has
+   * an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell cost of goods sold is the
+   * total cost of the products sold that weren't advertised. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
+   * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
+   * order is $5. This metric is only available if you report conversions with cart data. This
+   * metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCrossSellCostOfGoodsSoldMicros() {
+    return crossSellCostOfGoodsSoldMicros;
+  }
+
+  /**
+   * Cross-sell cost of goods sold (COGS) is the total cost of products sold as a result of
+   * advertising a different product. How it works: You report conversions with cart data for
+   * completed purchases on your website. If the ad that was interacted with before the purchase has
+   * an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If these
+   * products don't match then this is considered cross-sell. Cross-sell cost of goods sold is the
+   * total cost of the products sold that weren't advertised. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
+   * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
+   * order is $5. This metric is only available if you report conversions with cart data. This
+   * metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @param crossSellCostOfGoodsSoldMicros crossSellCostOfGoodsSoldMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setCrossSellCostOfGoodsSoldMicros(java.lang.Long crossSellCostOfGoodsSoldMicros) {
+    this.crossSellCostOfGoodsSoldMicros = crossSellCostOfGoodsSoldMicros;
+    return this;
+  }
+
+  /**
+   * Cross-sell gross profit is the profit you made from products sold as a result of advertising a
+   * different product, minus cost of goods sold (COGS). How it works: You report conversions with
+   * cart data for completed purchases on your website. If the ad that was interacted with before
+   * the purchase has an associated product (see Shopping Ads) then this product is considered the
+   * advertised product. Any product included in the purchase is a sold product. If these products
+   * don't match then this is considered cross-sell. Cross-sell gross profit is the revenue you made
+   * from cross-sell attributed to your ads minus the cost of the goods sold. Example: Someone
+   * clicked on a Shopping ad for a hat then bought the same hat and a shirt. The shirt is priced
+   * $20 and has a cost of goods sold value of $5. The cross-sell gross profit of this order is $15
+   * = $20 - $5. This metric is only available if you report conversions with cart data. This metric
+   * is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCrossSellGrossProfitMicros() {
+    return crossSellGrossProfitMicros;
+  }
+
+  /**
+   * Cross-sell gross profit is the profit you made from products sold as a result of advertising a
+   * different product, minus cost of goods sold (COGS). How it works: You report conversions with
+   * cart data for completed purchases on your website. If the ad that was interacted with before
+   * the purchase has an associated product (see Shopping Ads) then this product is considered the
+   * advertised product. Any product included in the purchase is a sold product. If these products
+   * don't match then this is considered cross-sell. Cross-sell gross profit is the revenue you made
+   * from cross-sell attributed to your ads minus the cost of the goods sold. Example: Someone
+   * clicked on a Shopping ad for a hat then bought the same hat and a shirt. The shirt is priced
+   * $20 and has a cost of goods sold value of $5. The cross-sell gross profit of this order is $15
+   * = $20 - $5. This metric is only available if you report conversions with cart data. This metric
+   * is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @param crossSellGrossProfitMicros crossSellGrossProfitMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setCrossSellGrossProfitMicros(java.lang.Long crossSellGrossProfitMicros) {
+    this.crossSellGrossProfitMicros = crossSellGrossProfitMicros;
+    return this;
+  }
+
+  /**
+   * Cross-sell revenue is the total amount you made from products sold as a result of advertising a
+   * different product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with before the purchase has an associated
+   * product (see Shopping Ads) then this product is considered the advertised product. Any product
+   * included in the order the customer places is a sold product. If these products don't match then
+   * this is considered cross-sell. Cross-sell revenue is the total value you made from cross-sell
+   * attributed to your ads. Example: Someone clicked on a Shopping ad for a hat then bought the
+   * same hat and a shirt. The hat is priced $10 and the shirt is priced $20. The cross-sell revenue
+   * of this order is $20. This metric is only available if you report conversions with cart data.
+   * This metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCrossSellRevenueMicros() {
+    return crossSellRevenueMicros;
+  }
+
+  /**
+   * Cross-sell revenue is the total amount you made from products sold as a result of advertising a
+   * different product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with before the purchase has an associated
+   * product (see Shopping Ads) then this product is considered the advertised product. Any product
+   * included in the order the customer places is a sold product. If these products don't match then
+   * this is considered cross-sell. Cross-sell revenue is the total value you made from cross-sell
+   * attributed to your ads. Example: Someone clicked on a Shopping ad for a hat then bought the
+   * same hat and a shirt. The hat is priced $10 and the shirt is priced $20. The cross-sell revenue
+   * of this order is $20. This metric is only available if you report conversions with cart data.
+   * This metric is a monetary value and returned in the customer's currency by default. See the
+   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @param crossSellRevenueMicros crossSellRevenueMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setCrossSellRevenueMicros(java.lang.Long crossSellRevenueMicros) {
+    this.crossSellRevenueMicros = crossSellRevenueMicros;
+    return this;
+  }
+
+  /**
+   * Cross-sell units sold is the total number of products sold as a result of advertising a
+   * different product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with before the purchase has an associated
+   * product (see Shopping Ads) then this product is considered the advertised product. Any product
+   * included in the order the customer places is a sold product. If these products don't match then
+   * this is considered cross-sell. Cross-sell units sold is the total number of cross-sold products
+   * from all orders attributed to your ads. Example: Someone clicked on a Shopping ad for a hat
+   * then bought the same hat, a shirt and a jacket. The cross-sell units sold in this order is 2.
+   * This metric is only available if you report conversions with cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getCrossSellUnitsSold() {
+    return crossSellUnitsSold;
+  }
+
+  /**
+   * Cross-sell units sold is the total number of products sold as a result of advertising a
+   * different product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with before the purchase has an associated
+   * product (see Shopping Ads) then this product is considered the advertised product. Any product
+   * included in the order the customer places is a sold product. If these products don't match then
+   * this is considered cross-sell. Cross-sell units sold is the total number of cross-sold products
+   * from all orders attributed to your ads. Example: Someone clicked on a Shopping ad for a hat
+   * then bought the same hat, a shirt and a jacket. The cross-sell units sold in this order is 2.
+   * This metric is only available if you report conversions with cart data.
+   * @param crossSellUnitsSold crossSellUnitsSold or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setCrossSellUnitsSold(java.lang.Double crossSellUnitsSold) {
+    this.crossSellUnitsSold = crossSellUnitsSold;
+    return this;
+  }
+
+  /**
    * The number of clicks your ad receives (Clicks) divided by the number of times your ad is shown
    * (Impressions).
    * @return value or {@code null} for none
@@ -1526,6 +2269,154 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   public GoogleAdsSearchads360V0CommonMetrics setInvalidClicks(java.lang.Long invalidClicks) {
     this.invalidClicks = invalidClicks;
+    return this;
+  }
+
+  /**
+   * Lead cost of goods sold (COGS) is the total cost of products sold as a result of advertising
+   * the same product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with has an associated product (see Shopping
+   * Ads) then this product is considered the advertised product. Any product included in the order
+   * the customer places is a sold product. If the advertised and sold products match, then the cost
+   * of these goods is counted under lead cost of goods sold. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
+   * $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold for this order
+   * is $3. This metric is only available if you report conversions with cart data. This metric is a
+   * monetary value and returned in the customer's currency by default. See the metrics_currency
+   * parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLeadCostOfGoodsSoldMicros() {
+    return leadCostOfGoodsSoldMicros;
+  }
+
+  /**
+   * Lead cost of goods sold (COGS) is the total cost of products sold as a result of advertising
+   * the same product. How it works: You report conversions with cart data for completed purchases
+   * on your website. If the ad that was interacted with has an associated product (see Shopping
+   * Ads) then this product is considered the advertised product. Any product included in the order
+   * the customer places is a sold product. If the advertised and sold products match, then the cost
+   * of these goods is counted under lead cost of goods sold. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
+   * $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold for this order
+   * is $3. This metric is only available if you report conversions with cart data. This metric is a
+   * monetary value and returned in the customer's currency by default. See the metrics_currency
+   * parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
+   * @param leadCostOfGoodsSoldMicros leadCostOfGoodsSoldMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setLeadCostOfGoodsSoldMicros(java.lang.Long leadCostOfGoodsSoldMicros) {
+    this.leadCostOfGoodsSoldMicros = leadCostOfGoodsSoldMicros;
+    return this;
+  }
+
+  /**
+   * Lead gross profit is the profit you made from products sold as a result of advertising the same
+   * product, minus cost of goods sold (COGS). How it works: You report conversions with cart data
+   * for completed purchases on your website. If the ad that was interacted with before the purchase
+   * has an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If the
+   * advertised and sold products match, then the revenue you made from these sales minus the cost
+   * of goods sold is your lead gross profit. Example: Someone clicked on a Shopping ad for a hat
+   * then bought the same hat and a shirt. The hat is priced $10 and has a cost of goods sold value
+   * of $3. The lead gross profit of this order is $7 = $10 - $3. This metric is only available if
+   * you report conversions with cart data. This metric is a monetary value and returned in the
+   * customer's currency by default. See the metrics_currency parameter at
+   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLeadGrossProfitMicros() {
+    return leadGrossProfitMicros;
+  }
+
+  /**
+   * Lead gross profit is the profit you made from products sold as a result of advertising the same
+   * product, minus cost of goods sold (COGS). How it works: You report conversions with cart data
+   * for completed purchases on your website. If the ad that was interacted with before the purchase
+   * has an associated product (see Shopping Ads) then this product is considered the advertised
+   * product. Any product included in the order the customer places is a sold product. If the
+   * advertised and sold products match, then the revenue you made from these sales minus the cost
+   * of goods sold is your lead gross profit. Example: Someone clicked on a Shopping ad for a hat
+   * then bought the same hat and a shirt. The hat is priced $10 and has a cost of goods sold value
+   * of $3. The lead gross profit of this order is $7 = $10 - $3. This metric is only available if
+   * you report conversions with cart data. This metric is a monetary value and returned in the
+   * customer's currency by default. See the metrics_currency parameter at
+   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * @param leadGrossProfitMicros leadGrossProfitMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setLeadGrossProfitMicros(java.lang.Long leadGrossProfitMicros) {
+    this.leadGrossProfitMicros = leadGrossProfitMicros;
+    return this;
+  }
+
+  /**
+   * Lead revenue is the total amount you made from products sold as a result of advertising the
+   * same product. How it works: You report conversions with cart data for completed purchases on
+   * your website. If the ad that was interacted with before the purchase has an associated product
+   * (see Shopping Ads) then this product is considered the advertised product. Any product included
+   * in the order the customer places is a sold product. If the advertised and sold products match,
+   * then the total value you made from the sales of these products is shown under lead revenue.
+   * Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a shirt. The
+   * hat is priced $10 and the shirt is priced $20. The lead revenue of this order is $10. This
+   * metric is only available if you report conversions with cart data. This metric is a monetary
+   * value and returned in the customer's currency by default. See the metrics_currency parameter at
+   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLeadRevenueMicros() {
+    return leadRevenueMicros;
+  }
+
+  /**
+   * Lead revenue is the total amount you made from products sold as a result of advertising the
+   * same product. How it works: You report conversions with cart data for completed purchases on
+   * your website. If the ad that was interacted with before the purchase has an associated product
+   * (see Shopping Ads) then this product is considered the advertised product. Any product included
+   * in the order the customer places is a sold product. If the advertised and sold products match,
+   * then the total value you made from the sales of these products is shown under lead revenue.
+   * Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a shirt. The
+   * hat is priced $10 and the shirt is priced $20. The lead revenue of this order is $10. This
+   * metric is only available if you report conversions with cart data. This metric is a monetary
+   * value and returned in the customer's currency by default. See the metrics_currency parameter at
+   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * @param leadRevenueMicros leadRevenueMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setLeadRevenueMicros(java.lang.Long leadRevenueMicros) {
+    this.leadRevenueMicros = leadRevenueMicros;
+    return this;
+  }
+
+  /**
+   * Lead units sold is the total number of products sold as a result of advertising the same
+   * product. How it works: You report conversions with cart data for completed purchases on your
+   * website. If the ad that was interacted with before the purchase has an associated product (see
+   * Shopping Ads) then this product is considered the advertised product. Any product included in
+   * the order the customer places is a sold product. If the advertised and sold products match,
+   * then the total number of these products sold is shown under lead units sold. Example: Someone
+   * clicked on a Shopping ad for a hat then bought the same hat, a shirt and a jacket. The lead
+   * units sold in this order is 1. This metric is only available if you report conversions with
+   * cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getLeadUnitsSold() {
+    return leadUnitsSold;
+  }
+
+  /**
+   * Lead units sold is the total number of products sold as a result of advertising the same
+   * product. How it works: You report conversions with cart data for completed purchases on your
+   * website. If the ad that was interacted with before the purchase has an associated product (see
+   * Shopping Ads) then this product is considered the advertised product. Any product included in
+   * the order the customer places is a sold product. If the advertised and sold products match,
+   * then the total number of these products sold is shown under lead units sold. Example: Someone
+   * clicked on a Shopping ad for a hat then bought the same hat, a shirt and a jacket. The lead
+   * units sold in this order is 1. This metric is only available if you report conversions with
+   * cart data.
+   * @param leadUnitsSold leadUnitsSold or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setLeadUnitsSold(java.lang.Double leadUnitsSold) {
+    this.leadUnitsSold = leadUnitsSold;
     return this;
   }
 

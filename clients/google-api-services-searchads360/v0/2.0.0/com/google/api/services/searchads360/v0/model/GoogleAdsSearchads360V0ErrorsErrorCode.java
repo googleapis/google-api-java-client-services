@@ -101,7 +101,7 @@ public final class GoogleAdsSearchads360V0ErrorsErrorCode extends com.google.api
   private java.lang.String queryError;
 
   /**
-   * An error with the amonut of quota remaining.
+   * An error with the amount of quota remaining.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,7 +292,7 @@ public final class GoogleAdsSearchads360V0ErrorsErrorCode extends com.google.api
   }
 
   /**
-   * An error with the amonut of quota remaining.
+   * An error with the amount of quota remaining.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuotaError() {
@@ -300,7 +300,7 @@ public final class GoogleAdsSearchads360V0ErrorsErrorCode extends com.google.api
   }
 
   /**
-   * An error with the amonut of quota remaining.
+   * An error with the amount of quota remaining.
    * @param quotaError quotaError or {@code null} for none
    */
   public GoogleAdsSearchads360V0ErrorsErrorCode setQuotaError(java.lang.String quotaError) {

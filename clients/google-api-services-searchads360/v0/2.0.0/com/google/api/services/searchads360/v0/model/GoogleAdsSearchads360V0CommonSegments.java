@@ -107,6 +107,307 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
   private java.lang.String month;
 
   /**
+   * Bidding category (level 1) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productBiddingCategoryLevel1;
+
+  /**
+   * Bidding category (level 2) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productBiddingCategoryLevel2;
+
+  /**
+   * Bidding category (level 3) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productBiddingCategoryLevel3;
+
+  /**
+   * Bidding category (level 4) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productBiddingCategoryLevel4;
+
+  /**
+   * Bidding category (level 5) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productBiddingCategoryLevel5;
+
+  /**
+   * Brand of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productBrand;
+
+  /**
+   * Channel of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productChannel;
+
+  /**
+   * Channel exclusivity of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productChannelExclusivity;
+
+  /**
+   * Condition of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productCondition;
+
+  /**
+   * Resource name of the geo target constant for the country of sale of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productCountry;
+
+  /**
+   * Custom attribute 0 of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productCustomAttribute0;
+
+  /**
+   * Custom attribute 1 of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productCustomAttribute1;
+
+  /**
+   * Custom attribute 2 of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productCustomAttribute2;
+
+  /**
+   * Custom attribute 3 of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productCustomAttribute3;
+
+  /**
+   * Custom attribute 4 of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productCustomAttribute4;
+
+  /**
+   * Item ID of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productItemId;
+
+  /**
+   * Resource name of the language constant for the language of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productLanguage;
+
+  /**
+   * Bidding category (level 1) of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldBiddingCategoryLevel1;
+
+  /**
+   * Bidding category (level 2) of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldBiddingCategoryLevel2;
+
+  /**
+   * Bidding category (level 3) of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldBiddingCategoryLevel3;
+
+  /**
+   * Bidding category (level 4) of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldBiddingCategoryLevel4;
+
+  /**
+   * Bidding category (level 5) of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldBiddingCategoryLevel5;
+
+  /**
+   * Brand of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldBrand;
+
+  /**
+   * Condition of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldCondition;
+
+  /**
+   * Custom attribute 0 of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldCustomAttribute0;
+
+  /**
+   * Custom attribute 1 of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldCustomAttribute1;
+
+  /**
+   * Custom attribute 2 of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldCustomAttribute2;
+
+  /**
+   * Custom attribute 3 of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldCustomAttribute3;
+
+  /**
+   * Custom attribute 4 of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldCustomAttribute4;
+
+  /**
+   * Item ID of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldItemId;
+
+  /**
+   * Title of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldTitle;
+
+  /**
+   * Type (level 1) of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldTypeL1;
+
+  /**
+   * Type (level 2) of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldTypeL2;
+
+  /**
+   * Type (level 3) of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldTypeL3;
+
+  /**
+   * Type (level 4) of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldTypeL4;
+
+  /**
+   * Type (level 5) of the product sold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productSoldTypeL5;
+
+  /**
+   * Store ID of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productStoreId;
+
+  /**
+   * Title of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTitle;
+
+  /**
+   * Type (level 1) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTypeL1;
+
+  /**
+   * Type (level 2) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTypeL2;
+
+  /**
+   * Type (level 3) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTypeL3;
+
+  /**
+   * Type (level 4) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTypeL4;
+
+  /**
+   * Type (level 5) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTypeL5;
+
+  /**
    * Quarter as represented by the date of the first day of a quarter. Uses the calendar year for
    * quarters, for example, the second quarter of 2018 starts on 2018-04-01. Formatted as yyyy-MM-
    * dd.
@@ -309,6 +610,737 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
    */
   public GoogleAdsSearchads360V0CommonSegments setMonth(java.lang.String month) {
     this.month = month;
+    return this;
+  }
+
+  /**
+   * Bidding category (level 1) of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductBiddingCategoryLevel1() {
+    return productBiddingCategoryLevel1;
+  }
+
+  /**
+   * Bidding category (level 1) of the product.
+   * @param productBiddingCategoryLevel1 productBiddingCategoryLevel1 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductBiddingCategoryLevel1(java.lang.String productBiddingCategoryLevel1) {
+    this.productBiddingCategoryLevel1 = productBiddingCategoryLevel1;
+    return this;
+  }
+
+  /**
+   * Bidding category (level 2) of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductBiddingCategoryLevel2() {
+    return productBiddingCategoryLevel2;
+  }
+
+  /**
+   * Bidding category (level 2) of the product.
+   * @param productBiddingCategoryLevel2 productBiddingCategoryLevel2 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductBiddingCategoryLevel2(java.lang.String productBiddingCategoryLevel2) {
+    this.productBiddingCategoryLevel2 = productBiddingCategoryLevel2;
+    return this;
+  }
+
+  /**
+   * Bidding category (level 3) of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductBiddingCategoryLevel3() {
+    return productBiddingCategoryLevel3;
+  }
+
+  /**
+   * Bidding category (level 3) of the product.
+   * @param productBiddingCategoryLevel3 productBiddingCategoryLevel3 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductBiddingCategoryLevel3(java.lang.String productBiddingCategoryLevel3) {
+    this.productBiddingCategoryLevel3 = productBiddingCategoryLevel3;
+    return this;
+  }
+
+  /**
+   * Bidding category (level 4) of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductBiddingCategoryLevel4() {
+    return productBiddingCategoryLevel4;
+  }
+
+  /**
+   * Bidding category (level 4) of the product.
+   * @param productBiddingCategoryLevel4 productBiddingCategoryLevel4 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductBiddingCategoryLevel4(java.lang.String productBiddingCategoryLevel4) {
+    this.productBiddingCategoryLevel4 = productBiddingCategoryLevel4;
+    return this;
+  }
+
+  /**
+   * Bidding category (level 5) of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductBiddingCategoryLevel5() {
+    return productBiddingCategoryLevel5;
+  }
+
+  /**
+   * Bidding category (level 5) of the product.
+   * @param productBiddingCategoryLevel5 productBiddingCategoryLevel5 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductBiddingCategoryLevel5(java.lang.String productBiddingCategoryLevel5) {
+    this.productBiddingCategoryLevel5 = productBiddingCategoryLevel5;
+    return this;
+  }
+
+  /**
+   * Brand of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductBrand() {
+    return productBrand;
+  }
+
+  /**
+   * Brand of the product.
+   * @param productBrand productBrand or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductBrand(java.lang.String productBrand) {
+    this.productBrand = productBrand;
+    return this;
+  }
+
+  /**
+   * Channel of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductChannel() {
+    return productChannel;
+  }
+
+  /**
+   * Channel of the product.
+   * @param productChannel productChannel or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductChannel(java.lang.String productChannel) {
+    this.productChannel = productChannel;
+    return this;
+  }
+
+  /**
+   * Channel exclusivity of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductChannelExclusivity() {
+    return productChannelExclusivity;
+  }
+
+  /**
+   * Channel exclusivity of the product.
+   * @param productChannelExclusivity productChannelExclusivity or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductChannelExclusivity(java.lang.String productChannelExclusivity) {
+    this.productChannelExclusivity = productChannelExclusivity;
+    return this;
+  }
+
+  /**
+   * Condition of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductCondition() {
+    return productCondition;
+  }
+
+  /**
+   * Condition of the product.
+   * @param productCondition productCondition or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductCondition(java.lang.String productCondition) {
+    this.productCondition = productCondition;
+    return this;
+  }
+
+  /**
+   * Resource name of the geo target constant for the country of sale of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductCountry() {
+    return productCountry;
+  }
+
+  /**
+   * Resource name of the geo target constant for the country of sale of the product.
+   * @param productCountry productCountry or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductCountry(java.lang.String productCountry) {
+    this.productCountry = productCountry;
+    return this;
+  }
+
+  /**
+   * Custom attribute 0 of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductCustomAttribute0() {
+    return productCustomAttribute0;
+  }
+
+  /**
+   * Custom attribute 0 of the product.
+   * @param productCustomAttribute0 productCustomAttribute0 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductCustomAttribute0(java.lang.String productCustomAttribute0) {
+    this.productCustomAttribute0 = productCustomAttribute0;
+    return this;
+  }
+
+  /**
+   * Custom attribute 1 of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductCustomAttribute1() {
+    return productCustomAttribute1;
+  }
+
+  /**
+   * Custom attribute 1 of the product.
+   * @param productCustomAttribute1 productCustomAttribute1 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductCustomAttribute1(java.lang.String productCustomAttribute1) {
+    this.productCustomAttribute1 = productCustomAttribute1;
+    return this;
+  }
+
+  /**
+   * Custom attribute 2 of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductCustomAttribute2() {
+    return productCustomAttribute2;
+  }
+
+  /**
+   * Custom attribute 2 of the product.
+   * @param productCustomAttribute2 productCustomAttribute2 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductCustomAttribute2(java.lang.String productCustomAttribute2) {
+    this.productCustomAttribute2 = productCustomAttribute2;
+    return this;
+  }
+
+  /**
+   * Custom attribute 3 of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductCustomAttribute3() {
+    return productCustomAttribute3;
+  }
+
+  /**
+   * Custom attribute 3 of the product.
+   * @param productCustomAttribute3 productCustomAttribute3 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductCustomAttribute3(java.lang.String productCustomAttribute3) {
+    this.productCustomAttribute3 = productCustomAttribute3;
+    return this;
+  }
+
+  /**
+   * Custom attribute 4 of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductCustomAttribute4() {
+    return productCustomAttribute4;
+  }
+
+  /**
+   * Custom attribute 4 of the product.
+   * @param productCustomAttribute4 productCustomAttribute4 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductCustomAttribute4(java.lang.String productCustomAttribute4) {
+    this.productCustomAttribute4 = productCustomAttribute4;
+    return this;
+  }
+
+  /**
+   * Item ID of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductItemId() {
+    return productItemId;
+  }
+
+  /**
+   * Item ID of the product.
+   * @param productItemId productItemId or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductItemId(java.lang.String productItemId) {
+    this.productItemId = productItemId;
+    return this;
+  }
+
+  /**
+   * Resource name of the language constant for the language of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductLanguage() {
+    return productLanguage;
+  }
+
+  /**
+   * Resource name of the language constant for the language of the product.
+   * @param productLanguage productLanguage or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductLanguage(java.lang.String productLanguage) {
+    this.productLanguage = productLanguage;
+    return this;
+  }
+
+  /**
+   * Bidding category (level 1) of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldBiddingCategoryLevel1() {
+    return productSoldBiddingCategoryLevel1;
+  }
+
+  /**
+   * Bidding category (level 1) of the product sold.
+   * @param productSoldBiddingCategoryLevel1 productSoldBiddingCategoryLevel1 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldBiddingCategoryLevel1(java.lang.String productSoldBiddingCategoryLevel1) {
+    this.productSoldBiddingCategoryLevel1 = productSoldBiddingCategoryLevel1;
+    return this;
+  }
+
+  /**
+   * Bidding category (level 2) of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldBiddingCategoryLevel2() {
+    return productSoldBiddingCategoryLevel2;
+  }
+
+  /**
+   * Bidding category (level 2) of the product sold.
+   * @param productSoldBiddingCategoryLevel2 productSoldBiddingCategoryLevel2 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldBiddingCategoryLevel2(java.lang.String productSoldBiddingCategoryLevel2) {
+    this.productSoldBiddingCategoryLevel2 = productSoldBiddingCategoryLevel2;
+    return this;
+  }
+
+  /**
+   * Bidding category (level 3) of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldBiddingCategoryLevel3() {
+    return productSoldBiddingCategoryLevel3;
+  }
+
+  /**
+   * Bidding category (level 3) of the product sold.
+   * @param productSoldBiddingCategoryLevel3 productSoldBiddingCategoryLevel3 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldBiddingCategoryLevel3(java.lang.String productSoldBiddingCategoryLevel3) {
+    this.productSoldBiddingCategoryLevel3 = productSoldBiddingCategoryLevel3;
+    return this;
+  }
+
+  /**
+   * Bidding category (level 4) of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldBiddingCategoryLevel4() {
+    return productSoldBiddingCategoryLevel4;
+  }
+
+  /**
+   * Bidding category (level 4) of the product sold.
+   * @param productSoldBiddingCategoryLevel4 productSoldBiddingCategoryLevel4 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldBiddingCategoryLevel4(java.lang.String productSoldBiddingCategoryLevel4) {
+    this.productSoldBiddingCategoryLevel4 = productSoldBiddingCategoryLevel4;
+    return this;
+  }
+
+  /**
+   * Bidding category (level 5) of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldBiddingCategoryLevel5() {
+    return productSoldBiddingCategoryLevel5;
+  }
+
+  /**
+   * Bidding category (level 5) of the product sold.
+   * @param productSoldBiddingCategoryLevel5 productSoldBiddingCategoryLevel5 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldBiddingCategoryLevel5(java.lang.String productSoldBiddingCategoryLevel5) {
+    this.productSoldBiddingCategoryLevel5 = productSoldBiddingCategoryLevel5;
+    return this;
+  }
+
+  /**
+   * Brand of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldBrand() {
+    return productSoldBrand;
+  }
+
+  /**
+   * Brand of the product sold.
+   * @param productSoldBrand productSoldBrand or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldBrand(java.lang.String productSoldBrand) {
+    this.productSoldBrand = productSoldBrand;
+    return this;
+  }
+
+  /**
+   * Condition of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldCondition() {
+    return productSoldCondition;
+  }
+
+  /**
+   * Condition of the product sold.
+   * @param productSoldCondition productSoldCondition or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldCondition(java.lang.String productSoldCondition) {
+    this.productSoldCondition = productSoldCondition;
+    return this;
+  }
+
+  /**
+   * Custom attribute 0 of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldCustomAttribute0() {
+    return productSoldCustomAttribute0;
+  }
+
+  /**
+   * Custom attribute 0 of the product sold.
+   * @param productSoldCustomAttribute0 productSoldCustomAttribute0 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldCustomAttribute0(java.lang.String productSoldCustomAttribute0) {
+    this.productSoldCustomAttribute0 = productSoldCustomAttribute0;
+    return this;
+  }
+
+  /**
+   * Custom attribute 1 of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldCustomAttribute1() {
+    return productSoldCustomAttribute1;
+  }
+
+  /**
+   * Custom attribute 1 of the product sold.
+   * @param productSoldCustomAttribute1 productSoldCustomAttribute1 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldCustomAttribute1(java.lang.String productSoldCustomAttribute1) {
+    this.productSoldCustomAttribute1 = productSoldCustomAttribute1;
+    return this;
+  }
+
+  /**
+   * Custom attribute 2 of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldCustomAttribute2() {
+    return productSoldCustomAttribute2;
+  }
+
+  /**
+   * Custom attribute 2 of the product sold.
+   * @param productSoldCustomAttribute2 productSoldCustomAttribute2 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldCustomAttribute2(java.lang.String productSoldCustomAttribute2) {
+    this.productSoldCustomAttribute2 = productSoldCustomAttribute2;
+    return this;
+  }
+
+  /**
+   * Custom attribute 3 of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldCustomAttribute3() {
+    return productSoldCustomAttribute3;
+  }
+
+  /**
+   * Custom attribute 3 of the product sold.
+   * @param productSoldCustomAttribute3 productSoldCustomAttribute3 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldCustomAttribute3(java.lang.String productSoldCustomAttribute3) {
+    this.productSoldCustomAttribute3 = productSoldCustomAttribute3;
+    return this;
+  }
+
+  /**
+   * Custom attribute 4 of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldCustomAttribute4() {
+    return productSoldCustomAttribute4;
+  }
+
+  /**
+   * Custom attribute 4 of the product sold.
+   * @param productSoldCustomAttribute4 productSoldCustomAttribute4 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldCustomAttribute4(java.lang.String productSoldCustomAttribute4) {
+    this.productSoldCustomAttribute4 = productSoldCustomAttribute4;
+    return this;
+  }
+
+  /**
+   * Item ID of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldItemId() {
+    return productSoldItemId;
+  }
+
+  /**
+   * Item ID of the product sold.
+   * @param productSoldItemId productSoldItemId or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldItemId(java.lang.String productSoldItemId) {
+    this.productSoldItemId = productSoldItemId;
+    return this;
+  }
+
+  /**
+   * Title of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldTitle() {
+    return productSoldTitle;
+  }
+
+  /**
+   * Title of the product sold.
+   * @param productSoldTitle productSoldTitle or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldTitle(java.lang.String productSoldTitle) {
+    this.productSoldTitle = productSoldTitle;
+    return this;
+  }
+
+  /**
+   * Type (level 1) of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldTypeL1() {
+    return productSoldTypeL1;
+  }
+
+  /**
+   * Type (level 1) of the product sold.
+   * @param productSoldTypeL1 productSoldTypeL1 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldTypeL1(java.lang.String productSoldTypeL1) {
+    this.productSoldTypeL1 = productSoldTypeL1;
+    return this;
+  }
+
+  /**
+   * Type (level 2) of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldTypeL2() {
+    return productSoldTypeL2;
+  }
+
+  /**
+   * Type (level 2) of the product sold.
+   * @param productSoldTypeL2 productSoldTypeL2 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldTypeL2(java.lang.String productSoldTypeL2) {
+    this.productSoldTypeL2 = productSoldTypeL2;
+    return this;
+  }
+
+  /**
+   * Type (level 3) of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldTypeL3() {
+    return productSoldTypeL3;
+  }
+
+  /**
+   * Type (level 3) of the product sold.
+   * @param productSoldTypeL3 productSoldTypeL3 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldTypeL3(java.lang.String productSoldTypeL3) {
+    this.productSoldTypeL3 = productSoldTypeL3;
+    return this;
+  }
+
+  /**
+   * Type (level 4) of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldTypeL4() {
+    return productSoldTypeL4;
+  }
+
+  /**
+   * Type (level 4) of the product sold.
+   * @param productSoldTypeL4 productSoldTypeL4 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldTypeL4(java.lang.String productSoldTypeL4) {
+    this.productSoldTypeL4 = productSoldTypeL4;
+    return this;
+  }
+
+  /**
+   * Type (level 5) of the product sold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductSoldTypeL5() {
+    return productSoldTypeL5;
+  }
+
+  /**
+   * Type (level 5) of the product sold.
+   * @param productSoldTypeL5 productSoldTypeL5 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductSoldTypeL5(java.lang.String productSoldTypeL5) {
+    this.productSoldTypeL5 = productSoldTypeL5;
+    return this;
+  }
+
+  /**
+   * Store ID of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductStoreId() {
+    return productStoreId;
+  }
+
+  /**
+   * Store ID of the product.
+   * @param productStoreId productStoreId or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductStoreId(java.lang.String productStoreId) {
+    this.productStoreId = productStoreId;
+    return this;
+  }
+
+  /**
+   * Title of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTitle() {
+    return productTitle;
+  }
+
+  /**
+   * Title of the product.
+   * @param productTitle productTitle or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductTitle(java.lang.String productTitle) {
+    this.productTitle = productTitle;
+    return this;
+  }
+
+  /**
+   * Type (level 1) of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTypeL1() {
+    return productTypeL1;
+  }
+
+  /**
+   * Type (level 1) of the product.
+   * @param productTypeL1 productTypeL1 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductTypeL1(java.lang.String productTypeL1) {
+    this.productTypeL1 = productTypeL1;
+    return this;
+  }
+
+  /**
+   * Type (level 2) of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTypeL2() {
+    return productTypeL2;
+  }
+
+  /**
+   * Type (level 2) of the product.
+   * @param productTypeL2 productTypeL2 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductTypeL2(java.lang.String productTypeL2) {
+    this.productTypeL2 = productTypeL2;
+    return this;
+  }
+
+  /**
+   * Type (level 3) of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTypeL3() {
+    return productTypeL3;
+  }
+
+  /**
+   * Type (level 3) of the product.
+   * @param productTypeL3 productTypeL3 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductTypeL3(java.lang.String productTypeL3) {
+    this.productTypeL3 = productTypeL3;
+    return this;
+  }
+
+  /**
+   * Type (level 4) of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTypeL4() {
+    return productTypeL4;
+  }
+
+  /**
+   * Type (level 4) of the product.
+   * @param productTypeL4 productTypeL4 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductTypeL4(java.lang.String productTypeL4) {
+    this.productTypeL4 = productTypeL4;
+    return this;
+  }
+
+  /**
+   * Type (level 5) of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTypeL5() {
+    return productTypeL5;
+  }
+
+  /**
+   * Type (level 5) of the product.
+   * @param productTypeL5 productTypeL5 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setProductTypeL5(java.lang.String productTypeL5) {
+    this.productTypeL5 = productTypeL5;
     return this;
   }
 

@@ -31,6 +31,14 @@ package com.google.api.services.datamigration.v1.model;
 public final class PostgreSqlConnectionProfile extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If the destination is an AlloyDB database, use this field to provide the AlloyDB
+   * cluster ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String alloydbClusterId;
+
+  /**
    * If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of
    * the source.
    * The value may be {@code null}.
@@ -104,6 +112,25 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String username;
+
+  /**
+   * Optional. If the destination is an AlloyDB database, use this field to provide the AlloyDB
+   * cluster ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAlloydbClusterId() {
+    return alloydbClusterId;
+  }
+
+  /**
+   * Optional. If the destination is an AlloyDB database, use this field to provide the AlloyDB
+   * cluster ID.
+   * @param alloydbClusterId alloydbClusterId or {@code null} for none
+   */
+  public PostgreSqlConnectionProfile setAlloydbClusterId(java.lang.String alloydbClusterId) {
+    this.alloydbClusterId = alloydbClusterId;
+    return this;
+  }
 
   /**
    * If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of

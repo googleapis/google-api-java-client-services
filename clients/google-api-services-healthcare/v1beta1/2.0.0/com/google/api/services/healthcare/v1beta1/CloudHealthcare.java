@@ -12476,8 +12476,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * implementation of SearchForInstances, see [Search
            * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
            * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
-           * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-           * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+           * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-dicom).
            *
            * Create a request for the method "dicomStores.searchForInstances".
            *
@@ -12513,8 +12512,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * implementation of SearchForInstances, see [Search
              * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
              * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
-             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+             * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-
+             * dicom).
              *
              * Create a request for the method "dicomStores.searchForInstances".
              *
@@ -12679,8 +12678,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * SearchForSeries, see [Search
            * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
            * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
-           * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-           * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+           * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-dicom).
            *
            * Create a request for the method "dicomStores.searchForSeries".
            *
@@ -12716,8 +12714,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * of SearchForSeries, see [Search
              * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
              * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
-             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+             * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-
+             * dicom).
              *
              * Create a request for the method "dicomStores.searchForSeries".
              *
@@ -12882,8 +12880,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * of SearchForStudies, see [Search
            * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
            * Healthcare API conformance statement. For samples that show how to call SearchForStudies, see
-           * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-           * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+           * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-dicom).
            *
            * Create a request for the method "dicomStores.searchForStudies".
            *
@@ -12918,8 +12915,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * implementation of SearchForStudies, see [Search
              * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
              * Healthcare API conformance statement. For samples that show how to call SearchForStudies, see
-             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+             * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-
+             * dicom).
              *
              * Create a request for the method "dicomStores.searchForStudies".
              *
@@ -13068,6 +13065,176 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public SearchForStudies set(String parameterName, Object value) {
               return (SearchForStudies) super.set(parameterName, value);
+            }
+          }
+          /**
+           * SetBlobStorageSettings sets the blob storage settings of the specified resources.
+           *
+           * Create a request for the method "dicomStores.setBlobStorageSettings".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link SetBlobStorageSettings#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param resource Required. The path of the resource to update the blob storage settings in the format of
+           *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{st
+           *        udyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+           *        tudies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dico
+           *        mStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{instanceU
+           *        ID}`. If `filter_config` is specified, set the value of `resource` to the resource name of
+           *        a DICOM store in the format
+           *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest}
+           * @return the request
+           */
+          public SetBlobStorageSettings setBlobStorageSettings(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest content) throws java.io.IOException {
+            SetBlobStorageSettings result = new SetBlobStorageSettings(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetBlobStorageSettings extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:setBlobStorageSettings";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+
+            /**
+             * SetBlobStorageSettings sets the blob storage settings of the specified resources.
+             *
+             * Create a request for the method "dicomStores.setBlobStorageSettings".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link SetBlobStorageSettings#execute()} method to invoke the
+             * remote operation. <p> {@link SetBlobStorageSettings#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param resource Required. The path of the resource to update the blob storage settings in the format of
+           *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{st
+           *        udyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+           *        tudies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dico
+           *        mStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{instanceU
+           *        ID}`. If `filter_config` is specified, set the value of `resource` to the resource name of
+           *        a DICOM store in the format
+           *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest}
+             * @since 1.13
+             */
+            protected SetBlobStorageSettings(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetBlobStorageSettings set$Xgafv(java.lang.String $Xgafv) {
+              return (SetBlobStorageSettings) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetBlobStorageSettings setAccessToken(java.lang.String accessToken) {
+              return (SetBlobStorageSettings) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetBlobStorageSettings setAlt(java.lang.String alt) {
+              return (SetBlobStorageSettings) super.setAlt(alt);
+            }
+
+            @Override
+            public SetBlobStorageSettings setCallback(java.lang.String callback) {
+              return (SetBlobStorageSettings) super.setCallback(callback);
+            }
+
+            @Override
+            public SetBlobStorageSettings setFields(java.lang.String fields) {
+              return (SetBlobStorageSettings) super.setFields(fields);
+            }
+
+            @Override
+            public SetBlobStorageSettings setKey(java.lang.String key) {
+              return (SetBlobStorageSettings) super.setKey(key);
+            }
+
+            @Override
+            public SetBlobStorageSettings setOauthToken(java.lang.String oauthToken) {
+              return (SetBlobStorageSettings) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetBlobStorageSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetBlobStorageSettings) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetBlobStorageSettings setQuotaUser(java.lang.String quotaUser) {
+              return (SetBlobStorageSettings) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetBlobStorageSettings setUploadType(java.lang.String uploadType) {
+              return (SetBlobStorageSettings) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetBlobStorageSettings setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetBlobStorageSettings) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The path of the resource to update the blob storage settings in the format
+             * of `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/stu
+             * dies/{studyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+             * D}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/dataset
+             * s/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUI
+             * D}/instances/{instanceUID}`. If `filter_config` is specified, set the value of
+             * `resource` to the resource name of a DICOM store in the format
+             * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** Required. The path of the resource to update the blob storage settings in the format of
+           `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}`,
+           `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/s
+           eries/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicom
+           Web/studies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+           specified, set the value of `resource` to the resource name of a DICOM store in the format
+           `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * Required. The path of the resource to update the blob storage settings in the format
+             * of `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/stu
+             * dies/{studyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+             * D}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/dataset
+             * s/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUI
+             * D}/instances/{instanceUID}`. If `filter_config` is specified, set the value of
+             * `resource` to the resource name of a DICOM store in the format
+             * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+             */
+            public SetBlobStorageSettings setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetBlobStorageSettings set(String parameterName, Object value) {
+              return (SetBlobStorageSettings) super.set(parameterName, value);
             }
           }
           /**
@@ -13224,8 +13391,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * details on the implementation of StoreInstances, see [Store
            * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
            * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
-           * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
-           * tos/dicomweb#storing_dicom_data).
+           * [Store DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#store-dicom).
            *
            * Create a request for the method "dicomStores.storeInstances".
            *
@@ -13263,8 +13429,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * For details on the implementation of StoreInstances, see [Store
              * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
              * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
-             * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
-             * tos/dicomweb#storing_dicom_data).
+             * [Store DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#store-dicom).
              *
              * Create a request for the method "dicomStores.storeInstances".
              *
@@ -13756,6 +13921,178 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   return (GetStudyMetrics) super.set(parameterName, value);
                 }
               }
+              /**
+               * SetBlobStorageSettings sets the blob storage settings of the specified resources.
+               *
+               * Create a request for the method "studies.setBlobStorageSettings".
+               *
+               * This request holds the parameters needed by the healthcare server.  After setting any optional
+               * parameters, call the {@link SetBlobStorageSettings#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param resource Required. The path of the resource to update the blob storage settings in the format of
+               *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{st
+               *        udyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+               *        tudies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dico
+               *        mStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{instanceU
+               *        ID}`. If `filter_config` is specified, set the value of `resource` to the resource name of
+               *        a DICOM store in the format
+               *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest}
+               * @return the request
+               */
+              public SetBlobStorageSettings setBlobStorageSettings(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest content) throws java.io.IOException {
+                SetBlobStorageSettings result = new SetBlobStorageSettings(resource, content);
+                initialize(result);
+                return result;
+              }
+
+              public class SetBlobStorageSettings extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+                private static final String REST_PATH = "v1beta1/{+resource}:setBlobStorageSettings";
+
+                private final java.util.regex.Pattern RESOURCE_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/.*$");
+
+                /**
+                 * SetBlobStorageSettings sets the blob storage settings of the specified resources.
+                 *
+                 * Create a request for the method "studies.setBlobStorageSettings".
+                 *
+                 * This request holds the parameters needed by the the healthcare server.  After setting any
+                 * optional parameters, call the {@link SetBlobStorageSettings#execute()} method to invoke the
+                 * remote operation. <p> {@link SetBlobStorageSettings#initialize(com.google.api.client.googleapis
+                 * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+                 * after invoking the constructor. </p>
+                 *
+                 * @param resource Required. The path of the resource to update the blob storage settings in the format of
+               *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{st
+               *        udyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+               *        tudies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dico
+               *        mStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{instanceU
+               *        ID}`. If `filter_config` is specified, set the value of `resource` to the resource name of
+               *        a DICOM store in the format
+               *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+                 * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest}
+                 * @since 1.13
+                 */
+                protected SetBlobStorageSettings(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest content) {
+                  super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+                  this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                        "Parameter resource must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/.*$");
+                  }
+                }
+
+                @Override
+                public SetBlobStorageSettings set$Xgafv(java.lang.String $Xgafv) {
+                  return (SetBlobStorageSettings) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public SetBlobStorageSettings setAccessToken(java.lang.String accessToken) {
+                  return (SetBlobStorageSettings) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public SetBlobStorageSettings setAlt(java.lang.String alt) {
+                  return (SetBlobStorageSettings) super.setAlt(alt);
+                }
+
+                @Override
+                public SetBlobStorageSettings setCallback(java.lang.String callback) {
+                  return (SetBlobStorageSettings) super.setCallback(callback);
+                }
+
+                @Override
+                public SetBlobStorageSettings setFields(java.lang.String fields) {
+                  return (SetBlobStorageSettings) super.setFields(fields);
+                }
+
+                @Override
+                public SetBlobStorageSettings setKey(java.lang.String key) {
+                  return (SetBlobStorageSettings) super.setKey(key);
+                }
+
+                @Override
+                public SetBlobStorageSettings setOauthToken(java.lang.String oauthToken) {
+                  return (SetBlobStorageSettings) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public SetBlobStorageSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (SetBlobStorageSettings) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public SetBlobStorageSettings setQuotaUser(java.lang.String quotaUser) {
+                  return (SetBlobStorageSettings) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public SetBlobStorageSettings setUploadType(java.lang.String uploadType) {
+                  return (SetBlobStorageSettings) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public SetBlobStorageSettings setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (SetBlobStorageSettings) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The path of the resource to update the blob storage settings in the
+                 * format of `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/d
+                 * icomWeb/studies/{studyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStor
+                 * es/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/
+                 * {projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{stu
+                 * dyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+                 * specified, set the value of `resource` to the resource name of a DICOM store in
+                 * the format
+                 * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String resource;
+
+                /** Required. The path of the resource to update the blob storage settings in the format of
+               `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}`,
+               `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/s
+               eries/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicom
+               Web/studies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+               specified, set the value of `resource` to the resource name of a DICOM store in the format
+               `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+                 */
+                public java.lang.String getResource() {
+                  return resource;
+                }
+
+                /**
+                 * Required. The path of the resource to update the blob storage settings in the
+                 * format of `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/d
+                 * icomWeb/studies/{studyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStor
+                 * es/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/
+                 * {projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{stu
+                 * dyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+                 * specified, set the value of `resource` to the resource name of a DICOM store in
+                 * the format
+                 * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+                 */
+                public SetBlobStorageSettings setResource(java.lang.String resource) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                        "Parameter resource must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/.*$");
+                  }
+                  this.resource = resource;
+                  return this;
+                }
+
+                @Override
+                public SetBlobStorageSettings set(String parameterName, Object value) {
+                  return (SetBlobStorageSettings) super.set(parameterName, value);
+                }
+              }
 
               /**
                * An accessor for creating requests from the Series collection.
@@ -13928,6 +14265,183 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
                 }
 
+                /**
+                 * An accessor for creating requests from the Instances collection.
+                 *
+                 * <p>The typical use is:</p>
+                 * <pre>
+                 *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+                 *   {@code CloudHealthcare.Instances.List request = healthcare.instances().list(parameters ...)}
+                 * </pre>
+                 *
+                 * @return the resource collection
+                 */
+                public Instances instances() {
+                  return new Instances();
+                }
+
+                /**
+                 * The "instances" collection of methods.
+                 */
+                public class Instances {
+
+                  /**
+                   * GetStorageInfo returns the storage info of the specified resource.
+                   *
+                   * Create a request for the method "instances.getStorageInfo".
+                   *
+                   * This request holds the parameters needed by the healthcare server.  After setting any optional
+                   * parameters, call the {@link GetStorageInfo#execute()} method to invoke the remote operation.
+                   *
+                   * @param resource Required. The path of the resource for which the storage info is requested (for exaxmple for a DICOM
+                   *        Instance: `projects/{projectid}/datasets/{datasetid}/dicomStores/{dicomStoreId}/dicomWeb/s
+                   *        tudies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
+                   * @return the request
+                   */
+                  public GetStorageInfo getStorageInfo(java.lang.String resource) throws java.io.IOException {
+                    GetStorageInfo result = new GetStorageInfo(resource);
+                    initialize(result);
+                    return result;
+                  }
+
+                  public class GetStorageInfo extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.StorageInfo> {
+
+                    private static final String REST_PATH = "v1beta1/{+resource}:getStorageInfo";
+
+                    private final java.util.regex.Pattern RESOURCE_PATTERN =
+                        java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+/series/[^/]+/instances/[^/]+$");
+
+                    /**
+                     * GetStorageInfo returns the storage info of the specified resource.
+                     *
+                     * Create a request for the method "instances.getStorageInfo".
+                     *
+                     * This request holds the parameters needed by the the healthcare server.  After setting any
+                     * optional parameters, call the {@link GetStorageInfo#execute()} method to invoke the remote
+                     * operation. <p> {@link GetStorageInfo#initialize(com.google.api.client.googleapis.services.Abstr
+                     * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+                     * the constructor. </p>
+                     *
+                     * @param resource Required. The path of the resource for which the storage info is requested (for exaxmple for a DICOM
+                   *        Instance: `projects/{projectid}/datasets/{datasetid}/dicomStores/{dicomStoreId}/dicomWeb/s
+                   *        tudies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
+                     * @since 1.13
+                     */
+                    protected GetStorageInfo(java.lang.String resource) {
+                      super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.StorageInfo.class);
+                      this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+                      if (!getSuppressPatternChecks()) {
+                        com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                            "Parameter resource must conform to the pattern " +
+                            "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+/series/[^/]+/instances/[^/]+$");
+                      }
+                    }
+
+                    @Override
+                    public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                      return super.executeUsingHead();
+                    }
+
+                    @Override
+                    public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                      return super.buildHttpRequestUsingHead();
+                    }
+
+                    @Override
+                    public GetStorageInfo set$Xgafv(java.lang.String $Xgafv) {
+                      return (GetStorageInfo) super.set$Xgafv($Xgafv);
+                    }
+
+                    @Override
+                    public GetStorageInfo setAccessToken(java.lang.String accessToken) {
+                      return (GetStorageInfo) super.setAccessToken(accessToken);
+                    }
+
+                    @Override
+                    public GetStorageInfo setAlt(java.lang.String alt) {
+                      return (GetStorageInfo) super.setAlt(alt);
+                    }
+
+                    @Override
+                    public GetStorageInfo setCallback(java.lang.String callback) {
+                      return (GetStorageInfo) super.setCallback(callback);
+                    }
+
+                    @Override
+                    public GetStorageInfo setFields(java.lang.String fields) {
+                      return (GetStorageInfo) super.setFields(fields);
+                    }
+
+                    @Override
+                    public GetStorageInfo setKey(java.lang.String key) {
+                      return (GetStorageInfo) super.setKey(key);
+                    }
+
+                    @Override
+                    public GetStorageInfo setOauthToken(java.lang.String oauthToken) {
+                      return (GetStorageInfo) super.setOauthToken(oauthToken);
+                    }
+
+                    @Override
+                    public GetStorageInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+                      return (GetStorageInfo) super.setPrettyPrint(prettyPrint);
+                    }
+
+                    @Override
+                    public GetStorageInfo setQuotaUser(java.lang.String quotaUser) {
+                      return (GetStorageInfo) super.setQuotaUser(quotaUser);
+                    }
+
+                    @Override
+                    public GetStorageInfo setUploadType(java.lang.String uploadType) {
+                      return (GetStorageInfo) super.setUploadType(uploadType);
+                    }
+
+                    @Override
+                    public GetStorageInfo setUploadProtocol(java.lang.String uploadProtocol) {
+                      return (GetStorageInfo) super.setUploadProtocol(uploadProtocol);
+                    }
+
+                    /**
+                     * Required. The path of the resource for which the storage info is requested
+                     * (for exaxmple for a DICOM Instance: `projects/{projectid}/datasets/{datasetid
+                     * }/dicomStores/{dicomStoreId}/dicomWeb/studies/{study_uid}/series/{series_uid}
+                     * /instances/{instance_uid}`)
+                     */
+                    @com.google.api.client.util.Key
+                    private java.lang.String resource;
+
+                    /** Required. The path of the resource for which the storage info is requested (for exaxmple for a
+                   DICOM Instance: `projects/{projectid}/datasets/{datasetid}/dicomStores/{dicomStoreId}/dicomWeb/stud
+                   ies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
+                     */
+                    public java.lang.String getResource() {
+                      return resource;
+                    }
+
+                    /**
+                     * Required. The path of the resource for which the storage info is requested
+                     * (for exaxmple for a DICOM Instance: `projects/{projectid}/datasets/{datasetid
+                     * }/dicomStores/{dicomStoreId}/dicomWeb/studies/{study_uid}/series/{series_uid}
+                     * /instances/{instance_uid}`)
+                     */
+                    public GetStorageInfo setResource(java.lang.String resource) {
+                      if (!getSuppressPatternChecks()) {
+                        com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                            "Parameter resource must conform to the pattern " +
+                            "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+/series/[^/]+/instances/[^/]+$");
+                      }
+                      this.resource = resource;
+                      return this;
+                    }
+
+                    @Override
+                    public GetStorageInfo set(String parameterName, Object value) {
+                      return (GetStorageInfo) super.set(parameterName, value);
+                    }
+                  }
+
+                }
               }
             }
           }
@@ -13955,9 +14469,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * DeleteStudy deletes all instances within the given study using a long running operation. The
              * method returns an Operation which will be marked successful when the deletion is complete.
              * Warning: Instances cannot be inserted into a study that is being deleted by an operation until
-             * the operation completes. For samples that show how to call DeleteStudy, see [Deleting a study,
-             * series, or instance](https://cloud.google.com/healthcare/docs/how-
-             * tos/dicomweb#deleting_a_study_series_or_instance).
+             * the operation completes. For samples that show how to call DeleteStudy, see [Delete a study,
+             * series, or instance](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#delete-dicom).
              *
              * Create a request for the method "studies.delete".
              *
@@ -13988,9 +14501,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * DeleteStudy deletes all instances within the given study using a long running operation. The
                * method returns an Operation which will be marked successful when the deletion is complete.
                * Warning: Instances cannot be inserted into a study that is being deleted by an operation until
-               * the operation completes. For samples that show how to call DeleteStudy, see [Deleting a study,
-               * series, or instance](https://cloud.google.com/healthcare/docs/how-
-               * tos/dicomweb#deleting_a_study_series_or_instance).
+               * the operation completes. For samples that show how to call DeleteStudy, see [Delete a study,
+               * series, or instance](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#delete-dicom).
                *
                * Create a request for the method "studies.delete".
                *
@@ -14127,8 +14639,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ut/html/part18.html#sect_10.4). For details on the implementation of RetrieveStudyMetadata, see
              * [Metadata resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the
              * Cloud Healthcare API conformance statement. For samples that show how to call
-             * RetrieveStudyMetadata, see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
-             * tos/dicomweb#retrieving_metadata).
+             * RetrieveStudyMetadata, see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-
+             * tos/dicomweb#retrieve-metadata).
              *
              * Create a request for the method "studies.retrieveMetadata".
              *
@@ -14164,8 +14676,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * RetrieveStudyMetadata, see [Metadata
                * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
                * Healthcare API conformance statement. For samples that show how to call RetrieveStudyMetadata,
-               * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
-               * tos/dicomweb#retrieving_metadata).
+               * see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+               * metadata).
                *
                * Create a request for the method "studies.retrieveMetadata".
                *
@@ -14328,8 +14840,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * m.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
              * implementation of RetrieveStudy, see [DICOM study/series/instances](https://cloud.google.com/heal
              * thcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance statement.
-             * For samples that show how to call RetrieveStudy, see [Retrieving DICOM
-             * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
+             * For samples that show how to call RetrieveStudy, see [Retrieve DICOM
+             * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-dicom).
              *
              * Create a request for the method "studies.retrieveStudy".
              *
@@ -14363,8 +14875,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * com.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
                * implementation of RetrieveStudy, see [DICOM study/series/instances](https://cloud.google.com/he
                * althcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
-               * statement. For samples that show how to call RetrieveStudy, see [Retrieving DICOM
-               * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
+               * statement. For samples that show how to call RetrieveStudy, see [Retrieve DICOM
+               * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-dicom).
                *
                * Create a request for the method "studies.retrieveStudy".
                *
@@ -14525,8 +15037,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * implementation of SearchForInstances, see [Search
              * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
              * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
-             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+             * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-dicom).
              *
              * Create a request for the method "studies.searchForInstances".
              *
@@ -14562,8 +15073,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * implementation of SearchForInstances, see [Search
                * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
                * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
-               * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-               * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+               * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-
+               * dicom).
                *
                * Create a request for the method "studies.searchForInstances".
                *
@@ -14728,8 +15239,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * SearchForSeries, see [Search
              * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
              * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
-             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+             * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-dicom).
              *
              * Create a request for the method "studies.searchForSeries".
              *
@@ -14765,8 +15275,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * of SearchForSeries, see [Search
                * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
                * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
-               * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-               * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+               * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-
+               * dicom).
                *
                * Create a request for the method "studies.searchForSeries".
                *
@@ -14932,8 +15442,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * details on the implementation of StoreInstances, see [Store
              * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
              * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
-             * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
-             * tos/dicomweb#storing_dicom_data).
+             * [Store DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#store-dicom).
              *
              * Create a request for the method "studies.storeInstances".
              *
@@ -14971,8 +15480,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * For details on the implementation of StoreInstances, see [Store
                * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
                * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
-               * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
-               * tos/dicomweb#storing_dicom_data).
+               * [Store DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#store-dicom).
                *
                * Create a request for the method "studies.storeInstances".
                *
@@ -15148,8 +15656,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * operation. The method returns an Operation which will be marked successful when the deletion is
                * complete. Warning: Instances cannot be inserted into a series that is being deleted by an
                * operation until the operation completes. For samples that show how to call DeleteSeries, see
-               * [Deleting a study, series, or instance](https://cloud.google.com/healthcare/docs/how-
-               * tos/dicomweb#deleting_a_study_series_or_instance).
+               * [Delete a study, series, or instance](https://cloud.google.com/healthcare/docs/how-tos/dicomweb
+               * #delete-dicom).
                *
                * Create a request for the method "series.delete".
                *
@@ -15183,8 +15691,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * operation. The method returns an Operation which will be marked successful when the deletion is
                  * complete. Warning: Instances cannot be inserted into a series that is being deleted by an
                  * operation until the operation completes. For samples that show how to call DeleteSeries, see
-                 * [Deleting a study, series, or instance](https://cloud.google.com/healthcare/docs/how-
-                 * tos/dicomweb#deleting_a_study_series_or_instance).
+                 * [Delete a study, series, or instance](https://cloud.google.com/healthcare/docs/how-tos/dicomweb
+                 * #delete-dicom).
                  *
                  * Create a request for the method "series.delete".
                  *
@@ -15340,8 +15848,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * RetrieveSeriesMetadata, see [Metadata
                * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
                * Healthcare API conformance statement. For samples that show how to call RetrieveSeriesMetadata,
-               * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
-               * tos/dicomweb#retrieving_metadata).
+               * see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+               * metadata).
                *
                * Create a request for the method "series.retrieveMetadata".
                *
@@ -15378,8 +15886,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * RetrieveSeriesMetadata, see [Metadata
                  * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
                  * Healthcare API conformance statement. For samples that show how to call RetrieveSeriesMetadata,
-                 * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
-                 * tos/dicomweb#retrieving_metadata).
+                 * see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+                 * metadata).
                  *
                  * Create a request for the method "series.retrieveMetadata".
                  *
@@ -15545,8 +16053,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
                * the implementation of RetrieveSeries, see [DICOM study/series/instances](https://cloud.google.com
                * /healthcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
-               * statement. For samples that show how to call RetrieveSeries, see [Retrieving DICOM
-               * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
+               * statement. For samples that show how to call RetrieveSeries, see [Retrieve DICOM
+               * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-dicom).
                *
                * Create a request for the method "series.retrieveSeries".
                *
@@ -15581,8 +16089,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * n](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details
                  * on the implementation of RetrieveSeries, see [DICOM study/series/instances](https://cloud.googl
                  * e.com/healthcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
-                 * statement. For samples that show how to call RetrieveSeries, see [Retrieving DICOM
-                 * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
+                 * statement. For samples that show how to call RetrieveSeries, see [Retrieve DICOM
+                 * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-dicom).
                  *
                  * Create a request for the method "series.retrieveSeries".
                  *
@@ -15749,8 +16257,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * implementation of SearchForInstances, see [Search
                * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
                * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
-               * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-               * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+               * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-dicom).
                *
                * Create a request for the method "series.searchForInstances".
                *
@@ -15786,8 +16293,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * implementation of SearchForInstances, see [Search
                  * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
                  * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
-                 * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
-                 * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
+                 * [Search for DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-
+                 * dicom).
                  *
                  * Create a request for the method "series.searchForInstances".
                  *
@@ -15973,9 +16480,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * DeleteInstance deletes an instance associated with the given study, series, and SOP Instance UID.
                  * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. Study
                  * and series search results can take a few seconds to be updated after an instance is deleted using
-                 * DeleteInstance. For samples that show how to call DeleteInstance, see [Deleting a study, series,
-                 * or instance](https://cloud.google.com/healthcare/docs/how-
-                 * tos/dicomweb#deleting_a_study_series_or_instance).
+                 * DeleteInstance. For samples that show how to call DeleteInstance, see [Delete a study, series, or
+                 * instance](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#delete-dicom).
                  *
                  * Create a request for the method "instances.delete".
                  *
@@ -16009,9 +16515,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * DeleteInstance deletes an instance associated with the given study, series, and SOP Instance
                    * UID. Delete requests are equivalent to the GET requests specified in the Retrieve transaction.
                    * Study and series search results can take a few seconds to be updated after an instance is
-                   * deleted using DeleteInstance. For samples that show how to call DeleteInstance, see [Deleting a
-                   * study, series, or instance](https://cloud.google.com/healthcare/docs/how-
-                   * tos/dicomweb#deleting_a_study_series_or_instance).
+                   * deleted using DeleteInstance. For samples that show how to call DeleteInstance, see [Delete a
+                   * study, series, or instance](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#delete-
+                   * dicom).
                    *
                    * Create a request for the method "instances.delete".
                    *
@@ -16169,8 +16675,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * ](https://cloud.google.com/healthcare/docs/dicom#dicom_studyseriesinstances) and [DICOM
                  * instances](https://cloud.google.com/healthcare/docs/dicom#dicom_instances) in the Cloud
                  * Healthcare API conformance statement. For samples that show how to call RetrieveInstance, see
-                 * [Retrieving an instance](https://cloud.google.com/healthcare/docs/how-
-                 * tos/dicomweb#retrieving_an_instance).
+                 * [Retrieve an instance](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+                 * instance).
                  *
                  * Create a request for the method "instances.retrieveInstance".
                  *
@@ -16207,8 +16713,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * instances](https://cloud.google.com/healthcare/docs/dicom#dicom_studyseriesinstances) and
                    * [DICOM instances](https://cloud.google.com/healthcare/docs/dicom#dicom_instances) in the Cloud
                    * Healthcare API conformance statement. For samples that show how to call RetrieveInstance, see
-                   * [Retrieving an instance](https://cloud.google.com/healthcare/docs/how-
-                   * tos/dicomweb#retrieving_an_instance).
+                   * [Retrieve an instance](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+                   * instance).
                    *
                    * Create a request for the method "instances.retrieveInstance".
                    *
@@ -16376,8 +16882,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * implementation of RetrieveInstanceMetadata, see [Metadata
                  * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
                  * Healthcare API conformance statement. For samples that show how to call RetrieveInstanceMetadata,
-                 * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
-                 * tos/dicomweb#retrieving_metadata).
+                 * see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+                 * metadata).
                  *
                  * Create a request for the method "instances.retrieveMetadata".
                  *
@@ -16414,8 +16920,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * implementation of RetrieveInstanceMetadata, see [Metadata
                    * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
                    * Healthcare API conformance statement. For samples that show how to call
-                   * RetrieveInstanceMetadata, see [Retrieving metadata](https://cloud.google.com/healthcare/docs
-                   * /how-tos/dicomweb#retrieving_metadata).
+                   * RetrieveInstanceMetadata, see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-
+                   * tos/dicomweb#retrieve-metadata).
                    *
                    * Create a request for the method "instances.retrieveMetadata".
                    *
@@ -16583,8 +17089,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * RetrieveRenderedInstance, see [Rendered
                  * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
                  * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedInstance,
-                 * see [Retrieving consumer image formats](https://cloud.google.com/healthcare/docs/how-
-                 * tos/dicomweb#retrieving_consumer_image_formats).
+                 * see [Retrieve consumer image formats](https://cloud.google.com/healthcare/docs/how-tos/dicomweb
+                 * #retrieve-consumer).
                  *
                  * Create a request for the method "instances.retrieveRendered".
                  *
@@ -16621,9 +17127,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * of RetrieveRenderedInstance, see [Rendered
                    * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
                    * Healthcare API conformance statement. For samples that show how to call
-                   * RetrieveRenderedInstance, see [Retrieving consumer image
-                   * formats](https://cloud.google.com/healthcare/docs/how-
-                   * tos/dicomweb#retrieving_consumer_image_formats).
+                   * RetrieveRenderedInstance, see [Retrieve consumer image
+                   * formats](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-consumer).
                    *
                    * Create a request for the method "instances.retrieveRendered".
                    *
@@ -16810,8 +17315,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * frame numbers. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/output/html/
                    * part18.html#sect_10.4). For details on the implementation of RetrieveFrames, see [DICOM
                    * frames](https://cloud.google.com/healthcare/docs/dicom#dicom_frames) in the Cloud Healthcare API
-                   * conformance statement. For samples that show how to call RetrieveFrames, see [Retrieving DICOM
-                   * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
+                   * conformance statement. For samples that show how to call RetrieveFrames, see [Retrieve DICOM
+                   * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-dicom).
                    *
                    * Create a request for the method "frames.retrieveFrames".
                    *
@@ -16846,8 +17351,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * frame numbers. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/output/htm
                      * l/part18.html#sect_10.4). For details on the implementation of RetrieveFrames, see [DICOM
                      * frames](https://cloud.google.com/healthcare/docs/dicom#dicom_frames) in the Cloud Healthcare
-                     * API conformance statement. For samples that show how to call RetrieveFrames, see [Retrieving
-                     * DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
+                     * API conformance statement. For samples that show how to call RetrieveFrames, see [Retrieve
+                     * DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-dicom).
                      *
                      * Create a request for the method "frames.retrieveFrames".
                      *
@@ -17015,8 +17520,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * implementation of RetrieveRenderedFrames, see [Rendered
                    * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
                    * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedFrames,
-                   * see [Retrieving consumer image formats](https://cloud.google.com/healthcare/docs/how-
-                   * tos/dicomweb#retrieving_consumer_image_formats).
+                   * see [Retrieve consumer image formats](https://cloud.google.com/healthcare/docs/how-tos/dicomweb
+                   * #retrieve-consumer).
                    *
                    * Create a request for the method "frames.retrieveRendered".
                    *
@@ -17054,8 +17559,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * implementation of RetrieveRenderedFrames, see [Rendered
                      * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
                      * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedFrames,
-                     * see [Retrieving consumer image formats](https://cloud.google.com/healthcare/docs/how-
-                     * tos/dicomweb#retrieving_consumer_image_formats).
+                     * see [Retrieve consumer image formats](https://cloud.google.com/healthcare/docs/how-tos/dicomweb
+                     * #retrieve-consumer).
                      *
                      * Create a request for the method "frames.retrieveRendered".
                      *
@@ -25344,7 +25849,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Gets metrics asssociated with the HL7v2 store.
+           * Gets metrics associated with the HL7v2 store.
            *
            * Create a request for the method "hl7V2Stores.getHL7v2StoreMetrics".
            *
@@ -25371,7 +25876,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
 
             /**
-             * Gets metrics asssociated with the HL7v2 store.
+             * Gets metrics associated with the HL7v2 store.
              *
              * Create a request for the method "hl7V2Stores.getHL7v2StoreMetrics".
              *

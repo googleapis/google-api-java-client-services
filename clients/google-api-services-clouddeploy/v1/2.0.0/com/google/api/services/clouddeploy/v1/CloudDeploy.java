@@ -2445,6 +2445,1687 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
         }
 
         /**
+         * An accessor for creating requests from the AutomationRuns collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudDeploy clouddeploy = new CloudDeploy(...);}
+         *   {@code CloudDeploy.AutomationRuns.List request = clouddeploy.automationRuns().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AutomationRuns automationRuns() {
+          return new AutomationRuns();
+        }
+
+        /**
+         * The "automationRuns" collection of methods.
+         */
+        public class AutomationRuns {
+
+          /**
+           * Cancels an AutomationRun. The `state` of the `AutomationRun` after cancelling is `CANCELLED`.
+           * `CancelAutomationRun` can be called on AutomationRun in the state `IN_PROGRESS` and `PENDING`;
+           * AutomationRun in a different state returns an `FAILED_PRECONDITION` error.
+           *
+           * Create a request for the method "automationRuns.cancel".
+           *
+           * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the `AutomationRun`. Format is projects/{project}/locations/{location}/deliveryPip
+           *        elines/{delivery_pipeline}/automationRuns/{automation_run}.
+           * @param content the {@link com.google.api.services.clouddeploy.v1.model.CancelAutomationRunRequest}
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String name, com.google.api.services.clouddeploy.v1.model.CancelAutomationRunRequest content) throws java.io.IOException {
+            Cancel result = new Cancel(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.CancelAutomationRunResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:cancel";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automationRuns/[^/]+$");
+
+            /**
+             * Cancels an AutomationRun. The `state` of the `AutomationRun` after cancelling is `CANCELLED`.
+             * `CancelAutomationRun` can be called on AutomationRun in the state `IN_PROGRESS` and `PENDING`;
+             * AutomationRun in a different state returns an `FAILED_PRECONDITION` error.
+             *
+             * Create a request for the method "automationRuns.cancel".
+             *
+             * This request holds the parameters needed by the the clouddeploy server.  After setting any
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the `AutomationRun`. Format is projects/{project}/locations/{location}/deliveryPip
+           *        elines/{delivery_pipeline}/automationRuns/{automation_run}.
+             * @param content the {@link com.google.api.services.clouddeploy.v1.model.CancelAutomationRunRequest}
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String name, com.google.api.services.clouddeploy.v1.model.CancelAutomationRunRequest content) {
+              super(CloudDeploy.this, "POST", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.CancelAutomationRunResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automationRuns/[^/]+$");
+              }
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the `AutomationRun`. Format is projects/{project}/locations/{locati
+             * on}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the `AutomationRun`. Format is projects/{project}/locations/{location}/deliveryPi
+           pelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the `AutomationRun`. Format is projects/{project}/locations/{locati
+             * on}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             */
+            public Cancel setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automationRuns/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single AutomationRun.
+           *
+           * Create a request for the method "automationRuns.get".
+           *
+           * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the `AutomationRun`. Format must be projects/{project}/locations/{location}/delive
+           *        ryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.AutomationRun> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automationRuns/[^/]+$");
+
+            /**
+             * Gets details of a single AutomationRun.
+             *
+             * Create a request for the method "automationRuns.get".
+             *
+             * This request holds the parameters needed by the the clouddeploy server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the `AutomationRun`. Format must be projects/{project}/locations/{location}/delive
+           *        ryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudDeploy.this, "GET", REST_PATH, null, com.google.api.services.clouddeploy.v1.model.AutomationRun.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automationRuns/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the `AutomationRun`. Format must be projects/{project}/locations/{l
+             * ocation}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the `AutomationRun`. Format must be projects/{project}/locations/{location}/deliv
+           eryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the `AutomationRun`. Format must be projects/{project}/locations/{l
+             * ocation}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automationRuns/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists AutomationRuns in a given project and location.
+           *
+           * Create a request for the method "automationRuns.list".
+           *
+           * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent, which owns this collection of automationRuns. Format must be
+           *        projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.ListAutomationRunsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/automationRuns";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+
+            /**
+             * Lists AutomationRuns in a given project and location.
+             *
+             * Create a request for the method "automationRuns.list".
+             *
+             * This request holds the parameters needed by the the clouddeploy server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent, which owns this collection of automationRuns. Format must be
+           *        projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudDeploy.this, "GET", REST_PATH, null, com.google.api.services.clouddeploy.v1.model.ListAutomationRunsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent, which owns this collection of automationRuns. Format must be
+             * projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent, which owns this collection of automationRuns. Format must be
+           projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent, which owns this collection of automationRuns. Format must be
+             * projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Filter automationRuns to be returned. All fields can be used in the filter. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Filter automationRuns to be returned. All fields can be used in the filter.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Filter automationRuns to be returned. All fields can be used in the filter. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Field to sort by. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Field to sort by.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Field to sort by. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * The maximum number of automationRuns to return. The service may return fewer than
+             * this value. If unspecified, at most 50 automationRuns will be returned. The maximum
+             * value is 1000; values above 1000 will be set to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of automationRuns to return. The service may return fewer than this value. If
+           unspecified, at most 50 automationRuns will be returned. The maximum value is 1000; values above
+           1000 will be set to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of automationRuns to return. The service may return fewer than
+             * this value. If unspecified, at most 50 automationRuns will be returned. The maximum
+             * value is 1000; values above 1000 will be set to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous `ListAutomationRuns` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other provided parameters match
+             * the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous `ListAutomationRuns` call. Provide this to retrieve the
+           subsequent page. When paginating, all other provided parameters match the call that provided the
+           page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous `ListAutomationRuns` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other provided parameters match
+             * the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Automations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudDeploy clouddeploy = new CloudDeploy(...);}
+         *   {@code CloudDeploy.Automations.List request = clouddeploy.automations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Automations automations() {
+          return new Automations();
+        }
+
+        /**
+         * The "automations" collection of methods.
+         */
+        public class Automations {
+
+          /**
+           * Creates a new Automation in a given project and location.
+           *
+           * Create a request for the method "automations.create".
+           *
+           * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent collection in which the `Automation` should be created. Format should be
+           *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           * @param content the {@link com.google.api.services.clouddeploy.v1.model.Automation}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.clouddeploy.v1.model.Automation content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/automations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+
+            /**
+             * Creates a new Automation in a given project and location.
+             *
+             * Create a request for the method "automations.create".
+             *
+             * This request holds the parameters needed by the the clouddeploy server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent collection in which the `Automation` should be created. Format should be
+           *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             * @param content the {@link com.google.api.services.clouddeploy.v1.model.Automation}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.clouddeploy.v1.model.Automation content) {
+              super(CloudDeploy.this, "POST", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent collection in which the `Automation` should be created. Format
+             * should be
+             * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent collection in which the `Automation` should be created. Format should be
+           projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent collection in which the `Automation` should be created. Format
+             * should be
+             * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. ID of the `Automation`. */
+            @com.google.api.client.util.Key
+            private java.lang.String automationId;
+
+            /** Required. ID of the `Automation`.
+             */
+            public java.lang.String getAutomationId() {
+              return automationId;
+            }
+
+            /** Required. ID of the `Automation`. */
+            public Create setAutomationId(java.lang.String automationId) {
+              this.automationId = automationId;
+              return this;
+            }
+
+            /**
+             * Optional. A request ID to identify requests. Specify a unique request ID so that if
+             * you must retry your request, the server will know to ignore the request if it has
+             * already been completed. The server will guarantee that for at least 60 minutes since
+             * the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+           your request, the server will know to ignore the request if it has already been completed. The
+           server will guarantee that for at least 60 minutes since the first request. For example, consider a
+           situation where you make an initial request and the request times out. If you make the request
+           again with the same request ID, the server can check if original operation with the same request ID
+           was received, and if so, will ignore the second request. This prevents clients from accidentally
+           creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. A request ID to identify requests. Specify a unique request ID so that if
+             * you must retry your request, the server will know to ignore the request if it has
+             * already been completed. The server will guarantee that for at least 60 minutes since
+             * the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true, the request is validated and the user is provided with an
+             * expected result, but no actual change is made.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** Optional. If set to true, the request is validated and the user is provided with an expected
+           result, but no actual change is made.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /**
+             * Optional. If set to true, the request is validated and the user is provided with an
+             * expected result, but no actual change is made.
+             */
+            public Create setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a single Automation resource.
+           *
+           * Create a request for the method "automations.delete".
+           *
+           * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the `Automation` to delete. Format should be projects/{project_id}/locations/{
+           *        location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automations/[^/]+$");
+
+            /**
+             * Deletes a single Automation resource.
+             *
+             * Create a request for the method "automations.delete".
+             *
+             * This request holds the parameters needed by the the clouddeploy server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the `Automation` to delete. Format should be projects/{project_id}/locations/{
+           *        location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudDeploy.this, "DELETE", REST_PATH, null, com.google.api.services.clouddeploy.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the `Automation` to delete. Format should be projects/{project_
+             * id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automati
+             * on_name}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the `Automation` to delete. Format should be projects/{project_id}/locations/
+           {location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the `Automation` to delete. Format should be projects/{project_
+             * id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automati
+             * on_name}.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true, then deleting an already deleted or non-existing
+             * `Automation` will succeed.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean allowMissing;
+
+            /** Optional. If set to true, then deleting an already deleted or non-existing `Automation` will
+           succeed.
+             */
+            public java.lang.Boolean getAllowMissing() {
+              return allowMissing;
+            }
+
+            /**
+             * Optional. If set to true, then deleting an already deleted or non-existing
+             * `Automation` will succeed.
+             */
+            public Delete setAllowMissing(java.lang.Boolean allowMissing) {
+              this.allowMissing = allowMissing;
+              return this;
+            }
+
+            /**
+             * Optional. The weak etag of the request. This checksum is computed by the server based
+             * on the value of other fields, and may be sent on update and delete requests to ensure
+             * the client has an up-to-date value before proceeding.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String etag;
+
+            /** Optional. The weak etag of the request. This checksum is computed by the server based on the value
+           of other fields, and may be sent on update and delete requests to ensure the client has an up-to-
+           date value before proceeding.
+             */
+            public java.lang.String getEtag() {
+              return etag;
+            }
+
+            /**
+             * Optional. The weak etag of the request. This checksum is computed by the server based
+             * on the value of other fields, and may be sent on update and delete requests to ensure
+             * the client has an up-to-date value before proceeding.
+             */
+            public Delete setEtag(java.lang.String etag) {
+              this.etag = etag;
+              return this;
+            }
+
+            /**
+             * Optional. A request ID to identify requests. Specify a unique request ID so that if
+             * you must retry your request, the server will know to ignore the request if it has
+             * already been completed. The server will guarantee that for at least 60 minutes after
+             * the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+           your request, the server will know to ignore the request if it has already been completed. The
+           server will guarantee that for at least 60 minutes after the first request. For example, consider a
+           situation where you make an initial request and the request times out. If you make the request
+           again with the same request ID, the server can check if original operation with the same request ID
+           was received, and if so, will ignore the second request. This prevents clients from accidentally
+           creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. A request ID to identify requests. Specify a unique request ID so that if
+             * you must retry your request, the server will know to ignore the request if it has
+             * already been completed. The server will guarantee that for at least 60 minutes after
+             * the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /**
+             * Optional. If set, validate the request and verify whether the resource exists, but do
+             * not actually post it.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** Optional. If set, validate the request and verify whether the resource exists, but do not actually
+           post it.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /**
+             * Optional. If set, validate the request and verify whether the resource exists, but do
+             * not actually post it.
+             */
+            public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single Automation.
+           *
+           * Create a request for the method "automations.get".
+           *
+           * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the `Automation`. Format must be projects/{project_id}/locations/{location_name}/d
+           *        eliveryPipelines/{pipeline_name}/automations/{automation_name}.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.Automation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automations/[^/]+$");
+
+            /**
+             * Gets details of a single Automation.
+             *
+             * Create a request for the method "automations.get".
+             *
+             * This request holds the parameters needed by the the clouddeploy server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the `Automation`. Format must be projects/{project_id}/locations/{location_name}/d
+           *        eliveryPipelines/{pipeline_name}/automations/{automation_name}.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudDeploy.this, "GET", REST_PATH, null, com.google.api.services.clouddeploy.v1.model.Automation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the `Automation`. Format must be projects/{project_id}/locations/{l
+             * ocation_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the `Automation`. Format must be projects/{project_id}/locations/{location_name}/
+           deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the `Automation`. Format must be projects/{project_id}/locations/{l
+             * ocation_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists Automations in a given project and location.
+           *
+           * Create a request for the method "automations.list".
+           *
+           * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent, which owns this collection of automations. Format must be
+           *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.ListAutomationsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/automations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+
+            /**
+             * Lists Automations in a given project and location.
+             *
+             * Create a request for the method "automations.list".
+             *
+             * This request holds the parameters needed by the the clouddeploy server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent, which owns this collection of automations. Format must be
+           *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudDeploy.this, "GET", REST_PATH, null, com.google.api.services.clouddeploy.v1.model.ListAutomationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent, which owns this collection of automations. Format must be
+             * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent, which owns this collection of automations. Format must be
+           projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent, which owns this collection of automations. Format must be
+             * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Filter automations to be returned. All fields can be used in the filter. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Filter automations to be returned. All fields can be used in the filter.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Filter automations to be returned. All fields can be used in the filter. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Field to sort by. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Field to sort by.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Field to sort by. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * The maximum number of automations to return. The service may return fewer than this
+             * value. If unspecified, at most 50 automations will be returned. The maximum value is
+             * 1000; values above 1000 will be set to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of automations to return. The service may return fewer than this value. If
+           unspecified, at most 50 automations will be returned. The maximum value is 1000; values above 1000
+           will be set to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of automations to return. The service may return fewer than this
+             * value. If unspecified, at most 50 automations will be returned. The maximum value is
+             * 1000; values above 1000 will be set to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous `ListAutomations` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other provided parameters match
+             * the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous `ListAutomations` call. Provide this to retrieve the
+           subsequent page. When paginating, all other provided parameters match the call that provided the
+           page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous `ListAutomations` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other provided parameters match
+             * the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the parameters of a single Automation resource.
+           *
+           * Create a request for the method "automations.patch".
+           *
+           * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. Name of the `Automation`. Format is projects/{project}/locations/{location}/deliveryPip
+           *        elines/{delivery_pipeline}/automations/{automation}.
+           * @param content the {@link com.google.api.services.clouddeploy.v1.model.Automation}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.clouddeploy.v1.model.Automation content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automations/[^/]+$");
+
+            /**
+             * Updates the parameters of a single Automation resource.
+             *
+             * Create a request for the method "automations.patch".
+             *
+             * This request holds the parameters needed by the the clouddeploy server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Name of the `Automation`. Format is projects/{project}/locations/{location}/deliveryPip
+           *        elines/{delivery_pipeline}/automations/{automation}.
+             * @param content the {@link com.google.api.services.clouddeploy.v1.model.Automation}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.clouddeploy.v1.model.Automation content) {
+              super(CloudDeploy.this, "PATCH", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. Name of the `Automation`. Format is projects/{project}/locations/{locati
+             * on}/deliveryPipelines/{delivery_pipeline}/automations/{automation}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Name of the `Automation`. Format is projects/{project}/locations/{location}/deliveryPi
+           pelines/{delivery_pipeline}/automations/{automation}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. Name of the `Automation`. Format is projects/{project}/locations/{locati
+             * on}/deliveryPipelines/{delivery_pipeline}/automations/{automation}.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/automations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true, updating a `Automation` that does not exist will result in
+             * the creation of a new `Automation`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean allowMissing;
+
+            /** Optional. If set to true, updating a `Automation` that does not exist will result in the creation
+           of a new `Automation`.
+             */
+            public java.lang.Boolean getAllowMissing() {
+              return allowMissing;
+            }
+
+            /**
+             * Optional. If set to true, updating a `Automation` that does not exist will result in
+             * the creation of a new `Automation`.
+             */
+            public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+              this.allowMissing = allowMissing;
+              return this;
+            }
+
+            /**
+             * Optional. A request ID to identify requests. Specify a unique request ID so that if
+             * you must retry your request, the server will know to ignore the request if it has
+             * already been completed. The server will guarantee that for at least 60 minutes since
+             * the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+           your request, the server will know to ignore the request if it has already been completed. The
+           server will guarantee that for at least 60 minutes since the first request. For example, consider a
+           situation where you make an initial request and the request times out. If you make the request
+           again with the same request ID, the server can check if original operation with the same request ID
+           was received, and if so, will ignore the second request. This prevents clients from accidentally
+           creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. A request ID to identify requests. Specify a unique request ID so that if
+             * you must retry your request, the server will know to ignore the request if it has
+             * already been completed. The server will guarantee that for at least 60 minutes since
+             * the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Patch setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /**
+             * Required. Field mask is used to specify the fields to be overwritten in the
+             * `Automation` resource by the update. The fields specified in the update_mask are
+             * relative to the resource, not the full request. A field will be overwritten if it is
+             * in the mask. If the user does not provide a mask then all fields will be overwritten.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. Field mask is used to specify the fields to be overwritten in the `Automation` resource
+           by the update. The fields specified in the update_mask are relative to the resource, not the full
+           request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+           all fields will be overwritten.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. Field mask is used to specify the fields to be overwritten in the
+             * `Automation` resource by the update. The fields specified in the update_mask are
+             * relative to the resource, not the full request. A field will be overwritten if it is
+             * in the mask. If the user does not provide a mask then all fields will be overwritten.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true, the request is validated and the user is provided with an
+             * expected result, but no actual change is made.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** Optional. If set to true, the request is validated and the user is provided with an expected
+           result, but no actual change is made.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /**
+             * Optional. If set to true, the request is validated and the user is provided with an
+             * expected result, but no actual change is made.
+             */
+            public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Releases collection.
          *
          * <p>The typical use is:</p>

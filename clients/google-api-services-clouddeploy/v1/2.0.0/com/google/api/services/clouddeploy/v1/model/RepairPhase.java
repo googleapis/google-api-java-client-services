@@ -17,7 +17,8 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Metadata includes information associated with a `Rollout`.
+ * RepairPhase tracks the repair attempts that have been made for each `RepairMode` specified in the
+ * `Automation` resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,67 +28,64 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Metadata extends com.google.api.client.json.GenericJson {
+public final class RepairPhase extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. AutomationRolloutMetadata contains the information about the interactions between
-   * Automation service and this rollout.
+   * Output only. Records of the retry attempts for retry repair mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AutomationRolloutMetadata automation;
+  private RetryPhase retry;
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
+   * Output only. Rollback attempt for rollback repair mode .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CloudRunMetadata cloudRun;
+  private RollbackAttempt rollback;
 
   /**
-   * Output only. AutomationRolloutMetadata contains the information about the interactions between
-   * Automation service and this rollout.
+   * Output only. Records of the retry attempts for retry repair mode.
    * @return value or {@code null} for none
    */
-  public AutomationRolloutMetadata getAutomation() {
-    return automation;
+  public RetryPhase getRetry() {
+    return retry;
   }
 
   /**
-   * Output only. AutomationRolloutMetadata contains the information about the interactions between
-   * Automation service and this rollout.
-   * @param automation automation or {@code null} for none
+   * Output only. Records of the retry attempts for retry repair mode.
+   * @param retry retry or {@code null} for none
    */
-  public Metadata setAutomation(AutomationRolloutMetadata automation) {
-    this.automation = automation;
+  public RepairPhase setRetry(RetryPhase retry) {
+    this.retry = retry;
     return this;
   }
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
+   * Output only. Rollback attempt for rollback repair mode .
    * @return value or {@code null} for none
    */
-  public CloudRunMetadata getCloudRun() {
-    return cloudRun;
+  public RollbackAttempt getRollback() {
+    return rollback;
   }
 
   /**
-   * Output only. The name of the Cloud Run Service that is associated with a `Rollout`.
-   * @param cloudRun cloudRun or {@code null} for none
+   * Output only. Rollback attempt for rollback repair mode .
+   * @param rollback rollback or {@code null} for none
    */
-  public Metadata setCloudRun(CloudRunMetadata cloudRun) {
-    this.cloudRun = cloudRun;
+  public RepairPhase setRollback(RollbackAttempt rollback) {
+    this.rollback = rollback;
     return this;
   }
 
   @Override
-  public Metadata set(String fieldName, Object value) {
-    return (Metadata) super.set(fieldName, value);
+  public RepairPhase set(String fieldName, Object value) {
+    return (RepairPhase) super.set(fieldName, value);
   }
 
   @Override
-  public Metadata clone() {
-    return (Metadata) super.clone();
+  public RepairPhase clone() {
+    return (RepairPhase) super.clone();
   }
 
 }

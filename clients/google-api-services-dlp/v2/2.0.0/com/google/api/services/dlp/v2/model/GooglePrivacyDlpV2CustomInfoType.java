@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
 
   /**
    * Sensitivity for this CustomInfoType. If this CustomInfoType extends an existing InfoType, the
-   * sensitivity here will take precedent over that of the original InfoType. If unset for a
+   * sensitivity here will take precedence over that of the original InfoType. If unset for a
    * CustomInfoType, it will default to HIGH. This only applies to data profiling.
    * The value may be {@code null}.
    */
@@ -225,7 +225,7 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
 
   /**
    * Sensitivity for this CustomInfoType. If this CustomInfoType extends an existing InfoType, the
-   * sensitivity here will take precedent over that of the original InfoType. If unset for a
+   * sensitivity here will take precedence over that of the original InfoType. If unset for a
    * CustomInfoType, it will default to HIGH. This only applies to data profiling.
    * @return value or {@code null} for none
    */
@@ -235,7 +235,7 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
 
   /**
    * Sensitivity for this CustomInfoType. If this CustomInfoType extends an existing InfoType, the
-   * sensitivity here will take precedent over that of the original InfoType. If unset for a
+   * sensitivity here will take precedence over that of the original InfoType. If unset for a
    * CustomInfoType, it will default to HIGH. This only applies to data profiling.
    * @param sensitivityScore sensitivityScore or {@code null} for none
    */

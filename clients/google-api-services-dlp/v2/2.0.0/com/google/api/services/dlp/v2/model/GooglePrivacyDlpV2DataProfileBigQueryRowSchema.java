@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * The schema of data to be saved to the BigQuery when the `DataProfileAction` is enabled.
+ * The schema of data to be saved to the BigQuery table when the `DataProfileAction` is enabled.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed

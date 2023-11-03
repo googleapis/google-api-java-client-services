@@ -111,7 +111,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   private java.lang.String name;
 
   /**
-   * Other types found within this column. List will be un-ordered.
+   * Other types found within this column. List will be unordered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   private java.lang.String state;
 
   /**
-   * The resource name to the table data profile.
+   * The resource name of the table data profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -368,7 +368,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   }
 
   /**
-   * Other types found within this column. List will be un-ordered.
+   * Other types found within this column. List will be unordered.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2OtherInfoTypeSummary> getOtherMatches() {
@@ -376,7 +376,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   }
 
   /**
-   * Other types found within this column. List will be un-ordered.
+   * Other types found within this column. List will be unordered.
    * @param otherMatches otherMatches or {@code null} for none
    */
   public GooglePrivacyDlpV2ColumnDataProfile setOtherMatches(java.util.List<GooglePrivacyDlpV2OtherInfoTypeSummary> otherMatches) {
@@ -472,7 +472,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   }
 
   /**
-   * The resource name to the table data profile.
+   * The resource name of the table data profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getTableDataProfile() {
@@ -480,7 +480,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   }
 
   /**
-   * The resource name to the table data profile.
+   * The resource name of the table data profile.
    * @param tableDataProfile tableDataProfile or {@code null} for none
    */
   public GooglePrivacyDlpV2ColumnDataProfile setTableDataProfile(java.lang.String tableDataProfile) {

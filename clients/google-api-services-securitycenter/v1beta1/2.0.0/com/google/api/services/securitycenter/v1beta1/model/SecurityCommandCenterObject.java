@@ -32,6 +32,19 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class SecurityCommandCenterObject extends com.google.api.client.json.GenericJson {
 
   /**
+   * Pod containers associated with this finding, if any.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Container> containers;
+
+  static {
+    // hack to force ProGuard to consider Container used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Container.class);
+  }
+
+  /**
    * Kubernetes object group, such as "policy.k8s.io/v1".
    * The value may be {@code null}.
    */
@@ -61,6 +74,23 @@ public final class SecurityCommandCenterObject extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String ns;
+
+  /**
+   * Pod containers associated with this finding, if any.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Container> getContainers() {
+    return containers;
+  }
+
+  /**
+   * Pod containers associated with this finding, if any.
+   * @param containers containers or {@code null} for none
+   */
+  public SecurityCommandCenterObject setContainers(java.util.List<Container> containers) {
+    this.containers = containers;
+    return this;
+  }
 
   /**
    * Kubernetes object group, such as "policy.k8s.io/v1".

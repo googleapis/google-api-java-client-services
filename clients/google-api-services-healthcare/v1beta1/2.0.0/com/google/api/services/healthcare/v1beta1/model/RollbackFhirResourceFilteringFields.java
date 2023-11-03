@@ -30,11 +30,11 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class RollbackFhirResourceFilteringFields extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A string to use for filtering resource metadata. Complies with AIP-160 except without
-   * the has operator. Additionally, supports 2 functions: hastag("system") = "code" for tag
-   * filtering and extension_ts_value("uri") = timestamp for filtering extensions with timestamp,
-   * which is given as a unix timestamp. extension_ts_url can be used with >, <, <=, >=, !=
-   * comparisons as well.
+   * Optional. A filter expression that matches data in the `Resource.meta` element. Supports all
+   * filters in [AIP-160](https://google.aip.dev/160) except the "has" (`:`) operator. Supports the
+   * following custom functions: * `tag("") = ""` for tag filtering. * `extension_value_ts("") = `
+   * for filtering extensions with a timestamp, where `` is a Unix timestamp. Supports the `>`, `<`,
+   * `<=`, `>=`, and `!=` comparison operators.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,11 +49,11 @@ public final class RollbackFhirResourceFilteringFields extends com.google.api.cl
   private java.util.List<java.math.BigInteger> operationIds;
 
   /**
-   * Optional. A string to use for filtering resource metadata. Complies with AIP-160 except without
-   * the has operator. Additionally, supports 2 functions: hastag("system") = "code" for tag
-   * filtering and extension_ts_value("uri") = timestamp for filtering extensions with timestamp,
-   * which is given as a unix timestamp. extension_ts_url can be used with >, <, <=, >=, !=
-   * comparisons as well.
+   * Optional. A filter expression that matches data in the `Resource.meta` element. Supports all
+   * filters in [AIP-160](https://google.aip.dev/160) except the "has" (`:`) operator. Supports the
+   * following custom functions: * `tag("") = ""` for tag filtering. * `extension_value_ts("") = `
+   * for filtering extensions with a timestamp, where `` is a Unix timestamp. Supports the `>`, `<`,
+   * `<=`, `>=`, and `!=` comparison operators.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetadataFilter() {
@@ -61,11 +61,11 @@ public final class RollbackFhirResourceFilteringFields extends com.google.api.cl
   }
 
   /**
-   * Optional. A string to use for filtering resource metadata. Complies with AIP-160 except without
-   * the has operator. Additionally, supports 2 functions: hastag("system") = "code" for tag
-   * filtering and extension_ts_value("uri") = timestamp for filtering extensions with timestamp,
-   * which is given as a unix timestamp. extension_ts_url can be used with >, <, <=, >=, !=
-   * comparisons as well.
+   * Optional. A filter expression that matches data in the `Resource.meta` element. Supports all
+   * filters in [AIP-160](https://google.aip.dev/160) except the "has" (`:`) operator. Supports the
+   * following custom functions: * `tag("") = ""` for tag filtering. * `extension_value_ts("") = `
+   * for filtering extensions with a timestamp, where `` is a Unix timestamp. Supports the `>`, `<`,
+   * `<=`, `>=`, and `!=` comparison operators.
    * @param metadataFilter metadataFilter or {@code null} for none
    */
   public RollbackFhirResourceFilteringFields setMetadataFilter(java.lang.String metadataFilter) {

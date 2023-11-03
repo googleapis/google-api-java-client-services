@@ -31,11 +31,35 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies the type of the objects in `bucket_uri`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bucketObjectType;
+
+  /**
    * Required. The Cloud Storage bucket containing source objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bucketUri;
+
+  /**
+   * Optional. Specifies the type of the objects in `bucket_uri`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBucketObjectType() {
+    return bucketObjectType;
+  }
+
+  /**
+   * Optional. Specifies the type of the objects in `bucket_uri`.
+   * @param bucketObjectType bucketObjectType or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource setBucketObjectType(java.lang.String bucketObjectType) {
+    this.bucketObjectType = bucketObjectType;
+    return this;
+  }
 
   /**
    * Required. The Cloud Storage bucket containing source objects.

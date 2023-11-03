@@ -31,11 +31,50 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
+   * the agent. Note that this must be set for audio conversations to be properly displayed and
+   * analyzed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer agentChannel;
+
+  /**
    * An opaque, user-specified string representing the human agent who handled the conversations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentId;
+
+  /**
+   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
+   * the customer. Note that this must be set for audio conversations to be properly displayed and
+   * analyzed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer customerChannel;
+
+  /**
+   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
+   * the agent. Note that this must be set for audio conversations to be properly displayed and
+   * analyzed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAgentChannel() {
+    return agentChannel;
+  }
+
+  /**
+   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
+   * the agent. Note that this must be set for audio conversations to be properly displayed and
+   * analyzed.
+   * @param agentChannel agentChannel or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig setAgentChannel(java.lang.Integer agentChannel) {
+    this.agentChannel = agentChannel;
+    return this;
+  }
 
   /**
    * An opaque, user-specified string representing the human agent who handled the conversations.
@@ -51,6 +90,27 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
    */
   public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig setAgentId(java.lang.String agentId) {
     this.agentId = agentId;
+    return this;
+  }
+
+  /**
+   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
+   * the customer. Note that this must be set for audio conversations to be properly displayed and
+   * analyzed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCustomerChannel() {
+    return customerChannel;
+  }
+
+  /**
+   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
+   * the customer. Note that this must be set for audio conversations to be properly displayed and
+   * analyzed.
+   * @param customerChannel customerChannel or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig setCustomerChannel(java.lang.Integer customerChannel) {
+    this.customerChannel = customerChannel;
     return this;
   }
 

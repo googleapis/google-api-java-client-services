@@ -53,6 +53,22 @@ public final class GoogleCloudContactcenterinsightsV1IngestConversationsRequest 
   private java.lang.String parent;
 
   /**
+   * Optional. DLP settings for transcript redaction. Optional, will default to the config specified
+   * in Settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig;
+
+  /**
+   * Optional. Default Speech-to-Text configuration. Optional, will default to the config specified
+   * in Settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig;
+
+  /**
    * Configuration for when `source` contains conversation transcripts.
    * The value may be {@code null}.
    */
@@ -109,6 +125,44 @@ public final class GoogleCloudContactcenterinsightsV1IngestConversationsRequest 
    */
   public GoogleCloudContactcenterinsightsV1IngestConversationsRequest setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Optional. DLP settings for transcript redaction. Optional, will default to the config specified
+   * in Settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1RedactionConfig getRedactionConfig() {
+    return redactionConfig;
+  }
+
+  /**
+   * Optional. DLP settings for transcript redaction. Optional, will default to the config specified
+   * in Settings.
+   * @param redactionConfig redactionConfig or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IngestConversationsRequest setRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig) {
+    this.redactionConfig = redactionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Default Speech-to-Text configuration. Optional, will default to the config specified
+   * in Settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1SpeechConfig getSpeechConfig() {
+    return speechConfig;
+  }
+
+  /**
+   * Optional. Default Speech-to-Text configuration. Optional, will default to the config specified
+   * in Settings.
+   * @param speechConfig speechConfig or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IngestConversationsRequest setSpeechConfig(GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig) {
+    this.speechConfig = speechConfig;
     return this;
   }
 

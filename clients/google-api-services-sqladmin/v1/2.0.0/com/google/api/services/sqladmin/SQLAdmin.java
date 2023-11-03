@@ -2657,6 +2657,145 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Demotes an existing standalone instance to be a Cloud SQL read replica for an external database
+     * server.
+     *
+     * Create a request for the method "instances.demote".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Demote#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. ID of the project that contains the instance.
+     * @param instance Required. Cloud SQL instance name.
+     * @param content the {@link com.google.api.services.sqladmin.model.InstancesDemoteRequest}
+     * @return the request
+     */
+    public Demote demote(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.InstancesDemoteRequest content) throws java.io.IOException {
+      Demote result = new Demote(project, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Demote extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/demote";
+
+      /**
+       * Demotes an existing standalone instance to be a Cloud SQL read replica for an external database
+       * server.
+       *
+       * Create a request for the method "instances.demote".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Demote#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Demote#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. ID of the project that contains the instance.
+       * @param instance Required. Cloud SQL instance name.
+       * @param content the {@link com.google.api.services.sqladmin.model.InstancesDemoteRequest}
+       * @since 1.13
+       */
+      protected Demote(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.InstancesDemoteRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public Demote set$Xgafv(java.lang.String $Xgafv) {
+        return (Demote) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Demote setAccessToken(java.lang.String accessToken) {
+        return (Demote) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Demote setAlt(java.lang.String alt) {
+        return (Demote) super.setAlt(alt);
+      }
+
+      @Override
+      public Demote setCallback(java.lang.String callback) {
+        return (Demote) super.setCallback(callback);
+      }
+
+      @Override
+      public Demote setFields(java.lang.String fields) {
+        return (Demote) super.setFields(fields);
+      }
+
+      @Override
+      public Demote setKey(java.lang.String key) {
+        return (Demote) super.setKey(key);
+      }
+
+      @Override
+      public Demote setOauthToken(java.lang.String oauthToken) {
+        return (Demote) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Demote setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Demote) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Demote setQuotaUser(java.lang.String quotaUser) {
+        return (Demote) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Demote setUploadType(java.lang.String uploadType) {
+        return (Demote) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Demote setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Demote) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. ID of the project that contains the instance. */
+      public Demote setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance name. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance name.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Cloud SQL instance name. */
+      public Demote setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public Demote set(String parameterName, Object value) {
+        return (Demote) super.set(parameterName, value);
+      }
+    }
+    /**
      * Demotes the stand-alone instance to be a Cloud SQL read replica for an external database server.
      *
      * Create a request for the method "instances.demoteMaster".

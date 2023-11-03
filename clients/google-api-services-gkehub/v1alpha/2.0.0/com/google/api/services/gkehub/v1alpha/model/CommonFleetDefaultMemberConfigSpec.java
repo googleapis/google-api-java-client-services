@@ -45,6 +45,13 @@ public final class CommonFleetDefaultMemberConfigSpec extends com.google.api.cli
   private IdentityServiceMembershipSpec identityservice;
 
   /**
+   * Anthos Service Mesh-specific spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceMeshMembershipSpec mesh;
+
+  /**
    * Policy Controller spec.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class CommonFleetDefaultMemberConfigSpec extends com.google.api.cli
    */
   public CommonFleetDefaultMemberConfigSpec setIdentityservice(IdentityServiceMembershipSpec identityservice) {
     this.identityservice = identityservice;
+    return this;
+  }
+
+  /**
+   * Anthos Service Mesh-specific spec
+   * @return value or {@code null} for none
+   */
+  public ServiceMeshMembershipSpec getMesh() {
+    return mesh;
+  }
+
+  /**
+   * Anthos Service Mesh-specific spec
+   * @param mesh mesh or {@code null} for none
+   */
+  public CommonFleetDefaultMemberConfigSpec setMesh(ServiceMeshMembershipSpec mesh) {
+    this.mesh = mesh;
     return this;
   }
 

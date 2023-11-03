@@ -624,6 +624,144 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
         }
         /**
+         * Deletes multiple conversations in a single request.
+         *
+         * Create a request for the method "conversations.bulkDelete".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link BulkDelete#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource to create analyses in. Format: projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest}
+         * @return the request
+         */
+        public BulkDelete bulkDelete(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest content) throws java.io.IOException {
+          BulkDelete result = new BulkDelete(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BulkDelete extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/conversations:bulkDelete";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Deletes multiple conversations in a single request.
+           *
+           * Create a request for the method "conversations.bulkDelete".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link BulkDelete#execute()} method to invoke the
+           * remote operation. <p> {@link
+           * BulkDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource to create analyses in. Format: projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest}
+           * @since 1.13
+           */
+          protected BulkDelete(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public BulkDelete set$Xgafv(java.lang.String $Xgafv) {
+            return (BulkDelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BulkDelete setAccessToken(java.lang.String accessToken) {
+            return (BulkDelete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BulkDelete setAlt(java.lang.String alt) {
+            return (BulkDelete) super.setAlt(alt);
+          }
+
+          @Override
+          public BulkDelete setCallback(java.lang.String callback) {
+            return (BulkDelete) super.setCallback(callback);
+          }
+
+          @Override
+          public BulkDelete setFields(java.lang.String fields) {
+            return (BulkDelete) super.setFields(fields);
+          }
+
+          @Override
+          public BulkDelete setKey(java.lang.String key) {
+            return (BulkDelete) super.setKey(key);
+          }
+
+          @Override
+          public BulkDelete setOauthToken(java.lang.String oauthToken) {
+            return (BulkDelete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BulkDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BulkDelete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BulkDelete setQuotaUser(java.lang.String quotaUser) {
+            return (BulkDelete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BulkDelete setUploadType(java.lang.String uploadType) {
+            return (BulkDelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BulkDelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BulkDelete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource to create analyses in. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource to create analyses in. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource to create analyses in. Format:
+           * projects/{project}/locations/{location}
+           */
+          public BulkDelete setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BulkDelete set(String parameterName, Object value) {
+            return (BulkDelete) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets conversation statistics.
          *
          * Create a request for the method "conversations.calculateStats".

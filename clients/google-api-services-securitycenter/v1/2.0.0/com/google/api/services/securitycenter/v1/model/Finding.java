@@ -253,6 +253,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.util.List<LoadBalancer> loadBalancers;
 
   /**
+   * Log entries that are relevant to the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LogEntry> logEntries;
+
+  /**
    * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
    * The value may be {@code null}.
    */
@@ -845,6 +852,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setLoadBalancers(java.util.List<LoadBalancer> loadBalancers) {
     this.loadBalancers = loadBalancers;
+    return this;
+  }
+
+  /**
+   * Log entries that are relevant to the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LogEntry> getLogEntries() {
+    return logEntries;
+  }
+
+  /**
+   * Log entries that are relevant to the finding.
+   * @param logEntries logEntries or {@code null} for none
+   */
+  public Finding setLogEntries(java.util.List<LogEntry> logEntries) {
+    this.logEntries = logEntries;
     return this;
   }
 

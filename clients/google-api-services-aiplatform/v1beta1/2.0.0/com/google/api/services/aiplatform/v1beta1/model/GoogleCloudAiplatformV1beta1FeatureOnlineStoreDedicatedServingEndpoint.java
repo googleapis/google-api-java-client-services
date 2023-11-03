@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * The dedicated serving endpoint for this FeatureOnlineStore.
+ * The dedicated serving endpoint for this FeatureOnlineStore. Only need to set when you choose
+ * Optimized storage type or enable EmbeddingManagement.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

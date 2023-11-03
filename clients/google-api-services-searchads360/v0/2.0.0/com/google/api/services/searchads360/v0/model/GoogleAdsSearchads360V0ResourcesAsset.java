@@ -40,6 +40,13 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
   private GoogleAdsSearchads360V0CommonUnifiedCallAsset callAsset;
 
   /**
+   * Immutable. A call to action asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonCallToActionAsset callToActionAsset;
+
+  /**
    * Output only. A unified callout asset.
    * The value may be {@code null}.
    */
@@ -76,6 +83,13 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
   private java.lang.Long id;
 
   /**
+   * Output only. An image asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonImageAsset imageAsset;
+
+  /**
    * Output only. The datetime when this asset was last modified. The datetime is in the customer's
    * time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
    * The value may be {@code null}.
@@ -96,6 +110,13 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0CommonMobileAppAsset mobileAppAsset;
+
+  /**
+   * Optional name of the asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
 
   /**
    * Output only. A unified page feed asset.
@@ -127,6 +148,13 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
   private java.lang.String status;
 
   /**
+   * Output only. A text asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonTextAsset textAsset;
+
+  /**
    * URL template for constructing a tracking URL.
    * The value may be {@code null}.
    */
@@ -139,6 +167,13 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Immutable. A YouTube video asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonYoutubeVideoAsset youtubeVideoAsset;
 
   /**
    * Output only. A unified call asset.
@@ -154,6 +189,23 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   public GoogleAdsSearchads360V0ResourcesAsset setCallAsset(GoogleAdsSearchads360V0CommonUnifiedCallAsset callAsset) {
     this.callAsset = callAsset;
+    return this;
+  }
+
+  /**
+   * Immutable. A call to action asset.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonCallToActionAsset getCallToActionAsset() {
+    return callToActionAsset;
+  }
+
+  /**
+   * Immutable. A call to action asset.
+   * @param callToActionAsset callToActionAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setCallToActionAsset(GoogleAdsSearchads360V0CommonCallToActionAsset callToActionAsset) {
+    this.callToActionAsset = callToActionAsset;
     return this;
   }
 
@@ -245,6 +297,23 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
   }
 
   /**
+   * Output only. An image asset.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonImageAsset getImageAsset() {
+    return imageAsset;
+  }
+
+  /**
+   * Output only. An image asset.
+   * @param imageAsset imageAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setImageAsset(GoogleAdsSearchads360V0CommonImageAsset imageAsset) {
+    this.imageAsset = imageAsset;
+    return this;
+  }
+
+  /**
    * Output only. The datetime when this asset was last modified. The datetime is in the customer's
    * time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
    * @return value or {@code null} for none
@@ -294,6 +363,23 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   public GoogleAdsSearchads360V0ResourcesAsset setMobileAppAsset(GoogleAdsSearchads360V0CommonMobileAppAsset mobileAppAsset) {
     this.mobileAppAsset = mobileAppAsset;
+    return this;
+  }
+
+  /**
+   * Optional name of the asset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Optional name of the asset.
+   * @param name name or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
@@ -368,6 +454,23 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
   }
 
   /**
+   * Output only. A text asset.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonTextAsset getTextAsset() {
+    return textAsset;
+  }
+
+  /**
+   * Output only. A text asset.
+   * @param textAsset textAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setTextAsset(GoogleAdsSearchads360V0CommonTextAsset textAsset) {
+    this.textAsset = textAsset;
+    return this;
+  }
+
+  /**
    * URL template for constructing a tracking URL.
    * @return value or {@code null} for none
    */
@@ -398,6 +501,23 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   public GoogleAdsSearchads360V0ResourcesAsset setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Immutable. A YouTube video asset.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonYoutubeVideoAsset getYoutubeVideoAsset() {
+    return youtubeVideoAsset;
+  }
+
+  /**
+   * Immutable. A YouTube video asset.
+   * @param youtubeVideoAsset youtubeVideoAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setYoutubeVideoAsset(GoogleAdsSearchads360V0CommonYoutubeVideoAsset youtubeVideoAsset) {
+    this.youtubeVideoAsset = youtubeVideoAsset;
     return this;
   }
 

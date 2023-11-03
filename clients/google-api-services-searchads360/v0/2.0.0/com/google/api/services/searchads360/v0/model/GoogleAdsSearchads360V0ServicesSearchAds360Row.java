@@ -115,6 +115,41 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesAsset asset;
 
   /**
+   * The asset group referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAssetGroup assetGroup;
+
+  /**
+   * The asset group asset referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAssetGroupAsset assetGroupAsset;
+
+  /**
+   * The asset group listing group filter referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAssetGroupListingGroupFilter assetGroupListingGroupFilter;
+
+  /**
+   * The asset group signal referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAssetGroupSignal assetGroupSignal;
+
+  /**
+   * The asset group top combination view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAssetGroupTopCombinationView assetGroupTopCombinationView;
+
+  /**
    * The asset set referenced in the query.
    * The value may be {@code null}.
    */
@@ -127,6 +162,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesAssetSetAsset assetSetAsset;
+
+  /**
+   * The Audience referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAudience audience;
 
   /**
    * The bidding strategy referenced in the query.
@@ -183,6 +225,20 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesCampaignLabel campaignLabel;
+
+  /**
+   * The cart data sales view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesCartDataSalesView cartDataSalesView;
+
+  /**
+   * The event level conversion referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesConversion conversion;
 
   /**
    * The conversion action referenced in the query.
@@ -275,6 +331,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesLabel label;
 
   /**
+   * The language constant referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesLanguageConstant languageConstant;
+
+  /**
    * The location view referenced in the query.
    * The value may be {@code null}.
    */
@@ -287,6 +350,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0CommonMetrics metrics;
+
+  /**
+   * The Product Bidding Category referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant productBiddingCategoryConstant;
 
   /**
    * The product group view referenced in the query.
@@ -303,11 +373,25 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0CommonSegments segments;
 
   /**
+   * The shopping performance view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesShoppingPerformanceView shoppingPerformanceView;
+
+  /**
    * The user list referenced in the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesUserList userList;
+
+  /**
+   * The event level visit referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesVisit visit;
 
   /**
    * The webpage view referenced in the query.
@@ -521,6 +605,91 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   }
 
   /**
+   * The asset group referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAssetGroup getAssetGroup() {
+    return assetGroup;
+  }
+
+  /**
+   * The asset group referenced in the query.
+   * @param assetGroup assetGroup or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAssetGroup(GoogleAdsSearchads360V0ResourcesAssetGroup assetGroup) {
+    this.assetGroup = assetGroup;
+    return this;
+  }
+
+  /**
+   * The asset group asset referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAssetGroupAsset getAssetGroupAsset() {
+    return assetGroupAsset;
+  }
+
+  /**
+   * The asset group asset referenced in the query.
+   * @param assetGroupAsset assetGroupAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAssetGroupAsset(GoogleAdsSearchads360V0ResourcesAssetGroupAsset assetGroupAsset) {
+    this.assetGroupAsset = assetGroupAsset;
+    return this;
+  }
+
+  /**
+   * The asset group listing group filter referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAssetGroupListingGroupFilter getAssetGroupListingGroupFilter() {
+    return assetGroupListingGroupFilter;
+  }
+
+  /**
+   * The asset group listing group filter referenced in the query.
+   * @param assetGroupListingGroupFilter assetGroupListingGroupFilter or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAssetGroupListingGroupFilter(GoogleAdsSearchads360V0ResourcesAssetGroupListingGroupFilter assetGroupListingGroupFilter) {
+    this.assetGroupListingGroupFilter = assetGroupListingGroupFilter;
+    return this;
+  }
+
+  /**
+   * The asset group signal referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAssetGroupSignal getAssetGroupSignal() {
+    return assetGroupSignal;
+  }
+
+  /**
+   * The asset group signal referenced in the query.
+   * @param assetGroupSignal assetGroupSignal or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAssetGroupSignal(GoogleAdsSearchads360V0ResourcesAssetGroupSignal assetGroupSignal) {
+    this.assetGroupSignal = assetGroupSignal;
+    return this;
+  }
+
+  /**
+   * The asset group top combination view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAssetGroupTopCombinationView getAssetGroupTopCombinationView() {
+    return assetGroupTopCombinationView;
+  }
+
+  /**
+   * The asset group top combination view referenced in the query.
+   * @param assetGroupTopCombinationView assetGroupTopCombinationView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAssetGroupTopCombinationView(GoogleAdsSearchads360V0ResourcesAssetGroupTopCombinationView assetGroupTopCombinationView) {
+    this.assetGroupTopCombinationView = assetGroupTopCombinationView;
+    return this;
+  }
+
+  /**
    * The asset set referenced in the query.
    * @return value or {@code null} for none
    */
@@ -551,6 +720,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setAssetSetAsset(GoogleAdsSearchads360V0ResourcesAssetSetAsset assetSetAsset) {
     this.assetSetAsset = assetSetAsset;
+    return this;
+  }
+
+  /**
+   * The Audience referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAudience getAudience() {
+    return audience;
+  }
+
+  /**
+   * The Audience referenced in the query.
+   * @param audience audience or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAudience(GoogleAdsSearchads360V0ResourcesAudience audience) {
+    this.audience = audience;
     return this;
   }
 
@@ -687,6 +873,40 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setCampaignLabel(GoogleAdsSearchads360V0ResourcesCampaignLabel campaignLabel) {
     this.campaignLabel = campaignLabel;
+    return this;
+  }
+
+  /**
+   * The cart data sales view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCartDataSalesView getCartDataSalesView() {
+    return cartDataSalesView;
+  }
+
+  /**
+   * The cart data sales view referenced in the query.
+   * @param cartDataSalesView cartDataSalesView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setCartDataSalesView(GoogleAdsSearchads360V0ResourcesCartDataSalesView cartDataSalesView) {
+    this.cartDataSalesView = cartDataSalesView;
+    return this;
+  }
+
+  /**
+   * The event level conversion referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesConversion getConversion() {
+    return conversion;
+  }
+
+  /**
+   * The event level conversion referenced in the query.
+   * @param conversion conversion or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setConversion(GoogleAdsSearchads360V0ResourcesConversion conversion) {
+    this.conversion = conversion;
     return this;
   }
 
@@ -895,6 +1115,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   }
 
   /**
+   * The language constant referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesLanguageConstant getLanguageConstant() {
+    return languageConstant;
+  }
+
+  /**
+   * The language constant referenced in the query.
+   * @param languageConstant languageConstant or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setLanguageConstant(GoogleAdsSearchads360V0ResourcesLanguageConstant languageConstant) {
+    this.languageConstant = languageConstant;
+    return this;
+  }
+
+  /**
    * The location view referenced in the query.
    * @return value or {@code null} for none
    */
@@ -925,6 +1162,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setMetrics(GoogleAdsSearchads360V0CommonMetrics metrics) {
     this.metrics = metrics;
+    return this;
+  }
+
+  /**
+   * The Product Bidding Category referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant getProductBiddingCategoryConstant() {
+    return productBiddingCategoryConstant;
+  }
+
+  /**
+   * The Product Bidding Category referenced in the query.
+   * @param productBiddingCategoryConstant productBiddingCategoryConstant or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setProductBiddingCategoryConstant(GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant productBiddingCategoryConstant) {
+    this.productBiddingCategoryConstant = productBiddingCategoryConstant;
     return this;
   }
 
@@ -963,6 +1217,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   }
 
   /**
+   * The shopping performance view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesShoppingPerformanceView getShoppingPerformanceView() {
+    return shoppingPerformanceView;
+  }
+
+  /**
+   * The shopping performance view referenced in the query.
+   * @param shoppingPerformanceView shoppingPerformanceView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setShoppingPerformanceView(GoogleAdsSearchads360V0ResourcesShoppingPerformanceView shoppingPerformanceView) {
+    this.shoppingPerformanceView = shoppingPerformanceView;
+    return this;
+  }
+
+  /**
    * The user list referenced in the query.
    * @return value or {@code null} for none
    */
@@ -976,6 +1247,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setUserList(GoogleAdsSearchads360V0ResourcesUserList userList) {
     this.userList = userList;
+    return this;
+  }
+
+  /**
+   * The event level visit referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesVisit getVisit() {
+    return visit;
+  }
+
+  /**
+   * The event level visit referenced in the query.
+   * @param visit visit or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setVisit(GoogleAdsSearchads360V0ResourcesVisit visit) {
+    this.visit = visit;
     return this;
   }
 

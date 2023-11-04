@@ -30,6 +30,15 @@ package com.google.api.services.spanner.v1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The autoscaling configuration. Autoscaling is enabled if this field is set. When
+   * autoscaling is enabled, node_count and processing_units are treated as OUTPUT_ONLY fields and
+   * reflect the current compute capacity allocated to the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoscalingConfig autoscalingConfig;
+
+  /**
    * Required. The name of the instance's configuration. Values are of the form
    * `projects//instanceConfigs/`. See also InstanceConfig and ListInstanceConfigs.
    * The value may be {@code null}.
@@ -139,6 +148,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. The autoscaling configuration. Autoscaling is enabled if this field is set. When
+   * autoscaling is enabled, node_count and processing_units are treated as OUTPUT_ONLY fields and
+   * reflect the current compute capacity allocated to the instance.
+   * @return value or {@code null} for none
+   */
+  public AutoscalingConfig getAutoscalingConfig() {
+    return autoscalingConfig;
+  }
+
+  /**
+   * Optional. The autoscaling configuration. Autoscaling is enabled if this field is set. When
+   * autoscaling is enabled, node_count and processing_units are treated as OUTPUT_ONLY fields and
+   * reflect the current compute capacity allocated to the instance.
+   * @param autoscalingConfig autoscalingConfig or {@code null} for none
+   */
+  public Instance setAutoscalingConfig(AutoscalingConfig autoscalingConfig) {
+    this.autoscalingConfig = autoscalingConfig;
+    return this;
+  }
 
   /**
    * Required. The name of the instance's configuration. Values are of the form

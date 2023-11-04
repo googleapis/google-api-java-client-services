@@ -38,6 +38,13 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   private BestEffort bestEffort;
 
   /**
+   * Output only. The time when the QueuedResource was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * The Guaranteed tier.
    * The value may be {@code null}.
    */
@@ -101,6 +108,23 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
    */
   public QueuedResource setBestEffort(BestEffort bestEffort) {
     this.bestEffort = bestEffort;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the QueuedResource was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The time when the QueuedResource was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public QueuedResource setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 

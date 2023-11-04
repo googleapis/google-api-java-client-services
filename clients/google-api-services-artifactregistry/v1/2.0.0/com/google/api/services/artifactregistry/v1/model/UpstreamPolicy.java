@@ -45,8 +45,8 @@ public final class UpstreamPolicy extends com.google.api.client.json.GenericJson
   private java.lang.Integer priority;
 
   /**
-   * A reference to the repository resource, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1".
+   * A reference to the repository resource, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +87,8 @@ public final class UpstreamPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A reference to the repository resource, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1".
+   * A reference to the repository resource, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRepository() {
@@ -96,8 +96,8 @@ public final class UpstreamPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A reference to the repository resource, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1".
+   * A reference to the repository resource, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1`.
    * @param repository repository or {@code null} for none
    */
   public UpstreamPolicy setRepository(java.lang.String repository) {

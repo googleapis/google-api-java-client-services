@@ -43,6 +43,18 @@ public final class GoogleFirestoreAdminV1ListDatabasesResponse extends com.googl
   }
 
   /**
+   * In the event that data about individual databases cannot be listed they will be recorded here.
+   * An example entry might be: projects/some_project/locations/some_location This can happen if the
+   * Cloud Region that the Database resides in is currently unavailable. In this case we can't fetch
+   * all the details about the database. You may be able to get a more detailed error message (or
+   * possibly fetch the resource) by sending a 'Get' request for the resource or a 'List' request
+   * for the specific location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The databases in the project.
    * @return value or {@code null} for none
    */
@@ -56,6 +68,33 @@ public final class GoogleFirestoreAdminV1ListDatabasesResponse extends com.googl
    */
   public GoogleFirestoreAdminV1ListDatabasesResponse setDatabases(java.util.List<GoogleFirestoreAdminV1Database> databases) {
     this.databases = databases;
+    return this;
+  }
+
+  /**
+   * In the event that data about individual databases cannot be listed they will be recorded here.
+   * An example entry might be: projects/some_project/locations/some_location This can happen if the
+   * Cloud Region that the Database resides in is currently unavailable. In this case we can't fetch
+   * all the details about the database. You may be able to get a more detailed error message (or
+   * possibly fetch the resource) by sending a 'Get' request for the resource or a 'List' request
+   * for the specific location.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * In the event that data about individual databases cannot be listed they will be recorded here.
+   * An example entry might be: projects/some_project/locations/some_location This can happen if the
+   * Cloud Region that the Database resides in is currently unavailable. In this case we can't fetch
+   * all the details about the database. You may be able to get a more detailed error message (or
+   * possibly fetch the resource) by sending a 'Get' request for the resource or a 'List' request
+   * for the specific location.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1ListDatabasesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

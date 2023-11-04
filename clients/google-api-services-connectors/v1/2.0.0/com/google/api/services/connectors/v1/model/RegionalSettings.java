@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v1.model;
 public final class RegionalSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Regional encryption config to hold CMEK details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfig encryptionConfig;
+
+  /**
    * Output only. Resource name of the Connection. Format:
    * projects/{project}/locations/{location}/regionalSettings
    * The value may be {@code null}.
@@ -43,6 +50,23 @@ public final class RegionalSettings extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private NetworkConfig networkConfig;
+
+  /**
+   * Optional. Regional encryption config to hold CMEK details.
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
+  }
+
+  /**
+   * Optional. Regional encryption config to hold CMEK details.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
+   */
+  public RegionalSettings setEncryptionConfig(EncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
+    return this;
+  }
 
   /**
    * Output only. Resource name of the Connection. Format:

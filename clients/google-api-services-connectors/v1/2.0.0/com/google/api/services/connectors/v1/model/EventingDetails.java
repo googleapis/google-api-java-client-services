@@ -79,6 +79,13 @@ public final class EventingDetails extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> searchTags;
 
   /**
+   * Output only. The type of the event listener for a specific connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Output only. Custom Event Types.
    * @return value or {@code null} for none
    */
@@ -194,6 +201,23 @@ public final class EventingDetails extends com.google.api.client.json.GenericJso
    */
   public EventingDetails setSearchTags(java.util.List<java.lang.String> searchTags) {
     this.searchTags = searchTags;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the event listener for a specific connector.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Output only. The type of the event listener for a specific connector.
+   * @param type type or {@code null} for none
+   */
+  public EventingDetails setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

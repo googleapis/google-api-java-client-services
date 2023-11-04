@@ -194,6 +194,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String endpoint;
 
   /**
+   * GKE Enterprise Configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnterpriseConfig enterpriseConfig;
+
+  /**
    * This checksum is computed by the server based on the value of cluster fields, and may be sent
    * on update requests to ensure the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -1039,6 +1046,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setEndpoint(java.lang.String endpoint) {
     this.endpoint = endpoint;
+    return this;
+  }
+
+  /**
+   * GKE Enterprise Configuration.
+   * @return value or {@code null} for none
+   */
+  public EnterpriseConfig getEnterpriseConfig() {
+    return enterpriseConfig;
+  }
+
+  /**
+   * GKE Enterprise Configuration.
+   * @param enterpriseConfig enterpriseConfig or {@code null} for none
+   */
+  public Cluster setEnterpriseConfig(EnterpriseConfig enterpriseConfig) {
+    this.enterpriseConfig = enterpriseConfig;
     return this;
   }
 

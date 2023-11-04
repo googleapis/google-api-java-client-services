@@ -39,6 +39,13 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   private java.lang.Boolean dataBoostEnabled;
 
   /**
+   * Directed read options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DirectedReadOptions directedReadOptions;
+
+  /**
    * It is not always possible for Cloud Spanner to infer the right SQL type from a JSON value. For
    * example, values of type `BYTES` and values of type `STRING` both appear in params as JSON
    * strings. In these cases, `param_types` can be used to specify the exact SQL type for some or
@@ -151,6 +158,23 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
    */
   public ExecuteSqlRequest setDataBoostEnabled(java.lang.Boolean dataBoostEnabled) {
     this.dataBoostEnabled = dataBoostEnabled;
+    return this;
+  }
+
+  /**
+   * Directed read options for this request.
+   * @return value or {@code null} for none
+   */
+  public DirectedReadOptions getDirectedReadOptions() {
+    return directedReadOptions;
+  }
+
+  /**
+   * Directed read options for this request.
+   * @param directedReadOptions directedReadOptions or {@code null} for none
+   */
+  public ExecuteSqlRequest setDirectedReadOptions(DirectedReadOptions directedReadOptions) {
+    this.directedReadOptions = directedReadOptions;
     return this;
   }
 

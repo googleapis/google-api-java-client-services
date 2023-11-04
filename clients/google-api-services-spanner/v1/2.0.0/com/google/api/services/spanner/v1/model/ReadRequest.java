@@ -46,6 +46,13 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean dataBoostEnabled;
 
   /**
+   * Directed read options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DirectedReadOptions directedReadOptions;
+
+  /**
    * If non-empty, the name of an index on table. This index is used instead of the table primary
    * key when interpreting key_set and sorting result rows. See key_set for further information.
    * The value may be {@code null}.
@@ -150,6 +157,23 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
    */
   public ReadRequest setDataBoostEnabled(java.lang.Boolean dataBoostEnabled) {
     this.dataBoostEnabled = dataBoostEnabled;
+    return this;
+  }
+
+  /**
+   * Directed read options for this request.
+   * @return value or {@code null} for none
+   */
+  public DirectedReadOptions getDirectedReadOptions() {
+    return directedReadOptions;
+  }
+
+  /**
+   * Directed read options for this request.
+   * @param directedReadOptions directedReadOptions or {@code null} for none
+   */
+  public ReadRequest setDirectedReadOptions(DirectedReadOptions directedReadOptions) {
+    this.directedReadOptions = directedReadOptions;
     return this;
   }
 

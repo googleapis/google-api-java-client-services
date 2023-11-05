@@ -69,6 +69,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Optional. Configuration of a stretched cluster. Required for clusters that belong to a
+   * STRETCHED private cloud.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StretchedClusterConfig stretchedClusterConfig;
+
+  /**
    * Output only. System-generated unique identifier for the resource.
    * The value may be {@code null}.
    */
@@ -172,6 +180,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration of a stretched cluster. Required for clusters that belong to a
+   * STRETCHED private cloud.
+   * @return value or {@code null} for none
+   */
+  public StretchedClusterConfig getStretchedClusterConfig() {
+    return stretchedClusterConfig;
+  }
+
+  /**
+   * Optional. Configuration of a stretched cluster. Required for clusters that belong to a
+   * STRETCHED private cloud.
+   * @param stretchedClusterConfig stretchedClusterConfig or {@code null} for none
+   */
+  public Cluster setStretchedClusterConfig(StretchedClusterConfig stretchedClusterConfig) {
+    this.stretchedClusterConfig = stretchedClusterConfig;
     return this;
   }
 

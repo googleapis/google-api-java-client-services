@@ -17,7 +17,7 @@
 package com.google.api.services.vmwareengine.v1.model;
 
 /**
- * Request message for VmwareEngine.ResetVcenterCredentials
+ * Request message for VmwareEngine.RevokeDnsBindPermission
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the VMware Engine API. For a detailed explanation see:
@@ -27,7 +27,15 @@ package com.google.api.services.vmwareengine.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ResetVcenterCredentialsRequest extends com.google.api.client.json.GenericJson {
+public final class RevokeDnsBindPermissionRequest extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Required. The consumer provided user/service account which needs to be granted permission to
+   * bind with the intranet VPC corresponding to the consumer project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Principal principal;
 
   /**
    * Optional. A request ID to identify requests. Specify a unique request ID so that if you must
@@ -45,14 +53,23 @@ public final class ResetVcenterCredentialsRequest extends com.google.api.client.
   private java.lang.String requestId;
 
   /**
-   * Optional. The username of the user to be to reset the credentials. The default value of this
-   * field is CloudOwner@gve.local. The provided value should be one of the following: solution-
-   * user-01@gve.local, solution-user-02@gve.local, solution-user-03@gve.local, solution-
-   * user-04@gve.local, solution-user-05@gve.local, zertoadmin@gve.local.
-   * The value may be {@code null}.
+   * Required. The consumer provided user/service account which needs to be granted permission to
+   * bind with the intranet VPC corresponding to the consumer project.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.lang.String username;
+  public Principal getPrincipal() {
+    return principal;
+  }
+
+  /**
+   * Required. The consumer provided user/service account which needs to be granted permission to
+   * bind with the intranet VPC corresponding to the consumer project.
+   * @param principal principal or {@code null} for none
+   */
+  public RevokeDnsBindPermissionRequest setPrincipal(Principal principal) {
+    this.principal = principal;
+    return this;
+  }
 
   /**
    * Optional. A request ID to identify requests. Specify a unique request ID so that if you must
@@ -82,42 +99,19 @@ public final class ResetVcenterCredentialsRequest extends com.google.api.client.
    * supported (00000000-0000-0000-0000-000000000000).
    * @param requestId requestId or {@code null} for none
    */
-  public ResetVcenterCredentialsRequest setRequestId(java.lang.String requestId) {
+  public RevokeDnsBindPermissionRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
     return this;
   }
 
-  /**
-   * Optional. The username of the user to be to reset the credentials. The default value of this
-   * field is CloudOwner@gve.local. The provided value should be one of the following: solution-
-   * user-01@gve.local, solution-user-02@gve.local, solution-user-03@gve.local, solution-
-   * user-04@gve.local, solution-user-05@gve.local, zertoadmin@gve.local.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUsername() {
-    return username;
-  }
-
-  /**
-   * Optional. The username of the user to be to reset the credentials. The default value of this
-   * field is CloudOwner@gve.local. The provided value should be one of the following: solution-
-   * user-01@gve.local, solution-user-02@gve.local, solution-user-03@gve.local, solution-
-   * user-04@gve.local, solution-user-05@gve.local, zertoadmin@gve.local.
-   * @param username username or {@code null} for none
-   */
-  public ResetVcenterCredentialsRequest setUsername(java.lang.String username) {
-    this.username = username;
-    return this;
+  @Override
+  public RevokeDnsBindPermissionRequest set(String fieldName, Object value) {
+    return (RevokeDnsBindPermissionRequest) super.set(fieldName, value);
   }
 
   @Override
-  public ResetVcenterCredentialsRequest set(String fieldName, Object value) {
-    return (ResetVcenterCredentialsRequest) super.set(fieldName, value);
-  }
-
-  @Override
-  public ResetVcenterCredentialsRequest clone() {
-    return (ResetVcenterCredentialsRequest) super.clone();
+  public RevokeDnsBindPermissionRequest clone() {
+    return (RevokeDnsBindPermissionRequest) super.clone();
   }
 
 }

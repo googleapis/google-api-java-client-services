@@ -68,6 +68,13 @@ public final class Subnet extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
+   * Output only. VLAN ID of the VLAN on which the subnet is configured
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer vlanId;
+
+  /**
    * The IP address of the gateway of this subnet. Must fall within the IP prefix defined above.
    * @return value or {@code null} for none
    */
@@ -153,6 +160,23 @@ public final class Subnet extends com.google.api.client.json.GenericJson {
    */
   public Subnet setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Output only. VLAN ID of the VLAN on which the subnet is configured
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVlanId() {
+    return vlanId;
+  }
+
+  /**
+   * Output only. VLAN ID of the VLAN on which the subnet is configured
+   * @param vlanId vlanId or {@code null} for none
+   */
+  public Subnet setVlanId(java.lang.Integer vlanId) {
+    this.vlanId = vlanId;
     return this;
   }
 

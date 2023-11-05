@@ -48,6 +48,13 @@ public final class ManagementCluster extends com.google.api.client.json.GenericJ
   private java.util.Map<String, NodeTypeConfig> nodeTypeConfigs;
 
   /**
+   * Optional. Configuration of a stretched cluster. Required for STRETCHED private clouds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StretchedClusterConfig stretchedClusterConfig;
+
+  /**
    * Required. The user-provided identifier of the new `Cluster`. The identifier must meet the
    * following requirements: * Only contains 1-63 alphanumeric characters and hyphens * Begins with
    * an alphabetical character * Ends with a non-hyphen character * Not formatted as a UUID *
@@ -86,6 +93,23 @@ public final class ManagementCluster extends com.google.api.client.json.GenericJ
    */
   public ManagementCluster setNodeTypeConfigs(java.util.Map<String, NodeTypeConfig> nodeTypeConfigs) {
     this.nodeTypeConfigs = nodeTypeConfigs;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration of a stretched cluster. Required for STRETCHED private clouds.
+   * @return value or {@code null} for none
+   */
+  public StretchedClusterConfig getStretchedClusterConfig() {
+    return stretchedClusterConfig;
+  }
+
+  /**
+   * Optional. Configuration of a stretched cluster. Required for STRETCHED private clouds.
+   * @param stretchedClusterConfig stretchedClusterConfig or {@code null} for none
+   */
+  public ManagementCluster setStretchedClusterConfig(StretchedClusterConfig stretchedClusterConfig) {
+    this.stretchedClusterConfig = stretchedClusterConfig;
     return this;
   }
 

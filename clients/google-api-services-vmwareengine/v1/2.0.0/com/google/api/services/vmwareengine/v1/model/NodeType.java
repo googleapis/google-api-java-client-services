@@ -37,6 +37,13 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Integer> availableCustomCoreCounts;
 
   /**
+   * Output only. Capabilities of this node type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> capabilities;
+
+  /**
    * Output only. The amount of storage available, defined in GB.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
    */
   public NodeType setAvailableCustomCoreCounts(java.util.List<java.lang.Integer> availableCustomCoreCounts) {
     this.availableCustomCoreCounts = availableCustomCoreCounts;
+    return this;
+  }
+
+  /**
+   * Output only. Capabilities of this node type.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCapabilities() {
+    return capabilities;
+  }
+
+  /**
+   * Output only. Capabilities of this node type.
+   * @param capabilities capabilities or {@code null} for none
+   */
+  public NodeType setCapabilities(java.util.List<java.lang.String> capabilities) {
+    this.capabilities = capabilities;
     return this;
   }
 

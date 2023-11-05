@@ -30,6 +30,15 @@ package com.google.api.services.vmwareengine.v1.model;
 public final class NetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. DNS Server IP of the Private Cloud. All DNS queries can be forwarded to this
+   * address for name resolution of Private Cloud's management entities like vCenter, NSX-T Manager
+   * and ESXi hosts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dnsServerIp;
+
+  /**
    * Required. Management CIDR used by VMware management appliances.
    * The value may be {@code null}.
    */
@@ -65,6 +74,27 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String vmwareEngineNetworkCanonical;
+
+  /**
+   * Output only. DNS Server IP of the Private Cloud. All DNS queries can be forwarded to this
+   * address for name resolution of Private Cloud's management entities like vCenter, NSX-T Manager
+   * and ESXi hosts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDnsServerIp() {
+    return dnsServerIp;
+  }
+
+  /**
+   * Output only. DNS Server IP of the Private Cloud. All DNS queries can be forwarded to this
+   * address for name resolution of Private Cloud's management entities like vCenter, NSX-T Manager
+   * and ESXi hosts.
+   * @param dnsServerIp dnsServerIp or {@code null} for none
+   */
+  public NetworkConfig setDnsServerIp(java.lang.String dnsServerIp) {
+    this.dnsServerIp = dnsServerIp;
+    return this;
+  }
 
   /**
    * Required. Management CIDR used by VMware management appliances.

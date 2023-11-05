@@ -78,8 +78,8 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private MavenRepositoryConfig mavenConfig;
 
   /**
-   * The name of the repository, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1".
+   * The name of the repository, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,8 +220,8 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the repository, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1".
+   * The name of the repository, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -229,8 +229,8 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the repository, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1".
+   * The name of the repository, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1`.
    * @param name name or {@code null} for none
    */
   public Repository setName(java.lang.String name) {

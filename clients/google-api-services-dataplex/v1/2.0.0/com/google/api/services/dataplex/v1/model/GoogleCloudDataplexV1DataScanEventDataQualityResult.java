@@ -30,12 +30,30 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataScanEventDataQualityResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * The score of each column scanned in the data scan job. The key of the map is the name of the
+   * column. The value is the data quality score for the column.The score ranges between 0, 100 (up
+   * to two decimal points).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Float> columnScore;
+
+  /**
    * The result of each dimension for data quality result. The key of the map is the name of the
    * dimension. The value is the bool value depicting whether the dimension result was pass or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Boolean> dimensionPassed;
+
+  /**
+   * The score of each dimension for data quality result. The key of the map is the name of the
+   * dimension. The value is the data quality score for the dimension.The score ranges between 0,
+   * 100 (up to two decimal points).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Float> dimensionScore;
 
   /**
    * Whether the data quality result was pass or not.
@@ -50,6 +68,35 @@ public final class GoogleCloudDataplexV1DataScanEventDataQualityResult extends c
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long rowCount;
+
+  /**
+   * The table-level data quality score for the data scan job.The data quality score ranges between
+   * 0, 100 (up to two decimal points).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float score;
+
+  /**
+   * The score of each column scanned in the data scan job. The key of the map is the name of the
+   * column. The value is the data quality score for the column.The score ranges between 0, 100 (up
+   * to two decimal points).
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Float> getColumnScore() {
+    return columnScore;
+  }
+
+  /**
+   * The score of each column scanned in the data scan job. The key of the map is the name of the
+   * column. The value is the data quality score for the column.The score ranges between 0, 100 (up
+   * to two decimal points).
+   * @param columnScore columnScore or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEventDataQualityResult setColumnScore(java.util.Map<String, java.lang.Float> columnScore) {
+    this.columnScore = columnScore;
+    return this;
+  }
 
   /**
    * The result of each dimension for data quality result. The key of the map is the name of the
@@ -67,6 +114,27 @@ public final class GoogleCloudDataplexV1DataScanEventDataQualityResult extends c
    */
   public GoogleCloudDataplexV1DataScanEventDataQualityResult setDimensionPassed(java.util.Map<String, java.lang.Boolean> dimensionPassed) {
     this.dimensionPassed = dimensionPassed;
+    return this;
+  }
+
+  /**
+   * The score of each dimension for data quality result. The key of the map is the name of the
+   * dimension. The value is the data quality score for the dimension.The score ranges between 0,
+   * 100 (up to two decimal points).
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Float> getDimensionScore() {
+    return dimensionScore;
+  }
+
+  /**
+   * The score of each dimension for data quality result. The key of the map is the name of the
+   * dimension. The value is the data quality score for the dimension.The score ranges between 0,
+   * 100 (up to two decimal points).
+   * @param dimensionScore dimensionScore or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEventDataQualityResult setDimensionScore(java.util.Map<String, java.lang.Float> dimensionScore) {
+    this.dimensionScore = dimensionScore;
     return this;
   }
 
@@ -101,6 +169,25 @@ public final class GoogleCloudDataplexV1DataScanEventDataQualityResult extends c
    */
   public GoogleCloudDataplexV1DataScanEventDataQualityResult setRowCount(java.lang.Long rowCount) {
     this.rowCount = rowCount;
+    return this;
+  }
+
+  /**
+   * The table-level data quality score for the data scan job.The data quality score ranges between
+   * 0, 100 (up to two decimal points).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getScore() {
+    return score;
+  }
+
+  /**
+   * The table-level data quality score for the data scan job.The data quality score ranges between
+   * 0, 100 (up to two decimal points).
+   * @param score score or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEventDataQualityResult setScore(java.lang.Float score) {
+    this.score = score;
     return this;
   }
 

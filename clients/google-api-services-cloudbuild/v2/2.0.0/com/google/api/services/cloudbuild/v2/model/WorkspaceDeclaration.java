@@ -51,6 +51,14 @@ public final class WorkspaceDeclaration extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
+   * Optional. Optional marks a Workspace as not being required in TaskRuns. By default this field
+   * is false and so declared workspaces are required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean optional;
+
+  /**
    * ReadOnly dictates whether a mounted volume is writable.
    * The value may be {@code null}.
    */
@@ -105,6 +113,25 @@ public final class WorkspaceDeclaration extends com.google.api.client.json.Gener
    */
   public WorkspaceDeclaration setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Optional marks a Workspace as not being required in TaskRuns. By default this field
+   * is false and so declared workspaces are required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOptional() {
+    return optional;
+  }
+
+  /**
+   * Optional. Optional marks a Workspace as not being required in TaskRuns. By default this field
+   * is false and so declared workspaces are required.
+   * @param optional optional or {@code null} for none
+   */
+  public WorkspaceDeclaration setOptional(java.lang.Boolean optional) {
+    this.optional = optional;
     return this;
   }
 

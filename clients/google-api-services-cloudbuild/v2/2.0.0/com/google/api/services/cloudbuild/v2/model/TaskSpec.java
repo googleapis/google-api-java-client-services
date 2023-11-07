@@ -83,6 +83,20 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. StepTemplate can be used as the basis for all step containers within the Task, so
+   * that the steps inherit settings on the base container.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StepTemplate> stepTemplate;
+
+  static {
+    // hack to force ProGuard to consider StepTemplate used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StepTemplate.class);
+  }
+
+  /**
    * Steps of the task.
    * The value may be {@code null}.
    */
@@ -191,6 +205,25 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
    */
   public TaskSpec setSidecars(java.util.List<Sidecar> sidecars) {
     this.sidecars = sidecars;
+    return this;
+  }
+
+  /**
+   * Optional. StepTemplate can be used as the basis for all step containers within the Task, so
+   * that the steps inherit settings on the base container.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StepTemplate> getStepTemplate() {
+    return stepTemplate;
+  }
+
+  /**
+   * Optional. StepTemplate can be used as the basis for all step containers within the Task, so
+   * that the steps inherit settings on the base container.
+   * @param stepTemplate stepTemplate or {@code null} for none
+   */
+  public TaskSpec setStepTemplate(java.util.List<StepTemplate> stepTemplate) {
+    this.stepTemplate = stepTemplate;
     return this;
   }
 

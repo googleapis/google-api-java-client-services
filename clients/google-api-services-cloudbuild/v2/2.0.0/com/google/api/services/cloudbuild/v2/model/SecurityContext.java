@@ -30,11 +30,102 @@ package com.google.api.services.cloudbuild.v2.model;
 public final class SecurityContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. AllowPrivilegeEscalation controls whether a process can gain more privileges than its
+   * parent process. This bool directly controls if the no_new_privs flag will be set on the
+   * container process. AllowPrivilegeEscalation is true always when the container is: 1) run as
+   * Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is
+   * windows. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowPrivilegeEscalation;
+
+  /**
+   * Optional. Adds and removes POSIX capabilities from running containers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Capabilities capabilities;
+
+  /**
    * Run container in privileged mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean privileged;
+
+  /**
+   * Optional. The GID to run the entrypoint of the container process. Uses runtime default if
+   * unset. May also be set in PodSecurityContext. If set in both SecurityContext and
+   * PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this
+   * field cannot be set when spec.os.name is windows. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long runAsGroup;
+
+  /**
+   * Optional. Indicates that the container must run as a non-root user. If true, the Kubelet will
+   * validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start
+   * the container if it does. If unset or false, no such validation will be performed. May also be
+   * set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value
+   * specified in SecurityContext takes precedence. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean runAsNonRoot;
+
+  /**
+   * Optional. The UID to run the entrypoint of the container process. Defaults to user specified in
+   * image metadata if unspecified. May also be set in PodSecurityContext. If set in both
+   * SecurityContext and PodSecurityContext, the value specified in SecurityContext takes
+   * precedence. Note that this field cannot be set when spec.os.name is windows. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long runAsUser;
+
+  /**
+   * Optional. AllowPrivilegeEscalation controls whether a process can gain more privileges than its
+   * parent process. This bool directly controls if the no_new_privs flag will be set on the
+   * container process. AllowPrivilegeEscalation is true always when the container is: 1) run as
+   * Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is
+   * windows. +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowPrivilegeEscalation() {
+    return allowPrivilegeEscalation;
+  }
+
+  /**
+   * Optional. AllowPrivilegeEscalation controls whether a process can gain more privileges than its
+   * parent process. This bool directly controls if the no_new_privs flag will be set on the
+   * container process. AllowPrivilegeEscalation is true always when the container is: 1) run as
+   * Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is
+   * windows. +optional
+   * @param allowPrivilegeEscalation allowPrivilegeEscalation or {@code null} for none
+   */
+  public SecurityContext setAllowPrivilegeEscalation(java.lang.Boolean allowPrivilegeEscalation) {
+    this.allowPrivilegeEscalation = allowPrivilegeEscalation;
+    return this;
+  }
+
+  /**
+   * Optional. Adds and removes POSIX capabilities from running containers.
+   * @return value or {@code null} for none
+   */
+  public Capabilities getCapabilities() {
+    return capabilities;
+  }
+
+  /**
+   * Optional. Adds and removes POSIX capabilities from running containers.
+   * @param capabilities capabilities or {@code null} for none
+   */
+  public SecurityContext setCapabilities(Capabilities capabilities) {
+    this.capabilities = capabilities;
+    return this;
+  }
 
   /**
    * Run container in privileged mode.
@@ -50,6 +141,77 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    */
   public SecurityContext setPrivileged(java.lang.Boolean privileged) {
     this.privileged = privileged;
+    return this;
+  }
+
+  /**
+   * Optional. The GID to run the entrypoint of the container process. Uses runtime default if
+   * unset. May also be set in PodSecurityContext. If set in both SecurityContext and
+   * PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this
+   * field cannot be set when spec.os.name is windows. +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRunAsGroup() {
+    return runAsGroup;
+  }
+
+  /**
+   * Optional. The GID to run the entrypoint of the container process. Uses runtime default if
+   * unset. May also be set in PodSecurityContext. If set in both SecurityContext and
+   * PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this
+   * field cannot be set when spec.os.name is windows. +optional
+   * @param runAsGroup runAsGroup or {@code null} for none
+   */
+  public SecurityContext setRunAsGroup(java.lang.Long runAsGroup) {
+    this.runAsGroup = runAsGroup;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates that the container must run as a non-root user. If true, the Kubelet will
+   * validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start
+   * the container if it does. If unset or false, no such validation will be performed. May also be
+   * set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value
+   * specified in SecurityContext takes precedence. +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRunAsNonRoot() {
+    return runAsNonRoot;
+  }
+
+  /**
+   * Optional. Indicates that the container must run as a non-root user. If true, the Kubelet will
+   * validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start
+   * the container if it does. If unset or false, no such validation will be performed. May also be
+   * set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value
+   * specified in SecurityContext takes precedence. +optional
+   * @param runAsNonRoot runAsNonRoot or {@code null} for none
+   */
+  public SecurityContext setRunAsNonRoot(java.lang.Boolean runAsNonRoot) {
+    this.runAsNonRoot = runAsNonRoot;
+    return this;
+  }
+
+  /**
+   * Optional. The UID to run the entrypoint of the container process. Defaults to user specified in
+   * image metadata if unspecified. May also be set in PodSecurityContext. If set in both
+   * SecurityContext and PodSecurityContext, the value specified in SecurityContext takes
+   * precedence. Note that this field cannot be set when spec.os.name is windows. +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRunAsUser() {
+    return runAsUser;
+  }
+
+  /**
+   * Optional. The UID to run the entrypoint of the container process. Defaults to user specified in
+   * image metadata if unspecified. May also be set in PodSecurityContext. If set in both
+   * SecurityContext and PodSecurityContext, the value specified in SecurityContext takes
+   * precedence. Note that this field cannot be set when spec.os.name is windows. +optional
+   * @param runAsUser runAsUser or {@code null} for none
+   */
+  public SecurityContext setRunAsUser(java.lang.Long runAsUser) {
+    this.runAsUser = runAsUser;
     return this;
   }
 

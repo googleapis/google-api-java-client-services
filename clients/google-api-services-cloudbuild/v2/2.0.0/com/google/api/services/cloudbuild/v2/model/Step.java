@@ -78,6 +78,15 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.String script;
 
   /**
+   * Optional. SecurityContext defines the security options the Step should be run with. If set, the
+   * fields of SecurityContext override the equivalent fields of PodSecurityContext. More info:
+   * https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityContext securityContext;
+
+  /**
    * Time after which the Step times out. Defaults to never.
    * The value may be {@code null}.
    */
@@ -197,6 +206,27 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setScript(java.lang.String script) {
     this.script = script;
+    return this;
+  }
+
+  /**
+   * Optional. SecurityContext defines the security options the Step should be run with. If set, the
+   * fields of SecurityContext override the equivalent fields of PodSecurityContext. More info:
+   * https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional
+   * @return value or {@code null} for none
+   */
+  public SecurityContext getSecurityContext() {
+    return securityContext;
+  }
+
+  /**
+   * Optional. SecurityContext defines the security options the Step should be run with. If set, the
+   * fields of SecurityContext override the equivalent fields of PodSecurityContext. More info:
+   * https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional
+   * @param securityContext securityContext or {@code null} for none
+   */
+  public Step setSecurityContext(SecurityContext securityContext) {
+    this.securityContext = securityContext;
     return this;
   }
 

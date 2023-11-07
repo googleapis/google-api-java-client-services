@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2.model;
 
 /**
- * Redirects a shopper to a specific page. * Rule Condition: - Must specify Condition.query_terms. *
+ * Redirects a shopper to a specific page. * Rule Condition: Must specify Condition.query_terms. *
  * Action Input: Request Query * Action Result: Redirects shopper to provided uri.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

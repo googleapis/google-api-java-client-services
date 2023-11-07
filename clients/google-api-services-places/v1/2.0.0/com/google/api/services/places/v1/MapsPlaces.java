@@ -814,7 +814,7 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
         /**
          * Optional. If set, skip the default HTTP redirect behavior and render a text format (for
          * example, in JSON format for HTTP use case) response. If not set, an HTTP redirect will be
-         * issued to redirect the call to the image midea. This option is ignored for non-HTTP
+         * issued to redirect the call to the image media. This option is ignored for non-HTTP
          * requests.
          */
         @com.google.api.client.util.Key
@@ -822,7 +822,7 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
 
         /** Optional. If set, skip the default HTTP redirect behavior and render a text format (for example, in
        JSON format for HTTP use case) response. If not set, an HTTP redirect will be issued to redirect
-       the call to the image midea. This option is ignored for non-HTTP requests.
+       the call to the image media. This option is ignored for non-HTTP requests.
          */
         public java.lang.Boolean getSkipHttpRedirect() {
           return skipHttpRedirect;
@@ -831,7 +831,7 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
         /**
          * Optional. If set, skip the default HTTP redirect behavior and render a text format (for
          * example, in JSON format for HTTP use case) response. If not set, an HTTP redirect will be
-         * issued to redirect the call to the image midea. This option is ignored for non-HTTP
+         * issued to redirect the call to the image media. This option is ignored for non-HTTP
          * requests.
          */
         public GetMedia setSkipHttpRedirect(java.lang.Boolean skipHttpRedirect) {

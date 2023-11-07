@@ -71,6 +71,15 @@ public final class Sidecar extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Periodic probe of Sidecar service readiness. Container will be removed from service
+   * endpoints if the probe fails. Cannot be updated. More info:
+   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Probe readinessProbe;
+
+  /**
    * The contents of an executable file to execute.
    * The value may be {@code null}.
    */
@@ -78,7 +87,7 @@ public final class Sidecar extends com.google.api.client.json.GenericJson {
   private java.lang.String script;
 
   /**
-   * Security options the container should be run with.
+   * Optional. Security options the container should be run with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,6 +193,27 @@ public final class Sidecar extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Periodic probe of Sidecar service readiness. Container will be removed from service
+   * endpoints if the probe fails. Cannot be updated. More info:
+   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+   * @return value or {@code null} for none
+   */
+  public Probe getReadinessProbe() {
+    return readinessProbe;
+  }
+
+  /**
+   * Optional. Periodic probe of Sidecar service readiness. Container will be removed from service
+   * endpoints if the probe fails. Cannot be updated. More info:
+   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+   * @param readinessProbe readinessProbe or {@code null} for none
+   */
+  public Sidecar setReadinessProbe(Probe readinessProbe) {
+    this.readinessProbe = readinessProbe;
+    return this;
+  }
+
+  /**
    * The contents of an executable file to execute.
    * @return value or {@code null} for none
    */
@@ -201,7 +231,7 @@ public final class Sidecar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Security options the container should be run with.
+   * Optional. Security options the container should be run with.
    * @return value or {@code null} for none
    */
   public SecurityContext getSecurityContext() {
@@ -209,7 +239,7 @@ public final class Sidecar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Security options the container should be run with.
+   * Optional. Security options the container should be run with.
    * @param securityContext securityContext or {@code null} for none
    */
   public Sidecar setSecurityContext(SecurityContext securityContext) {

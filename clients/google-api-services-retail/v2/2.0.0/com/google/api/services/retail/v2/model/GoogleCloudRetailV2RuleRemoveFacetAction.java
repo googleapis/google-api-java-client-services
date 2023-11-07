@@ -17,10 +17,10 @@
 package com.google.api.services.retail.v2.model;
 
 /**
- * Removes an attribute/facet in the request if is present. * Rule Condition: - Must specify non-
- * empty Condition.query_terms (for search only) or Condition.page_categories (for browse only), but
- * can't specify both. * Action Input: attribute name * Action Result: Will remove the attribute (as
- * a facet) from the request if it is present. Example: Suppose the query is "shoes", the
+ * Removes an attribute/facet in the request if is present. * Rule Condition: Must specify non-empty
+ * Condition.query_terms (for search only) or Condition.page_categories (for browse only), but can't
+ * specify both. * Action Input: attribute name * Action Result: Will remove the attribute (as a
+ * facet) from the request if it is present. Example: Suppose the query is "shoes", the
  * Condition.query_terms is "shoes" and the attribute name "size", then facet key "size" will be
  * removed from the request (if it is present).
  *

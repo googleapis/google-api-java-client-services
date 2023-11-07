@@ -18,7 +18,7 @@ package com.google.api.services.retail.v2alpha.model;
 
 /**
  * Force returns an attribute/facet in the request around a certain position or above. * Rule
- * Condition: - Must specify non-empty Condition.query_terms (for search only) or
+ * Condition: Must specify non-empty Condition.query_terms (for search only) or
  * Condition.page_categories (for browse only), but can't specify both. * Action Inputs: attribute
  * name, position * Action Result: Will force return a facet key around a certain position or above
  * if the condition is satisfied. Example: Suppose the query is "shoes", the Condition.query_terms

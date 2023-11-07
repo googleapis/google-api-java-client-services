@@ -64,6 +64,17 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
   private java.lang.String emptyReason;
 
   /**
+   * If this report results is [sampled](https://support.google.com/analytics/answer/13331292), this
+   * describes the percentage of events used in this report. One `samplingMetadatas` is populated
+   * for each date range. Each `samplingMetadatas` corresponds to a date range in order that date
+   * ranges were specified in the request. However if the results are not sampled, this field will
+   * not be defined.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SamplingMetadata> samplingMetadatas;
+
+  /**
    * Describes the schema restrictions actively enforced in creating this report. To learn more, see
    * [Access and data-restriction management](https://support.google.com/analytics/answer/10851388).
    * The value may be {@code null}.
@@ -76,8 +87,7 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
    * data that meets the minimum aggregation thresholds. It is possible for a request to be subject
    * to thresholding thresholding and no data is absent from the report, and this happens when all
    * data is above the thresholds. To learn more, see [Data
-   * thresholds](https://support.google.com/analytics/answer/9383630) and [About Demographics and
-   * Interests](https://support.google.com/analytics/answer/2799357).
+   * thresholds](https://support.google.com/analytics/answer/9383630).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,6 +178,31 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * If this report results is [sampled](https://support.google.com/analytics/answer/13331292), this
+   * describes the percentage of events used in this report. One `samplingMetadatas` is populated
+   * for each date range. Each `samplingMetadatas` corresponds to a date range in order that date
+   * ranges were specified in the request. However if the results are not sampled, this field will
+   * not be defined.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SamplingMetadata> getSamplingMetadatas() {
+    return samplingMetadatas;
+  }
+
+  /**
+   * If this report results is [sampled](https://support.google.com/analytics/answer/13331292), this
+   * describes the percentage of events used in this report. One `samplingMetadatas` is populated
+   * for each date range. Each `samplingMetadatas` corresponds to a date range in order that date
+   * ranges were specified in the request. However if the results are not sampled, this field will
+   * not be defined.
+   * @param samplingMetadatas samplingMetadatas or {@code null} for none
+   */
+  public ResponseMetaData setSamplingMetadatas(java.util.List<SamplingMetadata> samplingMetadatas) {
+    this.samplingMetadatas = samplingMetadatas;
+    return this;
+  }
+
+  /**
    * Describes the schema restrictions actively enforced in creating this report. To learn more, see
    * [Access and data-restriction management](https://support.google.com/analytics/answer/10851388).
    * @return value or {@code null} for none
@@ -191,8 +226,7 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
    * data that meets the minimum aggregation thresholds. It is possible for a request to be subject
    * to thresholding thresholding and no data is absent from the report, and this happens when all
    * data is above the thresholds. To learn more, see [Data
-   * thresholds](https://support.google.com/analytics/answer/9383630) and [About Demographics and
-   * Interests](https://support.google.com/analytics/answer/2799357).
+   * thresholds](https://support.google.com/analytics/answer/9383630).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSubjectToThresholding() {
@@ -204,8 +238,7 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
    * data that meets the minimum aggregation thresholds. It is possible for a request to be subject
    * to thresholding thresholding and no data is absent from the report, and this happens when all
    * data is above the thresholds. To learn more, see [Data
-   * thresholds](https://support.google.com/analytics/answer/9383630) and [About Demographics and
-   * Interests](https://support.google.com/analytics/answer/2799357).
+   * thresholds](https://support.google.com/analytics/answer/9383630).
    * @param subjectToThresholding subjectToThresholding or {@code null} for none
    */
   public ResponseMetaData setSubjectToThresholding(java.lang.Boolean subjectToThresholding) {

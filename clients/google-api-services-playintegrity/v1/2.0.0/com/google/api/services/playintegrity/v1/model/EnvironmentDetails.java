@@ -17,8 +17,7 @@
 package com.google.api.services.playintegrity.v1.model;
 
 /**
- * Deprecated: this field is not used. Contains guidance details about the Integrity API response,
- * providing additional context to the integrity verdicts.
+ * Contains information about the environment Play Integrity API runs in, e.g. Play Protect verdict.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Integrity API. For a detailed explanation
@@ -29,43 +28,40 @@ package com.google.api.services.playintegrity.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GuidanceDetails extends com.google.api.client.json.GenericJson {
+public final class EnvironmentDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * This shows when there is an issue with at least one of the integrity verdicts, which can be
-   * remedied by the user and provides additional details.
+   * The evaluation of Play Protect verdict.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<UserRemediationDetails> userRemediationDetails;
+  private java.lang.String playProtectVerdict;
 
   /**
-   * This shows when there is an issue with at least one of the integrity verdicts, which can be
-   * remedied by the user and provides additional details.
+   * The evaluation of Play Protect verdict.
    * @return value or {@code null} for none
    */
-  public java.util.List<UserRemediationDetails> getUserRemediationDetails() {
-    return userRemediationDetails;
+  public java.lang.String getPlayProtectVerdict() {
+    return playProtectVerdict;
   }
 
   /**
-   * This shows when there is an issue with at least one of the integrity verdicts, which can be
-   * remedied by the user and provides additional details.
-   * @param userRemediationDetails userRemediationDetails or {@code null} for none
+   * The evaluation of Play Protect verdict.
+   * @param playProtectVerdict playProtectVerdict or {@code null} for none
    */
-  public GuidanceDetails setUserRemediationDetails(java.util.List<UserRemediationDetails> userRemediationDetails) {
-    this.userRemediationDetails = userRemediationDetails;
+  public EnvironmentDetails setPlayProtectVerdict(java.lang.String playProtectVerdict) {
+    this.playProtectVerdict = playProtectVerdict;
     return this;
   }
 
   @Override
-  public GuidanceDetails set(String fieldName, Object value) {
-    return (GuidanceDetails) super.set(fieldName, value);
+  public EnvironmentDetails set(String fieldName, Object value) {
+    return (EnvironmentDetails) super.set(fieldName, value);
   }
 
   @Override
-  public GuidanceDetails clone() {
-    return (GuidanceDetails) super.clone();
+  public EnvironmentDetails clone() {
+    return (EnvironmentDetails) super.clone();
   }
 
 }

@@ -18,7 +18,7 @@ package com.google.api.services.content.model;
 
 /**
  * The [business identity attributes](https://support.google.com/merchants/answer/10342414) can be
- * used to self-declare attributes that let customers know more about your business. NEXT ID: 7.
+ * used to self-declare attributes that let customers know more about your business.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

@@ -59,6 +59,19 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private java.util.Map<String, ResourceStatusServiceIntegrationStatus> serviceIntegrationStatuses;
 
   /**
+   * [Output Only] Details about stopping state of instance
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceStatusShutdownDetails shutdownDetails;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpcomingMaintenance upcomingMaintenance;
+
+  /**
    * [Output Only] Contains last termination details why the instance was terminated.
    * @return value or {@code null} for none
    */
@@ -123,6 +136,38 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setServiceIntegrationStatuses(java.util.Map<String, ResourceStatusServiceIntegrationStatus> serviceIntegrationStatuses) {
     this.serviceIntegrationStatuses = serviceIntegrationStatuses;
+    return this;
+  }
+
+  /**
+   * [Output Only] Details about stopping state of instance
+   * @return value or {@code null} for none
+   */
+  public ResourceStatusShutdownDetails getShutdownDetails() {
+    return shutdownDetails;
+  }
+
+  /**
+   * [Output Only] Details about stopping state of instance
+   * @param shutdownDetails shutdownDetails or {@code null} for none
+   */
+  public ResourceStatus setShutdownDetails(ResourceStatusShutdownDetails shutdownDetails) {
+    this.shutdownDetails = shutdownDetails;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public UpcomingMaintenance getUpcomingMaintenance() {
+    return upcomingMaintenance;
+  }
+
+  /**
+   * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
+   */
+  public ResourceStatus setUpcomingMaintenance(UpcomingMaintenance upcomingMaintenance) {
+    this.upcomingMaintenance = upcomingMaintenance;
     return this;
   }
 

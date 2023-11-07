@@ -17,7 +17,8 @@
 package com.google.api.services.playintegrity.v1.model;
 
 /**
- * Contains details of remediation guidance that the user can perform.
+ * Deprecated: this field is not used. Contains details of remediation guidance that the user can
+ * perform.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Integrity API. For a detailed explanation

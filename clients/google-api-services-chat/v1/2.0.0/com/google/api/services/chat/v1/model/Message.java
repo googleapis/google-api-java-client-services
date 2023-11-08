@@ -265,9 +265,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String text;
 
   /**
-   * The thread the message belongs to. For example usage, see [Start or reply to a message thread](
-   * https://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread
-   * ).
+   * The thread the message belongs to. For example usage, see [Start or reply to a message
+   * thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-
+   * thread).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -748,9 +748,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thread the message belongs to. For example usage, see [Start or reply to a message thread](
-   * https://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread
-   * ).
+   * The thread the message belongs to. For example usage, see [Start or reply to a message
+   * thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-
+   * thread).
    * @return value or {@code null} for none
    */
   public Thread getThread() {
@@ -758,9 +758,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The thread the message belongs to. For example usage, see [Start or reply to a message thread](
-   * https://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread
-   * ).
+   * The thread the message belongs to. For example usage, see [Start or reply to a message
+   * thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-
+   * thread).
    * @param thread thread or {@code null} for none
    */
   public Message setThread(Thread thread) {

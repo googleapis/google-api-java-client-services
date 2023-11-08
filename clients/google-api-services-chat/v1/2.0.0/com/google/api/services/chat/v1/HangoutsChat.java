@@ -2797,16 +2797,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Optional. Deprecated: Use thread.thread_key instead. ID for the thread. Supports up to
          * 4000 characters. To start or add to a thread, create a message and specify a `threadKey`
-         * or the thread.name. For example usage, see [Start or reply to a message thread](https://d
-         * evelopers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+         * or the thread.name. For example usage, see [Start or reply to a message
+         * thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-
+         * thread).
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
         /** Optional. Deprecated: Use thread.thread_key instead. ID for the thread. Supports up to 4000
        characters. To start or add to a thread, create a message and specify a `threadKey` or the
-       thread.name. For example usage, see [Start or reply to a message thread](https://developers.google.
-       com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+       thread.name. For example usage, see [Start or reply to a message
+       thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-thread).
          */
         public java.lang.String getThreadKey() {
           return threadKey;
@@ -2815,8 +2816,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Optional. Deprecated: Use thread.thread_key instead. ID for the thread. Supports up to
          * 4000 characters. To start or add to a thread, create a message and specify a `threadKey`
-         * or the thread.name. For example usage, see [Start or reply to a message thread](https://d
-         * evelopers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+         * or the thread.name. For example usage, see [Start or reply to a message
+         * thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-
+         * thread).
          */
         public Create setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;

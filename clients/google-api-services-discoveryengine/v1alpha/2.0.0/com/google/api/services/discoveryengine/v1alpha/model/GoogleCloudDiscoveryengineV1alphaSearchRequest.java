@@ -186,9 +186,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Required. The resource name of the Search serving config, such as `projects/locations/global/co
-   * llections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
-   * g`. This field is used to identify the serving configuration name, set of models used to make
-   * the search.
+   * llections/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+   * ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/default
+   * _serving_config`. This field is used to identify the serving configuration name, set of models
+   * used to make the search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -599,9 +600,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Required. The resource name of the Search serving config, such as `projects/locations/global/co
-   * llections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
-   * g`. This field is used to identify the serving configuration name, set of models used to make
-   * the search.
+   * llections/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+   * ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/default
+   * _serving_config`. This field is used to identify the serving configuration name, set of models
+   * used to make the search.
    * @return value or {@code null} for none
    */
   public java.lang.String getServingConfig() {
@@ -610,9 +612,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Required. The resource name of the Search serving config, such as `projects/locations/global/co
-   * llections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
-   * g`. This field is used to identify the serving configuration name, set of models used to make
-   * the search.
+   * llections/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+   * ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/default
+   * _serving_config`. This field is used to identify the serving configuration name, set of models
+   * used to make the search.
    * @param servingConfig servingConfig or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setServingConfig(java.lang.String servingConfig) {

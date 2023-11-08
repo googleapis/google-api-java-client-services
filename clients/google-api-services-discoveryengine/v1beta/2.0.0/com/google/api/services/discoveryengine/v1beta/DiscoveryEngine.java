@@ -5035,9 +5035,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Recommend#execute()} method to invoke the remote operation.
              *
-             * @param servingConfig Required. Full resource name of the format:
-             *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
-             *        recommendations from your model, you must create at least one serving config for it.
+             * @param servingConfig Required. Full resource name of a ServingConfig:
+             *        `projects/locations/global/collections/engines/servingConfigs`, or
+             *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
+             *        config is created along with your recommendation engine creation. The engine ID will be
+             *        used as the ID of the default serving config. For example, for Engine
+             *        `projects/locations/global/collections/engines/my-engine`, you can use
+             *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
+             *        your Recommend requests.
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRecommendRequest}
              * @return the request
              */
@@ -5065,9 +5070,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Recommend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param servingConfig Required. Full resource name of the format:
-             *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
-             *        recommendations from your model, you must create at least one serving config for it.
+               * @param servingConfig Required. Full resource name of a ServingConfig:
+             *        `projects/locations/global/collections/engines/servingConfigs`, or
+             *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
+             *        config is created along with your recommendation engine creation. The engine ID will be
+             *        used as the ID of the default serving config. For example, for Engine
+             *        `projects/locations/global/collections/engines/my-engine`, you can use
+             *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
+             *        your Recommend requests.
                * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRecommendRequest}
                * @since 1.13
                */
@@ -5137,27 +5147,39 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. Full resource name of the format:
-               * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
-               * request recommendations from your model, you must create at least one serving
-               * config for it.
+               * Required. Full resource name of a ServingConfig:
+               * `projects/locations/global/collections/engines/servingConfigs`, or
+               * `projects/locations/global/collections/dataStores/servingConfigs` One default
+               * serving config is created along with your recommendation engine creation. The
+               * engine ID will be used as the ID of the default serving config. For example, for
+               * Engine `projects/locations/global/collections/engines/my-engine`, you can use
+               * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
+               * for your Recommend requests.
                */
               @com.google.api.client.util.Key
               private java.lang.String servingConfig;
 
-              /** Required. Full resource name of the format:
-             `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
-             recommendations from your model, you must create at least one serving config for it.
+              /** Required. Full resource name of a ServingConfig:
+             `projects/locations/global/collections/engines/servingConfigs`, or
+             `projects/locations/global/collections/dataStores/servingConfigs` One default serving config is
+             created along with your recommendation engine creation. The engine ID will be used as the ID of the
+             default serving config. For example, for Engine `projects/locations/global/collections/engines/my-
+             engine`, you can use `projects/locations/global/collections/engines/my-engine/servingConfigs/my-
+             engine` for your Recommend requests.
                */
               public java.lang.String getServingConfig() {
                 return servingConfig;
               }
 
               /**
-               * Required. Full resource name of the format:
-               * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
-               * request recommendations from your model, you must create at least one serving
-               * config for it.
+               * Required. Full resource name of a ServingConfig:
+               * `projects/locations/global/collections/engines/servingConfigs`, or
+               * `projects/locations/global/collections/dataStores/servingConfigs` One default
+               * serving config is created along with your recommendation engine creation. The
+               * engine ID will be used as the ID of the default serving config. For example, for
+               * Engine `projects/locations/global/collections/engines/my-engine`, you can use
+               * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
+               * for your Recommend requests.
                */
               public Recommend setServingConfig(java.lang.String servingConfig) {
                 if (!getSuppressPatternChecks()) {
@@ -5183,9 +5205,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
              *
              * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
-             *        ions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+             *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+             *        fault_serving_config`. This field is used to identify the serving configuration name, set
+             *        of models used to make the search.
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSearchRequest}
              * @return the request
              */
@@ -5214,9 +5237,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
-             *        ions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+             *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+             *        fault_serving_config`. This field is used to identify the serving configuration name, set
+             *        of models used to make the search.
                * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSearchRequest}
                * @since 1.13
                */
@@ -5287,16 +5311,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the Search serving config, such as `projects/locatio
-               * ns/global/collections/default_collection/dataStores/default_data_store/servingConfi
-               * gs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
+               * fig`, or `projects/locations/global/collections/default_collection/dataStores/defau
+               * lt_data_store/servingConfigs/default_serving_config`. This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               @com.google.api.client.util.Key
               private java.lang.String servingConfig;
 
               /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
-             tions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_config`. This
-             field is used to identify the serving configuration name, set of models used to make the search.
+             tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
+             bal/collections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_con
+             fig`. This field is used to identify the serving configuration name, set of models used to make the
+             search.
                */
               public java.lang.String getServingConfig() {
                 return servingConfig;
@@ -5304,9 +5331,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the Search serving config, such as `projects/locatio
-               * ns/global/collections/default_collection/dataStores/default_data_store/servingConfi
-               * gs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
+               * fig`, or `projects/locations/global/collections/default_collection/dataStores/defau
+               * lt_data_store/servingConfigs/default_serving_config`. This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               public Search setServingConfig(java.lang.String servingConfig) {
                 if (!getSuppressPatternChecks()) {
@@ -7000,9 +7028,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Recommend#execute()} method to invoke the remote operation.
              *
-             * @param servingConfig Required. Full resource name of the format:
-             *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
-             *        recommendations from your model, you must create at least one serving config for it.
+             * @param servingConfig Required. Full resource name of a ServingConfig:
+             *        `projects/locations/global/collections/engines/servingConfigs`, or
+             *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
+             *        config is created along with your recommendation engine creation. The engine ID will be
+             *        used as the ID of the default serving config. For example, for Engine
+             *        `projects/locations/global/collections/engines/my-engine`, you can use
+             *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
+             *        your Recommend requests.
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRecommendRequest}
              * @return the request
              */
@@ -7030,9 +7063,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Recommend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param servingConfig Required. Full resource name of the format:
-             *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
-             *        recommendations from your model, you must create at least one serving config for it.
+               * @param servingConfig Required. Full resource name of a ServingConfig:
+             *        `projects/locations/global/collections/engines/servingConfigs`, or
+             *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
+             *        config is created along with your recommendation engine creation. The engine ID will be
+             *        used as the ID of the default serving config. For example, for Engine
+             *        `projects/locations/global/collections/engines/my-engine`, you can use
+             *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
+             *        your Recommend requests.
                * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRecommendRequest}
                * @since 1.13
                */
@@ -7102,27 +7140,39 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. Full resource name of the format:
-               * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
-               * request recommendations from your model, you must create at least one serving
-               * config for it.
+               * Required. Full resource name of a ServingConfig:
+               * `projects/locations/global/collections/engines/servingConfigs`, or
+               * `projects/locations/global/collections/dataStores/servingConfigs` One default
+               * serving config is created along with your recommendation engine creation. The
+               * engine ID will be used as the ID of the default serving config. For example, for
+               * Engine `projects/locations/global/collections/engines/my-engine`, you can use
+               * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
+               * for your Recommend requests.
                */
               @com.google.api.client.util.Key
               private java.lang.String servingConfig;
 
-              /** Required. Full resource name of the format:
-             `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
-             recommendations from your model, you must create at least one serving config for it.
+              /** Required. Full resource name of a ServingConfig:
+             `projects/locations/global/collections/engines/servingConfigs`, or
+             `projects/locations/global/collections/dataStores/servingConfigs` One default serving config is
+             created along with your recommendation engine creation. The engine ID will be used as the ID of the
+             default serving config. For example, for Engine `projects/locations/global/collections/engines/my-
+             engine`, you can use `projects/locations/global/collections/engines/my-engine/servingConfigs/my-
+             engine` for your Recommend requests.
                */
               public java.lang.String getServingConfig() {
                 return servingConfig;
               }
 
               /**
-               * Required. Full resource name of the format:
-               * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
-               * request recommendations from your model, you must create at least one serving
-               * config for it.
+               * Required. Full resource name of a ServingConfig:
+               * `projects/locations/global/collections/engines/servingConfigs`, or
+               * `projects/locations/global/collections/dataStores/servingConfigs` One default
+               * serving config is created along with your recommendation engine creation. The
+               * engine ID will be used as the ID of the default serving config. For example, for
+               * Engine `projects/locations/global/collections/engines/my-engine`, you can use
+               * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
+               * for your Recommend requests.
                */
               public Recommend setServingConfig(java.lang.String servingConfig) {
                 if (!getSuppressPatternChecks()) {
@@ -7148,9 +7198,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
              *
              * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
-             *        ions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+             *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+             *        fault_serving_config`. This field is used to identify the serving configuration name, set
+             *        of models used to make the search.
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSearchRequest}
              * @return the request
              */
@@ -7179,9 +7230,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
-             *        ions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+             *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+             *        fault_serving_config`. This field is used to identify the serving configuration name, set
+             *        of models used to make the search.
                * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSearchRequest}
                * @since 1.13
                */
@@ -7252,16 +7304,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the Search serving config, such as `projects/locatio
-               * ns/global/collections/default_collection/dataStores/default_data_store/servingConfi
-               * gs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
+               * fig`, or `projects/locations/global/collections/default_collection/dataStores/defau
+               * lt_data_store/servingConfigs/default_serving_config`. This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               @com.google.api.client.util.Key
               private java.lang.String servingConfig;
 
               /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
-             tions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_config`. This
-             field is used to identify the serving configuration name, set of models used to make the search.
+             tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
+             bal/collections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_con
+             fig`. This field is used to identify the serving configuration name, set of models used to make the
+             search.
                */
               public java.lang.String getServingConfig() {
                 return servingConfig;
@@ -7269,9 +7324,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the Search serving config, such as `projects/locatio
-               * ns/global/collections/default_collection/dataStores/default_data_store/servingConfi
-               * gs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
+               * fig`, or `projects/locations/global/collections/default_collection/dataStores/defau
+               * lt_data_store/servingConfigs/default_serving_config`. This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               public Search setServingConfig(java.lang.String servingConfig) {
                 if (!getSuppressPatternChecks()) {
@@ -12126,9 +12182,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Recommend#execute()} method to invoke the remote operation.
            *
-           * @param servingConfig Required. Full resource name of the format:
-           *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
-           *        recommendations from your model, you must create at least one serving config for it.
+           * @param servingConfig Required. Full resource name of a ServingConfig:
+           *        `projects/locations/global/collections/engines/servingConfigs`, or
+           *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
+           *        config is created along with your recommendation engine creation. The engine ID will be
+           *        used as the ID of the default serving config. For example, for Engine
+           *        `projects/locations/global/collections/engines/my-engine`, you can use
+           *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
+           *        your Recommend requests.
            * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRecommendRequest}
            * @return the request
            */
@@ -12156,9 +12217,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Recommend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param servingConfig Required. Full resource name of the format:
-           *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
-           *        recommendations from your model, you must create at least one serving config for it.
+             * @param servingConfig Required. Full resource name of a ServingConfig:
+           *        `projects/locations/global/collections/engines/servingConfigs`, or
+           *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
+           *        config is created along with your recommendation engine creation. The engine ID will be
+           *        used as the ID of the default serving config. For example, for Engine
+           *        `projects/locations/global/collections/engines/my-engine`, you can use
+           *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
+           *        your Recommend requests.
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRecommendRequest}
              * @since 1.13
              */
@@ -12228,27 +12294,39 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Full resource name of the format:
-             * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
-             * request recommendations from your model, you must create at least one serving config
-             * for it.
+             * Required. Full resource name of a ServingConfig:
+             * `projects/locations/global/collections/engines/servingConfigs`, or
+             * `projects/locations/global/collections/dataStores/servingConfigs` One default serving
+             * config is created along with your recommendation engine creation. The engine ID will
+             * be used as the ID of the default serving config. For example, for Engine
+             * `projects/locations/global/collections/engines/my-engine`, you can use
+             * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
+             * for your Recommend requests.
              */
             @com.google.api.client.util.Key
             private java.lang.String servingConfig;
 
-            /** Required. Full resource name of the format:
-           `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
-           recommendations from your model, you must create at least one serving config for it.
+            /** Required. Full resource name of a ServingConfig:
+           `projects/locations/global/collections/engines/servingConfigs`, or
+           `projects/locations/global/collections/dataStores/servingConfigs` One default serving config is
+           created along with your recommendation engine creation. The engine ID will be used as the ID of the
+           default serving config. For example, for Engine `projects/locations/global/collections/engines/my-
+           engine`, you can use `projects/locations/global/collections/engines/my-engine/servingConfigs/my-
+           engine` for your Recommend requests.
              */
             public java.lang.String getServingConfig() {
               return servingConfig;
             }
 
             /**
-             * Required. Full resource name of the format:
-             * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
-             * request recommendations from your model, you must create at least one serving config
-             * for it.
+             * Required. Full resource name of a ServingConfig:
+             * `projects/locations/global/collections/engines/servingConfigs`, or
+             * `projects/locations/global/collections/dataStores/servingConfigs` One default serving
+             * config is created along with your recommendation engine creation. The engine ID will
+             * be used as the ID of the default serving config. For example, for Engine
+             * `projects/locations/global/collections/engines/my-engine`, you can use
+             * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
+             * for your Recommend requests.
              */
             public Recommend setServingConfig(java.lang.String servingConfig) {
               if (!getSuppressPatternChecks()) {
@@ -12274,9 +12352,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
            *
            * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
-           *        ions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
-           *        g`. This field is used to identify the serving configuration name, set of models used to
-           *        make the search.
+           *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+           *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+           *        fault_serving_config`. This field is used to identify the serving configuration name, set
+           *        of models used to make the search.
            * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSearchRequest}
            * @return the request
            */
@@ -12305,9 +12384,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
-           *        ions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
-           *        g`. This field is used to identify the serving configuration name, set of models used to
-           *        make the search.
+           *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+           *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+           *        fault_serving_config`. This field is used to identify the serving configuration name, set
+           *        of models used to make the search.
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSearchRequest}
              * @since 1.13
              */
@@ -12378,16 +12458,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the Search serving config, such as `projects/locations
-             * /global/collections/default_collection/dataStores/default_data_store/servingConfigs/d
-             * efault_serving_config`. This field is used to identify the serving configuration
-             * name, set of models used to make the search.
+             * /global/collections/default_collection/engines/servingConfigs/default_serving_config`
+             * , or `projects/locations/global/collections/default_collection/dataStores/default_dat
+             * a_store/servingConfigs/default_serving_config`. This field is used to identify the
+             * serving configuration name, set of models used to make the search.
              */
             @com.google.api.client.util.Key
             private java.lang.String servingConfig;
 
             /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
-           tions/default_collection/dataStores/default_data_store/servingConfigs/default_serving_config`. This
-           field is used to identify the serving configuration name, set of models used to make the search.
+           tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
+           bal/collections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_con
+           fig`. This field is used to identify the serving configuration name, set of models used to make the
+           search.
              */
             public java.lang.String getServingConfig() {
               return servingConfig;
@@ -12395,9 +12478,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the Search serving config, such as `projects/locations
-             * /global/collections/default_collection/dataStores/default_data_store/servingConfigs/d
-             * efault_serving_config`. This field is used to identify the serving configuration
-             * name, set of models used to make the search.
+             * /global/collections/default_collection/engines/servingConfigs/default_serving_config`
+             * , or `projects/locations/global/collections/default_collection/dataStores/default_dat
+             * a_store/servingConfigs/default_serving_config`. This field is used to identify the
+             * serving configuration name, set of models used to make the search.
              */
             public Search setServingConfig(java.lang.String servingConfig) {
               if (!getSuppressPatternChecks()) {

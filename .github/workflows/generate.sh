@@ -43,7 +43,8 @@ pushd ${ROOT_DIR}/discovery-artifact-manager
 for DISCOVERY in `ls discoveries/${SERVICE}.*.json`
 do
   VERSION=$(basename ${DISCOVERY} | sed 's/\.json//' | cut -d. -f2-)
-  OUTPUT_DIR=${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${VARIANT}
+  TARGET_DIR=${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${VARIANT}
+  OUTPUT_DIR=$(mktemp -d)
   echo ${DISCOVERY}
   echo ${VERSION}
   echo ${OUTPUT_DIR}
@@ -55,7 +56,16 @@ do
       --language_variant=${VARIANT} \
       --package_path=api/services
 
+  if [ $(find "${OUTPUT_DIR}" -mindepth 1 | wc -l) == '0' ]; then
+    echo 'the generation produced no files'
+    exit 1
+  fi
+
+  rm -rdf ${TARGET_DIR}/*
+  cp -r ${OUTPUT_DIR}/* "${TARGET_DIR}"
+
   # Copy the latest variant's README to the main service location
   # Generation of libraries with older variants should not update the root README
   cp ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${LATEST_VARIANT}/README.md ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/README.md
 done
+

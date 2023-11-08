@@ -846,8 +846,8 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * file. * No credentials should be attached - the signed URLs provide access to the target bucket
          * using internal service identity; if credentials were attached, the identity from the credentials
          * would be used, but that identity does not have permissions to upload files to the URL. When
-         * making a HTTP PUT request, these two headers need to be specified: * `content-type:
-         * application/zip` And this header SHOULD NOT be specified: * `Authorization: Bearer YOUR_TOKEN`
+         * making a HTTP PUT request, specify this header: * `content-type: application/zip` Do not specify
+         * this header: * `Authorization: Bearer YOUR_TOKEN`
          *
          * Create a request for the method "functions.generateUploadUrl".
          *
@@ -882,9 +882,8 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * file type should be a zip file. * No credentials should be attached - the signed URLs provide
            * access to the target bucket using internal service identity; if credentials were attached, the
            * identity from the credentials would be used, but that identity does not have permissions to
-           * upload files to the URL. When making a HTTP PUT request, these two headers need to be
-           * specified: * `content-type: application/zip` And this header SHOULD NOT be specified: *
-           * `Authorization: Bearer YOUR_TOKEN`
+           * upload files to the URL. When making a HTTP PUT request, specify this header: * `content-type:
+           * application/zip` Do not specify this header: * `Authorization: Bearer YOUR_TOKEN`
            *
            * Create a request for the method "functions.generateUploadUrl".
            *

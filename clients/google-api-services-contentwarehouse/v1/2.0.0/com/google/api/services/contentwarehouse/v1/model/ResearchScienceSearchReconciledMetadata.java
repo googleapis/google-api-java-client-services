@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A proto for storing inferred and reconciled metadata for Science Search. Next available tag: 73
+ * A proto for storing inferred and reconciled metadata for Science Search. Next available tag: 74
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -325,6 +325,14 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> licenseDeprecated;
+
+  /**
+   * Indicates if the location has been reconciled for the dataset name. This is used by
+   * LocationExtender to avoid re-annotating the dataset name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean locationReconciledForName;
 
   /**
    * A technique or technology used in a Dataset corresponding to the method used for measuring the
@@ -1162,6 +1170,25 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
    */
   public ResearchScienceSearchReconciledMetadata setLicenseDeprecated(java.util.List<java.lang.String> licenseDeprecated) {
     this.licenseDeprecated = licenseDeprecated;
+    return this;
+  }
+
+  /**
+   * Indicates if the location has been reconciled for the dataset name. This is used by
+   * LocationExtender to avoid re-annotating the dataset name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLocationReconciledForName() {
+    return locationReconciledForName;
+  }
+
+  /**
+   * Indicates if the location has been reconciled for the dataset name. This is used by
+   * LocationExtender to avoid re-annotating the dataset name.
+   * @param locationReconciledForName locationReconciledForName or {@code null} for none
+   */
+  public ResearchScienceSearchReconciledMetadata setLocationReconciledForName(java.lang.Boolean locationReconciledForName) {
+    this.locationReconciledForName = locationReconciledForName;
     return this;
   }
 

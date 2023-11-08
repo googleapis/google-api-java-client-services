@@ -24,7 +24,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * assistant.api.core_types.SurfaceType enum. A surface's capabilities can differ from the device's.
  * An example would be ANDROID_ALLO running on Pixel. Allo does not support AudioInput while the
  * Pixel does. In this case, audio_input will be set to false for Assistant Allo requests while it
- * might be set to true for OPA_NEXUS requests. Next ID: 36
+ * might be set to true for OPA_NEXUS requests. Next ID: 37
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -113,6 +113,12 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private AssistantApiContactLookupCapabilities contactLookupCapabilities;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantApiDataValidateCapabilities dataValidateCapabilities;
 
   /**
    * This is the same device id that is specified in the conversation protocol and should be unique
@@ -486,6 +492,21 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    */
   public AssistantApiDeviceCapabilities setContactLookupCapabilities(AssistantApiContactLookupCapabilities contactLookupCapabilities) {
     this.contactLookupCapabilities = contactLookupCapabilities;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public AssistantApiDataValidateCapabilities getDataValidateCapabilities() {
+    return dataValidateCapabilities;
+  }
+
+  /**
+   * @param dataValidateCapabilities dataValidateCapabilities or {@code null} for none
+   */
+  public AssistantApiDeviceCapabilities setDataValidateCapabilities(AssistantApiDataValidateCapabilities dataValidateCapabilities) {
+    this.dataValidateCapabilities = dataValidateCapabilities;
     return this;
   }
 

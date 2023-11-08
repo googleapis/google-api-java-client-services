@@ -31,9 +31,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class KnowledgeAnswersIntentQueryGroundingSignals extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if the argument was added during grounding. This signal is intended to be used with
-   * ArgumentSignals. Note that the added argument's value must be a FunctionCall that only contains
-   * resolutions, i.e. grounding cannot add/modify/delete any ungrounded values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,9 +123,6 @@ public final class KnowledgeAnswersIntentQueryGroundingSignals extends com.googl
   private java.lang.Boolean usesGroundingBox;
 
   /**
-   * True if the argument was added during grounding. This signal is intended to be used with
-   * ArgumentSignals. Note that the added argument's value must be a FunctionCall that only contains
-   * resolutions, i.e. grounding cannot add/modify/delete any ungrounded values.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAddedByGrounding() {
@@ -136,9 +130,6 @@ public final class KnowledgeAnswersIntentQueryGroundingSignals extends com.googl
   }
 
   /**
-   * True if the argument was added during grounding. This signal is intended to be used with
-   * ArgumentSignals. Note that the added argument's value must be a FunctionCall that only contains
-   * resolutions, i.e. grounding cannot add/modify/delete any ungrounded values.
    * @param addedByGrounding addedByGrounding or {@code null} for none
    */
   public KnowledgeAnswersIntentQueryGroundingSignals setAddedByGrounding(java.lang.Boolean addedByGrounding) {

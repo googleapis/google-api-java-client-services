@@ -31,16 +31,48 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class IndexingDocjoinerDataVersionVersionInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Sometimes, a piece of data may not exist for a document (and we don't want to delete it), so
+   * timestamp_micros won't exist. However, consideration_timestamp_micros will be set to indicate
+   * we tried to update that piece of data for tracking purposes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long considerationTimestampMicros;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String humanReadableVersion;
 
   /**
+   * The timestamp when a piece of data is updated (or deleted if the data doesn't exist in the
+   * update).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long timestampMicros;
+
+  /**
+   * Sometimes, a piece of data may not exist for a document (and we don't want to delete it), so
+   * timestamp_micros won't exist. However, consideration_timestamp_micros will be set to indicate
+   * we tried to update that piece of data for tracking purposes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getConsiderationTimestampMicros() {
+    return considerationTimestampMicros;
+  }
+
+  /**
+   * Sometimes, a piece of data may not exist for a document (and we don't want to delete it), so
+   * timestamp_micros won't exist. However, consideration_timestamp_micros will be set to indicate
+   * we tried to update that piece of data for tracking purposes.
+   * @param considerationTimestampMicros considerationTimestampMicros or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo setConsiderationTimestampMicros(java.lang.Long considerationTimestampMicros) {
+    this.considerationTimestampMicros = considerationTimestampMicros;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -58,6 +90,8 @@ public final class IndexingDocjoinerDataVersionVersionInfo extends com.google.ap
   }
 
   /**
+   * The timestamp when a piece of data is updated (or deleted if the data doesn't exist in the
+   * update).
    * @return value or {@code null} for none
    */
   public java.lang.Long getTimestampMicros() {
@@ -65,6 +99,8 @@ public final class IndexingDocjoinerDataVersionVersionInfo extends com.google.ap
   }
 
   /**
+   * The timestamp when a piece of data is updated (or deleted if the data doesn't exist in the
+   * update).
    * @param timestampMicros timestampMicros or {@code null} for none
    */
   public IndexingDocjoinerDataVersionVersionInfo setTimestampMicros(java.lang.Long timestampMicros) {

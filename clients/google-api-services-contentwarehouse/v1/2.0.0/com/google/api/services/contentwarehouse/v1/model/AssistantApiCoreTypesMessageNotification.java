@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * LINT.IfChange(ungoverned_message_notification) This proto captures the contents of a messaging
- * app notification that is typically part of a conversation thread. Next Id: 20
+ * app notification that is typically part of a conversation thread. Next Id: 21
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -96,6 +96,13 @@ public final class AssistantApiCoreTypesMessageNotification extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String messageRecipientType;
+
+  /**
+   * Word count of the message
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer messageWordCount;
 
   /**
    * Mime type of the data_uri. e.g. 'audio/wav', 'video/mp4', 'image/png'.
@@ -324,6 +331,23 @@ public final class AssistantApiCoreTypesMessageNotification extends com.google.a
    */
   public AssistantApiCoreTypesMessageNotification setMessageRecipientType(java.lang.String messageRecipientType) {
     this.messageRecipientType = messageRecipientType;
+    return this;
+  }
+
+  /**
+   * Word count of the message
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMessageWordCount() {
+    return messageWordCount;
+  }
+
+  /**
+   * Word count of the message
+   * @param messageWordCount messageWordCount or {@code null} for none
+   */
+  public AssistantApiCoreTypesMessageNotification setMessageWordCount(java.lang.Integer messageWordCount) {
+    this.messageWordCount = messageWordCount;
     return this;
   }
 

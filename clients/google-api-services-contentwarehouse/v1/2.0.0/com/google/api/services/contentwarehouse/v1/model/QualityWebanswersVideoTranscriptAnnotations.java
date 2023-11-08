@@ -81,6 +81,12 @@ public final class QualityWebanswersVideoTranscriptAnnotations extends com.googl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String transcriptSource;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private RepositoryWebrefWebrefEntities webrefEntities;
 
   /**
@@ -195,6 +201,21 @@ public final class QualityWebanswersVideoTranscriptAnnotations extends com.googl
    */
   public QualityWebanswersVideoTranscriptAnnotations setTimingInfo(QualityWebanswersVideoYouTubeCaptionTimingInfoAnnotations timingInfo) {
     this.timingInfo = timingInfo;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTranscriptSource() {
+    return transcriptSource;
+  }
+
+  /**
+   * @param transcriptSource transcriptSource or {@code null} for none
+   */
+  public QualityWebanswersVideoTranscriptAnnotations setTranscriptSource(java.lang.String transcriptSource) {
+    this.transcriptSource = transcriptSource;
     return this;
   }
 

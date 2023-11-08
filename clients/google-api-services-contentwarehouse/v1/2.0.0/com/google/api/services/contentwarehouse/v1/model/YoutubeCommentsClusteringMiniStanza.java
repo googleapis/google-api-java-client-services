@@ -371,8 +371,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
 
   /**
    * The language code stored in the KV pair ranking:post_language. This should usually be the same
-   * as language_code but is not guaranteed to be identical. The KV pair is needed because ranking
-   * can't consume user_content.
+   * as language_code but is not guaranteed to be identical. The KV pair is needed because SBE
+   * ranking can't consume user_content. Still populated, but deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1358,8 +1358,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
 
   /**
    * The language code stored in the KV pair ranking:post_language. This should usually be the same
-   * as language_code but is not guaranteed to be identical. The KV pair is needed because ranking
-   * can't consume user_content.
+   * as language_code but is not guaranteed to be identical. The KV pair is needed because SBE
+   * ranking can't consume user_content. Still populated, but deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getRankingPostLanguage() {
@@ -1368,8 +1368,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
 
   /**
    * The language code stored in the KV pair ranking:post_language. This should usually be the same
-   * as language_code but is not guaranteed to be identical. The KV pair is needed because ranking
-   * can't consume user_content.
+   * as language_code but is not guaranteed to be identical. The KV pair is needed because SBE
+   * ranking can't consume user_content. Still populated, but deprecated.
    * @param rankingPostLanguage rankingPostLanguage or {@code null} for none
    */
   public YoutubeCommentsClusteringMiniStanza setRankingPostLanguage(java.lang.String rankingPostLanguage) {

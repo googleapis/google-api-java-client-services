@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This defines the per-doc data which is extracted from thumbnails and propagated over to indexing.
- * It contains all information that can be used for restricts. Next tag id: 131
+ * It contains all information that can be used for restricts. Next tag id: 132
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -552,6 +552,13 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String onPageAlternateUrl;
+
+  /**
+   * Orbit intents. More details on go/orbit-in-image-indexing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityOrbitOrbitImageIntents orbitIntents;
 
   /**
    * Encodes face number and largest face frac into a small package for storage in mustang. This is
@@ -2023,6 +2030,23 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   public ImageData setOnPageAlternateUrl(java.lang.String onPageAlternateUrl) {
     this.onPageAlternateUrl = onPageAlternateUrl;
+    return this;
+  }
+
+  /**
+   * Orbit intents. More details on go/orbit-in-image-indexing.
+   * @return value or {@code null} for none
+   */
+  public QualityOrbitOrbitImageIntents getOrbitIntents() {
+    return orbitIntents;
+  }
+
+  /**
+   * Orbit intents. More details on go/orbit-in-image-indexing.
+   * @param orbitIntents orbitIntents or {@code null} for none
+   */
+  public ImageData setOrbitIntents(QualityOrbitOrbitImageIntents orbitIntents) {
+    this.orbitIntents = orbitIntents;
     return this;
   }
 

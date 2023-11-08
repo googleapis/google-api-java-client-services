@@ -20,7 +20,14 @@ package com.google.api.services.contentwarehouse.v1.model;
  * Specifies the allowed type(s) that a value can have, e.g. for a Slot. For example, having both
  * entity_type and string_type present in a ValueType field of a Slot means that the Slot can take
  * _either_ an an EntityType _or_ StringType as a value, and nothing else. It may be helpful to
- * think of this proto as being called something like AllAllowedValueTypes. Next tag id: 25
+ * think of this proto as being called something like AllAllowedValueTypes. To enforce a component-
+ * specific contract (go/contract-based-conformance) for allowed type(s), we add a repeated field
+ * view_specific_${x} for the type ${x}. For example, if we want a slot that can hold any type by
+ * default, but can only hold an integer when checking against the P2_LWA contract, then the
+ * following should be added to MeaningCatalog: slot { name: "integer_only_slot" type { // The
+ * default view has no sub_type or other options. number_type {} // The P2_LWA view specifies
+ * INTEGER sub_type. view_specific_number_types { sub_type: INTEGER component_specific_contracts:
+ * P2_LWA } } } See go/view-based-options-for-valuetype for more information. Next tag id: 26
  * LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -170,6 +177,25 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private KnowledgeAnswersTrackingNumberType trackingNumberType;
+
+  /**
+   * LINT.IfChange Contract-specific typing (go/view-based-options-for-valuetype). NOTE: To
+   * facilitate writing macros for view-specific filtering, all view-specific fields should be named
+   * with the format "view_specific_${singular_field}s" -- e.g., for the singular field
+   * |number_type|, the view-specific repeated field is |view_specific_number_types|.
+   * LINT.ThenChange(
+   * //depot/google3/nlp/meaning/remodel/meaning_remodeling_utils.cc:ViewSpecificTypes, //depot/goog
+   * le3/nlp/meaning/analyzer/checks/component_specific_contracts_checks.cc:ViewSpecificTypes)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<KnowledgeAnswersNumberType> viewSpecificNumberTypes;
+
+  static {
+    // hack to force ProGuard to consider KnowledgeAnswersNumberType used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(KnowledgeAnswersNumberType.class);
+  }
 
   /**
    * This type is meant to accept "any" type and allow any and all composition. As such, it should
@@ -505,6 +531,35 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
    */
   public KnowledgeAnswersValueType setTrackingNumberType(KnowledgeAnswersTrackingNumberType trackingNumberType) {
     this.trackingNumberType = trackingNumberType;
+    return this;
+  }
+
+  /**
+   * LINT.IfChange Contract-specific typing (go/view-based-options-for-valuetype). NOTE: To
+   * facilitate writing macros for view-specific filtering, all view-specific fields should be named
+   * with the format "view_specific_${singular_field}s" -- e.g., for the singular field
+   * |number_type|, the view-specific repeated field is |view_specific_number_types|.
+   * LINT.ThenChange(
+   * //depot/google3/nlp/meaning/remodel/meaning_remodeling_utils.cc:ViewSpecificTypes, //depot/goog
+   * le3/nlp/meaning/analyzer/checks/component_specific_contracts_checks.cc:ViewSpecificTypes)
+   * @return value or {@code null} for none
+   */
+  public java.util.List<KnowledgeAnswersNumberType> getViewSpecificNumberTypes() {
+    return viewSpecificNumberTypes;
+  }
+
+  /**
+   * LINT.IfChange Contract-specific typing (go/view-based-options-for-valuetype). NOTE: To
+   * facilitate writing macros for view-specific filtering, all view-specific fields should be named
+   * with the format "view_specific_${singular_field}s" -- e.g., for the singular field
+   * |number_type|, the view-specific repeated field is |view_specific_number_types|.
+   * LINT.ThenChange(
+   * //depot/google3/nlp/meaning/remodel/meaning_remodeling_utils.cc:ViewSpecificTypes, //depot/goog
+   * le3/nlp/meaning/analyzer/checks/component_specific_contracts_checks.cc:ViewSpecificTypes)
+   * @param viewSpecificNumberTypes viewSpecificNumberTypes or {@code null} for none
+   */
+  public KnowledgeAnswersValueType setViewSpecificNumberTypes(java.util.List<KnowledgeAnswersNumberType> viewSpecificNumberTypes) {
+    this.viewSpecificNumberTypes = viewSpecificNumberTypes;
     return this;
   }
 

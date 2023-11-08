@@ -135,9 +135,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
    * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
    * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field only presents
-   * for the purpose of backward compatibility. Please use the `kms_keys` field to retrieve Cloud
-   * KMS key information. This field is available only when the resource's Protobuf contains it and
-   * will only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
+   * for the purpose of backward compatibility. Use the `kms_keys` field to retrieve Cloud KMS key
+   * information. This field is available only when the resource's Protobuf contains it and will
+   * only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
    * /legacy-field-names#resource_types_with_the_to_be_deprecated_kmskey_field) for backward
    * compatible purposes. To search against the `kms_key`: * Use a field query. Example:
    * `kmsKey:key` * Use a free text query. Example: `key`
@@ -260,10 +260,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The actual content of Security Command Center security marks associated with the asset. Note
-   * that both staging & prod SecurityMarks are attached on prod resources. In CAS preprod/prod,
-   * both staging & prod SecurityMarks are ingested and returned in the following `security_marks`
-   * map. In that case, the prefix "staging." will be added to the keys of all the staging marks. To
+   * The actual content of Security Command Center security marks associated with the asset. To
    * search against SCC SecurityMarks field: * Use a field query: - query by a given key value pair.
    * Example: `sccSecurityMarks.foo=bar` - query by a given key's existence. Example:
    * `sccSecurityMarks.foo:*`
@@ -290,9 +287,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String state;
 
   /**
-   * This field is only present for the purpose of backward compatibility. Please use the `tags`
-   * field instead. TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To
-   * search against the `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
+   * This field is only present for the purpose of backward compatibility. Use the `tags` field
+   * instead. TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search
+   * against the `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
    * `tagKeys="123456789/env"` - `tagKeys:"env"` * Use a free text query. Example: - `env`
    * The value may be {@code null}.
    */
@@ -300,8 +297,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> tagKeys;
 
   /**
-   * This field is only present for the purpose of backward compatibility. Please use the `tags`
-   * field instead. TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the
+   * This field is only present for the purpose of backward compatibility. Use the `tags` field
+   * instead. TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the
    * `tagValueIds`: * Use a field query. Example: - `tagValueIds="tagValues/456"` * Use a free text
    * query. Example: - `456`
    * The value may be {@code null}.
@@ -310,8 +307,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> tagValueIds;
 
   /**
-   * This field is only present for the purpose of backward compatibility. Please use the `tags`
-   * field instead. TagValue namespaced names, in the format of
+   * This field is only present for the purpose of backward compatibility. Use the `tags` field
+   * instead. TagValue namespaced names, in the format of
    * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * Use
    * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
    * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` * Use a free text query.
@@ -562,9 +559,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
    * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
    * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field only presents
-   * for the purpose of backward compatibility. Please use the `kms_keys` field to retrieve Cloud
-   * KMS key information. This field is available only when the resource's Protobuf contains it and
-   * will only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
+   * for the purpose of backward compatibility. Use the `kms_keys` field to retrieve Cloud KMS key
+   * information. This field is available only when the resource's Protobuf contains it and will
+   * only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
    * /legacy-field-names#resource_types_with_the_to_be_deprecated_kmskey_field) for backward
    * compatible purposes. To search against the `kms_key`: * Use a field query. Example:
    * `kmsKey:key` * Use a free text query. Example: `key`
@@ -578,9 +575,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
    * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
    * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field only presents
-   * for the purpose of backward compatibility. Please use the `kms_keys` field to retrieve Cloud
-   * KMS key information. This field is available only when the resource's Protobuf contains it and
-   * will only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
+   * for the purpose of backward compatibility. Use the `kms_keys` field to retrieve Cloud KMS key
+   * information. This field is available only when the resource's Protobuf contains it and will
+   * only be populated for [these resource types](https://cloud.google.com/asset-inventory/docs
    * /legacy-field-names#resource_types_with_the_to_be_deprecated_kmskey_field) for backward
    * compatible purposes. To search against the `kms_key`: * Use a field query. Example:
    * `kmsKey:key` * Use a free text query. Example: `key`
@@ -836,10 +833,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The actual content of Security Command Center security marks associated with the asset. Note
-   * that both staging & prod SecurityMarks are attached on prod resources. In CAS preprod/prod,
-   * both staging & prod SecurityMarks are ingested and returned in the following `security_marks`
-   * map. In that case, the prefix "staging." will be added to the keys of all the staging marks. To
+   * The actual content of Security Command Center security marks associated with the asset. To
    * search against SCC SecurityMarks field: * Use a field query: - query by a given key value pair.
    * Example: `sccSecurityMarks.foo=bar` - query by a given key's existence. Example:
    * `sccSecurityMarks.foo:*`
@@ -850,10 +844,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The actual content of Security Command Center security marks associated with the asset. Note
-   * that both staging & prod SecurityMarks are attached on prod resources. In CAS preprod/prod,
-   * both staging & prod SecurityMarks are ingested and returned in the following `security_marks`
-   * map. In that case, the prefix "staging." will be added to the keys of all the staging marks. To
+   * The actual content of Security Command Center security marks associated with the asset. To
    * search against SCC SecurityMarks field: * Use a field query: - query by a given key value pair.
    * Example: `sccSecurityMarks.foo=bar` - query by a given key's existence. Example:
    * `sccSecurityMarks.foo:*`
@@ -902,9 +893,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * This field is only present for the purpose of backward compatibility. Please use the `tags`
-   * field instead. TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To
-   * search against the `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
+   * This field is only present for the purpose of backward compatibility. Use the `tags` field
+   * instead. TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search
+   * against the `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
    * `tagKeys="123456789/env"` - `tagKeys:"env"` * Use a free text query. Example: - `env`
    * @return value or {@code null} for none
    */
@@ -913,9 +904,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * This field is only present for the purpose of backward compatibility. Please use the `tags`
-   * field instead. TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To
-   * search against the `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
+   * This field is only present for the purpose of backward compatibility. Use the `tags` field
+   * instead. TagKey namespaced names, in the format of {ORG_ID}/{TAG_KEY_SHORT_NAME}. To search
+   * against the `tagKeys`: * Use a field query. Example: - `tagKeys:"123456789/env*"` -
    * `tagKeys="123456789/env"` - `tagKeys:"env"` * Use a free text query. Example: - `env`
    * @param tagKeys tagKeys or {@code null} for none
    */
@@ -925,8 +916,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * This field is only present for the purpose of backward compatibility. Please use the `tags`
-   * field instead. TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the
+   * This field is only present for the purpose of backward compatibility. Use the `tags` field
+   * instead. TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the
    * `tagValueIds`: * Use a field query. Example: - `tagValueIds="tagValues/456"` * Use a free text
    * query. Example: - `456`
    * @return value or {@code null} for none
@@ -936,8 +927,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * This field is only present for the purpose of backward compatibility. Please use the `tags`
-   * field instead. TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the
+   * This field is only present for the purpose of backward compatibility. Use the `tags` field
+   * instead. TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the
    * `tagValueIds`: * Use a field query. Example: - `tagValueIds="tagValues/456"` * Use a free text
    * query. Example: - `456`
    * @param tagValueIds tagValueIds or {@code null} for none
@@ -948,8 +939,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * This field is only present for the purpose of backward compatibility. Please use the `tags`
-   * field instead. TagValue namespaced names, in the format of
+   * This field is only present for the purpose of backward compatibility. Use the `tags` field
+   * instead. TagValue namespaced names, in the format of
    * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * Use
    * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
    * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` * Use a free text query.
@@ -961,8 +952,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * This field is only present for the purpose of backward compatibility. Please use the `tags`
-   * field instead. TagValue namespaced names, in the format of
+   * This field is only present for the purpose of backward compatibility. Use the `tags` field
+   * instead. TagValue namespaced names, in the format of
    * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}. To search against the `tagValues`: * Use
    * a field query. Example: - `tagValues:"env"` - `tagValues:"env/prod"` -
    * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` * Use a free text query.

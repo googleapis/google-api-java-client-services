@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
  * The dedicated serving endpoint for this FeatureOnlineStore. Only need to set when you choose
@@ -28,7 +28,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Private service connect config. If
@@ -38,7 +38,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServin
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig privateServiceConnectConfig;
+  private GoogleCloudAiplatformV1PrivateServiceConnectConfig privateServiceConnectConfig;
 
   /**
    * Output only. This field will be populated with the domain name to use for this
@@ -63,7 +63,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServin
    * endpoint.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig getPrivateServiceConnectConfig() {
+  public GoogleCloudAiplatformV1PrivateServiceConnectConfig getPrivateServiceConnectConfig() {
     return privateServiceConnectConfig;
   }
 
@@ -74,7 +74,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServin
    * endpoint.
    * @param privateServiceConnectConfig privateServiceConnectConfig or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint setPrivateServiceConnectConfig(GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig privateServiceConnectConfig) {
+  public GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint setPrivateServiceConnectConfig(GoogleCloudAiplatformV1PrivateServiceConnectConfig privateServiceConnectConfig) {
     this.privateServiceConnectConfig = privateServiceConnectConfig;
     return this;
   }
@@ -93,7 +93,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServin
    * FeatureOnlineStore
    * @param publicEndpointDomainName publicEndpointDomainName or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint setPublicEndpointDomainName(java.lang.String publicEndpointDomainName) {
+  public GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint setPublicEndpointDomainName(java.lang.String publicEndpointDomainName) {
     this.publicEndpointDomainName = publicEndpointDomainName;
     return this;
   }
@@ -112,19 +112,19 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServin
    * is enabled and after FeatureViewSync is created.
    * @param serviceAttachment serviceAttachment or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint setServiceAttachment(java.lang.String serviceAttachment) {
+  public GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint setServiceAttachment(java.lang.String serviceAttachment) {
     this.serviceAttachment = serviceAttachment;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint clone() {
-    return (GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint) super.clone();
+  public GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint clone() {
+    return (GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint) super.clone();
   }
 
 }

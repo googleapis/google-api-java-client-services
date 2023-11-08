@@ -55,6 +55,15 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
   /**
    * Optional. List of Restrict of the datapoint, used to perform "restricted searches" where
    * boolean rule are used to filter the subset of the database eligible for matching. This uses
+   * numeric comparisons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1IndexDatapointNumericRestriction> numericRestricts;
+
+  /**
+   * Optional. List of Restrict of the datapoint, used to perform "restricted searches" where
+   * boolean rule are used to filter the subset of the database eligible for matching. This uses
    * categorical tokens. See: https://cloud.google.com/vertex-ai/docs/matching-engine/filtering
    * The value may be {@code null}.
    */
@@ -113,6 +122,27 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
    */
   public GoogleCloudAiplatformV1beta1IndexDatapoint setFeatureVector(java.util.List<java.lang.Float> featureVector) {
     this.featureVector = featureVector;
+    return this;
+  }
+
+  /**
+   * Optional. List of Restrict of the datapoint, used to perform "restricted searches" where
+   * boolean rule are used to filter the subset of the database eligible for matching. This uses
+   * numeric comparisons.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1IndexDatapointNumericRestriction> getNumericRestricts() {
+    return numericRestricts;
+  }
+
+  /**
+   * Optional. List of Restrict of the datapoint, used to perform "restricted searches" where
+   * boolean rule are used to filter the subset of the database eligible for matching. This uses
+   * numeric comparisons.
+   * @param numericRestricts numericRestricts or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1IndexDatapoint setNumericRestricts(java.util.List<GoogleCloudAiplatformV1beta1IndexDatapointNumericRestriction> numericRestricts) {
+    this.numericRestricts = numericRestricts;
     return this;
   }
 

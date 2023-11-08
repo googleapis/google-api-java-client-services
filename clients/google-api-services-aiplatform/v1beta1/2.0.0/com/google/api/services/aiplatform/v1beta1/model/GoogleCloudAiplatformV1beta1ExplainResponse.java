@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ExplainResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * This field stores the results of the explanations run in parallel with The default explanation
+   * strategy/method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudAiplatformV1beta1ExplainResponseConcurrentExplanation> concurrentExplanations;
+
+  /**
    * ID of the Endpoint's DeployedModel that served this explanation.
    * The value may be {@code null}.
    */
@@ -51,6 +59,25 @@ public final class GoogleCloudAiplatformV1beta1ExplainResponse extends com.googl
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Object> predictions;
+
+  /**
+   * This field stores the results of the explanations run in parallel with The default explanation
+   * strategy/method.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudAiplatformV1beta1ExplainResponseConcurrentExplanation> getConcurrentExplanations() {
+    return concurrentExplanations;
+  }
+
+  /**
+   * This field stores the results of the explanations run in parallel with The default explanation
+   * strategy/method.
+   * @param concurrentExplanations concurrentExplanations or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ExplainResponse setConcurrentExplanations(java.util.Map<String, GoogleCloudAiplatformV1beta1ExplainResponseConcurrentExplanation> concurrentExplanations) {
+    this.concurrentExplanations = concurrentExplanations;
+    return this;
+  }
 
   /**
    * ID of the Endpoint's DeployedModel that served this explanation.

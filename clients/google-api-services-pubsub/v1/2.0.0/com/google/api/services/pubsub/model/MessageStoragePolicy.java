@@ -41,6 +41,16 @@ public final class MessageStoragePolicy extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> allowedPersistenceRegions;
 
   /**
+   * Optional. If true, `allowed_persistence_regions` is also used to enforce in-transit guarantees
+   * for messages. That is, Pub/Sub will fail Publish operations on this topic and subscribe
+   * operations on any subscription attached to this topic in any region that is not in
+   * `allowed_persistence_regions`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enforceInTransit;
+
+  /**
    * Optional. A list of IDs of Google Cloud regions where messages that are published to the topic
    * may be persisted in storage. Messages published by publishers running in non-allowed Google
    * Cloud regions (or running outside of Google Cloud altogether) are routed for storage in one of
@@ -62,6 +72,29 @@ public final class MessageStoragePolicy extends com.google.api.client.json.Gener
    */
   public MessageStoragePolicy setAllowedPersistenceRegions(java.util.List<java.lang.String> allowedPersistenceRegions) {
     this.allowedPersistenceRegions = allowedPersistenceRegions;
+    return this;
+  }
+
+  /**
+   * Optional. If true, `allowed_persistence_regions` is also used to enforce in-transit guarantees
+   * for messages. That is, Pub/Sub will fail Publish operations on this topic and subscribe
+   * operations on any subscription attached to this topic in any region that is not in
+   * `allowed_persistence_regions`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnforceInTransit() {
+    return enforceInTransit;
+  }
+
+  /**
+   * Optional. If true, `allowed_persistence_regions` is also used to enforce in-transit guarantees
+   * for messages. That is, Pub/Sub will fail Publish operations on this topic and subscribe
+   * operations on any subscription attached to this topic in any region that is not in
+   * `allowed_persistence_regions`.
+   * @param enforceInTransit enforceInTransit or {@code null} for none
+   */
+  public MessageStoragePolicy setEnforceInTransit(java.lang.Boolean enforceInTransit) {
+    this.enforceInTransit = enforceInTransit;
     return this;
   }
 

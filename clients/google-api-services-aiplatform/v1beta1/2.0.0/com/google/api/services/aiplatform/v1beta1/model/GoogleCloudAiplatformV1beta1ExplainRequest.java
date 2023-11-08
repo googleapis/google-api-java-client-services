@@ -30,6 +30,16 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ExplainRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. This field is the same as the one above, but supports multiple explanations to occur
+   * in parallel. The key can be any string. Each override will be run against the model, then its
+   * explanations will be grouped together. Note - these explanations are run **In Addition** to the
+   * default Explanation in the deployed model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudAiplatformV1beta1ExplanationSpecOverride> concurrentExplanationSpecOverride;
+
+  /**
    * If specified, this ExplainRequest will be served by the chosen DeployedModel, overriding
    * Endpoint.traffic_split.
    * The value may be {@code null}.
@@ -66,6 +76,29 @@ public final class GoogleCloudAiplatformV1beta1ExplainRequest extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.Object parameters;
+
+  /**
+   * Optional. This field is the same as the one above, but supports multiple explanations to occur
+   * in parallel. The key can be any string. Each override will be run against the model, then its
+   * explanations will be grouped together. Note - these explanations are run **In Addition** to the
+   * default Explanation in the deployed model.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudAiplatformV1beta1ExplanationSpecOverride> getConcurrentExplanationSpecOverride() {
+    return concurrentExplanationSpecOverride;
+  }
+
+  /**
+   * Optional. This field is the same as the one above, but supports multiple explanations to occur
+   * in parallel. The key can be any string. Each override will be run against the model, then its
+   * explanations will be grouped together. Note - these explanations are run **In Addition** to the
+   * default Explanation in the deployed model.
+   * @param concurrentExplanationSpecOverride concurrentExplanationSpecOverride or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ExplainRequest setConcurrentExplanationSpecOverride(java.util.Map<String, GoogleCloudAiplatformV1beta1ExplanationSpecOverride> concurrentExplanationSpecOverride) {
+    this.concurrentExplanationSpecOverride = concurrentExplanationSpecOverride;
+    return this;
+  }
 
   /**
    * If specified, this ExplainRequest will be served by the chosen DeployedModel, overriding

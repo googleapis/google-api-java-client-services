@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
  * Vertex AI Feature Online Store provides a centralized repository for serving ML features and
@@ -28,7 +28,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1FeatureOnlineStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Contains settings for the Cloud Bigtable instance that will be created to serve featureValues
@@ -36,7 +36,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtable bigtable;
+  private GoogleCloudAiplatformV1FeatureOnlineStoreBigtable bigtable;
 
   /**
    * Output only. Timestamp when this FeatureOnlineStore was created.
@@ -51,14 +51,14 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint dedicatedServingEndpoint;
+  private GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint dedicatedServingEndpoint;
 
   /**
    * Optional. The settings for embedding management in FeatureOnlineStore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1FeatureOnlineStoreEmbeddingManagement embeddingManagement;
+  private GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement embeddingManagement;
 
   /**
    * Optional. Used to perform consistent read-modify-write updates. If not set, a blind "overwrite"
@@ -89,16 +89,6 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
   private java.lang.String name;
 
   /**
-   * Contains settings for the Optimized store that will be created to serve featureValues for all
-   * FeatureViews under this FeatureOnlineStore. When choose Optimized storage type, need to set
-   * PrivateServiceConnectConfig.enable_private_service_connect to use private endpoint. Otherwise
-   * will use public endpoint by default.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1FeatureOnlineStoreOptimized optimized;
-
-  /**
    * Output only. State of the featureOnlineStore.
    * The value may be {@code null}.
    */
@@ -117,7 +107,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * for all FeatureViews under this FeatureOnlineStore.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtable getBigtable() {
+  public GoogleCloudAiplatformV1FeatureOnlineStoreBigtable getBigtable() {
     return bigtable;
   }
 
@@ -126,7 +116,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * for all FeatureViews under this FeatureOnlineStore.
    * @param bigtable bigtable or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setBigtable(GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtable bigtable) {
+  public GoogleCloudAiplatformV1FeatureOnlineStore setBigtable(GoogleCloudAiplatformV1FeatureOnlineStoreBigtable bigtable) {
     this.bigtable = bigtable;
     return this;
   }
@@ -143,7 +133,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * Output only. Timestamp when this FeatureOnlineStore was created.
    * @param createTime createTime or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setCreateTime(String createTime) {
+  public GoogleCloudAiplatformV1FeatureOnlineStore setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -153,7 +143,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * common Vertex service endpoint.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint getDedicatedServingEndpoint() {
+  public GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint getDedicatedServingEndpoint() {
     return dedicatedServingEndpoint;
   }
 
@@ -162,7 +152,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * common Vertex service endpoint.
    * @param dedicatedServingEndpoint dedicatedServingEndpoint or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setDedicatedServingEndpoint(GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint dedicatedServingEndpoint) {
+  public GoogleCloudAiplatformV1FeatureOnlineStore setDedicatedServingEndpoint(GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint dedicatedServingEndpoint) {
     this.dedicatedServingEndpoint = dedicatedServingEndpoint;
     return this;
   }
@@ -171,7 +161,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * Optional. The settings for embedding management in FeatureOnlineStore.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreEmbeddingManagement getEmbeddingManagement() {
+  public GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement getEmbeddingManagement() {
     return embeddingManagement;
   }
 
@@ -179,7 +169,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * Optional. The settings for embedding management in FeatureOnlineStore.
    * @param embeddingManagement embeddingManagement or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setEmbeddingManagement(GoogleCloudAiplatformV1beta1FeatureOnlineStoreEmbeddingManagement embeddingManagement) {
+  public GoogleCloudAiplatformV1FeatureOnlineStore setEmbeddingManagement(GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement embeddingManagement) {
     this.embeddingManagement = embeddingManagement;
     return this;
   }
@@ -198,7 +188,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * update happens.
    * @param etag etag or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setEtag(java.lang.String etag) {
+  public GoogleCloudAiplatformV1FeatureOnlineStore setEtag(java.lang.String etag) {
     this.etag = etag;
     return this;
   }
@@ -225,7 +215,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * reserved label keys are prefixed with "aiplatform.googleapis.com/" and are immutable.
    * @param labels labels or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setLabels(java.util.Map<String, java.lang.String> labels) {
+  public GoogleCloudAiplatformV1FeatureOnlineStore setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
@@ -244,31 +234,8 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
    * @param name name or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setName(java.lang.String name) {
+  public GoogleCloudAiplatformV1FeatureOnlineStore setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Contains settings for the Optimized store that will be created to serve featureValues for all
-   * FeatureViews under this FeatureOnlineStore. When choose Optimized storage type, need to set
-   * PrivateServiceConnectConfig.enable_private_service_connect to use private endpoint. Otherwise
-   * will use public endpoint by default.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreOptimized getOptimized() {
-    return optimized;
-  }
-
-  /**
-   * Contains settings for the Optimized store that will be created to serve featureValues for all
-   * FeatureViews under this FeatureOnlineStore. When choose Optimized storage type, need to set
-   * PrivateServiceConnectConfig.enable_private_service_connect to use private endpoint. Otherwise
-   * will use public endpoint by default.
-   * @param optimized optimized or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setOptimized(GoogleCloudAiplatformV1beta1FeatureOnlineStoreOptimized optimized) {
-    this.optimized = optimized;
     return this;
   }
 
@@ -284,7 +251,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * Output only. State of the featureOnlineStore.
    * @param state state or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setState(java.lang.String state) {
+  public GoogleCloudAiplatformV1FeatureOnlineStore setState(java.lang.String state) {
     this.state = state;
     return this;
   }
@@ -301,19 +268,19 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    * Output only. Timestamp when this FeatureOnlineStore was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setUpdateTime(String updateTime) {
+  public GoogleCloudAiplatformV1FeatureOnlineStore setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1FeatureOnlineStore) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1FeatureOnlineStore set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1FeatureOnlineStore) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStore clone() {
-    return (GoogleCloudAiplatformV1beta1FeatureOnlineStore) super.clone();
+  public GoogleCloudAiplatformV1FeatureOnlineStore clone() {
+    return (GoogleCloudAiplatformV1FeatureOnlineStore) super.clone();
   }
 
 }

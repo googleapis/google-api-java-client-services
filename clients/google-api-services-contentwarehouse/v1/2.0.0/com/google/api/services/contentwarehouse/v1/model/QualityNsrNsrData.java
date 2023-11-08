@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * NOTE: When adding a new field to be propagated to Raffia check if NsrPatternSignalSpec needs to
- * be updated. Next ID: 55
+ * be updated. Next ID: 56
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -306,6 +306,12 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Float siteQualityStddev;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> siteQualityStddevs;
 
   /**
    * Score of small personal site promotion go/promoting-personal-blogs-v1
@@ -1051,6 +1057,21 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setSiteQualityStddev(java.lang.Float siteQualityStddev) {
     this.siteQualityStddev = siteQualityStddev;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedFloatSignal> getSiteQualityStddevs() {
+    return siteQualityStddevs;
+  }
+
+  /**
+   * @param siteQualityStddevs siteQualityStddevs or {@code null} for none
+   */
+  public QualityNsrNsrData setSiteQualityStddevs(java.util.List<QualityNsrVersionedFloatSignal> siteQualityStddevs) {
+    this.siteQualityStddevs = siteQualityStddevs;
     return this;
   }
 

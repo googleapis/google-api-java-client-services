@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A message representing the signals associated with an argument. NEXT ID TO USE: 60 For
+ * A message representing the signals associated with an argument. NEXT ID TO USE: 62 For
  * //depot/google3/logs/proto/knowledge/interpretation/intent_query.proto in the "ThenChange",
  * fields under Argument.signals in the serving proto are stored directly under Argument on the
  * logging side. For example, see http://google3/nlp/semantic_parsing/data_management/logs/web_logs/
@@ -420,6 +420,13 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
   private KnowledgeAnswersIntentQueryShoppingIds shoppingIds;
 
   /**
+   * What added this argument.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String source;
+
+  /**
    * go/stbr supportthis is an
    * The value may be {@code null}.
    */
@@ -440,6 +447,13 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   @com.google.api.client.util.Key
   private KnowledgeAnswersValueType ungroundedValueType;
+
+  /**
+   * What added the argument value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String valueSource;
 
   /**
    * Webref entity index for this argument, necessary for interpreting the relationship structure,
@@ -1361,6 +1375,23 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
   }
 
   /**
+   * What added this argument.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSource() {
+    return source;
+  }
+
+  /**
+   * What added this argument.
+   * @param source source or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentSignals setSource(java.lang.String source) {
+    this.source = source;
+    return this;
+  }
+
+  /**
    * go/stbr supportthis is an
    * @return value or {@code null} for none
    */
@@ -1410,6 +1441,23 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   public KnowledgeAnswersIntentQueryArgumentSignals setUngroundedValueType(KnowledgeAnswersValueType ungroundedValueType) {
     this.ungroundedValueType = ungroundedValueType;
+    return this;
+  }
+
+  /**
+   * What added the argument value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getValueSource() {
+    return valueSource;
+  }
+
+  /**
+   * What added the argument value.
+   * @param valueSource valueSource or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentSignals setValueSource(java.lang.String valueSource) {
+    this.valueSource = valueSource;
     return this;
   }
 

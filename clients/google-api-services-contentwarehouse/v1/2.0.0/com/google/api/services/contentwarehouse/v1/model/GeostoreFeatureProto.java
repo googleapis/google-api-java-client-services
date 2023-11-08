@@ -89,7 +89,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreAnchoredGeometryProto anchoredGeometry;
 
   /**
-   * RESERVED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -986,7 +985,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
    * @return value or {@code null} for none
    */
   public java.util.List<GeostoreFeatureIdProto> getAssociatedEvChargingStation() {
@@ -994,7 +992,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
    * @param associatedEvChargingStation associatedEvChargingStation or {@code null} for none
    */
   public GeostoreFeatureProto setAssociatedEvChargingStation(java.util.List<GeostoreFeatureIdProto> associatedEvChargingStation) {

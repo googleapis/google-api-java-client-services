@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 68
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 69
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -176,6 +176,12 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.String intentType;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDummyIntent;
 
   /**
    * Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to
@@ -831,6 +837,21 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIntentType(java.lang.String intentType) {
     this.intentType = intentType;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDummyIntent() {
+    return isDummyIntent;
+  }
+
+  /**
+   * @param isDummyIntent isDummyIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsDummyIntent(java.lang.Boolean isDummyIntent) {
+    this.isDummyIntent = isDummyIntent;
     return this;
   }
 

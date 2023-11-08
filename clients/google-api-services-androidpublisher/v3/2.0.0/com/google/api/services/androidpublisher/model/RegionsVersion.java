@@ -17,10 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * The version of the available regions being used for the specified resource. A string representing
- * the version of available regions being used for the specified resource. Regional prices for the
- * resource have to be specified according to the information published in [this
- * article](https://support.google.com/googleplay/android-developer/answer/10532353).
+ * The version of the available regions being used for the specified resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -34,14 +31,26 @@ package com.google.api.services.androidpublisher.model;
 public final class RegionsVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The latest version is 2022/02.
+   * Required. A string representing the version of available regions being used for the specified
+   * resource. Regional prices for the resource have to be specified according to the information
+   * published in [this article](https://support.google.com/googleplay/android-
+   * developer/answer/10532353). Each time the supported locations substantially change, the version
+   * will be incremented. Using this field will ensure that creating and updating the resource with
+   * an older region's version and set of regional prices and currencies will succeed even though a
+   * new version is available. The latest version is 2022/02.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Required. The latest version is 2022/02.
+   * Required. A string representing the version of available regions being used for the specified
+   * resource. Regional prices for the resource have to be specified according to the information
+   * published in [this article](https://support.google.com/googleplay/android-
+   * developer/answer/10532353). Each time the supported locations substantially change, the version
+   * will be incremented. Using this field will ensure that creating and updating the resource with
+   * an older region's version and set of regional prices and currencies will succeed even though a
+   * new version is available. The latest version is 2022/02.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -49,7 +58,13 @@ public final class RegionsVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The latest version is 2022/02.
+   * Required. A string representing the version of available regions being used for the specified
+   * resource. Regional prices for the resource have to be specified according to the information
+   * published in [this article](https://support.google.com/googleplay/android-
+   * developer/answer/10532353). Each time the supported locations substantially change, the version
+   * will be incremented. Using this field will ensure that creating and updating the resource with
+   * an older region's version and set of regional prices and currencies will succeed even though a
+   * new version is available. The latest version is 2022/02.
    * @param version version or {@code null} for none
    */
   public RegionsVersion setVersion(java.lang.String version) {

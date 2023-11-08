@@ -50,6 +50,14 @@ public final class SecurityPolicyAdvancedOptionsConfig extends com.google.api.cl
   private java.lang.String logLevel;
 
   /**
+   * An optional list of case-insensitive request header names to use for resolving the callers
+   * client IP address.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> userIpRequestHeaders;
+
+  /**
    * Custom configuration to apply the JSON parsing. Only applicable when json_parsing is set to
    * STANDARD.
    * @return value or {@code null} for none
@@ -95,6 +103,25 @@ public final class SecurityPolicyAdvancedOptionsConfig extends com.google.api.cl
    */
   public SecurityPolicyAdvancedOptionsConfig setLogLevel(java.lang.String logLevel) {
     this.logLevel = logLevel;
+    return this;
+  }
+
+  /**
+   * An optional list of case-insensitive request header names to use for resolving the callers
+   * client IP address.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUserIpRequestHeaders() {
+    return userIpRequestHeaders;
+  }
+
+  /**
+   * An optional list of case-insensitive request header names to use for resolving the callers
+   * client IP address.
+   * @param userIpRequestHeaders userIpRequestHeaders or {@code null} for none
+   */
+  public SecurityPolicyAdvancedOptionsConfig setUserIpRequestHeaders(java.util.List<java.lang.String> userIpRequestHeaders) {
+    this.userIpRequestHeaders = userIpRequestHeaders;
     return this;
   }
 

@@ -93,7 +93,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It can be one of
-   * the following values: CA_STANDARD, CAMP_PLUS_MONTHLY. If this field is not specified, it is
+   * the following values: CA_STANDARD, CAMP_PLUS_PAYGO. If this field is not specified, it is
    * assumed to be CA_STANDARD.
    * The value may be {@code null}.
    */
@@ -293,7 +293,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It can be one of
-   * the following values: CA_STANDARD, CAMP_PLUS_MONTHLY. If this field is not specified, it is
+   * the following values: CA_STANDARD, CAMP_PLUS_PAYGO. If this field is not specified, it is
    * assumed to be CA_STANDARD.
    * @return value or {@code null} for none
    */
@@ -303,7 +303,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It can be one of
-   * the following values: CA_STANDARD, CAMP_PLUS_MONTHLY. If this field is not specified, it is
+   * the following values: CA_STANDARD, CAMP_PLUS_PAYGO. If this field is not specified, it is
    * assumed to be CA_STANDARD.
    * @param managedProtectionTier managedProtectionTier or {@code null} for none
    */

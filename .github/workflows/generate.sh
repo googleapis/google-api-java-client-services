@@ -61,6 +61,7 @@ do
     exit 1
   fi
 
+  # transfer generated source into the wiped-out service's source folder
   rm -rdf ${TARGET_DIR}/*
   cp -r ${OUTPUT_DIR}/* "${TARGET_DIR}"
 

@@ -92,6 +92,21 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.Long downloadBytes;
 
   /**
+   * [Output Only] A list of features to enable on the guest operating system. Applicable only for
+   * bootable images. Read Enabling guest operating system features to see a list of available
+   * options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GuestOsFeature> guestOsFeatures;
+
+  static {
+    // hack to force ProGuard to consider GuestOsFeature used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GuestOsFeature.class);
+  }
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -414,6 +429,27 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setDownloadBytes(java.lang.Long downloadBytes) {
     this.downloadBytes = downloadBytes;
+    return this;
+  }
+
+  /**
+   * [Output Only] A list of features to enable on the guest operating system. Applicable only for
+   * bootable images. Read Enabling guest operating system features to see a list of available
+   * options.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GuestOsFeature> getGuestOsFeatures() {
+    return guestOsFeatures;
+  }
+
+  /**
+   * [Output Only] A list of features to enable on the guest operating system. Applicable only for
+   * bootable images. Read Enabling guest operating system features to see a list of available
+   * options.
+   * @param guestOsFeatures guestOsFeatures or {@code null} for none
+   */
+  public Snapshot setGuestOsFeatures(java.util.List<GuestOsFeature> guestOsFeatures) {
+    this.guestOsFeatures = guestOsFeatures;
     return this;
   }
 

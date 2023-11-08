@@ -77,6 +77,14 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.String name;
 
   /**
+   * Requested run duration for instances that will be created by this request. At the end of the
+   * run duration instance will be deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration requestedRunDuration;
+
+  /**
    * The number of instances to be created by this resize request. The group's target size will be
    * increased by this number.
    * The value may be {@code null}.
@@ -223,6 +231,25 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
    */
   public InstanceGroupManagerResizeRequest setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Requested run duration for instances that will be created by this request. At the end of the
+   * run duration instance will be deleted.
+   * @return value or {@code null} for none
+   */
+  public Duration getRequestedRunDuration() {
+    return requestedRunDuration;
+  }
+
+  /**
+   * Requested run duration for instances that will be created by this request. At the end of the
+   * run duration instance will be deleted.
+   * @param requestedRunDuration requestedRunDuration or {@code null} for none
+   */
+  public InstanceGroupManagerResizeRequest setRequestedRunDuration(Duration requestedRunDuration) {
+    this.requestedRunDuration = requestedRunDuration;
     return this;
   }
 

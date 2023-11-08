@@ -71,12 +71,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String iPProtocol;
 
   /**
-   * This field can only be used: - If IPProtocol is one of TCP, UDP, or SCTP. - By internal TCP/UDP
-   * load balancers, backend service-based network load balancers, and internal and external
-   * protocol forwarding. Set this field to true to allow packets addressed to any port or packets
-   * lacking destination port information (for example, UDP fragments after the first fragment) to
-   * be forwarded to the backends configured with this forwarding rule. The ports, port_range, and
-   * allPorts fields are mutually exclusive.
+   * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
+   * ports in the specified range will be forwarded to the backends configured with this forwarding
+   * rule. The allPorts field has the following limitations: - It requires that the forwarding rule
+   * IPProtocol be TCP, UDP, SCTP, or L3_DEFAULT. - It's applicable only to the following products:
+   * internal passthrough Network Load Balancers, backend service-based external passthrough Network
+   * Load Balancers, and internal and external protocol forwarding. - Set this field to true to
+   * allow packets addressed to any port or packets lacking destination port information (for
+   * example, UDP fragments after the first fragment) to be forwarded to the backends configured
+   * with this forwarding rule. The L3_DEFAULT protocol requires allPorts be set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -280,32 +283,34 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean noAutomateDnsZone;
 
   /**
-   * This field can only be used: - If IPProtocol is one of TCP, UDP, or SCTP. - By backend service-
-   * based network load balancers, target pool-based network load balancers, internal proxy load
-   * balancers, external proxy load balancers, Traffic Director, external protocol forwarding, and
-   * Classic VPN. Some products have restrictions on what ports can be used. See port specifications
-   * for details. Only packets addressed to ports in the specified range will be forwarded to the
-   * backends configured with this forwarding rule. The ports, port_range, and allPorts fields are
-   * mutually exclusive. For external forwarding rules, two or more forwarding rules cannot use the
-   * same [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. For internal
-   * forwarding rules within the same VPC network, two or more forwarding rules cannot use the same
-   * [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. @pattern: \\d+(?:-\\d+)?
+   * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
+   * ports in the specified range will be forwarded to the backends configured with this forwarding
+   * rule. The portRange field has the following limitations: - It requires that the forwarding rule
+   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: external
+   * passthrough Network Load Balancers, internal and external proxy Network Load Balancers,
+   * internal and external Application Load Balancers, external protocol forwarding, and Classic
+   * VPN. - Some products have restrictions on what ports can be used. See port specifications for
+   * details. For external forwarding rules, two or more forwarding rules cannot use the same
+   * [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. For internal forwarding
+   * rules within the same VPC network, two or more forwarding rules cannot use the same [IPAddress,
+   * IPProtocol] pair, and cannot have overlapping portRanges. @pattern: \\d+(?:-\\d+)?
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String portRange;
 
   /**
-   * This field can only be used: - If IPProtocol is one of TCP, UDP, or SCTP. - By internal TCP/UDP
-   * load balancers, backend service-based network load balancers, and internal protocol forwarding.
-   * You can specify a list of up to five ports by number, separated by commas. The ports can be
-   * contiguous or discontiguous. Only packets addressed to these ports will be forwarded to the
-   * backends configured with this forwarding rule. For external forwarding rules, two or more
-   * forwarding rules cannot use the same [IPAddress, IPProtocol] pair, and cannot share any values
-   * defined in ports. For internal forwarding rules within the same VPC network, two or more
-   * forwarding rules cannot use the same [IPAddress, IPProtocol] pair, and cannot share any values
-   * defined in ports. The ports, port_range, and allPorts fields are mutually exclusive. @pattern:
-   * \\d+(?:-\\d+)?
+   * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
+   * ports in the specified range will be forwarded to the backends configured with this forwarding
+   * rule. The ports field has the following limitations: - It requires that the forwarding rule
+   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: internal
+   * passthrough Network Load Balancers, backend service-based external passthrough Network Load
+   * Balancers, and internal protocol forwarding. - You can specify a list of up to five ports by
+   * number, separated by commas. The ports can be contiguous or discontiguous. For external
+   * forwarding rules, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair
+   * if they share at least one port number. For internal forwarding rules within the same VPC
+   * network, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair if they
+   * share at least one port number. @pattern: \\d+(?:-\\d+)?
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -482,12 +487,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field can only be used: - If IPProtocol is one of TCP, UDP, or SCTP. - By internal TCP/UDP
-   * load balancers, backend service-based network load balancers, and internal and external
-   * protocol forwarding. Set this field to true to allow packets addressed to any port or packets
-   * lacking destination port information (for example, UDP fragments after the first fragment) to
-   * be forwarded to the backends configured with this forwarding rule. The ports, port_range, and
-   * allPorts fields are mutually exclusive.
+   * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
+   * ports in the specified range will be forwarded to the backends configured with this forwarding
+   * rule. The allPorts field has the following limitations: - It requires that the forwarding rule
+   * IPProtocol be TCP, UDP, SCTP, or L3_DEFAULT. - It's applicable only to the following products:
+   * internal passthrough Network Load Balancers, backend service-based external passthrough Network
+   * Load Balancers, and internal and external protocol forwarding. - Set this field to true to
+   * allow packets addressed to any port or packets lacking destination port information (for
+   * example, UDP fragments after the first fragment) to be forwarded to the backends configured
+   * with this forwarding rule. The L3_DEFAULT protocol requires allPorts be set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllPorts() {
@@ -495,12 +503,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field can only be used: - If IPProtocol is one of TCP, UDP, or SCTP. - By internal TCP/UDP
-   * load balancers, backend service-based network load balancers, and internal and external
-   * protocol forwarding. Set this field to true to allow packets addressed to any port or packets
-   * lacking destination port information (for example, UDP fragments after the first fragment) to
-   * be forwarded to the backends configured with this forwarding rule. The ports, port_range, and
-   * allPorts fields are mutually exclusive.
+   * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
+   * ports in the specified range will be forwarded to the backends configured with this forwarding
+   * rule. The allPorts field has the following limitations: - It requires that the forwarding rule
+   * IPProtocol be TCP, UDP, SCTP, or L3_DEFAULT. - It's applicable only to the following products:
+   * internal passthrough Network Load Balancers, backend service-based external passthrough Network
+   * Load Balancers, and internal and external protocol forwarding. - Set this field to true to
+   * allow packets addressed to any port or packets lacking destination port information (for
+   * example, UDP fragments after the first fragment) to be forwarded to the backends configured
+   * with this forwarding rule. The L3_DEFAULT protocol requires allPorts be set to true.
    * @param allPorts allPorts or {@code null} for none
    */
   public ForwardingRule setAllPorts(java.lang.Boolean allPorts) {
@@ -1037,16 +1048,17 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field can only be used: - If IPProtocol is one of TCP, UDP, or SCTP. - By backend service-
-   * based network load balancers, target pool-based network load balancers, internal proxy load
-   * balancers, external proxy load balancers, Traffic Director, external protocol forwarding, and
-   * Classic VPN. Some products have restrictions on what ports can be used. See port specifications
-   * for details. Only packets addressed to ports in the specified range will be forwarded to the
-   * backends configured with this forwarding rule. The ports, port_range, and allPorts fields are
-   * mutually exclusive. For external forwarding rules, two or more forwarding rules cannot use the
-   * same [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. For internal
-   * forwarding rules within the same VPC network, two or more forwarding rules cannot use the same
-   * [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. @pattern: \\d+(?:-\\d+)?
+   * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
+   * ports in the specified range will be forwarded to the backends configured with this forwarding
+   * rule. The portRange field has the following limitations: - It requires that the forwarding rule
+   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: external
+   * passthrough Network Load Balancers, internal and external proxy Network Load Balancers,
+   * internal and external Application Load Balancers, external protocol forwarding, and Classic
+   * VPN. - Some products have restrictions on what ports can be used. See port specifications for
+   * details. For external forwarding rules, two or more forwarding rules cannot use the same
+   * [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. For internal forwarding
+   * rules within the same VPC network, two or more forwarding rules cannot use the same [IPAddress,
+   * IPProtocol] pair, and cannot have overlapping portRanges. @pattern: \\d+(?:-\\d+)?
    * @return value or {@code null} for none
    */
   public java.lang.String getPortRange() {
@@ -1054,16 +1066,17 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field can only be used: - If IPProtocol is one of TCP, UDP, or SCTP. - By backend service-
-   * based network load balancers, target pool-based network load balancers, internal proxy load
-   * balancers, external proxy load balancers, Traffic Director, external protocol forwarding, and
-   * Classic VPN. Some products have restrictions on what ports can be used. See port specifications
-   * for details. Only packets addressed to ports in the specified range will be forwarded to the
-   * backends configured with this forwarding rule. The ports, port_range, and allPorts fields are
-   * mutually exclusive. For external forwarding rules, two or more forwarding rules cannot use the
-   * same [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. For internal
-   * forwarding rules within the same VPC network, two or more forwarding rules cannot use the same
-   * [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. @pattern: \\d+(?:-\\d+)?
+   * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
+   * ports in the specified range will be forwarded to the backends configured with this forwarding
+   * rule. The portRange field has the following limitations: - It requires that the forwarding rule
+   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: external
+   * passthrough Network Load Balancers, internal and external proxy Network Load Balancers,
+   * internal and external Application Load Balancers, external protocol forwarding, and Classic
+   * VPN. - Some products have restrictions on what ports can be used. See port specifications for
+   * details. For external forwarding rules, two or more forwarding rules cannot use the same
+   * [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. For internal forwarding
+   * rules within the same VPC network, two or more forwarding rules cannot use the same [IPAddress,
+   * IPProtocol] pair, and cannot have overlapping portRanges. @pattern: \\d+(?:-\\d+)?
    * @param portRange portRange or {@code null} for none
    */
   public ForwardingRule setPortRange(java.lang.String portRange) {
@@ -1072,16 +1085,17 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field can only be used: - If IPProtocol is one of TCP, UDP, or SCTP. - By internal TCP/UDP
-   * load balancers, backend service-based network load balancers, and internal protocol forwarding.
-   * You can specify a list of up to five ports by number, separated by commas. The ports can be
-   * contiguous or discontiguous. Only packets addressed to these ports will be forwarded to the
-   * backends configured with this forwarding rule. For external forwarding rules, two or more
-   * forwarding rules cannot use the same [IPAddress, IPProtocol] pair, and cannot share any values
-   * defined in ports. For internal forwarding rules within the same VPC network, two or more
-   * forwarding rules cannot use the same [IPAddress, IPProtocol] pair, and cannot share any values
-   * defined in ports. The ports, port_range, and allPorts fields are mutually exclusive. @pattern:
-   * \\d+(?:-\\d+)?
+   * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
+   * ports in the specified range will be forwarded to the backends configured with this forwarding
+   * rule. The ports field has the following limitations: - It requires that the forwarding rule
+   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: internal
+   * passthrough Network Load Balancers, backend service-based external passthrough Network Load
+   * Balancers, and internal protocol forwarding. - You can specify a list of up to five ports by
+   * number, separated by commas. The ports can be contiguous or discontiguous. For external
+   * forwarding rules, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair
+   * if they share at least one port number. For internal forwarding rules within the same VPC
+   * network, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair if they
+   * share at least one port number. @pattern: \\d+(?:-\\d+)?
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPorts() {
@@ -1089,16 +1103,17 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field can only be used: - If IPProtocol is one of TCP, UDP, or SCTP. - By internal TCP/UDP
-   * load balancers, backend service-based network load balancers, and internal protocol forwarding.
-   * You can specify a list of up to five ports by number, separated by commas. The ports can be
-   * contiguous or discontiguous. Only packets addressed to these ports will be forwarded to the
-   * backends configured with this forwarding rule. For external forwarding rules, two or more
-   * forwarding rules cannot use the same [IPAddress, IPProtocol] pair, and cannot share any values
-   * defined in ports. For internal forwarding rules within the same VPC network, two or more
-   * forwarding rules cannot use the same [IPAddress, IPProtocol] pair, and cannot share any values
-   * defined in ports. The ports, port_range, and allPorts fields are mutually exclusive. @pattern:
-   * \\d+(?:-\\d+)?
+   * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
+   * ports in the specified range will be forwarded to the backends configured with this forwarding
+   * rule. The ports field has the following limitations: - It requires that the forwarding rule
+   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: internal
+   * passthrough Network Load Balancers, backend service-based external passthrough Network Load
+   * Balancers, and internal protocol forwarding. - You can specify a list of up to five ports by
+   * number, separated by commas. The ports can be contiguous or discontiguous. For external
+   * forwarding rules, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair
+   * if they share at least one port number. For internal forwarding rules within the same VPC
+   * network, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair if they
+   * share at least one port number. @pattern: \\d+(?:-\\d+)?
    * @param ports ports or {@code null} for none
    */
   public ForwardingRule setPorts(java.util.List<java.lang.String> ports) {

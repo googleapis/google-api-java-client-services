@@ -50,7 +50,7 @@ public final class AnalyzeIamPolicyLongrunningRequest extends com.google.api.cli
    * organizations/organization_number/savedQueries/saved_query_id If both `analysis_query` and
    * `saved_analysis_query` are provided, they will be merged together with the
    * `saved_analysis_query` as base and the `analysis_query` as overrides. For more details of the
-   * merge behavior, please refer to the [MergeFrom](https://developers.google.com/protocol-
+   * merge behavior, refer to the [MergeFrom](https://developers.google.com/protocol-
    * buffers/docs/reference/cpp/google.protobuf.message#Message.MergeFrom.details) doc. Note that
    * you cannot override primitive fields with default value, such as 0 or empty string, etc.,
    * because we use proto3, which doesn't support field presence yet.
@@ -100,7 +100,7 @@ public final class AnalyzeIamPolicyLongrunningRequest extends com.google.api.cli
    * organizations/organization_number/savedQueries/saved_query_id If both `analysis_query` and
    * `saved_analysis_query` are provided, they will be merged together with the
    * `saved_analysis_query` as base and the `analysis_query` as overrides. For more details of the
-   * merge behavior, please refer to the [MergeFrom](https://developers.google.com/protocol-
+   * merge behavior, refer to the [MergeFrom](https://developers.google.com/protocol-
    * buffers/docs/reference/cpp/google.protobuf.message#Message.MergeFrom.details) doc. Note that
    * you cannot override primitive fields with default value, such as 0 or empty string, etc.,
    * because we use proto3, which doesn't support field presence yet.
@@ -117,7 +117,7 @@ public final class AnalyzeIamPolicyLongrunningRequest extends com.google.api.cli
    * organizations/organization_number/savedQueries/saved_query_id If both `analysis_query` and
    * `saved_analysis_query` are provided, they will be merged together with the
    * `saved_analysis_query` as base and the `analysis_query` as overrides. For more details of the
-   * merge behavior, please refer to the [MergeFrom](https://developers.google.com/protocol-
+   * merge behavior, refer to the [MergeFrom](https://developers.google.com/protocol-
    * buffers/docs/reference/cpp/google.protobuf.message#Message.MergeFrom.details) doc. Note that
    * you cannot override primitive fields with default value, such as 0 or empty string, etc.,
    * because we use proto3, which doesn't support field presence yet.

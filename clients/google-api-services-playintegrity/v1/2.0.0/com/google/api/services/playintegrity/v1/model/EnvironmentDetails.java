@@ -31,11 +31,35 @@ package com.google.api.services.playintegrity.v1.model;
 public final class EnvironmentDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * The evaluation of the App Access Risk verdicts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppAccessRiskVerdict appAccessRiskVerdict;
+
+  /**
    * The evaluation of Play Protect verdict.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String playProtectVerdict;
+
+  /**
+   * The evaluation of the App Access Risk verdicts.
+   * @return value or {@code null} for none
+   */
+  public AppAccessRiskVerdict getAppAccessRiskVerdict() {
+    return appAccessRiskVerdict;
+  }
+
+  /**
+   * The evaluation of the App Access Risk verdicts.
+   * @param appAccessRiskVerdict appAccessRiskVerdict or {@code null} for none
+   */
+  public EnvironmentDetails setAppAccessRiskVerdict(AppAccessRiskVerdict appAccessRiskVerdict) {
+    this.appAccessRiskVerdict = appAccessRiskVerdict;
+    return this;
+  }
 
   /**
    * The evaluation of Play Protect verdict.

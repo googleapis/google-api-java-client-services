@@ -115,6 +115,21 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   private String updateTime;
 
   /**
+   * Output only. The hostnames of the exposed AGM endpoints for both types of user i.e. 1p and 3p,
+   * used to connect AGM/RM UI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkforceIdentityBasedManagementURI workforceIdentityBasedManagementUri;
+
+  /**
+   * Output only. The OAuth client IDs for both types of user i.e. 1p and 3p.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkforceIdentityBasedOAuth2ClientID workforceIdentityBasedOauth2ClientId;
+
+  /**
    * Output only. The time when the instance was created.
    * @return value or {@code null} for none
    */
@@ -312,6 +327,42 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
    */
   public ManagementServer setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The hostnames of the exposed AGM endpoints for both types of user i.e. 1p and 3p,
+   * used to connect AGM/RM UI.
+   * @return value or {@code null} for none
+   */
+  public WorkforceIdentityBasedManagementURI getWorkforceIdentityBasedManagementUri() {
+    return workforceIdentityBasedManagementUri;
+  }
+
+  /**
+   * Output only. The hostnames of the exposed AGM endpoints for both types of user i.e. 1p and 3p,
+   * used to connect AGM/RM UI.
+   * @param workforceIdentityBasedManagementUri workforceIdentityBasedManagementUri or {@code null} for none
+   */
+  public ManagementServer setWorkforceIdentityBasedManagementUri(WorkforceIdentityBasedManagementURI workforceIdentityBasedManagementUri) {
+    this.workforceIdentityBasedManagementUri = workforceIdentityBasedManagementUri;
+    return this;
+  }
+
+  /**
+   * Output only. The OAuth client IDs for both types of user i.e. 1p and 3p.
+   * @return value or {@code null} for none
+   */
+  public WorkforceIdentityBasedOAuth2ClientID getWorkforceIdentityBasedOauth2ClientId() {
+    return workforceIdentityBasedOauth2ClientId;
+  }
+
+  /**
+   * Output only. The OAuth client IDs for both types of user i.e. 1p and 3p.
+   * @param workforceIdentityBasedOauth2ClientId workforceIdentityBasedOauth2ClientId or {@code null} for none
+   */
+  public ManagementServer setWorkforceIdentityBasedOauth2ClientId(WorkforceIdentityBasedOAuth2ClientID workforceIdentityBasedOauth2ClientId) {
+    this.workforceIdentityBasedOauth2ClientId = workforceIdentityBasedOauth2ClientId;
     return this;
   }
 

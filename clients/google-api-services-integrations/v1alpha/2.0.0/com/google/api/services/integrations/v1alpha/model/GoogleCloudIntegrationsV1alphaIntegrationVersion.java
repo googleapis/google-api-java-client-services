@@ -31,6 +31,13 @@ package com.google.api.services.integrations.v1alpha.model;
 public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Cloud Logging details for the integration version
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaCloudLoggingDetails cloudLoggingDetails;
+
+  /**
    * Output only. Auto-generated.
    * The value may be {@code null}.
    */
@@ -226,6 +233,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String userLabel;
+
+  /**
+   * Optional. Cloud Logging details for the integration version
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaCloudLoggingDetails getCloudLoggingDetails() {
+    return cloudLoggingDetails;
+  }
+
+  /**
+   * Optional. Cloud Logging details for the integration version
+   * @param cloudLoggingDetails cloudLoggingDetails or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setCloudLoggingDetails(GoogleCloudIntegrationsV1alphaCloudLoggingDetails cloudLoggingDetails) {
+    this.cloudLoggingDetails = cloudLoggingDetails;
+    return this;
+  }
 
   /**
    * Output only. Auto-generated.

@@ -86,6 +86,16 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private String deleteTime;
 
   /**
+   * Optional. Disables support for plain TCP connections in the workstation. By default the service
+   * supports TCP connections via a websocket relay. Setting this option to true disables that
+   * relay, which prevents the usage of services that require plain tcp connections, such as ssh.
+   * When enabled, all communication must occur over https or wss.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableTcpConnections;
+
+  /**
    * Optional. Human-readable name for this workstation configuration.
    * The value may be {@code null}.
    */
@@ -354,6 +364,29 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setDeleteTime(String deleteTime) {
     this.deleteTime = deleteTime;
+    return this;
+  }
+
+  /**
+   * Optional. Disables support for plain TCP connections in the workstation. By default the service
+   * supports TCP connections via a websocket relay. Setting this option to true disables that
+   * relay, which prevents the usage of services that require plain tcp connections, such as ssh.
+   * When enabled, all communication must occur over https or wss.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableTcpConnections() {
+    return disableTcpConnections;
+  }
+
+  /**
+   * Optional. Disables support for plain TCP connections in the workstation. By default the service
+   * supports TCP connections via a websocket relay. Setting this option to true disables that
+   * relay, which prevents the usage of services that require plain tcp connections, such as ssh.
+   * When enabled, all communication must occur over https or wss.
+   * @param disableTcpConnections disableTcpConnections or {@code null} for none
+   */
+  public WorkstationConfig setDisableTcpConnections(java.lang.Boolean disableTcpConnections) {
+    this.disableTcpConnections = disableTcpConnections;
     return this;
   }
 

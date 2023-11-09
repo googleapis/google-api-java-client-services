@@ -193,8 +193,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Configures health checking for instances. Unhealthy instances are stopped and replaced with new
-   * instances. Only applicable in the App Engine flexible environment.Only returned in GET requests
-   * if view=FULL is set.
+   * instances. Only applicable in the App Engine flexible environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,7 +241,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Configures liveness health checking for instances. Unhealthy instances are stopped and replaced
-   * with new instancesOnly returned in GET requests if view=FULL is set.
+   * with new instances
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -282,7 +281,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Configures readiness health checking for instances. Unhealthy instances are not put into the
-   * backend traffic rotation.Only returned in GET requests if view=FULL is set.
+   * backend traffic rotation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -737,8 +736,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Configures health checking for instances. Unhealthy instances are stopped and replaced with new
-   * instances. Only applicable in the App Engine flexible environment.Only returned in GET requests
-   * if view=FULL is set.
+   * instances. Only applicable in the App Engine flexible environment.
    * @return value or {@code null} for none
    */
   public HealthCheck getHealthCheck() {
@@ -747,8 +745,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Configures health checking for instances. Unhealthy instances are stopped and replaced with new
-   * instances. Only applicable in the App Engine flexible environment.Only returned in GET requests
-   * if view=FULL is set.
+   * instances. Only applicable in the App Engine flexible environment.
    * @param healthCheck healthCheck or {@code null} for none
    */
   public Version setHealthCheck(HealthCheck healthCheck) {
@@ -838,7 +835,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Configures liveness health checking for instances. Unhealthy instances are stopped and replaced
-   * with new instancesOnly returned in GET requests if view=FULL is set.
+   * with new instances
    * @return value or {@code null} for none
    */
   public LivenessCheck getLivenessCheck() {
@@ -847,7 +844,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Configures liveness health checking for instances. Unhealthy instances are stopped and replaced
-   * with new instancesOnly returned in GET requests if view=FULL is set.
+   * with new instances
    * @param livenessCheck livenessCheck or {@code null} for none
    */
   public Version setLivenessCheck(LivenessCheck livenessCheck) {
@@ -933,7 +930,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Configures readiness health checking for instances. Unhealthy instances are not put into the
-   * backend traffic rotation.Only returned in GET requests if view=FULL is set.
+   * backend traffic rotation.
    * @return value or {@code null} for none
    */
   public ReadinessCheck getReadinessCheck() {
@@ -942,7 +939,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Configures readiness health checking for instances. Unhealthy instances are not put into the
-   * backend traffic rotation.Only returned in GET requests if view=FULL is set.
+   * backend traffic rotation.
    * @param readinessCheck readinessCheck or {@code null} for none
    */
   public Version setReadinessCheck(ReadinessCheck readinessCheck) {

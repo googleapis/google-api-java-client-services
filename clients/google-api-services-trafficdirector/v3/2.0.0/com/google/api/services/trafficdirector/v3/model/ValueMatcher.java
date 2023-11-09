@@ -18,7 +18,7 @@ package com.google.api.services.trafficdirector.v3.model;
 
 /**
  * Specifies the way to match a ProtobufWkt::Value. Primitive values and ListValue are supported.
- * StructValue is not supported and is always not matched. [#next-free-field: 7]
+ * StructValue is not supported and is always not matched. [#next-free-field: 8]
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Traffic Director API. For a detailed explanation see:
@@ -60,6 +60,14 @@ public final class ValueMatcher extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private NullMatch nullMatch;
+
+  /**
+   * If specified, a match occurs if and only if any of the alternatives in the match accept the
+   * value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OrMatcher orMatch;
 
   /**
    * If specified, value match will be performed based on whether the path is referring to a valid
@@ -149,6 +157,25 @@ public final class ValueMatcher extends com.google.api.client.json.GenericJson {
    */
   public ValueMatcher setNullMatch(NullMatch nullMatch) {
     this.nullMatch = nullMatch;
+    return this;
+  }
+
+  /**
+   * If specified, a match occurs if and only if any of the alternatives in the match accept the
+   * value.
+   * @return value or {@code null} for none
+   */
+  public OrMatcher getOrMatch() {
+    return orMatch;
+  }
+
+  /**
+   * If specified, a match occurs if and only if any of the alternatives in the match accept the
+   * value.
+   * @param orMatch orMatch or {@code null} for none
+   */
+  public ValueMatcher setOrMatch(OrMatcher orMatch) {
+    this.orMatch = orMatch;
     return this;
   }
 

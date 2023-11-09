@@ -37,6 +37,13 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. The default cluster configurations to apply across the fleet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DefaultClusterConfig defaultClusterConfig;
+
+  /**
    * Output only. When the Fleet was deleted.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
    */
   public Fleet setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. The default cluster configurations to apply across the fleet.
+   * @return value or {@code null} for none
+   */
+  public DefaultClusterConfig getDefaultClusterConfig() {
+    return defaultClusterConfig;
+  }
+
+  /**
+   * Optional. The default cluster configurations to apply across the fleet.
+   * @param defaultClusterConfig defaultClusterConfig or {@code null} for none
+   */
+  public Fleet setDefaultClusterConfig(DefaultClusterConfig defaultClusterConfig) {
+    this.defaultClusterConfig = defaultClusterConfig;
     return this;
   }
 

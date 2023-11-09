@@ -43,7 +43,8 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The auto-install mode. If unset defaults to "doNotAutoInstall".
+   * The auto-install mode. If unset, defaults to "doNotAutoInstall". An app is automatically
+   * installed regardless of a set maintenance window.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +84,8 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The auto-install mode. If unset defaults to "doNotAutoInstall".
+   * The auto-install mode. If unset, defaults to "doNotAutoInstall". An app is automatically
+   * installed regardless of a set maintenance window.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoInstallMode() {
@@ -91,7 +93,8 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The auto-install mode. If unset defaults to "doNotAutoInstall".
+   * The auto-install mode. If unset, defaults to "doNotAutoInstall". An app is automatically
+   * installed regardless of a set maintenance window.
    * @param autoInstallMode autoInstallMode or {@code null} for none
    */
   public AutoInstallPolicy setAutoInstallMode(java.lang.String autoInstallMode) {

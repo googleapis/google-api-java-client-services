@@ -39,11 +39,18 @@ public final class ReleaseRenderEvent extends com.google.api.client.json.Generic
   private java.lang.String message;
 
   /**
-   * The name of the `Release`.
+   * The name of the release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String release;
+
+  /**
+   * The state of the release render.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String releaseRenderState;
 
   /**
    * Debug message for when a render transition occurs. Provides further details as rendering
@@ -65,7 +72,7 @@ public final class ReleaseRenderEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the `Release`.
+   * The name of the release.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelease() {
@@ -73,11 +80,28 @@ public final class ReleaseRenderEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the `Release`.
+   * The name of the release.
    * @param release release or {@code null} for none
    */
   public ReleaseRenderEvent setRelease(java.lang.String release) {
     this.release = release;
+    return this;
+  }
+
+  /**
+   * The state of the release render.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReleaseRenderState() {
+    return releaseRenderState;
+  }
+
+  /**
+   * The state of the release render.
+   * @param releaseRenderState releaseRenderState or {@code null} for none
+   */
+  public ReleaseRenderEvent setReleaseRenderState(java.lang.String releaseRenderState) {
+    this.releaseRenderState = releaseRenderState;
     return this;
   }
 

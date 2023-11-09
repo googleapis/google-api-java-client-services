@@ -59,7 +59,7 @@ public final class RolloutUpdateEvent extends com.google.api.client.json.Generic
   private java.lang.String rollout;
 
   /**
-   * Output only. The type of the rollout update.
+   * The type of the rollout update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +148,7 @@ public final class RolloutUpdateEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The type of the rollout update.
+   * The type of the rollout update.
    * @return value or {@code null} for none
    */
   public java.lang.String getRolloutUpdateType() {
@@ -156,7 +156,7 @@ public final class RolloutUpdateEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The type of the rollout update.
+   * The type of the rollout update.
    * @param rolloutUpdateType rolloutUpdateType or {@code null} for none
    */
   public RolloutUpdateEvent setRolloutUpdateType(java.lang.String rolloutUpdateType) {

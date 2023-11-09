@@ -10291,13 +10291,13 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Id of the requesting object. If auto-generating Id server-side, remove this
+           * Optional. Id of the requesting object. If auto-generating Id server-side, remove this
            * field and firewall_endpoint_association_id from the method_signature of Create RPC.
            */
           @com.google.api.client.util.Key
           private java.lang.String firewallEndpointAssociationId;
 
-          /** Required. Id of the requesting object. If auto-generating Id server-side, remove this field and
+          /** Optional. Id of the requesting object. If auto-generating Id server-side, remove this field and
          firewall_endpoint_association_id from the method_signature of Create RPC.
            */
           public java.lang.String getFirewallEndpointAssociationId() {
@@ -10305,7 +10305,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Id of the requesting object. If auto-generating Id server-side, remove this
+           * Optional. Id of the requesting object. If auto-generating Id server-side, remove this
            * field and firewall_endpoint_association_id from the method_signature of Create RPC.
            */
           public Create setFirewallEndpointAssociationId(java.lang.String firewallEndpointAssociationId) {

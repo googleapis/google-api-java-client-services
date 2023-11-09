@@ -57,7 +57,8 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
 
   /**
    * Region preferences for assets using this preference set. If you are unsure which value to set,
-   * the migration service API region is often a good value to start with.
+   * the migration service API region is often a good value to start with. If
+   * PreferenceSet.RegionPreferences is specified, it overrides this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +162,8 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
 
   /**
    * Region preferences for assets using this preference set. If you are unsure which value to set,
-   * the migration service API region is often a good value to start with.
+   * the migration service API region is often a good value to start with. If
+   * PreferenceSet.RegionPreferences is specified, it overrides this field.
    * @return value or {@code null} for none
    */
   public RegionPreferences getRegionPreferences() {
@@ -170,7 +172,8 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
 
   /**
    * Region preferences for assets using this preference set. If you are unsure which value to set,
-   * the migration service API region is often a good value to start with.
+   * the migration service API region is often a good value to start with. If
+   * PreferenceSet.RegionPreferences is specified, it overrides this field.
    * @param regionPreferences regionPreferences or {@code null} for none
    */
   public VirtualMachinePreferences setRegionPreferences(RegionPreferences regionPreferences) {

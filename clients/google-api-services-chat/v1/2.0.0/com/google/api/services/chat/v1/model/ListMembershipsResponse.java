@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class ListMembershipsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of memberships in the requested (or first) page.
+   * Unordered list. List of memberships in the requested (or first) page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class ListMembershipsResponse extends com.google.api.client.json.Ge
   private java.lang.String nextPageToken;
 
   /**
-   * List of memberships in the requested (or first) page.
+   * Unordered list. List of memberships in the requested (or first) page.
    * @return value or {@code null} for none
    */
   public java.util.List<Membership> getMemberships() {
@@ -53,7 +53,7 @@ public final class ListMembershipsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * List of memberships in the requested (or first) page.
+   * Unordered list. List of memberships in the requested (or first) page.
    * @param memberships memberships or {@code null} for none
    */
   public ListMembershipsResponse setMemberships(java.util.List<Membership> memberships) {

@@ -31,6 +31,22 @@ package com.google.api.services.integrations.v1alpha.model;
 public final class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Ancestor iteration number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ancestorIterationNumbers;
+
+  /**
+   * Ancestor task number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ancestorTaskNumbers;
+
+  /**
    * the execution attempt number this snapshot belongs to.
    * The value may be {@code null}.
    */
@@ -64,6 +80,44 @@ public final class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnaps
    */
   @com.google.api.client.util.Key
   private java.lang.String taskNumber;
+
+  /**
+   * Ancestor iteration number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAncestorIterationNumbers() {
+    return ancestorIterationNumbers;
+  }
+
+  /**
+   * Ancestor iteration number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @param ancestorIterationNumbers ancestorIterationNumbers or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setAncestorIterationNumbers(java.util.List<java.lang.String> ancestorIterationNumbers) {
+    this.ancestorIterationNumbers = ancestorIterationNumbers;
+    return this;
+  }
+
+  /**
+   * Ancestor task number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAncestorTaskNumbers() {
+    return ancestorTaskNumbers;
+  }
+
+  /**
+   * Ancestor task number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @param ancestorTaskNumbers ancestorTaskNumbers or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setAncestorTaskNumbers(java.util.List<java.lang.String> ancestorTaskNumbers) {
+    this.ancestorTaskNumbers = ancestorTaskNumbers;
+    return this;
+  }
 
   /**
    * the execution attempt number this snapshot belongs to.

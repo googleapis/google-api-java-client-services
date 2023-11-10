@@ -6295,6 +6295,141 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
         }
         /**
+         * Demotes the destination database to become a read replica of the source. This is applicable for
+         * the following migrations: 1. MySQL to Cloud SQL (for MySQL) 2. PostgreSQL to Cloud SQL (for
+         * PostgreSQL) 3. PostgreSQL to AlloyDB.
+         *
+         * Create a request for the method "migrationJobs.demoteDestination".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link DemoteDestination#execute()} method to invoke the remote operation.
+         *
+         * @param name Name of the migration job resource to demote its destination.
+         * @param content the {@link com.google.api.services.datamigration.v1.model.DemoteDestinationRequest}
+         * @return the request
+         */
+        public DemoteDestination demoteDestination(java.lang.String name, com.google.api.services.datamigration.v1.model.DemoteDestinationRequest content) throws java.io.IOException {
+          DemoteDestination result = new DemoteDestination(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DemoteDestination extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:demoteDestination";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+
+          /**
+           * Demotes the destination database to become a read replica of the source. This is applicable for
+           * the following migrations: 1. MySQL to Cloud SQL (for MySQL) 2. PostgreSQL to Cloud SQL (for
+           * PostgreSQL) 3. PostgreSQL to AlloyDB.
+           *
+           * Create a request for the method "migrationJobs.demoteDestination".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link DemoteDestination#execute()} method to invoke the remote
+           * operation. <p> {@link DemoteDestination#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Name of the migration job resource to demote its destination.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.DemoteDestinationRequest}
+           * @since 1.13
+           */
+          protected DemoteDestination(java.lang.String name, com.google.api.services.datamigration.v1.model.DemoteDestinationRequest content) {
+            super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public DemoteDestination set$Xgafv(java.lang.String $Xgafv) {
+            return (DemoteDestination) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DemoteDestination setAccessToken(java.lang.String accessToken) {
+            return (DemoteDestination) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DemoteDestination setAlt(java.lang.String alt) {
+            return (DemoteDestination) super.setAlt(alt);
+          }
+
+          @Override
+          public DemoteDestination setCallback(java.lang.String callback) {
+            return (DemoteDestination) super.setCallback(callback);
+          }
+
+          @Override
+          public DemoteDestination setFields(java.lang.String fields) {
+            return (DemoteDestination) super.setFields(fields);
+          }
+
+          @Override
+          public DemoteDestination setKey(java.lang.String key) {
+            return (DemoteDestination) super.setKey(key);
+          }
+
+          @Override
+          public DemoteDestination setOauthToken(java.lang.String oauthToken) {
+            return (DemoteDestination) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DemoteDestination setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DemoteDestination) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DemoteDestination setQuotaUser(java.lang.String quotaUser) {
+            return (DemoteDestination) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DemoteDestination setUploadType(java.lang.String uploadType) {
+            return (DemoteDestination) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DemoteDestination setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DemoteDestination) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Name of the migration job resource to demote its destination. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Name of the migration job resource to demote its destination.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Name of the migration job resource to demote its destination. */
+          public DemoteDestination setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public DemoteDestination set(String parameterName, Object value) {
+            return (DemoteDestination) super.set(parameterName, value);
+          }
+        }
+        /**
          * Generate a SSH configuration script to configure the reverse SSH connectivity.
          *
          * Create a request for the method "migrationJobs.generateSshScript".

@@ -267,6 +267,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String reservedIpRange;
 
   /**
+   * Optional. Output only. Reserved for future use. Zone Separation compliance state of the
+   * instance. Field name and documentation is obfuscated according to go/zs-resource-status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Optional. Additional IP range for node placement. Required when enabling read replicas on an
    * existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or "auto".
    * For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address range associated
@@ -872,6 +880,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setReservedIpRange(java.lang.String reservedIpRange) {
     this.reservedIpRange = reservedIpRange;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Reserved for future use. Zone Separation compliance state of the
+   * instance. Field name and documentation is obfuscated according to go/zs-resource-status.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Optional. Output only. Reserved for future use. Zone Separation compliance state of the
+   * instance. Field name and documentation is obfuscated according to go/zs-resource-status.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Instance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

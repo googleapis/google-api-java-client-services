@@ -73,6 +73,13 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private ServiceMeshMembershipSpec mesh;
 
   /**
+   * FNS Actuation membership spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NamespaceActuationMembershipSpec namespaceactuation;
+
+  /**
    * Whether this per-Membership spec was inherited from a fleet-level default. This field can be
    * updated by users by either overriding a Membership config (updated to USER implicitly) or
    * setting to FLEET explicitly.
@@ -194,6 +201,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setMesh(ServiceMeshMembershipSpec mesh) {
     this.mesh = mesh;
+    return this;
+  }
+
+  /**
+   * FNS Actuation membership spec
+   * @return value or {@code null} for none
+   */
+  public NamespaceActuationMembershipSpec getNamespaceactuation() {
+    return namespaceactuation;
+  }
+
+  /**
+   * FNS Actuation membership spec
+   * @param namespaceactuation namespaceactuation or {@code null} for none
+   */
+  public MembershipFeatureSpec setNamespaceactuation(NamespaceActuationMembershipSpec namespaceactuation) {
+    this.namespaceactuation = namespaceactuation;
     return this;
   }
 

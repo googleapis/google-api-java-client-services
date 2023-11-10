@@ -72,6 +72,13 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private MultiClusterIngressFeatureSpec multiclusteringress;
 
   /**
+   * Namespace Actuation feature spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NamespaceActuationFeatureSpec namespaceactuation;
+
+  /**
    * Workload Certificate spec.
    * The value may be {@code null}.
    */
@@ -177,6 +184,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setMulticlusteringress(MultiClusterIngressFeatureSpec multiclusteringress) {
     this.multiclusteringress = multiclusteringress;
+    return this;
+  }
+
+  /**
+   * Namespace Actuation feature spec
+   * @return value or {@code null} for none
+   */
+  public NamespaceActuationFeatureSpec getNamespaceactuation() {
+    return namespaceactuation;
+  }
+
+  /**
+   * Namespace Actuation feature spec
+   * @param namespaceactuation namespaceactuation or {@code null} for none
+   */
+  public CommonFeatureSpec setNamespaceactuation(NamespaceActuationFeatureSpec namespaceactuation) {
+    this.namespaceactuation = namespaceactuation;
     return this;
   }
 

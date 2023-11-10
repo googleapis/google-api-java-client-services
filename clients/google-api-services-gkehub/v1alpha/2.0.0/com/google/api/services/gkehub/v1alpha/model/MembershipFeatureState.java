@@ -72,6 +72,13 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
   private MeteringMembershipState metering;
 
   /**
+   * FNS Actuation membership state
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NamespaceActuationMembershipState namespaceactuation;
+
+  /**
    * Policycontroller-specific state.
    * The value may be {@code null}.
    */
@@ -191,6 +198,23 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
    */
   public MembershipFeatureState setMetering(MeteringMembershipState metering) {
     this.metering = metering;
+    return this;
+  }
+
+  /**
+   * FNS Actuation membership state
+   * @return value or {@code null} for none
+   */
+  public NamespaceActuationMembershipState getNamespaceactuation() {
+    return namespaceactuation;
+  }
+
+  /**
+   * FNS Actuation membership state
+   * @param namespaceactuation namespaceactuation or {@code null} for none
+   */
+  public MembershipFeatureState setNamespaceactuation(NamespaceActuationMembershipState namespaceactuation) {
+    this.namespaceactuation = namespaceactuation;
     return this;
   }
 

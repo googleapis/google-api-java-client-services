@@ -51,6 +51,13 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
   private FleetObservabilityFeatureState fleetobservability;
 
   /**
+   * Namespace Actuation feature state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NamespaceActuationFeatureState namespaceactuation;
+
+  /**
    * Service Mesh-specific state.
    * The value may be {@code null}.
    */
@@ -112,6 +119,23 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
    */
   public CommonFeatureState setFleetobservability(FleetObservabilityFeatureState fleetobservability) {
     this.fleetobservability = fleetobservability;
+    return this;
+  }
+
+  /**
+   * Namespace Actuation feature state.
+   * @return value or {@code null} for none
+   */
+  public NamespaceActuationFeatureState getNamespaceactuation() {
+    return namespaceactuation;
+  }
+
+  /**
+   * Namespace Actuation feature state.
+   * @param namespaceactuation namespaceactuation or {@code null} for none
+   */
+  public CommonFeatureState setNamespaceactuation(NamespaceActuationFeatureState namespaceactuation) {
+    this.namespaceactuation = namespaceactuation;
     return this;
   }
 

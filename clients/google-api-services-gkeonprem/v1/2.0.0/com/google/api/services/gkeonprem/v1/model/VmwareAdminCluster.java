@@ -55,6 +55,13 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
   private VmwareAAGConfig antiAffinityGroups;
 
   /**
+   * The VMware admin cluster authorization configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmwareAdminAuthorizationConfig authorization;
+
+  /**
    * The VMware admin cluster auto repair configuration.
    * The value may be {@code null}.
    */
@@ -273,6 +280,23 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
    */
   public VmwareAdminCluster setAntiAffinityGroups(VmwareAAGConfig antiAffinityGroups) {
     this.antiAffinityGroups = antiAffinityGroups;
+    return this;
+  }
+
+  /**
+   * The VMware admin cluster authorization configuration.
+   * @return value or {@code null} for none
+   */
+  public VmwareAdminAuthorizationConfig getAuthorization() {
+    return authorization;
+  }
+
+  /**
+   * The VMware admin cluster authorization configuration.
+   * @param authorization authorization or {@code null} for none
+   */
+  public VmwareAdminCluster setAuthorization(VmwareAdminAuthorizationConfig authorization) {
+    this.authorization = authorization;
     return this;
   }
 

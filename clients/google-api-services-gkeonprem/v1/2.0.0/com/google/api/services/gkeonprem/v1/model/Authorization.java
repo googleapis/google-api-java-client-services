@@ -31,8 +31,8 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class Authorization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. For VMware and bare metal user clusters, users will be granted the cluster-admin role
-   * on the cluster, which provides full administrative access to the cluster. For bare metal admin
+   * For VMware and bare metal user clusters, users will be granted the cluster-admin role on the
+   * cluster, which provides full administrative access to the cluster. For bare metal admin
    * clusters, users will be granted the cluster-view role, which limits users to read-only access.
    * The value may be {@code null}.
    */
@@ -40,8 +40,8 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   private java.util.List<ClusterUser> adminUsers;
 
   /**
-   * Required. For VMware and bare metal user clusters, users will be granted the cluster-admin role
-   * on the cluster, which provides full administrative access to the cluster. For bare metal admin
+   * For VMware and bare metal user clusters, users will be granted the cluster-admin role on the
+   * cluster, which provides full administrative access to the cluster. For bare metal admin
    * clusters, users will be granted the cluster-view role, which limits users to read-only access.
    * @return value or {@code null} for none
    */
@@ -50,8 +50,8 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. For VMware and bare metal user clusters, users will be granted the cluster-admin role
-   * on the cluster, which provides full administrative access to the cluster. For bare metal admin
+   * For VMware and bare metal user clusters, users will be granted the cluster-admin role on the
+   * cluster, which provides full administrative access to the cluster. For bare metal admin
    * clusters, users will be granted the cluster-view role, which limits users to read-only access.
    * @param adminUsers adminUsers or {@code null} for none
    */

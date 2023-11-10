@@ -31,7 +31,10 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DataProfileConfigSnapshot extends com.google.api.client.json.GenericJson {
 
   /**
-   * A copy of the configuration used to generate this profile.
+   * A copy of the configuration used to generate this profile. This is deprecated and will be
+   * replaced by DiscoveryConfig. DataProfileJobConfig will still be written here for Discovery in
+   * BigQuery for backwards compatibility, but will not be updated with new fields, while
+   * DiscoveryConfig will.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +49,10 @@ public final class GooglePrivacyDlpV2DataProfileConfigSnapshot extends com.googl
   private GooglePrivacyDlpV2InspectConfig inspectConfig;
 
   /**
-   * A copy of the configuration used to generate this profile.
+   * A copy of the configuration used to generate this profile. This is deprecated and will be
+   * replaced by DiscoveryConfig. DataProfileJobConfig will still be written here for Discovery in
+   * BigQuery for backwards compatibility, but will not be updated with new fields, while
+   * DiscoveryConfig will.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DataProfileJobConfig getDataProfileJob() {
@@ -54,7 +60,10 @@ public final class GooglePrivacyDlpV2DataProfileConfigSnapshot extends com.googl
   }
 
   /**
-   * A copy of the configuration used to generate this profile.
+   * A copy of the configuration used to generate this profile. This is deprecated and will be
+   * replaced by DiscoveryConfig. DataProfileJobConfig will still be written here for Discovery in
+   * BigQuery for backwards compatibility, but will not be updated with new fields, while
+   * DiscoveryConfig will.
    * @param dataProfileJob dataProfileJob or {@code null} for none
    */
   public GooglePrivacyDlpV2DataProfileConfigSnapshot setDataProfileJob(GooglePrivacyDlpV2DataProfileJobConfig dataProfileJob) {

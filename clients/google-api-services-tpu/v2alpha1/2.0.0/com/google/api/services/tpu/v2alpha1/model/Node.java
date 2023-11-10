@@ -51,6 +51,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.lang.String apiVersion;
 
   /**
+   * Optional. Whether Autocheckpoint is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autocheckpointEnabled;
+
+  /**
    * Optional. Boot disk configuration.
    * The value may be {@code null}.
    */
@@ -273,6 +280,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Whether Autocheckpoint is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutocheckpointEnabled() {
+    return autocheckpointEnabled;
+  }
+
+  /**
+   * Optional. Whether Autocheckpoint is enabled.
+   * @param autocheckpointEnabled autocheckpointEnabled or {@code null} for none
+   */
+  public Node setAutocheckpointEnabled(java.lang.Boolean autocheckpointEnabled) {
+    this.autocheckpointEnabled = autocheckpointEnabled;
     return this;
   }
 

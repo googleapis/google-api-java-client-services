@@ -40,6 +40,14 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   private java.lang.String backup;
 
   /**
+   * Optional. A Cloud Storage URI specifying where the backup artifacts are stored, in the format
+   * gs:.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupLocation;
+
+  /**
    * Output only. The restore details containing the revision of the service to be restored to, in
    * format of JSON.
    * The value may be {@code null}.
@@ -93,6 +101,25 @@ public final class Restore extends com.google.api.client.json.GenericJson {
    */
   public Restore setBackup(java.lang.String backup) {
     this.backup = backup;
+    return this;
+  }
+
+  /**
+   * Optional. A Cloud Storage URI specifying where the backup artifacts are stored, in the format
+   * gs:.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupLocation() {
+    return backupLocation;
+  }
+
+  /**
+   * Optional. A Cloud Storage URI specifying where the backup artifacts are stored, in the format
+   * gs:.
+   * @param backupLocation backupLocation or {@code null} for none
+   */
+  public Restore setBackupLocation(java.lang.String backupLocation) {
+    this.backupLocation = backupLocation;
     return this;
   }
 

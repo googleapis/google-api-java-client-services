@@ -64,6 +64,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private Capacity capacity;
 
   /**
+   * Optional. List of certifications claimed by this product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleShoppingManufacturersV1ProductCertification> certification;
+
+  /**
    * The color of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#color.
    * The value may be {@code null}.
@@ -425,6 +432,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setCapacity(Capacity capacity) {
     this.capacity = capacity;
+    return this;
+  }
+
+  /**
+   * Optional. List of certifications claimed by this product.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleShoppingManufacturersV1ProductCertification> getCertification() {
+    return certification;
+  }
+
+  /**
+   * Optional. List of certifications claimed by this product.
+   * @param certification certification or {@code null} for none
+   */
+  public Attributes setCertification(java.util.List<GoogleShoppingManufacturersV1ProductCertification> certification) {
+    this.certification = certification;
     return this;
   }
 

@@ -310,6 +310,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private Settings settings;
 
   /**
+   * The SQL network architecture for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sqlNetworkArchitecture;
+
+  /**
    * The current serving state of the Cloud SQL instance.
    * The value may be {@code null}.
    */
@@ -998,6 +1005,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setSettings(Settings settings) {
     this.settings = settings;
+    return this;
+  }
+
+  /**
+   * The SQL network architecture for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSqlNetworkArchitecture() {
+    return sqlNetworkArchitecture;
+  }
+
+  /**
+   * The SQL network architecture for the instance.
+   * @param sqlNetworkArchitecture sqlNetworkArchitecture or {@code null} for none
+   */
+  public DatabaseInstance setSqlNetworkArchitecture(java.lang.String sqlNetworkArchitecture) {
+    this.sqlNetworkArchitecture = sqlNetworkArchitecture;
     return this;
   }
 

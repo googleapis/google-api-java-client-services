@@ -31,6 +31,13 @@ package com.google.api.services.sqladmin.model;
 public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
+   * An Admin API warning message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ApiWarning apiWarning;
+
+  /**
    * The context for backup operation, if applicable.
    * The value may be {@code null}.
    */
@@ -146,6 +153,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String user;
+
+  /**
+   * An Admin API warning message.
+   * @return value or {@code null} for none
+   */
+  public ApiWarning getApiWarning() {
+    return apiWarning;
+  }
+
+  /**
+   * An Admin API warning message.
+   * @param apiWarning apiWarning or {@code null} for none
+   */
+  public Operation setApiWarning(ApiWarning apiWarning) {
+    this.apiWarning = apiWarning;
+    return this;
+  }
 
   /**
    * The context for backup operation, if applicable.

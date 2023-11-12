@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1ReportExecutionEventRequest exten
   private java.lang.String eventType;
 
   /**
+   * Optional. The error details of the event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcStatus status;
+
+  /**
    * Required. The VM identity token (a JWT) for authenticating the VM.
    * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
    * The value may be {@code null}.
@@ -58,6 +65,23 @@ public final class GoogleCloudAiplatformV1beta1ReportExecutionEventRequest exten
    */
   public GoogleCloudAiplatformV1beta1ReportExecutionEventRequest setEventType(java.lang.String eventType) {
     this.eventType = eventType;
+    return this;
+  }
+
+  /**
+   * Optional. The error details of the event.
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * Optional. The error details of the event.
+   * @param status status or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReportExecutionEventRequest setStatus(GoogleRpcStatus status) {
+    this.status = status;
     return this;
   }
 

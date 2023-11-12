@@ -97,15 +97,6 @@ public final class GoogleCloudAiplatformV1FeatureView extends com.google.api.cli
   private String updateTime;
 
   /**
-   * Optional. Configuration for vector search. It contains the required configurations to create an
-   * index from source data, so that approximate nearest neighbor (a.k.a ANN) algorithms search can
-   * be performed during online serving.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1FeatureViewVectorSearchConfig vectorSearchConfig;
-
-  /**
    * Optional. Configures how data is supposed to be extracted from a BigQuery source to be loaded
    * onto the FeatureOnlineStore.
    * @return value or {@code null} for none
@@ -258,27 +249,6 @@ public final class GoogleCloudAiplatformV1FeatureView extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1FeatureView setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
-    return this;
-  }
-
-  /**
-   * Optional. Configuration for vector search. It contains the required configurations to create an
-   * index from source data, so that approximate nearest neighbor (a.k.a ANN) algorithms search can
-   * be performed during online serving.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1FeatureViewVectorSearchConfig getVectorSearchConfig() {
-    return vectorSearchConfig;
-  }
-
-  /**
-   * Optional. Configuration for vector search. It contains the required configurations to create an
-   * index from source data, so that approximate nearest neighbor (a.k.a ANN) algorithms search can
-   * be performed during online serving.
-   * @param vectorSearchConfig vectorSearchConfig or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1FeatureView setVectorSearchConfig(GoogleCloudAiplatformV1FeatureViewVectorSearchConfig vectorSearchConfig) {
-    this.vectorSearchConfig = vectorSearchConfig;
     return this;
   }
 

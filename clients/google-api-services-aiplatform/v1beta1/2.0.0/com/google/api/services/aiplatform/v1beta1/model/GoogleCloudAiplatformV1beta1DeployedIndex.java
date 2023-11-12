@@ -49,14 +49,14 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
 
   /**
    * Optional. A description of resources that are dedicated to the DeployedIndex, and that need a
-   * higher degree of manual configuration. If min_replica_count is not set, the default value is 2
-   * (we don't provide SLA when min_replica_count=1). If max_replica_count is not set, the default
-   * value is min_replica_count. The max allowed replica count is 1000. Available machine types for
-   * SMALL shard: e2-standard-2 and all machine types available for MEDIUM and LARGE shard.
-   * Available machine types for MEDIUM shard: e2-standard-16 and all machine types available for
-   * LARGE shard. Available machine types for LARGE shard: e2-highmem-16, n2d-standard-32.
-   * n1-standard-16 and n1-standard-32 are still available, but we recommend e2-standard-16 and
-   * e2-highmem-16 for cost efficiency.
+   * higher degree of manual configuration. The field min_replica_count must be set to a value
+   * strictly greater than 0, or else validation will fail. We don't provide SLA when
+   * min_replica_count=1. If max_replica_count is not set, the default value is min_replica_count.
+   * The max allowed replica count is 1000. Available machine types for SMALL shard: e2-standard-2
+   * and all machine types available for MEDIUM and LARGE shard. Available machine types for MEDIUM
+   * shard: e2-standard-16 and all machine types available for LARGE shard. Available machine types
+   * for LARGE shard: e2-highmem-16, n2d-standard-32. n1-standard-16 and n1-standard-32 are still
+   * available, but we recommend e2-standard-16 and e2-highmem-16 for cost efficiency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,14 +197,14 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
 
   /**
    * Optional. A description of resources that are dedicated to the DeployedIndex, and that need a
-   * higher degree of manual configuration. If min_replica_count is not set, the default value is 2
-   * (we don't provide SLA when min_replica_count=1). If max_replica_count is not set, the default
-   * value is min_replica_count. The max allowed replica count is 1000. Available machine types for
-   * SMALL shard: e2-standard-2 and all machine types available for MEDIUM and LARGE shard.
-   * Available machine types for MEDIUM shard: e2-standard-16 and all machine types available for
-   * LARGE shard. Available machine types for LARGE shard: e2-highmem-16, n2d-standard-32.
-   * n1-standard-16 and n1-standard-32 are still available, but we recommend e2-standard-16 and
-   * e2-highmem-16 for cost efficiency.
+   * higher degree of manual configuration. The field min_replica_count must be set to a value
+   * strictly greater than 0, or else validation will fail. We don't provide SLA when
+   * min_replica_count=1. If max_replica_count is not set, the default value is min_replica_count.
+   * The max allowed replica count is 1000. Available machine types for SMALL shard: e2-standard-2
+   * and all machine types available for MEDIUM and LARGE shard. Available machine types for MEDIUM
+   * shard: e2-standard-16 and all machine types available for LARGE shard. Available machine types
+   * for LARGE shard: e2-highmem-16, n2d-standard-32. n1-standard-16 and n1-standard-32 are still
+   * available, but we recommend e2-standard-16 and e2-highmem-16 for cost efficiency.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DedicatedResources getDedicatedResources() {
@@ -213,14 +213,14 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
 
   /**
    * Optional. A description of resources that are dedicated to the DeployedIndex, and that need a
-   * higher degree of manual configuration. If min_replica_count is not set, the default value is 2
-   * (we don't provide SLA when min_replica_count=1). If max_replica_count is not set, the default
-   * value is min_replica_count. The max allowed replica count is 1000. Available machine types for
-   * SMALL shard: e2-standard-2 and all machine types available for MEDIUM and LARGE shard.
-   * Available machine types for MEDIUM shard: e2-standard-16 and all machine types available for
-   * LARGE shard. Available machine types for LARGE shard: e2-highmem-16, n2d-standard-32.
-   * n1-standard-16 and n1-standard-32 are still available, but we recommend e2-standard-16 and
-   * e2-highmem-16 for cost efficiency.
+   * higher degree of manual configuration. The field min_replica_count must be set to a value
+   * strictly greater than 0, or else validation will fail. We don't provide SLA when
+   * min_replica_count=1. If max_replica_count is not set, the default value is min_replica_count.
+   * The max allowed replica count is 1000. Available machine types for SMALL shard: e2-standard-2
+   * and all machine types available for MEDIUM and LARGE shard. Available machine types for MEDIUM
+   * shard: e2-standard-16 and all machine types available for LARGE shard. Available machine types
+   * for LARGE shard: e2-highmem-16, n2d-standard-32. n1-standard-16 and n1-standard-32 are still
+   * available, but we recommend e2-standard-16 and e2-highmem-16 for cost efficiency.
    * @param dedicatedResources dedicatedResources or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DeployedIndex setDedicatedResources(GoogleCloudAiplatformV1beta1DedicatedResources dedicatedResources) {

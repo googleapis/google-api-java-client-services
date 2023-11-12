@@ -12962,6 +12962,277 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
       public class Endpoints {
 
         /**
+         * Return a list of tokens based on the input text.
+         *
+         * Create a request for the method "endpoints.computeTokens".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link ComputeTokens#execute()} method to invoke the remote operation.
+         *
+         * @param endpoint Required. The name of the Endpoint requested to get lists of tokens and token ids.
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensRequest}
+         * @return the request
+         */
+        public ComputeTokens computeTokens(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensRequest content) throws java.io.IOException {
+          ComputeTokens result = new ComputeTokens(endpoint, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ComputeTokens extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensResponse> {
+
+          private static final String REST_PATH = "v1/{+endpoint}:computeTokens";
+
+          private final java.util.regex.Pattern ENDPOINT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Return a list of tokens based on the input text.
+           *
+           * Create a request for the method "endpoints.computeTokens".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link ComputeTokens#execute()} method to invoke the remote
+           * operation. <p> {@link ComputeTokens#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param endpoint Required. The name of the Endpoint requested to get lists of tokens and token ids.
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensRequest}
+           * @since 1.13
+           */
+          protected ComputeTokens(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensResponse.class);
+            this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public ComputeTokens set$Xgafv(java.lang.String $Xgafv) {
+            return (ComputeTokens) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ComputeTokens setAccessToken(java.lang.String accessToken) {
+            return (ComputeTokens) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ComputeTokens setAlt(java.lang.String alt) {
+            return (ComputeTokens) super.setAlt(alt);
+          }
+
+          @Override
+          public ComputeTokens setCallback(java.lang.String callback) {
+            return (ComputeTokens) super.setCallback(callback);
+          }
+
+          @Override
+          public ComputeTokens setFields(java.lang.String fields) {
+            return (ComputeTokens) super.setFields(fields);
+          }
+
+          @Override
+          public ComputeTokens setKey(java.lang.String key) {
+            return (ComputeTokens) super.setKey(key);
+          }
+
+          @Override
+          public ComputeTokens setOauthToken(java.lang.String oauthToken) {
+            return (ComputeTokens) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ComputeTokens setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ComputeTokens) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ComputeTokens setQuotaUser(java.lang.String quotaUser) {
+            return (ComputeTokens) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ComputeTokens setUploadType(java.lang.String uploadType) {
+            return (ComputeTokens) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ComputeTokens setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ComputeTokens) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the Endpoint requested to get lists of tokens and token ids. */
+          @com.google.api.client.util.Key
+          private java.lang.String endpoint;
+
+          /** Required. The name of the Endpoint requested to get lists of tokens and token ids.
+           */
+          public java.lang.String getEndpoint() {
+            return endpoint;
+          }
+
+          /** Required. The name of the Endpoint requested to get lists of tokens and token ids. */
+          public ComputeTokens setEndpoint(java.lang.String endpoint) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.endpoint = endpoint;
+            return this;
+          }
+
+          @Override
+          public ComputeTokens set(String parameterName, Object value) {
+            return (ComputeTokens) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Perform a token counting.
+         *
+         * Create a request for the method "endpoints.countTokens".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link CountTokens#execute()} method to invoke the remote operation.
+         *
+         * @param endpoint Required. The name of the Endpoint requested to perform token counting. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensRequest}
+         * @return the request
+         */
+        public CountTokens countTokens(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensRequest content) throws java.io.IOException {
+          CountTokens result = new CountTokens(endpoint, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CountTokens extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensResponse> {
+
+          private static final String REST_PATH = "v1/{+endpoint}:countTokens";
+
+          private final java.util.regex.Pattern ENDPOINT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Perform a token counting.
+           *
+           * Create a request for the method "endpoints.countTokens".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link CountTokens#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * CountTokens#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param endpoint Required. The name of the Endpoint requested to perform token counting. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensRequest}
+           * @since 1.13
+           */
+          protected CountTokens(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensResponse.class);
+            this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public CountTokens set$Xgafv(java.lang.String $Xgafv) {
+            return (CountTokens) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CountTokens setAccessToken(java.lang.String accessToken) {
+            return (CountTokens) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CountTokens setAlt(java.lang.String alt) {
+            return (CountTokens) super.setAlt(alt);
+          }
+
+          @Override
+          public CountTokens setCallback(java.lang.String callback) {
+            return (CountTokens) super.setCallback(callback);
+          }
+
+          @Override
+          public CountTokens setFields(java.lang.String fields) {
+            return (CountTokens) super.setFields(fields);
+          }
+
+          @Override
+          public CountTokens setKey(java.lang.String key) {
+            return (CountTokens) super.setKey(key);
+          }
+
+          @Override
+          public CountTokens setOauthToken(java.lang.String oauthToken) {
+            return (CountTokens) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CountTokens setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CountTokens) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CountTokens setQuotaUser(java.lang.String quotaUser) {
+            return (CountTokens) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CountTokens setUploadType(java.lang.String uploadType) {
+            return (CountTokens) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CountTokens setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CountTokens) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to perform token counting. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String endpoint;
+
+          /** Required. The name of the Endpoint requested to perform token counting. Format:
+         `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          public java.lang.String getEndpoint() {
+            return endpoint;
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to perform token counting. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          public CountTokens setEndpoint(java.lang.String endpoint) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.endpoint = endpoint;
+            return this;
+          }
+
+          @Override
+          public CountTokens set(String parameterName, Object value) {
+            return (CountTokens) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates an Endpoint.
          *
          * Create a request for the method "endpoints.create".
@@ -55949,6 +56220,281 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          */
         public class Models {
 
+          /**
+           * Return a list of tokens based on the input text.
+           *
+           * Create a request for the method "models.computeTokens".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link ComputeTokens#execute()} method to invoke the remote operation.
+           *
+           * @param endpoint Required. The name of the Endpoint requested to get lists of tokens and token ids.
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensRequest}
+           * @return the request
+           */
+          public ComputeTokens computeTokens(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensRequest content) throws java.io.IOException {
+            ComputeTokens result = new ComputeTokens(endpoint, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ComputeTokens extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensResponse> {
+
+            private static final String REST_PATH = "v1/{+endpoint}:computeTokens";
+
+            private final java.util.regex.Pattern ENDPOINT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+
+            /**
+             * Return a list of tokens based on the input text.
+             *
+             * Create a request for the method "models.computeTokens".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link ComputeTokens#execute()} method to invoke the remote
+             * operation. <p> {@link ComputeTokens#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param endpoint Required. The name of the Endpoint requested to get lists of tokens and token ids.
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensRequest}
+             * @since 1.13
+             */
+            protected ComputeTokens(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1ComputeTokensResponse.class);
+              this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public ComputeTokens set$Xgafv(java.lang.String $Xgafv) {
+              return (ComputeTokens) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ComputeTokens setAccessToken(java.lang.String accessToken) {
+              return (ComputeTokens) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ComputeTokens setAlt(java.lang.String alt) {
+              return (ComputeTokens) super.setAlt(alt);
+            }
+
+            @Override
+            public ComputeTokens setCallback(java.lang.String callback) {
+              return (ComputeTokens) super.setCallback(callback);
+            }
+
+            @Override
+            public ComputeTokens setFields(java.lang.String fields) {
+              return (ComputeTokens) super.setFields(fields);
+            }
+
+            @Override
+            public ComputeTokens setKey(java.lang.String key) {
+              return (ComputeTokens) super.setKey(key);
+            }
+
+            @Override
+            public ComputeTokens setOauthToken(java.lang.String oauthToken) {
+              return (ComputeTokens) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ComputeTokens setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ComputeTokens) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ComputeTokens setQuotaUser(java.lang.String quotaUser) {
+              return (ComputeTokens) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ComputeTokens setUploadType(java.lang.String uploadType) {
+              return (ComputeTokens) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ComputeTokens setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ComputeTokens) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to get lists of tokens and token ids.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String endpoint;
+
+            /** Required. The name of the Endpoint requested to get lists of tokens and token ids.
+             */
+            public java.lang.String getEndpoint() {
+              return endpoint;
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to get lists of tokens and token ids.
+             */
+            public ComputeTokens setEndpoint(java.lang.String endpoint) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+              this.endpoint = endpoint;
+              return this;
+            }
+
+            @Override
+            public ComputeTokens set(String parameterName, Object value) {
+              return (ComputeTokens) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Perform a token counting.
+           *
+           * Create a request for the method "models.countTokens".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link CountTokens#execute()} method to invoke the remote operation.
+           *
+           * @param endpoint Required. The name of the Endpoint requested to perform token counting. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensRequest}
+           * @return the request
+           */
+          public CountTokens countTokens(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensRequest content) throws java.io.IOException {
+            CountTokens result = new CountTokens(endpoint, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CountTokens extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensResponse> {
+
+            private static final String REST_PATH = "v1/{+endpoint}:countTokens";
+
+            private final java.util.regex.Pattern ENDPOINT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+
+            /**
+             * Perform a token counting.
+             *
+             * Create a request for the method "models.countTokens".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link CountTokens#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * CountTokens#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param endpoint Required. The name of the Endpoint requested to perform token counting. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensRequest}
+             * @since 1.13
+             */
+            protected CountTokens(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CountTokensResponse.class);
+              this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public CountTokens set$Xgafv(java.lang.String $Xgafv) {
+              return (CountTokens) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CountTokens setAccessToken(java.lang.String accessToken) {
+              return (CountTokens) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CountTokens setAlt(java.lang.String alt) {
+              return (CountTokens) super.setAlt(alt);
+            }
+
+            @Override
+            public CountTokens setCallback(java.lang.String callback) {
+              return (CountTokens) super.setCallback(callback);
+            }
+
+            @Override
+            public CountTokens setFields(java.lang.String fields) {
+              return (CountTokens) super.setFields(fields);
+            }
+
+            @Override
+            public CountTokens setKey(java.lang.String key) {
+              return (CountTokens) super.setKey(key);
+            }
+
+            @Override
+            public CountTokens setOauthToken(java.lang.String oauthToken) {
+              return (CountTokens) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CountTokens setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CountTokens) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CountTokens setQuotaUser(java.lang.String quotaUser) {
+              return (CountTokens) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CountTokens setUploadType(java.lang.String uploadType) {
+              return (CountTokens) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CountTokens setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CountTokens) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to perform token counting. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String endpoint;
+
+            /** Required. The name of the Endpoint requested to perform token counting. Format:
+           `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            public java.lang.String getEndpoint() {
+              return endpoint;
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to perform token counting. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            public CountTokens setEndpoint(java.lang.String endpoint) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+              this.endpoint = endpoint;
+              return this;
+            }
+
+            @Override
+            public CountTokens set(String parameterName, Object value) {
+              return (CountTokens) super.set(parameterName, value);
+            }
+          }
           /**
            * Perform an online prediction.
            *

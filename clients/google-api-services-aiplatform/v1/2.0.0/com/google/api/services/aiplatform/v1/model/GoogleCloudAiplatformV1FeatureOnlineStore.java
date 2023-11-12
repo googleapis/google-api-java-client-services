@@ -46,21 +46,6 @@ public final class GoogleCloudAiplatformV1FeatureOnlineStore extends com.google.
   private String createTime;
 
   /**
-   * Optional. The dedicated serving endpoint for this FeatureOnlineStore, which is different from
-   * common Vertex service endpoint.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint dedicatedServingEndpoint;
-
-  /**
-   * Optional. The settings for embedding management in FeatureOnlineStore.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement embeddingManagement;
-
-  /**
    * Optional. Used to perform consistent read-modify-write updates. If not set, a blind "overwrite"
    * update happens.
    * The value may be {@code null}.
@@ -135,42 +120,6 @@ public final class GoogleCloudAiplatformV1FeatureOnlineStore extends com.google.
    */
   public GoogleCloudAiplatformV1FeatureOnlineStore setCreateTime(String createTime) {
     this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * Optional. The dedicated serving endpoint for this FeatureOnlineStore, which is different from
-   * common Vertex service endpoint.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint getDedicatedServingEndpoint() {
-    return dedicatedServingEndpoint;
-  }
-
-  /**
-   * Optional. The dedicated serving endpoint for this FeatureOnlineStore, which is different from
-   * common Vertex service endpoint.
-   * @param dedicatedServingEndpoint dedicatedServingEndpoint or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1FeatureOnlineStore setDedicatedServingEndpoint(GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint dedicatedServingEndpoint) {
-    this.dedicatedServingEndpoint = dedicatedServingEndpoint;
-    return this;
-  }
-
-  /**
-   * Optional. The settings for embedding management in FeatureOnlineStore.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement getEmbeddingManagement() {
-    return embeddingManagement;
-  }
-
-  /**
-   * Optional. The settings for embedding management in FeatureOnlineStore.
-   * @param embeddingManagement embeddingManagement or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1FeatureOnlineStore setEmbeddingManagement(GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement embeddingManagement) {
-    this.embeddingManagement = embeddingManagement;
     return this;
   }
 

@@ -45,7 +45,9 @@ public final class DnsSettings extends com.google.api.client.json.GenericJson {
   private java.util.List<GlueRecord> glueRecords;
 
   /**
-   * The free DNS zone provided by [Google Domains](https://domains.google/).
+   * Deprecated: For more information, see [Cloud Domains feature
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The free
+   * DNS zone provided by [Google Domains](https://domains.google/).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +88,9 @@ public final class DnsSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The free DNS zone provided by [Google Domains](https://domains.google/).
+   * Deprecated: For more information, see [Cloud Domains feature
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The free
+   * DNS zone provided by [Google Domains](https://domains.google/).
    * @return value or {@code null} for none
    */
   public GoogleDomainsDns getGoogleDomainsDns() {
@@ -94,7 +98,9 @@ public final class DnsSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The free DNS zone provided by [Google Domains](https://domains.google/).
+   * Deprecated: For more information, see [Cloud Domains feature
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The free
+   * DNS zone provided by [Google Domains](https://domains.google/).
    * @param googleDomainsDns googleDomainsDns or {@code null} for none
    */
   public DnsSettings setGoogleDomainsDns(GoogleDomainsDns googleDomainsDns) {

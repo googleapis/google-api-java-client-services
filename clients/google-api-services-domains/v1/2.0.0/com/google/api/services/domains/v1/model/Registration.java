@@ -23,13 +23,16 @@ package com.google.api.services.domains.v1.model;
  * available domain name options. After choosing a name, call `RetrieveRegisterParameters` to ensure
  * availability and obtain information like pricing, which is needed to build a call to
  * `RegisterDomain`. Another way to create a new `Registration` is to transfer an existing domain
- * from another registrar. First, go to the current registrar to unlock the domain for transfer and
- * retrieve the domain's transfer authorization code. Then call `RetrieveTransferParameters` to
- * confirm that the domain is unlocked and to get values needed to build a call to `TransferDomain`.
- * Finally, you can create a new `Registration` by importing an existing domain managed with [Google
- * Domains](https://domains.google/). First, call `RetrieveImportableDomains` to list domains to
- * which the calling user has sufficient access. Then call `ImportDomain` on any domain names you
- * want to use with Cloud Domains.
+ * from another registrar (Deprecated: For more information, see [Cloud Domains feature
+ * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations)). First, go
+ * to the current registrar to unlock the domain for transfer and retrieve the domain's transfer
+ * authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked
+ * and to get values needed to build a call to `TransferDomain`. Finally, you can create a new
+ * `Registration` by importing an existing domain managed with [Google
+ * Domains](https://domains.google/) (Deprecated: For more information, see [Cloud Domains feature
+ * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations)). First,
+ * call `RetrieveImportableDomains` to list domains to which the calling user has sufficient access.
+ * Then call `ImportDomain` on any domain names you want to use with Cloud Domains.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Domains API. For a detailed explanation see:
@@ -147,8 +150,9 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> supportedPrivacy;
 
   /**
-   * Output only. The reason the domain transfer failed. Only set for domains in TRANSFER_FAILED
-   * state.
+   * Output only. Deprecated: For more information, see [Cloud Domains feature
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The
+   * reason the domain transfer failed. Only set for domains in TRANSFER_FAILED state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -404,8 +408,9 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reason the domain transfer failed. Only set for domains in TRANSFER_FAILED
-   * state.
+   * Output only. Deprecated: For more information, see [Cloud Domains feature
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The
+   * reason the domain transfer failed. Only set for domains in TRANSFER_FAILED state.
    * @return value or {@code null} for none
    */
   public java.lang.String getTransferFailureReason() {
@@ -413,8 +418,9 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reason the domain transfer failed. Only set for domains in TRANSFER_FAILED
-   * state.
+   * Output only. Deprecated: For more information, see [Cloud Domains feature
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The
+   * reason the domain transfer failed. Only set for domains in TRANSFER_FAILED state.
    * @param transferFailureReason transferFailureReason or {@code null} for none
    */
   public Registration setTransferFailureReason(java.lang.String transferFailureReason) {

@@ -1312,13 +1312,15 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
         /**
          * Deletes a `Registration` resource. This method works on any `Registration` resource using
          * [Subscription or Commitment billing](/domains/pricing#billing-models), provided that the resource
-         * was created at least 1 day in the past. For `Registration` resources using [Monthly
-         * billing](/domains/pricing#billing-models), this method works if: * `state` is `EXPORTED` with
-         * `expire_time` in the past * `state` is `REGISTRATION_FAILED` * `state` is `TRANSFER_FAILED` When
-         * an active registration is successfully deleted, you can continue to use the domain in [Google
-         * Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole
-         * owner in Google Domains, and permissions for the domain are subsequently managed there. The
-         * domain does not renew automatically unless the new owner sets up billing in Google Domains.
+         * was created at least 1 day in the past. When an active registration is successfully deleted, you
+         * can continue to use the domain in [Google Domains](https://domains.google/) until it expires. The
+         * calling user becomes the domain's sole owner in Google Domains, and permissions for the domain
+         * are subsequently managed there. The domain does not renew automatically unless the new owner sets
+         * up billing in Google Domains. After January 2024 you will only be able to delete `Registration`
+         * resources when `state` is one of: `EXPORTED`, `EXPIRED`,`REGISTRATION_FAILED` or
+         * `TRANSFER_FAILED`. See [Cloud Domains feature
+         * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) for more
+         * details.
          *
          * Create a request for the method "registrations.delete".
          *
@@ -1345,14 +1347,15 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           /**
            * Deletes a `Registration` resource. This method works on any `Registration` resource using
            * [Subscription or Commitment billing](/domains/pricing#billing-models), provided that the
-           * resource was created at least 1 day in the past. For `Registration` resources using [Monthly
-           * billing](/domains/pricing#billing-models), this method works if: * `state` is `EXPORTED` with
-           * `expire_time` in the past * `state` is `REGISTRATION_FAILED` * `state` is `TRANSFER_FAILED`
-           * When an active registration is successfully deleted, you can continue to use the domain in
-           * [Google Domains](https://domains.google/) until it expires. The calling user becomes the
-           * domain's sole owner in Google Domains, and permissions for the domain are subsequently managed
-           * there. The domain does not renew automatically unless the new owner sets up billing in Google
-           * Domains.
+           * resource was created at least 1 day in the past. When an active registration is successfully
+           * deleted, you can continue to use the domain in [Google Domains](https://domains.google/) until
+           * it expires. The calling user becomes the domain's sole owner in Google Domains, and permissions
+           * for the domain are subsequently managed there. The domain does not renew automatically unless
+           * the new owner sets up billing in Google Domains. After January 2024 you will only be able to
+           * delete `Registration` resources when `state` is one of: `EXPORTED`,
+           * `EXPIRED`,`REGISTRATION_FAILED` or `TRANSFER_FAILED`. See [Cloud Domains feature
+           * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) for more
+           * details.
            *
            * Create a request for the method "registrations.delete".
            *
@@ -1464,8 +1467,10 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Exports a `Registration` resource, such that it is no longer managed by Cloud Domains. When an
-         * active domain is successfully exported, you can continue to use the domain in [Google
+         * Deprecated: For more information, see [Cloud Domains feature
+         * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Exports a
+         * `Registration` resource, such that it is no longer managed by Cloud Domains. When an active
+         * domain is successfully exported, you can continue to use the domain in [Google
          * Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole
          * owner in Google Domains, and permissions for the domain are subsequently managed there. The
          * domain does not renew automatically unless the new owner sets up billing in Google Domains.
@@ -1494,8 +1499,10 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
 
           /**
-           * Exports a `Registration` resource, such that it is no longer managed by Cloud Domains. When an
-           * active domain is successfully exported, you can continue to use the domain in [Google
+           * Deprecated: For more information, see [Cloud Domains feature
+           * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Exports a
+           * `Registration` resource, such that it is no longer managed by Cloud Domains. When an active
+           * domain is successfully exported, you can continue to use the domain in [Google
            * Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole
            * owner in Google Domains, and permissions for the domain are subsequently managed there. The
            * domain does not renew automatically unless the new owner sets up billing in Google Domains.
@@ -1953,10 +1960,11 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Imports a domain name from [Google Domains](https://domains.google/) for use in Cloud Domains. To
-         * transfer a domain from another registrar, use the `TransferDomain` method instead. Since
-         * individual users can own domains in Google Domains, the calling user must have ownership
-         * permission on the domain.
+         * Deprecated: For more information, see [Cloud Domains feature
+         * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Imports a
+         * domain name from [Google Domains](https://domains.google/) for use in Cloud Domains. To transfer
+         * a domain from another registrar, use the `TransferDomain` method instead. Since individual users
+         * can own domains in Google Domains, the calling user must have ownership permission on the domain.
          *
          * Create a request for the method "registrations.import".
          *
@@ -1981,8 +1989,10 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Imports a domain name from [Google Domains](https://domains.google/) for use in Cloud Domains.
-           * To transfer a domain from another registrar, use the `TransferDomain` method instead. Since
+           * Deprecated: For more information, see [Cloud Domains feature
+           * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Imports a
+           * domain name from [Google Domains](https://domains.google/) for use in Cloud Domains. To
+           * transfer a domain from another registrar, use the `TransferDomain` method instead. Since
            * individual users can own domains in Google Domains, the calling user must have ownership
            * permission on the domain.
            *
@@ -2940,10 +2950,12 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Lists domain names from [Google Domains](https://domains.google/) that can be imported to Cloud
-         * Domains using the `ImportDomain` method. Since individual users can own domains in Google
-         * Domains, the list of domains returned depends on the individual user making the call. Domains
-         * already managed by Cloud Domains are not returned.
+         * Deprecated: For more information, see [Cloud Domains feature
+         * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Lists
+         * domain names from [Google Domains](https://domains.google/) that can be imported to Cloud Domains
+         * using the `ImportDomain` method. Since individual users can own domains in Google Domains, the
+         * list of domains returned depends on the individual user making the call. Domains already managed
+         * by Cloud Domains are not returned.
          *
          * Create a request for the method "registrations.retrieveImportableDomains".
          *
@@ -2968,7 +2980,9 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists domain names from [Google Domains](https://domains.google/) that can be imported to Cloud
+           * Deprecated: For more information, see [Cloud Domains feature
+           * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Lists
+           * domain names from [Google Domains](https://domains.google/) that can be imported to Cloud
            * Domains using the `ImportDomain` method. Since individual users can own domains in Google
            * Domains, the list of domains returned depends on the individual user making the call. Domains
            * already managed by Cloud Domains are not returned.
@@ -3286,9 +3300,11 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Gets parameters needed to transfer a domain name from another registrar to Cloud Domains. For
-         * domains already managed by [Google Domains](https://domains.google/), use `ImportDomain` instead.
-         * Use the returned values to call `TransferDomain`.
+         * Deprecated: For more information, see [Cloud Domains feature
+         * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Gets
+         * parameters needed to transfer a domain name from another registrar to Cloud Domains. For domains
+         * already managed by [Google Domains](https://domains.google/), use `ImportDomain` instead. Use the
+         * returned values to call `TransferDomain`.
          *
          * Create a request for the method "registrations.retrieveTransferParameters".
          *
@@ -3313,7 +3329,9 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Gets parameters needed to transfer a domain name from another registrar to Cloud Domains. For
+           * Deprecated: For more information, see [Cloud Domains feature
+           * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Gets
+           * parameters needed to transfer a domain name from another registrar to Cloud Domains. For
            * domains already managed by [Google Domains](https://domains.google/), use `ImportDomain`
            * instead. Use the returned values to call `TransferDomain`.
            *
@@ -3907,18 +3925,20 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Transfers a domain name from another registrar to Cloud Domains. For domains already managed by
-         * [Google Domains](https://domains.google/), use `ImportDomain` instead. Before calling this
-         * method, go to the domain's current registrar to unlock the domain for transfer and retrieve the
-         * domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the
-         * domain is unlocked and to get values needed to build a call to this method. A successful call
-         * creates a `Registration` resource in state `TRANSFER_PENDING`. It can take several days to
-         * complete the transfer process. The registrant can often speed up this process by approving the
-         * transfer through the current registrar, either by clicking a link in an email from the registrar
-         * or by visiting the registrar's website. A few minutes after transfer approval, the resource
-         * transitions to state `ACTIVE`, indicating that the transfer was successful. If the transfer is
-         * rejected or the request expires without being approved, the resource can end up in state
-         * `TRANSFER_FAILED`. If transfer fails, you can safely delete the resource and retry the transfer.
+         * Deprecated: For more information, see [Cloud Domains feature
+         * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Transfers a
+         * domain name from another registrar to Cloud Domains. For domains already managed by [Google
+         * Domains](https://domains.google/), use `ImportDomain` instead. Before calling this method, go to
+         * the domain's current registrar to unlock the domain for transfer and retrieve the domain's
+         * transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is
+         * unlocked and to get values needed to build a call to this method. A successful call creates a
+         * `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the
+         * transfer process. The registrant can often speed up this process by approving the transfer
+         * through the current registrar, either by clicking a link in an email from the registrar or by
+         * visiting the registrar's website. A few minutes after transfer approval, the resource transitions
+         * to state `ACTIVE`, indicating that the transfer was successful. If the transfer is rejected or
+         * the request expires without being approved, the resource can end up in state `TRANSFER_FAILED`.
+         * If transfer fails, you can safely delete the resource and retry the transfer.
          *
          * Create a request for the method "registrations.transfer".
          *
@@ -3943,18 +3963,20 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Transfers a domain name from another registrar to Cloud Domains. For domains already managed by
-           * [Google Domains](https://domains.google/), use `ImportDomain` instead. Before calling this
-           * method, go to the domain's current registrar to unlock the domain for transfer and retrieve the
-           * domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that
-           * the domain is unlocked and to get values needed to build a call to this method. A successful
-           * call creates a `Registration` resource in state `TRANSFER_PENDING`. It can take several days to
-           * complete the transfer process. The registrant can often speed up this process by approving the
-           * transfer through the current registrar, either by clicking a link in an email from the
-           * registrar or by visiting the registrar's website. A few minutes after transfer approval, the
-           * resource transitions to state `ACTIVE`, indicating that the transfer was successful. If the
-           * transfer is rejected or the request expires without being approved, the resource can end up in
-           * state `TRANSFER_FAILED`. If transfer fails, you can safely delete the resource and retry the
+           * Deprecated: For more information, see [Cloud Domains feature
+           * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Transfers
+           * a domain name from another registrar to Cloud Domains. For domains already managed by [Google
+           * Domains](https://domains.google/), use `ImportDomain` instead. Before calling this method, go
+           * to the domain's current registrar to unlock the domain for transfer and retrieve the domain's
+           * transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain
+           * is unlocked and to get values needed to build a call to this method. A successful call creates
+           * a `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the
+           * transfer process. The registrant can often speed up this process by approving the transfer
+           * through the current registrar, either by clicking a link in an email from the registrar or by
+           * visiting the registrar's website. A few minutes after transfer approval, the resource
+           * transitions to state `ACTIVE`, indicating that the transfer was successful. If the transfer is
+           * rejected or the request expires without being approved, the resource can end up in state
+           * `TRANSFER_FAILED`. If transfer fails, you can safely delete the resource and retry the
            * transfer.
            *
            * Create a request for the method "registrations.transfer".

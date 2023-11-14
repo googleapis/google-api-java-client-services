@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * Wrapper message for a list of mobile device IDs defining Customer Match audience members.
+ * User consent status.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -28,67 +28,64 @@ package com.google.api.services.displayvideo.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MobileDeviceIdList extends com.google.api.client.json.GenericJson {
+public final class Consent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. User consent status.
+   * Represents consent for ad personalization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Consent consent;
+  private java.lang.String adPersonalization;
 
   /**
-   * A list of mobile device IDs defining Customer Match audience members. The size of
-   * mobile_device_ids mustn't be greater than 500,000.
+   * Represents consent for ad user data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> mobileDeviceIds;
+  private java.lang.String adUserData;
 
   /**
-   * Input only. User consent status.
+   * Represents consent for ad personalization.
    * @return value or {@code null} for none
    */
-  public Consent getConsent() {
-    return consent;
+  public java.lang.String getAdPersonalization() {
+    return adPersonalization;
   }
 
   /**
-   * Input only. User consent status.
-   * @param consent consent or {@code null} for none
+   * Represents consent for ad personalization.
+   * @param adPersonalization adPersonalization or {@code null} for none
    */
-  public MobileDeviceIdList setConsent(Consent consent) {
-    this.consent = consent;
+  public Consent setAdPersonalization(java.lang.String adPersonalization) {
+    this.adPersonalization = adPersonalization;
     return this;
   }
 
   /**
-   * A list of mobile device IDs defining Customer Match audience members. The size of
-   * mobile_device_ids mustn't be greater than 500,000.
+   * Represents consent for ad user data.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getMobileDeviceIds() {
-    return mobileDeviceIds;
+  public java.lang.String getAdUserData() {
+    return adUserData;
   }
 
   /**
-   * A list of mobile device IDs defining Customer Match audience members. The size of
-   * mobile_device_ids mustn't be greater than 500,000.
-   * @param mobileDeviceIds mobileDeviceIds or {@code null} for none
+   * Represents consent for ad user data.
+   * @param adUserData adUserData or {@code null} for none
    */
-  public MobileDeviceIdList setMobileDeviceIds(java.util.List<java.lang.String> mobileDeviceIds) {
-    this.mobileDeviceIds = mobileDeviceIds;
+  public Consent setAdUserData(java.lang.String adUserData) {
+    this.adUserData = adUserData;
     return this;
   }
 
   @Override
-  public MobileDeviceIdList set(String fieldName, Object value) {
-    return (MobileDeviceIdList) super.set(fieldName, value);
+  public Consent set(String fieldName, Object value) {
+    return (Consent) super.set(fieldName, value);
   }
 
   @Override
-  public MobileDeviceIdList clone() {
-    return (MobileDeviceIdList) super.clone();
+  public Consent clone() {
+    return (Consent) super.clone();
   }
 
 }

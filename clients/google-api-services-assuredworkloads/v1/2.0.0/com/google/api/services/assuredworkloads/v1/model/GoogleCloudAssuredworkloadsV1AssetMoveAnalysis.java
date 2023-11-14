@@ -47,8 +47,7 @@ public final class GoogleCloudAssuredworkloadsV1AssetMoveAnalysis extends com.go
 
   /**
    * Type of the asset being analyzed. Possible values will be among the ones listed
-   * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types#searchable_asset_types).
+   * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +91,7 @@ public final class GoogleCloudAssuredworkloadsV1AssetMoveAnalysis extends com.go
 
   /**
    * Type of the asset being analyzed. Possible values will be among the ones listed
-   * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types#searchable_asset_types).
+   * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetType() {
@@ -102,8 +100,7 @@ public final class GoogleCloudAssuredworkloadsV1AssetMoveAnalysis extends com.go
 
   /**
    * Type of the asset being analyzed. Possible values will be among the ones listed
-   * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types#searchable_asset_types).
+   * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
    * @param assetType assetType or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1AssetMoveAnalysis setAssetType(java.lang.String assetType) {

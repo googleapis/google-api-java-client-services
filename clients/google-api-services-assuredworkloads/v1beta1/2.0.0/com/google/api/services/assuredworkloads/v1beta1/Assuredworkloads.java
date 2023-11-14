@@ -706,15 +706,14 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           /**
            * Optional. List of asset types to be analyzed, including and under the source resource.
            * If empty, all assets are analyzed. The complete list of asset types is available
-           * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
-           * types#searchable_asset_types).
+           * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
            */
           @com.google.api.client.util.Key
           private java.util.List<java.lang.String> assetTypes;
 
           /** Optional. List of asset types to be analyzed, including and under the source resource. If empty,
          all assets are analyzed. The complete list of asset types is available
-         [here](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+         [here](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
            */
           public java.util.List<java.lang.String> getAssetTypes() {
             return assetTypes;
@@ -723,8 +722,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           /**
            * Optional. List of asset types to be analyzed, including and under the source resource.
            * If empty, all assets are analyzed. The complete list of asset types is available
-           * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
-           * types#searchable_asset_types).
+           * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
            */
           public AnalyzeWorkloadMove setAssetTypes(java.util.List<java.lang.String> assetTypes) {
             this.assetTypes = assetTypes;

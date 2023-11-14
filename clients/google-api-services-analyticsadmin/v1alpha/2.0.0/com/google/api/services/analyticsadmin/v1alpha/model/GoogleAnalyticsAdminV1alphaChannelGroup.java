@@ -45,7 +45,7 @@ public final class GoogleAnalyticsAdminV1alphaChannelGroup extends com.google.ap
   private java.lang.String displayName;
 
   /**
-   * Required. The grouping rules of channels. Maximum number of rules is 25.
+   * Required. The grouping rules of channels. Maximum number of rules is 50.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class GoogleAnalyticsAdminV1alphaChannelGroup extends com.google.ap
   }
 
   /**
-   * Required. The grouping rules of channels. Maximum number of rules is 25.
+   * Required. The grouping rules of channels. Maximum number of rules is 50.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAnalyticsAdminV1alphaGroupingRule> getGroupingRule() {
@@ -110,7 +110,7 @@ public final class GoogleAnalyticsAdminV1alphaChannelGroup extends com.google.ap
   }
 
   /**
-   * Required. The grouping rules of channels. Maximum number of rules is 25.
+   * Required. The grouping rules of channels. Maximum number of rules is 50.
    * @param groupingRule groupingRule or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaChannelGroup setGroupingRule(java.util.List<GoogleAnalyticsAdminV1alphaGroupingRule> groupingRule) {

@@ -45,11 +45,26 @@ public final class MediationAbExperiment extends com.google.api.client.json.Gene
   private java.lang.String displayName;
 
   /**
+   * Output only. The time at which the experiment was ended or target to end (in UTC).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
    * Output only. Unique identifier for the mediation A/B experiment. It is an output only property.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String experimentId;
+
+  /**
+   * Output only. The mediation group id this experiment belongs to. This can be used for filtering
+   * the experiments in the list experiments API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mediationGroupId;
 
   /**
    * Resource name for this experiment. The format is accounts/{publisher_id}/
@@ -60,6 +75,13 @@ public final class MediationAbExperiment extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The time at which the experiment was started (in UTC).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
 
   /**
    * Output only. The state of the experiment. It is an output only field.
@@ -85,6 +107,13 @@ public final class MediationAbExperiment extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long treatmentTrafficPercentage;
+
+  /**
+   * Output only. The variant leader for the experiment according to some key metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String variantLeader;
 
   /**
    * Output only. The experiment mediation lines for control. They are inherited from the parent
@@ -123,6 +152,23 @@ public final class MediationAbExperiment extends com.google.api.client.json.Gene
   }
 
   /**
+   * Output only. The time at which the experiment was ended or target to end (in UTC).
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Output only. The time at which the experiment was ended or target to end (in UTC).
+   * @param endTime endTime or {@code null} for none
+   */
+  public MediationAbExperiment setEndTime(String endTime) {
+    this.endTime = endTime;
+    return this;
+  }
+
+  /**
    * Output only. Unique identifier for the mediation A/B experiment. It is an output only property.
    * @return value or {@code null} for none
    */
@@ -136,6 +182,25 @@ public final class MediationAbExperiment extends com.google.api.client.json.Gene
    */
   public MediationAbExperiment setExperimentId(java.lang.String experimentId) {
     this.experimentId = experimentId;
+    return this;
+  }
+
+  /**
+   * Output only. The mediation group id this experiment belongs to. This can be used for filtering
+   * the experiments in the list experiments API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMediationGroupId() {
+    return mediationGroupId;
+  }
+
+  /**
+   * Output only. The mediation group id this experiment belongs to. This can be used for filtering
+   * the experiments in the list experiments API.
+   * @param mediationGroupId mediationGroupId or {@code null} for none
+   */
+  public MediationAbExperiment setMediationGroupId(java.lang.String mediationGroupId) {
+    this.mediationGroupId = mediationGroupId;
     return this;
   }
 
@@ -159,6 +224,23 @@ public final class MediationAbExperiment extends com.google.api.client.json.Gene
    */
   public MediationAbExperiment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the experiment was started (in UTC).
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Output only. The time at which the experiment was started (in UTC).
+   * @param startTime startTime or {@code null} for none
+   */
+  public MediationAbExperiment setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 
@@ -218,6 +300,23 @@ public final class MediationAbExperiment extends com.google.api.client.json.Gene
    */
   public MediationAbExperiment setTreatmentTrafficPercentage(java.lang.Long treatmentTrafficPercentage) {
     this.treatmentTrafficPercentage = treatmentTrafficPercentage;
+    return this;
+  }
+
+  /**
+   * Output only. The variant leader for the experiment according to some key metrics.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVariantLeader() {
+    return variantLeader;
+  }
+
+  /**
+   * Output only. The variant leader for the experiment according to some key metrics.
+   * @param variantLeader variantLeader or {@code null} for none
+   */
+  public MediationAbExperiment setVariantLeader(java.lang.String variantLeader) {
+    this.variantLeader = variantLeader;
     return this;
   }
 

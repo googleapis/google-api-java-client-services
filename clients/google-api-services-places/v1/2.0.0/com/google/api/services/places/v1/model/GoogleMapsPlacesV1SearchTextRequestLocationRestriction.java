@@ -31,14 +31,18 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1SearchTextRequestLocationRestriction extends com.google.api.client.json.GenericJson {
 
   /**
-   * A rectangle box defined by northeast and southwest corner.
+   * A rectangle box defined by northeast and southwest corner. `rectangle.high()` must be the
+   * northeast point of the rectangle viewport. `rectangle.low()` must be the southwest point of the
+   * rectangle viewport.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleGeoTypeViewport rectangle;
 
   /**
-   * A rectangle box defined by northeast and southwest corner.
+   * A rectangle box defined by northeast and southwest corner. `rectangle.high()` must be the
+   * northeast point of the rectangle viewport. `rectangle.low()` must be the southwest point of the
+   * rectangle viewport.
    * @return value or {@code null} for none
    */
   public GoogleGeoTypeViewport getRectangle() {
@@ -46,7 +50,9 @@ public final class GoogleMapsPlacesV1SearchTextRequestLocationRestriction extend
   }
 
   /**
-   * A rectangle box defined by northeast and southwest corner.
+   * A rectangle box defined by northeast and southwest corner. `rectangle.high()` must be the
+   * northeast point of the rectangle viewport. `rectangle.low()` must be the southwest point of the
+   * rectangle viewport.
    * @param rectangle rectangle or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequestLocationRestriction setRectangle(GoogleGeoTypeViewport rectangle) {

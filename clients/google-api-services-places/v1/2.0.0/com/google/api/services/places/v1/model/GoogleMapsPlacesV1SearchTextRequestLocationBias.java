@@ -38,7 +38,9 @@ public final class GoogleMapsPlacesV1SearchTextRequestLocationBias extends com.g
   private GoogleMapsPlacesV1Circle circle;
 
   /**
-   * A rectangle box defined by northeast and southwest corner.
+   * A rectangle box defined by northeast and southwest corner. `rectangle.high()` must be the
+   * northeast point of the rectangle viewport. `rectangle.low()` must be the southwest point of the
+   * rectangle viewport.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +64,9 @@ public final class GoogleMapsPlacesV1SearchTextRequestLocationBias extends com.g
   }
 
   /**
-   * A rectangle box defined by northeast and southwest corner.
+   * A rectangle box defined by northeast and southwest corner. `rectangle.high()` must be the
+   * northeast point of the rectangle viewport. `rectangle.low()` must be the southwest point of the
+   * rectangle viewport.
    * @return value or {@code null} for none
    */
   public GoogleGeoTypeViewport getRectangle() {
@@ -70,7 +74,9 @@ public final class GoogleMapsPlacesV1SearchTextRequestLocationBias extends com.g
   }
 
   /**
-   * A rectangle box defined by northeast and southwest corner.
+   * A rectangle box defined by northeast and southwest corner. `rectangle.high()` must be the
+   * northeast point of the rectangle viewport. `rectangle.low()` must be the southwest point of the
+   * rectangle viewport.
    * @param rectangle rectangle or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequestLocationBias setRectangle(GoogleGeoTypeViewport rectangle) {

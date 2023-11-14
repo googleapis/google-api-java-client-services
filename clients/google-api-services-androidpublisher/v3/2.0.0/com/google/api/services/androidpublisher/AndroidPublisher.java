@@ -6232,6 +6232,143 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Tracks {
 
       /**
+       * Creates a new track.
+       *
+       * Create a request for the method "tracks.create".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. Package name of the app.
+       * @param editId Required. Identifier of the edit.
+       * @param content the {@link com.google.api.services.androidpublisher.model.TrackConfig}
+       * @return the request
+       */
+      public Create create(java.lang.String packageName, java.lang.String editId, com.google.api.services.androidpublisher.model.TrackConfig content) throws java.io.IOException {
+        Create result = new Create(packageName, editId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Track> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks";
+
+        /**
+         * Creates a new track.
+         *
+         * Create a request for the method "tracks.create".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. Package name of the app.
+         * @param editId Required. Identifier of the edit.
+         * @param content the {@link com.google.api.services.androidpublisher.model.TrackConfig}
+         * @since 1.13
+         */
+        protected Create(java.lang.String packageName, java.lang.String editId, com.google.api.services.androidpublisher.model.TrackConfig content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.Track.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.editId = com.google.api.client.util.Preconditions.checkNotNull(editId, "Required parameter editId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Package name of the app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. Package name of the app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Required. Package name of the app. */
+        public Create setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** Required. Identifier of the edit. */
+        @com.google.api.client.util.Key
+        private java.lang.String editId;
+
+        /** Required. Identifier of the edit.
+         */
+        public java.lang.String getEditId() {
+          return editId;
+        }
+
+        /** Required. Identifier of the edit. */
+        public Create setEditId(java.lang.String editId) {
+          this.editId = editId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets a track.
        *
        * Create a request for the method "tracks.get".

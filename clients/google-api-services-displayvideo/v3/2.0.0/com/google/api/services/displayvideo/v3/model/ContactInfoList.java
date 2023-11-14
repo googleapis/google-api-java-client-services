@@ -31,6 +31,13 @@ package com.google.api.services.displayvideo.v3.model;
 public final class ContactInfoList extends com.google.api.client.json.GenericJson {
 
   /**
+   * Input only. User consent status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Consent consent;
+
+  /**
    * A list of ContactInfo objects defining Customer Match audience members. The size of members
    * after splitting the contact_infos mustn't be greater than 500,000.
    * The value may be {@code null}.
@@ -42,6 +49,23 @@ public final class ContactInfoList extends com.google.api.client.json.GenericJso
     // hack to force ProGuard to consider ContactInfo used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ContactInfo.class);
+  }
+
+  /**
+   * Input only. User consent status.
+   * @return value or {@code null} for none
+   */
+  public Consent getConsent() {
+    return consent;
+  }
+
+  /**
+   * Input only. User consent status.
+   * @param consent consent or {@code null} for none
+   */
+  public ContactInfoList setConsent(Consent consent) {
+    this.consent = consent;
+    return this;
   }
 
   /**

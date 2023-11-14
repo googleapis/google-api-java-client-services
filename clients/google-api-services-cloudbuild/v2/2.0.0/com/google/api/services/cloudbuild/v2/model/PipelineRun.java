@@ -85,6 +85,14 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Output only. FinallyStartTime is when all non-finally tasks have been completed and only
+   * finally tasks are being executed. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String finallyStartTime;
+
+  /**
    * Output only. The `PipelineRun` name with format
    * `projects/{project}/locations/{location}/pipelineRuns/{pipeline_run}`
    * The value may be {@code null}.
@@ -298,6 +306,25 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    */
   public PipelineRun setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. FinallyStartTime is when all non-finally tasks have been completed and only
+   * finally tasks are being executed. +optional
+   * @return value or {@code null} for none
+   */
+  public String getFinallyStartTime() {
+    return finallyStartTime;
+  }
+
+  /**
+   * Output only. FinallyStartTime is when all non-finally tasks have been completed and only
+   * finally tasks are being executed. +optional
+   * @param finallyStartTime finallyStartTime or {@code null} for none
+   */
+  public PipelineRun setFinallyStartTime(String finallyStartTime) {
+    this.finallyStartTime = finallyStartTime;
     return this;
   }
 

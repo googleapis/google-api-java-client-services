@@ -38,6 +38,14 @@ public final class WorkspacePipelineTaskBinding extends com.google.api.client.js
   private java.lang.String name;
 
   /**
+   * Optional. SubPath is optionally a directory on the volume which should be used for this binding
+   * (i.e. the volume will be mounted at this sub directory). +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subPath;
+
+  /**
    * Name of the workspace declared by the pipeline.
    * The value may be {@code null}.
    */
@@ -58,6 +66,25 @@ public final class WorkspacePipelineTaskBinding extends com.google.api.client.js
    */
   public WorkspacePipelineTaskBinding setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. SubPath is optionally a directory on the volume which should be used for this binding
+   * (i.e. the volume will be mounted at this sub directory). +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubPath() {
+    return subPath;
+  }
+
+  /**
+   * Optional. SubPath is optionally a directory on the volume which should be used for this binding
+   * (i.e. the volume will be mounted at this sub directory). +optional
+   * @param subPath subPath or {@code null} for none
+   */
+  public WorkspacePipelineTaskBinding setSubPath(java.lang.String subPath) {
+    this.subPath = subPath;
     return this;
   }
 

@@ -52,7 +52,7 @@ public final class SecurityCommandCenterObject extends com.google.api.client.jso
   private java.lang.String group;
 
   /**
-   * Kubernetes object kind, such as “Namespace”.
+   * Kubernetes object kind, such as "Namespace".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class SecurityCommandCenterObject extends com.google.api.client.jso
   }
 
   /**
-   * Kubernetes object kind, such as “Namespace”.
+   * Kubernetes object kind, such as "Namespace".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -118,7 +118,7 @@ public final class SecurityCommandCenterObject extends com.google.api.client.jso
   }
 
   /**
-   * Kubernetes object kind, such as “Namespace”.
+   * Kubernetes object kind, such as "Namespace".
    * @param kind kind or {@code null} for none
    */
   public SecurityCommandCenterObject setKind(java.lang.String kind) {

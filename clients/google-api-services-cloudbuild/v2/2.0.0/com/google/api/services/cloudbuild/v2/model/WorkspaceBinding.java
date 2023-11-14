@@ -45,6 +45,14 @@ public final class WorkspaceBinding extends com.google.api.client.json.GenericJs
   private SecretVolumeSource secret;
 
   /**
+   * Optional. SubPath is optionally a directory on the volume which should be used for this binding
+   * (i.e. the volume will be mounted at this sub directory). +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subPath;
+
+  /**
    * Volume claim that will be created in the same namespace.
    * The value may be {@code null}.
    */
@@ -82,6 +90,25 @@ public final class WorkspaceBinding extends com.google.api.client.json.GenericJs
    */
   public WorkspaceBinding setSecret(SecretVolumeSource secret) {
     this.secret = secret;
+    return this;
+  }
+
+  /**
+   * Optional. SubPath is optionally a directory on the volume which should be used for this binding
+   * (i.e. the volume will be mounted at this sub directory). +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubPath() {
+    return subPath;
+  }
+
+  /**
+   * Optional. SubPath is optionally a directory on the volume which should be used for this binding
+   * (i.e. the volume will be mounted at this sub directory). +optional
+   * @param subPath subPath or {@code null} for none
+   */
+  public WorkspaceBinding setSubPath(java.lang.String subPath) {
+    this.subPath = subPath;
     return this;
   }
 

@@ -13,27 +13,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-EXIT_STATUS=0
+# Fail only any non-zero status code
+set -e
 
 pushd $(dirname "$0")/../
 
-for directory in `find clients -mindepth 3 -maxdepth 3 -type d | sort`
+VARIANT="2.0.0"
+
+# Only search for directories with the latest variant as only the generator only
+# generates libraries for the latest variant
+for directory in `find clients -mindepth 3 -maxdepth 3 -type d | grep ${VARIANT} | sort`
 do
   pushd $directory
-  diff=$(git diff master .)
+  diff=$(git diff main .)
   if [ -z "$diff" ]; then
     # skipping tests
-    echo "No difference from master, skipping tests."
+    echo "No difference from main, skipping tests."
   else
     mvn clean verify package -Dclirr.skip=true -B
-    es=$?
-    if [ $es -ne 0 ]; then
-        EXIT_STATUS=$es
-    fi
   fi
   popd
 done
-
 popd
-
-exit $EXIT_STATUS

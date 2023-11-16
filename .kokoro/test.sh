@@ -18,6 +18,7 @@ set -e
 
 pushd $(dirname "$0")/../
 
+# Add project as safe to run `git diff`
 git config --global --add safe.directory $(realpath .)
 
 VARIANT="2.0.0"
@@ -27,13 +28,16 @@ VARIANT="2.0.0"
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d | grep ${VARIANT} | sort`
 do
   pushd $directory
-  diff=$(git diff "${KOKORO_GITHUB_PULL_REQUEST_TARGET_BRANCH}...${KOKORO_GITHUB_PULL_REQUEST_COMMIT}")
+
+  # Find any diffs in the PR branch that are in this directory
+  diff=$(git diff "${KOKORO_GITHUB_PULL_REQUEST_TARGET_BRANCH}...${KOKORO_GITHUB_PULL_REQUEST_COMMIT}" -- "${directory}")
   if [ -z "$diff" ]; then
     # skipping tests
-    echo "No difference from main, skipping tests."
+    echo "No differences found in the PR branch, skipping tests."
   else
-    mvn clean verify package -Dclirr.skip=true -B
+    mvn clean verify package -Dclirr.skip=true -Dmaven.javadoc.skip=true -B
   fi
+
   popd
 done
 popd

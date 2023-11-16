@@ -25,7 +25,7 @@ VARIANT="2.0.0"
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d | grep ${VARIANT} | sort`
 do
   pushd $directory
-  diff=$(git diff main .)
+  diff=$(git diff "${KOKORO_GITHUB_PULL_REQUEST_TARGET_BRANCH}...${KOKORO_GITHUB_PULL_REQUEST_COMMIT}")
   if [ -z "$diff" ]; then
     # skipping tests
     echo "No difference from main, skipping tests."

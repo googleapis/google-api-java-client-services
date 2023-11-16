@@ -18,7 +18,7 @@ set -e
 
 pushd $(dirname "$0")/../
 
-printenv
+git config --global --add safe.directory $(realpath .)
 
 VARIANT="2.0.0"
 

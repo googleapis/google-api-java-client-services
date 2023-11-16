@@ -18,6 +18,8 @@ set -e
 
 pushd $(dirname "$0")/../
 
+printenv
+
 VARIANT="2.0.0"
 
 # Only search for directories with the latest variant as only the generator only

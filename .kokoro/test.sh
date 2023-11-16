@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Fail only any non-zero status code
+# Fail on any non-zero status code
 set -e
 
 pushd $(dirname "$0")/../

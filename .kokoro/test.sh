@@ -32,8 +32,8 @@ do
   # Find any diffs in the PR branch that are in this directory
   diff=$(git diff "${KOKORO_GITHUB_PULL_REQUEST_TARGET_BRANCH}...${KOKORO_GITHUB_PULL_REQUEST_COMMIT}" -- "${directory}")
   if [ -z "$diff" ]; then
-    # skipping tests
-    echo "No differences found in the PR branch, skipping tests."
+    # Skip compilation + Running tests
+    echo "No differences found in the PR branch for ${directory}, skipping..."
   else
     mvn clean verify package -Dclirr.skip=true -Dmaven.javadoc.skip=true -B
   fi

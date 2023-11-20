@@ -269,6 +269,7 @@ Generating the API clients requires git and Python 3.6.
 1. Install the generator dependencies:
 
     ```bash
+    cd /path/to/google-api-java-client-services/generator
     python -m pip install -r generator_requirements.in
     ```
 

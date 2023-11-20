@@ -282,12 +282,12 @@ Generating the API clients requires git and Python 3.6.
     library.
 
     ```bash
-        python /path/to/google-api-java-client-services/generator/src/googleapis/codegen \
-            --input=/path/to/discovery-artifact-manager/discoveries/admin.directory_v1.json \
-            --output_dir=/path/to/google-api-java-client-services/clients/google-api-services-admin/directory_v1/2.0.0 \
-            --language=java \
-            --language_variant=2.0.0 \
-            --package_path=api/services
+    python /path/to/google-api-java-client-services/generator/src/googleapis/codegen \
+        --input=/path/to/discovery-artifact-manager/discoveries/admin.directory_v1.json \
+        --output_dir=/path/to/google-api-java-client-services/clients/google-api-services-admin/directory_v1/2.0.0 \
+        --language=java \
+        --language_variant=2.0.0 \
+        --package_path=api/services
     ```
 
 

@@ -266,17 +266,30 @@ for how to use credentials with google-http-client and
 
 Generating the API clients requires git and Python 3.6.
 
-1. Install gcp-synthtool:
+1. Install the generator dependencies:
 
     ```bash
-    $ python3 -m pip install gcp-synthtool
+    cd /path/to/google-api-java-client-services/generator
+    python -m pip install -r generator_requirements.in
     ```
 
 1. Run the generator:
 
+    This is an example for Admin Directory v1. Note that `2.0.0` corresponds to the
+    latest variant of the generator. Make sure your `discovery-artifact-manager`
+    [repo](https://github.com/googleapis/discovery-artifact-manager/blob/master/discoveries/admin.directory_v1.json)
+    is up to date. Output doesn't have to be the exact location of the old
+    library.
+
     ```bash
-    $ python3 synth.py
+    python /path/to/google-api-java-client-services/generator/src/googleapis/codegen \
+        --input=/path/to/discovery-artifact-manager/discoveries/admin.directory_v1.json \
+        --output_dir=/path/to/google-api-java-client-services/clients/google-api-services-admin/directory_v1/2.0.0 \
+        --language=java \
+        --language_variant=2.0.0 \
+        --package_path=api/services
     ```
+
 
 [google-api-java-client]: https://github.com/googleapis/google-api-java-client
 [google-auth-library-java]: https://github.com/googleapis/google-auth-library-java

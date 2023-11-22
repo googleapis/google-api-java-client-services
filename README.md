@@ -262,20 +262,32 @@ see the [project's README](https://github.com/googleapis/google-auth-library-jav
 for how to use credentials with google-http-client and
 [javadoc](https://cloud.google.com/java/docs/reference/google-auth-library/latest/overview) for more details.
 
-## How the code is updated
+## How the code is updated and published
 
 When a change is made in the API definitions, the following events happens:
 
 1. [The discovery-artifact-manager repository](https://github.com/googleapis/discovery-artifact-manager) has
   ([update-discoveries job](https://github.com/googleapis/discovery-artifact-manager/blob/master/.github/workflows/update-disco.yml)
   that copies files from https://discovery.googleapis.com/discovery/v1/apis.
-1. This google-api-java-client-services repository has ([codegen workflow](https://github.com/googleapis/google-api-java-client-services/blob/main/.github/workflows/codegen.yaml)). This workflow has the following jobs:
-  - **discovery**: It uses the discovery-artifact-manager repository's [discovery job](https://github.com/googleapis/discovery-artifact-manager/blob/master/.github/workflows/list-services.yml).
-  - **total_service_size_check**:
-  - **batch**
-  - **generate**: At the end, this job creates pull requests for each service definition change. Example pull request: [#18860](https://github.com/googleapis/google-api-java-client-services/pull/18860).
+1. This google-api-java-client-services repository has ([codegen workflow](
+   https://github.com/googleapis/google-api-java-client-services/blob/main/.github/workflows/codegen.yaml)).
+   This workflow has the following jobs:
+    - **discovery**: It uses the discovery-artifact-manager repository's [discovery job](https://github.com/googleapis/discovery-artifact-manager/blob/master/.github/workflows/list-services.yml) to list the service names.
+      Example values in the returned list are "storage" (from `discoveries/storage.v1.json`) and "admin" (from `discoveries/admin.datatransfer_v1.json`).
+    - **total_service_size_check**: This job ensures the size of the service list exceeds 300
+      (00:30 to 02:30 implies 3 batches of size 100); otherwise it fails.
+    - **batch** This job splits the service names into chunks of maximum 100 and returns an array containing the chunks.
+      As of November 2022, the length of the array is 3.
+      This array has a chunk of 100 service names at the index 0, a chunk of other 100 service names at the index 1, and 69 service names at the index 2.
+    - **generate**: At the end, this job runs the code generator for each service in the chunk whose array index corresponds to the hour of the day.
+      For example, a job starting at "1:30" uses the chunk at the index 1 in the array.
+      If you manually invoke the workflow at "5:00", this job is skipped because there's no element at the index 5 in the array. 
+      If there's changes, this job creates pull requests (Example: [#18860](https://github.com/googleapis/google-api-java-client-services/pull/18860)).
+1. [The Kokoro job](http://fusion2/search?q=cloud-devrel%2Fclient-libraries%2Fjava%2Fgoogle-api-java-client-services&s=p) publishes this repository.
 
-## Generating the API clients
+## Generating the API clients locally
+
+If you want to generate certain code locally, please follow these steps:
 
 Generating the API clients requires git and Python 3.6.
 

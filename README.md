@@ -294,7 +294,7 @@ When a change is made in the API definitions, the following events happens:
 
 ## Generating the API clients locally
 
-If you want to generate certain code locally, please follow these steps:
+If you want to generate certain code locally for troubleshooting purpose, please follow these steps:
 
 Generating the API clients requires git and Python 3.6.
 

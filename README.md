@@ -262,6 +262,19 @@ see the [project's README](https://github.com/googleapis/google-auth-library-jav
 for how to use credentials with google-http-client and
 [javadoc](https://cloud.google.com/java/docs/reference/google-auth-library/latest/overview) for more details.
 
+## How the code is updated
+
+When a change is made in the API definitions, the following events happens:
+
+1. [The discovery-artifact-manager repository](https://github.com/googleapis/discovery-artifact-manager) has
+  ([update-discoveries job](https://github.com/googleapis/discovery-artifact-manager/blob/master/.github/workflows/update-disco.yml)
+  that copies files from https://discovery.googleapis.com/discovery/v1/apis.
+1. This google-api-java-client-services repository has ([codegen workflow](https://github.com/googleapis/google-api-java-client-services/blob/main/.github/workflows/codegen.yaml)). This workflow has the following jobs:
+  - **discovery**: It uses the discovery-artifact-manager repository's [discovery job](https://github.com/googleapis/discovery-artifact-manager/blob/master/.github/workflows/list-services.yml).
+  - **total_service_size_check**:
+  - **batch**
+  - **generate**: At the end, this job creates pull requests for each service definition change. Example pull request: [#18860](https://github.com/googleapis/google-api-java-client-services/pull/18860).
+
 ## Generating the API clients
 
 Generating the API clients requires git and Python 3.6.

@@ -219,6 +219,15 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.util.List<SpeechContext> speechContexts;
 
   /**
+   * Optional. Use transcription normalization to automatically replace parts of the transcript with
+   * phrases of your choosing. For StreamingRecognize, this normalization only applies to stable
+   * partial transcripts (stability > 0.8) and final transcripts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TranscriptNormalization transcriptNormalization;
+
+  /**
    * Set to true to use an enhanced model for speech recognition. If `use_enhanced` is set to true
    * and the `model` field is not set, then an appropriate enhanced model is chosen if an enhanced
    * model exists for the audio. If `use_enhanced` is true and an enhanced version of the specified
@@ -656,6 +665,27 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   public RecognitionConfig setSpeechContexts(java.util.List<SpeechContext> speechContexts) {
     this.speechContexts = speechContexts;
+    return this;
+  }
+
+  /**
+   * Optional. Use transcription normalization to automatically replace parts of the transcript with
+   * phrases of your choosing. For StreamingRecognize, this normalization only applies to stable
+   * partial transcripts (stability > 0.8) and final transcripts.
+   * @return value or {@code null} for none
+   */
+  public TranscriptNormalization getTranscriptNormalization() {
+    return transcriptNormalization;
+  }
+
+  /**
+   * Optional. Use transcription normalization to automatically replace parts of the transcript with
+   * phrases of your choosing. For StreamingRecognize, this normalization only applies to stable
+   * partial transcripts (stability > 0.8) and final transcripts.
+   * @param transcriptNormalization transcriptNormalization or {@code null} for none
+   */
+  public RecognitionConfig setTranscriptNormalization(TranscriptNormalization transcriptNormalization) {
+    this.transcriptNormalization = transcriptNormalization;
     return this;
   }
 

@@ -236,9 +236,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.util.List<SpeechContext> speechContexts;
 
   /**
-   * Use transcription normalization to automatically replace parts of the transcript with phrases
-   * of your choosing. For StreamingRecognize, this normalization only applies to stable partial
-   * transcripts (stability > 0.8) and final transcripts.
+   * Optional. Use transcription normalization to automatically replace parts of the transcript with
+   * phrases of your choosing. For StreamingRecognize, this normalization only applies to stable
+   * partial transcripts (stability > 0.8) and final transcripts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -726,9 +726,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Use transcription normalization to automatically replace parts of the transcript with phrases
-   * of your choosing. For StreamingRecognize, this normalization only applies to stable partial
-   * transcripts (stability > 0.8) and final transcripts.
+   * Optional. Use transcription normalization to automatically replace parts of the transcript with
+   * phrases of your choosing. For StreamingRecognize, this normalization only applies to stable
+   * partial transcripts (stability > 0.8) and final transcripts.
    * @return value or {@code null} for none
    */
   public TranscriptNormalization getTranscriptNormalization() {
@@ -736,9 +736,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Use transcription normalization to automatically replace parts of the transcript with phrases
-   * of your choosing. For StreamingRecognize, this normalization only applies to stable partial
-   * transcripts (stability > 0.8) and final transcripts.
+   * Optional. Use transcription normalization to automatically replace parts of the transcript with
+   * phrases of your choosing. For StreamingRecognize, this normalization only applies to stable
+   * partial transcripts (stability > 0.8) and final transcripts.
    * @param transcriptNormalization transcriptNormalization or {@code null} for none
    */
   public RecognitionConfig setTranscriptNormalization(TranscriptNormalization transcriptNormalization) {

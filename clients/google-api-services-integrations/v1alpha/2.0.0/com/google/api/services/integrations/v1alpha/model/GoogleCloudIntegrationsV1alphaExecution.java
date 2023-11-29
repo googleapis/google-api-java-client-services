@@ -73,6 +73,13 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
   private java.lang.String executionMethod;
 
   /**
+   * Output only. State of the integration version
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String integrationVersionState;
+
+  /**
    * Auto-generated primary key.
    * The value may be {@code null}.
    */
@@ -234,6 +241,23 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
    */
   public GoogleCloudIntegrationsV1alphaExecution setExecutionMethod(java.lang.String executionMethod) {
     this.executionMethod = executionMethod;
+    return this;
+  }
+
+  /**
+   * Output only. State of the integration version
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIntegrationVersionState() {
+    return integrationVersionState;
+  }
+
+  /**
+   * Output only. State of the integration version
+   * @param integrationVersionState integrationVersionState or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecution setIntegrationVersionState(java.lang.String integrationVersionState) {
+    this.integrationVersionState = integrationVersionState;
     return this;
   }
 

@@ -68,7 +68,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The resource name for the Key in the format `projects/{project}/keys/{key}`.
+   * Identifier. The resource name for the Key in the format `projects/{project}/keys/{key}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +183,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * The resource name for the Key in the format `projects/{project}/keys/{key}`.
+   * Identifier. The resource name for the Key in the format `projects/{project}/keys/{key}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -191,7 +191,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * The resource name for the Key in the format `projects/{project}/keys/{key}`.
+   * Identifier. The resource name for the Key in the format `projects/{project}/keys/{key}`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Key setName(java.lang.String name) {

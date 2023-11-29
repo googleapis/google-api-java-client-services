@@ -34,6 +34,12 @@ public final class Maintainer extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String email;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
@@ -41,6 +47,27 @@ public final class Maintainer extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String url;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmail() {
+    return email;
+  }
+
+  /**
+   * @param email email or {@code null} for none
+   */
+  public Maintainer setEmail(java.lang.String email) {
+    this.email = email;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -69,6 +96,21 @@ public final class Maintainer extends com.google.api.client.json.GenericJson {
    */
   public Maintainer setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUrl() {
+    return url;
+  }
+
+  /**
+   * @param url url or {@code null} for none
+   */
+  public Maintainer setUrl(java.lang.String url) {
+    this.url = url;
     return this;
   }
 

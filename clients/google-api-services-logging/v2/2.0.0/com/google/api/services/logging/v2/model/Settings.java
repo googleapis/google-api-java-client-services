@@ -31,6 +31,13 @@ package com.google.api.services.logging.v2.model;
 public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Overrides the built-in configuration for _Default sink.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DefaultSinkConfig defaultSinkConfig;
+
+  /**
    * Optional. If set to true, the _Default sink in newly created projects and folders will created
    * in a disabled state. This can be used to automatically disable log storage if there is already
    * an aggregated sink configured in the hierarchy. The _Default sink can be re-enabled manually if
@@ -70,8 +77,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String kmsServiceAccountId;
 
   /**
-   * Output only. The service account for the given container. Sinks use this service account as
-   * their writer_identity if no custom service account is provided.
+   * Output only. The service account for the given resource container, such as project or folder.
+   * Log sinks use this service account as their writer_identity if no custom service account is
+   * provided in the request when calling the create sink method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,6 +102,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String storageLocation;
+
+  /**
+   * Optional. Overrides the built-in configuration for _Default sink.
+   * @return value or {@code null} for none
+   */
+  public DefaultSinkConfig getDefaultSinkConfig() {
+    return defaultSinkConfig;
+  }
+
+  /**
+   * Optional. Overrides the built-in configuration for _Default sink.
+   * @param defaultSinkConfig defaultSinkConfig or {@code null} for none
+   */
+  public Settings setDefaultSinkConfig(DefaultSinkConfig defaultSinkConfig) {
+    this.defaultSinkConfig = defaultSinkConfig;
+    return this;
+  }
 
   /**
    * Optional. If set to true, the _Default sink in newly created projects and folders will created
@@ -183,8 +208,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The service account for the given container. Sinks use this service account as
-   * their writer_identity if no custom service account is provided.
+   * Output only. The service account for the given resource container, such as project or folder.
+   * Log sinks use this service account as their writer_identity if no custom service account is
+   * provided in the request when calling the create sink method.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoggingServiceAccountId() {
@@ -192,8 +218,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The service account for the given container. Sinks use this service account as
-   * their writer_identity if no custom service account is provided.
+   * Output only. The service account for the given resource container, such as project or folder.
+   * Log sinks use this service account as their writer_identity if no custom service account is
+   * provided in the request when calling the create sink method.
    * @param loggingServiceAccountId loggingServiceAccountId or {@code null} for none
    */
   public Settings setLoggingServiceAccountId(java.lang.String loggingServiceAccountId) {

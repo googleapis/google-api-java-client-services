@@ -5583,6 +5583,855 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
       }
+      /**
+       * An accessor for creating requests from the RecentQueries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.RecentQueries.List request = logging.recentQueries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RecentQueries recentQueries() {
+        return new RecentQueries();
+      }
+
+      /**
+       * The "recentQueries" collection of methods.
+       */
+      public class RecentQueries {
+
+        /**
+         * Lists the RecentQueries that were created by the user making the request.
+         *
+         * Create a request for the method "recentQueries.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+         *        /us-central1Note: The location portion of the resource must be specified, but supplying
+         *        the character - in place of LOCATION_ID will return all recent queries.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListRecentQueriesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/recentQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the RecentQueries that were created by the user making the request.
+           *
+           * Create a request for the method "recentQueries.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+         *        /us-central1Note: The location portion of the resource must be specified, but supplying
+         *        the character - in place of LOCATION_ID will return all recent queries.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListRecentQueriesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+           * /us-central1Note: The location portion of the resource must be specified, but supplying
+           * the character - in place of LOCATION_ID will return all recent queries.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource to which the listed queries belong.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations/us-
+         central1Note: The location portion of the resource must be specified, but supplying the character -
+         in place of LOCATION_ID will return all recent queries.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+           * /us-central1Note: The location portion of the resource must be specified, but supplying
+           * the character - in place of LOCATION_ID will return all recent queries.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request. Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the SavedQueries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.SavedQueries.List request = logging.savedQueries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SavedQueries savedQueries() {
+        return new SavedQueries();
+      }
+
+      /**
+       * The "savedQueries" collection of methods.
+       */
+      public class SavedQueries {
+
+        /**
+         * Creates a new SavedQuery for the user making the request.
+         *
+         * Create a request for the method "savedQueries.create".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource in which to create the saved query:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/global" "organizations/123456789/locations/us-central1"
+         * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.logging.v2.model.SavedQuery content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+parent}/savedQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new SavedQuery for the user making the request.
+           *
+           * Create a request for the method "savedQueries.create".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource in which to create the saved query:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/global" "organizations/123456789/locations/us-central1"
+           * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.logging.v2.model.SavedQuery content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource in which to create the saved query:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/global" "organizations/123456789/locations/us-central1"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource in which to create the saved query:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations/global"
+         "organizations/123456789/locations/us-central1"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource in which to create the saved query:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/global" "organizations/123456789/locations/us-central1"
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The ID to use for the saved query, which will become the final component of
+           * the saved query's resource name.If the saved_query_id is not provided, the system will
+           * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
+           * include only the following characters: upper and lower-case alphanumeric characters,
+           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String savedQueryId;
+
+          /** Optional. The ID to use for the saved query, which will become the final component of the saved
+         query's resource name.If the saved_query_id is not provided, the system will generate an
+         alphanumeric ID.The saved_query_id is limited to 100 characters and can include only the following
+         characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First
+         character has to be alphanumeric.
+           */
+          public java.lang.String getSavedQueryId() {
+            return savedQueryId;
+          }
+
+          /**
+           * Optional. The ID to use for the saved query, which will become the final component of
+           * the saved query's resource name.If the saved_query_id is not provided, the system will
+           * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
+           * include only the following characters: upper and lower-case alphanumeric characters,
+           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           */
+          public Create setSavedQueryId(java.lang.String savedQueryId) {
+            this.savedQueryId = savedQueryId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an existing SavedQuery that was created by the user making the request.
+         *
+         * Create a request for the method "savedQueries.delete".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the saved query to delete.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends LoggingRequest<com.google.api.services.logging.v2.model.Empty> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Deletes an existing SavedQuery that was created by the user making the request.
+           *
+           * Create a request for the method "savedQueries.delete".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the saved query to delete.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Logging.this, "DELETE", REST_PATH, null, com.google.api.services.logging.v2.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the saved query to delete.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the saved query to delete.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example: "projects/my-
+         project/locations/global/savedQueries/my-saved-query"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the saved query to delete.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the SavedQueries that were created by the user making the request.
+         *
+         * Create a request for the method "savedQueries.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
+         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
+         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
+         *        "projects/my-project/locations/-"
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListSavedQueriesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/savedQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the SavedQueries that were created by the user making the request.
+           *
+           * Create a request for the method "savedQueries.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
+         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
+         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
+         *        "projects/my-project/locations/-"
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListSavedQueriesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/us-central1" Note: The locations portion of the resource must be
+           * specified. To get a list of all saved queries, a wildcard character - can be used for
+           * LOCATION_ID, for example: "projects/my-project/locations/-"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource to which the listed queries belong.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations/us-
+         central1" Note: The locations portion of the resource must be specified. To get a list of all saved
+         queries, a wildcard character - can be used for LOCATION_ID, for example: "projects/my-
+         project/locations/-"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/us-central1" Note: The locations portion of the resource must be
+           * specified. To get a list of all saved queries, a wildcard character - can be used for
+           * LOCATION_ID, for example: "projects/my-project/locations/-"
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request.Non-positive values
+           * are ignored. The presence of nextPageToken in the response indicates that more results
+           * might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request.Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request.Non-positive values
+           * are ignored. The presence of nextPageToken in the response indicates that more results
+           * might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Logs collection.
@@ -14249,6 +15098,855 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the RecentQueries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.RecentQueries.List request = logging.recentQueries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RecentQueries recentQueries() {
+        return new RecentQueries();
+      }
+
+      /**
+       * The "recentQueries" collection of methods.
+       */
+      public class RecentQueries {
+
+        /**
+         * Lists the RecentQueries that were created by the user making the request.
+         *
+         * Create a request for the method "recentQueries.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+         *        /us-central1Note: The location portion of the resource must be specified, but supplying
+         *        the character - in place of LOCATION_ID will return all recent queries.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListRecentQueriesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/recentQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the RecentQueries that were created by the user making the request.
+           *
+           * Create a request for the method "recentQueries.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+         *        /us-central1Note: The location portion of the resource must be specified, but supplying
+         *        the character - in place of LOCATION_ID will return all recent queries.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListRecentQueriesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+           * /us-central1Note: The location portion of the resource must be specified, but supplying
+           * the character - in place of LOCATION_ID will return all recent queries.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource to which the listed queries belong.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations/us-
+         central1Note: The location portion of the resource must be specified, but supplying the character -
+         in place of LOCATION_ID will return all recent queries.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+           * /us-central1Note: The location portion of the resource must be specified, but supplying
+           * the character - in place of LOCATION_ID will return all recent queries.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request. Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the SavedQueries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.SavedQueries.List request = logging.savedQueries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SavedQueries savedQueries() {
+        return new SavedQueries();
+      }
+
+      /**
+       * The "savedQueries" collection of methods.
+       */
+      public class SavedQueries {
+
+        /**
+         * Creates a new SavedQuery for the user making the request.
+         *
+         * Create a request for the method "savedQueries.create".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource in which to create the saved query:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/global" "organizations/123456789/locations/us-central1"
+         * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.logging.v2.model.SavedQuery content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+parent}/savedQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new SavedQuery for the user making the request.
+           *
+           * Create a request for the method "savedQueries.create".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource in which to create the saved query:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/global" "organizations/123456789/locations/us-central1"
+           * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.logging.v2.model.SavedQuery content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource in which to create the saved query:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/global" "organizations/123456789/locations/us-central1"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource in which to create the saved query:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations/global"
+         "organizations/123456789/locations/us-central1"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource in which to create the saved query:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/global" "organizations/123456789/locations/us-central1"
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The ID to use for the saved query, which will become the final component of
+           * the saved query's resource name.If the saved_query_id is not provided, the system will
+           * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
+           * include only the following characters: upper and lower-case alphanumeric characters,
+           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String savedQueryId;
+
+          /** Optional. The ID to use for the saved query, which will become the final component of the saved
+         query's resource name.If the saved_query_id is not provided, the system will generate an
+         alphanumeric ID.The saved_query_id is limited to 100 characters and can include only the following
+         characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First
+         character has to be alphanumeric.
+           */
+          public java.lang.String getSavedQueryId() {
+            return savedQueryId;
+          }
+
+          /**
+           * Optional. The ID to use for the saved query, which will become the final component of
+           * the saved query's resource name.If the saved_query_id is not provided, the system will
+           * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
+           * include only the following characters: upper and lower-case alphanumeric characters,
+           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           */
+          public Create setSavedQueryId(java.lang.String savedQueryId) {
+            this.savedQueryId = savedQueryId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an existing SavedQuery that was created by the user making the request.
+         *
+         * Create a request for the method "savedQueries.delete".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the saved query to delete.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends LoggingRequest<com.google.api.services.logging.v2.model.Empty> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Deletes an existing SavedQuery that was created by the user making the request.
+           *
+           * Create a request for the method "savedQueries.delete".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the saved query to delete.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Logging.this, "DELETE", REST_PATH, null, com.google.api.services.logging.v2.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the saved query to delete.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the saved query to delete.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example: "projects/my-
+         project/locations/global/savedQueries/my-saved-query"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the saved query to delete.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the SavedQueries that were created by the user making the request.
+         *
+         * Create a request for the method "savedQueries.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
+         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
+         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
+         *        "projects/my-project/locations/-"
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListSavedQueriesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/savedQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the SavedQueries that were created by the user making the request.
+           *
+           * Create a request for the method "savedQueries.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
+         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
+         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
+         *        "projects/my-project/locations/-"
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListSavedQueriesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/us-central1" Note: The locations portion of the resource must be
+           * specified. To get a list of all saved queries, a wildcard character - can be used for
+           * LOCATION_ID, for example: "projects/my-project/locations/-"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource to which the listed queries belong.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations/us-
+         central1" Note: The locations portion of the resource must be specified. To get a list of all saved
+         queries, a wildcard character - can be used for LOCATION_ID, for example: "projects/my-
+         project/locations/-"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/us-central1" Note: The locations portion of the resource must be
+           * specified. To get a list of all saved queries, a wildcard character - can be used for
+           * LOCATION_ID, for example: "projects/my-project/locations/-"
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request.Non-positive values
+           * are ignored. The presence of nextPageToken in the response indicates that more results
+           * might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request.Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request.Non-positive values
+           * are ignored. The presence of nextPageToken in the response indicates that more results
+           * might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -26343,6 +28041,855 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
       }
+      /**
+       * An accessor for creating requests from the RecentQueries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.RecentQueries.List request = logging.recentQueries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RecentQueries recentQueries() {
+        return new RecentQueries();
+      }
+
+      /**
+       * The "recentQueries" collection of methods.
+       */
+      public class RecentQueries {
+
+        /**
+         * Lists the RecentQueries that were created by the user making the request.
+         *
+         * Create a request for the method "recentQueries.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+         *        /us-central1Note: The location portion of the resource must be specified, but supplying
+         *        the character - in place of LOCATION_ID will return all recent queries.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListRecentQueriesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/recentQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the RecentQueries that were created by the user making the request.
+           *
+           * Create a request for the method "recentQueries.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+         *        /us-central1Note: The location portion of the resource must be specified, but supplying
+         *        the character - in place of LOCATION_ID will return all recent queries.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListRecentQueriesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+           * /us-central1Note: The location portion of the resource must be specified, but supplying
+           * the character - in place of LOCATION_ID will return all recent queries.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource to which the listed queries belong.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations/us-
+         central1Note: The location portion of the resource must be specified, but supplying the character -
+         in place of LOCATION_ID will return all recent queries.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+           * /us-central1Note: The location portion of the resource must be specified, but supplying
+           * the character - in place of LOCATION_ID will return all recent queries.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request. Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the SavedQueries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.SavedQueries.List request = logging.savedQueries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SavedQueries savedQueries() {
+        return new SavedQueries();
+      }
+
+      /**
+       * The "savedQueries" collection of methods.
+       */
+      public class SavedQueries {
+
+        /**
+         * Creates a new SavedQuery for the user making the request.
+         *
+         * Create a request for the method "savedQueries.create".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource in which to create the saved query:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/global" "organizations/123456789/locations/us-central1"
+         * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.logging.v2.model.SavedQuery content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+parent}/savedQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new SavedQuery for the user making the request.
+           *
+           * Create a request for the method "savedQueries.create".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource in which to create the saved query:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/global" "organizations/123456789/locations/us-central1"
+           * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.logging.v2.model.SavedQuery content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource in which to create the saved query:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/global" "organizations/123456789/locations/us-central1"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource in which to create the saved query:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations/global"
+         "organizations/123456789/locations/us-central1"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource in which to create the saved query:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/global" "organizations/123456789/locations/us-central1"
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The ID to use for the saved query, which will become the final component of
+           * the saved query's resource name.If the saved_query_id is not provided, the system will
+           * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
+           * include only the following characters: upper and lower-case alphanumeric characters,
+           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String savedQueryId;
+
+          /** Optional. The ID to use for the saved query, which will become the final component of the saved
+         query's resource name.If the saved_query_id is not provided, the system will generate an
+         alphanumeric ID.The saved_query_id is limited to 100 characters and can include only the following
+         characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First
+         character has to be alphanumeric.
+           */
+          public java.lang.String getSavedQueryId() {
+            return savedQueryId;
+          }
+
+          /**
+           * Optional. The ID to use for the saved query, which will become the final component of
+           * the saved query's resource name.If the saved_query_id is not provided, the system will
+           * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
+           * include only the following characters: upper and lower-case alphanumeric characters,
+           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           */
+          public Create setSavedQueryId(java.lang.String savedQueryId) {
+            this.savedQueryId = savedQueryId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an existing SavedQuery that was created by the user making the request.
+         *
+         * Create a request for the method "savedQueries.delete".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the saved query to delete.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends LoggingRequest<com.google.api.services.logging.v2.model.Empty> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Deletes an existing SavedQuery that was created by the user making the request.
+           *
+           * Create a request for the method "savedQueries.delete".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the saved query to delete.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Logging.this, "DELETE", REST_PATH, null, com.google.api.services.logging.v2.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the saved query to delete.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the saved query to delete.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example: "projects/my-
+         project/locations/global/savedQueries/my-saved-query"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the saved query to delete.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the SavedQueries that were created by the user making the request.
+         *
+         * Create a request for the method "savedQueries.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
+         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
+         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
+         *        "projects/my-project/locations/-"
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListSavedQueriesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/savedQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the SavedQueries that were created by the user making the request.
+           *
+           * Create a request for the method "savedQueries.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
+         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
+         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
+         *        "projects/my-project/locations/-"
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListSavedQueriesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/us-central1" Note: The locations portion of the resource must be
+           * specified. To get a list of all saved queries, a wildcard character - can be used for
+           * LOCATION_ID, for example: "projects/my-project/locations/-"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource to which the listed queries belong.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations/us-
+         central1" Note: The locations portion of the resource must be specified. To get a list of all saved
+         queries, a wildcard character - can be used for LOCATION_ID, for example: "projects/my-
+         project/locations/-"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/us-central1" Note: The locations portion of the resource must be
+           * specified. To get a list of all saved queries, a wildcard character - can be used for
+           * LOCATION_ID, for example: "projects/my-project/locations/-"
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request.Non-positive values
+           * are ignored. The presence of nextPageToken in the response indicates that more results
+           * might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request.Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request.Non-positive values
+           * are ignored. The presence of nextPageToken in the response indicates that more results
+           * might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Logs collection.
@@ -33502,6 +36049,855 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the RecentQueries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.RecentQueries.List request = logging.recentQueries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RecentQueries recentQueries() {
+        return new RecentQueries();
+      }
+
+      /**
+       * The "recentQueries" collection of methods.
+       */
+      public class RecentQueries {
+
+        /**
+         * Lists the RecentQueries that were created by the user making the request.
+         *
+         * Create a request for the method "recentQueries.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+         *        /us-central1Note: The location portion of the resource must be specified, but supplying
+         *        the character - in place of LOCATION_ID will return all recent queries.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListRecentQueriesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/recentQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the RecentQueries that were created by the user making the request.
+           *
+           * Create a request for the method "recentQueries.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+         *        /us-central1Note: The location portion of the resource must be specified, but supplying
+         *        the character - in place of LOCATION_ID will return all recent queries.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListRecentQueriesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+           * /us-central1Note: The location portion of the resource must be specified, but supplying
+           * the character - in place of LOCATION_ID will return all recent queries.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource to which the listed queries belong.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations/us-
+         central1Note: The location portion of the resource must be specified, but supplying the character -
+         in place of LOCATION_ID will return all recent queries.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
+           * /us-central1Note: The location portion of the resource must be specified, but supplying
+           * the character - in place of LOCATION_ID will return all recent queries.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request. Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the SavedQueries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.SavedQueries.List request = logging.savedQueries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SavedQueries savedQueries() {
+        return new SavedQueries();
+      }
+
+      /**
+       * The "savedQueries" collection of methods.
+       */
+      public class SavedQueries {
+
+        /**
+         * Creates a new SavedQuery for the user making the request.
+         *
+         * Create a request for the method "savedQueries.create".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource in which to create the saved query:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/global" "organizations/123456789/locations/us-central1"
+         * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.logging.v2.model.SavedQuery content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+parent}/savedQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new SavedQuery for the user making the request.
+           *
+           * Create a request for the method "savedQueries.create".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource in which to create the saved query:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/global" "organizations/123456789/locations/us-central1"
+           * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.logging.v2.model.SavedQuery content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource in which to create the saved query:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/global" "organizations/123456789/locations/us-central1"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource in which to create the saved query:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations/global"
+         "organizations/123456789/locations/us-central1"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource in which to create the saved query:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/global" "organizations/123456789/locations/us-central1"
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The ID to use for the saved query, which will become the final component of
+           * the saved query's resource name.If the saved_query_id is not provided, the system will
+           * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
+           * include only the following characters: upper and lower-case alphanumeric characters,
+           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String savedQueryId;
+
+          /** Optional. The ID to use for the saved query, which will become the final component of the saved
+         query's resource name.If the saved_query_id is not provided, the system will generate an
+         alphanumeric ID.The saved_query_id is limited to 100 characters and can include only the following
+         characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First
+         character has to be alphanumeric.
+           */
+          public java.lang.String getSavedQueryId() {
+            return savedQueryId;
+          }
+
+          /**
+           * Optional. The ID to use for the saved query, which will become the final component of
+           * the saved query's resource name.If the saved_query_id is not provided, the system will
+           * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
+           * include only the following characters: upper and lower-case alphanumeric characters,
+           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           */
+          public Create setSavedQueryId(java.lang.String savedQueryId) {
+            this.savedQueryId = savedQueryId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an existing SavedQuery that was created by the user making the request.
+         *
+         * Create a request for the method "savedQueries.delete".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the saved query to delete.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends LoggingRequest<com.google.api.services.logging.v2.model.Empty> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Deletes an existing SavedQuery that was created by the user making the request.
+           *
+           * Create a request for the method "savedQueries.delete".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the saved query to delete.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Logging.this, "DELETE", REST_PATH, null, com.google.api.services.logging.v2.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the saved query to delete.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the saved query to delete.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example: "projects/my-
+         project/locations/global/savedQueries/my-saved-query"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the saved query to delete.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the SavedQueries that were created by the user making the request.
+         *
+         * Create a request for the method "savedQueries.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
+         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
+         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
+         *        "projects/my-project/locations/-"
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListSavedQueriesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/savedQueries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the SavedQueries that were created by the user making the request.
+           *
+           * Create a request for the method "savedQueries.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource to which the listed queries belong.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
+         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
+         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
+         *        "projects/my-project/locations/-"
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListSavedQueriesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/us-central1" Note: The locations portion of the resource must be
+           * specified. To get a list of all saved queries, a wildcard character - can be used for
+           * LOCATION_ID, for example: "projects/my-project/locations/-"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource to which the listed queries belong.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations/us-
+         central1" Note: The locations portion of the resource must be specified. To get a list of all saved
+         queries, a wildcard character - can be used for LOCATION_ID, for example: "projects/my-
+         project/locations/-"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource to which the listed queries belong.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+           * project/locations/us-central1" Note: The locations portion of the resource must be
+           * specified. To get a list of all saved queries, a wildcard character - can be used for
+           * LOCATION_ID, for example: "projects/my-project/locations/-"
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request.Non-positive values
+           * are ignored. The presence of nextPageToken in the response indicates that more results
+           * might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request.Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request.Non-positive values
+           * are ignored. The presence of nextPageToken in the response indicates that more results
+           * might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

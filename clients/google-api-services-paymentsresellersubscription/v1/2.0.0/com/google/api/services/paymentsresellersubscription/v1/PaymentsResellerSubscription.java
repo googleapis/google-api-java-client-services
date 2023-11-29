@@ -431,7 +431,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
       /**
        * To find eligible promotions for the current user. The API requires user authorization via OAuth.
-       * The user is inferred from the authenticated OAuth credential.
+       * The bare minimum oauth scope `openid` is sufficient, which will skip the consent screen.
        *
        * Create a request for the method "promotions.findEligible".
        *
@@ -458,7 +458,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * To find eligible promotions for the current user. The API requires user authorization via
-         * OAuth. The user is inferred from the authenticated OAuth credential.
+         * OAuth. The bare minimum oauth scope `openid` is sufficient, which will skip the consent screen.
          *
          * Create a request for the method "promotions.findEligible".
          *

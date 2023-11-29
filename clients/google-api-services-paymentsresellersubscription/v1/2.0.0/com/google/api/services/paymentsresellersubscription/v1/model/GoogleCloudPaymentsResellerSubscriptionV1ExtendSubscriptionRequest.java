@@ -43,7 +43,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRe
    * Required. Restricted to 36 ASCII characters. A random UUID is recommended. The idempotency key
    * for the request. The ID generation logic is controlled by the partner. request_id should be the
    * same as on retries of the same request. A different request_id must be used for a extension of
-   * a different cycle. A random UUID is recommended.
+   * a different cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRe
    * Required. Restricted to 36 ASCII characters. A random UUID is recommended. The idempotency key
    * for the request. The ID generation logic is controlled by the partner. request_id should be the
    * same as on retries of the same request. A different request_id must be used for a extension of
-   * a different cycle. A random UUID is recommended.
+   * a different cycle.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -83,7 +83,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRe
    * Required. Restricted to 36 ASCII characters. A random UUID is recommended. The idempotency key
    * for the request. The ID generation logic is controlled by the partner. request_id should be the
    * same as on retries of the same request. A different request_id must be used for a extension of
-   * a different cycle. A random UUID is recommended.
+   * a different cycle.
    * @param requestId requestId or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest setRequestId(java.lang.String requestId) {

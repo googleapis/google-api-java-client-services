@@ -37,6 +37,13 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
   private AppDevExperienceFeatureState appdevexperience;
 
   /**
+   * ClusterUpgrade state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterUpgradeMembershipState clusterupgrade;
+
+  /**
    * Config Management-specific state.
    * The value may be {@code null}.
    */
@@ -92,6 +99,23 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
    */
   public MembershipFeatureState setAppdevexperience(AppDevExperienceFeatureState appdevexperience) {
     this.appdevexperience = appdevexperience;
+    return this;
+  }
+
+  /**
+   * ClusterUpgrade state.
+   * @return value or {@code null} for none
+   */
+  public ClusterUpgradeMembershipState getClusterupgrade() {
+    return clusterupgrade;
+  }
+
+  /**
+   * ClusterUpgrade state.
+   * @param clusterupgrade clusterupgrade or {@code null} for none
+   */
+  public MembershipFeatureState setClusterupgrade(ClusterUpgradeMembershipState clusterupgrade) {
+    this.clusterupgrade = clusterupgrade;
     return this;
   }
 

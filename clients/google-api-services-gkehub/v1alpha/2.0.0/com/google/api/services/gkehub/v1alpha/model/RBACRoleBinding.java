@@ -58,9 +58,10 @@ public final class RBACRoleBinding extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The resource name for the rbacrolebinding `projects/{project}/locations/{location}/namespaces/{
-   * namespace}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locations/{location}/memb
-   * erships/{membership}/rbacrolebindings/{rbacrolebinding}`
+   * The resource name for the rbacrolebinding
+   * `projects/{project}/locations/{location}/scopes/{scope}/rbacrolebindings/{rbacrolebinding}` or 
+   * `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{rbacrolebin
+   * ding}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,9 +174,10 @@ public final class RBACRoleBinding extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The resource name for the rbacrolebinding `projects/{project}/locations/{location}/namespaces/{
-   * namespace}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locations/{location}/memb
-   * erships/{membership}/rbacrolebindings/{rbacrolebinding}`
+   * The resource name for the rbacrolebinding
+   * `projects/{project}/locations/{location}/scopes/{scope}/rbacrolebindings/{rbacrolebinding}` or 
+   * `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{rbacrolebin
+   * ding}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -183,9 +185,10 @@ public final class RBACRoleBinding extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The resource name for the rbacrolebinding `projects/{project}/locations/{location}/namespaces/{
-   * namespace}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locations/{location}/memb
-   * erships/{membership}/rbacrolebindings/{rbacrolebinding}`
+   * The resource name for the rbacrolebinding
+   * `projects/{project}/locations/{location}/scopes/{scope}/rbacrolebindings/{rbacrolebinding}` or 
+   * `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{rbacrolebin
+   * ding}`
    * @param name name or {@code null} for none
    */
   public RBACRoleBinding setName(java.lang.String name) {

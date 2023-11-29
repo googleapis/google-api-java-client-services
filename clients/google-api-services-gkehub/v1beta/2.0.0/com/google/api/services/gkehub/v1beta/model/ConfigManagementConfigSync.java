@@ -88,15 +88,6 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   private java.lang.String sourceFormat;
 
   /**
-   * Set to true to stop syncing configs for a single cluster when automatic Feature management is
-   * enabled. Default to false. The field will be ignored when automatic Feature management is
-   * disabled.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean stopSyncing;
-
-  /**
    * Set to true to allow the vertical scaling. Defaults to false which disallows vertical scaling.
    * This field is deprecated.
    * @return value or {@code null} for none
@@ -230,27 +221,6 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    */
   public ConfigManagementConfigSync setSourceFormat(java.lang.String sourceFormat) {
     this.sourceFormat = sourceFormat;
-    return this;
-  }
-
-  /**
-   * Set to true to stop syncing configs for a single cluster when automatic Feature management is
-   * enabled. Default to false. The field will be ignored when automatic Feature management is
-   * disabled.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getStopSyncing() {
-    return stopSyncing;
-  }
-
-  /**
-   * Set to true to stop syncing configs for a single cluster when automatic Feature management is
-   * enabled. Default to false. The field will be ignored when automatic Feature management is
-   * disabled.
-   * @param stopSyncing stopSyncing or {@code null} for none
-   */
-  public ConfigManagementConfigSync setStopSyncing(java.lang.Boolean stopSyncing) {
-    this.stopSyncing = stopSyncing;
     return this;
   }
 

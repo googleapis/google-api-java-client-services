@@ -37,6 +37,13 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
   private AppDevExperienceFeatureState appdevexperience;
 
   /**
+   * ClusterUpgrade fleet-level state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterUpgradeFleetState clusterupgrade;
+
+  /**
    * FleetObservability feature state.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
    */
   public CommonFeatureState setAppdevexperience(AppDevExperienceFeatureState appdevexperience) {
     this.appdevexperience = appdevexperience;
+    return this;
+  }
+
+  /**
+   * ClusterUpgrade fleet-level state.
+   * @return value or {@code null} for none
+   */
+  public ClusterUpgradeFleetState getClusterupgrade() {
+    return clusterupgrade;
+  }
+
+  /**
+   * ClusterUpgrade fleet-level state.
+   * @param clusterupgrade clusterupgrade or {@code null} for none
+   */
+  public CommonFeatureState setClusterupgrade(ClusterUpgradeFleetState clusterupgrade) {
+    this.clusterupgrade = clusterupgrade;
     return this;
   }
 

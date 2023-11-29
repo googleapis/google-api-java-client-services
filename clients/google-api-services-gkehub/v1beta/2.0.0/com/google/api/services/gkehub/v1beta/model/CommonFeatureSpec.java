@@ -44,6 +44,13 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private AppDevExperienceFeatureSpec appdevexperience;
 
   /**
+   * ClusterUpgrade (fleet-based) feature spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterUpgradeFleetSpec clusterupgrade;
+
+  /**
    * FleetObservability feature spec.
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setAppdevexperience(AppDevExperienceFeatureSpec appdevexperience) {
     this.appdevexperience = appdevexperience;
+    return this;
+  }
+
+  /**
+   * ClusterUpgrade (fleet-based) feature spec.
+   * @return value or {@code null} for none
+   */
+  public ClusterUpgradeFleetSpec getClusterupgrade() {
+    return clusterupgrade;
+  }
+
+  /**
+   * ClusterUpgrade (fleet-based) feature spec.
+   * @param clusterupgrade clusterupgrade or {@code null} for none
+   */
+  public CommonFeatureSpec setClusterupgrade(ClusterUpgradeFleetSpec clusterupgrade) {
+    this.clusterupgrade = clusterupgrade;
     return this;
   }
 

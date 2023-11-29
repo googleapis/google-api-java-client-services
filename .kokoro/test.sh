@@ -27,17 +27,14 @@ VARIANT="2.0.0"
 # generates libraries for the latest variant
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d | grep ${VARIANT} | sort`
 do
-  pushd $directory
-
   # Find any diffs in the PR branch that are in this directory
-  diff=$(git diff "${KOKORO_GITHUB_PULL_REQUEST_TARGET_BRANCH}...${KOKORO_GITHUB_PULL_REQUEST_COMMIT}" -- "${directory}")
+  diff=$(git diff --name-only "${KOKORO_GITHUB_PULL_REQUEST_TARGET_BRANCH}...${KOKORO_GITHUB_PULL_REQUEST_COMMIT}" -- "${directory}")
   if [ -z "$diff" ]; then
     # Skip compilation + Running tests
     echo "No differences found in the PR branch for ${directory}, skipping..."
   else
+    echo "Found differences in ${directory}. Compiling..."
     mvn clean verify package -Dclirr.skip=true -Dmaven.javadoc.skip=true -B
   fi
-
-  popd
 done
 popd

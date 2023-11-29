@@ -69,6 +69,13 @@ public final class EnterpriseCrmEventbusProtoAttributes extends com.google.api.c
   private EnterpriseCrmEventbusProtoLogSettings logSettings;
 
   /**
+   * Used to indicate if the ParameterEntry is a read only field or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean readOnly;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,6 +174,23 @@ public final class EnterpriseCrmEventbusProtoAttributes extends com.google.api.c
    */
   public EnterpriseCrmEventbusProtoAttributes setLogSettings(EnterpriseCrmEventbusProtoLogSettings logSettings) {
     this.logSettings = logSettings;
+    return this;
+  }
+
+  /**
+   * Used to indicate if the ParameterEntry is a read only field or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReadOnly() {
+    return readOnly;
+  }
+
+  /**
+   * Used to indicate if the ParameterEntry is a read only field or not.
+   * @param readOnly readOnly or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoAttributes setReadOnly(java.lang.Boolean readOnly) {
+    this.readOnly = readOnly;
     return this;
   }
 

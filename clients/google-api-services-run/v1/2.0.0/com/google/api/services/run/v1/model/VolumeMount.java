@@ -45,7 +45,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Only true is accepted for Secret Volumes. Defaults to true for Secrets Volumes.
+   * Sets the mount to be read-only or read-write. Not used by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only true is accepted for Secret Volumes. Defaults to true for Secrets Volumes.
+   * Sets the mount to be read-only or read-write. Not used by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReadOnly() {
@@ -104,7 +104,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only true is accepted for Secret Volumes. Defaults to true for Secrets Volumes.
+   * Sets the mount to be read-only or read-write. Not used by Cloud Run.
    * @param readOnly readOnly or {@code null} for none
    */
   public VolumeMount setReadOnly(java.lang.Boolean readOnly) {

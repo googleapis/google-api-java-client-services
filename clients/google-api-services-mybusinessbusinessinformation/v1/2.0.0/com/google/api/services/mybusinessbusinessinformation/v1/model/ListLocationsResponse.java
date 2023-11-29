@@ -47,7 +47,8 @@ public final class ListLocationsResponse extends com.google.api.client.json.Gene
   private java.lang.String nextPageToken;
 
   /**
-   * The approximate number of Locations in the list irrespective of pagination.
+   * The approximate number of Locations in the list irrespective of pagination. This field will
+   * only be returned if `filter` is used as a query parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,8 @@ public final class ListLocationsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The approximate number of Locations in the list irrespective of pagination.
+   * The approximate number of Locations in the list irrespective of pagination. This field will
+   * only be returned if `filter` is used as a query parameter.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -100,7 +102,8 @@ public final class ListLocationsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The approximate number of Locations in the list irrespective of pagination.
+   * The approximate number of Locations in the list irrespective of pagination. This field will
+   * only be returned if `filter` is used as a query parameter.
    * @param totalSize totalSize or {@code null} for none
    */
   public ListLocationsResponse setTotalSize(java.lang.Integer totalSize) {

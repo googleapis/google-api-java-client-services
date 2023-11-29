@@ -42,6 +42,13 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   private GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings;
 
   /**
+   * Optional. Answer feedback collection settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1AgentAnswerFeedbackSettings answerFeedbackSettings;
+
+  /**
    * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the
    * self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo)
    * integration.
@@ -181,6 +188,23 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
    */
   public GoogleCloudDialogflowCxV3beta1Agent setAdvancedSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings) {
     this.advancedSettings = advancedSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Answer feedback collection settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AgentAnswerFeedbackSettings getAnswerFeedbackSettings() {
+    return answerFeedbackSettings;
+  }
+
+  /**
+   * Optional. Answer feedback collection settings.
+   * @param answerFeedbackSettings answerFeedbackSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Agent setAnswerFeedbackSettings(GoogleCloudDialogflowCxV3beta1AgentAnswerFeedbackSettings answerFeedbackSettings) {
+    this.answerFeedbackSettings = answerFeedbackSettings;
     return this;
   }
 

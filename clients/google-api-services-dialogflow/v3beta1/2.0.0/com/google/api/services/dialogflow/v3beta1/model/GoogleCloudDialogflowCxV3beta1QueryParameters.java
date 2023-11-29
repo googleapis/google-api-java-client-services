@@ -120,6 +120,13 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
+   * Optional. Search configuration for UCS search queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1SearchConfig searchConfig;
+
+  /**
    * Additional session entity types to replace or extend developer entity types with. The entity
    * synonyms apply to all languages and persist for the session of this query.
    * The value may be {@code null}.
@@ -361,6 +368,23 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setPayload(java.util.Map<String, java.lang.Object> payload) {
     this.payload = payload;
+    return this;
+  }
+
+  /**
+   * Optional. Search configuration for UCS search queries.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1SearchConfig getSearchConfig() {
+    return searchConfig;
+  }
+
+  /**
+   * Optional. Search configuration for UCS search queries.
+   * @param searchConfig searchConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryParameters setSearchConfig(GoogleCloudDialogflowCxV3beta1SearchConfig searchConfig) {
+    this.searchConfig = searchConfig;
     return this;
   }
 

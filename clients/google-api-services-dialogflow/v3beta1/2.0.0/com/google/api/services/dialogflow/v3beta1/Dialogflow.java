@@ -14388,6 +14388,138 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (MatchIntent) super.set(parameterName, value);
             }
           }
+          /**
+           * Updates the feedback received from the user for a single turn of the bot response.
+           *
+           * Create a request for the method "sessions.submitAnswerFeedback".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link SubmitAnswerFeedback#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param session Required. The name of the session the feedback was sent to.
+           * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SubmitAnswerFeedbackRequest}
+           * @return the request
+           */
+          public SubmitAnswerFeedback submitAnswerFeedback(java.lang.String session, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SubmitAnswerFeedbackRequest content) throws java.io.IOException {
+            SubmitAnswerFeedback result = new SubmitAnswerFeedback(session, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SubmitAnswerFeedback extends DialogflowRequest<com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1AnswerFeedback> {
+
+            private static final String REST_PATH = "v3beta1/{+session}:submitAnswerFeedback";
+
+            private final java.util.regex.Pattern SESSION_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
+
+            /**
+             * Updates the feedback received from the user for a single turn of the bot response.
+             *
+             * Create a request for the method "sessions.submitAnswerFeedback".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link SubmitAnswerFeedback#execute()} method to invoke the
+             * remote operation. <p> {@link SubmitAnswerFeedback#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param session Required. The name of the session the feedback was sent to.
+             * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SubmitAnswerFeedbackRequest}
+             * @since 1.13
+             */
+            protected SubmitAnswerFeedback(java.lang.String session, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SubmitAnswerFeedbackRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1AnswerFeedback.class);
+              this.session = com.google.api.client.util.Preconditions.checkNotNull(session, "Required parameter session must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                    "Parameter session must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public SubmitAnswerFeedback set$Xgafv(java.lang.String $Xgafv) {
+              return (SubmitAnswerFeedback) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SubmitAnswerFeedback setAccessToken(java.lang.String accessToken) {
+              return (SubmitAnswerFeedback) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SubmitAnswerFeedback setAlt(java.lang.String alt) {
+              return (SubmitAnswerFeedback) super.setAlt(alt);
+            }
+
+            @Override
+            public SubmitAnswerFeedback setCallback(java.lang.String callback) {
+              return (SubmitAnswerFeedback) super.setCallback(callback);
+            }
+
+            @Override
+            public SubmitAnswerFeedback setFields(java.lang.String fields) {
+              return (SubmitAnswerFeedback) super.setFields(fields);
+            }
+
+            @Override
+            public SubmitAnswerFeedback setKey(java.lang.String key) {
+              return (SubmitAnswerFeedback) super.setKey(key);
+            }
+
+            @Override
+            public SubmitAnswerFeedback setOauthToken(java.lang.String oauthToken) {
+              return (SubmitAnswerFeedback) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SubmitAnswerFeedback setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SubmitAnswerFeedback) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SubmitAnswerFeedback setQuotaUser(java.lang.String quotaUser) {
+              return (SubmitAnswerFeedback) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SubmitAnswerFeedback setUploadType(java.lang.String uploadType) {
+              return (SubmitAnswerFeedback) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SubmitAnswerFeedback setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SubmitAnswerFeedback) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the session the feedback was sent to. */
+            @com.google.api.client.util.Key
+            private java.lang.String session;
+
+            /** Required. The name of the session the feedback was sent to.
+             */
+            public java.lang.String getSession() {
+              return session;
+            }
+
+            /** Required. The name of the session the feedback was sent to. */
+            public SubmitAnswerFeedback setSession(java.lang.String session) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                    "Parameter session must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
+              }
+              this.session = session;
+              return this;
+            }
+
+            @Override
+            public SubmitAnswerFeedback set(String parameterName, Object value) {
+              return (SubmitAnswerFeedback) super.set(parameterName, value);
+            }
+          }
 
           /**
            * An accessor for creating requests from the EntityTypes collection.

@@ -41,6 +41,14 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   private GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings;
 
   /**
+   * Indicates whether the Thumbs up/Thumbs down rating controls are need to be shown for the
+   * response in the Dialogflow Messenger widget.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowAnswerFeedback;
+
+  /**
    * The current Page. Some, not all fields are filled in this message, including but not limited to
    * `name` and `display_name`.
    * The value may be {@code null}.
@@ -203,6 +211,25 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
    */
   public GoogleCloudDialogflowCxV3QueryResult setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings) {
     this.advancedSettings = advancedSettings;
+    return this;
+  }
+
+  /**
+   * Indicates whether the Thumbs up/Thumbs down rating controls are need to be shown for the
+   * response in the Dialogflow Messenger widget.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowAnswerFeedback() {
+    return allowAnswerFeedback;
+  }
+
+  /**
+   * Indicates whether the Thumbs up/Thumbs down rating controls are need to be shown for the
+   * response in the Dialogflow Messenger widget.
+   * @param allowAnswerFeedback allowAnswerFeedback or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3QueryResult setAllowAnswerFeedback(java.lang.Boolean allowAnswerFeedback) {
+    this.allowAnswerFeedback = allowAnswerFeedback;
     return this;
   }
 

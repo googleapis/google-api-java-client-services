@@ -23,9 +23,6 @@ package com.google.api.services.smartdevicemanagement.v1;
  */
 public class SmartDeviceManagementScopes {
 
-  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
-  public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
-
   /** See and/or control the devices that you selected. */
   public static final String SDM_SERVICE = "https://www.googleapis.com/auth/sdm.service";
 
@@ -36,7 +33,6 @@ public class SmartDeviceManagementScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
-    set.add(CLOUD_PLATFORM);
     set.add(SDM_SERVICE);
     return java.util.Collections.unmodifiableSet(set);
   }

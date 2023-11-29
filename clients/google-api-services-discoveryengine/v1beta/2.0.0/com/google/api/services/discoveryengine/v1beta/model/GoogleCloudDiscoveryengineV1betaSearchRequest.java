@@ -47,6 +47,19 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   private java.lang.String branch;
 
   /**
+   * The default filter that is applied when a user performs a search without checking any filters
+   * on the search page. The filter applied to every search request when quality improvement such as
+   * query expansion is needed. In the case a query does not have a sufficient amount of results
+   * this filter will be used to determine whether or not to enable the query expansion flow. The
+   * original filter will still be used for the query expanded search. This field is strongly
+   * recommended to achieve high search quality. For more information about filter syntax, see
+   * SearchRequest.filter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String canonicalFilter;
+
+  /**
    * A specification for configuring the behavior of content search.
    * The value may be {@code null}.
    */
@@ -266,6 +279,35 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setBranch(java.lang.String branch) {
     this.branch = branch;
+    return this;
+  }
+
+  /**
+   * The default filter that is applied when a user performs a search without checking any filters
+   * on the search page. The filter applied to every search request when quality improvement such as
+   * query expansion is needed. In the case a query does not have a sufficient amount of results
+   * this filter will be used to determine whether or not to enable the query expansion flow. The
+   * original filter will still be used for the query expanded search. This field is strongly
+   * recommended to achieve high search quality. For more information about filter syntax, see
+   * SearchRequest.filter.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCanonicalFilter() {
+    return canonicalFilter;
+  }
+
+  /**
+   * The default filter that is applied when a user performs a search without checking any filters
+   * on the search page. The filter applied to every search request when quality improvement such as
+   * query expansion is needed. In the case a query does not have a sufficient amount of results
+   * this filter will be used to determine whether or not to enable the query expansion flow. The
+   * original filter will still be used for the query expanded search. This field is strongly
+   * recommended to achieve high search quality. For more information about filter syntax, see
+   * SearchRequest.filter.
+   * @param canonicalFilter canonicalFilter or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequest setCanonicalFilter(java.lang.String canonicalFilter) {
+    this.canonicalFilter = canonicalFilter;
     return this;
   }
 

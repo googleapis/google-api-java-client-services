@@ -58,7 +58,8 @@ public final class LoadBalancerInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URI of the health check for the load balancer.
+   * URI of the health check for the load balancer. Deprecated and no longer populated as different
+   * load balancer backends might have different health checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +124,8 @@ public final class LoadBalancerInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URI of the health check for the load balancer.
+   * URI of the health check for the load balancer. Deprecated and no longer populated as different
+   * load balancer backends might have different health checks.
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthCheckUri() {
@@ -131,7 +133,8 @@ public final class LoadBalancerInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URI of the health check for the load balancer.
+   * URI of the health check for the load balancer. Deprecated and no longer populated as different
+   * load balancer backends might have different health checks.
    * @param healthCheckUri healthCheckUri or {@code null} for none
    */
   public LoadBalancerInfo setHealthCheckUri(java.lang.String healthCheckUri) {

@@ -31,7 +31,7 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource name for the related account group in the format
+   * Required. Identifier. The resource name for the related account group in the format
    * `projects/{project}/relatedaccountgroups/{related_account_group}`.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup extends c
   private java.lang.String name;
 
   /**
-   * Required. The resource name for the related account group in the format
+   * Required. Identifier. The resource name for the related account group in the format
    * `projects/{project}/relatedaccountgroups/{related_account_group}`.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup extends c
   }
 
   /**
-   * Required. The resource name for the related account group in the format
+   * Required. Identifier. The resource name for the related account group in the format
    * `projects/{project}/relatedaccountgroups/{related_account_group}`.
    * @param name name or {@code null} for none
    */

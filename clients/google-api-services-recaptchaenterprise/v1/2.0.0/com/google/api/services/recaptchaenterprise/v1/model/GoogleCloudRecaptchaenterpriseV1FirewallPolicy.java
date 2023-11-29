@@ -68,7 +68,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   private java.lang.String description;
 
   /**
-   * The resource name for the FirewallPolicy in the format
+   * Identifier. The resource name for the FirewallPolicy in the format
    * `projects/{project}/firewallpolicies/{firewallpolicy}`.
    * The value may be {@code null}.
    */
@@ -156,7 +156,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   }
 
   /**
-   * The resource name for the FirewallPolicy in the format
+   * Identifier. The resource name for the FirewallPolicy in the format
    * `projects/{project}/firewallpolicies/{firewallpolicy}`.
    * @return value or {@code null} for none
    */
@@ -165,7 +165,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends com.go
   }
 
   /**
-   * The resource name for the FirewallPolicy in the format
+   * Identifier. The resource name for the FirewallPolicy in the format
    * `projects/{project}/firewallpolicies/{firewallpolicy}`.
    * @param name name or {@code null} for none
    */

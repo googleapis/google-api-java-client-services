@@ -39,7 +39,7 @@ public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership
   private java.lang.String hashedAccountId;
 
   /**
-   * Required. The resource name for this membership in the format
+   * Required. Identifier. The resource name for this membership in the format
    * `projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}`.
    * The value may be {@code null}.
    */
@@ -96,7 +96,7 @@ public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership
   }
 
   /**
-   * Required. The resource name for this membership in the format
+   * Required. Identifier. The resource name for this membership in the format
    * `projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}`.
    * @return value or {@code null} for none
    */
@@ -105,7 +105,7 @@ public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership
   }
 
   /**
-   * Required. The resource name for this membership in the format
+   * Required. Identifier. The resource name for this membership in the format
    * `projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}`.
    * @param name name or {@code null} for none
    */

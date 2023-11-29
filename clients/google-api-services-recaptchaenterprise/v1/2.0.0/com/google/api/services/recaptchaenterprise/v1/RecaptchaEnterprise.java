@@ -1097,7 +1097,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name for the FirewallPolicy in the format
+       * @param name Identifier. The resource name for the FirewallPolicy in the format
        *        `projects/{project}/firewallpolicies/{firewallpolicy}`.
        * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1FirewallPolicy}
        * @return the request
@@ -1126,7 +1126,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name for the FirewallPolicy in the format
+         * @param name Identifier. The resource name for the FirewallPolicy in the format
        *        `projects/{project}/firewallpolicies/{firewallpolicy}`.
          * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1FirewallPolicy}
          * @since 1.13
@@ -1197,13 +1197,13 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * The resource name for the FirewallPolicy in the format
+         * Identifier. The resource name for the FirewallPolicy in the format
          * `projects/{project}/firewallpolicies/{firewallpolicy}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name for the FirewallPolicy in the format
+        /** Identifier. The resource name for the FirewallPolicy in the format
        `projects/{project}/firewallpolicies/{firewallpolicy}`.
          */
         public java.lang.String getName() {
@@ -1211,7 +1211,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * The resource name for the FirewallPolicy in the format
+         * Identifier. The resource name for the FirewallPolicy in the format
          * `projects/{project}/firewallpolicies/{firewallpolicy}`.
          */
         public Patch setName(java.lang.String name) {
@@ -2172,7 +2172,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name for the Key in the format `projects/{project}/keys/{key}`.
+       * @param name Identifier. The resource name for the Key in the format `projects/{project}/keys/{key}`.
        * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Key}
        * @return the request
        */
@@ -2200,7 +2200,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name for the Key in the format `projects/{project}/keys/{key}`.
+         * @param name Identifier. The resource name for the Key in the format `projects/{project}/keys/{key}`.
          * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Key}
          * @since 1.13
          */
@@ -2269,17 +2269,21 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The resource name for the Key in the format `projects/{project}/keys/{key}`. */
+        /**
+         * Identifier. The resource name for the Key in the format `projects/{project}/keys/{key}`.
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name for the Key in the format `projects/{project}/keys/{key}`.
+        /** Identifier. The resource name for the Key in the format `projects/{project}/keys/{key}`.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The resource name for the Key in the format `projects/{project}/keys/{key}`. */
+        /**
+         * Identifier. The resource name for the Key in the format `projects/{project}/keys/{key}`.
+         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

@@ -75,7 +75,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private GoogleCloudRecaptchaenterpriseV1FraudSignals fraudSignals;
 
   /**
-   * Output only. The resource name for the Assessment in the format
+   * Output only. Identifier. The resource name for the Assessment in the format
    * `projects/{project}/assessments/{assessment}`.
    * The value may be {@code null}.
    */
@@ -211,7 +211,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Output only. The resource name for the Assessment in the format
+   * Output only. Identifier. The resource name for the Assessment in the format
    * `projects/{project}/assessments/{assessment}`.
    * @return value or {@code null} for none
    */
@@ -220,7 +220,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Output only. The resource name for the Assessment in the format
+   * Output only. Identifier. The resource name for the Assessment in the format
    * `projects/{project}/assessments/{assessment}`.
    * @param name name or {@code null} for none
    */

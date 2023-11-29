@@ -282,7 +282,7 @@ When a change is made in the API definitions, the following events happens:
       (00:30 to 02:30 implies 3 batches of size 100); otherwise it fails.
       As of November 2023, the size of the service name array is 269.
     - **batch** This job splits the service names into chunks of maximum 100 and returns an array containing the chunks.
-      This is to avoid one job that is too long to finish.
+      This is to avoid one job that is too long to finish and also to avoid hitting the maximum parallel job limit of Github actions (256).
     - **generate**: At the end, this job runs the code generator for each service in the chunk whose array index
       corresponds to the hour of the day. For details, see [codegen.yaml](
       https://github.com/googleapis/google-api-java-client-services/blob/main/.github/workflows/codegen.yaml).

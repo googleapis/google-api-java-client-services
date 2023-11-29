@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.serviceusage.v1.model;
+package com.google.api.services.serviceusage.v1beta1.model;
 
 /**
- * Metadata for the `UpdateConsumerPolicyLRO` method.
+ * Metadata for the `UpdateConsumerPolicy` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Usage API. For a detailed explanation see:
@@ -27,16 +27,16 @@ package com.google.api.services.serviceusage.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class UpdateConsumerPolicyLROMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleApiServiceusageV2alphaUpdateConsumerPolicyMetadata extends com.google.api.client.json.GenericJson {
 
   @Override
-  public UpdateConsumerPolicyLROMetadata set(String fieldName, Object value) {
-    return (UpdateConsumerPolicyLROMetadata) super.set(fieldName, value);
+  public GoogleApiServiceusageV2alphaUpdateConsumerPolicyMetadata set(String fieldName, Object value) {
+    return (GoogleApiServiceusageV2alphaUpdateConsumerPolicyMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public UpdateConsumerPolicyLROMetadata clone() {
-    return (UpdateConsumerPolicyLROMetadata) super.clone();
+  public GoogleApiServiceusageV2alphaUpdateConsumerPolicyMetadata clone() {
+    return (GoogleApiServiceusageV2alphaUpdateConsumerPolicyMetadata) super.clone();
   }
 
 }

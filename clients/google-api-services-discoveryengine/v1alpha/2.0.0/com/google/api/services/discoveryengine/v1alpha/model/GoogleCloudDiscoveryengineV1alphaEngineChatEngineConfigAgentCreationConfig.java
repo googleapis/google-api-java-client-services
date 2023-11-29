@@ -18,8 +18,8 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
  * Configurations for generating a Dialogflow agent. Note that these configurations are one-time
- * consumed by and passed to Dialogflow service. It means they cannot be retrieved using GetEngine
- * or ListEngine API after engine creation.
+ * consumed by and passed to Dialogflow service. It means they cannot be retrieved using
+ * EngineService.GetEngine or EngineService.ListEngines API after engine creation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

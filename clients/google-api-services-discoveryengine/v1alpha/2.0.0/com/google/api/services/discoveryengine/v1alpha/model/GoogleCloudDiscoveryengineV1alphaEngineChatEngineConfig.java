@@ -32,7 +32,8 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig exten
   /**
    * The configurationt generate the Dialogflow agent that is associated to this Engine. Note that
    * these configurations are one-time consumed by and passed to Dialogflow service. It means they
-   * cannot be retrieved using GetEngine or ListEngine API after engine creation.
+   * cannot be retrieved using EngineService.GetEngine or EngineService.ListEngines API after engine
+   * creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,9 +44,9 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig exten
    * either provide `agent_creation_config` to create agent or provide an agent name that links the
    * agent with the Chat engine. Format: `projects//locations//agents/`. Note that the
    * `dialogflow_agent_to_link` are one-time consumed by and passed to Dialogflow service. It means
-   * they cannot be retrieved using GetEngine or ListEngine API after engine creation. Please use
-   * Engine.chat_engine_metadata.dialogflow_agent for actual agent association after Engine is
-   * created.
+   * they cannot be retrieved using EngineService.GetEngine or EngineService.ListEngines API after
+   * engine creation. Please use chat_engine_metadata.dialogflow_agent for actual agent association
+   * after Engine is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +55,8 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig exten
   /**
    * The configurationt generate the Dialogflow agent that is associated to this Engine. Note that
    * these configurations are one-time consumed by and passed to Dialogflow service. It means they
-   * cannot be retrieved using GetEngine or ListEngine API after engine creation.
+   * cannot be retrieved using EngineService.GetEngine or EngineService.ListEngines API after engine
+   * creation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfigAgentCreationConfig getAgentCreationConfig() {
@@ -64,7 +66,8 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig exten
   /**
    * The configurationt generate the Dialogflow agent that is associated to this Engine. Note that
    * these configurations are one-time consumed by and passed to Dialogflow service. It means they
-   * cannot be retrieved using GetEngine or ListEngine API after engine creation.
+   * cannot be retrieved using EngineService.GetEngine or EngineService.ListEngines API after engine
+   * creation.
    * @param agentCreationConfig agentCreationConfig or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig setAgentCreationConfig(GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfigAgentCreationConfig agentCreationConfig) {
@@ -77,9 +80,9 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig exten
    * either provide `agent_creation_config` to create agent or provide an agent name that links the
    * agent with the Chat engine. Format: `projects//locations//agents/`. Note that the
    * `dialogflow_agent_to_link` are one-time consumed by and passed to Dialogflow service. It means
-   * they cannot be retrieved using GetEngine or ListEngine API after engine creation. Please use
-   * Engine.chat_engine_metadata.dialogflow_agent for actual agent association after Engine is
-   * created.
+   * they cannot be retrieved using EngineService.GetEngine or EngineService.ListEngines API after
+   * engine creation. Please use chat_engine_metadata.dialogflow_agent for actual agent association
+   * after Engine is created.
    * @return value or {@code null} for none
    */
   public java.lang.String getDialogflowAgentToLink() {
@@ -91,9 +94,9 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig exten
    * either provide `agent_creation_config` to create agent or provide an agent name that links the
    * agent with the Chat engine. Format: `projects//locations//agents/`. Note that the
    * `dialogflow_agent_to_link` are one-time consumed by and passed to Dialogflow service. It means
-   * they cannot be retrieved using GetEngine or ListEngine API after engine creation. Please use
-   * Engine.chat_engine_metadata.dialogflow_agent for actual agent association after Engine is
-   * created.
+   * they cannot be retrieved using EngineService.GetEngine or EngineService.ListEngines API after
+   * engine creation. Please use chat_engine_metadata.dialogflow_agent for actual agent association
+   * after Engine is created.
    * @param dialogflowAgentToLink dialogflowAgentToLink or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig setDialogflowAgentToLink(java.lang.String dialogflowAgentToLink) {

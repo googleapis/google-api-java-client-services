@@ -48,7 +48,7 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The desired number of instances running this revision. For Cloud Run, this only
+   * Output only. The configured number of instances running this revision. For Cloud Run, this only
    * includes instances provisioned using the minScale annotation. It does not include instances
    * created by autoscaling.
    * The value may be {@code null}.
@@ -117,7 +117,7 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The desired number of instances running this revision. For Cloud Run, this only
+   * Output only. The configured number of instances running this revision. For Cloud Run, this only
    * includes instances provisioned using the minScale annotation. It does not include instances
    * created by autoscaling.
    * @return value or {@code null} for none
@@ -127,7 +127,7 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The desired number of instances running this revision. For Cloud Run, this only
+   * Output only. The configured number of instances running this revision. For Cloud Run, this only
    * includes instances provisioned using the minScale annotation. It does not include instances
    * created by autoscaling.
    * @param desiredReplicas desiredReplicas or {@code null} for none

@@ -17,7 +17,7 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * Scaling settings that apply to the service as a whole rather than the individual revision.
+ * Scaling settings applied at the service level rather than at the revision level.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -30,16 +30,16 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2ServiceScaling extends com.google.api.client.json.GenericJson {
 
   /**
-   * total min instances for the service. This number of instances will be divide among all
-   * revisions with specified traffic based on the percent of traffic they are receiving. (ALPHA)
+   * total min instances for the service. This number of instances is divided among all revisions
+   * with specified traffic based on the percent of traffic they are receiving. (ALPHA)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minInstanceCount;
 
   /**
-   * total min instances for the service. This number of instances will be divide among all
-   * revisions with specified traffic based on the percent of traffic they are receiving. (ALPHA)
+   * total min instances for the service. This number of instances is divided among all revisions
+   * with specified traffic based on the percent of traffic they are receiving. (ALPHA)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinInstanceCount() {
@@ -47,8 +47,8 @@ public final class GoogleCloudRunV2ServiceScaling extends com.google.api.client.
   }
 
   /**
-   * total min instances for the service. This number of instances will be divide among all
-   * revisions with specified traffic based on the percent of traffic they are receiving. (ALPHA)
+   * total min instances for the service. This number of instances is divided among all revisions
+   * with specified traffic based on the percent of traffic they are receiving. (ALPHA)
    * @param minInstanceCount minInstanceCount or {@code null} for none
    */
   public GoogleCloudRunV2ServiceScaling setMinInstanceCount(java.lang.Integer minInstanceCount) {

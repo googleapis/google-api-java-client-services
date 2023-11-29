@@ -23,13 +23,13 @@ git config --global --add safe.directory $(realpath .)
 
 VARIANT="2.0.0"
 
-# Only search for directories with the latest variant as only the generator only
+# Only search for directories with the latest variant as the generator only
 # generates libraries for the latest variant
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d | grep ${VARIANT} | sort`
 do
   # Find any diffs in the PR branch that are in this directory
   diff=$(git diff --name-only "${KOKORO_GITHUB_PULL_REQUEST_TARGET_BRANCH}...${KOKORO_GITHUB_PULL_REQUEST_COMMIT}" -- "${directory}")
-  if [ -z "$diff" ]; then
+  if [ -z "${diff}" ]; then
     # Skip compilation + Running tests
     echo "No differences found in the PR branch for ${directory}, skipping..."
   else

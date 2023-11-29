@@ -103,7 +103,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   private MonitoredResource monitoredResource;
 
   /**
-   * A unique resource name for this Uptime check configuration. The format is:
+   * Identifier. A unique resource name for this Uptime check configuration. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] [PROJECT_ID_OR_NUMBER] is
    * the Workspace host project associated with the Uptime check.This field should be omitted when
    * creating the Uptime check configuration; on create, the resource name is assigned by the server
@@ -315,7 +315,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A unique resource name for this Uptime check configuration. The format is:
+   * Identifier. A unique resource name for this Uptime check configuration. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] [PROJECT_ID_OR_NUMBER] is
    * the Workspace host project associated with the Uptime check.This field should be omitted when
    * creating the Uptime check configuration; on create, the resource name is assigned by the server
@@ -327,7 +327,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A unique resource name for this Uptime check configuration. The format is:
+   * Identifier. A unique resource name for this Uptime check configuration. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] [PROJECT_ID_OR_NUMBER] is
    * the Workspace host project associated with the Uptime check.This field should be omitted when
    * creating the Uptime check configuration; on create, the resource name is assigned by the server

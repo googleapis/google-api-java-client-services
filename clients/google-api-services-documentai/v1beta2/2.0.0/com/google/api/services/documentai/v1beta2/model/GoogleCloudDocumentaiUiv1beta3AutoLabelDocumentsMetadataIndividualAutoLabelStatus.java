@@ -38,13 +38,6 @@ public final class GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndiv
   private GoogleCloudDocumentaiUiv1beta3DocumentId documentId;
 
   /**
-   * The gcs_uri of the auto-labeling document, which uniquely identifies a dataset document.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String gcsUri;
-
-  /**
    * The status of the document auto-labeling.
    * The value may be {@code null}.
    */
@@ -65,23 +58,6 @@ public final class GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndiv
    */
   public GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabelStatus setDocumentId(GoogleCloudDocumentaiUiv1beta3DocumentId documentId) {
     this.documentId = documentId;
-    return this;
-  }
-
-  /**
-   * The gcs_uri of the auto-labeling document, which uniquely identifies a dataset document.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getGcsUri() {
-    return gcsUri;
-  }
-
-  /**
-   * The gcs_uri of the auto-labeling document, which uniquely identifies a dataset document.
-   * @param gcsUri gcsUri or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabelStatus setGcsUri(java.lang.String gcsUri) {
-    this.gcsUri = gcsUri;
     return this;
   }
 

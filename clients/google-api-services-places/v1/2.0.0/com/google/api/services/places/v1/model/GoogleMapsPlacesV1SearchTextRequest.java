@@ -75,10 +75,9 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
 
   /**
    * Filter out results whose average user rating is strictly less than this limit. A valid value
-   * must be an float between 0 and 5 (inclusively) at a 0.5 cadence i.e. [0, 0.5, 1.0, ... , 5.0]
-   * inclusively. This is to keep parity with LocalRefinement_UserRating. The input rating will
-   * round up to the nearest 0.5(ceiling). For instance, a rating of 0.6 will eliminate all results
-   * with a less than 1.0 rating.
+   * must be a float between 0 and 5 (inclusively) at a 0.5 cadence i.e. [0, 0.5, 1.0, ... , 5.0]
+   * inclusively. The input rating will round up to the nearest 0.5(ceiling). For instance, a rating
+   * of 0.6 will eliminate all results with a less than 1.0 rating.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,10 +236,9 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
 
   /**
    * Filter out results whose average user rating is strictly less than this limit. A valid value
-   * must be an float between 0 and 5 (inclusively) at a 0.5 cadence i.e. [0, 0.5, 1.0, ... , 5.0]
-   * inclusively. This is to keep parity with LocalRefinement_UserRating. The input rating will
-   * round up to the nearest 0.5(ceiling). For instance, a rating of 0.6 will eliminate all results
-   * with a less than 1.0 rating.
+   * must be a float between 0 and 5 (inclusively) at a 0.5 cadence i.e. [0, 0.5, 1.0, ... , 5.0]
+   * inclusively. The input rating will round up to the nearest 0.5(ceiling). For instance, a rating
+   * of 0.6 will eliminate all results with a less than 1.0 rating.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMinRating() {
@@ -249,10 +247,9 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
 
   /**
    * Filter out results whose average user rating is strictly less than this limit. A valid value
-   * must be an float between 0 and 5 (inclusively) at a 0.5 cadence i.e. [0, 0.5, 1.0, ... , 5.0]
-   * inclusively. This is to keep parity with LocalRefinement_UserRating. The input rating will
-   * round up to the nearest 0.5(ceiling). For instance, a rating of 0.6 will eliminate all results
-   * with a less than 1.0 rating.
+   * must be a float between 0 and 5 (inclusively) at a 0.5 cadence i.e. [0, 0.5, 1.0, ... , 5.0]
+   * inclusively. The input rating will round up to the nearest 0.5(ceiling). For instance, a rating
+   * of 0.6 will eliminate all results with a less than 1.0 rating.
    * @param minRating minRating or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequest setMinRating(java.lang.Double minRating) {

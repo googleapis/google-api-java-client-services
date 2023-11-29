@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfig extends com.go
   private java.lang.String audioEncoding;
 
   /**
+   * Configuration of barge-in behavior during the streaming of input audio.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1BargeInConfig bargeInConfig;
+
+  /**
    * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with
    * information about the recognized speech words, e.g. start and end time offsets. If false or
    * unspecified, Speech doesn't return any word-level information.
@@ -109,6 +116,23 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfig extends com.go
    */
   public GoogleCloudDialogflowCxV3beta1InputAudioConfig setAudioEncoding(java.lang.String audioEncoding) {
     this.audioEncoding = audioEncoding;
+    return this;
+  }
+
+  /**
+   * Configuration of barge-in behavior during the streaming of input audio.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1BargeInConfig getBargeInConfig() {
+    return bargeInConfig;
+  }
+
+  /**
+   * Configuration of barge-in behavior during the streaming of input audio.
+   * @param bargeInConfig bargeInConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1InputAudioConfig setBargeInConfig(GoogleCloudDialogflowCxV3beta1BargeInConfig bargeInConfig) {
+    this.bargeInConfig = bargeInConfig;
     return this;
   }
 

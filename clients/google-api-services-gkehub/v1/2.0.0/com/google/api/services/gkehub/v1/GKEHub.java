@@ -9092,9 +9092,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name The resource name for the rbacrolebinding
-           *        `projects/{project}/locations/{location}/namespaces/{namespace}/rbacrolebindings/{rbacrole
-           *        binding}` or `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebin
-           *        dings/{rbacrolebinding}`
+           *        `projects/{project}/locations/{location}/scopes/{scope}/rbacrolebindings/{rbacrolebinding}
+           *        ` or `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{r
+           *        bacrolebinding}`
            * @param content the {@link com.google.api.services.gkehub.v1.model.RBACRoleBinding}
            * @return the request
            */
@@ -9122,9 +9122,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name The resource name for the rbacrolebinding
-           *        `projects/{project}/locations/{location}/namespaces/{namespace}/rbacrolebindings/{rbacrole
-           *        binding}` or `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebin
-           *        dings/{rbacrolebinding}`
+           *        `projects/{project}/locations/{location}/scopes/{scope}/rbacrolebindings/{rbacrolebinding}
+           *        ` or `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{r
+           *        bacrolebinding}`
              * @param content the {@link com.google.api.services.gkehub.v1.model.RBACRoleBinding}
              * @since 1.13
              */
@@ -9194,26 +9194,25 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * The resource name for the rbacrolebinding `projects/{project}/locations/{location}/na
-             * mespaces/{namespace}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locat
-             * ions/{location}/memberships/{membership}/rbacrolebindings/{rbacrolebinding}`
+             * The resource name for the rbacrolebinding `projects/{project}/locations/{location}/sc
+             * opes/{scope}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locations/{lo
+             * cation}/memberships/{membership}/rbacrolebindings/{rbacrolebinding}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The resource name for the rbacrolebinding
-           `projects/{project}/locations/{location}/namespaces/{namespace}/rbacrolebindings/{rbacrolebinding}`
-           or `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{rbacrolebind
-           ing}`
+           `projects/{project}/locations/{location}/scopes/{scope}/rbacrolebindings/{rbacrolebinding}` or `pro
+           jects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{rbacrolebinding}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The resource name for the rbacrolebinding `projects/{project}/locations/{location}/na
-             * mespaces/{namespace}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locat
-             * ions/{location}/memberships/{membership}/rbacrolebindings/{rbacrolebinding}`
+             * The resource name for the rbacrolebinding `projects/{project}/locations/{location}/sc
+             * opes/{scope}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locations/{lo
+             * cation}/memberships/{membership}/rbacrolebindings/{rbacrolebinding}`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

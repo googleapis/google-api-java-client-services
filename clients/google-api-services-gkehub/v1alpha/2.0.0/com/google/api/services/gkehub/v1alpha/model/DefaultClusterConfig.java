@@ -31,11 +31,35 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class DefaultClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Enable/Disable binary authorization features for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BinaryAuthorizationConfig binaryAuthorizationConfig;
+
+  /**
    * Enable/Disable Security Posture features for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecurityPostureConfig securityPostureConfig;
+
+  /**
+   * Optional. Enable/Disable binary authorization features for the cluster.
+   * @return value or {@code null} for none
+   */
+  public BinaryAuthorizationConfig getBinaryAuthorizationConfig() {
+    return binaryAuthorizationConfig;
+  }
+
+  /**
+   * Optional. Enable/Disable binary authorization features for the cluster.
+   * @param binaryAuthorizationConfig binaryAuthorizationConfig or {@code null} for none
+   */
+  public DefaultClusterConfig setBinaryAuthorizationConfig(BinaryAuthorizationConfig binaryAuthorizationConfig) {
+    this.binaryAuthorizationConfig = binaryAuthorizationConfig;
+    return this;
+  }
 
   /**
    * Enable/Disable Security Posture features for the cluster.

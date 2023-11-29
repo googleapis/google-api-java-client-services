@@ -17,7 +17,7 @@
 package com.google.api.services.serviceusage.v1.model;
 
 /**
- * Unimplemented. Do not use. GroupValue contains information of a service group.
+ * Metadata for the `UpdateConsumerPolicy` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Usage API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.serviceusage.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GroupValue extends com.google.api.client.json.GenericJson {
+public final class GoogleApiServiceusageV2alphaUpdateConsumerPolicyMetadata extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The name of the value. Example: `groups/googleSerivice`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
-   * The name of the value. Example: `groups/googleSerivice`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * The name of the value. Example: `groups/googleSerivice`.
-   * @param name name or {@code null} for none
-   */
-  public GroupValue setName(java.lang.String name) {
-    this.name = name;
-    return this;
+  @Override
+  public GoogleApiServiceusageV2alphaUpdateConsumerPolicyMetadata set(String fieldName, Object value) {
+    return (GoogleApiServiceusageV2alphaUpdateConsumerPolicyMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GroupValue set(String fieldName, Object value) {
-    return (GroupValue) super.set(fieldName, value);
-  }
-
-  @Override
-  public GroupValue clone() {
-    return (GroupValue) super.clone();
+  public GoogleApiServiceusageV2alphaUpdateConsumerPolicyMetadata clone() {
+    return (GoogleApiServiceusageV2alphaUpdateConsumerPolicyMetadata) super.clone();
   }
 
 }

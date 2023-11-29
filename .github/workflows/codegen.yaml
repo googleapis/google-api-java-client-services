@@ -7,6 +7,7 @@ on:
 name: codegen
 jobs:
   discovery:
+    # As of November 2023, it returns 269 service names.
     uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
   total_service_size_check:
     runs-on: ubuntu-20.04
@@ -26,6 +27,9 @@ jobs:
     runs-on: ubuntu-20.04
     needs: discovery
     outputs:
+      # As of November 2023, the output of batch job is a 3-element array, which contains a chunk of 100 service names
+      # at the index 0, a chunk of other 100 service names at the index 1, and a chunk of remaining 69 service names
+      # at the index 2.
       services: ${{ steps.chunk.outputs.result }}
     steps:
       - uses: actions/github-script@v5
@@ -48,7 +52,10 @@ jobs:
     uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@main
     needs: batch
     secrets: inherit
-    # The number of batch is implicitly decided by the hour of the day
+    # The size of the batch is implicitly decided by the hour of the day.
+    # For example, a job starting at "1:30" uses the chunk at the index 1 in the array.
+    # If you manually invoke the workflow other hours than 0:00 - 2:59 and the array's length is 3,
+    # this job is skipped because there's no element at the index in the array.
     if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
     with: 
       services: ${{toJson(fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour])}}

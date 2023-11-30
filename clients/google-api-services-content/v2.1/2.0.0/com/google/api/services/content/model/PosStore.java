@@ -45,6 +45,35 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Output only. The matching status of POS store and Google Business Profile store. Possible
+   * values are: - "`matched`": The POS store is successfully matched with the Google Business
+   * Profile store. - "`failed`": The POS store is not matched with the Google Business Profile
+   * store. See matching_status_hint for further details. Note that there is up to 48 hours
+   * propagation delay for changes in Merchant Center (e.g. creation of new account, accounts
+   * linking) and Google Business Profile (e.g. store address update) which may affect the matching
+   * status. In such cases, after a delay call [pos.list](https://developers.google.com/shopping-
+   * content/reference/rest/v2.1/pos/list) to retrieve the updated matching status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String matchingStatus;
+
+  /**
+   * Output only. The hint of why the matching has failed. This is only set when
+   * matching_status=failed. Possible values are: - "`linked-store-not-found`": There aren't any
+   * Google Business Profile stores available for matching. Connect your Merchant Center account
+   * with the Google Business Profile account. Or add a new Google Business Profile store
+   * corresponding to the POS store. - "`store-match-not-found`": The provided POS store couldn't be
+   * matched to any of the connected Google Business Profile stores. Merchant Center account is
+   * connected correctly and stores are available on Google Business Profile, but POS store location
+   * address does not match with Google Business Profile stores' addresses. Update POS store address
+   * or Google Business Profile store address to match correctly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String matchingStatusHint;
+
+  /**
    * The store phone number.
    * The value may be {@code null}.
    */
@@ -117,6 +146,70 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
    */
   public PosStore setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Output only. The matching status of POS store and Google Business Profile store. Possible
+   * values are: - "`matched`": The POS store is successfully matched with the Google Business
+   * Profile store. - "`failed`": The POS store is not matched with the Google Business Profile
+   * store. See matching_status_hint for further details. Note that there is up to 48 hours
+   * propagation delay for changes in Merchant Center (e.g. creation of new account, accounts
+   * linking) and Google Business Profile (e.g. store address update) which may affect the matching
+   * status. In such cases, after a delay call [pos.list](https://developers.google.com/shopping-
+   * content/reference/rest/v2.1/pos/list) to retrieve the updated matching status.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMatchingStatus() {
+    return matchingStatus;
+  }
+
+  /**
+   * Output only. The matching status of POS store and Google Business Profile store. Possible
+   * values are: - "`matched`": The POS store is successfully matched with the Google Business
+   * Profile store. - "`failed`": The POS store is not matched with the Google Business Profile
+   * store. See matching_status_hint for further details. Note that there is up to 48 hours
+   * propagation delay for changes in Merchant Center (e.g. creation of new account, accounts
+   * linking) and Google Business Profile (e.g. store address update) which may affect the matching
+   * status. In such cases, after a delay call [pos.list](https://developers.google.com/shopping-
+   * content/reference/rest/v2.1/pos/list) to retrieve the updated matching status.
+   * @param matchingStatus matchingStatus or {@code null} for none
+   */
+  public PosStore setMatchingStatus(java.lang.String matchingStatus) {
+    this.matchingStatus = matchingStatus;
+    return this;
+  }
+
+  /**
+   * Output only. The hint of why the matching has failed. This is only set when
+   * matching_status=failed. Possible values are: - "`linked-store-not-found`": There aren't any
+   * Google Business Profile stores available for matching. Connect your Merchant Center account
+   * with the Google Business Profile account. Or add a new Google Business Profile store
+   * corresponding to the POS store. - "`store-match-not-found`": The provided POS store couldn't be
+   * matched to any of the connected Google Business Profile stores. Merchant Center account is
+   * connected correctly and stores are available on Google Business Profile, but POS store location
+   * address does not match with Google Business Profile stores' addresses. Update POS store address
+   * or Google Business Profile store address to match correctly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMatchingStatusHint() {
+    return matchingStatusHint;
+  }
+
+  /**
+   * Output only. The hint of why the matching has failed. This is only set when
+   * matching_status=failed. Possible values are: - "`linked-store-not-found`": There aren't any
+   * Google Business Profile stores available for matching. Connect your Merchant Center account
+   * with the Google Business Profile account. Or add a new Google Business Profile store
+   * corresponding to the POS store. - "`store-match-not-found`": The provided POS store couldn't be
+   * matched to any of the connected Google Business Profile stores. Merchant Center account is
+   * connected correctly and stores are available on Google Business Profile, but POS store location
+   * address does not match with Google Business Profile stores' addresses. Update POS store address
+   * or Google Business Profile store address to match correctly.
+   * @param matchingStatusHint matchingStatusHint or {@code null} for none
+   */
+  public PosStore setMatchingStatusHint(java.lang.String matchingStatusHint) {
+    this.matchingStatusHint = matchingStatusHint;
     return this;
   }
 

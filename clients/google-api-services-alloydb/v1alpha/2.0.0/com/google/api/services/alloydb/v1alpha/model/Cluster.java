@@ -189,6 +189,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private PrimaryConfig primaryConfig;
 
   /**
+   * Optional. The configuration for Private Service Connect (PSC) for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscConfig pscConfig;
+
+  /**
    * Output only. Reconciling (https://google.aip.dev/128#reconciliation). Set to true if the
    * current state of Cluster does not match the user's intended state, and the service is actively
    * updating the resource to reconcile them. This can happen due to user-triggered updates or
@@ -612,6 +619,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setPrimaryConfig(PrimaryConfig primaryConfig) {
     this.primaryConfig = primaryConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the cluster.
+   * @return value or {@code null} for none
+   */
+  public PscConfig getPscConfig() {
+    return pscConfig;
+  }
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the cluster.
+   * @param pscConfig pscConfig or {@code null} for none
+   */
+  public Cluster setPscConfig(PscConfig pscConfig) {
+    this.pscConfig = pscConfig;
     return this;
   }
 

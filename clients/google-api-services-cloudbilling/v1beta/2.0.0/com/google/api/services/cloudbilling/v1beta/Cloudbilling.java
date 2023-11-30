@@ -1796,14 +1796,14 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       public class Price {
 
         /**
-         * Gets the latest price for the given billing account SKU.
+         * Gets the latest price for SKUs available to your Cloud Billing account.
          *
          * Create a request for the method "price.get".
          *
          * This request holds the parameters needed by the cloudbilling server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the latest billing account price to retrieve. Format:
+         * @param name Required. Name of the billing account price to retrieve. Format:
          *        billingAccounts/{billing_account}/skus/{sku}/price
          * @return the request
          */
@@ -1821,7 +1821,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^billingAccounts/[^/]+/skus/[^/]+/price$");
 
           /**
-           * Gets the latest price for the given billing account SKU.
+           * Gets the latest price for SKUs available to your Cloud Billing account.
            *
            * Create a request for the method "price.get".
            *
@@ -1830,7 +1830,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the latest billing account price to retrieve. Format:
+           * @param name Required. Name of the billing account price to retrieve. Format:
          *        billingAccounts/{billing_account}/skus/{sku}/price
            * @since 1.13
            */
@@ -1910,13 +1910,13 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. Name of the latest billing account price to retrieve. Format:
+           * Required. Name of the billing account price to retrieve. Format:
            * billingAccounts/{billing_account}/skus/{sku}/price
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the latest billing account price to retrieve. Format:
+          /** Required. Name of the billing account price to retrieve. Format:
          billingAccounts/{billing_account}/skus/{sku}/price
            */
           public java.lang.String getName() {
@@ -1924,7 +1924,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. Name of the latest billing account price to retrieve. Format:
+           * Required. Name of the billing account price to retrieve. Format:
            * billingAccounts/{billing_account}/skus/{sku}/price
            */
           public Get setName(java.lang.String name) {
@@ -1938,22 +1938,22 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Optional. ISO-4217 currency code for the price. If not specified, currency of billing
-           * account will be used.
+           * Optional. ISO-4217 currency code for the price. If not specified, the currency of the
+           * billing account is used.
            */
           @com.google.api.client.util.Key
           private java.lang.String currencyCode;
 
-          /** Optional. ISO-4217 currency code for the price. If not specified, currency of billing account will
-         be used.
+          /** Optional. ISO-4217 currency code for the price. If not specified, the currency of the billing
+         account is used.
            */
           public java.lang.String getCurrencyCode() {
             return currencyCode;
           }
 
           /**
-           * Optional. ISO-4217 currency code for the price. If not specified, currency of billing
-           * account will be used.
+           * Optional. ISO-4217 currency code for the price. If not specified, the currency of the
+           * billing account is used.
            */
           public Get setCurrencyCode(java.lang.String currencyCode) {
             this.currencyCode = currencyCode;

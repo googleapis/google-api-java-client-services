@@ -66,6 +66,16 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   private java.lang.Boolean open;
 
   /**
+   * Output only. The billing account's parent resource identifier. Use the `MoveBillingAccount`
+   * method to update the account's parent resource if it is a organization. Format: -
+   * organizations/{organization_id}, for example: organizations/12345678 -
+   * billingAccounts/{billing_account_id}, for example: `billingAccounts/012345-567890-ABCDEF`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parent;
+
+  /**
    * The display name given to the billing account, such as `My Billing Account`. This name is
    * displayed in the Google Cloud Console.
    * @return value or {@code null} for none
@@ -144,6 +154,29 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
    */
   public BillingAccount setOpen(java.lang.Boolean open) {
     this.open = open;
+    return this;
+  }
+
+  /**
+   * Output only. The billing account's parent resource identifier. Use the `MoveBillingAccount`
+   * method to update the account's parent resource if it is a organization. Format: -
+   * organizations/{organization_id}, for example: organizations/12345678 -
+   * billingAccounts/{billing_account_id}, for example: `billingAccounts/012345-567890-ABCDEF`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParent() {
+    return parent;
+  }
+
+  /**
+   * Output only. The billing account's parent resource identifier. Use the `MoveBillingAccount`
+   * method to update the account's parent resource if it is a organization. Format: -
+   * organizations/{organization_id}, for example: organizations/12345678 -
+   * billingAccounts/{billing_account_id}, for example: `billingAccounts/012345-567890-ABCDEF`
+   * @param parent parent or {@code null} for none
+   */
+  public BillingAccount setParent(java.lang.String parent) {
+    this.parent = parent;
     return this;
   }
 

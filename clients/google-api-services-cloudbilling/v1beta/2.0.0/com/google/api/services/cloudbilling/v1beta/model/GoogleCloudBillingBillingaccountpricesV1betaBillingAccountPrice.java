@@ -17,7 +17,7 @@
 package com.google.api.services.cloudbilling.v1beta.model;
 
 /**
- * Encapsulates the latest price for the given billing account SKU.
+ * Encapsulates the latest price for a billing account SKU.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:
@@ -59,7 +59,7 @@ public final class GoogleCloudBillingBillingaccountpricesV1betaBillingAccountPri
   private GoogleCloudBillingBillingaccountpricesV1betaRate rate;
 
   /**
-   * Type of the price. It can have values: ["unspecified", "rate"].
+   * Type of the price. The possible values are: ["unspecified", "rate"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class GoogleCloudBillingBillingaccountpricesV1betaBillingAccountPri
   }
 
   /**
-   * Type of the price. It can have values: ["unspecified", "rate"].
+   * Type of the price. The possible values are: ["unspecified", "rate"].
    * @return value or {@code null} for none
    */
   public java.lang.String getValueType() {
@@ -144,7 +144,7 @@ public final class GoogleCloudBillingBillingaccountpricesV1betaBillingAccountPri
   }
 
   /**
-   * Type of the price. It can have values: ["unspecified", "rate"].
+   * Type of the price. The possible values are: ["unspecified", "rate"].
    * @param valueType valueType or {@code null} for none
    */
   public GoogleCloudBillingBillingaccountpricesV1betaBillingAccountPrice setValueType(java.lang.String valueType) {

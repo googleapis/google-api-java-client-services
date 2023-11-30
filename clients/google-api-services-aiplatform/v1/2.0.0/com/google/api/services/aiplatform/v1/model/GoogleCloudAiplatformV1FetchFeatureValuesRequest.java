@@ -31,50 +31,50 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1FetchFeatureValuesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specify response data format. If not set, KeyValue format will be used.
+   * Optional. Response data format. If not set, FeatureViewDataFormat.KEY_VALUE will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String format;
+  private java.lang.String dataFormat;
 
   /**
-   * Simple ID. The whole string will be used as is to identify Entity to fetch feature values for.
+   * Optional. The request key to fetch feature values for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private GoogleCloudAiplatformV1FeatureViewDataKey dataKey;
 
   /**
-   * Specify response data format. If not set, KeyValue format will be used.
+   * Optional. Response data format. If not set, FeatureViewDataFormat.KEY_VALUE will be used.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFormat() {
-    return format;
+  public java.lang.String getDataFormat() {
+    return dataFormat;
   }
 
   /**
-   * Specify response data format. If not set, KeyValue format will be used.
-   * @param format format or {@code null} for none
+   * Optional. Response data format. If not set, FeatureViewDataFormat.KEY_VALUE will be used.
+   * @param dataFormat dataFormat or {@code null} for none
    */
-  public GoogleCloudAiplatformV1FetchFeatureValuesRequest setFormat(java.lang.String format) {
-    this.format = format;
+  public GoogleCloudAiplatformV1FetchFeatureValuesRequest setDataFormat(java.lang.String dataFormat) {
+    this.dataFormat = dataFormat;
     return this;
   }
 
   /**
-   * Simple ID. The whole string will be used as is to identify Entity to fetch feature values for.
+   * Optional. The request key to fetch feature values for.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public GoogleCloudAiplatformV1FeatureViewDataKey getDataKey() {
+    return dataKey;
   }
 
   /**
-   * Simple ID. The whole string will be used as is to identify Entity to fetch feature values for.
-   * @param id id or {@code null} for none
+   * Optional. The request key to fetch feature values for.
+   * @param dataKey dataKey or {@code null} for none
    */
-  public GoogleCloudAiplatformV1FetchFeatureValuesRequest setId(java.lang.String id) {
-    this.id = id;
+  public GoogleCloudAiplatformV1FetchFeatureValuesRequest setDataKey(GoogleCloudAiplatformV1FeatureViewDataKey dataKey) {
+    this.dataKey = dataKey;
     return this;
   }
 

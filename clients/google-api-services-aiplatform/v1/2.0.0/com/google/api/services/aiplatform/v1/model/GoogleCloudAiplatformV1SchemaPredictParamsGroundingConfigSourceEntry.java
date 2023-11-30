@@ -30,7 +30,8 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * The uri of the Enterprise Search data source.
+   * The uri of the Vertex AI Search data source. Deprecated. Use vertex_ai_search_datastore
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,15 @@ public final class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSour
   private java.lang.String type;
 
   /**
-   * The uri of the Enterprise Search data source.
+   * The uri of the Vertex AI Search data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vertexAiSearchDatastore;
+
+  /**
+   * The uri of the Vertex AI Search data source. Deprecated. Use vertex_ai_search_datastore
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnterpriseDatastore() {
@@ -52,7 +61,8 @@ public final class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSour
   }
 
   /**
-   * The uri of the Enterprise Search data source.
+   * The uri of the Vertex AI Search data source. Deprecated. Use vertex_ai_search_datastore
+   * instead.
    * @param enterpriseDatastore enterpriseDatastore or {@code null} for none
    */
   public GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry setEnterpriseDatastore(java.lang.String enterpriseDatastore) {
@@ -74,6 +84,23 @@ public final class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSour
    */
   public GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * The uri of the Vertex AI Search data source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVertexAiSearchDatastore() {
+    return vertexAiSearchDatastore;
+  }
+
+  /**
+   * The uri of the Vertex AI Search data source.
+   * @param vertexAiSearchDatastore vertexAiSearchDatastore or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry setVertexAiSearchDatastore(java.lang.String vertexAiSearchDatastore) {
+    this.vertexAiSearchDatastore = vertexAiSearchDatastore;
     return this;
   }
 

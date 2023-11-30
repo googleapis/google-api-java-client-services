@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Contains settings for embedding management.
+ * Runtime operation information for CreateDeploymentResourcePool method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.aiplatform.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1CreateDeploymentResourcePoolOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Immutable. Whether to enable embedding management in this FeatureOnlineStore. It's
-   * immutable after creation to ensure the FeatureOnlineStore availability.
+   * The operation generic information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
+  private GoogleCloudAiplatformV1GenericOperationMetadata genericMetadata;
 
   /**
-   * Optional. Immutable. Whether to enable embedding management in this FeatureOnlineStore. It's
-   * immutable after creation to ensure the FeatureOnlineStore availability.
+   * The operation generic information.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
+  public GoogleCloudAiplatformV1GenericOperationMetadata getGenericMetadata() {
+    return genericMetadata;
   }
 
   /**
-   * Optional. Immutable. Whether to enable embedding management in this FeatureOnlineStore. It's
-   * immutable after creation to ensure the FeatureOnlineStore availability.
-   * @param enabled enabled or {@code null} for none
+   * The operation generic information.
+   * @param genericMetadata genericMetadata or {@code null} for none
    */
-  public GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
+  public GoogleCloudAiplatformV1CreateDeploymentResourcePoolOperationMetadata setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata genericMetadata) {
+    this.genericMetadata = genericMetadata;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1CreateDeploymentResourcePoolOperationMetadata set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1CreateDeploymentResourcePoolOperationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement clone() {
-    return (GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement) super.clone();
+  public GoogleCloudAiplatformV1CreateDeploymentResourcePoolOperationMetadata clone() {
+    return (GoogleCloudAiplatformV1CreateDeploymentResourcePoolOperationMetadata) super.clone();
   }
 
 }

@@ -148,6 +148,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.lang.Integer podIpv4CidrSize;
 
   /**
+   * Specifies the configuration of queued provisioning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueuedProvisioning queuedProvisioning;
+
+  /**
    * [Output only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -457,6 +464,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setPodIpv4CidrSize(java.lang.Integer podIpv4CidrSize) {
     this.podIpv4CidrSize = podIpv4CidrSize;
+    return this;
+  }
+
+  /**
+   * Specifies the configuration of queued provisioning.
+   * @return value or {@code null} for none
+   */
+  public QueuedProvisioning getQueuedProvisioning() {
+    return queuedProvisioning;
+  }
+
+  /**
+   * Specifies the configuration of queued provisioning.
+   * @param queuedProvisioning queuedProvisioning or {@code null} for none
+   */
+  public NodePool setQueuedProvisioning(QueuedProvisioning queuedProvisioning) {
+    this.queuedProvisioning = queuedProvisioning;
     return this;
   }
 

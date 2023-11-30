@@ -31,6 +31,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class Autopilot extends com.google.api.client.json.GenericJson {
 
   /**
+   * ConversionStatus shows conversion status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutopilotConversionStatus conversionStatus;
+
+  /**
    * Enable Autopilot
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class Autopilot extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WorkloadPolicyConfig workloadPolicyConfig;
+
+  /**
+   * ConversionStatus shows conversion status.
+   * @return value or {@code null} for none
+   */
+  public AutopilotConversionStatus getConversionStatus() {
+    return conversionStatus;
+  }
+
+  /**
+   * ConversionStatus shows conversion status.
+   * @param conversionStatus conversionStatus or {@code null} for none
+   */
+  public Autopilot setConversionStatus(AutopilotConversionStatus conversionStatus) {
+    this.conversionStatus = conversionStatus;
+    return this;
+  }
 
   /**
    * Enable Autopilot

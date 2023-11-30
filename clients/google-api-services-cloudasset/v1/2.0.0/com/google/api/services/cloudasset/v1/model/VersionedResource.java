@@ -36,7 +36,7 @@ public final class VersionedResource extends com.google.api.client.json.GenericJ
    * contain the JSON representation of the instance as defined by Compute Engine:
    * `https://cloud.google.com/compute/docs/reference/rest/v1/instances`. You can find the resource
    * definition for each supported resource type in this table: `https://cloud.google.com/asset-
-   * inventory/docs/supported-asset-types#searchable_asset_types`
+   * inventory/docs/supported-asset-types`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class VersionedResource extends com.google.api.client.json.GenericJ
    * contain the JSON representation of the instance as defined by Compute Engine:
    * `https://cloud.google.com/compute/docs/reference/rest/v1/instances`. You can find the resource
    * definition for each supported resource type in this table: `https://cloud.google.com/asset-
-   * inventory/docs/supported-asset-types#searchable_asset_types`
+   * inventory/docs/supported-asset-types`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getResource() {
@@ -70,7 +70,7 @@ public final class VersionedResource extends com.google.api.client.json.GenericJ
    * contain the JSON representation of the instance as defined by Compute Engine:
    * `https://cloud.google.com/compute/docs/reference/rest/v1/instances`. You can find the resource
    * definition for each supported resource type in this table: `https://cloud.google.com/asset-
-   * inventory/docs/supported-asset-types#searchable_asset_types`
+   * inventory/docs/supported-asset-types`
    * @param resource resource or {@code null} for none
    */
   public VersionedResource setResource(java.util.Map<String, java.lang.Object> resource) {

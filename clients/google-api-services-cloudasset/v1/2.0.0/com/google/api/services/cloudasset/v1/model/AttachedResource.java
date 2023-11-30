@@ -33,7 +33,7 @@ public final class AttachedResource extends com.google.api.client.json.GenericJs
   /**
    * The type of this attached resource. Example: `osconfig.googleapis.com/Inventory` You can find
    * the supported attached asset types of each resource in this table: `https://cloud.google.com
-   * /asset-inventory/docs/supported-asset-types#searchable_asset_types`
+   * /asset-inventory/docs/supported-asset-types`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class AttachedResource extends com.google.api.client.json.GenericJs
   /**
    * The type of this attached resource. Example: `osconfig.googleapis.com/Inventory` You can find
    * the supported attached asset types of each resource in this table: `https://cloud.google.com
-   * /asset-inventory/docs/supported-asset-types#searchable_asset_types`
+   * /asset-inventory/docs/supported-asset-types`
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetType() {
@@ -60,7 +60,7 @@ public final class AttachedResource extends com.google.api.client.json.GenericJs
   /**
    * The type of this attached resource. Example: `osconfig.googleapis.com/Inventory` You can find
    * the supported attached asset types of each resource in this table: `https://cloud.google.com
-   * /asset-inventory/docs/supported-asset-types#searchable_asset_types`
+   * /asset-inventory/docs/supported-asset-types`
    * @param assetType assetType or {@code null} for none
    */
   public AttachedResource setAssetType(java.lang.String assetType) {

@@ -692,16 +692,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The names refer to the [full_resource_names] (https://cloud.google.com/asset-
        * inventory/docs/resource-name-format) of [searchable asset types](https://cloud.google.com
-       * /asset-inventory/docs/supported-asset-types#searchable_asset_types). A maximum of 20
-       * resources' effective policies can be retrieved in a batch.
+       * /asset-inventory/docs/supported-asset-types). A maximum of 20 resources' effective policies
+       * can be retrieved in a batch.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> names;
 
       /** Required. The names refer to the [full_resource_names] (https://cloud.google.com/asset-
      inventory/docs/resource-name-format) of [searchable asset types](https://cloud.google.com/asset-
-     inventory/docs/supported-asset-types#searchable_asset_types). A maximum of 20 resources' effective
-     policies can be retrieved in a batch.
+     inventory/docs/supported-asset-types). A maximum of 20 resources' effective policies can be
+     retrieved in a batch.
        */
       public java.util.List<java.lang.String> getNames() {
         return names;
@@ -710,8 +710,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The names refer to the [full_resource_names] (https://cloud.google.com/asset-
        * inventory/docs/resource-name-format) of [searchable asset types](https://cloud.google.com
-       * /asset-inventory/docs/supported-asset-types#searchable_asset_types). A maximum of 20
-       * resources' effective policies can be retrieved in a batch.
+       * /asset-inventory/docs/supported-asset-types). A maximum of 20 resources' effective policies
+       * can be retrieved in a batch.
        */
       public BatchGet setNames(java.util.List<java.lang.String> names) {
         this.names = names;
@@ -3845,8 +3845,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * appengine.enforceServiceAccountActAsCheck * gcp.resourceLocations * compute.trustedImageProjects
      * * compute.skipDefaultNetworkCreation * compute.requireOsLogin *
      * compute.disableNestedVirtualization This RPC only returns either resources of types supported by
-     * [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
-     * types#searchable_asset_types), or IAM policies.
+     * [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-types), or
+     * IAM policies.
      *
      * Create a request for the method "v1.analyzeOrgPolicyGovernedAssets".
      *
@@ -3882,7 +3882,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * compute.trustedImageProjects * compute.skipDefaultNetworkCreation * compute.requireOsLogin *
        * compute.disableNestedVirtualization This RPC only returns either resources of types supported
        * by [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
-       * types#searchable_asset_types), or IAM policies.
+       * types), or IAM policies.
        *
        * Create a request for the method "v1.analyzeOrgPolicyGovernedAssets".
        *
@@ -5182,13 +5182,13 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional. A list of asset types that the IAM policies are attached to. If empty, it will
        * search the IAM policies that are attached to all the [searchable asset
-       * types](https://cloud.google.com/asset-inventory/docs/supported-asset-
-       * types#searchable_asset_types). Regular expressions are also supported. For example: *
-       * "compute.googleapis.com.*" snapshots IAM policies attached to asset type starts with
-       * "compute.googleapis.com". * ".*Instance" snapshots IAM policies attached to asset type ends
-       * with "Instance". * ".*Instance.*" snapshots IAM policies attached to asset type contains
-       * "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular
-       * expression syntax. If the regular expression does not match any supported asset type, an
+       * types](https://cloud.google.com/asset-inventory/docs/supported-asset-types). Regular
+       * expressions are also supported. For example: * "compute.googleapis.com.*" snapshots IAM
+       * policies attached to asset type starts with "compute.googleapis.com". * ".*Instance"
+       * snapshots IAM policies attached to asset type ends with "Instance". * ".*Instance.*"
+       * snapshots IAM policies attached to asset type contains "Instance". See
+       * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
+       * syntax. If the regular expression does not match any supported asset type, an
        * INVALID_ARGUMENT error will be returned.
        */
       @com.google.api.client.util.Key
@@ -5196,13 +5196,13 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /** Optional. A list of asset types that the IAM policies are attached to. If empty, it will search the
      IAM policies that are attached to all the [searchable asset types](https://cloud.google.com/asset-
-     inventory/docs/supported-asset-types#searchable_asset_types). Regular expressions are also
-     supported. For example: * "compute.googleapis.com.*" snapshots IAM policies attached to asset type
-     starts with "compute.googleapis.com". * ".*Instance" snapshots IAM policies attached to asset type
-     ends with "Instance". * ".*Instance.*" snapshots IAM policies attached to asset type contains
-     "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular
-     expression syntax. If the regular expression does not match any supported asset type, an
-     INVALID_ARGUMENT error will be returned.
+     inventory/docs/supported-asset-types). Regular expressions are also supported. For example: *
+     "compute.googleapis.com.*" snapshots IAM policies attached to asset type starts with
+     "compute.googleapis.com". * ".*Instance" snapshots IAM policies attached to asset type ends with
+     "Instance". * ".*Instance.*" snapshots IAM policies attached to asset type contains "Instance". See
+     [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression syntax. If
+     the regular expression does not match any supported asset type, an INVALID_ARGUMENT error will be
+     returned.
        */
       public java.util.List<java.lang.String> getAssetTypes() {
         return assetTypes;
@@ -5211,13 +5211,13 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional. A list of asset types that the IAM policies are attached to. If empty, it will
        * search the IAM policies that are attached to all the [searchable asset
-       * types](https://cloud.google.com/asset-inventory/docs/supported-asset-
-       * types#searchable_asset_types). Regular expressions are also supported. For example: *
-       * "compute.googleapis.com.*" snapshots IAM policies attached to asset type starts with
-       * "compute.googleapis.com". * ".*Instance" snapshots IAM policies attached to asset type ends
-       * with "Instance". * ".*Instance.*" snapshots IAM policies attached to asset type contains
-       * "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular
-       * expression syntax. If the regular expression does not match any supported asset type, an
+       * types](https://cloud.google.com/asset-inventory/docs/supported-asset-types). Regular
+       * expressions are also supported. For example: * "compute.googleapis.com.*" snapshots IAM
+       * policies attached to asset type starts with "compute.googleapis.com". * ".*Instance"
+       * snapshots IAM policies attached to asset type ends with "Instance". * ".*Instance.*"
+       * snapshots IAM policies attached to asset type contains "Instance". See
+       * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
+       * syntax. If the regular expression does not match any supported asset type, an
        * INVALID_ARGUMENT error will be returned.
        */
       public SearchAllIamPolicies setAssetTypes(java.util.List<java.lang.String> assetTypes) {
@@ -5592,7 +5592,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional. A list of asset types that this request searches for. If empty, it will search
        * all the [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-
-       * asset-types#searchable_asset_types). Regular expressions are also supported. For example: *
+       * asset-types). Regular expressions are also supported. For example: *
        * "compute.googleapis.com.*" snapshots resources whose asset type starts with
        * "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with
        * "Instance". * ".*Instance.*" snapshots resources whose asset type contains "Instance". See
@@ -5604,14 +5604,13 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       private java.util.List<java.lang.String> assetTypes;
 
       /** Optional. A list of asset types that this request searches for. If empty, it will search all the
-     [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
-     types#searchable_asset_types). Regular expressions are also supported. For example: *
-     "compute.googleapis.com.*" snapshots resources whose asset type starts with
-     "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with "Instance".
-     * ".*Instance.*" snapshots resources whose asset type contains "Instance". See
-     [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression syntax. If
-     the regular expression does not match any supported asset type, an INVALID_ARGUMENT error will be
-     returned.
+     [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
+     Regular expressions are also supported. For example: * "compute.googleapis.com.*" snapshots
+     resources whose asset type starts with "compute.googleapis.com". * ".*Instance" snapshots resources
+     whose asset type ends with "Instance". * ".*Instance.*" snapshots resources whose asset type
+     contains "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular
+     expression syntax. If the regular expression does not match any supported asset type, an
+     INVALID_ARGUMENT error will be returned.
        */
       public java.util.List<java.lang.String> getAssetTypes() {
         return assetTypes;
@@ -5620,7 +5619,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional. A list of asset types that this request searches for. If empty, it will search
        * all the [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-
-       * asset-types#searchable_asset_types). Regular expressions are also supported. For example: *
+       * asset-types). Regular expressions are also supported. For example: *
        * "compute.googleapis.com.*" snapshots resources whose asset type starts with
        * "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with
        * "Instance". * ".*Instance.*" snapshots resources whose asset type contains "Instance". See

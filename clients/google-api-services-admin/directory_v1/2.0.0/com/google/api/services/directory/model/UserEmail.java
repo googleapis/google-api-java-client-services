@@ -51,6 +51,13 @@ public final class UserEmail extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean primary;
 
   /**
+   * Public Key Encryption Certificates. Current limit: 1 per email address, and 5 per user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("public_key_encryption_certificates")
+  private PublicKeyEncryptionCertificates publicKeyEncryptionCertificates;
+
+  /**
    * Each entry can have a type which indicates standard types of that entry. For example email
    * could be of home, work etc. In addition to the standard type, an entry can have a custom type
    * and can take any value Such types should have the CUSTOM value as type and also have a
@@ -112,6 +119,23 @@ public final class UserEmail extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Public Key Encryption Certificates. Current limit: 1 per email address, and 5 per user.
+   * @return value or {@code null} for none
+   */
+  public PublicKeyEncryptionCertificates getPublicKeyEncryptionCertificates() {
+    return publicKeyEncryptionCertificates;
+  }
+
+  /**
+   * Public Key Encryption Certificates. Current limit: 1 per email address, and 5 per user.
+   * @param publicKeyEncryptionCertificates publicKeyEncryptionCertificates or {@code null} for none
+   */
+  public UserEmail setPublicKeyEncryptionCertificates(PublicKeyEncryptionCertificates publicKeyEncryptionCertificates) {
+    this.publicKeyEncryptionCertificates = publicKeyEncryptionCertificates;
+    return this;
+  }
+
+  /**
    * Each entry can have a type which indicates standard types of that entry. For example email
    * could be of home, work etc. In addition to the standard type, an entry can have a custom type
    * and can take any value Such types should have the CUSTOM value as type and also have a
@@ -142,6 +166,98 @@ public final class UserEmail extends com.google.api.client.json.GenericJson {
   @Override
   public UserEmail clone() {
     return (UserEmail) super.clone();
+  }
+
+  /**
+   * Public Key Encryption Certificates. Current limit: 1 per email address, and 5 per user.
+   */
+  public static final class PublicKeyEncryptionCertificates extends com.google.api.client.json.GenericJson {
+
+    /**
+     * X.509 encryption certificate in `PEM` format. Must only be an end-entity (leaf) certificate.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String certificate;
+
+    /**
+     * Whether this is the default certificate for the given email address.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key("is_default")
+    private java.lang.Boolean isDefault;
+
+    /**
+     * Denotes the certificate's state in its lifecycle. Possible values are `not_yet_validated`,
+     * `valid`, `invalid`, `expired`, and `revoked`.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String state;
+
+    /**
+     * X.509 encryption certificate in `PEM` format. Must only be an end-entity (leaf) certificate.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getCertificate() {
+      return certificate;
+    }
+
+    /**
+     * X.509 encryption certificate in `PEM` format. Must only be an end-entity (leaf) certificate.
+     * @param certificate certificate or {@code null} for none
+     */
+    public PublicKeyEncryptionCertificates setCertificate(java.lang.String certificate) {
+      this.certificate = certificate;
+      return this;
+    }
+
+    /**
+     * Whether this is the default certificate for the given email address.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getIsDefault() {
+      return isDefault;
+    }
+
+    /**
+     * Whether this is the default certificate for the given email address.
+     * @param isDefault isDefault or {@code null} for none
+     */
+    public PublicKeyEncryptionCertificates setIsDefault(java.lang.Boolean isDefault) {
+      this.isDefault = isDefault;
+      return this;
+    }
+
+    /**
+     * Denotes the certificate's state in its lifecycle. Possible values are `not_yet_validated`,
+     * `valid`, `invalid`, `expired`, and `revoked`.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getState() {
+      return state;
+    }
+
+    /**
+     * Denotes the certificate's state in its lifecycle. Possible values are `not_yet_validated`,
+     * `valid`, `invalid`, `expired`, and `revoked`.
+     * @param state state or {@code null} for none
+     */
+    public PublicKeyEncryptionCertificates setState(java.lang.String state) {
+      this.state = state;
+      return this;
+    }
+
+    @Override
+    public PublicKeyEncryptionCertificates set(String fieldName, Object value) {
+      return (PublicKeyEncryptionCertificates) super.set(fieldName, value);
+    }
+
+    @Override
+    public PublicKeyEncryptionCertificates clone() {
+      return (PublicKeyEncryptionCertificates) super.clone();
+    }
+
   }
 
 }

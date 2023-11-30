@@ -104,6 +104,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the user's email addresses. The maximum allowed data size for this field is 10KB.
+   * This excludes `publicKeyEncryptionCertificates`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -565,6 +566,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the user's email addresses. The maximum allowed data size for this field is 10KB.
+   * This excludes `publicKeyEncryptionCertificates`.
    * @return value or {@code null} for none
    */
   public java.lang.Object getEmails() {
@@ -573,6 +575,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the user's email addresses. The maximum allowed data size for this field is 10KB.
+   * This excludes `publicKeyEncryptionCertificates`.
    * @param emails emails or {@code null} for none
    */
   public User setEmails(java.lang.Object emails) {

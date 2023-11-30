@@ -30,8 +30,9 @@ package com.google.api.services.chat.v1.model;
 public final class ActionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. A response to an event related to a [dialog](https://developers.google.com/chat
-   * /how-tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
+   * Input only. A response to an interaction event related to a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs). Must be accompanied by
+   * `ResponseType.Dialog`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,6 +46,13 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   private java.lang.String type;
 
   /**
+   * Input only. The response of the updated widget.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdatedWidget updatedWidget;
+
+  /**
    * Input only. URL for users to authenticate or configure. (Only for `REQUEST_CONFIG` response
    * types.)
    * The value may be {@code null}.
@@ -53,8 +61,9 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   private java.lang.String url;
 
   /**
-   * Input only. A response to an event related to a [dialog](https://developers.google.com/chat
-   * /how-tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
+   * Input only. A response to an interaction event related to a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs). Must be accompanied by
+   * `ResponseType.Dialog`.
    * @return value or {@code null} for none
    */
   public DialogAction getDialogAction() {
@@ -62,8 +71,9 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Input only. A response to an event related to a [dialog](https://developers.google.com/chat
-   * /how-tos/dialogs). Must be accompanied by `ResponseType.Dialog`.
+   * Input only. A response to an interaction event related to a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs). Must be accompanied by
+   * `ResponseType.Dialog`.
    * @param dialogAction dialogAction or {@code null} for none
    */
   public ActionResponse setDialogAction(DialogAction dialogAction) {
@@ -85,6 +95,23 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
    */
   public ActionResponse setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Input only. The response of the updated widget.
+   * @return value or {@code null} for none
+   */
+  public UpdatedWidget getUpdatedWidget() {
+    return updatedWidget;
+  }
+
+  /**
+   * Input only. The response of the updated widget.
+   * @param updatedWidget updatedWidget or {@code null} for none
+   */
+  public ActionResponse setUpdatedWidget(UpdatedWidget updatedWidget) {
+    this.updatedWidget = updatedWidget;
     return this;
   }
 

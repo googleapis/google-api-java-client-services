@@ -31,7 +31,7 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Filter used to select the subset of conversations to analyze.
+   * Filter used to select the subset of conversations to delete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,15 +46,14 @@ public final class GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequ
   private java.lang.Boolean force;
 
   /**
-   * Maximum number of conversations to delete. The default is 1000. It can be changed by setting
-   * the `max_delete_count` field.
+   * Maximum number of conversations to delete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxDeleteCount;
 
   /**
-   * Required. The parent resource to create analyses in. Format:
+   * Required. The parent resource to delete conversations from. Format:
    * projects/{project}/locations/{location}
    * The value may be {@code null}.
    */
@@ -62,7 +61,7 @@ public final class GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequ
   private java.lang.String parent;
 
   /**
-   * Filter used to select the subset of conversations to analyze.
+   * Filter used to select the subset of conversations to delete.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -70,7 +69,7 @@ public final class GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequ
   }
 
   /**
-   * Filter used to select the subset of conversations to analyze.
+   * Filter used to select the subset of conversations to delete.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest setFilter(java.lang.String filter) {
@@ -98,8 +97,7 @@ public final class GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequ
   }
 
   /**
-   * Maximum number of conversations to delete. The default is 1000. It can be changed by setting
-   * the `max_delete_count` field.
+   * Maximum number of conversations to delete.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxDeleteCount() {
@@ -107,8 +105,7 @@ public final class GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequ
   }
 
   /**
-   * Maximum number of conversations to delete. The default is 1000. It can be changed by setting
-   * the `max_delete_count` field.
+   * Maximum number of conversations to delete.
    * @param maxDeleteCount maxDeleteCount or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest setMaxDeleteCount(java.lang.Integer maxDeleteCount) {
@@ -117,7 +114,7 @@ public final class GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequ
   }
 
   /**
-   * Required. The parent resource to create analyses in. Format:
+   * Required. The parent resource to delete conversations from. Format:
    * projects/{project}/locations/{location}
    * @return value or {@code null} for none
    */
@@ -126,7 +123,7 @@ public final class GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequ
   }
 
   /**
-   * Required. The parent resource to create analyses in. Format:
+   * Required. The parent resource to delete conversations from. Format:
    * projects/{project}/locations/{location}
    * @param parent parent or {@code null} for none
    */

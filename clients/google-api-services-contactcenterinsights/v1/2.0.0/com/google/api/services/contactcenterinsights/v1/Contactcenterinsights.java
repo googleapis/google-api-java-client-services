@@ -631,7 +631,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the contactcenterinsights server.  After setting any
          * optional parameters, call the {@link BulkDelete#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource to create analyses in. Format: projects/{project}/locations/{location}
+         * @param parent Required. The parent resource to delete conversations from. Format:
+         *        projects/{project}/locations/{location}
          * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest}
          * @return the request
          */
@@ -659,7 +660,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
            * BulkDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource to create analyses in. Format: projects/{project}/locations/{location}
+           * @param parent Required. The parent resource to delete conversations from. Format:
+         *        projects/{project}/locations/{location}
            * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest}
            * @since 1.13
            */
@@ -729,13 +731,13 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The parent resource to create analyses in. Format:
+           * Required. The parent resource to delete conversations from. Format:
            * projects/{project}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource to create analyses in. Format:
+          /** Required. The parent resource to delete conversations from. Format:
          projects/{project}/locations/{location}
            */
           public java.lang.String getParent() {
@@ -743,7 +745,7 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The parent resource to create analyses in. Format:
+           * Required. The parent resource to delete conversations from. Format:
            * projects/{project}/locations/{location}
            */
           public BulkDelete setParent(java.lang.String parent) {

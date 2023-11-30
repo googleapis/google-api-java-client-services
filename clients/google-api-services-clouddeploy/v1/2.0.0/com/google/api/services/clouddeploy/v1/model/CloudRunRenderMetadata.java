@@ -31,7 +31,7 @@ public final class CloudRunRenderMetadata extends com.google.api.client.json.Gen
 
   /**
    * Output only. The name of the Cloud Run Service in the rendered manifest. Format is
-   * projects/{project}/locations/{location}/services/{service}.
+   * `projects/{project}/locations/{location}/services/{service}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class CloudRunRenderMetadata extends com.google.api.client.json.Gen
 
   /**
    * Output only. The name of the Cloud Run Service in the rendered manifest. Format is
-   * projects/{project}/locations/{location}/services/{service}.
+   * `projects/{project}/locations/{location}/services/{service}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -48,7 +48,7 @@ public final class CloudRunRenderMetadata extends com.google.api.client.json.Gen
 
   /**
    * Output only. The name of the Cloud Run Service in the rendered manifest. Format is
-   * projects/{project}/locations/{location}/services/{service}.
+   * `projects/{project}/locations/{location}/services/{service}`.
    * @param service service or {@code null} for none
    */
   public CloudRunRenderMetadata setService(java.lang.String service) {

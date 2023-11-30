@@ -36,12 +36,13 @@ public final class Automation extends com.google.api.client.json.GenericJson {
    * Optional. User annotations. These attributes can only be set and used by the user, and not by
    * Cloud Deploy. Annotations must meet the following constraints: * Annotations are key/value
    * pairs. * Valid annotation keys have two segments: an optional prefix and name, separated by a
-   * slash (/). * The name segment is required and must be 63 characters or less, beginning and
-   * ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.),
-   * and alphanumerics between. * The prefix is optional. If specified, the prefix must be a DNS
-   * subdomain: a series of DNS labels separated by dots(.), not longer than 253 characters in
-   * total, followed by a slash (/). See https://kubernetes.io/docs/concepts/overview/working-with-
-   * objects/annotations/#syntax-and-character-set for more details.
+   * slash (`/`). * The name segment is required and must be 63 characters or less, beginning and
+   * ending with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`),
+   * dots (`.`), and alphanumerics between. * The prefix is optional. If specified, the prefix must
+   * be a DNS subdomain: a series of DNS labels separated by dots(`.`), not longer than 253
+   * characters in total, followed by a slash (`/`). See
+   * https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/#syntax-and-
+   * character-set for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +84,8 @@ public final class Automation extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Name of the `Automation`. Format is projects/{project}/locations/{location}/delive
-   * ryPipelines/{delivery_pipeline}/automations/{automation}.
+   * Output only. Name of the `Automation`. Format is `projects/{project}/locations/{location}/deliv
+   * eryPipelines/{delivery_pipeline}/automations/{automation}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,12 +140,13 @@ public final class Automation extends com.google.api.client.json.GenericJson {
    * Optional. User annotations. These attributes can only be set and used by the user, and not by
    * Cloud Deploy. Annotations must meet the following constraints: * Annotations are key/value
    * pairs. * Valid annotation keys have two segments: an optional prefix and name, separated by a
-   * slash (/). * The name segment is required and must be 63 characters or less, beginning and
-   * ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.),
-   * and alphanumerics between. * The prefix is optional. If specified, the prefix must be a DNS
-   * subdomain: a series of DNS labels separated by dots(.), not longer than 253 characters in
-   * total, followed by a slash (/). See https://kubernetes.io/docs/concepts/overview/working-with-
-   * objects/annotations/#syntax-and-character-set for more details.
+   * slash (`/`). * The name segment is required and must be 63 characters or less, beginning and
+   * ending with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`),
+   * dots (`.`), and alphanumerics between. * The prefix is optional. If specified, the prefix must
+   * be a DNS subdomain: a series of DNS labels separated by dots(`.`), not longer than 253
+   * characters in total, followed by a slash (`/`). See
+   * https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/#syntax-and-
+   * character-set for more details.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -155,12 +157,13 @@ public final class Automation extends com.google.api.client.json.GenericJson {
    * Optional. User annotations. These attributes can only be set and used by the user, and not by
    * Cloud Deploy. Annotations must meet the following constraints: * Annotations are key/value
    * pairs. * Valid annotation keys have two segments: an optional prefix and name, separated by a
-   * slash (/). * The name segment is required and must be 63 characters or less, beginning and
-   * ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.),
-   * and alphanumerics between. * The prefix is optional. If specified, the prefix must be a DNS
-   * subdomain: a series of DNS labels separated by dots(.), not longer than 253 characters in
-   * total, followed by a slash (/). See https://kubernetes.io/docs/concepts/overview/working-with-
-   * objects/annotations/#syntax-and-character-set for more details.
+   * slash (`/`). * The name segment is required and must be 63 characters or less, beginning and
+   * ending with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`),
+   * dots (`.`), and alphanumerics between. * The prefix is optional. If specified, the prefix must
+   * be a DNS subdomain: a series of DNS labels separated by dots(`.`), not longer than 253
+   * characters in total, followed by a slash (`/`). See
+   * https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/#syntax-and-
+   * character-set for more details.
    * @param annotations annotations or {@code null} for none
    */
   public Automation setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -251,8 +254,8 @@ public final class Automation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the `Automation`. Format is projects/{project}/locations/{location}/delive
-   * ryPipelines/{delivery_pipeline}/automations/{automation}.
+   * Output only. Name of the `Automation`. Format is `projects/{project}/locations/{location}/deliv
+   * eryPipelines/{delivery_pipeline}/automations/{automation}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -260,8 +263,8 @@ public final class Automation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the `Automation`. Format is projects/{project}/locations/{location}/delive
-   * ryPipelines/{delivery_pipeline}/automations/{automation}.
+   * Output only. Name of the `Automation`. Format is `projects/{project}/locations/{location}/deliv
+   * eryPipelines/{delivery_pipeline}/automations/{automation}`.
    * @param name name or {@code null} for none
    */
   public Automation setName(java.lang.String name) {

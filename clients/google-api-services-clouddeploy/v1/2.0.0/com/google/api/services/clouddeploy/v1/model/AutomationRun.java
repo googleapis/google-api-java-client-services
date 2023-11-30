@@ -17,8 +17,8 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * An `AutomationRun` resource in the Cloud Deploy API. An `AutomationResource` represents an
- * automation execution instance of an automation rule.
+ * An `AutomationRun` resource in the Cloud Deploy API. An `AutomationRun` represents an automation
+ * execution instance of an automation rule.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -76,8 +76,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   private String expireTime;
 
   /**
-   * Output only. Name of the `AutomationRun`. Format is projects/{project}/locations/{location}/del
-   * iveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+   * Output only. Name of the `AutomationRun`. Format is `projects/{project}/locations/{location}/de
+   * liveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -259,8 +259,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Name of the `AutomationRun`. Format is projects/{project}/locations/{location}/del
-   * iveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+   * Output only. Name of the `AutomationRun`. Format is `projects/{project}/locations/{location}/de
+   * liveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -268,8 +268,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Name of the `AutomationRun`. Format is projects/{project}/locations/{location}/del
-   * iveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+   * Output only. Name of the `AutomationRun`. Format is `projects/{project}/locations/{location}/de
+   * liveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
    * @param name name or {@code null} for none
    */
   public AutomationRun setName(java.lang.String name) {

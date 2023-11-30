@@ -32,7 +32,7 @@ public final class TargetsPresentCondition extends com.google.api.client.json.Ge
 
   /**
    * The list of Target names that do not exist. For example,
-   * projects/{project_id}/locations/{location_name}/targets/{target_name}.
+   * `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class TargetsPresentCondition extends com.google.api.client.json.Ge
 
   /**
    * The list of Target names that do not exist. For example,
-   * projects/{project_id}/locations/{location_name}/targets/{target_name}.
+   * `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMissingTargets() {
@@ -63,7 +63,7 @@ public final class TargetsPresentCondition extends com.google.api.client.json.Ge
 
   /**
    * The list of Target names that do not exist. For example,
-   * projects/{project_id}/locations/{location_name}/targets/{target_name}.
+   * `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
    * @param missingTargets missingTargets or {@code null} for none
    */
   public TargetsPresentCondition setMissingTargets(java.util.List<java.lang.String> missingTargets) {

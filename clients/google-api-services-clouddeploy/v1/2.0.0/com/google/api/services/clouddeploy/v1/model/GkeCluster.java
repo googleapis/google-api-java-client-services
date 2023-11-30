@@ -31,7 +31,7 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Information specifying a GKE Cluster. Format is
-   * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+   * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Information specifying a GKE Cluster. Format is
-   * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+   * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -59,7 +59,7 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Information specifying a GKE Cluster. Format is
-   * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+   * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`.
    * @param cluster cluster or {@code null} for none
    */
   public GkeCluster setCluster(java.lang.String cluster) {

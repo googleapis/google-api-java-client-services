@@ -194,14 +194,7 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * The VPC Network that this cloud function can connect to. It can be either the fully-qualified
-   * URI, or the short name of the network resource. If the short network name is used, the network
-   * must belong to the same project. Otherwise, it must belong to a project within the same
-   * organization. The format of this field is either `projects/{project}/global/networks/{network}`
-   * or `{network}`, where `{project}` is a project id where the network is defined, and `{network}`
-   * is the short name of the network. This field is mutually exclusive with `vpc_connector` and
-   * will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc)
-   * for more information on connecting Cloud projects.
+   * Deprecated: use vpc_connector
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -699,14 +692,7 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The VPC Network that this cloud function can connect to. It can be either the fully-qualified
-   * URI, or the short name of the network resource. If the short network name is used, the network
-   * must belong to the same project. Otherwise, it must belong to a project within the same
-   * organization. The format of this field is either `projects/{project}/global/networks/{network}`
-   * or `{network}`, where `{project}` is a project id where the network is defined, and `{network}`
-   * is the short name of the network. This field is mutually exclusive with `vpc_connector` and
-   * will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc)
-   * for more information on connecting Cloud projects.
+   * Deprecated: use vpc_connector
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -714,14 +700,7 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The VPC Network that this cloud function can connect to. It can be either the fully-qualified
-   * URI, or the short name of the network resource. If the short network name is used, the network
-   * must belong to the same project. Otherwise, it must belong to a project within the same
-   * organization. The format of this field is either `projects/{project}/global/networks/{network}`
-   * or `{network}`, where `{project}` is a project id where the network is defined, and `{network}`
-   * is the short name of the network. This field is mutually exclusive with `vpc_connector` and
-   * will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc)
-   * for more information on connecting Cloud projects.
+   * Deprecated: use vpc_connector
    * @param network network or {@code null} for none
    */
   public CloudFunction setNetwork(java.lang.String network) {

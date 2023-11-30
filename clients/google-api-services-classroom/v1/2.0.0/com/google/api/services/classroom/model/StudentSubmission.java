@@ -17,9 +17,9 @@
 package com.google.api.services.classroom.model;
 
 /**
- * Student submission for course work. StudentSubmission items are generated when a CourseWork item
- * is created. StudentSubmissions that have never been accessed (i.e. with `state` = NEW) may not
- * have a creation time or update time.
+ * Student submission for course work. `StudentSubmission` items are generated when a `CourseWork`
+ * item is created. Student submissions that have never been accessed (i.e. with `state` = NEW) may
+ * not have a creation time or update time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Classroom API. For a detailed explanation see:

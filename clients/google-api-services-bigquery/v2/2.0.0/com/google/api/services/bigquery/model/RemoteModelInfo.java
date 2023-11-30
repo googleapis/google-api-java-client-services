@@ -67,6 +67,18 @@ public final class RemoteModelInfo extends com.google.api.client.json.GenericJso
   private java.lang.String remoteServiceType;
 
   /**
+   * Output only. The name of the speech recognizer to use for speech recognition. The expected
+   * format is `projects/{project}/locations/{location}/recognizers/{recognizer}`. Customers can
+   * specify this field at model creation. If not specified, a default recognizer `projects/{model
+   * project}/locations/global/recognizers/_` will be used. See more details at
+   * [recognizers](https://cloud.google.com/speech-to-
+   * text/v2/docs/reference/rest/v2/projects.locations.recognizers)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String speechRecognizer;
+
+  /**
    * Output only. Fully qualified name of the user-provided connection object of the remote model.
    * Format: ```"projects/{project_id}/locations/{location_id}/connections/{connection_id}"```
    * @return value or {@code null} for none
@@ -152,6 +164,33 @@ public final class RemoteModelInfo extends com.google.api.client.json.GenericJso
    */
   public RemoteModelInfo setRemoteServiceType(java.lang.String remoteServiceType) {
     this.remoteServiceType = remoteServiceType;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the speech recognizer to use for speech recognition. The expected
+   * format is `projects/{project}/locations/{location}/recognizers/{recognizer}`. Customers can
+   * specify this field at model creation. If not specified, a default recognizer `projects/{model
+   * project}/locations/global/recognizers/_` will be used. See more details at
+   * [recognizers](https://cloud.google.com/speech-to-
+   * text/v2/docs/reference/rest/v2/projects.locations.recognizers)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpeechRecognizer() {
+    return speechRecognizer;
+  }
+
+  /**
+   * Output only. The name of the speech recognizer to use for speech recognition. The expected
+   * format is `projects/{project}/locations/{location}/recognizers/{recognizer}`. Customers can
+   * specify this field at model creation. If not specified, a default recognizer `projects/{model
+   * project}/locations/global/recognizers/_` will be used. See more details at
+   * [recognizers](https://cloud.google.com/speech-to-
+   * text/v2/docs/reference/rest/v2/projects.locations.recognizers)
+   * @param speechRecognizer speechRecognizer or {@code null} for none
+   */
+  public RemoteModelInfo setSpeechRecognizer(java.lang.String speechRecognizer) {
+    this.speechRecognizer = speechRecognizer;
     return this;
   }
 

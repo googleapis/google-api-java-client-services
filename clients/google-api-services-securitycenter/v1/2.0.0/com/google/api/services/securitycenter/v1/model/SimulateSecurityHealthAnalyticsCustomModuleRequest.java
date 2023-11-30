@@ -32,7 +32,7 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SimulateSecurityHealthAnalyticsCustomModuleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The user specified custom configuration to test.
+   * Required. The custom configuration that you need to test.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class SimulateSecurityHealthAnalyticsCustomModuleRequest extends co
   private SimulatedResource resource;
 
   /**
-   * Required. The user specified custom configuration to test.
+   * Required. The custom configuration that you need to test.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1CustomConfig getCustomConfig() {
@@ -54,7 +54,7 @@ public final class SimulateSecurityHealthAnalyticsCustomModuleRequest extends co
   }
 
   /**
-   * Required. The user specified custom configuration to test.
+   * Required. The custom configuration that you need to test.
    * @param customConfig customConfig or {@code null} for none
    */
   public SimulateSecurityHealthAnalyticsCustomModuleRequest setCustomConfig(GoogleCloudSecuritycenterV1CustomConfig customConfig) {

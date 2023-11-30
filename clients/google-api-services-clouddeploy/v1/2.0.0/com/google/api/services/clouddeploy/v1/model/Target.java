@@ -121,7 +121,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Name of the `Target`. Format is
-   * projects/{project}/locations/{location}/targets/a-z{0,62}.
+   * `projects/{project}/locations/{location}/targets/a-z{0,62}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -360,7 +360,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Name of the `Target`. Format is
-   * projects/{project}/locations/{location}/targets/a-z{0,62}.
+   * `projects/{project}/locations/{location}/targets/a-z{0,62}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -369,7 +369,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Name of the `Target`. Format is
-   * projects/{project}/locations/{location}/targets/a-z{0,62}.
+   * `projects/{project}/locations/{location}/targets/a-z{0,62}`.
    * @param name name or {@code null} for none
    */
   public Target setName(java.lang.String name) {

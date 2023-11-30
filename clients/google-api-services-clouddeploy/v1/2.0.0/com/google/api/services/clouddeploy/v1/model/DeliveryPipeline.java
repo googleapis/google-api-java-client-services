@@ -80,8 +80,8 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/a-z{0,62}.
+   * Optional. Name of the `DeliveryPipeline`. Format is
+   * `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,8 +232,8 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/a-z{0,62}.
+   * Optional. Name of the `DeliveryPipeline`. Format is
+   * `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -241,8 +241,8 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/a-z{0,62}.
+   * Optional. Name of the `DeliveryPipeline`. Format is
+   * `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
    * @param name name or {@code null} for none
    */
   public DeliveryPipeline setName(java.lang.String name) {

@@ -54,9 +54,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private String approveTime;
 
   /**
-   * Output only. Name of the `ControllerRollout`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/a-z{0,62}.
+   * Output only. Name of the `ControllerRollout`. Format is `projects/{project}/locations/{location
+   * }/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,9 +147,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private Metadata metadata;
 
   /**
-   * Optional. Name of the `Rollout`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/a-z{0,62}.
+   * Optional. Name of the `Rollout`. Format is `projects/{project}/locations/{location}/deliveryPip
+   * elines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,9 +259,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the `ControllerRollout`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/a-z{0,62}.
+   * Output only. Name of the `ControllerRollout`. Format is `projects/{project}/locations/{location
+   * }/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getControllerRollout() {
@@ -271,9 +268,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the `ControllerRollout`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/a-z{0,62}.
+   * Output only. Name of the `ControllerRollout`. Format is `projects/{project}/locations/{location
+   * }/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
    * @param controllerRollout controllerRollout or {@code null} for none
    */
   public Rollout setControllerRollout(java.lang.String controllerRollout) {
@@ -485,9 +481,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Name of the `Rollout`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/a-z{0,62}.
+   * Optional. Name of the `Rollout`. Format is `projects/{project}/locations/{location}/deliveryPip
+   * elines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -495,9 +490,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Name of the `Rollout`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/a-z{0,62}.
+   * Optional. Name of the `Rollout`. Format is `projects/{project}/locations/{location}/deliveryPip
+   * elines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
    * @param name name or {@code null} for none
    */
   public Rollout setName(java.lang.String name) {

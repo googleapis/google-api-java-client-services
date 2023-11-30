@@ -115,8 +115,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Name of the `Release`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
+   * Optional. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryPip
+   * elines/{deliveryPipeline}/releases/a-z{0,62}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -381,8 +381,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Name of the `Release`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
+   * Optional. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryPip
+   * elines/{deliveryPipeline}/releases/a-z{0,62}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -390,8 +390,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Name of the `Release`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
+   * Optional. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryPip
+   * elines/{deliveryPipeline}/releases/a-z{0,62}`.
    * @param name name or {@code null} for none
    */
   public Release setName(java.lang.String name) {

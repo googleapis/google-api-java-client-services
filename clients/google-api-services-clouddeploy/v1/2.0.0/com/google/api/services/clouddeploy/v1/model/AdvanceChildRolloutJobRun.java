@@ -30,9 +30,8 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class AdvanceChildRolloutJobRun extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Name of the `ChildRollout`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/a-z{0,62}.
+   * Output only. Name of the `ChildRollout`. Format is `projects/{project}/locations/{location}/del
+   * iveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +45,8 @@ public final class AdvanceChildRolloutJobRun extends com.google.api.client.json.
   private java.lang.String rolloutPhaseId;
 
   /**
-   * Output only. Name of the `ChildRollout`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/a-z{0,62}.
+   * Output only. Name of the `ChildRollout`. Format is `projects/{project}/locations/{location}/del
+   * iveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRollout() {
@@ -56,9 +54,8 @@ public final class AdvanceChildRolloutJobRun extends com.google.api.client.json.
   }
 
   /**
-   * Output only. Name of the `ChildRollout`. Format is projects/{project}/
-   * locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/a-z{0,62}.
+   * Output only. Name of the `ChildRollout`. Format is `projects/{project}/locations/{location}/del
+   * iveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
    * @param rollout rollout or {@code null} for none
    */
   public AdvanceChildRolloutJobRun setRollout(java.lang.String rollout) {

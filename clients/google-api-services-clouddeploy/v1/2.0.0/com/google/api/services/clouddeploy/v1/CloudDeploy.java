@@ -682,7 +682,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent collection in which the `DeliveryPipeline` should be created. Format should be
-         *        projects/{project_id}/locations/{location_name}.
+         *        `projects/{project_id}/locations/{location_name}`.
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.DeliveryPipeline}
          * @return the request
          */
@@ -711,7 +711,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent collection in which the `DeliveryPipeline` should be created. Format should be
-         *        projects/{project_id}/locations/{location_name}.
+         *        `projects/{project_id}/locations/{location_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.DeliveryPipeline}
            * @since 1.13
            */
@@ -782,13 +782,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The parent collection in which the `DeliveryPipeline` should be created.
-           * Format should be projects/{project_id}/locations/{location_name}.
+           * Format should be `projects/{project_id}/locations/{location_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent collection in which the `DeliveryPipeline` should be created. Format should be
-         projects/{project_id}/locations/{location_name}.
+         `projects/{project_id}/locations/{location_name}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -796,7 +796,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The parent collection in which the `DeliveryPipeline` should be created.
-           * Format should be projects/{project_id}/locations/{location_name}.
+           * Format should be `projects/{project_id}/locations/{location_name}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -904,7 +904,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the `DeliveryPipeline` to delete. Format should be
-         *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+         *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -932,7 +932,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the `DeliveryPipeline` to delete. Format should be
-         *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+         *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1002,13 +1002,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The name of the `DeliveryPipeline` to delete. Format should be
-           * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the `DeliveryPipeline` to delete. Format should be
-         projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+         `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           public java.lang.String getName() {
             return name;
@@ -1016,7 +1016,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The name of the `DeliveryPipeline` to delete. Format should be
-           * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1178,7 +1178,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the `DeliveryPipeline`. Format must be
-         *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+         *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1205,7 +1205,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the `DeliveryPipeline`. Format must be
-         *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+         *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1285,13 +1285,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the `DeliveryPipeline`. Format must be
-           * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the `DeliveryPipeline`. Format must be
-         projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+         `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           public java.lang.String getName() {
             return name;
@@ -1299,7 +1299,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the `DeliveryPipeline`. Format must be
-           * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1523,7 +1523,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which owns this collection of pipelines. Format must be
-         *        projects/{project_id}/locations/{location_name}.
+         *        `projects/{project_id}/locations/{location_name}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1550,7 +1550,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which owns this collection of pipelines. Format must be
-         *        projects/{project_id}/locations/{location_name}.
+         *        `projects/{project_id}/locations/{location_name}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1630,13 +1630,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The parent, which owns this collection of pipelines. Format must be
-           * projects/{project_id}/locations/{location_name}.
+           * `projects/{project_id}/locations/{location_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which owns this collection of pipelines. Format must be
-         projects/{project_id}/locations/{location_name}.
+         `projects/{project_id}/locations/{location_name}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1644,7 +1644,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The parent, which owns this collection of pipelines. Format must be
-           * projects/{project_id}/locations/{location_name}.
+           * `projects/{project_id}/locations/{location_name}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1753,8 +1753,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the clouddeploy server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/
-         *        locations/{location}/deliveryPipelines/a-z{0,62}.
+         * @param name Optional. Name of the `DeliveryPipeline`. Format is
+         *        `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.DeliveryPipeline}
          * @return the request
          */
@@ -1782,8 +1782,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/
-         *        locations/{location}/deliveryPipelines/a-z{0,62}.
+           * @param name Optional. Name of the `DeliveryPipeline`. Format is
+         *        `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.DeliveryPipeline}
            * @since 1.13
            */
@@ -1853,22 +1853,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/
-           * locations/{location}/deliveryPipelines/a-z{0,62}.
+           * Optional. Name of the `DeliveryPipeline`. Format is
+           * `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/
-         locations/{location}/deliveryPipelines/a-z{0,62}.
+          /** Optional. Name of the `DeliveryPipeline`. Format is
+         `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/
-           * locations/{location}/deliveryPipelines/a-z{0,62}.
+           * Optional. Name of the `DeliveryPipeline`. Format is
+           * `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2012,7 +2012,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link RollbackTarget#execute()} method to invoke the remote operation.
          *
          * @param name Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created. Format should
-         *        be projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+         *        be `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.RollbackTargetRequest}
          * @return the request
          */
@@ -2041,7 +2041,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * the constructor. </p>
            *
            * @param name Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created. Format should
-         *        be projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+         *        be `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.RollbackTargetRequest}
            * @since 1.13
            */
@@ -2113,13 +2113,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           /**
            * Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created.
            * Format should be
-           * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created. Format should
-         be projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+         be `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           public java.lang.String getName() {
             return name;
@@ -2128,7 +2128,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           /**
            * Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created.
            * Format should be
-           * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           public RollbackTarget setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2474,8 +2474,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the `AutomationRun`. Format is projects/{project}/locations/{location}/deliveryPip
-           *        elines/{delivery_pipeline}/automationRuns/{automation_run}.
+           * @param name Required. Name of the `AutomationRun`. Format is `projects/{project}/locations/{location}/deliveryPi
+           *        pelines/{delivery_pipeline}/automationRuns/{automation_run}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.CancelAutomationRunRequest}
            * @return the request
            */
@@ -2505,8 +2505,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the `AutomationRun`. Format is projects/{project}/locations/{location}/deliveryPip
-           *        elines/{delivery_pipeline}/automationRuns/{automation_run}.
+             * @param name Required. Name of the `AutomationRun`. Format is `projects/{project}/locations/{location}/deliveryPi
+           *        pelines/{delivery_pipeline}/automationRuns/{automation_run}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.CancelAutomationRunRequest}
              * @since 1.13
              */
@@ -2576,22 +2576,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. Name of the `AutomationRun`. Format is projects/{project}/locations/{locati
-             * on}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             * Required. Name of the `AutomationRun`. Format is `projects/{project}/locations/{locat
+             * ion}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the `AutomationRun`. Format is projects/{project}/locations/{location}/deliveryPi
-           pelines/{delivery_pipeline}/automationRuns/{automation_run}.
+            /** Required. Name of the `AutomationRun`. Format is `projects/{project}/locations/{location}/deliveryP
+           ipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the `AutomationRun`. Format is projects/{project}/locations/{locati
-             * on}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             * Required. Name of the `AutomationRun`. Format is `projects/{project}/locations/{locat
+             * ion}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
              */
             public Cancel setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2616,8 +2616,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the `AutomationRun`. Format must be projects/{project}/locations/{location}/delive
-           *        ryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+           * @param name Required. Name of the `AutomationRun`. Format must be `projects/{project}/locations/{location}/deliv
+           *        eryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2643,8 +2643,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the `AutomationRun`. Format must be projects/{project}/locations/{location}/delive
-           *        ryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             * @param name Required. Name of the `AutomationRun`. Format must be `projects/{project}/locations/{location}/deliv
+           *        eryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2723,22 +2723,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. Name of the `AutomationRun`. Format must be projects/{project}/locations/{l
-             * ocation}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             * Required. Name of the `AutomationRun`. Format must be `projects/{project}/locations/{
+             * location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the `AutomationRun`. Format must be projects/{project}/locations/{location}/deliv
-           eryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+            /** Required. Name of the `AutomationRun`. Format must be `projects/{project}/locations/{location}/deli
+           veryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the `AutomationRun`. Format must be projects/{project}/locations/{l
-             * ocation}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}.
+             * Required. Name of the `AutomationRun`. Format must be `projects/{project}/locations/{
+             * location}/deliveryPipelines/{delivery_pipeline}/automationRuns/{automation_run}`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2764,7 +2764,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent, which owns this collection of automationRuns. Format must be
-           *        projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}.
+           *        `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2791,7 +2791,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent, which owns this collection of automationRuns. Format must be
-           *        projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}.
+           *        `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2871,13 +2871,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The parent, which owns this collection of automationRuns. Format must be
-             * projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}.
+             * `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent, which owns this collection of automationRuns. Format must be
-           projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}.
+           `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -2885,7 +2885,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The parent, which owns this collection of automationRuns. Format must be
-             * projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}.
+             * `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3017,7 +3017,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent collection in which the `Automation` should be created. Format should be
-           *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.Automation}
            * @return the request
            */
@@ -3046,7 +3046,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent collection in which the `Automation` should be created. Format should be
-           *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.Automation}
              * @since 1.13
              */
@@ -3118,13 +3118,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             /**
              * Required. The parent collection in which the `Automation` should be created. Format
              * should be
-             * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent collection in which the `Automation` should be created. Format should be
-           projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -3133,7 +3133,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             /**
              * Required. The parent collection in which the `Automation` should be created. Format
              * should be
-             * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3240,8 +3240,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the `Automation` to delete. Format should be projects/{project_id}/locations/{
-           *        location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+           * @param name Required. The name of the `Automation` to delete. Format should be `projects/{project_id}/locations/
+           *        {location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3268,8 +3268,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the `Automation` to delete. Format should be projects/{project_id}/locations/{
-           *        location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+             * @param name Required. The name of the `Automation` to delete. Format should be `projects/{project_id}/locations/
+           *        {location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -3338,24 +3338,24 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The name of the `Automation` to delete. Format should be projects/{project_
-             * id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automati
-             * on_name}.
+             * Required. The name of the `Automation` to delete. Format should be `projects/{project
+             * _id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automat
+             * ion_name}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the `Automation` to delete. Format should be projects/{project_id}/locations/
-           {location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+            /** Required. The name of the `Automation` to delete. Format should be `projects/{project_id}/locations
+           /{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the `Automation` to delete. Format should be projects/{project_
-             * id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automati
-             * on_name}.
+             * Required. The name of the `Automation` to delete. Format should be `projects/{project
+             * _id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automat
+             * ion_name}`.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3495,8 +3495,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the `Automation`. Format must be projects/{project_id}/locations/{location_name}/d
-           *        eliveryPipelines/{pipeline_name}/automations/{automation_name}.
+           * @param name Required. Name of the `Automation`. Format must be `projects/{project_id}/locations/{location_name}/
+           *        deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3522,8 +3522,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the `Automation`. Format must be projects/{project_id}/locations/{location_name}/d
-           *        eliveryPipelines/{pipeline_name}/automations/{automation_name}.
+             * @param name Required. Name of the `Automation`. Format must be `projects/{project_id}/locations/{location_name}/
+           *        deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3602,22 +3602,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. Name of the `Automation`. Format must be projects/{project_id}/locations/{l
-             * ocation_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+             * Required. Name of the `Automation`. Format must be `projects/{project_id}/locations/{
+             * location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the `Automation`. Format must be projects/{project_id}/locations/{location_name}/
-           deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+            /** Required. Name of the `Automation`. Format must be `projects/{project_id}/locations/{location_name}
+           /deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the `Automation`. Format must be projects/{project_id}/locations/{l
-             * ocation_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}.
+             * Required. Name of the `Automation`. Format must be `projects/{project_id}/locations/{
+             * location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3643,7 +3643,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent, which owns this collection of automations. Format must be
-           *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3670,7 +3670,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent, which owns this collection of automations. Format must be
-           *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3750,13 +3750,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The parent, which owns this collection of automations. Format must be
-             * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent, which owns this collection of automations. Format must be
-           projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -3764,7 +3764,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The parent, which owns this collection of automations. Format must be
-             * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3873,8 +3873,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Name of the `Automation`. Format is projects/{project}/locations/{location}/deliveryPip
-           *        elines/{delivery_pipeline}/automations/{automation}.
+           * @param name Output only. Name of the `Automation`. Format is `projects/{project}/locations/{location}/deliveryPi
+           *        pelines/{delivery_pipeline}/automations/{automation}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.Automation}
            * @return the request
            */
@@ -3902,8 +3902,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Name of the `Automation`. Format is projects/{project}/locations/{location}/deliveryPip
-           *        elines/{delivery_pipeline}/automations/{automation}.
+             * @param name Output only. Name of the `Automation`. Format is `projects/{project}/locations/{location}/deliveryPi
+           *        pelines/{delivery_pipeline}/automations/{automation}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.Automation}
              * @since 1.13
              */
@@ -3973,22 +3973,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Output only. Name of the `Automation`. Format is projects/{project}/locations/{locati
-             * on}/deliveryPipelines/{delivery_pipeline}/automations/{automation}.
+             * Output only. Name of the `Automation`. Format is `projects/{project}/locations/{locat
+             * ion}/deliveryPipelines/{delivery_pipeline}/automations/{automation}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Name of the `Automation`. Format is projects/{project}/locations/{location}/deliveryPi
-           pelines/{delivery_pipeline}/automations/{automation}.
+            /** Output only. Name of the `Automation`. Format is `projects/{project}/locations/{location}/deliveryP
+           ipelines/{delivery_pipeline}/automations/{automation}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Output only. Name of the `Automation`. Format is projects/{project}/locations/{locati
-             * on}/deliveryPipelines/{delivery_pipeline}/automations/{automation}.
+             * Output only. Name of the `Automation`. Format is `projects/{project}/locations/{locat
+             * ion}/deliveryPipelines/{delivery_pipeline}/automations/{automation}`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4154,8 +4154,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Abandon#execute()} method to invoke the remote operation.
            *
            * @param name Required. Name of the Release. Format is
-           *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-           *        releases/{release}.
+           *        `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{re
+           *        lease}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.AbandonReleaseRequest}
            * @return the request
            */
@@ -4184,8 +4184,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Name of the Release. Format is
-           *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-           *        releases/{release}.
+           *        `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{re
+           *        lease}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.AbandonReleaseRequest}
              * @since 1.13
              */
@@ -4255,24 +4255,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. Name of the Release. Format is
-             * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             * releases/{release}.
+             * Required. Name of the Release. Format is `projects/{project}/locations/{location}/del
+             * iveryPipelines/{deliveryPipeline}/releases/{release}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Name of the Release. Format is
-           projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}.
+           `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{release}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the Release. Format is
-             * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             * releases/{release}.
+             * Required. Name of the Release. Format is `projects/{project}/locations/{location}/del
+             * iveryPipelines/{deliveryPipeline}/releases/{release}`.
              */
             public Abandon setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4298,7 +4296,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent collection in which the `Release` should be created. Format should be
-           *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.Release}
            * @return the request
            */
@@ -4327,7 +4325,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent collection in which the `Release` should be created. Format should be
-           *        projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.Release}
              * @since 1.13
              */
@@ -4399,13 +4397,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             /**
              * Required. The parent collection in which the `Release` should be created. Format
              * should be
-             * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent collection in which the `Release` should be created. Format should be
-           projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+           `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -4414,7 +4412,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             /**
              * Required. The parent collection in which the `Release` should be created. Format
              * should be
-             * projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}.
+             * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4521,8 +4519,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the `Release`. Format must be projects/{project_id}/locations/{location_name}/deli
-           *        veryPipelines/{pipeline_name}/releases/{release_name}.
+           * @param name Required. Name of the `Release`. Format must be `projects/{project_id}/locations/{location_name}/del
+           *        iveryPipelines/{pipeline_name}/releases/{release_name}`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -4548,8 +4546,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the `Release`. Format must be projects/{project_id}/locations/{location_name}/deli
-           *        veryPipelines/{pipeline_name}/releases/{release_name}.
+             * @param name Required. Name of the `Release`. Format must be `projects/{project_id}/locations/{location_name}/del
+           *        iveryPipelines/{pipeline_name}/releases/{release_name}`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -4628,22 +4626,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. Name of the `Release`. Format must be projects/{project_id}/locations/{loca
-             * tion_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+             * Required. Name of the `Release`. Format must be `projects/{project_id}/locations/{loc
+             * ation_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the `Release`. Format must be projects/{project_id}/locations/{location_name}/del
-           iveryPipelines/{pipeline_name}/releases/{release_name}.
+            /** Required. Name of the `Release`. Format must be `projects/{project_id}/locations/{location_name}/de
+           liveryPipelines/{pipeline_name}/releases/{release_name}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the `Release`. Format must be projects/{project_id}/locations/{loca
-             * tion_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+             * Required. Name of the `Release`. Format must be `projects/{project_id}/locations/{loc
+             * ation_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4925,9 +4923,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * This request holds the parameters needed by the clouddeploy server.  After setting any optional
              * parameters, call the {@link Advance#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Name of the Rollout. Format is
-             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             *        releases/{release}/rollouts/{rollout}.
+             * @param name Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines/
+             *        {deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.AdvanceRolloutRequest}
              * @return the request
              */
@@ -4955,9 +4952,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                * Advance#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Name of the Rollout. Format is
-             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             *        releases/{release}/rollouts/{rollout}.
+               * @param name Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines/
+             *        {deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                * @param content the {@link com.google.api.services.clouddeploy.v1.model.AdvanceRolloutRequest}
                * @since 1.13
                */
@@ -5027,25 +5023,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * Required. Name of the Rollout. Format is
-               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               * releases/{release}/rollouts/{rollout}.
+               * Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/d
+               * eliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Name of the Rollout. Format is
-             projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             releases/{release}/rollouts/{rollout}.
+              /** Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines
+             /{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. Name of the Rollout. Format is
-               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               * releases/{release}/rollouts/{rollout}.
+               * Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/d
+               * eliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               public Advance setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -5070,9 +5063,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * This request holds the parameters needed by the clouddeploy server.  After setting any optional
              * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Name of the Rollout. Format is
-             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             *        releases/{release}/rollouts/{rollout}.
+             * @param name Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines/
+             *        {deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.ApproveRolloutRequest}
              * @return the request
              */
@@ -5100,9 +5092,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                * Approve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Name of the Rollout. Format is
-             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             *        releases/{release}/rollouts/{rollout}.
+               * @param name Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines/
+             *        {deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                * @param content the {@link com.google.api.services.clouddeploy.v1.model.ApproveRolloutRequest}
                * @since 1.13
                */
@@ -5172,25 +5163,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * Required. Name of the Rollout. Format is
-               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               * releases/{release}/rollouts/{rollout}.
+               * Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/d
+               * eliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Name of the Rollout. Format is
-             projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             releases/{release}/rollouts/{rollout}.
+              /** Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines
+             /{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. Name of the Rollout. Format is
-               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               * releases/{release}/rollouts/{rollout}.
+               * Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/d
+               * eliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               public Approve setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -5215,9 +5203,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * This request holds the parameters needed by the clouddeploy server.  After setting any optional
              * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Name of the Rollout. Format is
-             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             *        releases/{release}/rollouts/{rollout}.
+             * @param name Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines/
+             *        {deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.CancelRolloutRequest}
              * @return the request
              */
@@ -5245,9 +5232,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Name of the Rollout. Format is
-             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             *        releases/{release}/rollouts/{rollout}.
+               * @param name Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines/
+             *        {deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                * @param content the {@link com.google.api.services.clouddeploy.v1.model.CancelRolloutRequest}
                * @since 1.13
                */
@@ -5317,25 +5303,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * Required. Name of the Rollout. Format is
-               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               * releases/{release}/rollouts/{rollout}.
+               * Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/d
+               * eliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Name of the Rollout. Format is
-             projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             releases/{release}/rollouts/{rollout}.
+              /** Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines
+             /{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. Name of the Rollout. Format is
-               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               * releases/{release}/rollouts/{rollout}.
+               * Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/d
+               * eliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               public Cancel setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -5360,9 +5343,9 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * This request holds the parameters needed by the clouddeploy server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent collection in which the `Rollout` should be created. Format should be projects/
-             *        {project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release
-             *        _name}.
+             * @param parent Required. The parent collection in which the `Rollout` should be created. Format should be `projects
+             *        /{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{releas
+             *        e_name}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.Rollout}
              * @return the request
              */
@@ -5390,9 +5373,9 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent collection in which the `Rollout` should be created. Format should be projects/
-             *        {project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release
-             *        _name}.
+               * @param parent Required. The parent collection in which the `Rollout` should be created. Format should be `projects
+             *        /{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{releas
+             *        e_name}`.
                * @param content the {@link com.google.api.services.clouddeploy.v1.model.Rollout}
                * @since 1.13
                */
@@ -5463,14 +5446,15 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
               /**
                * Required. The parent collection in which the `Rollout` should be created. Format
-               * should be projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeli
-               * ne_name}/releases/{release_name}.
+               * should be `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipel
+               * ine_name}/releases/{release_name}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent collection in which the `Rollout` should be created. Format should be projects
-             /{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+              /** Required. The parent collection in which the `Rollout` should be created. Format should be `project
+             s/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`
+             .
                */
               public java.lang.String getParent() {
                 return parent;
@@ -5478,8 +5462,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
               /**
                * Required. The parent collection in which the `Rollout` should be created. Format
-               * should be projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeli
-               * ne_name}/releases/{release_name}.
+               * should be `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipel
+               * ine_name}/releases/{release_name}`.
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -5611,8 +5595,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * This request holds the parameters needed by the clouddeploy server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Name of the `Rollout`. Format must be projects/{project_id}/locations/{location_name}/deli
-             *        veryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}.
+             * @param name Required. Name of the `Rollout`. Format must be `projects/{project_id}/locations/{location_name}/del
+             *        iveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}`.
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -5638,8 +5622,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Name of the `Rollout`. Format must be projects/{project_id}/locations/{location_name}/deli
-             *        veryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}.
+               * @param name Required. Name of the `Rollout`. Format must be `projects/{project_id}/locations/{location_name}/del
+             *        iveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}`.
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -5718,24 +5702,24 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * Required. Name of the `Rollout`. Format must be projects/{project_id}/locations/{lo
-               * cation_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{ro
-               * llout_name}.
+               * Required. Name of the `Rollout`. Format must be `projects/{project_id}/locations/{l
+               * ocation_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{r
+               * ollout_name}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Name of the `Rollout`. Format must be projects/{project_id}/locations/{location_name}/del
-             iveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}.
+              /** Required. Name of the `Rollout`. Format must be `projects/{project_id}/locations/{location_name}/de
+             liveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}`.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. Name of the `Rollout`. Format must be projects/{project_id}/locations/{lo
-               * cation_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{ro
-               * llout_name}.
+               * Required. Name of the `Rollout`. Format must be `projects/{project_id}/locations/{l
+               * ocation_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{r
+               * ollout_name}`.
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -5760,9 +5744,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * This request holds the parameters needed by the clouddeploy server.  After setting any optional
              * parameters, call the {@link IgnoreJob#execute()} method to invoke the remote operation.
              *
-             * @param rollout Required. Name of the Rollout. Format is
-             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             *        releases/{release}/rollouts/{rollout}.
+             * @param rollout Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines/
+             *        {deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.IgnoreJobRequest}
              * @return the request
              */
@@ -5790,9 +5773,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                * IgnoreJob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param rollout Required. Name of the Rollout. Format is
-             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             *        releases/{release}/rollouts/{rollout}.
+               * @param rollout Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines/
+             *        {deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                * @param content the {@link com.google.api.services.clouddeploy.v1.model.IgnoreJobRequest}
                * @since 1.13
                */
@@ -5862,25 +5844,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * Required. Name of the Rollout. Format is
-               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               * releases/{release}/rollouts/{rollout}.
+               * Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/d
+               * eliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String rollout;
 
-              /** Required. Name of the Rollout. Format is
-             projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             releases/{release}/rollouts/{rollout}.
+              /** Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines
+             /{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               public java.lang.String getRollout() {
                 return rollout;
               }
 
               /**
-               * Required. Name of the Rollout. Format is
-               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               * releases/{release}/rollouts/{rollout}.
+               * Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/d
+               * eliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               public IgnoreJob setRollout(java.lang.String rollout) {
                 if (!getSuppressPatternChecks()) {
@@ -6139,9 +6118,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * This request holds the parameters needed by the clouddeploy server.  After setting any optional
              * parameters, call the {@link RetryJob#execute()} method to invoke the remote operation.
              *
-             * @param rollout Required. Name of the Rollout. Format is
-             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             *        releases/{release}/rollouts/{rollout}.
+             * @param rollout Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines/
+             *        {deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.RetryJobRequest}
              * @return the request
              */
@@ -6169,9 +6147,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                * RetryJob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param rollout Required. Name of the Rollout. Format is
-             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             *        releases/{release}/rollouts/{rollout}.
+               * @param rollout Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines/
+             *        {deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                * @param content the {@link com.google.api.services.clouddeploy.v1.model.RetryJobRequest}
                * @since 1.13
                */
@@ -6241,25 +6218,22 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * Required. Name of the Rollout. Format is
-               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               * releases/{release}/rollouts/{rollout}.
+               * Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/d
+               * eliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String rollout;
 
-              /** Required. Name of the Rollout. Format is
-             projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-             releases/{release}/rollouts/{rollout}.
+              /** Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/deliveryPipelines
+             /{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               public java.lang.String getRollout() {
                 return rollout;
               }
 
               /**
-               * Required. Name of the Rollout. Format is
-               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               * releases/{release}/rollouts/{rollout}.
+               * Required. Name of the Rollout. Format is `projects/{project}/locations/{location}/d
+               * eliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
                */
               public RetryJob setRollout(java.lang.String rollout) {
                 if (!getSuppressPatternChecks()) {
@@ -6305,9 +6279,9 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                * This request holds the parameters needed by the clouddeploy server.  After setting any optional
                * parameters, call the {@link Get#execute()} method to invoke the remote operation.
                *
-               * @param name Required. Name of the `JobRun`. Format must be projects/{project_id}/locations/{location_name}/deliv
-               *        eryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_
-               *        run_name}.
+               * @param name Required. Name of the `JobRun`. Format must be `projects/{project_id}/locations/{location_name}/deli
+               *        veryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job
+               *        _run_name}`.
                * @return the request
                */
               public Get get(java.lang.String name) throws java.io.IOException {
@@ -6333,9 +6307,9 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                  * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                  * must be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name Required. Name of the `JobRun`. Format must be projects/{project_id}/locations/{location_name}/deliv
-               *        eryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_
-               *        run_name}.
+                 * @param name Required. Name of the `JobRun`. Format must be `projects/{project_id}/locations/{location_name}/deli
+               *        veryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job
+               *        _run_name}`.
                  * @since 1.13
                  */
                 protected Get(java.lang.String name) {
@@ -6414,25 +6388,25 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                 }
 
                 /**
-                 * Required. Name of the `JobRun`. Format must be projects/{project_id}/locations/{l
-                 * ocation_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/
-                 * {rollout_name}/jobRuns/{job_run_name}.
+                 * Required. Name of the `JobRun`. Format must be `projects/{project_id}/locations/{
+                 * location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts
+                 * /{rollout_name}/jobRuns/{job_run_name}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** Required. Name of the `JobRun`. Format must be projects/{project_id}/locations/{location_name}/deli
-               veryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name
-               }.
+                /** Required. Name of the `JobRun`. Format must be `projects/{project_id}/locations/{location_name}/del
+               iveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_nam
+               e}`.
                  */
                 public java.lang.String getName() {
                   return name;
                 }
 
                 /**
-                 * Required. Name of the `JobRun`. Format must be projects/{project_id}/locations/{l
-                 * ocation_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts/
-                 * {rollout_name}/jobRuns/{job_run_name}.
+                 * Required. Name of the `JobRun`. Format must be `projects/{project_id}/locations/{
+                 * location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}/rollouts
+                 * /{rollout_name}/jobRuns/{job_run_name}`.
                  */
                 public Get setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
@@ -6691,9 +6665,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                * This request holds the parameters needed by the clouddeploy server.  After setting any optional
                * parameters, call the {@link Terminate#execute()} method to invoke the remote operation.
                *
-               * @param name Required. Name of the `JobRun`. Format must be
-               *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               *        releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+               * @param name Required. Name of the `JobRun`. Format must be `projects/{project}/locations/{location}/deliveryPipe
+               *        lines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}`.
                * @param content the {@link com.google.api.services.clouddeploy.v1.model.TerminateJobRunRequest}
                * @return the request
                */
@@ -6721,9 +6694,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                  * Terminate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                  * must be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name Required. Name of the `JobRun`. Format must be
-               *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               *        releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+                 * @param name Required. Name of the `JobRun`. Format must be `projects/{project}/locations/{location}/deliveryPipe
+               *        lines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}`.
                  * @param content the {@link com.google.api.services.clouddeploy.v1.model.TerminateJobRunRequest}
                  * @since 1.13
                  */
@@ -6793,25 +6765,24 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                 }
 
                 /**
-                 * Required. Name of the `JobRun`. Format must be
-                 * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-                 * releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+                 * Required. Name of the `JobRun`. Format must be `projects/{project}/locations/{loc
+                 * ation}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}
+                 * /jobRuns/{jobRun}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** Required. Name of the `JobRun`. Format must be
-               projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-               releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+                /** Required. Name of the `JobRun`. Format must be `projects/{project}/locations/{location}/deliveryPip
+               elines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}`.
                  */
                 public java.lang.String getName() {
                   return name;
                 }
 
                 /**
-                 * Required. Name of the `JobRun`. Format must be
-                 * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-                 * releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+                 * Required. Name of the `JobRun`. Format must be `projects/{project}/locations/{loc
+                 * ation}/deliveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}
+                 * /jobRuns/{jobRun}`.
                  */
                 public Terminate setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
@@ -7488,7 +7459,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent collection in which the `Target` should be created. Format should be
-         *        projects/{project_id}/locations/{location_name}.
+         *        `projects/{project_id}/locations/{location_name}`.
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.Target}
          * @return the request
          */
@@ -7517,7 +7488,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent collection in which the `Target` should be created. Format should be
-         *        projects/{project_id}/locations/{location_name}.
+         *        `projects/{project_id}/locations/{location_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.Target}
            * @since 1.13
            */
@@ -7588,13 +7559,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The parent collection in which the `Target` should be created. Format should
-           * be projects/{project_id}/locations/{location_name}.
+           * be `projects/{project_id}/locations/{location_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent collection in which the `Target` should be created. Format should be
-         projects/{project_id}/locations/{location_name}.
+         `projects/{project_id}/locations/{location_name}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -7602,7 +7573,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The parent collection in which the `Target` should be created. Format should
-           * be projects/{project_id}/locations/{location_name}.
+           * be `projects/{project_id}/locations/{location_name}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7710,7 +7681,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the `Target` to delete. Format should be
-         *        projects/{project_id}/locations/{location_name}/targets/{target_name}.
+         *        `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -7738,7 +7709,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the `Target` to delete. Format should be
-         *        projects/{project_id}/locations/{location_name}/targets/{target_name}.
+         *        `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -7808,13 +7779,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The name of the `Target` to delete. Format should be
-           * projects/{project_id}/locations/{location_name}/targets/{target_name}.
+           * `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the `Target` to delete. Format should be
-         projects/{project_id}/locations/{location_name}/targets/{target_name}.
+         `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            */
           public java.lang.String getName() {
             return name;
@@ -7822,7 +7793,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The name of the `Target` to delete. Format should be
-           * projects/{project_id}/locations/{location_name}/targets/{target_name}.
+           * `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7960,7 +7931,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the `Target`. Format must be
-         *        projects/{project_id}/locations/{location_name}/targets/{target_name}.
+         *        `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -7987,7 +7958,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the `Target`. Format must be
-         *        projects/{project_id}/locations/{location_name}/targets/{target_name}.
+         *        `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -8067,13 +8038,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the `Target`. Format must be
-           * projects/{project_id}/locations/{location_name}/targets/{target_name}.
+           * `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the `Target`. Format must be
-         projects/{project_id}/locations/{location_name}/targets/{target_name}.
+         `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            */
           public java.lang.String getName() {
             return name;
@@ -8081,7 +8052,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. Name of the `Target`. Format must be
-           * projects/{project_id}/locations/{location_name}/targets/{target_name}.
+           * `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -8305,7 +8276,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which owns this collection of targets. Format must be
-         *        projects/{project_id}/locations/{location_name}.
+         *        `projects/{project_id}/locations/{location_name}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -8332,7 +8303,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which owns this collection of targets. Format must be
-         *        projects/{project_id}/locations/{location_name}.
+         *        `projects/{project_id}/locations/{location_name}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -8412,13 +8383,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The parent, which owns this collection of targets. Format must be
-           * projects/{project_id}/locations/{location_name}.
+           * `projects/{project_id}/locations/{location_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which owns this collection of targets. Format must be
-         projects/{project_id}/locations/{location_name}.
+         `projects/{project_id}/locations/{location_name}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -8426,7 +8397,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Required. The parent, which owns this collection of targets. Format must be
-           * projects/{project_id}/locations/{location_name}.
+           * `projects/{project_id}/locations/{location_name}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -8545,7 +8516,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the clouddeploy server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+         * @param name Optional. Name of the `Target`. Format is
+         *        `projects/{project}/locations/{location}/targets/a-z{0,62}`.
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.Target}
          * @return the request
          */
@@ -8573,7 +8545,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+           * @param name Optional. Name of the `Target`. Format is
+         *        `projects/{project}/locations/{location}/targets/a-z{0,62}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.Target}
            * @since 1.13
            */
@@ -8644,13 +8617,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Optional. Name of the `Target`. Format is
-           * projects/{project}/locations/{location}/targets/a-z{0,62}.
+           * `projects/{project}/locations/{location}/targets/a-z{0,62}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Optional. Name of the `Target`. Format is
-         projects/{project}/locations/{location}/targets/a-z{0,62}.
+         `projects/{project}/locations/{location}/targets/a-z{0,62}`.
            */
           public java.lang.String getName() {
             return name;
@@ -8658,7 +8631,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Optional. Name of the `Target`. Format is
-           * projects/{project}/locations/{location}/targets/a-z{0,62}.
+           * `projects/{project}/locations/{location}/targets/a-z{0,62}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

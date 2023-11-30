@@ -39,7 +39,7 @@ public final class VerifyJobRun extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to verify. Format
-   * is projects/{project}/locations/{location}/builds/{build}.
+   * is `projects/{project}/locations/{location}/builds/{build}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class VerifyJobRun extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to verify. Format
-   * is projects/{project}/locations/{location}/builds/{build}.
+   * is `projects/{project}/locations/{location}/builds/{build}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBuild() {
@@ -97,7 +97,7 @@ public final class VerifyJobRun extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to verify. Format
-   * is projects/{project}/locations/{location}/builds/{build}.
+   * is `projects/{project}/locations/{location}/builds/{build}`.
    * @param build build or {@code null} for none
    */
   public VerifyJobRun setBuild(java.lang.String build) {

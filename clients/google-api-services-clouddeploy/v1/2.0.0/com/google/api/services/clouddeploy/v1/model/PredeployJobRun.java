@@ -32,7 +32,7 @@ public final class PredeployJobRun extends com.google.api.client.json.GenericJso
   /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to execute the
    * custom actions associated with the predeploy Job. Format is
-   * projects/{project}/locations/{location}/builds/{build}.
+   * `projects/{project}/locations/{location}/builds/{build}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class PredeployJobRun extends com.google.api.client.json.GenericJso
   /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to execute the
    * custom actions associated with the predeploy Job. Format is
-   * projects/{project}/locations/{location}/builds/{build}.
+   * `projects/{project}/locations/{location}/builds/{build}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBuild() {
@@ -66,7 +66,7 @@ public final class PredeployJobRun extends com.google.api.client.json.GenericJso
   /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to execute the
    * custom actions associated with the predeploy Job. Format is
-   * projects/{project}/locations/{location}/builds/{build}.
+   * `projects/{project}/locations/{location}/builds/{build}`.
    * @param build build or {@code null} for none
    */
   public PredeployJobRun setBuild(java.lang.String build) {

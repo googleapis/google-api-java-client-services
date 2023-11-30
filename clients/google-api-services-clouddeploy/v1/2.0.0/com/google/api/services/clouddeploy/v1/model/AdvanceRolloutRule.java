@@ -39,7 +39,7 @@ public final class AdvanceRolloutRule extends com.google.api.client.json.Generic
 
   /**
    * Required. ID of the rule. This id must be unique in the `Automation` resource to which this
-   * rule belongs. The format is a-z{0,62}.
+   * rule belongs. The format is `a-z{0,62}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class AdvanceRolloutRule extends com.google.api.client.json.Generic
 
   /**
    * Required. ID of the rule. This id must be unique in the `Automation` resource to which this
-   * rule belongs. The format is a-z{0,62}.
+   * rule belongs. The format is `a-z{0,62}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -90,7 +90,7 @@ public final class AdvanceRolloutRule extends com.google.api.client.json.Generic
 
   /**
    * Required. ID of the rule. This id must be unique in the `Automation` resource to which this
-   * rule belongs. The format is a-z{0,62}.
+   * rule belongs. The format is `a-z{0,62}`.
    * @param id id or {@code null} for none
    */
   public AdvanceRolloutRule setId(java.lang.String id) {

@@ -37,12 +37,28 @@ public final class SignatureInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String customerKmsKeyVersion;
 
   /**
+   * The hashing algorithm used for signature verification. It will only be present in the case of
+   * Google managed keys.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String googleKeyAlgorithm;
+
+  /**
    * The public key for the Google default signing, encoded in PEM format. The signature was created
    * using a private key which may be verified using this public key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String googlePublicKeyPem;
+
+  /**
+   * The serialized ApprovalRequest message without the approve.signature_info field. This to allow
+   * the customer to verify signatures if they want to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serializedApprovalRequest;
 
   /**
    * The digital signature.
@@ -69,6 +85,25 @@ public final class SignatureInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The hashing algorithm used for signature verification. It will only be present in the case of
+   * Google managed keys.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGoogleKeyAlgorithm() {
+    return googleKeyAlgorithm;
+  }
+
+  /**
+   * The hashing algorithm used for signature verification. It will only be present in the case of
+   * Google managed keys.
+   * @param googleKeyAlgorithm googleKeyAlgorithm or {@code null} for none
+   */
+  public SignatureInfo setGoogleKeyAlgorithm(java.lang.String googleKeyAlgorithm) {
+    this.googleKeyAlgorithm = googleKeyAlgorithm;
+    return this;
+  }
+
+  /**
    * The public key for the Google default signing, encoded in PEM format. The signature was created
    * using a private key which may be verified using this public key.
    * @return value or {@code null} for none
@@ -84,6 +119,55 @@ public final class SignatureInfo extends com.google.api.client.json.GenericJson 
    */
   public SignatureInfo setGooglePublicKeyPem(java.lang.String googlePublicKeyPem) {
     this.googlePublicKeyPem = googlePublicKeyPem;
+    return this;
+  }
+
+  /**
+   * The serialized ApprovalRequest message without the approve.signature_info field. This to allow
+   * the customer to verify signatures if they want to.
+   * @see #decodeSerializedApprovalRequest()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSerializedApprovalRequest() {
+    return serializedApprovalRequest;
+  }
+
+  /**
+   * The serialized ApprovalRequest message without the approve.signature_info field. This to allow
+   * the customer to verify signatures if they want to.
+   * @see #getSerializedApprovalRequest()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeSerializedApprovalRequest() {
+    return com.google.api.client.util.Base64.decodeBase64(serializedApprovalRequest);
+  }
+
+  /**
+   * The serialized ApprovalRequest message without the approve.signature_info field. This to allow
+   * the customer to verify signatures if they want to.
+   * @see #encodeSerializedApprovalRequest()
+   * @param serializedApprovalRequest serializedApprovalRequest or {@code null} for none
+   */
+  public SignatureInfo setSerializedApprovalRequest(java.lang.String serializedApprovalRequest) {
+    this.serializedApprovalRequest = serializedApprovalRequest;
+    return this;
+  }
+
+  /**
+   * The serialized ApprovalRequest message without the approve.signature_info field. This to allow
+   * the customer to verify signatures if they want to.
+   * @see #setSerializedApprovalRequest()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public SignatureInfo encodeSerializedApprovalRequest(byte[] serializedApprovalRequest) {
+    this.serializedApprovalRequest = com.google.api.client.util.Base64.encodeBase64URLSafeString(serializedApprovalRequest);
     return this;
   }
 

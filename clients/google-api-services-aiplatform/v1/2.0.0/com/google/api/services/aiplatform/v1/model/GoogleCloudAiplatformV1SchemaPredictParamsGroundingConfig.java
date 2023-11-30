@@ -30,11 +30,35 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * If set, skip finding claim attributions (i.e not generate grounding citation).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableAttribution;
+
+  /**
    * The sources for the grounding checking.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry> sources;
+
+  /**
+   * If set, skip finding claim attributions (i.e not generate grounding citation).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableAttribution() {
+    return disableAttribution;
+  }
+
+  /**
+   * If set, skip finding claim attributions (i.e not generate grounding citation).
+   * @param disableAttribution disableAttribution or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig setDisableAttribution(java.lang.Boolean disableAttribution) {
+    this.disableAttribution = disableAttribution;
+    return this;
+  }
 
   /**
    * The sources for the grounding checking.

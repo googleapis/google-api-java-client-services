@@ -31,7 +31,22 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1FetchFeatureValuesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specify response data format. If not set, KeyValue format will be used.
+   * Optional. Response data format. If not set, FeatureViewDataFormat.KEY_VALUE will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataFormat;
+
+  /**
+   * Optional. The request key to fetch feature values for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FeatureViewDataKey dataKey;
+
+  /**
+   * Specify response data format. If not set, KeyValue format will be used. Deprecated. Use
+   * FetchFeatureValuesRequest.data_format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +60,42 @@ public final class GoogleCloudAiplatformV1beta1FetchFeatureValuesRequest extends
   private java.lang.String id;
 
   /**
-   * Specify response data format. If not set, KeyValue format will be used.
+   * Optional. Response data format. If not set, FeatureViewDataFormat.KEY_VALUE will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataFormat() {
+    return dataFormat;
+  }
+
+  /**
+   * Optional. Response data format. If not set, FeatureViewDataFormat.KEY_VALUE will be used.
+   * @param dataFormat dataFormat or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FetchFeatureValuesRequest setDataFormat(java.lang.String dataFormat) {
+    this.dataFormat = dataFormat;
+    return this;
+  }
+
+  /**
+   * Optional. The request key to fetch feature values for.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureViewDataKey getDataKey() {
+    return dataKey;
+  }
+
+  /**
+   * Optional. The request key to fetch feature values for.
+   * @param dataKey dataKey or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FetchFeatureValuesRequest setDataKey(GoogleCloudAiplatformV1beta1FeatureViewDataKey dataKey) {
+    this.dataKey = dataKey;
+    return this;
+  }
+
+  /**
+   * Specify response data format. If not set, KeyValue format will be used. Deprecated. Use
+   * FetchFeatureValuesRequest.data_format.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormat() {
@@ -53,7 +103,8 @@ public final class GoogleCloudAiplatformV1beta1FetchFeatureValuesRequest extends
   }
 
   /**
-   * Specify response data format. If not set, KeyValue format will be used.
+   * Specify response data format. If not set, KeyValue format will be used. Deprecated. Use
+   * FetchFeatureValuesRequest.data_format.
    * @param format format or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FetchFeatureValuesRequest setFormat(java.lang.String format) {

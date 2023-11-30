@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Contains information about the source of the models generated from Generative AI Studio.
+ * Runtime operation information for UpdateDeploymentResourcePool method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1GenieSource extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1UpdateDeploymentResourcePoolOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The public base model URI.
+   * The operation generic information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String baseModelUri;
+  private GoogleCloudAiplatformV1GenericOperationMetadata genericMetadata;
 
   /**
-   * Required. The public base model URI.
+   * The operation generic information.
    * @return value or {@code null} for none
    */
-  public java.lang.String getBaseModelUri() {
-    return baseModelUri;
+  public GoogleCloudAiplatformV1GenericOperationMetadata getGenericMetadata() {
+    return genericMetadata;
   }
 
   /**
-   * Required. The public base model URI.
-   * @param baseModelUri baseModelUri or {@code null} for none
+   * The operation generic information.
+   * @param genericMetadata genericMetadata or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1GenieSource setBaseModelUri(java.lang.String baseModelUri) {
-    this.baseModelUri = baseModelUri;
+  public GoogleCloudAiplatformV1UpdateDeploymentResourcePoolOperationMetadata setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata genericMetadata) {
+    this.genericMetadata = genericMetadata;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1GenieSource set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1GenieSource) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1UpdateDeploymentResourcePoolOperationMetadata set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1UpdateDeploymentResourcePoolOperationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1GenieSource clone() {
-    return (GoogleCloudAiplatformV1beta1GenieSource) super.clone();
+  public GoogleCloudAiplatformV1UpdateDeploymentResourcePoolOperationMetadata clone() {
+    return (GoogleCloudAiplatformV1UpdateDeploymentResourcePoolOperationMetadata) super.clone();
   }
 
 }

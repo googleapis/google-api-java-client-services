@@ -90,6 +90,13 @@ public final class GoogleCloudAiplatformV1ModelContainerSpec extends com.google.
   private java.util.List<java.lang.String> command;
 
   /**
+   * Immutable. Deployment timeout. TODO (b/306244185): Revise documentation before exposing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deploymentTimeout;
+
+  /**
    * Immutable. List of environment variables to set in the container. After the container starts
    * running, code running in the container can read these environment variables. Additionally, the
    * command and args fields can reference these variables. Later entries in this list can also
@@ -109,6 +116,14 @@ public final class GoogleCloudAiplatformV1ModelContainerSpec extends com.google.
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1EnvVar.class);
   }
+
+  /**
+   * Immutable. Specification for Kubernetes readiness probe. TODO (b/306244185): Revise
+   * documentation before exposing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1Probe healthProbe;
 
   /**
    * Immutable. HTTP path on the container to send health checks to. Vertex AI intermittently sends
@@ -184,6 +199,22 @@ public final class GoogleCloudAiplatformV1ModelContainerSpec extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String predictRoute;
+
+  /**
+   * Immutable. The amount of the VM memory to reserve as the shared memory for the model in
+   * megabytes. TODO (b/306244185): Revise documentation before exposing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long sharedMemorySizeMb;
+
+  /**
+   * Immutable. Specification for Kubernetes startup probe. TODO (b/306244185): Revise documentation
+   * before exposing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1Probe startupProbe;
 
   /**
    * Immutable. Specifies arguments for the command that runs when the container starts. This
@@ -306,6 +337,23 @@ public final class GoogleCloudAiplatformV1ModelContainerSpec extends com.google.
   }
 
   /**
+   * Immutable. Deployment timeout. TODO (b/306244185): Revise documentation before exposing.
+   * @return value or {@code null} for none
+   */
+  public String getDeploymentTimeout() {
+    return deploymentTimeout;
+  }
+
+  /**
+   * Immutable. Deployment timeout. TODO (b/306244185): Revise documentation before exposing.
+   * @param deploymentTimeout deploymentTimeout or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelContainerSpec setDeploymentTimeout(String deploymentTimeout) {
+    this.deploymentTimeout = deploymentTimeout;
+    return this;
+  }
+
+  /**
    * Immutable. List of environment variables to set in the container. After the container starts
    * running, code running in the container can read these environment variables. Additionally, the
    * command and args fields can reference these variables. Later entries in this list can also
@@ -335,6 +383,25 @@ public final class GoogleCloudAiplatformV1ModelContainerSpec extends com.google.
    */
   public GoogleCloudAiplatformV1ModelContainerSpec setEnv(java.util.List<GoogleCloudAiplatformV1EnvVar> env) {
     this.env = env;
+    return this;
+  }
+
+  /**
+   * Immutable. Specification for Kubernetes readiness probe. TODO (b/306244185): Revise
+   * documentation before exposing.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Probe getHealthProbe() {
+    return healthProbe;
+  }
+
+  /**
+   * Immutable. Specification for Kubernetes readiness probe. TODO (b/306244185): Revise
+   * documentation before exposing.
+   * @param healthProbe healthProbe or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelContainerSpec setHealthProbe(GoogleCloudAiplatformV1Probe healthProbe) {
+    this.healthProbe = healthProbe;
     return this;
   }
 
@@ -497,6 +564,44 @@ public final class GoogleCloudAiplatformV1ModelContainerSpec extends com.google.
    */
   public GoogleCloudAiplatformV1ModelContainerSpec setPredictRoute(java.lang.String predictRoute) {
     this.predictRoute = predictRoute;
+    return this;
+  }
+
+  /**
+   * Immutable. The amount of the VM memory to reserve as the shared memory for the model in
+   * megabytes. TODO (b/306244185): Revise documentation before exposing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSharedMemorySizeMb() {
+    return sharedMemorySizeMb;
+  }
+
+  /**
+   * Immutable. The amount of the VM memory to reserve as the shared memory for the model in
+   * megabytes. TODO (b/306244185): Revise documentation before exposing.
+   * @param sharedMemorySizeMb sharedMemorySizeMb or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelContainerSpec setSharedMemorySizeMb(java.lang.Long sharedMemorySizeMb) {
+    this.sharedMemorySizeMb = sharedMemorySizeMb;
+    return this;
+  }
+
+  /**
+   * Immutable. Specification for Kubernetes startup probe. TODO (b/306244185): Revise documentation
+   * before exposing.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Probe getStartupProbe() {
+    return startupProbe;
+  }
+
+  /**
+   * Immutable. Specification for Kubernetes startup probe. TODO (b/306244185): Revise documentation
+   * before exposing.
+   * @param startupProbe startupProbe or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelContainerSpec setStartupProbe(GoogleCloudAiplatformV1Probe startupProbe) {
+    this.startupProbe = startupProbe;
     return this;
   }
 

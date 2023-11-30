@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Contains information about the source of the models generated from Model Garden.
+ * Details of operations that perform reboot PersistentResource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1ModelGardenSource extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1RebootPersistentResourceOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The model garden source model resource name.
+   * Operation metadata for PersistentResource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String publicModelName;
+  private GoogleCloudAiplatformV1beta1GenericOperationMetadata genericMetadata;
 
   /**
-   * Required. The model garden source model resource name.
+   * Operation metadata for PersistentResource.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPublicModelName() {
-    return publicModelName;
+  public GoogleCloudAiplatformV1beta1GenericOperationMetadata getGenericMetadata() {
+    return genericMetadata;
   }
 
   /**
-   * Required. The model garden source model resource name.
-   * @param publicModelName publicModelName or {@code null} for none
+   * Operation metadata for PersistentResource.
+   * @param genericMetadata genericMetadata or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1ModelGardenSource setPublicModelName(java.lang.String publicModelName) {
-    this.publicModelName = publicModelName;
+  public GoogleCloudAiplatformV1beta1RebootPersistentResourceOperationMetadata setGenericMetadata(GoogleCloudAiplatformV1beta1GenericOperationMetadata genericMetadata) {
+    this.genericMetadata = genericMetadata;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ModelGardenSource set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1ModelGardenSource) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1RebootPersistentResourceOperationMetadata set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1RebootPersistentResourceOperationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ModelGardenSource clone() {
-    return (GoogleCloudAiplatformV1beta1ModelGardenSource) super.clone();
+  public GoogleCloudAiplatformV1beta1RebootPersistentResourceOperationMetadata clone() {
+    return (GoogleCloudAiplatformV1beta1RebootPersistentResourceOperationMetadata) super.clone();
   }
 
 }

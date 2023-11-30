@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Optimized storage type
+ * Lookup key for a feature view.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,16 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreOptimized extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1FeatureViewDataKey extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreOptimized set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1FeatureOnlineStoreOptimized) super.set(fieldName, value);
+  /**
+   * String key to use for lookup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String key;
+
+  /**
+   * String key to use for lookup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKey() {
+    return key;
+  }
+
+  /**
+   * String key to use for lookup.
+   * @param key key or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureViewDataKey setKey(java.lang.String key) {
+    this.key = key;
+    return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreOptimized clone() {
-    return (GoogleCloudAiplatformV1beta1FeatureOnlineStoreOptimized) super.clone();
+  public GoogleCloudAiplatformV1beta1FeatureViewDataKey set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1FeatureViewDataKey) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudAiplatformV1beta1FeatureViewDataKey clone() {
+    return (GoogleCloudAiplatformV1beta1FeatureViewDataKey) super.clone();
   }
 
 }

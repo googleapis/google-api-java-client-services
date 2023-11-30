@@ -56,6 +56,14 @@ public final class RecurringExternalTransaction extends com.google.api.client.js
   private java.lang.String initialExternalTransactionId;
 
   /**
+   * Input only. Provided during the call to Create. Must only be used when migrating a subscription
+   * from manual monthly reporting to automated reporting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String migratedTransactionProgram;
+
+  /**
    * Details of an external subscription.
    * @return value or {@code null} for none
    */
@@ -109,6 +117,25 @@ public final class RecurringExternalTransaction extends com.google.api.client.js
    */
   public RecurringExternalTransaction setInitialExternalTransactionId(java.lang.String initialExternalTransactionId) {
     this.initialExternalTransactionId = initialExternalTransactionId;
+    return this;
+  }
+
+  /**
+   * Input only. Provided during the call to Create. Must only be used when migrating a subscription
+   * from manual monthly reporting to automated reporting.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMigratedTransactionProgram() {
+    return migratedTransactionProgram;
+  }
+
+  /**
+   * Input only. Provided during the call to Create. Must only be used when migrating a subscription
+   * from manual monthly reporting to automated reporting.
+   * @param migratedTransactionProgram migratedTransactionProgram or {@code null} for none
+   */
+  public RecurringExternalTransaction setMigratedTransactionProgram(java.lang.String migratedTransactionProgram) {
+    this.migratedTransactionProgram = migratedTransactionProgram;
     return this;
   }
 

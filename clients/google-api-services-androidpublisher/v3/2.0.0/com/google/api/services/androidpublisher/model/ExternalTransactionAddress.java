@@ -31,11 +31,56 @@ package com.google.api.services.androidpublisher.model;
 public final class ExternalTransactionAddress extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Top-level administrative subdivision of the country/region. Only required for
+   * transactions in India. Valid values are "ANDAMAN AND NICOBAR ISLANDS", "ANDHRA PRADESH",
+   * "ARUNACHAL PRADESH", "ASSAM", "BIHAR", "CHANDIGARH", "CHHATTISGARH", "DADRA AND NAGAR HAVELI",
+   * "DADRA AND NAGAR HAVELI AND DAMAN AND DIU", "DAMAN AND DIU", "DELHI", "GOA", "GUJARAT",
+   * "HARYANA", "HIMACHAL PRADESH", "JAMMU AND KASHMIR", "JHARKHAND", "KARNATAKA", "KERALA",
+   * "LADAKH", "LAKSHADWEEP", "MADHYA PRADESH", "MAHARASHTRA", "MANIPUR", "MEGHALAYA", "MIZORAM",
+   * "NAGALAND", "ODISHA", "PUDUCHERRY", "PUNJAB", "RAJASTHAN", "SIKKIM", "TAMIL NADU", "TELANGANA",
+   * "TRIPURA", "UTTAR PRADESH", "UTTARAKHAND", and "WEST BENGAL".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String administrativeArea;
+
+  /**
    * Required. Two letter region code based on ISO-3166-1 Alpha-2 (UN region codes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
+
+  /**
+   * Optional. Top-level administrative subdivision of the country/region. Only required for
+   * transactions in India. Valid values are "ANDAMAN AND NICOBAR ISLANDS", "ANDHRA PRADESH",
+   * "ARUNACHAL PRADESH", "ASSAM", "BIHAR", "CHANDIGARH", "CHHATTISGARH", "DADRA AND NAGAR HAVELI",
+   * "DADRA AND NAGAR HAVELI AND DAMAN AND DIU", "DAMAN AND DIU", "DELHI", "GOA", "GUJARAT",
+   * "HARYANA", "HIMACHAL PRADESH", "JAMMU AND KASHMIR", "JHARKHAND", "KARNATAKA", "KERALA",
+   * "LADAKH", "LAKSHADWEEP", "MADHYA PRADESH", "MAHARASHTRA", "MANIPUR", "MEGHALAYA", "MIZORAM",
+   * "NAGALAND", "ODISHA", "PUDUCHERRY", "PUNJAB", "RAJASTHAN", "SIKKIM", "TAMIL NADU", "TELANGANA",
+   * "TRIPURA", "UTTAR PRADESH", "UTTARAKHAND", and "WEST BENGAL".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdministrativeArea() {
+    return administrativeArea;
+  }
+
+  /**
+   * Optional. Top-level administrative subdivision of the country/region. Only required for
+   * transactions in India. Valid values are "ANDAMAN AND NICOBAR ISLANDS", "ANDHRA PRADESH",
+   * "ARUNACHAL PRADESH", "ASSAM", "BIHAR", "CHANDIGARH", "CHHATTISGARH", "DADRA AND NAGAR HAVELI",
+   * "DADRA AND NAGAR HAVELI AND DAMAN AND DIU", "DAMAN AND DIU", "DELHI", "GOA", "GUJARAT",
+   * "HARYANA", "HIMACHAL PRADESH", "JAMMU AND KASHMIR", "JHARKHAND", "KARNATAKA", "KERALA",
+   * "LADAKH", "LAKSHADWEEP", "MADHYA PRADESH", "MAHARASHTRA", "MANIPUR", "MEGHALAYA", "MIZORAM",
+   * "NAGALAND", "ODISHA", "PUDUCHERRY", "PUNJAB", "RAJASTHAN", "SIKKIM", "TAMIL NADU", "TELANGANA",
+   * "TRIPURA", "UTTAR PRADESH", "UTTARAKHAND", and "WEST BENGAL".
+   * @param administrativeArea administrativeArea or {@code null} for none
+   */
+  public ExternalTransactionAddress setAdministrativeArea(java.lang.String administrativeArea) {
+    this.administrativeArea = administrativeArea;
+    return this;
+  }
 
   /**
    * Required. Two letter region code based on ISO-3166-1 Alpha-2 (UN region codes).

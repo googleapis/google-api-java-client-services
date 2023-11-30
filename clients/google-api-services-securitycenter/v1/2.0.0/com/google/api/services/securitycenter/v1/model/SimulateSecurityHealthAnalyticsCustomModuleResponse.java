@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response message for simulating a SecurityHealthAnalyticsCustomModule against a given resource.
+ * Response message for simulating a `SecurityHealthAnalyticsCustomModule` against a given resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

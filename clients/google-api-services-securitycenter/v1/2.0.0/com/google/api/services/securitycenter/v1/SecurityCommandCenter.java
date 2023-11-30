@@ -5422,9 +5422,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The relative resource name of the organization, project, or folder. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
-         *        "organizations/{organization_id}".
+         * @param parent Required. The relative resource name of the organization, project, or folder. For more information
+         *        about relative resource names, see [Relative Resource
+         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
+         *        `organizations/{organization_id}`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
          * @return the request
          */
@@ -5452,9 +5453,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Simulate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The relative resource name of the organization, project, or folder. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
-         *        "organizations/{organization_id}".
+           * @param parent Required. The relative resource name of the organization, project, or folder. For more information
+         *        about relative resource names, see [Relative Resource
+         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
+         *        `organizations/{organization_id}`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
            * @since 1.13
            */
@@ -5524,25 +5526,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The relative resource name of the organization, project, or folder. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
-           * is: "organizations/{organization_id}".
+           * Required. The relative resource name of the organization, project, or folder. For more
+           * information about relative resource names, see [Relative Resource
+           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+           * Example: `organizations/{organization_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The relative resource name of the organization, project, or folder. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
-         "organizations/{organization_id}".
+          /** Required. The relative resource name of the organization, project, or folder. For more information
+         about relative resource names, see [Relative Resource
+         Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
+         `organizations/{organization_id}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The relative resource name of the organization, project, or folder. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
-           * is: "organizations/{organization_id}".
+           * Required. The relative resource name of the organization, project, or folder. For more
+           * information about relative resource names, see [Relative Resource
+           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+           * Example: `organizations/{organization_id}`
            */
           public Simulate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -15860,9 +15865,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The relative resource name of the organization, project, or folder. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
-         *        "organizations/{organization_id}".
+         * @param parent Required. The relative resource name of the organization, project, or folder. For more information
+         *        about relative resource names, see [Relative Resource
+         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
+         *        `organizations/{organization_id}`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
          * @return the request
          */
@@ -15890,9 +15896,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Simulate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The relative resource name of the organization, project, or folder. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
-         *        "organizations/{organization_id}".
+           * @param parent Required. The relative resource name of the organization, project, or folder. For more information
+         *        about relative resource names, see [Relative Resource
+         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
+         *        `organizations/{organization_id}`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
            * @since 1.13
            */
@@ -15962,25 +15969,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The relative resource name of the organization, project, or folder. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
-           * is: "organizations/{organization_id}".
+           * Required. The relative resource name of the organization, project, or folder. For more
+           * information about relative resource names, see [Relative Resource
+           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+           * Example: `organizations/{organization_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The relative resource name of the organization, project, or folder. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
-         "organizations/{organization_id}".
+          /** Required. The relative resource name of the organization, project, or folder. For more information
+         about relative resource names, see [Relative Resource
+         Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
+         `organizations/{organization_id}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The relative resource name of the organization, project, or folder. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
-           * is: "organizations/{organization_id}".
+           * Required. The relative resource name of the organization, project, or folder. For more
+           * information about relative resource names, see [Relative Resource
+           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+           * Example: `organizations/{organization_id}`
            */
           public Simulate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -26091,9 +26101,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The relative resource name of the organization, project, or folder. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
-         *        "organizations/{organization_id}".
+         * @param parent Required. The relative resource name of the organization, project, or folder. For more information
+         *        about relative resource names, see [Relative Resource
+         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
+         *        `organizations/{organization_id}`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
          * @return the request
          */
@@ -26121,9 +26132,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Simulate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The relative resource name of the organization, project, or folder. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
-         *        "organizations/{organization_id}".
+           * @param parent Required. The relative resource name of the organization, project, or folder. For more information
+         *        about relative resource names, see [Relative Resource
+         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
+         *        `organizations/{organization_id}`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
            * @since 1.13
            */
@@ -26193,25 +26205,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The relative resource name of the organization, project, or folder. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
-           * is: "organizations/{organization_id}".
+           * Required. The relative resource name of the organization, project, or folder. For more
+           * information about relative resource names, see [Relative Resource
+           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+           * Example: `organizations/{organization_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The relative resource name of the organization, project, or folder. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name An example is:
-         "organizations/{organization_id}".
+          /** Required. The relative resource name of the organization, project, or folder. For more information
+         about relative resource names, see [Relative Resource
+         Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
+         `organizations/{organization_id}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The relative resource name of the organization, project, or folder. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name An example
-           * is: "organizations/{organization_id}".
+           * Required. The relative resource name of the organization, project, or folder. For more
+           * information about relative resource names, see [Relative Resource
+           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
+           * Example: `organizations/{organization_id}`
            */
           public Simulate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

@@ -42,11 +42,25 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Access access;
 
   /**
+   * Represents an application associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Application application;
+
+  /**
    * The results of an attack path simulation relevant to this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AttackExposure attackExposure;
+
+  /**
+   * Fields related to Backup and DR findings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupDisasterRecovery backupDisasterRecovery;
 
   /**
    * The canonical name of the finding. It's either
@@ -425,6 +439,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Represents an application associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public Application getApplication() {
+    return application;
+  }
+
+  /**
+   * Represents an application associated with the finding.
+   * @param application application or {@code null} for none
+   */
+  public Finding setApplication(Application application) {
+    this.application = application;
+    return this;
+  }
+
+  /**
    * The results of an attack path simulation relevant to this finding.
    * @return value or {@code null} for none
    */
@@ -438,6 +469,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setAttackExposure(AttackExposure attackExposure) {
     this.attackExposure = attackExposure;
+    return this;
+  }
+
+  /**
+   * Fields related to Backup and DR findings.
+   * @return value or {@code null} for none
+   */
+  public BackupDisasterRecovery getBackupDisasterRecovery() {
+    return backupDisasterRecovery;
+  }
+
+  /**
+   * Fields related to Backup and DR findings.
+   * @param backupDisasterRecovery backupDisasterRecovery or {@code null} for none
+   */
+  public Finding setBackupDisasterRecovery(BackupDisasterRecovery backupDisasterRecovery) {
+    this.backupDisasterRecovery = backupDisasterRecovery;
     return this;
   }
 

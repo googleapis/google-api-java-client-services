@@ -42,11 +42,25 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private GoogleCloudSecuritycenterV2Access access;
 
   /**
+   * Represents an application associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2Application application;
+
+  /**
    * The results of an attack path simulation relevant to this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2AttackExposure attackExposure;
+
+  /**
+   * Fields related to Backup and DR findings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2BackupDisasterRecovery backupDisasterRecovery;
 
   /**
    * Output only. The canonical name of the finding. The following list shows some examples: +
@@ -441,6 +455,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
+   * Represents an application associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Application getApplication() {
+    return application;
+  }
+
+  /**
+   * Represents an application associated with the finding.
+   * @param application application or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setApplication(GoogleCloudSecuritycenterV2Application application) {
+    this.application = application;
+    return this;
+  }
+
+  /**
    * The results of an attack path simulation relevant to this finding.
    * @return value or {@code null} for none
    */
@@ -454,6 +485,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setAttackExposure(GoogleCloudSecuritycenterV2AttackExposure attackExposure) {
     this.attackExposure = attackExposure;
+    return this;
+  }
+
+  /**
+   * Fields related to Backup and DR findings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2BackupDisasterRecovery getBackupDisasterRecovery() {
+    return backupDisasterRecovery;
+  }
+
+  /**
+   * Fields related to Backup and DR findings.
+   * @param backupDisasterRecovery backupDisasterRecovery or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setBackupDisasterRecovery(GoogleCloudSecuritycenterV2BackupDisasterRecovery backupDisasterRecovery) {
+    this.backupDisasterRecovery = backupDisasterRecovery;
     return this;
   }
 

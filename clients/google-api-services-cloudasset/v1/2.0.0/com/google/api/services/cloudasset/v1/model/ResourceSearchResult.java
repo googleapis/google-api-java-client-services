@@ -35,12 +35,12 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * This field contains a subset of the resource metadata fields that are returned by the List or
    * Get APIs provided by the corresponding Google Cloud service (e.g., Compute Engine). see [API
    * references and supported searchable attributes](https://cloud.google.com/asset-inventory/docs
-   * /supported-asset-types#searchable_asset_types) to see which fields are included. You can search
-   * values of these fields through free text search. However, you should not consume the field
-   * programically as the field names and values may change as the Google Cloud service updates to a
-   * new incompatible API version. To search against the `additional_attributes`: * Use a free text
-   * query to match the attributes values. Example: to search `additional_attributes = { dnsName:
-   * "foobar" }`, you can issue a query `foobar`.
+   * /supported-asset-types) to see which fields are included. You can search values of these fields
+   * through free text search. However, you should not consume the field programically as the field
+   * names and values may change as the Google Cloud service updates to a new incompatible API
+   * version. To search against the `additional_attributes`: * Use a free text query to match the
+   * attributes values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can
+   * issue a query `foobar`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -357,12 +357,12 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * This field contains a subset of the resource metadata fields that are returned by the List or
    * Get APIs provided by the corresponding Google Cloud service (e.g., Compute Engine). see [API
    * references and supported searchable attributes](https://cloud.google.com/asset-inventory/docs
-   * /supported-asset-types#searchable_asset_types) to see which fields are included. You can search
-   * values of these fields through free text search. However, you should not consume the field
-   * programically as the field names and values may change as the Google Cloud service updates to a
-   * new incompatible API version. To search against the `additional_attributes`: * Use a free text
-   * query to match the attributes values. Example: to search `additional_attributes = { dnsName:
-   * "foobar" }`, you can issue a query `foobar`.
+   * /supported-asset-types) to see which fields are included. You can search values of these fields
+   * through free text search. However, you should not consume the field programically as the field
+   * names and values may change as the Google Cloud service updates to a new incompatible API
+   * version. To search against the `additional_attributes`: * Use a free text query to match the
+   * attributes values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can
+   * issue a query `foobar`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getAdditionalAttributes() {
@@ -375,12 +375,12 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * This field contains a subset of the resource metadata fields that are returned by the List or
    * Get APIs provided by the corresponding Google Cloud service (e.g., Compute Engine). see [API
    * references and supported searchable attributes](https://cloud.google.com/asset-inventory/docs
-   * /supported-asset-types#searchable_asset_types) to see which fields are included. You can search
-   * values of these fields through free text search. However, you should not consume the field
-   * programically as the field names and values may change as the Google Cloud service updates to a
-   * new incompatible API version. To search against the `additional_attributes`: * Use a free text
-   * query to match the attributes values. Example: to search `additional_attributes = { dnsName:
-   * "foobar" }`, you can issue a query `foobar`.
+   * /supported-asset-types) to see which fields are included. You can search values of these fields
+   * through free text search. However, you should not consume the field programically as the field
+   * names and values may change as the Google Cloud service updates to a new incompatible API
+   * version. To search against the `additional_attributes`: * Use a free text query to match the
+   * attributes values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can
+   * issue a query `foobar`.
    * @param additionalAttributes additionalAttributes or {@code null} for none
    */
   public ResourceSearchResult setAdditionalAttributes(java.util.Map<String, java.lang.Object> additionalAttributes) {

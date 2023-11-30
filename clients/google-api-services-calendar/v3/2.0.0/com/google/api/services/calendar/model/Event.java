@@ -127,7 +127,9 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * Specific type of the event. This cannot be modified after the event is created. Possible values
    * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
-   * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
+   * office event. An outOfOfficeProperties parameter must be supplied to make a valid event (even
+   * if empty).  - "focusTime" - A focus-time event. A focusTimeProperties parameter must be
+   * supplied to make a valid event (even if empty).  - "workingLocation" - A working location
    * event.  Currently, only "default " and "workingLocation" events can be created using the API.
    * Extended support for other event types will be made available in later releases.
    * The value may be {@code null}.
@@ -141,6 +143,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ExtendedProperties extendedProperties;
+
+  /**
+   * Focus Time event data. Required if eventType is focusTime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EventFocusTimeProperties focusTimeProperties;
 
   /**
    * A gadget that extends this event. Gadgets are deprecated; this structure is instead only used
@@ -259,6 +268,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private EventDateTime originalStartTime;
+
+  /**
+   * Out of office event data. Required if eventType is outOfOffice.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EventOutOfOfficeProperties outOfOfficeProperties;
 
   /**
    * If set to True, Event propagation is disabled. Note that it is not the same thing as Private
@@ -697,7 +713,9 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * Specific type of the event. This cannot be modified after the event is created. Possible values
    * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
-   * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
+   * office event. An outOfOfficeProperties parameter must be supplied to make a valid event (even
+   * if empty).  - "focusTime" - A focus-time event. A focusTimeProperties parameter must be
+   * supplied to make a valid event (even if empty).  - "workingLocation" - A working location
    * event.  Currently, only "default " and "workingLocation" events can be created using the API.
    * Extended support for other event types will be made available in later releases.
    * @return value or {@code null} for none
@@ -709,7 +727,9 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * Specific type of the event. This cannot be modified after the event is created. Possible values
    * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
-   * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
+   * office event. An outOfOfficeProperties parameter must be supplied to make a valid event (even
+   * if empty).  - "focusTime" - A focus-time event. A focusTimeProperties parameter must be
+   * supplied to make a valid event (even if empty).  - "workingLocation" - A working location
    * event.  Currently, only "default " and "workingLocation" events can be created using the API.
    * Extended support for other event types will be made available in later releases.
    * @param eventType eventType or {@code null} for none
@@ -733,6 +753,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setExtendedProperties(ExtendedProperties extendedProperties) {
     this.extendedProperties = extendedProperties;
+    return this;
+  }
+
+  /**
+   * Focus Time event data. Required if eventType is focusTime.
+   * @return value or {@code null} for none
+   */
+  public EventFocusTimeProperties getFocusTimeProperties() {
+    return focusTimeProperties;
+  }
+
+  /**
+   * Focus Time event data. Required if eventType is focusTime.
+   * @param focusTimeProperties focusTimeProperties or {@code null} for none
+   */
+  public Event setFocusTimeProperties(EventFocusTimeProperties focusTimeProperties) {
+    this.focusTimeProperties = focusTimeProperties;
     return this;
   }
 
@@ -1120,6 +1157,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setOriginalStartTime(EventDateTime originalStartTime) {
     this.originalStartTime = originalStartTime;
+    return this;
+  }
+
+  /**
+   * Out of office event data. Required if eventType is outOfOffice.
+   * @return value or {@code null} for none
+   */
+  public EventOutOfOfficeProperties getOutOfOfficeProperties() {
+    return outOfOfficeProperties;
+  }
+
+  /**
+   * Out of office event data. Required if eventType is outOfOffice.
+   * @param outOfOfficeProperties outOfOfficeProperties or {@code null} for none
+   */
+  public Event setOutOfOfficeProperties(EventOutOfOfficeProperties outOfOfficeProperties) {
+    this.outOfOfficeProperties = outOfOfficeProperties;
     return this;
   }
 

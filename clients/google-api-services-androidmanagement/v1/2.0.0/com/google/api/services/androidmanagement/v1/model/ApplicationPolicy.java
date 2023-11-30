@@ -19,7 +19,7 @@ package com.google.api.services.androidmanagement.v1.model;
 /**
  * Policy for an individual app. Note: Application availability on a given device cannot be changed
  * using this policy if installAppsDisabled is enabled. The maximum number of applications that you
- * can specify per enterprise policy is 3,000.
+ * can specify per policy is 3,000.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

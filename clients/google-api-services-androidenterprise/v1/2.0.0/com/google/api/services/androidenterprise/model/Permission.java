@@ -34,15 +34,14 @@ package com.google.api.services.androidenterprise.model;
 public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
-   * A longer description of the Permissions resource, giving more details of what it affects. This
-   * field may be absent.
+   * A longer description of the Permissions resource, giving more details of what it affects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The name of the permission. This field may be absent.
+   * The name of the permission.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +55,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.String permissionId;
 
   /**
-   * A longer description of the Permissions resource, giving more details of what it affects. This
-   * field may be absent.
+   * A longer description of the Permissions resource, giving more details of what it affects.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -65,8 +63,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A longer description of the Permissions resource, giving more details of what it affects. This
-   * field may be absent.
+   * A longer description of the Permissions resource, giving more details of what it affects.
    * @param description description or {@code null} for none
    */
   public Permission setDescription(java.lang.String description) {
@@ -75,7 +72,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the permission. This field may be absent.
+   * The name of the permission.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -83,7 +80,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the permission. This field may be absent.
+   * The name of the permission.
    * @param name name or {@code null} for none
    */
   public Permission setName(java.lang.String name) {

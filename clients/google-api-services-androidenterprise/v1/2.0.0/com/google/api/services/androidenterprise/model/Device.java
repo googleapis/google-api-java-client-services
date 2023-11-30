@@ -103,8 +103,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private DeviceReport report;
 
   /**
-   * Retail brand for the device, if set. See
-   * https://developer.android.com/reference/android/os/Build.html#BRAND
+   * Retail brand for the device, if set. See android.os.Build.BRAND
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -289,8 +288,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Retail brand for the device, if set. See
-   * https://developer.android.com/reference/android/os/Build.html#BRAND
+   * Retail brand for the device, if set. See android.os.Build.BRAND
    * @return value or {@code null} for none
    */
   public java.lang.String getRetailBrand() {
@@ -298,8 +296,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Retail brand for the device, if set. See
-   * https://developer.android.com/reference/android/os/Build.html#BRAND
+   * Retail brand for the device, if set. See android.os.Build.BRAND
    * @param retailBrand retailBrand or {@code null} for none
    */
   public Device setRetailBrand(java.lang.String retailBrand) {

@@ -37,7 +37,9 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   private AutoInstallPolicy autoInstallPolicy;
 
   /**
-   * The auto-update mode for the product.
+   * The auto-update mode for the product. When autoUpdateMode is used, it always takes precedence
+   * over the user's choice. So when a user makes changes to the device settings manually, these
+   * changes are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +48,8 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   /**
    * An authentication URL configuration for the authenticator app of an identity provider. This
    * helps to launch the identity provider's authenticator app during the authentication happening
-   * in a private app using Android WebView. Authenticator app should already be the [default
-   * handler](https://developer.android.com/training/app-links/verify-site-associations) for the
-   * authentication url on the device.
+   * in a private app using Android WebView. Authenticator app should already be the default handler
+   * for the authentication url on the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +108,9 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The auto-update mode for the product.
+   * The auto-update mode for the product. When autoUpdateMode is used, it always takes precedence
+   * over the user's choice. So when a user makes changes to the device settings manually, these
+   * changes are ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoUpdateMode() {
@@ -115,7 +118,9 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The auto-update mode for the product.
+   * The auto-update mode for the product. When autoUpdateMode is used, it always takes precedence
+   * over the user's choice. So when a user makes changes to the device settings manually, these
+   * changes are ignored.
    * @param autoUpdateMode autoUpdateMode or {@code null} for none
    */
   public ProductPolicy setAutoUpdateMode(java.lang.String autoUpdateMode) {
@@ -126,9 +131,8 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   /**
    * An authentication URL configuration for the authenticator app of an identity provider. This
    * helps to launch the identity provider's authenticator app during the authentication happening
-   * in a private app using Android WebView. Authenticator app should already be the [default
-   * handler](https://developer.android.com/training/app-links/verify-site-associations) for the
-   * authentication url on the device.
+   * in a private app using Android WebView. Authenticator app should already be the default handler
+   * for the authentication url on the device.
    * @return value or {@code null} for none
    */
   public java.util.List<EnterpriseAuthenticationAppLinkConfig> getEnterpriseAuthenticationAppLinkConfigs() {
@@ -138,9 +142,8 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   /**
    * An authentication URL configuration for the authenticator app of an identity provider. This
    * helps to launch the identity provider's authenticator app during the authentication happening
-   * in a private app using Android WebView. Authenticator app should already be the [default
-   * handler](https://developer.android.com/training/app-links/verify-site-associations) for the
-   * authentication url on the device.
+   * in a private app using Android WebView. Authenticator app should already be the default handler
+   * for the authentication url on the device.
    * @param enterpriseAuthenticationAppLinkConfigs enterpriseAuthenticationAppLinkConfigs or {@code null} for none
    */
   public ProductPolicy setEnterpriseAuthenticationAppLinkConfigs(java.util.List<EnterpriseAuthenticationAppLinkConfig> enterpriseAuthenticationAppLinkConfigs) {

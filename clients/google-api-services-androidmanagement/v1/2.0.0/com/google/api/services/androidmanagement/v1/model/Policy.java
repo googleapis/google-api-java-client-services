@@ -88,7 +88,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String appAutoUpdatePolicy;
 
   /**
-   * Policy applied to apps.
+   * Policy applied to apps. This can have at most 3,000 elements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -922,7 +922,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Policy applied to apps.
+   * Policy applied to apps. This can have at most 3,000 elements.
    * @return value or {@code null} for none
    */
   public java.util.List<ApplicationPolicy> getApplications() {
@@ -930,7 +930,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Policy applied to apps.
+   * Policy applied to apps. This can have at most 3,000 elements.
    * @param applications applications or {@code null} for none
    */
   public Policy setApplications(java.util.List<ApplicationPolicy> applications) {

@@ -21,18 +21,7 @@ package com.google.api.services.container.v1beta1.model;
  * nodes (i.e. VM's), with a common configuration and specification, under the control of the
  * cluster master. They may have a set of Kubernetes labels applied to them, which may be used to
  * reference them during pod scheduling. They may also be resized up or down, to accommodate the
- * workload. These upgrade settings control the level of parallelism and the level of disruption
- * caused by an upgrade. maxUnavailable controls the number of nodes that can be simultaneously
- * unavailable. maxSurge controls the number of additional nodes that can be added to the node pool
- * temporarily for the time of the upgrade to increase the number of available nodes.
- * (maxUnavailable + maxSurge) determines the level of parallelism (how many nodes are being
- * upgraded at the same time). Note: upgrades inevitably introduce some disruption since workloads
- * need to be moved from old nodes to new, upgraded ones. Even if maxUnavailable=0, this holds true.
- * (Disruption stays within the limits of PodDisruptionBudget, if it is configured.) Consider a
- * hypothetical node pool with 5 nodes having maxSurge=2, maxUnavailable=1. This means the upgrade
- * process upgrades 3 nodes simultaneously. It creates 2 additional (upgraded) nodes, then it brings
- * down 3 old (not yet upgraded) nodes at the same time. This ensures that there are always at least
- * 4 nodes available.
+ * workload.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -157,6 +146,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer podIpv4CidrSize;
+
+  /**
+   * Specifies the configuration of queued provisioning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueuedProvisioning queuedProvisioning;
 
   /**
    * [Output only] Server-defined URL for the resource.
@@ -468,6 +464,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setPodIpv4CidrSize(java.lang.Integer podIpv4CidrSize) {
     this.podIpv4CidrSize = podIpv4CidrSize;
+    return this;
+  }
+
+  /**
+   * Specifies the configuration of queued provisioning.
+   * @return value or {@code null} for none
+   */
+  public QueuedProvisioning getQueuedProvisioning() {
+    return queuedProvisioning;
+  }
+
+  /**
+   * Specifies the configuration of queued provisioning.
+   * @param queuedProvisioning queuedProvisioning or {@code null} for none
+   */
+  public NodePool setQueuedProvisioning(QueuedProvisioning queuedProvisioning) {
+    this.queuedProvisioning = queuedProvisioning;
     return this;
   }
 

@@ -17,8 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Autoscaled rollout policy uses cluster autoscaler during blue-green upgrades to scale both the
- * green and blue pools.
+ * AutopilotConversionStatus represents conversion status.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,16 +28,40 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AutoscaledRolloutPolicy extends com.google.api.client.json.GenericJson {
+public final class AutopilotConversionStatus extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public AutoscaledRolloutPolicy set(String fieldName, Object value) {
-    return (AutoscaledRolloutPolicy) super.set(fieldName, value);
+  /**
+   * Output only. The current state of the conversion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * Output only. The current state of the conversion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The current state of the conversion.
+   * @param state state or {@code null} for none
+   */
+  public AutopilotConversionStatus setState(java.lang.String state) {
+    this.state = state;
+    return this;
   }
 
   @Override
-  public AutoscaledRolloutPolicy clone() {
-    return (AutoscaledRolloutPolicy) super.clone();
+  public AutopilotConversionStatus set(String fieldName, Object value) {
+    return (AutopilotConversionStatus) super.set(fieldName, value);
+  }
+
+  @Override
+  public AutopilotConversionStatus clone() {
+    return (AutopilotConversionStatus) super.clone();
   }
 
 }

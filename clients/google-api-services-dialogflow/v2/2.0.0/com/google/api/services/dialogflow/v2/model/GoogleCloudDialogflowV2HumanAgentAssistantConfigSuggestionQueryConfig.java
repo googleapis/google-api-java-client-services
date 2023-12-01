@@ -82,6 +82,13 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   private java.lang.Integer maxResults;
 
   /**
+   * Optional. The customized sections chosen to return when requesting a summary of a conversation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigSections sections;
+
+  /**
    * Confidence threshold of query result. Agent Assist gives each suggestion a score in the range
    * [0.0, 1.0], based on the relevance between the suggestion and the current conversation context.
    * A score of 0.0 has no relevance, while a score of 1.0 has high relevance. Only suggestions with
@@ -200,6 +207,23 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setMaxResults(java.lang.Integer maxResults) {
     this.maxResults = maxResults;
+    return this;
+  }
+
+  /**
+   * Optional. The customized sections chosen to return when requesting a summary of a conversation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigSections getSections() {
+    return sections;
+  }
+
+  /**
+   * Optional. The customized sections chosen to return when requesting a summary of a conversation.
+   * @param sections sections or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setSections(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigSections sections) {
+    this.sections = sections;
     return this;
   }
 

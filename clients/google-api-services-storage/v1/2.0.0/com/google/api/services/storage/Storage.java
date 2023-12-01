@@ -523,7 +523,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
     public class List extends StorageRequest<com.google.api.services.storage.model.AnywhereCaches> {
 
-      private static final String REST_PATH = "b/{bucket}/anywhereCache";
+      private static final String REST_PATH = "b/{bucket}/anywhereCaches";
 
       /**
        * Returns a list of Anywhere Cache instances of the bucket matching the criteria.

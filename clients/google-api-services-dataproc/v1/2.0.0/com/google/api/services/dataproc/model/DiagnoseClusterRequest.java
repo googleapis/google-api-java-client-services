@@ -53,6 +53,14 @@ public final class DiagnoseClusterRequest extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> jobs;
 
   /**
+   * Optional. (Optional) The access type to the diagnostic tarball. If not specified, falls back to
+   * default access of the bucket
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tarballAccess;
+
+  /**
    * Optional. (Optional) The output Cloud Storage directory for the diagnostic tarball. If not
    * specified, a task-specific directory in the cluster's staging bucket will be used.
    * The value may be {@code null}.
@@ -126,6 +134,25 @@ public final class DiagnoseClusterRequest extends com.google.api.client.json.Gen
    */
   public DiagnoseClusterRequest setJobs(java.util.List<java.lang.String> jobs) {
     this.jobs = jobs;
+    return this;
+  }
+
+  /**
+   * Optional. (Optional) The access type to the diagnostic tarball. If not specified, falls back to
+   * default access of the bucket
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTarballAccess() {
+    return tarballAccess;
+  }
+
+  /**
+   * Optional. (Optional) The access type to the diagnostic tarball. If not specified, falls back to
+   * default access of the bucket
+   * @param tarballAccess tarballAccess or {@code null} for none
+   */
+  public DiagnoseClusterRequest setTarballAccess(java.lang.String tarballAccess) {
+    this.tarballAccess = tarballAccess;
     return this;
   }
 

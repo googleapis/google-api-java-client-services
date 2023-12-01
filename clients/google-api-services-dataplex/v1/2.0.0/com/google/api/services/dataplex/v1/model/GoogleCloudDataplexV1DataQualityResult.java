@@ -30,6 +30,21 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A list of results at the column level.A column will have a corresponding
+   * DataQualityColumnResult if and only if there is at least one rule with the 'column' field set
+   * to it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDataplexV1DataQualityColumnResult> columns;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDataplexV1DataQualityColumnResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDataplexV1DataQualityColumnResult.class);
+  }
+
+  /**
    * A list of results at the dimension level.A dimension will have a corresponding
    * DataQualityDimensionResult if and only if there is at least one rule with the 'dimension' field
    * set to it.
@@ -78,6 +93,35 @@ public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1ScannedData scannedData;
+
+  /**
+   * Output only. The overall data quality score.The score ranges between 0, 100 (up to two decimal
+   * points).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float score;
+
+  /**
+   * Output only. A list of results at the column level.A column will have a corresponding
+   * DataQualityColumnResult if and only if there is at least one rule with the 'column' field set
+   * to it.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDataplexV1DataQualityColumnResult> getColumns() {
+    return columns;
+  }
+
+  /**
+   * Output only. A list of results at the column level.A column will have a corresponding
+   * DataQualityColumnResult if and only if there is at least one rule with the 'column' field set
+   * to it.
+   * @param columns columns or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityResult setColumns(java.util.List<GoogleCloudDataplexV1DataQualityColumnResult> columns) {
+    this.columns = columns;
+    return this;
+  }
 
   /**
    * A list of results at the dimension level.A dimension will have a corresponding
@@ -182,6 +226,25 @@ public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api
    */
   public GoogleCloudDataplexV1DataQualityResult setScannedData(GoogleCloudDataplexV1ScannedData scannedData) {
     this.scannedData = scannedData;
+    return this;
+  }
+
+  /**
+   * Output only. The overall data quality score.The score ranges between 0, 100 (up to two decimal
+   * points).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getScore() {
+    return score;
+  }
+
+  /**
+   * Output only. The overall data quality score.The score ranges between 0, 100 (up to two decimal
+   * points).
+   * @param score score or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityResult setScore(java.lang.Float score) {
+    this.score = score;
     return this;
   }
 

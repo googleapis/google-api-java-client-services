@@ -44,6 +44,14 @@ public final class GoogleCloudDataplexV1DataQualityDimensionResult extends com.g
   private java.lang.Boolean passed;
 
   /**
+   * Output only. The dimension-level data quality score for this data scan job if and only if the
+   * 'dimension' field is set.The score ranges between 0, 100 (up to two decimal points).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float score;
+
+  /**
    * Output only. The dimension config specified in the DataQualitySpec, as is.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,25 @@ public final class GoogleCloudDataplexV1DataQualityDimensionResult extends com.g
    */
   public GoogleCloudDataplexV1DataQualityDimensionResult setPassed(java.lang.Boolean passed) {
     this.passed = passed;
+    return this;
+  }
+
+  /**
+   * Output only. The dimension-level data quality score for this data scan job if and only if the
+   * 'dimension' field is set.The score ranges between 0, 100 (up to two decimal points).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getScore() {
+    return score;
+  }
+
+  /**
+   * Output only. The dimension-level data quality score for this data scan job if and only if the
+   * 'dimension' field is set.The score ranges between 0, 100 (up to two decimal points).
+   * @param score score or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityDimensionResult setScore(java.lang.Float score) {
+    this.score = score;
     return this;
   }
 

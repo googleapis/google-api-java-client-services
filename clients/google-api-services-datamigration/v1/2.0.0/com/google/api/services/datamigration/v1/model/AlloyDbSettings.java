@@ -31,6 +31,14 @@ package com.google.api.services.datamigration.v1.model;
 public final class AlloyDbSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The database engine major version. This is an optional field. If a database version
+   * is not supplied at cluster creation time, then a default database version will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseVersion;
+
+  /**
    * Optional. The encryption config can be specified to encrypt the data disks and other persistent
    * data resources of a cluster with a customer-managed encryption key (CMEK). When this field is
    * not specified, the cluster will then use default encryption scheme to protect the user data.
@@ -69,6 +77,25 @@ public final class AlloyDbSettings extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String vpcNetwork;
+
+  /**
+   * Optional. The database engine major version. This is an optional field. If a database version
+   * is not supplied at cluster creation time, then a default database version will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseVersion() {
+    return databaseVersion;
+  }
+
+  /**
+   * Optional. The database engine major version. This is an optional field. If a database version
+   * is not supplied at cluster creation time, then a default database version will be used.
+   * @param databaseVersion databaseVersion or {@code null} for none
+   */
+  public AlloyDbSettings setDatabaseVersion(java.lang.String databaseVersion) {
+    this.databaseVersion = databaseVersion;
+    return this;
+  }
 
   /**
    * Optional. The encryption config can be specified to encrypt the data disks and other persistent

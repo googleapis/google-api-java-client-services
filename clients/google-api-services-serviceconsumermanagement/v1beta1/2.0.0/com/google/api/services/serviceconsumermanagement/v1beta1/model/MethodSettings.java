@@ -31,6 +31,16 @@ package com.google.api.services.serviceconsumermanagement.v1beta1.model;
 public final class MethodSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of top-level fields of the request message, that should be automatically populated by the
+   * client libraries based on their (google.api.field_info).format. Currently supported format:
+   * UUID4. Example of a YAML configuration: publishing: method_settings: - selector:
+   * google.example.v1.ExampleService.CreateExample auto_populated_fields: - request_id
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> autoPopulatedFields;
+
+  /**
    * Describes settings to use for long-running operations when generating API methods for RPCs.
    * Complements RPCs that use the annotations in google/longrunning/operations.proto. Example of a
    * YAML configuration:: publishing: method_settings: - selector:
@@ -49,6 +59,29 @@ public final class MethodSettings extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String selector;
+
+  /**
+   * List of top-level fields of the request message, that should be automatically populated by the
+   * client libraries based on their (google.api.field_info).format. Currently supported format:
+   * UUID4. Example of a YAML configuration: publishing: method_settings: - selector:
+   * google.example.v1.ExampleService.CreateExample auto_populated_fields: - request_id
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAutoPopulatedFields() {
+    return autoPopulatedFields;
+  }
+
+  /**
+   * List of top-level fields of the request message, that should be automatically populated by the
+   * client libraries based on their (google.api.field_info).format. Currently supported format:
+   * UUID4. Example of a YAML configuration: publishing: method_settings: - selector:
+   * google.example.v1.ExampleService.CreateExample auto_populated_fields: - request_id
+   * @param autoPopulatedFields autoPopulatedFields or {@code null} for none
+   */
+  public MethodSettings setAutoPopulatedFields(java.util.List<java.lang.String> autoPopulatedFields) {
+    this.autoPopulatedFields = autoPopulatedFields;
+    return this;
+  }
 
   /**
    * Describes settings to use for long-running operations when generating API methods for RPCs.

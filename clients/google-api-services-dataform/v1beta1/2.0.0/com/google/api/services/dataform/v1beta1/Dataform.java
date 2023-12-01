@@ -9742,6 +9742,217 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
+           * Finds the contents of a given Workspace directory by filter.
+           *
+           * Create a request for the method "workspaces.searchFiles".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link SearchFiles#execute()} method to invoke the remote operation.
+           *
+           * @param workspace Required. The workspace's name.
+           * @return the request
+           */
+          public SearchFiles searchFiles(java.lang.String workspace) throws java.io.IOException {
+            SearchFiles result = new SearchFiles(workspace);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchFiles extends DataformRequest<com.google.api.services.dataform.v1beta1.model.SearchFilesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+workspace}:searchFiles";
+
+            private final java.util.regex.Pattern WORKSPACE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Finds the contents of a given Workspace directory by filter.
+             *
+             * Create a request for the method "workspaces.searchFiles".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link SearchFiles#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SearchFiles#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param workspace Required. The workspace's name.
+             * @since 1.13
+             */
+            protected SearchFiles(java.lang.String workspace) {
+              super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.SearchFilesResponse.class);
+              this.workspace = com.google.api.client.util.Preconditions.checkNotNull(workspace, "Required parameter workspace must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(WORKSPACE_PATTERN.matcher(workspace).matches(),
+                    "Parameter workspace must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchFiles set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchFiles) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchFiles setAccessToken(java.lang.String accessToken) {
+              return (SearchFiles) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchFiles setAlt(java.lang.String alt) {
+              return (SearchFiles) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchFiles setCallback(java.lang.String callback) {
+              return (SearchFiles) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchFiles setFields(java.lang.String fields) {
+              return (SearchFiles) super.setFields(fields);
+            }
+
+            @Override
+            public SearchFiles setKey(java.lang.String key) {
+              return (SearchFiles) super.setKey(key);
+            }
+
+            @Override
+            public SearchFiles setOauthToken(java.lang.String oauthToken) {
+              return (SearchFiles) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchFiles setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchFiles) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchFiles setQuotaUser(java.lang.String quotaUser) {
+              return (SearchFiles) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchFiles setUploadType(java.lang.String uploadType) {
+              return (SearchFiles) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchFiles setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchFiles) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The workspace's name. */
+            @com.google.api.client.util.Key
+            private java.lang.String workspace;
+
+            /** Required. The workspace's name.
+             */
+            public java.lang.String getWorkspace() {
+              return workspace;
+            }
+
+            /** Required. The workspace's name. */
+            public SearchFiles setWorkspace(java.lang.String workspace) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(WORKSPACE_PATTERN.matcher(workspace).matches(),
+                    "Parameter workspace must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+              this.workspace = workspace;
+              return this;
+            }
+
+            /**
+             * Optional. Optional filter for the returned list in go/filtering format. Filtering is
+             * only currently supported on the `path` field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Optional filter for the returned list in go/filtering format. Filtering is only currently
+           supported on the `path` field.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Optional filter for the returned list in go/filtering format. Filtering is
+             * only currently supported on the `path` field.
+             */
+            public SearchFiles setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of search results to return. The server may return fewer
+             * items than requested. If unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of search results to return. The server may return fewer items than
+           requested. If unspecified, the server will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of search results to return. The server may return fewer
+             * items than requested. If unspecified, the server will pick an appropriate default.
+             */
+            public SearchFiles setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Page token received from a previous `SearchFilesRequest` call. Provide this
+             * to retrieve the subsequent page. When paginating, all other parameters provided to
+             * `SearchFilesRequest` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Page token received from a previous `SearchFilesRequest` call. Provide this to retrieve
+           the subsequent page. When paginating, all other parameters provided to `SearchFilesRequest` must
+           match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Page token received from a previous `SearchFilesRequest` call. Provide this
+             * to retrieve the subsequent page. When paginating, all other parameters provided to
+             * `SearchFilesRequest` must match the call that provided the page token.
+             */
+            public SearchFiles setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public SearchFiles set(String parameterName, Object value) {
+              return (SearchFiles) super.set(parameterName, value);
+            }
+          }
+          /**
            * Sets the access control policy on the specified resource. Replaces any existing policy. Can
            * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *

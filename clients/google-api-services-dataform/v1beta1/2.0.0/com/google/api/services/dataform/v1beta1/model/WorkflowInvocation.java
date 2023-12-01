@@ -59,6 +59,14 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
+   * Output only. The resolved compilation result that was used to create this invocation. Will be
+   * in the format `projects/locations/repositories/compilationResults`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resolvedCompilationResult;
+
+  /**
    * Output only. This workflow invocation's current state.
    * The value may be {@code null}.
    */
@@ -140,6 +148,25 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
    */
   public WorkflowInvocation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The resolved compilation result that was used to create this invocation. Will be
+   * in the format `projects/locations/repositories/compilationResults`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolvedCompilationResult() {
+    return resolvedCompilationResult;
+  }
+
+  /**
+   * Output only. The resolved compilation result that was used to create this invocation. Will be
+   * in the format `projects/locations/repositories/compilationResults`.
+   * @param resolvedCompilationResult resolvedCompilationResult or {@code null} for none
+   */
+  public WorkflowInvocation setResolvedCompilationResult(java.lang.String resolvedCompilationResult) {
+    this.resolvedCompilationResult = resolvedCompilationResult;
     return this;
   }
 

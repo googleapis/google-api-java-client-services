@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v3.model;
 public final class MobileDeviceIdList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. User consent status.
+   * Input only. The consent setting for the users in mobile_device_ids.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class MobileDeviceIdList extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> mobileDeviceIds;
 
   /**
-   * Input only. User consent status.
+   * Input only. The consent setting for the users in mobile_device_ids.
    * @return value or {@code null} for none
    */
   public Consent getConsent() {
@@ -54,7 +54,7 @@ public final class MobileDeviceIdList extends com.google.api.client.json.Generic
   }
 
   /**
-   * Input only. User consent status.
+   * Input only. The consent setting for the users in mobile_device_ids.
    * @param consent consent or {@code null} for none
    */
   public MobileDeviceIdList setConsent(Consent consent) {

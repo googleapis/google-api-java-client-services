@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ContactInfoList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. User consent status.
+   * Input only. The consent setting for the users in contact_infos.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class ContactInfoList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Input only. User consent status.
+   * Input only. The consent setting for the users in contact_infos.
    * @return value or {@code null} for none
    */
   public Consent getConsent() {
@@ -60,7 +60,7 @@ public final class ContactInfoList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Input only. User consent status.
+   * Input only. The consent setting for the users in contact_infos.
    * @param consent consent or {@code null} for none
    */
   public ContactInfoList setConsent(Consent consent) {

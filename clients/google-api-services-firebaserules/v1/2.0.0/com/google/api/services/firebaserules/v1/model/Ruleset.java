@@ -30,6 +30,15 @@ package com.google.api.services.firebaserules.v1.model;
 public final class Ruleset extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. Intended resource to which this Ruleset should be released. May be left blank to
+   * signify the resource associated with the default release. Expected format:
+   * firestore.googleapis.com/projects//databases/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String attachmentPoint;
+
+  /**
    * Output only. Time the `Ruleset` was created.
    * The value may be {@code null}.
    */
@@ -57,6 +66,27 @@ public final class Ruleset extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Source source;
+
+  /**
+   * Immutable. Intended resource to which this Ruleset should be released. May be left blank to
+   * signify the resource associated with the default release. Expected format:
+   * firestore.googleapis.com/projects//databases/
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAttachmentPoint() {
+    return attachmentPoint;
+  }
+
+  /**
+   * Immutable. Intended resource to which this Ruleset should be released. May be left blank to
+   * signify the resource associated with the default release. Expected format:
+   * firestore.googleapis.com/projects//databases/
+   * @param attachmentPoint attachmentPoint or {@code null} for none
+   */
+  public Ruleset setAttachmentPoint(java.lang.String attachmentPoint) {
+    this.attachmentPoint = attachmentPoint;
+    return this;
+  }
 
   /**
    * Output only. Time the `Ruleset` was created.

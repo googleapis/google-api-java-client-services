@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
   private java.lang.String description;
 
   /**
-   * Display name of the security profile.
+   * DEPRECATED: DO NOT USE Display name of the security profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,8 +94,8 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
   private java.lang.Long revisionId;
 
   /**
-   * Output only. The time when revision was published. Once published, the security profile
-   * revision cannot be updated further and can be attached to environments.
+   * Output only. DEPRECATED: DO NOT USE The time when revision was published. Once published, the
+   * security profile revision cannot be updated further and can be attached to environments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +133,7 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
   }
 
   /**
-   * Display name of the security profile.
+   * DEPRECATED: DO NOT USE Display name of the security profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -141,7 +141,7 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
   }
 
   /**
-   * Display name of the security profile.
+   * DEPRECATED: DO NOT USE Display name of the security profile.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityProfile setDisplayName(java.lang.String displayName) {
@@ -271,8 +271,8 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
   }
 
   /**
-   * Output only. The time when revision was published. Once published, the security profile
-   * revision cannot be updated further and can be attached to environments.
+   * Output only. DEPRECATED: DO NOT USE The time when revision was published. Once published, the
+   * security profile revision cannot be updated further and can be attached to environments.
    * @return value or {@code null} for none
    */
   public String getRevisionPublishTime() {
@@ -280,8 +280,8 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
   }
 
   /**
-   * Output only. The time when revision was published. Once published, the security profile
-   * revision cannot be updated further and can be attached to environments.
+   * Output only. DEPRECATED: DO NOT USE The time when revision was published. Once published, the
+   * security profile revision cannot be updated further and can be attached to environments.
    * @param revisionPublishTime revisionPublishTime or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityProfile setRevisionPublishTime(String revisionPublishTime) {

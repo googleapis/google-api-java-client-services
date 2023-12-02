@@ -44,7 +44,7 @@ public final class GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation exte
   private java.lang.String name;
 
   /**
-   * Revision ID of the security profile.
+   * DEPRECATED: DO NOT USE Revision ID of the security profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -85,7 +85,7 @@ public final class GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation exte
   }
 
   /**
-   * Revision ID of the security profile.
+   * DEPRECATED: DO NOT USE Revision ID of the security profile.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSecurityProfileRevisionId() {
@@ -93,7 +93,7 @@ public final class GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation exte
   }
 
   /**
-   * Revision ID of the security profile.
+   * DEPRECATED: DO NOT USE Revision ID of the security profile.
    * @param securityProfileRevisionId securityProfileRevisionId or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation setSecurityProfileRevisionId(java.lang.Long securityProfileRevisionId) {

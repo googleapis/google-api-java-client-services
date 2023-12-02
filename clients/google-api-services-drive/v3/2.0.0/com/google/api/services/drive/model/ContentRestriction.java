@@ -71,6 +71,14 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   private com.google.api.client.util.DateTime restrictionTime;
 
   /**
+   * Output only. Whether the content restriction was applied by the system, for example due to an
+   * esignature. Users cannot modify or remove system restricted content restrictions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean systemRestricted;
+
+  /**
    * Output only. The type of the content restriction. Currently the only possible value is
    * `globalContentRestriction`.
    * The value may be {@code null}.
@@ -172,6 +180,25 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
    */
   public ContentRestriction setRestrictionTime(com.google.api.client.util.DateTime restrictionTime) {
     this.restrictionTime = restrictionTime;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the content restriction was applied by the system, for example due to an
+   * esignature. Users cannot modify or remove system restricted content restrictions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSystemRestricted() {
+    return systemRestricted;
+  }
+
+  /**
+   * Output only. Whether the content restriction was applied by the system, for example due to an
+   * esignature. Users cannot modify or remove system restricted content restrictions.
+   * @param systemRestricted systemRestricted or {@code null} for none
+   */
+  public ContentRestriction setSystemRestricted(java.lang.Boolean systemRestricted) {
+    this.systemRestricted = systemRestricted;
     return this;
   }
 

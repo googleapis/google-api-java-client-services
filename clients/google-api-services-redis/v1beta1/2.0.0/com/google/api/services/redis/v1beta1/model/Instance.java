@@ -267,6 +267,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String reservedIpRange;
 
   /**
+   * Optional. Output only. Reserved for future use. Zone Isolation compliance state of the
+   * instance. Field name and documentation is obfuscated according to go/per-resource-zi-bit-
+   * semantics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
    * Optional. Output only. Reserved for future use. Zone Separation compliance state of the
    * instance. Field name and documentation is obfuscated according to go/zs-resource-status.
    * The value may be {@code null}.
@@ -880,6 +889,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setReservedIpRange(java.lang.String reservedIpRange) {
     this.reservedIpRange = reservedIpRange;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Reserved for future use. Zone Isolation compliance state of the
+   * instance. Field name and documentation is obfuscated according to go/per-resource-zi-bit-
+   * semantics.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Optional. Output only. Reserved for future use. Zone Isolation compliance state of the
+   * instance. Field name and documentation is obfuscated according to go/per-resource-zi-bit-
+   * semantics.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public Instance setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
     return this;
   }
 

@@ -35222,6 +35222,151 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       public class SecurityIncidents {
 
         /**
+         * BatchUpdateSecurityIncident updates multiple existing security incidents.
+         *
+         * Create a request for the method "securityIncidents.batchUpdate".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link BatchUpdate#execute()} method to invoke the remote operation.
+         *
+         * @param parent Optional. The parent resource shared by all security incidents being updated. If this is set, the
+         *        parent field in the UpdateSecurityIncidentRequest messages must either be empty or match
+         *        this field.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchUpdateSecurityIncidentsRequest}
+         * @return the request
+         */
+        public BatchUpdate batchUpdate(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchUpdateSecurityIncidentsRequest content) throws java.io.IOException {
+          BatchUpdate result = new BatchUpdate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchUpdate extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchUpdateSecurityIncidentsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/securityIncidents:batchUpdate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
+
+          /**
+           * BatchUpdateSecurityIncident updates multiple existing security incidents.
+           *
+           * Create a request for the method "securityIncidents.batchUpdate".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link BatchUpdate#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Optional. The parent resource shared by all security incidents being updated. If this is set, the
+         *        parent field in the UpdateSecurityIncidentRequest messages must either be empty or match
+         *        this field.
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchUpdateSecurityIncidentsRequest}
+           * @since 1.13
+           */
+          protected BatchUpdate(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchUpdateSecurityIncidentsRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchUpdateSecurityIncidentsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchUpdate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchUpdate setAccessToken(java.lang.String accessToken) {
+            return (BatchUpdate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchUpdate setAlt(java.lang.String alt) {
+            return (BatchUpdate) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchUpdate setCallback(java.lang.String callback) {
+            return (BatchUpdate) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchUpdate setFields(java.lang.String fields) {
+            return (BatchUpdate) super.setFields(fields);
+          }
+
+          @Override
+          public BatchUpdate setKey(java.lang.String key) {
+            return (BatchUpdate) super.setKey(key);
+          }
+
+          @Override
+          public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+            return (BatchUpdate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+            return (BatchUpdate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchUpdate setUploadType(java.lang.String uploadType) {
+            return (BatchUpdate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Optional. The parent resource shared by all security incidents being updated. If this
+           * is set, the parent field in the UpdateSecurityIncidentRequest messages must either be
+           * empty or match this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Optional. The parent resource shared by all security incidents being updated. If this is set, the
+         parent field in the UpdateSecurityIncidentRequest messages must either be empty or match this
+         field.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Optional. The parent resource shared by all security incidents being updated. If this
+           * is set, the parent field in the UpdateSecurityIncidentRequest messages must either be
+           * empty or match this field.
+           */
+          public BatchUpdate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchUpdate set(String parameterName, Object value) {
+            return (BatchUpdate) super.set(parameterName, value);
+          }
+        }
+        /**
          * GetSecurityIncident gets the specified security incident. Returns NOT_FOUND if security incident
          * is not present for the specified organization and environment.
          *
@@ -35591,6 +35736,173 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * UpdateSecurityIncidents updates an existing security incident.
+         *
+         * Create a request for the method "securityIncidents.patch".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. Name of the security incident resource. Format:
+         *        organizations/{org}/environments/{environment}/securityIncidents/{incident} Example:
+         *        organizations/apigee-org/environments/dev/securityIncidents/1234-5678-9101-1111
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityIncident}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityIncident content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityIncident> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityIncidents/[^/]+$");
+
+          /**
+           * UpdateSecurityIncidents updates an existing security incident.
+           *
+           * Create a request for the method "securityIncidents.patch".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. Name of the security incident resource. Format:
+         *        organizations/{org}/environments/{environment}/securityIncidents/{incident} Example:
+         *        organizations/apigee-org/environments/dev/securityIncidents/1234-5678-9101-1111
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityIncident}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityIncident content) {
+            super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityIncident.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityIncidents/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. Name of the security incident resource. Format:
+           * organizations/{org}/environments/{environment}/securityIncidents/{incident} Example:
+           * organizations/apigee-org/environments/dev/securityIncidents/1234-5678-9101-1111
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. Name of the security incident resource. Format:
+         organizations/{org}/environments/{environment}/securityIncidents/{incident} Example: organizations
+         /apigee-org/environments/dev/securityIncidents/1234-5678-9101-1111
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. Name of the security incident resource. Format:
+           * organizations/{org}/environments/{environment}/securityIncidents/{incident} Example:
+           * organizations/apigee-org/environments/dev/securityIncidents/1234-5678-9101-1111
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityIncidents/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. The list of fields to update. Allowed fields are:
+           * LINT.IfChange(allowed_update_fields_comment) - observability LINT.ThenChange()
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. The list of fields to update. Allowed fields are:
+         LINT.IfChange(allowed_update_fields_comment) - observability LINT.ThenChange()
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. The list of fields to update. Allowed fields are:
+           * LINT.IfChange(allowed_update_fields_comment) - observability LINT.ThenChange()
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 

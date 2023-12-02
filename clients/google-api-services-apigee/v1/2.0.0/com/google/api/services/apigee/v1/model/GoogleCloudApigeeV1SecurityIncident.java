@@ -59,6 +59,13 @@ public final class GoogleCloudApigeeV1SecurityIncident extends com.google.api.cl
   private String lastDetectedTime;
 
   /**
+   * Output only. The time when the incident observability was last changed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastObservabilityChangeTime;
+
+  /**
    * Immutable. Name of the security incident resource. Format:
    * organizations/{org}/environments/{environment}/securityIncidents/{incident} Example:
    * organizations/apigee-org/environments/dev/securityIncidents/1234-5678-9101-1111
@@ -66,6 +73,13 @@ public final class GoogleCloudApigeeV1SecurityIncident extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Indicates if the user archived this incident.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String observability;
 
   /**
    * Output only. Risk level of the incident.
@@ -152,6 +166,23 @@ public final class GoogleCloudApigeeV1SecurityIncident extends com.google.api.cl
   }
 
   /**
+   * Output only. The time when the incident observability was last changed.
+   * @return value or {@code null} for none
+   */
+  public String getLastObservabilityChangeTime() {
+    return lastObservabilityChangeTime;
+  }
+
+  /**
+   * Output only. The time when the incident observability was last changed.
+   * @param lastObservabilityChangeTime lastObservabilityChangeTime or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityIncident setLastObservabilityChangeTime(String lastObservabilityChangeTime) {
+    this.lastObservabilityChangeTime = lastObservabilityChangeTime;
+    return this;
+  }
+
+  /**
    * Immutable. Name of the security incident resource. Format:
    * organizations/{org}/environments/{environment}/securityIncidents/{incident} Example:
    * organizations/apigee-org/environments/dev/securityIncidents/1234-5678-9101-1111
@@ -169,6 +200,23 @@ public final class GoogleCloudApigeeV1SecurityIncident extends com.google.api.cl
    */
   public GoogleCloudApigeeV1SecurityIncident setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the user archived this incident.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getObservability() {
+    return observability;
+  }
+
+  /**
+   * Optional. Indicates if the user archived this incident.
+   * @param observability observability or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityIncident setObservability(java.lang.String observability) {
+    this.observability = observability;
     return this;
   }
 

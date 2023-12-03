@@ -66,13 +66,6 @@ public final class CustomConnector extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Launch stage.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String launchStage;
-
-  /**
    * Optional. Logo of the resource.
    * The value may be {@code null}.
    */
@@ -178,23 +171,6 @@ public final class CustomConnector extends com.google.api.client.json.GenericJso
    */
   public CustomConnector setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
-    return this;
-  }
-
-  /**
-   * Output only. Launch stage.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLaunchStage() {
-    return launchStage;
-  }
-
-  /**
-   * Output only. Launch stage.
-   * @param launchStage launchStage or {@code null} for none
-   */
-  public CustomConnector setLaunchStage(java.lang.String launchStage) {
-    this.launchStage = launchStage;
     return this;
   }
 

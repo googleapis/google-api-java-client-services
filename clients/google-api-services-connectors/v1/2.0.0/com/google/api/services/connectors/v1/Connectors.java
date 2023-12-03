@@ -1985,6 +1985,137 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * ListenEvent listens to the event.
+         *
+         * Create a request for the method "connections.listenEvent".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link ListenEvent#execute()} method to invoke the remote operation.
+         *
+         * @param resourcePath Required. Resource path for request.
+         * @param content the {@link com.google.api.services.connectors.v1.model.ListenEventRequest}
+         * @return the request
+         */
+        public ListenEvent listenEvent(java.lang.String resourcePath, com.google.api.services.connectors.v1.model.ListenEventRequest content) throws java.io.IOException {
+          ListenEvent result = new ListenEvent(resourcePath, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ListenEvent extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ListenEventResponse> {
+
+          private static final String REST_PATH = "v1/{+resourcePath}:listenEvent";
+
+          private final java.util.regex.Pattern RESOURCE_PATH_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * ListenEvent listens to the event.
+           *
+           * Create a request for the method "connections.listenEvent".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link ListenEvent#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ListenEvent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resourcePath Required. Resource path for request.
+           * @param content the {@link com.google.api.services.connectors.v1.model.ListenEventRequest}
+           * @since 1.13
+           */
+          protected ListenEvent(java.lang.String resourcePath, com.google.api.services.connectors.v1.model.ListenEventRequest content) {
+            super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v1.model.ListenEventResponse.class);
+            this.resourcePath = com.google.api.client.util.Preconditions.checkNotNull(resourcePath, "Required parameter resourcePath must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATH_PATTERN.matcher(resourcePath).matches(),
+                  "Parameter resourcePath must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public ListenEvent set$Xgafv(java.lang.String $Xgafv) {
+            return (ListenEvent) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListenEvent setAccessToken(java.lang.String accessToken) {
+            return (ListenEvent) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListenEvent setAlt(java.lang.String alt) {
+            return (ListenEvent) super.setAlt(alt);
+          }
+
+          @Override
+          public ListenEvent setCallback(java.lang.String callback) {
+            return (ListenEvent) super.setCallback(callback);
+          }
+
+          @Override
+          public ListenEvent setFields(java.lang.String fields) {
+            return (ListenEvent) super.setFields(fields);
+          }
+
+          @Override
+          public ListenEvent setKey(java.lang.String key) {
+            return (ListenEvent) super.setKey(key);
+          }
+
+          @Override
+          public ListenEvent setOauthToken(java.lang.String oauthToken) {
+            return (ListenEvent) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListenEvent setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListenEvent) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListenEvent setQuotaUser(java.lang.String quotaUser) {
+            return (ListenEvent) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListenEvent setUploadType(java.lang.String uploadType) {
+            return (ListenEvent) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListenEvent setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListenEvent) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource path for request. */
+          @com.google.api.client.util.Key
+          private java.lang.String resourcePath;
+
+          /** Required. Resource path for request.
+           */
+          public java.lang.String getResourcePath() {
+            return resourcePath;
+          }
+
+          /** Required. Resource path for request. */
+          public ListenEvent setResourcePath(java.lang.String resourcePath) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATH_PATTERN.matcher(resourcePath).matches(),
+                  "Parameter resourcePath must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.resourcePath = resourcePath;
+            return this;
+          }
+
+          @Override
+          public ListenEvent set(String parameterName, Object value) {
+            return (ListenEvent) super.set(parameterName, value);
+          }
+        }
+        /**
          * Updates the parameters of a single Connection.
          *
          * Create a request for the method "connections.patch".

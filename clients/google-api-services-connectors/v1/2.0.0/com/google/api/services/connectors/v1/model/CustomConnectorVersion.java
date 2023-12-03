@@ -75,18 +75,18 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * Required. Service account needed for runtime plane to access Custom Connector secrets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Optional. Location of the custom connector spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String specLocation;
-
-  /**
-   * Required. Type of the customConnector.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
 
   /**
    * Output only. Updated time.
@@ -204,6 +204,23 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   }
 
   /**
+   * Required. Service account needed for runtime plane to access Custom Connector secrets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Required. Service account needed for runtime plane to access Custom Connector secrets.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public CustomConnectorVersion setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
    * Optional. Location of the custom connector spec.
    * @return value or {@code null} for none
    */
@@ -217,23 +234,6 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
    */
   public CustomConnectorVersion setSpecLocation(java.lang.String specLocation) {
     this.specLocation = specLocation;
-    return this;
-  }
-
-  /**
-   * Required. Type of the customConnector.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
-
-  /**
-   * Required. Type of the customConnector.
-   * @param type type or {@code null} for none
-   */
-  public CustomConnectorVersion setType(java.lang.String type) {
-    this.type = type;
     return this;
   }
 

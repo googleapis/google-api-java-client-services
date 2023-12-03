@@ -98,6 +98,19 @@ public final class EventingConfigTemplate extends com.google.api.client.json.Gen
   private java.lang.Boolean isEventingSupported;
 
   /**
+   * ListenerAuthConfigTemplates represents the auth values for the event listener.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AuthConfigTemplate> listenerAuthConfigTemplates;
+
+  static {
+    // hack to force ProGuard to consider AuthConfigTemplate used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AuthConfigTemplate.class);
+  }
+
+  /**
    * Registration host destination config template.
    * The value may be {@code null}.
    */
@@ -237,6 +250,23 @@ public final class EventingConfigTemplate extends com.google.api.client.json.Gen
    */
   public EventingConfigTemplate setIsEventingSupported(java.lang.Boolean isEventingSupported) {
     this.isEventingSupported = isEventingSupported;
+    return this;
+  }
+
+  /**
+   * ListenerAuthConfigTemplates represents the auth values for the event listener.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AuthConfigTemplate> getListenerAuthConfigTemplates() {
+    return listenerAuthConfigTemplates;
+  }
+
+  /**
+   * ListenerAuthConfigTemplates represents the auth values for the event listener.
+   * @param listenerAuthConfigTemplates listenerAuthConfigTemplates or {@code null} for none
+   */
+  public EventingConfigTemplate setListenerAuthConfigTemplates(java.util.List<AuthConfigTemplate> listenerAuthConfigTemplates) {
+    this.listenerAuthConfigTemplates = listenerAuthConfigTemplates;
     return this;
   }
 

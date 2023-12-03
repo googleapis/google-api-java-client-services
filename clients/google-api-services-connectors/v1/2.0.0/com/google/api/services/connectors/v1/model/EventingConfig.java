@@ -50,13 +50,6 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
   private AuthConfig authConfig;
 
   /**
-   * Encryption key (can be either Google managed or CMEK).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ConfigVariable encryptionKey;
-
-  /**
    * Enrichment Enabled.
    * The value may be {@code null}.
    */
@@ -70,6 +63,13 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String eventsListenerIngressEndpoint;
+
+  /**
+   * Optional. Auth details for the event listener.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthConfig listenerAuthConfig;
 
   /**
    * Optional. Private Connectivity Enabled.
@@ -120,23 +120,6 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Encryption key (can be either Google managed or CMEK).
-   * @return value or {@code null} for none
-   */
-  public ConfigVariable getEncryptionKey() {
-    return encryptionKey;
-  }
-
-  /**
-   * Encryption key (can be either Google managed or CMEK).
-   * @param encryptionKey encryptionKey or {@code null} for none
-   */
-  public EventingConfig setEncryptionKey(ConfigVariable encryptionKey) {
-    this.encryptionKey = encryptionKey;
-    return this;
-  }
-
-  /**
    * Enrichment Enabled.
    * @return value or {@code null} for none
    */
@@ -169,6 +152,23 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   public EventingConfig setEventsListenerIngressEndpoint(java.lang.String eventsListenerIngressEndpoint) {
     this.eventsListenerIngressEndpoint = eventsListenerIngressEndpoint;
+    return this;
+  }
+
+  /**
+   * Optional. Auth details for the event listener.
+   * @return value or {@code null} for none
+   */
+  public AuthConfig getListenerAuthConfig() {
+    return listenerAuthConfig;
+  }
+
+  /**
+   * Optional. Auth details for the event listener.
+   * @param listenerAuthConfig listenerAuthConfig or {@code null} for none
+   */
+  public EventingConfig setListenerAuthConfig(AuthConfig listenerAuthConfig) {
+    this.listenerAuthConfig = listenerAuthConfig;
     return this;
   }
 

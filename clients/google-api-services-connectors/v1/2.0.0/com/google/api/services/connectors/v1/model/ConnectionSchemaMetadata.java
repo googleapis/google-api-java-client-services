@@ -45,6 +45,13 @@ public final class ConnectionSchemaMetadata extends com.google.api.client.json.G
   private java.util.List<java.lang.String> entities;
 
   /**
+   * Error message for users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorMessage;
+
+  /**
    * Output only. Resource name. Format:
    * projects/{project}/locations/{location}/connections/{connection}/connectionSchemaMetadata
    * The value may be {@code null}.
@@ -104,6 +111,23 @@ public final class ConnectionSchemaMetadata extends com.google.api.client.json.G
    */
   public ConnectionSchemaMetadata setEntities(java.util.List<java.lang.String> entities) {
     this.entities = entities;
+    return this;
+  }
+
+  /**
+   * Error message for users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorMessage() {
+    return errorMessage;
+  }
+
+  /**
+   * Error message for users.
+   * @param errorMessage errorMessage or {@code null} for none
+   */
+  public ConnectionSchemaMetadata setErrorMessage(java.lang.String errorMessage) {
+    this.errorMessage = errorMessage;
     return this;
   }
 

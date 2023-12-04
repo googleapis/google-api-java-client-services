@@ -60,7 +60,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless
    * otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal
    * state. After a job has reached a terminal state, no further state updates may be made. This
-   * field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+   * field might be mutated by the Dataflow service; callers cannot mutate it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +88,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private JobExecutionInfo executionInfo;
 
   /**
-   * The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is
-   * created, and is immutable for the life of the job.
+   * The unique ID of this job. This field is set by the Dataflow service when the job is created,
+   * and is immutable for the life of the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,10 +123,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
-   * The user-specified Cloud Dataflow job name. Only one Job with a given name can exist in a
+   * The user-specified Dataflow job name. Only one active job with a given name can exist in a
    * project within one region at any given time. Jobs in different regions can have the same name.
-   * If a caller attempts to create a Job with the same name as an already-existing Job, the attempt
-   * returns the existing Job. The name must match the regular expression
+   * If a caller attempts to create a job with the same name as an active job that already exists,
+   * the attempt returns the existing job. The name must match the regular expression
    * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * The value may be {@code null}.
    */
@@ -143,7 +143,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private PipelineDescription pipelineDescription;
 
   /**
-   * The ID of the Cloud Platform project that the job belongs to.
+   * The ID of the Google Cloud project that the job belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -259,7 +259,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> transformNameMapping;
 
   /**
-   * The type of Cloud Dataflow job.
+   * The type of Dataflow job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -330,7 +330,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless
    * otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal
    * state. After a job has reached a terminal state, no further state updates may be made. This
-   * field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+   * field might be mutated by the Dataflow service; callers cannot mutate it.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentState() {
@@ -341,7 +341,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless
    * otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal
    * state. After a job has reached a terminal state, no further state updates may be made. This
-   * field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+   * field might be mutated by the Dataflow service; callers cannot mutate it.
    * @param currentState currentState or {@code null} for none
    */
   public Job setCurrentState(java.lang.String currentState) {
@@ -401,8 +401,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is
-   * created, and is immutable for the life of the job.
+   * The unique ID of this job. This field is set by the Dataflow service when the job is created,
+   * and is immutable for the life of the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -410,8 +410,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is
-   * created, and is immutable for the life of the job.
+   * The unique ID of this job. This field is set by the Dataflow service when the job is created,
+   * and is immutable for the life of the job.
    * @param id id or {@code null} for none
    */
   public Job setId(java.lang.String id) {
@@ -483,10 +483,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-specified Cloud Dataflow job name. Only one Job with a given name can exist in a
+   * The user-specified Dataflow job name. Only one active job with a given name can exist in a
    * project within one region at any given time. Jobs in different regions can have the same name.
-   * If a caller attempts to create a Job with the same name as an already-existing Job, the attempt
-   * returns the existing Job. The name must match the regular expression
+   * If a caller attempts to create a job with the same name as an active job that already exists,
+   * the attempt returns the existing job. The name must match the regular expression
    * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * @return value or {@code null} for none
    */
@@ -495,10 +495,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-specified Cloud Dataflow job name. Only one Job with a given name can exist in a
+   * The user-specified Dataflow job name. Only one active job with a given name can exist in a
    * project within one region at any given time. Jobs in different regions can have the same name.
-   * If a caller attempts to create a Job with the same name as an already-existing Job, the attempt
-   * returns the existing Job. The name must match the regular expression
+   * If a caller attempts to create a job with the same name as an active job that already exists,
+   * the attempt returns the existing job. The name must match the regular expression
    * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * @param name name or {@code null} for none
    */
@@ -529,7 +529,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the Cloud Platform project that the job belongs to.
+   * The ID of the Google Cloud project that the job belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -537,7 +537,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the Cloud Platform project that the job belongs to.
+   * The ID of the Google Cloud project that the job belongs to.
    * @param projectId projectId or {@code null} for none
    */
   public Job setProjectId(java.lang.String projectId) {
@@ -788,7 +788,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of Cloud Dataflow job.
+   * The type of Dataflow job.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -796,7 +796,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of Cloud Dataflow job.
+   * The type of Dataflow job.
    * @param type type or {@code null} for none
    */
   public Job setType(java.lang.String type) {

@@ -47,6 +47,15 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
   private java.lang.Integer minNumWorkers;
 
   /**
+   * Target worker utilization, compared against the aggregate utilization of the worker pool by
+   * autoscaler, to determine upscaling and downscaling when absent other constraints such as
+   * backlog.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double workerUtilizationHint;
+
+  /**
    * The maximum number of workers to cap autoscaling at. This field is currently only supported for
    * Streaming Engine jobs.
    * @return value or {@code null} for none
@@ -81,6 +90,27 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
    */
   public RuntimeUpdatableParams setMinNumWorkers(java.lang.Integer minNumWorkers) {
     this.minNumWorkers = minNumWorkers;
+    return this;
+  }
+
+  /**
+   * Target worker utilization, compared against the aggregate utilization of the worker pool by
+   * autoscaler, to determine upscaling and downscaling when absent other constraints such as
+   * backlog.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getWorkerUtilizationHint() {
+    return workerUtilizationHint;
+  }
+
+  /**
+   * Target worker utilization, compared against the aggregate utilization of the worker pool by
+   * autoscaler, to determine upscaling and downscaling when absent other constraints such as
+   * backlog.
+   * @param workerUtilizationHint workerUtilizationHint or {@code null} for none
+   */
+  public RuntimeUpdatableParams setWorkerUtilizationHint(java.lang.Double workerUtilizationHint) {
+    this.workerUtilizationHint = workerUtilizationHint;
     return this;
   }
 

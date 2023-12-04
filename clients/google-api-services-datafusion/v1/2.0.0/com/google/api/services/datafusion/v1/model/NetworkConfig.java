@@ -35,26 +35,69 @@ package com.google.api.services.datafusion.v1.model;
 public final class NetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This range
-   * must not overlap with any other ranges used in the customer network.
+   * Optional. Type of connection for establishing private IP connectivity between the Data Fusion
+   * customer project VPC and the corresponding tenant project from a predefined list of available
+   * connection modes. If this field is unspecified for a private instance, VPC peering is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectionType;
+
+  /**
+   * Optional. The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This
+   * range must not overlap with any other ranges used in the Data Fusion instance network. This is
+   * required only when using connection type VPC_PEERING. Format: a.b.c.d/22 Example:
+   * 192.168.0.0/22
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAllocation;
 
   /**
-   * Name of the network in the customer project with which the Tenant Project will be peered for
-   * executing pipelines. In case of shared VPC where the network resides in another host project
-   * the network should specified in the form of projects/{host-project-
-   * id}/global/networks/{network}
+   * Optional. Name of the network in the customer project with which the Tenant Project will be
+   * peered for executing pipelines. This is required only when using connection type VPC peering.
+   * In case of shared VPC where the network resides in another host project the network should
+   * specified in the form of projects/{host-project-id}/global/networks/{network}. This is only
+   * required for connectivity type VPC_PEERING.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This range
-   * must not overlap with any other ranges used in the customer network.
+   * Optional. Configuration for Private Service Connect. This is required only when using
+   * connection type PRIVATE_SERVICE_CONNECT_INTERFACES.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateServiceConnectConfig privateServiceConnectConfig;
+
+  /**
+   * Optional. Type of connection for establishing private IP connectivity between the Data Fusion
+   * customer project VPC and the corresponding tenant project from a predefined list of available
+   * connection modes. If this field is unspecified for a private instance, VPC peering is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectionType() {
+    return connectionType;
+  }
+
+  /**
+   * Optional. Type of connection for establishing private IP connectivity between the Data Fusion
+   * customer project VPC and the corresponding tenant project from a predefined list of available
+   * connection modes. If this field is unspecified for a private instance, VPC peering is used.
+   * @param connectionType connectionType or {@code null} for none
+   */
+  public NetworkConfig setConnectionType(java.lang.String connectionType) {
+    this.connectionType = connectionType;
+    return this;
+  }
+
+  /**
+   * Optional. The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This
+   * range must not overlap with any other ranges used in the Data Fusion instance network. This is
+   * required only when using connection type VPC_PEERING. Format: a.b.c.d/22 Example:
+   * 192.168.0.0/22
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAllocation() {
@@ -62,8 +105,10 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This range
-   * must not overlap with any other ranges used in the customer network.
+   * Optional. The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This
+   * range must not overlap with any other ranges used in the Data Fusion instance network. This is
+   * required only when using connection type VPC_PEERING. Format: a.b.c.d/22 Example:
+   * 192.168.0.0/22
    * @param ipAllocation ipAllocation or {@code null} for none
    */
   public NetworkConfig setIpAllocation(java.lang.String ipAllocation) {
@@ -72,10 +117,11 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the network in the customer project with which the Tenant Project will be peered for
-   * executing pipelines. In case of shared VPC where the network resides in another host project
-   * the network should specified in the form of projects/{host-project-
-   * id}/global/networks/{network}
+   * Optional. Name of the network in the customer project with which the Tenant Project will be
+   * peered for executing pipelines. This is required only when using connection type VPC peering.
+   * In case of shared VPC where the network resides in another host project the network should
+   * specified in the form of projects/{host-project-id}/global/networks/{network}. This is only
+   * required for connectivity type VPC_PEERING.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -83,14 +129,34 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the network in the customer project with which the Tenant Project will be peered for
-   * executing pipelines. In case of shared VPC where the network resides in another host project
-   * the network should specified in the form of projects/{host-project-
-   * id}/global/networks/{network}
+   * Optional. Name of the network in the customer project with which the Tenant Project will be
+   * peered for executing pipelines. This is required only when using connection type VPC peering.
+   * In case of shared VPC where the network resides in another host project the network should
+   * specified in the form of projects/{host-project-id}/global/networks/{network}. This is only
+   * required for connectivity type VPC_PEERING.
    * @param network network or {@code null} for none
    */
   public NetworkConfig setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for Private Service Connect. This is required only when using
+   * connection type PRIVATE_SERVICE_CONNECT_INTERFACES.
+   * @return value or {@code null} for none
+   */
+  public PrivateServiceConnectConfig getPrivateServiceConnectConfig() {
+    return privateServiceConnectConfig;
+  }
+
+  /**
+   * Optional. Configuration for Private Service Connect. This is required only when using
+   * connection type PRIVATE_SERVICE_CONNECT_INTERFACES.
+   * @param privateServiceConnectConfig privateServiceConnectConfig or {@code null} for none
+   */
+  public NetworkConfig setPrivateServiceConnectConfig(PrivateServiceConnectConfig privateServiceConnectConfig) {
+    this.privateServiceConnectConfig = privateServiceConnectConfig;
     return this;
   }
 

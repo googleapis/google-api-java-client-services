@@ -74,6 +74,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private CryptoKeyConfig cryptoKeyConfig;
 
   /**
+   * Optional. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dataplexDataLineageIntegrationEnabled;
+
+  /**
    * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run
    * data processing pipelines. This allows users to have fine-grained access control on Dataproc's
    * accesses to cloud resources.
@@ -363,6 +370,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCryptoKeyConfig(CryptoKeyConfig cryptoKeyConfig) {
     this.cryptoKeyConfig = cryptoKeyConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDataplexDataLineageIntegrationEnabled() {
+    return dataplexDataLineageIntegrationEnabled;
+  }
+
+  /**
+   * Optional. Reserved for future use.
+   * @param dataplexDataLineageIntegrationEnabled dataplexDataLineageIntegrationEnabled or {@code null} for none
+   */
+  public Instance setDataplexDataLineageIntegrationEnabled(java.lang.Boolean dataplexDataLineageIntegrationEnabled) {
+    this.dataplexDataLineageIntegrationEnabled = dataplexDataLineageIntegrationEnabled;
     return this;
   }
 

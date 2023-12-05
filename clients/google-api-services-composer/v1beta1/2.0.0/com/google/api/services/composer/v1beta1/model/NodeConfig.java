@@ -31,6 +31,30 @@ package com.google.api.services.composer.v1beta1.model;
 public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The IP range in CIDR notation to use internally by Cloud Composer. IP addresses are
+   * not reserved - and the same range can be used by multiple Cloud Composer environments. In case
+   * of overlap, IPs from this range will not be accessible in the user's VPC network. Cannot be
+   * updated. If not specified, the default value of '100.64.128.0/20' is used. This field is
+   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String composerInternalIpv4CidrBlock;
+
+  /**
+   * Optional. Network Attachment that Cloud Composer environment is connected to, which provides
+   * connectivity with a user's VPC network. Takes precedence over network and subnetwork settings.
+   * If not provided, but network and subnetwork are defined during environment, it will be
+   * provisioned. If not provided and network and subnetwork are also empty, then connectivity to
+   * user's VPC network is disabled. Network attachment must be provided in format
+   * projects/{project}/regions/{region}/networkAttachments/{networkAttachment}. This field is
+   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String composerNetworkAttachment;
+
+  /**
    * Optional. The disk size in GB used for node VMs. Minimum size is 30GB. If unspecified, defaults
    * to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in
    * versions composer-1.*.*-airflow-*.*.*.
@@ -157,6 +181,60 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
+
+  /**
+   * Optional. The IP range in CIDR notation to use internally by Cloud Composer. IP addresses are
+   * not reserved - and the same range can be used by multiple Cloud Composer environments. In case
+   * of overlap, IPs from this range will not be accessible in the user's VPC network. Cannot be
+   * updated. If not specified, the default value of '100.64.128.0/20' is used. This field is
+   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getComposerInternalIpv4CidrBlock() {
+    return composerInternalIpv4CidrBlock;
+  }
+
+  /**
+   * Optional. The IP range in CIDR notation to use internally by Cloud Composer. IP addresses are
+   * not reserved - and the same range can be used by multiple Cloud Composer environments. In case
+   * of overlap, IPs from this range will not be accessible in the user's VPC network. Cannot be
+   * updated. If not specified, the default value of '100.64.128.0/20' is used. This field is
+   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * @param composerInternalIpv4CidrBlock composerInternalIpv4CidrBlock or {@code null} for none
+   */
+  public NodeConfig setComposerInternalIpv4CidrBlock(java.lang.String composerInternalIpv4CidrBlock) {
+    this.composerInternalIpv4CidrBlock = composerInternalIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * Optional. Network Attachment that Cloud Composer environment is connected to, which provides
+   * connectivity with a user's VPC network. Takes precedence over network and subnetwork settings.
+   * If not provided, but network and subnetwork are defined during environment, it will be
+   * provisioned. If not provided and network and subnetwork are also empty, then connectivity to
+   * user's VPC network is disabled. Network attachment must be provided in format
+   * projects/{project}/regions/{region}/networkAttachments/{networkAttachment}. This field is
+   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getComposerNetworkAttachment() {
+    return composerNetworkAttachment;
+  }
+
+  /**
+   * Optional. Network Attachment that Cloud Composer environment is connected to, which provides
+   * connectivity with a user's VPC network. Takes precedence over network and subnetwork settings.
+   * If not provided, but network and subnetwork are defined during environment, it will be
+   * provisioned. If not provided and network and subnetwork are also empty, then connectivity to
+   * user's VPC network is disabled. Network attachment must be provided in format
+   * projects/{project}/regions/{region}/networkAttachments/{networkAttachment}. This field is
+   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * @param composerNetworkAttachment composerNetworkAttachment or {@code null} for none
+   */
+  public NodeConfig setComposerNetworkAttachment(java.lang.String composerNetworkAttachment) {
+    this.composerNetworkAttachment = composerNetworkAttachment;
+    return this;
+  }
 
   /**
    * Optional. The disk size in GB used for node VMs. Minimum size is 30GB. If unspecified, defaults

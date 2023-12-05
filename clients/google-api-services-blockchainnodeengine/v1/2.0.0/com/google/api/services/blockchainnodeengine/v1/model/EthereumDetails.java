@@ -52,11 +52,12 @@ public final class EthereumDetails extends com.google.api.client.json.GenericJso
   private java.lang.Boolean apiEnableDebug;
 
   /**
-   * An Ethereum address which the beacon client will send fee rewards to if no recipient is
-   * configured in the validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-
-   * recipient.html or https://docs.prylabs.network/docs/execution-node/fee-recipient for examples
-   * of how this is used. Note that while this is often described as "suggested", as we run the
-   * execution node we can trust the execution node, and therefore this is considered enforced.
+   * Deprecated: Use the same field in the ValidatorConfig message as replacement. An Ethereum
+   * address which the beacon client will send fee rewards to if no recipient is configured in the
+   * validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html or
+   * https://docs.prylabs.network/docs/execution-node/fee-recipient for examples of how this is
+   * used. Note that while this is often described as "suggested", as we run the execution node we
+   * can trust the execution node, and therefore this is considered enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,6 +97,14 @@ public final class EthereumDetails extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String nodeType;
+
+  /**
+   * Configuration for validator-related parameters on the beacon client, and for any GCP-managed
+   * validator client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ValidatorConfig validatorConfig;
 
   /**
    * Output only. Ethereum-specific endpoint information.
@@ -149,11 +158,12 @@ public final class EthereumDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * An Ethereum address which the beacon client will send fee rewards to if no recipient is
-   * configured in the validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-
-   * recipient.html or https://docs.prylabs.network/docs/execution-node/fee-recipient for examples
-   * of how this is used. Note that while this is often described as "suggested", as we run the
-   * execution node we can trust the execution node, and therefore this is considered enforced.
+   * Deprecated: Use the same field in the ValidatorConfig message as replacement. An Ethereum
+   * address which the beacon client will send fee rewards to if no recipient is configured in the
+   * validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html or
+   * https://docs.prylabs.network/docs/execution-node/fee-recipient for examples of how this is
+   * used. Note that while this is often described as "suggested", as we run the execution node we
+   * can trust the execution node, and therefore this is considered enforced.
    * @return value or {@code null} for none
    */
   public java.lang.String getBeaconFeeRecipient() {
@@ -161,11 +171,12 @@ public final class EthereumDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * An Ethereum address which the beacon client will send fee rewards to if no recipient is
-   * configured in the validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-
-   * recipient.html or https://docs.prylabs.network/docs/execution-node/fee-recipient for examples
-   * of how this is used. Note that while this is often described as "suggested", as we run the
-   * execution node we can trust the execution node, and therefore this is considered enforced.
+   * Deprecated: Use the same field in the ValidatorConfig message as replacement. An Ethereum
+   * address which the beacon client will send fee rewards to if no recipient is configured in the
+   * validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html or
+   * https://docs.prylabs.network/docs/execution-node/fee-recipient for examples of how this is
+   * used. Note that while this is often described as "suggested", as we run the execution node we
+   * can trust the execution node, and therefore this is considered enforced.
    * @param beaconFeeRecipient beaconFeeRecipient or {@code null} for none
    */
   public EthereumDetails setBeaconFeeRecipient(java.lang.String beaconFeeRecipient) {
@@ -255,6 +266,25 @@ public final class EthereumDetails extends com.google.api.client.json.GenericJso
    */
   public EthereumDetails setNodeType(java.lang.String nodeType) {
     this.nodeType = nodeType;
+    return this;
+  }
+
+  /**
+   * Configuration for validator-related parameters on the beacon client, and for any GCP-managed
+   * validator client.
+   * @return value or {@code null} for none
+   */
+  public ValidatorConfig getValidatorConfig() {
+    return validatorConfig;
+  }
+
+  /**
+   * Configuration for validator-related parameters on the beacon client, and for any GCP-managed
+   * validator client.
+   * @param validatorConfig validatorConfig or {@code null} for none
+   */
+  public EthereumDetails setValidatorConfig(ValidatorConfig validatorConfig) {
+    this.validatorConfig = validatorConfig;
     return this;
   }
 

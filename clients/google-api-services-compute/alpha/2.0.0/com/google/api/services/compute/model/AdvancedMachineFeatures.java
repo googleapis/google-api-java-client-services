@@ -47,6 +47,13 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   private java.lang.Boolean enableUefiNetworking;
 
   /**
+   * Whether to enable the watchdog timer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableWatchdogTimer;
+
+  /**
    * The number of vNUMA nodes.
    * The value may be {@code null}.
    */
@@ -110,6 +117,23 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
    */
   public AdvancedMachineFeatures setEnableUefiNetworking(java.lang.Boolean enableUefiNetworking) {
     this.enableUefiNetworking = enableUefiNetworking;
+    return this;
+  }
+
+  /**
+   * Whether to enable the watchdog timer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableWatchdogTimer() {
+    return enableWatchdogTimer;
+  }
+
+  /**
+   * Whether to enable the watchdog timer.
+   * @param enableWatchdogTimer enableWatchdogTimer or {@code null} for none
+   */
+  public AdvancedMachineFeatures setEnableWatchdogTimer(java.lang.Boolean enableWatchdogTimer) {
+    this.enableWatchdogTimer = enableWatchdogTimer;
     return this;
   }
 

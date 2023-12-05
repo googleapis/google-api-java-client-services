@@ -17,9 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Describes the auto-registration of the Forwarding Rule to Service Directory. The region and
+ * Describes the auto-registration of the forwarding rule to Service Directory. The region and
  * project of the Service Directory resource generated from this registration will be the same as
- * this Forwarding Rule.
+ * this forwarding rule.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -47,7 +47,7 @@ public final class ForwardingRuleServiceDirectoryRegistration extends com.google
 
   /**
    * [Optional] Service Directory region to register this global forwarding rule under. Default to
-   * "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on
+   * "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs forwarding rules on
    * the same network should use the same Service Directory region.
    * The value may be {@code null}.
    */
@@ -90,7 +90,7 @@ public final class ForwardingRuleServiceDirectoryRegistration extends com.google
 
   /**
    * [Optional] Service Directory region to register this global forwarding rule under. Default to
-   * "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on
+   * "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs forwarding rules on
    * the same network should use the same Service Directory region.
    * @return value or {@code null} for none
    */
@@ -100,7 +100,7 @@ public final class ForwardingRuleServiceDirectoryRegistration extends com.google
 
   /**
    * [Optional] Service Directory region to register this global forwarding rule under. Default to
-   * "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on
+   * "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs forwarding rules on
    * the same network should use the same Service Directory region.
    * @param serviceDirectoryRegion serviceDirectoryRegion or {@code null} for none
    */

@@ -53,8 +53,9 @@ public final class SignatureInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String googlePublicKeyPem;
 
   /**
-   * The serialized ApprovalRequest message without the approve.signature_info field. This to allow
-   * the customer to verify signatures if they want to.
+   * The ApprovalRequest that is serialized without the SignatureInfo message field. This data is
+   * used with the hashing algorithm to generate the digital signature, and it can be used for
+   * signature verification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +124,9 @@ public final class SignatureInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The serialized ApprovalRequest message without the approve.signature_info field. This to allow
-   * the customer to verify signatures if they want to.
+   * The ApprovalRequest that is serialized without the SignatureInfo message field. This data is
+   * used with the hashing algorithm to generate the digital signature, and it can be used for
+   * signature verification.
    * @see #decodeSerializedApprovalRequest()
    * @return value or {@code null} for none
    */
@@ -133,8 +135,9 @@ public final class SignatureInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The serialized ApprovalRequest message without the approve.signature_info field. This to allow
-   * the customer to verify signatures if they want to.
+   * The ApprovalRequest that is serialized without the SignatureInfo message field. This data is
+   * used with the hashing algorithm to generate the digital signature, and it can be used for
+   * signature verification.
    * @see #getSerializedApprovalRequest()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -145,8 +148,9 @@ public final class SignatureInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The serialized ApprovalRequest message without the approve.signature_info field. This to allow
-   * the customer to verify signatures if they want to.
+   * The ApprovalRequest that is serialized without the SignatureInfo message field. This data is
+   * used with the hashing algorithm to generate the digital signature, and it can be used for
+   * signature verification.
    * @see #encodeSerializedApprovalRequest()
    * @param serializedApprovalRequest serializedApprovalRequest or {@code null} for none
    */
@@ -156,8 +160,9 @@ public final class SignatureInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The serialized ApprovalRequest message without the approve.signature_info field. This to allow
-   * the customer to verify signatures if they want to.
+   * The ApprovalRequest that is serialized without the SignatureInfo message field. This data is
+   * used with the hashing algorithm to generate the digital signature, and it can be used for
+   * signature verification.
    * @see #setSerializedApprovalRequest()
    *
    * <p>

@@ -108,11 +108,11 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
    * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
    * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
-   * allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string
-   * with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
-   * Corresponding properties: Google Merchant Center property google_product_category. Schema.org
-   * property [Product.category] (https://schema.org/category). [mc_google_product_category]:
-   * https://support.google.com/merchants/answer/6324436
+   * allowed per Product unless overridden via pantheon UI. Empty values are not allowed. Each value
+   * must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property
+   * google_product_category. Schema.org property [Product.category] (https://schema.org/category).
+   * [mc_google_product_category]: https://support.google.com/merchants/answer/6324436
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,14 +160,14 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   private java.lang.String description;
 
   /**
-   * The timestamp when this product becomes unavailable for SearchService.Search. Note that this is
-   * only applicable to Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT. In general,
-   * we suggest the users to delete the stale products explicitly, instead of using this field to
-   * determine staleness. If it is set, the Product is not available for SearchService.Search after
-   * expire_time. However, the product can still be retrieved by ProductService.GetProduct and
-   * ProductService.ListProducts. expire_time must be later than available_time and publish_time,
-   * otherwise an INVALID_ARGUMENT error is thrown. Corresponding properties: Google Merchant Center
-   * property [expiration_date](https://support.google.com/merchants/answer/6324499).
+   * Note that this field is applied in the following ways: * If the Product is already expired when
+   * it is uploaded, this product is not indexed for search. * If the Product is not expired when it
+   * is uploaded, only the Type.PRIMARY's and Type.COLLECTION's expireTime is respected, and
+   * Type.VARIANT's expireTime is not used. In general, we suggest the users to delete the stale
+   * products explicitly, instead of using this field to determine staleness. expire_time must be
+   * later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown.
+   * Corresponding properties: Google Merchant Center property
+   * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -591,11 +591,11 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
    * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
    * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
-   * allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string
-   * with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
-   * Corresponding properties: Google Merchant Center property google_product_category. Schema.org
-   * property [Product.category] (https://schema.org/category). [mc_google_product_category]:
-   * https://support.google.com/merchants/answer/6324436
+   * allowed per Product unless overridden via pantheon UI. Empty values are not allowed. Each value
+   * must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property
+   * google_product_category. Schema.org property [Product.category] (https://schema.org/category).
+   * [mc_google_product_category]: https://support.google.com/merchants/answer/6324436
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCategories() {
@@ -611,11 +611,11 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
    * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
    * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
-   * allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string
-   * with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
-   * Corresponding properties: Google Merchant Center property google_product_category. Schema.org
-   * property [Product.category] (https://schema.org/category). [mc_google_product_category]:
-   * https://support.google.com/merchants/answer/6324436
+   * allowed per Product unless overridden via pantheon UI. Empty values are not allowed. Each value
+   * must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property
+   * google_product_category. Schema.org property [Product.category] (https://schema.org/category).
+   * [mc_google_product_category]: https://support.google.com/merchants/answer/6324436
    * @param categories categories or {@code null} for none
    */
   public GoogleCloudRetailV2Product setCategories(java.util.List<java.lang.String> categories) {
@@ -718,14 +718,14 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   }
 
   /**
-   * The timestamp when this product becomes unavailable for SearchService.Search. Note that this is
-   * only applicable to Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT. In general,
-   * we suggest the users to delete the stale products explicitly, instead of using this field to
-   * determine staleness. If it is set, the Product is not available for SearchService.Search after
-   * expire_time. However, the product can still be retrieved by ProductService.GetProduct and
-   * ProductService.ListProducts. expire_time must be later than available_time and publish_time,
-   * otherwise an INVALID_ARGUMENT error is thrown. Corresponding properties: Google Merchant Center
-   * property [expiration_date](https://support.google.com/merchants/answer/6324499).
+   * Note that this field is applied in the following ways: * If the Product is already expired when
+   * it is uploaded, this product is not indexed for search. * If the Product is not expired when it
+   * is uploaded, only the Type.PRIMARY's and Type.COLLECTION's expireTime is respected, and
+   * Type.VARIANT's expireTime is not used. In general, we suggest the users to delete the stale
+   * products explicitly, instead of using this field to determine staleness. expire_time must be
+   * later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown.
+   * Corresponding properties: Google Merchant Center property
+   * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -733,14 +733,14 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   }
 
   /**
-   * The timestamp when this product becomes unavailable for SearchService.Search. Note that this is
-   * only applicable to Type.PRIMARY and Type.COLLECTION, and ignored for Type.VARIANT. In general,
-   * we suggest the users to delete the stale products explicitly, instead of using this field to
-   * determine staleness. If it is set, the Product is not available for SearchService.Search after
-   * expire_time. However, the product can still be retrieved by ProductService.GetProduct and
-   * ProductService.ListProducts. expire_time must be later than available_time and publish_time,
-   * otherwise an INVALID_ARGUMENT error is thrown. Corresponding properties: Google Merchant Center
-   * property [expiration_date](https://support.google.com/merchants/answer/6324499).
+   * Note that this field is applied in the following ways: * If the Product is already expired when
+   * it is uploaded, this product is not indexed for search. * If the Product is not expired when it
+   * is uploaded, only the Type.PRIMARY's and Type.COLLECTION's expireTime is respected, and
+   * Type.VARIANT's expireTime is not used. In general, we suggest the users to delete the stale
+   * products explicitly, instead of using this field to determine staleness. expire_time must be
+   * later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is thrown.
+   * Corresponding properties: Google Merchant Center property
+   * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * @param expireTime expireTime or {@code null} for none
    */
   public GoogleCloudRetailV2Product setExpireTime(String expireTime) {

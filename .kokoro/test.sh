@@ -33,8 +33,11 @@ do
     # Skip compilation + Running tests
     echo "No differences found in the PR branch for ${directory}, skipping..."
   else
+    # Run the mvn command in the directory
+    pushd "${directory}"
     echo "Found differences in ${directory}. Compiling..."
-    mvn clean verify package -Dclirr.skip=true -Dmaven.javadoc.skip=true -B
+    mvn verify -Dclirr.skip=true -Dmaven.javadoc.skip=true -B
+    popd
   fi
 done
 popd

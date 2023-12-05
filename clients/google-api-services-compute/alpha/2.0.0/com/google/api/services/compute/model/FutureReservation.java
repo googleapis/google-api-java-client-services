@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class FutureReservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Future timestamp when the FR auto-created reservations will be deleted by GCE. Format of this
-   * field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
+   * Future timestamp when the FR auto-created reservations will be deleted by Compute Engine.
+   * Format of this field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,9 +39,9 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
 
   /**
    * Specifies the duration of auto-created reservations. It represents relative time to future
-   * reservation start_time when auto-created reservations will be automatically deleted by GCE.
-   * Duration time unit is represented as a count of seconds and fractions of seconds at nanosecond
-   * resolution.
+   * reservation start_time when auto-created reservations will be automatically deleted by Compute
+   * Engine. Duration time unit is represented as a count of seconds and fractions of seconds at
+   * nanosecond resolution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,8 +165,8 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.String zone;
 
   /**
-   * Future timestamp when the FR auto-created reservations will be deleted by GCE. Format of this
-   * field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
+   * Future timestamp when the FR auto-created reservations will be deleted by Compute Engine.
+   * Format of this field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoCreatedReservationsDeleteTime() {
@@ -174,8 +174,8 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Future timestamp when the FR auto-created reservations will be deleted by GCE. Format of this
-   * field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
+   * Future timestamp when the FR auto-created reservations will be deleted by Compute Engine.
+   * Format of this field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
    * @param autoCreatedReservationsDeleteTime autoCreatedReservationsDeleteTime or {@code null} for none
    */
   public FutureReservation setAutoCreatedReservationsDeleteTime(java.lang.String autoCreatedReservationsDeleteTime) {
@@ -185,9 +185,9 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
 
   /**
    * Specifies the duration of auto-created reservations. It represents relative time to future
-   * reservation start_time when auto-created reservations will be automatically deleted by GCE.
-   * Duration time unit is represented as a count of seconds and fractions of seconds at nanosecond
-   * resolution.
+   * reservation start_time when auto-created reservations will be automatically deleted by Compute
+   * Engine. Duration time unit is represented as a count of seconds and fractions of seconds at
+   * nanosecond resolution.
    * @return value or {@code null} for none
    */
   public Duration getAutoCreatedReservationsDuration() {
@@ -196,9 +196,9 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
 
   /**
    * Specifies the duration of auto-created reservations. It represents relative time to future
-   * reservation start_time when auto-created reservations will be automatically deleted by GCE.
-   * Duration time unit is represented as a count of seconds and fractions of seconds at nanosecond
-   * resolution.
+   * reservation start_time when auto-created reservations will be automatically deleted by Compute
+   * Engine. Duration time unit is represented as a count of seconds and fractions of seconds at
+   * nanosecond resolution.
    * @param autoCreatedReservationsDuration autoCreatedReservationsDuration or {@code null} for none
    */
   public FutureReservation setAutoCreatedReservationsDuration(Duration autoCreatedReservationsDuration) {

@@ -49,8 +49,8 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   private java.lang.String connectionPersistenceOnUnhealthyBackends;
 
   /**
-   * Enable Strong Session Affinity for Network Load Balancing. This option is not available
-   * publicly.
+   * Enable Strong Session Affinity for external passthrough Network Load Balancers. This option is
+   * not available publicly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,11 +58,11 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds). For Internal TCP/UDP Load Balancing: - The minimum (default) is 10 minutes and the
-   * maximum is 16 hours. - It can be set only if Connection Tracking is less than 5-tuple (i.e.
-   * Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and Tracking Mode
-   * is PER_SESSION). For Network Load Balancer the default is 60 seconds. This option is not
-   * available publicly.
+   * seconds). For internal passthrough Network Load Balancers: - The minimum (default) is 10
+   * minutes and the maximum is 16 hours. - It can be set only if Connection Tracking is less than
+   * 5-tuple (i.e. Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and
+   * Tracking Mode is PER_SESSION). For external passthrough Network Load Balancers the default is
+   * 60 seconds. This option is not available publicly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +123,8 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   }
 
   /**
-   * Enable Strong Session Affinity for Network Load Balancing. This option is not available
-   * publicly.
+   * Enable Strong Session Affinity for external passthrough Network Load Balancers. This option is
+   * not available publicly.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableStrongAffinity() {
@@ -132,8 +132,8 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   }
 
   /**
-   * Enable Strong Session Affinity for Network Load Balancing. This option is not available
-   * publicly.
+   * Enable Strong Session Affinity for external passthrough Network Load Balancers. This option is
+   * not available publicly.
    * @param enableStrongAffinity enableStrongAffinity or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy setEnableStrongAffinity(java.lang.Boolean enableStrongAffinity) {
@@ -143,11 +143,11 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds). For Internal TCP/UDP Load Balancing: - The minimum (default) is 10 minutes and the
-   * maximum is 16 hours. - It can be set only if Connection Tracking is less than 5-tuple (i.e.
-   * Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and Tracking Mode
-   * is PER_SESSION). For Network Load Balancer the default is 60 seconds. This option is not
-   * available publicly.
+   * seconds). For internal passthrough Network Load Balancers: - The minimum (default) is 10
+   * minutes and the maximum is 16 hours. - It can be set only if Connection Tracking is less than
+   * 5-tuple (i.e. Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and
+   * Tracking Mode is PER_SESSION). For external passthrough Network Load Balancers the default is
+   * 60 seconds. This option is not available publicly.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIdleTimeoutSec() {
@@ -156,11 +156,11 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds). For Internal TCP/UDP Load Balancing: - The minimum (default) is 10 minutes and the
-   * maximum is 16 hours. - It can be set only if Connection Tracking is less than 5-tuple (i.e.
-   * Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and Tracking Mode
-   * is PER_SESSION). For Network Load Balancer the default is 60 seconds. This option is not
-   * available publicly.
+   * seconds). For internal passthrough Network Load Balancers: - The minimum (default) is 10
+   * minutes and the maximum is 16 hours. - It can be set only if Connection Tracking is less than
+   * 5-tuple (i.e. Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and
+   * Tracking Mode is PER_SESSION). For external passthrough Network Load Balancers the default is
+   * 60 seconds. This option is not available publicly.
    * @param idleTimeoutSec idleTimeoutSec or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy setIdleTimeoutSec(java.lang.Integer idleTimeoutSec) {

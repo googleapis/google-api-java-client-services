@@ -40,7 +40,9 @@ public final class GoogleMapsPlacesV1SearchTextRequestLocationBias extends com.g
   /**
    * A rectangle box defined by northeast and southwest corner. `rectangle.high()` must be the
    * northeast point of the rectangle viewport. `rectangle.low()` must be the southwest point of the
-   * rectangle viewport.
+   * rectangle viewport. `rectangle.low().latitude()` cannot be greater than
+   * `rectangle.high().latitude()`. This will result in an empty latitude range. A rectangle
+   * viewport cannot be wider than 180 degrees.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +68,9 @@ public final class GoogleMapsPlacesV1SearchTextRequestLocationBias extends com.g
   /**
    * A rectangle box defined by northeast and southwest corner. `rectangle.high()` must be the
    * northeast point of the rectangle viewport. `rectangle.low()` must be the southwest point of the
-   * rectangle viewport.
+   * rectangle viewport. `rectangle.low().latitude()` cannot be greater than
+   * `rectangle.high().latitude()`. This will result in an empty latitude range. A rectangle
+   * viewport cannot be wider than 180 degrees.
    * @return value or {@code null} for none
    */
   public GoogleGeoTypeViewport getRectangle() {
@@ -76,7 +80,9 @@ public final class GoogleMapsPlacesV1SearchTextRequestLocationBias extends com.g
   /**
    * A rectangle box defined by northeast and southwest corner. `rectangle.high()` must be the
    * northeast point of the rectangle viewport. `rectangle.low()` must be the southwest point of the
-   * rectangle viewport.
+   * rectangle viewport. `rectangle.low().latitude()` cannot be greater than
+   * `rectangle.high().latitude()`. This will result in an empty latitude range. A rectangle
+   * viewport cannot be wider than 180 degrees.
    * @param rectangle rectangle or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequestLocationBias setRectangle(GoogleGeoTypeViewport rectangle) {

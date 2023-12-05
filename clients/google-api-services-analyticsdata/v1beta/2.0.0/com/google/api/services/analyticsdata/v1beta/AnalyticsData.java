@@ -1299,6 +1299,731 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
     }
 
+    /**
+     * An accessor for creating requests from the AudienceExports collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AnalyticsData analyticsdata = new AnalyticsData(...);}
+     *   {@code AnalyticsData.AudienceExports.List request = analyticsdata.audienceExports().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AudienceExports audienceExports() {
+      return new AudienceExports();
+    }
+
+    /**
+     * The "audienceExports" collection of methods.
+     */
+    public class AudienceExports {
+
+      /**
+       * Creates an audience export for later retrieval. This method quickly returns the audience export's
+       * resource name and initiates a long running asynchronous request to form an audience export. To
+       * export the users in an audience export, first create the audience export through this method and
+       * then send the audience resource name to the `QueryAudienceExport` method. See [Creating an
+       * Audience Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-
+       * list-basics) for an introduction to Audience Exports with examples. An audience export is a
+       * snapshot of the users currently in the audience at the time of audience export creation. Creating
+       * audience exports for one audience on different days will return different results as users enter
+       * and exit the audience. Audiences in Google Analytics 4 allow you to segment your users in the
+       * ways that are important to your business. To learn more, see
+       * https://support.google.com/analytics/answer/9267572. Audience exports contain the users in each
+       * audience. Audience Export APIs have some methods at alpha and other methods at beta stability.
+       * The intention is to advance methods to beta stability after some feedback and adoption. To give
+       * your feedback on this API, complete the [Google Analytics Audience Export API
+       * Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+       *
+       * Create a request for the method "audienceExports.create".
+       *
+       * This request holds the parameters needed by the analyticsdata server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource where this audience export will be created. Format:
+       *        `properties/{property}`
+       * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.AudienceExport}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.analyticsdata.v1beta.model.AudienceExport content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AnalyticsDataRequest<com.google.api.services.analyticsdata.v1beta.model.Operation> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/audienceExports";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Creates an audience export for later retrieval. This method quickly returns the audience
+         * export's resource name and initiates a long running asynchronous request to form an audience
+         * export. To export the users in an audience export, first create the audience export through
+         * this method and then send the audience resource name to the `QueryAudienceExport` method. See
+         * [Creating an Audience
+         * Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-
+         * basics) for an introduction to Audience Exports with examples. An audience export is a snapshot
+         * of the users currently in the audience at the time of audience export creation. Creating
+         * audience exports for one audience on different days will return different results as users
+         * enter and exit the audience. Audiences in Google Analytics 4 allow you to segment your users in
+         * the ways that are important to your business. To learn more, see
+         * https://support.google.com/analytics/answer/9267572. Audience exports contain the users in each
+         * audience. Audience Export APIs have some methods at alpha and other methods at beta stability.
+         * The intention is to advance methods to beta stability after some feedback and adoption. To give
+         * your feedback on this API, complete the [Google Analytics Audience Export API
+         * Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+         *
+         * Create a request for the method "audienceExports.create".
+         *
+         * This request holds the parameters needed by the the analyticsdata server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource where this audience export will be created. Format:
+       *        `properties/{property}`
+         * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.AudienceExport}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.analyticsdata.v1beta.model.AudienceExport content) {
+          super(AnalyticsData.this, "POST", REST_PATH, content, com.google.api.services.analyticsdata.v1beta.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource where this audience export will be created. Format:
+         * `properties/{property}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource where this audience export will be created. Format:
+       `properties/{property}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource where this audience export will be created. Format:
+         * `properties/{property}`
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets configuration metadata about a specific audience export. This method can be used to
+       * understand an audience export after it has been created. See [Creating an Audience
+       * Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+       * for an introduction to Audience Exports with examples. Audience Export APIs have some methods at
+       * alpha and other methods at beta stability. The intention is to advance methods to beta stability
+       * after some feedback and adoption. To give your feedback on this API, complete the [Google
+       * Analytics Audience Export API Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+       *
+       * Create a request for the method "audienceExports.get".
+       *
+       * This request holds the parameters needed by the analyticsdata server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The audience export resource name. Format:
+       *        `properties/{property}/audienceExports/{audience_export}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AnalyticsDataRequest<com.google.api.services.analyticsdata.v1beta.model.AudienceExport> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/audienceExports/[^/]+$");
+
+        /**
+         * Gets configuration metadata about a specific audience export. This method can be used to
+         * understand an audience export after it has been created. See [Creating an Audience
+         * Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-
+         * basics) for an introduction to Audience Exports with examples. Audience Export APIs have some
+         * methods at alpha and other methods at beta stability. The intention is to advance methods to
+         * beta stability after some feedback and adoption. To give your feedback on this API, complete
+         * the [Google Analytics Audience Export API Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+         *
+         * Create a request for the method "audienceExports.get".
+         *
+         * This request holds the parameters needed by the the analyticsdata server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The audience export resource name. Format:
+       *        `properties/{property}/audienceExports/{audience_export}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(AnalyticsData.this, "GET", REST_PATH, null, com.google.api.services.analyticsdata.v1beta.model.AudienceExport.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/audienceExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The audience export resource name. Format:
+         * `properties/{property}/audienceExports/{audience_export}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The audience export resource name. Format:
+       `properties/{property}/audienceExports/{audience_export}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The audience export resource name. Format:
+         * `properties/{property}/audienceExports/{audience_export}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/audienceExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all audience exports for a property. This method can be used for you to find and reuse
+       * existing audience exports rather than creating unnecessary new audience exports. The same
+       * audience can have multiple audience exports that represent the export of users that were in an
+       * audience on different days. See [Creating an Audience
+       * Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+       * for an introduction to Audience Exports with examples. Audience Export APIs have some methods at
+       * alpha and other methods at beta stability. The intention is to advance methods to beta stability
+       * after some feedback and adoption. To give your feedback on this API, complete the [Google
+       * Analytics Audience Export API Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+       *
+       * Create a request for the method "audienceExports.list".
+       *
+       * This request holds the parameters needed by the analyticsdata server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. All audience exports for this property will be listed in the response. Format:
+       *        `properties/{property}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AnalyticsDataRequest<com.google.api.services.analyticsdata.v1beta.model.ListAudienceExportsResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/audienceExports";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Lists all audience exports for a property. This method can be used for you to find and reuse
+         * existing audience exports rather than creating unnecessary new audience exports. The same
+         * audience can have multiple audience exports that represent the export of users that were in an
+         * audience on different days. See [Creating an Audience
+         * Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-
+         * basics) for an introduction to Audience Exports with examples. Audience Export APIs have some
+         * methods at alpha and other methods at beta stability. The intention is to advance methods to
+         * beta stability after some feedback and adoption. To give your feedback on this API, complete
+         * the [Google Analytics Audience Export API Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+         *
+         * Create a request for the method "audienceExports.list".
+         *
+         * This request holds the parameters needed by the the analyticsdata server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. All audience exports for this property will be listed in the response. Format:
+       *        `properties/{property}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(AnalyticsData.this, "GET", REST_PATH, null, com.google.api.services.analyticsdata.v1beta.model.ListAudienceExportsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. All audience exports for this property will be listed in the response. Format:
+         * `properties/{property}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. All audience exports for this property will be listed in the response. Format:
+       `properties/{property}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. All audience exports for this property will be listed in the response. Format:
+         * `properties/{property}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of audience exports to return. The service may return fewer
+         * than this value. If unspecified, at most 200 audience exports will be returned. The
+         * maximum value is 1000 (higher values will be coerced to the maximum).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of audience exports to return. The service may return fewer than this
+       value. If unspecified, at most 200 audience exports will be returned. The maximum value is 1000
+       (higher values will be coerced to the maximum).
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of audience exports to return. The service may return fewer
+         * than this value. If unspecified, at most 200 audience exports will be returned. The
+         * maximum value is 1000 (higher values will be coerced to the maximum).
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListAudienceExports` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListAudienceExports` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListAudienceExports` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListAudienceExports` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListAudienceExports` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListAudienceExports` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves an audience export of users. After creating an audience, the users are not immediately
+       * available for exporting. First, a request to `CreateAudienceExport` is necessary to create an
+       * audience export of users, and then second, this method is used to retrieve the users in the
+       * audience export. See [Creating an Audience
+       * Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-basics)
+       * for an introduction to Audience Exports with examples. Audiences in Google Analytics 4 allow you
+       * to segment your users in the ways that are important to your business. To learn more, see
+       * https://support.google.com/analytics/answer/9267572. Audience Export APIs have some methods at
+       * alpha and other methods at beta stability. The intention is to advance methods to beta stability
+       * after some feedback and adoption. To give your feedback on this API, complete the [Google
+       * Analytics Audience Export API Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+       *
+       * Create a request for the method "audienceExports.query".
+       *
+       * This request holds the parameters needed by the analyticsdata server.  After setting any optional
+       * parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the audience export to retrieve users from. Format:
+       *        `properties/{property}/audienceExports/{audience_export}`
+       * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.QueryAudienceExportRequest}
+       * @return the request
+       */
+      public Query query(java.lang.String name, com.google.api.services.analyticsdata.v1beta.model.QueryAudienceExportRequest content) throws java.io.IOException {
+        Query result = new Query(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Query extends AnalyticsDataRequest<com.google.api.services.analyticsdata.v1beta.model.QueryAudienceExportResponse> {
+
+        private static final String REST_PATH = "v1beta/{+name}:query";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/audienceExports/[^/]+$");
+
+        /**
+         * Retrieves an audience export of users. After creating an audience, the users are not
+         * immediately available for exporting. First, a request to `CreateAudienceExport` is necessary to
+         * create an audience export of users, and then second, this method is used to retrieve the users
+         * in the audience export. See [Creating an Audience
+         * Export](https://developers.google.com/analytics/devguides/reporting/data/v1/audience-list-
+         * basics) for an introduction to Audience Exports with examples. Audiences in Google Analytics 4
+         * allow you to segment your users in the ways that are important to your business. To learn more,
+         * see https://support.google.com/analytics/answer/9267572. Audience Export APIs have some methods
+         * at alpha and other methods at beta stability. The intention is to advance methods to beta
+         * stability after some feedback and adoption. To give your feedback on this API, complete the
+         * [Google Analytics Audience Export API Feedback](https://forms.gle/EeA5u5LW6PEggtCEA) form.
+         *
+         * Create a request for the method "audienceExports.query".
+         *
+         * This request holds the parameters needed by the the analyticsdata server.  After setting any
+         * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the audience export to retrieve users from. Format:
+       *        `properties/{property}/audienceExports/{audience_export}`
+         * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.QueryAudienceExportRequest}
+         * @since 1.13
+         */
+        protected Query(java.lang.String name, com.google.api.services.analyticsdata.v1beta.model.QueryAudienceExportRequest content) {
+          super(AnalyticsData.this, "POST", REST_PATH, content, com.google.api.services.analyticsdata.v1beta.model.QueryAudienceExportResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/audienceExports/[^/]+$");
+          }
+        }
+
+        @Override
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Query setAlt(java.lang.String alt) {
+          return (Query) super.setAlt(alt);
+        }
+
+        @Override
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
+        }
+
+        @Override
+        public Query setFields(java.lang.String fields) {
+          return (Query) super.setFields(fields);
+        }
+
+        @Override
+        public Query setKey(java.lang.String key) {
+          return (Query) super.setKey(key);
+        }
+
+        @Override
+        public Query setOauthToken(java.lang.String oauthToken) {
+          return (Query) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Query) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Query setQuotaUser(java.lang.String quotaUser) {
+          return (Query) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the audience export to retrieve users from. Format:
+         * `properties/{property}/audienceExports/{audience_export}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the audience export to retrieve users from. Format:
+       `properties/{property}/audienceExports/{audience_export}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the audience export to retrieve users from. Format:
+         * `properties/{property}/audienceExports/{audience_export}`
+         */
+        public Query setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/audienceExports/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Query set(String parameterName, Object value) {
+          return (Query) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

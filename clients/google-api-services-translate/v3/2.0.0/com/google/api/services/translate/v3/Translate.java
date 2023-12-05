@@ -862,6 +862,146 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
     public class Locations {
 
       /**
+       * Translate text using Adaptive MT.
+       *
+       * Create a request for the method "locations.adaptiveMtTranslate".
+       *
+       * This request holds the parameters needed by the translate server.  After setting any optional
+       * parameters, call the {@link AdaptiveMtTranslate#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`.
+       * @param content the {@link com.google.api.services.translate.v3.model.AdaptiveMtTranslateRequest}
+       * @return the request
+       */
+      public AdaptiveMtTranslate adaptiveMtTranslate(java.lang.String parent, com.google.api.services.translate.v3.model.AdaptiveMtTranslateRequest content) throws java.io.IOException {
+        AdaptiveMtTranslate result = new AdaptiveMtTranslate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AdaptiveMtTranslate extends TranslateRequest<com.google.api.services.translate.v3.model.AdaptiveMtTranslateResponse> {
+
+        private static final String REST_PATH = "v3/{+parent}:adaptiveMtTranslate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Translate text using Adaptive MT.
+         *
+         * Create a request for the method "locations.adaptiveMtTranslate".
+         *
+         * This request holds the parameters needed by the the translate server.  After setting any
+         * optional parameters, call the {@link AdaptiveMtTranslate#execute()} method to invoke the remote
+         * operation. <p> {@link AdaptiveMtTranslate#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`.
+         * @param content the {@link com.google.api.services.translate.v3.model.AdaptiveMtTranslateRequest}
+         * @since 1.13
+         */
+        protected AdaptiveMtTranslate(java.lang.String parent, com.google.api.services.translate.v3.model.AdaptiveMtTranslateRequest content) {
+          super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.AdaptiveMtTranslateResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public AdaptiveMtTranslate set$Xgafv(java.lang.String $Xgafv) {
+          return (AdaptiveMtTranslate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AdaptiveMtTranslate setAccessToken(java.lang.String accessToken) {
+          return (AdaptiveMtTranslate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AdaptiveMtTranslate setAlt(java.lang.String alt) {
+          return (AdaptiveMtTranslate) super.setAlt(alt);
+        }
+
+        @Override
+        public AdaptiveMtTranslate setCallback(java.lang.String callback) {
+          return (AdaptiveMtTranslate) super.setCallback(callback);
+        }
+
+        @Override
+        public AdaptiveMtTranslate setFields(java.lang.String fields) {
+          return (AdaptiveMtTranslate) super.setFields(fields);
+        }
+
+        @Override
+        public AdaptiveMtTranslate setKey(java.lang.String key) {
+          return (AdaptiveMtTranslate) super.setKey(key);
+        }
+
+        @Override
+        public AdaptiveMtTranslate setOauthToken(java.lang.String oauthToken) {
+          return (AdaptiveMtTranslate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AdaptiveMtTranslate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AdaptiveMtTranslate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AdaptiveMtTranslate setQuotaUser(java.lang.String quotaUser) {
+          return (AdaptiveMtTranslate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AdaptiveMtTranslate setUploadType(java.lang.String uploadType) {
+          return (AdaptiveMtTranslate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AdaptiveMtTranslate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AdaptiveMtTranslate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Location to make a regional call. Format: `projects/{project-number-or-
+         * id}/locations/{location-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       /{location-id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Location to make a regional call. Format: `projects/{project-number-or-
+         * id}/locations/{location-id}`.
+         */
+        public AdaptiveMtTranslate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public AdaptiveMtTranslate set(String parameterName, Object value) {
+          return (AdaptiveMtTranslate) super.set(parameterName, value);
+        }
+      }
+      /**
        * Translates a large volume of document in asynchronous batch mode. This function provides real-
        * time output as the inputs are being processed. If caller cancels a request, the partial results
        * (for an input file, it's all or nothing) may still be available on the specified output location.
@@ -2365,6 +2505,1762 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         }
       }
 
+      /**
+       * An accessor for creating requests from the AdaptiveMtDatasets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Translate translate = new Translate(...);}
+       *   {@code Translate.AdaptiveMtDatasets.List request = translate.adaptiveMtDatasets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AdaptiveMtDatasets adaptiveMtDatasets() {
+        return new AdaptiveMtDatasets();
+      }
+
+      /**
+       * The "adaptiveMtDatasets" collection of methods.
+       */
+      public class AdaptiveMtDatasets {
+
+        /**
+         * Creates an Adaptive MT dataset.
+         *
+         * Create a request for the method "adaptiveMtDatasets.create".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
+         * @param content the {@link com.google.api.services.translate.v3.model.AdaptiveMtDataset}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.translate.v3.model.AdaptiveMtDataset content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends TranslateRequest<com.google.api.services.translate.v3.model.AdaptiveMtDataset> {
+
+          private static final String REST_PATH = "v3/{+parent}/adaptiveMtDatasets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates an Adaptive MT dataset.
+           *
+           * Create a request for the method "adaptiveMtDatasets.create".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
+           * @param content the {@link com.google.api.services.translate.v3.model.AdaptiveMtDataset}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.translate.v3.model.AdaptiveMtDataset content) {
+            super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.AdaptiveMtDataset.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the parent project. In form of `projects/{project-number-or-
+           * id}/locations/{location-id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         /{location-id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the parent project. In form of `projects/{project-number-or-
+           * id}/locations/{location-id}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an Adaptive MT dataset, including all its entries and associated metadata.
+         *
+         * Create a request for the method "adaptiveMtDatasets.delete".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the dataset. In the form of `projects/{project-number-or-id}/locations/{location-
+         *        id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends TranslateRequest<com.google.api.services.translate.v3.model.Empty> {
+
+          private static final String REST_PATH = "v3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+
+          /**
+           * Deletes an Adaptive MT dataset, including all its entries and associated metadata.
+           *
+           * Create a request for the method "adaptiveMtDatasets.delete".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the dataset. In the form of `projects/{project-number-or-id}/locations/{location-
+         *        id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Translate.this, "DELETE", REST_PATH, null, com.google.api.services.translate.v3.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the dataset. In the form of `projects/{project-number-or-
+           * id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the dataset. In the form of `projects/{project-number-or-id}/locations/{location-
+         id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the dataset. In the form of `projects/{project-number-or-
+           * id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the Adaptive MT dataset.
+         *
+         * Create a request for the method "adaptiveMtDatasets.get".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the dataset. In the form of `projects/{project-number-or-id}/locations/{location-
+         *        id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends TranslateRequest<com.google.api.services.translate.v3.model.AdaptiveMtDataset> {
+
+          private static final String REST_PATH = "v3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+
+          /**
+           * Gets the Adaptive MT dataset.
+           *
+           * Create a request for the method "adaptiveMtDatasets.get".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the dataset. In the form of `projects/{project-number-or-id}/locations/{location-
+         *        id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.AdaptiveMtDataset.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the dataset. In the form of `projects/{project-number-or-
+           * id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the dataset. In the form of `projects/{project-number-or-id}/locations/{location-
+         id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the dataset. In the form of `projects/{project-number-or-
+           * id}/locations/{location-id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Imports an AdaptiveMtFile and adds all of its sentences into the AdaptiveMtDataset.
+         *
+         * Create a request for the method "adaptiveMtDatasets.importAdaptiveMtFile".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link ImportAdaptiveMtFile#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The resource name of the file, in form of `projects/{project-number-or-
+         *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+         * @param content the {@link com.google.api.services.translate.v3.model.ImportAdaptiveMtFileRequest}
+         * @return the request
+         */
+        public ImportAdaptiveMtFile importAdaptiveMtFile(java.lang.String parent, com.google.api.services.translate.v3.model.ImportAdaptiveMtFileRequest content) throws java.io.IOException {
+          ImportAdaptiveMtFile result = new ImportAdaptiveMtFile(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ImportAdaptiveMtFile extends TranslateRequest<com.google.api.services.translate.v3.model.ImportAdaptiveMtFileResponse> {
+
+          private static final String REST_PATH = "v3/{+parent}:importAdaptiveMtFile";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+
+          /**
+           * Imports an AdaptiveMtFile and adds all of its sentences into the AdaptiveMtDataset.
+           *
+           * Create a request for the method "adaptiveMtDatasets.importAdaptiveMtFile".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link ImportAdaptiveMtFile#execute()} method to invoke the
+           * remote operation. <p> {@link ImportAdaptiveMtFile#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the file, in form of `projects/{project-number-or-
+         *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+           * @param content the {@link com.google.api.services.translate.v3.model.ImportAdaptiveMtFileRequest}
+           * @since 1.13
+           */
+          protected ImportAdaptiveMtFile(java.lang.String parent, com.google.api.services.translate.v3.model.ImportAdaptiveMtFileRequest content) {
+            super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.ImportAdaptiveMtFileResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public ImportAdaptiveMtFile set$Xgafv(java.lang.String $Xgafv) {
+            return (ImportAdaptiveMtFile) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ImportAdaptiveMtFile setAccessToken(java.lang.String accessToken) {
+            return (ImportAdaptiveMtFile) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ImportAdaptiveMtFile setAlt(java.lang.String alt) {
+            return (ImportAdaptiveMtFile) super.setAlt(alt);
+          }
+
+          @Override
+          public ImportAdaptiveMtFile setCallback(java.lang.String callback) {
+            return (ImportAdaptiveMtFile) super.setCallback(callback);
+          }
+
+          @Override
+          public ImportAdaptiveMtFile setFields(java.lang.String fields) {
+            return (ImportAdaptiveMtFile) super.setFields(fields);
+          }
+
+          @Override
+          public ImportAdaptiveMtFile setKey(java.lang.String key) {
+            return (ImportAdaptiveMtFile) super.setKey(key);
+          }
+
+          @Override
+          public ImportAdaptiveMtFile setOauthToken(java.lang.String oauthToken) {
+            return (ImportAdaptiveMtFile) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ImportAdaptiveMtFile setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ImportAdaptiveMtFile) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ImportAdaptiveMtFile setQuotaUser(java.lang.String quotaUser) {
+            return (ImportAdaptiveMtFile) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ImportAdaptiveMtFile setUploadType(java.lang.String uploadType) {
+            return (ImportAdaptiveMtFile) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ImportAdaptiveMtFile setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ImportAdaptiveMtFile) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the file, in form of `projects/{project-number-or-
+           * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the file, in form of `projects/{project-number-or-
+         id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the file, in form of `projects/{project-number-or-
+           * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}`
+           */
+          public ImportAdaptiveMtFile setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ImportAdaptiveMtFile set(String parameterName, Object value) {
+            return (ImportAdaptiveMtFile) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all Adaptive MT datasets for which the caller has read permission.
+         *
+         * Create a request for the method "adaptiveMtDatasets.list".
+         *
+         * This request holds the parameters needed by the translate server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the project from which to list the Adaptive MT datasets. `projects
+         *        /{project-number-or-id}/locations/{location-id}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends TranslateRequest<com.google.api.services.translate.v3.model.ListAdaptiveMtDatasetsResponse> {
+
+          private static final String REST_PATH = "v3/{+parent}/adaptiveMtDatasets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all Adaptive MT datasets for which the caller has read permission.
+           *
+           * Create a request for the method "adaptiveMtDatasets.list".
+           *
+           * This request holds the parameters needed by the the translate server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the project from which to list the Adaptive MT datasets. `projects
+         *        /{project-number-or-id}/locations/{location-id}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.ListAdaptiveMtDatasetsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the project from which to list the Adaptive MT datasets.
+           * `projects/{project-number-or-id}/locations/{location-id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the project from which to list the Adaptive MT datasets. `projects
+         /{project-number-or-id}/locations/{location-id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the project from which to list the Adaptive MT datasets.
+           * `projects/{project-number-or-id}/locations/{location-id}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An expression for filtering the results of the request. Filter is not
+           * supported yet.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression for filtering the results of the request. Filter is not supported yet.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An expression for filtering the results of the request. Filter is not
+           * supported yet.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server picks an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. The server may return fewer results than requested. If unspecified,
+         the server picks an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server picks an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token identifying a page of results the server should return. Typically,
+           * this is the value of ListAdaptiveMtDatasetsResponse.next_page_token returned from the
+           * previous call to `ListAdaptiveMtDatasets` method. The first page is returned if
+           * `page_token`is empty or missing.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return. Typically, this is the
+         value of ListAdaptiveMtDatasetsResponse.next_page_token returned from the previous call to
+         `ListAdaptiveMtDatasets` method. The first page is returned if `page_token`is empty or missing.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token identifying a page of results the server should return. Typically,
+           * this is the value of ListAdaptiveMtDatasetsResponse.next_page_token returned from the
+           * previous call to `ListAdaptiveMtDatasets` method. The first page is returned if
+           * `page_token`is empty or missing.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the AdaptiveMtFiles collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Translate translate = new Translate(...);}
+         *   {@code Translate.AdaptiveMtFiles.List request = translate.adaptiveMtFiles().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AdaptiveMtFiles adaptiveMtFiles() {
+          return new AdaptiveMtFiles();
+        }
+
+        /**
+         * The "adaptiveMtFiles" collection of methods.
+         */
+        public class AdaptiveMtFiles {
+
+          /**
+           * Deletes an AdaptiveMtFile along with its sentences.
+           *
+           * Create a request for the method "adaptiveMtFiles.delete".
+           *
+           * This request holds the parameters needed by the translate server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the file to delete, in form of `projects/{project-number-or-
+           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends TranslateRequest<com.google.api.services.translate.v3.model.Empty> {
+
+            private static final String REST_PATH = "v3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+/adaptiveMtFiles/[^/]+$");
+
+            /**
+             * Deletes an AdaptiveMtFile along with its sentences.
+             *
+             * Create a request for the method "adaptiveMtFiles.delete".
+             *
+             * This request holds the parameters needed by the the translate server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the file to delete, in form of `projects/{project-number-or-
+           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Translate.this, "DELETE", REST_PATH, null, com.google.api.services.translate.v3.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+/adaptiveMtFiles/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the file to delete, in form of `projects/{project-
+             * number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the file to delete, in form of `projects/{project-number-or-
+           id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the file to delete, in form of `projects/{project-
+             * number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+/adaptiveMtFiles/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets and AdaptiveMtFile
+           *
+           * Create a request for the method "adaptiveMtFiles.get".
+           *
+           * This request holds the parameters needed by the translate server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the file, in form of `projects/{project-number-or-
+           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends TranslateRequest<com.google.api.services.translate.v3.model.AdaptiveMtFile> {
+
+            private static final String REST_PATH = "v3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+/adaptiveMtFiles/[^/]+$");
+
+            /**
+             * Gets and AdaptiveMtFile
+             *
+             * Create a request for the method "adaptiveMtFiles.get".
+             *
+             * This request holds the parameters needed by the the translate server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the file, in form of `projects/{project-number-or-
+           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.AdaptiveMtFile.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+/adaptiveMtFiles/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the file, in form of `projects/{project-number-or-
+             * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the file, in form of `projects/{project-number-or-
+           id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the file, in form of `projects/{project-number-or-
+             * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+/adaptiveMtFiles/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+           *
+           * Create a request for the method "adaptiveMtFiles.list".
+           *
+           * This request holds the parameters needed by the translate server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the project from which to list the Adaptive MT files.
+           *        `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends TranslateRequest<com.google.api.services.translate.v3.model.ListAdaptiveMtFilesResponse> {
+
+            private static final String REST_PATH = "v3/{+parent}/adaptiveMtFiles";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+
+            /**
+             * Lists all AdaptiveMtFiles associated to an AdaptiveMtDataset.
+             *
+             * Create a request for the method "adaptiveMtFiles.list".
+             *
+             * This request holds the parameters needed by the the translate server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the project from which to list the Adaptive MT files.
+           *        `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.ListAdaptiveMtFilesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the project from which to list the Adaptive MT files.
+             * `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the project from which to list the Adaptive MT files.
+           `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the project from which to list the Adaptive MT files.
+             * `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional.  */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional.  */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A token identifying a page of results the server should return. Typically,
+             * this is the value of ListAdaptiveMtFilesResponse.next_page_token returned from the
+             * previous call to `ListAdaptiveMtFiles` method. The first page is returned if
+             * `page_token`is empty or missing.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results the server should return. Typically, this is the
+           value of ListAdaptiveMtFilesResponse.next_page_token returned from the previous call to
+           `ListAdaptiveMtFiles` method. The first page is returned if `page_token`is empty or missing.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A token identifying a page of results the server should return. Typically,
+             * this is the value of ListAdaptiveMtFilesResponse.next_page_token returned from the
+             * previous call to `ListAdaptiveMtFiles` method. The first page is returned if
+             * `page_token`is empty or missing.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the AdaptiveMtSentences collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Translate translate = new Translate(...);}
+           *   {@code Translate.AdaptiveMtSentences.List request = translate.adaptiveMtSentences().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public AdaptiveMtSentences adaptiveMtSentences() {
+            return new AdaptiveMtSentences();
+          }
+
+          /**
+           * The "adaptiveMtSentences" collection of methods.
+           */
+          public class AdaptiveMtSentences {
+
+            /**
+             * Lists all AdaptiveMtSentences under a given file/dataset.
+             *
+             * Create a request for the method "adaptiveMtSentences.list".
+             *
+             * This request holds the parameters needed by the translate server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name of the project from which to list the Adaptive MT files. The following
+             *        format lists all sentences under a file. `projects/{project}/locations/{location}/adaptive
+             *        MtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format lists all sentences
+             *        within a dataset. `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends TranslateRequest<com.google.api.services.translate.v3.model.ListAdaptiveMtSentencesResponse> {
+
+              private static final String REST_PATH = "v3/{+parent}/adaptiveMtSentences";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+/adaptiveMtFiles/[^/]+$");
+
+              /**
+               * Lists all AdaptiveMtSentences under a given file/dataset.
+               *
+               * Create a request for the method "adaptiveMtSentences.list".
+               *
+               * This request holds the parameters needed by the the translate server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name of the project from which to list the Adaptive MT files. The following
+             *        format lists all sentences under a file. `projects/{project}/locations/{location}/adaptive
+             *        MtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format lists all sentences
+             *        within a dataset. `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.ListAdaptiveMtSentencesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+/adaptiveMtFiles/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the project from which to list the Adaptive MT
+               * files. The following format lists all sentences under a file. `projects/{project}/l
+               * ocations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The
+               * following format lists all sentences within a dataset.
+               * `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name of the project from which to list the Adaptive MT files. The following
+             format lists all sentences under a file.
+             `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The
+             following format lists all sentences within a dataset.
+             `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name of the project from which to list the Adaptive MT
+               * files. The following format lists all sentences under a file. `projects/{project}/l
+               * ocations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The
+               * following format lists all sentences within a dataset.
+               * `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+/adaptiveMtFiles/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /**
+
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A token identifying a page of results the server should return. Typically, this is
+               * the value of ListAdaptiveMtSentencesRequest.next_page_token returned from the
+               * previous call to `ListTranslationMemories` method. The first page is returned if
+               * `page_token` is empty or missing.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A token identifying a page of results the server should return. Typically, this is the value of
+             ListAdaptiveMtSentencesRequest.next_page_token returned from the previous call to
+             `ListTranslationMemories` method. The first page is returned if `page_token` is empty or missing.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A token identifying a page of results the server should return. Typically, this is
+               * the value of ListAdaptiveMtSentencesRequest.next_page_token returned from the
+               * previous call to `ListTranslationMemories` method. The first page is returned if
+               * `page_token` is empty or missing.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+        /**
+         * An accessor for creating requests from the AdaptiveMtSentences collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Translate translate = new Translate(...);}
+         *   {@code Translate.AdaptiveMtSentences.List request = translate.adaptiveMtSentences().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AdaptiveMtSentences adaptiveMtSentences() {
+          return new AdaptiveMtSentences();
+        }
+
+        /**
+         * The "adaptiveMtSentences" collection of methods.
+         */
+        public class AdaptiveMtSentences {
+
+          /**
+           * Lists all AdaptiveMtSentences under a given file/dataset.
+           *
+           * Create a request for the method "adaptiveMtSentences.list".
+           *
+           * This request holds the parameters needed by the translate server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the project from which to list the Adaptive MT files. The following
+           *        format lists all sentences under a file. `projects/{project}/locations/{location}/adaptive
+           *        MtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format lists all sentences
+           *        within a dataset. `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends TranslateRequest<com.google.api.services.translate.v3.model.ListAdaptiveMtSentencesResponse> {
+
+            private static final String REST_PATH = "v3/{+parent}/adaptiveMtSentences";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+
+            /**
+             * Lists all AdaptiveMtSentences under a given file/dataset.
+             *
+             * Create a request for the method "adaptiveMtSentences.list".
+             *
+             * This request holds the parameters needed by the the translate server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the project from which to list the Adaptive MT files. The following
+           *        format lists all sentences under a file. `projects/{project}/locations/{location}/adaptive
+           *        MtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format lists all sentences
+           *        within a dataset. `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Translate.this, "GET", REST_PATH, null, com.google.api.services.translate.v3.model.ListAdaptiveMtSentencesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the project from which to list the Adaptive MT files.
+             * The following format lists all sentences under a file. `projects/{project}/locations/
+             * {location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format
+             * lists all sentences within a dataset.
+             * `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the project from which to list the Adaptive MT files. The following
+           format lists all sentences under a file.
+           `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The
+           following format lists all sentences within a dataset.
+           `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the project from which to list the Adaptive MT files.
+             * The following format lists all sentences under a file. `projects/{project}/locations/
+             * {location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format
+             * lists all sentences within a dataset.
+             * `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/adaptiveMtDatasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /**
+
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of ListAdaptiveMtSentencesRequest.next_page_token returned from the
+             * previous call to `ListTranslationMemories` method. The first page is returned if
+             * `page_token` is empty or missing.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying a page of results the server should return. Typically, this is the value of
+           ListAdaptiveMtSentencesRequest.next_page_token returned from the previous call to
+           `ListTranslationMemories` method. The first page is returned if `page_token` is empty or missing.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of ListAdaptiveMtSentencesRequest.next_page_token returned from the
+             * previous call to `ListTranslationMemories` method. The first page is returned if
+             * `page_token` is empty or missing.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
       /**
        * An accessor for creating requests from the Datasets collection.
        *

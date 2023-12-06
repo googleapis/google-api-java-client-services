@@ -17,9 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an SSL Policy resource. Use SSL policies to control the SSL features, such as versions
- * and cipher suites, offered by an HTTPS or SSL Proxy load balancer. For more information, read SSL
- * Policy Concepts.
+ * Represents an SSL Policy resource. Use SSL policies to control SSL features, such as versions and
+ * cipher suites, that are offered by Application Load Balancers and proxy Network Load Balancers.
+ * For more information, read SSL policies overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

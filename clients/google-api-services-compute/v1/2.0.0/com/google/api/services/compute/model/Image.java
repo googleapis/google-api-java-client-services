@@ -73,6 +73,14 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.Long diskSizeGb;
 
   /**
+   * Whether this image is created from a confidential compute mode disk. [Output Only]: This field
+   * is not set by user, but from source disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialCompute;
+
+  /**
    * The name of the image family to which this image belongs. The image family name can be from a
    * publicly managed image family provided by Compute Engine, or from a custom image family you
    * create. For example, centos-stream-9 is a publicly available image family. For more
@@ -402,6 +410,25 @@ public final class Image extends com.google.api.client.json.GenericJson {
    */
   public Image setDiskSizeGb(java.lang.Long diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * Whether this image is created from a confidential compute mode disk. [Output Only]: This field
+   * is not set by user, but from source disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialCompute() {
+    return enableConfidentialCompute;
+  }
+
+  /**
+   * Whether this image is created from a confidential compute mode disk. [Output Only]: This field
+   * is not set by user, but from source disk.
+   * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
+   */
+  public Image setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
+    this.enableConfidentialCompute = enableConfidentialCompute;
     return this;
   }
 

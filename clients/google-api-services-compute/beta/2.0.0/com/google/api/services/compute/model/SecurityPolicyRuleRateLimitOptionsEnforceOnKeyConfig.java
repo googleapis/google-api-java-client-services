@@ -54,7 +54,12 @@ public final class SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig extends 
    * path of the HTTP request. The key value is truncated to the first 128 bytes. - SNI: Server name
    * indication in the TLS session of the HTTPS request. The key value is truncated to the first 128
    * bytes. The key type defaults to ALL on a HTTP session. - REGION_CODE: The country/region from
-   * which the request originates.
+   * which the request originates. - TLS_JA3_FINGERPRINT: JA3 TLS/SSL fingerprint if the client
+   * connects using HTTPS, HTTP/2 or HTTP/3. If not available, the key type defaults to ALL. -
+   * USER_IP: The IP address of the originating client, which is resolved based on
+   * "userIpRequestHeaders" configured with the security policy. If there is no
+   * "userIpRequestHeaders" configuration or an IP address cannot be resolved from it, the key type
+   * defaults to IP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +102,12 @@ public final class SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig extends 
    * path of the HTTP request. The key value is truncated to the first 128 bytes. - SNI: Server name
    * indication in the TLS session of the HTTPS request. The key value is truncated to the first 128
    * bytes. The key type defaults to ALL on a HTTP session. - REGION_CODE: The country/region from
-   * which the request originates.
+   * which the request originates. - TLS_JA3_FINGERPRINT: JA3 TLS/SSL fingerprint if the client
+   * connects using HTTPS, HTTP/2 or HTTP/3. If not available, the key type defaults to ALL. -
+   * USER_IP: The IP address of the originating client, which is resolved based on
+   * "userIpRequestHeaders" configured with the security policy. If there is no
+   * "userIpRequestHeaders" configuration or an IP address cannot be resolved from it, the key type
+   * defaults to IP.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnforceOnKeyType() {
@@ -120,7 +130,12 @@ public final class SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig extends 
    * path of the HTTP request. The key value is truncated to the first 128 bytes. - SNI: Server name
    * indication in the TLS session of the HTTPS request. The key value is truncated to the first 128
    * bytes. The key type defaults to ALL on a HTTP session. - REGION_CODE: The country/region from
-   * which the request originates.
+   * which the request originates. - TLS_JA3_FINGERPRINT: JA3 TLS/SSL fingerprint if the client
+   * connects using HTTPS, HTTP/2 or HTTP/3. If not available, the key type defaults to ALL. -
+   * USER_IP: The IP address of the originating client, which is resolved based on
+   * "userIpRequestHeaders" configured with the security policy. If there is no
+   * "userIpRequestHeaders" configuration or an IP address cannot be resolved from it, the key type
+   * defaults to IP.
    * @param enforceOnKeyType enforceOnKeyType or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig setEnforceOnKeyType(java.lang.String enforceOnKeyType) {

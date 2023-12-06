@@ -38,6 +38,13 @@ public final class InstanceGroupManagerInstanceFlexibilityPolicy extends com.goo
 
   /**
    * Named instance selections configuring properties that the group will use when creating new VMs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> instanceSelections;
+
+  /**
+   * Named instance selections configuring properties that the group will use when creating new VMs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> getInstanceSelectionLists() {
@@ -50,6 +57,23 @@ public final class InstanceGroupManagerInstanceFlexibilityPolicy extends com.goo
    */
   public InstanceGroupManagerInstanceFlexibilityPolicy setInstanceSelectionLists(java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> instanceSelectionLists) {
     this.instanceSelectionLists = instanceSelectionLists;
+    return this;
+  }
+
+  /**
+   * Named instance selections configuring properties that the group will use when creating new VMs.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> getInstanceSelections() {
+    return instanceSelections;
+  }
+
+  /**
+   * Named instance selections configuring properties that the group will use when creating new VMs.
+   * @param instanceSelections instanceSelections or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceFlexibilityPolicy setInstanceSelections(java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> instanceSelections) {
+    this.instanceSelections = instanceSelections;
     return this;
   }
 

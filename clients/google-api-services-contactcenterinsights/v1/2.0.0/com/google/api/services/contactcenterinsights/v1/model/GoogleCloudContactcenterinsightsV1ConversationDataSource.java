@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenterinsights.v1.model;
 
 /**
- * The conversation source, which is a combination of transcript, audio, and metadata.
+ * The conversation source, which is a combination of transcript and audio.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Insights API. For a detailed

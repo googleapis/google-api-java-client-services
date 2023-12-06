@@ -1137,6 +1137,145 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
         }
         /**
+         * Enable resource violation monitoring for a workload.
+         *
+         * Create a request for the method "workloads.enableResourceMonitoring".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link EnableResourceMonitoring#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The `name` field is used to identify the workload. Format:
+         *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+         * @return the request
+         */
+        public EnableResourceMonitoring enableResourceMonitoring(java.lang.String name) throws java.io.IOException {
+          EnableResourceMonitoring result = new EnableResourceMonitoring(name);
+          initialize(result);
+          return result;
+        }
+
+        public class EnableResourceMonitoring extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1EnableResourceMonitoringResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:enableResourceMonitoring";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+          /**
+           * Enable resource violation monitoring for a workload.
+           *
+           * Create a request for the method "workloads.enableResourceMonitoring".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link EnableResourceMonitoring#execute()} method to invoke the
+           * remote operation. <p> {@link EnableResourceMonitoring#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the workload. Format:
+         *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           * @since 1.13
+           */
+          protected EnableResourceMonitoring(java.lang.String name) {
+            super(Assuredworkloads.this, "POST", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1EnableResourceMonitoringResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+          }
+
+          @Override
+          public EnableResourceMonitoring set$Xgafv(java.lang.String $Xgafv) {
+            return (EnableResourceMonitoring) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public EnableResourceMonitoring setAccessToken(java.lang.String accessToken) {
+            return (EnableResourceMonitoring) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public EnableResourceMonitoring setAlt(java.lang.String alt) {
+            return (EnableResourceMonitoring) super.setAlt(alt);
+          }
+
+          @Override
+          public EnableResourceMonitoring setCallback(java.lang.String callback) {
+            return (EnableResourceMonitoring) super.setCallback(callback);
+          }
+
+          @Override
+          public EnableResourceMonitoring setFields(java.lang.String fields) {
+            return (EnableResourceMonitoring) super.setFields(fields);
+          }
+
+          @Override
+          public EnableResourceMonitoring setKey(java.lang.String key) {
+            return (EnableResourceMonitoring) super.setKey(key);
+          }
+
+          @Override
+          public EnableResourceMonitoring setOauthToken(java.lang.String oauthToken) {
+            return (EnableResourceMonitoring) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public EnableResourceMonitoring setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (EnableResourceMonitoring) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public EnableResourceMonitoring setQuotaUser(java.lang.String quotaUser) {
+            return (EnableResourceMonitoring) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public EnableResourceMonitoring setUploadType(java.lang.String uploadType) {
+            return (EnableResourceMonitoring) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public EnableResourceMonitoring setUploadProtocol(java.lang.String uploadProtocol) {
+            return (EnableResourceMonitoring) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the workload. Format:
+           * organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the workload. Format:
+         organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the workload. Format:
+           * organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          public EnableResourceMonitoring setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public EnableResourceMonitoring set(String parameterName, Object value) {
+            return (EnableResourceMonitoring) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets Assured Workload associated with a CRM Node
          *
          * Create a request for the method "workloads.get".

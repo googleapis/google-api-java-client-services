@@ -58,13 +58,14 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   private java.lang.String cloudfrontDomain;
 
   /**
-   * Optional. The Resource name of a secret in Secret Manager. The Azure SAS token must be stored
-   * in Secret Manager in JSON format: { "sas_token" : "SAS_TOKEN" } GoogleServiceAccount must be
-   * granted `roles/secretmanager.secretAccessor` for the resource. See [Configure access to a
-   * source: Microsoft Azure Blob Storage] (https://cloud.google.com/storage-transfer/docs/source-
-   * microsoft-azure#secret_manager) for more information. If `credentials_secret` is specified, do
-   * not specify azure_credentials. This feature is in [preview](https://cloud.google.com/terms
-   * /service-terms#1). Format: `projects/{project_number}/secrets/{secret_name}`
+   * Optional. The Resource name of a secret in Secret Manager. AWS credentials must be stored in
+   * Secret Manager in JSON format: { "access_key_id": "ACCESS_KEY_ID", "secret_access_key":
+   * "SECRET_ACCESS_KEY" } GoogleServiceAccount must be granted `roles/secretmanager.secretAccessor`
+   * for the resource. See [Configure access to a source: Amazon S3] (https://cloud.google.com
+   * /storage-transfer/docs/source-amazon-s3#secret_manager) for more information. If
+   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. This feature is
+   * in [preview](https://cloud.google.com/terms/service-terms#1). Format:
+   * `projects/{project_number}/secrets/{secret_name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,13 +155,14 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Resource name of a secret in Secret Manager. The Azure SAS token must be stored
-   * in Secret Manager in JSON format: { "sas_token" : "SAS_TOKEN" } GoogleServiceAccount must be
-   * granted `roles/secretmanager.secretAccessor` for the resource. See [Configure access to a
-   * source: Microsoft Azure Blob Storage] (https://cloud.google.com/storage-transfer/docs/source-
-   * microsoft-azure#secret_manager) for more information. If `credentials_secret` is specified, do
-   * not specify azure_credentials. This feature is in [preview](https://cloud.google.com/terms
-   * /service-terms#1). Format: `projects/{project_number}/secrets/{secret_name}`
+   * Optional. The Resource name of a secret in Secret Manager. AWS credentials must be stored in
+   * Secret Manager in JSON format: { "access_key_id": "ACCESS_KEY_ID", "secret_access_key":
+   * "SECRET_ACCESS_KEY" } GoogleServiceAccount must be granted `roles/secretmanager.secretAccessor`
+   * for the resource. See [Configure access to a source: Amazon S3] (https://cloud.google.com
+   * /storage-transfer/docs/source-amazon-s3#secret_manager) for more information. If
+   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. This feature is
+   * in [preview](https://cloud.google.com/terms/service-terms#1). Format:
+   * `projects/{project_number}/secrets/{secret_name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getCredentialsSecret() {
@@ -168,13 +170,14 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Resource name of a secret in Secret Manager. The Azure SAS token must be stored
-   * in Secret Manager in JSON format: { "sas_token" : "SAS_TOKEN" } GoogleServiceAccount must be
-   * granted `roles/secretmanager.secretAccessor` for the resource. See [Configure access to a
-   * source: Microsoft Azure Blob Storage] (https://cloud.google.com/storage-transfer/docs/source-
-   * microsoft-azure#secret_manager) for more information. If `credentials_secret` is specified, do
-   * not specify azure_credentials. This feature is in [preview](https://cloud.google.com/terms
-   * /service-terms#1). Format: `projects/{project_number}/secrets/{secret_name}`
+   * Optional. The Resource name of a secret in Secret Manager. AWS credentials must be stored in
+   * Secret Manager in JSON format: { "access_key_id": "ACCESS_KEY_ID", "secret_access_key":
+   * "SECRET_ACCESS_KEY" } GoogleServiceAccount must be granted `roles/secretmanager.secretAccessor`
+   * for the resource. See [Configure access to a source: Amazon S3] (https://cloud.google.com
+   * /storage-transfer/docs/source-amazon-s3#secret_manager) for more information. If
+   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. This feature is
+   * in [preview](https://cloud.google.com/terms/service-terms#1). Format:
+   * `projects/{project_number}/secrets/{secret_name}`
    * @param credentialsSecret credentialsSecret or {@code null} for none
    */
   public AwsS3Data setCredentialsSecret(java.lang.String credentialsSecret) {

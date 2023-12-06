@@ -31,7 +31,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of containers belonging to the task. We disallow a number of fields on this
-   * Container. Only a single container may be provided.
+   * Container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of containers belonging to the task. We disallow a number of fields on this
-   * Container. Only a single container may be provided.
+   * Container.
    * @return value or {@code null} for none
    */
   public java.util.List<Container> getContainers() {
@@ -87,7 +87,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of containers belonging to the task. We disallow a number of fields on this
-   * Container. Only a single container may be provided.
+   * Container.
    * @param containers containers or {@code null} for none
    */
   public TaskSpec setContainers(java.util.List<Container> containers) {

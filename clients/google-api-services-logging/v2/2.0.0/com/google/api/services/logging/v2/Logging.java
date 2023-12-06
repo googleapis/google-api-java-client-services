@@ -155,7 +155,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
     /**
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
-     * configured for Google Cloud projects, folders, organizations and billing accounts. Once
+     * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
      * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
@@ -169,7 +169,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-     *        for Google Cloud projects, folders, organizations and billing accounts. Once configured
+     *        for Google Cloud projects, folders, organizations, and billing accounts. Once configured
      *        for an organization, it applies to all projects and folders in the Google Cloud
      *        organization.
      * @return the request
@@ -189,7 +189,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
-       * configured for Google Cloud projects, folders, organizations and billing accounts. Once
+       * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
        * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
@@ -206,7 +206,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-     *        for Google Cloud projects, folders, organizations and billing accounts. Once configured
+     *        for Google Cloud projects, folders, organizations, and billing accounts. Once configured
      *        for an organization, it applies to all projects and folders in the Google Cloud
      *        organization.
        * @since 1.13
@@ -291,8 +291,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-       * for Google Cloud projects, folders, organizations and billing accounts. Once configured for
-       * an organization, it applies to all projects and folders in the Google Cloud organization.
+       * for Google Cloud projects, folders, organizations, and billing accounts. Once configured
+       * for an organization, it applies to all projects and folders in the Google Cloud
+       * organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -300,7 +301,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /** Required. The resource for which to retrieve CMEK settings. "projects/[PROJECT_ID]/cmekSettings"
      "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
      "folders/[FOLDER_ID]/cmekSettings" For example:"organizations/12345/cmekSettings"Note: CMEK for the
-     Log Router can be configured for Google Cloud projects, folders, organizations and billing
+     Log Router can be configured for Google Cloud projects, folders, organizations, and billing
      accounts. Once configured for an organization, it applies to all projects and folders in the Google
      Cloud organization.
        */
@@ -313,8 +314,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-       * for Google Cloud projects, folders, organizations and billing accounts. Once configured for
-       * an organization, it applies to all projects and folders in the Google Cloud organization.
+       * for Google Cloud projects, folders, organizations, and billing accounts. Once configured
+       * for an organization, it applies to all projects and folders in the Google Cloud
+       * organization.
        */
       public GetCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -332,11 +334,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be get
-     * for Google Cloud projects, folders, organizations and billing accounts. Currently it can only be
-     * configured for organizations. Once configured for an organization, it applies to all projects and
-     * folders in the Google Cloud organization.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
+     * projects, folders, organizations, and billing accounts.See View default resource settings for
+     * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+     * information.
      *
      * Create a request for the method "billingAccounts.getSettings".
      *
@@ -346,10 +347,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
      *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
-     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
-     *        billing accounts. Currently it can only be configured for organizations. Once configured
-     *        for an organization, it applies to all projects and folders in the Google Cloud
-     *        organization.
+     *        can be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
      * @return the request
      */
     public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
@@ -366,11 +364,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
 
       /**
-       * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be
-       * get for Google Cloud projects, folders, organizations and billing accounts. Currently it can
-       * only be configured for organizations. Once configured for an organization, it applies to all
-       * projects and folders in the Google Cloud organization.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
+       * projects, folders, organizations, and billing accounts.See View default resource settings for
+       * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+       * information.
        *
        * Create a request for the method "billingAccounts.getSettings".
        *
@@ -383,10 +380,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
      *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
-     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
-     *        billing accounts. Currently it can only be configured for organizations. Once configured
-     *        for an organization, it applies to all projects and folders in the Google Cloud
-     *        organization.
+     *        can be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        * @since 1.13
        */
       protected GetSettings(java.lang.String name) {
@@ -467,20 +461,16 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
        * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
-       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
-       * accounts. Currently it can only be configured for organizations. Once configured for an
-       * organization, it applies to all projects and folders in the Google Cloud organization.
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can
+       * be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for the Log
-     Router can be get for Google Cloud projects, folders, organizations and billing accounts. Currently
-     it can only be configured for organizations. Once configured for an organization, it applies to all
-     projects and folders in the Google Cloud organization.
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can be
+     retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       public java.lang.String getName() {
         return name;
@@ -489,10 +479,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
        * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
-       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
-       * accounts. Currently it can only be configured for organizations. Once configured for an
-       * organization, it applies to all projects and folders in the Google Cloud organization.
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can
+       * be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       public GetSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -9490,7 +9478,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
     /**
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
-     * configured for Google Cloud projects, folders, organizations and billing accounts. Once
+     * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
      * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
@@ -9504,7 +9492,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-     *        for Google Cloud projects, folders, organizations and billing accounts. Once configured
+     *        for Google Cloud projects, folders, organizations, and billing accounts. Once configured
      *        for an organization, it applies to all projects and folders in the Google Cloud
      *        organization.
      * @return the request
@@ -9524,7 +9512,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
-       * configured for Google Cloud projects, folders, organizations and billing accounts. Once
+       * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
        * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
@@ -9541,7 +9529,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-     *        for Google Cloud projects, folders, organizations and billing accounts. Once configured
+     *        for Google Cloud projects, folders, organizations, and billing accounts. Once configured
      *        for an organization, it applies to all projects and folders in the Google Cloud
      *        organization.
        * @since 1.13
@@ -9626,8 +9614,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-       * for Google Cloud projects, folders, organizations and billing accounts. Once configured for
-       * an organization, it applies to all projects and folders in the Google Cloud organization.
+       * for Google Cloud projects, folders, organizations, and billing accounts. Once configured
+       * for an organization, it applies to all projects and folders in the Google Cloud
+       * organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -9635,7 +9624,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /** Required. The resource for which to retrieve CMEK settings. "projects/[PROJECT_ID]/cmekSettings"
      "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
      "folders/[FOLDER_ID]/cmekSettings" For example:"organizations/12345/cmekSettings"Note: CMEK for the
-     Log Router can be configured for Google Cloud projects, folders, organizations and billing
+     Log Router can be configured for Google Cloud projects, folders, organizations, and billing
      accounts. Once configured for an organization, it applies to all projects and folders in the Google
      Cloud organization.
        */
@@ -9648,8 +9637,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-       * for Google Cloud projects, folders, organizations and billing accounts. Once configured for
-       * an organization, it applies to all projects and folders in the Google Cloud organization.
+       * for Google Cloud projects, folders, organizations, and billing accounts. Once configured
+       * for an organization, it applies to all projects and folders in the Google Cloud
+       * organization.
        */
       public GetCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -9667,11 +9657,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be get
-     * for Google Cloud projects, folders, organizations and billing accounts. Currently it can only be
-     * configured for organizations. Once configured for an organization, it applies to all projects and
-     * folders in the Google Cloud organization.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
+     * projects, folders, organizations, and billing accounts.See View default resource settings for
+     * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+     * information.
      *
      * Create a request for the method "folders.getSettings".
      *
@@ -9681,10 +9670,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
      *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
-     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
-     *        billing accounts. Currently it can only be configured for organizations. Once configured
-     *        for an organization, it applies to all projects and folders in the Google Cloud
-     *        organization.
+     *        can be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
      * @return the request
      */
     public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
@@ -9701,11 +9687,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^folders/[^/]+$");
 
       /**
-       * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be
-       * get for Google Cloud projects, folders, organizations and billing accounts. Currently it can
-       * only be configured for organizations. Once configured for an organization, it applies to all
-       * projects and folders in the Google Cloud organization.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
+       * projects, folders, organizations, and billing accounts.See View default resource settings for
+       * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+       * information.
        *
        * Create a request for the method "folders.getSettings".
        *
@@ -9718,10 +9703,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
      *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
-     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
-     *        billing accounts. Currently it can only be configured for organizations. Once configured
-     *        for an organization, it applies to all projects and folders in the Google Cloud
-     *        organization.
+     *        can be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        * @since 1.13
        */
       protected GetSettings(java.lang.String name) {
@@ -9802,20 +9784,16 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
        * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
-       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
-       * accounts. Currently it can only be configured for organizations. Once configured for an
-       * organization, it applies to all projects and folders in the Google Cloud organization.
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can
+       * be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for the Log
-     Router can be get for Google Cloud projects, folders, organizations and billing accounts. Currently
-     it can only be configured for organizations. Once configured for an organization, it applies to all
-     projects and folders in the Google Cloud organization.
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can be
+     retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       public java.lang.String getName() {
         return name;
@@ -9824,10 +9802,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
        * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
-       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
-       * accounts. Currently it can only be configured for organizations. Once configured for an
-       * organization, it applies to all projects and folders in the Google Cloud organization.
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can
+       * be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       public GetSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -9845,14 +9821,13 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Updates the Log Router settings for the given resource.Note: Settings for the Log Router can
-     * currently only be configured for Google Cloud organizations. Once configured, it applies to all
-     * projects and folders in the Google Cloud organization.UpdateSettings will fail if 1) kms_key_name
-     * is invalid, or 2) the associated service account does not have the required
-     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
-     * disabled. 4) location_id is not supported by Logging. 5) location_id violate OrgPolicy.See
-     * Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
-     * for more information.
+     * Updates the settings for the given resource. This method applies to all feature configurations
+     * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
+     * associated service account does not have the required roles/cloudkms.cryptoKeyEncrypterDecrypter
+     * role assigned for the key, 3) access to the key is disabled, 4) storage_location is not supported
+     * by Logging, 5) storage_location violates the location OrgPolicy, or 6) default_sink_config is set
+     * but has an unspecified filter write mode.See Configure default settings for organizations and
+     * folders (https://cloud.google.com/logging/docs/default-settings) for more information.
      *
      * Create a request for the method "folders.updateSettings".
      *
@@ -9860,9 +9835,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
      *
      * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"Note: Settings for the Log Router can currently
-     *        only be configured for Google Cloud organizations. Once configured, it applies to all
-     *        projects and folders in the Google Cloud organization.
+     *        For example:"organizations/12345/settings"
      * @param content the {@link com.google.api.services.logging.v2.model.Settings}
      * @return the request
      */
@@ -9880,14 +9853,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^folders/[^/]+$");
 
       /**
-       * Updates the Log Router settings for the given resource.Note: Settings for the Log Router can
-       * currently only be configured for Google Cloud organizations. Once configured, it applies to all
-       * projects and folders in the Google Cloud organization.UpdateSettings will fail if 1)
-       * kms_key_name is invalid, or 2) the associated service account does not have the required
-       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
-       * is disabled. 4) location_id is not supported by Logging. 5) location_id violate OrgPolicy.See
-       * Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
-       * for more information.
+       * Updates the settings for the given resource. This method applies to all feature configurations
+       * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
+       * associated service account does not have the required
+       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, 3) access to the key is
+       * disabled, 4) storage_location is not supported by Logging, 5) storage_location violates the
+       * location OrgPolicy, or 6) default_sink_config is set but has an unspecified filter write
+       * mode.See Configure default settings for organizations and folders
+       * (https://cloud.google.com/logging/docs/default-settings) for more information.
        *
        * Create a request for the method "folders.updateSettings".
        *
@@ -9898,9 +9871,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * constructor. </p>
        *
        * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"Note: Settings for the Log Router can currently
-     *        only be configured for Google Cloud organizations. Once configured, it applies to all
-     *        projects and folders in the Google Cloud organization.
+     *        For example:"organizations/12345/settings"
        * @param content the {@link com.google.api.services.logging.v2.model.Settings}
        * @since 1.13
        */
@@ -9971,18 +9942,13 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"Note:
-       * Settings for the Log Router can currently only be configured for Google Cloud
-       * organizations. Once configured, it applies to all projects and folders in the Google Cloud
-       * organization.
+       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     For example:"organizations/12345/settings"Note: Settings for the Log Router can currently only be
-     configured for Google Cloud organizations. Once configured, it applies to all projects and folders
-     in the Google Cloud organization.
+     For example:"organizations/12345/settings"
        */
       public java.lang.String getName() {
         return name;
@@ -9990,10 +9956,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"Note:
-       * Settings for the Log Router can currently only be configured for Google Cloud
-       * organizations. Once configured, it applies to all projects and folders in the Google Cloud
-       * organization.
+       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
        */
       public UpdateSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -22224,7 +22187,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
     /**
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
-     * configured for Google Cloud projects, folders, organizations and billing accounts. Once
+     * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
      * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
@@ -22238,7 +22201,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-     *        for Google Cloud projects, folders, organizations and billing accounts. Once configured
+     *        for Google Cloud projects, folders, organizations, and billing accounts. Once configured
      *        for an organization, it applies to all projects and folders in the Google Cloud
      *        organization.
      * @return the request
@@ -22258,7 +22221,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
-       * configured for Google Cloud projects, folders, organizations and billing accounts. Once
+       * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
        * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
@@ -22275,7 +22238,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-     *        for Google Cloud projects, folders, organizations and billing accounts. Once configured
+     *        for Google Cloud projects, folders, organizations, and billing accounts. Once configured
      *        for an organization, it applies to all projects and folders in the Google Cloud
      *        organization.
        * @since 1.13
@@ -22360,8 +22323,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-       * for Google Cloud projects, folders, organizations and billing accounts. Once configured for
-       * an organization, it applies to all projects and folders in the Google Cloud organization.
+       * for Google Cloud projects, folders, organizations, and billing accounts. Once configured
+       * for an organization, it applies to all projects and folders in the Google Cloud
+       * organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -22369,7 +22333,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /** Required. The resource for which to retrieve CMEK settings. "projects/[PROJECT_ID]/cmekSettings"
      "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
      "folders/[FOLDER_ID]/cmekSettings" For example:"organizations/12345/cmekSettings"Note: CMEK for the
-     Log Router can be configured for Google Cloud projects, folders, organizations and billing
+     Log Router can be configured for Google Cloud projects, folders, organizations, and billing
      accounts. Once configured for an organization, it applies to all projects and folders in the Google
      Cloud organization.
        */
@@ -22382,8 +22346,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-       * for Google Cloud projects, folders, organizations and billing accounts. Once configured for
-       * an organization, it applies to all projects and folders in the Google Cloud organization.
+       * for Google Cloud projects, folders, organizations, and billing accounts. Once configured
+       * for an organization, it applies to all projects and folders in the Google Cloud
+       * organization.
        */
       public GetCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -22401,11 +22366,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be get
-     * for Google Cloud projects, folders, organizations and billing accounts. Currently it can only be
-     * configured for organizations. Once configured for an organization, it applies to all projects and
-     * folders in the Google Cloud organization.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
+     * projects, folders, organizations, and billing accounts.See View default resource settings for
+     * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+     * information.
      *
      * Create a request for the method "organizations.getSettings".
      *
@@ -22415,10 +22379,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
      *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
-     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
-     *        billing accounts. Currently it can only be configured for organizations. Once configured
-     *        for an organization, it applies to all projects and folders in the Google Cloud
-     *        organization.
+     *        can be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
      * @return the request
      */
     public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
@@ -22435,11 +22396,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
       /**
-       * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be
-       * get for Google Cloud projects, folders, organizations and billing accounts. Currently it can
-       * only be configured for organizations. Once configured for an organization, it applies to all
-       * projects and folders in the Google Cloud organization.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
+       * projects, folders, organizations, and billing accounts.See View default resource settings for
+       * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+       * information.
        *
        * Create a request for the method "organizations.getSettings".
        *
@@ -22452,10 +22412,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
      *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
-     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
-     *        billing accounts. Currently it can only be configured for organizations. Once configured
-     *        for an organization, it applies to all projects and folders in the Google Cloud
-     *        organization.
+     *        can be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        * @since 1.13
        */
       protected GetSettings(java.lang.String name) {
@@ -22536,20 +22493,16 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
        * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
-       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
-       * accounts. Currently it can only be configured for organizations. Once configured for an
-       * organization, it applies to all projects and folders in the Google Cloud organization.
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can
+       * be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for the Log
-     Router can be get for Google Cloud projects, folders, organizations and billing accounts. Currently
-     it can only be configured for organizations. Once configured for an organization, it applies to all
-     projects and folders in the Google Cloud organization.
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can be
+     retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       public java.lang.String getName() {
         return name;
@@ -22558,10 +22511,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
        * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
-       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
-       * accounts. Currently it can only be configured for organizations. Once configured for an
-       * organization, it applies to all projects and folders in the Google Cloud organization.
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can
+       * be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       public GetSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -22776,14 +22727,13 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Updates the Log Router settings for the given resource.Note: Settings for the Log Router can
-     * currently only be configured for Google Cloud organizations. Once configured, it applies to all
-     * projects and folders in the Google Cloud organization.UpdateSettings will fail if 1) kms_key_name
-     * is invalid, or 2) the associated service account does not have the required
-     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
-     * disabled. 4) location_id is not supported by Logging. 5) location_id violate OrgPolicy.See
-     * Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
-     * for more information.
+     * Updates the settings for the given resource. This method applies to all feature configurations
+     * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
+     * associated service account does not have the required roles/cloudkms.cryptoKeyEncrypterDecrypter
+     * role assigned for the key, 3) access to the key is disabled, 4) storage_location is not supported
+     * by Logging, 5) storage_location violates the location OrgPolicy, or 6) default_sink_config is set
+     * but has an unspecified filter write mode.See Configure default settings for organizations and
+     * folders (https://cloud.google.com/logging/docs/default-settings) for more information.
      *
      * Create a request for the method "organizations.updateSettings".
      *
@@ -22791,9 +22741,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
      *
      * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"Note: Settings for the Log Router can currently
-     *        only be configured for Google Cloud organizations. Once configured, it applies to all
-     *        projects and folders in the Google Cloud organization.
+     *        For example:"organizations/12345/settings"
      * @param content the {@link com.google.api.services.logging.v2.model.Settings}
      * @return the request
      */
@@ -22811,14 +22759,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
       /**
-       * Updates the Log Router settings for the given resource.Note: Settings for the Log Router can
-       * currently only be configured for Google Cloud organizations. Once configured, it applies to all
-       * projects and folders in the Google Cloud organization.UpdateSettings will fail if 1)
-       * kms_key_name is invalid, or 2) the associated service account does not have the required
-       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
-       * is disabled. 4) location_id is not supported by Logging. 5) location_id violate OrgPolicy.See
-       * Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
-       * for more information.
+       * Updates the settings for the given resource. This method applies to all feature configurations
+       * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
+       * associated service account does not have the required
+       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, 3) access to the key is
+       * disabled, 4) storage_location is not supported by Logging, 5) storage_location violates the
+       * location OrgPolicy, or 6) default_sink_config is set but has an unspecified filter write
+       * mode.See Configure default settings for organizations and folders
+       * (https://cloud.google.com/logging/docs/default-settings) for more information.
        *
        * Create a request for the method "organizations.updateSettings".
        *
@@ -22829,9 +22777,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * constructor. </p>
        *
        * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"Note: Settings for the Log Router can currently
-     *        only be configured for Google Cloud organizations. Once configured, it applies to all
-     *        projects and folders in the Google Cloud organization.
+     *        For example:"organizations/12345/settings"
        * @param content the {@link com.google.api.services.logging.v2.model.Settings}
        * @since 1.13
        */
@@ -22902,18 +22848,13 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"Note:
-       * Settings for the Log Router can currently only be configured for Google Cloud
-       * organizations. Once configured, it applies to all projects and folders in the Google Cloud
-       * organization.
+       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     For example:"organizations/12345/settings"Note: Settings for the Log Router can currently only be
-     configured for Google Cloud organizations. Once configured, it applies to all projects and folders
-     in the Google Cloud organization.
+     For example:"organizations/12345/settings"
        */
       public java.lang.String getName() {
         return name;
@@ -22921,10 +22862,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"Note:
-       * Settings for the Log Router can currently only be configured for Google Cloud
-       * organizations. Once configured, it applies to all projects and folders in the Google Cloud
-       * organization.
+       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
        */
       public UpdateSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -30633,7 +30571,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
     /**
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
-     * configured for Google Cloud projects, folders, organizations and billing accounts. Once
+     * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
      * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
@@ -30647,7 +30585,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-     *        for Google Cloud projects, folders, organizations and billing accounts. Once configured
+     *        for Google Cloud projects, folders, organizations, and billing accounts. Once configured
      *        for an organization, it applies to all projects and folders in the Google Cloud
      *        organization.
      * @return the request
@@ -30667,7 +30605,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
-       * configured for Google Cloud projects, folders, organizations and billing accounts. Once
+       * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
        * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
@@ -30684,7 +30622,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-     *        for Google Cloud projects, folders, organizations and billing accounts. Once configured
+     *        for Google Cloud projects, folders, organizations, and billing accounts. Once configured
      *        for an organization, it applies to all projects and folders in the Google Cloud
      *        organization.
        * @since 1.13
@@ -30769,8 +30707,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-       * for Google Cloud projects, folders, organizations and billing accounts. Once configured for
-       * an organization, it applies to all projects and folders in the Google Cloud organization.
+       * for Google Cloud projects, folders, organizations, and billing accounts. Once configured
+       * for an organization, it applies to all projects and folders in the Google Cloud
+       * organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -30778,7 +30717,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /** Required. The resource for which to retrieve CMEK settings. "projects/[PROJECT_ID]/cmekSettings"
      "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
      "folders/[FOLDER_ID]/cmekSettings" For example:"organizations/12345/cmekSettings"Note: CMEK for the
-     Log Router can be configured for Google Cloud projects, folders, organizations and billing
+     Log Router can be configured for Google Cloud projects, folders, organizations, and billing
      accounts. Once configured for an organization, it applies to all projects and folders in the Google
      Cloud organization.
        */
@@ -30791,8 +30730,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-       * for Google Cloud projects, folders, organizations and billing accounts. Once configured for
-       * an organization, it applies to all projects and folders in the Google Cloud organization.
+       * for Google Cloud projects, folders, organizations, and billing accounts. Once configured
+       * for an organization, it applies to all projects and folders in the Google Cloud
+       * organization.
        */
       public GetCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -30810,11 +30750,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be get
-     * for Google Cloud projects, folders, organizations and billing accounts. Currently it can only be
-     * configured for organizations. Once configured for an organization, it applies to all projects and
-     * folders in the Google Cloud organization.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
+     * projects, folders, organizations, and billing accounts.See View default resource settings for
+     * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+     * information.
      *
      * Create a request for the method "projects.getSettings".
      *
@@ -30824,10 +30763,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
      *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
-     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
-     *        billing accounts. Currently it can only be configured for organizations. Once configured
-     *        for an organization, it applies to all projects and folders in the Google Cloud
-     *        organization.
+     *        can be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
      * @return the request
      */
     public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
@@ -30844,11 +30780,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be
-       * get for Google Cloud projects, folders, organizations and billing accounts. Currently it can
-       * only be configured for organizations. Once configured for an organization, it applies to all
-       * projects and folders in the Google Cloud organization.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
+       * projects, folders, organizations, and billing accounts.See View default resource settings for
+       * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+       * information.
        *
        * Create a request for the method "projects.getSettings".
        *
@@ -30861,10 +30796,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
      *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
-     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
-     *        billing accounts. Currently it can only be configured for organizations. Once configured
-     *        for an organization, it applies to all projects and folders in the Google Cloud
-     *        organization.
+     *        can be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        * @since 1.13
        */
       protected GetSettings(java.lang.String name) {
@@ -30945,20 +30877,16 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
        * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
-       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
-       * accounts. Currently it can only be configured for organizations. Once configured for an
-       * organization, it applies to all projects and folders in the Google Cloud organization.
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can
+       * be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for the Log
-     Router can be get for Google Cloud projects, folders, organizations and billing accounts. Currently
-     it can only be configured for organizations. Once configured for an organization, it applies to all
-     projects and folders in the Google Cloud organization.
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can be
+     retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       public java.lang.String getName() {
         return name;
@@ -30967,10 +30895,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
        * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
-       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
-       * accounts. Currently it can only be configured for organizations. Once configured for an
-       * organization, it applies to all projects and folders in the Google Cloud organization.
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can
+       * be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       public GetSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -40452,7 +40378,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
     /**
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
-     * configured for Google Cloud projects, folders, organizations and billing accounts. Once
+     * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
      * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
@@ -40466,7 +40392,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-     *        for Google Cloud projects, folders, organizations and billing accounts. Once configured
+     *        for Google Cloud projects, folders, organizations, and billing accounts. Once configured
      *        for an organization, it applies to all projects and folders in the Google Cloud
      *        organization.
      * @return the request
@@ -40486,7 +40412,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
-       * configured for Google Cloud projects, folders, organizations and billing accounts. Once
+       * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
        * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
@@ -40503,7 +40429,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-     *        for Google Cloud projects, folders, organizations and billing accounts. Once configured
+     *        for Google Cloud projects, folders, organizations, and billing accounts. Once configured
      *        for an organization, it applies to all projects and folders in the Google Cloud
      *        organization.
        * @since 1.13
@@ -40588,8 +40514,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-       * for Google Cloud projects, folders, organizations and billing accounts. Once configured for
-       * an organization, it applies to all projects and folders in the Google Cloud organization.
+       * for Google Cloud projects, folders, organizations, and billing accounts. Once configured
+       * for an organization, it applies to all projects and folders in the Google Cloud
+       * organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -40597,7 +40524,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /** Required. The resource for which to retrieve CMEK settings. "projects/[PROJECT_ID]/cmekSettings"
      "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
      "folders/[FOLDER_ID]/cmekSettings" For example:"organizations/12345/cmekSettings"Note: CMEK for the
-     Log Router can be configured for Google Cloud projects, folders, organizations and billing
+     Log Router can be configured for Google Cloud projects, folders, organizations, and billing
      accounts. Once configured for an organization, it applies to all projects and folders in the Google
      Cloud organization.
        */
@@ -40610,8 +40537,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Log Router can be configured
-       * for Google Cloud projects, folders, organizations and billing accounts. Once configured for
-       * an organization, it applies to all projects and folders in the Google Cloud organization.
+       * for Google Cloud projects, folders, organizations, and billing accounts. Once configured
+       * for an organization, it applies to all projects and folders in the Google Cloud
+       * organization.
        */
       public GetCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -40629,11 +40557,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be get
-     * for Google Cloud projects, folders, organizations and billing accounts. Currently it can only be
-     * configured for organizations. Once configured for an organization, it applies to all projects and
-     * folders in the Google Cloud organization.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
+     * projects, folders, organizations, and billing accounts.See View default resource settings for
+     * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+     * information.
      *
      * Create a request for the method "v2.getSettings".
      *
@@ -40643,10 +40570,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
      *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
-     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
-     *        billing accounts. Currently it can only be configured for organizations. Once configured
-     *        for an organization, it applies to all projects and folders in the Google Cloud
-     *        organization.
+     *        can be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
      * @return the request
      */
     public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
@@ -40663,11 +40587,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Gets the Log Router settings for the given resource.Note: Settings for the Log Router can be
-       * get for Google Cloud projects, folders, organizations and billing accounts. Currently it can
-       * only be configured for organizations. Once configured for an organization, it applies to all
-       * projects and folders in the Google Cloud organization.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
+       * projects, folders, organizations, and billing accounts.See View default resource settings for
+       * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+       * information.
        *
        * Create a request for the method "v2.getSettings".
        *
@@ -40680,10 +40603,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * @param name Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      *        "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
      *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings
-     *        for the Log Router can be get for Google Cloud projects, folders, organizations and
-     *        billing accounts. Currently it can only be configured for organizations. Once configured
-     *        for an organization, it applies to all projects and folders in the Google Cloud
-     *        organization.
+     *        can be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        * @since 1.13
        */
       protected GetSettings(java.lang.String name) {
@@ -40764,20 +40684,16 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
        * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
-       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
-       * accounts. Currently it can only be configured for organizations. Once configured for an
-       * organization, it applies to all projects and folders in the Google Cloud organization.
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can
+       * be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
      "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for the Log
-     Router can be get for Google Cloud projects, folders, organizations and billing accounts. Currently
-     it can only be configured for organizations. Once configured for an organization, it applies to all
-     projects and folders in the Google Cloud organization.
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can be
+     retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       public java.lang.String getName() {
         return name;
@@ -40786,10 +40702,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Required. The resource for which to retrieve settings. "projects/[PROJECT_ID]/settings"
        * "organizations/[ORGANIZATION_ID]/settings" "billingAccounts/[BILLING_ACCOUNT_ID]/settings"
-       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings for
-       * the Log Router can be get for Google Cloud projects, folders, organizations and billing
-       * accounts. Currently it can only be configured for organizations. Once configured for an
-       * organization, it applies to all projects and folders in the Google Cloud organization.
+       * "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"Note: Settings can
+       * be retrieved for Google Cloud projects, folders, organizations, and billing accounts.
        */
       public GetSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -41004,14 +40918,13 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Updates the Log Router settings for the given resource.Note: Settings for the Log Router can
-     * currently only be configured for Google Cloud organizations. Once configured, it applies to all
-     * projects and folders in the Google Cloud organization.UpdateSettings will fail if 1) kms_key_name
-     * is invalid, or 2) the associated service account does not have the required
-     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
-     * disabled. 4) location_id is not supported by Logging. 5) location_id violate OrgPolicy.See
-     * Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
-     * for more information.
+     * Updates the settings for the given resource. This method applies to all feature configurations
+     * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
+     * associated service account does not have the required roles/cloudkms.cryptoKeyEncrypterDecrypter
+     * role assigned for the key, 3) access to the key is disabled, 4) storage_location is not supported
+     * by Logging, 5) storage_location violates the location OrgPolicy, or 6) default_sink_config is set
+     * but has an unspecified filter write mode.See Configure default settings for organizations and
+     * folders (https://cloud.google.com/logging/docs/default-settings) for more information.
      *
      * Create a request for the method "v2.updateSettings".
      *
@@ -41019,9 +40932,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
      *
      * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"Note: Settings for the Log Router can currently
-     *        only be configured for Google Cloud organizations. Once configured, it applies to all
-     *        projects and folders in the Google Cloud organization.
+     *        For example:"organizations/12345/settings"
      * @param content the {@link com.google.api.services.logging.v2.model.Settings}
      * @return the request
      */
@@ -41039,14 +40950,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Updates the Log Router settings for the given resource.Note: Settings for the Log Router can
-       * currently only be configured for Google Cloud organizations. Once configured, it applies to all
-       * projects and folders in the Google Cloud organization.UpdateSettings will fail if 1)
-       * kms_key_name is invalid, or 2) the associated service account does not have the required
-       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
-       * is disabled. 4) location_id is not supported by Logging. 5) location_id violate OrgPolicy.See
-       * Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
-       * for more information.
+       * Updates the settings for the given resource. This method applies to all feature configurations
+       * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
+       * associated service account does not have the required
+       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, 3) access to the key is
+       * disabled, 4) storage_location is not supported by Logging, 5) storage_location violates the
+       * location OrgPolicy, or 6) default_sink_config is set but has an unspecified filter write
+       * mode.See Configure default settings for organizations and folders
+       * (https://cloud.google.com/logging/docs/default-settings) for more information.
        *
        * Create a request for the method "v2.updateSettings".
        *
@@ -41057,9 +40968,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * constructor. </p>
        *
        * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"Note: Settings for the Log Router can currently
-     *        only be configured for Google Cloud organizations. Once configured, it applies to all
-     *        projects and folders in the Google Cloud organization.
+     *        For example:"organizations/12345/settings"
        * @param content the {@link com.google.api.services.logging.v2.model.Settings}
        * @since 1.13
        */
@@ -41130,18 +41039,13 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"Note:
-       * Settings for the Log Router can currently only be configured for Google Cloud
-       * organizations. Once configured, it applies to all projects and folders in the Google Cloud
-       * organization.
+       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     For example:"organizations/12345/settings"Note: Settings for the Log Router can currently only be
-     configured for Google Cloud organizations. Once configured, it applies to all projects and folders
-     in the Google Cloud organization.
+     For example:"organizations/12345/settings"
        */
       public java.lang.String getName() {
         return name;
@@ -41149,10 +41053,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"Note:
-       * Settings for the Log Router can currently only be configured for Google Cloud
-       * organizations. Once configured, it applies to all projects and folders in the Google Cloud
-       * organization.
+       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
        */
       public UpdateSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

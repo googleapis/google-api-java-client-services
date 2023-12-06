@@ -30,7 +30,7 @@ package com.google.api.services.recommender.v1beta1.model;
 public final class GoogleCloudRecommenderV1beta1InsightType extends com.google.api.client.json.GenericJson {
 
   /**
-   * The insight_type’s name in format insightTypes/{insight_type} eg:
+   * The insight_type's name in format insightTypes/{insight_type} eg:
    * insightTypes/google.iam.policy.Insight
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class GoogleCloudRecommenderV1beta1InsightType extends com.google.a
   private java.lang.String name;
 
   /**
-   * The insight_type’s name in format insightTypes/{insight_type} eg:
+   * The insight_type's name in format insightTypes/{insight_type} eg:
    * insightTypes/google.iam.policy.Insight
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class GoogleCloudRecommenderV1beta1InsightType extends com.google.a
   }
 
   /**
-   * The insight_type’s name in format insightTypes/{insight_type} eg:
+   * The insight_type's name in format insightTypes/{insight_type} eg:
    * insightTypes/google.iam.policy.Insight
    * @param name name or {@code null} for none
    */

@@ -40,6 +40,13 @@ public final class GoogleCloudRecommenderV1CostProjection extends com.google.api
   private GoogleTypeMoney cost;
 
   /**
+   * The approximate cost savings in the billing account's local currency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeMoney costInLocalCurrency;
+
+  /**
    * Duration for which this cost applies.
    * The value may be {@code null}.
    */
@@ -66,6 +73,23 @@ public final class GoogleCloudRecommenderV1CostProjection extends com.google.api
    */
   public GoogleCloudRecommenderV1CostProjection setCost(GoogleTypeMoney cost) {
     this.cost = cost;
+    return this;
+  }
+
+  /**
+   * The approximate cost savings in the billing account's local currency.
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeMoney getCostInLocalCurrency() {
+    return costInLocalCurrency;
+  }
+
+  /**
+   * The approximate cost savings in the billing account's local currency.
+   * @param costInLocalCurrency costInLocalCurrency or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1CostProjection setCostInLocalCurrency(GoogleTypeMoney costInLocalCurrency) {
+    this.costInLocalCurrency = costInLocalCurrency;
     return this;
   }
 

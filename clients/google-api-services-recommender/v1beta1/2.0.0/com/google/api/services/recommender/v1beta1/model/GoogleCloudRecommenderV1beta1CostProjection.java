@@ -54,6 +54,13 @@ public final class GoogleCloudRecommenderV1beta1CostProjection extends com.googl
   private String duration;
 
   /**
+   * How the cost is calculated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pricingType;
+
+  /**
    * An approximate projection on amount saved or amount incurred. Negative cost units indicate cost
    * savings and positive cost units indicate increase. See google.type.Money documentation for
    * positive/negative units. A user's permissions may affect whether the cost is computed using
@@ -107,6 +114,23 @@ public final class GoogleCloudRecommenderV1beta1CostProjection extends com.googl
    */
   public GoogleCloudRecommenderV1beta1CostProjection setDuration(String duration) {
     this.duration = duration;
+    return this;
+  }
+
+  /**
+   * How the cost is calculated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPricingType() {
+    return pricingType;
+  }
+
+  /**
+   * How the cost is calculated.
+   * @param pricingType pricingType or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1CostProjection setPricingType(java.lang.String pricingType) {
+    this.pricingType = pricingType;
     return this;
   }
 

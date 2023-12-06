@@ -44,7 +44,7 @@ public final class GoogleCloudRecommenderV1Impact extends com.google.api.client.
   private GoogleCloudRecommenderV1CostProjection costProjection;
 
   /**
-   * Use with CategoryType.RELAIBILITY
+   * Use with CategoryType.RELIABILITY
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class GoogleCloudRecommenderV1Impact extends com.google.api.client.
   }
 
   /**
-   * Use with CategoryType.RELAIBILITY
+   * Use with CategoryType.RELIABILITY
    * @return value or {@code null} for none
    */
   public GoogleCloudRecommenderV1ReliabilityProjection getReliabilityProjection() {
@@ -107,7 +107,7 @@ public final class GoogleCloudRecommenderV1Impact extends com.google.api.client.
   }
 
   /**
-   * Use with CategoryType.RELAIBILITY
+   * Use with CategoryType.RELIABILITY
    * @param reliabilityProjection reliabilityProjection or {@code null} for none
    */
   public GoogleCloudRecommenderV1Impact setReliabilityProjection(GoogleCloudRecommenderV1ReliabilityProjection reliabilityProjection) {

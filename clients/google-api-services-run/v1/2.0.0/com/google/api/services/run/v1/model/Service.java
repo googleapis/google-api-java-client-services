@@ -56,13 +56,12 @@ public final class Service extends com.google.api.client.json.GenericJson {
    * Cloud Run-specific annotations are accepted in Service.metadata.annotations. *
    * `run.googleapis.com/binary-authorization-breakglass` * `run.googleapis.com/binary-
    * authorization` * `run.googleapis.com/client-name` * `run.googleapis.com/custom-audiences` *
-   * `run.googleapis.com/description` * `run.googleapis.com/disable-default-url` *
-   * `run.googleapis.com/gc-traffic-tags` * `run.googleapis.com/ingress` *
-   * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress
-   * settings documentation](/run/docs/securing/ingress) for details on configuring ingress
-   * settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently
-   * active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from
-   * `run.googleapis.com/ingress` while the system is processing a change to
+   * `run.googleapis.com/description` * `run.googleapis.com/gc-traffic-tags` *
+   * `run.googleapis.com/ingress` * `run.googleapis.com/ingress` sets the ingress settings for the
+   * Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on
+   * configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains
+   * the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may
+   * differ from `run.googleapis.com/ingress` while the system is processing a change to
    * `run.googleapis.com/ingress` or if the system failed to process a change to
    * `run.googleapis.com/ingress`. When the system has processed all changes successfully
    * `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
@@ -126,13 +125,12 @@ public final class Service extends com.google.api.client.json.GenericJson {
    * Cloud Run-specific annotations are accepted in Service.metadata.annotations. *
    * `run.googleapis.com/binary-authorization-breakglass` * `run.googleapis.com/binary-
    * authorization` * `run.googleapis.com/client-name` * `run.googleapis.com/custom-audiences` *
-   * `run.googleapis.com/description` * `run.googleapis.com/disable-default-url` *
-   * `run.googleapis.com/gc-traffic-tags` * `run.googleapis.com/ingress` *
-   * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress
-   * settings documentation](/run/docs/securing/ingress) for details on configuring ingress
-   * settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently
-   * active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from
-   * `run.googleapis.com/ingress` while the system is processing a change to
+   * `run.googleapis.com/description` * `run.googleapis.com/gc-traffic-tags` *
+   * `run.googleapis.com/ingress` * `run.googleapis.com/ingress` sets the ingress settings for the
+   * Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on
+   * configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains
+   * the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may
+   * differ from `run.googleapis.com/ingress` while the system is processing a change to
    * `run.googleapis.com/ingress` or if the system failed to process a change to
    * `run.googleapis.com/ingress`. When the system has processed all changes successfully
    * `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
@@ -149,13 +147,12 @@ public final class Service extends com.google.api.client.json.GenericJson {
    * Cloud Run-specific annotations are accepted in Service.metadata.annotations. *
    * `run.googleapis.com/binary-authorization-breakglass` * `run.googleapis.com/binary-
    * authorization` * `run.googleapis.com/client-name` * `run.googleapis.com/custom-audiences` *
-   * `run.googleapis.com/description` * `run.googleapis.com/disable-default-url` *
-   * `run.googleapis.com/gc-traffic-tags` * `run.googleapis.com/ingress` *
-   * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress
-   * settings documentation](/run/docs/securing/ingress) for details on configuring ingress
-   * settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently
-   * active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from
-   * `run.googleapis.com/ingress` while the system is processing a change to
+   * `run.googleapis.com/description` * `run.googleapis.com/gc-traffic-tags` *
+   * `run.googleapis.com/ingress` * `run.googleapis.com/ingress` sets the ingress settings for the
+   * Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on
+   * configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains
+   * the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may
+   * differ from `run.googleapis.com/ingress` while the system is processing a change to
    * `run.googleapis.com/ingress` or if the system failed to process a change to
    * `run.googleapis.com/ingress`. When the system has processed all changes successfully
    * `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.

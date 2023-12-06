@@ -31,11 +31,11 @@ package com.google.api.services.policysimulator.v1beta.model;
 public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * An opaque tag indicating the current version of the policy, used for concurrency control. This
-   * field is ignored if used in a `CreatePolicy` request. When the policy` is returned from either
-   * a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current
-   * policy to use when executing a read-modify-write loop. When the policy is returned from a
-   * `GetEffectivePolicy` request, the `etag` will be unset.
+   * An opaque tag indicating the current version of the policySpec, used for concurrency control.
+   * This field is ignored if used in a `CreatePolicy` request. When the policy is returned from
+   * either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the
+   * current policySpec to use when executing a read-modify-write loop. When the policy is returned
+   * from a `GetEffectivePolicy` request, the `etag` will be unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,11 +80,11 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   private String updateTime;
 
   /**
-   * An opaque tag indicating the current version of the policy, used for concurrency control. This
-   * field is ignored if used in a `CreatePolicy` request. When the policy` is returned from either
-   * a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current
-   * policy to use when executing a read-modify-write loop. When the policy is returned from a
-   * `GetEffectivePolicy` request, the `etag` will be unset.
+   * An opaque tag indicating the current version of the policySpec, used for concurrency control.
+   * This field is ignored if used in a `CreatePolicy` request. When the policy is returned from
+   * either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the
+   * current policySpec to use when executing a read-modify-write loop. When the policy is returned
+   * from a `GetEffectivePolicy` request, the `etag` will be unset.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -92,11 +92,11 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   }
 
   /**
-   * An opaque tag indicating the current version of the policy, used for concurrency control. This
-   * field is ignored if used in a `CreatePolicy` request. When the policy` is returned from either
-   * a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current
-   * policy to use when executing a read-modify-write loop. When the policy is returned from a
-   * `GetEffectivePolicy` request, the `etag` will be unset.
+   * An opaque tag indicating the current version of the policySpec, used for concurrency control.
+   * This field is ignored if used in a `CreatePolicy` request. When the policy is returned from
+   * either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the
+   * current policySpec to use when executing a read-modify-write loop. When the policy is returned
+   * from a `GetEffectivePolicy` request, the `etag` will be unset.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2PolicySpec setEtag(java.lang.String etag) {

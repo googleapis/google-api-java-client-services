@@ -55,16 +55,15 @@ public final class GoogleCloudContactcenterinsightsV1UploadConversationRequest e
   private java.lang.String parent;
 
   /**
-   * Optional. DLP settings for transcript redaction. Optional, will default to the config specified
-   * in Settings.
+   * Optional. DLP settings for transcript redaction. Will default to the config specified in
+   * Settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig;
 
   /**
-   * Optional. Default Speech-to-Text configuration. Optional, will default to the config specified
-   * in Settings.
+   * Optional. Speech-to-Text configuration. Will default to the config specified in Settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +127,8 @@ public final class GoogleCloudContactcenterinsightsV1UploadConversationRequest e
   }
 
   /**
-   * Optional. DLP settings for transcript redaction. Optional, will default to the config specified
-   * in Settings.
+   * Optional. DLP settings for transcript redaction. Will default to the config specified in
+   * Settings.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1RedactionConfig getRedactionConfig() {
@@ -137,8 +136,8 @@ public final class GoogleCloudContactcenterinsightsV1UploadConversationRequest e
   }
 
   /**
-   * Optional. DLP settings for transcript redaction. Optional, will default to the config specified
-   * in Settings.
+   * Optional. DLP settings for transcript redaction. Will default to the config specified in
+   * Settings.
    * @param redactionConfig redactionConfig or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1UploadConversationRequest setRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig) {
@@ -147,8 +146,7 @@ public final class GoogleCloudContactcenterinsightsV1UploadConversationRequest e
   }
 
   /**
-   * Optional. Default Speech-to-Text configuration. Optional, will default to the config specified
-   * in Settings.
+   * Optional. Speech-to-Text configuration. Will default to the config specified in Settings.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1SpeechConfig getSpeechConfig() {
@@ -156,8 +154,7 @@ public final class GoogleCloudContactcenterinsightsV1UploadConversationRequest e
   }
 
   /**
-   * Optional. Default Speech-to-Text configuration. Optional, will default to the config specified
-   * in Settings.
+   * Optional. Speech-to-Text configuration. Will default to the config specified in Settings.
    * @param speechConfig speechConfig or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1UploadConversationRequest setSpeechConfig(GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig) {

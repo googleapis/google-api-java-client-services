@@ -77,6 +77,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   private java.lang.String languageCode;
 
   /**
+   * If specified, the spec will be used to modify the model specification provided to the LLM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec modelSpec;
+
+  /**
    * The number of top results to generate the summary from. If the number of results returned is
    * less than `summaryResultCount`, the summary is generated from all of the results. At most five
    * results can be used to generate a summary.
@@ -188,6 +195,23 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * If specified, the spec will be used to modify the model specification provided to the LLM.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec getModelSpec() {
+    return modelSpec;
+  }
+
+  /**
+   * If specified, the spec will be used to modify the model specification provided to the LLM.
+   * @param modelSpec modelSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec setModelSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec modelSpec) {
+    this.modelSpec = modelSpec;
     return this;
   }
 

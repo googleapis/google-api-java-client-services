@@ -331,7 +331,7 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link UpdateSettings#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Output only. The resource name of the settings to retrieve. Format:
+       * @param name Identifier. The resource name of the settings to retrieve. Format:
        *        organizations/{organization}/locations/{location}/settings.
        * @param content the {@link com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Settings}
        * @return the request
@@ -360,7 +360,7 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
          * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Output only. The resource name of the settings to retrieve. Format:
+         * @param name Identifier. The resource name of the settings to retrieve. Format:
        *        organizations/{organization}/locations/{location}/settings.
          * @param content the {@link com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Settings}
          * @since 1.13
@@ -431,13 +431,13 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Output only. The resource name of the settings to retrieve. Format:
+         * Identifier. The resource name of the settings to retrieve. Format:
          * organizations/{organization}/locations/{location}/settings.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Output only. The resource name of the settings to retrieve. Format:
+        /** Identifier. The resource name of the settings to retrieve. Format:
        organizations/{organization}/locations/{location}/settings.
          */
         public java.lang.String getName() {
@@ -445,7 +445,7 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Output only. The resource name of the settings to retrieve. Format:
+         * Identifier. The resource name of the settings to retrieve. Format:
          * organizations/{organization}/locations/{location}/settings.
          */
         public UpdateSettings setName(java.lang.String name) {
@@ -493,7 +493,8 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. A name of the notification to retrieve. Format:
-         *        organizations/{organization}/locations/{location}/notifications/{notification}.
+         *        organizations/{organization}/locations/{location}/notifications/{notification} or
+         *        projects/{projects}/locations/{location}/notifications/{notification}.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -521,7 +522,8 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. A name of the notification to retrieve. Format:
-         *        organizations/{organization}/locations/{location}/notifications/{notification}.
+         *        organizations/{organization}/locations/{location}/notifications/{notification} or
+         *        projects/{projects}/locations/{location}/notifications/{notification}.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -601,13 +603,15 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
 
           /**
            * Required. A name of the notification to retrieve. Format:
-           * organizations/{organization}/locations/{location}/notifications/{notification}.
+           * organizations/{organization}/locations/{location}/notifications/{notification} or
+           * projects/{projects}/locations/{location}/notifications/{notification}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. A name of the notification to retrieve. Format:
-         organizations/{organization}/locations/{location}/notifications/{notification}.
+         organizations/{organization}/locations/{location}/notifications/{notification} or
+         projects/{projects}/locations/{location}/notifications/{notification}.
            */
           public java.lang.String getName() {
             return name;
@@ -615,7 +619,8 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
 
           /**
            * Required. A name of the notification to retrieve. Format:
-           * organizations/{organization}/locations/{location}/notifications/{notification}.
+           * organizations/{organization}/locations/{location}/notifications/{notification} or
+           * projects/{projects}/locations/{location}/notifications/{notification}.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -670,7 +675,8 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which owns this collection of notifications. Must be of the form
-         *        "organizations/{organization}/locations/{location}"
+         *        "organizations/{organization}/locations/{location}" or
+         *        "projects/{project}/locations/{location}"
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -698,7 +704,8 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which owns this collection of notifications. Must be of the form
-         *        "organizations/{organization}/locations/{location}"
+         *        "organizations/{organization}/locations/{location}" or
+         *        "projects/{project}/locations/{location}"
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -778,13 +785,14 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The parent, which owns this collection of notifications. Must be of the form
-           * "organizations/{organization}/locations/{location}"
+           * "organizations/{organization}/locations/{location}" or
+           * "projects/{project}/locations/{location}"
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which owns this collection of notifications. Must be of the form
-         "organizations/{organization}/locations/{location}"
+         "organizations/{organization}/locations/{location}" or "projects/{project}/locations/{location}"
            */
           public java.lang.String getParent() {
             return parent;
@@ -792,13 +800,511 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The parent, which owns this collection of notifications. Must be of the form
-           * "organizations/{organization}/locations/{location}"
+           * "organizations/{organization}/locations/{location}" or
+           * "projects/{project}/locations/{location}"
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
                   "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * ISO code for requested localization language. If unset, will be interpereted as "en".
+           * If the requested language is valid, but not supported for this notification, English
+           * will be returned with an "Not applicable" LocalizationState. If the ISO code is invalid
+           * (i.e. not a real language), this RPC will throw an error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String languageCode;
+
+          /** ISO code for requested localization language. If unset, will be interpereted as "en". If the
+         requested language is valid, but not supported for this notification, English will be returned with
+         an "Not applicable" LocalizationState. If the ISO code is invalid (i.e. not a real language), this
+         RPC will throw an error.
+           */
+          public java.lang.String getLanguageCode() {
+            return languageCode;
+          }
+
+          /**
+           * ISO code for requested localization language. If unset, will be interpereted as "en".
+           * If the requested language is valid, but not supported for this notification, English
+           * will be returned with an "Not applicable" LocalizationState. If the ISO code is invalid
+           * (i.e. not a real language), this RPC will throw an error.
+           */
+          public List setLanguageCode(java.lang.String languageCode) {
+            this.languageCode = languageCode;
+            return this;
+          }
+
+          /**
+           * The maximum number of notifications to return. The service may return fewer than this
+           * value. If unspecified or equal to 0, at most 50 notifications will be returned. The
+           * maximum value is 50; values above 50 will be coerced to 50.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of notifications to return. The service may return fewer than this value. If
+         unspecified or equal to 0, at most 50 notifications will be returned. The maximum value is 50;
+         values above 50 will be coerced to 50.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of notifications to return. The service may return fewer than this
+           * value. If unspecified or equal to 0, at most 50 notifications will be returned. The
+           * maximum value is 50; values above 50 will be coerced to 50.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token returned from a previous request. When paginating, all other parameters
+           * provided in the request must match the call that returned the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token returned from a previous request. When paginating, all other parameters provided in
+         the request must match the call that returned the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token returned from a previous request. When paginating, all other parameters
+           * provided in the request must match the call that returned the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Specifies which parts of the notification resource should be returned in the response.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Specifies which parts of the notification resource should be returned in the response.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * Specifies which parts of the notification resource should be returned in the response.
+           */
+          public List setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Advisorynotifications advisorynotifications = new Advisorynotifications(...);}
+   *   {@code Advisorynotifications.Projects.List request = advisorynotifications.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Advisorynotifications advisorynotifications = new Advisorynotifications(...);}
+     *   {@code Advisorynotifications.Locations.List request = advisorynotifications.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Notifications collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Advisorynotifications advisorynotifications = new Advisorynotifications(...);}
+       *   {@code Advisorynotifications.Notifications.List request = advisorynotifications.notifications().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Notifications notifications() {
+        return new Notifications();
+      }
+
+      /**
+       * The "notifications" collection of methods.
+       */
+      public class Notifications {
+
+        /**
+         * Gets a notification.
+         *
+         * Create a request for the method "notifications.get".
+         *
+         * This request holds the parameters needed by the advisorynotifications server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the notification to retrieve. Format:
+         *        organizations/{organization}/locations/{location}/notifications/{notification} or
+         *        projects/{projects}/locations/{location}/notifications/{notification}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AdvisorynotificationsRequest<com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Notification> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notifications/[^/]+$");
+
+          /**
+           * Gets a notification.
+           *
+           * Create a request for the method "notifications.get".
+           *
+           * This request holds the parameters needed by the the advisorynotifications server.  After
+           * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the notification to retrieve. Format:
+         *        organizations/{organization}/locations/{location}/notifications/{notification} or
+         *        projects/{projects}/locations/{location}/notifications/{notification}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Advisorynotifications.this, "GET", REST_PATH, null, com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1Notification.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notifications/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the notification to retrieve. Format:
+           * organizations/{organization}/locations/{location}/notifications/{notification} or
+           * projects/{projects}/locations/{location}/notifications/{notification}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the notification to retrieve. Format:
+         organizations/{organization}/locations/{location}/notifications/{notification} or
+         projects/{projects}/locations/{location}/notifications/{notification}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the notification to retrieve. Format:
+           * organizations/{organization}/locations/{location}/notifications/{notification} or
+           * projects/{projects}/locations/{location}/notifications/{notification}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notifications/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * ISO code for requested localization language. If unset, will be interpereted as "en".
+           * If the requested language is valid, but not supported for this notification, English
+           * will be returned with an "Not applicable" LocalizationState. If the ISO code is invalid
+           * (i.e. not a real language), this RPC will throw an error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String languageCode;
+
+          /** ISO code for requested localization language. If unset, will be interpereted as "en". If the
+         requested language is valid, but not supported for this notification, English will be returned with
+         an "Not applicable" LocalizationState. If the ISO code is invalid (i.e. not a real language), this
+         RPC will throw an error.
+           */
+          public java.lang.String getLanguageCode() {
+            return languageCode;
+          }
+
+          /**
+           * ISO code for requested localization language. If unset, will be interpereted as "en".
+           * If the requested language is valid, but not supported for this notification, English
+           * will be returned with an "Not applicable" LocalizationState. If the ISO code is invalid
+           * (i.e. not a real language), this RPC will throw an error.
+           */
+          public Get setLanguageCode(java.lang.String languageCode) {
+            this.languageCode = languageCode;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists notifications under a given parent.
+         *
+         * Create a request for the method "notifications.list".
+         *
+         * This request holds the parameters needed by the advisorynotifications server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of notifications. Must be of the form
+         *        "organizations/{organization}/locations/{location}" or
+         *        "projects/{project}/locations/{location}"
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdvisorynotificationsRequest<com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1ListNotificationsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/notifications";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists notifications under a given parent.
+           *
+           * Create a request for the method "notifications.list".
+           *
+           * This request holds the parameters needed by the the advisorynotifications server.  After
+           * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of notifications. Must be of the form
+         *        "organizations/{organization}/locations/{location}" or
+         *        "projects/{project}/locations/{location}"
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Advisorynotifications.this, "GET", REST_PATH, null, com.google.api.services.advisorynotifications.v1.model.GoogleCloudAdvisorynotificationsV1ListNotificationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns this collection of notifications. Must be of the form
+           * "organizations/{organization}/locations/{location}" or
+           * "projects/{project}/locations/{location}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of notifications. Must be of the form
+         "organizations/{organization}/locations/{location}" or "projects/{project}/locations/{location}"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns this collection of notifications. Must be of the form
+           * "organizations/{organization}/locations/{location}" or
+           * "projects/{project}/locations/{location}"
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;

@@ -40,7 +40,7 @@ public final class GoogleCloudAdvisorynotificationsV1Settings extends com.google
   private java.lang.String etag;
 
   /**
-   * Output only. The resource name of the settings to retrieve. Format:
+   * Identifier. The resource name of the settings to retrieve. Format:
    * organizations/{organization}/locations/{location}/settings.
    * The value may be {@code null}.
    */
@@ -83,7 +83,7 @@ public final class GoogleCloudAdvisorynotificationsV1Settings extends com.google
   }
 
   /**
-   * Output only. The resource name of the settings to retrieve. Format:
+   * Identifier. The resource name of the settings to retrieve. Format:
    * organizations/{organization}/locations/{location}/settings.
    * @return value or {@code null} for none
    */
@@ -92,7 +92,7 @@ public final class GoogleCloudAdvisorynotificationsV1Settings extends com.google
   }
 
   /**
-   * Output only. The resource name of the settings to retrieve. Format:
+   * Identifier. The resource name of the settings to retrieve. Format:
    * organizations/{organization}/locations/{location}/settings.
    * @param name name or {@code null} for none
    */

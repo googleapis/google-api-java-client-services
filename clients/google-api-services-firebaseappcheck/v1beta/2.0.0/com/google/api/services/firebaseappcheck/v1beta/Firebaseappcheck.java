@@ -8206,6 +8206,1046 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
       }
 
+      /**
+       * An accessor for creating requests from the ResourcePolicies collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Firebaseappcheck firebaseappcheck = new Firebaseappcheck(...);}
+       *   {@code Firebaseappcheck.ResourcePolicies.List request = firebaseappcheck.resourcePolicies().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ResourcePolicies resourcePolicies() {
+        return new ResourcePolicies();
+      }
+
+      /**
+       * The "resourcePolicies" collection of methods.
+       */
+      public class ResourcePolicies {
+
+        /**
+         * Atomically updates the specified ResourcePolicy configurations.
+         *
+         * Create a request for the method "resourcePolicies.batchUpdate".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The parent project name and the service, in the format ```
+         *        projects/{project_number}/services/{service_id} ``` The parent collection in the `name`
+         *        field of any resource being updated must match this field, or the entire batch fails.
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesRequest}
+         * @return the request
+         */
+        public BatchUpdate batchUpdate(java.lang.String parent, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesRequest content) throws java.io.IOException {
+          BatchUpdate result = new BatchUpdate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchUpdate extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/resourcePolicies:batchUpdate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+$");
+
+          /**
+           * Atomically updates the specified ResourcePolicy configurations.
+           *
+           * Create a request for the method "resourcePolicies.batchUpdate".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent project name and the service, in the format ```
+         *        projects/{project_number}/services/{service_id} ``` The parent collection in the `name`
+         *        field of any resource being updated must match this field, or the entire batch fails.
+           * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesRequest}
+           * @since 1.13
+           */
+          protected BatchUpdate(java.lang.String parent, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesRequest content) {
+            super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchUpdate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchUpdate setAccessToken(java.lang.String accessToken) {
+            return (BatchUpdate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchUpdate setAlt(java.lang.String alt) {
+            return (BatchUpdate) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchUpdate setCallback(java.lang.String callback) {
+            return (BatchUpdate) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchUpdate setFields(java.lang.String fields) {
+            return (BatchUpdate) super.setFields(fields);
+          }
+
+          @Override
+          public BatchUpdate setKey(java.lang.String key) {
+            return (BatchUpdate) super.setKey(key);
+          }
+
+          @Override
+          public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+            return (BatchUpdate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+            return (BatchUpdate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchUpdate setUploadType(java.lang.String uploadType) {
+            return (BatchUpdate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent project name and the service, in the format ```
+           * projects/{project_number}/services/{service_id} ``` The parent collection in the `name`
+           * field of any resource being updated must match this field, or the entire batch fails.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent project name and the service, in the format ```
+         projects/{project_number}/services/{service_id} ``` The parent collection in the `name` field of
+         any resource being updated must match this field, or the entire batch fails.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent project name and the service, in the format ```
+           * projects/{project_number}/services/{service_id} ``` The parent collection in the `name`
+           * field of any resource being updated must match this field, or the entire batch fails.
+           */
+          public BatchUpdate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchUpdate set(String parameterName, Object value) {
+            return (BatchUpdate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates the specified ResourcePolicy configuration.
+         *
+         * Create a request for the method "resourcePolicies.create".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The relative resource name of the parent service in which the specified ResourcePolicy
+         *        will be created, in the format: ``` projects/{project_number}/services/{service_id} ```
+         *        Note that the `service_id` element must be a supported service ID. Currently, the
+         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/resourcePolicies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+$");
+
+          /**
+           * Creates the specified ResourcePolicy configuration.
+           *
+           * Create a request for the method "resourcePolicies.create".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The relative resource name of the parent service in which the specified ResourcePolicy
+         *        will be created, in the format: ``` projects/{project_number}/services/{service_id} ```
+         *        Note that the `service_id` element must be a supported service ID. Currently, the
+         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+           * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy content) {
+            super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the parent service in which the specified
+           * ResourcePolicy will be created, in the format: ```
+           * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
+           * must be a supported service ID. Currently, the following service IDs are supported: *
+           * `oauth2.googleapis.com` (Google Identity for iOS)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The relative resource name of the parent service in which the specified ResourcePolicy
+         will be created, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
+         the `service_id` element must be a supported service ID. Currently, the following service IDs are
+         supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The relative resource name of the parent service in which the specified
+           * ResourcePolicy will be created, in the format: ```
+           * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
+           * must be a supported service ID. Currently, the following service IDs are supported: *
+           * `oauth2.googleapis.com` (Google Identity for iOS)
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the specified ResourcePolicy configuration.
+         *
+         * Create a request for the method "resourcePolicies.delete".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the ResourcePolicy to delete, in the format: ```
+         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name} ```
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+
+          /**
+           * Deletes the specified ResourcePolicy configuration.
+           *
+           * Create a request for the method "resourcePolicies.delete".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the ResourcePolicy to delete, in the format: ```
+         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name} ```
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Firebaseappcheck.this, "DELETE", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the ResourcePolicy to delete, in the format:
+           * ``` projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name}
+           * ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the ResourcePolicy to delete, in the format: ```
+         projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name} ```
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the ResourcePolicy to delete, in the format:
+           * ``` projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name}
+           * ```
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The checksum to be validated against the current ResourcePolicy, to ensure the client
+           * has an up-to-date value before proceeding. The user can obtain this from the
+           * ResourcePolicy object that they last received. This etag is strongly validated.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** The checksum to be validated against the current ResourcePolicy, to ensure the client has an up-to-
+         date value before proceeding. The user can obtain this from the ResourcePolicy object that they
+         last received. This etag is strongly validated.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * The checksum to be validated against the current ResourcePolicy, to ensure the client
+           * has an up-to-date value before proceeding. The user can obtain this from the
+           * ResourcePolicy object that they last received. This etag is strongly validated.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the requested ResourcePolicy configuration.
+         *
+         * Create a request for the method "resourcePolicies.get".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the ResourcePolicy to retrieve, in the format: ```
+         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
+         *        Note that the `service_id` element must be a supported service ID. Currently, the
+         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+
+          /**
+           * Gets the requested ResourcePolicy configuration.
+           *
+           * Create a request for the method "resourcePolicies.get".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the ResourcePolicy to retrieve, in the format: ```
+         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
+         *        Note that the `service_id` element must be a supported service ID. Currently, the
+         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the ResourcePolicy to retrieve, in the format:
+           * ```
+           * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
+           * ``` Note that the `service_id` element must be a supported service ID. Currently, the
+           * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
+           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
+           * policy.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the ResourcePolicy to retrieve, in the format: ```
+         projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note that
+         the `service_id` element must be a supported service ID. Currently, the following service IDs are
+         supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is a system-
+         generated UID used as the resource ID for the policy.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the ResourcePolicy to retrieve, in the format:
+           * ```
+           * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
+           * ``` Note that the `service_id` element must be a supported service ID. Currently, the
+           * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
+           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
+           * policy.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all ResourcePolicy configurations for the specified project and service.
+         *
+         * Create a request for the method "resourcePolicies.list".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The relative resource name of the parent project and service for which to list each
+         *        associated ResourcePolicy, in the format: ```
+         *        projects/{project_number}/services/{service_name} ```
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaListResourcePoliciesResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/resourcePolicies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+$");
+
+          /**
+           * Lists all ResourcePolicy configurations for the specified project and service.
+           *
+           * Create a request for the method "resourcePolicies.list".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The relative resource name of the parent project and service for which to list each
+         *        associated ResourcePolicy, in the format: ```
+         *        projects/{project_number}/services/{service_name} ```
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaListResourcePoliciesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the parent project and service for which to
+           * list each associated ResourcePolicy, in the format: ```
+           * projects/{project_number}/services/{service_name} ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The relative resource name of the parent project and service for which to list each
+         associated ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_name} ```
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The relative resource name of the parent project and service for which to
+           * list each associated ResourcePolicy, in the format: ```
+           * projects/{project_number}/services/{service_name} ```
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of ResourcePolicys to return in the response. Only explicitly
+           * configured policies are returned. The server may return fewer than this at its own
+           * discretion. If no value is specified (or too large a value is specified), the server
+           * will impose its own limit.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of ResourcePolicys to return in the response. Only explicitly configured
+         policies are returned. The server may return fewer than this at its own discretion. If no value is
+         specified (or too large a value is specified), the server will impose its own limit.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of ResourcePolicys to return in the response. Only explicitly
+           * configured policies are returned. The server may return fewer than this at its own
+           * discretion. If no value is specified (or too large a value is specified), the server
+           * will impose its own limit.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Token returned from a previous call to ListResourcePolicies indicating where in the set
+           * of ResourcePolicys to resume listing. Provide this to retrieve the subsequent page.
+           * When paginating, all other parameters provided to ListResourcePolicies must match the
+           * call that provided the page token; if they do not match, the result is undefined.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Token returned from a previous call to ListResourcePolicies indicating where in the set of
+         ResourcePolicys to resume listing. Provide this to retrieve the subsequent page. When paginating,
+         all other parameters provided to ListResourcePolicies must match the call that provided the page
+         token; if they do not match, the result is undefined.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Token returned from a previous call to ListResourcePolicies indicating where in the set
+           * of ResourcePolicys to resume listing. Provide this to retrieve the subsequent page.
+           * When paginating, all other parameters provided to ListResourcePolicies must match the
+           * call that provided the page token; if they do not match, the result is undefined.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the specified ResourcePolicy configuration.
+         *
+         * Create a request for the method "resourcePolicies.patch".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative name of the resource configuration object, in the format: ```
+         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
+         *        Note that the `service_id` element must be a supported service ID. Currently, the
+         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+
+          /**
+           * Updates the specified ResourcePolicy configuration.
+           *
+           * Create a request for the method "resourcePolicies.patch".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative name of the resource configuration object, in the format: ```
+         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
+         *        Note that the `service_id` element must be a supported service ID. Currently, the
+         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
+           * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy content) {
+            super(Firebaseappcheck.this, "PATCH", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative name of the resource configuration object, in the format: ```
+           * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
+           * ``` Note that the `service_id` element must be a supported service ID. Currently, the
+           * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
+           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
+           * policy.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative name of the resource configuration object, in the format: ```
+         projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note that
+         the `service_id` element must be a supported service ID. Currently, the following service IDs are
+         supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is a system-
+         generated UID used as the resource ID for the policy.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative name of the resource configuration object, in the format: ```
+           * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
+           * ``` Note that the `service_id` element must be a supported service ID. Currently, the
+           * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
+           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
+           * policy.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. A comma-separated list of names of fields in the ResourcePolicy to update.
+           * Example: `enforcement_mode`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A comma-separated list of names of fields in the ResourcePolicy to update. Example:
+         `enforcement_mode`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. A comma-separated list of names of fields in the ResourcePolicy to update.
+           * Example: `enforcement_mode`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

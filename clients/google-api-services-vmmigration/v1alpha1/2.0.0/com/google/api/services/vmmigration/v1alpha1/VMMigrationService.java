@@ -6360,7 +6360,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
               }
             }
             /**
-             * Lists CloneJobs of a given migrating VM.
+             * Lists the CloneJobs of a migrating VM. Only the 25 most recent CloneJobs are returned.
              *
              * Create a request for the method "cloneJobs.list".
              *
@@ -6384,7 +6384,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sources/[^/]+/migratingVms/[^/]+$");
 
               /**
-               * Lists CloneJobs of a given migrating VM.
+               * Lists the CloneJobs of a migrating VM. Only the 25 most recent CloneJobs are returned.
                *
                * Create a request for the method "cloneJobs.list".
                *
@@ -7065,7 +7065,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
               }
             }
             /**
-             * Lists CutoverJobs of a given migrating VM.
+             * Lists the CutoverJobs of a migrating VM. Only the 25 most recent CutoverJobs are returned.
              *
              * Create a request for the method "cutoverJobs.list".
              *
@@ -7089,7 +7089,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sources/[^/]+/migratingVms/[^/]+$");
 
               /**
-               * Lists CutoverJobs of a given migrating VM.
+               * Lists the CutoverJobs of a migrating VM. Only the 25 most recent CutoverJobs are returned.
                *
                * Create a request for the method "cutoverJobs.list".
                *

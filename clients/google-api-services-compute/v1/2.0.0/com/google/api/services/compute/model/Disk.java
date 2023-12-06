@@ -90,6 +90,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey diskEncryptionKey;
 
   /**
+   * Whether this disk is using confidential compute mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialCompute;
+
+  /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
    * images. Read Enabling guest operating system features to see a list of available options.
    * The value may be {@code null}.
@@ -539,6 +546,23 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {
     this.diskEncryptionKey = diskEncryptionKey;
+    return this;
+  }
+
+  /**
+   * Whether this disk is using confidential compute mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialCompute() {
+    return enableConfidentialCompute;
+  }
+
+  /**
+   * Whether this disk is using confidential compute mode.
+   * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
+   */
+  public Disk setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
+    this.enableConfidentialCompute = enableConfidentialCompute;
     return this;
   }
 

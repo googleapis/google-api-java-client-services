@@ -17,9 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Target Pool resource. Target pools are used for network TCP/UDP load balancing. A
- * target pool references member instances, an associated legacy HttpHealthCheck resource, and,
- * optionally, a backup target pool. For more information, read Using target pools.
+ * Represents a Target Pool resource. Target pools are used with external passthrough Network Load
+ * Balancers. A target pool references member instances, an associated legacy HttpHealthCheck
+ * resource, and, optionally, a backup target pool. For more information, read Using target pools.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

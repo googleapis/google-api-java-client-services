@@ -82,6 +82,13 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String diskType;
 
   /**
+   * Whether this disk is using confidential compute mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialCompute;
+
+  /**
    * Labels to apply to this disk. These can be later modified by the disks.setLabels method. This
    * field is only applicable for persistent disks.
    * The value may be {@code null}.
@@ -300,6 +307,23 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Whether this disk is using confidential compute mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialCompute() {
+    return enableConfidentialCompute;
+  }
+
+  /**
+   * Whether this disk is using confidential compute mode.
+   * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
+    this.enableConfidentialCompute = enableConfidentialCompute;
     return this;
   }
 

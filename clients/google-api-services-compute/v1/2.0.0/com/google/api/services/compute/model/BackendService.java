@@ -38,11 +38,11 @@ package com.google.api.services.compute.model;
 public final class BackendService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S)
-   * load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session
-   * affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser
-   * session (or equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when
-   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * Lifetime of cookies in seconds. This setting is applicable to Application Load Balancers and
+   * Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0,
+   * the cookie is non-persistent and lasts only until the end of the browser session (or
+   * equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when the backend
+   * service is referenced by a URL map that is bound to target gRPC proxy that has
    * validateForProxyless field set to true.
    * The value may be {@code null}.
    */
@@ -92,7 +92,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Connection Tracking configuration for this BackendService. Connection tracking policy settings
-   * are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
+   * are only available for external passthrough Network Load Balancers and internal passthrough
+   * Network Load Balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +153,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String edgeSecurityPolicy;
 
   /**
-   * If true, enables Cloud CDN for the backend service of an external HTTP(S) load balancer.
+   * If true, enables Cloud CDN for the backend service of a global external Application Load
+   * Balancer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,10 +162,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Requires at least one backend instance group to be defined as a backup (failover) backend. For
-   * load balancers that have configurable failover: [Internal TCP/UDP Load
-   * Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
-   * [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network
-   * /networklb-failover-overview).
+   * load balancers that have configurable failover: [Internal passthrough Network Load
+   * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
+   * [external passthrough Network Load Balancers](https://cloud.google.com/load-
+   * balancing/docs/network/networklb-failover-overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,8 +195,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> healthChecks;
 
   /**
-   * The configurations for Identity-Aware Proxy on this resource. Not available for Internal
-   * TCP/UDP Load Balancing and Network Load Balancing.
+   * The configurations for Identity-Aware Proxy on this resource. Not available for internal
+   * passthrough Network Load Balancers and external passthrough Network Load Balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -336,7 +338,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
-   * 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+   * 80. For internal passthrough Network Load Balancers and external passthrough Network Load
+   * Balancers, omit port.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -346,8 +349,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * A named port on a backend instance group representing the port for communication to the backend
    * VMs in that group. The named port must be [defined on each backend instance
    * group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This
-   * parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and
-   * Network Load Balancing, omit port_name.
+   * parameter has no meaning if the backends are NEGs. For internal passthrough Network Load
+   * Balancers and external passthrough Network Load Balancers, omit port_name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -439,11 +442,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.util.List<BackendServiceUsedBy> usedBy;
 
   /**
-   * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S)
-   * load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session
-   * affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser
-   * session (or equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when
-   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * Lifetime of cookies in seconds. This setting is applicable to Application Load Balancers and
+   * Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0,
+   * the cookie is non-persistent and lasts only until the end of the browser session (or
+   * equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when the backend
+   * service is referenced by a URL map that is bound to target gRPC proxy that has
    * validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
@@ -452,11 +455,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S)
-   * load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session
-   * affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser
-   * session (or equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when
-   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * Lifetime of cookies in seconds. This setting is applicable to Application Load Balancers and
+   * Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0,
+   * the cookie is non-persistent and lasts only until the end of the browser session (or
+   * equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when the backend
+   * service is referenced by a URL map that is bound to target gRPC proxy that has
    * validateForProxyless field set to true.
    * @param affinityCookieTtlSec affinityCookieTtlSec or {@code null} for none
    */
@@ -552,7 +555,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Connection Tracking configuration for this BackendService. Connection tracking policy settings
-   * are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
+   * are only available for external passthrough Network Load Balancers and internal passthrough
+   * Network Load Balancers.
    * @return value or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy getConnectionTrackingPolicy() {
@@ -561,7 +565,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Connection Tracking configuration for this BackendService. Connection tracking policy settings
-   * are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
+   * are only available for external passthrough Network Load Balancers and internal passthrough
+   * Network Load Balancers.
    * @param connectionTrackingPolicy connectionTrackingPolicy or {@code null} for none
    */
   public BackendService setConnectionTrackingPolicy(BackendServiceConnectionTrackingPolicy connectionTrackingPolicy) {
@@ -694,7 +699,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * If true, enables Cloud CDN for the backend service of an external HTTP(S) load balancer.
+   * If true, enables Cloud CDN for the backend service of a global external Application Load
+   * Balancer.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableCDN() {
@@ -702,7 +708,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * If true, enables Cloud CDN for the backend service of an external HTTP(S) load balancer.
+   * If true, enables Cloud CDN for the backend service of a global external Application Load
+   * Balancer.
    * @param enableCDN enableCDN or {@code null} for none
    */
   public BackendService setEnableCDN(java.lang.Boolean enableCDN) {
@@ -712,10 +719,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Requires at least one backend instance group to be defined as a backup (failover) backend. For
-   * load balancers that have configurable failover: [Internal TCP/UDP Load
-   * Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
-   * [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network
-   * /networklb-failover-overview).
+   * load balancers that have configurable failover: [Internal passthrough Network Load
+   * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
+   * [external passthrough Network Load Balancers](https://cloud.google.com/load-
+   * balancing/docs/network/networklb-failover-overview).
    * @return value or {@code null} for none
    */
   public BackendServiceFailoverPolicy getFailoverPolicy() {
@@ -724,10 +731,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Requires at least one backend instance group to be defined as a backup (failover) backend. For
-   * load balancers that have configurable failover: [Internal TCP/UDP Load
-   * Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
-   * [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network
-   * /networklb-failover-overview).
+   * load balancers that have configurable failover: [Internal passthrough Network Load
+   * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
+   * [external passthrough Network Load Balancers](https://cloud.google.com/load-
+   * balancing/docs/network/networklb-failover-overview).
    * @param failoverPolicy failoverPolicy or {@code null} for none
    */
   public BackendService setFailoverPolicy(BackendServiceFailoverPolicy failoverPolicy) {
@@ -824,8 +831,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The configurations for Identity-Aware Proxy on this resource. Not available for Internal
-   * TCP/UDP Load Balancing and Network Load Balancing.
+   * The configurations for Identity-Aware Proxy on this resource. Not available for internal
+   * passthrough Network Load Balancers and external passthrough Network Load Balancers.
    * @return value or {@code null} for none
    */
   public BackendServiceIAP getIap() {
@@ -833,8 +840,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The configurations for Identity-Aware Proxy on this resource. Not available for Internal
-   * TCP/UDP Load Balancing and Network Load Balancing.
+   * The configurations for Identity-Aware Proxy on this resource. Not available for internal
+   * passthrough Network Load Balancers and external passthrough Network Load Balancers.
    * @param iap iap or {@code null} for none
    */
   public BackendService setIap(BackendServiceIAP iap) {
@@ -1145,7 +1152,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
-   * 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+   * 80. For internal passthrough Network Load Balancers and external passthrough Network Load
+   * Balancers, omit port.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -1154,7 +1162,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
-   * 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+   * 80. For internal passthrough Network Load Balancers and external passthrough Network Load
+   * Balancers, omit port.
    * @param port port or {@code null} for none
    */
   public BackendService setPort(java.lang.Integer port) {
@@ -1166,8 +1175,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * A named port on a backend instance group representing the port for communication to the backend
    * VMs in that group. The named port must be [defined on each backend instance
    * group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This
-   * parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and
-   * Network Load Balancing, omit port_name.
+   * parameter has no meaning if the backends are NEGs. For internal passthrough Network Load
+   * Balancers and external passthrough Network Load Balancers, omit port_name.
    * @return value or {@code null} for none
    */
   public java.lang.String getPortName() {
@@ -1178,8 +1187,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * A named port on a backend instance group representing the port for communication to the backend
    * VMs in that group. The named port must be [defined on each backend instance
    * group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This
-   * parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and
-   * Network Load Balancing, omit port_name.
+   * parameter has no meaning if the backends are NEGs. For internal passthrough Network Load
+   * Balancers and external passthrough Network Load Balancers, omit port_name.
    * @param portName portName or {@code null} for none
    */
   public BackendService setPortName(java.lang.String portName) {

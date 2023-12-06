@@ -36,7 +36,8 @@ public final class InstanceGroupManagerStandbyPolicy extends com.google.api.clie
   private java.lang.Integer initialDelaySec;
 
   /**
-   * Defines behaviour of using instances from standby pool to resize MIG.
+   * Defines how a MIG resumes or starts VMs from a standby pool when the group scales out. The
+   * default mode is `MANUAL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +59,8 @@ public final class InstanceGroupManagerStandbyPolicy extends com.google.api.clie
   }
 
   /**
-   * Defines behaviour of using instances from standby pool to resize MIG.
+   * Defines how a MIG resumes or starts VMs from a standby pool when the group scales out. The
+   * default mode is `MANUAL`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -66,7 +68,8 @@ public final class InstanceGroupManagerStandbyPolicy extends com.google.api.clie
   }
 
   /**
-   * Defines behaviour of using instances from standby pool to resize MIG.
+   * Defines how a MIG resumes or starts VMs from a standby pool when the group scales out. The
+   * default mode is `MANUAL`.
    * @param mode mode or {@code null} for none
    */
   public InstanceGroupManagerStandbyPolicy setMode(java.lang.String mode) {

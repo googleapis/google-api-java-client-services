@@ -57,7 +57,7 @@ public final class HTTPHealthCheck extends com.google.api.client.json.GenericJso
   /**
    * Specifies how a port is selected for health checking. Can be one of the following values:
    * USE_FIXED_PORT: Specifies a port number explicitly using the port field in the health check.
-   * Supported by backend services for pass-through load balancers and backend services for proxy
+   * Supported by backend services for passthrough load balancers and backend services for proxy
    * load balancers. Also supported in legacy HTTP health checks for target pools. The health check
    * supports all backends supported by the backend service provided the backend can be health
    * checked. For example, GCE_VM_IP network endpoint groups, GCE_VM_IP_PORT network endpoint
@@ -162,7 +162,7 @@ public final class HTTPHealthCheck extends com.google.api.client.json.GenericJso
   /**
    * Specifies how a port is selected for health checking. Can be one of the following values:
    * USE_FIXED_PORT: Specifies a port number explicitly using the port field in the health check.
-   * Supported by backend services for pass-through load balancers and backend services for proxy
+   * Supported by backend services for passthrough load balancers and backend services for proxy
    * load balancers. Also supported in legacy HTTP health checks for target pools. The health check
    * supports all backends supported by the backend service provided the backend can be health
    * checked. For example, GCE_VM_IP network endpoint groups, GCE_VM_IP_PORT network endpoint
@@ -184,7 +184,7 @@ public final class HTTPHealthCheck extends com.google.api.client.json.GenericJso
   /**
    * Specifies how a port is selected for health checking. Can be one of the following values:
    * USE_FIXED_PORT: Specifies a port number explicitly using the port field in the health check.
-   * Supported by backend services for pass-through load balancers and backend services for proxy
+   * Supported by backend services for passthrough load balancers and backend services for proxy
    * load balancers. Also supported in legacy HTTP health checks for target pools. The health check
    * supports all backends supported by the backend service provided the backend can be health
    * checked. For example, GCE_VM_IP network endpoint groups, GCE_VM_IP_PORT network endpoint

@@ -31,6 +31,13 @@ package com.google.api.services.compute.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Reservation for aggregated resources, providing shape flexibility.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AllocationAggregateReservation aggregateReservation;
+
+  /**
    * [Output Only] Full or partial URL to a parent commitment. This field displays for reservations
    * that are tied to a commitment.
    * The value may be {@code null}.
@@ -145,6 +152,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Reservation for aggregated resources, providing shape flexibility.
+   * @return value or {@code null} for none
+   */
+  public AllocationAggregateReservation getAggregateReservation() {
+    return aggregateReservation;
+  }
+
+  /**
+   * Reservation for aggregated resources, providing shape flexibility.
+   * @param aggregateReservation aggregateReservation or {@code null} for none
+   */
+  public Reservation setAggregateReservation(AllocationAggregateReservation aggregateReservation) {
+    this.aggregateReservation = aggregateReservation;
+    return this;
+  }
 
   /**
    * [Output Only] Full or partial URL to a parent commitment. This field displays for reservations

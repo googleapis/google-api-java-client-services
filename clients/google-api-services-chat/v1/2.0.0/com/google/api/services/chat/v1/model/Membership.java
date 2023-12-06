@@ -31,12 +31,22 @@ package com.google.api.services.chat.v1.model;
 public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The creation time of the membership, such as when a member joined or was invited
-   * to join a space.
+   * Optional. Immutable. The creation time of the membership, such as when a member joined or was
+   * invited to join a space. [Developer Preview](https://developers.google.com/workspace/preview):
+   * This field is output only, except when used to import historical memberships in import mode
+   * spaces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * The Google Group the membership corresponds to. Only supports read operations. Other
+   * operations, like creating or updating a membership, aren't currently supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Group groupMember;
 
   /**
    * The Google Chat user or app the membership corresponds to. If your Chat app [authenticates as a
@@ -72,8 +82,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Output only. The creation time of the membership, such as when a member joined or was invited
-   * to join a space.
+   * Optional. Immutable. The creation time of the membership, such as when a member joined or was
+   * invited to join a space. [Developer Preview](https://developers.google.com/workspace/preview):
+   * This field is output only, except when used to import historical memberships in import mode
+   * spaces.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -81,12 +93,33 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The creation time of the membership, such as when a member joined or was invited
-   * to join a space.
+   * Optional. Immutable. The creation time of the membership, such as when a member joined or was
+   * invited to join a space. [Developer Preview](https://developers.google.com/workspace/preview):
+   * This field is output only, except when used to import historical memberships in import mode
+   * spaces.
    * @param createTime createTime or {@code null} for none
    */
   public Membership setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The Google Group the membership corresponds to. Only supports read operations. Other
+   * operations, like creating or updating a membership, aren't currently supported.
+   * @return value or {@code null} for none
+   */
+  public Group getGroupMember() {
+    return groupMember;
+  }
+
+  /**
+   * The Google Group the membership corresponds to. Only supports read operations. Other
+   * operations, like creating or updating a membership, aren't currently supported.
+   * @param groupMember groupMember or {@code null} for none
+   */
+  public Membership setGroupMember(Group groupMember) {
+    this.groupMember = groupMember;
     return this;
   }
 

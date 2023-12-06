@@ -2500,6 +2500,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. When `true`, also returns memberships associated with a Google Group, in
+         * addition to other types of memberships. If a filter is set, Google Group memberships that
+         * don't match the filter criteria aren't returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showGroups;
+
+        /** Optional. When `true`, also returns memberships associated with a Google Group, in addition to
+       other types of memberships. If a filter is set, Google Group memberships that don't match the
+       filter criteria aren't returned.
+         */
+        public java.lang.Boolean getShowGroups() {
+          return showGroups;
+        }
+
+        /**
+         * Optional. When `true`, also returns memberships associated with a Google Group, in
+         * addition to other types of memberships. If a filter is set, Google Group memberships that
+         * don't match the filter criteria aren't returned.
+         */
+        public List setShowGroups(java.lang.Boolean showGroups) {
+          this.showGroups = showGroups;
+          return this;
+        }
+
+        /**
          * Optional. When `true`, also returns memberships associated with invited members, in
          * addition to other types of memberships. If a filter is set, invited memberships that
          * don't match the filter criteria aren't returned. Currently requires [user

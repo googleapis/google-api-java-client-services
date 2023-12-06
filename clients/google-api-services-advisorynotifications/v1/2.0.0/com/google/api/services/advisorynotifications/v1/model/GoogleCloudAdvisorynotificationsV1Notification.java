@@ -52,7 +52,8 @@ public final class GoogleCloudAdvisorynotificationsV1Notification extends com.go
 
   /**
    * The resource name of the notification. Format:
-   * organizations/{organization}/locations/{location}/notifications/{notification}.
+   * organizations/{organization}/locations/{location}/notifications/{notification} or
+   * projects/{project}/locations/{location}/notifications/{notification}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +109,8 @@ public final class GoogleCloudAdvisorynotificationsV1Notification extends com.go
 
   /**
    * The resource name of the notification. Format:
-   * organizations/{organization}/locations/{location}/notifications/{notification}.
+   * organizations/{organization}/locations/{location}/notifications/{notification} or
+   * projects/{project}/locations/{location}/notifications/{notification}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -117,7 +119,8 @@ public final class GoogleCloudAdvisorynotificationsV1Notification extends com.go
 
   /**
    * The resource name of the notification. Format:
-   * organizations/{organization}/locations/{location}/notifications/{notification}.
+   * organizations/{organization}/locations/{location}/notifications/{notification} or
+   * projects/{project}/locations/{location}/notifications/{notification}.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAdvisorynotificationsV1Notification setName(java.lang.String name) {

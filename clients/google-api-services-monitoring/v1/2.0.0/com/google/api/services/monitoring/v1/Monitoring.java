@@ -1628,25 +1628,25 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return additional
-         * results from the previous method call.
+         * Optional. If this field is not empty then it must contain the nextPageToken value
+         * returned by a previous call to this method. Using this field causes the method to return
+         * additional results from the previous method call.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
-       to this method. Using this field causes the method to return additional results from the previous
-       method call.
+        /** Optional. If this field is not empty then it must contain the nextPageToken value returned by a
+       previous call to this method. Using this field causes the method to return additional results from
+       the previous method call.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return additional
-         * results from the previous method call.
+         * Optional. If this field is not empty then it must contain the nextPageToken value
+         * returned by a previous call to this method. Using this field causes the method to return
+         * additional results from the previous method call.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -1668,7 +1668,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Immutable. The resource name of the dashboard.
+       * @param name Identifier. The resource name of the dashboard.
        * @param content the {@link com.google.api.services.monitoring.v1.model.Dashboard}
        * @return the request
        */
@@ -1698,7 +1698,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Immutable. The resource name of the dashboard.
+         * @param name Identifier. The resource name of the dashboard.
          * @param content the {@link com.google.api.services.monitoring.v1.model.Dashboard}
          * @since 1.13
          */
@@ -1767,17 +1767,17 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Immutable. The resource name of the dashboard. */
+        /** Identifier. The resource name of the dashboard. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Immutable. The resource name of the dashboard.
+        /** Identifier. The resource name of the dashboard.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Immutable. The resource name of the dashboard. */
+        /** Identifier. The resource name of the dashboard. */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

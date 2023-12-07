@@ -82,7 +82,7 @@ public final class Lun extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean shareable;
 
   /**
-   * The size of this LUN, in gigabytes.
+   * The size of this LUN, in GiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -240,7 +240,7 @@ public final class Lun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of this LUN, in gigabytes.
+   * The size of this LUN, in GiB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -248,7 +248,7 @@ public final class Lun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of this LUN, in gigabytes.
+   * The size of this LUN, in GiB.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public Lun setSizeGb(java.lang.Long sizeGb) {

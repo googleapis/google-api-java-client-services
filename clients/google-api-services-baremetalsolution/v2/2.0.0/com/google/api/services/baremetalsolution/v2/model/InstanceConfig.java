@@ -67,6 +67,14 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String instanceType;
 
   /**
+   * Name of the KMS crypto key version used to encrypt the initial passwords. The key has to have
+   * ASYMMETRIC_DECRYPT purpose.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyVersion;
+
+  /**
    * List of logical interfaces for the instance. The number of logical interfaces will be the same
    * as number of hardware bond/nic on the chosen network template. Filled if
    * InstanceConfig.multivlan_config is true.
@@ -216,6 +224,25 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
    */
   public InstanceConfig setInstanceType(java.lang.String instanceType) {
     this.instanceType = instanceType;
+    return this;
+  }
+
+  /**
+   * Name of the KMS crypto key version used to encrypt the initial passwords. The key has to have
+   * ASYMMETRIC_DECRYPT purpose.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyVersion() {
+    return kmsKeyVersion;
+  }
+
+  /**
+   * Name of the KMS crypto key version used to encrypt the initial passwords. The key has to have
+   * ASYMMETRIC_DECRYPT purpose.
+   * @param kmsKeyVersion kmsKeyVersion or {@code null} for none
+   */
+  public InstanceConfig setKmsKeyVersion(java.lang.String kmsKeyVersion) {
+    this.kmsKeyVersion = kmsKeyVersion;
     return this;
   }
 

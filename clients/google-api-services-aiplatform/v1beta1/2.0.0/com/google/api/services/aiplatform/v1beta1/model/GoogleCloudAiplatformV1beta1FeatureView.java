@@ -74,8 +74,8 @@ public final class GoogleCloudAiplatformV1beta1FeatureView extends com.google.ap
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureO
-   * nlineStores/{feature_online_store}/featureViews/{feature_view}`
+   * Identifier. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOn
+   * lineStores/{feature_online_store}/featureViews/{feature_view}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,8 +207,8 @@ public final class GoogleCloudAiplatformV1beta1FeatureView extends com.google.ap
   }
 
   /**
-   * Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureO
-   * nlineStores/{feature_online_store}/featureViews/{feature_view}`
+   * Identifier. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOn
+   * lineStores/{feature_online_store}/featureViews/{feature_view}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -216,8 +216,8 @@ public final class GoogleCloudAiplatformV1beta1FeatureView extends com.google.ap
   }
 
   /**
-   * Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureO
-   * nlineStores/{feature_online_store}/featureViews/{feature_view}`
+   * Identifier. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOn
+   * lineStores/{feature_online_store}/featureViews/{feature_view}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureView setName(java.lang.String name) {

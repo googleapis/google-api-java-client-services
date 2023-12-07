@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndexRef extends com.goog
   private java.lang.String deployedIndexId;
 
   /**
+   * Output only. The display name of the DeployedIndex.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Immutable. A resource name of the IndexEndpoint.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndexRef extends com.goog
    */
   public GoogleCloudAiplatformV1beta1DeployedIndexRef setDeployedIndexId(java.lang.String deployedIndexId) {
     this.deployedIndexId = deployedIndexId;
+    return this;
+  }
+
+  /**
+   * Output only. The display name of the DeployedIndex.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. The display name of the DeployedIndex.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployedIndexRef setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

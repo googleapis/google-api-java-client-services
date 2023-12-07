@@ -73,7 +73,7 @@ public final class GoogleCloudAiplatformV1FeatureGroup extends com.google.api.cl
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Name of the FeatureGroup. Format:
+   * Identifier. Name of the FeatureGroup. Format:
    * `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
    * The value may be {@code null}.
    */
@@ -189,7 +189,7 @@ public final class GoogleCloudAiplatformV1FeatureGroup extends com.google.api.cl
   }
 
   /**
-   * Output only. Name of the FeatureGroup. Format:
+   * Identifier. Name of the FeatureGroup. Format:
    * `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
    * @return value or {@code null} for none
    */
@@ -198,7 +198,7 @@ public final class GoogleCloudAiplatformV1FeatureGroup extends com.google.api.cl
   }
 
   /**
-   * Output only. Name of the FeatureGroup. Format:
+   * Identifier. Name of the FeatureGroup. Format:
    * `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
    * @param name name or {@code null} for none
    */

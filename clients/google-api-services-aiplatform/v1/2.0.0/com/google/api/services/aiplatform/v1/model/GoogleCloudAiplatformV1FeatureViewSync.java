@@ -47,9 +47,9 @@ public final class GoogleCloudAiplatformV1FeatureViewSync extends com.google.api
   private GoogleRpcStatus finalStatus;
 
   /**
-   * Output only. Name of the FeatureViewSync. Format: `projects/{project}/locations/{location}/feat
-   * ureOnlineStores/{feature_online_store}/featureViews/{feature_view}/featureViewSyncs/{feature_vi
-   * ew_sync}`
+   * Identifier. Name of the FeatureViewSync. Format: `projects/{project}/locations/{location}/featu
+   * reOnlineStores/{feature_online_store}/featureViews/{feature_view}/featureViewSyncs/{feature_vie
+   * w_sync}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,9 +101,9 @@ public final class GoogleCloudAiplatformV1FeatureViewSync extends com.google.api
   }
 
   /**
-   * Output only. Name of the FeatureViewSync. Format: `projects/{project}/locations/{location}/feat
-   * ureOnlineStores/{feature_online_store}/featureViews/{feature_view}/featureViewSyncs/{feature_vi
-   * ew_sync}`
+   * Identifier. Name of the FeatureViewSync. Format: `projects/{project}/locations/{location}/featu
+   * reOnlineStores/{feature_online_store}/featureViews/{feature_view}/featureViewSyncs/{feature_vie
+   * w_sync}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -111,9 +111,9 @@ public final class GoogleCloudAiplatformV1FeatureViewSync extends com.google.api
   }
 
   /**
-   * Output only. Name of the FeatureViewSync. Format: `projects/{project}/locations/{location}/feat
-   * ureOnlineStores/{feature_online_store}/featureViews/{feature_view}/featureViewSyncs/{feature_vi
-   * ew_sync}`
+   * Identifier. Name of the FeatureViewSync. Format: `projects/{project}/locations/{location}/featu
+   * reOnlineStores/{feature_online_store}/featureViews/{feature_view}/featureViewSyncs/{feature_vie
+   * w_sync}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1FeatureViewSync setName(java.lang.String name) {

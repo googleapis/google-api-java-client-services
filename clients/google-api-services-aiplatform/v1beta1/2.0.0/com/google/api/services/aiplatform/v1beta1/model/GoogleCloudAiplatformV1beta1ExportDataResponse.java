@@ -30,14 +30,18 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ExportDataResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * All of the files that are exported in this export operation.
+   * All of the files that are exported in this export operation. For custom code training export,
+   * only three (training, validation and test) GCS paths in wildcard format are populated (e.g.,
+   * gs://.../training-*).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> exportedFiles;
 
   /**
-   * All of the files that are exported in this export operation.
+   * All of the files that are exported in this export operation. For custom code training export,
+   * only three (training, validation and test) GCS paths in wildcard format are populated (e.g.,
+   * gs://.../training-*).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExportedFiles() {
@@ -45,7 +49,9 @@ public final class GoogleCloudAiplatformV1beta1ExportDataResponse extends com.go
   }
 
   /**
-   * All of the files that are exported in this export operation.
+   * All of the files that are exported in this export operation. For custom code training export,
+   * only three (training, validation and test) GCS paths in wildcard format are populated (e.g.,
+   * gs://.../training-*).
    * @param exportedFiles exportedFiles or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ExportDataResponse setExportedFiles(java.util.List<java.lang.String> exportedFiles) {

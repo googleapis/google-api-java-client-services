@@ -30,12 +30,50 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1CountTokensRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. Input content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1Content> contents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1Content used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1Content.class);
+  }
+
+  /**
    * Required. The instances that are the input to token counting call. Schema is identical to the
    * prediction schema of the underlying model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Object> instances;
+
+  /**
+   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * `projects/{project}/locations/{location}/publishers/models`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String model;
+
+  /**
+   * Required. Input content.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1Content> getContents() {
+    return contents;
+  }
+
+  /**
+   * Required. Input content.
+   * @param contents contents or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CountTokensRequest setContents(java.util.List<GoogleCloudAiplatformV1Content> contents) {
+    this.contents = contents;
+    return this;
+  }
 
   /**
    * Required. The instances that are the input to token counting call. Schema is identical to the
@@ -53,6 +91,25 @@ public final class GoogleCloudAiplatformV1CountTokensRequest extends com.google.
    */
   public GoogleCloudAiplatformV1CountTokensRequest setInstances(java.util.List<java.lang.Object> instances) {
     this.instances = instances;
+    return this;
+  }
+
+  /**
+   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * `projects/{project}/locations/{location}/publishers/models`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModel() {
+    return model;
+  }
+
+  /**
+   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * `projects/{project}/locations/{location}/publishers/models`
+   * @param model model or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CountTokensRequest setModel(java.lang.String model) {
+    this.model = model;
     return this;
   }
 

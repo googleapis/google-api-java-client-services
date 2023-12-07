@@ -14515,6 +14515,286 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Perform an unary online prediction request for Vertex first-party products and frameworks.
+         *
+         * Create a request for the method "endpoints.directPredict".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link DirectPredict#execute()} method to invoke the remote operation.
+         *
+         * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectPredictRequest}
+         * @return the request
+         */
+        public DirectPredict directPredict(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectPredictRequest content) throws java.io.IOException {
+          DirectPredict result = new DirectPredict(endpoint, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DirectPredict extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectPredictResponse> {
+
+          private static final String REST_PATH = "v1/{+endpoint}:directPredict";
+
+          private final java.util.regex.Pattern ENDPOINT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Perform an unary online prediction request for Vertex first-party products and frameworks.
+           *
+           * Create a request for the method "endpoints.directPredict".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link DirectPredict#execute()} method to invoke the remote
+           * operation. <p> {@link DirectPredict#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectPredictRequest}
+           * @since 1.13
+           */
+          protected DirectPredict(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectPredictRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectPredictResponse.class);
+            this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public DirectPredict set$Xgafv(java.lang.String $Xgafv) {
+            return (DirectPredict) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DirectPredict setAccessToken(java.lang.String accessToken) {
+            return (DirectPredict) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DirectPredict setAlt(java.lang.String alt) {
+            return (DirectPredict) super.setAlt(alt);
+          }
+
+          @Override
+          public DirectPredict setCallback(java.lang.String callback) {
+            return (DirectPredict) super.setCallback(callback);
+          }
+
+          @Override
+          public DirectPredict setFields(java.lang.String fields) {
+            return (DirectPredict) super.setFields(fields);
+          }
+
+          @Override
+          public DirectPredict setKey(java.lang.String key) {
+            return (DirectPredict) super.setKey(key);
+          }
+
+          @Override
+          public DirectPredict setOauthToken(java.lang.String oauthToken) {
+            return (DirectPredict) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DirectPredict setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DirectPredict) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DirectPredict setQuotaUser(java.lang.String quotaUser) {
+            return (DirectPredict) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DirectPredict setUploadType(java.lang.String uploadType) {
+            return (DirectPredict) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DirectPredict setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DirectPredict) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String endpoint;
+
+          /** Required. The name of the Endpoint requested to serve the prediction. Format:
+         `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          public java.lang.String getEndpoint() {
+            return endpoint;
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          public DirectPredict setEndpoint(java.lang.String endpoint) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.endpoint = endpoint;
+            return this;
+          }
+
+          @Override
+          public DirectPredict set(String parameterName, Object value) {
+            return (DirectPredict) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Perform an online prediction request through gRPC.
+         *
+         * Create a request for the method "endpoints.directRawPredict".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link DirectRawPredict#execute()} method to invoke the remote operation.
+         *
+         * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectRawPredictRequest}
+         * @return the request
+         */
+        public DirectRawPredict directRawPredict(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectRawPredictRequest content) throws java.io.IOException {
+          DirectRawPredict result = new DirectRawPredict(endpoint, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DirectRawPredict extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectRawPredictResponse> {
+
+          private static final String REST_PATH = "v1/{+endpoint}:directRawPredict";
+
+          private final java.util.regex.Pattern ENDPOINT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Perform an online prediction request through gRPC.
+           *
+           * Create a request for the method "endpoints.directRawPredict".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link DirectRawPredict#execute()} method to invoke the remote
+           * operation. <p> {@link DirectRawPredict#initialize(com.google.api.client.googleapis.services.Abs
+           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectRawPredictRequest}
+           * @since 1.13
+           */
+          protected DirectRawPredict(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectRawPredictRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1DirectRawPredictResponse.class);
+            this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public DirectRawPredict set$Xgafv(java.lang.String $Xgafv) {
+            return (DirectRawPredict) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DirectRawPredict setAccessToken(java.lang.String accessToken) {
+            return (DirectRawPredict) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DirectRawPredict setAlt(java.lang.String alt) {
+            return (DirectRawPredict) super.setAlt(alt);
+          }
+
+          @Override
+          public DirectRawPredict setCallback(java.lang.String callback) {
+            return (DirectRawPredict) super.setCallback(callback);
+          }
+
+          @Override
+          public DirectRawPredict setFields(java.lang.String fields) {
+            return (DirectRawPredict) super.setFields(fields);
+          }
+
+          @Override
+          public DirectRawPredict setKey(java.lang.String key) {
+            return (DirectRawPredict) super.setKey(key);
+          }
+
+          @Override
+          public DirectRawPredict setOauthToken(java.lang.String oauthToken) {
+            return (DirectRawPredict) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DirectRawPredict setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DirectRawPredict) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DirectRawPredict setQuotaUser(java.lang.String quotaUser) {
+            return (DirectRawPredict) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DirectRawPredict setUploadType(java.lang.String uploadType) {
+            return (DirectRawPredict) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DirectRawPredict setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DirectRawPredict) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String endpoint;
+
+          /** Required. The name of the Endpoint requested to serve the prediction. Format:
+         `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          public java.lang.String getEndpoint() {
+            return endpoint;
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          public DirectRawPredict setEndpoint(java.lang.String endpoint) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.endpoint = endpoint;
+            return this;
+          }
+
+          @Override
+          public DirectRawPredict set(String parameterName, Object value) {
+            return (DirectRawPredict) super.set(parameterName, value);
+          }
+        }
+        /**
          * Perform an online explanation. If deployed_model_id is specified, the corresponding DeployModel
          * must have explanation_spec populated. If deployed_model_id is not specified, all DeployedModels
          * must have explanation_spec populated.
@@ -17480,7 +17760,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the aiplatform server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Name of the FeatureGroup. Format:
+         * @param name Identifier. Name of the FeatureGroup. Format:
          *        `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
          * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FeatureGroup}
          * @return the request
@@ -17509,7 +17789,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Name of the FeatureGroup. Format:
+           * @param name Identifier. Name of the FeatureGroup. Format:
          *        `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
            * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FeatureGroup}
            * @since 1.13
@@ -17580,13 +17860,13 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Output only. Name of the FeatureGroup. Format:
+           * Identifier. Name of the FeatureGroup. Format:
            * `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Name of the FeatureGroup. Format:
+          /** Identifier. Name of the FeatureGroup. Format:
          `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
            */
           public java.lang.String getName() {
@@ -17594,7 +17874,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Output only. Name of the FeatureGroup. Format:
+           * Identifier. Name of the FeatureGroup. Format:
            * `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
            */
           public Patch setName(java.lang.String name) {
@@ -18430,7 +18710,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * A page token, received from a previous FeaturestoreService.ListFeatures call or
              * FeatureRegistryService.ListFeatures call. Provide this to retrieve the subsequent
              * page. When paginating, all other parameters provided to
-             * FeaturestoreService.ListFeatures or or FeatureRegistryService.ListFeatures must match
+             * FeaturestoreService.ListFeatures or FeatureRegistryService.ListFeatures must match
              * the call that provided the page token.
              */
             @com.google.api.client.util.Key
@@ -18438,7 +18718,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
             /** A page token, received from a previous FeaturestoreService.ListFeatures call or
            FeatureRegistryService.ListFeatures call. Provide this to retrieve the subsequent page. When
-           paginating, all other parameters provided to FeaturestoreService.ListFeatures or or
+           paginating, all other parameters provided to FeaturestoreService.ListFeatures or
            FeatureRegistryService.ListFeatures must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
@@ -18449,7 +18729,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * A page token, received from a previous FeaturestoreService.ListFeatures call or
              * FeatureRegistryService.ListFeatures call. Provide this to retrieve the subsequent
              * page. When paginating, all other parameters provided to
-             * FeaturestoreService.ListFeatures or or FeatureRegistryService.ListFeatures must match
+             * FeaturestoreService.ListFeatures or FeatureRegistryService.ListFeatures must match
              * the call that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
@@ -20740,7 +21020,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the aiplatform server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Name of the FeatureOnlineStore. Format:
+         * @param name Identifier. Name of the FeatureOnlineStore. Format:
          *        `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
          * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FeatureOnlineStore}
          * @return the request
@@ -20769,7 +21049,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Name of the FeatureOnlineStore. Format:
+           * @param name Identifier. Name of the FeatureOnlineStore. Format:
          *        `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
            * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FeatureOnlineStore}
            * @since 1.13
@@ -20840,13 +21120,13 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Output only. Name of the FeatureOnlineStore. Format:
+           * Identifier. Name of the FeatureOnlineStore. Format:
            * `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Name of the FeatureOnlineStore. Format:
+          /** Identifier. Name of the FeatureOnlineStore. Format:
          `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
            */
           public java.lang.String getName() {
@@ -20854,7 +21134,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Output only. Name of the FeatureOnlineStore. Format:
+           * Identifier. Name of the FeatureOnlineStore. Format:
            * `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
            */
           public Patch setName(java.lang.String name) {
@@ -21827,8 +22107,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the aiplatform server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOnline
-           *        Stores/{feature_online_store}/featureViews/{feature_view}`
+           * @param name Identifier. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOnlineS
+           *        tores/{feature_online_store}/featureViews/{feature_view}`
            * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FeatureView}
            * @return the request
            */
@@ -21856,8 +22136,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOnline
-           *        Stores/{feature_online_store}/featureViews/{feature_view}`
+             * @param name Identifier. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOnlineS
+           *        tores/{feature_online_store}/featureViews/{feature_view}`
              * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FeatureView}
              * @since 1.13
              */
@@ -21927,22 +22207,22 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location
-             * }/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+             * Identifier. Name of the FeatureView. Format: `projects/{project}/locations/{location}
+             * /featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOnlin
-           eStores/{feature_online_store}/featureViews/{feature_view}`
+            /** Identifier. Name of the FeatureView. Format: `projects/{project}/locations/{location}/featureOnline
+           Stores/{feature_online_store}/featureViews/{feature_view}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Output only. Name of the FeatureView. Format: `projects/{project}/locations/{location
-             * }/featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
+             * Identifier. Name of the FeatureView. Format: `projects/{project}/locations/{location}
+             * /featureOnlineStores/{feature_online_store}/featureViews/{feature_view}`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -29147,15 +29427,15 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * A page token, received from a previous FeaturestoreService.ListFeatures call or
                * FeatureRegistryService.ListFeatures call. Provide this to retrieve the subsequent
                * page. When paginating, all other parameters provided to
-               * FeaturestoreService.ListFeatures or or FeatureRegistryService.ListFeatures must
-               * match the call that provided the page token.
+               * FeaturestoreService.ListFeatures or FeatureRegistryService.ListFeatures must match
+               * the call that provided the page token.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
               /** A page token, received from a previous FeaturestoreService.ListFeatures call or
              FeatureRegistryService.ListFeatures call. Provide this to retrieve the subsequent page. When
-             paginating, all other parameters provided to FeaturestoreService.ListFeatures or or
+             paginating, all other parameters provided to FeaturestoreService.ListFeatures or
              FeatureRegistryService.ListFeatures must match the call that provided the page token.
                */
               public java.lang.String getPageToken() {
@@ -29166,8 +29446,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * A page token, received from a previous FeaturestoreService.ListFeatures call or
                * FeatureRegistryService.ListFeatures call. Provide this to retrieve the subsequent
                * page. When paginating, all other parameters provided to
-               * FeaturestoreService.ListFeatures or or FeatureRegistryService.ListFeatures must
-               * match the call that provided the page token.
+               * FeaturestoreService.ListFeatures or FeatureRegistryService.ListFeatures must match
+               * the call that provided the page token.
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
@@ -54484,6 +54764,151 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           @Override
           public Start set(String parameterName, Object value) {
             return (Start) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Upgrades a NotebookRuntime.
+         *
+         * Create a request for the method "notebookRuntimes.upgrade".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the NotebookRuntime resource to be upgrade. Instead of checking whether the
+         *        name is in valid NotebookRuntime resource name format, directly throw NotFound exception
+         *        if there is no such NotebookRuntime in spanner.
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1UpgradeNotebookRuntimeRequest}
+         * @return the request
+         */
+        public Upgrade upgrade(java.lang.String name, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1UpgradeNotebookRuntimeRequest content) throws java.io.IOException {
+          Upgrade result = new Upgrade(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Upgrade extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}:upgrade";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebookRuntimes/[^/]+$");
+
+          /**
+           * Upgrades a NotebookRuntime.
+           *
+           * Create a request for the method "notebookRuntimes.upgrade".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Upgrade#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the NotebookRuntime resource to be upgrade. Instead of checking whether the
+         *        name is in valid NotebookRuntime resource name format, directly throw NotFound exception
+         *        if there is no such NotebookRuntime in spanner.
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1UpgradeNotebookRuntimeRequest}
+           * @since 1.13
+           */
+          protected Upgrade(java.lang.String name, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1UpgradeNotebookRuntimeRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notebookRuntimes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Upgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (Upgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upgrade setAccessToken(java.lang.String accessToken) {
+            return (Upgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upgrade setAlt(java.lang.String alt) {
+            return (Upgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public Upgrade setCallback(java.lang.String callback) {
+            return (Upgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public Upgrade setFields(java.lang.String fields) {
+            return (Upgrade) super.setFields(fields);
+          }
+
+          @Override
+          public Upgrade setKey(java.lang.String key) {
+            return (Upgrade) super.setKey(key);
+          }
+
+          @Override
+          public Upgrade setOauthToken(java.lang.String oauthToken) {
+            return (Upgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upgrade setQuotaUser(java.lang.String quotaUser) {
+            return (Upgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upgrade setUploadType(java.lang.String uploadType) {
+            return (Upgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the NotebookRuntime resource to be upgrade. Instead of checking
+           * whether the name is in valid NotebookRuntime resource name format, directly throw
+           * NotFound exception if there is no such NotebookRuntime in spanner.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the NotebookRuntime resource to be upgrade. Instead of checking whether the
+         name is in valid NotebookRuntime resource name format, directly throw NotFound exception if there
+         is no such NotebookRuntime in spanner.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the NotebookRuntime resource to be upgrade. Instead of checking
+           * whether the name is in valid NotebookRuntime resource name format, directly throw
+           * NotFound exception if there is no such NotebookRuntime in spanner.
+           */
+          public Upgrade setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notebookRuntimes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Upgrade set(String parameterName, Object value) {
+            return (Upgrade) super.set(parameterName, value);
           }
         }
 

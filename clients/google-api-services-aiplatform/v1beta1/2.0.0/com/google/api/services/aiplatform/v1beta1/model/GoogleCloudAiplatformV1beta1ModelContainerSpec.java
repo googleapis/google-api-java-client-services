@@ -90,7 +90,7 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   private java.util.List<java.lang.String> command;
 
   /**
-   * Immutable. Deployment timeout. TODO (b/306244185): Revise documentation before exposing.
+   * Immutable. Deployment timeout. Limit for deployment timeout is 2 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,8 +118,18 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   }
 
   /**
-   * Immutable. Specification for Kubernetes readiness probe. TODO (b/306244185): Revise
-   * documentation before exposing.
+   * Immutable. List of ports to expose from the container. Vertex AI sends gRPC prediction requests
+   * that it receives to the first port on this list. Vertex AI also sends liveness and health
+   * checks to this port. If you do not specify this field, gRPC requests to the container will be
+   * disabled. Vertex AI does not use ports other than the first one listed. This field corresponds
+   * to the `ports` field of the Kubernetes Containers v1 core API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1Port> grpcPorts;
+
+  /**
+   * Immutable. Specification for Kubernetes readiness probe.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,15 +212,14 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
 
   /**
    * Immutable. The amount of the VM memory to reserve as the shared memory for the model in
-   * megabytes. TODO (b/306244185): Revise documentation before exposing.
+   * megabytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long sharedMemorySizeMb;
 
   /**
-   * Immutable. Specification for Kubernetes startup probe. TODO (b/306244185): Revise documentation
-   * before exposing.
+   * Immutable. Specification for Kubernetes startup probe.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -337,7 +346,7 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   }
 
   /**
-   * Immutable. Deployment timeout. TODO (b/306244185): Revise documentation before exposing.
+   * Immutable. Deployment timeout. Limit for deployment timeout is 2 hours.
    * @return value or {@code null} for none
    */
   public String getDeploymentTimeout() {
@@ -345,7 +354,7 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   }
 
   /**
-   * Immutable. Deployment timeout. TODO (b/306244185): Revise documentation before exposing.
+   * Immutable. Deployment timeout. Limit for deployment timeout is 2 hours.
    * @param deploymentTimeout deploymentTimeout or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelContainerSpec setDeploymentTimeout(String deploymentTimeout) {
@@ -387,8 +396,32 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   }
 
   /**
-   * Immutable. Specification for Kubernetes readiness probe. TODO (b/306244185): Revise
-   * documentation before exposing.
+   * Immutable. List of ports to expose from the container. Vertex AI sends gRPC prediction requests
+   * that it receives to the first port on this list. Vertex AI also sends liveness and health
+   * checks to this port. If you do not specify this field, gRPC requests to the container will be
+   * disabled. Vertex AI does not use ports other than the first one listed. This field corresponds
+   * to the `ports` field of the Kubernetes Containers v1 core API.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1Port> getGrpcPorts() {
+    return grpcPorts;
+  }
+
+  /**
+   * Immutable. List of ports to expose from the container. Vertex AI sends gRPC prediction requests
+   * that it receives to the first port on this list. Vertex AI also sends liveness and health
+   * checks to this port. If you do not specify this field, gRPC requests to the container will be
+   * disabled. Vertex AI does not use ports other than the first one listed. This field corresponds
+   * to the `ports` field of the Kubernetes Containers v1 core API.
+   * @param grpcPorts grpcPorts or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ModelContainerSpec setGrpcPorts(java.util.List<GoogleCloudAiplatformV1beta1Port> grpcPorts) {
+    this.grpcPorts = grpcPorts;
+    return this;
+  }
+
+  /**
+   * Immutable. Specification for Kubernetes readiness probe.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Probe getHealthProbe() {
@@ -396,8 +429,7 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   }
 
   /**
-   * Immutable. Specification for Kubernetes readiness probe. TODO (b/306244185): Revise
-   * documentation before exposing.
+   * Immutable. Specification for Kubernetes readiness probe.
    * @param healthProbe healthProbe or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelContainerSpec setHealthProbe(GoogleCloudAiplatformV1beta1Probe healthProbe) {
@@ -569,7 +601,7 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
 
   /**
    * Immutable. The amount of the VM memory to reserve as the shared memory for the model in
-   * megabytes. TODO (b/306244185): Revise documentation before exposing.
+   * megabytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSharedMemorySizeMb() {
@@ -578,7 +610,7 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
 
   /**
    * Immutable. The amount of the VM memory to reserve as the shared memory for the model in
-   * megabytes. TODO (b/306244185): Revise documentation before exposing.
+   * megabytes.
    * @param sharedMemorySizeMb sharedMemorySizeMb or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelContainerSpec setSharedMemorySizeMb(java.lang.Long sharedMemorySizeMb) {
@@ -587,8 +619,7 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   }
 
   /**
-   * Immutable. Specification for Kubernetes startup probe. TODO (b/306244185): Revise documentation
-   * before exposing.
+   * Immutable. Specification for Kubernetes startup probe.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Probe getStartupProbe() {
@@ -596,8 +627,7 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   }
 
   /**
-   * Immutable. Specification for Kubernetes startup probe. TODO (b/306244185): Revise documentation
-   * before exposing.
+   * Immutable. Specification for Kubernetes startup probe.
    * @param startupProbe startupProbe or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelContainerSpec setStartupProbe(GoogleCloudAiplatformV1beta1Probe startupProbe) {

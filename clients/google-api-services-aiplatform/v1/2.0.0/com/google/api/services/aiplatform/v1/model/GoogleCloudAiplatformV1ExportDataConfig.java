@@ -31,12 +31,43 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1ExportDataConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Only used for custom training data export use cases. Only applicable to Datasets that have
+   * DataItems and Annotations. Cloud Storage URI that points to a YAML file describing the
+   * annotation schema. The schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
+   * The schema files that can be used here are found in gs://google-cloud-
+   * aiplatform/schema/dataset/annotation/, note that the chosen schema must be consistent with
+   * metadata of the Dataset specified by dataset_id. Only Annotations that both match this schema
+   * and belong to DataItems not ignored by the split method are used in respectively training,
+   * validation or test role, depending on the role of the DataItem they are on. When used in
+   * conjunction with annotations_filter, the Annotations used for training are filtered by both
+   * annotations_filter and annotation_schema_uri.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String annotationSchemaUri;
+
+  /**
    * An expression for filtering what part of the Dataset is to be exported. Only Annotations that
    * match this filter will be exported. The filter syntax is the same as in ListAnnotations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String annotationsFilter;
+
+  /**
+   * Indicates the usage of the exported files.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exportUse;
+
+  /**
+   * Split based on the provided filters for each set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ExportFilterSplit filterSplit;
 
   /**
    * Split based on fractions defining the size of each set.
@@ -58,6 +89,56 @@ public final class GoogleCloudAiplatformV1ExportDataConfig extends com.google.ap
   private GoogleCloudAiplatformV1GcsDestination gcsDestination;
 
   /**
+   * Only used for custom training data export use cases. Only applicable to Datasets that have
+   * SavedQueries. The ID of a SavedQuery (annotation set) under the Dataset specified by dataset_id
+   * used for filtering Annotations for training. Only Annotations that are associated with this
+   * SavedQuery are used in respectively training. When used in conjunction with annotations_filter,
+   * the Annotations used for training are filtered by both saved_query_id and annotations_filter.
+   * Only one of saved_query_id and annotation_schema_uri should be specified as both of them
+   * represent the same thing: problem type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String savedQueryId;
+
+  /**
+   * Only used for custom training data export use cases. Only applicable to Datasets that have
+   * DataItems and Annotations. Cloud Storage URI that points to a YAML file describing the
+   * annotation schema. The schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
+   * The schema files that can be used here are found in gs://google-cloud-
+   * aiplatform/schema/dataset/annotation/, note that the chosen schema must be consistent with
+   * metadata of the Dataset specified by dataset_id. Only Annotations that both match this schema
+   * and belong to DataItems not ignored by the split method are used in respectively training,
+   * validation or test role, depending on the role of the DataItem they are on. When used in
+   * conjunction with annotations_filter, the Annotations used for training are filtered by both
+   * annotations_filter and annotation_schema_uri.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnnotationSchemaUri() {
+    return annotationSchemaUri;
+  }
+
+  /**
+   * Only used for custom training data export use cases. Only applicable to Datasets that have
+   * DataItems and Annotations. Cloud Storage URI that points to a YAML file describing the
+   * annotation schema. The schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
+   * The schema files that can be used here are found in gs://google-cloud-
+   * aiplatform/schema/dataset/annotation/, note that the chosen schema must be consistent with
+   * metadata of the Dataset specified by dataset_id. Only Annotations that both match this schema
+   * and belong to DataItems not ignored by the split method are used in respectively training,
+   * validation or test role, depending on the role of the DataItem they are on. When used in
+   * conjunction with annotations_filter, the Annotations used for training are filtered by both
+   * annotations_filter and annotation_schema_uri.
+   * @param annotationSchemaUri annotationSchemaUri or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ExportDataConfig setAnnotationSchemaUri(java.lang.String annotationSchemaUri) {
+    this.annotationSchemaUri = annotationSchemaUri;
+    return this;
+  }
+
+  /**
    * An expression for filtering what part of the Dataset is to be exported. Only Annotations that
    * match this filter will be exported. The filter syntax is the same as in ListAnnotations.
    * @return value or {@code null} for none
@@ -73,6 +154,40 @@ public final class GoogleCloudAiplatformV1ExportDataConfig extends com.google.ap
    */
   public GoogleCloudAiplatformV1ExportDataConfig setAnnotationsFilter(java.lang.String annotationsFilter) {
     this.annotationsFilter = annotationsFilter;
+    return this;
+  }
+
+  /**
+   * Indicates the usage of the exported files.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExportUse() {
+    return exportUse;
+  }
+
+  /**
+   * Indicates the usage of the exported files.
+   * @param exportUse exportUse or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ExportDataConfig setExportUse(java.lang.String exportUse) {
+    this.exportUse = exportUse;
+    return this;
+  }
+
+  /**
+   * Split based on the provided filters for each set.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ExportFilterSplit getFilterSplit() {
+    return filterSplit;
+  }
+
+  /**
+   * Split based on the provided filters for each set.
+   * @param filterSplit filterSplit or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ExportDataConfig setFilterSplit(GoogleCloudAiplatformV1ExportFilterSplit filterSplit) {
+    this.filterSplit = filterSplit;
     return this;
   }
 
@@ -117,6 +232,35 @@ public final class GoogleCloudAiplatformV1ExportDataConfig extends com.google.ap
    */
   public GoogleCloudAiplatformV1ExportDataConfig setGcsDestination(GoogleCloudAiplatformV1GcsDestination gcsDestination) {
     this.gcsDestination = gcsDestination;
+    return this;
+  }
+
+  /**
+   * Only used for custom training data export use cases. Only applicable to Datasets that have
+   * SavedQueries. The ID of a SavedQuery (annotation set) under the Dataset specified by dataset_id
+   * used for filtering Annotations for training. Only Annotations that are associated with this
+   * SavedQuery are used in respectively training. When used in conjunction with annotations_filter,
+   * the Annotations used for training are filtered by both saved_query_id and annotations_filter.
+   * Only one of saved_query_id and annotation_schema_uri should be specified as both of them
+   * represent the same thing: problem type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSavedQueryId() {
+    return savedQueryId;
+  }
+
+  /**
+   * Only used for custom training data export use cases. Only applicable to Datasets that have
+   * SavedQueries. The ID of a SavedQuery (annotation set) under the Dataset specified by dataset_id
+   * used for filtering Annotations for training. Only Annotations that are associated with this
+   * SavedQuery are used in respectively training. When used in conjunction with annotations_filter,
+   * the Annotations used for training are filtered by both saved_query_id and annotations_filter.
+   * Only one of saved_query_id and annotation_schema_uri should be specified as both of them
+   * represent the same thing: problem type.
+   * @param savedQueryId savedQueryId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ExportDataConfig setSavedQueryId(java.lang.String savedQueryId) {
+    this.savedQueryId = savedQueryId;
     return this;
   }
 

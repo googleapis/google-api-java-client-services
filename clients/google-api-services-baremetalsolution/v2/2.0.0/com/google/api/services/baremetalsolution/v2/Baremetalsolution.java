@@ -1265,6 +1265,146 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Load auth info for a server.
+         *
+         * Create a request for the method "instances.loadAuthInfo".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link LoadAuthInfo#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Name of the server.
+         * @return the request
+         */
+        public LoadAuthInfo loadAuthInfo(java.lang.String name) throws java.io.IOException {
+          LoadAuthInfo result = new LoadAuthInfo(name);
+          initialize(result);
+          return result;
+        }
+
+        public class LoadAuthInfo extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.LoadInstanceAuthInfoResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:loadAuthInfo";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Load auth info for a server.
+           *
+           * Create a request for the method "instances.loadAuthInfo".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link LoadAuthInfo#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * LoadAuthInfo#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the server.
+           * @since 1.13
+           */
+          protected LoadAuthInfo(java.lang.String name) {
+            super(Baremetalsolution.this, "GET", REST_PATH, null, com.google.api.services.baremetalsolution.v2.model.LoadInstanceAuthInfoResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public LoadAuthInfo set$Xgafv(java.lang.String $Xgafv) {
+            return (LoadAuthInfo) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public LoadAuthInfo setAccessToken(java.lang.String accessToken) {
+            return (LoadAuthInfo) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public LoadAuthInfo setAlt(java.lang.String alt) {
+            return (LoadAuthInfo) super.setAlt(alt);
+          }
+
+          @Override
+          public LoadAuthInfo setCallback(java.lang.String callback) {
+            return (LoadAuthInfo) super.setCallback(callback);
+          }
+
+          @Override
+          public LoadAuthInfo setFields(java.lang.String fields) {
+            return (LoadAuthInfo) super.setFields(fields);
+          }
+
+          @Override
+          public LoadAuthInfo setKey(java.lang.String key) {
+            return (LoadAuthInfo) super.setKey(key);
+          }
+
+          @Override
+          public LoadAuthInfo setOauthToken(java.lang.String oauthToken) {
+            return (LoadAuthInfo) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public LoadAuthInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (LoadAuthInfo) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public LoadAuthInfo setQuotaUser(java.lang.String quotaUser) {
+            return (LoadAuthInfo) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public LoadAuthInfo setUploadType(java.lang.String uploadType) {
+            return (LoadAuthInfo) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public LoadAuthInfo setUploadProtocol(java.lang.String uploadProtocol) {
+            return (LoadAuthInfo) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the server. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the server.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the server. */
+          public LoadAuthInfo setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public LoadAuthInfo set(String parameterName, Object value) {
+            return (LoadAuthInfo) super.set(parameterName, value);
+          }
+        }
+        /**
          * Update details of a single server.
          *
          * Create a request for the method "instances.patch".

@@ -67,6 +67,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean interactiveSerialConsoleEnabled;
 
   /**
+   * Optional. Name of the KMS crypto key version used to encrypt the initial passwords. The key has
+   * to have ASYMMETRIC_DECRYPT purpose. Format is `projects/{project}/locations/{location}/keyRings
+   * /{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyVersion;
+
+  /**
    * Labels as key value pairs.
    * The value may be {@code null}.
    */
@@ -151,6 +160,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String pod;
+
+  /**
+   * Optional. List of SSH Keys used during instance provisioning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sshKeys;
 
   /**
    * Output only. The state of the server.
@@ -265,6 +281,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setInteractiveSerialConsoleEnabled(java.lang.Boolean interactiveSerialConsoleEnabled) {
     this.interactiveSerialConsoleEnabled = interactiveSerialConsoleEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Name of the KMS crypto key version used to encrypt the initial passwords. The key has
+   * to have ASYMMETRIC_DECRYPT purpose. Format is `projects/{project}/locations/{location}/keyRings
+   * /{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyVersion() {
+    return kmsKeyVersion;
+  }
+
+  /**
+   * Optional. Name of the KMS crypto key version used to encrypt the initial passwords. The key has
+   * to have ASYMMETRIC_DECRYPT purpose. Format is `projects/{project}/locations/{location}/keyRings
+   * /{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}`.
+   * @param kmsKeyVersion kmsKeyVersion or {@code null} for none
+   */
+  public Instance setKmsKeyVersion(java.lang.String kmsKeyVersion) {
+    this.kmsKeyVersion = kmsKeyVersion;
     return this;
   }
 
@@ -455,6 +492,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setPod(java.lang.String pod) {
     this.pod = pod;
+    return this;
+  }
+
+  /**
+   * Optional. List of SSH Keys used during instance provisioning.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSshKeys() {
+    return sshKeys;
+  }
+
+  /**
+   * Optional. List of SSH Keys used during instance provisioning.
+   * @param sshKeys sshKeys or {@code null} for none
+   */
+  public Instance setSshKeys(java.util.List<java.lang.String> sshKeys) {
+    this.sshKeys = sshKeys;
     return this;
   }
 

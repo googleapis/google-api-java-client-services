@@ -51,7 +51,7 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
 
   /**
    * Identifier. A reference representing this place photo which may be used to look up this place
-   * photo again (a.k.a. the API "resource" name: places/{place_id}/photos/{photo}).
+   * photo again (also called the API "resource" name: `places/{place_id}/photos/{photo}`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
 
   /**
    * Identifier. A reference representing this place photo which may be used to look up this place
-   * photo again (a.k.a. the API "resource" name: places/{place_id}/photos/{photo}).
+   * photo again (also called the API "resource" name: `places/{place_id}/photos/{photo}`).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -109,7 +109,7 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
 
   /**
    * Identifier. A reference representing this place photo which may be used to look up this place
-   * photo again (a.k.a. the API "resource" name: places/{place_id}/photos/{photo}).
+   * photo again (also called the API "resource" name: `places/{place_id}/photos/{photo}`).
    * @param name name or {@code null} for none
    */
   public GoogleMapsPlacesV1Photo setName(java.lang.String name) {

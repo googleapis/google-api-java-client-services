@@ -86,7 +86,7 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   private MosaicLayout mosaicLayout;
 
   /**
-   * Immutable. The resource name of the dashboard.
+   * Identifier. The resource name of the dashboard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +231,7 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name of the dashboard.
+   * Identifier. The resource name of the dashboard.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -239,7 +239,7 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name of the dashboard.
+   * Identifier. The resource name of the dashboard.
    * @param name name or {@code null} for none
    */
   public Dashboard setName(java.lang.String name) {

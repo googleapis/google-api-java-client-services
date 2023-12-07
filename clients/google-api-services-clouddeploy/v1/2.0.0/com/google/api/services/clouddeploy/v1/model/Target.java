@@ -54,6 +54,13 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Information specifying a Custom Target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomTarget customTarget;
+
+  /**
    * Optional. The deploy parameters to use for this target.
    * The value may be {@code null}.
    */
@@ -214,6 +221,23 @@ public final class Target extends com.google.api.client.json.GenericJson {
    */
   public Target setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Information specifying a Custom Target.
+   * @return value or {@code null} for none
+   */
+  public CustomTarget getCustomTarget() {
+    return customTarget;
+  }
+
+  /**
+   * Optional. Information specifying a Custom Target.
+   * @param customTarget customTarget or {@code null} for none
+   */
+  public Target setCustomTarget(CustomTarget customTarget) {
+    this.customTarget = customTarget;
     return this;
   }
 

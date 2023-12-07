@@ -30,7 +30,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class SkaffoldVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time at which this version of skaffold will enter maintenance mode.
+   * The time at which this version of Skaffold will enter maintenance mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class SkaffoldVersion extends com.google.api.client.json.GenericJso
   private Date supportEndDate;
 
   /**
-   * The time at which this version of skaffold will no longer be supported.
+   * The time at which this version of Skaffold will no longer be supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class SkaffoldVersion extends com.google.api.client.json.GenericJso
   private java.lang.String version;
 
   /**
-   * The time at which this version of skaffold will enter maintenance mode.
+   * The time at which this version of Skaffold will enter maintenance mode.
    * @return value or {@code null} for none
    */
   public String getMaintenanceModeTime() {
@@ -66,7 +66,7 @@ public final class SkaffoldVersion extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The time at which this version of skaffold will enter maintenance mode.
+   * The time at which this version of Skaffold will enter maintenance mode.
    * @param maintenanceModeTime maintenanceModeTime or {@code null} for none
    */
   public SkaffoldVersion setMaintenanceModeTime(String maintenanceModeTime) {
@@ -92,7 +92,7 @@ public final class SkaffoldVersion extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The time at which this version of skaffold will no longer be supported.
+   * The time at which this version of Skaffold will no longer be supported.
    * @return value or {@code null} for none
    */
   public String getSupportExpirationTime() {
@@ -100,7 +100,7 @@ public final class SkaffoldVersion extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The time at which this version of skaffold will no longer be supported.
+   * The time at which this version of Skaffold will no longer be supported.
    * @param supportExpirationTime supportExpirationTime or {@code null} for none
    */
   public SkaffoldVersion setSupportExpirationTime(String supportExpirationTime) {

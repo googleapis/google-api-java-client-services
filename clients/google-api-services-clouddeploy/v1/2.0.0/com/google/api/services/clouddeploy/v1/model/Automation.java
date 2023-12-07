@@ -18,9 +18,9 @@ package com.google.api.services.clouddeploy.v1.model;
 
 /**
  * An `Automation` resource in the Cloud Deploy API. An `Automation` enables the automation of
- * manually driven actions for a Delivery Pipeline, which includes Release promotion amongst
- * Targets, Rollout repair and Rollout deployment strategy advancement. The intention of Automation
- * is to reduce manual intervention in the continuous delivery process.
+ * manually driven actions for a Delivery Pipeline, which includes Release promotion among Targets,
+ * Rollout repair and Rollout deployment strategy advancement. The intention of Automation is to
+ * reduce manual intervention in the continuous delivery process.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:

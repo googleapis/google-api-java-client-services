@@ -45,6 +45,13 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private CloudRunMetadata cloudRun;
 
   /**
+   * Output only. Custom metadata provided by user defined `Rollout` operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomMetadata custom;
+
+  /**
    * Output only. AutomationRolloutMetadata contains the information about the interactions between
    * Automation service and this rollout.
    * @return value or {@code null} for none
@@ -77,6 +84,23 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
    */
   public Metadata setCloudRun(CloudRunMetadata cloudRun) {
     this.cloudRun = cloudRun;
+    return this;
+  }
+
+  /**
+   * Output only. Custom metadata provided by user defined `Rollout` operations.
+   * @return value or {@code null} for none
+   */
+  public CustomMetadata getCustom() {
+    return custom;
+  }
+
+  /**
+   * Output only. Custom metadata provided by user defined `Rollout` operations.
+   * @param custom custom or {@code null} for none
+   */
+  public Metadata setCustom(CustomMetadata custom) {
+    this.custom = custom;
     return this;
   }
 

@@ -37,6 +37,20 @@ public final class DeployJobRunMetadata extends com.google.api.client.json.Gener
   private CloudRunMetadata cloudRun;
 
   /**
+   * Output only. Custom metadata provided by user defined deploy operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomMetadata custom;
+
+  /**
+   * Output only. Custom Target metadata associated with a `DeployJobRun`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomTargetDeployMetadata customTarget;
+
+  /**
    * Output only. The name of the Cloud Run Service that is associated with a `DeployJobRun`.
    * @return value or {@code null} for none
    */
@@ -50,6 +64,40 @@ public final class DeployJobRunMetadata extends com.google.api.client.json.Gener
    */
   public DeployJobRunMetadata setCloudRun(CloudRunMetadata cloudRun) {
     this.cloudRun = cloudRun;
+    return this;
+  }
+
+  /**
+   * Output only. Custom metadata provided by user defined deploy operation.
+   * @return value or {@code null} for none
+   */
+  public CustomMetadata getCustom() {
+    return custom;
+  }
+
+  /**
+   * Output only. Custom metadata provided by user defined deploy operation.
+   * @param custom custom or {@code null} for none
+   */
+  public DeployJobRunMetadata setCustom(CustomMetadata custom) {
+    this.custom = custom;
+    return this;
+  }
+
+  /**
+   * Output only. Custom Target metadata associated with a `DeployJobRun`.
+   * @return value or {@code null} for none
+   */
+  public CustomTargetDeployMetadata getCustomTarget() {
+    return customTarget;
+  }
+
+  /**
+   * Output only. Custom Target metadata associated with a `DeployJobRun`.
+   * @param customTarget customTarget or {@code null} for none
+   */
+  public DeployJobRunMetadata setCustomTarget(CustomTargetDeployMetadata customTarget) {
+    this.customTarget = customTarget;
     return this;
   }
 

@@ -37,7 +37,7 @@ public final class ReleaseCondition extends com.google.api.client.json.GenericJs
   private ReleaseReadyCondition releaseReadyCondition;
 
   /**
-   * Details around the support state of the release's skaffold version.
+   * Details around the support state of the release's Skaffold version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class ReleaseCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Details around the support state of the release's skaffold version.
+   * Details around the support state of the release's Skaffold version.
    * @return value or {@code null} for none
    */
   public SkaffoldSupportedCondition getSkaffoldSupportedCondition() {
@@ -69,7 +69,7 @@ public final class ReleaseCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Details around the support state of the release's skaffold version.
+   * Details around the support state of the release's Skaffold version.
    * @param skaffoldSupportedCondition skaffoldSupportedCondition or {@code null} for none
    */
   public ReleaseCondition setSkaffoldSupportedCondition(SkaffoldSupportedCondition skaffoldSupportedCondition) {

@@ -30,7 +30,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class AdvanceRolloutOperation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The phase to which the rollout will be advanced to.
+   * Output only. The phase the rollout will be advanced to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class AdvanceRolloutOperation extends com.google.api.client.json.Ge
   private String wait;
 
   /**
-   * Output only. The phase to which the rollout will be advanced to.
+   * Output only. The phase the rollout will be advanced to.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationPhase() {
@@ -66,7 +66,7 @@ public final class AdvanceRolloutOperation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The phase to which the rollout will be advanced to.
+   * Output only. The phase the rollout will be advanced to.
    * @param destinationPhase destinationPhase or {@code null} for none
    */
   public AdvanceRolloutOperation setDestinationPhase(java.lang.String destinationPhase) {

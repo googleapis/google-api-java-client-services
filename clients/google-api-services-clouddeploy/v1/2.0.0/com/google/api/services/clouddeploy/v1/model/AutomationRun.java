@@ -17,8 +17,8 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * An `AutomationRun` resource in the Cloud Deploy API. An `AutomationRun` represents an automation
- * execution instance of an automation rule.
+ * An `AutomationRun` resource in the Cloud Deploy API. An `AutomationRun` represents an execution
+ * instance of an automation rule.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -68,8 +68,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   private java.lang.String etag;
 
   /**
-   * Output only. Time the `AutomationRun` will expire. An `AutomationRun` will expire after 14 days
-   * from its creation date.
+   * Output only. Time the `AutomationRun` expires. An `AutomationRun` expires after 14 days from
+   * its creation date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,8 +120,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   private java.lang.String state;
 
   /**
-   * Output only. Explains the current state of the `AutomationRun`. Present only an explanation is
-   * needed.
+   * Output only. Explains the current state of the `AutomationRun`. Present only when an
+   * explanation is needed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,8 +240,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Time the `AutomationRun` will expire. An `AutomationRun` will expire after 14 days
-   * from its creation date.
+   * Output only. Time the `AutomationRun` expires. An `AutomationRun` expires after 14 days from
+   * its creation date.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -249,8 +249,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Time the `AutomationRun` will expire. An `AutomationRun` will expire after 14 days
-   * from its creation date.
+   * Output only. Time the `AutomationRun` expires. An `AutomationRun` expires after 14 days from
+   * its creation date.
    * @param expireTime expireTime or {@code null} for none
    */
   public AutomationRun setExpireTime(String expireTime) {
@@ -365,8 +365,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Explains the current state of the `AutomationRun`. Present only an explanation is
-   * needed.
+   * Output only. Explains the current state of the `AutomationRun`. Present only when an
+   * explanation is needed.
    * @return value or {@code null} for none
    */
   public java.lang.String getStateDescription() {
@@ -374,8 +374,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Explains the current state of the `AutomationRun`. Present only an explanation is
-   * needed.
+   * Output only. Explains the current state of the `AutomationRun`. Present only when an
+   * explanation is needed.
    * @param stateDescription stateDescription or {@code null} for none
    */
   public AutomationRun setStateDescription(java.lang.String stateDescription) {

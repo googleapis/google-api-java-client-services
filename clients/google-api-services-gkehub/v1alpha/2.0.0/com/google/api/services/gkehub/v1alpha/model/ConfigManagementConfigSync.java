@@ -59,7 +59,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    * Cloud Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should have the
    * Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
    * ServiceAccount `default` in the namespace `config-management-monitoring` should be bound to the
-   * GSA. This field is required when automatic Feature management is enabled.
+   * GSA.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    * Cloud Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should have the
    * Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
    * ServiceAccount `default` in the namespace `config-management-monitoring` should be bound to the
-   * GSA. This field is required when automatic Feature management is enabled.
+   * GSA.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetricsGcpServiceAccountEmail() {
@@ -163,7 +163,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    * Cloud Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should have the
    * Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
    * ServiceAccount `default` in the namespace `config-management-monitoring` should be bound to the
-   * GSA. This field is required when automatic Feature management is enabled.
+   * GSA.
    * @param metricsGcpServiceAccountEmail metricsGcpServiceAccountEmail or {@code null} for none
    */
   public ConfigManagementConfigSync setMetricsGcpServiceAccountEmail(java.lang.String metricsGcpServiceAccountEmail) {

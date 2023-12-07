@@ -30,14 +30,6 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ClusterUpgradeMembershipState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Project number or id of the fleet. It is set only for Memberships that are part of fleet-based
-   * Rollout Sequencing.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String fleet;
-
-  /**
    * Whether this membership is ignored by the feature. For example, manually upgraded clusters can
    * be ignored if they are newer than the default versions of its release channel.
    * The value may be {@code null}.
@@ -64,25 +56,6 @@ public final class ClusterUpgradeMembershipState extends com.google.api.client.j
     // hack to force ProGuard to consider ClusterUpgradeMembershipGKEUpgradeState used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ClusterUpgradeMembershipGKEUpgradeState.class);
-  }
-
-  /**
-   * Project number or id of the fleet. It is set only for Memberships that are part of fleet-based
-   * Rollout Sequencing.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFleet() {
-    return fleet;
-  }
-
-  /**
-   * Project number or id of the fleet. It is set only for Memberships that are part of fleet-based
-   * Rollout Sequencing.
-   * @param fleet fleet or {@code null} for none
-   */
-  public ClusterUpgradeMembershipState setFleet(java.lang.String fleet) {
-    this.fleet = fleet;
-    return this;
   }
 
   /**

@@ -30,14 +30,14 @@ package com.google.api.services.vision.v1p2beta1.model;
 public final class GoogleCloudVisionV1p2beta1WebDetectionParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to include results derived from the geo information in the image.
+   * This field has no effect on results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeGeoResults;
 
   /**
-   * Whether to include results derived from the geo information in the image.
+   * This field has no effect on results.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeGeoResults() {
@@ -45,7 +45,7 @@ public final class GoogleCloudVisionV1p2beta1WebDetectionParams extends com.goog
   }
 
   /**
-   * Whether to include results derived from the geo information in the image.
+   * This field has no effect on results.
    * @param includeGeoResults includeGeoResults or {@code null} for none
    */
   public GoogleCloudVisionV1p2beta1WebDetectionParams setIncludeGeoResults(java.lang.Boolean includeGeoResults) {

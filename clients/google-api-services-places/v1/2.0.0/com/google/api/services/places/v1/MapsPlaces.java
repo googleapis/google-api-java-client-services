@@ -162,7 +162,7 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param name Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name in the
-     *        same Place. Format: placesplace_id*.
+     *        same Place. Format: `places/{place_id}`.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -189,7 +189,7 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name in the
-     *        same Place. Format: placesplace_id*.
+     *        same Place. Format: `places/{place_id}`.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -269,13 +269,13 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name
-       * in the same Place. Format: placesplace_id*.
+       * in the same Place. Format: `places/{place_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name in the
-     same Place. Format: placesplace_id*.
+     same Place. Format: `places/{place_id}`.
        */
       public java.lang.String getName() {
         return name;
@@ -283,7 +283,7 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name
-       * in the same Place. Format: placesplace_id*.
+       * in the same Place. Format: `places/{place_id}`.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -583,9 +583,9 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link GetMedia#execute()} method to invoke the remote operation.
        *
        * @param name Required. The resource name of a photo media in the format:
-       *        `"places/place_id/photos/photo_reference/media"`. The resource name of a photo as returned
-       *        in a Place object's `photos.name` field comes with the format
-       *        `"places/place_id/photos/photo_reference"`. You need to append `"/media"` at the end of
+       *        `places/{place_id}/photos/{photo_reference}/media`. The resource name of a photo as
+       *        returned in a Place object's `photos.name` field comes with the format
+       *        `places/{place_id}/photos/{photo_reference}`. You need to append `/media` at the end of
        *        the photo resource to get the photo media resource name.
        * @return the request
        */
@@ -614,9 +614,9 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The resource name of a photo media in the format:
-       *        `"places/place_id/photos/photo_reference/media"`. The resource name of a photo as returned
-       *        in a Place object's `photos.name` field comes with the format
-       *        `"places/place_id/photos/photo_reference"`. You need to append `"/media"` at the end of
+       *        `places/{place_id}/photos/{photo_reference}/media`. The resource name of a photo as
+       *        returned in a Place object's `photos.name` field comes with the format
+       *        `places/{place_id}/photos/{photo_reference}`. You need to append `/media` at the end of
        *        the photo resource to get the photo media resource name.
          * @since 1.13
          */
@@ -697,18 +697,18 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. The resource name of a photo media in the format:
-         * `"places/place_id/photos/photo_reference/media"`. The resource name of a photo as
+         * `places/{place_id}/photos/{photo_reference}/media`. The resource name of a photo as
          * returned in a Place object's `photos.name` field comes with the format
-         * `"places/place_id/photos/photo_reference"`. You need to append `"/media"` at the end of
+         * `places/{place_id}/photos/{photo_reference}`. You need to append `/media` at the end of
          * the photo resource to get the photo media resource name.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The resource name of a photo media in the format:
-       `"places/place_id/photos/photo_reference/media"`. The resource name of a photo as returned in a
+       `places/{place_id}/photos/{photo_reference}/media`. The resource name of a photo as returned in a
        Place object's `photos.name` field comes with the format
-       `"places/place_id/photos/photo_reference"`. You need to append `"/media"` at the end of the photo
+       `places/{place_id}/photos/{photo_reference}`. You need to append `/media` at the end of the photo
        resource to get the photo media resource name.
          */
         public java.lang.String getName() {
@@ -717,9 +717,9 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. The resource name of a photo media in the format:
-         * `"places/place_id/photos/photo_reference/media"`. The resource name of a photo as
+         * `places/{place_id}/photos/{photo_reference}/media`. The resource name of a photo as
          * returned in a Place object's `photos.name` field comes with the format
-         * `"places/place_id/photos/photo_reference"`. You need to append `"/media"` at the end of
+         * `places/{place_id}/photos/{photo_reference}`. You need to append `/media` at the end of
          * the photo resource to get the photo media resource name.
          */
         public GetMedia setName(java.lang.String name) {

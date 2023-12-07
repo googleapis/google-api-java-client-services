@@ -38,7 +38,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
 
   /**
    * A reference representing this place review which may be used to look up this place review again
-   * (also called the API "resource" name: places/place_id/reviews/review).
+   * (also called the API "resource" name: `places/{place_id}/reviews/{review}`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
 
   /**
    * A reference representing this place review which may be used to look up this place review again
-   * (also called the API "resource" name: places/place_id/reviews/review).
+   * (also called the API "resource" name: `places/{place_id}/reviews/{review}`).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,7 +108,7 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
 
   /**
    * A reference representing this place review which may be used to look up this place review again
-   * (also called the API "resource" name: places/place_id/reviews/review).
+   * (also called the API "resource" name: `places/{place_id}/reviews/{review}`).
    * @param name name or {@code null} for none
    */
   public GoogleMapsPlacesV1Review setName(java.lang.String name) {

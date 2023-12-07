@@ -30,7 +30,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Retry extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Total number of retries. Retry will skipped if set to 0; The minimum value is 1, and
+   * Required. Total number of retries. Retry is skipped if set to 0; The minimum value is 1, and
    * the maximum value is 10.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class Retry extends com.google.api.client.json.GenericJson {
   private String wait;
 
   /**
-   * Required. Total number of retries. Retry will skipped if set to 0; The minimum value is 1, and
+   * Required. Total number of retries. Retry is skipped if set to 0; The minimum value is 1, and
    * the maximum value is 10.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class Retry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Total number of retries. Retry will skipped if set to 0; The minimum value is 1, and
+   * Required. Total number of retries. Retry is skipped if set to 0; The minimum value is 1, and
    * the maximum value is 10.
    * @param attempts attempts or {@code null} for none
    */

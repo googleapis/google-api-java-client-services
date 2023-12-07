@@ -39,6 +39,30 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean automaticTrafficControl;
 
   /**
+   * Optional. A list of tags that are added to the canary revision while the canary deployment is
+   * in progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> canaryRevisionTags;
+
+  /**
+   * Optional. A list of tags that are added to the prior revision while the canary deployment is in
+   * progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> priorRevisionTags;
+
+  /**
+   * Optional. A list of tags that are added to the final stable revision after the canary
+   * deployment is completed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> stableRevisionTags;
+
+  /**
    * Whether Cloud Deploy should update the traffic stanza in a Cloud Run Service on the user's
    * behalf to facilitate traffic splitting. This is required to be true for CanaryDeployments, but
    * optional for CustomCanaryDeployments.
@@ -56,6 +80,63 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
    */
   public CloudRunConfig setAutomaticTrafficControl(java.lang.Boolean automaticTrafficControl) {
     this.automaticTrafficControl = automaticTrafficControl;
+    return this;
+  }
+
+  /**
+   * Optional. A list of tags that are added to the canary revision while the canary deployment is
+   * in progress.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCanaryRevisionTags() {
+    return canaryRevisionTags;
+  }
+
+  /**
+   * Optional. A list of tags that are added to the canary revision while the canary deployment is
+   * in progress.
+   * @param canaryRevisionTags canaryRevisionTags or {@code null} for none
+   */
+  public CloudRunConfig setCanaryRevisionTags(java.util.List<java.lang.String> canaryRevisionTags) {
+    this.canaryRevisionTags = canaryRevisionTags;
+    return this;
+  }
+
+  /**
+   * Optional. A list of tags that are added to the prior revision while the canary deployment is in
+   * progress.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPriorRevisionTags() {
+    return priorRevisionTags;
+  }
+
+  /**
+   * Optional. A list of tags that are added to the prior revision while the canary deployment is in
+   * progress.
+   * @param priorRevisionTags priorRevisionTags or {@code null} for none
+   */
+  public CloudRunConfig setPriorRevisionTags(java.util.List<java.lang.String> priorRevisionTags) {
+    this.priorRevisionTags = priorRevisionTags;
+    return this;
+  }
+
+  /**
+   * Optional. A list of tags that are added to the final stable revision after the canary
+   * deployment is completed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getStableRevisionTags() {
+    return stableRevisionTags;
+  }
+
+  /**
+   * Optional. A list of tags that are added to the final stable revision after the canary
+   * deployment is completed.
+   * @param stableRevisionTags stableRevisionTags or {@code null} for none
+   */
+  public CloudRunConfig setStableRevisionTags(java.util.List<java.lang.String> stableRevisionTags) {
+    this.stableRevisionTags = stableRevisionTags;
     return this;
   }
 

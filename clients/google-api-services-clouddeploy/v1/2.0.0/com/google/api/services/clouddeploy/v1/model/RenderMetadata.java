@@ -37,6 +37,13 @@ public final class RenderMetadata extends com.google.api.client.json.GenericJson
   private CloudRunRenderMetadata cloudRun;
 
   /**
+   * Output only. Custom metadata provided by user defined render operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomMetadata custom;
+
+  /**
    * Output only. Metadata associated with rendering for Cloud Run.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class RenderMetadata extends com.google.api.client.json.GenericJson
    */
   public RenderMetadata setCloudRun(CloudRunRenderMetadata cloudRun) {
     this.cloudRun = cloudRun;
+    return this;
+  }
+
+  /**
+   * Output only. Custom metadata provided by user defined render operation.
+   * @return value or {@code null} for none
+   */
+  public CustomMetadata getCustom() {
+    return custom;
+  }
+
+  /**
+   * Output only. Custom metadata provided by user defined render operation.
+   * @param custom custom or {@code null} for none
+   */
+  public RenderMetadata setCustom(CustomMetadata custom) {
+    this.custom = custom;
     return this;
   }
 

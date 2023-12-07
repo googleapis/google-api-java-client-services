@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * The response object from `ListAutomations`.
+ * The response object from `ListCustomTargetTypes.`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,19 +27,19 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListAutomationsResponse extends com.google.api.client.json.GenericJson {
+public final class ListCustomTargetTypesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The `Automation` objects.
+   * The `CustomTargetType` objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Automation> automations;
+  private java.util.List<CustomTargetType> customTargetTypes;
 
   static {
-    // hack to force ProGuard to consider Automation used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider CustomTargetType used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Automation.class);
+    com.google.api.client.util.Data.nullOf(CustomTargetType.class);
   }
 
   /**
@@ -58,19 +58,19 @@ public final class ListAutomationsResponse extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The `Automation` objects.
+   * The `CustomTargetType` objects.
    * @return value or {@code null} for none
    */
-  public java.util.List<Automation> getAutomations() {
-    return automations;
+  public java.util.List<CustomTargetType> getCustomTargetTypes() {
+    return customTargetTypes;
   }
 
   /**
-   * The `Automation` objects.
-   * @param automations automations or {@code null} for none
+   * The `CustomTargetType` objects.
+   * @param customTargetTypes customTargetTypes or {@code null} for none
    */
-  public ListAutomationsResponse setAutomations(java.util.List<Automation> automations) {
-    this.automations = automations;
+  public ListCustomTargetTypesResponse setCustomTargetTypes(java.util.List<CustomTargetType> customTargetTypes) {
+    this.customTargetTypes = customTargetTypes;
     return this;
   }
 
@@ -88,7 +88,7 @@ public final class ListAutomationsResponse extends com.google.api.client.json.Ge
    * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListAutomationsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListCustomTargetTypesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
@@ -105,19 +105,19 @@ public final class ListAutomationsResponse extends com.google.api.client.json.Ge
    * Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
-  public ListAutomationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+  public ListCustomTargetTypesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
     this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public ListAutomationsResponse set(String fieldName, Object value) {
-    return (ListAutomationsResponse) super.set(fieldName, value);
+  public ListCustomTargetTypesResponse set(String fieldName, Object value) {
+    return (ListCustomTargetTypesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListAutomationsResponse clone() {
-    return (ListAutomationsResponse) super.clone();
+  public ListCustomTargetTypesResponse clone() {
+    return (ListCustomTargetTypesResponse) super.clone();
   }
 
 }

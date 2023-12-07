@@ -18,7 +18,7 @@ package com.google.api.services.clouddeploy.v1.model;
 
 /**
  * SkaffoldSupportedCondition contains information about when support for the release's version of
- * skaffold ends.
+ * Skaffold ends.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -31,35 +31,35 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class SkaffoldSupportedCondition extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time at which this release's version of skaffold will enter maintenance mode.
+   * The time at which this release's version of Skaffold will enter maintenance mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String maintenanceModeTime;
 
   /**
-   * The skaffold support state for this release's version of skaffold.
+   * The Skaffold support state for this release's version of Skaffold.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String skaffoldSupportState;
 
   /**
-   * True if the version of skaffold used by this release is supported.
+   * True if the version of Skaffold used by this release is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean status;
 
   /**
-   * The time at which this release's version of skaffold will no longer be supported.
+   * The time at which this release's version of Skaffold will no longer be supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String supportExpirationTime;
 
   /**
-   * The time at which this release's version of skaffold will enter maintenance mode.
+   * The time at which this release's version of Skaffold will enter maintenance mode.
    * @return value or {@code null} for none
    */
   public String getMaintenanceModeTime() {
@@ -67,7 +67,7 @@ public final class SkaffoldSupportedCondition extends com.google.api.client.json
   }
 
   /**
-   * The time at which this release's version of skaffold will enter maintenance mode.
+   * The time at which this release's version of Skaffold will enter maintenance mode.
    * @param maintenanceModeTime maintenanceModeTime or {@code null} for none
    */
   public SkaffoldSupportedCondition setMaintenanceModeTime(String maintenanceModeTime) {
@@ -76,7 +76,7 @@ public final class SkaffoldSupportedCondition extends com.google.api.client.json
   }
 
   /**
-   * The skaffold support state for this release's version of skaffold.
+   * The Skaffold support state for this release's version of Skaffold.
    * @return value or {@code null} for none
    */
   public java.lang.String getSkaffoldSupportState() {
@@ -84,7 +84,7 @@ public final class SkaffoldSupportedCondition extends com.google.api.client.json
   }
 
   /**
-   * The skaffold support state for this release's version of skaffold.
+   * The Skaffold support state for this release's version of Skaffold.
    * @param skaffoldSupportState skaffoldSupportState or {@code null} for none
    */
   public SkaffoldSupportedCondition setSkaffoldSupportState(java.lang.String skaffoldSupportState) {
@@ -93,7 +93,7 @@ public final class SkaffoldSupportedCondition extends com.google.api.client.json
   }
 
   /**
-   * True if the version of skaffold used by this release is supported.
+   * True if the version of Skaffold used by this release is supported.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStatus() {
@@ -101,7 +101,7 @@ public final class SkaffoldSupportedCondition extends com.google.api.client.json
   }
 
   /**
-   * True if the version of skaffold used by this release is supported.
+   * True if the version of Skaffold used by this release is supported.
    * @param status status or {@code null} for none
    */
   public SkaffoldSupportedCondition setStatus(java.lang.Boolean status) {
@@ -110,7 +110,7 @@ public final class SkaffoldSupportedCondition extends com.google.api.client.json
   }
 
   /**
-   * The time at which this release's version of skaffold will no longer be supported.
+   * The time at which this release's version of Skaffold will no longer be supported.
    * @return value or {@code null} for none
    */
   public String getSupportExpirationTime() {
@@ -118,7 +118,7 @@ public final class SkaffoldSupportedCondition extends com.google.api.client.json
   }
 
   /**
-   * The time at which this release's version of skaffold will no longer be supported.
+   * The time at which this release's version of Skaffold will no longer be supported.
    * @param supportExpirationTime supportExpirationTime or {@code null} for none
    */
   public SkaffoldSupportedCondition setSupportExpirationTime(String supportExpirationTime) {

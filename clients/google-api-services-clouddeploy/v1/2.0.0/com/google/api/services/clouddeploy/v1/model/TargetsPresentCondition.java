@@ -17,8 +17,8 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * TargetsPresentCondition contains information on any Targets defined in the Delivery Pipeline that
- * do not actually exist.
+ * `TargetsPresentCondition` contains information on any Targets referenced in the Delivery Pipeline
+ * that do not actually exist.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:

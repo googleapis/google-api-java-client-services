@@ -37,6 +37,20 @@ public final class RepairRolloutOperation extends com.google.api.client.json.Gen
   private java.lang.Long currentRepairModeIndex;
 
   /**
+   * Output only. The job ID for the Job to repair.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jobId;
+
+  /**
+   * Output only. The phase ID of the phase that includes the job being repaired.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String phaseId;
+
+  /**
    * Output only. Records of the repair attempts. Each repair phase may have multiple retry attempts
    * or single rollback attempt.
    * The value may be {@code null}.
@@ -71,6 +85,40 @@ public final class RepairRolloutOperation extends com.google.api.client.json.Gen
    */
   public RepairRolloutOperation setCurrentRepairModeIndex(java.lang.Long currentRepairModeIndex) {
     this.currentRepairModeIndex = currentRepairModeIndex;
+    return this;
+  }
+
+  /**
+   * Output only. The job ID for the Job to repair.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJobId() {
+    return jobId;
+  }
+
+  /**
+   * Output only. The job ID for the Job to repair.
+   * @param jobId jobId or {@code null} for none
+   */
+  public RepairRolloutOperation setJobId(java.lang.String jobId) {
+    this.jobId = jobId;
+    return this;
+  }
+
+  /**
+   * Output only. The phase ID of the phase that includes the job being repaired.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPhaseId() {
+    return phaseId;
+  }
+
+  /**
+   * Output only. The phase ID of the phase that includes the job being repaired.
+   * @param phaseId phaseId or {@code null} for none
+   */
+  public RepairRolloutOperation setPhaseId(java.lang.String phaseId) {
+    this.phaseId = phaseId;
     return this;
   }
 

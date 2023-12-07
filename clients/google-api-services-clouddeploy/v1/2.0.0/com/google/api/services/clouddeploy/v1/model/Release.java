@@ -74,6 +74,20 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. Snapshot of the custom target types referenced by the targets taken at release
+   * creation time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomTargetType> customTargetTypeSnapshots;
+
+  static {
+    // hack to force ProGuard to consider CustomTargetType used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CustomTargetType.class);
+  }
+
+  /**
    * Output only. Snapshot of the parent pipeline taken at release creation time.
    * The value may be {@code null}.
    */
@@ -280,6 +294,25 @@ public final class Release extends com.google.api.client.json.GenericJson {
    */
   public Release setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Snapshot of the custom target types referenced by the targets taken at release
+   * creation time.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomTargetType> getCustomTargetTypeSnapshots() {
+    return customTargetTypeSnapshots;
+  }
+
+  /**
+   * Output only. Snapshot of the custom target types referenced by the targets taken at release
+   * creation time.
+   * @param customTargetTypeSnapshots customTargetTypeSnapshots or {@code null} for none
+   */
+  public Release setCustomTargetTypeSnapshots(java.util.List<CustomTargetType> customTargetTypeSnapshots) {
+    this.customTargetTypeSnapshots = customTargetTypeSnapshots;
     return this;
   }
 

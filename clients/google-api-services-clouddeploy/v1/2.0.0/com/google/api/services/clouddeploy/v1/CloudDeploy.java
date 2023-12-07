@@ -654,6 +654,1142 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
       }
 
       /**
+       * An accessor for creating requests from the CustomTargetTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudDeploy clouddeploy = new CloudDeploy(...);}
+       *   {@code CloudDeploy.CustomTargetTypes.List request = clouddeploy.customTargetTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public CustomTargetTypes customTargetTypes() {
+        return new CustomTargetTypes();
+      }
+
+      /**
+       * The "customTargetTypes" collection of methods.
+       */
+      public class CustomTargetTypes {
+
+        /**
+         * Creates a new CustomTargetType in a given project and location.
+         *
+         * Create a request for the method "customTargetTypes.create".
+         *
+         * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection in which the `CustomTargetType` should be created in. Format should
+         *        be `projects/{project_id}/locations/{location_name}`.
+         * @param content the {@link com.google.api.services.clouddeploy.v1.model.CustomTargetType}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.clouddeploy.v1.model.CustomTargetType content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/customTargetTypes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new CustomTargetType in a given project and location.
+           *
+           * Create a request for the method "customTargetTypes.create".
+           *
+           * This request holds the parameters needed by the the clouddeploy server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection in which the `CustomTargetType` should be created in. Format should
+         *        be `projects/{project_id}/locations/{location_name}`.
+           * @param content the {@link com.google.api.services.clouddeploy.v1.model.CustomTargetType}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.clouddeploy.v1.model.CustomTargetType content) {
+            super(CloudDeploy.this, "POST", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent collection in which the `CustomTargetType` should be created in.
+           * Format should be `projects/{project_id}/locations/{location_name}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection in which the `CustomTargetType` should be created in. Format should
+         be `projects/{project_id}/locations/{location_name}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent collection in which the `CustomTargetType` should be created in.
+           * Format should be `projects/{project_id}/locations/{location_name}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. ID of the `CustomTargetType`. */
+          @com.google.api.client.util.Key
+          private java.lang.String customTargetTypeId;
+
+          /** Required. ID of the `CustomTargetType`.
+           */
+          public java.lang.String getCustomTargetTypeId() {
+            return customTargetTypeId;
+          }
+
+          /** Required. ID of the `CustomTargetType`. */
+          public Create setCustomTargetTypeId(java.lang.String customTargetTypeId) {
+            this.customTargetTypeId = customTargetTypeId;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+         your request, the server will know to ignore the request if it has already been completed. The
+         server will guarantee that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, the request is validated and the user is provided with an
+           * expected result, but no actual change is made.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to true, the request is validated and the user is provided with an expected
+         result, but no actual change is made.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to true, the request is validated and the user is provided with an
+           * expected result, but no actual change is made.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single CustomTargetType.
+         *
+         * Create a request for the method "customTargetTypes.delete".
+         *
+         * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the `CustomTargetType` to delete. Format must be
+         *        `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/customTargetTypes/[^/]+$");
+
+          /**
+           * Deletes a single CustomTargetType.
+           *
+           * Create a request for the method "customTargetTypes.delete".
+           *
+           * This request holds the parameters needed by the the clouddeploy server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the `CustomTargetType` to delete. Format must be
+         *        `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudDeploy.this, "DELETE", REST_PATH, null, com.google.api.services.clouddeploy.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/customTargetTypes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the `CustomTargetType` to delete. Format must be `projects/{proje
+           * ct_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the `CustomTargetType` to delete. Format must be
+         `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the `CustomTargetType` to delete. Format must be `projects/{proje
+           * ct_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/customTargetTypes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, then deleting an already deleted or non-existing
+           * `CustomTargetType` will succeed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, then deleting an already deleted or non-existing `CustomTargetType` will
+         succeed.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, then deleting an already deleted or non-existing
+           * `CustomTargetType` will succeed.
+           */
+          public Delete setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. This checksum is computed by the server based on the value of other fields,
+           * and may be sent on update and delete requests to ensure the client has an up-to-date
+           * value before proceeding.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. This checksum is computed by the server based on the value of other fields, and may be
+         sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. This checksum is computed by the server based on the value of other fields,
+           * and may be sent on update and delete requests to ensure the client has an up-to-date
+           * value before proceeding.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+         your request, the server will know to ignore the request if it has already been completed. The
+         server will guarantee that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Optional. If set to true, the request is validated but no actual change is made. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to true, the request is validated but no actual change is made.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set to true, the request is validated but no actual change is made. */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single CustomTargetType.
+         *
+         * Create a request for the method "customTargetTypes.get".
+         *
+         * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the `CustomTargetType`. Format must be
+         *        `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.CustomTargetType> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/customTargetTypes/[^/]+$");
+
+          /**
+           * Gets details of a single CustomTargetType.
+           *
+           * Create a request for the method "customTargetTypes.get".
+           *
+           * This request holds the parameters needed by the the clouddeploy server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the `CustomTargetType`. Format must be
+         *        `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudDeploy.this, "GET", REST_PATH, null, com.google.api.services.clouddeploy.v1.model.CustomTargetType.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/customTargetTypes/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the `CustomTargetType`. Format must be `projects/{project_id}/locatio
+           * ns/{location_name}/customTargetTypes/{custom_target_type}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the `CustomTargetType`. Format must be
+         `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_target_type}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the `CustomTargetType`. Format must be `projects/{project_id}/locatio
+           * ns/{location_name}/customTargetTypes/{custom_target_type}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/customTargetTypes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists CustomTargetTypes in a given project and location.
+         *
+         * Create a request for the method "customTargetTypes.list".
+         *
+         * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent that owns this collection of custom target types. Format must be
+         *        `projects/{project_id}/locations/{location_name}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.ListCustomTargetTypesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/customTargetTypes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists CustomTargetTypes in a given project and location.
+           *
+           * Create a request for the method "customTargetTypes.list".
+           *
+           * This request holds the parameters needed by the the clouddeploy server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent that owns this collection of custom target types. Format must be
+         *        `projects/{project_id}/locations/{location_name}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudDeploy.this, "GET", REST_PATH, null, com.google.api.services.clouddeploy.v1.model.ListCustomTargetTypesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent that owns this collection of custom target types. Format must be
+           * `projects/{project_id}/locations/{location_name}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent that owns this collection of custom target types. Format must be
+         `projects/{project_id}/locations/{location_name}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent that owns this collection of custom target types. Format must be
+           * `projects/{project_id}/locations/{location_name}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter custom target types to be returned. See https://google.aip.dev/160 for
+           * more details.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter custom target types to be returned. See https://google.aip.dev/160 for more
+         details.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter custom target types to be returned. See https://google.aip.dev/160 for
+           * more details.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Field to sort by. See https://google.aip.dev/132#ordering for more details.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field to sort by. See https://google.aip.dev/132#ordering for more details.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Field to sort by. See https://google.aip.dev/132#ordering for more details.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of `CustomTargetType` objects to return. The service may
+           * return fewer than this value. If unspecified, at most 50 `CustomTargetType` objects
+           * will be returned. The maximum value is 1000; values above 1000 will be set to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of `CustomTargetType` objects to return. The service may return fewer
+         than this value. If unspecified, at most 50 `CustomTargetType` objects will be returned. The
+         maximum value is 1000; values above 1000 will be set to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of `CustomTargetType` objects to return. The service may
+           * return fewer than this value. If unspecified, at most 50 `CustomTargetType` objects
+           * will be returned. The maximum value is 1000; values above 1000 will be set to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListCustomTargetTypes` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other provided parameters
+           * match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListCustomTargetTypes` call. Provide this to
+         retrieve the subsequent page. When paginating, all other provided parameters match the call that
+         provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListCustomTargetTypes` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other provided parameters
+           * match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a single CustomTargetType.
+         *
+         * Create a request for the method "customTargetTypes.patch".
+         *
+         * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Optional. Name of the `CustomTargetType`. Format is
+         *        `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+         * @param content the {@link com.google.api.services.clouddeploy.v1.model.CustomTargetType}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.clouddeploy.v1.model.CustomTargetType content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/customTargetTypes/[^/]+$");
+
+          /**
+           * Updates a single CustomTargetType.
+           *
+           * Create a request for the method "customTargetTypes.patch".
+           *
+           * This request holds the parameters needed by the the clouddeploy server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Optional. Name of the `CustomTargetType`. Format is
+         *        `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+           * @param content the {@link com.google.api.services.clouddeploy.v1.model.CustomTargetType}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.clouddeploy.v1.model.CustomTargetType content) {
+            super(CloudDeploy.this, "PATCH", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/customTargetTypes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Optional. Name of the `CustomTargetType`. Format is
+           * `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Optional. Name of the `CustomTargetType`. Format is
+         `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Optional. Name of the `CustomTargetType`. Format is
+           * `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/customTargetTypes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, updating a `CustomTargetType` that does not exist will result
+           * in the creation of a new `CustomTargetType`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, updating a `CustomTargetType` that does not exist will result in the
+         creation of a new `CustomTargetType`.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, updating a `CustomTargetType` that does not exist will result
+           * in the creation of a new `CustomTargetType`.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+         your request, the server will know to ignore the request if it has already been completed. The
+         server will guarantee that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. Field mask is used to specify the fields to be overwritten in the
+           * `CustomTargetType` resource by the update. The fields specified in the update_mask are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask is used to specify the fields to be overwritten in the `CustomTargetType`
+         resource by the update. The fields specified in the update_mask are relative to the resource, not
+         the full request. A field will be overwritten if it is in the mask. If the user does not provide a
+         mask then all fields will be overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask is used to specify the fields to be overwritten in the
+           * `CustomTargetType` resource by the update. The fields specified in the update_mask are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, the request is validated and the user is provided with an
+           * expected result, but no actual change is made.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to true, the request is validated and the user is provided with an expected
+         result, but no actual change is made.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to true, the request is validated and the user is provided with an
+           * expected result, but no actual change is made.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the DeliveryPipelines collection.
        *
        * <p>The typical use is:</p>
@@ -2763,8 +3899,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which owns this collection of automationRuns. Format must be
-           *        `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
+           * @param parent Required. The parent `Delivery Pipeline`, which owns this collection of automationRuns. Format must
+           *        be `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2790,8 +3926,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which owns this collection of automationRuns. Format must be
-           *        `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
+             * @param parent Required. The parent `Delivery Pipeline`, which owns this collection of automationRuns. Format must
+           *        be `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2870,21 +4006,23 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The parent, which owns this collection of automationRuns. Format must be
+             * Required. The parent `Delivery Pipeline`, which owns this collection of
+             * automationRuns. Format must be
              * `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which owns this collection of automationRuns. Format must be
-           `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
+            /** Required. The parent `Delivery Pipeline`, which owns this collection of automationRuns. Format must
+           be `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent, which owns this collection of automationRuns. Format must be
+             * Required. The parent `Delivery Pipeline`, which owns this collection of
+             * automationRuns. Format must be
              * `projects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}`.
              */
             public List setParent(java.lang.String parent) {
@@ -3642,7 +4780,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which owns this collection of automations. Format must be
+           * @param parent Required. The parent `Delivery Pipeline`, which owns this collection of automations. Format must be
            *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @return the request
            */
@@ -3669,7 +4807,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which owns this collection of automations. Format must be
+             * @param parent Required. The parent `Delivery Pipeline`, which owns this collection of automations. Format must be
            *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              * @since 1.13
              */
@@ -3749,13 +4887,14 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The parent, which owns this collection of automations. Format must be
+             * Required. The parent `Delivery Pipeline`, which owns this collection of automations.
+             * Format must be
              * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which owns this collection of automations. Format must be
+            /** Required. The parent `Delivery Pipeline`, which owns this collection of automations. Format must be
            `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public java.lang.String getParent() {
@@ -3763,7 +4902,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The parent, which owns this collection of automations. Format must be
+             * Required. The parent `Delivery Pipeline`, which owns this collection of automations.
+             * Format must be
              * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public List setParent(java.lang.String parent) {

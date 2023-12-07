@@ -106,7 +106,9 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   private java.lang.String orgUnitId;
 
   /**
-   * A set of restrictions that apply to this shared drive or items inside this shared drive.
+   * A set of restrictions that apply to this shared drive or items inside this shared drive. Note
+   * that restrictions can't be set when creating a shared drive. To add a restriction, first create
+   * a shared drive and then use `drives.update` to add restrictions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -304,7 +306,9 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of restrictions that apply to this shared drive or items inside this shared drive.
+   * A set of restrictions that apply to this shared drive or items inside this shared drive. Note
+   * that restrictions can't be set when creating a shared drive. To add a restriction, first create
+   * a shared drive and then use `drives.update` to add restrictions.
    * @return value or {@code null} for none
    */
   public Restrictions getRestrictions() {
@@ -312,7 +316,9 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of restrictions that apply to this shared drive or items inside this shared drive.
+   * A set of restrictions that apply to this shared drive or items inside this shared drive. Note
+   * that restrictions can't be set when creating a shared drive. To add a restriction, first create
+   * a shared drive and then use `drives.update` to add restrictions.
    * @param restrictions restrictions or {@code null} for none
    */
   public Drive setRestrictions(Restrictions restrictions) {
@@ -1016,7 +1022,9 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of restrictions that apply to this shared drive or items inside this shared drive.
+   * A set of restrictions that apply to this shared drive or items inside this shared drive. Note
+   * that restrictions can't be set when creating a shared drive. To add a restriction, first create a
+   * shared drive and then use `drives.update` to add restrictions.
    */
   public static final class Restrictions extends com.google.api.client.json.GenericJson {
 

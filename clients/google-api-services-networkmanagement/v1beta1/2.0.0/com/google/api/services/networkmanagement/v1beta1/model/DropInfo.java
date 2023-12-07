@@ -38,11 +38,32 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String cause;
 
   /**
+   * Destination IP address of the dropped packet (if relevant).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destinationIp;
+
+  /**
+   * Region of the dropped packet (if relevant).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * URI of the resource that caused the drop.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceUri;
+
+  /**
+   * Source IP address of the dropped packet (if relevant).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceIp;
 
   /**
    * Cause that the packet is dropped.
@@ -62,6 +83,40 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Destination IP address of the dropped packet (if relevant).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestinationIp() {
+    return destinationIp;
+  }
+
+  /**
+   * Destination IP address of the dropped packet (if relevant).
+   * @param destinationIp destinationIp or {@code null} for none
+   */
+  public DropInfo setDestinationIp(java.lang.String destinationIp) {
+    this.destinationIp = destinationIp;
+    return this;
+  }
+
+  /**
+   * Region of the dropped packet (if relevant).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * Region of the dropped packet (if relevant).
+   * @param region region or {@code null} for none
+   */
+  public DropInfo setRegion(java.lang.String region) {
+    this.region = region;
+    return this;
+  }
+
+  /**
    * URI of the resource that caused the drop.
    * @return value or {@code null} for none
    */
@@ -75,6 +130,23 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
    */
   public DropInfo setResourceUri(java.lang.String resourceUri) {
     this.resourceUri = resourceUri;
+    return this;
+  }
+
+  /**
+   * Source IP address of the dropped packet (if relevant).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceIp() {
+    return sourceIp;
+  }
+
+  /**
+   * Source IP address of the dropped packet (if relevant).
+   * @param sourceIp sourceIp or {@code null} for none
+   */
+  public DropInfo setSourceIp(java.lang.String sourceIp) {
+    this.sourceIp = sourceIp;
     return this;
   }
 

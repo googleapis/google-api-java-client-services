@@ -9876,22 +9876,24 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional. Optional filter for the returned list in go/filtering format. Filtering is
-             * only currently supported on the `path` field.
+             * Optional. Optional filter for the returned list in filtering format. Filtering is
+             * only currently supported on the `path` field. See https://google.aip.dev/160 for
+             * details.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Optional filter for the returned list in go/filtering format. Filtering is only currently
-           supported on the `path` field.
+            /** Optional. Optional filter for the returned list in filtering format. Filtering is only currently
+           supported on the `path` field. See https://google.aip.dev/160 for details.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Optional filter for the returned list in go/filtering format. Filtering is
-             * only currently supported on the `path` field.
+             * Optional. Optional filter for the returned list in filtering format. Filtering is
+             * only currently supported on the `path` field. See https://google.aip.dev/160 for
+             * details.
              */
             public SearchFiles setFilter(java.lang.String filter) {
               this.filter = filter;

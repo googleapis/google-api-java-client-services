@@ -18,7 +18,8 @@ package com.google.api.services.dns.model;
 
 /**
  * HealthCheckTargets describes endpoints to health-check when responding to Routing Policy queries.
- * Only the healthy endpoints will be included in the response.
+ * Only the healthy endpoints will be included in the response. Only one of internal_load_balancer
+ * and external_endpoints should be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
@@ -31,12 +32,41 @@ package com.google.api.services.dns.model;
 public final class RRSetRoutingPolicyHealthCheckTargets extends com.google.api.client.json.GenericJson {
 
   /**
+   * The Internet IP addresses to be health checked. The format matches the format of
+   * ResourceRecordSet.rrdata as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> externalEndpoints;
+
+  /**
+   * Configuration for internal load balancers to be health checked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<RRSetRoutingPolicyLoadBalancerTarget> internalLoadBalancers;
 
   /**
+   * The Internet IP addresses to be health checked. The format matches the format of
+   * ResourceRecordSet.rrdata as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1)
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExternalEndpoints() {
+    return externalEndpoints;
+  }
+
+  /**
+   * The Internet IP addresses to be health checked. The format matches the format of
+   * ResourceRecordSet.rrdata as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1)
+   * @param externalEndpoints externalEndpoints or {@code null} for none
+   */
+  public RRSetRoutingPolicyHealthCheckTargets setExternalEndpoints(java.util.List<java.lang.String> externalEndpoints) {
+    this.externalEndpoints = externalEndpoints;
+    return this;
+  }
+
+  /**
+   * Configuration for internal load balancers to be health checked.
    * @return value or {@code null} for none
    */
   public java.util.List<RRSetRoutingPolicyLoadBalancerTarget> getInternalLoadBalancers() {
@@ -44,6 +74,7 @@ public final class RRSetRoutingPolicyHealthCheckTargets extends com.google.api.c
   }
 
   /**
+   * Configuration for internal load balancers to be health checked.
    * @param internalLoadBalancers internalLoadBalancers or {@code null} for none
    */
   public RRSetRoutingPolicyHealthCheckTargets setInternalLoadBalancers(java.util.List<RRSetRoutingPolicyLoadBalancerTarget> internalLoadBalancers) {

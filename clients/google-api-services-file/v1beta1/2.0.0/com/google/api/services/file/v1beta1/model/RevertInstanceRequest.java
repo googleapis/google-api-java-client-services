@@ -32,7 +32,7 @@ public final class RevertInstanceRequest extends com.google.api.client.json.Gene
   /**
    * Required. The snapshot resource ID, in the format 'my-snapshot', where the specified ID is the
    * {snapshot_id} of the fully qualified name like
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class RevertInstanceRequest extends com.google.api.client.json.Gene
   /**
    * Required. The snapshot resource ID, in the format 'my-snapshot', where the specified ID is the
    * {snapshot_id} of the fully qualified name like
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetSnapshotId() {
@@ -51,7 +51,7 @@ public final class RevertInstanceRequest extends com.google.api.client.json.Gene
   /**
    * Required. The snapshot resource ID, in the format 'my-snapshot', where the specified ID is the
    * {snapshot_id} of the fully qualified name like
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`
    * @param targetSnapshotId targetSnapshotId or {@code null} for none
    */
   public RevertInstanceRequest setTargetSnapshotId(java.lang.String targetSnapshotId) {

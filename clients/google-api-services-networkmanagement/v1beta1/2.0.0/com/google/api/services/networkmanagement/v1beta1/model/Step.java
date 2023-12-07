@@ -153,6 +153,20 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private LoadBalancerInfo loadBalancer;
 
   /**
+   * Display information of a specific load balancer backend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LoadBalancerBackendInfo loadBalancerBackendInfo;
+
+  /**
+   * Display information of a NAT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NatInfo nat;
+
+  /**
    * Display information of a Google Cloud network.
    * The value may be {@code null}.
    */
@@ -165,6 +179,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
+
+  /**
+   * Display information of a ProxyConnection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProxyConnectionInfo proxyConnection;
 
   /**
    * Display information of a Compute Engine route.
@@ -495,6 +516,40 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Display information of a specific load balancer backend.
+   * @return value or {@code null} for none
+   */
+  public LoadBalancerBackendInfo getLoadBalancerBackendInfo() {
+    return loadBalancerBackendInfo;
+  }
+
+  /**
+   * Display information of a specific load balancer backend.
+   * @param loadBalancerBackendInfo loadBalancerBackendInfo or {@code null} for none
+   */
+  public Step setLoadBalancerBackendInfo(LoadBalancerBackendInfo loadBalancerBackendInfo) {
+    this.loadBalancerBackendInfo = loadBalancerBackendInfo;
+    return this;
+  }
+
+  /**
+   * Display information of a NAT.
+   * @return value or {@code null} for none
+   */
+  public NatInfo getNat() {
+    return nat;
+  }
+
+  /**
+   * Display information of a NAT.
+   * @param nat nat or {@code null} for none
+   */
+  public Step setNat(NatInfo nat) {
+    this.nat = nat;
+    return this;
+  }
+
+  /**
    * Display information of a Google Cloud network.
    * @return value or {@code null} for none
    */
@@ -525,6 +580,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Display information of a ProxyConnection.
+   * @return value or {@code null} for none
+   */
+  public ProxyConnectionInfo getProxyConnection() {
+    return proxyConnection;
+  }
+
+  /**
+   * Display information of a ProxyConnection.
+   * @param proxyConnection proxyConnection or {@code null} for none
+   */
+  public Step setProxyConnection(ProxyConnectionInfo proxyConnection) {
+    this.proxyConnection = proxyConnection;
     return this;
   }
 

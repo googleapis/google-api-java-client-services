@@ -95,9 +95,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String instance;
 
   /**
-   * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is
-   * only allowed when the test's destination is a [global load balancer
-   * VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
+   * The IP address of the endpoint, which can be an external or internal IP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,9 +303,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is
-   * only allowed when the test's destination is a [global load balancer
-   * VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
+   * The IP address of the endpoint, which can be an external or internal IP.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -315,9 +311,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is
-   * only allowed when the test's destination is a [global load balancer
-   * VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
+   * The IP address of the endpoint, which can be an external or internal IP.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public Endpoint setIpAddress(java.lang.String ipAddress) {

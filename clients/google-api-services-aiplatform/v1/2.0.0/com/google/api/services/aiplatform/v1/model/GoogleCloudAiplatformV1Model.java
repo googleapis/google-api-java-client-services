@@ -54,6 +54,14 @@ public final class GoogleCloudAiplatformV1Model extends com.google.api.client.js
   private String createTime;
 
   /**
+   * Stats of data used for training or evaluating the Model. Only populated when the Model is
+   * trained by a TrainingPipeline with data_input_config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ModelDataStats dataStats;
+
+  /**
    * Output only. The pointers to DeployedModels created from this Model. Note that Model could have
    * been deployed to Endpoints in different Locations.
    * The value may be {@code null}.
@@ -360,6 +368,25 @@ public final class GoogleCloudAiplatformV1Model extends com.google.api.client.js
    */
   public GoogleCloudAiplatformV1Model setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Stats of data used for training or evaluating the Model. Only populated when the Model is
+   * trained by a TrainingPipeline with data_input_config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelDataStats getDataStats() {
+    return dataStats;
+  }
+
+  /**
+   * Stats of data used for training or evaluating the Model. Only populated when the Model is
+   * trained by a TrainingPipeline with data_input_config.
+   * @param dataStats dataStats or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Model setDataStats(GoogleCloudAiplatformV1ModelDataStats dataStats) {
+    this.dataStats = dataStats;
     return this;
   }
 

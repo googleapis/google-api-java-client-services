@@ -30,14 +30,45 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1ExportDataResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * All of the files that are exported in this export operation.
+   * Only present for custom code training export use case. Records data stats, i.e.,
+   * train/validation/test item/annotation counts calculated during the export operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ModelDataStats dataStats;
+
+  /**
+   * All of the files that are exported in this export operation. For custom code training export,
+   * only three (training, validation and test) GCS paths in wildcard format are populated (e.g.,
+   * gs://.../training-*).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> exportedFiles;
 
   /**
-   * All of the files that are exported in this export operation.
+   * Only present for custom code training export use case. Records data stats, i.e.,
+   * train/validation/test item/annotation counts calculated during the export operation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelDataStats getDataStats() {
+    return dataStats;
+  }
+
+  /**
+   * Only present for custom code training export use case. Records data stats, i.e.,
+   * train/validation/test item/annotation counts calculated during the export operation.
+   * @param dataStats dataStats or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ExportDataResponse setDataStats(GoogleCloudAiplatformV1ModelDataStats dataStats) {
+    this.dataStats = dataStats;
+    return this;
+  }
+
+  /**
+   * All of the files that are exported in this export operation. For custom code training export,
+   * only three (training, validation and test) GCS paths in wildcard format are populated (e.g.,
+   * gs://.../training-*).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExportedFiles() {
@@ -45,7 +76,9 @@ public final class GoogleCloudAiplatformV1ExportDataResponse extends com.google.
   }
 
   /**
-   * All of the files that are exported in this export operation.
+   * All of the files that are exported in this export operation. For custom code training export,
+   * only three (training, validation and test) GCS paths in wildcard format are populated (e.g.,
+   * gs://.../training-*).
    * @param exportedFiles exportedFiles or {@code null} for none
    */
   public GoogleCloudAiplatformV1ExportDataResponse setExportedFiles(java.util.List<java.lang.String> exportedFiles) {

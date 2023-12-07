@@ -38,6 +38,14 @@ public final class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSour
   private java.lang.String enterpriseDatastore;
 
   /**
+   * The grounding text passed inline with the Predict API. It can support up to 1 million token
+   * context.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String inlineContext;
+
+  /**
    * The type of the grounding checking source.
    * The value may be {@code null}.
    */
@@ -67,6 +75,25 @@ public final class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSour
    */
   public GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry setEnterpriseDatastore(java.lang.String enterpriseDatastore) {
     this.enterpriseDatastore = enterpriseDatastore;
+    return this;
+  }
+
+  /**
+   * The grounding text passed inline with the Predict API. It can support up to 1 million token
+   * context.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInlineContext() {
+    return inlineContext;
+  }
+
+  /**
+   * The grounding text passed inline with the Predict API. It can support up to 1 million token
+   * context.
+   * @param inlineContext inlineContext or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry setInlineContext(java.lang.String inlineContext) {
+    this.inlineContext = inlineContext;
     return this;
   }
 

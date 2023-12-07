@@ -81,7 +81,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Name of the FeatureOnlineStore. Format:
+   * Identifier. Name of the FeatureOnlineStore. Format:
    * `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
    * The value may be {@code null}.
    */
@@ -231,7 +231,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
   }
 
   /**
-   * Output only. Name of the FeatureOnlineStore. Format:
+   * Identifier. Name of the FeatureOnlineStore. Format:
    * `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
    * @return value or {@code null} for none
    */
@@ -240,7 +240,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
   }
 
   /**
-   * Output only. Name of the FeatureOnlineStore. Format:
+   * Identifier. Name of the FeatureOnlineStore. Format:
    * `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
    * @param name name or {@code null} for none
    */

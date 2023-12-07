@@ -58,6 +58,13 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
   private java.lang.Long maxOutputTokens;
 
   /**
+   * User-created prompt note. Note size limit is 2KB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String note;
+
+  /**
    * Type of the prompt dataset.
    * The value may be {@code null}.
    */
@@ -167,6 +174,23 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setMaxOutputTokens(java.lang.Long maxOutputTokens) {
     this.maxOutputTokens = maxOutputTokens;
+    return this;
+  }
+
+  /**
+   * User-created prompt note. Note size limit is 2KB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNote() {
+    return note;
+  }
+
+  /**
+   * User-created prompt note. Note size limit is 2KB.
+   * @param note note or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setNote(java.lang.String note) {
+    this.note = note;
     return this;
   }
 

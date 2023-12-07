@@ -142,6 +142,14 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   private java.lang.String serviceAccount;
 
   /**
+   * The resource name of the shared DeploymentResourcePool to deploy on. Format:
+   * `projects/{project}/locations/{location}/deploymentResourcePools/{deployment_resource_pool}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sharedResources;
+
+  /**
    * A description of resources that to large degree are decided by Vertex AI, and require only a
    * modest additional configuration.
    * @return value or {@code null} for none
@@ -398,6 +406,25 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
    */
   public GoogleCloudAiplatformV1DeployedModel setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * The resource name of the shared DeploymentResourcePool to deploy on. Format:
+   * `projects/{project}/locations/{location}/deploymentResourcePools/{deployment_resource_pool}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSharedResources() {
+    return sharedResources;
+  }
+
+  /**
+   * The resource name of the shared DeploymentResourcePool to deploy on. Format:
+   * `projects/{project}/locations/{location}/deploymentResourcePools/{deployment_resource_pool}`
+   * @param sharedResources sharedResources or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployedModel setSharedResources(java.lang.String sharedResources) {
+    this.sharedResources = sharedResources;
     return this;
   }
 

@@ -77,6 +77,16 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.String retryPolicy;
 
   /**
+   * Optional. The hostname of the service that 1st Gen function should be observed. If no string is
+   * provided, the default service implementing the API will be used. For example,
+   * `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+   * The field is only applicable to 1st Gen functions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String service;
+
+  /**
    * Optional. The email of the trigger's service account. The service account must have permission
    * to invoke Cloud Run services, the permission is `run.routes.invoke`. If empty, defaults to the
    * Compute Engine default service account:
@@ -197,6 +207,29 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
    */
   public EventTrigger setRetryPolicy(java.lang.String retryPolicy) {
     this.retryPolicy = retryPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. The hostname of the service that 1st Gen function should be observed. If no string is
+   * provided, the default service implementing the API will be used. For example,
+   * `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+   * The field is only applicable to 1st Gen functions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getService() {
+    return service;
+  }
+
+  /**
+   * Optional. The hostname of the service that 1st Gen function should be observed. If no string is
+   * provided, the default service implementing the API will be used. For example,
+   * `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+   * The field is only applicable to 1st Gen functions.
+   * @param service service or {@code null} for none
+   */
+  public EventTrigger setService(java.lang.String service) {
+    this.service = service;
     return this;
   }
 

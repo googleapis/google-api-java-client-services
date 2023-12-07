@@ -40,8 +40,8 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean allTrafficOnLatestRevision;
 
   /**
-   * [Preview] The number of CPUs used in a single container instance. Default value is calculated
-   * from available memory. Supports the same values as Cloud Run, see
+   * The number of CPUs used in a single container instance. Default value is calculated from
+   * available memory. Supports the same values as Cloud Run, see
    * https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1"
    * indicates 1 vCPU
    * The value may be {@code null}.
@@ -86,8 +86,7 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Integer maxInstanceCount;
 
   /**
-   * [Preview] Sets the maximum number of concurrent requests that each instance can receive.
-   * Defaults to 1.
+   * Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,8 +216,8 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Preview] The number of CPUs used in a single container instance. Default value is calculated
-   * from available memory. Supports the same values as Cloud Run, see
+   * The number of CPUs used in a single container instance. Default value is calculated from
+   * available memory. Supports the same values as Cloud Run, see
    * https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1"
    * indicates 1 vCPU
    * @return value or {@code null} for none
@@ -228,8 +227,8 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Preview] The number of CPUs used in a single container instance. Default value is calculated
-   * from available memory. Supports the same values as Cloud Run, see
+   * The number of CPUs used in a single container instance. Default value is calculated from
+   * available memory. Supports the same values as Cloud Run, see
    * https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1"
    * indicates 1 vCPU
    * @param availableCpu availableCpu or {@code null} for none
@@ -324,8 +323,7 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Preview] Sets the maximum number of concurrent requests that each instance can receive.
-   * Defaults to 1.
+   * Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxInstanceRequestConcurrency() {
@@ -333,8 +331,7 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Preview] Sets the maximum number of concurrent requests that each instance can receive.
-   * Defaults to 1.
+   * Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
    * @param maxInstanceRequestConcurrency maxInstanceRequestConcurrency or {@code null} for none
    */
   public ServiceConfig setMaxInstanceRequestConcurrency(java.lang.Integer maxInstanceRequestConcurrency) {

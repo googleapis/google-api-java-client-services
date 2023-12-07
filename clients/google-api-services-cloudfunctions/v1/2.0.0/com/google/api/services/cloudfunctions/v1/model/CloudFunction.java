@@ -31,6 +31,13 @@ package com.google.api.services.cloudfunctions.v1.model;
 public final class CloudFunction extends com.google.api.client.json.GenericJson {
 
   /**
+   * See the comment next to this message for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutomaticUpdatePolicy automaticUpdatePolicy;
+
+  /**
    * The amount of memory in MB available for a function. Defaults to 256MB.
    * The value may be {@code null}.
    */
@@ -201,6 +208,13 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
+   * See the comment next to this message for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OnDeployUpdatePolicy onDeployUpdatePolicy;
+
+  /**
    * The runtime in which to run the function. Required when deploying a new function, optional when
    * updating an existing function. For a complete list of possible choices, see the [`gcloud`
    * command reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
@@ -310,6 +324,23 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String vpcConnectorEgressSettings;
+
+  /**
+   * See the comment next to this message for more details.
+   * @return value or {@code null} for none
+   */
+  public AutomaticUpdatePolicy getAutomaticUpdatePolicy() {
+    return automaticUpdatePolicy;
+  }
+
+  /**
+   * See the comment next to this message for more details.
+   * @param automaticUpdatePolicy automaticUpdatePolicy or {@code null} for none
+   */
+  public CloudFunction setAutomaticUpdatePolicy(AutomaticUpdatePolicy automaticUpdatePolicy) {
+    this.automaticUpdatePolicy = automaticUpdatePolicy;
+    return this;
+  }
 
   /**
    * The amount of memory in MB available for a function. Defaults to 256MB.
@@ -705,6 +736,23 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * See the comment next to this message for more details.
+   * @return value or {@code null} for none
+   */
+  public OnDeployUpdatePolicy getOnDeployUpdatePolicy() {
+    return onDeployUpdatePolicy;
+  }
+
+  /**
+   * See the comment next to this message for more details.
+   * @param onDeployUpdatePolicy onDeployUpdatePolicy or {@code null} for none
+   */
+  public CloudFunction setOnDeployUpdatePolicy(OnDeployUpdatePolicy onDeployUpdatePolicy) {
+    this.onDeployUpdatePolicy = onDeployUpdatePolicy;
     return this;
   }
 

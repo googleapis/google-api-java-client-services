@@ -72,7 +72,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   private ReportSummaryChartData operatingSystem;
 
   /**
-   * Histogram showing a distribution of memory sizes.
+   * Histogram showing a distribution of storage sizes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,7 +223,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   }
 
   /**
-   * Histogram showing a distribution of memory sizes.
+   * Histogram showing a distribution of storage sizes.
    * @return value or {@code null} for none
    */
   public ReportSummaryHistogramChartData getStorageBytesHistogram() {
@@ -231,7 +231,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   }
 
   /**
-   * Histogram showing a distribution of memory sizes.
+   * Histogram showing a distribution of storage sizes.
    * @param storageBytesHistogram storageBytesHistogram or {@code null} for none
    */
   public ReportSummaryAssetAggregateStats setStorageBytesHistogram(ReportSummaryHistogramChartData storageBytesHistogram) {

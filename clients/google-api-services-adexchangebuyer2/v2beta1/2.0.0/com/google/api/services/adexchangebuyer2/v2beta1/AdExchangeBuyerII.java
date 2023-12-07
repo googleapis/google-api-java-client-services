@@ -12522,6 +12522,3183 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
   }
 
   /**
+   * An accessor for creating requests from the Buyers collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+   *   {@code AdExchangeBuyerII.Buyers.List request = adexchangebuyer2.buyers().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Buyers buyers() {
+    return new Buyers();
+  }
+
+  /**
+   * The "buyers" collection of methods.
+   */
+  public class Buyers {
+
+    /**
+     * An accessor for creating requests from the FilterSets collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+     *   {@code AdExchangeBuyerII.FilterSets.List request = adexchangebuyer2.filterSets().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public FilterSets filterSets() {
+      return new FilterSets();
+    }
+
+    /**
+     * The "filterSets" collection of methods.
+     */
+    public class FilterSets {
+
+      /**
+       * Creates the specified filter set for the account with the given account ID.
+       *
+       * Create a request for the method "filterSets.create".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param ownerName Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-
+       *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+       *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
+       *        `bidders/123/accounts/456`
+       * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet}
+       * @return the request
+       */
+      public Create create(java.lang.String ownerName, com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet content) throws java.io.IOException {
+        Create result = new Create(ownerName, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet> {
+
+        private static final String REST_PATH = "v2beta1/{+ownerName}/filterSets";
+
+        private final java.util.regex.Pattern OWNER_NAME_PATTERN =
+            java.util.regex.Pattern.compile("^buyers/[^/]+$");
+
+        /**
+         * Creates the specified filter set for the account with the given account ID.
+         *
+         * Create a request for the method "filterSets.create".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param ownerName Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-
+       *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+       *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
+       *        `bidders/123/accounts/456`
+         * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet}
+         * @since 1.13
+         */
+        protected Create(java.lang.String ownerName, com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet content) {
+          super(AdExchangeBuyerII.this, "POST", REST_PATH, content, com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet.class);
+          this.ownerName = com.google.api.client.util.Preconditions.checkNotNull(ownerName, "Required parameter ownerName must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(OWNER_NAME_PATTERN.matcher(ownerName).matches(),
+                "Parameter ownerName must conform to the pattern " +
+                "^buyers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Name of the owner (bidder or account) of the filter set to be created. For example: - For
+         * a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set
+         * for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String ownerName;
+
+        /** Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-
+       level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer
+       account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for
+       the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
+         */
+        public java.lang.String getOwnerName() {
+          return ownerName;
+        }
+
+        /**
+         * Name of the owner (bidder or account) of the filter set to be created. For example: - For
+         * a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set
+         * for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456`
+         */
+        public Create setOwnerName(java.lang.String ownerName) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(OWNER_NAME_PATTERN.matcher(ownerName).matches(),
+                "Parameter ownerName must conform to the pattern " +
+                "^buyers/[^/]+$");
+          }
+          this.ownerName = ownerName;
+          return this;
+        }
+
+        /**
+         * Whether the filter set is transient, or should be persisted indefinitely. By default,
+         * filter sets are not transient. If transient, it will be available for at least 1 hour
+         * after creation.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean isTransient;
+
+        /** Whether the filter set is transient, or should be persisted indefinitely. By default, filter sets
+       are not transient. If transient, it will be available for at least 1 hour after creation.
+         */
+        public java.lang.Boolean getIsTransient() {
+          return isTransient;
+        }
+
+        /**
+         * Whether the filter set is transient, or should be persisted indefinitely. By default,
+         * filter sets are not transient. If transient, it will be available for at least 1 hour
+         * after creation.
+         */
+        public Create setIsTransient(java.lang.Boolean isTransient) {
+          this.isTransient = isTransient;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes the requested filter set from the account with the given account ID.
+       *
+       * Create a request for the method "filterSets.delete".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Full name of the resource to delete. For example: - For a bidder-level filter set for bidder 123:
+       *        `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+       *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
+       *        `bidders/123/accounts/456/filterSets/abc`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.Empty> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+        /**
+         * Deletes the requested filter set from the account with the given account ID.
+         *
+         * Create a request for the method "filterSets.delete".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Full name of the resource to delete. For example: - For a bidder-level filter set for bidder 123:
+       *        `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+       *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
+       *        `bidders/123/accounts/456/filterSets/abc`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(AdExchangeBuyerII.this, "DELETE", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^buyers/[^/]+/filterSets/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Full name of the resource to delete. For example: - For a bidder-level filter set for
+         * bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer
+         * account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456/filterSets/abc`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Full name of the resource to delete. For example: - For a bidder-level filter set for bidder 123:
+       `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account representing
+       bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+       child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Full name of the resource to delete. For example: - For a bidder-level filter set for
+         * bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer
+         * account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456/filterSets/abc`
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^buyers/[^/]+/filterSets/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves the requested filter set for the account with the given account ID.
+       *
+       * Create a request for the method "filterSets.get".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Full name of the resource being requested. For example: - For a bidder-level filter set for bidder
+       *        123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+       *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
+       *        `bidders/123/accounts/456/filterSets/abc`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+        /**
+         * Retrieves the requested filter set for the account with the given account ID.
+         *
+         * Create a request for the method "filterSets.get".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Full name of the resource being requested. For example: - For a bidder-level filter set for bidder
+       *        123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+       *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
+       *        `bidders/123/accounts/456/filterSets/abc`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^buyers/[^/]+/filterSets/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Full name of the resource being requested. For example: - For a bidder-level filter set
+         * for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the
+         * buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456/filterSets/abc`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Full name of the resource being requested. For example: - For a bidder-level filter set for bidder
+       123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+       representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level filter
+       set for the child seat buyer account 456 whose bidder is 123:
+       `bidders/123/accounts/456/filterSets/abc`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Full name of the resource being requested. For example: - For a bidder-level filter set
+         * for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the
+         * buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456/filterSets/abc`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^buyers/[^/]+/filterSets/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all filter sets for the account with the given account ID.
+       *
+       * Create a request for the method "filterSets.list".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param ownerName Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-
+       *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+       *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
+       *        `bidders/123/accounts/456`
+       * @return the request
+       */
+      public List list(java.lang.String ownerName) throws java.io.IOException {
+        List result = new List(ownerName);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListFilterSetsResponse> {
+
+        private static final String REST_PATH = "v2beta1/{+ownerName}/filterSets";
+
+        private final java.util.regex.Pattern OWNER_NAME_PATTERN =
+            java.util.regex.Pattern.compile("^buyers/[^/]+$");
+
+        /**
+         * Lists all filter sets for the account with the given account ID.
+         *
+         * Create a request for the method "filterSets.list".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param ownerName Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-
+       *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+       *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
+       *        `bidders/123/accounts/456`
+         * @since 1.13
+         */
+        protected List(java.lang.String ownerName) {
+          super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListFilterSetsResponse.class);
+          this.ownerName = com.google.api.client.util.Preconditions.checkNotNull(ownerName, "Required parameter ownerName must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(OWNER_NAME_PATTERN.matcher(ownerName).matches(),
+                "Parameter ownerName must conform to the pattern " +
+                "^buyers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Name of the owner (bidder or account) of the filter sets to be listed. For example: - For
+         * a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set
+         * for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String ownerName;
+
+        /** Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-
+       level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer
+       account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for
+       the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
+         */
+        public java.lang.String getOwnerName() {
+          return ownerName;
+        }
+
+        /**
+         * Name of the owner (bidder or account) of the filter sets to be listed. For example: - For
+         * a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set
+         * for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456`
+         */
+        public List setOwnerName(java.lang.String ownerName) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(OWNER_NAME_PATTERN.matcher(ownerName).matches(),
+                "Parameter ownerName must conform to the pattern " +
+                "^buyers/[^/]+$");
+          }
+          this.ownerName = ownerName;
+          return this;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+       will pick an appropriate default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of ListFilterSetsResponse.nextPageToken returned from the previous call to the
+         * accounts.filterSets.list method.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       ListFilterSetsResponse.nextPageToken returned from the previous call to the
+       accounts.filterSets.list method.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of ListFilterSetsResponse.nextPageToken returned from the previous call to the
+         * accounts.filterSets.list method.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the BidMetrics collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+       *   {@code AdExchangeBuyerII.BidMetrics.List request = adexchangebuyer2.bidMetrics().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BidMetrics bidMetrics() {
+        return new BidMetrics();
+      }
+
+      /**
+       * The "bidMetrics" collection of methods.
+       */
+      public class BidMetrics {
+
+        /**
+         * Lists all metrics that are measured in terms of number of bids.
+         *
+         * Create a request for the method "bidMetrics.list".
+         *
+         * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @return the request
+         */
+        public List list(java.lang.String filterSetName) throws java.io.IOException {
+          List result = new List(filterSetName);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListBidMetricsResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+filterSetName}/bidMetrics";
+
+          private final java.util.regex.Pattern FILTER_SET_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+          /**
+           * Lists all metrics that are measured in terms of number of bids.
+           *
+           * Create a request for the method "bidMetrics.list".
+           *
+           * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @since 1.13
+           */
+          protected List(java.lang.String filterSetName) {
+            super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListBidMetricsResponse.class);
+            this.filterSetName = com.google.api.client.util.Preconditions.checkNotNull(filterSetName, "Required parameter filterSetName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filterSetName;
+
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         `bidders/123/accounts/456/filterSets/abc`
+           */
+          public java.lang.String getFilterSetName() {
+            return filterSetName;
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          public List setFilterSetName(java.lang.String filterSetName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+            this.filterSetName = filterSetName;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListBidMetricsResponse.nextPageToken returned from the previous call to the
+           * bidMetrics.list method.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         ListBidMetricsResponse.nextPageToken returned from the previous call to the bidMetrics.list method.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListBidMetricsResponse.nextPageToken returned from the previous call to the
+           * bidMetrics.list method.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the BidResponseErrors collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+       *   {@code AdExchangeBuyerII.BidResponseErrors.List request = adexchangebuyer2.bidResponseErrors().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BidResponseErrors bidResponseErrors() {
+        return new BidResponseErrors();
+      }
+
+      /**
+       * The "bidResponseErrors" collection of methods.
+       */
+      public class BidResponseErrors {
+
+        /**
+         * List all errors that occurred in bid responses, with the number of bid responses affected for
+         * each reason.
+         *
+         * Create a request for the method "bidResponseErrors.list".
+         *
+         * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @return the request
+         */
+        public List list(java.lang.String filterSetName) throws java.io.IOException {
+          List result = new List(filterSetName);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListBidResponseErrorsResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+filterSetName}/bidResponseErrors";
+
+          private final java.util.regex.Pattern FILTER_SET_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+          /**
+           * List all errors that occurred in bid responses, with the number of bid responses affected for
+           * each reason.
+           *
+           * Create a request for the method "bidResponseErrors.list".
+           *
+           * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @since 1.13
+           */
+          protected List(java.lang.String filterSetName) {
+            super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListBidResponseErrorsResponse.class);
+            this.filterSetName = com.google.api.client.util.Preconditions.checkNotNull(filterSetName, "Required parameter filterSetName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filterSetName;
+
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         `bidders/123/accounts/456/filterSets/abc`
+           */
+          public java.lang.String getFilterSetName() {
+            return filterSetName;
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          public List setFilterSetName(java.lang.String filterSetName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+            this.filterSetName = filterSetName;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListBidResponseErrorsResponse.nextPageToken returned from the previous call to
+           * the bidResponseErrors.list method.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         ListBidResponseErrorsResponse.nextPageToken returned from the previous call to the
+         bidResponseErrors.list method.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListBidResponseErrorsResponse.nextPageToken returned from the previous call to
+           * the bidResponseErrors.list method.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the BidResponsesWithoutBids collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+       *   {@code AdExchangeBuyerII.BidResponsesWithoutBids.List request = adexchangebuyer2.bidResponsesWithoutBids().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BidResponsesWithoutBids bidResponsesWithoutBids() {
+        return new BidResponsesWithoutBids();
+      }
+
+      /**
+       * The "bidResponsesWithoutBids" collection of methods.
+       */
+      public class BidResponsesWithoutBids {
+
+        /**
+         * List all reasons for which bid responses were considered to have no applicable bids, with the
+         * number of bid responses affected for each reason.
+         *
+         * Create a request for the method "bidResponsesWithoutBids.list".
+         *
+         * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @return the request
+         */
+        public List list(java.lang.String filterSetName) throws java.io.IOException {
+          List result = new List(filterSetName);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListBidResponsesWithoutBidsResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+filterSetName}/bidResponsesWithoutBids";
+
+          private final java.util.regex.Pattern FILTER_SET_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+          /**
+           * List all reasons for which bid responses were considered to have no applicable bids, with the
+           * number of bid responses affected for each reason.
+           *
+           * Create a request for the method "bidResponsesWithoutBids.list".
+           *
+           * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @since 1.13
+           */
+          protected List(java.lang.String filterSetName) {
+            super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListBidResponsesWithoutBidsResponse.class);
+            this.filterSetName = com.google.api.client.util.Preconditions.checkNotNull(filterSetName, "Required parameter filterSetName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filterSetName;
+
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         `bidders/123/accounts/456/filterSets/abc`
+           */
+          public java.lang.String getFilterSetName() {
+            return filterSetName;
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          public List setFilterSetName(java.lang.String filterSetName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+            this.filterSetName = filterSetName;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListBidResponsesWithoutBidsResponse.nextPageToken returned from the previous
+           * call to the bidResponsesWithoutBids.list method.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         ListBidResponsesWithoutBidsResponse.nextPageToken returned from the previous call to the
+         bidResponsesWithoutBids.list method.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListBidResponsesWithoutBidsResponse.nextPageToken returned from the previous
+           * call to the bidResponsesWithoutBids.list method.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the FilteredBidRequests collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+       *   {@code AdExchangeBuyerII.FilteredBidRequests.List request = adexchangebuyer2.filteredBidRequests().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public FilteredBidRequests filteredBidRequests() {
+        return new FilteredBidRequests();
+      }
+
+      /**
+       * The "filteredBidRequests" collection of methods.
+       */
+      public class FilteredBidRequests {
+
+        /**
+         * List all reasons that caused a bid request not to be sent for an impression, with the number of
+         * bid requests not sent for each reason.
+         *
+         * Create a request for the method "filteredBidRequests.list".
+         *
+         * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @return the request
+         */
+        public List list(java.lang.String filterSetName) throws java.io.IOException {
+          List result = new List(filterSetName);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListFilteredBidRequestsResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+filterSetName}/filteredBidRequests";
+
+          private final java.util.regex.Pattern FILTER_SET_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+          /**
+           * List all reasons that caused a bid request not to be sent for an impression, with the number of
+           * bid requests not sent for each reason.
+           *
+           * Create a request for the method "filteredBidRequests.list".
+           *
+           * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @since 1.13
+           */
+          protected List(java.lang.String filterSetName) {
+            super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListFilteredBidRequestsResponse.class);
+            this.filterSetName = com.google.api.client.util.Preconditions.checkNotNull(filterSetName, "Required parameter filterSetName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filterSetName;
+
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         `bidders/123/accounts/456/filterSets/abc`
+           */
+          public java.lang.String getFilterSetName() {
+            return filterSetName;
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          public List setFilterSetName(java.lang.String filterSetName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+            this.filterSetName = filterSetName;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListFilteredBidRequestsResponse.nextPageToken returned from the previous call
+           * to the filteredBidRequests.list method.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         ListFilteredBidRequestsResponse.nextPageToken returned from the previous call to the
+         filteredBidRequests.list method.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListFilteredBidRequestsResponse.nextPageToken returned from the previous call
+           * to the filteredBidRequests.list method.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the FilteredBids collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+       *   {@code AdExchangeBuyerII.FilteredBids.List request = adexchangebuyer2.filteredBids().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public FilteredBids filteredBids() {
+        return new FilteredBids();
+      }
+
+      /**
+       * The "filteredBids" collection of methods.
+       */
+      public class FilteredBids {
+
+        /**
+         * List all reasons for which bids were filtered, with the number of bids filtered for each reason.
+         *
+         * Create a request for the method "filteredBids.list".
+         *
+         * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @return the request
+         */
+        public List list(java.lang.String filterSetName) throws java.io.IOException {
+          List result = new List(filterSetName);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListFilteredBidsResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+filterSetName}/filteredBids";
+
+          private final java.util.regex.Pattern FILTER_SET_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+          /**
+           * List all reasons for which bids were filtered, with the number of bids filtered for each
+           * reason.
+           *
+           * Create a request for the method "filteredBids.list".
+           *
+           * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @since 1.13
+           */
+          protected List(java.lang.String filterSetName) {
+            super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListFilteredBidsResponse.class);
+            this.filterSetName = com.google.api.client.util.Preconditions.checkNotNull(filterSetName, "Required parameter filterSetName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filterSetName;
+
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         `bidders/123/accounts/456/filterSets/abc`
+           */
+          public java.lang.String getFilterSetName() {
+            return filterSetName;
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          public List setFilterSetName(java.lang.String filterSetName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+            this.filterSetName = filterSetName;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListFilteredBidsResponse.nextPageToken returned from the previous call to the
+           * filteredBids.list method.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         ListFilteredBidsResponse.nextPageToken returned from the previous call to the filteredBids.list
+         method.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListFilteredBidsResponse.nextPageToken returned from the previous call to the
+           * filteredBids.list method.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Creatives collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+         *   {@code AdExchangeBuyerII.Creatives.List request = adexchangebuyer2.creatives().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Creatives creatives() {
+          return new Creatives();
+        }
+
+        /**
+         * The "creatives" collection of methods.
+         */
+        public class Creatives {
+
+          /**
+           * List all creatives associated with a specific reason for which bids were filtered, with the
+           * number of bids filtered for each creative.
+           *
+           * Create a request for the method "creatives.list".
+           *
+           * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by creative. See [creative-status-
+           *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+           *        codes).
+           * @return the request
+           */
+          public List list(java.lang.String filterSetName, java.lang.Integer creativeStatusId) throws java.io.IOException {
+            List result = new List(filterSetName, creativeStatusId);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListCreativeStatusBreakdownByCreativeResponse> {
+
+            private static final String REST_PATH = "v2beta1/{+filterSetName}/filteredBids/{creativeStatusId}/creatives";
+
+            private final java.util.regex.Pattern FILTER_SET_NAME_PATTERN =
+                java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+            /**
+             * List all creatives associated with a specific reason for which bids were filtered, with the
+             * number of bids filtered for each creative.
+             *
+             * Create a request for the method "creatives.list".
+             *
+             * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by creative. See [creative-status-
+           *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+           *        codes).
+             * @since 1.13
+             */
+            protected List(java.lang.String filterSetName, java.lang.Integer creativeStatusId) {
+              super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListCreativeStatusBreakdownByCreativeResponse.class);
+              this.filterSetName = com.google.api.client.util.Preconditions.checkNotNull(filterSetName, "Required parameter filterSetName must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                    "Parameter filterSetName must conform to the pattern " +
+                    "^buyers/[^/]+/filterSets/[^/]+$");
+              }
+              this.creativeStatusId = com.google.api.client.util.Preconditions.checkNotNull(creativeStatusId, "Required parameter creativeStatusId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Name of the filter set that should be applied to the requested metrics. For example:
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filterSetName;
+
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+           `bidders/123/accounts/456/filterSets/abc`
+             */
+            public java.lang.String getFilterSetName() {
+              return filterSetName;
+            }
+
+            /**
+             * Name of the filter set that should be applied to the requested metrics. For example:
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
+             */
+            public List setFilterSetName(java.lang.String filterSetName) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                    "Parameter filterSetName must conform to the pattern " +
+                    "^buyers/[^/]+/filterSets/[^/]+$");
+              }
+              this.filterSetName = filterSetName;
+              return this;
+            }
+
+            /**
+             * The ID of the creative status for which to retrieve a breakdown by creative. See
+             * [creative-status-codes](https://developers.google.com/authorized-buyers/rtb/downloads
+             * /creative-status-codes).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer creativeStatusId;
+
+            /** The ID of the creative status for which to retrieve a breakdown by creative. See [creative-status-
+           codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-codes).
+             */
+            public java.lang.Integer getCreativeStatusId() {
+              return creativeStatusId;
+            }
+
+            /**
+             * The ID of the creative status for which to retrieve a breakdown by creative. See
+             * [creative-status-codes](https://developers.google.com/authorized-buyers/rtb/downloads
+             * /creative-status-codes).
+             */
+            public List setCreativeStatusId(java.lang.Integer creativeStatusId) {
+              this.creativeStatusId = creativeStatusId;
+              return this;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of ListCreativeStatusBreakdownByCreativeResponse.nextPageToken returned
+             * from the previous call to the filteredBids.creatives.list method.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying a page of results the server should return. Typically, this is the value of
+           ListCreativeStatusBreakdownByCreativeResponse.nextPageToken returned from the previous call to the
+           filteredBids.creatives.list method.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of ListCreativeStatusBreakdownByCreativeResponse.nextPageToken returned
+             * from the previous call to the filteredBids.creatives.list method.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Details collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+         *   {@code AdExchangeBuyerII.Details.List request = adexchangebuyer2.details().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Details details() {
+          return new Details();
+        }
+
+        /**
+         * The "details" collection of methods.
+         */
+        public class Details {
+
+          /**
+           * List all details associated with a specific reason for which bids were filtered, with the number
+           * of bids filtered for each detail.
+           *
+           * Create a request for the method "details.list".
+           *
+           * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail. See [creative-status-
+           *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+           *        codes). Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+           * @return the request
+           */
+          public List list(java.lang.String filterSetName, java.lang.Integer creativeStatusId) throws java.io.IOException {
+            List result = new List(filterSetName, creativeStatusId);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListCreativeStatusBreakdownByDetailResponse> {
+
+            private static final String REST_PATH = "v2beta1/{+filterSetName}/filteredBids/{creativeStatusId}/details";
+
+            private final java.util.regex.Pattern FILTER_SET_NAME_PATTERN =
+                java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+            /**
+             * List all details associated with a specific reason for which bids were filtered, with the
+             * number of bids filtered for each detail.
+             *
+             * Create a request for the method "details.list".
+             *
+             * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail. See [creative-status-
+           *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+           *        codes). Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+             * @since 1.13
+             */
+            protected List(java.lang.String filterSetName, java.lang.Integer creativeStatusId) {
+              super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListCreativeStatusBreakdownByDetailResponse.class);
+              this.filterSetName = com.google.api.client.util.Preconditions.checkNotNull(filterSetName, "Required parameter filterSetName must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                    "Parameter filterSetName must conform to the pattern " +
+                    "^buyers/[^/]+/filterSets/[^/]+$");
+              }
+              this.creativeStatusId = com.google.api.client.util.Preconditions.checkNotNull(creativeStatusId, "Required parameter creativeStatusId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Name of the filter set that should be applied to the requested metrics. For example:
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filterSetName;
+
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+           `bidders/123/accounts/456/filterSets/abc`
+             */
+            public java.lang.String getFilterSetName() {
+              return filterSetName;
+            }
+
+            /**
+             * Name of the filter set that should be applied to the requested metrics. For example:
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
+             */
+            public List setFilterSetName(java.lang.String filterSetName) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                    "Parameter filterSetName must conform to the pattern " +
+                    "^buyers/[^/]+/filterSets/[^/]+$");
+              }
+              this.filterSetName = filterSetName;
+              return this;
+            }
+
+            /**
+             * The ID of the creative status for which to retrieve a breakdown by detail. See
+             * [creative-status-codes](https://developers.google.com/authorized-buyers/rtb/downloads
+             * /creative-status-codes). Details are only available for statuses 10, 14, 15, 17, 18,
+             * 19, 86, and 87.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer creativeStatusId;
+
+            /** The ID of the creative status for which to retrieve a breakdown by detail. See [creative-status-
+           codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-codes).
+           Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+             */
+            public java.lang.Integer getCreativeStatusId() {
+              return creativeStatusId;
+            }
+
+            /**
+             * The ID of the creative status for which to retrieve a breakdown by detail. See
+             * [creative-status-codes](https://developers.google.com/authorized-buyers/rtb/downloads
+             * /creative-status-codes). Details are only available for statuses 10, 14, 15, 17, 18,
+             * 19, 86, and 87.
+             */
+            public List setCreativeStatusId(java.lang.Integer creativeStatusId) {
+              this.creativeStatusId = creativeStatusId;
+              return this;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of ListCreativeStatusBreakdownByDetailResponse.nextPageToken returned from
+             * the previous call to the filteredBids.details.list method.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying a page of results the server should return. Typically, this is the value of
+           ListCreativeStatusBreakdownByDetailResponse.nextPageToken returned from the previous call to the
+           filteredBids.details.list method.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of ListCreativeStatusBreakdownByDetailResponse.nextPageToken returned from
+             * the previous call to the filteredBids.details.list method.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the ImpressionMetrics collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+       *   {@code AdExchangeBuyerII.ImpressionMetrics.List request = adexchangebuyer2.impressionMetrics().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ImpressionMetrics impressionMetrics() {
+        return new ImpressionMetrics();
+      }
+
+      /**
+       * The "impressionMetrics" collection of methods.
+       */
+      public class ImpressionMetrics {
+
+        /**
+         * Lists all metrics that are measured in terms of number of impressions.
+         *
+         * Create a request for the method "impressionMetrics.list".
+         *
+         * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @return the request
+         */
+        public List list(java.lang.String filterSetName) throws java.io.IOException {
+          List result = new List(filterSetName);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListImpressionMetricsResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+filterSetName}/impressionMetrics";
+
+          private final java.util.regex.Pattern FILTER_SET_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+          /**
+           * Lists all metrics that are measured in terms of number of impressions.
+           *
+           * Create a request for the method "impressionMetrics.list".
+           *
+           * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @since 1.13
+           */
+          protected List(java.lang.String filterSetName) {
+            super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListImpressionMetricsResponse.class);
+            this.filterSetName = com.google.api.client.util.Preconditions.checkNotNull(filterSetName, "Required parameter filterSetName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filterSetName;
+
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         `bidders/123/accounts/456/filterSets/abc`
+           */
+          public java.lang.String getFilterSetName() {
+            return filterSetName;
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          public List setFilterSetName(java.lang.String filterSetName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+            this.filterSetName = filterSetName;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListImpressionMetricsResponse.nextPageToken returned from the previous call to
+           * the impressionMetrics.list method.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         ListImpressionMetricsResponse.nextPageToken returned from the previous call to the
+         impressionMetrics.list method.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListImpressionMetricsResponse.nextPageToken returned from the previous call to
+           * the impressionMetrics.list method.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the LosingBids collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+       *   {@code AdExchangeBuyerII.LosingBids.List request = adexchangebuyer2.losingBids().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public LosingBids losingBids() {
+        return new LosingBids();
+      }
+
+      /**
+       * The "losingBids" collection of methods.
+       */
+      public class LosingBids {
+
+        /**
+         * List all reasons for which bids lost in the auction, with the number of bids that lost for each
+         * reason.
+         *
+         * Create a request for the method "losingBids.list".
+         *
+         * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @return the request
+         */
+        public List list(java.lang.String filterSetName) throws java.io.IOException {
+          List result = new List(filterSetName);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListLosingBidsResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+filterSetName}/losingBids";
+
+          private final java.util.regex.Pattern FILTER_SET_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+          /**
+           * List all reasons for which bids lost in the auction, with the number of bids that lost for each
+           * reason.
+           *
+           * Create a request for the method "losingBids.list".
+           *
+           * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @since 1.13
+           */
+          protected List(java.lang.String filterSetName) {
+            super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListLosingBidsResponse.class);
+            this.filterSetName = com.google.api.client.util.Preconditions.checkNotNull(filterSetName, "Required parameter filterSetName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filterSetName;
+
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         `bidders/123/accounts/456/filterSets/abc`
+           */
+          public java.lang.String getFilterSetName() {
+            return filterSetName;
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          public List setFilterSetName(java.lang.String filterSetName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+            this.filterSetName = filterSetName;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListLosingBidsResponse.nextPageToken returned from the previous call to the
+           * losingBids.list method.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         ListLosingBidsResponse.nextPageToken returned from the previous call to the losingBids.list method.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListLosingBidsResponse.nextPageToken returned from the previous call to the
+           * losingBids.list method.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the NonBillableWinningBids collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+       *   {@code AdExchangeBuyerII.NonBillableWinningBids.List request = adexchangebuyer2.nonBillableWinningBids().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public NonBillableWinningBids nonBillableWinningBids() {
+        return new NonBillableWinningBids();
+      }
+
+      /**
+       * The "nonBillableWinningBids" collection of methods.
+       */
+      public class NonBillableWinningBids {
+
+        /**
+         * List all reasons for which winning bids were not billable, with the number of bids not billed for
+         * each reason.
+         *
+         * Create a request for the method "nonBillableWinningBids.list".
+         *
+         * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @return the request
+         */
+        public List list(java.lang.String filterSetName) throws java.io.IOException {
+          List result = new List(filterSetName);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.ListNonBillableWinningBidsResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+filterSetName}/nonBillableWinningBids";
+
+          private final java.util.regex.Pattern FILTER_SET_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^buyers/[^/]+/filterSets/[^/]+$");
+
+          /**
+           * List all reasons for which winning bids were not billable, with the number of bids not billed
+           * for each reason.
+           *
+           * Create a request for the method "nonBillableWinningBids.list".
+           *
+           * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @since 1.13
+           */
+          protected List(java.lang.String filterSetName) {
+            super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.api.services.adexchangebuyer2.v2beta1.model.ListNonBillableWinningBidsResponse.class);
+            this.filterSetName = com.google.api.client.util.Preconditions.checkNotNull(filterSetName, "Required parameter filterSetName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filterSetName;
+
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         `bidders/123/accounts/456/filterSets/abc`
+           */
+          public java.lang.String getFilterSetName() {
+            return filterSetName;
+          }
+
+          /**
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
+           */
+          public List setFilterSetName(java.lang.String filterSetName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FILTER_SET_NAME_PATTERN.matcher(filterSetName).matches(),
+                  "Parameter filterSetName must conform to the pattern " +
+                  "^buyers/[^/]+/filterSets/[^/]+$");
+            }
+            this.filterSetName = filterSetName;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListNonBillableWinningBidsResponse.nextPageToken returned from the previous
+           * call to the nonBillableWinningBids.list method.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         ListNonBillableWinningBidsResponse.nextPageToken returned from the previous call to the
+         nonBillableWinningBids.list method.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListNonBillableWinningBidsResponse.nextPageToken returned from the previous
+           * call to the nonBillableWinningBids.list method.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * Builder for {@link AdExchangeBuyerII}.
    *
    * <p>

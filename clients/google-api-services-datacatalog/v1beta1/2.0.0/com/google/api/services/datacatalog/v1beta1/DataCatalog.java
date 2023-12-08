@@ -7585,7 +7585,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the datacatalog server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Resource name of this taxonomy, whose format is:
+         * @param name Identifier. Resource name of this taxonomy, whose format is:
          *        "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
          * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy}
          * @return the request
@@ -7614,7 +7614,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Resource name of this taxonomy, whose format is:
+           * @param name Identifier. Resource name of this taxonomy, whose format is:
          *        "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
            * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy}
            * @since 1.13
@@ -7685,13 +7685,13 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Output only. Resource name of this taxonomy, whose format is:
+           * Identifier. Resource name of this taxonomy, whose format is:
            * "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Resource name of this taxonomy, whose format is:
+          /** Identifier. Resource name of this taxonomy, whose format is:
          "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
            */
           public java.lang.String getName() {
@@ -7699,7 +7699,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Output only. Resource name of this taxonomy, whose format is:
+           * Identifier. Resource name of this taxonomy, whose format is:
            * "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
            */
           public Patch setName(java.lang.String name) {
@@ -8798,7 +8798,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the datacatalog server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Resource name of this policy tag, whose format is:
+           * @param name Identifier. Resource name of this policy tag, whose format is:
            *        "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id
            *        }".
            * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag}
@@ -8828,7 +8828,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Resource name of this policy tag, whose format is:
+             * @param name Identifier. Resource name of this policy tag, whose format is:
            *        "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id
            *        }".
              * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag}
@@ -8900,13 +8900,13 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Output only. Resource name of this policy tag, whose format is: "projects/{project_nu
-             * mber}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
+             * Identifier. Resource name of this policy tag, whose format is: "projects/{project_num
+             * ber}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Resource name of this policy tag, whose format is:
+            /** Identifier. Resource name of this policy tag, whose format is:
            "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
              */
             public java.lang.String getName() {
@@ -8914,8 +8914,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Output only. Resource name of this policy tag, whose format is: "projects/{project_nu
-             * mber}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
+             * Identifier. Resource name of this policy tag, whose format is: "projects/{project_num
+             * ber}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

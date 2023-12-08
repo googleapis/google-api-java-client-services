@@ -41,7 +41,7 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
   /**
    * Required. The target storage utilization percentage that the autoscaler should be trying to
    * achieve for the instance. This number is on a scale from 0 (no utilization) to 100 (full
-   * utilization). The valid range is [10, 100] inclusive.
+   * utilization). The valid range is [10, 99] inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
   /**
    * Required. The target storage utilization percentage that the autoscaler should be trying to
    * achieve for the instance. This number is on a scale from 0 (no utilization) to 100 (full
-   * utilization). The valid range is [10, 100] inclusive.
+   * utilization). The valid range is [10, 99] inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStorageUtilizationPercent() {
@@ -81,7 +81,7 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
   /**
    * Required. The target storage utilization percentage that the autoscaler should be trying to
    * achieve for the instance. This number is on a scale from 0 (no utilization) to 100 (full
-   * utilization). The valid range is [10, 100] inclusive.
+   * utilization). The valid range is [10, 99] inclusive.
    * @param storageUtilizationPercent storageUtilizationPercent or {@code null} for none
    */
   public AutoscalingTargets setStorageUtilizationPercent(java.lang.Integer storageUtilizationPercent) {

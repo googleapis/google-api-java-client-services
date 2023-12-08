@@ -48,6 +48,17 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> commands;
 
   /**
+   * Optional. If set to true, container will run with Image streaming. The container runtime will
+   * be changed to containerd instead of docker. Currently, only imageUri, commands, entrypoint and
+   * volumes are supported and any other fields will be ignored. Please refer
+   * [here](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples/image-
+   * streaming) for the feature requirements and limitations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableImageStreaming;
+
+  /**
    * Overrides the `ENTRYPOINT` specified in the container.
    * The value may be {@code null}.
    */
@@ -138,6 +149,31 @@ public final class Container extends com.google.api.client.json.GenericJson {
    */
   public Container setCommands(java.util.List<java.lang.String> commands) {
     this.commands = commands;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, container will run with Image streaming. The container runtime will
+   * be changed to containerd instead of docker. Currently, only imageUri, commands, entrypoint and
+   * volumes are supported and any other fields will be ignored. Please refer
+   * [here](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples/image-
+   * streaming) for the feature requirements and limitations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableImageStreaming() {
+    return enableImageStreaming;
+  }
+
+  /**
+   * Optional. If set to true, container will run with Image streaming. The container runtime will
+   * be changed to containerd instead of docker. Currently, only imageUri, commands, entrypoint and
+   * volumes are supported and any other fields will be ignored. Please refer
+   * [here](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples/image-
+   * streaming) for the feature requirements and limitations.
+   * @param enableImageStreaming enableImageStreaming or {@code null} for none
+   */
+  public Container setEnableImageStreaming(java.lang.Boolean enableImageStreaming) {
+    this.enableImageStreaming = enableImageStreaming;
     return this;
   }
 

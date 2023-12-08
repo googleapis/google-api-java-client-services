@@ -48,6 +48,13 @@ public final class WorkerMessage extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Contains per-user worker telemetry used in streaming autoscaling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StreamingScalingReport streamingScalingReport;
+
+  /**
    * The timestamp of the worker_message.
    * The value may be {@code null}.
    */
@@ -135,6 +142,23 @@ public final class WorkerMessage extends com.google.api.client.json.GenericJson 
    */
   public WorkerMessage setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Contains per-user worker telemetry used in streaming autoscaling.
+   * @return value or {@code null} for none
+   */
+  public StreamingScalingReport getStreamingScalingReport() {
+    return streamingScalingReport;
+  }
+
+  /**
+   * Contains per-user worker telemetry used in streaming autoscaling.
+   * @param streamingScalingReport streamingScalingReport or {@code null} for none
+   */
+  public WorkerMessage setStreamingScalingReport(StreamingScalingReport streamingScalingReport) {
+    this.streamingScalingReport = streamingScalingReport;
     return this;
   }
 

@@ -68,8 +68,13 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   private java.lang.String name;
 
   /**
-   * Required. The reference to the service that runs the extension. Must be a reference to a
-   * [backend service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices).
+   * Required. The reference to the service that runs the extension. Currently only Callout
+   * extensions are supported here. To configure a Callout extension, `service` must be a fully-
+   * qualified reference to a [backend
+   * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
+   * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
+   * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
+   * ndServices/{backendService}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,8 +186,13 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The reference to the service that runs the extension. Must be a reference to a
-   * [backend service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices).
+   * Required. The reference to the service that runs the extension. Currently only Callout
+   * extensions are supported here. To configure a Callout extension, `service` must be a fully-
+   * qualified reference to a [backend
+   * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
+   * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
+   * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
+   * ndServices/{backendService}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -190,8 +200,13 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The reference to the service that runs the extension. Must be a reference to a
-   * [backend service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices).
+   * Required. The reference to the service that runs the extension. Currently only Callout
+   * extensions are supported here. To configure a Callout extension, `service` must be a fully-
+   * qualified reference to a [backend
+   * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
+   * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
+   * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
+   * ndServices/{backendService}`.
    * @param service service or {@code null} for none
    */
   public ExtensionChainExtension setService(java.lang.String service) {

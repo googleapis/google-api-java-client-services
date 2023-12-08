@@ -20,6 +20,7 @@ package com.google.api.services.networkservices.v1beta1.model;
  * Gateway represents the configuration for a proxy, typically a load balancer. It captures the
  * ip:port over which the services are exposed by the proxy, along with any policy configurations.
  * Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
+ * Next id: 29
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:
@@ -73,6 +74,14 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String gatewaySecurityPolicy;
+
+  /**
+   * Optional. The IP Version that will be used by this gateway. Valid options are IPV4 or IPV6.
+   * Default is IPV4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipVersion;
 
   /**
    * Optional. Set of label tags associated with the Gateway resource.
@@ -254,6 +263,25 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
    */
   public Gateway setGatewaySecurityPolicy(java.lang.String gatewaySecurityPolicy) {
     this.gatewaySecurityPolicy = gatewaySecurityPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. The IP Version that will be used by this gateway. Valid options are IPV4 or IPV6.
+   * Default is IPV4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpVersion() {
+    return ipVersion;
+  }
+
+  /**
+   * Optional. The IP Version that will be used by this gateway. Valid options are IPV4 or IPV6.
+   * Default is IPV4.
+   * @param ipVersion ipVersion or {@code null} for none
+   */
+  public Gateway setIpVersion(java.lang.String ipVersion) {
+    this.ipVersion = ipVersion;
     return this;
   }
 

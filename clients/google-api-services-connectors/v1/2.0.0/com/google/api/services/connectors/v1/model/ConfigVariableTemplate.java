@@ -72,6 +72,13 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   private java.lang.String key;
 
   /**
+   * Optional. Location Tyep denotes where this value should be sent in BYOC connections.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationType;
+
+  /**
    * Flag represents that this `ConfigVariable` must be provided for a connection.
    * The value may be {@code null}.
    */
@@ -214,6 +221,23 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
    */
   public ConfigVariableTemplate setKey(java.lang.String key) {
     this.key = key;
+    return this;
+  }
+
+  /**
+   * Optional. Location Tyep denotes where this value should be sent in BYOC connections.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationType() {
+    return locationType;
+  }
+
+  /**
+   * Optional. Location Tyep denotes where this value should be sent in BYOC connections.
+   * @param locationType locationType or {@code null} for none
+   */
+  public ConfigVariableTemplate setLocationType(java.lang.String locationType) {
+    this.locationType = locationType;
     return this;
   }
 

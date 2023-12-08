@@ -194,6 +194,422 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
       public class Connections {
 
         /**
+         * Reports readiness status of the connector. Similar logic to GetStatus but modified for kubernetes
+         * health check to understand.
+         *
+         * Create a request for the method "connections.checkReadiness".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link CheckReadiness#execute()} method to invoke the remote operation.
+         *
+         * @param name
+         * @return the request
+         */
+        public CheckReadiness checkReadiness(java.lang.String name) throws java.io.IOException {
+          CheckReadiness result = new CheckReadiness(name);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckReadiness extends ConnectorsRequest<com.google.api.services.connectors.v2.model.CheckReadinessResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:checkReadiness";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * Reports readiness status of the connector. Similar logic to GetStatus but modified for
+           * kubernetes health check to understand.
+           *
+           * Create a request for the method "connections.checkReadiness".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link CheckReadiness#execute()} method to invoke the remote
+           * operation. <p> {@link CheckReadiness#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name
+           * @since 1.13
+           */
+          protected CheckReadiness(java.lang.String name) {
+            super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v2.model.CheckReadinessResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public CheckReadiness set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckReadiness) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckReadiness setAccessToken(java.lang.String accessToken) {
+            return (CheckReadiness) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckReadiness setAlt(java.lang.String alt) {
+            return (CheckReadiness) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckReadiness setCallback(java.lang.String callback) {
+            return (CheckReadiness) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckReadiness setFields(java.lang.String fields) {
+            return (CheckReadiness) super.setFields(fields);
+          }
+
+          @Override
+          public CheckReadiness setKey(java.lang.String key) {
+            return (CheckReadiness) super.setKey(key);
+          }
+
+          @Override
+          public CheckReadiness setOauthToken(java.lang.String oauthToken) {
+            return (CheckReadiness) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckReadiness setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckReadiness) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckReadiness setQuotaUser(java.lang.String quotaUser) {
+            return (CheckReadiness) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckReadiness setUploadType(java.lang.String uploadType) {
+            return (CheckReadiness) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckReadiness setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckReadiness) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /**
+
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          public CheckReadiness setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public CheckReadiness set(String parameterName, Object value) {
+            return (CheckReadiness) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Reports the status of the connection. Note that when the connection is in a state that is not
+         * ACTIVE, the implementation of this RPC method must return a Status with the corresponding State
+         * instead of returning a gRPC status code that is not "OK", which indicates that ConnectionStatus
+         * itself, not the connection, failed.
+         *
+         * Create a request for the method "connections.checkStatus".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link CheckStatus#execute()} method to invoke the remote operation.
+         *
+         * @param name
+         * @return the request
+         */
+        public CheckStatus checkStatus(java.lang.String name) throws java.io.IOException {
+          CheckStatus result = new CheckStatus(name);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckStatus extends ConnectorsRequest<com.google.api.services.connectors.v2.model.CheckStatusResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:checkStatus";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * Reports the status of the connection. Note that when the connection is in a state that is not
+           * ACTIVE, the implementation of this RPC method must return a Status with the corresponding State
+           * instead of returning a gRPC status code that is not "OK", which indicates that ConnectionStatus
+           * itself, not the connection, failed.
+           *
+           * Create a request for the method "connections.checkStatus".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link CheckStatus#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * CheckStatus#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name
+           * @since 1.13
+           */
+          protected CheckStatus(java.lang.String name) {
+            super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v2.model.CheckStatusResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public CheckStatus set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckStatus) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckStatus setAccessToken(java.lang.String accessToken) {
+            return (CheckStatus) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckStatus setAlt(java.lang.String alt) {
+            return (CheckStatus) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckStatus setCallback(java.lang.String callback) {
+            return (CheckStatus) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckStatus setFields(java.lang.String fields) {
+            return (CheckStatus) super.setFields(fields);
+          }
+
+          @Override
+          public CheckStatus setKey(java.lang.String key) {
+            return (CheckStatus) super.setKey(key);
+          }
+
+          @Override
+          public CheckStatus setOauthToken(java.lang.String oauthToken) {
+            return (CheckStatus) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckStatus) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckStatus setQuotaUser(java.lang.String quotaUser) {
+            return (CheckStatus) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckStatus setUploadType(java.lang.String uploadType) {
+            return (CheckStatus) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckStatus setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckStatus) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /**
+
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          public CheckStatus setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public CheckStatus set(String parameterName, Object value) {
+            return (CheckStatus) super.set(parameterName, value);
+          }
+        }
+        /**
+         * ExchangeAuthCode exchanges the OAuth authorization code (and other necessary data) for an access
+         * token (and associated credentials).
+         *
+         * Create a request for the method "connections.exchangeAuthCode".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link ExchangeAuthCode#execute()} method to invoke the remote operation.
+         *
+         * @param name
+         * @param content the {@link com.google.api.services.connectors.v2.model.ExchangeAuthCodeRequest}
+         * @return the request
+         */
+        public ExchangeAuthCode exchangeAuthCode(java.lang.String name, com.google.api.services.connectors.v2.model.ExchangeAuthCodeRequest content) throws java.io.IOException {
+          ExchangeAuthCode result = new ExchangeAuthCode(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ExchangeAuthCode extends ConnectorsRequest<com.google.api.services.connectors.v2.model.ExchangeAuthCodeResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:exchangeAuthCode";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * ExchangeAuthCode exchanges the OAuth authorization code (and other necessary data) for an
+           * access token (and associated credentials).
+           *
+           * Create a request for the method "connections.exchangeAuthCode".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link ExchangeAuthCode#execute()} method to invoke the remote
+           * operation. <p> {@link ExchangeAuthCode#initialize(com.google.api.client.googleapis.services.Abs
+           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name
+           * @param content the {@link com.google.api.services.connectors.v2.model.ExchangeAuthCodeRequest}
+           * @since 1.13
+           */
+          protected ExchangeAuthCode(java.lang.String name, com.google.api.services.connectors.v2.model.ExchangeAuthCodeRequest content) {
+            super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v2.model.ExchangeAuthCodeResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public ExchangeAuthCode set$Xgafv(java.lang.String $Xgafv) {
+            return (ExchangeAuthCode) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ExchangeAuthCode setAccessToken(java.lang.String accessToken) {
+            return (ExchangeAuthCode) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ExchangeAuthCode setAlt(java.lang.String alt) {
+            return (ExchangeAuthCode) super.setAlt(alt);
+          }
+
+          @Override
+          public ExchangeAuthCode setCallback(java.lang.String callback) {
+            return (ExchangeAuthCode) super.setCallback(callback);
+          }
+
+          @Override
+          public ExchangeAuthCode setFields(java.lang.String fields) {
+            return (ExchangeAuthCode) super.setFields(fields);
+          }
+
+          @Override
+          public ExchangeAuthCode setKey(java.lang.String key) {
+            return (ExchangeAuthCode) super.setKey(key);
+          }
+
+          @Override
+          public ExchangeAuthCode setOauthToken(java.lang.String oauthToken) {
+            return (ExchangeAuthCode) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ExchangeAuthCode setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ExchangeAuthCode) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ExchangeAuthCode setQuotaUser(java.lang.String quotaUser) {
+            return (ExchangeAuthCode) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ExchangeAuthCode setUploadType(java.lang.String uploadType) {
+            return (ExchangeAuthCode) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ExchangeAuthCode setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ExchangeAuthCode) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /**
+
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          public ExchangeAuthCode setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ExchangeAuthCode set(String parameterName, Object value) {
+            return (ExchangeAuthCode) super.set(parameterName, value);
+          }
+        }
+        /**
          * Executes a SQL statement specified in the body of the request. An example of this SQL statement
          * in the case of Salesforce connector would be 'select * from Account a, Order o where a.Id =
          * o.AccountId'.
@@ -335,6 +751,138 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           @Override
           public ExecuteSqlQuery set(String parameterName, Object value) {
             return (ExecuteSqlQuery) super.set(parameterName, value);
+          }
+        }
+        /**
+         * RefreshAccessToken exchanges the OAuth refresh token (and other necessary data) for a new access
+         * token (and new associated credentials).
+         *
+         * Create a request for the method "connections.refreshAccessToken".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link RefreshAccessToken#execute()} method to invoke the remote operation.
+         *
+         * @param name
+         * @param content the {@link com.google.api.services.connectors.v2.model.RefreshAccessTokenRequest}
+         * @return the request
+         */
+        public RefreshAccessToken refreshAccessToken(java.lang.String name, com.google.api.services.connectors.v2.model.RefreshAccessTokenRequest content) throws java.io.IOException {
+          RefreshAccessToken result = new RefreshAccessToken(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RefreshAccessToken extends ConnectorsRequest<com.google.api.services.connectors.v2.model.RefreshAccessTokenResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:refreshAccessToken";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * RefreshAccessToken exchanges the OAuth refresh token (and other necessary data) for a new
+           * access token (and new associated credentials).
+           *
+           * Create a request for the method "connections.refreshAccessToken".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link RefreshAccessToken#execute()} method to invoke the remote
+           * operation. <p> {@link RefreshAccessToken#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name
+           * @param content the {@link com.google.api.services.connectors.v2.model.RefreshAccessTokenRequest}
+           * @since 1.13
+           */
+          protected RefreshAccessToken(java.lang.String name, com.google.api.services.connectors.v2.model.RefreshAccessTokenRequest content) {
+            super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v2.model.RefreshAccessTokenResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public RefreshAccessToken set$Xgafv(java.lang.String $Xgafv) {
+            return (RefreshAccessToken) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RefreshAccessToken setAccessToken(java.lang.String accessToken) {
+            return (RefreshAccessToken) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RefreshAccessToken setAlt(java.lang.String alt) {
+            return (RefreshAccessToken) super.setAlt(alt);
+          }
+
+          @Override
+          public RefreshAccessToken setCallback(java.lang.String callback) {
+            return (RefreshAccessToken) super.setCallback(callback);
+          }
+
+          @Override
+          public RefreshAccessToken setFields(java.lang.String fields) {
+            return (RefreshAccessToken) super.setFields(fields);
+          }
+
+          @Override
+          public RefreshAccessToken setKey(java.lang.String key) {
+            return (RefreshAccessToken) super.setKey(key);
+          }
+
+          @Override
+          public RefreshAccessToken setOauthToken(java.lang.String oauthToken) {
+            return (RefreshAccessToken) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RefreshAccessToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RefreshAccessToken) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RefreshAccessToken setQuotaUser(java.lang.String quotaUser) {
+            return (RefreshAccessToken) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RefreshAccessToken setUploadType(java.lang.String uploadType) {
+            return (RefreshAccessToken) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RefreshAccessToken setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RefreshAccessToken) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /**
+
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          public RefreshAccessToken setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RefreshAccessToken set(String parameterName, Object value) {
+            return (RefreshAccessToken) super.set(parameterName, value);
           }
         }
 

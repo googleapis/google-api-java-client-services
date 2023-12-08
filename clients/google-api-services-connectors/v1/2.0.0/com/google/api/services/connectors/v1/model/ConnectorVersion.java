@@ -157,6 +157,13 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   private SupportedRuntimeFeatures supportedRuntimeFeatures;
 
   /**
+   * Output only. Unsupported connection types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unsupportedConnectionTypes;
+
+  /**
    * Output only. Updated time.
    * The value may be {@code null}.
    */
@@ -438,6 +445,23 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   public ConnectorVersion setSupportedRuntimeFeatures(SupportedRuntimeFeatures supportedRuntimeFeatures) {
     this.supportedRuntimeFeatures = supportedRuntimeFeatures;
+    return this;
+  }
+
+  /**
+   * Output only. Unsupported connection types.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnsupportedConnectionTypes() {
+    return unsupportedConnectionTypes;
+  }
+
+  /**
+   * Output only. Unsupported connection types.
+   * @param unsupportedConnectionTypes unsupportedConnectionTypes or {@code null} for none
+   */
+  public ConnectorVersion setUnsupportedConnectionTypes(java.util.List<java.lang.String> unsupportedConnectionTypes) {
+    this.unsupportedConnectionTypes = unsupportedConnectionTypes;
     return this;
   }
 

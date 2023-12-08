@@ -30,11 +30,26 @@ package com.google.api.services.connectors.v1.model;
 public final class CustomConnectorVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Configuration for establishing the authentication to the connector destination.
+   * Optional. Authentication config for accessing connector facade/ proxy. This is used only when
+   * enable_backend_destination_config is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AuthConfig authConfig;
+
+  /**
+   * Optional. Backend variables config templates. This translates to additional variable templates
+   * in connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ConfigVariableTemplate> backendVariableTemplates;
+
+  static {
+    // hack to force ProGuard to consider ConfigVariableTemplate used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ConfigVariableTemplate.class);
+  }
 
   /**
    * Output only. Created time.
@@ -44,15 +59,16 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   private String createTime;
 
   /**
-   * Required. Configuration of the customConnector's destination.
+   * Optional. Destination config(s) for accessing connector facade/ proxy. This is used only when
+   * enable_backend_destination_config is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DestinationConfig destinationConfig;
+  private java.util.List<DestinationConfig> destinationConfigs;
 
   /**
-   * Optional. Whether to enable backend destination config. This is the backend server that the
-   * connector connects to.
+   * Optional. When enabled, the connector will be a facade/ proxy, and connects to the destination
+   * provided during connection creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +91,7 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
-   * Required. Service account needed for runtime plane to access Custom Connector secrets.
+   * Required. Service account used by runtime plane to access auth config secrets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +112,8 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   private String updateTime;
 
   /**
-   * Required. Configuration for establishing the authentication to the connector destination.
+   * Optional. Authentication config for accessing connector facade/ proxy. This is used only when
+   * enable_backend_destination_config is true.
    * @return value or {@code null} for none
    */
   public AuthConfig getAuthConfig() {
@@ -104,11 +121,31 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Configuration for establishing the authentication to the connector destination.
+   * Optional. Authentication config for accessing connector facade/ proxy. This is used only when
+   * enable_backend_destination_config is true.
    * @param authConfig authConfig or {@code null} for none
    */
   public CustomConnectorVersion setAuthConfig(AuthConfig authConfig) {
     this.authConfig = authConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Backend variables config templates. This translates to additional variable templates
+   * in connection.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ConfigVariableTemplate> getBackendVariableTemplates() {
+    return backendVariableTemplates;
+  }
+
+  /**
+   * Optional. Backend variables config templates. This translates to additional variable templates
+   * in connection.
+   * @param backendVariableTemplates backendVariableTemplates or {@code null} for none
+   */
+  public CustomConnectorVersion setBackendVariableTemplates(java.util.List<ConfigVariableTemplate> backendVariableTemplates) {
+    this.backendVariableTemplates = backendVariableTemplates;
     return this;
   }
 
@@ -130,25 +167,27 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Configuration of the customConnector's destination.
+   * Optional. Destination config(s) for accessing connector facade/ proxy. This is used only when
+   * enable_backend_destination_config is true.
    * @return value or {@code null} for none
    */
-  public DestinationConfig getDestinationConfig() {
-    return destinationConfig;
+  public java.util.List<DestinationConfig> getDestinationConfigs() {
+    return destinationConfigs;
   }
 
   /**
-   * Required. Configuration of the customConnector's destination.
-   * @param destinationConfig destinationConfig or {@code null} for none
+   * Optional. Destination config(s) for accessing connector facade/ proxy. This is used only when
+   * enable_backend_destination_config is true.
+   * @param destinationConfigs destinationConfigs or {@code null} for none
    */
-  public CustomConnectorVersion setDestinationConfig(DestinationConfig destinationConfig) {
-    this.destinationConfig = destinationConfig;
+  public CustomConnectorVersion setDestinationConfigs(java.util.List<DestinationConfig> destinationConfigs) {
+    this.destinationConfigs = destinationConfigs;
     return this;
   }
 
   /**
-   * Optional. Whether to enable backend destination config. This is the backend server that the
-   * connector connects to.
+   * Optional. When enabled, the connector will be a facade/ proxy, and connects to the destination
+   * provided during connection creation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableBackendDestinationConfig() {
@@ -156,8 +195,8 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Whether to enable backend destination config. This is the backend server that the
-   * connector connects to.
+   * Optional. When enabled, the connector will be a facade/ proxy, and connects to the destination
+   * provided during connection creation.
    * @param enableBackendDestinationConfig enableBackendDestinationConfig or {@code null} for none
    */
   public CustomConnectorVersion setEnableBackendDestinationConfig(java.lang.Boolean enableBackendDestinationConfig) {
@@ -204,7 +243,7 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Service account needed for runtime plane to access Custom Connector secrets.
+   * Required. Service account used by runtime plane to access auth config secrets.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -212,7 +251,7 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Service account needed for runtime plane to access Custom Connector secrets.
+   * Required. Service account used by runtime plane to access auth config secrets.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public CustomConnectorVersion setServiceAccount(java.lang.String serviceAccount) {

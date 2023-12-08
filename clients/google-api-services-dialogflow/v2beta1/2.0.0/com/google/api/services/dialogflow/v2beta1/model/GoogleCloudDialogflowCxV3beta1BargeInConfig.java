@@ -27,11 +27,8 @@ package com.google.api.services.dialogflow.v2beta1.model;
  * barge-in phase and during which the API starts speech detection and may inform the client that an
  * utterance has been detected. Note that no-speech event is not expected in this phase. The client
  * provides this configuration in terms of the durations of those two phases. The durations are
- * measured in terms of the audio length fromt the the start of the input audio. The flow goes like
- * below: --> Time without speech detection | utterance only | utterance or no-speech event | |
- * +-------------+ | +------------+ | +---------------+ ----------+ no barge-in +-|-+ barge-in +-|-+
- * normal period +----------- +-------------+ | +------------+ | +---------------+ No-speech event
- * is a response with END_OF_UTTERANCE without any transcript following up.
+ * measured in terms of the audio length from the the start of the input audio. No-speech event is a
+ * response with END_OF_UTTERANCE without any transcript following up.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

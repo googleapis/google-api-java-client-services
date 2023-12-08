@@ -120,6 +120,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. The workforce pools proxy endpoint that is used to access the Jupyter notebook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thirdPartyProxyUrl;
+
+  /**
    * Output only. Instance update time.
    * The value may be {@code null}.
    */
@@ -346,6 +353,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The workforce pools proxy endpoint that is used to access the Jupyter notebook.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThirdPartyProxyUrl() {
+    return thirdPartyProxyUrl;
+  }
+
+  /**
+   * Output only. The workforce pools proxy endpoint that is used to access the Jupyter notebook.
+   * @param thirdPartyProxyUrl thirdPartyProxyUrl or {@code null} for none
+   */
+  public Instance setThirdPartyProxyUrl(java.lang.String thirdPartyProxyUrl) {
+    this.thirdPartyProxyUrl = thirdPartyProxyUrl;
     return this;
   }
 

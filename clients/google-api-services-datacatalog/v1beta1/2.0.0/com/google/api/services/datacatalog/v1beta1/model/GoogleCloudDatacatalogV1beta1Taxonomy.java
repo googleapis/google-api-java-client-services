@@ -60,7 +60,7 @@ public final class GoogleCloudDatacatalogV1beta1Taxonomy extends com.google.api.
   private java.lang.String displayName;
 
   /**
-   * Output only. Resource name of this taxonomy, whose format is:
+   * Identifier. Resource name of this taxonomy, whose format is:
    * "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
    * The value may be {@code null}.
    */
@@ -151,7 +151,7 @@ public final class GoogleCloudDatacatalogV1beta1Taxonomy extends com.google.api.
   }
 
   /**
-   * Output only. Resource name of this taxonomy, whose format is:
+   * Identifier. Resource name of this taxonomy, whose format is:
    * "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
    * @return value or {@code null} for none
    */
@@ -160,7 +160,7 @@ public final class GoogleCloudDatacatalogV1beta1Taxonomy extends com.google.api.
   }
 
   /**
-   * Output only. Resource name of this taxonomy, whose format is:
+   * Identifier. Resource name of this taxonomy, whose format is:
    * "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
    * @param name name or {@code null} for none
    */

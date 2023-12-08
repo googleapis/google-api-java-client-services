@@ -58,7 +58,7 @@ public final class GoogleCloudDatacatalogV1beta1PolicyTag extends com.google.api
   private java.lang.String displayName;
 
   /**
-   * Output only. Resource name of this policy tag, whose format is:
+   * Identifier. Resource name of this policy tag, whose format is:
    * "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
    * The value may be {@code null}.
    */
@@ -135,7 +135,7 @@ public final class GoogleCloudDatacatalogV1beta1PolicyTag extends com.google.api
   }
 
   /**
-   * Output only. Resource name of this policy tag, whose format is:
+   * Identifier. Resource name of this policy tag, whose format is:
    * "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
    * @return value or {@code null} for none
    */
@@ -144,7 +144,7 @@ public final class GoogleCloudDatacatalogV1beta1PolicyTag extends com.google.api
   }
 
   /**
-   * Output only. Resource name of this policy tag, whose format is:
+   * Identifier. Resource name of this policy tag, whose format is:
    * "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
    * @param name name or {@code null} for none
    */

@@ -39,6 +39,13 @@ public final class AdvancedDatapathObservabilityConfig extends com.google.api.cl
   private java.lang.Boolean enableMetrics;
 
   /**
+   * Enable Relay component
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableRelay;
+
+  /**
    * Method used to make Relay available
    * The value may be {@code null}.
    */
@@ -59,6 +66,23 @@ public final class AdvancedDatapathObservabilityConfig extends com.google.api.cl
    */
   public AdvancedDatapathObservabilityConfig setEnableMetrics(java.lang.Boolean enableMetrics) {
     this.enableMetrics = enableMetrics;
+    return this;
+  }
+
+  /**
+   * Enable Relay component
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableRelay() {
+    return enableRelay;
+  }
+
+  /**
+   * Enable Relay component
+   * @param enableRelay enableRelay or {@code null} for none
+   */
+  public AdvancedDatapathObservabilityConfig setEnableRelay(java.lang.Boolean enableRelay) {
+    this.enableRelay = enableRelay;
     return this;
   }
 

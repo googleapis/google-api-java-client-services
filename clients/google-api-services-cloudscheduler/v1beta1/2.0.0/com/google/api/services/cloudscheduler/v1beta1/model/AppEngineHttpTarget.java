@@ -57,15 +57,15 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
    * (+http://code.google.com/appengine)"` to the modified `User-Agent`. * `X-CloudScheduler`: This
    * header will be set to true. * `X-CloudScheduler-JobName`: This header will contain the job
    * name. * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in the unix-cron
-   * format, this header will contain the job schedule time in RFC3339 UTC "Zulu" format. If the job
-   * has a body and the following headers are not set by the user, Cloud Scheduler sets default
-   * values: * `Content-Type`: This will be set to `"application/octet-stream"`. You can override
-   * this default by explicitly setting `Content-Type` to a particular media type when creating the
-   * job. For example, you can set `Content-Type` to `"application/json"`. The headers below are
-   * output only. They cannot be set or overridden: * `Content-Length`: This is computed by Cloud
-   * Scheduler. * `X-Google-*`: For Google internal use only. * `X-AppEngine-*`: For Google internal
-   * use only. In addition, some App Engine headers, which contain job-specific information, are
-   * also be sent to the job handler.
+   * format, this header will contain the job schedule as an offset of UTC parsed according to
+   * RFC3339. If the job has a body and the following headers are not set by the user, Cloud
+   * Scheduler sets default values: * `Content-Type`: This will be set to `"application/octet-
+   * stream"`. You can override this default by explicitly setting `Content-Type` to a particular
+   * media type when creating the job. For example, you can set `Content-Type` to
+   * `"application/json"`. The headers below are output only. They cannot be set or overridden: *
+   * `Content-Length`: This is computed by Cloud Scheduler. * `X-Google-*`: For Google internal use
+   * only. * `X-AppEngine-*`: For Google internal use only. In addition, some App Engine headers,
+   * which contain job-specific information, are also be sent to the job handler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,15 +162,15 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
    * (+http://code.google.com/appengine)"` to the modified `User-Agent`. * `X-CloudScheduler`: This
    * header will be set to true. * `X-CloudScheduler-JobName`: This header will contain the job
    * name. * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in the unix-cron
-   * format, this header will contain the job schedule time in RFC3339 UTC "Zulu" format. If the job
-   * has a body and the following headers are not set by the user, Cloud Scheduler sets default
-   * values: * `Content-Type`: This will be set to `"application/octet-stream"`. You can override
-   * this default by explicitly setting `Content-Type` to a particular media type when creating the
-   * job. For example, you can set `Content-Type` to `"application/json"`. The headers below are
-   * output only. They cannot be set or overridden: * `Content-Length`: This is computed by Cloud
-   * Scheduler. * `X-Google-*`: For Google internal use only. * `X-AppEngine-*`: For Google internal
-   * use only. In addition, some App Engine headers, which contain job-specific information, are
-   * also be sent to the job handler.
+   * format, this header will contain the job schedule as an offset of UTC parsed according to
+   * RFC3339. If the job has a body and the following headers are not set by the user, Cloud
+   * Scheduler sets default values: * `Content-Type`: This will be set to `"application/octet-
+   * stream"`. You can override this default by explicitly setting `Content-Type` to a particular
+   * media type when creating the job. For example, you can set `Content-Type` to
+   * `"application/json"`. The headers below are output only. They cannot be set or overridden: *
+   * `Content-Length`: This is computed by Cloud Scheduler. * `X-Google-*`: For Google internal use
+   * only. * `X-AppEngine-*`: For Google internal use only. In addition, some App Engine headers,
+   * which contain job-specific information, are also be sent to the job handler.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getHeaders() {
@@ -185,15 +185,15 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
    * (+http://code.google.com/appengine)"` to the modified `User-Agent`. * `X-CloudScheduler`: This
    * header will be set to true. * `X-CloudScheduler-JobName`: This header will contain the job
    * name. * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in the unix-cron
-   * format, this header will contain the job schedule time in RFC3339 UTC "Zulu" format. If the job
-   * has a body and the following headers are not set by the user, Cloud Scheduler sets default
-   * values: * `Content-Type`: This will be set to `"application/octet-stream"`. You can override
-   * this default by explicitly setting `Content-Type` to a particular media type when creating the
-   * job. For example, you can set `Content-Type` to `"application/json"`. The headers below are
-   * output only. They cannot be set or overridden: * `Content-Length`: This is computed by Cloud
-   * Scheduler. * `X-Google-*`: For Google internal use only. * `X-AppEngine-*`: For Google internal
-   * use only. In addition, some App Engine headers, which contain job-specific information, are
-   * also be sent to the job handler.
+   * format, this header will contain the job schedule as an offset of UTC parsed according to
+   * RFC3339. If the job has a body and the following headers are not set by the user, Cloud
+   * Scheduler sets default values: * `Content-Type`: This will be set to `"application/octet-
+   * stream"`. You can override this default by explicitly setting `Content-Type` to a particular
+   * media type when creating the job. For example, you can set `Content-Type` to
+   * `"application/json"`. The headers below are output only. They cannot be set or overridden: *
+   * `Content-Length`: This is computed by Cloud Scheduler. * `X-Google-*`: For Google internal use
+   * only. * `X-AppEngine-*`: For Google internal use only. In addition, some App Engine headers,
+   * which contain job-specific information, are also be sent to the job handler.
    * @param headers headers or {@code null} for none
    */
   public AppEngineHttpTarget setHeaders(java.util.Map<String, java.lang.String> headers) {

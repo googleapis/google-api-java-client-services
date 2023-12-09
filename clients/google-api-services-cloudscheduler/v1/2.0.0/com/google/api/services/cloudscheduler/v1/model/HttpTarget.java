@@ -52,12 +52,12 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * Google internal use only. * `X-AppEngine-*`: Google internal use only. * `X-CloudScheduler`:
    * This header will be set to true. * `X-CloudScheduler-JobName`: This header will contain the job
    * name. * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in the unix-cron
-   * format, this header will contain the job schedule time in RFC3339 UTC "Zulu" format. If the job
-   * has a body and the following headers are not set by the user, Cloud Scheduler sets default
-   * values: * `Content-Type`: This will be set to `"application/octet-stream"`. You can override
-   * this default by explicitly setting `Content-Type` to a particular media type when creating the
-   * job. For example, you can set `Content-Type` to `"application/json"`. The total size of headers
-   * must be less than 80KB.
+   * format, this header will contain the job schedule as an offset of UTC parsed according to
+   * RFC3339. If the job has a body and the following headers are not set by the user, Cloud
+   * Scheduler sets default values: * `Content-Type`: This will be set to `"application/octet-
+   * stream"`. You can override this default by explicitly setting `Content-Type` to a particular
+   * media type when creating the job. For example, you can set `Content-Type` to
+   * `"application/json"`. The total size of headers must be less than 80KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,12 +160,12 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * Google internal use only. * `X-AppEngine-*`: Google internal use only. * `X-CloudScheduler`:
    * This header will be set to true. * `X-CloudScheduler-JobName`: This header will contain the job
    * name. * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in the unix-cron
-   * format, this header will contain the job schedule time in RFC3339 UTC "Zulu" format. If the job
-   * has a body and the following headers are not set by the user, Cloud Scheduler sets default
-   * values: * `Content-Type`: This will be set to `"application/octet-stream"`. You can override
-   * this default by explicitly setting `Content-Type` to a particular media type when creating the
-   * job. For example, you can set `Content-Type` to `"application/json"`. The total size of headers
-   * must be less than 80KB.
+   * format, this header will contain the job schedule as an offset of UTC parsed according to
+   * RFC3339. If the job has a body and the following headers are not set by the user, Cloud
+   * Scheduler sets default values: * `Content-Type`: This will be set to `"application/octet-
+   * stream"`. You can override this default by explicitly setting `Content-Type` to a particular
+   * media type when creating the job. For example, you can set `Content-Type` to
+   * `"application/json"`. The total size of headers must be less than 80KB.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getHeaders() {
@@ -183,12 +183,12 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * Google internal use only. * `X-AppEngine-*`: Google internal use only. * `X-CloudScheduler`:
    * This header will be set to true. * `X-CloudScheduler-JobName`: This header will contain the job
    * name. * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in the unix-cron
-   * format, this header will contain the job schedule time in RFC3339 UTC "Zulu" format. If the job
-   * has a body and the following headers are not set by the user, Cloud Scheduler sets default
-   * values: * `Content-Type`: This will be set to `"application/octet-stream"`. You can override
-   * this default by explicitly setting `Content-Type` to a particular media type when creating the
-   * job. For example, you can set `Content-Type` to `"application/json"`. The total size of headers
-   * must be less than 80KB.
+   * format, this header will contain the job schedule as an offset of UTC parsed according to
+   * RFC3339. If the job has a body and the following headers are not set by the user, Cloud
+   * Scheduler sets default values: * `Content-Type`: This will be set to `"application/octet-
+   * stream"`. You can override this default by explicitly setting `Content-Type` to a particular
+   * media type when creating the job. For example, you can set `Content-Type` to
+   * `"application/json"`. The total size of headers must be less than 80KB.
    * @param headers headers or {@code null} for none
    */
   public HttpTarget setHeaders(java.util.Map<String, java.lang.String> headers) {

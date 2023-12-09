@@ -89,6 +89,14 @@ public final class GooglePlayDeveloperReportingV1beta1ErrorReport extends com.go
   private java.lang.String type;
 
   /**
+   * Version control system information from BUNDLE-METADATA/version-control-info.textproto or META-
+   * INF/version-control-info.textproto of the app bundle or APK, respectively.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vcsInformation;
+
+  /**
    * A device model on which an event in this error report occurred on.
    * @return value or {@code null} for none
    */
@@ -216,6 +224,25 @@ public final class GooglePlayDeveloperReportingV1beta1ErrorReport extends com.go
    */
   public GooglePlayDeveloperReportingV1beta1ErrorReport setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Version control system information from BUNDLE-METADATA/version-control-info.textproto or META-
+   * INF/version-control-info.textproto of the app bundle or APK, respectively.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVcsInformation() {
+    return vcsInformation;
+  }
+
+  /**
+   * Version control system information from BUNDLE-METADATA/version-control-info.textproto or META-
+   * INF/version-control-info.textproto of the app bundle or APK, respectively.
+   * @param vcsInformation vcsInformation or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1beta1ErrorReport setVcsInformation(java.lang.String vcsInformation) {
+    this.vcsInformation = vcsInformation;
     return this;
   }
 

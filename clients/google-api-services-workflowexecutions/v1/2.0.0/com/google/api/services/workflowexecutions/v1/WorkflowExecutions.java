@@ -498,7 +498,8 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             }
           }
           /**
-           * Creates a new execution using the latest revision of the given workflow.
+           * Creates a new execution using the latest revision of the given workflow. For more information,
+           * see Execute a workflow.
            *
            * Create a request for the method "executions.create".
            *
@@ -525,7 +526,8 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflows/[^/]+$");
 
             /**
-             * Creates a new execution using the latest revision of the given workflow.
+             * Creates a new execution using the latest revision of the given workflow. For more information,
+             * see Execute a workflow.
              *
              * Create a request for the method "executions.create".
              *

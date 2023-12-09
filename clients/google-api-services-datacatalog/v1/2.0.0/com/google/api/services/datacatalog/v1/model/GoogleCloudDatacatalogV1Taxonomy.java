@@ -62,7 +62,7 @@ public final class GoogleCloudDatacatalogV1Taxonomy extends com.google.api.clien
   private java.lang.String displayName;
 
   /**
-   * Output only. Resource name of this taxonomy in URL format. Note: Policy tag manager generates
+   * Identifier. Resource name of this taxonomy in URL format. Note: Policy tag manager generates
    * unique taxonomy IDs.
    * The value may be {@code null}.
    */
@@ -155,7 +155,7 @@ public final class GoogleCloudDatacatalogV1Taxonomy extends com.google.api.clien
   }
 
   /**
-   * Output only. Resource name of this taxonomy in URL format. Note: Policy tag manager generates
+   * Identifier. Resource name of this taxonomy in URL format. Note: Policy tag manager generates
    * unique taxonomy IDs.
    * @return value or {@code null} for none
    */
@@ -164,7 +164,7 @@ public final class GoogleCloudDatacatalogV1Taxonomy extends com.google.api.clien
   }
 
   /**
-   * Output only. Resource name of this taxonomy in URL format. Note: Policy tag manager generates
+   * Identifier. Resource name of this taxonomy in URL format. Note: Policy tag manager generates
    * unique taxonomy IDs.
    * @param name name or {@code null} for none
    */

@@ -8960,7 +8960,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the datacatalog server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique
+         * @param name Identifier. Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique
          *        taxonomy IDs.
          * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1Taxonomy}
          * @return the request
@@ -8989,7 +8989,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique
+           * @param name Identifier. Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique
          *        taxonomy IDs.
            * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1Taxonomy}
            * @since 1.13
@@ -9060,21 +9060,21 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Output only. Resource name of this taxonomy in URL format. Note: Policy tag manager
+           * Identifier. Resource name of this taxonomy in URL format. Note: Policy tag manager
            * generates unique taxonomy IDs.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Resource name of this taxonomy in URL format. Note: Policy tag manager generates
-         unique taxonomy IDs.
+          /** Identifier. Resource name of this taxonomy in URL format. Note: Policy tag manager generates unique
+         taxonomy IDs.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. Resource name of this taxonomy in URL format. Note: Policy tag manager
+           * Identifier. Resource name of this taxonomy in URL format. Note: Policy tag manager
            * generates unique taxonomy IDs.
            */
           public Patch setName(java.lang.String name) {
@@ -10318,7 +10318,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the datacatalog server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Resource name of this policy tag in the URL format. The policy tag manager generates
+           * @param name Identifier. Resource name of this policy tag in the URL format. The policy tag manager generates
            *        unique taxonomy IDs and policy tag IDs.
            * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1PolicyTag}
            * @return the request
@@ -10347,7 +10347,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Resource name of this policy tag in the URL format. The policy tag manager generates
+             * @param name Identifier. Resource name of this policy tag in the URL format. The policy tag manager generates
            *        unique taxonomy IDs and policy tag IDs.
              * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1PolicyTag}
              * @since 1.13
@@ -10418,13 +10418,13 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Output only. Resource name of this policy tag in the URL format. The policy tag
+             * Identifier. Resource name of this policy tag in the URL format. The policy tag
              * manager generates unique taxonomy IDs and policy tag IDs.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Resource name of this policy tag in the URL format. The policy tag manager generates
+            /** Identifier. Resource name of this policy tag in the URL format. The policy tag manager generates
            unique taxonomy IDs and policy tag IDs.
              */
             public java.lang.String getName() {
@@ -10432,7 +10432,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Output only. Resource name of this policy tag in the URL format. The policy tag
+             * Identifier. Resource name of this policy tag in the URL format. The policy tag
              * manager generates unique taxonomy IDs and policy tag IDs.
              */
             public Patch setName(java.lang.String name) {

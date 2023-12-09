@@ -58,7 +58,7 @@ public final class GoogleCloudDatacatalogV1PolicyTag extends com.google.api.clie
   private java.lang.String displayName;
 
   /**
-   * Output only. Resource name of this policy tag in the URL format. The policy tag manager
+   * Identifier. Resource name of this policy tag in the URL format. The policy tag manager
    * generates unique taxonomy IDs and policy tag IDs.
    * The value may be {@code null}.
    */
@@ -135,7 +135,7 @@ public final class GoogleCloudDatacatalogV1PolicyTag extends com.google.api.clie
   }
 
   /**
-   * Output only. Resource name of this policy tag in the URL format. The policy tag manager
+   * Identifier. Resource name of this policy tag in the URL format. The policy tag manager
    * generates unique taxonomy IDs and policy tag IDs.
    * @return value or {@code null} for none
    */
@@ -144,7 +144,7 @@ public final class GoogleCloudDatacatalogV1PolicyTag extends com.google.api.clie
   }
 
   /**
-   * Output only. Resource name of this policy tag in the URL format. The policy tag manager
+   * Identifier. Resource name of this policy tag in the URL format. The policy tag manager
    * generates unique taxonomy IDs and policy tag IDs.
    * @param name name or {@code null} for none
    */

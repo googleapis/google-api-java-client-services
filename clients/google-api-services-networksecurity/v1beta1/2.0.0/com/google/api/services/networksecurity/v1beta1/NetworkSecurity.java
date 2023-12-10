@@ -2490,7 +2490,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. name of resource
+         * @param name Immutable. Identifier. name of resource
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpoint}
          * @return the request
          */
@@ -2518,7 +2518,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. name of resource
+           * @param name Immutable. Identifier. name of resource
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpoint}
            * @since 1.13
            */
@@ -2587,17 +2587,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. name of resource */
+          /** Immutable. Identifier. name of resource */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. name of resource
+          /** Immutable. Identifier. name of resource
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. name of resource */
+          /** Immutable. Identifier. name of resource */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10888,7 +10888,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. name of resource
+         * @param name Immutable. Identifier. name of resource
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpointAssociation}
          * @return the request
          */
@@ -10916,7 +10916,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. name of resource
+           * @param name Immutable. Identifier. name of resource
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpointAssociation}
            * @since 1.13
            */
@@ -10985,17 +10985,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. name of resource */
+          /** Immutable. Identifier. name of resource */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. name of resource
+          /** Immutable. Identifier. name of resource
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. name of resource */
+          /** Immutable. Identifier. name of resource */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

@@ -668,6 +668,31 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
           return this;
         }
 
+        /**
+         * Optional. The current etag of policy. If an etag is provided and does not match the
+         * current etag of the policy, deletion will be blocked and an ABORTED error will be
+         * returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String etag;
+
+        /** Optional. The current etag of policy. If an etag is provided and does not match the current etag of
+       the policy, deletion will be blocked and an ABORTED error will be returned.
+         */
+        public java.lang.String getEtag() {
+          return etag;
+        }
+
+        /**
+         * Optional. The current etag of policy. If an etag is provided and does not match the
+         * current etag of the policy, deletion will be blocked and an ABORTED error will be
+         * returned.
+         */
+        public Delete setEtag(java.lang.String etag) {
+          this.etag = etag;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
@@ -2701,6 +2726,31 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
           return this;
         }
 
+        /**
+         * Optional. The current etag of policy. If an etag is provided and does not match the
+         * current etag of the policy, deletion will be blocked and an ABORTED error will be
+         * returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String etag;
+
+        /** Optional. The current etag of policy. If an etag is provided and does not match the current etag of
+       the policy, deletion will be blocked and an ABORTED error will be returned.
+         */
+        public java.lang.String getEtag() {
+          return etag;
+        }
+
+        /**
+         * Optional. The current etag of policy. If an etag is provided and does not match the
+         * current etag of the policy, deletion will be blocked and an ABORTED error will be
+         * returned.
+         */
+        public Delete setEtag(java.lang.String etag) {
+          this.etag = etag;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
@@ -3929,6 +3979,31 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
                 "^projects/[^/]+/policies/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. The current etag of policy. If an etag is provided and does not match the
+         * current etag of the policy, deletion will be blocked and an ABORTED error will be
+         * returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String etag;
+
+        /** Optional. The current etag of policy. If an etag is provided and does not match the current etag of
+       the policy, deletion will be blocked and an ABORTED error will be returned.
+         */
+        public java.lang.String getEtag() {
+          return etag;
+        }
+
+        /**
+         * Optional. The current etag of policy. If an etag is provided and does not match the
+         * current etag of the policy, deletion will be blocked and an ABORTED error will be
+         * returned.
+         */
+        public Delete setEtag(java.lang.String etag) {
+          this.etag = etag;
           return this;
         }
 

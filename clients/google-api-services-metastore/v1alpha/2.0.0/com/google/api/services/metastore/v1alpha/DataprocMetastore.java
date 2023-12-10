@@ -2809,6 +2809,152 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Alter metadata table properties.
+         *
+         * Create a request for the method "services.alterTableProperties".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link AlterTableProperties#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param service Required. The relative resource name of the Dataproc Metastore service that's being used to mutate
+         *        metadata table properties, in the following
+         *        format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+         * @param content the {@link com.google.api.services.metastore.v1alpha.model.AlterTablePropertiesRequest}
+         * @return the request
+         */
+        public AlterTableProperties alterTableProperties(java.lang.String service, com.google.api.services.metastore.v1alpha.model.AlterTablePropertiesRequest content) throws java.io.IOException {
+          AlterTableProperties result = new AlterTableProperties(service, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AlterTableProperties extends DataprocMetastoreRequest<com.google.api.services.metastore.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+service}:alterTableProperties";
+
+          private final java.util.regex.Pattern SERVICE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Alter metadata table properties.
+           *
+           * Create a request for the method "services.alterTableProperties".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link AlterTableProperties#execute()} method to invoke the
+           * remote operation. <p> {@link AlterTableProperties#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param service Required. The relative resource name of the Dataproc Metastore service that's being used to mutate
+         *        metadata table properties, in the following
+         *        format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           * @param content the {@link com.google.api.services.metastore.v1alpha.model.AlterTablePropertiesRequest}
+           * @since 1.13
+           */
+          protected AlterTableProperties(java.lang.String service, com.google.api.services.metastore.v1alpha.model.AlterTablePropertiesRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1alpha.model.Operation.class);
+            this.service = com.google.api.client.util.Preconditions.checkNotNull(service, "Required parameter service must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public AlterTableProperties set$Xgafv(java.lang.String $Xgafv) {
+            return (AlterTableProperties) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AlterTableProperties setAccessToken(java.lang.String accessToken) {
+            return (AlterTableProperties) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AlterTableProperties setAlt(java.lang.String alt) {
+            return (AlterTableProperties) super.setAlt(alt);
+          }
+
+          @Override
+          public AlterTableProperties setCallback(java.lang.String callback) {
+            return (AlterTableProperties) super.setCallback(callback);
+          }
+
+          @Override
+          public AlterTableProperties setFields(java.lang.String fields) {
+            return (AlterTableProperties) super.setFields(fields);
+          }
+
+          @Override
+          public AlterTableProperties setKey(java.lang.String key) {
+            return (AlterTableProperties) super.setKey(key);
+          }
+
+          @Override
+          public AlterTableProperties setOauthToken(java.lang.String oauthToken) {
+            return (AlterTableProperties) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AlterTableProperties setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AlterTableProperties) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AlterTableProperties setQuotaUser(java.lang.String quotaUser) {
+            return (AlterTableProperties) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AlterTableProperties setUploadType(java.lang.String uploadType) {
+            return (AlterTableProperties) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AlterTableProperties setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AlterTableProperties) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the Dataproc Metastore service that's being
+           * used to mutate metadata table properties, in the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String service;
+
+          /** Required. The relative resource name of the Dataproc Metastore service that's being used to mutate
+         metadata table properties, in the following
+         format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public java.lang.String getService() {
+            return service;
+          }
+
+          /**
+           * Required. The relative resource name of the Dataproc Metastore service that's being
+           * used to mutate metadata table properties, in the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public AlterTableProperties setService(java.lang.String service) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.service = service;
+            return this;
+          }
+
+          @Override
+          public AlterTableProperties set(String parameterName, Object value) {
+            return (AlterTableProperties) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a metastore service in a project and location.
          *
          * Create a request for the method "services.create".

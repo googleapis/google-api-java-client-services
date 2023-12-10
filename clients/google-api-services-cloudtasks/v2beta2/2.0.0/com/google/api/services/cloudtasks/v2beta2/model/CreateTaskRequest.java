@@ -49,16 +49,15 @@ public final class CreateTaskRequest extends com.google.api.client.json.GenericJ
    * is not set or is in the past then Cloud Tasks will set it to the current time. Task De-
    * duplication: Explicitly specifying a task ID enables task de-duplication. If a task's ID is
    * identical to that of an existing task or a task that was deleted or completed recently then the
-   * call will fail with ALREADY_EXISTS. If the task's queue was created using Cloud Tasks, then
-   * another task with the same name can't be created for ~1 hour after the original task was
-   * deleted or completed. If the task's queue was created using queue.yaml or queue.xml, then
-   * another task with the same name can't be created for ~9 days after the original task was
-   * deleted or completed. Because there is an extra lookup cost to identify duplicate task names,
-   * these CreateTask calls have significantly increased latency. Using hashed strings for the task
-   * id or for the prefix of the task id is recommended. Choosing task ids that are sequential or
-   * have sequential prefixes, for example using a timestamp, causes an increase in latency and
-   * error rates in all task commands. The infrastructure relies on an approximately uniform
-   * distribution of task ids to store and serve tasks efficiently.
+   * call will fail with ALREADY_EXISTS. The IDs of deleted tasks are not immediately available for
+   * reuse. It can take up to 4 hours (or 9 days if the task's queue was created using a queue.yaml
+   * or queue.xml) for the task ID to be released and made available again. Because there is an
+   * extra lookup cost to identify duplicate task names, these CreateTask calls have significantly
+   * increased latency. Using hashed strings for the task id or for the prefix of the task id is
+   * recommended. Choosing task ids that are sequential or have sequential prefixes, for example
+   * using a timestamp, causes an increase in latency and error rates in all task commands. The
+   * infrastructure relies on an approximately uniform distribution of task ids to store and serve
+   * tasks efficiently.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,16 +98,15 @@ public final class CreateTaskRequest extends com.google.api.client.json.GenericJ
    * is not set or is in the past then Cloud Tasks will set it to the current time. Task De-
    * duplication: Explicitly specifying a task ID enables task de-duplication. If a task's ID is
    * identical to that of an existing task or a task that was deleted or completed recently then the
-   * call will fail with ALREADY_EXISTS. If the task's queue was created using Cloud Tasks, then
-   * another task with the same name can't be created for ~1 hour after the original task was
-   * deleted or completed. If the task's queue was created using queue.yaml or queue.xml, then
-   * another task with the same name can't be created for ~9 days after the original task was
-   * deleted or completed. Because there is an extra lookup cost to identify duplicate task names,
-   * these CreateTask calls have significantly increased latency. Using hashed strings for the task
-   * id or for the prefix of the task id is recommended. Choosing task ids that are sequential or
-   * have sequential prefixes, for example using a timestamp, causes an increase in latency and
-   * error rates in all task commands. The infrastructure relies on an approximately uniform
-   * distribution of task ids to store and serve tasks efficiently.
+   * call will fail with ALREADY_EXISTS. The IDs of deleted tasks are not immediately available for
+   * reuse. It can take up to 4 hours (or 9 days if the task's queue was created using a queue.yaml
+   * or queue.xml) for the task ID to be released and made available again. Because there is an
+   * extra lookup cost to identify duplicate task names, these CreateTask calls have significantly
+   * increased latency. Using hashed strings for the task id or for the prefix of the task id is
+   * recommended. Choosing task ids that are sequential or have sequential prefixes, for example
+   * using a timestamp, causes an increase in latency and error rates in all task commands. The
+   * infrastructure relies on an approximately uniform distribution of task ids to store and serve
+   * tasks efficiently.
    * @return value or {@code null} for none
    */
   public Task getTask() {
@@ -123,16 +121,15 @@ public final class CreateTaskRequest extends com.google.api.client.json.GenericJ
    * is not set or is in the past then Cloud Tasks will set it to the current time. Task De-
    * duplication: Explicitly specifying a task ID enables task de-duplication. If a task's ID is
    * identical to that of an existing task or a task that was deleted or completed recently then the
-   * call will fail with ALREADY_EXISTS. If the task's queue was created using Cloud Tasks, then
-   * another task with the same name can't be created for ~1 hour after the original task was
-   * deleted or completed. If the task's queue was created using queue.yaml or queue.xml, then
-   * another task with the same name can't be created for ~9 days after the original task was
-   * deleted or completed. Because there is an extra lookup cost to identify duplicate task names,
-   * these CreateTask calls have significantly increased latency. Using hashed strings for the task
-   * id or for the prefix of the task id is recommended. Choosing task ids that are sequential or
-   * have sequential prefixes, for example using a timestamp, causes an increase in latency and
-   * error rates in all task commands. The infrastructure relies on an approximately uniform
-   * distribution of task ids to store and serve tasks efficiently.
+   * call will fail with ALREADY_EXISTS. The IDs of deleted tasks are not immediately available for
+   * reuse. It can take up to 4 hours (or 9 days if the task's queue was created using a queue.yaml
+   * or queue.xml) for the task ID to be released and made available again. Because there is an
+   * extra lookup cost to identify duplicate task names, these CreateTask calls have significantly
+   * increased latency. Using hashed strings for the task id or for the prefix of the task id is
+   * recommended. Choosing task ids that are sequential or have sequential prefixes, for example
+   * using a timestamp, causes an increase in latency and error rates in all task commands. The
+   * infrastructure relies on an approximately uniform distribution of task ids to store and serve
+   * tasks efficiently.
    * @param task task or {@code null} for none
    */
   public CreateTaskRequest setTask(Task task) {

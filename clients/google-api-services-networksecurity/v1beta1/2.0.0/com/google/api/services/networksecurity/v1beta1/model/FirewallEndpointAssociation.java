@@ -51,7 +51,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. name of resource
+   * Immutable. Identifier. name of resource
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +144,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Output only. name of resource
+   * Immutable. Identifier. name of resource
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -152,7 +152,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Output only. name of resource
+   * Immutable. Identifier. name of resource
    * @param name name or {@code null} for none
    */
   public FirewallEndpointAssociation setName(java.lang.String name) {

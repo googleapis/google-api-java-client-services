@@ -40,6 +40,14 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> associatedNetworks;
 
   /**
+   * Output only. List of FirewallEndpointAssociations that are associated to this endpoint. An
+   * association will only appear in this list after traffic routing is fully configured.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FirewallEndpointAssociationReference> associations;
+
+  /**
    * Optional. Project to bill on endpoint uptime usage.
    * The value may be {@code null}.
    */
@@ -68,7 +76,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. name of resource
+   * Immutable. Identifier. name of resource
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,6 +123,25 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
    */
   public FirewallEndpoint setAssociatedNetworks(java.util.List<java.lang.String> associatedNetworks) {
     this.associatedNetworks = associatedNetworks;
+    return this;
+  }
+
+  /**
+   * Output only. List of FirewallEndpointAssociations that are associated to this endpoint. An
+   * association will only appear in this list after traffic routing is fully configured.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FirewallEndpointAssociationReference> getAssociations() {
+    return associations;
+  }
+
+  /**
+   * Output only. List of FirewallEndpointAssociations that are associated to this endpoint. An
+   * association will only appear in this list after traffic routing is fully configured.
+   * @param associations associations or {@code null} for none
+   */
+  public FirewallEndpoint setAssociations(java.util.List<FirewallEndpointAssociationReference> associations) {
+    this.associations = associations;
     return this;
   }
 
@@ -187,7 +214,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. name of resource
+   * Immutable. Identifier. name of resource
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -195,7 +222,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. name of resource
+   * Immutable. Identifier. name of resource
    * @param name name or {@code null} for none
    */
   public FirewallEndpoint setName(java.lang.String name) {

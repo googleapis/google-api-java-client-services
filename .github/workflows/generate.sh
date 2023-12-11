@@ -61,6 +61,8 @@ do
     exit 1
   fi
 
+  # for new libraries, we create the destination folder
+  mkdir -p "${TARGET_DIR}"
   # transfer generated source into the wiped-out service's source folder
   rm -rdf ${TARGET_DIR}/*
   cp -r ${OUTPUT_DIR}/* "${TARGET_DIR}"

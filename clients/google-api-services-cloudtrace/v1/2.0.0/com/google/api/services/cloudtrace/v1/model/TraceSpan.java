@@ -33,7 +33,7 @@ package com.google.api.services.cloudtrace.v1.model;
 public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
-   * End time of the span in nanoseconds from the UNIX epoch.
+   * End time of the span in seconds and nanoseconds from the UNIX epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,14 +90,14 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger spanId;
 
   /**
-   * Start time of the span in nanoseconds from the UNIX epoch.
+   * Start time of the span in seconds and nanoseconds from the UNIX epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * End time of the span in nanoseconds from the UNIX epoch.
+   * End time of the span in seconds and nanoseconds from the UNIX epoch.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -105,7 +105,7 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * End time of the span in nanoseconds from the UNIX epoch.
+   * End time of the span in seconds and nanoseconds from the UNIX epoch.
    * @param endTime endTime or {@code null} for none
    */
   public TraceSpan setEndTime(String endTime) {
@@ -229,7 +229,7 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Start time of the span in nanoseconds from the UNIX epoch.
+   * Start time of the span in seconds and nanoseconds from the UNIX epoch.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -237,7 +237,7 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Start time of the span in nanoseconds from the UNIX epoch.
+   * Start time of the span in seconds and nanoseconds from the UNIX epoch.
    * @param startTime startTime or {@code null} for none
    */
   public TraceSpan setStartTime(String startTime) {

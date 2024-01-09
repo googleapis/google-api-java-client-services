@@ -30,6 +30,26 @@ package com.google.api.services.networkservices.v1.model;
 public final class HttpRouteDestination extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The specification for modifying the headers of a matching request prior to delivery
+   * of the request to the destination. If HeaderModifiers are set on both the Destination and the
+   * RouteAction, they will be merged. Conflicts between the two will not be resolved on the
+   * configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpRouteHeaderModifier requestHeaderModifier;
+
+  /**
+   * Optional. The specification for modifying the headers of a response prior to sending the
+   * response back to the client. If HeaderModifiers are set on both the Destination and the
+   * RouteAction, they will be merged. Conflicts between the two will not be resolved on the
+   * configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpRouteHeaderModifier responseHeaderModifier;
+
+  /**
    * The URL of a BackendService to route traffic to.
    * The value may be {@code null}.
    */
@@ -48,6 +68,52 @@ public final class HttpRouteDestination extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Integer weight;
+
+  /**
+   * Optional. The specification for modifying the headers of a matching request prior to delivery
+   * of the request to the destination. If HeaderModifiers are set on both the Destination and the
+   * RouteAction, they will be merged. Conflicts between the two will not be resolved on the
+   * configuration.
+   * @return value or {@code null} for none
+   */
+  public HttpRouteHeaderModifier getRequestHeaderModifier() {
+    return requestHeaderModifier;
+  }
+
+  /**
+   * Optional. The specification for modifying the headers of a matching request prior to delivery
+   * of the request to the destination. If HeaderModifiers are set on both the Destination and the
+   * RouteAction, they will be merged. Conflicts between the two will not be resolved on the
+   * configuration.
+   * @param requestHeaderModifier requestHeaderModifier or {@code null} for none
+   */
+  public HttpRouteDestination setRequestHeaderModifier(HttpRouteHeaderModifier requestHeaderModifier) {
+    this.requestHeaderModifier = requestHeaderModifier;
+    return this;
+  }
+
+  /**
+   * Optional. The specification for modifying the headers of a response prior to sending the
+   * response back to the client. If HeaderModifiers are set on both the Destination and the
+   * RouteAction, they will be merged. Conflicts between the two will not be resolved on the
+   * configuration.
+   * @return value or {@code null} for none
+   */
+  public HttpRouteHeaderModifier getResponseHeaderModifier() {
+    return responseHeaderModifier;
+  }
+
+  /**
+   * Optional. The specification for modifying the headers of a response prior to sending the
+   * response back to the client. If HeaderModifiers are set on both the Destination and the
+   * RouteAction, they will be merged. Conflicts between the two will not be resolved on the
+   * configuration.
+   * @param responseHeaderModifier responseHeaderModifier or {@code null} for none
+   */
+  public HttpRouteDestination setResponseHeaderModifier(HttpRouteHeaderModifier responseHeaderModifier) {
+    this.responseHeaderModifier = responseHeaderModifier;
+    return this;
+  }
 
   /**
    * The URL of a BackendService to route traffic to.

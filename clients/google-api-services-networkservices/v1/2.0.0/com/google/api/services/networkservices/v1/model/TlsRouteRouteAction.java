@@ -38,6 +38,16 @@ public final class TlsRouteRouteAction extends com.google.api.client.json.Generi
   private java.util.List<TlsRouteRouteDestination> destinations;
 
   /**
+   * Optional. Specifies the idle timeout for the selected route. The idle timeout is defined as the
+   * period in which there are no bytes sent or received on either the upstream or downstream
+   * connection. If not set, the default idle timeout is 1 hour. If set to 0s, the timeout will be
+   * disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String idleTimeout;
+
+  /**
    * Required. The destination services to which traffic should be forwarded. At least one
    * destination service is required.
    * @return value or {@code null} for none
@@ -53,6 +63,29 @@ public final class TlsRouteRouteAction extends com.google.api.client.json.Generi
    */
   public TlsRouteRouteAction setDestinations(java.util.List<TlsRouteRouteDestination> destinations) {
     this.destinations = destinations;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the idle timeout for the selected route. The idle timeout is defined as the
+   * period in which there are no bytes sent or received on either the upstream or downstream
+   * connection. If not set, the default idle timeout is 1 hour. If set to 0s, the timeout will be
+   * disabled.
+   * @return value or {@code null} for none
+   */
+  public String getIdleTimeout() {
+    return idleTimeout;
+  }
+
+  /**
+   * Optional. Specifies the idle timeout for the selected route. The idle timeout is defined as the
+   * period in which there are no bytes sent or received on either the upstream or downstream
+   * connection. If not set, the default idle timeout is 1 hour. If set to 0s, the timeout will be
+   * disabled.
+   * @param idleTimeout idleTimeout or {@code null} for none
+   */
+  public TlsRouteRouteAction setIdleTimeout(String idleTimeout) {
+    this.idleTimeout = idleTimeout;
     return this;
   }
 

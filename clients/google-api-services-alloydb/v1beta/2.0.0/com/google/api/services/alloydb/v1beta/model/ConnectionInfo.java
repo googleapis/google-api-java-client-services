@@ -63,6 +63,14 @@ public final class ConnectionInfo extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> pemCertificateChain;
 
   /**
+   * Output only. The public IP addresses for the Instance. This is available ONLY when
+   * enable_public_ip is set. This is the connection endpoint for an end-user application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publicIpAddress;
+
+  /**
    * Output only. The unique ID of the Instance.
    * @return value or {@code null} for none
    */
@@ -137,6 +145,25 @@ public final class ConnectionInfo extends com.google.api.client.json.GenericJson
    */
   public ConnectionInfo setPemCertificateChain(java.util.List<java.lang.String> pemCertificateChain) {
     this.pemCertificateChain = pemCertificateChain;
+    return this;
+  }
+
+  /**
+   * Output only. The public IP addresses for the Instance. This is available ONLY when
+   * enable_public_ip is set. This is the connection endpoint for an end-user application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublicIpAddress() {
+    return publicIpAddress;
+  }
+
+  /**
+   * Output only. The public IP addresses for the Instance. This is available ONLY when
+   * enable_public_ip is set. This is the connection endpoint for an end-user application.
+   * @param publicIpAddress publicIpAddress or {@code null} for none
+   */
+  public ConnectionInfo setPublicIpAddress(java.lang.String publicIpAddress) {
+    this.publicIpAddress = publicIpAddress;
     return this;
   }
 

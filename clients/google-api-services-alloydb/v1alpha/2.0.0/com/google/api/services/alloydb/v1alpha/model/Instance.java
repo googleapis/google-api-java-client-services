@@ -150,12 +150,26 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Instance level network configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceNetworkConfig networkConfig;
+
+  /**
    * Output only. List of available read-only VMs in this instance, including the standby for a
    * PRIMARY instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Node> nodes;
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscInstanceConfig pscInstanceConfig;
 
   /**
    * Configuration for query insights.
@@ -514,6 +528,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Instance level network configuration.
+   * @return value or {@code null} for none
+   */
+  public InstanceNetworkConfig getNetworkConfig() {
+    return networkConfig;
+  }
+
+  /**
+   * Optional. Instance level network configuration.
+   * @param networkConfig networkConfig or {@code null} for none
+   */
+  public Instance setNetworkConfig(InstanceNetworkConfig networkConfig) {
+    this.networkConfig = networkConfig;
+    return this;
+  }
+
+  /**
    * Output only. List of available read-only VMs in this instance, including the standby for a
    * PRIMARY instance.
    * @return value or {@code null} for none
@@ -529,6 +560,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNodes(java.util.List<Node> nodes) {
     this.nodes = nodes;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the instance.
+   * @return value or {@code null} for none
+   */
+  public PscInstanceConfig getPscInstanceConfig() {
+    return pscInstanceConfig;
+  }
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the instance.
+   * @param pscInstanceConfig pscInstanceConfig or {@code null} for none
+   */
+  public Instance setPscInstanceConfig(PscInstanceConfig pscInstanceConfig) {
+    this.pscInstanceConfig = pscInstanceConfig;
     return this;
   }
 

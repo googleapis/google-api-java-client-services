@@ -728,12 +728,14 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
   public class Chromeosdevices {
 
     /**
-     * Takes an action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-
-     * enabling devices. *Warning:* * Deprovisioning a device will stop device policy syncing and remove
-     * device-level printers. After a device is deprovisioned, it must be wiped before it can be re-
-     * enrolled. * Lost or stolen devices should use the disable action. * Re-enabling a disabled device
-     * will consume a device license. If you do not have sufficient licenses available when completing
-     * the re-enable action, you will receive an error. For more information about deprovisioning and
+     * Use [BatchChangeChromeOsDeviceStatus](/admin-
+     * sdk/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus) instead. Takes an
+     * action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-enabling
+     * devices. *Warning:* * Deprovisioning a device will stop device policy syncing and remove device-
+     * level printers. After a device is deprovisioned, it must be wiped before it can be re-enrolled. *
+     * Lost or stolen devices should use the disable action. * Re-enabling a disabled device will
+     * consume a device license. If you do not have sufficient licenses available when completing the
+     * re-enable action, you will receive an error. For more information about deprovisioning and
      * disabling devices, visit the [help center](https://support.google.com/chrome/a/answer/3523633).
      *
      * Create a request for the method "chromeosdevices.action".
@@ -760,8 +762,10 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/devices/chromeos/{resourceId}/action";
 
       /**
-       * Takes an action that affects a Chrome OS Device. This includes deprovisioning, disabling, and
-       * re-enabling devices. *Warning:* * Deprovisioning a device will stop device policy syncing and
+       * Use [BatchChangeChromeOsDeviceStatus](/admin-
+       * sdk/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus) instead. Takes an
+       * action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-
+       * enabling devices. *Warning:* * Deprovisioning a device will stop device policy syncing and
        * remove device-level printers. After a device is deprovisioned, it must be wiped before it can
        * be re-enrolled. * Lost or stolen devices should use the disable action. * Re-enabling a
        * disabled device will consume a device license. If you do not have sufficient licenses available
@@ -1947,6 +1951,128 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        */
       public class Chromeos {
 
+        /**
+         * Changes the status of a batch of ChromeOS devices. For more information about changing a ChromeOS
+         * device state [Repair, repurpose, or retire ChromeOS
+         * devices](https://support.google.com/chrome/a/answer/3523633).
+         *
+         * Create a request for the method "chromeos.batchChangeStatus".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link BatchChangeStatus#execute()} method to invoke the remote operation.
+         *
+         * @param customerId Required. Immutable ID of the Google Workspace account.
+         * @param content the {@link com.google.api.services.directory.model.BatchChangeChromeOsDeviceStatusRequest}
+         * @return the request
+         */
+        public BatchChangeStatus batchChangeStatus(java.lang.String customerId, com.google.api.services.directory.model.BatchChangeChromeOsDeviceStatusRequest content) throws java.io.IOException {
+          BatchChangeStatus result = new BatchChangeStatus(customerId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchChangeStatus extends DirectoryRequest<com.google.api.services.directory.model.BatchChangeChromeOsDeviceStatusResponse> {
+
+          private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/devices/chromeos:batchChangeStatus";
+
+          /**
+           * Changes the status of a batch of ChromeOS devices. For more information about changing a
+           * ChromeOS device state [Repair, repurpose, or retire ChromeOS
+           * devices](https://support.google.com/chrome/a/answer/3523633).
+           *
+           * Create a request for the method "chromeos.batchChangeStatus".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link BatchChangeStatus#execute()} method to invoke the remote operation.
+           * <p> {@link BatchChangeStatus#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+           * eClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param customerId Required. Immutable ID of the Google Workspace account.
+           * @param content the {@link com.google.api.services.directory.model.BatchChangeChromeOsDeviceStatusRequest}
+           * @since 1.13
+           */
+          protected BatchChangeStatus(java.lang.String customerId, com.google.api.services.directory.model.BatchChangeChromeOsDeviceStatusRequest content) {
+            super(Directory.this, "POST", REST_PATH, content, com.google.api.services.directory.model.BatchChangeChromeOsDeviceStatusResponse.class);
+            this.customerId = com.google.api.client.util.Preconditions.checkNotNull(customerId, "Required parameter customerId must be specified.");
+          }
+
+          @Override
+          public BatchChangeStatus set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchChangeStatus) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchChangeStatus setAccessToken(java.lang.String accessToken) {
+            return (BatchChangeStatus) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchChangeStatus setAlt(java.lang.String alt) {
+            return (BatchChangeStatus) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchChangeStatus setCallback(java.lang.String callback) {
+            return (BatchChangeStatus) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchChangeStatus setFields(java.lang.String fields) {
+            return (BatchChangeStatus) super.setFields(fields);
+          }
+
+          @Override
+          public BatchChangeStatus setKey(java.lang.String key) {
+            return (BatchChangeStatus) super.setKey(key);
+          }
+
+          @Override
+          public BatchChangeStatus setOauthToken(java.lang.String oauthToken) {
+            return (BatchChangeStatus) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchChangeStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchChangeStatus) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchChangeStatus setQuotaUser(java.lang.String quotaUser) {
+            return (BatchChangeStatus) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchChangeStatus setUploadType(java.lang.String uploadType) {
+            return (BatchChangeStatus) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchChangeStatus setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchChangeStatus) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Immutable ID of the Google Workspace account. */
+          @com.google.api.client.util.Key
+          private java.lang.String customerId;
+
+          /** Required. Immutable ID of the Google Workspace account.
+           */
+          public java.lang.String getCustomerId() {
+            return customerId;
+          }
+
+          /** Required. Immutable ID of the Google Workspace account. */
+          public BatchChangeStatus setCustomerId(java.lang.String customerId) {
+            this.customerId = customerId;
+            return this;
+          }
+
+          @Override
+          public BatchChangeStatus set(String parameterName, Object value) {
+            return (BatchChangeStatus) super.set(parameterName, value);
+          }
+        }
         /**
          * Issues a command for the device to execute.
          *

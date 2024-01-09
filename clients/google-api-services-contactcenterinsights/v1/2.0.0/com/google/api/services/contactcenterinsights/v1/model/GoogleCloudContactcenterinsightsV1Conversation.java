@@ -133,6 +133,13 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
   private java.lang.String obfuscatedUserId;
 
   /**
+   * Conversation metadata related to quality management.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1ConversationQualityMetadata qualityMetadata;
+
+  /**
    * Output only. The annotations that were generated during the customer and agent interaction.
    * The value may be {@code null}.
    */
@@ -418,6 +425,23 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
    */
   public GoogleCloudContactcenterinsightsV1Conversation setObfuscatedUserId(java.lang.String obfuscatedUserId) {
     this.obfuscatedUserId = obfuscatedUserId;
+    return this;
+  }
+
+  /**
+   * Conversation metadata related to quality management.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationQualityMetadata getQualityMetadata() {
+    return qualityMetadata;
+  }
+
+  /**
+   * Conversation metadata related to quality management.
+   * @param qualityMetadata qualityMetadata or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Conversation setQualityMetadata(GoogleCloudContactcenterinsightsV1ConversationQualityMetadata qualityMetadata) {
+    this.qualityMetadata = qualityMetadata;
     return this;
   }
 

@@ -51,6 +51,14 @@ public final class ListBatchesResponse extends com.google.api.client.json.Generi
   private java.lang.String nextPageToken;
 
   /**
+   * Output only. List of Batches that could not be included in the response. Attempting to get one
+   * of these resources may indicate why it was not included in the list response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * Output only. The batches from the specified collection.
    * @return value or {@code null} for none
    */
@@ -83,6 +91,25 @@ public final class ListBatchesResponse extends com.google.api.client.json.Generi
    */
   public ListBatchesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Output only. List of Batches that could not be included in the response. Attempting to get one
+   * of these resources may indicate why it was not included in the list response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Output only. List of Batches that could not be included in the response. Attempting to get one
+   * of these resources may indicate why it was not included in the list response.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListBatchesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

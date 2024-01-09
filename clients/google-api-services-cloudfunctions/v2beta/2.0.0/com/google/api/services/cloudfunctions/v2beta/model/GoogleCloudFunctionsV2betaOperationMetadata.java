@@ -60,6 +60,13 @@ public final class GoogleCloudFunctionsV2betaOperationMetadata extends com.googl
   private String endTime;
 
   /**
+   * The operation type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String operationType;
+
+  /**
    * The original request that started the operation.
    * The value may be {@code null}.
    */
@@ -171,6 +178,23 @@ public final class GoogleCloudFunctionsV2betaOperationMetadata extends com.googl
    */
   public GoogleCloudFunctionsV2betaOperationMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The operation type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOperationType() {
+    return operationType;
+  }
+
+  /**
+   * The operation type.
+   * @param operationType operationType or {@code null} for none
+   */
+  public GoogleCloudFunctionsV2betaOperationMetadata setOperationType(java.lang.String operationType) {
+    this.operationType = operationType;
     return this;
   }
 

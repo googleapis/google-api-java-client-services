@@ -37,7 +37,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.String direction;
 
   /**
-   * The field to order by.
+   * Order based on the value referenced by this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The field to order by.
+   * Order based on the value referenced by this field.
    * @return value or {@code null} for none
    */
   public FieldReference getField() {
@@ -69,7 +69,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The field to order by.
+   * Order based on the value referenced by this field.
    * @param field field or {@code null} for none
    */
   public Order setField(FieldReference field) {

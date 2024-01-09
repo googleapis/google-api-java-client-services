@@ -49,6 +49,14 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   private java.lang.String databaseId;
 
   /**
+   * Database snapshot to restore from. The source database must exist and have enabled PITR. The
+   * restored database will be created in the same location as the source database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirestoreAdminV1DatabaseSnapshot databaseSnapshot;
+
+  /**
    * Backup to restore from. Must be from the same project as the parent. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
    * @return value or {@code null} for none
@@ -89,6 +97,25 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
    */
   public GoogleFirestoreAdminV1RestoreDatabaseRequest setDatabaseId(java.lang.String databaseId) {
     this.databaseId = databaseId;
+    return this;
+  }
+
+  /**
+   * Database snapshot to restore from. The source database must exist and have enabled PITR. The
+   * restored database will be created in the same location as the source database.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1DatabaseSnapshot getDatabaseSnapshot() {
+    return databaseSnapshot;
+  }
+
+  /**
+   * Database snapshot to restore from. The source database must exist and have enabled PITR. The
+   * restored database will be created in the same location as the source database.
+   * @param databaseSnapshot databaseSnapshot or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1RestoreDatabaseRequest setDatabaseSnapshot(GoogleFirestoreAdminV1DatabaseSnapshot databaseSnapshot) {
+    this.databaseSnapshot = databaseSnapshot;
     return this;
   }
 

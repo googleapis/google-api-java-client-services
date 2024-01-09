@@ -38,6 +38,13 @@ public final class DeviceIntegrity extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> deviceRecognitionVerdict;
 
   /**
+   * Details about the device activity of the device the app is running on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RecentDeviceActivity recentDeviceActivity;
+
+  /**
    * Details about the integrity of the device the app is running on.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class DeviceIntegrity extends com.google.api.client.json.GenericJso
    */
   public DeviceIntegrity setDeviceRecognitionVerdict(java.util.List<java.lang.String> deviceRecognitionVerdict) {
     this.deviceRecognitionVerdict = deviceRecognitionVerdict;
+    return this;
+  }
+
+  /**
+   * Details about the device activity of the device the app is running on.
+   * @return value or {@code null} for none
+   */
+  public RecentDeviceActivity getRecentDeviceActivity() {
+    return recentDeviceActivity;
+  }
+
+  /**
+   * Details about the device activity of the device the app is running on.
+   * @param recentDeviceActivity recentDeviceActivity or {@code null} for none
+   */
+  public DeviceIntegrity setRecentDeviceActivity(RecentDeviceActivity recentDeviceActivity) {
+    this.recentDeviceActivity = recentDeviceActivity;
     return this;
   }
 

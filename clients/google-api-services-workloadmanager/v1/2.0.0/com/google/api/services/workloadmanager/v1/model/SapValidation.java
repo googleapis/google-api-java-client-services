@@ -30,11 +30,42 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapValidation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. The project_id of the cloud project that the Insight data comes from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectId;
+
+  /**
    * Optional. A list of SAP validation metrics data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SapValidationValidationDetail> validationDetails;
+
+  /**
+   * Optional. The zone of the instance that the Insight data comes from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String zone;
+
+  /**
+   * Required. The project_id of the cloud project that the Insight data comes from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectId() {
+    return projectId;
+  }
+
+  /**
+   * Required. The project_id of the cloud project that the Insight data comes from.
+   * @param projectId projectId or {@code null} for none
+   */
+  public SapValidation setProjectId(java.lang.String projectId) {
+    this.projectId = projectId;
+    return this;
+  }
 
   /**
    * Optional. A list of SAP validation metrics data.
@@ -50,6 +81,23 @@ public final class SapValidation extends com.google.api.client.json.GenericJson 
    */
   public SapValidation setValidationDetails(java.util.List<SapValidationValidationDetail> validationDetails) {
     this.validationDetails = validationDetails;
+    return this;
+  }
+
+  /**
+   * Optional. The zone of the instance that the Insight data comes from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getZone() {
+    return zone;
+  }
+
+  /**
+   * Optional. The zone of the instance that the Insight data comes from.
+   * @param zone zone or {@code null} for none
+   */
+  public SapValidation setZone(java.lang.String zone) {
+    this.zone = zone;
     return this;
   }
 

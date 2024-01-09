@@ -30,6 +30,13 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapDiscoveryResource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A set of properties only applying to instance type resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SapDiscoveryResourceInstanceProperties instanceProperties;
+
+  /**
    * Optional. A list of resource URIs related to this resource.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. A set of properties only applying to instance type resources.
+   * @return value or {@code null} for none
+   */
+  public SapDiscoveryResourceInstanceProperties getInstanceProperties() {
+    return instanceProperties;
+  }
+
+  /**
+   * Optional. A set of properties only applying to instance type resources.
+   * @param instanceProperties instanceProperties or {@code null} for none
+   */
+  public SapDiscoveryResource setInstanceProperties(SapDiscoveryResourceInstanceProperties instanceProperties) {
+    this.instanceProperties = instanceProperties;
+    return this;
+  }
 
   /**
    * Optional. A list of resource URIs related to this resource.

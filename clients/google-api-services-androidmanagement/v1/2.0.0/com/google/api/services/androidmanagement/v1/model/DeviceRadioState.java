@@ -45,6 +45,13 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   private java.lang.String cellularTwoGState;
 
   /**
+   * The minimum required security level of Wi-Fi networks that the device can connect to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minimumWifiSecurityLevel;
+
+  /**
    * Controls the state of the ultra wideband setting and whether the user can toggle it on or off.
    * The value may be {@code null}.
    */
@@ -89,6 +96,23 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
    */
   public DeviceRadioState setCellularTwoGState(java.lang.String cellularTwoGState) {
     this.cellularTwoGState = cellularTwoGState;
+    return this;
+  }
+
+  /**
+   * The minimum required security level of Wi-Fi networks that the device can connect to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinimumWifiSecurityLevel() {
+    return minimumWifiSecurityLevel;
+  }
+
+  /**
+   * The minimum required security level of Wi-Fi networks that the device can connect to.
+   * @param minimumWifiSecurityLevel minimumWifiSecurityLevel or {@code null} for none
+   */
+  public DeviceRadioState setMinimumWifiSecurityLevel(java.lang.String minimumWifiSecurityLevel) {
+    this.minimumWifiSecurityLevel = minimumWifiSecurityLevel;
     return this;
   }
 

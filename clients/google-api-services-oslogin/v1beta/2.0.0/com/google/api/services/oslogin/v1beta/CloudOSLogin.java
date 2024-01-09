@@ -486,6 +486,29 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /**
+       * Optional. The regions to which to assert that the key was written. If unspecified, defaults
+       * to all regions. Regions are listed at https://cloud.google.com/about/locations#region.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> regions;
+
+      /** Optional. The regions to which to assert that the key was written. If unspecified, defaults to all
+     regions. Regions are listed at https://cloud.google.com/about/locations#region.
+       */
+      public java.util.List<java.lang.String> getRegions() {
+        return regions;
+      }
+
+      /**
+       * Optional. The regions to which to assert that the key was written. If unspecified, defaults
+       * to all regions. Regions are listed at https://cloud.google.com/about/locations#region.
+       */
+      public ImportSshPublicKey setRegions(java.util.List<java.lang.String> regions) {
+        this.regions = regions;
+        return this;
+      }
+
       /** The view configures whether to retrieve security keys information. */
       @com.google.api.client.util.Key
       private java.lang.String view;

@@ -17,7 +17,7 @@
 package com.google.api.services.cloudbilling.v1beta.model;
 
 /**
- * Specify VM to VM egress.
+ * Specify VM to VM data transfer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:

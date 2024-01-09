@@ -17,7 +17,7 @@
 package com.google.api.services.cloudbilling.v1beta.model;
 
 /**
- * Specifies usage for Cloud CDN egress.
+ * Specifies usage for Cloud CDN Data Transfer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:
@@ -30,22 +30,23 @@ package com.google.api.services.cloudbilling.v1beta.model;
 public final class CloudCdnEgressWorkload extends com.google.api.client.json.GenericJson {
 
   /**
-   * The destination for the cache egress charges.
+   * The destination for the cache data transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cacheEgressDestination;
 
   /**
-   * Cache egress usage. The rate of data cache egressed in the destination. For example : units
-   * such as "GiBy/s" or "TBy/mo".
+   * Cache data transfer usage. The rate of data cache transferred to the destination. Use units
+   * such as GiBy/s or TiBy/mo, based on [The Unified Code for Units of
+   * Measure](https://ucum.org/ucum.html) standard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Usage cacheEgressRate;
 
   /**
-   * The destination for the cache egress charges.
+   * The destination for the cache data transfer.
    * @return value or {@code null} for none
    */
   public java.lang.String getCacheEgressDestination() {
@@ -53,7 +54,7 @@ public final class CloudCdnEgressWorkload extends com.google.api.client.json.Gen
   }
 
   /**
-   * The destination for the cache egress charges.
+   * The destination for the cache data transfer.
    * @param cacheEgressDestination cacheEgressDestination or {@code null} for none
    */
   public CloudCdnEgressWorkload setCacheEgressDestination(java.lang.String cacheEgressDestination) {
@@ -62,8 +63,9 @@ public final class CloudCdnEgressWorkload extends com.google.api.client.json.Gen
   }
 
   /**
-   * Cache egress usage. The rate of data cache egressed in the destination. For example : units
-   * such as "GiBy/s" or "TBy/mo".
+   * Cache data transfer usage. The rate of data cache transferred to the destination. Use units
+   * such as GiBy/s or TiBy/mo, based on [The Unified Code for Units of
+   * Measure](https://ucum.org/ucum.html) standard.
    * @return value or {@code null} for none
    */
   public Usage getCacheEgressRate() {
@@ -71,8 +73,9 @@ public final class CloudCdnEgressWorkload extends com.google.api.client.json.Gen
   }
 
   /**
-   * Cache egress usage. The rate of data cache egressed in the destination. For example : units
-   * such as "GiBy/s" or "TBy/mo".
+   * Cache data transfer usage. The rate of data cache transferred to the destination. Use units
+   * such as GiBy/s or TiBy/mo, based on [The Unified Code for Units of
+   * Measure](https://ucum.org/ucum.html) standard.
    * @param cacheEgressRate cacheEgressRate or {@code null} for none
    */
   public CloudCdnEgressWorkload setCacheEgressRate(Usage cacheEgressRate) {

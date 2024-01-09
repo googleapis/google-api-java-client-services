@@ -17,10 +17,10 @@
 package com.google.api.services.cloudbilling.v1beta.model;
 
 /**
- * Specification of a network type. Network egress within Google Cloud applies when you move or copy
- * data from one Cloud Storage bucket to another or when another Google Cloud service accesses data
- * in your Cloud Storage bucket.This includes the network egress within Google Cloud and the general
- * network usage.
+ * Specification of a network type. Network data transfer within Google Cloud applies when you move
+ * or copy data from one Cloud Storage bucket to another or when another Google Cloud service
+ * accesses data in your Cloud Storage bucket.This includes the network data transfer within Google
+ * Cloud and the general network usage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:
@@ -40,9 +40,10 @@ public final class CloudStorageEgressWorkload extends com.google.api.client.json
   private java.lang.String destinationContinent;
 
   /**
-   * Egress usage rate. This usage applies when you move or copy data from one Cloud Storage bucket
-   * to another or when another Google Cloud service accesses data in your Cloud Storage bucket.
-   * Expected units such as "GiBy/s, By/s, ..."
+   * Data transfer usage rate. This usage applies when you move or copy data from one Cloud Storage
+   * bucket to another or when another Google Cloud service accesses data in your Cloud Storage
+   * bucket. The expected units are GiBy/s, By/s, and so on, based on [The Unified Code for Units of
+   * Measure](https://ucum.org/ucum.html) standard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +74,10 @@ public final class CloudStorageEgressWorkload extends com.google.api.client.json
   }
 
   /**
-   * Egress usage rate. This usage applies when you move or copy data from one Cloud Storage bucket
-   * to another or when another Google Cloud service accesses data in your Cloud Storage bucket.
-   * Expected units such as "GiBy/s, By/s, ..."
+   * Data transfer usage rate. This usage applies when you move or copy data from one Cloud Storage
+   * bucket to another or when another Google Cloud service accesses data in your Cloud Storage
+   * bucket. The expected units are GiBy/s, By/s, and so on, based on [The Unified Code for Units of
+   * Measure](https://ucum.org/ucum.html) standard.
    * @return value or {@code null} for none
    */
   public Usage getEgressRate() {
@@ -83,9 +85,10 @@ public final class CloudStorageEgressWorkload extends com.google.api.client.json
   }
 
   /**
-   * Egress usage rate. This usage applies when you move or copy data from one Cloud Storage bucket
-   * to another or when another Google Cloud service accesses data in your Cloud Storage bucket.
-   * Expected units such as "GiBy/s, By/s, ..."
+   * Data transfer usage rate. This usage applies when you move or copy data from one Cloud Storage
+   * bucket to another or when another Google Cloud service accesses data in your Cloud Storage
+   * bucket. The expected units are GiBy/s, By/s, and so on, based on [The Unified Code for Units of
+   * Measure](https://ucum.org/ucum.html) standard.
    * @param egressRate egressRate or {@code null} for none
    */
   public CloudStorageEgressWorkload setEgressRate(Usage egressRate) {

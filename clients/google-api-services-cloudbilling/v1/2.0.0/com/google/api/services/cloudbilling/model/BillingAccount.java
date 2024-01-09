@@ -59,7 +59,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   /**
    * Output only. True if the billing account is open, and will therefore be charged for any usage
    * on associated projects. False if the billing account is closed, and therefore projects
-   * associated with it will be unable to use paid services.
+   * associated with it are unable to use paid services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   /**
    * Output only. The billing account's parent resource identifier. Use the `MoveBillingAccount`
    * method to update the account's parent resource if it is a organization. Format: -
-   * organizations/{organization_id}, for example: organizations/12345678 -
-   * billingAccounts/{billing_account_id}, for example: `billingAccounts/012345-567890-ABCDEF`
+   * `organizations/{organization_id}`, for example, `organizations/12345678` -
+   * `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   /**
    * Output only. True if the billing account is open, and will therefore be charged for any usage
    * on associated projects. False if the billing account is closed, and therefore projects
-   * associated with it will be unable to use paid services.
+   * associated with it are unable to use paid services.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOpen() {
@@ -149,7 +149,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   /**
    * Output only. True if the billing account is open, and will therefore be charged for any usage
    * on associated projects. False if the billing account is closed, and therefore projects
-   * associated with it will be unable to use paid services.
+   * associated with it are unable to use paid services.
    * @param open open or {@code null} for none
    */
   public BillingAccount setOpen(java.lang.Boolean open) {
@@ -160,8 +160,8 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   /**
    * Output only. The billing account's parent resource identifier. Use the `MoveBillingAccount`
    * method to update the account's parent resource if it is a organization. Format: -
-   * organizations/{organization_id}, for example: organizations/12345678 -
-   * billingAccounts/{billing_account_id}, for example: `billingAccounts/012345-567890-ABCDEF`
+   * `organizations/{organization_id}`, for example, `organizations/12345678` -
+   * `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -171,8 +171,8 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   /**
    * Output only. The billing account's parent resource identifier. Use the `MoveBillingAccount`
    * method to update the account's parent resource if it is a organization. Format: -
-   * organizations/{organization_id}, for example: organizations/12345678 -
-   * billingAccounts/{billing_account_id}, for example: `billingAccounts/012345-567890-ABCDEF`
+   * `organizations/{organization_id}`, for example, `organizations/12345678` -
+   * `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
    * @param parent parent or {@code null} for none
    */
   public BillingAccount setParent(java.lang.String parent) {

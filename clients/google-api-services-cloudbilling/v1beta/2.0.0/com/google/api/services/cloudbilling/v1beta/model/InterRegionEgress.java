@@ -17,7 +17,7 @@
 package com.google.api.services.cloudbilling.v1beta.model;
 
 /**
- * Egress traffic between two regions.
+ * Data transfer between two regions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:
@@ -30,28 +30,29 @@ package com.google.api.services.cloudbilling.v1beta.model;
 public final class InterRegionEgress extends com.google.api.client.json.GenericJson {
 
   /**
-   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the egress data goes to.
+   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the data is transferred to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationRegion;
 
   /**
-   * VM to VM egress usage. Expected units such as "GiBy/s, By/s, etc."
+   * VM to VM data transfer usage. The expected units such are GiBy/s, By/s, and so on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Usage egressRate;
 
   /**
-   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the egress data comes from.
+   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the data is transferred
+   * from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceRegion;
 
   /**
-   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the egress data goes to.
+   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the data is transferred to.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationRegion() {
@@ -59,7 +60,7 @@ public final class InterRegionEgress extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the egress data goes to.
+   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the data is transferred to.
    * @param destinationRegion destinationRegion or {@code null} for none
    */
   public InterRegionEgress setDestinationRegion(java.lang.String destinationRegion) {
@@ -68,7 +69,7 @@ public final class InterRegionEgress extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * VM to VM egress usage. Expected units such as "GiBy/s, By/s, etc."
+   * VM to VM data transfer usage. The expected units such are GiBy/s, By/s, and so on.
    * @return value or {@code null} for none
    */
   public Usage getEgressRate() {
@@ -76,7 +77,7 @@ public final class InterRegionEgress extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * VM to VM egress usage. Expected units such as "GiBy/s, By/s, etc."
+   * VM to VM data transfer usage. The expected units such are GiBy/s, By/s, and so on.
    * @param egressRate egressRate or {@code null} for none
    */
   public InterRegionEgress setEgressRate(Usage egressRate) {
@@ -85,7 +86,8 @@ public final class InterRegionEgress extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the egress data comes from.
+   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the data is transferred
+   * from.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceRegion() {
@@ -93,7 +95,8 @@ public final class InterRegionEgress extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the egress data comes from.
+   * Which [region](https://cloud.google.com/compute/docs/regions-zones) the data is transferred
+   * from.
    * @param sourceRegion sourceRegion or {@code null} for none
    */
   public InterRegionEgress setSourceRegion(java.lang.String sourceRegion) {

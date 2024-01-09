@@ -76,7 +76,7 @@ public final class GooglePlayDeveloperReportingV1alpha1SlowStartRateMetricSet ex
   private GooglePlayDeveloperReportingV1alpha1FreshnessInfo freshnessInfo;
 
   /**
-   * The resource name. Format: apps/{app}/slowStartRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/slowStartRateMetricSet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class GooglePlayDeveloperReportingV1alpha1SlowStartRateMetricSet ex
   }
 
   /**
-   * The resource name. Format: apps/{app}/slowStartRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/slowStartRateMetricSet
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,7 +108,7 @@ public final class GooglePlayDeveloperReportingV1alpha1SlowStartRateMetricSet ex
   }
 
   /**
-   * The resource name. Format: apps/{app}/slowStartRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/slowStartRateMetricSet
    * @param name name or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1SlowStartRateMetricSet setName(java.lang.String name) {

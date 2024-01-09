@@ -39,7 +39,7 @@ public final class GooglePlayDeveloperReportingV1alpha1App extends com.google.ap
   private java.lang.String displayName;
 
   /**
-   * The resource name. Format: apps/{app}
+   * Identifier. The resource name. Format: apps/{app}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class GooglePlayDeveloperReportingV1alpha1App extends com.google.ap
   }
 
   /**
-   * The resource name. Format: apps/{app}
+   * Identifier. The resource name. Format: apps/{app}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -80,7 +80,7 @@ public final class GooglePlayDeveloperReportingV1alpha1App extends com.google.ap
   }
 
   /**
-   * The resource name. Format: apps/{app}
+   * Identifier. The resource name. Format: apps/{app}
    * @param name name or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1App setName(java.lang.String name) {

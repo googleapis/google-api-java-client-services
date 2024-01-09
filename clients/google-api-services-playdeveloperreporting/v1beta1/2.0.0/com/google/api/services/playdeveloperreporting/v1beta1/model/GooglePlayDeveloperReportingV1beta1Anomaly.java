@@ -60,7 +60,7 @@ public final class GooglePlayDeveloperReportingV1beta1Anomaly extends com.google
   private java.lang.String metricSet;
 
   /**
-   * Name of the anomaly. Format: apps/{app}/anomalies/{anomaly}
+   * Identifier. Name of the anomaly. Format: apps/{app}/anomalies/{anomaly}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +125,7 @@ public final class GooglePlayDeveloperReportingV1beta1Anomaly extends com.google
   }
 
   /**
-   * Name of the anomaly. Format: apps/{app}/anomalies/{anomaly}
+   * Identifier. Name of the anomaly. Format: apps/{app}/anomalies/{anomaly}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -133,7 +133,7 @@ public final class GooglePlayDeveloperReportingV1beta1Anomaly extends com.google
   }
 
   /**
-   * Name of the anomaly. Format: apps/{app}/anomalies/{anomaly}
+   * Identifier. Name of the anomaly. Format: apps/{app}/anomalies/{anomaly}
    * @param name name or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1Anomaly setName(java.lang.String name) {

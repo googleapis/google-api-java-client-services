@@ -76,7 +76,7 @@ public final class GooglePlayDeveloperReportingV1alpha1ExcessiveWakeupRateMetric
   private GooglePlayDeveloperReportingV1alpha1FreshnessInfo freshnessInfo;
 
   /**
-   * The resource name. Format: apps/{app}/excessiveWakeupRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/excessiveWakeupRateMetricSet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class GooglePlayDeveloperReportingV1alpha1ExcessiveWakeupRateMetric
   }
 
   /**
-   * The resource name. Format: apps/{app}/excessiveWakeupRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/excessiveWakeupRateMetricSet
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,7 +108,7 @@ public final class GooglePlayDeveloperReportingV1alpha1ExcessiveWakeupRateMetric
   }
 
   /**
-   * The resource name. Format: apps/{app}/excessiveWakeupRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/excessiveWakeupRateMetricSet
    * @param name name or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1ExcessiveWakeupRateMetricSet setName(java.lang.String name) {

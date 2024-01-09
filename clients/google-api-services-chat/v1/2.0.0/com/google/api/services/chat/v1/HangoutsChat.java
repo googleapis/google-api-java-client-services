@@ -1245,50 +1245,37 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. A query filter. Requires [user
-       * authentication](https://developers.google.com/chat/api/guides/auth/users). You can filter
-       * spaces by the space type ([`space_type`](https://developers.google.com/chat/api/reference/r
-       * est/v1/spaces#spacetype)). To filter by space type, you must specify valid enum value, such
-       * as `SPACE` or `GROUP_CHAT` (the `space_type` can't be `SPACE_TYPE_UNSPECIFIED`). To query
-       * for multiple space types, use the `OR` operator. For example, the following queries are
-       * valid: ``` space_type = "SPACE" spaceType = "GROUP_CHAT" OR spaceType = "DIRECT_MESSAGE"
-       * ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT` error. With [app
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), this
-       * field is ignored and the query always returns all spaces. But the Chat API still validates
-       * the query syntax, so invalid queries are still rejected.
+       * Optional. A query filter. You can filter spaces by the space type ([`space_type`](https://d
+       * evelopers.google.com/chat/api/reference/rest/v1/spaces#spacetype)). To filter by space
+       * type, you must specify valid enum value, such as `SPACE` or `GROUP_CHAT` (the `space_type`
+       * can't be `SPACE_TYPE_UNSPECIFIED`). To query for multiple space types, use the `OR`
+       * operator. For example, the following queries are valid: ``` space_type = "SPACE" spaceType
+       * = "GROUP_CHAT" OR spaceType = "DIRECT_MESSAGE" ``` Invalid queries are rejected by the
+       * server with an `INVALID_ARGUMENT` error.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Optional. A query filter. Requires [user
-     authentication](https://developers.google.com/chat/api/guides/auth/users). You can filter spaces by
-     the space type
+      /** Optional. A query filter. You can filter spaces by the space type
      ([`space_type`](https://developers.google.com/chat/api/reference/rest/v1/spaces#spacetype)). To
      filter by space type, you must specify valid enum value, such as `SPACE` or `GROUP_CHAT` (the
      `space_type` can't be `SPACE_TYPE_UNSPECIFIED`). To query for multiple space types, use the `OR`
      operator. For example, the following queries are valid: ``` space_type = "SPACE" spaceType =
      "GROUP_CHAT" OR spaceType = "DIRECT_MESSAGE" ``` Invalid queries are rejected by the server with an
-     `INVALID_ARGUMENT` error. With [app
-     authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), this field is
-     ignored and the query always returns all spaces. But the Chat API still validates the query syntax,
-     so invalid queries are still rejected.
+     `INVALID_ARGUMENT` error.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Optional. A query filter. Requires [user
-       * authentication](https://developers.google.com/chat/api/guides/auth/users). You can filter
-       * spaces by the space type ([`space_type`](https://developers.google.com/chat/api/reference/r
-       * est/v1/spaces#spacetype)). To filter by space type, you must specify valid enum value, such
-       * as `SPACE` or `GROUP_CHAT` (the `space_type` can't be `SPACE_TYPE_UNSPECIFIED`). To query
-       * for multiple space types, use the `OR` operator. For example, the following queries are
-       * valid: ``` space_type = "SPACE" spaceType = "GROUP_CHAT" OR spaceType = "DIRECT_MESSAGE"
-       * ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT` error. With [app
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), this
-       * field is ignored and the query always returns all spaces. But the Chat API still validates
-       * the query syntax, so invalid queries are still rejected.
+       * Optional. A query filter. You can filter spaces by the space type ([`space_type`](https://d
+       * evelopers.google.com/chat/api/reference/rest/v1/spaces#spacetype)). To filter by space
+       * type, you must specify valid enum value, such as `SPACE` or `GROUP_CHAT` (the `space_type`
+       * can't be `SPACE_TYPE_UNSPECIFIED`). To query for multiple space types, use the `OR`
+       * operator. For example, the following queries are valid: ``` space_type = "SPACE" spaceType
+       * = "GROUP_CHAT" OR spaceType = "DIRECT_MESSAGE" ``` Invalid queries are rejected by the
+       * server with an `INVALID_ARGUMENT` error.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

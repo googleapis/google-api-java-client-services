@@ -20,10 +20,11 @@ package com.google.api.services.chat.v1.model;
  * A card interface displayed in a Google Chat message or Google Workspace Add-on. Cards support a
  * defined layout, interactive UI elements like buttons, and rich media like images. Use cards to
  * present detailed information, gather information from users, and guide users to take a next step.
- * To learn how to build cards, see the following documentation: * For Google Chat apps, see [Design
- * dynamic, interactive, and consistent UIs with cards](https://developers.google.com/chat/ui). *
- * For Google Workspace Add-ons, see [Card-based interfaces](https://developers.google.com/apps-
- * script/add-ons/concepts/cards). **Example: Card message for a Google Chat app** ![Example contact
+ * [Card builder](https://addons.gsuite.google.com/uikit/builder) To learn how to build cards, see
+ * the following documentation: * For Google Chat apps, see [Design dynamic, interactive, and
+ * consistent UIs with cards](https://developers.google.com/chat/ui). * For Google Workspace Add-
+ * ons, see [Card-based interfaces](https://developers.google.com/apps-script/add-
+ * ons/concepts/cards). **Example: Card message for a Google Chat app** ![Example contact
  * card](https://developers.google.com/chat/images/card_api_reference.png) To create the sample card
  * message in Google Chat, use the following JSON: ``` { "cardsV2": [ { "cardId": "unique-card-id",
  * "card": { "header": { "title": "Sasha", "subtitle": "Software Engineer", "imageUrl":

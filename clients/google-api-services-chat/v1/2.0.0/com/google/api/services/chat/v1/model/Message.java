@@ -103,7 +103,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * apps can create cards. If your Chat app [authenticates as a
    * user](https://developers.google.com/chat/api/guides/auth/users), the messages can't contain
    * cards. To learn about cards and how to create them, see [Design dynamic, interactive, and
-   * consistent UIs with cards](https://developers.google.com/chat/ui).
+   * consistent UIs with cards](https://developers.google.com/chat/ui). [Card
+   * builder](https://addons.gsuite.google.com/uikit/builder)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,6 +219,19 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Immutable. Input for creating a message, otherwise output only. The user that can view the
+   * message. When set, the message is private and only visible to the specified user and the Chat
+   * app. Link previews and attachments aren't supported for private messages. Only Chat apps can
+   * send private messages. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users) to send a message, the message
+   * can't be private and must omit this field. For details, see [Send private messages to Google
+   * Chat users](https://developers.google.com/chat/api/guides/v1/messages/private).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private User privateMessageViewer;
 
   /**
    * Output only. Information about a message that's quoted by a Google Chat user in a space. Google
@@ -396,7 +410,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * apps can create cards. If your Chat app [authenticates as a
    * user](https://developers.google.com/chat/api/guides/auth/users), the messages can't contain
    * cards. To learn about cards and how to create them, see [Design dynamic, interactive, and
-   * consistent UIs with cards](https://developers.google.com/chat/ui).
+   * consistent UIs with cards](https://developers.google.com/chat/ui). [Card
+   * builder](https://addons.gsuite.google.com/uikit/builder)
    * @return value or {@code null} for none
    */
   public java.util.List<CardWithId> getCardsV2() {
@@ -408,7 +423,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * apps can create cards. If your Chat app [authenticates as a
    * user](https://developers.google.com/chat/api/guides/auth/users), the messages can't contain
    * cards. To learn about cards and how to create them, see [Design dynamic, interactive, and
-   * consistent UIs with cards](https://developers.google.com/chat/ui).
+   * consistent UIs with cards](https://developers.google.com/chat/ui). [Card
+   * builder](https://addons.gsuite.google.com/uikit/builder)
    * @param cardsV2 cardsV2 or {@code null} for none
    */
   public Message setCardsV2(java.util.List<CardWithId> cardsV2) {
@@ -639,6 +655,35 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Immutable. Input for creating a message, otherwise output only. The user that can view the
+   * message. When set, the message is private and only visible to the specified user and the Chat
+   * app. Link previews and attachments aren't supported for private messages. Only Chat apps can
+   * send private messages. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users) to send a message, the message
+   * can't be private and must omit this field. For details, see [Send private messages to Google
+   * Chat users](https://developers.google.com/chat/api/guides/v1/messages/private).
+   * @return value or {@code null} for none
+   */
+  public User getPrivateMessageViewer() {
+    return privateMessageViewer;
+  }
+
+  /**
+   * Immutable. Input for creating a message, otherwise output only. The user that can view the
+   * message. When set, the message is private and only visible to the specified user and the Chat
+   * app. Link previews and attachments aren't supported for private messages. Only Chat apps can
+   * send private messages. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users) to send a message, the message
+   * can't be private and must omit this field. For details, see [Send private messages to Google
+   * Chat users](https://developers.google.com/chat/api/guides/v1/messages/private).
+   * @param privateMessageViewer privateMessageViewer or {@code null} for none
+   */
+  public Message setPrivateMessageViewer(User privateMessageViewer) {
+    this.privateMessageViewer = privateMessageViewer;
     return this;
   }
 

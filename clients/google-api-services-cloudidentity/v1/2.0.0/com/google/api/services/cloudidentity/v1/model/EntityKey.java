@@ -34,8 +34,10 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the entity. For Google-managed entities, the `id` should be the email address of an
-   * existing group or user. For external-identity-mapped entities, the `id` must be a string
-   * conforming to the Identity Source's requirements. Must be unique within a `namespace`.
+   * existing group or user. Email addresses need to adhere to [name guidelines for users and
+   * groups](https://support.google.com/a/answer/9193374). For external-identity-mapped entities,
+   * the `id` must be a string conforming to the Identity Source's requirements. Must be unique
+   * within a `namespace`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +55,10 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the entity. For Google-managed entities, the `id` should be the email address of an
-   * existing group or user. For external-identity-mapped entities, the `id` must be a string
-   * conforming to the Identity Source's requirements. Must be unique within a `namespace`.
+   * existing group or user. Email addresses need to adhere to [name guidelines for users and
+   * groups](https://support.google.com/a/answer/9193374). For external-identity-mapped entities,
+   * the `id` must be a string conforming to the Identity Source's requirements. Must be unique
+   * within a `namespace`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -63,8 +67,10 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the entity. For Google-managed entities, the `id` should be the email address of an
-   * existing group or user. For external-identity-mapped entities, the `id` must be a string
-   * conforming to the Identity Source's requirements. Must be unique within a `namespace`.
+   * existing group or user. Email addresses need to adhere to [name guidelines for users and
+   * groups](https://support.google.com/a/answer/9193374). For external-identity-mapped entities,
+   * the `id` must be a string conforming to the Identity Source's requirements. Must be unique
+   * within a `namespace`.
    * @param id id or {@code null} for none
    */
   public EntityKey setId(java.lang.String id) {

@@ -5228,15 +5228,19 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * The ID of the entity. For Google-managed entities, the `id` should be the email address of
-       * an existing group or user. For external-identity-mapped entities, the `id` must be a string
-       * conforming to the Identity Source's requirements. Must be unique within a `namespace`.
+       * an existing group or user. Email addresses need to adhere to [name guidelines for users and
+       * groups](https://support.google.com/a/answer/9193374). For external-identity-mapped
+       * entities, the `id` must be a string conforming to the Identity Source's requirements. Must
+       * be unique within a `namespace`.
        */
       @com.google.api.client.util.Key("groupKey.id")
       private java.lang.String groupKeyId;
 
       /** The ID of the entity. For Google-managed entities, the `id` should be the email address of an
-     existing group or user. For external-identity-mapped entities, the `id` must be a string conforming
-     to the Identity Source's requirements. Must be unique within a `namespace`.
+     existing group or user. Email addresses need to adhere to [name guidelines for users and
+     groups](https://support.google.com/a/answer/9193374). For external-identity-mapped entities, the
+     `id` must be a string conforming to the Identity Source's requirements. Must be unique within a
+     `namespace`.
        */
       public java.lang.String getGroupKeyId() {
         return groupKeyId;
@@ -5244,8 +5248,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * The ID of the entity. For Google-managed entities, the `id` should be the email address of
-       * an existing group or user. For external-identity-mapped entities, the `id` must be a string
-       * conforming to the Identity Source's requirements. Must be unique within a `namespace`.
+       * an existing group or user. Email addresses need to adhere to [name guidelines for users and
+       * groups](https://support.google.com/a/answer/9193374). For external-identity-mapped
+       * entities, the `id` must be a string conforming to the Identity Source's requirements. Must
+       * be unique within a `namespace`.
        */
       public Lookup setGroupKeyId(java.lang.String groupKeyId) {
         this.groupKeyId = groupKeyId;
@@ -5611,11 +5617,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * (https://support.google.com/cloudidentity/answer/10070793) * Can contain optional inclusion
        * operators on `labels` such as `'cloudidentity.googleapis.com/groups.discussion_forum' in
        * labels`). * Can contain an optional equality operator on `domain_name`. e.g. `domain_name
-       * == 'abc.com'` * Can contain optional `startsWith/contains/equality` operators on
-       * `group_key`, e.g. `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key ==
-       * 'dev@abc.com'` * Can contain optional `startsWith/contains/equality` operators on
-       * `display_name`, such as `display_name.startsWith('dev')` , `display_name.contains('dev')`,
-       * `display_name == 'dev'`
+       * == 'examplepetstore.com'` * Can contain optional `startsWith/contains/equality` operators
+       * on `group_key`, e.g. `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key
+       * == 'dev@examplepetstore.com'` * Can contain optional `startsWith/contains/equality`
+       * operators on `display_name`, such as `display_name.startsWith('dev')` ,
+       * `display_name.contains('dev')`, `display_name == 'dev'`
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -5626,10 +5632,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      'C046psxkn'). [Find your customer ID.] (https://support.google.com/cloudidentity/answer/10070793) *
      Can contain optional inclusion operators on `labels` such as
      `'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). * Can contain an optional
-     equality operator on `domain_name`. e.g. `domain_name == 'abc.com'` * Can contain optional
-     `startsWith/contains/equality` operators on `group_key`, e.g. `group_key.startsWith('dev')`,
-     `group_key.contains('dev'), group_key == 'dev@abc.com'` * Can contain optional
-     `startsWith/contains/equality` operators on `display_name`, such as
+     equality operator on `domain_name`. e.g. `domain_name == 'examplepetstore.com'` * Can contain
+     optional `startsWith/contains/equality` operators on `group_key`, e.g.
+     `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key == 'dev@examplepetstore.com'`
+     * Can contain optional `startsWith/contains/equality` operators on `display_name`, such as
      `display_name.startsWith('dev')` , `display_name.contains('dev')`, `display_name == 'dev'`
        */
       public java.lang.String getQuery() {
@@ -5644,11 +5650,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * (https://support.google.com/cloudidentity/answer/10070793) * Can contain optional inclusion
        * operators on `labels` such as `'cloudidentity.googleapis.com/groups.discussion_forum' in
        * labels`). * Can contain an optional equality operator on `domain_name`. e.g. `domain_name
-       * == 'abc.com'` * Can contain optional `startsWith/contains/equality` operators on
-       * `group_key`, e.g. `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key ==
-       * 'dev@abc.com'` * Can contain optional `startsWith/contains/equality` operators on
-       * `display_name`, such as `display_name.startsWith('dev')` , `display_name.contains('dev')`,
-       * `display_name == 'dev'`
+       * == 'examplepetstore.com'` * Can contain optional `startsWith/contains/equality` operators
+       * on `group_key`, e.g. `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key
+       * == 'dev@examplepetstore.com'` * Can contain optional `startsWith/contains/equality`
+       * operators on `display_name`, such as `display_name.startsWith('dev')` ,
+       * `display_name.contains('dev')`, `display_name == 'dev'`
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
@@ -7051,16 +7057,19 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * The ID of the entity. For Google-managed entities, the `id` should be the email address
-         * of an existing group or user. For external-identity-mapped entities, the `id` must be a
-         * string conforming to the Identity Source's requirements. Must be unique within a
-         * `namespace`.
+         * of an existing group or user. Email addresses need to adhere to [name guidelines for
+         * users and groups](https://support.google.com/a/answer/9193374). For external-identity-
+         * mapped entities, the `id` must be a string conforming to the Identity Source's
+         * requirements. Must be unique within a `namespace`.
          */
         @com.google.api.client.util.Key("memberKey.id")
         private java.lang.String memberKeyId;
 
         /** The ID of the entity. For Google-managed entities, the `id` should be the email address of an
-       existing group or user. For external-identity-mapped entities, the `id` must be a string conforming
-       to the Identity Source's requirements. Must be unique within a `namespace`.
+       existing group or user. Email addresses need to adhere to [name guidelines for users and
+       groups](https://support.google.com/a/answer/9193374). For external-identity-mapped entities, the
+       `id` must be a string conforming to the Identity Source's requirements. Must be unique within a
+       `namespace`.
          */
         public java.lang.String getMemberKeyId() {
           return memberKeyId;
@@ -7068,9 +7077,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * The ID of the entity. For Google-managed entities, the `id` should be the email address
-         * of an existing group or user. For external-identity-mapped entities, the `id` must be a
-         * string conforming to the Identity Source's requirements. Must be unique within a
-         * `namespace`.
+         * of an existing group or user. Email addresses need to adhere to [name guidelines for
+         * users and groups](https://support.google.com/a/answer/9193374). For external-identity-
+         * mapped entities, the `id` must be a string conforming to the Identity Source's
+         * requirements. Must be unique within a `namespace`.
          */
         public Lookup setMemberKeyId(java.lang.String memberKeyId) {
           this.memberKeyId = memberKeyId;

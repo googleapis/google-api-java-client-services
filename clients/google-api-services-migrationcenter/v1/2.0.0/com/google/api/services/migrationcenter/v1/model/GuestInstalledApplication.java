@@ -44,6 +44,13 @@ public final class GuestInstalledApplication extends com.google.api.client.json.
   private String installTime;
 
   /**
+   * License strings associated with the installed application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> licenses;
+
+  /**
    * Source path.
    * The value may be {@code null}.
    */
@@ -95,6 +102,23 @@ public final class GuestInstalledApplication extends com.google.api.client.json.
    */
   public GuestInstalledApplication setInstallTime(String installTime) {
     this.installTime = installTime;
+    return this;
+  }
+
+  /**
+   * License strings associated with the installed application.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLicenses() {
+    return licenses;
+  }
+
+  /**
+   * License strings associated with the installed application.
+   * @param licenses licenses or {@code null} for none
+   */
+  public GuestInstalledApplication setLicenses(java.util.List<java.lang.String> licenses) {
+    this.licenses = licenses;
     return this;
   }
 

@@ -31,14 +31,18 @@ package com.google.api.services.binaryauthorization.v1.model;
 public final class AttestationSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The IDs of the GCP projects storing the SLSA attestations as Container Analysis Occurrences.
+   * The IDs of the GCP projects storing the SLSA attestations as Container Analysis Occurrences, in
+   * the format `projects/[PROJECT_ID]`. Maximum number of `container_analysis_attestation_projects`
+   * allowed in each `AttestationSource` is 10.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> containerAnalysisAttestationProjects;
 
   /**
-   * The IDs of the GCP projects storing the SLSA attestations as Container Analysis Occurrences.
+   * The IDs of the GCP projects storing the SLSA attestations as Container Analysis Occurrences, in
+   * the format `projects/[PROJECT_ID]`. Maximum number of `container_analysis_attestation_projects`
+   * allowed in each `AttestationSource` is 10.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContainerAnalysisAttestationProjects() {
@@ -46,7 +50,9 @@ public final class AttestationSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The IDs of the GCP projects storing the SLSA attestations as Container Analysis Occurrences.
+   * The IDs of the GCP projects storing the SLSA attestations as Container Analysis Occurrences, in
+   * the format `projects/[PROJECT_ID]`. Maximum number of `container_analysis_attestation_projects`
+   * allowed in each `AttestationSource` is 10.
    * @param containerAnalysisAttestationProjects containerAnalysisAttestationProjects or {@code null} for none
    */
   public AttestationSource setContainerAnalysisAttestationProjects(java.util.List<java.lang.String> containerAnalysisAttestationProjects) {

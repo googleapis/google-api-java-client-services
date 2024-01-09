@@ -52,6 +52,12 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends
   private java.lang.String summaryText;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata summaryWithMetadata;
+
+  /**
    * A collection of Safety Attribute categories and their associated confidence scores.
    * @return value or {@code null} for none
    */
@@ -101,6 +107,21 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponseSummary setSummaryText(java.lang.String summaryText) {
     this.summaryText = summaryText;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata getSummaryWithMetadata() {
+    return summaryWithMetadata;
+  }
+
+  /**
+   * @param summaryWithMetadata summaryWithMetadata or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseSummary setSummaryWithMetadata(GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata summaryWithMetadata) {
+    this.summaryWithMetadata = summaryWithMetadata;
     return this;
   }
 

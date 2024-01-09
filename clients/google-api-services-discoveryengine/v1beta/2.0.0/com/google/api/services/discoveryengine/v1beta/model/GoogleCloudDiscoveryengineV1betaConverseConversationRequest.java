@@ -38,6 +38,22 @@ public final class GoogleCloudDiscoveryengineV1betaConverseConversationRequest e
   private GoogleCloudDiscoveryengineV1betaConversation conversation;
 
   /**
+   * The filter syntax consists of an expression language for constructing a predicate from one or
+   * more fields of the documents being filtered. Filter expression is case-sensitive. This will be
+   * used to filter search results which may affect the summary response. If this field is
+   * unrecognizable, an `INVALID_ARGUMENT` is returned. Filtering in Vertex AI Search is done by
+   * mapping the LHS filter key to a key property defined in the Vertex AI Search backend -- this
+   * mapping is defined by the customer in their schema. For example a media customer might have a
+   * field 'name' in their schema. In this case the filter would look like this: filter -->
+   * name:'ANY("king kong")' For more information about filtering including syntax and filter
+   * operators, see [Filter](https://cloud.google.com/generative-ai-app-builder/docs/filter-search-
+   * metadata)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
+
+  /**
    * Required. Current user input.
    * The value may be {@code null}.
    */
@@ -99,6 +115,41 @@ public final class GoogleCloudDiscoveryengineV1betaConverseConversationRequest e
    */
   public GoogleCloudDiscoveryengineV1betaConverseConversationRequest setConversation(GoogleCloudDiscoveryengineV1betaConversation conversation) {
     this.conversation = conversation;
+    return this;
+  }
+
+  /**
+   * The filter syntax consists of an expression language for constructing a predicate from one or
+   * more fields of the documents being filtered. Filter expression is case-sensitive. This will be
+   * used to filter search results which may affect the summary response. If this field is
+   * unrecognizable, an `INVALID_ARGUMENT` is returned. Filtering in Vertex AI Search is done by
+   * mapping the LHS filter key to a key property defined in the Vertex AI Search backend -- this
+   * mapping is defined by the customer in their schema. For example a media customer might have a
+   * field 'name' in their schema. In this case the filter would look like this: filter -->
+   * name:'ANY("king kong")' For more information about filtering including syntax and filter
+   * operators, see [Filter](https://cloud.google.com/generative-ai-app-builder/docs/filter-search-
+   * metadata)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * The filter syntax consists of an expression language for constructing a predicate from one or
+   * more fields of the documents being filtered. Filter expression is case-sensitive. This will be
+   * used to filter search results which may affect the summary response. If this field is
+   * unrecognizable, an `INVALID_ARGUMENT` is returned. Filtering in Vertex AI Search is done by
+   * mapping the LHS filter key to a key property defined in the Vertex AI Search backend -- this
+   * mapping is defined by the customer in their schema. For example a media customer might have a
+   * field 'name' in their schema. In this case the filter would look like this: filter -->
+   * name:'ANY("king kong")' For more information about filtering including syntax and filter
+   * operators, see [Filter](https://cloud.google.com/generative-ai-app-builder/docs/filter-search-
+   * metadata)
+   * @param filter filter or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaConverseConversationRequest setFilter(java.lang.String filter) {
+    this.filter = filter;
     return this;
   }
 

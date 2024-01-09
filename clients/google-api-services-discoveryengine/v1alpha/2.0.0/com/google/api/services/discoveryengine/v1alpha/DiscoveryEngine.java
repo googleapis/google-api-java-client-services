@@ -767,6 +767,145 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
     public class Locations {
 
       /**
+       * Estimates the data size to be used by a customer.
+       *
+       * Create a request for the method "locations.estimateDataSize".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link EstimateDataSize#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param location Required. Full resource name of the Location, such as `projects/{project}/locations/{location}`.
+       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaEstimateDataSizeRequest}
+       * @return the request
+       */
+      public EstimateDataSize estimateDataSize(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaEstimateDataSizeRequest content) throws java.io.IOException {
+        EstimateDataSize result = new EstimateDataSize(location, content);
+        initialize(result);
+        return result;
+      }
+
+      public class EstimateDataSize extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1alpha/{+location}:estimateDataSize";
+
+        private final java.util.regex.Pattern LOCATION_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Estimates the data size to be used by a customer.
+         *
+         * Create a request for the method "locations.estimateDataSize".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link EstimateDataSize#execute()} method to invoke the remote
+         * operation. <p> {@link EstimateDataSize#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param location Required. Full resource name of the Location, such as `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaEstimateDataSizeRequest}
+         * @since 1.13
+         */
+        protected EstimateDataSize(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaEstimateDataSizeRequest content) {
+          super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+          this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public EstimateDataSize set$Xgafv(java.lang.String $Xgafv) {
+          return (EstimateDataSize) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public EstimateDataSize setAccessToken(java.lang.String accessToken) {
+          return (EstimateDataSize) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public EstimateDataSize setAlt(java.lang.String alt) {
+          return (EstimateDataSize) super.setAlt(alt);
+        }
+
+        @Override
+        public EstimateDataSize setCallback(java.lang.String callback) {
+          return (EstimateDataSize) super.setCallback(callback);
+        }
+
+        @Override
+        public EstimateDataSize setFields(java.lang.String fields) {
+          return (EstimateDataSize) super.setFields(fields);
+        }
+
+        @Override
+        public EstimateDataSize setKey(java.lang.String key) {
+          return (EstimateDataSize) super.setKey(key);
+        }
+
+        @Override
+        public EstimateDataSize setOauthToken(java.lang.String oauthToken) {
+          return (EstimateDataSize) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public EstimateDataSize setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (EstimateDataSize) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public EstimateDataSize setQuotaUser(java.lang.String quotaUser) {
+          return (EstimateDataSize) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public EstimateDataSize setUploadType(java.lang.String uploadType) {
+          return (EstimateDataSize) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public EstimateDataSize setUploadProtocol(java.lang.String uploadProtocol) {
+          return (EstimateDataSize) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Full resource name of the Location, such as
+         * `projects/{project}/locations/{location}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Required. Full resource name of the Location, such as `projects/{project}/locations/{location}`.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /**
+         * Required. Full resource name of the Location, such as
+         * `projects/{project}/locations/{location}`.
+         */
+        public EstimateDataSize setLocation(java.lang.String location) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.location = location;
+          return this;
+        }
+
+        @Override
+        public EstimateDataSize set(String parameterName, Object value) {
+          return (EstimateDataSize) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the Collections collection.
        *
        * <p>The typical use is:</p>
@@ -1965,6 +2104,159 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Gets a DocumentProcessingConfig.
+           *
+           * Create a request for the method "dataStores.getDocumentProcessingConfig".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link GetDocumentProcessingConfig#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations/
+           *        {location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingCon
+           *        fig`
+           * @return the request
+           */
+          public GetDocumentProcessingConfig getDocumentProcessingConfig(java.lang.String name) throws java.io.IOException {
+            GetDocumentProcessingConfig result = new GetDocumentProcessingConfig(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetDocumentProcessingConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+
+            /**
+             * Gets a DocumentProcessingConfig.
+             *
+             * Create a request for the method "dataStores.getDocumentProcessingConfig".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link GetDocumentProcessingConfig#execute()} method to invoke
+             * the remote operation. <p> {@link GetDocumentProcessingConfig#initialize(com.google.api.client.g
+             * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations/
+           *        {location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingCon
+           *        fig`
+             * @since 1.13
+             */
+            protected GetDocumentProcessingConfig(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetDocumentProcessingConfig set$Xgafv(java.lang.String $Xgafv) {
+              return (GetDocumentProcessingConfig) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetDocumentProcessingConfig setAccessToken(java.lang.String accessToken) {
+              return (GetDocumentProcessingConfig) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetDocumentProcessingConfig setAlt(java.lang.String alt) {
+              return (GetDocumentProcessingConfig) super.setAlt(alt);
+            }
+
+            @Override
+            public GetDocumentProcessingConfig setCallback(java.lang.String callback) {
+              return (GetDocumentProcessingConfig) super.setCallback(callback);
+            }
+
+            @Override
+            public GetDocumentProcessingConfig setFields(java.lang.String fields) {
+              return (GetDocumentProcessingConfig) super.setFields(fields);
+            }
+
+            @Override
+            public GetDocumentProcessingConfig setKey(java.lang.String key) {
+              return (GetDocumentProcessingConfig) super.setKey(key);
+            }
+
+            @Override
+            public GetDocumentProcessingConfig setOauthToken(java.lang.String oauthToken) {
+              return (GetDocumentProcessingConfig) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetDocumentProcessingConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetDocumentProcessingConfig) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetDocumentProcessingConfig setQuotaUser(java.lang.String quotaUser) {
+              return (GetDocumentProcessingConfig) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetDocumentProcessingConfig setUploadType(java.lang.String uploadType) {
+              return (GetDocumentProcessingConfig) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetDocumentProcessingConfig setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetDocumentProcessingConfig) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_num
+             * ber}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/d
+             * ocumentProcessingConfig`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations
+           /{location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingConfig`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_num
+             * ber}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/d
+             * ocumentProcessingConfig`
+             */
+            public GetDocumentProcessingConfig setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetDocumentProcessingConfig set(String parameterName, Object value) {
+              return (GetDocumentProcessingConfig) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the SiteSearchEngine.
            *
            * Create a request for the method "dataStores.getSiteSearchEngine".
@@ -2523,6 +2815,323 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Trains a custom model.
+           *
+           * Create a request for the method "dataStores.trainCustomModel".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link TrainCustomModel#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param dataStore Required. The resource name of the Data Store, such as
+           *        `projects/locations/global/collections/default_collection/dataStores/default_data_store`.
+           *        This field is used to identify the data store where to train the models.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequest}
+           * @return the request
+           */
+          public TrainCustomModel trainCustomModel(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequest content) throws java.io.IOException {
+            TrainCustomModel result = new TrainCustomModel(dataStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TrainCustomModel extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+dataStore}:trainCustomModel";
+
+            private final java.util.regex.Pattern DATA_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+            /**
+             * Trains a custom model.
+             *
+             * Create a request for the method "dataStores.trainCustomModel".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link TrainCustomModel#execute()} method to invoke the remote
+             * operation. <p> {@link TrainCustomModel#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param dataStore Required. The resource name of the Data Store, such as
+           *        `projects/locations/global/collections/default_collection/dataStores/default_data_store`.
+           *        This field is used to identify the data store where to train the models.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequest}
+             * @since 1.13
+             */
+            protected TrainCustomModel(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+              this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public TrainCustomModel set$Xgafv(java.lang.String $Xgafv) {
+              return (TrainCustomModel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TrainCustomModel setAccessToken(java.lang.String accessToken) {
+              return (TrainCustomModel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TrainCustomModel setAlt(java.lang.String alt) {
+              return (TrainCustomModel) super.setAlt(alt);
+            }
+
+            @Override
+            public TrainCustomModel setCallback(java.lang.String callback) {
+              return (TrainCustomModel) super.setCallback(callback);
+            }
+
+            @Override
+            public TrainCustomModel setFields(java.lang.String fields) {
+              return (TrainCustomModel) super.setFields(fields);
+            }
+
+            @Override
+            public TrainCustomModel setKey(java.lang.String key) {
+              return (TrainCustomModel) super.setKey(key);
+            }
+
+            @Override
+            public TrainCustomModel setOauthToken(java.lang.String oauthToken) {
+              return (TrainCustomModel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TrainCustomModel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TrainCustomModel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TrainCustomModel setQuotaUser(java.lang.String quotaUser) {
+              return (TrainCustomModel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TrainCustomModel setUploadType(java.lang.String uploadType) {
+              return (TrainCustomModel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TrainCustomModel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TrainCustomModel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Data Store, such as `projects/locations/global/col
+             * lections/default_collection/dataStores/default_data_store`. This field is used to
+             * identify the data store where to train the models.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataStore;
+
+            /** Required. The resource name of the Data Store, such as
+           `projects/locations/global/collections/default_collection/dataStores/default_data_store`. This
+           field is used to identify the data store where to train the models.
+             */
+            public java.lang.String getDataStore() {
+              return dataStore;
+            }
+
+            /**
+             * Required. The resource name of the Data Store, such as `projects/locations/global/col
+             * lections/default_collection/dataStores/default_data_store`. This field is used to
+             * identify the data store where to train the models.
+             */
+            public TrainCustomModel setDataStore(java.lang.String dataStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+              this.dataStore = dataStore;
+              return this;
+            }
+
+            @Override
+            public TrainCustomModel set(String parameterName, Object value) {
+              return (TrainCustomModel) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleon resource of
+           * DataStore. It's empty when DataStore is created. The first call to this method will set up
+           * DocumentProcessingConfig.
+           *
+           * Create a request for the method "dataStores.updateDocumentProcessingConfig".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link UpdateDocumentProcessingConfig#execute()} method to invoke
+           * the remote operation.
+           *
+           * @param name Output only. The full resource name of the Document Processing Config. Format:
+           *        `projects/locations/collections/dataStores/documentProcessingConfig`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig}
+           * @return the request
+           */
+          public UpdateDocumentProcessingConfig updateDocumentProcessingConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig content) throws java.io.IOException {
+            UpdateDocumentProcessingConfig result = new UpdateDocumentProcessingConfig(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UpdateDocumentProcessingConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+
+            /**
+             * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleon resource of
+             * DataStore. It's empty when DataStore is created. The first call to this method will set up
+             * DocumentProcessingConfig.
+             *
+             * Create a request for the method "dataStores.updateDocumentProcessingConfig".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link UpdateDocumentProcessingConfig#execute()} method to invoke
+             * the remote operation. <p> {@link UpdateDocumentProcessingConfig#initialize(com.google.api.clien
+             * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. The full resource name of the Document Processing Config. Format:
+           *        `projects/locations/collections/dataStores/documentProcessingConfig`.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig}
+             * @since 1.13
+             */
+            protected UpdateDocumentProcessingConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig content) {
+              super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+              }
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig set$Xgafv(java.lang.String $Xgafv) {
+              return (UpdateDocumentProcessingConfig) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig setAccessToken(java.lang.String accessToken) {
+              return (UpdateDocumentProcessingConfig) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig setAlt(java.lang.String alt) {
+              return (UpdateDocumentProcessingConfig) super.setAlt(alt);
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig setCallback(java.lang.String callback) {
+              return (UpdateDocumentProcessingConfig) super.setCallback(callback);
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig setFields(java.lang.String fields) {
+              return (UpdateDocumentProcessingConfig) super.setFields(fields);
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig setKey(java.lang.String key) {
+              return (UpdateDocumentProcessingConfig) super.setKey(key);
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig setOauthToken(java.lang.String oauthToken) {
+              return (UpdateDocumentProcessingConfig) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UpdateDocumentProcessingConfig) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig setQuotaUser(java.lang.String quotaUser) {
+              return (UpdateDocumentProcessingConfig) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig setUploadType(java.lang.String uploadType) {
+              return (UpdateDocumentProcessingConfig) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UpdateDocumentProcessingConfig) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. The full resource name of the Document Processing Config. Format:
+             * `projects/locations/collections/dataStores/documentProcessingConfig`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. The full resource name of the Document Processing Config. Format:
+           `projects/locations/collections/dataStores/documentProcessingConfig`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. The full resource name of the Document Processing Config. Format:
+             * `projects/locations/collections/dataStores/documentProcessingConfig`.
+             */
+            public UpdateDocumentProcessingConfig setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Indicates which fields in the provided DocumentProcessingConfig to update. The
+             * following are the only supported fields: * DocumentProcessingConfig.orc_config If not
+             * set, all supported fields are updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Indicates which fields in the provided DocumentProcessingConfig to update. The following are the
+           only supported fields: * DocumentProcessingConfig.orc_config If not set, all supported fields are
+           updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Indicates which fields in the provided DocumentProcessingConfig to update. The
+             * following are the only supported fields: * DocumentProcessingConfig.orc_config If not
+             * set, all supported fields are updated.
+             */
+            public UpdateDocumentProcessingConfig setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public UpdateDocumentProcessingConfig set(String parameterName, Object value) {
+              return (UpdateDocumentProcessingConfig) super.set(parameterName, value);
             }
           }
 
@@ -14748,6 +15357,159 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
         }
         /**
+         * Gets a DocumentProcessingConfig.
+         *
+         * Create a request for the method "dataStores.getDocumentProcessingConfig".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link GetDocumentProcessingConfig#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations/
+         *        {location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingCon
+         *        fig`
+         * @return the request
+         */
+        public GetDocumentProcessingConfig getDocumentProcessingConfig(java.lang.String name) throws java.io.IOException {
+          GetDocumentProcessingConfig result = new GetDocumentProcessingConfig(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetDocumentProcessingConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+
+          /**
+           * Gets a DocumentProcessingConfig.
+           *
+           * Create a request for the method "dataStores.getDocumentProcessingConfig".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link GetDocumentProcessingConfig#execute()} method to invoke
+           * the remote operation. <p> {@link GetDocumentProcessingConfig#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations/
+         *        {location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingCon
+         *        fig`
+           * @since 1.13
+           */
+          protected GetDocumentProcessingConfig(java.lang.String name) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetDocumentProcessingConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (GetDocumentProcessingConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetDocumentProcessingConfig setAccessToken(java.lang.String accessToken) {
+            return (GetDocumentProcessingConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetDocumentProcessingConfig setAlt(java.lang.String alt) {
+            return (GetDocumentProcessingConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public GetDocumentProcessingConfig setCallback(java.lang.String callback) {
+            return (GetDocumentProcessingConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public GetDocumentProcessingConfig setFields(java.lang.String fields) {
+            return (GetDocumentProcessingConfig) super.setFields(fields);
+          }
+
+          @Override
+          public GetDocumentProcessingConfig setKey(java.lang.String key) {
+            return (GetDocumentProcessingConfig) super.setKey(key);
+          }
+
+          @Override
+          public GetDocumentProcessingConfig setOauthToken(java.lang.String oauthToken) {
+            return (GetDocumentProcessingConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetDocumentProcessingConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetDocumentProcessingConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetDocumentProcessingConfig setQuotaUser(java.lang.String quotaUser) {
+            return (GetDocumentProcessingConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetDocumentProcessingConfig setUploadType(java.lang.String uploadType) {
+            return (GetDocumentProcessingConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetDocumentProcessingConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetDocumentProcessingConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_numbe
+           * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/docum
+           * entProcessingConfig`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations
+         /{location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingConfig`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_numbe
+           * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/docum
+           * entProcessingConfig`
+           */
+          public GetDocumentProcessingConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetDocumentProcessingConfig set(String parameterName, Object value) {
+            return (GetDocumentProcessingConfig) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the SiteSearchEngine.
          *
          * Create a request for the method "dataStores.getSiteSearchEngine".
@@ -15306,6 +16068,177 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleon resource of
+         * DataStore. It's empty when DataStore is created. The first call to this method will set up
+         * DocumentProcessingConfig.
+         *
+         * Create a request for the method "dataStores.updateDocumentProcessingConfig".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link UpdateDocumentProcessingConfig#execute()} method to invoke
+         * the remote operation.
+         *
+         * @param name Output only. The full resource name of the Document Processing Config. Format:
+         *        `projects/locations/collections/dataStores/documentProcessingConfig`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig}
+         * @return the request
+         */
+        public UpdateDocumentProcessingConfig updateDocumentProcessingConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig content) throws java.io.IOException {
+          UpdateDocumentProcessingConfig result = new UpdateDocumentProcessingConfig(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateDocumentProcessingConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+
+          /**
+           * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleon resource of
+           * DataStore. It's empty when DataStore is created. The first call to this method will set up
+           * DocumentProcessingConfig.
+           *
+           * Create a request for the method "dataStores.updateDocumentProcessingConfig".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link UpdateDocumentProcessingConfig#execute()} method to invoke
+           * the remote operation. <p> {@link UpdateDocumentProcessingConfig#initialize(com.google.api.clien
+           * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The full resource name of the Document Processing Config. Format:
+         *        `projects/locations/collections/dataStores/documentProcessingConfig`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig}
+           * @since 1.13
+           */
+          protected UpdateDocumentProcessingConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig content) {
+            super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+            }
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateDocumentProcessingConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig setAccessToken(java.lang.String accessToken) {
+            return (UpdateDocumentProcessingConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig setAlt(java.lang.String alt) {
+            return (UpdateDocumentProcessingConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig setCallback(java.lang.String callback) {
+            return (UpdateDocumentProcessingConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig setFields(java.lang.String fields) {
+            return (UpdateDocumentProcessingConfig) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig setKey(java.lang.String key) {
+            return (UpdateDocumentProcessingConfig) super.setKey(key);
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig setOauthToken(java.lang.String oauthToken) {
+            return (UpdateDocumentProcessingConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateDocumentProcessingConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateDocumentProcessingConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig setUploadType(java.lang.String uploadType) {
+            return (UpdateDocumentProcessingConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateDocumentProcessingConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The full resource name of the Document Processing Config. Format:
+           * `projects/locations/collections/dataStores/documentProcessingConfig`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The full resource name of the Document Processing Config. Format:
+         `projects/locations/collections/dataStores/documentProcessingConfig`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The full resource name of the Document Processing Config. Format:
+           * `projects/locations/collections/dataStores/documentProcessingConfig`.
+           */
+          public UpdateDocumentProcessingConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Indicates which fields in the provided DocumentProcessingConfig to update. The
+           * following are the only supported fields: * DocumentProcessingConfig.orc_config If not
+           * set, all supported fields are updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Indicates which fields in the provided DocumentProcessingConfig to update. The following are the
+         only supported fields: * DocumentProcessingConfig.orc_config If not set, all supported fields are
+         updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Indicates which fields in the provided DocumentProcessingConfig to update. The
+           * following are the only supported fields: * DocumentProcessingConfig.orc_config If not
+           * set, all supported fields are updated.
+           */
+          public UpdateDocumentProcessingConfig setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateDocumentProcessingConfig set(String parameterName, Object value) {
+            return (UpdateDocumentProcessingConfig) super.set(parameterName, value);
           }
         }
 

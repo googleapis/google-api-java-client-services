@@ -14,10 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.discoveryengine.v1beta.model;
+package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Specification of the model.
+ * Metadata related to the progress of the EstimateDataSize operation. This is returned by the
+ * google.longrunning.Operation.metadata field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,40 +28,40 @@ package com.google.api.services.discoveryengine.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaEstimateDataSizeMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The string format of the model version. e.g. stable, preview, etc.
+   * Operation create time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String version;
+  private String createTime;
 
   /**
-   * The string format of the model version. e.g. stable, preview, etc.
+   * Operation create time.
    * @return value or {@code null} for none
    */
-  public java.lang.String getVersion() {
-    return version;
+  public String getCreateTime() {
+    return createTime;
   }
 
   /**
-   * The string format of the model version. e.g. stable, preview, etc.
-   * @param version version or {@code null} for none
+   * Operation create time.
+   * @param createTime createTime or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec setVersion(java.lang.String version) {
-    this.version = version;
+  public GoogleCloudDiscoveryengineV1alphaEstimateDataSizeMetadata setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaEstimateDataSizeMetadata set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaEstimateDataSizeMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec clone() {
-    return (GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaEstimateDataSizeMetadata clone() {
+    return (GoogleCloudDiscoveryengineV1alphaEstimateDataSizeMetadata) super.clone();
   }
 
 }

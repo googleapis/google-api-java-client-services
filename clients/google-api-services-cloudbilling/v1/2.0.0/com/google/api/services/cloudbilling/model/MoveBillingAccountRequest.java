@@ -30,16 +30,16 @@ package com.google.api.services.cloudbilling.model;
 public final class MoveBillingAccountRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource name of the Organization to reparent the billing account under. Must be
-   * of the form `organizations/{organization_id}`.
+   * Required. The resource name of the Organization to move the billing account under. Must be of
+   * the form `organizations/{organization_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationParent;
 
   /**
-   * Required. The resource name of the Organization to reparent the billing account under. Must be
-   * of the form `organizations/{organization_id}`.
+   * Required. The resource name of the Organization to move the billing account under. Must be of
+   * the form `organizations/{organization_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationParent() {
@@ -47,8 +47,8 @@ public final class MoveBillingAccountRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. The resource name of the Organization to reparent the billing account under. Must be
-   * of the form `organizations/{organization_id}`.
+   * Required. The resource name of the Organization to move the billing account under. Must be of
+   * the form `organizations/{organization_id}`.
    * @param destinationParent destinationParent or {@code null} for none
    */
   public MoveBillingAccountRequest setDestinationParent(java.lang.String destinationParent) {

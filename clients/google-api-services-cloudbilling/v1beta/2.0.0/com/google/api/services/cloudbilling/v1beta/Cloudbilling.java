@@ -1967,6 +1967,249 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         }
 
       }
+      /**
+       * An accessor for creating requests from the Prices collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+       *   {@code Cloudbilling.Prices.List request = cloudbilling.prices().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Prices prices() {
+        return new Prices();
+      }
+
+      /**
+       * The "prices" collection of methods.
+       */
+      public class Prices {
+
+        /**
+         * Lists the latest prices for SKUs available to your Cloud Billing account.
+         *
+         * Create a request for the method "prices.list".
+         *
+         * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. To list all Billing Account SKUs, use `-` as the SKU ID. Format:
+         *        `billingAccounts/{billing_account}/skus/-` Note: Specifying an actual SKU resource id will
+         *        return a collection of one Billing Account Price.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountpricesV1betaListBillingAccountPricesResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/prices";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/skus/[^/]+$");
+
+          /**
+           * Lists the latest prices for SKUs available to your Cloud Billing account.
+           *
+           * Create a request for the method "prices.list".
+           *
+           * This request holds the parameters needed by the the cloudbilling server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. To list all Billing Account SKUs, use `-` as the SKU ID. Format:
+         *        `billingAccounts/{billing_account}/skus/-` Note: Specifying an actual SKU resource id will
+         *        return a collection of one Billing Account Price.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountpricesV1betaListBillingAccountPricesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/skus/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. To list all Billing Account SKUs, use `-` as the SKU ID. Format:
+           * `billingAccounts/{billing_account}/skus/-` Note: Specifying an actual SKU resource id
+           * will return a collection of one Billing Account Price.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. To list all Billing Account SKUs, use `-` as the SKU ID. Format:
+         `billingAccounts/{billing_account}/skus/-` Note: Specifying an actual SKU resource id will return a
+         collection of one Billing Account Price.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. To list all Billing Account SKUs, use `-` as the SKU ID. Format:
+           * `billingAccounts/{billing_account}/skus/-` Note: Specifying an actual SKU resource id
+           * will return a collection of one Billing Account Price.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/skus/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. ISO-4217 currency code for the price. If not specified, currency of billing
+           * account will be used.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String currencyCode;
+
+          /** Optional. ISO-4217 currency code for the price. If not specified, currency of billing account will
+         be used.
+           */
+          public java.lang.String getCurrencyCode() {
+            return currencyCode;
+          }
+
+          /**
+           * Optional. ISO-4217 currency code for the price. If not specified, currency of billing
+           * account will be used.
+           */
+          public List setCurrencyCode(java.lang.String currencyCode) {
+            this.currencyCode = currencyCode;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of billing account price to return. Results may return fewer
+           * than this value. Default value is 50 and maximum value is 5000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of billing account price to return. Results may return fewer than this
+         value. Default value is 50 and maximum value is 5000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of billing account price to return. Results may return fewer
+           * than this value. Default value is 50 and maximum value is 5000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token received from a previous ListBillingAccountPrices call to retrieve
+           * the next page of results. If this field is empty, the first page is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous ListBillingAccountPrices call to retrieve the next
+         page of results. If this field is empty, the first page is returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token received from a previous ListBillingAccountPrices call to retrieve
+           * the next page of results. If this field is empty, the first page is returned.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 
@@ -2825,6 +3068,237 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Prices collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+     *   {@code Cloudbilling.Prices.List request = cloudbilling.prices().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Prices prices() {
+      return new Prices();
+    }
+
+    /**
+     * The "prices" collection of methods.
+     */
+    public class Prices {
+
+      /**
+       * Lists the latest prices for all SKUs.
+       *
+       * Create a request for the method "prices.list".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. To list the prices for all SKUs, use `-` as the SKU ID. Format: `skus/-` Specifying a
+       *        specific SKU ID returns a collection with one Price object for the SKU.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingPricesV1betaListPricesResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/prices";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^skus/[^/]+$");
+
+        /**
+         * Lists the latest prices for all SKUs.
+         *
+         * Create a request for the method "prices.list".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. To list the prices for all SKUs, use `-` as the SKU ID. Format: `skus/-` Specifying a
+       *        specific SKU ID returns a collection with one Price object for the SKU.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingPricesV1betaListPricesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^skus/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. To list the prices for all SKUs, use `-` as the SKU ID. Format: `skus/-`
+         * Specifying a specific SKU ID returns a collection with one Price object for the SKU.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. To list the prices for all SKUs, use `-` as the SKU ID. Format: `skus/-` Specifying a
+       specific SKU ID returns a collection with one Price object for the SKU.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. To list the prices for all SKUs, use `-` as the SKU ID. Format: `skus/-`
+         * Specifying a specific SKU ID returns a collection with one Price object for the SKU.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^skus/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Optional. ISO-4217 currency code for the price. If not specified, USD will be used. */
+        @com.google.api.client.util.Key
+        private java.lang.String currencyCode;
+
+        /** Optional. ISO-4217 currency code for the price. If not specified, USD will be used.
+         */
+        public java.lang.String getCurrencyCode() {
+          return currencyCode;
+        }
+
+        /** Optional. ISO-4217 currency code for the price. If not specified, USD will be used. */
+        public List setCurrencyCode(java.lang.String currencyCode) {
+          this.currencyCode = currencyCode;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of prices to return. Results may return fewer than this value.
+         * Default value is 50 and maximum value is 5000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of prices to return. Results may return fewer than this value. Default
+       value is 50 and maximum value is 5000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of prices to return. Results may return fewer than this value.
+         * Default value is 50 and maximum value is 5000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. Page token received from a previous ListPrices call to retrieve the next page
+         * of results. If this field is empty, the first page is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Page token received from a previous ListPrices call to retrieve the next page of results.
+       If this field is empty, the first page is returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. Page token received from a previous ListPrices call to retrieve the next page
+         * of results. If this field is empty, the first page is returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
         }
       }
 

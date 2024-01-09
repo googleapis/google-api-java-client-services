@@ -17,8 +17,8 @@
 package com.google.api.services.cloudbilling.v1beta.model;
 
 /**
- * The interconnect egress only includes the Interconnect Egress. Please use the standard egress
- * traffic interface to specify your standard egress usage.
+ * Includes the estimate for Interconnect Data Transfer only. To specify usage for data transfer
+ * between VMs and internet end-points, use the Standard Tier Internet Data Transfer interface.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:
@@ -31,8 +31,9 @@ package com.google.api.services.cloudbilling.v1beta.model;
 public final class CloudInterconnectEgressWorkload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Data egress usage. This usage applies when you move or copy data from one Google Cloud service
-   * to another service. Expected units such as "GiBy/s, By/s, etc."
+   * Outbound data transfer usage. This usage applies when you move or copy data from one Google
+   * Cloud service to another service. The units are GiBy/s, By/s, and so on, based on [The Unified
+   * Code for Units of Measure](https://ucum.org/ucum.html) standard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,15 +41,16 @@ public final class CloudInterconnectEgressWorkload extends com.google.api.client
 
   /**
    * Locations in the [Interconnect connection location table](https://cloud.google.com/vpc/network-
-   * pricing#interconnect-pricing). This is the interconnect egress charges.
+   * pricing#interconnect-pricing). These are the Interconnect Data Transfer charges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String interconnectConnectionLocation;
 
   /**
-   * Data egress usage. This usage applies when you move or copy data from one Google Cloud service
-   * to another service. Expected units such as "GiBy/s, By/s, etc."
+   * Outbound data transfer usage. This usage applies when you move or copy data from one Google
+   * Cloud service to another service. The units are GiBy/s, By/s, and so on, based on [The Unified
+   * Code for Units of Measure](https://ucum.org/ucum.html) standard.
    * @return value or {@code null} for none
    */
   public Usage getEgressRate() {
@@ -56,8 +58,9 @@ public final class CloudInterconnectEgressWorkload extends com.google.api.client
   }
 
   /**
-   * Data egress usage. This usage applies when you move or copy data from one Google Cloud service
-   * to another service. Expected units such as "GiBy/s, By/s, etc."
+   * Outbound data transfer usage. This usage applies when you move or copy data from one Google
+   * Cloud service to another service. The units are GiBy/s, By/s, and so on, based on [The Unified
+   * Code for Units of Measure](https://ucum.org/ucum.html) standard.
    * @param egressRate egressRate or {@code null} for none
    */
   public CloudInterconnectEgressWorkload setEgressRate(Usage egressRate) {
@@ -67,7 +70,7 @@ public final class CloudInterconnectEgressWorkload extends com.google.api.client
 
   /**
    * Locations in the [Interconnect connection location table](https://cloud.google.com/vpc/network-
-   * pricing#interconnect-pricing). This is the interconnect egress charges.
+   * pricing#interconnect-pricing). These are the Interconnect Data Transfer charges.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterconnectConnectionLocation() {
@@ -76,7 +79,7 @@ public final class CloudInterconnectEgressWorkload extends com.google.api.client
 
   /**
    * Locations in the [Interconnect connection location table](https://cloud.google.com/vpc/network-
-   * pricing#interconnect-pricing). This is the interconnect egress charges.
+   * pricing#interconnect-pricing). These are the Interconnect Data Transfer charges.
    * @param interconnectConnectionLocation interconnectConnectionLocation or {@code null} for none
    */
   public CloudInterconnectEgressWorkload setInterconnectConnectionLocation(java.lang.String interconnectConnectionLocation) {

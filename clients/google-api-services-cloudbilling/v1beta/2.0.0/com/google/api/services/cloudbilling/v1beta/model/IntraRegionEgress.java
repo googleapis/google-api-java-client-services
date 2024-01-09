@@ -17,8 +17,8 @@
 package com.google.api.services.cloudbilling.v1beta.model;
 
 /**
- * Egress traffic within the same region. When source region and destination region are in the same
- * zone, using the internal IP addresses, there isn't any egress charge.
+ * Data transfer within the same region. When the source region and destination region are in the
+ * same zone, using internal IP addresses, there isn't any charge for data transfer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:
@@ -31,14 +31,14 @@ package com.google.api.services.cloudbilling.v1beta.model;
 public final class IntraRegionEgress extends com.google.api.client.json.GenericJson {
 
   /**
-   * VM to VM egress usage. Expected units such as "GiBy/s, By/s, etc."
+   * VM to VM data transfer usage. The expected are GiBy/s, By/s, and so on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Usage egressRate;
 
   /**
-   * VM to VM egress usage. Expected units such as "GiBy/s, By/s, etc."
+   * VM to VM data transfer usage. The expected are GiBy/s, By/s, and so on.
    * @return value or {@code null} for none
    */
   public Usage getEgressRate() {
@@ -46,7 +46,7 @@ public final class IntraRegionEgress extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * VM to VM egress usage. Expected units such as "GiBy/s, By/s, etc."
+   * VM to VM data transfer usage. The expected are GiBy/s, By/s, and so on.
    * @param egressRate egressRate or {@code null} for none
    */
   public IntraRegionEgress setEgressRate(Usage egressRate) {

@@ -31,15 +31,15 @@ public final class CloudStorageWorkload extends com.google.api.client.json.Gener
 
   /**
    * Data retrieval usage. A retrieval cost applies when data or metadata is read, copied, or
-   * rewritten . For example: units such as "GiBy/s" or "By/s".
+   * rewritten . For example: units such as "GiB/s" or "B/s".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Usage dataRetrieval;
 
   /**
-   * Data storage usage. The amount of data stored in buckets. For example: units such as "GiBy/s"
-   * or "TBy/mo".
+   * Data storage usage. The amount of data stored in buckets. For example: units such as GiBy/s or
+   * TiBy/mo, based on [The Unified Code for Units of Measure](https://ucum.org/ucum.html) standard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class CloudStorageWorkload extends com.google.api.client.json.Gener
 
   /**
    * Data retrieval usage. A retrieval cost applies when data or metadata is read, copied, or
-   * rewritten . For example: units such as "GiBy/s" or "By/s".
+   * rewritten . For example: units such as "GiB/s" or "B/s".
    * @return value or {@code null} for none
    */
   public Usage getDataRetrieval() {
@@ -103,7 +103,7 @@ public final class CloudStorageWorkload extends com.google.api.client.json.Gener
 
   /**
    * Data retrieval usage. A retrieval cost applies when data or metadata is read, copied, or
-   * rewritten . For example: units such as "GiBy/s" or "By/s".
+   * rewritten . For example: units such as "GiB/s" or "B/s".
    * @param dataRetrieval dataRetrieval or {@code null} for none
    */
   public CloudStorageWorkload setDataRetrieval(Usage dataRetrieval) {
@@ -112,8 +112,8 @@ public final class CloudStorageWorkload extends com.google.api.client.json.Gener
   }
 
   /**
-   * Data storage usage. The amount of data stored in buckets. For example: units such as "GiBy/s"
-   * or "TBy/mo".
+   * Data storage usage. The amount of data stored in buckets. For example: units such as GiBy/s or
+   * TiBy/mo, based on [The Unified Code for Units of Measure](https://ucum.org/ucum.html) standard.
    * @return value or {@code null} for none
    */
   public Usage getDataStored() {
@@ -121,8 +121,8 @@ public final class CloudStorageWorkload extends com.google.api.client.json.Gener
   }
 
   /**
-   * Data storage usage. The amount of data stored in buckets. For example: units such as "GiBy/s"
-   * or "TBy/mo".
+   * Data storage usage. The amount of data stored in buckets. For example: units such as GiBy/s or
+   * TiBy/mo, based on [The Unified Code for Units of Measure](https://ucum.org/ucum.html) standard.
    * @param dataStored dataStored or {@code null} for none
    */
   public CloudStorageWorkload setDataStored(Usage dataStored) {

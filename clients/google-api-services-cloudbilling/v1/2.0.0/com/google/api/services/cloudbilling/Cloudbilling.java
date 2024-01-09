@@ -266,14 +266,14 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
       /**
        * Optional. The parent to create a billing account from. Format: -
-       * organizations/{organization_id} eg organizations/12345678 -
-       * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       * `organizations/{organization_id}`, for example, `organizations/12345678` -
+       * `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
-     organizations/12345678 - billingAccounts/{billing_account_id} eg
+      /** Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
+     for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for example,
      `billingAccounts/012345-567890-ABCDEF`
        */
       public java.lang.String getParent() {
@@ -282,8 +282,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
       /**
        * Optional. The parent to create a billing account from. Format: -
-       * organizations/{organization_id} eg organizations/12345678 -
-       * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       * `organizations/{organization_id}`, for example, `organizations/12345678` -
+       * `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
        */
       public Create setParent(java.lang.String parent) {
         this.parent = parent;
@@ -750,8 +750,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       /**
        * Options for how to filter the returned billing accounts. This only supports filtering for
        * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
-       * parent billing account. (e.g.
-       * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
+       * parent billing account. (for example,
+       * `master_billing_account=billingAccounts/012345-678901-ABCDEF`). Boolean algebra and other
        * fields are not currently supported.
        */
       @com.google.api.client.util.Key
@@ -759,8 +759,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
       /** Options for how to filter the returned billing accounts. This only supports filtering for
      [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided parent
-     billing account. (e.g. "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean
-     algebra and other fields are not currently supported.
+     billing account. (for example, `master_billing_account=billingAccounts/012345-678901-ABCDEF`).
+     Boolean algebra and other fields are not currently supported.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -769,8 +769,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       /**
        * Options for how to filter the returned billing accounts. This only supports filtering for
        * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
-       * parent billing account. (e.g.
-       * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
+       * parent billing account. (for example,
+       * `master_billing_account=billingAccounts/012345-678901-ABCDEF`). Boolean algebra and other
        * fields are not currently supported.
        */
       public List setFilter(java.lang.String filter) {
@@ -821,15 +821,15 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
       /**
        * Optional. The parent resource to list billing accounts from. Format: -
-       * organizations/{organization_id} eg organizations/12345678 -
-       * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       * `organizations/{organization_id}`, for example, `organizations/12345678` -
+       * `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Optional. The parent resource to list billing accounts from. Format: -
-     organizations/{organization_id} eg organizations/12345678 - billingAccounts/{billing_account_id} eg
-     `billingAccounts/012345-567890-ABCDEF`
+     `organizations/{organization_id}`, for example, `organizations/12345678` -
+     `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
        */
       public java.lang.String getParent() {
         return parent;
@@ -837,8 +837,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
       /**
        * Optional. The parent resource to list billing accounts from. Format: -
-       * organizations/{organization_id} eg organizations/12345678 -
-       * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       * `organizations/{organization_id}`, for example, `organizations/12345678` -
+       * `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
@@ -1703,9 +1703,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
-       *        organizations/12345678 - billingAccounts/{billing_account_id} eg
-       *        `billingAccounts/012345-567890-ABCDEF`
+       * @param parent Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
+       *        for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
+       *        example, `billingAccounts/012345-567890-ABCDEF`
        * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
        * @return the request
        */
@@ -1742,9 +1742,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
-       *        organizations/12345678 - billingAccounts/{billing_account_id} eg
-       *        `billingAccounts/012345-567890-ABCDEF`
+         * @param parent Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
+       *        for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
+       *        example, `billingAccounts/012345-567890-ABCDEF`
          * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
          * @since 1.13
          */
@@ -1815,14 +1815,15 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent to create a billing account from. Format: -
-         * organizations/{organization_id} eg organizations/12345678 -
-         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         * `organizations/{organization_id}`, for example, `organizations/12345678` -
+         * `billingAccounts/{billing_account_id}`, for example,
+         * `billingAccounts/012345-567890-ABCDEF`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
-       organizations/12345678 - billingAccounts/{billing_account_id} eg
+        /** Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
+       for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for example,
        `billingAccounts/012345-567890-ABCDEF`
          */
         public java.lang.String getParent() {
@@ -1831,8 +1832,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent to create a billing account from. Format: -
-         * organizations/{organization_id} eg organizations/12345678 -
-         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         * `organizations/{organization_id}`, for example, `organizations/12345678` -
+         * `billingAccounts/{billing_account_id}`, for example,
+         * `billingAccounts/012345-567890-ABCDEF`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1859,8 +1861,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Optional. The parent resource to list billing accounts from. Format: -
-       *        organizations/{organization_id} eg organizations/12345678 -
-       *        billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       *        `organizations/{organization_id}`, for example, `organizations/12345678` -
+       *        `billingAccounts/{billing_account_id}`, for example,
+       *        `billingAccounts/012345-567890-ABCDEF`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1888,8 +1891,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Optional. The parent resource to list billing accounts from. Format: -
-       *        organizations/{organization_id} eg organizations/12345678 -
-       *        billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       *        `organizations/{organization_id}`, for example, `organizations/12345678` -
+       *        `billingAccounts/{billing_account_id}`, for example,
+       *        `billingAccounts/012345-567890-ABCDEF`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1969,15 +1973,16 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent resource to list billing accounts from. Format: -
-         * organizations/{organization_id} eg organizations/12345678 -
-         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         * `organizations/{organization_id}`, for example, `organizations/12345678` -
+         * `billingAccounts/{billing_account_id}`, for example,
+         * `billingAccounts/012345-567890-ABCDEF`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Optional. The parent resource to list billing accounts from. Format: -
-       organizations/{organization_id} eg organizations/12345678 - billingAccounts/{billing_account_id} eg
-       `billingAccounts/012345-567890-ABCDEF`
+       `organizations/{organization_id}`, for example, `organizations/12345678` -
+       `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
          */
         public java.lang.String getParent() {
           return parent;
@@ -1985,8 +1990,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent resource to list billing accounts from. Format: -
-         * organizations/{organization_id} eg organizations/12345678 -
-         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         * `organizations/{organization_id}`, for example, `organizations/12345678` -
+         * `billingAccounts/{billing_account_id}`, for example,
+         * `billingAccounts/012345-567890-ABCDEF`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2001,8 +2007,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         /**
          * Options for how to filter the returned billing accounts. This only supports filtering for
          * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
-         * parent billing account. (e.g.
-         * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
+         * parent billing account. (for example,
+         * `master_billing_account=billingAccounts/012345-678901-ABCDEF`). Boolean algebra and other
          * fields are not currently supported.
          */
         @com.google.api.client.util.Key
@@ -2010,8 +2016,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /** Options for how to filter the returned billing accounts. This only supports filtering for
        [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided parent
-       billing account. (e.g. "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean
-       algebra and other fields are not currently supported.
+       billing account. (for example, `master_billing_account=billingAccounts/012345-678901-ABCDEF`).
+       Boolean algebra and other fields are not currently supported.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -2020,8 +2026,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         /**
          * Options for how to filter the returned billing accounts. This only supports filtering for
          * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
-         * parent billing account. (e.g.
-         * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
+         * parent billing account. (for example,
+         * `master_billing_account=billingAccounts/012345-678901-ABCDEF`). Boolean algebra and other
          * fields are not currently supported.
          */
         public List setFilter(java.lang.String filter) {
@@ -2135,9 +2141,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
-       *        organizations/12345678 - billingAccounts/{billing_account_id} eg
-       *        `billingAccounts/012345-567890-ABCDEF`
+       * @param parent Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
+       *        for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
+       *        example, `billingAccounts/012345-567890-ABCDEF`
        * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
        * @return the request
        */
@@ -2174,9 +2180,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
-       *        organizations/12345678 - billingAccounts/{billing_account_id} eg
-       *        `billingAccounts/012345-567890-ABCDEF`
+         * @param parent Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
+       *        for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
+       *        example, `billingAccounts/012345-567890-ABCDEF`
          * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
          * @since 1.13
          */
@@ -2247,14 +2253,15 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent to create a billing account from. Format: -
-         * organizations/{organization_id} eg organizations/12345678 -
-         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         * `organizations/{organization_id}`, for example, `organizations/12345678` -
+         * `billingAccounts/{billing_account_id}`, for example,
+         * `billingAccounts/012345-567890-ABCDEF`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. The parent to create a billing account from. Format: - organizations/{organization_id} eg
-       organizations/12345678 - billingAccounts/{billing_account_id} eg
+        /** Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
+       for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for example,
        `billingAccounts/012345-567890-ABCDEF`
          */
         public java.lang.String getParent() {
@@ -2263,8 +2270,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent to create a billing account from. Format: -
-         * organizations/{organization_id} eg organizations/12345678 -
-         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         * `organizations/{organization_id}`, for example, `organizations/12345678` -
+         * `billingAccounts/{billing_account_id}`, for example,
+         * `billingAccounts/012345-567890-ABCDEF`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2291,8 +2299,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Optional. The parent resource to list billing accounts from. Format: -
-       *        organizations/{organization_id} eg organizations/12345678 -
-       *        billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       *        `organizations/{organization_id}`, for example, `organizations/12345678` -
+       *        `billingAccounts/{billing_account_id}`, for example,
+       *        `billingAccounts/012345-567890-ABCDEF`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2320,8 +2329,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Optional. The parent resource to list billing accounts from. Format: -
-       *        organizations/{organization_id} eg organizations/12345678 -
-       *        billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+       *        `organizations/{organization_id}`, for example, `organizations/12345678` -
+       *        `billingAccounts/{billing_account_id}`, for example,
+       *        `billingAccounts/012345-567890-ABCDEF`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2401,15 +2411,16 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent resource to list billing accounts from. Format: -
-         * organizations/{organization_id} eg organizations/12345678 -
-         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         * `organizations/{organization_id}`, for example, `organizations/12345678` -
+         * `billingAccounts/{billing_account_id}`, for example,
+         * `billingAccounts/012345-567890-ABCDEF`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Optional. The parent resource to list billing accounts from. Format: -
-       organizations/{organization_id} eg organizations/12345678 - billingAccounts/{billing_account_id} eg
-       `billingAccounts/012345-567890-ABCDEF`
+       `organizations/{organization_id}`, for example, `organizations/12345678` -
+       `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
          */
         public java.lang.String getParent() {
           return parent;
@@ -2417,8 +2428,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent resource to list billing accounts from. Format: -
-         * organizations/{organization_id} eg organizations/12345678 -
-         * billingAccounts/{billing_account_id} eg `billingAccounts/012345-567890-ABCDEF`
+         * `organizations/{organization_id}`, for example, `organizations/12345678` -
+         * `billingAccounts/{billing_account_id}`, for example,
+         * `billingAccounts/012345-567890-ABCDEF`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2433,8 +2445,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         /**
          * Options for how to filter the returned billing accounts. This only supports filtering for
          * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
-         * parent billing account. (e.g.
-         * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
+         * parent billing account. (for example,
+         * `master_billing_account=billingAccounts/012345-678901-ABCDEF`). Boolean algebra and other
          * fields are not currently supported.
          */
         @com.google.api.client.util.Key
@@ -2442,8 +2454,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /** Options for how to filter the returned billing accounts. This only supports filtering for
        [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided parent
-       billing account. (e.g. "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean
-       algebra and other fields are not currently supported.
+       billing account. (for example, `master_billing_account=billingAccounts/012345-678901-ABCDEF`).
+       Boolean algebra and other fields are not currently supported.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -2452,8 +2464,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         /**
          * Options for how to filter the returned billing accounts. This only supports filtering for
          * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
-         * parent billing account. (e.g.
-         * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
+         * parent billing account. (for example,
+         * `master_billing_account=billingAccounts/012345-678901-ABCDEF`). Boolean algebra and other
          * fields are not currently supported.
          */
         public List setFilter(java.lang.String filter) {
@@ -2515,8 +2527,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link Move#execute()} method to invoke the remote operation.
        *
-       * @param destinationParent Required. The resource name of the Organization to reparent the billing account under. Must be of
-       *        the form `organizations/{organization_id}`.
+       * @param destinationParent Required. The resource name of the Organization to move the billing account under. Must be of the
+       *        form `organizations/{organization_id}`.
        * @param name Required. The resource name of the billing account to move. Must be of the form
        *        `billingAccounts/{billing_account_id}`. The specified billing account cannot be a
        *        subaccount, since a subaccount always belongs to the same organization as its parent
@@ -2549,8 +2561,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * {@link Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param destinationParent Required. The resource name of the Organization to reparent the billing account under. Must be of
-       *        the form `organizations/{organization_id}`.
+         * @param destinationParent Required. The resource name of the Organization to move the billing account under. Must be of the
+       *        form `organizations/{organization_id}`.
          * @param name Required. The resource name of the billing account to move. Must be of the form
        *        `billingAccounts/{billing_account_id}`. The specified billing account cannot be a
        *        subaccount, since a subaccount always belongs to the same organization as its parent
@@ -2639,22 +2651,22 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. The resource name of the Organization to reparent the billing account under.
-         * Must be of the form `organizations/{organization_id}`.
+         * Required. The resource name of the Organization to move the billing account under. Must
+         * be of the form `organizations/{organization_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String destinationParent;
 
-        /** Required. The resource name of the Organization to reparent the billing account under. Must be of
-       the form `organizations/{organization_id}`.
+        /** Required. The resource name of the Organization to move the billing account under. Must be of the
+       form `organizations/{organization_id}`.
          */
         public java.lang.String getDestinationParent() {
           return destinationParent;
         }
 
         /**
-         * Required. The resource name of the Organization to reparent the billing account under.
-         * Must be of the form `organizations/{organization_id}`.
+         * Required. The resource name of the Organization to move the billing account under. Must
+         * be of the form `organizations/{organization_id}`.
          */
         public Move setDestinationParent(java.lang.String destinationParent) {
           if (!getSuppressPatternChecks()) {

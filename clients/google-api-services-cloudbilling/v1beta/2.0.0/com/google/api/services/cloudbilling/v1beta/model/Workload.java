@@ -32,7 +32,7 @@ package com.google.api.services.cloudbilling.v1beta.model;
 public final class Workload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Usage on Google Cloud CDN Egress.
+   * Usage on Google Cloud CDN Data Transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   private CloudCdnWorkload cloudCdnWorkload;
 
   /**
-   * Usage on Google Cloud Interconnect Egress.
+   * Usage on Google Cloud Interconnect Data Transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   private CloudInterconnectWorkload cloudInterconnectWorkload;
 
   /**
-   * Usage on a cloud storage egress.
+   * Usage on Cloud Storage Data Transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,28 +89,28 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Usage on Premium Tier Internet Egress.
+   * Usage on Premium Tier Internet Data Transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PremiumTierEgressWorkload premiumTierEgressWorkload;
 
   /**
-   * Usage on Standard Tier Internet Egress.
+   * Usage on Standard Tier Internet Data Transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StandardTierEgressWorkload standardTierEgressWorkload;
 
   /**
-   * Usage on Vm to Vm Egress.
+   * Usage on VM to VM Data Transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VmToVmEgressWorkload vmToVmEgressWorkload;
 
   /**
-   * Usage on Google Cloud CDN Egress.
+   * Usage on Google Cloud CDN Data Transfer.
    * @return value or {@code null} for none
    */
   public CloudCdnEgressWorkload getCloudCdnEgressWorkload() {
@@ -118,7 +118,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on Google Cloud CDN Egress.
+   * Usage on Google Cloud CDN Data Transfer.
    * @param cloudCdnEgressWorkload cloudCdnEgressWorkload or {@code null} for none
    */
   public Workload setCloudCdnEgressWorkload(CloudCdnEgressWorkload cloudCdnEgressWorkload) {
@@ -144,7 +144,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on Google Cloud Interconnect Egress.
+   * Usage on Google Cloud Interconnect Data Transfer.
    * @return value or {@code null} for none
    */
   public CloudInterconnectEgressWorkload getCloudInterconnectEgressWorkload() {
@@ -152,7 +152,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on Google Cloud Interconnect Egress.
+   * Usage on Google Cloud Interconnect Data Transfer.
    * @param cloudInterconnectEgressWorkload cloudInterconnectEgressWorkload or {@code null} for none
    */
   public Workload setCloudInterconnectEgressWorkload(CloudInterconnectEgressWorkload cloudInterconnectEgressWorkload) {
@@ -178,7 +178,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on a cloud storage egress.
+   * Usage on Cloud Storage Data Transfer.
    * @return value or {@code null} for none
    */
   public CloudStorageEgressWorkload getCloudStorageEgressWorkload() {
@@ -186,7 +186,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on a cloud storage egress.
+   * Usage on Cloud Storage Data Transfer.
    * @param cloudStorageEgressWorkload cloudStorageEgressWorkload or {@code null} for none
    */
   public Workload setCloudStorageEgressWorkload(CloudStorageEgressWorkload cloudStorageEgressWorkload) {
@@ -248,7 +248,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on Premium Tier Internet Egress.
+   * Usage on Premium Tier Internet Data Transfer.
    * @return value or {@code null} for none
    */
   public PremiumTierEgressWorkload getPremiumTierEgressWorkload() {
@@ -256,7 +256,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on Premium Tier Internet Egress.
+   * Usage on Premium Tier Internet Data Transfer.
    * @param premiumTierEgressWorkload premiumTierEgressWorkload or {@code null} for none
    */
   public Workload setPremiumTierEgressWorkload(PremiumTierEgressWorkload premiumTierEgressWorkload) {
@@ -265,7 +265,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on Standard Tier Internet Egress.
+   * Usage on Standard Tier Internet Data Transfer.
    * @return value or {@code null} for none
    */
   public StandardTierEgressWorkload getStandardTierEgressWorkload() {
@@ -273,7 +273,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on Standard Tier Internet Egress.
+   * Usage on Standard Tier Internet Data Transfer.
    * @param standardTierEgressWorkload standardTierEgressWorkload or {@code null} for none
    */
   public Workload setStandardTierEgressWorkload(StandardTierEgressWorkload standardTierEgressWorkload) {
@@ -282,7 +282,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on Vm to Vm Egress.
+   * Usage on VM to VM Data Transfer.
    * @return value or {@code null} for none
    */
   public VmToVmEgressWorkload getVmToVmEgressWorkload() {
@@ -290,7 +290,7 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Usage on Vm to Vm Egress.
+   * Usage on VM to VM Data Transfer.
    * @param vmToVmEgressWorkload vmToVmEgressWorkload or {@code null} for none
    */
   public Workload setVmToVmEgressWorkload(VmToVmEgressWorkload vmToVmEgressWorkload) {

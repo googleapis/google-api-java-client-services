@@ -46,11 +46,25 @@ public final class GoogleCloudRunV2Volume extends com.google.api.client.json.Gen
   private GoogleCloudRunV2EmptyDirVolumeSource emptyDir;
 
   /**
+   * Persistent storage backed by a Google Cloud Storage bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2GCSVolumeSource gcs;
+
+  /**
    * Required. Volume's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * For NFS Voumes, contains the path to the nfs Volume
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2NFSVolumeSource nfs;
 
   /**
    * Secret represents a secret that should populate this volume.
@@ -98,6 +112,23 @@ public final class GoogleCloudRunV2Volume extends com.google.api.client.json.Gen
   }
 
   /**
+   * Persistent storage backed by a Google Cloud Storage bucket.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2GCSVolumeSource getGcs() {
+    return gcs;
+  }
+
+  /**
+   * Persistent storage backed by a Google Cloud Storage bucket.
+   * @param gcs gcs or {@code null} for none
+   */
+  public GoogleCloudRunV2Volume setGcs(GoogleCloudRunV2GCSVolumeSource gcs) {
+    this.gcs = gcs;
+    return this;
+  }
+
+  /**
    * Required. Volume's name.
    * @return value or {@code null} for none
    */
@@ -111,6 +142,23 @@ public final class GoogleCloudRunV2Volume extends com.google.api.client.json.Gen
    */
   public GoogleCloudRunV2Volume setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * For NFS Voumes, contains the path to the nfs Volume
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2NFSVolumeSource getNfs() {
+    return nfs;
+  }
+
+  /**
+   * For NFS Voumes, contains the path to the nfs Volume
+   * @param nfs nfs or {@code null} for none
+   */
+  public GoogleCloudRunV2Volume setNfs(GoogleCloudRunV2NFSVolumeSource nfs) {
+    this.nfs = nfs;
     return this;
   }
 

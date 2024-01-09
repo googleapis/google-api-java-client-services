@@ -121,11 +121,26 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   private GoogleCloudAiplatformV1beta1NetworkSpec networkSpec;
 
   /**
+   * Optional. The Compute Engine tags to add to runtime (see [Tagging
+   * instances](https://cloud.google.com/vpc/docs/add-remove-network-tags)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> networkTags;
+
+  /**
    * Optional. Immutable. The type of the notebook runtime template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notebookRuntimeType;
+
+  /**
+   * Optional. Reservation Affinity of the notebook runtime template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookReservationAffinity reservationAffinity;
 
   /**
    * The service account that the runtime workload runs as. You can use any service account within
@@ -137,6 +152,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
+
+  /**
+   * Optional. Immutable. Runtime Shielded VM spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ShieldedVmConfig shieldedVmConfig;
 
   /**
    * Output only. Timestamp when this NotebookRuntimeTemplate was most recently updated.
@@ -362,6 +384,25 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   }
 
   /**
+   * Optional. The Compute Engine tags to add to runtime (see [Tagging
+   * instances](https://cloud.google.com/vpc/docs/add-remove-network-tags)).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNetworkTags() {
+    return networkTags;
+  }
+
+  /**
+   * Optional. The Compute Engine tags to add to runtime (see [Tagging
+   * instances](https://cloud.google.com/vpc/docs/add-remove-network-tags)).
+   * @param networkTags networkTags or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setNetworkTags(java.util.List<java.lang.String> networkTags) {
+    this.networkTags = networkTags;
+    return this;
+  }
+
+  /**
    * Optional. Immutable. The type of the notebook runtime template.
    * @return value or {@code null} for none
    */
@@ -375,6 +416,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setNotebookRuntimeType(java.lang.String notebookRuntimeType) {
     this.notebookRuntimeType = notebookRuntimeType;
+    return this;
+  }
+
+  /**
+   * Optional. Reservation Affinity of the notebook runtime template.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * Optional. Reservation Affinity of the notebook runtime template.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setReservationAffinity(GoogleCloudAiplatformV1beta1NotebookReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 
@@ -400,6 +458,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Runtime Shielded VM spec.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ShieldedVmConfig getShieldedVmConfig() {
+    return shieldedVmConfig;
+  }
+
+  /**
+   * Optional. Immutable. Runtime Shielded VM spec.
+   * @param shieldedVmConfig shieldedVmConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setShieldedVmConfig(GoogleCloudAiplatformV1beta1ShieldedVmConfig shieldedVmConfig) {
+    this.shieldedVmConfig = shieldedVmConfig;
     return this;
   }
 

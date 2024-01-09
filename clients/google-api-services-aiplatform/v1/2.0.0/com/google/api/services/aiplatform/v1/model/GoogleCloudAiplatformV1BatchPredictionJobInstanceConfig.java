@@ -34,7 +34,7 @@ public final class GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig exten
    * Fields that will be excluded in the prediction instance that is sent to the Model. Excluded
    * will be attached to the batch prediction output if key_field is not specified. When
    * excluded_fields is populated, included_fields must be empty. The input must be JSONL with
-   * objects at each line, CSV, BigQuery or TfRecord.
+   * objects at each line, BigQuery or TfRecord.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig exten
    * Fields that will be included in the prediction instance that is sent to the Model. If
    * instance_type is `array`, the order of field names in included_fields also determines the order
    * of the values in the array. When included_fields is populated, excluded_fields must be empty.
-   * The input must be JSONL with objects at each line, CSV, BigQuery or TfRecord.
+   * The input must be JSONL with objects at each line, BigQuery or TfRecord.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig exten
    * Fields that will be excluded in the prediction instance that is sent to the Model. Excluded
    * will be attached to the batch prediction output if key_field is not specified. When
    * excluded_fields is populated, included_fields must be empty. The input must be JSONL with
-   * objects at each line, CSV, BigQuery or TfRecord.
+   * objects at each line, BigQuery or TfRecord.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedFields() {
@@ -102,7 +102,7 @@ public final class GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig exten
    * Fields that will be excluded in the prediction instance that is sent to the Model. Excluded
    * will be attached to the batch prediction output if key_field is not specified. When
    * excluded_fields is populated, included_fields must be empty. The input must be JSONL with
-   * objects at each line, CSV, BigQuery or TfRecord.
+   * objects at each line, BigQuery or TfRecord.
    * @param excludedFields excludedFields or {@code null} for none
    */
   public GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig setExcludedFields(java.util.List<java.lang.String> excludedFields) {
@@ -114,7 +114,7 @@ public final class GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig exten
    * Fields that will be included in the prediction instance that is sent to the Model. If
    * instance_type is `array`, the order of field names in included_fields also determines the order
    * of the values in the array. When included_fields is populated, excluded_fields must be empty.
-   * The input must be JSONL with objects at each line, CSV, BigQuery or TfRecord.
+   * The input must be JSONL with objects at each line, BigQuery or TfRecord.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedFields() {
@@ -125,7 +125,7 @@ public final class GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig exten
    * Fields that will be included in the prediction instance that is sent to the Model. If
    * instance_type is `array`, the order of field names in included_fields also determines the order
    * of the values in the array. When included_fields is populated, excluded_fields must be empty.
-   * The input must be JSONL with objects at each line, CSV, BigQuery or TfRecord.
+   * The input must be JSONL with objects at each line, BigQuery or TfRecord.
    * @param includedFields includedFields or {@code null} for none
    */
   public GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig setIncludedFields(java.util.List<java.lang.String> includedFields) {

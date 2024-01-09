@@ -17,7 +17,10 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Function declaration details.
+ * Structured representation of a function declaration as defined by the [OpenAPI 3.0
+ * specification](https://spec.openapis.org/oas/v3.0.3). Included in this declaration are the
+ * function name and parameters. This FunctionDeclaration is a representation of a block of code
+ * that can be used as a `Tool` by the model and executed by the client.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -46,9 +49,11 @@ public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.g
   private java.lang.String name;
 
   /**
-   * Optional. Describes the parameters to this function. Reflects the Open API 3.03 Parameter
-   * Object string Key: the name of the parameter. Parameter names are case sensitive. For function
-   * with no parameters, this can be left unset.
+   * Optional. Describes the parameters to this function in JSON Schema Object format. Reflects the
+   * Open API 3.03 Parameter Object. string Key: the name of the parameter. Parameter names are case
+   * sensitive. Schema Value: the Schema defining the type used for the parameter. For function with
+   * no parameters, this can be left unset. Example with 1 required and 1 optional parameter: type:
+   * OBJECT properties: param1: type: STRING param2: type: INTEGER required: - param1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,9 +98,11 @@ public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.g
   }
 
   /**
-   * Optional. Describes the parameters to this function. Reflects the Open API 3.03 Parameter
-   * Object string Key: the name of the parameter. Parameter names are case sensitive. For function
-   * with no parameters, this can be left unset.
+   * Optional. Describes the parameters to this function in JSON Schema Object format. Reflects the
+   * Open API 3.03 Parameter Object. string Key: the name of the parameter. Parameter names are case
+   * sensitive. Schema Value: the Schema defining the type used for the parameter. For function with
+   * no parameters, this can be left unset. Example with 1 required and 1 optional parameter: type:
+   * OBJECT properties: param1: type: STRING param2: type: INTEGER required: - param1
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema getParameters() {
@@ -103,9 +110,11 @@ public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.g
   }
 
   /**
-   * Optional. Describes the parameters to this function. Reflects the Open API 3.03 Parameter
-   * Object string Key: the name of the parameter. Parameter names are case sensitive. For function
-   * with no parameters, this can be left unset.
+   * Optional. Describes the parameters to this function in JSON Schema Object format. Reflects the
+   * Open API 3.03 Parameter Object. string Key: the name of the parameter. Parameter names are case
+   * sensitive. Schema Value: the Schema defining the type used for the parameter. For function with
+   * no parameters, this can be left unset. Example with 1 required and 1 optional parameter: type:
+   * OBJECT properties: param1: type: STRING param2: type: INTEGER required: - param1
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FunctionDeclaration setParameters(GoogleCloudAiplatformV1beta1Schema parameters) {

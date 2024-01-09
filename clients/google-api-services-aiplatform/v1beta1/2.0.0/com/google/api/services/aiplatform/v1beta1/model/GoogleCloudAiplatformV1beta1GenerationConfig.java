@@ -37,46 +37,11 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.Integer candidateCount;
 
   /**
-   * Optional. Echo.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean echo;
-
-  /**
-   * Optional. Frequency penalties.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float frequencyPenalty;
-
-  /**
-   * Optional. Logit bias.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Float> logitBias;
-
-  /**
-   * Optional. Logit probabilities.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer logprobs;
-
-  /**
    * Optional. The maximum number of output tokens to generate per message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxOutputTokens;
-
-  /**
-   * Optional. Positive penalties.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float presencePenalty;
 
   /**
    * Optional. Stop sequences.
@@ -124,74 +89,6 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   }
 
   /**
-   * Optional. Echo.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEcho() {
-    return echo;
-  }
-
-  /**
-   * Optional. Echo.
-   * @param echo echo or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1GenerationConfig setEcho(java.lang.Boolean echo) {
-    this.echo = echo;
-    return this;
-  }
-
-  /**
-   * Optional. Frequency penalties.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getFrequencyPenalty() {
-    return frequencyPenalty;
-  }
-
-  /**
-   * Optional. Frequency penalties.
-   * @param frequencyPenalty frequencyPenalty or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1GenerationConfig setFrequencyPenalty(java.lang.Float frequencyPenalty) {
-    this.frequencyPenalty = frequencyPenalty;
-    return this;
-  }
-
-  /**
-   * Optional. Logit bias.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.Float> getLogitBias() {
-    return logitBias;
-  }
-
-  /**
-   * Optional. Logit bias.
-   * @param logitBias logitBias or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1GenerationConfig setLogitBias(java.util.Map<String, java.lang.Float> logitBias) {
-    this.logitBias = logitBias;
-    return this;
-  }
-
-  /**
-   * Optional. Logit probabilities.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getLogprobs() {
-    return logprobs;
-  }
-
-  /**
-   * Optional. Logit probabilities.
-   * @param logprobs logprobs or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1GenerationConfig setLogprobs(java.lang.Integer logprobs) {
-    this.logprobs = logprobs;
-    return this;
-  }
-
-  /**
    * Optional. The maximum number of output tokens to generate per message.
    * @return value or {@code null} for none
    */
@@ -205,23 +102,6 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setMaxOutputTokens(java.lang.Integer maxOutputTokens) {
     this.maxOutputTokens = maxOutputTokens;
-    return this;
-  }
-
-  /**
-   * Optional. Positive penalties.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getPresencePenalty() {
-    return presencePenalty;
-  }
-
-  /**
-   * Optional. Positive penalties.
-   * @param presencePenalty presencePenalty or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1GenerationConfig setPresencePenalty(java.lang.Float presencePenalty) {
-    this.presencePenalty = presencePenalty;
     return this;
   }
 

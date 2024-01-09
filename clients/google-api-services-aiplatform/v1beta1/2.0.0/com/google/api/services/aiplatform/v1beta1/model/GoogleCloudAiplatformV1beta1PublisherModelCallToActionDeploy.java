@@ -76,6 +76,13 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeploy 
   private java.lang.String modelDisplayName;
 
   /**
+   * Optional. The signed URI for ephemeral Cloud Storage access to model artifact.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publicArtifactUri;
+
+  /**
    * The resource name of the shared DeploymentResourcePool to deploy on. Format:
    * `projects/{project}/locations/{location}/deploymentResourcePools/{deployment_resource_pool}`
    * The value may be {@code null}.
@@ -197,6 +204,23 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeploy 
    */
   public GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeploy setModelDisplayName(java.lang.String modelDisplayName) {
     this.modelDisplayName = modelDisplayName;
+    return this;
+  }
+
+  /**
+   * Optional. The signed URI for ephemeral Cloud Storage access to model artifact.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublicArtifactUri() {
+    return publicArtifactUri;
+  }
+
+  /**
+   * Optional. The signed URI for ephemeral Cloud Storage access to model artifact.
+   * @param publicArtifactUri publicArtifactUri or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeploy setPublicArtifactUri(java.lang.String publicArtifactUri) {
+    this.publicArtifactUri = publicArtifactUri;
     return this;
   }
 

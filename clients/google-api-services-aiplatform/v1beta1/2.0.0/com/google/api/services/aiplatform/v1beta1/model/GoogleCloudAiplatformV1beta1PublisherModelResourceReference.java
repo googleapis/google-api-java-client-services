@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PublisherModelResourceReference extends com.google.api.client.json.GenericJson {
 
   /**
+   * Description of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * The resource name of the Google Cloud resource.
    * The value may be {@code null}.
    */
@@ -42,6 +49,30 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelResourceReference e
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Use case (CUJ) of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String useCase;
+
+  /**
+   * Description of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Description of the resource.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelResourceReference setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * The resource name of the Google Cloud resource.
@@ -74,6 +105,23 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelResourceReference e
    */
   public GoogleCloudAiplatformV1beta1PublisherModelResourceReference setUri(java.lang.String uri) {
     this.uri = uri;
+    return this;
+  }
+
+  /**
+   * Use case (CUJ) of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUseCase() {
+    return useCase;
+  }
+
+  /**
+   * Use case (CUJ) of the resource.
+   * @param useCase useCase or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelResourceReference setUseCase(java.lang.String useCase) {
+    this.useCase = useCase;
     return this;
   }
 

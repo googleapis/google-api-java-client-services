@@ -37,7 +37,7 @@ public final class GoogleCloudAiplatformV1FileData extends com.google.api.client
   private java.lang.String fileUri;
 
   /**
-   * Required. Mime type of the data.
+   * Required. The IANA standard MIME type of the source data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudAiplatformV1FileData extends com.google.api.client
   }
 
   /**
-   * Required. Mime type of the data.
+   * Required. The IANA standard MIME type of the source data.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -69,7 +69,7 @@ public final class GoogleCloudAiplatformV1FileData extends com.google.api.client
   }
 
   /**
-   * Required. Mime type of the data.
+   * Required. The IANA standard MIME type of the source data.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudAiplatformV1FileData setMimeType(java.lang.String mimeType) {

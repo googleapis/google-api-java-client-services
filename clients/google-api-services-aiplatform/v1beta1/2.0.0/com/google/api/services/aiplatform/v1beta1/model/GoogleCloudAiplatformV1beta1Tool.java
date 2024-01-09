@@ -17,7 +17,9 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Tool details that the model may use to generate response.
+ * Tool details that the model may use to generate response. A `Tool` is a piece of code that
+ * enables the system to interact with external systems to perform an action, or set of actions,
+ * outside of knowledge and scope of the model.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

@@ -78,6 +78,15 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
   private ServiceAccount serviceAccount;
 
   /**
+   * Optional. Tags applied to the VM instances. The tags identify valid sources or targets for
+   * network firewalls. Each tag must be 1-63 characters long, and comply with
+   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tags;
+
+  /**
    * Describe instances that can be created by this AllocationPolicy. Only instances[0] is supported
    * now.
    * @return value or {@code null} for none
@@ -186,6 +195,27 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
    */
   public AllocationPolicy setServiceAccount(ServiceAccount serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Optional. Tags applied to the VM instances. The tags identify valid sources or targets for
+   * network firewalls. Each tag must be 1-63 characters long, and comply with
+   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Tags applied to the VM instances. The tags identify valid sources or targets for
+   * network firewalls. Each tag must be 1-63 characters long, and comply with
+   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
+   * @param tags tags or {@code null} for none
+   */
+  public AllocationPolicy setTags(java.util.List<java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

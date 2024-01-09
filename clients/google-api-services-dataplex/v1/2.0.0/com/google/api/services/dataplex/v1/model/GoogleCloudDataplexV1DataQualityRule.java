@@ -54,8 +54,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. Rows with null values will automatically fail a rule, unless ignore_null is true. In
-   * that case, such null rows are trivially considered passing.This field is only valid for row-
-   * level type rules.
+   * that case, such null rows are trivially considered passing.This field is only valid for the
+   * following type of rules: RangeExpectation RegexExpectation SetExpectation UniquenessExpectation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,8 +193,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. Rows with null values will automatically fail a rule, unless ignore_null is true. In
-   * that case, such null rows are trivially considered passing.This field is only valid for row-
-   * level type rules.
+   * that case, such null rows are trivially considered passing.This field is only valid for the
+   * following type of rules: RangeExpectation RegexExpectation SetExpectation UniquenessExpectation
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreNull() {
@@ -203,8 +203,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. Rows with null values will automatically fail a rule, unless ignore_null is true. In
-   * that case, such null rows are trivially considered passing.This field is only valid for row-
-   * level type rules.
+   * that case, such null rows are trivially considered passing.This field is only valid for the
+   * following type of rules: RangeExpectation RegexExpectation SetExpectation UniquenessExpectation
    * @param ignoreNull ignoreNull or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setIgnoreNull(java.lang.Boolean ignoreNull) {

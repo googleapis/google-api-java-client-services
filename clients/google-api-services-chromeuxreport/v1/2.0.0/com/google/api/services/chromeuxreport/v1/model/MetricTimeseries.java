@@ -32,6 +32,19 @@ package com.google.api.services.chromeuxreport.v1.model;
 public final class MetricTimeseries extends com.google.api.client.json.GenericJson {
 
   /**
+   * Mapping from labels to timeseries of fractions attributed to this label.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, FractionTimeseries> fractionTimeseries;
+
+  static {
+    // hack to force ProGuard to consider FractionTimeseries used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FractionTimeseries.class);
+  }
+
+  /**
    * The histogram of user experiences for a metric. The histogram will have at least one bin and
    * the densities of all bins will add up to ~1, for each timeseries entry.
    * The value may be {@code null}.
@@ -46,6 +59,23 @@ public final class MetricTimeseries extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private TimeseriesPercentiles percentilesTimeseries;
+
+  /**
+   * Mapping from labels to timeseries of fractions attributed to this label.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, FractionTimeseries> getFractionTimeseries() {
+    return fractionTimeseries;
+  }
+
+  /**
+   * Mapping from labels to timeseries of fractions attributed to this label.
+   * @param fractionTimeseries fractionTimeseries or {@code null} for none
+   */
+  public MetricTimeseries setFractionTimeseries(java.util.Map<String, FractionTimeseries> fractionTimeseries) {
+    this.fractionTimeseries = fractionTimeseries;
+    return this;
+  }
 
   /**
    * The histogram of user experiences for a metric. The histogram will have at least one bin and

@@ -19,7 +19,8 @@ package com.google.api.services.securitycenter.v1.model;
 /**
  * Represents an instance of an Event Threat Detection custom module, including its full module
  * name, display name, enablement state, and last updated time. You can create a custom module at
- * the organization level only.
+ * the organization, folder, or project level. Custom modules that you create at the organization or
+ * folder level are inherited by child folders and projects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,6 +32,14 @@ package com.google.api.services.securitycenter.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class EventThreatDetectionCustomModule extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Output only. The closest ancestor module that this module inherits the enablement state from.
+   * The format is the same as the EventThreatDetectionCustomModule resource name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ancestorModule;
 
   /**
    * Config for the module. For the resident module, its config value is defined at this level. For
@@ -91,6 +100,25 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. The closest ancestor module that this module inherits the enablement state from.
+   * The format is the same as the EventThreatDetectionCustomModule resource name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAncestorModule() {
+    return ancestorModule;
+  }
+
+  /**
+   * Output only. The closest ancestor module that this module inherits the enablement state from.
+   * The format is the same as the EventThreatDetectionCustomModule resource name.
+   * @param ancestorModule ancestorModule or {@code null} for none
+   */
+  public EventThreatDetectionCustomModule setAncestorModule(java.lang.String ancestorModule) {
+    this.ancestorModule = ancestorModule;
+    return this;
+  }
 
   /**
    * Config for the module. For the resident module, its config value is defined at this level. For

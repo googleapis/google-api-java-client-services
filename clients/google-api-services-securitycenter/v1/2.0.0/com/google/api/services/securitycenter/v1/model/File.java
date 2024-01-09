@@ -39,6 +39,13 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String contents;
 
   /**
+   * Path of the file in terms of underlying disk/partition identifiers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskPath diskPath;
+
+  /**
    * The length in bytes of the file prefix that was hashed. If hashed_size == size, any hashes
    * reported represent the entire file.
    * The value may be {@code null}.
@@ -89,6 +96,23 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setContents(java.lang.String contents) {
     this.contents = contents;
+    return this;
+  }
+
+  /**
+   * Path of the file in terms of underlying disk/partition identifiers.
+   * @return value or {@code null} for none
+   */
+  public DiskPath getDiskPath() {
+    return diskPath;
+  }
+
+  /**
+   * Path of the file in terms of underlying disk/partition identifiers.
+   * @param diskPath diskPath or {@code null} for none
+   */
+  public File setDiskPath(DiskPath diskPath) {
+    this.diskPath = diskPath;
     return this;
   }
 

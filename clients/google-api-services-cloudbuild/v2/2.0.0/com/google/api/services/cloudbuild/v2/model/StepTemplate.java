@@ -44,6 +44,13 @@ public final class StepTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Pod volumes to mount into the container's filesystem.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<VolumeMount> volumeMounts;
+
+  /**
    * Optional. List of environment variables to set in the Step. Cannot be updated.
    * @return value or {@code null} for none
    */
@@ -57,6 +64,23 @@ public final class StepTemplate extends com.google.api.client.json.GenericJson {
    */
   public StepTemplate setEnv(java.util.List<EnvVar> env) {
     this.env = env;
+    return this;
+  }
+
+  /**
+   * Optional. Pod volumes to mount into the container's filesystem.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<VolumeMount> getVolumeMounts() {
+    return volumeMounts;
+  }
+
+  /**
+   * Optional. Pod volumes to mount into the container's filesystem.
+   * @param volumeMounts volumeMounts or {@code null} for none
+   */
+  public StepTemplate setVolumeMounts(java.util.List<VolumeMount> volumeMounts) {
+    this.volumeMounts = volumeMounts;
     return this;
   }
 

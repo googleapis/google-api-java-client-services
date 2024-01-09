@@ -38,6 +38,27 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   private java.util.List<java.lang.String> assignees;
 
   /**
+   * The priority of the finding's corresponding case in the external system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String casePriority;
+
+  /**
+   * The SLA of the finding's corresponding case in the external system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String caseSla;
+
+  /**
+   * The link to the finding's corresponding case in the external system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String caseUri;
+
+  /**
    * The time when the case was last updated, as reported by the external system.
    * The value may be {@code null}.
    */
@@ -69,6 +90,14 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   private java.lang.String status;
 
   /**
+   * Information about the ticket, if any, that is being used to track the resolution of the issue
+   * that is identified by this finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TicketInfo ticketInfo;
+
+  /**
    * References primary/secondary etc assignees in the external system.
    * @return value or {@code null} for none
    */
@@ -82,6 +111,57 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
    */
   public GoogleCloudSecuritycenterV1ExternalSystem setAssignees(java.util.List<java.lang.String> assignees) {
     this.assignees = assignees;
+    return this;
+  }
+
+  /**
+   * The priority of the finding's corresponding case in the external system.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCasePriority() {
+    return casePriority;
+  }
+
+  /**
+   * The priority of the finding's corresponding case in the external system.
+   * @param casePriority casePriority or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExternalSystem setCasePriority(java.lang.String casePriority) {
+    this.casePriority = casePriority;
+    return this;
+  }
+
+  /**
+   * The SLA of the finding's corresponding case in the external system.
+   * @return value or {@code null} for none
+   */
+  public String getCaseSla() {
+    return caseSla;
+  }
+
+  /**
+   * The SLA of the finding's corresponding case in the external system.
+   * @param caseSla caseSla or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExternalSystem setCaseSla(String caseSla) {
+    this.caseSla = caseSla;
+    return this;
+  }
+
+  /**
+   * The link to the finding's corresponding case in the external system.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCaseUri() {
+    return caseUri;
+  }
+
+  /**
+   * The link to the finding's corresponding case in the external system.
+   * @param caseUri caseUri or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExternalSystem setCaseUri(java.lang.String caseUri) {
+    this.caseUri = caseUri;
     return this;
   }
 
@@ -156,6 +236,25 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
    */
   public GoogleCloudSecuritycenterV1ExternalSystem setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Information about the ticket, if any, that is being used to track the resolution of the issue
+   * that is identified by this finding.
+   * @return value or {@code null} for none
+   */
+  public TicketInfo getTicketInfo() {
+    return ticketInfo;
+  }
+
+  /**
+   * Information about the ticket, if any, that is being used to track the resolution of the issue
+   * that is identified by this finding.
+   * @param ticketInfo ticketInfo or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ExternalSystem setTicketInfo(TicketInfo ticketInfo) {
+    this.ticketInfo = ticketInfo;
     return this;
   }
 

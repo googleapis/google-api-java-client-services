@@ -38,6 +38,13 @@ public final class ProcessSignature extends com.google.api.client.json.GenericJs
   private MemoryHashSignature memoryHashSignature;
 
   /**
+   * Describes the type of resource associated with the signature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String signatureType;
+
+  /**
    * Signature indicating that a YARA rule was matched.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class ProcessSignature extends com.google.api.client.json.GenericJs
    */
   public ProcessSignature setMemoryHashSignature(MemoryHashSignature memoryHashSignature) {
     this.memoryHashSignature = memoryHashSignature;
+    return this;
+  }
+
+  /**
+   * Describes the type of resource associated with the signature.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSignatureType() {
+    return signatureType;
+  }
+
+  /**
+   * Describes the type of resource associated with the signature.
+   * @param signatureType signatureType or {@code null} for none
+   */
+  public ProcessSignature setSignatureType(java.lang.String signatureType) {
+    this.signatureType = signatureType;
     return this;
   }
 

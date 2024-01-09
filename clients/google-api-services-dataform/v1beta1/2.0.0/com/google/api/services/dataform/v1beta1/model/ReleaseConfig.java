@@ -45,6 +45,13 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String cronSchedule;
 
   /**
+   * Optional. Disables automatic creation of compilation results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
+
+  /**
    * Required. Git commit/tag/branch name at which the repository should be compiled. Must exist in
    * the remote repository. Examples: - a commit SHA: `12ade345` - a tag: `tag1` - a branch name:
    * `branch1`
@@ -123,6 +130,23 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
    */
   public ReleaseConfig setCronSchedule(java.lang.String cronSchedule) {
     this.cronSchedule = cronSchedule;
+    return this;
+  }
+
+  /**
+   * Optional. Disables automatic creation of compilation results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * Optional. Disables automatic creation of compilation results.
+   * @param disabled disabled or {@code null} for none
+   */
+  public ReleaseConfig setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
     return this;
   }
 

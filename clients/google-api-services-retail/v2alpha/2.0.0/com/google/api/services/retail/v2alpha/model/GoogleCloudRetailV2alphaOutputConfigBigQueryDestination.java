@@ -37,6 +37,21 @@ public final class GoogleCloudRetailV2alphaOutputConfigBigQueryDestination exten
   private java.lang.String datasetId;
 
   /**
+   * Required. The prefix of exported BigQuery tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tableIdPrefix;
+
+  /**
+   * Required. Describes the table type. The following values are supported: * `table`: A BigQuery
+   * native table. * `view`: A virtual table defined by a SQL query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tableType;
+
+  /**
    * Required. The ID of a BigQuery Dataset.
    * @return value or {@code null} for none
    */
@@ -50,6 +65,42 @@ public final class GoogleCloudRetailV2alphaOutputConfigBigQueryDestination exten
    */
   public GoogleCloudRetailV2alphaOutputConfigBigQueryDestination setDatasetId(java.lang.String datasetId) {
     this.datasetId = datasetId;
+    return this;
+  }
+
+  /**
+   * Required. The prefix of exported BigQuery tables.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTableIdPrefix() {
+    return tableIdPrefix;
+  }
+
+  /**
+   * Required. The prefix of exported BigQuery tables.
+   * @param tableIdPrefix tableIdPrefix or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaOutputConfigBigQueryDestination setTableIdPrefix(java.lang.String tableIdPrefix) {
+    this.tableIdPrefix = tableIdPrefix;
+    return this;
+  }
+
+  /**
+   * Required. Describes the table type. The following values are supported: * `table`: A BigQuery
+   * native table. * `view`: A virtual table defined by a SQL query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTableType() {
+    return tableType;
+  }
+
+  /**
+   * Required. Describes the table type. The following values are supported: * `table`: A BigQuery
+   * native table. * `view`: A virtual table defined by a SQL query.
+   * @param tableType tableType or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaOutputConfigBigQueryDestination setTableType(java.lang.String tableType) {
+    this.tableType = tableType;
     return this;
   }
 

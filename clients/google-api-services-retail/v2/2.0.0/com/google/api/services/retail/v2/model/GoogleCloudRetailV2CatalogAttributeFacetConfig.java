@@ -63,6 +63,14 @@ public final class GoogleCloudRetailV2CatalogAttributeFacetConfig extends com.go
   private java.util.List<GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue> mergedFacetValues;
 
   /**
+   * Set this field only if you want to rerank based on facet values engaged by the user for the
+   * current key. This option is only possible for custom facetable textual keys.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig rerankConfig;
+
+  /**
    * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals in the request to a
    * numerical attribute, then we use the computed intervals with rounded bounds obtained from all
    * its product numerical attribute values. The computed intervals might not be ideal for some
@@ -134,6 +142,25 @@ public final class GoogleCloudRetailV2CatalogAttributeFacetConfig extends com.go
    */
   public GoogleCloudRetailV2CatalogAttributeFacetConfig setMergedFacetValues(java.util.List<GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue> mergedFacetValues) {
     this.mergedFacetValues = mergedFacetValues;
+    return this;
+  }
+
+  /**
+   * Set this field only if you want to rerank based on facet values engaged by the user for the
+   * current key. This option is only possible for custom facetable textual keys.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig getRerankConfig() {
+    return rerankConfig;
+  }
+
+  /**
+   * Set this field only if you want to rerank based on facet values engaged by the user for the
+   * current key. This option is only possible for custom facetable textual keys.
+   * @param rerankConfig rerankConfig or {@code null} for none
+   */
+  public GoogleCloudRetailV2CatalogAttributeFacetConfig setRerankConfig(GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig rerankConfig) {
+    this.rerankConfig = rerankConfig;
     return this;
   }
 

@@ -37,6 +37,13 @@ public final class SapValidationValidationDetail extends com.google.api.client.j
   private java.util.Map<String, java.lang.String> details;
 
   /**
+   * Optional. Was there a SAP system detected for this validation type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isPresent;
+
+  /**
    * Optional. The SAP system that the validation data is from.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class SapValidationValidationDetail extends com.google.api.client.j
    */
   public SapValidationValidationDetail setDetails(java.util.Map<String, java.lang.String> details) {
     this.details = details;
+    return this;
+  }
+
+  /**
+   * Optional. Was there a SAP system detected for this validation type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsPresent() {
+    return isPresent;
+  }
+
+  /**
+   * Optional. Was there a SAP system detected for this validation type.
+   * @param isPresent isPresent or {@code null} for none
+   */
+  public SapValidationValidationDetail setIsPresent(java.lang.Boolean isPresent) {
+    this.isPresent = isPresent;
     return this;
   }
 

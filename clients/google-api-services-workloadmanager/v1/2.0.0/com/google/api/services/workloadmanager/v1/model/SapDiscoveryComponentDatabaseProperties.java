@@ -37,6 +37,13 @@ public final class SapDiscoveryComponentDatabaseProperties extends com.google.ap
   private java.lang.String databaseType;
 
   /**
+   * Optional. The version of the database software running in the system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseVersion;
+
+  /**
    * Required. URI of the recognized primary instance of the database.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class SapDiscoveryComponentDatabaseProperties extends com.google.ap
    */
   public SapDiscoveryComponentDatabaseProperties setDatabaseType(java.lang.String databaseType) {
     this.databaseType = databaseType;
+    return this;
+  }
+
+  /**
+   * Optional. The version of the database software running in the system.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseVersion() {
+    return databaseVersion;
+  }
+
+  /**
+   * Optional. The version of the database software running in the system.
+   * @param databaseVersion databaseVersion or {@code null} for none
+   */
+  public SapDiscoveryComponentDatabaseProperties setDatabaseVersion(java.lang.String databaseVersion) {
+    this.databaseVersion = databaseVersion;
     return this;
   }
 

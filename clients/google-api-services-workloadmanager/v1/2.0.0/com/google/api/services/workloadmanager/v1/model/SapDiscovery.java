@@ -51,6 +51,13 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   private SapDiscoveryMetadata metadata;
 
   /**
+   * Optional. The GCP project number that this SapSystem belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectNumber;
+
+  /**
    * Output only. A combination of database SID, database instance URI and tenant DB name to make a
    * unique identifier per-system.
    * The value may be {@code null}.
@@ -113,6 +120,23 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
    */
   public SapDiscovery setMetadata(SapDiscoveryMetadata metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Optional. The GCP project number that this SapSystem belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectNumber() {
+    return projectNumber;
+  }
+
+  /**
+   * Optional. The GCP project number that this SapSystem belongs to.
+   * @param projectNumber projectNumber or {@code null} for none
+   */
+  public SapDiscovery setProjectNumber(java.lang.String projectNumber) {
+    this.projectNumber = projectNumber;
     return this;
   }
 

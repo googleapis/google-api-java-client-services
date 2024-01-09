@@ -30,6 +30,14 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapDiscoveryComponentApplicationProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Indicates whether this is a Java or ABAP Netweaver instance. true means it is ABAP,
+   * false means it is Java.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean abap;
+
+  /**
    * Required. Type of the application. Netweaver, etc.
    * The value may be {@code null}.
    */
@@ -44,12 +52,38 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   private java.lang.String ascsUri;
 
   /**
+   * Optional. Kernel version for Netweaver running in the system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kernelVersion;
+
+  /**
    * Optional. Resource URI of the recognized shared NFS of the application. May be empty if the
    * application server has only a single node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nfsUri;
+
+  /**
+   * Optional. Indicates whether this is a Java or ABAP Netweaver instance. true means it is ABAP,
+   * false means it is Java.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAbap() {
+    return abap;
+  }
+
+  /**
+   * Optional. Indicates whether this is a Java or ABAP Netweaver instance. true means it is ABAP,
+   * false means it is Java.
+   * @param abap abap or {@code null} for none
+   */
+  public SapDiscoveryComponentApplicationProperties setAbap(java.lang.Boolean abap) {
+    this.abap = abap;
+    return this;
+  }
 
   /**
    * Required. Type of the application. Netweaver, etc.
@@ -82,6 +116,23 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
    */
   public SapDiscoveryComponentApplicationProperties setAscsUri(java.lang.String ascsUri) {
     this.ascsUri = ascsUri;
+    return this;
+  }
+
+  /**
+   * Optional. Kernel version for Netweaver running in the system.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKernelVersion() {
+    return kernelVersion;
+  }
+
+  /**
+   * Optional. Kernel version for Netweaver running in the system.
+   * @param kernelVersion kernelVersion or {@code null} for none
+   */
+  public SapDiscoveryComponentApplicationProperties setKernelVersion(java.lang.String kernelVersion) {
+    this.kernelVersion = kernelVersion;
     return this;
   }
 

@@ -44,6 +44,14 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   private SapDiscoveryComponentDatabaseProperties databaseProperties;
 
   /**
+   * Optional. A list of host URIs that are part of the HA configuration if present. An empty list
+   * indicates the component is not configured for HA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> haHosts;
+
+  /**
    * Required. Pantheon Project in which the resources reside.
    * The value may be {@code null}.
    */
@@ -64,6 +72,13 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String sid;
+
+  /**
+   * Optional. The detected topology of the component.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String topologyType;
 
   /**
    * Optional. The component is a SAP application.
@@ -96,6 +111,25 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
    */
   public SapDiscoveryComponent setDatabaseProperties(SapDiscoveryComponentDatabaseProperties databaseProperties) {
     this.databaseProperties = databaseProperties;
+    return this;
+  }
+
+  /**
+   * Optional. A list of host URIs that are part of the HA configuration if present. An empty list
+   * indicates the component is not configured for HA.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHaHosts() {
+    return haHosts;
+  }
+
+  /**
+   * Optional. A list of host URIs that are part of the HA configuration if present. An empty list
+   * indicates the component is not configured for HA.
+   * @param haHosts haHosts or {@code null} for none
+   */
+  public SapDiscoveryComponent setHaHosts(java.util.List<java.lang.String> haHosts) {
+    this.haHosts = haHosts;
     return this;
   }
 
@@ -149,6 +183,23 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
    */
   public SapDiscoveryComponent setSid(java.lang.String sid) {
     this.sid = sid;
+    return this;
+  }
+
+  /**
+   * Optional. The detected topology of the component.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTopologyType() {
+    return topologyType;
+  }
+
+  /**
+   * Optional. The detected topology of the component.
+   * @param topologyType topologyType or {@code null} for none
+   */
+  public SapDiscoveryComponent setTopologyType(java.lang.String topologyType) {
+    this.topologyType = topologyType;
     return this;
   }
 

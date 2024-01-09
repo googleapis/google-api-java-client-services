@@ -37,6 +37,13 @@ public final class MailExportOptions extends com.google.api.client.json.GenericJ
   private java.lang.String exportFormat;
 
   /**
+   * Optional. To enable exporting linked Drive files, set to **true**.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exportLinkedDriveFiles;
+
+  /**
    * To export confidential mode content, set to **true**.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class MailExportOptions extends com.google.api.client.json.GenericJ
    */
   public MailExportOptions setExportFormat(java.lang.String exportFormat) {
     this.exportFormat = exportFormat;
+    return this;
+  }
+
+  /**
+   * Optional. To enable exporting linked Drive files, set to **true**.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExportLinkedDriveFiles() {
+    return exportLinkedDriveFiles;
+  }
+
+  /**
+   * Optional. To enable exporting linked Drive files, set to **true**.
+   * @param exportLinkedDriveFiles exportLinkedDriveFiles or {@code null} for none
+   */
+  public MailExportOptions setExportLinkedDriveFiles(java.lang.Boolean exportLinkedDriveFiles) {
+    this.exportLinkedDriveFiles = exportLinkedDriveFiles;
     return this;
   }
 

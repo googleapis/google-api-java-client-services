@@ -37,6 +37,13 @@ public final class Query extends com.google.api.client.json.GenericJson {
   private AccountInfo accountInfo;
 
   /**
+   * Set Calendar search-specific options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CalendarOptions calendarOptions;
+
+  /**
    * The Google Workspace service to search.
    * The value may be {@code null}.
    */
@@ -176,6 +183,23 @@ public final class Query extends com.google.api.client.json.GenericJson {
    */
   public Query setAccountInfo(AccountInfo accountInfo) {
     this.accountInfo = accountInfo;
+    return this;
+  }
+
+  /**
+   * Set Calendar search-specific options.
+   * @return value or {@code null} for none
+   */
+  public CalendarOptions getCalendarOptions() {
+    return calendarOptions;
+  }
+
+  /**
+   * Set Calendar search-specific options.
+   * @param calendarOptions calendarOptions or {@code null} for none
+   */
+  public Query setCalendarOptions(CalendarOptions calendarOptions) {
+    this.calendarOptions = calendarOptions;
     return this;
   }
 

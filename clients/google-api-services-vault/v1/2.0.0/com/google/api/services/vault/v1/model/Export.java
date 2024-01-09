@@ -76,6 +76,14 @@ public final class Export extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Identifies the parent export that spawned this child export. This is only set on
+   * child exports.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentExportId;
+
+  /**
    * The query parameters used to create the export.
    * The value may be {@code null}.
    */
@@ -204,6 +212,25 @@ public final class Export extends com.google.api.client.json.GenericJson {
    */
   public Export setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Identifies the parent export that spawned this child export. This is only set on
+   * child exports.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentExportId() {
+    return parentExportId;
+  }
+
+  /**
+   * Output only. Identifies the parent export that spawned this child export. This is only set on
+   * child exports.
+   * @param parentExportId parentExportId or {@code null} for none
+   */
+  public Export setParentExportId(java.lang.String parentExportId) {
+    this.parentExportId = parentExportId;
     return this;
   }
 

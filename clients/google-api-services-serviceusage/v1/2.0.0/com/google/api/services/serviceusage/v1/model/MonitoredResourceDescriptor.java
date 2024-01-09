@@ -86,7 +86,7 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
 
   /**
    * Required. The monitored resource type. For example, the type `"cloudsql_database"` represents
-   * databases in Google Cloud SQL. For a list of types, see [Monitoring resource
+   * databases in Google Cloud SQL. For a list of types, see [Monitored resource
    * types](https://cloud.google.com/monitoring/api/resources) and [Logging resource
    * types](https://cloud.google.com/logging/docs/api/v2/resource-list).
    * The value may be {@code null}.
@@ -199,7 +199,7 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
 
   /**
    * Required. The monitored resource type. For example, the type `"cloudsql_database"` represents
-   * databases in Google Cloud SQL. For a list of types, see [Monitoring resource
+   * databases in Google Cloud SQL. For a list of types, see [Monitored resource
    * types](https://cloud.google.com/monitoring/api/resources) and [Logging resource
    * types](https://cloud.google.com/logging/docs/api/v2/resource-list).
    * @return value or {@code null} for none
@@ -210,7 +210,7 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
 
   /**
    * Required. The monitored resource type. For example, the type `"cloudsql_database"` represents
-   * databases in Google Cloud SQL. For a list of types, see [Monitoring resource
+   * databases in Google Cloud SQL. For a list of types, see [Monitored resource
    * types](https://cloud.google.com/monitoring/api/resources) and [Logging resource
    * types](https://cloud.google.com/logging/docs/api/v2/resource-list).
    * @param type type or {@code null} for none

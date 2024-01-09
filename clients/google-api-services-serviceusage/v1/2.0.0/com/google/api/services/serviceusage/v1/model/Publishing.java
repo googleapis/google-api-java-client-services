@@ -120,6 +120,14 @@ public final class Publishing extends com.google.api.client.json.GenericJson {
   private java.lang.String protoReferenceDocumentationUri;
 
   /**
+   * Optional link to REST reference documentation. Example:
+   * https://cloud.google.com/pubsub/lite/docs/reference/rest
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String restReferenceDocumentationUri;
+
+  /**
    * Used as a tracking tag when collecting data about the APIs developer relations artifacts like
    * docs, packages delivered to package managers, etc. Example: "speech".
    * @return value or {@code null} for none
@@ -298,6 +306,25 @@ public final class Publishing extends com.google.api.client.json.GenericJson {
    */
   public Publishing setProtoReferenceDocumentationUri(java.lang.String protoReferenceDocumentationUri) {
     this.protoReferenceDocumentationUri = protoReferenceDocumentationUri;
+    return this;
+  }
+
+  /**
+   * Optional link to REST reference documentation. Example:
+   * https://cloud.google.com/pubsub/lite/docs/reference/rest
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRestReferenceDocumentationUri() {
+    return restReferenceDocumentationUri;
+  }
+
+  /**
+   * Optional link to REST reference documentation. Example:
+   * https://cloud.google.com/pubsub/lite/docs/reference/rest
+   * @param restReferenceDocumentationUri restReferenceDocumentationUri or {@code null} for none
+   */
+  public Publishing setRestReferenceDocumentationUri(java.lang.String restReferenceDocumentationUri) {
+    this.restReferenceDocumentationUri = restReferenceDocumentationUri;
     return this;
   }
 

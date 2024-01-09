@@ -70,6 +70,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private java.lang.String healthState;
 
   /**
+   * Output only. Whether NotebookRuntime is upgradable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isUpgradable;
+
+  /**
    * The labels with user-defined metadata to organize your NotebookRuntime. Label keys and values
    * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
    * numeric characters, underscores and dashes. International characters are allowed. No more than
@@ -94,6 +101,14 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private java.lang.String name;
 
   /**
+   * Optional. The Compute Engine tags to add to runtime (see [Tagging
+   * instances](https://cloud.google.com/vpc/docs/add-remove-network-tags)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> networkTags;
+
+  /**
    * Output only. The pointer to NotebookRuntimeTemplate this NotebookRuntime is created from.
    * The value may be {@code null}.
    */
@@ -113,6 +128,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String proxyUri;
+
+  /**
+   * Output only. Reservation Affinity of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookReservationAffinity reservationAffinity;
 
   /**
    * Output only. The runtime (instance) state of the NotebookRuntime.
@@ -243,6 +265,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   }
 
   /**
+   * Output only. Whether NotebookRuntime is upgradable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsUpgradable() {
+    return isUpgradable;
+  }
+
+  /**
+   * Output only. Whether NotebookRuntime is upgradable.
+   * @param isUpgradable isUpgradable or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setIsUpgradable(java.lang.Boolean isUpgradable) {
+    this.isUpgradable = isUpgradable;
+    return this;
+  }
+
+  /**
    * The labels with user-defined metadata to organize your NotebookRuntime. Label keys and values
    * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
    * numeric characters, underscores and dashes. International characters are allowed. No more than
@@ -297,6 +336,25 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   }
 
   /**
+   * Optional. The Compute Engine tags to add to runtime (see [Tagging
+   * instances](https://cloud.google.com/vpc/docs/add-remove-network-tags)).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNetworkTags() {
+    return networkTags;
+  }
+
+  /**
+   * Optional. The Compute Engine tags to add to runtime (see [Tagging
+   * instances](https://cloud.google.com/vpc/docs/add-remove-network-tags)).
+   * @param networkTags networkTags or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setNetworkTags(java.util.List<java.lang.String> networkTags) {
+    this.networkTags = networkTags;
+    return this;
+  }
+
+  /**
    * Output only. The pointer to NotebookRuntimeTemplate this NotebookRuntime is created from.
    * @return value or {@code null} for none
    */
@@ -344,6 +402,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setProxyUri(java.lang.String proxyUri) {
     this.proxyUri = proxyUri;
+    return this;
+  }
+
+  /**
+   * Output only. Reservation Affinity of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * Output only. Reservation Affinity of the notebook runtime.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setReservationAffinity(GoogleCloudAiplatformV1beta1NotebookReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

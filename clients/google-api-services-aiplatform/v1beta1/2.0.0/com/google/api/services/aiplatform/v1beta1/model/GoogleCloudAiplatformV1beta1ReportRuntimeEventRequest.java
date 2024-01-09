@@ -45,6 +45,32 @@ public final class GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest extends
   private java.lang.String eventType;
 
   /**
+   * The details of the internal os service states.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1InternalOsServiceStateInstance> internalOsServiceStateInstance;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1InternalOsServiceStateInstance used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1InternalOsServiceStateInstance.class);
+  }
+
+  /**
+   * Optional. The details of the internal os service states.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1InternalOsServiceStateInstance> internalOsServiceStateInstances;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1InternalOsServiceStateInstance used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1InternalOsServiceStateInstance.class);
+  }
+
+  /**
    * Required. The VM identity token (a JWT) for authenticating the VM.
    * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
    * The value may be {@code null}.
@@ -83,6 +109,40 @@ public final class GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest extends
    */
   public GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest setEventType(java.lang.String eventType) {
     this.eventType = eventType;
+    return this;
+  }
+
+  /**
+   * The details of the internal os service states.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1InternalOsServiceStateInstance> getInternalOsServiceStateInstance() {
+    return internalOsServiceStateInstance;
+  }
+
+  /**
+   * The details of the internal os service states.
+   * @param internalOsServiceStateInstance internalOsServiceStateInstance or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest setInternalOsServiceStateInstance(java.util.List<GoogleCloudAiplatformV1beta1InternalOsServiceStateInstance> internalOsServiceStateInstance) {
+    this.internalOsServiceStateInstance = internalOsServiceStateInstance;
+    return this;
+  }
+
+  /**
+   * Optional. The details of the internal os service states.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1InternalOsServiceStateInstance> getInternalOsServiceStateInstances() {
+    return internalOsServiceStateInstances;
+  }
+
+  /**
+   * Optional. The details of the internal os service states.
+   * @param internalOsServiceStateInstances internalOsServiceStateInstances or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReportRuntimeEventRequest setInternalOsServiceStateInstances(java.util.List<GoogleCloudAiplatformV1beta1InternalOsServiceStateInstance> internalOsServiceStateInstances) {
+    this.internalOsServiceStateInstances = internalOsServiceStateInstances;
     return this;
   }
 

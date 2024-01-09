@@ -17,7 +17,10 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Content part.
+ * A datatype containing media that is part of a multi-part `Content` message. A `Part` consists of
+ * data which has an associated datatype. A `Part` can only contain one of the accepted types in
+ * `Part.data`. A `Part` must have a fixed IANA MIME type identifying the type and subtype of the
+ * media if `inline_data` or `file_data` field is filled with raw bytes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

@@ -39,8 +39,8 @@ public final class GoogleCloudAiplatformV1ExportDataResponse extends com.google.
 
   /**
    * All of the files that are exported in this export operation. For custom code training export,
-   * only three (training, validation and test) GCS paths in wildcard format are populated (e.g.,
-   * gs://.../training-*).
+   * only three (training, validation and test) Cloud Storage paths in wildcard format are populated
+   * (for example, gs://.../training-*).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class GoogleCloudAiplatformV1ExportDataResponse extends com.google.
 
   /**
    * All of the files that are exported in this export operation. For custom code training export,
-   * only three (training, validation and test) GCS paths in wildcard format are populated (e.g.,
-   * gs://.../training-*).
+   * only three (training, validation and test) Cloud Storage paths in wildcard format are populated
+   * (for example, gs://.../training-*).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExportedFiles() {
@@ -77,8 +77,8 @@ public final class GoogleCloudAiplatformV1ExportDataResponse extends com.google.
 
   /**
    * All of the files that are exported in this export operation. For custom code training export,
-   * only three (training, validation and test) GCS paths in wildcard format are populated (e.g.,
-   * gs://.../training-*).
+   * only three (training, validation and test) Cloud Storage paths in wildcard format are populated
+   * (for example, gs://.../training-*).
    * @param exportedFiles exportedFiles or {@code null} for none
    */
   public GoogleCloudAiplatformV1ExportDataResponse setExportedFiles(java.util.List<java.lang.String> exportedFiles) {

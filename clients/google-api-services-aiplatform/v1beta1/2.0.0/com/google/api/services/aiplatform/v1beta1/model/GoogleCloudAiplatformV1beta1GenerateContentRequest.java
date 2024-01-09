@@ -30,7 +30,9 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Input content.
+   * Required. The content of the current conversation with the model. For single-turn queries, this
+   * is a single instance. For multi-turn queries, this is a repeated field that contains
+   * conversation history + latest request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,14 +68,19 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
   private java.util.List<GoogleCloudAiplatformV1beta1SafetySetting> safetySettings;
 
   /**
-   * Optional. Tools that the model may use to generate response.
+   * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
+   * piece of code that enables the system to interact with external systems to perform an action,
+   * or set of actions, outside of knowledge and scope of the model. The only supported tool is
+   * currently `Function`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1Tool> tools;
 
   /**
-   * Required. Input content.
+   * Required. The content of the current conversation with the model. For single-turn queries, this
+   * is a single instance. For multi-turn queries, this is a repeated field that contains
+   * conversation history + latest request.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1Content> getContents() {
@@ -81,7 +88,9 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
   }
 
   /**
-   * Required. Input content.
+   * Required. The content of the current conversation with the model. For single-turn queries, this
+   * is a single instance. For multi-turn queries, this is a repeated field that contains
+   * conversation history + latest request.
    * @param contents contents or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerateContentRequest setContents(java.util.List<GoogleCloudAiplatformV1beta1Content> contents) {
@@ -145,7 +154,10 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
   }
 
   /**
-   * Optional. Tools that the model may use to generate response.
+   * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
+   * piece of code that enables the system to interact with external systems to perform an action,
+   * or set of actions, outside of knowledge and scope of the model. The only supported tool is
+   * currently `Function`
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1Tool> getTools() {
@@ -153,7 +165,10 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
   }
 
   /**
-   * Optional. Tools that the model may use to generate response.
+   * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
+   * piece of code that enables the system to interact with external systems to perform an action,
+   * or set of actions, outside of knowledge and scope of the model. The only supported tool is
+   * currently `Function`
    * @param tools tools or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerateContentRequest setTools(java.util.List<GoogleCloudAiplatformV1beta1Tool> tools) {

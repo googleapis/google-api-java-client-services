@@ -90,6 +90,13 @@ public final class GoogleCloudAiplatformV1PublisherModel extends com.google.api.
   private java.lang.String versionId;
 
   /**
+   * Optional. Indicates the state of the model version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String versionState;
+
+  /**
    * Optional. Additional information about the model's Frameworks.
    * @return value or {@code null} for none
    */
@@ -230,6 +237,23 @@ public final class GoogleCloudAiplatformV1PublisherModel extends com.google.api.
    */
   public GoogleCloudAiplatformV1PublisherModel setVersionId(java.lang.String versionId) {
     this.versionId = versionId;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates the state of the model version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersionState() {
+    return versionState;
+  }
+
+  /**
+   * Optional. Indicates the state of the model version.
+   * @param versionState versionState or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModel setVersionState(java.lang.String versionState) {
+    this.versionState = versionState;
     return this;
   }
 

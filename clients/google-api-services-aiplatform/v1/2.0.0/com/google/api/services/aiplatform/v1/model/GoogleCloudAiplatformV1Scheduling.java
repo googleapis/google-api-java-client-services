@@ -38,6 +38,14 @@ public final class GoogleCloudAiplatformV1Scheduling extends com.google.api.clie
   private java.lang.Boolean disableRetries;
 
   /**
+   * Optional. This is the maximum time a user will wait in the QRM queue for resources. Default is
+   * 1 day
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String maxWaitDuration;
+
+  /**
    * Restarts the entire CustomJob if a worker gets restarted. This feature can be used by
    * distributed training jobs that are not resilient to workers leaving and joining a job.
    * The value may be {@code null}.
@@ -68,6 +76,25 @@ public final class GoogleCloudAiplatformV1Scheduling extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1Scheduling setDisableRetries(java.lang.Boolean disableRetries) {
     this.disableRetries = disableRetries;
+    return this;
+  }
+
+  /**
+   * Optional. This is the maximum time a user will wait in the QRM queue for resources. Default is
+   * 1 day
+   * @return value or {@code null} for none
+   */
+  public String getMaxWaitDuration() {
+    return maxWaitDuration;
+  }
+
+  /**
+   * Optional. This is the maximum time a user will wait in the QRM queue for resources. Default is
+   * 1 day
+   * @param maxWaitDuration maxWaitDuration or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Scheduling setMaxWaitDuration(String maxWaitDuration) {
+    this.maxWaitDuration = maxWaitDuration;
     return this;
   }
 

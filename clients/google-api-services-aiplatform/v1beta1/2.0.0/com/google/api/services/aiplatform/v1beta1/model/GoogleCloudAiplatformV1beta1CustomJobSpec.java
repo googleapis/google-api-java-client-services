@@ -81,6 +81,21 @@ public final class GoogleCloudAiplatformV1beta1CustomJobSpec extends com.google.
   private java.lang.String experimentRun;
 
   /**
+   * Optional. The name of the Model resources for which to generate a mapping to artifact URIs.
+   * Applicable only to some of the Google-provided custom jobs. Format:
+   * `projects/{project}/locations/{location}/models/{model}` In order to retrieve a specific
+   * version of the model, also provide the version ID or version alias. Example:
+   * `projects/{project}/locations/{location}/models/{model}@2` or
+   * `projects/{project}/locations/{location}/models/{model}@golden` If no version ID or alias is
+   * specified, the "default" version will be returned. The "default" version alias is created for
+   * the first version of the model, and can be moved to other versions later on. There will be
+   * exactly one default version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> models;
+
+  /**
    * Optional. The full name of the Compute Engine [network](/compute/docs/networks-and-
    * firewalls#networks) to which the Job should be peered. For example,
    * `projects/12345/global/networks/myVPC`.
@@ -269,6 +284,39 @@ public final class GoogleCloudAiplatformV1beta1CustomJobSpec extends com.google.
    */
   public GoogleCloudAiplatformV1beta1CustomJobSpec setExperimentRun(java.lang.String experimentRun) {
     this.experimentRun = experimentRun;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the Model resources for which to generate a mapping to artifact URIs.
+   * Applicable only to some of the Google-provided custom jobs. Format:
+   * `projects/{project}/locations/{location}/models/{model}` In order to retrieve a specific
+   * version of the model, also provide the version ID or version alias. Example:
+   * `projects/{project}/locations/{location}/models/{model}@2` or
+   * `projects/{project}/locations/{location}/models/{model}@golden` If no version ID or alias is
+   * specified, the "default" version will be returned. The "default" version alias is created for
+   * the first version of the model, and can be moved to other versions later on. There will be
+   * exactly one default version.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getModels() {
+    return models;
+  }
+
+  /**
+   * Optional. The name of the Model resources for which to generate a mapping to artifact URIs.
+   * Applicable only to some of the Google-provided custom jobs. Format:
+   * `projects/{project}/locations/{location}/models/{model}` In order to retrieve a specific
+   * version of the model, also provide the version ID or version alias. Example:
+   * `projects/{project}/locations/{location}/models/{model}@2` or
+   * `projects/{project}/locations/{location}/models/{model}@golden` If no version ID or alias is
+   * specified, the "default" version will be returned. The "default" version alias is created for
+   * the first version of the model, and can be moved to other versions later on. There will be
+   * exactly one default version.
+   * @param models models or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CustomJobSpec setModels(java.util.List<java.lang.String> models) {
+    this.models = models;
     return this;
   }
 

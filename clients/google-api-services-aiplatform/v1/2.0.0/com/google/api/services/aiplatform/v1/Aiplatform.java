@@ -16070,6 +16070,147 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Generate content with multimodal inputs with streaming support.
+         *
+         * Create a request for the method "endpoints.streamGenerateContent".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link StreamGenerateContent#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param model Required. The name of the publisher model requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/publishers/models`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentRequest}
+         * @return the request
+         */
+        public StreamGenerateContent streamGenerateContent(java.lang.String model, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentRequest content) throws java.io.IOException {
+          StreamGenerateContent result = new StreamGenerateContent(model, content);
+          initialize(result);
+          return result;
+        }
+
+        public class StreamGenerateContent extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentResponse> {
+
+          private static final String REST_PATH = "v1/{+model}:streamGenerateContent";
+
+          private final java.util.regex.Pattern MODEL_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Generate content with multimodal inputs with streaming support.
+           *
+           * Create a request for the method "endpoints.streamGenerateContent".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link StreamGenerateContent#execute()} method to invoke the
+           * remote operation. <p> {@link StreamGenerateContent#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param model Required. The name of the publisher model requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/publishers/models`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentRequest}
+           * @since 1.13
+           */
+          protected StreamGenerateContent(java.lang.String model, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentResponse.class);
+            this.model = com.google.api.client.util.Preconditions.checkNotNull(model, "Required parameter model must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
+                  "Parameter model must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public StreamGenerateContent set$Xgafv(java.lang.String $Xgafv) {
+            return (StreamGenerateContent) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public StreamGenerateContent setAccessToken(java.lang.String accessToken) {
+            return (StreamGenerateContent) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public StreamGenerateContent setAlt(java.lang.String alt) {
+            return (StreamGenerateContent) super.setAlt(alt);
+          }
+
+          @Override
+          public StreamGenerateContent setCallback(java.lang.String callback) {
+            return (StreamGenerateContent) super.setCallback(callback);
+          }
+
+          @Override
+          public StreamGenerateContent setFields(java.lang.String fields) {
+            return (StreamGenerateContent) super.setFields(fields);
+          }
+
+          @Override
+          public StreamGenerateContent setKey(java.lang.String key) {
+            return (StreamGenerateContent) super.setKey(key);
+          }
+
+          @Override
+          public StreamGenerateContent setOauthToken(java.lang.String oauthToken) {
+            return (StreamGenerateContent) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public StreamGenerateContent setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (StreamGenerateContent) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public StreamGenerateContent setQuotaUser(java.lang.String quotaUser) {
+            return (StreamGenerateContent) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public StreamGenerateContent setUploadType(java.lang.String uploadType) {
+            return (StreamGenerateContent) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public StreamGenerateContent setUploadProtocol(java.lang.String uploadProtocol) {
+            return (StreamGenerateContent) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the publisher model requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/publishers/models`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String model;
+
+          /** Required. The name of the publisher model requested to serve the prediction. Format:
+         `projects/{project}/locations/{location}/publishers/models`
+           */
+          public java.lang.String getModel() {
+            return model;
+          }
+
+          /**
+           * Required. The name of the publisher model requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/publishers/models`
+           */
+          public StreamGenerateContent setModel(java.lang.String model) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
+                  "Parameter model must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.model = model;
+            return this;
+          }
+
+          @Override
+          public StreamGenerateContent set(String parameterName, Object value) {
+            return (StreamGenerateContent) super.set(parameterName, value);
+          }
+        }
+        /**
          * Undeploys a Model from an Endpoint, removing a DeployedModel from it, and freeing all resources
          * it's using.
          *
@@ -58170,6 +58311,147 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return (ServerStreamingPredict) super.set(parameterName, value);
             }
           }
+          /**
+           * Generate content with multimodal inputs with streaming support.
+           *
+           * Create a request for the method "models.streamGenerateContent".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link StreamGenerateContent#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param model Required. The name of the publisher model requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/publishers/models`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentRequest}
+           * @return the request
+           */
+          public StreamGenerateContent streamGenerateContent(java.lang.String model, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentRequest content) throws java.io.IOException {
+            StreamGenerateContent result = new StreamGenerateContent(model, content);
+            initialize(result);
+            return result;
+          }
+
+          public class StreamGenerateContent extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentResponse> {
+
+            private static final String REST_PATH = "v1/{+model}:streamGenerateContent";
+
+            private final java.util.regex.Pattern MODEL_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+
+            /**
+             * Generate content with multimodal inputs with streaming support.
+             *
+             * Create a request for the method "models.streamGenerateContent".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link StreamGenerateContent#execute()} method to invoke the
+             * remote operation. <p> {@link StreamGenerateContent#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param model Required. The name of the publisher model requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/publishers/models`
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentRequest}
+             * @since 1.13
+             */
+            protected StreamGenerateContent(java.lang.String model, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1GenerateContentResponse.class);
+              this.model = com.google.api.client.util.Preconditions.checkNotNull(model, "Required parameter model must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
+                    "Parameter model must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public StreamGenerateContent set$Xgafv(java.lang.String $Xgafv) {
+              return (StreamGenerateContent) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public StreamGenerateContent setAccessToken(java.lang.String accessToken) {
+              return (StreamGenerateContent) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public StreamGenerateContent setAlt(java.lang.String alt) {
+              return (StreamGenerateContent) super.setAlt(alt);
+            }
+
+            @Override
+            public StreamGenerateContent setCallback(java.lang.String callback) {
+              return (StreamGenerateContent) super.setCallback(callback);
+            }
+
+            @Override
+            public StreamGenerateContent setFields(java.lang.String fields) {
+              return (StreamGenerateContent) super.setFields(fields);
+            }
+
+            @Override
+            public StreamGenerateContent setKey(java.lang.String key) {
+              return (StreamGenerateContent) super.setKey(key);
+            }
+
+            @Override
+            public StreamGenerateContent setOauthToken(java.lang.String oauthToken) {
+              return (StreamGenerateContent) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public StreamGenerateContent setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (StreamGenerateContent) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public StreamGenerateContent setQuotaUser(java.lang.String quotaUser) {
+              return (StreamGenerateContent) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public StreamGenerateContent setUploadType(java.lang.String uploadType) {
+              return (StreamGenerateContent) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public StreamGenerateContent setUploadProtocol(java.lang.String uploadProtocol) {
+              return (StreamGenerateContent) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the publisher model requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/publishers/models`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String model;
+
+            /** Required. The name of the publisher model requested to serve the prediction. Format:
+           `projects/{project}/locations/{location}/publishers/models`
+             */
+            public java.lang.String getModel() {
+              return model;
+            }
+
+            /**
+             * Required. The name of the publisher model requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/publishers/models`
+             */
+            public StreamGenerateContent setModel(java.lang.String model) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
+                    "Parameter model must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+              this.model = model;
+              return this;
+            }
+
+            @Override
+            public StreamGenerateContent set(String parameterName, Object value) {
+              return (StreamGenerateContent) super.set(parameterName, value);
+            }
+          }
 
         }
       }
@@ -65617,6 +65899,195 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
       public class Tensorboards {
 
         /**
+         * Reads multiple TensorboardTimeSeries' data. The data point number limit is 1000 for scalars, 100
+         * for tensors and blob references. If the number of data points stored is less than the limit, all
+         * data is returned. Otherwise, the number limit of data points is randomly selected from this time
+         * series and returned.
+         *
+         * Create a request for the method "tensorboards.batchRead".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link BatchRead#execute()} method to invoke the remote operation.
+         *
+         * @param tensorboard Required. The resource name of the Tensorboard containing TensorboardTimeSeries to read data from.
+         *        Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
+         *        TensorboardTimeSeries referenced by time_series must be sub resources of this Tensorboard.
+         * @return the request
+         */
+        public BatchRead batchRead(java.lang.String tensorboard) throws java.io.IOException {
+          BatchRead result = new BatchRead(tensorboard);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchRead extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchReadTensorboardTimeSeriesDataResponse> {
+
+          private static final String REST_PATH = "v1/{+tensorboard}:batchRead";
+
+          private final java.util.regex.Pattern TENSORBOARD_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+$");
+
+          /**
+           * Reads multiple TensorboardTimeSeries' data. The data point number limit is 1000 for scalars,
+           * 100 for tensors and blob references. If the number of data points stored is less than the
+           * limit, all data is returned. Otherwise, the number limit of data points is randomly selected
+           * from this time series and returned.
+           *
+           * Create a request for the method "tensorboards.batchRead".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link BatchRead#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchRead#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param tensorboard Required. The resource name of the Tensorboard containing TensorboardTimeSeries to read data from.
+         *        Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
+         *        TensorboardTimeSeries referenced by time_series must be sub resources of this Tensorboard.
+           * @since 1.13
+           */
+          protected BatchRead(java.lang.String tensorboard) {
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchReadTensorboardTimeSeriesDataResponse.class);
+            this.tensorboard = com.google.api.client.util.Preconditions.checkNotNull(tensorboard, "Required parameter tensorboard must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TENSORBOARD_PATTERN.matcher(tensorboard).matches(),
+                  "Parameter tensorboard must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public BatchRead set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchRead) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchRead setAccessToken(java.lang.String accessToken) {
+            return (BatchRead) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchRead setAlt(java.lang.String alt) {
+            return (BatchRead) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchRead setCallback(java.lang.String callback) {
+            return (BatchRead) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchRead setFields(java.lang.String fields) {
+            return (BatchRead) super.setFields(fields);
+          }
+
+          @Override
+          public BatchRead setKey(java.lang.String key) {
+            return (BatchRead) super.setKey(key);
+          }
+
+          @Override
+          public BatchRead setOauthToken(java.lang.String oauthToken) {
+            return (BatchRead) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchRead setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchRead) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchRead setQuotaUser(java.lang.String quotaUser) {
+            return (BatchRead) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchRead setUploadType(java.lang.String uploadType) {
+            return (BatchRead) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchRead setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchRead) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Tensorboard containing TensorboardTimeSeries to read
+           * data from. Format:
+           * `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
+           * TensorboardTimeSeries referenced by time_series must be sub resources of this
+           * Tensorboard.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String tensorboard;
+
+          /** Required. The resource name of the Tensorboard containing TensorboardTimeSeries to read data from.
+         Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
+         TensorboardTimeSeries referenced by time_series must be sub resources of this Tensorboard.
+           */
+          public java.lang.String getTensorboard() {
+            return tensorboard;
+          }
+
+          /**
+           * Required. The resource name of the Tensorboard containing TensorboardTimeSeries to read
+           * data from. Format:
+           * `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
+           * TensorboardTimeSeries referenced by time_series must be sub resources of this
+           * Tensorboard.
+           */
+          public BatchRead setTensorboard(java.lang.String tensorboard) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TENSORBOARD_PATTERN.matcher(tensorboard).matches(),
+                  "Parameter tensorboard must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+$");
+            }
+            this.tensorboard = tensorboard;
+            return this;
+          }
+
+          /**
+           * Required. The resource names of the TensorboardTimeSeries to read data from. Format: `p
+           * rojects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experime
+           * nt}/runs/{run}/timeSeries/{time_series}`
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> timeSeries;
+
+          /** Required. The resource names of the TensorboardTimeSeries to read data from. Format: `projects/{pro
+         ject}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSerie
+         s/{time_series}`
+           */
+          public java.util.List<java.lang.String> getTimeSeries() {
+            return timeSeries;
+          }
+
+          /**
+           * Required. The resource names of the TensorboardTimeSeries to read data from. Format: `p
+           * rojects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experime
+           * nt}/runs/{run}/timeSeries/{time_series}`
+           */
+          public BatchRead setTimeSeries(java.util.List<java.lang.String> timeSeries) {
+            this.timeSeries = timeSeries;
+            return this;
+          }
+
+          @Override
+          public BatchRead set(String parameterName, Object value) {
+            return (BatchRead) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a Tensorboard.
          *
          * Create a request for the method "tensorboards.create".
@@ -66776,6 +67247,161 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          */
         public class Experiments {
 
+          /**
+           * Batch create TensorboardTimeSeries that belong to a TensorboardExperiment.
+           *
+           * Create a request for the method "experiments.batchCreate".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the TensorboardExperiment to create the TensorboardTimeSeries in.
+           *        Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{e
+           *        xperiment}` The TensorboardRuns referenced by the parent fields in the
+           *        CreateTensorboardTimeSeriesRequest messages must be sub resources of this
+           *        TensorboardExperiment.
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest}
+           * @return the request
+           */
+          public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest content) throws java.io.IOException {
+            BatchCreate result = new BatchCreate(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchCreate extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}:batchCreate";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+/experiments/[^/]+$");
+
+            /**
+             * Batch create TensorboardTimeSeries that belong to a TensorboardExperiment.
+             *
+             * Create a request for the method "experiments.batchCreate".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the TensorboardExperiment to create the TensorboardTimeSeries in.
+           *        Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{e
+           *        xperiment}` The TensorboardRuns referenced by the parent fields in the
+           *        CreateTensorboardTimeSeriesRequest messages must be sub resources of this
+           *        TensorboardExperiment.
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest}
+             * @since 1.13
+             */
+            protected BatchCreate(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+/experiments/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchCreate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchCreate setAccessToken(java.lang.String accessToken) {
+              return (BatchCreate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchCreate setAlt(java.lang.String alt) {
+              return (BatchCreate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchCreate setCallback(java.lang.String callback) {
+              return (BatchCreate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchCreate setFields(java.lang.String fields) {
+              return (BatchCreate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchCreate setKey(java.lang.String key) {
+              return (BatchCreate) super.setKey(key);
+            }
+
+            @Override
+            public BatchCreate setOauthToken(java.lang.String oauthToken) {
+              return (BatchCreate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchCreate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchCreate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchCreate setUploadType(java.lang.String uploadType) {
+              return (BatchCreate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the TensorboardExperiment to create the
+             * TensorboardTimeSeries in. Format: `projects/{project}/locations/{location}/tensorboar
+             * ds/{tensorboard}/experiments/{experiment}` The TensorboardRuns referenced by the
+             * parent fields in the CreateTensorboardTimeSeriesRequest messages must be sub
+             * resources of this TensorboardExperiment.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the TensorboardExperiment to create the TensorboardTimeSeries in.
+           Format:
+           `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}` The
+           TensorboardRuns referenced by the parent fields in the CreateTensorboardTimeSeriesRequest messages
+           must be sub resources of this TensorboardExperiment.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the TensorboardExperiment to create the
+             * TensorboardTimeSeries in. Format: `projects/{project}/locations/{location}/tensorboar
+             * ds/{tensorboard}/experiments/{experiment}` The TensorboardRuns referenced by the
+             * parent fields in the CreateTensorboardTimeSeriesRequest messages must be sub
+             * resources of this TensorboardExperiment.
+             */
+            public BatchCreate setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+/experiments/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BatchCreate set(String parameterName, Object value) {
+              return (BatchCreate) super.set(parameterName, value);
+            }
+          }
           /**
            * Creates a TensorboardExperiment.
            *
@@ -70593,404 +71219,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              */
             public class TimeSeries {
 
-              /**
-               * Batch create TensorboardTimeSeries that belong to a TensorboardExperiment.
-               *
-               * Create a request for the method "timeSeries.batchCreate".
-               *
-               * This request holds the parameters needed by the aiplatform server.  After setting any optional
-               * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation.
-               *
-               * @param parent Required. The resource name of the TensorboardExperiment to create the TensorboardTimeSeries in.
-               *        Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{e
-               *        xperiment}` The TensorboardRuns referenced by the parent fields in the
-               *        CreateTensorboardTimeSeriesRequest messages must be sub resources of this
-               *        TensorboardExperiment.
-               * @param runsId
-               * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest}
-               * @return the request
-               */
-              public BatchCreate batchCreate(java.lang.String parent, java.lang.String runsId, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest content) throws java.io.IOException {
-                BatchCreate result = new BatchCreate(parent, runsId, content);
-                initialize(result);
-                return result;
-              }
-
-              public class BatchCreate extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesResponse> {
-
-                private static final String REST_PATH = "v1/{+parent}/runs/{runsId}/timeSeries:batchCreate";
-
-                private final java.util.regex.Pattern PARENT_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+/experiments/[^/]+$");
-
-                /**
-                 * Batch create TensorboardTimeSeries that belong to a TensorboardExperiment.
-                 *
-                 * Create a request for the method "timeSeries.batchCreate".
-                 *
-                 * This request holds the parameters needed by the the aiplatform server.  After setting any
-                 * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
-                 * operation. <p> {@link
-                 * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                 * must be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param parent Required. The resource name of the TensorboardExperiment to create the TensorboardTimeSeries in.
-               *        Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{e
-               *        xperiment}` The TensorboardRuns referenced by the parent fields in the
-               *        CreateTensorboardTimeSeriesRequest messages must be sub resources of this
-               *        TensorboardExperiment.
-                 * @param runsId
-                 * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest}
-                 * @since 1.13
-                 */
-                protected BatchCreate(java.lang.String parent, java.lang.String runsId, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest content) {
-                  super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesResponse.class);
-                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                        "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+/experiments/[^/]+$");
-                  }
-                  this.runsId = com.google.api.client.util.Preconditions.checkNotNull(runsId, "Required parameter runsId must be specified.");
-                }
-
-                @Override
-                public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
-                  return (BatchCreate) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public BatchCreate setAccessToken(java.lang.String accessToken) {
-                  return (BatchCreate) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public BatchCreate setAlt(java.lang.String alt) {
-                  return (BatchCreate) super.setAlt(alt);
-                }
-
-                @Override
-                public BatchCreate setCallback(java.lang.String callback) {
-                  return (BatchCreate) super.setCallback(callback);
-                }
-
-                @Override
-                public BatchCreate setFields(java.lang.String fields) {
-                  return (BatchCreate) super.setFields(fields);
-                }
-
-                @Override
-                public BatchCreate setKey(java.lang.String key) {
-                  return (BatchCreate) super.setKey(key);
-                }
-
-                @Override
-                public BatchCreate setOauthToken(java.lang.String oauthToken) {
-                  return (BatchCreate) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (BatchCreate) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public BatchCreate setQuotaUser(java.lang.String quotaUser) {
-                  return (BatchCreate) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public BatchCreate setUploadType(java.lang.String uploadType) {
-                  return (BatchCreate) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (BatchCreate) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /**
-                 * Required. The resource name of the TensorboardExperiment to create the
-                 * TensorboardTimeSeries in. Format: `projects/{project}/locations/{location}/tensor
-                 * boards/{tensorboard}/experiments/{experiment}` The TensorboardRuns referenced by
-                 * the parent fields in the CreateTensorboardTimeSeriesRequest messages must be sub
-                 * resources of this TensorboardExperiment.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String parent;
-
-                /** Required. The resource name of the TensorboardExperiment to create the TensorboardTimeSeries in.
-               Format:
-               `projects/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}` The
-               TensorboardRuns referenced by the parent fields in the CreateTensorboardTimeSeriesRequest messages
-               must be sub resources of this TensorboardExperiment.
-                 */
-                public java.lang.String getParent() {
-                  return parent;
-                }
-
-                /**
-                 * Required. The resource name of the TensorboardExperiment to create the
-                 * TensorboardTimeSeries in. Format: `projects/{project}/locations/{location}/tensor
-                 * boards/{tensorboard}/experiments/{experiment}` The TensorboardRuns referenced by
-                 * the parent fields in the CreateTensorboardTimeSeriesRequest messages must be sub
-                 * resources of this TensorboardExperiment.
-                 */
-                public BatchCreate setParent(java.lang.String parent) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                        "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+/experiments/[^/]+$");
-                  }
-                  this.parent = parent;
-                  return this;
-                }
-
-                @com.google.api.client.util.Key
-                private java.lang.String runsId;
-
-                /**
-
-                 */
-                public java.lang.String getRunsId() {
-                  return runsId;
-                }
-
-                public BatchCreate setRunsId(java.lang.String runsId) {
-                  this.runsId = runsId;
-                  return this;
-                }
-
-                @Override
-                public BatchCreate set(String parameterName, Object value) {
-                  return (BatchCreate) super.set(parameterName, value);
-                }
-              }
-              /**
-               * Reads multiple TensorboardTimeSeries' data. The data point number limit is 1000 for scalars, 100
-               * for tensors and blob references. If the number of data points stored is less than the limit, all
-               * data is returned. Otherwise, the number limit of data points is randomly selected from this time
-               * series and returned.
-               *
-               * Create a request for the method "timeSeries.batchRead".
-               *
-               * This request holds the parameters needed by the aiplatform server.  After setting any optional
-               * parameters, call the {@link BatchRead#execute()} method to invoke the remote operation.
-               *
-               * @param tensorboard Required. The resource name of the Tensorboard containing TensorboardTimeSeries to read data from.
-               *        Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
-               *        TensorboardTimeSeries referenced by time_series must be sub resources of this Tensorboard.
-               * @param experimentsId
-               * @param runsId
-               * @return the request
-               */
-              public BatchRead batchRead(java.lang.String tensorboard, java.lang.String experimentsId, java.lang.String runsId) throws java.io.IOException {
-                BatchRead result = new BatchRead(tensorboard, experimentsId, runsId);
-                initialize(result);
-                return result;
-              }
-
-              public class BatchRead extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchReadTensorboardTimeSeriesDataResponse> {
-
-                private static final String REST_PATH = "v1/{+tensorboard}/experiments/{experimentsId}/runs/{runsId}/timeSeries:batchRead";
-
-                private final java.util.regex.Pattern TENSORBOARD_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+$");
-
-                /**
-                 * Reads multiple TensorboardTimeSeries' data. The data point number limit is 1000 for scalars,
-                 * 100 for tensors and blob references. If the number of data points stored is less than the
-                 * limit, all data is returned. Otherwise, the number limit of data points is randomly selected
-                 * from this time series and returned.
-                 *
-                 * Create a request for the method "timeSeries.batchRead".
-                 *
-                 * This request holds the parameters needed by the the aiplatform server.  After setting any
-                 * optional parameters, call the {@link BatchRead#execute()} method to invoke the remote
-                 * operation. <p> {@link
-                 * BatchRead#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                 * must be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param tensorboard Required. The resource name of the Tensorboard containing TensorboardTimeSeries to read data from.
-               *        Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
-               *        TensorboardTimeSeries referenced by time_series must be sub resources of this Tensorboard.
-                 * @param experimentsId
-                 * @param runsId
-                 * @since 1.13
-                 */
-                protected BatchRead(java.lang.String tensorboard, java.lang.String experimentsId, java.lang.String runsId) {
-                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchReadTensorboardTimeSeriesDataResponse.class);
-                  this.tensorboard = com.google.api.client.util.Preconditions.checkNotNull(tensorboard, "Required parameter tensorboard must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(TENSORBOARD_PATTERN.matcher(tensorboard).matches(),
-                        "Parameter tensorboard must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+$");
-                  }
-                  this.experimentsId = com.google.api.client.util.Preconditions.checkNotNull(experimentsId, "Required parameter experimentsId must be specified.");
-                  this.runsId = com.google.api.client.util.Preconditions.checkNotNull(runsId, "Required parameter runsId must be specified.");
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public BatchRead set$Xgafv(java.lang.String $Xgafv) {
-                  return (BatchRead) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public BatchRead setAccessToken(java.lang.String accessToken) {
-                  return (BatchRead) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public BatchRead setAlt(java.lang.String alt) {
-                  return (BatchRead) super.setAlt(alt);
-                }
-
-                @Override
-                public BatchRead setCallback(java.lang.String callback) {
-                  return (BatchRead) super.setCallback(callback);
-                }
-
-                @Override
-                public BatchRead setFields(java.lang.String fields) {
-                  return (BatchRead) super.setFields(fields);
-                }
-
-                @Override
-                public BatchRead setKey(java.lang.String key) {
-                  return (BatchRead) super.setKey(key);
-                }
-
-                @Override
-                public BatchRead setOauthToken(java.lang.String oauthToken) {
-                  return (BatchRead) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public BatchRead setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (BatchRead) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public BatchRead setQuotaUser(java.lang.String quotaUser) {
-                  return (BatchRead) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public BatchRead setUploadType(java.lang.String uploadType) {
-                  return (BatchRead) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public BatchRead setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (BatchRead) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /**
-                 * Required. The resource name of the Tensorboard containing TensorboardTimeSeries
-                 * to read data from. Format:
-                 * `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
-                 * TensorboardTimeSeries referenced by time_series must be sub resources of this
-                 * Tensorboard.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String tensorboard;
-
-                /** Required. The resource name of the Tensorboard containing TensorboardTimeSeries to read data from.
-               Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
-               TensorboardTimeSeries referenced by time_series must be sub resources of this Tensorboard.
-                 */
-                public java.lang.String getTensorboard() {
-                  return tensorboard;
-                }
-
-                /**
-                 * Required. The resource name of the Tensorboard containing TensorboardTimeSeries
-                 * to read data from. Format:
-                 * `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
-                 * TensorboardTimeSeries referenced by time_series must be sub resources of this
-                 * Tensorboard.
-                 */
-                public BatchRead setTensorboard(java.lang.String tensorboard) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(TENSORBOARD_PATTERN.matcher(tensorboard).matches(),
-                        "Parameter tensorboard must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/tensorboards/[^/]+$");
-                  }
-                  this.tensorboard = tensorboard;
-                  return this;
-                }
-
-                @com.google.api.client.util.Key
-                private java.lang.String experimentsId;
-
-                /**
-
-                 */
-                public java.lang.String getExperimentsId() {
-                  return experimentsId;
-                }
-
-                public BatchRead setExperimentsId(java.lang.String experimentsId) {
-                  this.experimentsId = experimentsId;
-                  return this;
-                }
-
-                @com.google.api.client.util.Key
-                private java.lang.String runsId;
-
-                /**
-
-                 */
-                public java.lang.String getRunsId() {
-                  return runsId;
-                }
-
-                public BatchRead setRunsId(java.lang.String runsId) {
-                  this.runsId = runsId;
-                  return this;
-                }
-
-                /**
-                 * Required. The resource names of the TensorboardTimeSeries to read data from.
-                 * Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}/exper
-                 * iments/{experiment}/runs/{run}/timeSeries/{time_series}`
-                 */
-                @com.google.api.client.util.Key
-                private java.util.List<java.lang.String> timeSeries;
-
-                /** Required. The resource names of the TensorboardTimeSeries to read data from. Format: `projects/{pro
-               ject}/locations/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/timeSerie
-               s/{time_series}`
-                 */
-                public java.util.List<java.lang.String> getTimeSeries() {
-                  return timeSeries;
-                }
-
-                /**
-                 * Required. The resource names of the TensorboardTimeSeries to read data from.
-                 * Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}/exper
-                 * iments/{experiment}/runs/{run}/timeSeries/{time_series}`
-                 */
-                public BatchRead setTimeSeries(java.util.List<java.lang.String> timeSeries) {
-                  this.timeSeries = timeSeries;
-                  return this;
-                }
-
-                @Override
-                public BatchRead set(String parameterName, Object value) {
-                  return (BatchRead) super.set(parameterName, value);
-                }
-              }
               /**
                * Creates a TensorboardTimeSeries.
                *

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Content blob.
+ * Raw media bytes. Text should not be sent as raw bytes, use the 'text' field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Data.
+   * Required. Raw bytes for media formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String data;
 
   /**
-   * Required. Mime type of the data.
+   * Required. The IANA standard MIME type of the source data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
-   * Required. Data.
+   * Required. Raw bytes for media formats.
    * @see #decodeData()
    * @return value or {@code null} for none
    */
@@ -53,7 +53,7 @@ public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.jso
   }
 
   /**
-   * Required. Data.
+   * Required. Raw bytes for media formats.
    * @see #getData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -64,7 +64,7 @@ public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.jso
   }
 
   /**
-   * Required. Data.
+   * Required. Raw bytes for media formats.
    * @see #encodeData()
    * @param data data or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.jso
   }
 
   /**
-   * Required. Data.
+   * Required. Raw bytes for media formats.
    * @see #setData()
    *
    * <p>
@@ -89,7 +89,7 @@ public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.jso
   }
 
   /**
-   * Required. Mime type of the data.
+   * Required. The IANA standard MIME type of the source data.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -97,7 +97,7 @@ public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.jso
   }
 
   /**
-   * Required. Mime type of the data.
+   * Required. The IANA standard MIME type of the source data.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudAiplatformV1Blob setMimeType(java.lang.String mimeType) {

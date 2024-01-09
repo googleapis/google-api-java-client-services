@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Generated candidate.
+ * A response candidate generated from the model.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -44,15 +44,16 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   private GoogleCloudAiplatformV1beta1Content content;
 
   /**
-   * Output only. A string that describes the filtering behavior in more detail. Only filled when
-   * reason is set.
+   * Output only. Describes the reason the mode stopped generating tokens in more detail. This is
+   * only filled when `finish_reason` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String finishMessage;
 
   /**
-   * Output only. The reason why the model stopped generating tokens.
+   * Output only. The reason why the model stopped generating tokens. If empty, the model has not
+   * stopped generating the tokens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +67,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   private java.lang.Integer index;
 
   /**
-   * Output only. Safety ratings of the generated content.
+   * Output only. List of ratings for the safety of a response candidate. There is at most one
+   * rating per category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +109,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. A string that describes the filtering behavior in more detail. Only filled when
-   * reason is set.
+   * Output only. Describes the reason the mode stopped generating tokens in more detail. This is
+   * only filled when `finish_reason` is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getFinishMessage() {
@@ -116,8 +118,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. A string that describes the filtering behavior in more detail. Only filled when
-   * reason is set.
+   * Output only. Describes the reason the mode stopped generating tokens in more detail. This is
+   * only filled when `finish_reason` is set.
    * @param finishMessage finishMessage or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setFinishMessage(java.lang.String finishMessage) {
@@ -126,7 +128,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. The reason why the model stopped generating tokens.
+   * Output only. The reason why the model stopped generating tokens. If empty, the model has not
+   * stopped generating the tokens.
    * @return value or {@code null} for none
    */
   public java.lang.String getFinishReason() {
@@ -134,7 +137,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. The reason why the model stopped generating tokens.
+   * Output only. The reason why the model stopped generating tokens. If empty, the model has not
+   * stopped generating the tokens.
    * @param finishReason finishReason or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setFinishReason(java.lang.String finishReason) {
@@ -160,7 +164,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Safety ratings of the generated content.
+   * Output only. List of ratings for the safety of a response candidate. There is at most one
+   * rating per category.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> getSafetyRatings() {
@@ -168,7 +173,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Safety ratings of the generated content.
+   * Output only. List of ratings for the safety of a response candidate. There is at most one
+   * rating per category.
    * @param safetyRatings safetyRatings or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setSafetyRatings(java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> safetyRatings) {

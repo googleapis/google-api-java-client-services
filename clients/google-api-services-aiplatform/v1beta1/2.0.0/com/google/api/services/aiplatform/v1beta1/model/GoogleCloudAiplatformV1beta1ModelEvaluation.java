@@ -62,7 +62,7 @@ public final class GoogleCloudAiplatformV1beta1ModelEvaluation extends com.googl
   /**
    * The metadata of the ModelEvaluation. For the ModelEvaluation uploaded from Managed Pipeline,
    * metadata contains a structured value with keys of "pipeline_job_id", "evaluation_dataset_type",
-   * "evaluation_dataset_path".
+   * "evaluation_dataset_path", "row_based_metrics_path".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +181,7 @@ public final class GoogleCloudAiplatformV1beta1ModelEvaluation extends com.googl
   /**
    * The metadata of the ModelEvaluation. For the ModelEvaluation uploaded from Managed Pipeline,
    * metadata contains a structured value with keys of "pipeline_job_id", "evaluation_dataset_type",
-   * "evaluation_dataset_path".
+   * "evaluation_dataset_path", "row_based_metrics_path".
    * @return value or {@code null} for none
    */
   public java.lang.Object getMetadata() {
@@ -191,7 +191,7 @@ public final class GoogleCloudAiplatformV1beta1ModelEvaluation extends com.googl
   /**
    * The metadata of the ModelEvaluation. For the ModelEvaluation uploaded from Managed Pipeline,
    * metadata contains a structured value with keys of "pipeline_job_id", "evaluation_dataset_type",
-   * "evaluation_dataset_path".
+   * "evaluation_dataset_path", "row_based_metrics_path".
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelEvaluation setMetadata(java.lang.Object metadata) {

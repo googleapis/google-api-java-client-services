@@ -110,8 +110,8 @@ public final class GoogleCloudAiplatformV1Feature extends com.google.api.client.
   private java.lang.String valueType;
 
   /**
-   * Only applicable for Vertex AI Feature Store. The name of the BigQuery Table/View columnn
-   * hosting data for this version. If no value is provided, will use feature_id.
+   * Only applicable for Vertex AI Feature Store. The name of the BigQuery Table/View column hosting
+   * data for this version. If no value is provided, will use feature_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,8 +305,8 @@ public final class GoogleCloudAiplatformV1Feature extends com.google.api.client.
   }
 
   /**
-   * Only applicable for Vertex AI Feature Store. The name of the BigQuery Table/View columnn
-   * hosting data for this version. If no value is provided, will use feature_id.
+   * Only applicable for Vertex AI Feature Store. The name of the BigQuery Table/View column hosting
+   * data for this version. If no value is provided, will use feature_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersionColumnName() {
@@ -314,8 +314,8 @@ public final class GoogleCloudAiplatformV1Feature extends com.google.api.client.
   }
 
   /**
-   * Only applicable for Vertex AI Feature Store. The name of the BigQuery Table/View columnn
-   * hosting data for this version. If no value is provided, will use feature_id.
+   * Only applicable for Vertex AI Feature Store. The name of the BigQuery Table/View column hosting
+   * data for this version. If no value is provided, will use feature_id.
    * @param versionColumnName versionColumnName or {@code null} for none
    */
   public GoogleCloudAiplatformV1Feature setVersionColumnName(java.lang.String versionColumnName) {

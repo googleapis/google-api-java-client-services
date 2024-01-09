@@ -20,6 +20,7 @@ package com.google.api.services.chat.v1.model;
  * A [card](https://developers.google.com/chat/api/reference/rest/v1/cards) in a Google Chat
  * message. Only Chat apps can create cards. If your Chat app [authenticates as a
  * user](https://developers.google.com/chat/api/guides/auth/users), the message can't contain cards.
+ * [Card builder](https://addons.gsuite.google.com/uikit/builder)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

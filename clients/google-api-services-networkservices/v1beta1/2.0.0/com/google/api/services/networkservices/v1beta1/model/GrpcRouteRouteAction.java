@@ -57,6 +57,16 @@ public final class GrpcRouteRouteAction extends com.google.api.client.json.Gener
   private GrpcRouteFaultInjectionPolicy faultInjectionPolicy;
 
   /**
+   * Optional. Specifies the idle timeout for the selected route. The idle timeout is defined as the
+   * period in which there are no bytes sent or received on either the upstream or downstream
+   * connection. If not set, the default idle timeout is 1 hour. If set to 0s, the timeout will be
+   * disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String idleTimeout;
+
+  /**
    * Optional. Specifies the retry policy associated with this route.
    * The value may be {@code null}.
    */
@@ -124,6 +134,29 @@ public final class GrpcRouteRouteAction extends com.google.api.client.json.Gener
    */
   public GrpcRouteRouteAction setFaultInjectionPolicy(GrpcRouteFaultInjectionPolicy faultInjectionPolicy) {
     this.faultInjectionPolicy = faultInjectionPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the idle timeout for the selected route. The idle timeout is defined as the
+   * period in which there are no bytes sent or received on either the upstream or downstream
+   * connection. If not set, the default idle timeout is 1 hour. If set to 0s, the timeout will be
+   * disabled.
+   * @return value or {@code null} for none
+   */
+  public String getIdleTimeout() {
+    return idleTimeout;
+  }
+
+  /**
+   * Optional. Specifies the idle timeout for the selected route. The idle timeout is defined as the
+   * period in which there are no bytes sent or received on either the upstream or downstream
+   * connection. If not set, the default idle timeout is 1 hour. If set to 0s, the timeout will be
+   * disabled.
+   * @param idleTimeout idleTimeout or {@code null} for none
+   */
+  public GrpcRouteRouteAction setIdleTimeout(String idleTimeout) {
+    this.idleTimeout = idleTimeout;
     return this;
   }
 

@@ -46,6 +46,14 @@ public final class Mesh extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Determines if envoy will insert internal debug headers into upstream requests. Other
+   * Envoy headers may still be injected. By default, envoy will not insert any debug headers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String envoyHeaders;
+
+  /**
    * Optional. If set to a valid TCP port (1-65535), instructs the SIDECAR proxy to listen on the
    * specified port of localhost (127.0.0.1) address. The SIDECAR proxy will expect all traffic to
    * be redirected to this port regardless of its actual ip:port destination. If unset, a port
@@ -115,6 +123,25 @@ public final class Mesh extends com.google.api.client.json.GenericJson {
    */
   public Mesh setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Determines if envoy will insert internal debug headers into upstream requests. Other
+   * Envoy headers may still be injected. By default, envoy will not insert any debug headers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnvoyHeaders() {
+    return envoyHeaders;
+  }
+
+  /**
+   * Optional. Determines if envoy will insert internal debug headers into upstream requests. Other
+   * Envoy headers may still be injected. By default, envoy will not insert any debug headers.
+   * @param envoyHeaders envoyHeaders or {@code null} for none
+   */
+  public Mesh setEnvoyHeaders(java.lang.String envoyHeaders) {
+    this.envoyHeaders = envoyHeaders;
     return this;
   }
 

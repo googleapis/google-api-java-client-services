@@ -40,6 +40,13 @@ public final class HttpRouteRequestMirrorPolicy extends com.google.api.client.js
   private HttpRouteDestination destination;
 
   /**
+   * Optional. The percentage of requests to get mirrored to the desired destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float mirrorPercent;
+
+  /**
    * The destination the requests will be mirrored to. The weight of the destination will be
    * ignored.
    * @return value or {@code null} for none
@@ -55,6 +62,23 @@ public final class HttpRouteRequestMirrorPolicy extends com.google.api.client.js
    */
   public HttpRouteRequestMirrorPolicy setDestination(HttpRouteDestination destination) {
     this.destination = destination;
+    return this;
+  }
+
+  /**
+   * Optional. The percentage of requests to get mirrored to the desired destination.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getMirrorPercent() {
+    return mirrorPercent;
+  }
+
+  /**
+   * Optional. The percentage of requests to get mirrored to the desired destination.
+   * @param mirrorPercent mirrorPercent or {@code null} for none
+   */
+  public HttpRouteRequestMirrorPolicy setMirrorPercent(java.lang.Float mirrorPercent) {
+    this.mirrorPercent = mirrorPercent;
     return this;
   }
 

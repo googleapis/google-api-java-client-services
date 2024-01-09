@@ -66,6 +66,14 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Determines if envoy will insert internal debug headers into upstream requests. Other
+   * Envoy headers may still be injected. By default, envoy will not insert any debug headers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String envoyHeaders;
+
+  /**
    * Optional. A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should
    * apply security policy to inbound (VM to Proxy) initiated connections. For example:
    * `projects/locations/gatewaySecurityPolicies/swg-policy`. This policy is specific to gateways of
@@ -240,6 +248,25 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
    */
   public Gateway setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Determines if envoy will insert internal debug headers into upstream requests. Other
+   * Envoy headers may still be injected. By default, envoy will not insert any debug headers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnvoyHeaders() {
+    return envoyHeaders;
+  }
+
+  /**
+   * Optional. Determines if envoy will insert internal debug headers into upstream requests. Other
+   * Envoy headers may still be injected. By default, envoy will not insert any debug headers.
+   * @param envoyHeaders envoyHeaders or {@code null} for none
+   */
+  public Gateway setEnvoyHeaders(java.lang.String envoyHeaders) {
+    this.envoyHeaders = envoyHeaders;
     return this;
   }
 

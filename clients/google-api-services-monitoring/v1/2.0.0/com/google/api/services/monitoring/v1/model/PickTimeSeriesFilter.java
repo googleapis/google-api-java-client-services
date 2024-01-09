@@ -41,6 +41,13 @@ public final class PickTimeSeriesFilter extends com.google.api.client.json.Gener
   private java.lang.String direction;
 
   /**
+   * Select the top N streams/time series within this time interval
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Interval interval;
+
+  /**
    * How many time series to allow to pass through the filter.
    * The value may be {@code null}.
    */
@@ -69,6 +76,23 @@ public final class PickTimeSeriesFilter extends com.google.api.client.json.Gener
    */
   public PickTimeSeriesFilter setDirection(java.lang.String direction) {
     this.direction = direction;
+    return this;
+  }
+
+  /**
+   * Select the top N streams/time series within this time interval
+   * @return value or {@code null} for none
+   */
+  public Interval getInterval() {
+    return interval;
+  }
+
+  /**
+   * Select the top N streams/time series within this time interval
+   * @param interval interval or {@code null} for none
+   */
+  public PickTimeSeriesFilter setInterval(Interval interval) {
+    this.interval = interval;
     return this;
   }
 

@@ -88,9 +88,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. The storage location that Cloud Logging will use to create new resources when a
-   * location is needed but not explicitly provided. The use cases includes: The location of
-   * _Default and _Required log bucket for newly created projects and folders.Example value: europe-
+   * Optional. The storage location for the _Default and _Required log buckets of newly created
+   * projects and folders, unless the storage location is explicitly provided.Example value: europe-
    * west1.Note: this setting does not affect the location of resources where a location is
    * explicitly provided when created, such as custom log buckets.
    * The value may be {@code null}.
@@ -233,9 +232,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The storage location that Cloud Logging will use to create new resources when a
-   * location is needed but not explicitly provided. The use cases includes: The location of
-   * _Default and _Required log bucket for newly created projects and folders.Example value: europe-
+   * Optional. The storage location for the _Default and _Required log buckets of newly created
+   * projects and folders, unless the storage location is explicitly provided.Example value: europe-
    * west1.Note: this setting does not affect the location of resources where a location is
    * explicitly provided when created, such as custom log buckets.
    * @return value or {@code null} for none
@@ -245,9 +243,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The storage location that Cloud Logging will use to create new resources when a
-   * location is needed but not explicitly provided. The use cases includes: The location of
-   * _Default and _Required log bucket for newly created projects and folders.Example value: europe-
+   * Optional. The storage location for the _Default and _Required log buckets of newly created
+   * projects and folders, unless the storage location is explicitly provided.Example value: europe-
    * west1.Note: this setting does not affect the location of resources where a location is
    * explicitly provided when created, such as custom log buckets.
    * @param storageLocation storageLocation or {@code null} for none

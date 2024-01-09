@@ -44,10 +44,13 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Filter that restricts which log entries in a bucket are visible in this view.Filters are
-   * restricted to be a logical AND of ==/!= of any of the following: originating
-   * project/folder/organization/billing account. resource type log idFor
-   * example:SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
+   * Filter that restricts which log entries in a bucket are visible in this view.Filters must be
+   * logical conjunctions that use the AND operator, and they can use any of the following
+   * qualifiers: SOURCE(), which specifies a project, folder, organization, or billing account of
+   * origin. resource.type, which specifies the resource type. LOG_ID(), which identifies the
+   * log.They can also use the negations of these qualifiers with the NOT operator.For
+   * example:SOURCE("projects/myproject") AND resource.type = "gce_instance" AND NOT
+   * LOG_ID("stdout")
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,10 +106,13 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter that restricts which log entries in a bucket are visible in this view.Filters are
-   * restricted to be a logical AND of ==/!= of any of the following: originating
-   * project/folder/organization/billing account. resource type log idFor
-   * example:SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
+   * Filter that restricts which log entries in a bucket are visible in this view.Filters must be
+   * logical conjunctions that use the AND operator, and they can use any of the following
+   * qualifiers: SOURCE(), which specifies a project, folder, organization, or billing account of
+   * origin. resource.type, which specifies the resource type. LOG_ID(), which identifies the
+   * log.They can also use the negations of these qualifiers with the NOT operator.For
+   * example:SOURCE("projects/myproject") AND resource.type = "gce_instance" AND NOT
+   * LOG_ID("stdout")
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -114,10 +120,13 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter that restricts which log entries in a bucket are visible in this view.Filters are
-   * restricted to be a logical AND of ==/!= of any of the following: originating
-   * project/folder/organization/billing account. resource type log idFor
-   * example:SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
+   * Filter that restricts which log entries in a bucket are visible in this view.Filters must be
+   * logical conjunctions that use the AND operator, and they can use any of the following
+   * qualifiers: SOURCE(), which specifies a project, folder, organization, or billing account of
+   * origin. resource.type, which specifies the resource type. LOG_ID(), which identifies the
+   * log.They can also use the negations of these qualifiers with the NOT operator.For
+   * example:SOURCE("projects/myproject") AND resource.type = "gce_instance" AND NOT
+   * LOG_ID("stdout")
    * @param filter filter or {@code null} for none
    */
   public LogView setFilter(java.lang.String filter) {

@@ -49,12 +49,14 @@ public final class SimpleSigningAttestationCheck extends com.google.api.client.j
   }
 
   /**
-   * Optional. The projects where attestations are stored as Container Analysis Occurrences. Only
-   * one attestation needs to successfully verify an image for this check to pass, so a single
-   * verified attestation found in any of `container_analysis_attestation_projects` is sufficient
-   * for the check to pass. When fetching Occurrences from Container Analysis, only
-   * 'AttestationOccurrence' kinds are considered. In the future, additional Occurrence kinds may be
-   * added to the query.
+   * Optional. The projects where attestations are stored as Container Analysis Occurrences, in the
+   * format `projects/[PROJECT_ID]`. Only one attestation needs to successfully verify an image for
+   * this check to pass, so a single verified attestation found in any of
+   * `container_analysis_attestation_projects` is sufficient for the check to pass. When fetching
+   * Occurrences from Container Analysis, only `AttestationOccurrence` kinds are considered. In the
+   * future, additional Occurrence kinds may be added to the query. Maximum number of
+   * `container_analysis_attestation_projects` allowed in each `SimpleSigningAttestationCheck` is
+   * 10.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,12 +88,14 @@ public final class SimpleSigningAttestationCheck extends com.google.api.client.j
   }
 
   /**
-   * Optional. The projects where attestations are stored as Container Analysis Occurrences. Only
-   * one attestation needs to successfully verify an image for this check to pass, so a single
-   * verified attestation found in any of `container_analysis_attestation_projects` is sufficient
-   * for the check to pass. When fetching Occurrences from Container Analysis, only
-   * 'AttestationOccurrence' kinds are considered. In the future, additional Occurrence kinds may be
-   * added to the query.
+   * Optional. The projects where attestations are stored as Container Analysis Occurrences, in the
+   * format `projects/[PROJECT_ID]`. Only one attestation needs to successfully verify an image for
+   * this check to pass, so a single verified attestation found in any of
+   * `container_analysis_attestation_projects` is sufficient for the check to pass. When fetching
+   * Occurrences from Container Analysis, only `AttestationOccurrence` kinds are considered. In the
+   * future, additional Occurrence kinds may be added to the query. Maximum number of
+   * `container_analysis_attestation_projects` allowed in each `SimpleSigningAttestationCheck` is
+   * 10.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContainerAnalysisAttestationProjects() {
@@ -99,12 +103,14 @@ public final class SimpleSigningAttestationCheck extends com.google.api.client.j
   }
 
   /**
-   * Optional. The projects where attestations are stored as Container Analysis Occurrences. Only
-   * one attestation needs to successfully verify an image for this check to pass, so a single
-   * verified attestation found in any of `container_analysis_attestation_projects` is sufficient
-   * for the check to pass. When fetching Occurrences from Container Analysis, only
-   * 'AttestationOccurrence' kinds are considered. In the future, additional Occurrence kinds may be
-   * added to the query.
+   * Optional. The projects where attestations are stored as Container Analysis Occurrences, in the
+   * format `projects/[PROJECT_ID]`. Only one attestation needs to successfully verify an image for
+   * this check to pass, so a single verified attestation found in any of
+   * `container_analysis_attestation_projects` is sufficient for the check to pass. When fetching
+   * Occurrences from Container Analysis, only `AttestationOccurrence` kinds are considered. In the
+   * future, additional Occurrence kinds may be added to the query. Maximum number of
+   * `container_analysis_attestation_projects` allowed in each `SimpleSigningAttestationCheck` is
+   * 10.
    * @param containerAnalysisAttestationProjects containerAnalysisAttestationProjects or {@code null} for none
    */
   public SimpleSigningAttestationCheck setContainerAnalysisAttestationProjects(java.util.List<java.lang.String> containerAnalysisAttestationProjects) {

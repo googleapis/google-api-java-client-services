@@ -44,7 +44,7 @@ public final class PolicyControllerPolicyControllerDeploymentConfig extends com.
   private java.lang.String podAffinity;
 
   /**
-   * Pod anti-affinity enablement.
+   * Pod anti-affinity enablement. Deprecated: use `pod_affinity` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class PolicyControllerPolicyControllerDeploymentConfig extends com.
   }
 
   /**
-   * Pod anti-affinity enablement.
+   * Pod anti-affinity enablement. Deprecated: use `pod_affinity` instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPodAntiAffinity() {
@@ -107,7 +107,7 @@ public final class PolicyControllerPolicyControllerDeploymentConfig extends com.
   }
 
   /**
-   * Pod anti-affinity enablement.
+   * Pod anti-affinity enablement. Deprecated: use `pod_affinity` instead.
    * @param podAntiAffinity podAntiAffinity or {@code null} for none
    */
   public PolicyControllerPolicyControllerDeploymentConfig setPodAntiAffinity(java.lang.Boolean podAntiAffinity) {

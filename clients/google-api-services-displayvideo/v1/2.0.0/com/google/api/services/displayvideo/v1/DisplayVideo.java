@@ -5175,7 +5175,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class Creatives {
 
       /**
-       * Creates a new creative. Returns the newly created creative if successful.
+       * Creates a new creative. Returns the newly created creative if successful. A ["Standard" user
+       * role](//support.google.com/displayvideo/answer/2723011) or greater for the parent advertiser or
+       * partner is required to make this request.
        *
        * Create a request for the method "creatives.create".
        *
@@ -5200,7 +5202,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Creates a new creative. Returns the newly created creative if successful.
+         * Creates a new creative. Returns the newly created creative if successful. A ["Standard" user
+         * role](//support.google.com/displayvideo/answer/2723011) or greater for the parent advertiser or
+         * partner is required to make this request.
          *
          * Create a request for the method "creatives.create".
          *
@@ -5298,7 +5302,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Deletes a creative. Returns error code `NOT_FOUND` if the creative does not exist. The creative
        * should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, before it can be
-       * deleted.
+       * deleted. A ["Standard" user role](//support.google.com/displayvideo/answer/2723011) or greater
+       * for the parent advertiser or partner is required to make this request.
        *
        * Create a request for the method "creatives.delete".
        *
@@ -5328,7 +5333,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Deletes a creative. Returns error code `NOT_FOUND` if the creative does not exist. The creative
          * should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, before it can be
-         * deleted.
+         * deleted. A ["Standard" user role](//support.google.com/displayvideo/answer/2723011) or greater
+         * for the parent advertiser or partner is required to make this request.
          *
          * Create a request for the method "creatives.delete".
          *
@@ -5899,7 +5905,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates an existing creative. Returns the updated creative if successful.
+       * Updates an existing creative. Returns the updated creative if successful. A ["Standard" user
+       * role](//support.google.com/displayvideo/answer/2723011) or greater for the parent advertiser or
+       * partner is required to make this request.
        *
        * Create a request for the method "creatives.patch".
        *
@@ -5928,7 +5936,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Updates an existing creative. Returns the updated creative if successful.
+         * Updates an existing creative. Returns the updated creative if successful. A ["Standard" user
+         * role](//support.google.com/displayvideo/answer/2723011) or greater for the parent advertiser or
+         * partner is required to make this request.
          *
          * Create a request for the method "creatives.patch".
          *
@@ -8441,7 +8451,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * then create the assigned targeting options provided in
        * BulkEditLineItemAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint cannot
        * be made concurrently with the following requests updating the same line item: * lineItems.patch *
-       * assignedTargetingOptions.create * assignedTargetingOptions.delete
+       * assignedTargetingOptions.create * assignedTargetingOptions.delete YouTube & Partners line items
+       * cannot be created or updated using the API.
        *
        * Create a request for the method "lineItems.bulkEditLineItemAssignedTargetingOptions".
        *
@@ -8476,7 +8487,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * and then create the assigned targeting options provided in
          * BulkEditLineItemAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint
          * cannot be made concurrently with the following requests updating the same line item: *
-         * lineItems.patch * assignedTargetingOptions.create * assignedTargetingOptions.delete
+         * lineItems.patch * assignedTargetingOptions.create * assignedTargetingOptions.delete YouTube &
+         * Partners line items cannot be created or updated using the API.
          *
          * Create a request for the method "lineItems.bulkEditLineItemAssignedTargetingOptions".
          *
@@ -8872,7 +8884,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Creates a new line item. Returns the newly created line item if successful.
+       * Creates a new line item. Returns the newly created line item if successful. YouTube & Partners
+       * line items cannot be created or updated using the API.
        *
        * Create a request for the method "lineItems.create".
        *
@@ -8897,7 +8910,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Creates a new line item. Returns the newly created line item if successful.
+         * Creates a new line item. Returns the newly created line item if successful. YouTube & Partners
+         * line items cannot be created or updated using the API.
          *
          * Create a request for the method "lineItems.create".
          *
@@ -8995,7 +9009,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Deletes a line item. Returns error code `NOT_FOUND` if the line item does not exist. The line
        * item should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to
-       * delete it.
+       * delete it. YouTube & Partners line items cannot be created or updated using the API.
        *
        * Create a request for the method "lineItems.delete".
        *
@@ -9025,7 +9039,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Deletes a line item. Returns error code `NOT_FOUND` if the line item does not exist. The line
          * item should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able
-         * to delete it.
+         * to delete it. YouTube & Partners line items cannot be created or updated using the API.
          *
          * Create a request for the method "lineItems.delete".
          *
@@ -9141,7 +9155,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * Creates a new line item with settings (including targeting) inherited from the insertion order
        * and an `ENTITY_STATUS_DRAFT` entity_status. Returns the newly created line item if successful.
        * There are default values based on the three fields: * The insertion order's insertion_order_type
-       * * The insertion order's automation_type * The given line_item_type
+       * * The insertion order's automation_type * The given line_item_type YouTube & Partners line items
+       * cannot be created or updated using the API.
        *
        * Create a request for the method "lineItems.generateDefault".
        *
@@ -9169,7 +9184,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Creates a new line item with settings (including targeting) inherited from the insertion order
          * and an `ENTITY_STATUS_DRAFT` entity_status. Returns the newly created line item if successful.
          * There are default values based on the three fields: * The insertion order's
-         * insertion_order_type * The insertion order's automation_type * The given line_item_type
+         * insertion_order_type * The insertion order's automation_type * The given line_item_type YouTube
+         * & Partners line items cannot be created or updated using the API.
          *
          * Create a request for the method "lineItems.generateDefault".
          *
@@ -9694,7 +9710,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * Updates an existing line item. Returns the updated line item if successful. Requests to this
        * endpoint cannot be made concurrently with the following requests updating the same line item: *
        * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * assignedTargetingOptions.create *
-       * assignedTargetingOptions.delete
+       * assignedTargetingOptions.delete YouTube & Partners line items cannot be created or updated using
+       * the API.
        *
        * Create a request for the method "lineItems.patch".
        *
@@ -9726,7 +9743,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Updates an existing line item. Returns the updated line item if successful. Requests to this
          * endpoint cannot be made concurrently with the following requests updating the same line item: *
          * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * assignedTargetingOptions.create *
-         * assignedTargetingOptions.delete
+         * assignedTargetingOptions.delete YouTube & Partners line items cannot be created or updated
+         * using the API.
          *
          * Create a request for the method "lineItems.patch".
          *
@@ -9900,7 +9918,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Assigns a targeting option to a line item. Returns the assigned targeting option if successful.
            * Requests to this endpoint cannot be made concurrently with the following requests updating the
            * same line item: * lineItems.bulkEditAssignedTargetingOptions * lineItems.bulkUpdate *
-           * lineItems.patch * DeleteLineItemAssignedTargetingOption
+           * lineItems.patch * DeleteLineItemAssignedTargetingOption YouTube & Partners line items cannot be
+           * created or updated using the API.
            *
            * Create a request for the method "assignedTargetingOptions.create".
            *
@@ -9957,7 +9976,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * Assigns a targeting option to a line item. Returns the assigned targeting option if successful.
              * Requests to this endpoint cannot be made concurrently with the following requests updating the
              * same line item: * lineItems.bulkEditAssignedTargetingOptions * lineItems.bulkUpdate *
-             * lineItems.patch * DeleteLineItemAssignedTargetingOption
+             * lineItems.patch * DeleteLineItemAssignedTargetingOption YouTube & Partners line items cannot be
+             * created or updated using the API.
              *
              * Create a request for the method "assignedTargetingOptions.create".
              *
@@ -10192,7 +10212,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made
            * concurrently with the following requests updating the same line item: *
            * lineItems.bulkEditAssignedTargetingOptions * lineItems.bulkUpdate * lineItems.patch *
-           * CreateLineItemAssignedTargetingOption
+           * CreateLineItemAssignedTargetingOption YouTube & Partners line items cannot be created or updated
+           * using the API.
            *
            * Create a request for the method "assignedTargetingOptions.delete".
            *
@@ -10252,7 +10273,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made
              * concurrently with the following requests updating the same line item: *
              * lineItems.bulkEditAssignedTargetingOptions * lineItems.bulkUpdate * lineItems.patch *
-             * CreateLineItemAssignedTargetingOption
+             * CreateLineItemAssignedTargetingOption YouTube & Partners line items cannot be created or
+             * updated using the API.
              *
              * Create a request for the method "assignedTargetingOptions.delete".
              *

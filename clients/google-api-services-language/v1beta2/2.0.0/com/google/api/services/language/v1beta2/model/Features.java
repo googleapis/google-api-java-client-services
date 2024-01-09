@@ -32,8 +32,8 @@ package com.google.api.services.language.v1beta2.model;
 public final class Features extends com.google.api.client.json.GenericJson {
 
   /**
-   * The model options to use for classification. Defaults to v1 options if not specified. Only used
-   * if `classify_text` is set to true.
+   * Optional. The model options to use for classification. Defaults to v1 options if not specified.
+   * Only used if `classify_text` is set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +84,8 @@ public final class Features extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean moderateText;
 
   /**
-   * The model options to use for classification. Defaults to v1 options if not specified. Only used
-   * if `classify_text` is set to true.
+   * Optional. The model options to use for classification. Defaults to v1 options if not specified.
+   * Only used if `classify_text` is set to true.
    * @return value or {@code null} for none
    */
   public ClassificationModelOptions getClassificationModelOptions() {
@@ -93,8 +93,8 @@ public final class Features extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The model options to use for classification. Defaults to v1 options if not specified. Only used
-   * if `classify_text` is set to true.
+   * Optional. The model options to use for classification. Defaults to v1 options if not specified.
+   * Only used if `classify_text` is set to true.
    * @param classificationModelOptions classificationModelOptions or {@code null} for none
    */
   public Features setClassificationModelOptions(ClassificationModelOptions classificationModelOptions) {

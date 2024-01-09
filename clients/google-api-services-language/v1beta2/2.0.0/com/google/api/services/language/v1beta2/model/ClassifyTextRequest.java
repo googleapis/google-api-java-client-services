@@ -31,7 +31,7 @@ package com.google.api.services.language.v1beta2.model;
 public final class ClassifyTextRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Model options to use for classification. Defaults to v1 options if not specified.
+   * Optional. Model options to use for classification. Defaults to v1 options if not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class ClassifyTextRequest extends com.google.api.client.json.Generi
   private Document document;
 
   /**
-   * Model options to use for classification. Defaults to v1 options if not specified.
+   * Optional. Model options to use for classification. Defaults to v1 options if not specified.
    * @return value or {@code null} for none
    */
   public ClassificationModelOptions getClassificationModelOptions() {
@@ -53,7 +53,7 @@ public final class ClassifyTextRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Model options to use for classification. Defaults to v1 options if not specified.
+   * Optional. Model options to use for classification. Defaults to v1 options if not specified.
    * @param classificationModelOptions classificationModelOptions or {@code null} for none
    */
   public ClassifyTextRequest setClassificationModelOptions(ClassificationModelOptions classificationModelOptions) {

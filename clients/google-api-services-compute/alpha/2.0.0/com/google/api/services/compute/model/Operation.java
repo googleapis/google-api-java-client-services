@@ -24,7 +24,8 @@ package com.google.api.services.compute.model;
  * manage asynchronous API requests. For more information, read Handling API responses. Operations
  * can be global, regional or zonal. - For global operations, use the `globalOperations` resource. -
  * For regional operations, use the `regionOperations` resource. - For zonal operations, use the
- * `zoneOperations` resource. For more information, read Global, Regional, and Zonal Resources.
+ * `zoneOperations` resource. For more information, read Global, Regional, and Zonal Resources. Note
+ * that completed Operation resources have a limited retention period.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

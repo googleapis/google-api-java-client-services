@@ -30,14 +30,20 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerResizeRequestStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Errors encountered during the queueing or provisioning phases of the ResizeRequest.
+   * [Output only] Fatal errors encountered during the queueing or provisioning phases of the
+   * ResizeRequest that caused the transition to the FAILED state. As a contrary to the last_attempt
+   * errors, this field is final and errors are never removed from here, as the RR is not going to
+   * retry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Error error;
 
   /**
-   * Errors encountered during the queueing or provisioning phases of the ResizeRequest.
+   * [Output only] Fatal errors encountered during the queueing or provisioning phases of the
+   * ResizeRequest that caused the transition to the FAILED state. As a contrary to the last_attempt
+   * errors, this field is final and errors are never removed from here, as the RR is not going to
+   * retry.
    * @return value or {@code null} for none
    */
   public Error getError() {
@@ -45,7 +51,10 @@ public final class InstanceGroupManagerResizeRequestStatus extends com.google.ap
   }
 
   /**
-   * Errors encountered during the queueing or provisioning phases of the ResizeRequest.
+   * [Output only] Fatal errors encountered during the queueing or provisioning phases of the
+   * ResizeRequest that caused the transition to the FAILED state. As a contrary to the last_attempt
+   * errors, this field is final and errors are never removed from here, as the RR is not going to
+   * retry.
    * @param error error or {@code null} for none
    */
   public InstanceGroupManagerResizeRequestStatus setError(Error error) {
@@ -64,7 +73,10 @@ public final class InstanceGroupManagerResizeRequestStatus extends com.google.ap
   }
 
   /**
-   * Errors encountered during the queueing or provisioning phases of the ResizeRequest.
+   * [Output only] Fatal errors encountered during the queueing or provisioning phases of the
+   * ResizeRequest that caused the transition to the FAILED state. As a contrary to the last_attempt
+   * errors, this field is final and errors are never removed from here, as the RR is not going to
+   * retry.
    */
   public static final class Error extends com.google.api.client.json.GenericJson {
 

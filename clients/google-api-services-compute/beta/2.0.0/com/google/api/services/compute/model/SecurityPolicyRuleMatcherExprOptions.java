@@ -31,7 +31,7 @@ public final class SecurityPolicyRuleMatcherExprOptions extends com.google.api.c
 
   /**
    * reCAPTCHA configuration options to be applied for the rule. If the rule does not evaluate
-   * reCAPTCHA tokens, this field will have no effect.
+   * reCAPTCHA tokens, this field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class SecurityPolicyRuleMatcherExprOptions extends com.google.api.c
 
   /**
    * reCAPTCHA configuration options to be applied for the rule. If the rule does not evaluate
-   * reCAPTCHA tokens, this field will have no effect.
+   * reCAPTCHA tokens, this field has no effect.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions getRecaptchaOptions() {
@@ -48,7 +48,7 @@ public final class SecurityPolicyRuleMatcherExprOptions extends com.google.api.c
 
   /**
    * reCAPTCHA configuration options to be applied for the rule. If the rule does not evaluate
-   * reCAPTCHA tokens, this field will have no effect.
+   * reCAPTCHA tokens, this field has no effect.
    * @param recaptchaOptions recaptchaOptions or {@code null} for none
    */
   public SecurityPolicyRuleMatcherExprOptions setRecaptchaOptions(SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions recaptchaOptions) {

@@ -32,17 +32,18 @@ public final class PacketMirroringFilter extends com.google.api.client.json.Gene
   /**
    * Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic
    * that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is
-   * specified, all traffic is mirrored.
+   * specified, all IPv4 traffic is mirrored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("IPProtocols")
   private java.util.List<java.lang.String> iPProtocols;
 
   /**
-   * IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the
-   * IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the
-   * specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all
-   * traffic is mirrored.
+   * One or more IPv4 or IPv6 CIDR ranges that apply as filter on the source (ingress) or
+   * destination (egress) IP in the IP header. If no ranges are specified, all IPv4 traffic that
+   * matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is
+   * specified, all IPv4 traffic is mirrored. To mirror all IPv4 and IPv6 traffic, use
+   * "0.0.0.0/0,::/0". Note: Support for IPv6 traffic is in preview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +59,7 @@ public final class PacketMirroringFilter extends com.google.api.client.json.Gene
   /**
    * Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic
    * that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is
-   * specified, all traffic is mirrored.
+   * specified, all IPv4 traffic is mirrored.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIPProtocols() {
@@ -68,7 +69,7 @@ public final class PacketMirroringFilter extends com.google.api.client.json.Gene
   /**
    * Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic
    * that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is
-   * specified, all traffic is mirrored.
+   * specified, all IPv4 traffic is mirrored.
    * @param iPProtocols iPProtocols or {@code null} for none
    */
   public PacketMirroringFilter setIPProtocols(java.util.List<java.lang.String> iPProtocols) {
@@ -77,10 +78,11 @@ public final class PacketMirroringFilter extends com.google.api.client.json.Gene
   }
 
   /**
-   * IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the
-   * IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the
-   * specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all
-   * traffic is mirrored.
+   * One or more IPv4 or IPv6 CIDR ranges that apply as filter on the source (ingress) or
+   * destination (egress) IP in the IP header. If no ranges are specified, all IPv4 traffic that
+   * matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is
+   * specified, all IPv4 traffic is mirrored. To mirror all IPv4 and IPv6 traffic, use
+   * "0.0.0.0/0,::/0". Note: Support for IPv6 traffic is in preview.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCidrRanges() {
@@ -88,10 +90,11 @@ public final class PacketMirroringFilter extends com.google.api.client.json.Gene
   }
 
   /**
-   * IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the
-   * IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the
-   * specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all
-   * traffic is mirrored.
+   * One or more IPv4 or IPv6 CIDR ranges that apply as filter on the source (ingress) or
+   * destination (egress) IP in the IP header. If no ranges are specified, all IPv4 traffic that
+   * matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is
+   * specified, all IPv4 traffic is mirrored. To mirror all IPv4 and IPv6 traffic, use
+   * "0.0.0.0/0,::/0". Note: Support for IPv6 traffic is in preview.
    * @param cidrRanges cidrRanges or {@code null} for none
    */
   public PacketMirroringFilter setCidrRanges(java.util.List<java.lang.String> cidrRanges) {

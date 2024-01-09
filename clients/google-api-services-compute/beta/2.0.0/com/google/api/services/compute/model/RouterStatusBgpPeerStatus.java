@@ -49,6 +49,13 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private BfdStatus bfdStatus;
 
   /**
+   * Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableIpv4;
+
+  /**
    * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
    * The value may be {@code null}.
    */
@@ -61,6 +68,13 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
+
+  /**
+   * IPv4 address of the local BGP interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv4NexthopAddress;
 
   /**
    * IPv6 address of the local BGP interface.
@@ -103,6 +117,13 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String peerIpAddress;
+
+  /**
+   * IPv4 address of the remote BGP interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerIpv4NexthopAddress;
 
   /**
    * IPv6 address of the remote BGP interface.
@@ -190,6 +211,23 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
+   * Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableIpv4() {
+    return enableIpv4;
+  }
+
+  /**
+   * Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
+   * @param enableIpv4 enableIpv4 or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setEnableIpv4(java.lang.Boolean enableIpv4) {
+    this.enableIpv4 = enableIpv4;
+    return this;
+  }
+
+  /**
    * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
    * @return value or {@code null} for none
    */
@@ -220,6 +258,23 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   public RouterStatusBgpPeerStatus setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * IPv4 address of the local BGP interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv4NexthopAddress() {
+    return ipv4NexthopAddress;
+  }
+
+  /**
+   * IPv4 address of the local BGP interface.
+   * @param ipv4NexthopAddress ipv4NexthopAddress or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setIpv4NexthopAddress(java.lang.String ipv4NexthopAddress) {
+    this.ipv4NexthopAddress = ipv4NexthopAddress;
     return this;
   }
 
@@ -322,6 +377,23 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   public RouterStatusBgpPeerStatus setPeerIpAddress(java.lang.String peerIpAddress) {
     this.peerIpAddress = peerIpAddress;
+    return this;
+  }
+
+  /**
+   * IPv4 address of the remote BGP interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerIpv4NexthopAddress() {
+    return peerIpv4NexthopAddress;
+  }
+
+  /**
+   * IPv4 address of the remote BGP interface.
+   * @param peerIpv4NexthopAddress peerIpv4NexthopAddress or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setPeerIpv4NexthopAddress(java.lang.String peerIpv4NexthopAddress) {
+    this.peerIpv4NexthopAddress = peerIpv4NexthopAddress;
     return this;
   }
 

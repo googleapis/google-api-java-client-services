@@ -77,7 +77,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
-   * User-provided name of the Organization security plicy. The name should be unique in the
+   * User-provided name of the organization security policy. The name should be unique in the
    * organization in which the security policy is created. This should only be used when
    * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with
    * https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and
@@ -341,7 +341,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User-provided name of the Organization security plicy. The name should be unique in the
+   * User-provided name of the organization security policy. The name should be unique in the
    * organization in which the security policy is created. This should only be used when
    * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with
    * https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and
@@ -355,7 +355,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User-provided name of the Organization security plicy. The name should be unique in the
+   * User-provided name of the organization security policy. The name should be unique in the
    * organization in which the security policy is created. This should only be used when
    * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with
    * https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and

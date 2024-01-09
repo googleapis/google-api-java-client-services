@@ -30,6 +30,10 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStandbyPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the number of seconds that the MIG should wait to suspend or stop a VM after that VM
+   * was created. The initial delay gives the initialization script the time to prepare your VM for
+   * a quick scale out. The value of initial delay must be between 0 and 3600 seconds. The default
+   * value is 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,6 +48,10 @@ public final class InstanceGroupManagerStandbyPolicy extends com.google.api.clie
   private java.lang.String mode;
 
   /**
+   * Specifies the number of seconds that the MIG should wait to suspend or stop a VM after that VM
+   * was created. The initial delay gives the initialization script the time to prepare your VM for
+   * a quick scale out. The value of initial delay must be between 0 and 3600 seconds. The default
+   * value is 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialDelaySec() {
@@ -51,6 +59,10 @@ public final class InstanceGroupManagerStandbyPolicy extends com.google.api.clie
   }
 
   /**
+   * Specifies the number of seconds that the MIG should wait to suspend or stop a VM after that VM
+   * was created. The initial delay gives the initialization script the time to prepare your VM for
+   * a quick scale out. The value of initial delay must be between 0 and 3600 seconds. The default
+   * value is 0.
    * @param initialDelaySec initialDelaySec or {@code null} for none
    */
   public InstanceGroupManagerStandbyPolicy setInitialDelaySec(java.lang.Integer initialDelaySec) {

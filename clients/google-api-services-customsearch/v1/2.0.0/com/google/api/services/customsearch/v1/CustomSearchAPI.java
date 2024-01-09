@@ -862,21 +862,17 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /**
-       * Specifies that all search results should be pages that are related to the specified URL.
-       */
+      /** Deprecated. */
       @com.google.api.client.util.Key
       private java.lang.String relatedSite;
 
-      /** Specifies that all search results should be pages that are related to the specified URL.
+      /** Deprecated.
        */
       public java.lang.String getRelatedSite() {
         return relatedSite;
       }
 
-      /**
-       * Specifies that all search results should be pages that are related to the specified URL.
-       */
+      /** Deprecated. */
       public List setRelatedSite(java.lang.String relatedSite) {
         this.relatedSite = relatedSite;
         return this;
@@ -1801,21 +1797,17 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
           return this;
         }
 
-        /**
-         * Specifies that all search results should be pages that are related to the specified URL.
-         */
+        /** Deprecated. */
         @com.google.api.client.util.Key
         private java.lang.String relatedSite;
 
-        /** Specifies that all search results should be pages that are related to the specified URL.
+        /** Deprecated.
          */
         public java.lang.String getRelatedSite() {
           return relatedSite;
         }
 
-        /**
-         * Specifies that all search results should be pages that are related to the specified URL.
-         */
+        /** Deprecated. */
         public List setRelatedSite(java.lang.String relatedSite) {
           this.relatedSite = relatedSite;
           return this;

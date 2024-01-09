@@ -77,6 +77,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   private java.lang.String languageCode;
 
   /**
+   * If specified, the spec will be used to modify the prompt provided to the LLM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelPromptSpec modelPromptSpec;
+
+  /**
    * If specified, the spec will be used to modify the model specification provided to the LLM.
    * The value may be {@code null}.
    */
@@ -195,6 +202,23 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * If specified, the spec will be used to modify the prompt provided to the LLM.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelPromptSpec getModelPromptSpec() {
+    return modelPromptSpec;
+  }
+
+  /**
+   * If specified, the spec will be used to modify the prompt provided to the LLM.
+   * @param modelPromptSpec modelPromptSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec setModelPromptSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelPromptSpec modelPromptSpec) {
+    this.modelPromptSpec = modelPromptSpec;
     return this;
   }
 

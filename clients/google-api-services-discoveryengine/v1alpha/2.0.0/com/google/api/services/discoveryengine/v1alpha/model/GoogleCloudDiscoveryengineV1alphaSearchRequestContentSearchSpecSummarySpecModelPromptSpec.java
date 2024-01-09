@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Specification of the model.
+ * Specification of the prompt to use with the model.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelSpec extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelPromptSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The string format of the model version. e.g. stable, preview, etc.
+   * Text at the beginning of the prompt that instructs the assistant. Examples are available in the
+   * user guide.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String version;
+  private java.lang.String preamble;
 
   /**
-   * The string format of the model version. e.g. stable, preview, etc.
+   * Text at the beginning of the prompt that instructs the assistant. Examples are available in the
+   * user guide.
    * @return value or {@code null} for none
    */
-  public java.lang.String getVersion() {
-    return version;
+  public java.lang.String getPreamble() {
+    return preamble;
   }
 
   /**
-   * The string format of the model version. e.g. stable, preview, etc.
-   * @param version version or {@code null} for none
+   * Text at the beginning of the prompt that instructs the assistant. Examples are available in the
+   * user guide.
+   * @param preamble preamble or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelSpec setVersion(java.lang.String version) {
-    this.version = version;
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelPromptSpec setPreamble(java.lang.String preamble) {
+    this.preamble = preamble;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelSpec set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelSpec) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelPromptSpec set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelPromptSpec) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelSpec clone() {
-    return (GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelSpec) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelPromptSpec clone() {
+    return (GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelPromptSpec) super.clone();
   }
 
 }

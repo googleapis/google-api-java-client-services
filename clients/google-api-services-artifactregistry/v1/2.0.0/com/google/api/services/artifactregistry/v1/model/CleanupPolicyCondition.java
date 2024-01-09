@@ -67,13 +67,6 @@ public final class CleanupPolicyCondition extends com.google.api.client.json.Gen
   private java.lang.String tagState;
 
   /**
-   * DEPRECATED: Use older_than.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String versionAge;
-
-  /**
    * Match versions by version name prefix. Applied on any prefix match.
    * The value may be {@code null}.
    */
@@ -162,23 +155,6 @@ public final class CleanupPolicyCondition extends com.google.api.client.json.Gen
    */
   public CleanupPolicyCondition setTagState(java.lang.String tagState) {
     this.tagState = tagState;
-    return this;
-  }
-
-  /**
-   * DEPRECATED: Use older_than.
-   * @return value or {@code null} for none
-   */
-  public String getVersionAge() {
-    return versionAge;
-  }
-
-  /**
-   * DEPRECATED: Use older_than.
-   * @param versionAge versionAge or {@code null} for none
-   */
-  public CleanupPolicyCondition setVersionAge(String versionAge) {
-    this.versionAge = versionAge;
     return this;
   }
 

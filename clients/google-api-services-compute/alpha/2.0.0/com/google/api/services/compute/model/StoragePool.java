@@ -103,15 +103,37 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String performanceProvisioningType;
 
   /**
-   * Provsioned IOPS of the storage pool.
+   * Size, in GiB, of the storage pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long poolProvisionedCapacityGb;
+
+  /**
+   * Provsioned IOPS of the storage pool. Only relevant if the storage pool type is hyperdisk-
+   * balanced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long poolProvisionedIops;
+
+  /**
+   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
+   * hyperdisk-balanced or hyperdisk-throughput.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long poolProvisionedThroughput;
+
+  /**
+   * DEPRECATED -- use "pool provisioned IOPS".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long provisionedIops;
 
   /**
-   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
-   * hyperdisk-balanced or hyperdisk-throughput.
+   * DEPRECATED -- use "pool provisioned throughput".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -139,7 +161,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
-   * Size, in GiB, of the storage pool.
+   * DEPRECATED -- use "pool provisioned capacity gb".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -388,19 +410,38 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provsioned IOPS of the storage pool.
+   * Size, in GiB, of the storage pool.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getProvisionedIops() {
-    return provisionedIops;
+  public java.lang.Long getPoolProvisionedCapacityGb() {
+    return poolProvisionedCapacityGb;
   }
 
   /**
-   * Provsioned IOPS of the storage pool.
-   * @param provisionedIops provisionedIops or {@code null} for none
+   * Size, in GiB, of the storage pool.
+   * @param poolProvisionedCapacityGb poolProvisionedCapacityGb or {@code null} for none
    */
-  public StoragePool setProvisionedIops(java.lang.Long provisionedIops) {
-    this.provisionedIops = provisionedIops;
+  public StoragePool setPoolProvisionedCapacityGb(java.lang.Long poolProvisionedCapacityGb) {
+    this.poolProvisionedCapacityGb = poolProvisionedCapacityGb;
+    return this;
+  }
+
+  /**
+   * Provsioned IOPS of the storage pool. Only relevant if the storage pool type is hyperdisk-
+   * balanced.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPoolProvisionedIops() {
+    return poolProvisionedIops;
+  }
+
+  /**
+   * Provsioned IOPS of the storage pool. Only relevant if the storage pool type is hyperdisk-
+   * balanced.
+   * @param poolProvisionedIops poolProvisionedIops or {@code null} for none
+   */
+  public StoragePool setPoolProvisionedIops(java.lang.Long poolProvisionedIops) {
+    this.poolProvisionedIops = poolProvisionedIops;
     return this;
   }
 
@@ -409,13 +450,47 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    * hyperdisk-balanced or hyperdisk-throughput.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getProvisionedThroughput() {
-    return provisionedThroughput;
+  public java.lang.Long getPoolProvisionedThroughput() {
+    return poolProvisionedThroughput;
   }
 
   /**
    * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
    * hyperdisk-balanced or hyperdisk-throughput.
+   * @param poolProvisionedThroughput poolProvisionedThroughput or {@code null} for none
+   */
+  public StoragePool setPoolProvisionedThroughput(java.lang.Long poolProvisionedThroughput) {
+    this.poolProvisionedThroughput = poolProvisionedThroughput;
+    return this;
+  }
+
+  /**
+   * DEPRECATED -- use "pool provisioned IOPS".
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedIops() {
+    return provisionedIops;
+  }
+
+  /**
+   * DEPRECATED -- use "pool provisioned IOPS".
+   * @param provisionedIops provisionedIops or {@code null} for none
+   */
+  public StoragePool setProvisionedIops(java.lang.Long provisionedIops) {
+    this.provisionedIops = provisionedIops;
+    return this;
+  }
+
+  /**
+   * DEPRECATED -- use "pool provisioned throughput".
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedThroughput() {
+    return provisionedThroughput;
+  }
+
+  /**
+   * DEPRECATED -- use "pool provisioned throughput".
    * @param provisionedThroughput provisionedThroughput or {@code null} for none
    */
   public StoragePool setProvisionedThroughput(java.lang.Long provisionedThroughput) {
@@ -475,7 +550,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size, in GiB, of the storage pool.
+   * DEPRECATED -- use "pool provisioned capacity gb".
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -483,7 +558,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size, in GiB, of the storage pool.
+   * DEPRECATED -- use "pool provisioned capacity gb".
    * @param sizeGb sizeGb or {@code null} for none
    */
   public StoragePool setSizeGb(java.lang.Long sizeGb) {

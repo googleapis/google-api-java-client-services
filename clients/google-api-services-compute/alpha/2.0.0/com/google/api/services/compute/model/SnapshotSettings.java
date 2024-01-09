@@ -30,12 +30,36 @@ package com.google.api.services.compute.model;
 public final class SnapshotSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * (Regional snapshots use only)Policy of which location is allowed to access snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SnapshotSettingsAccessLocation accessLocation;
+
+  /**
    * Policy of which storage location is going to be resolved, and additional data that
    * particularizes how the policy is going to be carried out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SnapshotSettingsStorageLocationSettings storageLocation;
+
+  /**
+   * (Regional snapshots use only)Policy of which location is allowed to access snapshot.
+   * @return value or {@code null} for none
+   */
+  public SnapshotSettingsAccessLocation getAccessLocation() {
+    return accessLocation;
+  }
+
+  /**
+   * (Regional snapshots use only)Policy of which location is allowed to access snapshot.
+   * @param accessLocation accessLocation or {@code null} for none
+   */
+  public SnapshotSettings setAccessLocation(SnapshotSettingsAccessLocation accessLocation) {
+    this.accessLocation = accessLocation;
+    return this;
+  }
 
   /**
    * Policy of which storage location is going to be resolved, and additional data that

@@ -45,12 +45,6 @@ public final class ListLabelsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer productId;
-
-  /**
    * List of labels. Note that each label resource only contains an `id`, `name`,
    * `messageListVisibility`, `labelListVisibility`, and `type`. The labels.get method can fetch
    * additional label details.
@@ -68,21 +62,6 @@ public final class ListLabelsResponse extends com.google.api.client.json.Generic
    */
   public ListLabelsResponse setLabels(java.util.List<Label> labels) {
     this.labels = labels;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getProductId() {
-    return productId;
-  }
-
-  /**
-   * @param productId productId or {@code null} for none
-   */
-  public ListLabelsResponse setProductId(java.lang.Integer productId) {
-    this.productId = productId;
     return this;
   }
 

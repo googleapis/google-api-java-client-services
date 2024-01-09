@@ -37,6 +37,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private ConfigMapVolumeSource configMap;
 
   /**
+   * Volume specified by the Container Storage Interface driver
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CSIVolumeSource csi;
+
+  /**
    * Ephemeral storage used as a shared volume.
    * The value may be {@code null}.
    */
@@ -49,6 +56,12 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NFSVolumeSource nfs;
 
   /**
    * The secret's value will be presented as the content of a file whose name is defined in the item
@@ -72,6 +85,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setConfigMap(ConfigMapVolumeSource configMap) {
     this.configMap = configMap;
+    return this;
+  }
+
+  /**
+   * Volume specified by the Container Storage Interface driver
+   * @return value or {@code null} for none
+   */
+  public CSIVolumeSource getCsi() {
+    return csi;
+  }
+
+  /**
+   * Volume specified by the Container Storage Interface driver
+   * @param csi csi or {@code null} for none
+   */
+  public Volume setCsi(CSIVolumeSource csi) {
+    this.csi = csi;
     return this;
   }
 
@@ -106,6 +136,21 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public NFSVolumeSource getNfs() {
+    return nfs;
+  }
+
+  /**
+   * @param nfs nfs or {@code null} for none
+   */
+  public Volume setNfs(NFSVolumeSource nfs) {
+    this.nfs = nfs;
     return this;
   }
 

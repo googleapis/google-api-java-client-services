@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Request message for ActivateSubscriptionOffer.
+ * Request message for GetSubscriptionOffer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -28,46 +28,38 @@ package com.google.api.services.androidpublisher.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ActivateSubscriptionOfferRequest extends com.google.api.client.json.GenericJson {
+public final class GetSubscriptionOfferRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The parent base plan (ID) of the offer to activate.
+   * Required. The parent base plan (ID) of the offer to get.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String basePlanId;
 
   /**
-   * Optional. The latency tolerance for the propagation of this product update. Defaults to
-   * latency-sensitive.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String latencyTolerance;
-
-  /**
-   * Required. The unique offer ID of the offer to activate.
+   * Required. The unique offer ID of the offer to get.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String offerId;
 
   /**
-   * Required. The parent app (package name) of the offer to activate.
+   * Required. The parent app (package name) of the offer to get.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String packageName;
 
   /**
-   * Required. The parent subscription (ID) of the offer to activate.
+   * Required. The parent subscription (ID) of the offer to get.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productId;
 
   /**
-   * Required. The parent base plan (ID) of the offer to activate.
+   * Required. The parent base plan (ID) of the offer to get.
    * @return value or {@code null} for none
    */
   public java.lang.String getBasePlanId() {
@@ -75,35 +67,16 @@ public final class ActivateSubscriptionOfferRequest extends com.google.api.clien
   }
 
   /**
-   * Required. The parent base plan (ID) of the offer to activate.
+   * Required. The parent base plan (ID) of the offer to get.
    * @param basePlanId basePlanId or {@code null} for none
    */
-  public ActivateSubscriptionOfferRequest setBasePlanId(java.lang.String basePlanId) {
+  public GetSubscriptionOfferRequest setBasePlanId(java.lang.String basePlanId) {
     this.basePlanId = basePlanId;
     return this;
   }
 
   /**
-   * Optional. The latency tolerance for the propagation of this product update. Defaults to
-   * latency-sensitive.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLatencyTolerance() {
-    return latencyTolerance;
-  }
-
-  /**
-   * Optional. The latency tolerance for the propagation of this product update. Defaults to
-   * latency-sensitive.
-   * @param latencyTolerance latencyTolerance or {@code null} for none
-   */
-  public ActivateSubscriptionOfferRequest setLatencyTolerance(java.lang.String latencyTolerance) {
-    this.latencyTolerance = latencyTolerance;
-    return this;
-  }
-
-  /**
-   * Required. The unique offer ID of the offer to activate.
+   * Required. The unique offer ID of the offer to get.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfferId() {
@@ -111,16 +84,16 @@ public final class ActivateSubscriptionOfferRequest extends com.google.api.clien
   }
 
   /**
-   * Required. The unique offer ID of the offer to activate.
+   * Required. The unique offer ID of the offer to get.
    * @param offerId offerId or {@code null} for none
    */
-  public ActivateSubscriptionOfferRequest setOfferId(java.lang.String offerId) {
+  public GetSubscriptionOfferRequest setOfferId(java.lang.String offerId) {
     this.offerId = offerId;
     return this;
   }
 
   /**
-   * Required. The parent app (package name) of the offer to activate.
+   * Required. The parent app (package name) of the offer to get.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackageName() {
@@ -128,16 +101,16 @@ public final class ActivateSubscriptionOfferRequest extends com.google.api.clien
   }
 
   /**
-   * Required. The parent app (package name) of the offer to activate.
+   * Required. The parent app (package name) of the offer to get.
    * @param packageName packageName or {@code null} for none
    */
-  public ActivateSubscriptionOfferRequest setPackageName(java.lang.String packageName) {
+  public GetSubscriptionOfferRequest setPackageName(java.lang.String packageName) {
     this.packageName = packageName;
     return this;
   }
 
   /**
-   * Required. The parent subscription (ID) of the offer to activate.
+   * Required. The parent subscription (ID) of the offer to get.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -145,22 +118,22 @@ public final class ActivateSubscriptionOfferRequest extends com.google.api.clien
   }
 
   /**
-   * Required. The parent subscription (ID) of the offer to activate.
+   * Required. The parent subscription (ID) of the offer to get.
    * @param productId productId or {@code null} for none
    */
-  public ActivateSubscriptionOfferRequest setProductId(java.lang.String productId) {
+  public GetSubscriptionOfferRequest setProductId(java.lang.String productId) {
     this.productId = productId;
     return this;
   }
 
   @Override
-  public ActivateSubscriptionOfferRequest set(String fieldName, Object value) {
-    return (ActivateSubscriptionOfferRequest) super.set(fieldName, value);
+  public GetSubscriptionOfferRequest set(String fieldName, Object value) {
+    return (GetSubscriptionOfferRequest) super.set(fieldName, value);
   }
 
   @Override
-  public ActivateSubscriptionOfferRequest clone() {
-    return (ActivateSubscriptionOfferRequest) super.clone();
+  public GetSubscriptionOfferRequest clone() {
+    return (GetSubscriptionOfferRequest) super.clone();
   }
 
 }

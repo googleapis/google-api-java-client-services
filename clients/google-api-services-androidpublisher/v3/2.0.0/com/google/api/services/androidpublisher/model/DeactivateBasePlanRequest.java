@@ -30,6 +30,105 @@ package com.google.api.services.androidpublisher.model;
 @SuppressWarnings("javadoc")
 public final class DeactivateBasePlanRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Required. The unique base plan ID of the base plan to deactivate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String basePlanId;
+
+  /**
+   * Optional. The latency tolerance for the propagation of this product update. Defaults to
+   * latency-sensitive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String latencyTolerance;
+
+  /**
+   * Required. The parent app (package name) of the base plan to deactivate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String packageName;
+
+  /**
+   * Required. The parent subscription (ID) of the base plan to deactivate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productId;
+
+  /**
+   * Required. The unique base plan ID of the base plan to deactivate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBasePlanId() {
+    return basePlanId;
+  }
+
+  /**
+   * Required. The unique base plan ID of the base plan to deactivate.
+   * @param basePlanId basePlanId or {@code null} for none
+   */
+  public DeactivateBasePlanRequest setBasePlanId(java.lang.String basePlanId) {
+    this.basePlanId = basePlanId;
+    return this;
+  }
+
+  /**
+   * Optional. The latency tolerance for the propagation of this product update. Defaults to
+   * latency-sensitive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLatencyTolerance() {
+    return latencyTolerance;
+  }
+
+  /**
+   * Optional. The latency tolerance for the propagation of this product update. Defaults to
+   * latency-sensitive.
+   * @param latencyTolerance latencyTolerance or {@code null} for none
+   */
+  public DeactivateBasePlanRequest setLatencyTolerance(java.lang.String latencyTolerance) {
+    this.latencyTolerance = latencyTolerance;
+    return this;
+  }
+
+  /**
+   * Required. The parent app (package name) of the base plan to deactivate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPackageName() {
+    return packageName;
+  }
+
+  /**
+   * Required. The parent app (package name) of the base plan to deactivate.
+   * @param packageName packageName or {@code null} for none
+   */
+  public DeactivateBasePlanRequest setPackageName(java.lang.String packageName) {
+    this.packageName = packageName;
+    return this;
+  }
+
+  /**
+   * Required. The parent subscription (ID) of the base plan to deactivate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductId() {
+    return productId;
+  }
+
+  /**
+   * Required. The parent subscription (ID) of the base plan to deactivate.
+   * @param productId productId or {@code null} for none
+   */
+  public DeactivateBasePlanRequest setProductId(java.lang.String productId) {
+    this.productId = productId;
+    return this;
+  }
+
   @Override
   public DeactivateBasePlanRequest set(String fieldName, Object value) {
     return (DeactivateBasePlanRequest) super.set(fieldName, value);

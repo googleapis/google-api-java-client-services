@@ -8339,6 +8339,408 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   public class Inappproducts {
 
     /**
+     * Deletes in-app products (managed products or subscriptions). Set the latencyTolerance field on
+     * nested requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update
+     * throughput. This method should not be used to delete subscriptions. See [this article](https
+     * ://android-developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html)
+     * for more information.
+     *
+     * Create a request for the method "inappproducts.batchDelete".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param packageName Package name of the app.
+     * @param content the {@link com.google.api.services.androidpublisher.model.InappproductsBatchDeleteRequest}
+     * @return the request
+     */
+    public BatchDelete batchDelete(java.lang.String packageName, com.google.api.services.androidpublisher.model.InappproductsBatchDeleteRequest content) throws java.io.IOException {
+      BatchDelete result = new BatchDelete(packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchDelete extends AndroidPublisherRequest<Void> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts:batchDelete";
+
+      /**
+       * Deletes in-app products (managed products or subscriptions). Set the latencyTolerance field on
+       * nested requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update
+       * throughput. This method should not be used to delete subscriptions. See [this article](https
+       * ://android-developers.googleblog.com/2023/06/changes-to-google-play-developer-api-
+       * june-2023.html) for more information.
+       *
+       * Create a request for the method "inappproducts.batchDelete".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.InappproductsBatchDeleteRequest}
+       * @since 1.13
+       */
+      protected BatchDelete(java.lang.String packageName, com.google.api.services.androidpublisher.model.InappproductsBatchDeleteRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, Void.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      @Override
+      public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchDelete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchDelete setAccessToken(java.lang.String accessToken) {
+        return (BatchDelete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchDelete setAlt(java.lang.String alt) {
+        return (BatchDelete) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchDelete setCallback(java.lang.String callback) {
+        return (BatchDelete) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchDelete setFields(java.lang.String fields) {
+        return (BatchDelete) super.setFields(fields);
+      }
+
+      @Override
+      public BatchDelete setKey(java.lang.String key) {
+        return (BatchDelete) super.setKey(key);
+      }
+
+      @Override
+      public BatchDelete setOauthToken(java.lang.String oauthToken) {
+        return (BatchDelete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchDelete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+        return (BatchDelete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchDelete setUploadType(java.lang.String uploadType) {
+        return (BatchDelete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Package name of the app.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Package name of the app. */
+      public BatchDelete setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public BatchDelete set(String parameterName, Object value) {
+        return (BatchDelete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Reads multiple in-app products, which can be managed products or subscriptions. This method
+     * should not be used to retrieve subscriptions. See [this article](https://android-
+     * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+     * information.
+     *
+     * Create a request for the method "inappproducts.batchGet".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+     *
+     * @param packageName Package name of the app.
+     * @return the request
+     */
+    public BatchGet batchGet(java.lang.String packageName) throws java.io.IOException {
+      BatchGet result = new BatchGet(packageName);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchGet extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InappproductsBatchGetResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts:batchGet";
+
+      /**
+       * Reads multiple in-app products, which can be managed products or subscriptions. This method
+       * should not be used to retrieve subscriptions. See [this article](https://android-
+       * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+       * information.
+       *
+       * Create a request for the method "inappproducts.batchGet".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Package name of the app.
+       * @since 1.13
+       */
+      protected BatchGet(java.lang.String packageName) {
+        super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.InappproductsBatchGetResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchGet) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchGet setAccessToken(java.lang.String accessToken) {
+        return (BatchGet) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchGet setAlt(java.lang.String alt) {
+        return (BatchGet) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchGet setCallback(java.lang.String callback) {
+        return (BatchGet) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchGet setFields(java.lang.String fields) {
+        return (BatchGet) super.setFields(fields);
+      }
+
+      @Override
+      public BatchGet setKey(java.lang.String key) {
+        return (BatchGet) super.setKey(key);
+      }
+
+      @Override
+      public BatchGet setOauthToken(java.lang.String oauthToken) {
+        return (BatchGet) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchGet) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchGet setQuotaUser(java.lang.String quotaUser) {
+        return (BatchGet) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchGet setUploadType(java.lang.String uploadType) {
+        return (BatchGet) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchGet) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Package name of the app.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Package name of the app. */
+      public BatchGet setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      /** Unique identifier for the in-app products. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> sku;
+
+      /** Unique identifier for the in-app products.
+       */
+      public java.util.List<java.lang.String> getSku() {
+        return sku;
+      }
+
+      /** Unique identifier for the in-app products. */
+      public BatchGet setSku(java.util.List<java.lang.String> sku) {
+        this.sku = sku;
+        return this;
+      }
+
+      @Override
+      public BatchGet set(String parameterName, Object value) {
+        return (BatchGet) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates or inserts one or more in-app products (managed products or subscriptions). Set the
+     * latencyTolerance field on nested requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to
+     * achieve maximum update throughput. This method should no longer be used to update subscriptions.
+     * See [this article](https://android-developers.googleblog.com/2023/06/changes-to-google-play-
+     * developer-api-june-2023.html) for more information.
+     *
+     * Create a request for the method "inappproducts.batchUpdate".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param packageName Package name of the app.
+     * @param content the {@link com.google.api.services.androidpublisher.model.InappproductsBatchUpdateRequest}
+     * @return the request
+     */
+    public BatchUpdate batchUpdate(java.lang.String packageName, com.google.api.services.androidpublisher.model.InappproductsBatchUpdateRequest content) throws java.io.IOException {
+      BatchUpdate result = new BatchUpdate(packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchUpdate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InappproductsBatchUpdateResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts:batchUpdate";
+
+      /**
+       * Updates or inserts one or more in-app products (managed products or subscriptions). Set the
+       * latencyTolerance field on nested requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT
+       * to achieve maximum update throughput. This method should no longer be used to update
+       * subscriptions. See [this article](https://android-developers.googleblog.com/2023/06/changes-to-
+       * google-play-developer-api-june-2023.html) for more information.
+       *
+       * Create a request for the method "inappproducts.batchUpdate".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.InappproductsBatchUpdateRequest}
+       * @since 1.13
+       */
+      protected BatchUpdate(java.lang.String packageName, com.google.api.services.androidpublisher.model.InappproductsBatchUpdateRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.InappproductsBatchUpdateResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      @Override
+      public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchUpdate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchUpdate setAccessToken(java.lang.String accessToken) {
+        return (BatchUpdate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchUpdate setAlt(java.lang.String alt) {
+        return (BatchUpdate) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchUpdate setCallback(java.lang.String callback) {
+        return (BatchUpdate) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchUpdate setFields(java.lang.String fields) {
+        return (BatchUpdate) super.setFields(fields);
+      }
+
+      @Override
+      public BatchUpdate setKey(java.lang.String key) {
+        return (BatchUpdate) super.setKey(key);
+      }
+
+      @Override
+      public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+        return (BatchUpdate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+        return (BatchUpdate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchUpdate setUploadType(java.lang.String uploadType) {
+        return (BatchUpdate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Package name of the app.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Package name of the app. */
+      public BatchUpdate setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public BatchUpdate set(String parameterName, Object value) {
+        return (BatchUpdate) super.set(parameterName, value);
+      }
+    }
+    /**
      * Deletes an in-app product (a managed product or a subscription). This method should no longer be
      * used to delete subscriptions. See [this article](https://android-
      * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
@@ -8471,6 +8873,29 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /** Unique identifier for the in-app product. */
       public Delete setSku(java.lang.String sku) {
         this.sku = sku;
+        return this;
+      }
+
+      /**
+       * Optional. The latency tolerance for the propagation of this product update. Defaults to
+       * latency-sensitive.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String latencyTolerance;
+
+      /** Optional. The latency tolerance for the propagation of this product update. Defaults to latency-
+     sensitive.
+       */
+      public java.lang.String getLatencyTolerance() {
+        return latencyTolerance;
+      }
+
+      /**
+       * Optional. The latency tolerance for the propagation of this product update. Defaults to
+       * latency-sensitive.
+       */
+      public Delete setLatencyTolerance(java.lang.String latencyTolerance) {
+        this.latencyTolerance = latencyTolerance;
         return this;
       }
 
@@ -9126,6 +9551,29 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return this;
       }
 
+      /**
+       * Optional. The latency tolerance for the propagation of this product update. Defaults to
+       * latency-sensitive.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String latencyTolerance;
+
+      /** Optional. The latency tolerance for the propagation of this product update. Defaults to latency-
+     sensitive.
+       */
+      public java.lang.String getLatencyTolerance() {
+        return latencyTolerance;
+      }
+
+      /**
+       * Optional. The latency tolerance for the propagation of this product update. Defaults to
+       * latency-sensitive.
+       */
+      public Patch setLatencyTolerance(java.lang.String latencyTolerance) {
+        this.latencyTolerance = latencyTolerance;
+        return this;
+      }
+
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
@@ -9315,6 +9763,29 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        */
       public Update setAutoConvertMissingPrices(java.lang.Boolean autoConvertMissingPrices) {
         this.autoConvertMissingPrices = autoConvertMissingPrices;
+        return this;
+      }
+
+      /**
+       * Optional. The latency tolerance for the propagation of this product update. Defaults to
+       * latency-sensitive.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String latencyTolerance;
+
+      /** Optional. The latency tolerance for the propagation of this product update. Defaults to latency-
+     sensitive.
+       */
+      public java.lang.String getLatencyTolerance() {
+        return latencyTolerance;
+      }
+
+      /**
+       * Optional. The latency tolerance for the propagation of this product update. Defaults to
+       * latency-sensitive.
+       */
+      public Update setLatencyTolerance(java.lang.String latencyTolerance) {
+        this.latencyTolerance = latencyTolerance;
         return this;
       }
 
@@ -10006,6 +10477,293 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         @Override
         public Archive set(String parameterName, Object value) {
           return (Archive) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Reads one or more subscriptions.
+       *
+       * Create a request for the method "subscriptions.batchGet".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The parent app (package name) for which the subscriptions should be retrieved. Must be
+       *        equal to the package_name field on all the requests.
+       * @return the request
+       */
+      public BatchGet batchGet(java.lang.String packageName) throws java.io.IOException {
+        BatchGet result = new BatchGet(packageName);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchGet extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchGetSubscriptionsResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions:batchGet";
+
+        /**
+         * Reads one or more subscriptions.
+         *
+         * Create a request for the method "subscriptions.batchGet".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) for which the subscriptions should be retrieved. Must be
+       *        equal to the package_name field on all the requests.
+         * @since 1.13
+         */
+        protected BatchGet(java.lang.String packageName) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.BatchGetSubscriptionsResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchGet) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchGet setAccessToken(java.lang.String accessToken) {
+          return (BatchGet) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchGet setAlt(java.lang.String alt) {
+          return (BatchGet) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchGet setCallback(java.lang.String callback) {
+          return (BatchGet) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchGet setFields(java.lang.String fields) {
+          return (BatchGet) super.setFields(fields);
+        }
+
+        @Override
+        public BatchGet setKey(java.lang.String key) {
+          return (BatchGet) super.setKey(key);
+        }
+
+        @Override
+        public BatchGet setOauthToken(java.lang.String oauthToken) {
+          return (BatchGet) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchGet) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchGet setQuotaUser(java.lang.String quotaUser) {
+          return (BatchGet) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchGet setUploadType(java.lang.String uploadType) {
+          return (BatchGet) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchGet) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent app (package name) for which the subscriptions should be retrieved.
+         * Must be equal to the package_name field on all the requests.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) for which the subscriptions should be retrieved. Must be
+       equal to the package_name field on all the requests.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The parent app (package name) for which the subscriptions should be retrieved.
+         * Must be equal to the package_name field on all the requests.
+         */
+        public BatchGet setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Required. A list of up to 100 subscription product IDs to retrieve. All the IDs must be
+         * different.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> productIds;
+
+        /** Required. A list of up to 100 subscription product IDs to retrieve. All the IDs must be different.
+         */
+        public java.util.List<java.lang.String> getProductIds() {
+          return productIds;
+        }
+
+        /**
+         * Required. A list of up to 100 subscription product IDs to retrieve. All the IDs must be
+         * different.
+         */
+        public BatchGet setProductIds(java.util.List<java.lang.String> productIds) {
+          this.productIds = productIds;
+          return this;
+        }
+
+        @Override
+        public BatchGet set(String parameterName, Object value) {
+          return (BatchGet) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a batch of subscriptions. Set the latencyTolerance field on nested requests to
+       * PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update throughput.
+       *
+       * Create a request for the method "subscriptions.batchUpdate".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param packageName Required. The parent app (package name) for which the subscriptions should be updated. Must be equal
+       *        to the package_name field on all the Subscription resources.
+       * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionsRequest}
+       * @return the request
+       */
+      public BatchUpdate batchUpdate(java.lang.String packageName, com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionsRequest content) throws java.io.IOException {
+        BatchUpdate result = new BatchUpdate(packageName, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchUpdate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionsResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions:batchUpdate";
+
+        /**
+         * Updates a batch of subscriptions. Set the latencyTolerance field on nested requests to
+         * PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update throughput.
+         *
+         * Create a request for the method "subscriptions.batchUpdate".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) for which the subscriptions should be updated. Must be equal
+       *        to the package_name field on all the Subscription resources.
+         * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionsRequest}
+         * @since 1.13
+         */
+        protected BatchUpdate(java.lang.String packageName, com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionsRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionsResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        }
+
+        @Override
+        public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchUpdate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchUpdate setAccessToken(java.lang.String accessToken) {
+          return (BatchUpdate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchUpdate setAlt(java.lang.String alt) {
+          return (BatchUpdate) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchUpdate setCallback(java.lang.String callback) {
+          return (BatchUpdate) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchUpdate setFields(java.lang.String fields) {
+          return (BatchUpdate) super.setFields(fields);
+        }
+
+        @Override
+        public BatchUpdate setKey(java.lang.String key) {
+          return (BatchUpdate) super.setKey(key);
+        }
+
+        @Override
+        public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+          return (BatchUpdate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+          return (BatchUpdate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchUpdate setUploadType(java.lang.String uploadType) {
+          return (BatchUpdate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent app (package name) for which the subscriptions should be updated.
+         * Must be equal to the package_name field on all the Subscription resources.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) for which the subscriptions should be updated. Must be
+       equal to the package_name field on all the Subscription resources.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The parent app (package name) for which the subscriptions should be updated.
+         * Must be equal to the package_name field on all the Subscription resources.
+         */
+        public BatchUpdate setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        @Override
+        public BatchUpdate set(String parameterName, Object value) {
+          return (BatchUpdate) super.set(parameterName, value);
         }
       }
       /**
@@ -10827,6 +11585,54 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
+         * Optional. If set to true, and the subscription with the given package_name and product_id
+         * doesn't exist, the subscription will be created. If a new subscription is created,
+         * update_mask is ignored.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean allowMissing;
+
+        /** Optional. If set to true, and the subscription with the given package_name and product_id doesn't
+       exist, the subscription will be created. If a new subscription is created, update_mask is ignored.
+         */
+        public java.lang.Boolean getAllowMissing() {
+          return allowMissing;
+        }
+
+        /**
+         * Optional. If set to true, and the subscription with the given package_name and product_id
+         * doesn't exist, the subscription will be created. If a new subscription is created,
+         * update_mask is ignored.
+         */
+        public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+          this.allowMissing = allowMissing;
+          return this;
+        }
+
+        /**
+         * Optional. The latency tolerance for the propagation of this product update. Defaults to
+         * latency-sensitive.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String latencyTolerance;
+
+        /** Optional. The latency tolerance for the propagation of this product update. Defaults to latency-
+       sensitive.
+         */
+        public java.lang.String getLatencyTolerance() {
+          return latencyTolerance;
+        }
+
+        /**
+         * Optional. The latency tolerance for the propagation of this product update. Defaults to
+         * latency-sensitive.
+         */
+        public Patch setLatencyTolerance(java.lang.String latencyTolerance) {
+          this.latencyTolerance = latencyTolerance;
+          return this;
+        }
+
+        /**
          * Required. A string representing the version of available regions being used for the
          * specified resource. Regional prices for the resource have to be specified according to
          * the information published in [this article](https://support.google.com/googleplay
@@ -11062,6 +11868,327 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           @Override
           public Activate set(String parameterName, Object value) {
             return (Activate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Batch variant of the MigrateBasePlanPrices endpoint. Set the latencyTolerance field on nested
+         * requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update
+         * throughput.
+         *
+         * Create a request for the method "basePlans.batchMigratePrices".
+         *
+         * This request holds the parameters needed by the androidpublisher server.  After setting any
+         * optional parameters, call the {@link BatchMigratePrices#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param packageName Required. The parent app (package name) for which the subscriptions should be created or updated.
+         *        Must be equal to the package_name field on all the Subscription resources.
+         * @param productId Required. The product ID of the parent subscription, if all updated offers belong to the same
+         *        subscription. If this batch update spans multiple subscriptions, set this field to "-".
+         *        Must be set.
+         * @param content the {@link com.google.api.services.androidpublisher.model.BatchMigrateBasePlanPricesRequest}
+         * @return the request
+         */
+        public BatchMigratePrices batchMigratePrices(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.BatchMigrateBasePlanPricesRequest content) throws java.io.IOException {
+          BatchMigratePrices result = new BatchMigratePrices(packageName, productId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchMigratePrices extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchMigrateBasePlanPricesResponse> {
+
+          private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans:batchMigratePrices";
+
+          /**
+           * Batch variant of the MigrateBasePlanPrices endpoint. Set the latencyTolerance field on nested
+           * requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update
+           * throughput.
+           *
+           * Create a request for the method "basePlans.batchMigratePrices".
+           *
+           * This request holds the parameters needed by the the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchMigratePrices#execute()} method to invoke the remote
+           * operation. <p> {@link BatchMigratePrices#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param packageName Required. The parent app (package name) for which the subscriptions should be created or updated.
+         *        Must be equal to the package_name field on all the Subscription resources.
+           * @param productId Required. The product ID of the parent subscription, if all updated offers belong to the same
+         *        subscription. If this batch update spans multiple subscriptions, set this field to "-".
+         *        Must be set.
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchMigrateBasePlanPricesRequest}
+           * @since 1.13
+           */
+          protected BatchMigratePrices(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.BatchMigrateBasePlanPricesRequest content) {
+            super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchMigrateBasePlanPricesResponse.class);
+            this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+            this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+          }
+
+          @Override
+          public BatchMigratePrices set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchMigratePrices) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchMigratePrices setAccessToken(java.lang.String accessToken) {
+            return (BatchMigratePrices) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchMigratePrices setAlt(java.lang.String alt) {
+            return (BatchMigratePrices) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchMigratePrices setCallback(java.lang.String callback) {
+            return (BatchMigratePrices) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchMigratePrices setFields(java.lang.String fields) {
+            return (BatchMigratePrices) super.setFields(fields);
+          }
+
+          @Override
+          public BatchMigratePrices setKey(java.lang.String key) {
+            return (BatchMigratePrices) super.setKey(key);
+          }
+
+          @Override
+          public BatchMigratePrices setOauthToken(java.lang.String oauthToken) {
+            return (BatchMigratePrices) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchMigratePrices setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchMigratePrices) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchMigratePrices setQuotaUser(java.lang.String quotaUser) {
+            return (BatchMigratePrices) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchMigratePrices setUploadType(java.lang.String uploadType) {
+            return (BatchMigratePrices) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchMigratePrices setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchMigratePrices) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent app (package name) for which the subscriptions should be created
+           * or updated. Must be equal to the package_name field on all the Subscription resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String packageName;
+
+          /** Required. The parent app (package name) for which the subscriptions should be created or updated.
+         Must be equal to the package_name field on all the Subscription resources.
+           */
+          public java.lang.String getPackageName() {
+            return packageName;
+          }
+
+          /**
+           * Required. The parent app (package name) for which the subscriptions should be created
+           * or updated. Must be equal to the package_name field on all the Subscription resources.
+           */
+          public BatchMigratePrices setPackageName(java.lang.String packageName) {
+            this.packageName = packageName;
+            return this;
+          }
+
+          /**
+           * Required. The product ID of the parent subscription, if all updated offers belong to
+           * the same subscription. If this batch update spans multiple subscriptions, set this
+           * field to "-". Must be set.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String productId;
+
+          /** Required. The product ID of the parent subscription, if all updated offers belong to the same
+         subscription. If this batch update spans multiple subscriptions, set this field to "-". Must be
+         set.
+           */
+          public java.lang.String getProductId() {
+            return productId;
+          }
+
+          /**
+           * Required. The product ID of the parent subscription, if all updated offers belong to
+           * the same subscription. If this batch update spans multiple subscriptions, set this
+           * field to "-". Must be set.
+           */
+          public BatchMigratePrices setProductId(java.lang.String productId) {
+            this.productId = productId;
+            return this;
+          }
+
+          @Override
+          public BatchMigratePrices set(String parameterName, Object value) {
+            return (BatchMigratePrices) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Activates or deactivates base plans across one or multiple subscriptions. Set the
+         * latencyTolerance field on nested requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to
+         * achieve maximum update throughput.
+         *
+         * Create a request for the method "basePlans.batchUpdateStates".
+         *
+         * This request holds the parameters needed by the androidpublisher server.  After setting any
+         * optional parameters, call the {@link BatchUpdateStates#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param packageName Required. The parent app (package name) of the updated base plans.
+         * @param productId Required. The product ID of the parent subscription, if all updated base plans belong to the same
+         *        subscription. If this batch update spans multiple subscriptions, set this field to "-".
+         *        Must be set.
+         * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateBasePlanStatesRequest}
+         * @return the request
+         */
+        public BatchUpdateStates batchUpdateStates(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.BatchUpdateBasePlanStatesRequest content) throws java.io.IOException {
+          BatchUpdateStates result = new BatchUpdateStates(packageName, productId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchUpdateStates extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchUpdateBasePlanStatesResponse> {
+
+          private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans:batchUpdateStates";
+
+          /**
+           * Activates or deactivates base plans across one or multiple subscriptions. Set the
+           * latencyTolerance field on nested requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT
+           * to achieve maximum update throughput.
+           *
+           * Create a request for the method "basePlans.batchUpdateStates".
+           *
+           * This request holds the parameters needed by the the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchUpdateStates#execute()} method to invoke the remote
+           * operation. <p> {@link BatchUpdateStates#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param packageName Required. The parent app (package name) of the updated base plans.
+           * @param productId Required. The product ID of the parent subscription, if all updated base plans belong to the same
+         *        subscription. If this batch update spans multiple subscriptions, set this field to "-".
+         *        Must be set.
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateBasePlanStatesRequest}
+           * @since 1.13
+           */
+          protected BatchUpdateStates(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.BatchUpdateBasePlanStatesRequest content) {
+            super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchUpdateBasePlanStatesResponse.class);
+            this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+            this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+          }
+
+          @Override
+          public BatchUpdateStates set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchUpdateStates) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchUpdateStates setAccessToken(java.lang.String accessToken) {
+            return (BatchUpdateStates) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchUpdateStates setAlt(java.lang.String alt) {
+            return (BatchUpdateStates) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchUpdateStates setCallback(java.lang.String callback) {
+            return (BatchUpdateStates) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchUpdateStates setFields(java.lang.String fields) {
+            return (BatchUpdateStates) super.setFields(fields);
+          }
+
+          @Override
+          public BatchUpdateStates setKey(java.lang.String key) {
+            return (BatchUpdateStates) super.setKey(key);
+          }
+
+          @Override
+          public BatchUpdateStates setOauthToken(java.lang.String oauthToken) {
+            return (BatchUpdateStates) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchUpdateStates setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchUpdateStates) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchUpdateStates setQuotaUser(java.lang.String quotaUser) {
+            return (BatchUpdateStates) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchUpdateStates setUploadType(java.lang.String uploadType) {
+            return (BatchUpdateStates) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchUpdateStates setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchUpdateStates) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent app (package name) of the updated base plans. */
+          @com.google.api.client.util.Key
+          private java.lang.String packageName;
+
+          /** Required. The parent app (package name) of the updated base plans.
+           */
+          public java.lang.String getPackageName() {
+            return packageName;
+          }
+
+          /** Required. The parent app (package name) of the updated base plans. */
+          public BatchUpdateStates setPackageName(java.lang.String packageName) {
+            this.packageName = packageName;
+            return this;
+          }
+
+          /**
+           * Required. The product ID of the parent subscription, if all updated base plans belong
+           * to the same subscription. If this batch update spans multiple subscriptions, set this
+           * field to "-". Must be set.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String productId;
+
+          /** Required. The product ID of the parent subscription, if all updated base plans belong to the same
+         subscription. If this batch update spans multiple subscriptions, set this field to "-". Must be
+         set.
+           */
+          public java.lang.String getProductId() {
+            return productId;
+          }
+
+          /**
+           * Required. The product ID of the parent subscription, if all updated base plans belong
+           * to the same subscription. If this batch update spans multiple subscriptions, set this
+           * field to "-". Must be set.
+           */
+          public BatchUpdateStates setProductId(java.lang.String productId) {
+            this.productId = productId;
+            return this;
+          }
+
+          @Override
+          public BatchUpdateStates set(String parameterName, Object value) {
+            return (BatchUpdateStates) super.set(parameterName, value);
           }
         }
         /**
@@ -11755,6 +12882,573 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
             @Override
             public Activate set(String parameterName, Object value) {
               return (Activate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Reads one or more subscription offers.
+           *
+           * Create a request for the method "offers.batchGet".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) for which the subscriptions should be created or updated.
+           *        Must be equal to the package_name field on all the requests.
+           * @param productId Required. The product ID of the parent subscription, if all updated offers belong to the same
+           *        subscription. If this request spans multiple subscriptions, set this field to "-". Must be
+           *        set.
+           * @param basePlanId Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to
+           *        read offers from multiple base plans.
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchGetSubscriptionOffersRequest}
+           * @return the request
+           */
+          public BatchGet batchGet(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.BatchGetSubscriptionOffersRequest content) throws java.io.IOException {
+            BatchGet result = new BatchGet(packageName, productId, basePlanId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchGet extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchGetSubscriptionOffersResponse> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers:batchGet";
+
+            /**
+             * Reads one or more subscription offers.
+             *
+             * Create a request for the method "offers.batchGet".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) for which the subscriptions should be created or updated.
+           *        Must be equal to the package_name field on all the requests.
+             * @param productId Required. The product ID of the parent subscription, if all updated offers belong to the same
+           *        subscription. If this request spans multiple subscriptions, set this field to "-". Must be
+           *        set.
+             * @param basePlanId Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to
+           *        read offers from multiple base plans.
+             * @param content the {@link com.google.api.services.androidpublisher.model.BatchGetSubscriptionOffersRequest}
+             * @since 1.13
+             */
+            protected BatchGet(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.BatchGetSubscriptionOffersRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchGetSubscriptionOffersResponse.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+            }
+
+            @Override
+            public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchGet) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchGet setAccessToken(java.lang.String accessToken) {
+              return (BatchGet) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchGet setAlt(java.lang.String alt) {
+              return (BatchGet) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchGet setCallback(java.lang.String callback) {
+              return (BatchGet) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchGet setFields(java.lang.String fields) {
+              return (BatchGet) super.setFields(fields);
+            }
+
+            @Override
+            public BatchGet setKey(java.lang.String key) {
+              return (BatchGet) super.setKey(key);
+            }
+
+            @Override
+            public BatchGet setOauthToken(java.lang.String oauthToken) {
+              return (BatchGet) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchGet) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchGet setQuotaUser(java.lang.String quotaUser) {
+              return (BatchGet) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchGet setUploadType(java.lang.String uploadType) {
+              return (BatchGet) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchGet) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent app (package name) for which the subscriptions should be created
+             * or updated. Must be equal to the package_name field on all the requests.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) for which the subscriptions should be created or updated.
+           Must be equal to the package_name field on all the requests.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /**
+             * Required. The parent app (package name) for which the subscriptions should be created
+             * or updated. Must be equal to the package_name field on all the requests.
+             */
+            public BatchGet setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /**
+             * Required. The product ID of the parent subscription, if all updated offers belong to
+             * the same subscription. If this request spans multiple subscriptions, set this field
+             * to "-". Must be set.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The product ID of the parent subscription, if all updated offers belong to the same
+           subscription. If this request spans multiple subscriptions, set this field to "-". Must be set.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /**
+             * Required. The product ID of the parent subscription, if all updated offers belong to
+             * the same subscription. If this request spans multiple subscriptions, set this field
+             * to "-". Must be set.
+             */
+            public BatchGet setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. The parent base plan (ID) for which the offers should be read. May be
+             * specified as '-' to read offers from multiple base plans.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String basePlanId;
+
+            /** Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to
+           read offers from multiple base plans.
+             */
+            public java.lang.String getBasePlanId() {
+              return basePlanId;
+            }
+
+            /**
+             * Required. The parent base plan (ID) for which the offers should be read. May be
+             * specified as '-' to read offers from multiple base plans.
+             */
+            public BatchGet setBasePlanId(java.lang.String basePlanId) {
+              this.basePlanId = basePlanId;
+              return this;
+            }
+
+            @Override
+            public BatchGet set(String parameterName, Object value) {
+              return (BatchGet) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a batch of subscription offers. Set the latencyTolerance field on nested requests to
+           * PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update throughput.
+           *
+           * Create a request for the method "offers.batchUpdate".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param packageName Required. The parent app (package name) of the updated subscription offers. Must be equal to the
+           *        package_name field on all the updated SubscriptionOffer resources.
+           * @param productId Required. The product ID of the parent subscription, if all updated offers belong to the same
+           *        subscription. If this request spans multiple subscriptions, set this field to "-". Must be
+           *        set.
+           * @param basePlanId Required. The parent base plan (ID) for which the offers should be updated. May be specified as '-'
+           *        to update offers from multiple base plans.
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOffersRequest}
+           * @return the request
+           */
+          public BatchUpdate batchUpdate(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOffersRequest content) throws java.io.IOException {
+            BatchUpdate result = new BatchUpdate(packageName, productId, basePlanId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchUpdate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOffersResponse> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers:batchUpdate";
+
+            /**
+             * Updates a batch of subscription offers. Set the latencyTolerance field on nested requests to
+             * PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update throughput.
+             *
+             * Create a request for the method "offers.batchUpdate".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the updated subscription offers. Must be equal to the
+           *        package_name field on all the updated SubscriptionOffer resources.
+             * @param productId Required. The product ID of the parent subscription, if all updated offers belong to the same
+           *        subscription. If this request spans multiple subscriptions, set this field to "-". Must be
+           *        set.
+             * @param basePlanId Required. The parent base plan (ID) for which the offers should be updated. May be specified as '-'
+           *        to update offers from multiple base plans.
+             * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOffersRequest}
+             * @since 1.13
+             */
+            protected BatchUpdate(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOffersRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOffersResponse.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+            }
+
+            @Override
+            public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchUpdate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchUpdate setAccessToken(java.lang.String accessToken) {
+              return (BatchUpdate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchUpdate setAlt(java.lang.String alt) {
+              return (BatchUpdate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchUpdate setCallback(java.lang.String callback) {
+              return (BatchUpdate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchUpdate setFields(java.lang.String fields) {
+              return (BatchUpdate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchUpdate setKey(java.lang.String key) {
+              return (BatchUpdate) super.setKey(key);
+            }
+
+            @Override
+            public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+              return (BatchUpdate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchUpdate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchUpdate setUploadType(java.lang.String uploadType) {
+              return (BatchUpdate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent app (package name) of the updated subscription offers. Must be
+             * equal to the package_name field on all the updated SubscriptionOffer resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the updated subscription offers. Must be equal to the
+           package_name field on all the updated SubscriptionOffer resources.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /**
+             * Required. The parent app (package name) of the updated subscription offers. Must be
+             * equal to the package_name field on all the updated SubscriptionOffer resources.
+             */
+            public BatchUpdate setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /**
+             * Required. The product ID of the parent subscription, if all updated offers belong to
+             * the same subscription. If this request spans multiple subscriptions, set this field
+             * to "-". Must be set.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The product ID of the parent subscription, if all updated offers belong to the same
+           subscription. If this request spans multiple subscriptions, set this field to "-". Must be set.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /**
+             * Required. The product ID of the parent subscription, if all updated offers belong to
+             * the same subscription. If this request spans multiple subscriptions, set this field
+             * to "-". Must be set.
+             */
+            public BatchUpdate setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. The parent base plan (ID) for which the offers should be updated. May be
+             * specified as '-' to update offers from multiple base plans.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String basePlanId;
+
+            /** Required. The parent base plan (ID) for which the offers should be updated. May be specified as '-'
+           to update offers from multiple base plans.
+             */
+            public java.lang.String getBasePlanId() {
+              return basePlanId;
+            }
+
+            /**
+             * Required. The parent base plan (ID) for which the offers should be updated. May be
+             * specified as '-' to update offers from multiple base plans.
+             */
+            public BatchUpdate setBasePlanId(java.lang.String basePlanId) {
+              this.basePlanId = basePlanId;
+              return this;
+            }
+
+            @Override
+            public BatchUpdate set(String parameterName, Object value) {
+              return (BatchUpdate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a batch of subscription offer states. Set the latencyTolerance field on nested requests
+           * to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update throughput.
+           *
+           * Create a request for the method "offers.batchUpdateStates".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchUpdateStates#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param packageName Required. The parent app (package name) of the updated subscription offers. Must be equal to the
+           *        package_name field on all the updated SubscriptionOffer resources.
+           * @param productId Required. The product ID of the parent subscription, if all updated offers belong to the same
+           *        subscription. If this request spans multiple subscriptions, set this field to "-". Must be
+           *        set.
+           * @param basePlanId Required. The parent base plan (ID) for which the offers should be updated. May be specified as '-'
+           *        to update offers from multiple base plans.
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOfferStatesRequest}
+           * @return the request
+           */
+          public BatchUpdateStates batchUpdateStates(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOfferStatesRequest content) throws java.io.IOException {
+            BatchUpdateStates result = new BatchUpdateStates(packageName, productId, basePlanId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchUpdateStates extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOfferStatesResponse> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers:batchUpdateStates";
+
+            /**
+             * Updates a batch of subscription offer states. Set the latencyTolerance field on nested requests
+             * to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update throughput.
+             *
+             * Create a request for the method "offers.batchUpdateStates".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link BatchUpdateStates#execute()} method to invoke the remote
+             * operation. <p> {@link BatchUpdateStates#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the updated subscription offers. Must be equal to the
+           *        package_name field on all the updated SubscriptionOffer resources.
+             * @param productId Required. The product ID of the parent subscription, if all updated offers belong to the same
+           *        subscription. If this request spans multiple subscriptions, set this field to "-". Must be
+           *        set.
+             * @param basePlanId Required. The parent base plan (ID) for which the offers should be updated. May be specified as '-'
+           *        to update offers from multiple base plans.
+             * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOfferStatesRequest}
+             * @since 1.13
+             */
+            protected BatchUpdateStates(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId, com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOfferStatesRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchUpdateSubscriptionOfferStatesResponse.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.basePlanId = com.google.api.client.util.Preconditions.checkNotNull(basePlanId, "Required parameter basePlanId must be specified.");
+            }
+
+            @Override
+            public BatchUpdateStates set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchUpdateStates) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchUpdateStates setAccessToken(java.lang.String accessToken) {
+              return (BatchUpdateStates) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchUpdateStates setAlt(java.lang.String alt) {
+              return (BatchUpdateStates) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchUpdateStates setCallback(java.lang.String callback) {
+              return (BatchUpdateStates) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchUpdateStates setFields(java.lang.String fields) {
+              return (BatchUpdateStates) super.setFields(fields);
+            }
+
+            @Override
+            public BatchUpdateStates setKey(java.lang.String key) {
+              return (BatchUpdateStates) super.setKey(key);
+            }
+
+            @Override
+            public BatchUpdateStates setOauthToken(java.lang.String oauthToken) {
+              return (BatchUpdateStates) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchUpdateStates setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchUpdateStates) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchUpdateStates setQuotaUser(java.lang.String quotaUser) {
+              return (BatchUpdateStates) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchUpdateStates setUploadType(java.lang.String uploadType) {
+              return (BatchUpdateStates) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchUpdateStates setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchUpdateStates) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent app (package name) of the updated subscription offers. Must be
+             * equal to the package_name field on all the updated SubscriptionOffer resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the updated subscription offers. Must be equal to the
+           package_name field on all the updated SubscriptionOffer resources.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /**
+             * Required. The parent app (package name) of the updated subscription offers. Must be
+             * equal to the package_name field on all the updated SubscriptionOffer resources.
+             */
+            public BatchUpdateStates setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /**
+             * Required. The product ID of the parent subscription, if all updated offers belong to
+             * the same subscription. If this request spans multiple subscriptions, set this field
+             * to "-". Must be set.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The product ID of the parent subscription, if all updated offers belong to the same
+           subscription. If this request spans multiple subscriptions, set this field to "-". Must be set.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /**
+             * Required. The product ID of the parent subscription, if all updated offers belong to
+             * the same subscription. If this request spans multiple subscriptions, set this field
+             * to "-". Must be set.
+             */
+            public BatchUpdateStates setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. The parent base plan (ID) for which the offers should be updated. May be
+             * specified as '-' to update offers from multiple base plans.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String basePlanId;
+
+            /** Required. The parent base plan (ID) for which the offers should be updated. May be specified as '-'
+           to update offers from multiple base plans.
+             */
+            public java.lang.String getBasePlanId() {
+              return basePlanId;
+            }
+
+            /**
+             * Required. The parent base plan (ID) for which the offers should be updated. May be
+             * specified as '-' to update offers from multiple base plans.
+             */
+            public BatchUpdateStates setBasePlanId(java.lang.String basePlanId) {
+              this.basePlanId = basePlanId;
+              return this;
+            }
+
+            @Override
+            public BatchUpdateStates set(String parameterName, Object value) {
+              return (BatchUpdateStates) super.set(parameterName, value);
             }
           }
           /**
@@ -12960,6 +14654,55 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
              */
             public Patch setOfferId(java.lang.String offerId) {
               this.offerId = offerId;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true, and the subscription offer with the given package_name,
+             * product_id, base_plan_id and offer_id doesn't exist, an offer will be created. If a
+             * new offer is created, update_mask is ignored.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean allowMissing;
+
+            /** Optional. If set to true, and the subscription offer with the given package_name, product_id,
+           base_plan_id and offer_id doesn't exist, an offer will be created. If a new offer is created,
+           update_mask is ignored.
+             */
+            public java.lang.Boolean getAllowMissing() {
+              return allowMissing;
+            }
+
+            /**
+             * Optional. If set to true, and the subscription offer with the given package_name,
+             * product_id, base_plan_id and offer_id doesn't exist, an offer will be created. If a
+             * new offer is created, update_mask is ignored.
+             */
+            public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+              this.allowMissing = allowMissing;
+              return this;
+            }
+
+            /**
+             * Optional. The latency tolerance for the propagation of this product update. Defaults
+             * to latency-sensitive.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String latencyTolerance;
+
+            /** Optional. The latency tolerance for the propagation of this product update. Defaults to latency-
+           sensitive.
+             */
+            public java.lang.String getLatencyTolerance() {
+              return latencyTolerance;
+            }
+
+            /**
+             * Optional. The latency tolerance for the propagation of this product update. Defaults
+             * to latency-sensitive.
+             */
+            public Patch setLatencyTolerance(java.lang.String latencyTolerance) {
+              this.latencyTolerance = latencyTolerance;
               return this;
             }
 

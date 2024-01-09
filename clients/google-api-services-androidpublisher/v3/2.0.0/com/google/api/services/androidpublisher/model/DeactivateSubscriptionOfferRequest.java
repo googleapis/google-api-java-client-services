@@ -30,6 +30,129 @@ package com.google.api.services.androidpublisher.model;
 @SuppressWarnings("javadoc")
 public final class DeactivateSubscriptionOfferRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Required. The parent base plan (ID) of the offer to deactivate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String basePlanId;
+
+  /**
+   * Optional. The latency tolerance for the propagation of this product update. Defaults to
+   * latency-sensitive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String latencyTolerance;
+
+  /**
+   * Required. The unique offer ID of the offer to deactivate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String offerId;
+
+  /**
+   * Required. The parent app (package name) of the offer to deactivate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String packageName;
+
+  /**
+   * Required. The parent subscription (ID) of the offer to deactivate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productId;
+
+  /**
+   * Required. The parent base plan (ID) of the offer to deactivate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBasePlanId() {
+    return basePlanId;
+  }
+
+  /**
+   * Required. The parent base plan (ID) of the offer to deactivate.
+   * @param basePlanId basePlanId or {@code null} for none
+   */
+  public DeactivateSubscriptionOfferRequest setBasePlanId(java.lang.String basePlanId) {
+    this.basePlanId = basePlanId;
+    return this;
+  }
+
+  /**
+   * Optional. The latency tolerance for the propagation of this product update. Defaults to
+   * latency-sensitive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLatencyTolerance() {
+    return latencyTolerance;
+  }
+
+  /**
+   * Optional. The latency tolerance for the propagation of this product update. Defaults to
+   * latency-sensitive.
+   * @param latencyTolerance latencyTolerance or {@code null} for none
+   */
+  public DeactivateSubscriptionOfferRequest setLatencyTolerance(java.lang.String latencyTolerance) {
+    this.latencyTolerance = latencyTolerance;
+    return this;
+  }
+
+  /**
+   * Required. The unique offer ID of the offer to deactivate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOfferId() {
+    return offerId;
+  }
+
+  /**
+   * Required. The unique offer ID of the offer to deactivate.
+   * @param offerId offerId or {@code null} for none
+   */
+  public DeactivateSubscriptionOfferRequest setOfferId(java.lang.String offerId) {
+    this.offerId = offerId;
+    return this;
+  }
+
+  /**
+   * Required. The parent app (package name) of the offer to deactivate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPackageName() {
+    return packageName;
+  }
+
+  /**
+   * Required. The parent app (package name) of the offer to deactivate.
+   * @param packageName packageName or {@code null} for none
+   */
+  public DeactivateSubscriptionOfferRequest setPackageName(java.lang.String packageName) {
+    this.packageName = packageName;
+    return this;
+  }
+
+  /**
+   * Required. The parent subscription (ID) of the offer to deactivate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductId() {
+    return productId;
+  }
+
+  /**
+   * Required. The parent subscription (ID) of the offer to deactivate.
+   * @param productId productId or {@code null} for none
+   */
+  public DeactivateSubscriptionOfferRequest setProductId(java.lang.String productId) {
+    this.productId = productId;
+    return this;
+  }
+
   @Override
   public DeactivateSubscriptionOfferRequest set(String fieldName, Object value) {
     return (DeactivateSubscriptionOfferRequest) super.set(fieldName, value);

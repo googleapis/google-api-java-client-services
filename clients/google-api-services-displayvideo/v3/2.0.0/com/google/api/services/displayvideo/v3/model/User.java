@@ -59,6 +59,13 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String email;
 
   /**
+   * Output only. The timestamp when the user last logged in DV360 UI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastLoginTime;
+
+  /**
    * Output only. The resource name of the user.
    * The value may be {@code null}.
    */
@@ -122,6 +129,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setEmail(java.lang.String email) {
     this.email = email;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the user last logged in DV360 UI.
+   * @return value or {@code null} for none
+   */
+  public String getLastLoginTime() {
+    return lastLoginTime;
+  }
+
+  /**
+   * Output only. The timestamp when the user last logged in DV360 UI.
+   * @param lastLoginTime lastLoginTime or {@code null} for none
+   */
+  public User setLastLoginTime(String lastLoginTime) {
+    this.lastLoginTime = lastLoginTime;
     return this;
   }
 

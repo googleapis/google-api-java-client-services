@@ -118,6 +118,16 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String shuffleMode;
 
   /**
+   * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
+   * latency but might result in duplicate messages committed to storage. Designed to run simple
+   * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
+   * BigQuery is a canonical use case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String streamingMode;
+
+  /**
    * The prefix of the resources the system should use for temporary storage. The system will append
    * the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the
    * job_name field. The resulting bucket and object prefix is used as the prefix of the resources
@@ -130,8 +140,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String tempStoragePrefix;
 
   /**
-   * Output only. Whether the job uses the new streaming engine billing model based on resource
-   * usage.
+   * Output only. Whether the job uses the Streaming Engine resource-based billing model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -389,6 +398,29 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
+   * latency but might result in duplicate messages committed to storage. Designed to run simple
+   * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
+   * BigQuery is a canonical use case.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStreamingMode() {
+    return streamingMode;
+  }
+
+  /**
+   * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
+   * latency but might result in duplicate messages committed to storage. Designed to run simple
+   * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
+   * BigQuery is a canonical use case.
+   * @param streamingMode streamingMode or {@code null} for none
+   */
+  public Environment setStreamingMode(java.lang.String streamingMode) {
+    this.streamingMode = streamingMode;
+    return this;
+  }
+
+  /**
    * The prefix of the resources the system should use for temporary storage. The system will append
    * the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the
    * job_name field. The resulting bucket and object prefix is used as the prefix of the resources
@@ -416,8 +448,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether the job uses the new streaming engine billing model based on resource
-   * usage.
+   * Output only. Whether the job uses the Streaming Engine resource-based billing model.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseStreamingEngineResourceBasedBilling() {
@@ -425,8 +456,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether the job uses the new streaming engine billing model based on resource
-   * usage.
+   * Output only. Whether the job uses the Streaming Engine resource-based billing model.
    * @param useStreamingEngineResourceBasedBilling useStreamingEngineResourceBasedBilling or {@code null} for none
    */
   public Environment setUseStreamingEngineResourceBasedBilling(java.lang.Boolean useStreamingEngineResourceBasedBilling) {

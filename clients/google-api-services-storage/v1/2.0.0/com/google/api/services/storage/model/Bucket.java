@@ -109,6 +109,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * The bucket's hierarchical namespace configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HierarchicalNamespace hierarchicalNamespace;
+
+  /**
    * The bucket's IAM configuration.
    * The value may be {@code null}.
    */
@@ -452,6 +459,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * The bucket's hierarchical namespace configuration.
+   * @return value or {@code null} for none
+   */
+  public HierarchicalNamespace getHierarchicalNamespace() {
+    return hierarchicalNamespace;
+  }
+
+  /**
+   * The bucket's hierarchical namespace configuration.
+   * @param hierarchicalNamespace hierarchicalNamespace or {@code null} for none
+   */
+  public Bucket setHierarchicalNamespace(HierarchicalNamespace hierarchicalNamespace) {
+    this.hierarchicalNamespace = hierarchicalNamespace;
     return this;
   }
 
@@ -1255,6 +1279,47 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     @Override
     public Encryption clone() {
       return (Encryption) super.clone();
+    }
+
+  }
+
+  /**
+   * The bucket's hierarchical namespace configuration.
+   */
+  public static final class HierarchicalNamespace extends com.google.api.client.json.GenericJson {
+
+    /**
+     * When set to true, hierarchical namespace is enabled for this bucket.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean enabled;
+
+    /**
+     * When set to true, hierarchical namespace is enabled for this bucket.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getEnabled() {
+      return enabled;
+    }
+
+    /**
+     * When set to true, hierarchical namespace is enabled for this bucket.
+     * @param enabled enabled or {@code null} for none
+     */
+    public HierarchicalNamespace setEnabled(java.lang.Boolean enabled) {
+      this.enabled = enabled;
+      return this;
+    }
+
+    @Override
+    public HierarchicalNamespace set(String fieldName, Object value) {
+      return (HierarchicalNamespace) super.set(fieldName, value);
+    }
+
+    @Override
+    public HierarchicalNamespace clone() {
+      return (HierarchicalNamespace) super.clone();
     }
 
   }

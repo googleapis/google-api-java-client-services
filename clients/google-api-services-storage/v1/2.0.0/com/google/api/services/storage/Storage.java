@@ -134,34 +134,34 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
-   * An accessor for creating requests from the AnywhereCache collection.
+   * An accessor for creating requests from the AnywhereCaches collection.
    *
    * <p>The typical use is:</p>
    * <pre>
    *   {@code Storage storage = new Storage(...);}
-   *   {@code Storage.AnywhereCache.List request = storage.anywhereCache().list(parameters ...)}
+   *   {@code Storage.AnywhereCaches.List request = storage.anywhereCaches().list(parameters ...)}
    * </pre>
    *
    * @return the resource collection
    */
-  public AnywhereCache anywhereCache() {
-    return new AnywhereCache();
+  public AnywhereCaches anywhereCaches() {
+    return new AnywhereCaches();
   }
 
   /**
-   * The "anywhereCache" collection of methods.
+   * The "anywhereCaches" collection of methods.
    */
-  public class AnywhereCache {
+  public class AnywhereCaches {
 
     /**
      * Disables an Anywhere Cache instance.
      *
-     * Create a request for the method "anywhereCache.disable".
+     * Create a request for the method "anywhereCaches.disable".
      *
      * This request holds the parameters needed by the storage server.  After setting any optional
      * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
      *
-     * @param bucket Name of the partent bucket
+     * @param bucket Name of the parent bucket.
      * @param anywhereCacheId The ID of requested Anywhere Cache instance.
      * @return the request
      */
@@ -178,7 +178,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Disables an Anywhere Cache instance.
        *
-       * Create a request for the method "anywhereCache.disable".
+       * Create a request for the method "anywhereCaches.disable".
        *
        * This request holds the parameters needed by the the storage server.  After setting any optional
        * parameters, call the {@link Disable#execute()} method to invoke the remote operation. <p>
@@ -186,7 +186,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param bucket Name of the partent bucket
+       * @param bucket Name of the parent bucket.
        * @param anywhereCacheId The ID of requested Anywhere Cache instance.
        * @since 1.13
        */
@@ -236,17 +236,17 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return (Disable) super.setUserIp(userIp);
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       @com.google.api.client.util.Key
       private java.lang.String bucket;
 
-      /** Name of the partent bucket
+      /** Name of the parent bucket.
        */
       public java.lang.String getBucket() {
         return bucket;
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       public Disable setBucket(java.lang.String bucket) {
         this.bucket = bucket;
         return this;
@@ -276,12 +276,12 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Returns the metadata of an Anywhere Cache instance.
      *
-     * Create a request for the method "anywhereCache.get".
+     * Create a request for the method "anywhereCaches.get".
      *
      * This request holds the parameters needed by the storage server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param bucket Name of the partent bucket
+     * @param bucket Name of the parent bucket.
      * @param anywhereCacheId The ID of requested Anywhere Cache instance.
      * @return the request
      */
@@ -298,14 +298,14 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Returns the metadata of an Anywhere Cache instance.
        *
-       * Create a request for the method "anywhereCache.get".
+       * Create a request for the method "anywhereCaches.get".
        *
        * This request holds the parameters needed by the the storage server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param bucket Name of the partent bucket
+       * @param bucket Name of the parent bucket.
        * @param anywhereCacheId The ID of requested Anywhere Cache instance.
        * @since 1.13
        */
@@ -365,17 +365,17 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return (Get) super.setUserIp(userIp);
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       @com.google.api.client.util.Key
       private java.lang.String bucket;
 
-      /** Name of the partent bucket
+      /** Name of the parent bucket.
        */
       public java.lang.String getBucket() {
         return bucket;
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       public Get setBucket(java.lang.String bucket) {
         this.bucket = bucket;
         return this;
@@ -405,12 +405,12 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Creates an Anywhere Cache instance.
      *
-     * Create a request for the method "anywhereCache.insert".
+     * Create a request for the method "anywhereCaches.insert".
      *
      * This request holds the parameters needed by the storage server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param bucket Name of the partent bucket
+     * @param bucket Name of the parent bucket.
      * @param content the {@link com.google.api.services.storage.model.AnywhereCache}
      * @return the request
      */
@@ -427,14 +427,14 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Creates an Anywhere Cache instance.
        *
-       * Create a request for the method "anywhereCache.insert".
+       * Create a request for the method "anywhereCaches.insert".
        *
        * This request holds the parameters needed by the the storage server.  After setting any optional
        * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param bucket Name of the partent bucket
+       * @param bucket Name of the parent bucket.
        * @param content the {@link com.google.api.services.storage.model.AnywhereCache}
        * @since 1.13
        */
@@ -483,17 +483,17 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return (Insert) super.setUserIp(userIp);
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       @com.google.api.client.util.Key
       private java.lang.String bucket;
 
-      /** Name of the partent bucket
+      /** Name of the parent bucket.
        */
       public java.lang.String getBucket() {
         return bucket;
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       public Insert setBucket(java.lang.String bucket) {
         this.bucket = bucket;
         return this;
@@ -507,12 +507,12 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Returns a list of Anywhere Cache instances of the bucket matching the criteria.
      *
-     * Create a request for the method "anywhereCache.list".
+     * Create a request for the method "anywhereCaches.list".
      *
      * This request holds the parameters needed by the storage server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param bucket Name of the partent bucket
+     * @param bucket Name of the parent bucket.
      * @return the request
      */
     public List list(java.lang.String bucket) throws java.io.IOException {
@@ -528,14 +528,14 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Returns a list of Anywhere Cache instances of the bucket matching the criteria.
        *
-       * Create a request for the method "anywhereCache.list".
+       * Create a request for the method "anywhereCaches.list".
        *
        * This request holds the parameters needed by the the storage server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param bucket Name of the partent bucket
+       * @param bucket Name of the parent bucket.
        * @since 1.13
        */
       protected List(java.lang.String bucket) {
@@ -593,27 +593,27 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return (List) super.setUserIp(userIp);
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       @com.google.api.client.util.Key
       private java.lang.String bucket;
 
-      /** Name of the partent bucket
+      /** Name of the parent bucket.
        */
       public java.lang.String getBucket() {
         return bucket;
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       public List setBucket(java.lang.String bucket) {
         this.bucket = bucket;
         return this;
       }
 
-      /** Maximum number of items return in a single page of responses. Maximum 1000. */
+      /** Maximum number of items to return in a single page of responses. Maximum 1000. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Maximum number of items return in a single page of responses. Maximum 1000.
+      /** Maximum number of items to return in a single page of responses. Maximum 1000.
 
      [minimum: 0]
        */
@@ -621,7 +621,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return pageSize;
       }
 
-      /** Maximum number of items return in a single page of responses. Maximum 1000. */
+      /** Maximum number of items to return in a single page of responses. Maximum 1000. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -655,12 +655,12 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Pauses an Anywhere Cache instance.
      *
-     * Create a request for the method "anywhereCache.pause".
+     * Create a request for the method "anywhereCaches.pause".
      *
      * This request holds the parameters needed by the storage server.  After setting any optional
      * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
      *
-     * @param bucket Name of the partent bucket
+     * @param bucket Name of the parent bucket.
      * @param anywhereCacheId The ID of requested Anywhere Cache instance.
      * @return the request
      */
@@ -677,14 +677,14 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Pauses an Anywhere Cache instance.
        *
-       * Create a request for the method "anywhereCache.pause".
+       * Create a request for the method "anywhereCaches.pause".
        *
        * This request holds the parameters needed by the the storage server.  After setting any optional
        * parameters, call the {@link Pause#execute()} method to invoke the remote operation. <p> {@link
        * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param bucket Name of the partent bucket
+       * @param bucket Name of the parent bucket.
        * @param anywhereCacheId The ID of requested Anywhere Cache instance.
        * @since 1.13
        */
@@ -734,17 +734,17 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return (Pause) super.setUserIp(userIp);
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       @com.google.api.client.util.Key
       private java.lang.String bucket;
 
-      /** Name of the partent bucket
+      /** Name of the parent bucket.
        */
       public java.lang.String getBucket() {
         return bucket;
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       public Pause setBucket(java.lang.String bucket) {
         this.bucket = bucket;
         return this;
@@ -774,12 +774,12 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Resumes a paused or disabled Anywhere Cache instance.
      *
-     * Create a request for the method "anywhereCache.resume".
+     * Create a request for the method "anywhereCaches.resume".
      *
      * This request holds the parameters needed by the storage server.  After setting any optional
      * parameters, call the {@link Resume#execute()} method to invoke the remote operation.
      *
-     * @param bucket Name of the partent bucket
+     * @param bucket Name of the parent bucket.
      * @param anywhereCacheId The ID of requested Anywhere Cache instance.
      * @return the request
      */
@@ -796,14 +796,14 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Resumes a paused or disabled Anywhere Cache instance.
        *
-       * Create a request for the method "anywhereCache.resume".
+       * Create a request for the method "anywhereCaches.resume".
        *
        * This request holds the parameters needed by the the storage server.  After setting any optional
        * parameters, call the {@link Resume#execute()} method to invoke the remote operation. <p> {@link
        * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param bucket Name of the partent bucket
+       * @param bucket Name of the parent bucket.
        * @param anywhereCacheId The ID of requested Anywhere Cache instance.
        * @since 1.13
        */
@@ -853,17 +853,17 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return (Resume) super.setUserIp(userIp);
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       @com.google.api.client.util.Key
       private java.lang.String bucket;
 
-      /** Name of the partent bucket
+      /** Name of the parent bucket.
        */
       public java.lang.String getBucket() {
         return bucket;
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       public Resume setBucket(java.lang.String bucket) {
         this.bucket = bucket;
         return this;
@@ -893,12 +893,12 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Updates the config(ttl and admissionPolicy) of an Anywhere Cache instance.
      *
-     * Create a request for the method "anywhereCache.update".
+     * Create a request for the method "anywhereCaches.update".
      *
      * This request holds the parameters needed by the storage server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param bucket Name of the partent bucket
+     * @param bucket Name of the parent bucket.
      * @param anywhereCacheId The ID of requested Anywhere Cache instance.
      * @param content the {@link com.google.api.services.storage.model.AnywhereCache}
      * @return the request
@@ -916,14 +916,14 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Updates the config(ttl and admissionPolicy) of an Anywhere Cache instance.
        *
-       * Create a request for the method "anywhereCache.update".
+       * Create a request for the method "anywhereCaches.update".
        *
        * This request holds the parameters needed by the the storage server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param bucket Name of the partent bucket
+       * @param bucket Name of the parent bucket.
        * @param anywhereCacheId The ID of requested Anywhere Cache instance.
        * @param content the {@link com.google.api.services.storage.model.AnywhereCache}
        * @since 1.13
@@ -974,17 +974,17 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return (Update) super.setUserIp(userIp);
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       @com.google.api.client.util.Key
       private java.lang.String bucket;
 
-      /** Name of the partent bucket
+      /** Name of the parent bucket.
        */
       public java.lang.String getBucket() {
         return bucket;
       }
 
-      /** Name of the partent bucket */
+      /** Name of the parent bucket. */
       public Update setBucket(java.lang.String bucket) {
         this.bucket = bucket;
         return this;
@@ -4656,6 +4656,911 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the Folders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Storage storage = new Storage(...);}
+   *   {@code Storage.Folders.List request = storage.folders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Folders folders() {
+    return new Folders();
+  }
+
+  /**
+   * The "folders" collection of methods.
+   */
+  public class Folders {
+
+    /**
+     * Permanently deletes a folder. Only applicable to buckets with hierarchical namespace enabled.
+     *
+     * Create a request for the method "folders.delete".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which the folder resides.
+     * @param folder Name of a folder.
+     * @return the request
+     */
+    public Delete delete(java.lang.String bucket, java.lang.String folder) throws java.io.IOException {
+      Delete result = new Delete(bucket, folder);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends StorageRequest<Void> {
+
+      private static final String REST_PATH = "b/{bucket}/folders/{folder}";
+
+      /**
+       * Permanently deletes a folder. Only applicable to buckets with hierarchical namespace enabled.
+       *
+       * Create a request for the method "folders.delete".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket in which the folder resides.
+       * @param folder Name of a folder.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String bucket, java.lang.String folder) {
+        super(Storage.this, "DELETE", REST_PATH, null, Void.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which the folder resides. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which the folder resides.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which the folder resides. */
+      public Delete setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** Name of a folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Name of a folder.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Name of a folder. */
+      public Delete setFolder(java.lang.String folder) {
+        this.folder = folder;
+        return this;
+      }
+
+      /** If set, only deletes the folder if its metageneration matches this value. */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationMatch;
+
+      /** If set, only deletes the folder if its metageneration matches this value.
+       */
+      public java.lang.Long getIfMetagenerationMatch() {
+        return ifMetagenerationMatch;
+      }
+
+      /** If set, only deletes the folder if its metageneration matches this value. */
+      public Delete setIfMetagenerationMatch(java.lang.Long ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+      }
+
+      /** If set, only deletes the folder if its metageneration does not match this value. */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationNotMatch;
+
+      /** If set, only deletes the folder if its metageneration does not match this value.
+       */
+      public java.lang.Long getIfMetagenerationNotMatch() {
+        return ifMetagenerationNotMatch;
+      }
+
+      /** If set, only deletes the folder if its metageneration does not match this value. */
+      public Delete setIfMetagenerationNotMatch(java.lang.Long ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns metadata for the specified folder. Only applicable to buckets with hierarchical namespace
+     * enabled.
+     *
+     * Create a request for the method "folders.get".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which the folder resides.
+     * @param folder Name of a folder.
+     * @return the request
+     */
+    public Get get(java.lang.String bucket, java.lang.String folder) throws java.io.IOException {
+      Get result = new Get(bucket, folder);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends StorageRequest<com.google.api.services.storage.model.Folder> {
+
+      private static final String REST_PATH = "b/{bucket}/folders/{folder}";
+
+      /**
+       * Returns metadata for the specified folder. Only applicable to buckets with hierarchical
+       * namespace enabled.
+       *
+       * Create a request for the method "folders.get".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket in which the folder resides.
+       * @param folder Name of a folder.
+       * @since 1.13
+       */
+      protected Get(java.lang.String bucket, java.lang.String folder) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.Folder.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which the folder resides. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which the folder resides.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which the folder resides. */
+      public Get setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** Name of a folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Name of a folder.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Name of a folder. */
+      public Get setFolder(java.lang.String folder) {
+        this.folder = folder;
+        return this;
+      }
+
+      /**
+       * Makes the return of the folder metadata conditional on whether the folder's current
+       * metageneration matches the given value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationMatch;
+
+      /** Makes the return of the folder metadata conditional on whether the folder's current metageneration
+     matches the given value.
+       */
+      public java.lang.Long getIfMetagenerationMatch() {
+        return ifMetagenerationMatch;
+      }
+
+      /**
+       * Makes the return of the folder metadata conditional on whether the folder's current
+       * metageneration matches the given value.
+       */
+      public Get setIfMetagenerationMatch(java.lang.Long ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+      }
+
+      /**
+       * Makes the return of the folder metadata conditional on whether the folder's current
+       * metageneration does not match the given value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationNotMatch;
+
+      /** Makes the return of the folder metadata conditional on whether the folder's current metageneration
+     does not match the given value.
+       */
+      public java.lang.Long getIfMetagenerationNotMatch() {
+        return ifMetagenerationNotMatch;
+      }
+
+      /**
+       * Makes the return of the folder metadata conditional on whether the folder's current
+       * metageneration does not match the given value.
+       */
+      public Get setIfMetagenerationNotMatch(java.lang.Long ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a new folder. Only applicable to buckets with hierarchical namespace enabled.
+     *
+     * Create a request for the method "folders.insert".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which the folder resides.
+     * @param content the {@link com.google.api.services.storage.model.Folder}
+     * @return the request
+     */
+    public Insert insert(java.lang.String bucket, com.google.api.services.storage.model.Folder content) throws java.io.IOException {
+      Insert result = new Insert(bucket, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends StorageRequest<com.google.api.services.storage.model.Folder> {
+
+      private static final String REST_PATH = "b/{bucket}/folders";
+
+      /**
+       * Creates a new folder. Only applicable to buckets with hierarchical namespace enabled.
+       *
+       * Create a request for the method "folders.insert".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket in which the folder resides.
+       * @param content the {@link com.google.api.services.storage.model.Folder}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String bucket, com.google.api.services.storage.model.Folder content) {
+        super(Storage.this, "POST", REST_PATH, content, com.google.api.services.storage.model.Folder.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which the folder resides. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which the folder resides.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which the folder resides. */
+      public Insert setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** If true, any parent folder which doesn’t exist will be created automatically. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean recursive;
+
+      /** If true, any parent folder which doesn’t exist will be created automatically.
+       */
+      public java.lang.Boolean getRecursive() {
+        return recursive;
+      }
+
+      /** If true, any parent folder which doesn’t exist will be created automatically. */
+      public Insert setRecursive(java.lang.Boolean recursive) {
+        this.recursive = recursive;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a list of folders matching the criteria. Only applicable to buckets with hierarchical
+     * namespace enabled.
+     *
+     * Create a request for the method "folders.list".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which to look for folders.
+     * @return the request
+     */
+    public List list(java.lang.String bucket) throws java.io.IOException {
+      List result = new List(bucket);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends StorageRequest<com.google.api.services.storage.model.Folders> {
+
+      private static final String REST_PATH = "b/{bucket}/folders";
+
+      /**
+       * Retrieves a list of folders matching the criteria. Only applicable to buckets with hierarchical
+       * namespace enabled.
+       *
+       * Create a request for the method "folders.list".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket in which to look for folders.
+       * @since 1.13
+       */
+      protected List(java.lang.String bucket) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.Folders.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which to look for folders. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which to look for folders.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which to look for folders. */
+      public List setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /**
+       * Returns results in a directory-like mode. The only supported value is '/'. If set, items
+       * will only contain folders that either exactly match the prefix, or are one level below the
+       * prefix.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String delimiter;
+
+      /** Returns results in a directory-like mode. The only supported value is '/'. If set, items will only
+     contain folders that either exactly match the prefix, or are one level below the prefix.
+       */
+      public java.lang.String getDelimiter() {
+        return delimiter;
+      }
+
+      /**
+       * Returns results in a directory-like mode. The only supported value is '/'. If set, items
+       * will only contain folders that either exactly match the prefix, or are one level below the
+       * prefix.
+       */
+      public List setDelimiter(java.lang.String delimiter) {
+        this.delimiter = delimiter;
+        return this;
+      }
+
+      /**
+       * Filter results to folders whose names are lexicographically before endOffset. If
+       * startOffset is also set, the folders listed will have names between startOffset (inclusive)
+       * and endOffset (exclusive).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String endOffset;
+
+      /** Filter results to folders whose names are lexicographically before endOffset. If startOffset is
+     also set, the folders listed will have names between startOffset (inclusive) and endOffset
+     (exclusive).
+       */
+      public java.lang.String getEndOffset() {
+        return endOffset;
+      }
+
+      /**
+       * Filter results to folders whose names are lexicographically before endOffset. If
+       * startOffset is also set, the folders listed will have names between startOffset (inclusive)
+       * and endOffset (exclusive).
+       */
+      public List setEndOffset(java.lang.String endOffset) {
+        this.endOffset = endOffset;
+        return this;
+      }
+
+      /** Maximum number of items to return in a single page of responses. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Maximum number of items to return in a single page of responses.
+
+     [minimum: 0]
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Maximum number of items to return in a single page of responses. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A previously-returned page token representing part of the larger set of results to view.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A previously-returned page token representing part of the larger set of results to view.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A previously-returned page token representing part of the larger set of results to view.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Filter results to folders whose paths begin with this prefix. If set, the value must either
+       * be an empty string or end with a '/'.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String prefix;
+
+      /** Filter results to folders whose paths begin with this prefix. If set, the value must either be an
+     empty string or end with a '/'.
+       */
+      public java.lang.String getPrefix() {
+        return prefix;
+      }
+
+      /**
+       * Filter results to folders whose paths begin with this prefix. If set, the value must either
+       * be an empty string or end with a '/'.
+       */
+      public List setPrefix(java.lang.String prefix) {
+        this.prefix = prefix;
+        return this;
+      }
+
+      /**
+       * Filter results to folders whose names are lexicographically equal to or after startOffset.
+       * If endOffset is also set, the folders listed will have names between startOffset
+       * (inclusive) and endOffset (exclusive).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String startOffset;
+
+      /** Filter results to folders whose names are lexicographically equal to or after startOffset. If
+     endOffset is also set, the folders listed will have names between startOffset (inclusive) and
+     endOffset (exclusive).
+       */
+      public java.lang.String getStartOffset() {
+        return startOffset;
+      }
+
+      /**
+       * Filter results to folders whose names are lexicographically equal to or after startOffset.
+       * If endOffset is also set, the folders listed will have names between startOffset
+       * (inclusive) and endOffset (exclusive).
+       */
+      public List setStartOffset(java.lang.String startOffset) {
+        this.startOffset = startOffset;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Renames a source folder to a destination folder. Only applicable to buckets with hierarchical
+     * namespace enabled.
+     *
+     * Create a request for the method "folders.rename".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Rename#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which the folders are in.
+     * @param sourceFolder Name of the source folder.
+     * @param destinationFolder Name of the destination folder.
+     * @return the request
+     */
+    public Rename rename(java.lang.String bucket, java.lang.String sourceFolder, java.lang.String destinationFolder) throws java.io.IOException {
+      Rename result = new Rename(bucket, sourceFolder, destinationFolder);
+      initialize(result);
+      return result;
+    }
+
+    public class Rename extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "b/{bucket}/folders/{sourceFolder}/renameTo/folders/{destinationFolder}";
+
+      /**
+       * Renames a source folder to a destination folder. Only applicable to buckets with hierarchical
+       * namespace enabled.
+       *
+       * Create a request for the method "folders.rename".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Rename#execute()} method to invoke the remote operation. <p> {@link
+       * Rename#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket in which the folders are in.
+       * @param sourceFolder Name of the source folder.
+       * @param destinationFolder Name of the destination folder.
+       * @since 1.13
+       */
+      protected Rename(java.lang.String bucket, java.lang.String sourceFolder, java.lang.String destinationFolder) {
+        super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.GoogleLongrunningOperation.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.sourceFolder = com.google.api.client.util.Preconditions.checkNotNull(sourceFolder, "Required parameter sourceFolder must be specified.");
+        this.destinationFolder = com.google.api.client.util.Preconditions.checkNotNull(destinationFolder, "Required parameter destinationFolder must be specified.");
+      }
+
+      @Override
+      public Rename setAlt(java.lang.String alt) {
+        return (Rename) super.setAlt(alt);
+      }
+
+      @Override
+      public Rename setFields(java.lang.String fields) {
+        return (Rename) super.setFields(fields);
+      }
+
+      @Override
+      public Rename setKey(java.lang.String key) {
+        return (Rename) super.setKey(key);
+      }
+
+      @Override
+      public Rename setOauthToken(java.lang.String oauthToken) {
+        return (Rename) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Rename setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Rename) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Rename setQuotaUser(java.lang.String quotaUser) {
+        return (Rename) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Rename setUploadType(java.lang.String uploadType) {
+        return (Rename) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Rename setUserIp(java.lang.String userIp) {
+        return (Rename) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which the folders are in. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which the folders are in.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which the folders are in. */
+      public Rename setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** Name of the source folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String sourceFolder;
+
+      /** Name of the source folder.
+       */
+      public java.lang.String getSourceFolder() {
+        return sourceFolder;
+      }
+
+      /** Name of the source folder. */
+      public Rename setSourceFolder(java.lang.String sourceFolder) {
+        this.sourceFolder = sourceFolder;
+        return this;
+      }
+
+      /** Name of the destination folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String destinationFolder;
+
+      /** Name of the destination folder.
+       */
+      public java.lang.String getDestinationFolder() {
+        return destinationFolder;
+      }
+
+      /** Name of the destination folder. */
+      public Rename setDestinationFolder(java.lang.String destinationFolder) {
+        this.destinationFolder = destinationFolder;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current metageneration
+       * matches the given value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifSourceMetagenerationMatch;
+
+      /** Makes the operation conditional on whether the source object's current metageneration matches the
+     given value.
+       */
+      public java.lang.Long getIfSourceMetagenerationMatch() {
+        return ifSourceMetagenerationMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current metageneration
+       * matches the given value.
+       */
+      public Rename setIfSourceMetagenerationMatch(java.lang.Long ifSourceMetagenerationMatch) {
+        this.ifSourceMetagenerationMatch = ifSourceMetagenerationMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current metageneration does
+       * not match the given value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifSourceMetagenerationNotMatch;
+
+      /** Makes the operation conditional on whether the source object's current metageneration does not
+     match the given value.
+       */
+      public java.lang.Long getIfSourceMetagenerationNotMatch() {
+        return ifSourceMetagenerationNotMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current metageneration does
+       * not match the given value.
+       */
+      public Rename setIfSourceMetagenerationNotMatch(java.lang.Long ifSourceMetagenerationNotMatch) {
+        this.ifSourceMetagenerationNotMatch = ifSourceMetagenerationNotMatch;
+        return this;
+      }
+
+      @Override
+      public Rename set(String parameterName, Object value) {
+        return (Rename) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the ManagedFolders collection.
    *
    * <p>The typical use is:</p>
@@ -5383,11 +6288,11 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Maximum number of items return in a single page of responses. */
+      /** Maximum number of items to return in a single page of responses. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Maximum number of items return in a single page of responses.
+      /** Maximum number of items to return in a single page of responses.
 
      [minimum: 0]
        */
@@ -5395,7 +6300,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return pageSize;
       }
 
-      /** Maximum number of items return in a single page of responses. */
+      /** Maximum number of items to return in a single page of responses. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;

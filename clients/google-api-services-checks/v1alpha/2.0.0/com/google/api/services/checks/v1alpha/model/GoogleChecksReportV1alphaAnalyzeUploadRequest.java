@@ -30,11 +30,38 @@ package com.google.api.services.checks.v1alpha.model;
 public final class GoogleChecksReportV1alphaAnalyzeUploadRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The type of the uploaded app binary. If not provided, the server assumes APK file for
+   * Android and IPA file for iOS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appBinaryFileType;
+
+  /**
    * Optional. Git commit hash or changelist number associated with the upload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String codeReferenceId;
+
+  /**
+   * Optional. The type of the uploaded app binary. If not provided, the server assumes APK file for
+   * Android and IPA file for iOS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppBinaryFileType() {
+    return appBinaryFileType;
+  }
+
+  /**
+   * Optional. The type of the uploaded app binary. If not provided, the server assumes APK file for
+   * Android and IPA file for iOS.
+   * @param appBinaryFileType appBinaryFileType or {@code null} for none
+   */
+  public GoogleChecksReportV1alphaAnalyzeUploadRequest setAppBinaryFileType(java.lang.String appBinaryFileType) {
+    this.appBinaryFileType = appBinaryFileType;
+    return this;
+  }
 
   /**
    * Optional. Git commit hash or changelist number associated with the upload.

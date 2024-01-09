@@ -96,6 +96,20 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private Scorecard scorecard;
 
   /**
+   * A widget that defines a section header for easier navigation of the dashboard.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SectionHeader sectionHeader;
+
+  /**
+   * A widget that groups the other widgets by using a dropdown menu.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SingleViewGroup singleViewGroup;
+
+  /**
    * A raw string or markdown displaying textual content.
    * The value may be {@code null}.
    */
@@ -277,6 +291,40 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setScorecard(Scorecard scorecard) {
     this.scorecard = scorecard;
+    return this;
+  }
+
+  /**
+   * A widget that defines a section header for easier navigation of the dashboard.
+   * @return value or {@code null} for none
+   */
+  public SectionHeader getSectionHeader() {
+    return sectionHeader;
+  }
+
+  /**
+   * A widget that defines a section header for easier navigation of the dashboard.
+   * @param sectionHeader sectionHeader or {@code null} for none
+   */
+  public Widget setSectionHeader(SectionHeader sectionHeader) {
+    this.sectionHeader = sectionHeader;
+    return this;
+  }
+
+  /**
+   * A widget that groups the other widgets by using a dropdown menu.
+   * @return value or {@code null} for none
+   */
+  public SingleViewGroup getSingleViewGroup() {
+    return singleViewGroup;
+  }
+
+  /**
+   * A widget that groups the other widgets by using a dropdown menu.
+   * @param singleViewGroup singleViewGroup or {@code null} for none
+   */
+  public Widget setSingleViewGroup(SingleViewGroup singleViewGroup) {
+    this.singleViewGroup = singleViewGroup;
     return this;
   }
 

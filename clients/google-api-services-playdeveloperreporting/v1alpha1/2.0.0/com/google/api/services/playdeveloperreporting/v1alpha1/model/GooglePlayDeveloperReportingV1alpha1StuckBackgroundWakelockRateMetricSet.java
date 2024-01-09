@@ -77,7 +77,7 @@ public final class GooglePlayDeveloperReportingV1alpha1StuckBackgroundWakelockRa
   private GooglePlayDeveloperReportingV1alpha1FreshnessInfo freshnessInfo;
 
   /**
-   * The resource name. Format: apps/{app}/stuckBackgroundWakelockRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/stuckBackgroundWakelockRateMetricSet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class GooglePlayDeveloperReportingV1alpha1StuckBackgroundWakelockRa
   }
 
   /**
-   * The resource name. Format: apps/{app}/stuckBackgroundWakelockRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/stuckBackgroundWakelockRateMetricSet
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -109,7 +109,7 @@ public final class GooglePlayDeveloperReportingV1alpha1StuckBackgroundWakelockRa
   }
 
   /**
-   * The resource name. Format: apps/{app}/stuckBackgroundWakelockRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/stuckBackgroundWakelockRateMetricSet
    * @param name name or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1StuckBackgroundWakelockRateMetricSet setName(java.lang.String name) {

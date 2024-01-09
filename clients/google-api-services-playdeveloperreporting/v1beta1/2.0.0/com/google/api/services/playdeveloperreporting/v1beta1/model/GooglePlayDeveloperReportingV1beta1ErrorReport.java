@@ -34,6 +34,13 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
 public final class GooglePlayDeveloperReportingV1beta1ErrorReport extends com.google.api.client.json.GenericJson {
 
   /**
+   * The app version on which an event in this error report occurred on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePlayDeveloperReportingV1beta1AppVersion appVersion;
+
+  /**
    * A device model on which an event in this error report occurred on.
    * The value may be {@code null}.
    */
@@ -95,6 +102,23 @@ public final class GooglePlayDeveloperReportingV1beta1ErrorReport extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.String vcsInformation;
+
+  /**
+   * The app version on which an event in this error report occurred on.
+   * @return value or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1beta1AppVersion getAppVersion() {
+    return appVersion;
+  }
+
+  /**
+   * The app version on which an event in this error report occurred on.
+   * @param appVersion appVersion or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1beta1ErrorReport setAppVersion(GooglePlayDeveloperReportingV1beta1AppVersion appVersion) {
+    this.appVersion = appVersion;
+    return this;
+  }
 
   /**
    * A device model on which an event in this error report occurred on.

@@ -85,7 +85,7 @@ public final class GooglePlayDeveloperReportingV1alpha1AnrRateMetricSet extends 
   private GooglePlayDeveloperReportingV1alpha1FreshnessInfo freshnessInfo;
 
   /**
-   * The resource name. Format: apps/{app}/anrRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/anrRateMetricSet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class GooglePlayDeveloperReportingV1alpha1AnrRateMetricSet extends 
   }
 
   /**
-   * The resource name. Format: apps/{app}/anrRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/anrRateMetricSet
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -117,7 +117,7 @@ public final class GooglePlayDeveloperReportingV1alpha1AnrRateMetricSet extends 
   }
 
   /**
-   * The resource name. Format: apps/{app}/anrRateMetricSet
+   * Identifier. The resource name. Format: apps/{app}/anrRateMetricSet
    * @param name name or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1AnrRateMetricSet setName(java.lang.String name) {

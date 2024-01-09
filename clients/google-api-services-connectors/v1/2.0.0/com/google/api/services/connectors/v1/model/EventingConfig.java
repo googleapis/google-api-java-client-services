@@ -50,6 +50,13 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
   private AuthConfig authConfig;
 
   /**
+   * Optional. Dead letter configuration for eventing of a connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeadLetterConfig deadLetterConfig;
+
+  /**
    * Enrichment Enabled.
    * The value may be {@code null}.
    */
@@ -116,6 +123,23 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   public EventingConfig setAuthConfig(AuthConfig authConfig) {
     this.authConfig = authConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Dead letter configuration for eventing of a connection.
+   * @return value or {@code null} for none
+   */
+  public DeadLetterConfig getDeadLetterConfig() {
+    return deadLetterConfig;
+  }
+
+  /**
+   * Optional. Dead letter configuration for eventing of a connection.
+   * @param deadLetterConfig deadLetterConfig or {@code null} for none
+   */
+  public EventingConfig setDeadLetterConfig(DeadLetterConfig deadLetterConfig) {
+    this.deadLetterConfig = deadLetterConfig;
     return this;
   }
 

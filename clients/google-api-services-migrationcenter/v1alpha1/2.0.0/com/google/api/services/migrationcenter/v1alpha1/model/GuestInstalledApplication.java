@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class GuestInstalledApplication extends com.google.api.client.json.GenericJson {
 
   /**
+   * License strings associated with the installed application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> licenses;
+
+  /**
    * Installed application name.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class GuestInstalledApplication extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * License strings associated with the installed application.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLicenses() {
+    return licenses;
+  }
+
+  /**
+   * License strings associated with the installed application.
+   * @param licenses licenses or {@code null} for none
+   */
+  public GuestInstalledApplication setLicenses(java.util.List<java.lang.String> licenses) {
+    this.licenses = licenses;
+    return this;
+  }
 
   /**
    * Installed application name.

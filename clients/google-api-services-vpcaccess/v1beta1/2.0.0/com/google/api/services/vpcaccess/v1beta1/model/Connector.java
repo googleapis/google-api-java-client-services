@@ -38,11 +38,25 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> connectedProjects;
 
   /**
+   * Output only. The creation time of the connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipCidrRange;
+
+  /**
+   * Output only. The last restart time of the connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastRestartTime;
 
   /**
    * Machine type of VM Instance underlying connector. Default is e2-micro
@@ -133,6 +147,23 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The creation time of the connector.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The creation time of the connector.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Connector setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
    * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
    * @return value or {@code null} for none
    */
@@ -146,6 +177,23 @@ public final class Connector extends com.google.api.client.json.GenericJson {
    */
   public Connector setIpCidrRange(java.lang.String ipCidrRange) {
     this.ipCidrRange = ipCidrRange;
+    return this;
+  }
+
+  /**
+   * Output only. The last restart time of the connector.
+   * @return value or {@code null} for none
+   */
+  public String getLastRestartTime() {
+    return lastRestartTime;
+  }
+
+  /**
+   * Output only. The last restart time of the connector.
+   * @param lastRestartTime lastRestartTime or {@code null} for none
+   */
+  public Connector setLastRestartTime(String lastRestartTime) {
+    this.lastRestartTime = lastRestartTime;
     return this;
   }
 

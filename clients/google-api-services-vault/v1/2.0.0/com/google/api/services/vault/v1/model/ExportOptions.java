@@ -30,6 +30,13 @@ package com.google.api.services.vault.v1.model;
 public final class ExportOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Option available for Calendar export.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CalendarExportOptions calendarOptions;
+
+  /**
    * Options for Drive exports.
    * The value may be {@code null}.
    */
@@ -70,6 +77,23 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private VoiceExportOptions voiceOptions;
+
+  /**
+   * Option available for Calendar export.
+   * @return value or {@code null} for none
+   */
+  public CalendarExportOptions getCalendarOptions() {
+    return calendarOptions;
+  }
+
+  /**
+   * Option available for Calendar export.
+   * @param calendarOptions calendarOptions or {@code null} for none
+   */
+  public ExportOptions setCalendarOptions(CalendarExportOptions calendarOptions) {
+    this.calendarOptions = calendarOptions;
+    return this;
+  }
 
   /**
    * Options for Drive exports.

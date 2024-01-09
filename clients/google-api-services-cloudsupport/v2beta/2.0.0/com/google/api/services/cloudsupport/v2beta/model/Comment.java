@@ -17,7 +17,8 @@
 package com.google.api.services.cloudsupport.v2beta.model;
 
 /**
- * A comment associated with a support case.
+ * Case comments are the main way Google Support communicates with a user who has opened a case.
+ * When a user responds to Google Support, the user's responses also appear as comments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Support API. For a detailed explanation

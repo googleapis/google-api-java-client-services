@@ -545,6 +545,114 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
+     * Checks whether account is legacy.
+     *
+     * Create a request for the method "customers.listLegacyOrganizations".
+     *
+     * This request holds the parameters needed by the sasportal server.  After setting any optional
+     * parameters, call the {@link ListLegacyOrganizations#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public ListLegacyOrganizations listLegacyOrganizations() throws java.io.IOException {
+      ListLegacyOrganizations result = new ListLegacyOrganizations();
+      initialize(result);
+      return result;
+    }
+
+    public class ListLegacyOrganizations extends SasportalRequest<com.google.api.services.sasportal.v1alpha1.model.SasPortalListLegacyOrganizationsResponse> {
+
+      private static final String REST_PATH = "v1alpha1/customers:listLegacyOrganizations";
+
+      /**
+       * Checks whether account is legacy.
+       *
+       * Create a request for the method "customers.listLegacyOrganizations".
+       *
+       * This request holds the parameters needed by the the sasportal server.  After setting any
+       * optional parameters, call the {@link ListLegacyOrganizations#execute()} method to invoke the
+       * remote operation. <p> {@link ListLegacyOrganizations#initialize(com.google.api.client.googleapi
+       * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected ListLegacyOrganizations() {
+        super(Sasportal.this, "GET", REST_PATH, null, com.google.api.services.sasportal.v1alpha1.model.SasPortalListLegacyOrganizationsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ListLegacyOrganizations set$Xgafv(java.lang.String $Xgafv) {
+        return (ListLegacyOrganizations) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListLegacyOrganizations setAccessToken(java.lang.String accessToken) {
+        return (ListLegacyOrganizations) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ListLegacyOrganizations setAlt(java.lang.String alt) {
+        return (ListLegacyOrganizations) super.setAlt(alt);
+      }
+
+      @Override
+      public ListLegacyOrganizations setCallback(java.lang.String callback) {
+        return (ListLegacyOrganizations) super.setCallback(callback);
+      }
+
+      @Override
+      public ListLegacyOrganizations setFields(java.lang.String fields) {
+        return (ListLegacyOrganizations) super.setFields(fields);
+      }
+
+      @Override
+      public ListLegacyOrganizations setKey(java.lang.String key) {
+        return (ListLegacyOrganizations) super.setKey(key);
+      }
+
+      @Override
+      public ListLegacyOrganizations setOauthToken(java.lang.String oauthToken) {
+        return (ListLegacyOrganizations) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListLegacyOrganizations setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListLegacyOrganizations) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListLegacyOrganizations setQuotaUser(java.lang.String quotaUser) {
+        return (ListLegacyOrganizations) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListLegacyOrganizations setUploadType(java.lang.String uploadType) {
+        return (ListLegacyOrganizations) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListLegacyOrganizations setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListLegacyOrganizations) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ListLegacyOrganizations set(String parameterName, Object value) {
+        return (ListLegacyOrganizations) super.set(parameterName, value);
+      }
+    }
+    /**
      * Migrates a SAS organization to the cloud. This will create GCP projects for each deployment and
      * associate them. The SAS Organization is linked to the gcp project that called the command. go
      * /sas-legacy-customer-migration

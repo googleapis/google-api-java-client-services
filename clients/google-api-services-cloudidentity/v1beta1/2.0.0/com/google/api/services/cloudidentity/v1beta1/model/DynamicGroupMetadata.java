@@ -31,7 +31,7 @@ public final class DynamicGroupMetadata extends com.google.api.client.json.Gener
 
   /**
    * Memberships will be the union of all queries. Only one entry with USER resource is currently
-   * supported. Customers can create up to 100 dynamic groups.
+   * supported. Customers can create up to 500 dynamic groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class DynamicGroupMetadata extends com.google.api.client.json.Gener
 
   /**
    * Memberships will be the union of all queries. Only one entry with USER resource is currently
-   * supported. Customers can create up to 100 dynamic groups.
+   * supported. Customers can create up to 500 dynamic groups.
    * @return value or {@code null} for none
    */
   public java.util.List<DynamicGroupQuery> getQueries() {
@@ -55,7 +55,7 @@ public final class DynamicGroupMetadata extends com.google.api.client.json.Gener
 
   /**
    * Memberships will be the union of all queries. Only one entry with USER resource is currently
-   * supported. Customers can create up to 100 dynamic groups.
+   * supported. Customers can create up to 500 dynamic groups.
    * @param queries queries or {@code null} for none
    */
   public DynamicGroupMetadata setQueries(java.util.List<DynamicGroupQuery> queries) {

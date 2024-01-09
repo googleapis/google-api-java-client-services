@@ -34,7 +34,7 @@ public final class GoogleAnalyticsAdminV1alphaConversionEventDefaultConversionVa
   /**
    * When a conversion event for this event_name has no set currency, this currency will be applied
    * as the default. Must be in ISO 4217 currency code format. See
-   * https://en.wikipedia.org/wiki/ISO_4217 for more.
+   * https://en.wikipedia.org/wiki/ISO_4217 for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class GoogleAnalyticsAdminV1alphaConversionEventDefaultConversionVa
   /**
    * When a conversion event for this event_name has no set currency, this currency will be applied
    * as the default. Must be in ISO 4217 currency code format. See
-   * https://en.wikipedia.org/wiki/ISO_4217 for more.
+   * https://en.wikipedia.org/wiki/ISO_4217 for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrencyCode() {
@@ -61,7 +61,7 @@ public final class GoogleAnalyticsAdminV1alphaConversionEventDefaultConversionVa
   /**
    * When a conversion event for this event_name has no set currency, this currency will be applied
    * as the default. Must be in ISO 4217 currency code format. See
-   * https://en.wikipedia.org/wiki/ISO_4217 for more.
+   * https://en.wikipedia.org/wiki/ISO_4217 for more information.
    * @param currencyCode currencyCode or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaConversionEventDefaultConversionValue setCurrencyCode(java.lang.String currencyCode) {

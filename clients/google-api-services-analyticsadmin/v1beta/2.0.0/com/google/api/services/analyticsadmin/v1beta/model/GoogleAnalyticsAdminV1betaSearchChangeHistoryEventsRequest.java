@@ -78,7 +78,7 @@ public final class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest ex
 
   /**
    * Optional. Resource name for a child property. If set, only return changes made to this property
-   * or its child resources.
+   * or its child resources. Format: properties/{propertyId} Example: "properties/100"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,7 +204,7 @@ public final class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest ex
 
   /**
    * Optional. Resource name for a child property. If set, only return changes made to this property
-   * or its child resources.
+   * or its child resources. Format: properties/{propertyId} Example: "properties/100"
    * @return value or {@code null} for none
    */
   public java.lang.String getProperty() {
@@ -213,7 +213,7 @@ public final class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest ex
 
   /**
    * Optional. Resource name for a child property. If set, only return changes made to this property
-   * or its child resources.
+   * or its child resources. Format: properties/{propertyId} Example: "properties/100"
    * @param property property or {@code null} for none
    */
   public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest setProperty(java.lang.String property) {

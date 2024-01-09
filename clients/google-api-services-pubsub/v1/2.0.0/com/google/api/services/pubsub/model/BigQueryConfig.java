@@ -56,8 +56,16 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   private java.lang.String table;
 
   /**
+   * Optional. When true, use the BigQuery table's schema as the columns to write to in BigQuery.
+   * `use_table_schema` and `use_topic_schema` cannot be enabled at the same time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useTableSchema;
+
+  /**
    * Optional. When true, use the topic's schema as the columns to write to in BigQuery, if it
-   * exists.
+   * exists. `use_topic_schema` and `use_table_schema` cannot be enabled at the same time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,8 +143,27 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Optional. When true, use the BigQuery table's schema as the columns to write to in BigQuery.
+   * `use_table_schema` and `use_topic_schema` cannot be enabled at the same time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseTableSchema() {
+    return useTableSchema;
+  }
+
+  /**
+   * Optional. When true, use the BigQuery table's schema as the columns to write to in BigQuery.
+   * `use_table_schema` and `use_topic_schema` cannot be enabled at the same time.
+   * @param useTableSchema useTableSchema or {@code null} for none
+   */
+  public BigQueryConfig setUseTableSchema(java.lang.Boolean useTableSchema) {
+    this.useTableSchema = useTableSchema;
+    return this;
+  }
+
+  /**
    * Optional. When true, use the topic's schema as the columns to write to in BigQuery, if it
-   * exists.
+   * exists. `use_topic_schema` and `use_table_schema` cannot be enabled at the same time.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseTopicSchema() {
@@ -145,7 +172,7 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. When true, use the topic's schema as the columns to write to in BigQuery, if it
-   * exists.
+   * exists. `use_topic_schema` and `use_table_schema` cannot be enabled at the same time.
    * @param useTopicSchema useTopicSchema or {@code null} for none
    */
   public BigQueryConfig setUseTopicSchema(java.lang.Boolean useTopicSchema) {

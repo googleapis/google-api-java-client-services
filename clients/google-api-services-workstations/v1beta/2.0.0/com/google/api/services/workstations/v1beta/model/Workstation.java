@@ -84,6 +84,15 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.String host;
 
   /**
+   * Output only. The name of the Google Cloud KMS encryption key used to encrypt this workstation.
+   * The KMS key can only be configured in the WorkstationConfig. The expected format is
+   * `projects/locations/keyRings/cryptoKeys`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKey;
+
+  /**
    * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
    * to the workstation and that are also propagated to the underlying Compute Engine resources.
    * The value may be {@code null}.
@@ -259,6 +268,27 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    */
   public Workstation setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the Google Cloud KMS encryption key used to encrypt this workstation.
+   * The KMS key can only be configured in the WorkstationConfig. The expected format is
+   * `projects/locations/keyRings/cryptoKeys`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKey() {
+    return kmsKey;
+  }
+
+  /**
+   * Output only. The name of the Google Cloud KMS encryption key used to encrypt this workstation.
+   * The KMS key can only be configured in the WorkstationConfig. The expected format is
+   * `projects/locations/keyRings/cryptoKeys`.
+   * @param kmsKey kmsKey or {@code null} for none
+   */
+  public Workstation setKmsKey(java.lang.String kmsKey) {
+    this.kmsKey = kmsKey;
     return this;
   }
 

@@ -1223,7 +1223,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     /**
      * Returns a customized report of data access records. The report provides records of each time a
      * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
-     * Access Reports can be requested for a property. The property must be in Google Analytics 360.
+     * Access Reports can be requested for a property. Reports may be requested for any property, but
+     * dimensions that aren't related to quota can only be requested on Google Analytics 360 properties.
      * This method is only available to Administrators. These data access records include GA4 UI
      * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
      * retrieve data from Google Analytics through a linkage. These records don't include property
@@ -1261,11 +1262,12 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       /**
        * Returns a customized report of data access records. The report provides records of each time a
        * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
-       * Access Reports can be requested for a property. The property must be in Google Analytics 360.
-       * This method is only available to Administrators. These data access records include GA4 UI
-       * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
-       * retrieve data from Google Analytics through a linkage. These records don't include property
-       * configuration changes like adding a stream or changing a property's time zone. For
+       * Access Reports can be requested for a property. Reports may be requested for any property, but
+       * dimensions that aren't related to quota can only be requested on Google Analytics 360
+       * properties. This method is only available to Administrators. These data access records include
+       * GA4 UI Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob
+       * that can retrieve data from Google Analytics through a linkage. These records don't include
+       * property configuration changes like adding a stream or changing a property's time zone. For
        * configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/ana
        * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
        *
@@ -1401,7 +1403,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link SearchChangeHistoryEvents#execute()} method to invoke the
      * remote operation.
      *
-     * @param account Required. The account resource for which to return change history resources.
+     * @param account Required. The account resource for which to return change history resources. Format:
+     *        accounts/{account} Example: "accounts/100"
      * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest}
      * @return the request
      */
@@ -1429,7 +1432,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param account Required. The account resource for which to return change history resources.
+       * @param account Required. The account resource for which to return change history resources. Format:
+     *        accounts/{account} Example: "accounts/100"
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest}
        * @since 1.13
        */
@@ -1498,17 +1502,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         return (SearchChangeHistoryEvents) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The account resource for which to return change history resources. */
+      /**
+       * Required. The account resource for which to return change history resources. Format:
+       * accounts/{account} Example: "accounts/100"
+       */
       @com.google.api.client.util.Key
       private java.lang.String account;
 
-      /** Required. The account resource for which to return change history resources.
+      /** Required. The account resource for which to return change history resources. Format:
+     accounts/{account} Example: "accounts/100"
        */
       public java.lang.String getAccount() {
         return account;
       }
 
-      /** Required. The account resource for which to return change history resources. */
+      /**
+       * Required. The account resource for which to return change history resources. Format:
+       * accounts/{account} Example: "accounts/100"
+       */
       public SearchChangeHistoryEvents setAccount(java.lang.String account) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_PATTERN.matcher(account).matches(),
@@ -2628,7 +2639,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     /**
      * Returns a customized report of data access records. The report provides records of each time a
      * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
-     * Access Reports can be requested for a property. The property must be in Google Analytics 360.
+     * Access Reports can be requested for a property. Reports may be requested for any property, but
+     * dimensions that aren't related to quota can only be requested on Google Analytics 360 properties.
      * This method is only available to Administrators. These data access records include GA4 UI
      * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
      * retrieve data from Google Analytics through a linkage. These records don't include property
@@ -2666,11 +2678,12 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       /**
        * Returns a customized report of data access records. The report provides records of each time a
        * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
-       * Access Reports can be requested for a property. The property must be in Google Analytics 360.
-       * This method is only available to Administrators. These data access records include GA4 UI
-       * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
-       * retrieve data from Google Analytics through a linkage. These records don't include property
-       * configuration changes like adding a stream or changing a property's time zone. For
+       * Access Reports can be requested for a property. Reports may be requested for any property, but
+       * dimensions that aren't related to quota can only be requested on Google Analytics 360
+       * properties. This method is only available to Administrators. These data access records include
+       * GA4 UI Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob
+       * that can retrieve data from Google Analytics through a linkage. These records don't include
+       * property configuration changes like adding a stream or changing a property's time zone. For
        * configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/ana
        * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
        *

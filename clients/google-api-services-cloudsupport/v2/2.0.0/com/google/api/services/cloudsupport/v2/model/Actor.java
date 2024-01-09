@@ -17,8 +17,9 @@
 package com.google.api.services.cloudsupport.v2.model;
 
 /**
- * An object containing information about the effective user and authenticated principal responsible
- * for an action.
+ * An Actor represents an entity that performed an action. For example, an actor could be a user who
+ * posted a comment on a support case, a user who uploaded an attachment, or a service account that
+ * created a support case.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Support API. For a detailed explanation
@@ -41,10 +42,10 @@ public final class Actor extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * The email address of the actor. If not provided, it is inferred from credentials supplied
-   * during case creation. If the authenticated principal does not have an email address, one must
-   * be provided. When a name is provided, an email must also be provided. This will be obfuscated
-   * if the user is a Google Support agent.
+   * The email address of the actor. If not provided, it is inferred from the credentials supplied
+   * during case creation. When a name is provided, an email must also be provided. If the user is a
+   * Google Support agent, this is obfuscated. This field is deprecated. Use **username** field
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,6 +57,16 @@ public final class Actor extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean googleSupport;
+
+  /**
+   * Output only. The username of the actor. It may look like an email or other format provided by
+   * the identity provider. If not provided, it is inferred from the credentials supplied. When a
+   * name is provided, a username must also be provided. If the user is a Google Support agent, this
+   * will not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String username;
 
   /**
    * The name to display for the actor. If not provided, it is inferred from credentials supplied
@@ -79,10 +90,10 @@ public final class Actor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address of the actor. If not provided, it is inferred from credentials supplied
-   * during case creation. If the authenticated principal does not have an email address, one must
-   * be provided. When a name is provided, an email must also be provided. This will be obfuscated
-   * if the user is a Google Support agent.
+   * The email address of the actor. If not provided, it is inferred from the credentials supplied
+   * during case creation. When a name is provided, an email must also be provided. If the user is a
+   * Google Support agent, this is obfuscated. This field is deprecated. Use **username** field
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -90,10 +101,10 @@ public final class Actor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address of the actor. If not provided, it is inferred from credentials supplied
-   * during case creation. If the authenticated principal does not have an email address, one must
-   * be provided. When a name is provided, an email must also be provided. This will be obfuscated
-   * if the user is a Google Support agent.
+   * The email address of the actor. If not provided, it is inferred from the credentials supplied
+   * during case creation. When a name is provided, an email must also be provided. If the user is a
+   * Google Support agent, this is obfuscated. This field is deprecated. Use **username** field
+   * instead.
    * @param email email or {@code null} for none
    */
   public Actor setEmail(java.lang.String email) {
@@ -115,6 +126,29 @@ public final class Actor extends com.google.api.client.json.GenericJson {
    */
   public Actor setGoogleSupport(java.lang.Boolean googleSupport) {
     this.googleSupport = googleSupport;
+    return this;
+  }
+
+  /**
+   * Output only. The username of the actor. It may look like an email or other format provided by
+   * the identity provider. If not provided, it is inferred from the credentials supplied. When a
+   * name is provided, a username must also be provided. If the user is a Google Support agent, this
+   * will not be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUsername() {
+    return username;
+  }
+
+  /**
+   * Output only. The username of the actor. It may look like an email or other format provided by
+   * the identity provider. If not provided, it is inferred from the credentials supplied. When a
+   * name is provided, a username must also be provided. If the user is a Google Support agent, this
+   * will not be set.
+   * @param username username or {@code null} for none
+   */
+  public Actor setUsername(java.lang.String username) {
+    this.username = username;
     return this;
   }
 

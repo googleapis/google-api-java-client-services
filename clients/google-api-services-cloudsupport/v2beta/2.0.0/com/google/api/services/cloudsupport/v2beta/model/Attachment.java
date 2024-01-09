@@ -17,7 +17,11 @@
 package com.google.api.services.cloudsupport.v2beta.model;
 
 /**
- * Represents a file attached to a support case.
+ * An Attachment contains metadata about a file that was uploaded to a case - it is NOT a file
+ * itself. That being said, the name of an Attachment object can be used to download its
+ * accompanying file through the `media.download` endpoint. While attachments can be uploaded in the
+ * console at the same time as a comment, they're associated on a "case" level, not a "comment"
+ * level.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Support API. For a detailed explanation

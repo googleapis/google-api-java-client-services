@@ -17,7 +17,10 @@
 package com.google.api.services.cloudsupport.v2beta.model;
 
 /**
- * A classification object with a product type and value.
+ * A Case Classification represents the topic that a case is about. It's very important to use
+ * accurate classifications, because they're used to route your cases to specialists who can help
+ * you. A classification always has an ID that is its unique identifier. A valid ID is required when
+ * creating a case.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Support API. For a detailed explanation

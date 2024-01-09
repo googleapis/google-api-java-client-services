@@ -1240,6 +1240,154 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
+     * GetSecuritySettings gets the security settings for API Security.
+     *
+     * Create a request for the method "organizations.getSecuritySettings".
+     *
+     * This request holds the parameters needed by the apigee server.  After setting any optional
+     * parameters, call the {@link GetSecuritySettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the SecuritySettings to retrieve. This will always be:
+     *        'organizations/{org}/securitySettings'.
+     * @return the request
+     */
+    public GetSecuritySettings getSecuritySettings(java.lang.String name) throws java.io.IOException {
+      GetSecuritySettings result = new GetSecuritySettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetSecuritySettings extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecuritySettings> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/securitySettings$");
+
+      /**
+       * GetSecuritySettings gets the security settings for API Security.
+       *
+       * Create a request for the method "organizations.getSecuritySettings".
+       *
+       * This request holds the parameters needed by the the apigee server.  After setting any optional
+       * parameters, call the {@link GetSecuritySettings#execute()} method to invoke the remote
+       * operation. <p> {@link GetSecuritySettings#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the SecuritySettings to retrieve. This will always be:
+     *        'organizations/{org}/securitySettings'.
+       * @since 1.13
+       */
+      protected GetSecuritySettings(java.lang.String name) {
+        super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecuritySettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/securitySettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSecuritySettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSecuritySettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSecuritySettings setAccessToken(java.lang.String accessToken) {
+        return (GetSecuritySettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSecuritySettings setAlt(java.lang.String alt) {
+        return (GetSecuritySettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSecuritySettings setCallback(java.lang.String callback) {
+        return (GetSecuritySettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSecuritySettings setFields(java.lang.String fields) {
+        return (GetSecuritySettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetSecuritySettings setKey(java.lang.String key) {
+        return (GetSecuritySettings) super.setKey(key);
+      }
+
+      @Override
+      public GetSecuritySettings setOauthToken(java.lang.String oauthToken) {
+        return (GetSecuritySettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSecuritySettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSecuritySettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSecuritySettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetSecuritySettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSecuritySettings setUploadType(java.lang.String uploadType) {
+        return (GetSecuritySettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSecuritySettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSecuritySettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the SecuritySettings to retrieve. This will always be:
+       * 'organizations/{org}/securitySettings'.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the SecuritySettings to retrieve. This will always be:
+     'organizations/{org}/securitySettings'.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the SecuritySettings to retrieve. This will always be:
+       * 'organizations/{org}/securitySettings'.
+       */
+      public GetSecuritySettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/securitySettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetSecuritySettings set(String parameterName, Object value) {
+        return (GetSecuritySettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Lists the service accounts with the permissions required to allow the Synchronizer to download
      * environment data from the control plane. An ETag is returned in the response to
      * `getSyncAuthorization`. Pass that ETag when calling [setSyncAuthorization](setSyncAuthorization)
@@ -1962,6 +2110,160 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       @Override
       public Update set(String parameterName, Object value) {
         return (Update) super.set(parameterName, value);
+      }
+    }
+    /**
+     * UpdateSecuritySettings updates the current security settings for API Security.
+     *
+     * Create a request for the method "organizations.updateSecuritySettings".
+     *
+     * This request holds the parameters needed by the apigee server.  After setting any optional
+     * parameters, call the {@link UpdateSecuritySettings#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Identifier. Full resource name is always `organizations/{org}/securitySettings`.
+     * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecuritySettings}
+     * @return the request
+     */
+    public UpdateSecuritySettings updateSecuritySettings(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecuritySettings content) throws java.io.IOException {
+      UpdateSecuritySettings result = new UpdateSecuritySettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateSecuritySettings extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecuritySettings> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/securitySettings$");
+
+      /**
+       * UpdateSecuritySettings updates the current security settings for API Security.
+       *
+       * Create a request for the method "organizations.updateSecuritySettings".
+       *
+       * This request holds the parameters needed by the the apigee server.  After setting any optional
+       * parameters, call the {@link UpdateSecuritySettings#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateSecuritySettings#initialize(com.google.api.client.googleapis.servic
+       * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Identifier. Full resource name is always `organizations/{org}/securitySettings`.
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecuritySettings}
+       * @since 1.13
+       */
+      protected UpdateSecuritySettings(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecuritySettings content) {
+        super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecuritySettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/securitySettings$");
+        }
+      }
+
+      @Override
+      public UpdateSecuritySettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateSecuritySettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateSecuritySettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateSecuritySettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateSecuritySettings setAlt(java.lang.String alt) {
+        return (UpdateSecuritySettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateSecuritySettings setCallback(java.lang.String callback) {
+        return (UpdateSecuritySettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateSecuritySettings setFields(java.lang.String fields) {
+        return (UpdateSecuritySettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateSecuritySettings setKey(java.lang.String key) {
+        return (UpdateSecuritySettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateSecuritySettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateSecuritySettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateSecuritySettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateSecuritySettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateSecuritySettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateSecuritySettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateSecuritySettings setUploadType(java.lang.String uploadType) {
+        return (UpdateSecuritySettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateSecuritySettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateSecuritySettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifier. Full resource name is always `organizations/{org}/securitySettings`. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. Full resource name is always `organizations/{org}/securitySettings`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Identifier. Full resource name is always `organizations/{org}/securitySettings`. */
+      public UpdateSecuritySettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/securitySettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. The list of fields to update. Allowed fields are: -
+       * ml_retraining_feedback_enabled
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The list of fields to update. Allowed fields are: - ml_retraining_feedback_enabled
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Optional. The list of fields to update. Allowed fields are: -
+       * ml_retraining_feedback_enabled
+       */
+      public UpdateSecuritySettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateSecuritySettings set(String parameterName, Object value) {
+        return (UpdateSecuritySettings) super.set(parameterName, value);
       }
     }
 

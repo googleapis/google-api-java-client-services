@@ -108,6 +108,13 @@ public final class AnywhereCache extends com.google.api.client.json.GenericJson 
   private com.google.api.client.util.DateTime updateTime;
 
   /**
+   * The zone in which the cache instance is running. For example, us-central1-a.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String zone;
+
+  /**
    * The cache-level entry admission policy.
    * @return value or {@code null} for none
    */
@@ -291,6 +298,23 @@ public final class AnywhereCache extends com.google.api.client.json.GenericJson 
    */
   public AnywhereCache setUpdateTime(com.google.api.client.util.DateTime updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * The zone in which the cache instance is running. For example, us-central1-a.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getZone() {
+    return zone;
+  }
+
+  /**
+   * The zone in which the cache instance is running. For example, us-central1-a.
+   * @param zone zone or {@code null} for none
+   */
+  public AnywhereCache setZone(java.lang.String zone) {
+    this.zone = zone;
     return this;
   }
 

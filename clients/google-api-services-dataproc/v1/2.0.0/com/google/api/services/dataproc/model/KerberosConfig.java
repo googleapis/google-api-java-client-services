@@ -103,7 +103,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   private java.lang.String keystoreUri;
 
   /**
-   * Optional. The uri of the KMS key used to encrypt various sensitive files.
+   * Optional. The URI of the KMS key used to encrypt sensitive files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -322,7 +322,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The uri of the KMS key used to encrypt various sensitive files.
+   * Optional. The URI of the KMS key used to encrypt sensitive files.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyUri() {
@@ -330,7 +330,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The uri of the KMS key used to encrypt various sensitive files.
+   * Optional. The URI of the KMS key used to encrypt sensitive files.
    * @param kmsKeyUri kmsKeyUri or {@code null} for none
    */
   public KerberosConfig setKmsKeyUri(java.lang.String kmsKeyUri) {

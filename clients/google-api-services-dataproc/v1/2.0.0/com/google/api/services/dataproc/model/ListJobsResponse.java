@@ -51,8 +51,9 @@ public final class ListJobsResponse extends com.google.api.client.json.GenericJs
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. List of jobs that could not be included in the response. Attempting to get one of
-   * these resources may indicate why it was not included in the list response.
+   * Output only. List of jobs with kms_key-encrypted parameters that could not be decrypted. A
+   * response to a jobs.get request may indicate the reason for the decryption failure for a
+   * specific job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +96,9 @@ public final class ListJobsResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. List of jobs that could not be included in the response. Attempting to get one of
-   * these resources may indicate why it was not included in the list response.
+   * Output only. List of jobs with kms_key-encrypted parameters that could not be decrypted. A
+   * response to a jobs.get request may indicate the reason for the decryption failure for a
+   * specific job.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -104,8 +106,9 @@ public final class ListJobsResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. List of jobs that could not be included in the response. Attempting to get one of
-   * these resources may indicate why it was not included in the list response.
+   * Output only. List of jobs with kms_key-encrypted parameters that could not be decrypted. A
+   * response to a jobs.get request may indicate the reason for the decryption failure for a
+   * specific job.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListJobsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

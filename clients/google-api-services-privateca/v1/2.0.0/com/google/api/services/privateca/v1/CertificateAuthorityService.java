@@ -946,7 +946,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
         }
         /**
          * FetchCaCerts returns the current trust anchor for the CaPool. This will include CA certificate
-         * chains for all ACTIVE CertificateAuthority resources in the CaPool.
+         * chains for all Certificate Authorities in the ENABLED, DISABLED, or STAGED states.
          *
          * Create a request for the method "caPools.fetchCaCerts".
          *
@@ -972,7 +972,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
 
           /**
            * FetchCaCerts returns the current trust anchor for the CaPool. This will include CA certificate
-           * chains for all ACTIVE CertificateAuthority resources in the CaPool.
+           * chains for all Certificate Authorities in the ENABLED, DISABLED, or STAGED states.
            *
            * Create a request for the method "caPools.fetchCaCerts".
            *

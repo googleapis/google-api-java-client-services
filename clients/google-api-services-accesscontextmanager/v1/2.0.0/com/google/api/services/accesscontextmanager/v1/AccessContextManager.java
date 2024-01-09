@@ -6011,6 +6011,303 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   }
 
   /**
+   * An accessor for creating requests from the Services collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AccessContextManager accesscontextmanager = new AccessContextManager(...);}
+   *   {@code AccessContextManager.Services.List request = accesscontextmanager.services().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Services services() {
+    return new Services();
+  }
+
+  /**
+   * The "services" collection of methods.
+   */
+  public class Services {
+
+    /**
+     * Returns a VPC-SC supported service based on the service name.
+     *
+     * Create a request for the method "services.get".
+     *
+     * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name The name of the service to get information about. The names must be in the same format as used in
+     *        defining a service perimeter, for example, `storage.googleapis.com`.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.SupportedService> {
+
+      private static final String REST_PATH = "v1/services/{name}";
+
+      /**
+       * Returns a VPC-SC supported service based on the service name.
+       *
+       * Create a request for the method "services.get".
+       *
+       * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+       * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The name of the service to get information about. The names must be in the same format as used in
+     *        defining a service perimeter, for example, `storage.googleapis.com`.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(AccessContextManager.this, "GET", REST_PATH, null, com.google.api.services.accesscontextmanager.v1.model.SupportedService.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The name of the service to get information about. The names must be in the same format as
+       * used in defining a service perimeter, for example, `storage.googleapis.com`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the service to get information about. The names must be in the same format as used in
+     defining a service perimeter, for example, `storage.googleapis.com`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The name of the service to get information about. The names must be in the same format as
+       * used in defining a service perimeter, for example, `storage.googleapis.com`.
+       */
+      public Get setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists all VPC-SC supported services.
+     *
+     * Create a request for the method "services.list".
+     *
+     * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.ListSupportedServicesResponse> {
+
+      private static final String REST_PATH = "v1/services";
+
+      /**
+       * Lists all VPC-SC supported services.
+       *
+       * Create a request for the method "services.list".
+       *
+       * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+       * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(AccessContextManager.this, "GET", REST_PATH, null, com.google.api.services.accesscontextmanager.v1.model.ListSupportedServicesResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** This flag specifies the maximum number of services to return per page. Default is 100. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** This flag specifies the maximum number of services to return per page. Default is 100.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** This flag specifies the maximum number of services to return per page. Default is 100. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** Token to start on a later page. Default is the first page. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Token to start on a later page. Default is the first page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** Token to start on a later page. Default is the first page. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link AccessContextManager}.
    *
    * <p>

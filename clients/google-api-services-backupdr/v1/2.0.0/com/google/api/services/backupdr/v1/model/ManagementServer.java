@@ -101,7 +101,7 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   private java.lang.String state;
 
   /**
-   * Required. The type of the ManagementServer resource.
+   * Optional. The type of the ManagementServer resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -297,7 +297,7 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The type of the ManagementServer resource.
+   * Optional. The type of the ManagementServer resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -305,7 +305,7 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The type of the ManagementServer resource.
+   * Optional. The type of the ManagementServer resource.
    * @param type type or {@code null} for none
    */
   public ManagementServer setType(java.lang.String type) {

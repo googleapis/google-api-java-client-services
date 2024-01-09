@@ -63,7 +63,8 @@ public final class GoogleCloudVisionV1p3beta1SafeSearchAnnotation extends com.go
   private java.lang.String spoof;
 
   /**
-   * Likelihood that this image contains violent content.
+   * Likelihood that this image contains violent content. Violent content may include death, serious
+   * harm, or injury to individuals or groups of individuals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +147,8 @@ public final class GoogleCloudVisionV1p3beta1SafeSearchAnnotation extends com.go
   }
 
   /**
-   * Likelihood that this image contains violent content.
+   * Likelihood that this image contains violent content. Violent content may include death, serious
+   * harm, or injury to individuals or groups of individuals.
    * @return value or {@code null} for none
    */
   public java.lang.String getViolence() {
@@ -154,7 +156,8 @@ public final class GoogleCloudVisionV1p3beta1SafeSearchAnnotation extends com.go
   }
 
   /**
-   * Likelihood that this image contains violent content.
+   * Likelihood that this image contains violent content. Violent content may include death, serious
+   * harm, or injury to individuals or groups of individuals.
    * @param violence violence or {@code null} for none
    */
   public GoogleCloudVisionV1p3beta1SafeSearchAnnotation setViolence(java.lang.String violence) {

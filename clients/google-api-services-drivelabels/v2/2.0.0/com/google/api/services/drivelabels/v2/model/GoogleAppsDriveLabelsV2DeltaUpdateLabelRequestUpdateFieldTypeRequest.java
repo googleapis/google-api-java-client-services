@@ -51,13 +51,6 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldType
   private GoogleAppsDriveLabelsV2FieldIntegerOptions integerOptions;
 
   /**
-   * Update field to Long Text.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleAppsDriveLabelsV2FieldLongTextOptions longTextOptions;
-
-  /**
    * Update field to Selection.
    * The value may be {@code null}.
    */
@@ -135,23 +128,6 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldType
    */
   public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequest setIntegerOptions(GoogleAppsDriveLabelsV2FieldIntegerOptions integerOptions) {
     this.integerOptions = integerOptions;
-    return this;
-  }
-
-  /**
-   * Update field to Long Text.
-   * @return value or {@code null} for none
-   */
-  public GoogleAppsDriveLabelsV2FieldLongTextOptions getLongTextOptions() {
-    return longTextOptions;
-  }
-
-  /**
-   * Update field to Long Text.
-   * @param longTextOptions longTextOptions or {@code null} for none
-   */
-  public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequest setLongTextOptions(GoogleAppsDriveLabelsV2FieldLongTextOptions longTextOptions) {
-    this.longTextOptions = longTextOptions;
     return this;
   }
 

@@ -31,6 +31,37 @@ package com.google.api.services.androidpublisher.model;
 public final class MigrateBasePlanPricesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. The unique base plan ID of the base plan to update prices on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String basePlanId;
+
+  /**
+   * Optional. The latency tolerance for the propagation of this product update. Defaults to
+   * latency-sensitive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String latencyTolerance;
+
+  /**
+   * Required. Package name of the parent app. Must be equal to the package_name field on the
+   * Subscription resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String packageName;
+
+  /**
+   * Required. The ID of the subscription to update. Must be equal to the product_id field on the
+   * Subscription resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productId;
+
+  /**
    * Required. The regional prices to update.
    * The value may be {@code null}.
    */
@@ -43,6 +74,80 @@ public final class MigrateBasePlanPricesRequest extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private RegionsVersion regionsVersion;
+
+  /**
+   * Required. The unique base plan ID of the base plan to update prices on.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBasePlanId() {
+    return basePlanId;
+  }
+
+  /**
+   * Required. The unique base plan ID of the base plan to update prices on.
+   * @param basePlanId basePlanId or {@code null} for none
+   */
+  public MigrateBasePlanPricesRequest setBasePlanId(java.lang.String basePlanId) {
+    this.basePlanId = basePlanId;
+    return this;
+  }
+
+  /**
+   * Optional. The latency tolerance for the propagation of this product update. Defaults to
+   * latency-sensitive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLatencyTolerance() {
+    return latencyTolerance;
+  }
+
+  /**
+   * Optional. The latency tolerance for the propagation of this product update. Defaults to
+   * latency-sensitive.
+   * @param latencyTolerance latencyTolerance or {@code null} for none
+   */
+  public MigrateBasePlanPricesRequest setLatencyTolerance(java.lang.String latencyTolerance) {
+    this.latencyTolerance = latencyTolerance;
+    return this;
+  }
+
+  /**
+   * Required. Package name of the parent app. Must be equal to the package_name field on the
+   * Subscription resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPackageName() {
+    return packageName;
+  }
+
+  /**
+   * Required. Package name of the parent app. Must be equal to the package_name field on the
+   * Subscription resource.
+   * @param packageName packageName or {@code null} for none
+   */
+  public MigrateBasePlanPricesRequest setPackageName(java.lang.String packageName) {
+    this.packageName = packageName;
+    return this;
+  }
+
+  /**
+   * Required. The ID of the subscription to update. Must be equal to the product_id field on the
+   * Subscription resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductId() {
+    return productId;
+  }
+
+  /**
+   * Required. The ID of the subscription to update. Must be equal to the product_id field on the
+   * Subscription resource.
+   * @param productId productId or {@code null} for none
+   */
+  public MigrateBasePlanPricesRequest setProductId(java.lang.String productId) {
+    this.productId = productId;
+    return this;
+  }
 
   /**
    * Required. The regional prices to update.

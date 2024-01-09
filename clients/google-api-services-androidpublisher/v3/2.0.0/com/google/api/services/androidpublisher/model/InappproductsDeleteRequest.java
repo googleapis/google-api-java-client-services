@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Request message for ActivateBasePlan.
+ * Request to delete an in-app product.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -28,14 +28,7 @@ package com.google.api.services.androidpublisher.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ActivateBasePlanRequest extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Required. The unique base plan ID of the base plan to activate.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String basePlanId;
+public final class InappproductsDeleteRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The latency tolerance for the propagation of this product update. Defaults to
@@ -46,35 +39,18 @@ public final class ActivateBasePlanRequest extends com.google.api.client.json.Ge
   private java.lang.String latencyTolerance;
 
   /**
-   * Required. The parent app (package name) of the base plan to activate.
+   * Package name of the app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String packageName;
 
   /**
-   * Required. The parent subscription (ID) of the base plan to activate.
+   * Unique identifier for the in-app product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String productId;
-
-  /**
-   * Required. The unique base plan ID of the base plan to activate.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBasePlanId() {
-    return basePlanId;
-  }
-
-  /**
-   * Required. The unique base plan ID of the base plan to activate.
-   * @param basePlanId basePlanId or {@code null} for none
-   */
-  public ActivateBasePlanRequest setBasePlanId(java.lang.String basePlanId) {
-    this.basePlanId = basePlanId;
-    return this;
-  }
+  private java.lang.String sku;
 
   /**
    * Optional. The latency tolerance for the propagation of this product update. Defaults to
@@ -90,13 +66,13 @@ public final class ActivateBasePlanRequest extends com.google.api.client.json.Ge
    * latency-sensitive.
    * @param latencyTolerance latencyTolerance or {@code null} for none
    */
-  public ActivateBasePlanRequest setLatencyTolerance(java.lang.String latencyTolerance) {
+  public InappproductsDeleteRequest setLatencyTolerance(java.lang.String latencyTolerance) {
     this.latencyTolerance = latencyTolerance;
     return this;
   }
 
   /**
-   * Required. The parent app (package name) of the base plan to activate.
+   * Package name of the app.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackageName() {
@@ -104,39 +80,39 @@ public final class ActivateBasePlanRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The parent app (package name) of the base plan to activate.
+   * Package name of the app.
    * @param packageName packageName or {@code null} for none
    */
-  public ActivateBasePlanRequest setPackageName(java.lang.String packageName) {
+  public InappproductsDeleteRequest setPackageName(java.lang.String packageName) {
     this.packageName = packageName;
     return this;
   }
 
   /**
-   * Required. The parent subscription (ID) of the base plan to activate.
+   * Unique identifier for the in-app product.
    * @return value or {@code null} for none
    */
-  public java.lang.String getProductId() {
-    return productId;
+  public java.lang.String getSku() {
+    return sku;
   }
 
   /**
-   * Required. The parent subscription (ID) of the base plan to activate.
-   * @param productId productId or {@code null} for none
+   * Unique identifier for the in-app product.
+   * @param sku sku or {@code null} for none
    */
-  public ActivateBasePlanRequest setProductId(java.lang.String productId) {
-    this.productId = productId;
+  public InappproductsDeleteRequest setSku(java.lang.String sku) {
+    this.sku = sku;
     return this;
   }
 
   @Override
-  public ActivateBasePlanRequest set(String fieldName, Object value) {
-    return (ActivateBasePlanRequest) super.set(fieldName, value);
+  public InappproductsDeleteRequest set(String fieldName, Object value) {
+    return (InappproductsDeleteRequest) super.set(fieldName, value);
   }
 
   @Override
-  public ActivateBasePlanRequest clone() {
-    return (ActivateBasePlanRequest) super.clone();
+  public InappproductsDeleteRequest clone() {
+    return (InappproductsDeleteRequest) super.clone();
   }
 
 }

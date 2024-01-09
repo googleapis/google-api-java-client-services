@@ -52,6 +52,14 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   private java.lang.Boolean disableAgentQueryLogging;
 
   /**
+   * Optional. Enable including conversation context during query answer generation. Supported
+   * features: KNOWLEDGE_SEARCH.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConversationAugmentedQuery;
+
+  /**
    * Automatically iterates all participants and tries to compile suggestions. Supported features:
    * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, ENTITY_EXTRACTION, KNOWLEDGE_ASSIST.
    * The value may be {@code null}.
@@ -131,6 +139,25 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig setDisableAgentQueryLogging(java.lang.Boolean disableAgentQueryLogging) {
     this.disableAgentQueryLogging = disableAgentQueryLogging;
+    return this;
+  }
+
+  /**
+   * Optional. Enable including conversation context during query answer generation. Supported
+   * features: KNOWLEDGE_SEARCH.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConversationAugmentedQuery() {
+    return enableConversationAugmentedQuery;
+  }
+
+  /**
+   * Optional. Enable including conversation context during query answer generation. Supported
+   * features: KNOWLEDGE_SEARCH.
+   * @param enableConversationAugmentedQuery enableConversationAugmentedQuery or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig setEnableConversationAugmentedQuery(java.lang.Boolean enableConversationAugmentedQuery) {
+    this.enableConversationAugmentedQuery = enableConversationAugmentedQuery;
     return this;
   }
 

@@ -85,6 +85,16 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disableResourceVersioning;
 
   /**
+   * Optional. Whether to allow the [ImportResourcesHistory] and [ExecuteBundle] APIs to accept
+   * history bundles, and directly insert and overwrite historical resource versions into the FHIR
+   * store. Importing resource histories creates resource interactions that have occurred in the
+   * past that clients might not allow. If set to false, using history bundles fail with an error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableHistoryModifications;
+
+  /**
    * Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir
    * /capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This
    * determines if the client can use an Update operation to create a new resource with a client-
@@ -301,6 +311,29 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    */
   public FhirStore setDisableResourceVersioning(java.lang.Boolean disableResourceVersioning) {
     this.disableResourceVersioning = disableResourceVersioning;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to allow the [ImportResourcesHistory] and [ExecuteBundle] APIs to accept
+   * history bundles, and directly insert and overwrite historical resource versions into the FHIR
+   * store. Importing resource histories creates resource interactions that have occurred in the
+   * past that clients might not allow. If set to false, using history bundles fail with an error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableHistoryModifications() {
+    return enableHistoryModifications;
+  }
+
+  /**
+   * Optional. Whether to allow the [ImportResourcesHistory] and [ExecuteBundle] APIs to accept
+   * history bundles, and directly insert and overwrite historical resource versions into the FHIR
+   * store. Importing resource histories creates resource interactions that have occurred in the
+   * past that clients might not allow. If set to false, using history bundles fail with an error.
+   * @param enableHistoryModifications enableHistoryModifications or {@code null} for none
+   */
+  public FhirStore setEnableHistoryModifications(java.lang.Boolean enableHistoryModifications) {
+    this.enableHistoryModifications = enableHistoryModifications;
     return this;
   }
 

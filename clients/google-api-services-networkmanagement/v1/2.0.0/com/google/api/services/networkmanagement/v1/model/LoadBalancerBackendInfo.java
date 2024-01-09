@@ -31,14 +31,6 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class LoadBalancerBackendInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Display name of the backend. For example, it might be an instance name for the instance group
-   * backends, or an IP address and port for zonal network endpoint group backends.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String backendDisplayName;
-
-  /**
    * URI of the backend service this backend belongs to (if applicable).
    * The value may be {@code null}.
    */
@@ -46,15 +38,15 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   private java.lang.String backendServiceUri;
 
   /**
-   * Output only. Health check configuration state for the backend. This is a result of the static
-   * firewall analysis (verifying that health check traffic from required IP ranges to the backend
-   * is allowed or not). The backend might still be unhealthy even if these firewalls are
-   * configured. Please refer to the documentation for more information: https://cloud.google.com
-   * /load-balancing/docs/firewall-rules
+   * Output only. Health check firewalls configuration state for the backend. This is a result of
+   * the static firewall analysis (verifying that health check traffic from required IP ranges to
+   * the backend is allowed or not). The backend might still be unhealthy even if these firewalls
+   * are configured. Please refer to the documentation for more information:
+   * https://cloud.google.com/load-balancing/docs/firewall-rules
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String healthCheckConfigState;
+  private java.lang.String healthCheckFirewallsConfigState;
 
   /**
    * URI of the health check attached to this backend (if applicable).
@@ -79,30 +71,19 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   private java.lang.String instanceUri;
 
   /**
+   * Display name of the backend. For example, it might be an instance name for the instance group
+   * backends, or an IP address and port for zonal network endpoint group backends.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * URI of the network endpoint group this backend belongs to (if applicable).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkEndpointGroupUri;
-
-  /**
-   * Display name of the backend. For example, it might be an instance name for the instance group
-   * backends, or an IP address and port for zonal network endpoint group backends.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBackendDisplayName() {
-    return backendDisplayName;
-  }
-
-  /**
-   * Display name of the backend. For example, it might be an instance name for the instance group
-   * backends, or an IP address and port for zonal network endpoint group backends.
-   * @param backendDisplayName backendDisplayName or {@code null} for none
-   */
-  public LoadBalancerBackendInfo setBackendDisplayName(java.lang.String backendDisplayName) {
-    this.backendDisplayName = backendDisplayName;
-    return this;
-  }
 
   /**
    * URI of the backend service this backend belongs to (if applicable).
@@ -122,27 +103,27 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Health check configuration state for the backend. This is a result of the static
-   * firewall analysis (verifying that health check traffic from required IP ranges to the backend
-   * is allowed or not). The backend might still be unhealthy even if these firewalls are
-   * configured. Please refer to the documentation for more information: https://cloud.google.com
-   * /load-balancing/docs/firewall-rules
+   * Output only. Health check firewalls configuration state for the backend. This is a result of
+   * the static firewall analysis (verifying that health check traffic from required IP ranges to
+   * the backend is allowed or not). The backend might still be unhealthy even if these firewalls
+   * are configured. Please refer to the documentation for more information:
+   * https://cloud.google.com/load-balancing/docs/firewall-rules
    * @return value or {@code null} for none
    */
-  public java.lang.String getHealthCheckConfigState() {
-    return healthCheckConfigState;
+  public java.lang.String getHealthCheckFirewallsConfigState() {
+    return healthCheckFirewallsConfigState;
   }
 
   /**
-   * Output only. Health check configuration state for the backend. This is a result of the static
-   * firewall analysis (verifying that health check traffic from required IP ranges to the backend
-   * is allowed or not). The backend might still be unhealthy even if these firewalls are
-   * configured. Please refer to the documentation for more information: https://cloud.google.com
-   * /load-balancing/docs/firewall-rules
-   * @param healthCheckConfigState healthCheckConfigState or {@code null} for none
+   * Output only. Health check firewalls configuration state for the backend. This is a result of
+   * the static firewall analysis (verifying that health check traffic from required IP ranges to
+   * the backend is allowed or not). The backend might still be unhealthy even if these firewalls
+   * are configured. Please refer to the documentation for more information:
+   * https://cloud.google.com/load-balancing/docs/firewall-rules
+   * @param healthCheckFirewallsConfigState healthCheckFirewallsConfigState or {@code null} for none
    */
-  public LoadBalancerBackendInfo setHealthCheckConfigState(java.lang.String healthCheckConfigState) {
-    this.healthCheckConfigState = healthCheckConfigState;
+  public LoadBalancerBackendInfo setHealthCheckFirewallsConfigState(java.lang.String healthCheckFirewallsConfigState) {
+    this.healthCheckFirewallsConfigState = healthCheckFirewallsConfigState;
     return this;
   }
 
@@ -196,6 +177,25 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
    */
   public LoadBalancerBackendInfo setInstanceUri(java.lang.String instanceUri) {
     this.instanceUri = instanceUri;
+    return this;
+  }
+
+  /**
+   * Display name of the backend. For example, it might be an instance name for the instance group
+   * backends, or an IP address and port for zonal network endpoint group backends.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Display name of the backend. For example, it might be an instance name for the instance group
+   * backends, or an IP address and port for zonal network endpoint group backends.
+   * @param name name or {@code null} for none
+   */
+  public LoadBalancerBackendInfo setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

@@ -32,7 +32,7 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class FirewallInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Possible values: ALLOW, DENY
+   * Possible values: ALLOW, DENY, APPLY_SECURITY_PROFILE_GROUP
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String uri;
 
   /**
-   * Possible values: ALLOW, DENY
+   * Possible values: ALLOW, DENY, APPLY_SECURITY_PROFILE_GROUP
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -115,7 +115,7 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Possible values: ALLOW, DENY
+   * Possible values: ALLOW, DENY, APPLY_SECURITY_PROFILE_GROUP
    * @param action action or {@code null} for none
    */
   public FirewallInfo setAction(java.lang.String action) {

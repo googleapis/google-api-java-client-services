@@ -44,6 +44,13 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeResponse extends c
   }
 
   /**
+   * The rewritten query used to search knowledge.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rewrittenQuery;
+
+  /**
    * Most relevant snippets extracted from articles in the given knowledge base, ordered by
    * confidence.
    * @return value or {@code null} for none
@@ -59,6 +66,23 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeResponse extends c
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeResponse setAnswers(java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer> answers) {
     this.answers = answers;
+    return this;
+  }
+
+  /**
+   * The rewritten query used to search knowledge.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRewrittenQuery() {
+    return rewrittenQuery;
+  }
+
+  /**
+   * The rewritten query used to search knowledge.
+   * @param rewrittenQuery rewrittenQuery or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SearchKnowledgeResponse setRewrittenQuery(java.lang.String rewrittenQuery) {
+    this.rewrittenQuery = rewrittenQuery;
     return this;
   }
 

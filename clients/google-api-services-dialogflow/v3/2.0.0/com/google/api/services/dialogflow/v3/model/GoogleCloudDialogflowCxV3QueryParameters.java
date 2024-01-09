@@ -135,9 +135,9 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
   private java.util.List<GoogleCloudDialogflowCxV3SessionEntityType> sessionEntityTypes;
 
   /**
-   * Optional. Sets Dialogflow session life time. By default, a Dialogflow session remains active
-   * and its data is stored for 30 minutes after the last request is sent for the session. This
-   * value should be no longer than 1 day.
+   * Optional. Configure lifetime of the Dialogflow session. By default, a Dialogflow session
+   * remains active and its data is stored for 30 minutes after the last request is sent for the
+   * session. This value should be no longer than 1 day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -408,9 +408,9 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
   }
 
   /**
-   * Optional. Sets Dialogflow session life time. By default, a Dialogflow session remains active
-   * and its data is stored for 30 minutes after the last request is sent for the session. This
-   * value should be no longer than 1 day.
+   * Optional. Configure lifetime of the Dialogflow session. By default, a Dialogflow session
+   * remains active and its data is stored for 30 minutes after the last request is sent for the
+   * session. This value should be no longer than 1 day.
    * @return value or {@code null} for none
    */
   public String getSessionTtl() {
@@ -418,9 +418,9 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
   }
 
   /**
-   * Optional. Sets Dialogflow session life time. By default, a Dialogflow session remains active
-   * and its data is stored for 30 minutes after the last request is sent for the session. This
-   * value should be no longer than 1 day.
+   * Optional. Configure lifetime of the Dialogflow session. By default, a Dialogflow session
+   * remains active and its data is stored for 30 minutes after the last request is sent for the
+   * session. This value should be no longer than 1 day.
    * @param sessionTtl sessionTtl or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryParameters setSessionTtl(String sessionTtl) {

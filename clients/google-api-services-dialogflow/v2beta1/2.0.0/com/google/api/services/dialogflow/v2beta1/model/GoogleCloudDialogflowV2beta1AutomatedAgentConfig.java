@@ -45,9 +45,9 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfig extends com.
   private java.lang.String agent;
 
   /**
-   * Optional. Sets Dialogflow CX session life time. By default, a Dialogflow CX session remains
-   * active and its data is stored for 30 minutes after the last request is sent for the session.
-   * This value should be no longer than 1 day.
+   * Optional. Configure lifetime of the Dialogflow session. By default, a Dialogflow CX session
+   * remains active and its data is stored for 30 minutes after the last request is sent for the
+   * session. This value should be no longer than 1 day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +87,9 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfig extends com.
   }
 
   /**
-   * Optional. Sets Dialogflow CX session life time. By default, a Dialogflow CX session remains
-   * active and its data is stored for 30 minutes after the last request is sent for the session.
-   * This value should be no longer than 1 day.
+   * Optional. Configure lifetime of the Dialogflow session. By default, a Dialogflow CX session
+   * remains active and its data is stored for 30 minutes after the last request is sent for the
+   * session. This value should be no longer than 1 day.
    * @return value or {@code null} for none
    */
   public String getSessionTtl() {
@@ -97,9 +97,9 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfig extends com.
   }
 
   /**
-   * Optional. Sets Dialogflow CX session life time. By default, a Dialogflow CX session remains
-   * active and its data is stored for 30 minutes after the last request is sent for the session.
-   * This value should be no longer than 1 day.
+   * Optional. Configure lifetime of the Dialogflow session. By default, a Dialogflow CX session
+   * remains active and its data is stored for 30 minutes after the last request is sent for the
+   * session. This value should be no longer than 1 day.
    * @param sessionTtl sessionTtl or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentConfig setSessionTtl(String sessionTtl) {

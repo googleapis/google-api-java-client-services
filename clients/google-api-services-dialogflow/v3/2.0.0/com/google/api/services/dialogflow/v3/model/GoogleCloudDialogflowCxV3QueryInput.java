@@ -20,7 +20,7 @@ package com.google.api.services.dialogflow.v3.model;
  * Represents the query input. It can contain one of: 1. A conversational query in the form of text.
  * 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be
  * processed. 4. An event to be triggered. 5. DTMF digits to invoke an intent and fill in parameter
- * value.
+ * value. 6. The results of a tool executed by the client.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

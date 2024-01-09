@@ -47,6 +47,13 @@ public final class GoogleCloudDialogflowCxV3beta1Page extends com.google.api.cli
   private GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings;
 
   /**
+   * The description of the page. The maximum length is 500 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Required. The human-readable name of the page, unique within the flow.
    * The value may be {@code null}.
    */
@@ -141,6 +148,23 @@ public final class GoogleCloudDialogflowCxV3beta1Page extends com.google.api.cli
    */
   public GoogleCloudDialogflowCxV3beta1Page setAdvancedSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings) {
     this.advancedSettings = advancedSettings;
+    return this;
+  }
+
+  /**
+   * The description of the page. The maximum length is 500 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * The description of the page. The maximum length is 500 characters.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Page setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

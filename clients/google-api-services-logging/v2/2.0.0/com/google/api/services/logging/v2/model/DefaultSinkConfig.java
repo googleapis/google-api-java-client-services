@@ -42,8 +42,8 @@ public final class DefaultSinkConfig extends com.google.api.client.json.GenericJ
    * Optional. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-
    * queries). The only exported log entries are those that are in the resource owning the sink and
    * that match the filter.For example:logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND
-   * severity>=ERRORCannot be empty or unset if mode == OVERWRITE. In order to match all logs, use
-   * the following line as the value of filter and do not use exclusions:logName:*
+   * severity>=ERRORTo match all logs, don't add exclusions and use the following line as the value
+   * of filter:logName:*Cannot be empty or unset when the value of mode is OVERWRITE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,8 @@ public final class DefaultSinkConfig extends com.google.api.client.json.GenericJ
    * Optional. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-
    * queries). The only exported log entries are those that are in the resource owning the sink and
    * that match the filter.For example:logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND
-   * severity>=ERRORCannot be empty or unset if mode == OVERWRITE. In order to match all logs, use
-   * the following line as the value of filter and do not use exclusions:logName:*
+   * severity>=ERRORTo match all logs, don't add exclusions and use the following line as the value
+   * of filter:logName:*Cannot be empty or unset when the value of mode is OVERWRITE.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -92,8 +92,8 @@ public final class DefaultSinkConfig extends com.google.api.client.json.GenericJ
    * Optional. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-
    * queries). The only exported log entries are those that are in the resource owning the sink and
    * that match the filter.For example:logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND
-   * severity>=ERRORCannot be empty or unset if mode == OVERWRITE. In order to match all logs, use
-   * the following line as the value of filter and do not use exclusions:logName:*
+   * severity>=ERRORTo match all logs, don't add exclusions and use the following line as the value
+   * of filter:logName:*Cannot be empty or unset when the value of mode is OVERWRITE.
    * @param filter filter or {@code null} for none
    */
   public DefaultSinkConfig setFilter(java.lang.String filter) {

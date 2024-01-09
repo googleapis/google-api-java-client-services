@@ -4624,10 +4624,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Updates a view on a log bucket. This method replaces the following fields in the existing view
-           * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
-           * system is not in a state where it can update the view. If this occurs, please try again in a few
-           * minutes.
+           * Updates a view on a log bucket. This method replaces the value of the filter field from the
+           * existing view with the corresponding value from the new view. If an UNAVAILABLE error is
+           * returned, this indicates that system is not in a state where it can update the view. If this
+           * occurs, please try again in a few minutes.
            *
            * Create a request for the method "views.patch".
            *
@@ -4654,10 +4654,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Updates a view on a log bucket. This method replaces the following fields in the existing view
-             * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
-             * system is not in a state where it can update the view. If this occurs, please try again in a
-             * few minutes.
+             * Updates a view on a log bucket. This method replaces the value of the filter field from the
+             * existing view with the corresponding value from the new view. If an UNAVAILABLE error is
+             * returned, this indicates that system is not in a state where it can update the view. If this
+             * occurs, please try again in a few minutes.
              *
              * Create a request for the method "views.patch".
              *
@@ -5998,7 +5998,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * the saved query's resource name.If the saved_query_id is not provided, the system will
            * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
            * include only the following characters: upper and lower-case alphanumeric characters,
-           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           * underscores, hyphens, periods.First character has to be alphanumeric.
            */
           @com.google.api.client.util.Key
           private java.lang.String savedQueryId;
@@ -6006,7 +6006,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /** Optional. The ID to use for the saved query, which will become the final component of the saved
          query's resource name.If the saved_query_id is not provided, the system will generate an
          alphanumeric ID.The saved_query_id is limited to 100 characters and can include only the following
-         characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First
+         characters: upper and lower-case alphanumeric characters, underscores, hyphens, periods.First
          character has to be alphanumeric.
            */
           public java.lang.String getSavedQueryId() {
@@ -6018,7 +6018,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * the saved query's resource name.If the saved_query_id is not provided, the system will
            * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
            * include only the following characters: upper and lower-case alphanumeric characters,
-           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           * underscores, hyphens, periods.First character has to be alphanumeric.
            */
           public Create setSavedQueryId(java.lang.String savedQueryId) {
             this.savedQueryId = savedQueryId;
@@ -7604,9 +7604,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
-       * the unique_writer_identity field.
+       * Updates a sink. This method replaces the values of the destination and filter fields of the
+       * existing sink with the corresponding values from the new sink.The updated sink might also have a
+       * new writer_identity; see the unique_writer_identity field.
        *
        * Create a request for the method "sinks.patch".
        *
@@ -7635,9 +7635,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+/sinks/[^/]+$");
 
         /**
-         * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
-         * see the unique_writer_identity field.
+         * Updates a sink. This method replaces the values of the destination and filter fields of the
+         * existing sink with the corresponding values from the new sink.The updated sink might also have
+         * a new writer_identity; see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.patch".
          *
@@ -7871,9 +7871,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
-       * the unique_writer_identity field.
+       * Updates a sink. This method replaces the values of the destination and filter fields of the
+       * existing sink with the corresponding values from the new sink.The updated sink might also have a
+       * new writer_identity; see the unique_writer_identity field.
        *
        * Create a request for the method "sinks.update".
        *
@@ -7902,9 +7902,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+/sinks/[^/]+$");
 
         /**
-         * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
-         * see the unique_writer_identity field.
+         * Updates a sink. This method replaces the values of the destination and filter fields of the
+         * existing sink with the corresponding values from the new sink.The updated sink might also have
+         * a new writer_identity; see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.update".
          *
@@ -9822,12 +9822,13 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     }
     /**
      * Updates the settings for the given resource. This method applies to all feature configurations
-     * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
-     * associated service account does not have the required roles/cloudkms.cryptoKeyEncrypterDecrypter
-     * role assigned for the key, 3) access to the key is disabled, 4) storage_location is not supported
-     * by Logging, 5) storage_location violates the location OrgPolicy, or 6) default_sink_config is set
-     * but has an unspecified filter write mode.See Configure default settings for organizations and
-     * folders (https://cloud.google.com/logging/docs/default-settings) for more information.
+     * for organization and folders.UpdateSettings fails when any of the following are true: The value
+     * of storage_location either isn't supported by Logging or violates the location OrgPolicy. The
+     * default_sink_config field is set, but it has an unspecified filter write mode. The value of
+     * kms_key_name is invalid. The associated service account doesn't have the required
+     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
+     * disabled.See Configure default settings for organizations and folders
+     * (https://cloud.google.com/logging/docs/default-settings) for more information.
      *
      * Create a request for the method "folders.updateSettings".
      *
@@ -9854,12 +9855,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Updates the settings for the given resource. This method applies to all feature configurations
-       * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
-       * associated service account does not have the required
-       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, 3) access to the key is
-       * disabled, 4) storage_location is not supported by Logging, 5) storage_location violates the
-       * location OrgPolicy, or 6) default_sink_config is set but has an unspecified filter write
-       * mode.See Configure default settings for organizations and folders
+       * for organization and folders.UpdateSettings fails when any of the following are true: The value
+       * of storage_location either isn't supported by Logging or violates the location OrgPolicy. The
+       * default_sink_config field is set, but it has an unspecified filter write mode. The value of
+       * kms_key_name is invalid. The associated service account doesn't have the required
+       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
+       * disabled.See Configure default settings for organizations and folders
        * (https://cloud.google.com/logging/docs/default-settings) for more information.
        *
        * Create a request for the method "folders.updateSettings".
@@ -14126,10 +14127,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Updates a view on a log bucket. This method replaces the following fields in the existing view
-           * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
-           * system is not in a state where it can update the view. If this occurs, please try again in a few
-           * minutes.
+           * Updates a view on a log bucket. This method replaces the value of the filter field from the
+           * existing view with the corresponding value from the new view. If an UNAVAILABLE error is
+           * returned, this indicates that system is not in a state where it can update the view. If this
+           * occurs, please try again in a few minutes.
            *
            * Create a request for the method "views.patch".
            *
@@ -14156,10 +14157,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Updates a view on a log bucket. This method replaces the following fields in the existing view
-             * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
-             * system is not in a state where it can update the view. If this occurs, please try again in a
-             * few minutes.
+             * Updates a view on a log bucket. This method replaces the value of the filter field from the
+             * existing view with the corresponding value from the new view. If an UNAVAILABLE error is
+             * returned, this indicates that system is not in a state where it can update the view. If this
+             * occurs, please try again in a few minutes.
              *
              * Create a request for the method "views.patch".
              *
@@ -15500,7 +15501,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * the saved query's resource name.If the saved_query_id is not provided, the system will
            * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
            * include only the following characters: upper and lower-case alphanumeric characters,
-           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           * underscores, hyphens, periods.First character has to be alphanumeric.
            */
           @com.google.api.client.util.Key
           private java.lang.String savedQueryId;
@@ -15508,7 +15509,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /** Optional. The ID to use for the saved query, which will become the final component of the saved
          query's resource name.If the saved_query_id is not provided, the system will generate an
          alphanumeric ID.The saved_query_id is limited to 100 characters and can include only the following
-         characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First
+         characters: upper and lower-case alphanumeric characters, underscores, hyphens, periods.First
          character has to be alphanumeric.
            */
           public java.lang.String getSavedQueryId() {
@@ -15520,7 +15521,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * the saved query's resource name.If the saved_query_id is not provided, the system will
            * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
            * include only the following characters: upper and lower-case alphanumeric characters,
-           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           * underscores, hyphens, periods.First character has to be alphanumeric.
            */
           public Create setSavedQueryId(java.lang.String savedQueryId) {
             this.savedQueryId = savedQueryId;
@@ -17106,9 +17107,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
-       * the unique_writer_identity field.
+       * Updates a sink. This method replaces the values of the destination and filter fields of the
+       * existing sink with the corresponding values from the new sink.The updated sink might also have a
+       * new writer_identity; see the unique_writer_identity field.
        *
        * Create a request for the method "sinks.patch".
        *
@@ -17137,9 +17138,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^folders/[^/]+/sinks/[^/]+$");
 
         /**
-         * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
-         * see the unique_writer_identity field.
+         * Updates a sink. This method replaces the values of the destination and filter fields of the
+         * existing sink with the corresponding values from the new sink.The updated sink might also have
+         * a new writer_identity; see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.patch".
          *
@@ -17373,9 +17374,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
-       * the unique_writer_identity field.
+       * Updates a sink. This method replaces the values of the destination and filter fields of the
+       * existing sink with the corresponding values from the new sink.The updated sink might also have a
+       * new writer_identity; see the unique_writer_identity field.
        *
        * Create a request for the method "sinks.update".
        *
@@ -17404,9 +17405,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^folders/[^/]+/sinks/[^/]+$");
 
         /**
-         * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
-         * see the unique_writer_identity field.
+         * Updates a sink. This method replaces the values of the destination and filter fields of the
+         * existing sink with the corresponding values from the new sink.The updated sink might also have
+         * a new writer_identity; see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.update".
          *
@@ -20878,10 +20879,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Updates a view on a log bucket. This method replaces the following fields in the existing view
-         * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
-         * system is not in a state where it can update the view. If this occurs, please try again in a few
-         * minutes.
+         * Updates a view on a log bucket. This method replaces the value of the filter field from the
+         * existing view with the corresponding value from the new view. If an UNAVAILABLE error is
+         * returned, this indicates that system is not in a state where it can update the view. If this
+         * occurs, please try again in a few minutes.
          *
          * Create a request for the method "views.patch".
          *
@@ -20908,10 +20909,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
           /**
-           * Updates a view on a log bucket. This method replaces the following fields in the existing view
-           * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
-           * system is not in a state where it can update the view. If this occurs, please try again in a
-           * few minutes.
+           * Updates a view on a log bucket. This method replaces the value of the filter field from the
+           * existing view with the corresponding value from the new view. If an UNAVAILABLE error is
+           * returned, this indicates that system is not in a state where it can update the view. If this
+           * occurs, please try again in a few minutes.
            *
            * Create a request for the method "views.patch".
            *
@@ -22532,11 +22533,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Updates the Log Router CMEK settings for the given resource.Note: CMEK for the Log Router can
      * currently only be configured for Google Cloud organizations. Once configured, it applies to all
-     * projects and folders in the Google Cloud organization.UpdateCmekSettings will fail if 1)
-     * kms_key_name is invalid, or 2) the associated service account does not have the required
-     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
-     * disabled.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-
-     * encryption) for more information.
+     * projects and folders in the Google Cloud organization.UpdateCmekSettings fails when any of the
+     * following are true: The value of kms_key_name is invalid. The associated service account doesn't
+     * have the required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to
+     * the key is disabled.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "organizations.updateCmekSettings".
      *
@@ -22568,11 +22569,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Updates the Log Router CMEK settings for the given resource.Note: CMEK for the Log Router can
        * currently only be configured for Google Cloud organizations. Once configured, it applies to all
-       * projects and folders in the Google Cloud organization.UpdateCmekSettings will fail if 1)
-       * kms_key_name is invalid, or 2) the associated service account does not have the required
-       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
-       * is disabled.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-       * /managed-encryption) for more information.
+       * projects and folders in the Google Cloud organization.UpdateCmekSettings fails when any of the
+       * following are true: The value of kms_key_name is invalid. The associated service account
+       * doesn't have the required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key.
+       * Access to the key is disabled.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "organizations.updateCmekSettings".
        *
@@ -22728,12 +22729,13 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     }
     /**
      * Updates the settings for the given resource. This method applies to all feature configurations
-     * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
-     * associated service account does not have the required roles/cloudkms.cryptoKeyEncrypterDecrypter
-     * role assigned for the key, 3) access to the key is disabled, 4) storage_location is not supported
-     * by Logging, 5) storage_location violates the location OrgPolicy, or 6) default_sink_config is set
-     * but has an unspecified filter write mode.See Configure default settings for organizations and
-     * folders (https://cloud.google.com/logging/docs/default-settings) for more information.
+     * for organization and folders.UpdateSettings fails when any of the following are true: The value
+     * of storage_location either isn't supported by Logging or violates the location OrgPolicy. The
+     * default_sink_config field is set, but it has an unspecified filter write mode. The value of
+     * kms_key_name is invalid. The associated service account doesn't have the required
+     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
+     * disabled.See Configure default settings for organizations and folders
+     * (https://cloud.google.com/logging/docs/default-settings) for more information.
      *
      * Create a request for the method "organizations.updateSettings".
      *
@@ -22760,12 +22762,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Updates the settings for the given resource. This method applies to all feature configurations
-       * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
-       * associated service account does not have the required
-       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, 3) access to the key is
-       * disabled, 4) storage_location is not supported by Logging, 5) storage_location violates the
-       * location OrgPolicy, or 6) default_sink_config is set but has an unspecified filter write
-       * mode.See Configure default settings for organizations and folders
+       * for organization and folders.UpdateSettings fails when any of the following are true: The value
+       * of storage_location either isn't supported by Logging or violates the location OrgPolicy. The
+       * default_sink_config field is set, but it has an unspecified filter write mode. The value of
+       * kms_key_name is invalid. The associated service account doesn't have the required
+       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
+       * disabled.See Configure default settings for organizations and folders
        * (https://cloud.google.com/logging/docs/default-settings) for more information.
        *
        * Create a request for the method "organizations.updateSettings".
@@ -27032,10 +27034,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Updates a view on a log bucket. This method replaces the following fields in the existing view
-           * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
-           * system is not in a state where it can update the view. If this occurs, please try again in a few
-           * minutes.
+           * Updates a view on a log bucket. This method replaces the value of the filter field from the
+           * existing view with the corresponding value from the new view. If an UNAVAILABLE error is
+           * returned, this indicates that system is not in a state where it can update the view. If this
+           * occurs, please try again in a few minutes.
            *
            * Create a request for the method "views.patch".
            *
@@ -27062,10 +27064,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Updates a view on a log bucket. This method replaces the following fields in the existing view
-             * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
-             * system is not in a state where it can update the view. If this occurs, please try again in a
-             * few minutes.
+             * Updates a view on a log bucket. This method replaces the value of the filter field from the
+             * existing view with the corresponding value from the new view. If an UNAVAILABLE error is
+             * returned, this indicates that system is not in a state where it can update the view. If this
+             * occurs, please try again in a few minutes.
              *
              * Create a request for the method "views.patch".
              *
@@ -28406,7 +28408,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * the saved query's resource name.If the saved_query_id is not provided, the system will
            * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
            * include only the following characters: upper and lower-case alphanumeric characters,
-           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           * underscores, hyphens, periods.First character has to be alphanumeric.
            */
           @com.google.api.client.util.Key
           private java.lang.String savedQueryId;
@@ -28414,7 +28416,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /** Optional. The ID to use for the saved query, which will become the final component of the saved
          query's resource name.If the saved_query_id is not provided, the system will generate an
          alphanumeric ID.The saved_query_id is limited to 100 characters and can include only the following
-         characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First
+         characters: upper and lower-case alphanumeric characters, underscores, hyphens, periods.First
          character has to be alphanumeric.
            */
           public java.lang.String getSavedQueryId() {
@@ -28426,7 +28428,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * the saved query's resource name.If the saved_query_id is not provided, the system will
            * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
            * include only the following characters: upper and lower-case alphanumeric characters,
-           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           * underscores, hyphens, periods.First character has to be alphanumeric.
            */
           public Create setSavedQueryId(java.lang.String savedQueryId) {
             this.savedQueryId = savedQueryId;
@@ -30012,9 +30014,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
-       * the unique_writer_identity field.
+       * Updates a sink. This method replaces the values of the destination and filter fields of the
+       * existing sink with the corresponding values from the new sink.The updated sink might also have a
+       * new writer_identity; see the unique_writer_identity field.
        *
        * Create a request for the method "sinks.patch".
        *
@@ -30043,9 +30045,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^organizations/[^/]+/sinks/[^/]+$");
 
         /**
-         * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
-         * see the unique_writer_identity field.
+         * Updates a sink. This method replaces the values of the destination and filter fields of the
+         * existing sink with the corresponding values from the new sink.The updated sink might also have
+         * a new writer_identity; see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.patch".
          *
@@ -30279,9 +30281,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
-       * the unique_writer_identity field.
+       * Updates a sink. This method replaces the values of the destination and filter fields of the
+       * existing sink with the corresponding values from the new sink.The updated sink might also have a
+       * new writer_identity; see the unique_writer_identity field.
        *
        * Create a request for the method "sinks.update".
        *
@@ -30310,9 +30312,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^organizations/[^/]+/sinks/[^/]+$");
 
         /**
-         * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
-         * see the unique_writer_identity field.
+         * Updates a sink. This method replaces the values of the destination and filter fields of the
+         * existing sink with the corresponding values from the new sink.The updated sink might also have
+         * a new writer_identity; see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.update".
          *
@@ -35040,10 +35042,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Updates a view on a log bucket. This method replaces the following fields in the existing view
-           * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
-           * system is not in a state where it can update the view. If this occurs, please try again in a few
-           * minutes.
+           * Updates a view on a log bucket. This method replaces the value of the filter field from the
+           * existing view with the corresponding value from the new view. If an UNAVAILABLE error is
+           * returned, this indicates that system is not in a state where it can update the view. If this
+           * occurs, please try again in a few minutes.
            *
            * Create a request for the method "views.patch".
            *
@@ -35070,10 +35072,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Updates a view on a log bucket. This method replaces the following fields in the existing view
-             * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
-             * system is not in a state where it can update the view. If this occurs, please try again in a
-             * few minutes.
+             * Updates a view on a log bucket. This method replaces the value of the filter field from the
+             * existing view with the corresponding value from the new view. If an UNAVAILABLE error is
+             * returned, this indicates that system is not in a state where it can update the view. If this
+             * occurs, please try again in a few minutes.
              *
              * Create a request for the method "views.patch".
              *
@@ -36414,7 +36416,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * the saved query's resource name.If the saved_query_id is not provided, the system will
            * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
            * include only the following characters: upper and lower-case alphanumeric characters,
-           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           * underscores, hyphens, periods.First character has to be alphanumeric.
            */
           @com.google.api.client.util.Key
           private java.lang.String savedQueryId;
@@ -36422,7 +36424,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /** Optional. The ID to use for the saved query, which will become the final component of the saved
          query's resource name.If the saved_query_id is not provided, the system will generate an
          alphanumeric ID.The saved_query_id is limited to 100 characters and can include only the following
-         characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First
+         characters: upper and lower-case alphanumeric characters, underscores, hyphens, periods.First
          character has to be alphanumeric.
            */
           public java.lang.String getSavedQueryId() {
@@ -36434,7 +36436,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * the saved query's resource name.If the saved_query_id is not provided, the system will
            * generate an alphanumeric ID.The saved_query_id is limited to 100 characters and can
            * include only the following characters: upper and lower-case alphanumeric characters,
-           * underscores, hyphens, and periods. First character has to be alphanumeric.
+           * underscores, hyphens, periods.First character has to be alphanumeric.
            */
           public Create setSavedQueryId(java.lang.String savedQueryId) {
             this.savedQueryId = savedQueryId;
@@ -38795,9 +38797,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
-       * the unique_writer_identity field.
+       * Updates a sink. This method replaces the values of the destination and filter fields of the
+       * existing sink with the corresponding values from the new sink.The updated sink might also have a
+       * new writer_identity; see the unique_writer_identity field.
        *
        * Create a request for the method "sinks.patch".
        *
@@ -38826,9 +38828,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/sinks/[^/]+$");
 
         /**
-         * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
-         * see the unique_writer_identity field.
+         * Updates a sink. This method replaces the values of the destination and filter fields of the
+         * existing sink with the corresponding values from the new sink.The updated sink might also have
+         * a new writer_identity; see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.patch".
          *
@@ -39062,9 +39064,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
-       * the unique_writer_identity field.
+       * Updates a sink. This method replaces the values of the destination and filter fields of the
+       * existing sink with the corresponding values from the new sink.The updated sink might also have a
+       * new writer_identity; see the unique_writer_identity field.
        *
        * Create a request for the method "sinks.update".
        *
@@ -39093,9 +39095,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/sinks/[^/]+$");
 
         /**
-         * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
-         * see the unique_writer_identity field.
+         * Updates a sink. This method replaces the values of the destination and filter fields of the
+         * existing sink with the corresponding values from the new sink.The updated sink might also have
+         * a new writer_identity; see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.update".
          *
@@ -40087,9 +40089,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Updates a sink. This method replaces the following fields in the existing sink with values from
-     * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
-     * the unique_writer_identity field.
+     * Updates a sink. This method replaces the values of the destination and filter fields of the
+     * existing sink with the corresponding values from the new sink.The updated sink might also have a
+     * new writer_identity; see the unique_writer_identity field.
      *
      * Create a request for the method "sinks.update".
      *
@@ -40118,9 +40120,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/sinks/[^/]+$");
 
       /**
-       * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
-       * see the unique_writer_identity field.
+       * Updates a sink. This method replaces the values of the destination and filter fields of the
+       * existing sink with the corresponding values from the new sink.The updated sink might also have
+       * a new writer_identity; see the unique_writer_identity field.
        *
        * Create a request for the method "sinks.update".
        *
@@ -40723,11 +40725,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Updates the Log Router CMEK settings for the given resource.Note: CMEK for the Log Router can
      * currently only be configured for Google Cloud organizations. Once configured, it applies to all
-     * projects and folders in the Google Cloud organization.UpdateCmekSettings will fail if 1)
-     * kms_key_name is invalid, or 2) the associated service account does not have the required
-     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
-     * disabled.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing/managed-
-     * encryption) for more information.
+     * projects and folders in the Google Cloud organization.UpdateCmekSettings fails when any of the
+     * following are true: The value of kms_key_name is invalid. The associated service account doesn't
+     * have the required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to
+     * the key is disabled.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "v2.updateCmekSettings".
      *
@@ -40759,11 +40761,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Updates the Log Router CMEK settings for the given resource.Note: CMEK for the Log Router can
        * currently only be configured for Google Cloud organizations. Once configured, it applies to all
-       * projects and folders in the Google Cloud organization.UpdateCmekSettings will fail if 1)
-       * kms_key_name is invalid, or 2) the associated service account does not have the required
-       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
-       * is disabled.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-       * /managed-encryption) for more information.
+       * projects and folders in the Google Cloud organization.UpdateCmekSettings fails when any of the
+       * following are true: The value of kms_key_name is invalid. The associated service account
+       * doesn't have the required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key.
+       * Access to the key is disabled.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "v2.updateCmekSettings".
        *
@@ -40919,12 +40921,13 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     }
     /**
      * Updates the settings for the given resource. This method applies to all feature configurations
-     * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
-     * associated service account does not have the required roles/cloudkms.cryptoKeyEncrypterDecrypter
-     * role assigned for the key, 3) access to the key is disabled, 4) storage_location is not supported
-     * by Logging, 5) storage_location violates the location OrgPolicy, or 6) default_sink_config is set
-     * but has an unspecified filter write mode.See Configure default settings for organizations and
-     * folders (https://cloud.google.com/logging/docs/default-settings) for more information.
+     * for organization and folders.UpdateSettings fails when any of the following are true: The value
+     * of storage_location either isn't supported by Logging or violates the location OrgPolicy. The
+     * default_sink_config field is set, but it has an unspecified filter write mode. The value of
+     * kms_key_name is invalid. The associated service account doesn't have the required
+     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
+     * disabled.See Configure default settings for organizations and folders
+     * (https://cloud.google.com/logging/docs/default-settings) for more information.
      *
      * Create a request for the method "v2.updateSettings".
      *
@@ -40951,12 +40954,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Updates the settings for the given resource. This method applies to all feature configurations
-       * for organization and folders.UpdateSettings will fail if 1) kms_key_name is invalid, 2) the
-       * associated service account does not have the required
-       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, 3) access to the key is
-       * disabled, 4) storage_location is not supported by Logging, 5) storage_location violates the
-       * location OrgPolicy, or 6) default_sink_config is set but has an unspecified filter write
-       * mode.See Configure default settings for organizations and folders
+       * for organization and folders.UpdateSettings fails when any of the following are true: The value
+       * of storage_location either isn't supported by Logging or violates the location OrgPolicy. The
+       * default_sink_config field is set, but it has an unspecified filter write mode. The value of
+       * kms_key_name is invalid. The associated service account doesn't have the required
+       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
+       * disabled.See Configure default settings for organizations and folders
        * (https://cloud.google.com/logging/docs/default-settings) for more information.
        *
        * Create a request for the method "v2.updateSettings".

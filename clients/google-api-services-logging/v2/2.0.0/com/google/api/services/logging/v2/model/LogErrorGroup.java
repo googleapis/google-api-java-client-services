@@ -31,10 +31,10 @@ public final class LogErrorGroup extends com.google.api.client.json.GenericJson 
 
   /**
    * The id is a unique identifier for a particular error group; it is the last part of the error
-   * group resource name: /projects//errors/. Example: COShysOX0r_51QE The id is derived from key
-   * parts of the error-log content and is treated as Service Data. For information about how
-   * Service Data is handled, see Google Cloud Privacy Notice (https://cloud.google.com/terms/cloud-
-   * privacy-notice).
+   * group resource name: /project/[PROJECT_ID]/errors/[ERROR_GROUP_ID]. Example: COShysOX0r_51QE.
+   * The id is derived from key parts of the error-log content and is treated as Service Data. For
+   * information about how Service Data is handled, see Google Cloud Privacy Notice
+   * (https://cloud.google.com/terms/cloud-privacy-notice).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,10 +42,10 @@ public final class LogErrorGroup extends com.google.api.client.json.GenericJson 
 
   /**
    * The id is a unique identifier for a particular error group; it is the last part of the error
-   * group resource name: /projects//errors/. Example: COShysOX0r_51QE The id is derived from key
-   * parts of the error-log content and is treated as Service Data. For information about how
-   * Service Data is handled, see Google Cloud Privacy Notice (https://cloud.google.com/terms/cloud-
-   * privacy-notice).
+   * group resource name: /project/[PROJECT_ID]/errors/[ERROR_GROUP_ID]. Example: COShysOX0r_51QE.
+   * The id is derived from key parts of the error-log content and is treated as Service Data. For
+   * information about how Service Data is handled, see Google Cloud Privacy Notice
+   * (https://cloud.google.com/terms/cloud-privacy-notice).
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -54,10 +54,10 @@ public final class LogErrorGroup extends com.google.api.client.json.GenericJson 
 
   /**
    * The id is a unique identifier for a particular error group; it is the last part of the error
-   * group resource name: /projects//errors/. Example: COShysOX0r_51QE The id is derived from key
-   * parts of the error-log content and is treated as Service Data. For information about how
-   * Service Data is handled, see Google Cloud Privacy Notice (https://cloud.google.com/terms/cloud-
-   * privacy-notice).
+   * group resource name: /project/[PROJECT_ID]/errors/[ERROR_GROUP_ID]. Example: COShysOX0r_51QE.
+   * The id is derived from key parts of the error-log content and is treated as Service Data. For
+   * information about how Service Data is handled, see Google Cloud Privacy Notice
+   * (https://cloud.google.com/terms/cloud-privacy-notice).
    * @param id id or {@code null} for none
    */
   public LogErrorGroup setId(java.lang.String id) {

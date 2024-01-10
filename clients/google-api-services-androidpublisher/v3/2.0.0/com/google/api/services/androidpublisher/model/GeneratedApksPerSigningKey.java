@@ -47,6 +47,16 @@ public final class GeneratedApksPerSigningKey extends com.google.api.client.json
   private java.util.List<GeneratedAssetPackSlice> generatedAssetPackSlices;
 
   /**
+   * Generated recovery apks for recovery actions signed with a key corresponding to
+   * certificate_sha256_hash. This includes all generated recovery APKs, also those in draft or
+   * cancelled state. This field is not set if no recovery actions were created for this signing
+   * key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeneratedRecoveryApk> generatedRecoveryModules;
+
+  /**
    * List of generated split APKs, signed with a key corresponding to certificate_sha256_hash.
    * The value may be {@code null}.
    */
@@ -108,6 +118,29 @@ public final class GeneratedApksPerSigningKey extends com.google.api.client.json
    */
   public GeneratedApksPerSigningKey setGeneratedAssetPackSlices(java.util.List<GeneratedAssetPackSlice> generatedAssetPackSlices) {
     this.generatedAssetPackSlices = generatedAssetPackSlices;
+    return this;
+  }
+
+  /**
+   * Generated recovery apks for recovery actions signed with a key corresponding to
+   * certificate_sha256_hash. This includes all generated recovery APKs, also those in draft or
+   * cancelled state. This field is not set if no recovery actions were created for this signing
+   * key.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeneratedRecoveryApk> getGeneratedRecoveryModules() {
+    return generatedRecoveryModules;
+  }
+
+  /**
+   * Generated recovery apks for recovery actions signed with a key corresponding to
+   * certificate_sha256_hash. This includes all generated recovery APKs, also those in draft or
+   * cancelled state. This field is not set if no recovery actions were created for this signing
+   * key.
+   * @param generatedRecoveryModules generatedRecoveryModules or {@code null} for none
+   */
+  public GeneratedApksPerSigningKey setGeneratedRecoveryModules(java.util.List<GeneratedRecoveryApk> generatedRecoveryModules) {
+    this.generatedRecoveryModules = generatedRecoveryModules;
     return this;
   }
 

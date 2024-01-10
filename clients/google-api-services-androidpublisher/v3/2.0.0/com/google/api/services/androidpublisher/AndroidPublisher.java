@@ -637,6 +637,701 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   }
 
   /**
+   * An accessor for creating requests from the Apprecovery collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+   *   {@code AndroidPublisher.Apprecovery.List request = androidpublisher.apprecovery().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Apprecovery apprecovery() {
+    return new Apprecovery();
+  }
+
+  /**
+   * The "apprecovery" collection of methods.
+   */
+  public class Apprecovery {
+
+    /**
+     * Incrementally update targeting for a recovery action. Note that only the criteria selected during
+     * the creation of recovery action can be expanded.
+     *
+     * Create a request for the method "apprecovery.addTargeting".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link AddTargeting#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param packageName Required. Package name of the app for which recovery action is to be updated.
+     * @param appRecoveryId Required. ID corresponding to the app recovery action.
+     * @param content the {@link com.google.api.services.androidpublisher.model.AddTargetingRequest}
+     * @return the request
+     */
+    public AddTargeting addTargeting(java.lang.String packageName, java.lang.Long appRecoveryId, com.google.api.services.androidpublisher.model.AddTargetingRequest content) throws java.io.IOException {
+      AddTargeting result = new AddTargeting(packageName, appRecoveryId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class AddTargeting extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.AddTargetingResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/appRecoveries/{appRecoveryId}:addTargeting";
+
+      /**
+       * Incrementally update targeting for a recovery action. Note that only the criteria selected
+       * during the creation of recovery action can be expanded.
+       *
+       * Create a request for the method "apprecovery.addTargeting".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link AddTargeting#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * AddTargeting#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Required. Package name of the app for which recovery action is to be updated.
+       * @param appRecoveryId Required. ID corresponding to the app recovery action.
+       * @param content the {@link com.google.api.services.androidpublisher.model.AddTargetingRequest}
+       * @since 1.13
+       */
+      protected AddTargeting(java.lang.String packageName, java.lang.Long appRecoveryId, com.google.api.services.androidpublisher.model.AddTargetingRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.AddTargetingResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        this.appRecoveryId = com.google.api.client.util.Preconditions.checkNotNull(appRecoveryId, "Required parameter appRecoveryId must be specified.");
+      }
+
+      @Override
+      public AddTargeting set$Xgafv(java.lang.String $Xgafv) {
+        return (AddTargeting) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AddTargeting setAccessToken(java.lang.String accessToken) {
+        return (AddTargeting) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AddTargeting setAlt(java.lang.String alt) {
+        return (AddTargeting) super.setAlt(alt);
+      }
+
+      @Override
+      public AddTargeting setCallback(java.lang.String callback) {
+        return (AddTargeting) super.setCallback(callback);
+      }
+
+      @Override
+      public AddTargeting setFields(java.lang.String fields) {
+        return (AddTargeting) super.setFields(fields);
+      }
+
+      @Override
+      public AddTargeting setKey(java.lang.String key) {
+        return (AddTargeting) super.setKey(key);
+      }
+
+      @Override
+      public AddTargeting setOauthToken(java.lang.String oauthToken) {
+        return (AddTargeting) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AddTargeting setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AddTargeting) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AddTargeting setQuotaUser(java.lang.String quotaUser) {
+        return (AddTargeting) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AddTargeting setUploadType(java.lang.String uploadType) {
+        return (AddTargeting) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AddTargeting setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AddTargeting) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the app for which recovery action is to be updated. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app for which recovery action is to be updated.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app for which recovery action is to be updated. */
+      public AddTargeting setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      /** Required. ID corresponding to the app recovery action. */
+      @com.google.api.client.util.Key
+      private java.lang.Long appRecoveryId;
+
+      /** Required. ID corresponding to the app recovery action.
+       */
+      public java.lang.Long getAppRecoveryId() {
+        return appRecoveryId;
+      }
+
+      /** Required. ID corresponding to the app recovery action. */
+      public AddTargeting setAppRecoveryId(java.lang.Long appRecoveryId) {
+        this.appRecoveryId = appRecoveryId;
+        return this;
+      }
+
+      @Override
+      public AddTargeting set(String parameterName, Object value) {
+        return (AddTargeting) super.set(parameterName, value);
+      }
+    }
+    /**
+     * List all app recovery action resources associated with a particular package name and app version.
+     *
+     * Create a request for the method "apprecovery.appRecoveries".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link AppRecoveries#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param packageName Required. Package name of the app for which list of recovery actions is requested.
+     * @return the request
+     */
+    public AppRecoveries appRecoveries(java.lang.String packageName) throws java.io.IOException {
+      AppRecoveries result = new AppRecoveries(packageName);
+      initialize(result);
+      return result;
+    }
+
+    public class AppRecoveries extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ListAppRecoveriesResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/appRecoveries";
+
+      /**
+       * List all app recovery action resources associated with a particular package name and app
+       * version.
+       *
+       * Create a request for the method "apprecovery.appRecoveries".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link AppRecoveries#execute()} method to invoke the remote
+       * operation. <p> {@link AppRecoveries#initialize(com.google.api.client.googleapis.services.Abstra
+       * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param packageName Required. Package name of the app for which list of recovery actions is requested.
+       * @since 1.13
+       */
+      protected AppRecoveries(java.lang.String packageName) {
+        super(AndroidPublisher.this, "POST", REST_PATH, null, com.google.api.services.androidpublisher.model.ListAppRecoveriesResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      @Override
+      public AppRecoveries set$Xgafv(java.lang.String $Xgafv) {
+        return (AppRecoveries) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AppRecoveries setAccessToken(java.lang.String accessToken) {
+        return (AppRecoveries) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AppRecoveries setAlt(java.lang.String alt) {
+        return (AppRecoveries) super.setAlt(alt);
+      }
+
+      @Override
+      public AppRecoveries setCallback(java.lang.String callback) {
+        return (AppRecoveries) super.setCallback(callback);
+      }
+
+      @Override
+      public AppRecoveries setFields(java.lang.String fields) {
+        return (AppRecoveries) super.setFields(fields);
+      }
+
+      @Override
+      public AppRecoveries setKey(java.lang.String key) {
+        return (AppRecoveries) super.setKey(key);
+      }
+
+      @Override
+      public AppRecoveries setOauthToken(java.lang.String oauthToken) {
+        return (AppRecoveries) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AppRecoveries setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AppRecoveries) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AppRecoveries setQuotaUser(java.lang.String quotaUser) {
+        return (AppRecoveries) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AppRecoveries setUploadType(java.lang.String uploadType) {
+        return (AppRecoveries) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AppRecoveries setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AppRecoveries) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the app for which list of recovery actions is requested. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app for which list of recovery actions is requested.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app for which list of recovery actions is requested. */
+      public AppRecoveries setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      /** Required. Version code targeted by the list of recovery actions. */
+      @com.google.api.client.util.Key
+      private java.lang.Long versionCode;
+
+      /** Required. Version code targeted by the list of recovery actions.
+       */
+      public java.lang.Long getVersionCode() {
+        return versionCode;
+      }
+
+      /** Required. Version code targeted by the list of recovery actions. */
+      public AppRecoveries setVersionCode(java.lang.Long versionCode) {
+        this.versionCode = versionCode;
+        return this;
+      }
+
+      @Override
+      public AppRecoveries set(String parameterName, Object value) {
+        return (AppRecoveries) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Cancel an already executing app recovery action. Note that this action changes status of the
+     * recovery action to CANCELED.
+     *
+     * Create a request for the method "apprecovery.cancel".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+     *
+     * @param packageName Required. Package name of the app for which recovery action cancellation is requested.
+     * @param appRecoveryId Required. ID corresponding to the app recovery action.
+     * @param content the {@link com.google.api.services.androidpublisher.model.CancelAppRecoveryRequest}
+     * @return the request
+     */
+    public Cancel cancel(java.lang.String packageName, java.lang.Long appRecoveryId, com.google.api.services.androidpublisher.model.CancelAppRecoveryRequest content) throws java.io.IOException {
+      Cancel result = new Cancel(packageName, appRecoveryId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Cancel extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.CancelAppRecoveryResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/appRecoveries/{appRecoveryId}:cancel";
+
+      /**
+       * Cancel an already executing app recovery action. Note that this action changes status of the
+       * recovery action to CANCELED.
+       *
+       * Create a request for the method "apprecovery.cancel".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Required. Package name of the app for which recovery action cancellation is requested.
+       * @param appRecoveryId Required. ID corresponding to the app recovery action.
+       * @param content the {@link com.google.api.services.androidpublisher.model.CancelAppRecoveryRequest}
+       * @since 1.13
+       */
+      protected Cancel(java.lang.String packageName, java.lang.Long appRecoveryId, com.google.api.services.androidpublisher.model.CancelAppRecoveryRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.CancelAppRecoveryResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        this.appRecoveryId = com.google.api.client.util.Preconditions.checkNotNull(appRecoveryId, "Required parameter appRecoveryId must be specified.");
+      }
+
+      @Override
+      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancel) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancel setAccessToken(java.lang.String accessToken) {
+        return (Cancel) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Cancel setAlt(java.lang.String alt) {
+        return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setCallback(java.lang.String callback) {
+        return (Cancel) super.setCallback(callback);
+      }
+
+      @Override
+      public Cancel setFields(java.lang.String fields) {
+        return (Cancel) super.setFields(fields);
+      }
+
+      @Override
+      public Cancel setKey(java.lang.String key) {
+        return (Cancel) super.setKey(key);
+      }
+
+      @Override
+      public Cancel setOauthToken(java.lang.String oauthToken) {
+        return (Cancel) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Cancel) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Cancel setQuotaUser(java.lang.String quotaUser) {
+        return (Cancel) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancel) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the app for which recovery action cancellation is requested. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app for which recovery action cancellation is requested.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app for which recovery action cancellation is requested. */
+      public Cancel setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      /** Required. ID corresponding to the app recovery action. */
+      @com.google.api.client.util.Key
+      private java.lang.Long appRecoveryId;
+
+      /** Required. ID corresponding to the app recovery action.
+       */
+      public java.lang.Long getAppRecoveryId() {
+        return appRecoveryId;
+      }
+
+      /** Required. ID corresponding to the app recovery action. */
+      public Cancel setAppRecoveryId(java.lang.Long appRecoveryId) {
+        this.appRecoveryId = appRecoveryId;
+        return this;
+      }
+
+      @Override
+      public Cancel set(String parameterName, Object value) {
+        return (Cancel) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Create an app recovery action with recovery status as DRAFT. Note that this action does not
+     * execute the recovery action.
+     *
+     * Create a request for the method "apprecovery.create".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param packageName Required. Package name of the app on which recovery action is performed.
+     * @param content the {@link com.google.api.services.androidpublisher.model.CreateDraftAppRecoveryRequest}
+     * @return the request
+     */
+    public Create create(java.lang.String packageName, com.google.api.services.androidpublisher.model.CreateDraftAppRecoveryRequest content) throws java.io.IOException {
+      Create result = new Create(packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.AppRecoveryAction> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/appRecoveries";
+
+      /**
+       * Create an app recovery action with recovery status as DRAFT. Note that this action does not
+       * execute the recovery action.
+       *
+       * Create a request for the method "apprecovery.create".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Required. Package name of the app on which recovery action is performed.
+       * @param content the {@link com.google.api.services.androidpublisher.model.CreateDraftAppRecoveryRequest}
+       * @since 1.13
+       */
+      protected Create(java.lang.String packageName, com.google.api.services.androidpublisher.model.CreateDraftAppRecoveryRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.AppRecoveryAction.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the app on which recovery action is performed. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app on which recovery action is performed.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app on which recovery action is performed. */
+      public Create setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deploy an already created app recovery action with recovery status DRAFT. Note that this action
+     * activates the recovery action for all targeted users and changes its status to ACTIVE.
+     *
+     * Create a request for the method "apprecovery.deploy".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Deploy#execute()} method to invoke the remote operation.
+     *
+     * @param packageName Required. Package name of the app for which recovery action is deployed.
+     * @param appRecoveryId Required. ID corresponding to the app recovery action to deploy.
+     * @param content the {@link com.google.api.services.androidpublisher.model.DeployAppRecoveryRequest}
+     * @return the request
+     */
+    public Deploy deploy(java.lang.String packageName, java.lang.Long appRecoveryId, com.google.api.services.androidpublisher.model.DeployAppRecoveryRequest content) throws java.io.IOException {
+      Deploy result = new Deploy(packageName, appRecoveryId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Deploy extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.DeployAppRecoveryResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/appRecoveries/{appRecoveryId}:deploy";
+
+      /**
+       * Deploy an already created app recovery action with recovery status DRAFT. Note that this action
+       * activates the recovery action for all targeted users and changes its status to ACTIVE.
+       *
+       * Create a request for the method "apprecovery.deploy".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Deploy#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Deploy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Required. Package name of the app for which recovery action is deployed.
+       * @param appRecoveryId Required. ID corresponding to the app recovery action to deploy.
+       * @param content the {@link com.google.api.services.androidpublisher.model.DeployAppRecoveryRequest}
+       * @since 1.13
+       */
+      protected Deploy(java.lang.String packageName, java.lang.Long appRecoveryId, com.google.api.services.androidpublisher.model.DeployAppRecoveryRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.DeployAppRecoveryResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        this.appRecoveryId = com.google.api.client.util.Preconditions.checkNotNull(appRecoveryId, "Required parameter appRecoveryId must be specified.");
+      }
+
+      @Override
+      public Deploy set$Xgafv(java.lang.String $Xgafv) {
+        return (Deploy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Deploy setAccessToken(java.lang.String accessToken) {
+        return (Deploy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Deploy setAlt(java.lang.String alt) {
+        return (Deploy) super.setAlt(alt);
+      }
+
+      @Override
+      public Deploy setCallback(java.lang.String callback) {
+        return (Deploy) super.setCallback(callback);
+      }
+
+      @Override
+      public Deploy setFields(java.lang.String fields) {
+        return (Deploy) super.setFields(fields);
+      }
+
+      @Override
+      public Deploy setKey(java.lang.String key) {
+        return (Deploy) super.setKey(key);
+      }
+
+      @Override
+      public Deploy setOauthToken(java.lang.String oauthToken) {
+        return (Deploy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Deploy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Deploy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Deploy setQuotaUser(java.lang.String quotaUser) {
+        return (Deploy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Deploy setUploadType(java.lang.String uploadType) {
+        return (Deploy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Deploy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Deploy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the app for which recovery action is deployed. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app for which recovery action is deployed.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app for which recovery action is deployed. */
+      public Deploy setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      /** Required. ID corresponding to the app recovery action to deploy. */
+      @com.google.api.client.util.Key
+      private java.lang.Long appRecoveryId;
+
+      /** Required. ID corresponding to the app recovery action to deploy.
+       */
+      public java.lang.Long getAppRecoveryId() {
+        return appRecoveryId;
+      }
+
+      /** Required. ID corresponding to the app recovery action to deploy. */
+      public Deploy setAppRecoveryId(java.lang.Long appRecoveryId) {
+        this.appRecoveryId = appRecoveryId;
+        return this;
+      }
+
+      @Override
+      public Deploy set(String parameterName, Object value) {
+        return (Deploy) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Edits collection.
    *
    * <p>The typical use is:</p>

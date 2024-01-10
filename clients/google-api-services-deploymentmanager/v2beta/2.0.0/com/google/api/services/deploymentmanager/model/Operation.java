@@ -25,7 +25,7 @@ package com.google.api.services.deploymentmanager.model;
  * Operations can be global, regional or zonal. - For global operations, use the `globalOperations`
  * resource. - For regional operations, use the `regionOperations` resource. - For zonal operations,
  * use the `zoneOperations` resource. For more information, read Global, Regional, and Zonal
- * Resources.
+ * Resources. Note that completed Operation resources have a limited retention period.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deployment Manager V2 API. For a detailed

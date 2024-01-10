@@ -133,11 +133,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String clientAssignedMessageId;
 
   /**
-   * For spaces created in Chat, the time at which the message was created. This field is output
-   * only, except when used in imported spaces. [Developer
-   * Preview](https://developers.google.com/workspace/preview): For imported spaces, set this field
-   * to the historical timestamp at which the message was created in the source in order to preserve
-   * the original creation time.
+   * Optional. Immutable. For spaces created in Chat, the time at which the message was created.
+   * This field is output only, except when used in import mode spaces. For import mode spaces, set
+   * this field to the historical timestamp at which the message was created in the source in order
+   * to preserve the original creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -468,11 +467,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For spaces created in Chat, the time at which the message was created. This field is output
-   * only, except when used in imported spaces. [Developer
-   * Preview](https://developers.google.com/workspace/preview): For imported spaces, set this field
-   * to the historical timestamp at which the message was created in the source in order to preserve
-   * the original creation time.
+   * Optional. Immutable. For spaces created in Chat, the time at which the message was created.
+   * This field is output only, except when used in import mode spaces. For import mode spaces, set
+   * this field to the historical timestamp at which the message was created in the source in order
+   * to preserve the original creation time.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -480,11 +478,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For spaces created in Chat, the time at which the message was created. This field is output
-   * only, except when used in imported spaces. [Developer
-   * Preview](https://developers.google.com/workspace/preview): For imported spaces, set this field
-   * to the historical timestamp at which the message was created in the source in order to preserve
-   * the original creation time.
+   * Optional. Immutable. For spaces created in Chat, the time at which the message was created.
+   * This field is output only, except when used in import mode spaces. For import mode spaces, set
+   * this field to the historical timestamp at which the message was created in the source in order
+   * to preserve the original creation time.
    * @param createTime createTime or {@code null} for none
    */
   public Message setCreateTime(String createTime) {

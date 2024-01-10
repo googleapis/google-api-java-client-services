@@ -41,6 +41,17 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adminInstalled;
 
   /**
+   * Optional. Immutable. For spaces created in Chat, the time the space was created. This field is
+   * output only, except when used in import mode spaces. For import mode spaces, set this field to
+   * the historical timestamp at which the space was created in the source in order to preserve the
+   * original creation time. Only populated in the output when `spaceType` is `GROUP_CHAT` or
+   * `SPACE`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * The space's display name. Required when [creating a
    * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). If you receive
    * the error message `ALREADY_EXISTS` when creating a space or updating the `displayName`, try a
@@ -64,6 +75,15 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean externalUserAllowed;
+
+  /**
+   * Optional. Whether this space is created in `Import Mode` as part of a data migration into
+   * Google Workspace. While spaces are being imported, they aren't visible to users until the
+   * import is complete.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean importMode;
 
   /**
    * Resource name of the space. Format: `spaces/{space}`
@@ -147,6 +167,31 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Immutable. For spaces created in Chat, the time the space was created. This field is
+   * output only, except when used in import mode spaces. For import mode spaces, set this field to
+   * the historical timestamp at which the space was created in the source in order to preserve the
+   * original creation time. Only populated in the output when `spaceType` is `GROUP_CHAT` or
+   * `SPACE`.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Optional. Immutable. For spaces created in Chat, the time the space was created. This field is
+   * output only, except when used in import mode spaces. For import mode spaces, set this field to
+   * the historical timestamp at which the space was created in the source in order to preserve the
+   * original creation time. Only populated in the output when `spaceType` is `GROUP_CHAT` or
+   * `SPACE`.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Space setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
    * The space's display name. Required when [creating a
    * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). If you receive
    * the error message `ALREADY_EXISTS` when creating a space or updating the `displayName`, try a
@@ -199,6 +244,27 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   public Space setExternalUserAllowed(java.lang.Boolean externalUserAllowed) {
     this.externalUserAllowed = externalUserAllowed;
+    return this;
+  }
+
+  /**
+   * Optional. Whether this space is created in `Import Mode` as part of a data migration into
+   * Google Workspace. While spaces are being imported, they aren't visible to users until the
+   * import is complete.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImportMode() {
+    return importMode;
+  }
+
+  /**
+   * Optional. Whether this space is created in `Import Mode` as part of a data migration into
+   * Google Workspace. While spaces are being imported, they aren't visible to users until the
+   * import is complete.
+   * @param importMode importMode or {@code null} for none
+   */
+  public Space setImportMode(java.lang.Boolean importMode) {
+    this.importMode = importMode;
     return this;
   }
 

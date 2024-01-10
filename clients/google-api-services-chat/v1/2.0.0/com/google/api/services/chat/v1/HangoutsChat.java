@@ -543,6 +543,143 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
   public class Spaces {
 
     /**
+     * Completes the [import process](https://developers.google.com/chat/api/guides/import-data) for the
+     * specified space and makes it visible to users. Requires app authentication and domain-wide
+     * delegation. For more information, see [Authorize Google Chat apps to import
+     * data](https://developers.google.com/chat/api/guides/authorize-import).
+     *
+     * Create a request for the method "spaces.completeImport".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link CompleteImport#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Resource name of the import mode space. Format: `spaces/{space}`
+     * @param content the {@link com.google.api.services.chat.v1.model.CompleteImportSpaceRequest}
+     * @return the request
+     */
+    public CompleteImport completeImport(java.lang.String name, com.google.api.services.chat.v1.model.CompleteImportSpaceRequest content) throws java.io.IOException {
+      CompleteImport result = new CompleteImport(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class CompleteImport extends HangoutsChatRequest<com.google.api.services.chat.v1.model.CompleteImportSpaceResponse> {
+
+      private static final String REST_PATH = "v1/{+name}:completeImport";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+      /**
+       * Completes the [import process](https://developers.google.com/chat/api/guides/import-data) for
+       * the specified space and makes it visible to users. Requires app authentication and domain-wide
+       * delegation. For more information, see [Authorize Google Chat apps to import
+       * data](https://developers.google.com/chat/api/guides/authorize-import).
+       *
+       * Create a request for the method "spaces.completeImport".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link CompleteImport#execute()} method to invoke the remote operation.
+       * <p> {@link CompleteImport#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. Resource name of the import mode space. Format: `spaces/{space}`
+       * @param content the {@link com.google.api.services.chat.v1.model.CompleteImportSpaceRequest}
+       * @since 1.13
+       */
+      protected CompleteImport(java.lang.String name, com.google.api.services.chat.v1.model.CompleteImportSpaceRequest content) {
+        super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.CompleteImportSpaceResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^spaces/[^/]+$");
+        }
+      }
+
+      @Override
+      public CompleteImport set$Xgafv(java.lang.String $Xgafv) {
+        return (CompleteImport) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CompleteImport setAccessToken(java.lang.String accessToken) {
+        return (CompleteImport) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CompleteImport setAlt(java.lang.String alt) {
+        return (CompleteImport) super.setAlt(alt);
+      }
+
+      @Override
+      public CompleteImport setCallback(java.lang.String callback) {
+        return (CompleteImport) super.setCallback(callback);
+      }
+
+      @Override
+      public CompleteImport setFields(java.lang.String fields) {
+        return (CompleteImport) super.setFields(fields);
+      }
+
+      @Override
+      public CompleteImport setKey(java.lang.String key) {
+        return (CompleteImport) super.setKey(key);
+      }
+
+      @Override
+      public CompleteImport setOauthToken(java.lang.String oauthToken) {
+        return (CompleteImport) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CompleteImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CompleteImport) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CompleteImport setQuotaUser(java.lang.String quotaUser) {
+        return (CompleteImport) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CompleteImport setUploadType(java.lang.String uploadType) {
+        return (CompleteImport) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CompleteImport setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CompleteImport) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Resource name of the import mode space. Format: `spaces/{space}` */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Resource name of the import mode space. Format: `spaces/{space}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Resource name of the import mode space. Format: `spaces/{space}` */
+      public CompleteImport setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^spaces/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public CompleteImport set(String parameterName, Object value) {
+        return (CompleteImport) super.set(parameterName, value);
+      }
+    }
+    /**
      * Creates a named space. Spaces grouped by topics aren't supported. For an example, see [Create a
      * space](https://developers.google.com/chat/api/guides/v1/spaces/create). If you receive the error
      * message `ALREADY_EXISTS` when creating a space, try a different `displayName`. An existing space

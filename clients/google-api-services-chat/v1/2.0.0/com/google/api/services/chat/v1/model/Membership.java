@@ -32,13 +32,21 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. The creation time of the membership, such as when a member joined or was
-   * invited to join a space. [Developer Preview](https://developers.google.com/workspace/preview):
-   * This field is output only, except when used to import historical memberships in import mode
-   * spaces.
+   * invited to join a space. This field is output only, except when used to import historical
+   * memberships in import mode spaces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Optional. Immutable. The deletion time of the membership, such as when a member left or was
+   * removed from a space. This field is output only, except when used to import historical
+   * memberships in import mode spaces.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deleteTime;
 
   /**
    * The Google Group the membership corresponds to. Only supports read operations. Other
@@ -83,9 +91,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. The creation time of the membership, such as when a member joined or was
-   * invited to join a space. [Developer Preview](https://developers.google.com/workspace/preview):
-   * This field is output only, except when used to import historical memberships in import mode
-   * spaces.
+   * invited to join a space. This field is output only, except when used to import historical
+   * memberships in import mode spaces.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -94,13 +101,33 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. The creation time of the membership, such as when a member joined or was
-   * invited to join a space. [Developer Preview](https://developers.google.com/workspace/preview):
-   * This field is output only, except when used to import historical memberships in import mode
-   * spaces.
+   * invited to join a space. This field is output only, except when used to import historical
+   * memberships in import mode spaces.
    * @param createTime createTime or {@code null} for none
    */
   public Membership setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The deletion time of the membership, such as when a member left or was
+   * removed from a space. This field is output only, except when used to import historical
+   * memberships in import mode spaces.
+   * @return value or {@code null} for none
+   */
+  public String getDeleteTime() {
+    return deleteTime;
+  }
+
+  /**
+   * Optional. Immutable. The deletion time of the membership, such as when a member left or was
+   * removed from a space. This field is output only, except when used to import historical
+   * memberships in import mode spaces.
+   * @param deleteTime deleteTime or {@code null} for none
+   */
+  public Membership setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
     return this;
   }
 

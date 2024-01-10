@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-identitytoolkit</artifactId>
-  <version>v2-rev20231027-2.0.0</version>
-  <name>Identity Toolkit API v2-rev20231027-2.0.0</name>
+  <version>v2-rev20240103-2.0.0</version>
+  <name>Identity Toolkit API v2-rev20240103-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

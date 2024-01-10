@@ -18,7 +18,9 @@ package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
  * The dedicated serving endpoint for this FeatureOnlineStore. Only need to set when you choose
- * Optimized storage type or enable EmbeddingManagement. Will use public endpoint by default.
+ * Optimized storage type or enable EmbeddingManagement. Will use public endpoint by default. Note,
+ * for EmbeddingManagement use case, only [DedicatedServingEndpoint.public_endpoint_domain_name] is
+ * available now.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -31,7 +33,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Private service connect config. If
+   * Optional. Private service connect config. The private service connection is available only for
+   * Optimized storage type, not for embedding management now. If
    * PrivateServiceConnectConfig.enable_private_service_connect set to true, customers will use
    * private service connection to send request. Otherwise, the connection will set to public
    * endpoint.
@@ -57,7 +60,8 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServin
   private java.lang.String serviceAttachment;
 
   /**
-   * Optional. Private service connect config. If
+   * Optional. Private service connect config. The private service connection is available only for
+   * Optimized storage type, not for embedding management now. If
    * PrivateServiceConnectConfig.enable_private_service_connect set to true, customers will use
    * private service connection to send request. Otherwise, the connection will set to public
    * endpoint.
@@ -68,7 +72,8 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServin
   }
 
   /**
-   * Optional. Private service connect config. If
+   * Optional. Private service connect config. The private service connection is available only for
+   * Optimized storage type, not for embedding management now. If
    * PrivateServiceConnectConfig.enable_private_service_connect set to true, customers will use
    * private service connection to send request. Otherwise, the connection will set to public
    * endpoint.

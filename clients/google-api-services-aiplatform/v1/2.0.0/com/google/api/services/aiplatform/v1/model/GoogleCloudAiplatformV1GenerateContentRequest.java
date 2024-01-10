@@ -45,14 +45,6 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
   }
 
   /**
-   * Required. The name of the Endpoint requested to serve the prediction. Format:
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String endpoint;
-
-  /**
    * Optional. Generation config.
    * The value may be {@code null}.
    */
@@ -95,25 +87,6 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
    */
   public GoogleCloudAiplatformV1GenerateContentRequest setContents(java.util.List<GoogleCloudAiplatformV1Content> contents) {
     this.contents = contents;
-    return this;
-  }
-
-  /**
-   * Required. The name of the Endpoint requested to serve the prediction. Format:
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEndpoint() {
-    return endpoint;
-  }
-
-  /**
-   * Required. The name of the Endpoint requested to serve the prediction. Format:
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
-   * @param endpoint endpoint or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1GenerateContentRequest setEndpoint(java.lang.String endpoint) {
-    this.endpoint = endpoint;
     return this;
   }
 

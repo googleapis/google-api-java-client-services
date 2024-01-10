@@ -43,6 +43,14 @@ public final class CloudAiNlLlmProtoServiceGenerateMultiModalResponse extends co
   }
 
   /**
+   * Debug information containing message metadata. Clients should not consume this field, and this
+   * is only populated for Flow Runner path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiNlLlmProtoServiceMessageMetadata debugMetadata;
+
+  /**
    * Content filter results for a prompt sent in the request. Note: Sent only in the first stream
    * chunk. Only happens when no candidates were generated due to content violations.
    * The value may be {@code null}.
@@ -78,6 +86,25 @@ public final class CloudAiNlLlmProtoServiceGenerateMultiModalResponse extends co
    */
   public CloudAiNlLlmProtoServiceGenerateMultiModalResponse setCandidates(java.util.List<CloudAiNlLlmProtoServiceCandidate> candidates) {
     this.candidates = candidates;
+    return this;
+  }
+
+  /**
+   * Debug information containing message metadata. Clients should not consume this field, and this
+   * is only populated for Flow Runner path.
+   * @return value or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServiceMessageMetadata getDebugMetadata() {
+    return debugMetadata;
+  }
+
+  /**
+   * Debug information containing message metadata. Clients should not consume this field, and this
+   * is only populated for Flow Runner path.
+   * @param debugMetadata debugMetadata or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServiceGenerateMultiModalResponse setDebugMetadata(CloudAiNlLlmProtoServiceMessageMetadata debugMetadata) {
+    this.debugMetadata = debugMetadata;
     return this;
   }
 

@@ -174,6 +174,209 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
     public class Locations {
 
       /**
+       * Lists locations with recommendations or insights.
+       *
+       * Create a request for the method "locations.list".
+       *
+       * This request holds the parameters needed by the recommender server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name The resource that owns the locations collection, if applicable.
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends RecommenderRequest<com.google.api.services.recommender.v1beta1.model.GoogleCloudLocationListLocationsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+name}/locations";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
+
+        /**
+         * Lists locations with recommendations or insights.
+         *
+         * Create a request for the method "locations.list".
+         *
+         * This request holds the parameters needed by the the recommender server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The resource that owns the locations collection, if applicable.
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(Recommender.this, "GET", REST_PATH, null, com.google.api.services.recommender.v1beta1.model.GoogleCloudLocationListLocationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The resource that owns the locations collection, if applicable. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The resource that owns the locations collection, if applicable.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The resource that owns the locations collection, if applicable. */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
+       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The maximum number of results to return. If not set, the service selects a default. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return. If not set, the service selects a default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of results to return. If not set, the service selects a default. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token received from the `next_page_token` field in the response. Send that page token to
+       receive the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the InsightTypes collection.
        *
        * <p>The typical use is:</p>
@@ -2524,6 +2727,209 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
     public class Locations {
 
       /**
+       * Lists locations with recommendations or insights.
+       *
+       * Create a request for the method "locations.list".
+       *
+       * This request holds the parameters needed by the recommender server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name The resource that owns the locations collection, if applicable.
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends RecommenderRequest<com.google.api.services.recommender.v1beta1.model.GoogleCloudLocationListLocationsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+name}/locations";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+        /**
+         * Lists locations with recommendations or insights.
+         *
+         * Create a request for the method "locations.list".
+         *
+         * This request holds the parameters needed by the the recommender server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The resource that owns the locations collection, if applicable.
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(Recommender.this, "GET", REST_PATH, null, com.google.api.services.recommender.v1beta1.model.GoogleCloudLocationListLocationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The resource that owns the locations collection, if applicable. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The resource that owns the locations collection, if applicable.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The resource that owns the locations collection, if applicable. */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
+       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The maximum number of results to return. If not set, the service selects a default. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return. If not set, the service selects a default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of results to return. If not set, the service selects a default. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token received from the `next_page_token` field in the response. Send that page token to
+       receive the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the InsightTypes collection.
        *
        * <p>The typical use is:</p>
@@ -4355,6 +4761,209 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
      * The "locations" collection of methods.
      */
     public class Locations {
+
+      /**
+       * Lists locations with recommendations or insights.
+       *
+       * Create a request for the method "locations.list".
+       *
+       * This request holds the parameters needed by the recommender server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name The resource that owns the locations collection, if applicable.
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends RecommenderRequest<com.google.api.services.recommender.v1beta1.model.GoogleCloudLocationListLocationsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+name}/locations";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists locations with recommendations or insights.
+         *
+         * Create a request for the method "locations.list".
+         *
+         * This request holds the parameters needed by the the recommender server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The resource that owns the locations collection, if applicable.
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(Recommender.this, "GET", REST_PATH, null, com.google.api.services.recommender.v1beta1.model.GoogleCloudLocationListLocationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The resource that owns the locations collection, if applicable. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The resource that owns the locations collection, if applicable.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The resource that owns the locations collection, if applicable. */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
+       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The maximum number of results to return. If not set, the service selects a default. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return. If not set, the service selects a default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of results to return. If not set, the service selects a default. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token received from the `next_page_token` field in the response. Send that page token to
+       receive the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the InsightTypes collection.
@@ -6705,6 +7314,209 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
      * The "locations" collection of methods.
      */
     public class Locations {
+
+      /**
+       * Lists locations with recommendations or insights.
+       *
+       * Create a request for the method "locations.list".
+       *
+       * This request holds the parameters needed by the recommender server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name The resource that owns the locations collection, if applicable.
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends RecommenderRequest<com.google.api.services.recommender.v1beta1.model.GoogleCloudLocationListLocationsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+name}/locations";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists locations with recommendations or insights.
+         *
+         * Create a request for the method "locations.list".
+         *
+         * This request holds the parameters needed by the the recommender server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The resource that owns the locations collection, if applicable.
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(Recommender.this, "GET", REST_PATH, null, com.google.api.services.recommender.v1beta1.model.GoogleCloudLocationListLocationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The resource that owns the locations collection, if applicable. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The resource that owns the locations collection, if applicable.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The resource that owns the locations collection, if applicable. */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
+       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like `"displayName=tokyo"`, and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The maximum number of results to return. If not set, the service selects a default. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return. If not set, the service selects a default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of results to return. If not set, the service selects a default. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token received from the `next_page_token` field in the response. Send that page token to
+       receive the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the InsightTypes collection.

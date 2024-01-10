@@ -30,6 +30,13 @@ package com.google.api.services.walletobjects.model;
 public final class Issuer extends com.google.api.client.json.GenericJson {
 
   /**
+   * Allows the issuer to provide their callback settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CallbackOptions callbackOptions;
+
+  /**
    * Issuer contact information.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class Issuer extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SmartTapMerchantData smartTapMerchantData;
+
+  /**
+   * Allows the issuer to provide their callback settings.
+   * @return value or {@code null} for none
+   */
+  public CallbackOptions getCallbackOptions() {
+    return callbackOptions;
+  }
+
+  /**
+   * Allows the issuer to provide their callback settings.
+   * @param callbackOptions callbackOptions or {@code null} for none
+   */
+  public Issuer setCallbackOptions(CallbackOptions callbackOptions) {
+    this.callbackOptions = callbackOptions;
+    return this;
+  }
 
   /**
    * Issuer contact information.

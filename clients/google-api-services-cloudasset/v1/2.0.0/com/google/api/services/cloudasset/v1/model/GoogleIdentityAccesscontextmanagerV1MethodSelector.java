@@ -30,24 +30,23 @@ package com.google.api.services.cloudasset.v1.model;
 public final class GoogleIdentityAccesscontextmanagerV1MethodSelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * Value for `method` should be a valid method name for the corresponding `service_name` in
-   * ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
+   * A valid method name for the corresponding `service_name` in ApiOperation. If `*` is used as the
+   * value for the `method`, then ALL methods and permissions are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String method;
 
   /**
-   * Value for `permission` should be a valid Cloud IAM permission for the corresponding
-   * `service_name` in ApiOperation.
+   * A valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String permission;
 
   /**
-   * Value for `method` should be a valid method name for the corresponding `service_name` in
-   * ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
+   * A valid method name for the corresponding `service_name` in ApiOperation. If `*` is used as the
+   * value for the `method`, then ALL methods and permissions are allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -55,8 +54,8 @@ public final class GoogleIdentityAccesscontextmanagerV1MethodSelector extends co
   }
 
   /**
-   * Value for `method` should be a valid method name for the corresponding `service_name` in
-   * ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
+   * A valid method name for the corresponding `service_name` in ApiOperation. If `*` is used as the
+   * value for the `method`, then ALL methods and permissions are allowed.
    * @param method method or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1MethodSelector setMethod(java.lang.String method) {
@@ -65,8 +64,7 @@ public final class GoogleIdentityAccesscontextmanagerV1MethodSelector extends co
   }
 
   /**
-   * Value for `permission` should be a valid Cloud IAM permission for the corresponding
-   * `service_name` in ApiOperation.
+   * A valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
    * @return value or {@code null} for none
    */
   public java.lang.String getPermission() {
@@ -74,8 +72,7 @@ public final class GoogleIdentityAccesscontextmanagerV1MethodSelector extends co
   }
 
   /**
-   * Value for `permission` should be a valid Cloud IAM permission for the corresponding
-   * `service_name` in ApiOperation.
+   * A valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
    * @param permission permission or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1MethodSelector setPermission(java.lang.String permission) {

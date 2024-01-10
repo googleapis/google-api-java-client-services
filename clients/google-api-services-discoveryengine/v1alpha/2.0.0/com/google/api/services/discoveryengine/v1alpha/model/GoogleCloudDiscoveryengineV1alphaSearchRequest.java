@@ -68,11 +68,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Uses the provided embedding to do additional semantic document retrieval. The retrieval is
-   * based on the dot product of SearchRequest.embedding_spec.embedding_vectors.vector and the
-   * document embedding that is provided in
-   * SearchRequest.embedding_spec.embedding_vectors.field_path. If
-   * SearchRequest.embedding_spec.embedding_vectors.field_path is not provided, it will use
-   * ServingConfig.embedding_config.field_paths.
+   * based on the dot product of SearchRequest.EmbeddingSpec.EmbeddingVector.vector and the document
+   * embedding that is provided in SearchRequest.EmbeddingSpec.EmbeddingVector.field_path. If
+   * SearchRequest.EmbeddingSpec.EmbeddingVector.field_path is not provided, it will use
+   * ServingConfig.EmbeddingConfig.field_paths.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -341,11 +340,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Uses the provided embedding to do additional semantic document retrieval. The retrieval is
-   * based on the dot product of SearchRequest.embedding_spec.embedding_vectors.vector and the
-   * document embedding that is provided in
-   * SearchRequest.embedding_spec.embedding_vectors.field_path. If
-   * SearchRequest.embedding_spec.embedding_vectors.field_path is not provided, it will use
-   * ServingConfig.embedding_config.field_paths.
+   * based on the dot product of SearchRequest.EmbeddingSpec.EmbeddingVector.vector and the document
+   * embedding that is provided in SearchRequest.EmbeddingSpec.EmbeddingVector.field_path. If
+   * SearchRequest.EmbeddingSpec.EmbeddingVector.field_path is not provided, it will use
+   * ServingConfig.EmbeddingConfig.field_paths.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec getEmbeddingSpec() {
@@ -354,11 +352,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Uses the provided embedding to do additional semantic document retrieval. The retrieval is
-   * based on the dot product of SearchRequest.embedding_spec.embedding_vectors.vector and the
-   * document embedding that is provided in
-   * SearchRequest.embedding_spec.embedding_vectors.field_path. If
-   * SearchRequest.embedding_spec.embedding_vectors.field_path is not provided, it will use
-   * ServingConfig.embedding_config.field_paths.
+   * based on the dot product of SearchRequest.EmbeddingSpec.EmbeddingVector.vector and the document
+   * embedding that is provided in SearchRequest.EmbeddingSpec.EmbeddingVector.field_path. If
+   * SearchRequest.EmbeddingSpec.EmbeddingVector.field_path is not provided, it will use
+   * ServingConfig.EmbeddingConfig.field_paths.
    * @param embeddingSpec embeddingSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setEmbeddingSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec embeddingSpec) {

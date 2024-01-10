@@ -31,6 +31,7 @@ public final class GoogleCloudDiscoveryengineV1alphaOcrConfig extends com.google
 
   /**
    * Required. If OCR is enabled or not. OCR must be enabled for other OcrConfig options to apply.
+   * We will only perform OCR on the first 80 pages of the PDF files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +54,7 @@ public final class GoogleCloudDiscoveryengineV1alphaOcrConfig extends com.google
 
   /**
    * Required. If OCR is enabled or not. OCR must be enabled for other OcrConfig options to apply.
+   * We will only perform OCR on the first 80 pages of the PDF files.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -61,6 +63,7 @@ public final class GoogleCloudDiscoveryengineV1alphaOcrConfig extends com.google
 
   /**
    * Required. If OCR is enabled or not. OCR must be enabled for other OcrConfig options to apply.
+   * We will only perform OCR on the first 80 pages of the PDF files.
    * @param enabled enabled or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaOcrConfig setEnabled(java.lang.Boolean enabled) {

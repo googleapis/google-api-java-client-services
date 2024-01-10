@@ -37,7 +37,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequest exte
   private GoogleCloudDiscoveryengineV1alphaImportErrorConfig errorConfig;
 
   /**
-   * Gcs training input.
+   * Cloud Storage training input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequest exte
   }
 
   /**
-   * Gcs training input.
+   * Cloud Storage training input.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput getGcsTrainingInput() {
@@ -77,7 +77,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequest exte
   }
 
   /**
-   * Gcs training input.
+   * Cloud Storage training input.
    * @param gcsTrainingInput gcsTrainingInput or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequest setGcsTrainingInput(GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput gcsTrainingInput) {

@@ -53,7 +53,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentContent extends com.g
 
   /**
    * The URI of the content. Only Cloud Storage URIs (e.g. `gs://bucket-name/path/to/file`) are
-   * supported. The maximum file size is 100 MB.
+   * supported. The maximum file size is 2.5 MB for text-based formats, 100 MB for other formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentContent extends com.g
 
   /**
    * The URI of the content. Only Cloud Storage URIs (e.g. `gs://bucket-name/path/to/file`) are
-   * supported. The maximum file size is 100 MB.
+   * supported. The maximum file size is 2.5 MB for text-based formats, 100 MB for other formats.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -156,7 +156,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentContent extends com.g
 
   /**
    * The URI of the content. Only Cloud Storage URIs (e.g. `gs://bucket-name/path/to/file`) are
-   * supported. The maximum file size is 100 MB.
+   * supported. The maximum file size is 2.5 MB for text-based formats, 100 MB for other formats.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocumentContent setUri(java.lang.String uri) {

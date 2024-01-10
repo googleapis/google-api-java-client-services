@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Data source contains files either in GCS or BigQuery.
+ * Data source contains files either in Cloud Storage or BigQuery.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

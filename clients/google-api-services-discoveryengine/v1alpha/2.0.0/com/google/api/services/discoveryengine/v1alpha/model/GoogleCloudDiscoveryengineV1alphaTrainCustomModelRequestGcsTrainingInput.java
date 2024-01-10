@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Gcs training data input.
+ * Cloud Storage training data input.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -30,9 +30,9 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * The gcs corpus data which could be associated in train data. The data path format is gs:. A
-   * newline delimited jsonl/ndjson file. * For search-tuning model, each line should have the _id,
-   * title and text. Example: {"_id": "doc1", title: "relevant doc", "text": "relevant text"}
+   * The Cloud Storage corpus data which could be associated in train data. The data path format is
+   * gs:. A newline delimited jsonl/ndjson file. For search-tuning model, each line should have the
+   * _id, title and text. Example: {"_id": "doc1", title: "relevant doc", "text": "relevant text"}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,26 +40,26 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
 
   /**
    * The gcs query data which could be associated in train data. The data path format is gs:. A
-   * newline delimited jsonl/ndjson file. * For search-tuning model, each line should have the _id
-   * and text. Example: {"_id": "query1", "text": "example query"}
+   * newline delimited jsonl/ndjson file. For search-tuning model, each line should have the _id and
+   * text. Example: {"_id": "query1", "text": "example query"}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String queryDataPath;
 
   /**
-   * Gcs test data. Same format as train_data_path. If not provided, a random 80/20 train/test split
-   * will be performed on train_data_path.
+   * Cloud Storage test data. Same format as train_data_path. If not provided, a random 80/20
+   * train/test split will be performed on train_data_path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String testDataPath;
 
   /**
-   * Gcs training data path whose format should be gs:. The file should be in tsv format. Each line
-   * should have the doc_id and query_id and score (number). * For search-tuning model, it should
-   * have the query-id corpus-id score as tsv file header. The score should be a number in [0,
-   * inf+). The larger the number is, the more relevant the pair is. Example: query-id\tcorpus-
+   * Cloud Storage training data path whose format should be gs:. The file should be in tsv format.
+   * Each line should have the doc_id and query_id and score (number). For search-tuning model, it
+   * should have the query-id corpus-id score as tsv file header. The score should be a number in
+   * [0, inf+). The larger the number is, the more relevant the pair is. Example: query-id\tcorpus-
    * id\tscore query1\tdoc1\t1
    * The value may be {@code null}.
    */
@@ -67,9 +67,9 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
   private java.lang.String trainDataPath;
 
   /**
-   * The gcs corpus data which could be associated in train data. The data path format is gs:. A
-   * newline delimited jsonl/ndjson file. * For search-tuning model, each line should have the _id,
-   * title and text. Example: {"_id": "doc1", title: "relevant doc", "text": "relevant text"}
+   * The Cloud Storage corpus data which could be associated in train data. The data path format is
+   * gs:. A newline delimited jsonl/ndjson file. For search-tuning model, each line should have the
+   * _id, title and text. Example: {"_id": "doc1", title: "relevant doc", "text": "relevant text"}
    * @return value or {@code null} for none
    */
   public java.lang.String getCorpusDataPath() {
@@ -77,9 +77,9 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
   }
 
   /**
-   * The gcs corpus data which could be associated in train data. The data path format is gs:. A
-   * newline delimited jsonl/ndjson file. * For search-tuning model, each line should have the _id,
-   * title and text. Example: {"_id": "doc1", title: "relevant doc", "text": "relevant text"}
+   * The Cloud Storage corpus data which could be associated in train data. The data path format is
+   * gs:. A newline delimited jsonl/ndjson file. For search-tuning model, each line should have the
+   * _id, title and text. Example: {"_id": "doc1", title: "relevant doc", "text": "relevant text"}
    * @param corpusDataPath corpusDataPath or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput setCorpusDataPath(java.lang.String corpusDataPath) {
@@ -89,8 +89,8 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
 
   /**
    * The gcs query data which could be associated in train data. The data path format is gs:. A
-   * newline delimited jsonl/ndjson file. * For search-tuning model, each line should have the _id
-   * and text. Example: {"_id": "query1", "text": "example query"}
+   * newline delimited jsonl/ndjson file. For search-tuning model, each line should have the _id and
+   * text. Example: {"_id": "query1", "text": "example query"}
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryDataPath() {
@@ -99,8 +99,8 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
 
   /**
    * The gcs query data which could be associated in train data. The data path format is gs:. A
-   * newline delimited jsonl/ndjson file. * For search-tuning model, each line should have the _id
-   * and text. Example: {"_id": "query1", "text": "example query"}
+   * newline delimited jsonl/ndjson file. For search-tuning model, each line should have the _id and
+   * text. Example: {"_id": "query1", "text": "example query"}
    * @param queryDataPath queryDataPath or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput setQueryDataPath(java.lang.String queryDataPath) {
@@ -109,8 +109,8 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
   }
 
   /**
-   * Gcs test data. Same format as train_data_path. If not provided, a random 80/20 train/test split
-   * will be performed on train_data_path.
+   * Cloud Storage test data. Same format as train_data_path. If not provided, a random 80/20
+   * train/test split will be performed on train_data_path.
    * @return value or {@code null} for none
    */
   public java.lang.String getTestDataPath() {
@@ -118,8 +118,8 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
   }
 
   /**
-   * Gcs test data. Same format as train_data_path. If not provided, a random 80/20 train/test split
-   * will be performed on train_data_path.
+   * Cloud Storage test data. Same format as train_data_path. If not provided, a random 80/20
+   * train/test split will be performed on train_data_path.
    * @param testDataPath testDataPath or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput setTestDataPath(java.lang.String testDataPath) {
@@ -128,10 +128,10 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
   }
 
   /**
-   * Gcs training data path whose format should be gs:. The file should be in tsv format. Each line
-   * should have the doc_id and query_id and score (number). * For search-tuning model, it should
-   * have the query-id corpus-id score as tsv file header. The score should be a number in [0,
-   * inf+). The larger the number is, the more relevant the pair is. Example: query-id\tcorpus-
+   * Cloud Storage training data path whose format should be gs:. The file should be in tsv format.
+   * Each line should have the doc_id and query_id and score (number). For search-tuning model, it
+   * should have the query-id corpus-id score as tsv file header. The score should be a number in
+   * [0, inf+). The larger the number is, the more relevant the pair is. Example: query-id\tcorpus-
    * id\tscore query1\tdoc1\t1
    * @return value or {@code null} for none
    */
@@ -140,10 +140,10 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
   }
 
   /**
-   * Gcs training data path whose format should be gs:. The file should be in tsv format. Each line
-   * should have the doc_id and query_id and score (number). * For search-tuning model, it should
-   * have the query-id corpus-id score as tsv file header. The score should be a number in [0,
-   * inf+). The larger the number is, the more relevant the pair is. Example: query-id\tcorpus-
+   * Cloud Storage training data path whose format should be gs:. The file should be in tsv format.
+   * Each line should have the doc_id and query_id and score (number). For search-tuning model, it
+   * should have the query-id corpus-id score as tsv file header. The score should be a number in
+   * [0, inf+). The larger the number is, the more relevant the pair is. Example: query-id\tcorpus-
    * id\tscore query1\tdoc1\t1
    * @param trainDataPath trainDataPath or {@code null} for none
    */

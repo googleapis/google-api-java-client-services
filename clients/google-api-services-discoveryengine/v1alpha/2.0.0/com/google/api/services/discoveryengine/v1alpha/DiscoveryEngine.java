@@ -2425,7 +2425,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            *
            * @param parent Required. The parent branch resource name, such as
            *        `projects/{project}/locations/{location}/collections/{collection_id}`. If the caller does
-           *        not have permission to list DataStoress under this location, regardless of whether or not
+           *        not have permission to list DataStores under this location, regardless of whether or not
            *        this data store exists, a PERMISSION_DENIED error is returned.
            * @return the request
            */
@@ -2454,7 +2454,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              *
              * @param parent Required. The parent branch resource name, such as
            *        `projects/{project}/locations/{location}/collections/{collection_id}`. If the caller does
-           *        not have permission to list DataStoress under this location, regardless of whether or not
+           *        not have permission to list DataStores under this location, regardless of whether or not
            *        this data store exists, a PERMISSION_DENIED error is returned.
              * @since 1.13
              */
@@ -2536,7 +2536,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * Required. The parent branch resource name, such as
              * `projects/{project}/locations/{location}/collections/{collection_id}`. If the caller
-             * does not have permission to list DataStoress under this location, regardless of
+             * does not have permission to list DataStores under this location, regardless of
              * whether or not this data store exists, a PERMISSION_DENIED error is returned.
              */
             @com.google.api.client.util.Key
@@ -2544,7 +2544,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /** Required. The parent branch resource name, such as
            `projects/{project}/locations/{location}/collections/{collection_id}`. If the caller does not have
-           permission to list DataStoress under this location, regardless of whether or not this data store
+           permission to list DataStores under this location, regardless of whether or not this data store
            exists, a PERMISSION_DENIED error is returned.
              */
             public java.lang.String getParent() {
@@ -2554,7 +2554,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * Required. The parent branch resource name, such as
              * `projects/{project}/locations/{location}/collections/{collection_id}`. If the caller
-             * does not have permission to list DataStoress under this location, regardless of
+             * does not have permission to list DataStores under this location, regardless of
              * whether or not this data store exists, a PERMISSION_DENIED error is returned.
              */
             public List setParent(java.lang.String parent) {
@@ -5704,14 +5704,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Indicates which fields in the provided Conversation to update. The following are
-               * NOT supported: * conversation.name If not set or empty, all supported fields are
+               * NOT supported: * Conversation.name If not set or empty, all supported fields are
                * updated.
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
               /** Indicates which fields in the provided Conversation to update. The following are NOT supported: *
-             conversation.name If not set or empty, all supported fields are updated.
+             Conversation.name If not set or empty, all supported fields are updated.
                */
               public String getUpdateMask() {
                 return updateMask;
@@ -5719,7 +5719,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Indicates which fields in the provided Conversation to update. The following are
-               * NOT supported: * conversation.name If not set or empty, all supported fields are
+               * NOT supported: * Conversation.name If not set or empty, all supported fields are
                * updated.
                */
               public Patch setUpdateMask(String updateMask) {
@@ -7692,7 +7692,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              *        used as the ID of the default serving config. For example, for Engine
              *        `projects/locations/global/collections/engines/my-engine`, you can use
              *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
-             *        your Recommend requests.
+             *        your RecommendationService.Recommend requests.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
              * @return the request
              */
@@ -7727,7 +7727,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              *        used as the ID of the default serving config. For example, for Engine
              *        `projects/locations/global/collections/engines/my-engine`, you can use
              *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
-             *        your Recommend requests.
+             *        your RecommendationService.Recommend requests.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
                * @since 1.13
                */
@@ -7804,7 +7804,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * engine ID will be used as the ID of the default serving config. For example, for
                * Engine `projects/locations/global/collections/engines/my-engine`, you can use
                * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
-               * for your Recommend requests.
+               * for your RecommendationService.Recommend requests.
                */
               @com.google.api.client.util.Key
               private java.lang.String servingConfig;
@@ -7815,7 +7815,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              created along with your recommendation engine creation. The engine ID will be used as the ID of the
              default serving config. For example, for Engine `projects/locations/global/collections/engines/my-
              engine`, you can use `projects/locations/global/collections/engines/my-engine/servingConfigs/my-
-             engine` for your Recommend requests.
+             engine` for your RecommendationService.Recommend requests.
                */
               public java.lang.String getServingConfig() {
                 return servingConfig;
@@ -7829,7 +7829,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * engine ID will be used as the ID of the default serving config. For example, for
                * Engine `projects/locations/global/collections/engines/my-engine`, you can use
                * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
-               * for your Recommend requests.
+               * for your RecommendationService.Recommend requests.
                */
               public Recommend setServingConfig(java.lang.String servingConfig) {
                 if (!getSuppressPatternChecks()) {
@@ -10493,6 +10493,309 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * An accessor for creating requests from the SuggestionDenyListEntries collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.SuggestionDenyListEntries.List request = discoveryengine.suggestionDenyListEntries().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public SuggestionDenyListEntries suggestionDenyListEntries() {
+            return new SuggestionDenyListEntries();
+          }
+
+          /**
+           * The "suggestionDenyListEntries" collection of methods.
+           */
+          public class SuggestionDenyListEntries {
+
+            /**
+             * Imports all SuggestionDenyListEntry for a DataStore.
+             *
+             * Create a request for the method "suggestionDenyListEntries.import".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param parent Required. The parent data store resource name for which to import denylist entries. Follows pattern
+             *        projects/locations/collections/dataStores.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesRequest}
+             * @return the request
+             */
+            public DiscoveryEngineImport discoveryengineImport(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesRequest content) throws java.io.IOException {
+              DiscoveryEngineImport result = new DiscoveryEngineImport(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class DiscoveryEngineImport extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/suggestionDenyListEntries:import";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Imports all SuggestionDenyListEntry for a DataStore.
+               *
+               * Create a request for the method "suggestionDenyListEntries.import".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the
+               * remote operation. <p> {@link DiscoveryEngineImport#initialize(com.google.api.client.googleapis.
+               * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+               * after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent data store resource name for which to import denylist entries. Follows pattern
+             *        projects/locations/collections/dataStores.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesRequest}
+               * @since 1.13
+               */
+              protected DiscoveryEngineImport(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public DiscoveryEngineImport set$Xgafv(java.lang.String $Xgafv) {
+                return (DiscoveryEngineImport) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public DiscoveryEngineImport setAccessToken(java.lang.String accessToken) {
+                return (DiscoveryEngineImport) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public DiscoveryEngineImport setAlt(java.lang.String alt) {
+                return (DiscoveryEngineImport) super.setAlt(alt);
+              }
+
+              @Override
+              public DiscoveryEngineImport setCallback(java.lang.String callback) {
+                return (DiscoveryEngineImport) super.setCallback(callback);
+              }
+
+              @Override
+              public DiscoveryEngineImport setFields(java.lang.String fields) {
+                return (DiscoveryEngineImport) super.setFields(fields);
+              }
+
+              @Override
+              public DiscoveryEngineImport setKey(java.lang.String key) {
+                return (DiscoveryEngineImport) super.setKey(key);
+              }
+
+              @Override
+              public DiscoveryEngineImport setOauthToken(java.lang.String oauthToken) {
+                return (DiscoveryEngineImport) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public DiscoveryEngineImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (DiscoveryEngineImport) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public DiscoveryEngineImport setQuotaUser(java.lang.String quotaUser) {
+                return (DiscoveryEngineImport) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public DiscoveryEngineImport setUploadType(java.lang.String uploadType) {
+                return (DiscoveryEngineImport) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public DiscoveryEngineImport setUploadProtocol(java.lang.String uploadProtocol) {
+                return (DiscoveryEngineImport) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent data store resource name for which to import denylist entries.
+               * Follows pattern projects/locations/collections/dataStores.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent data store resource name for which to import denylist entries. Follows pattern
+             projects/locations/collections/dataStores.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent data store resource name for which to import denylist entries.
+               * Follows pattern projects/locations/collections/dataStores.
+               */
+              public DiscoveryEngineImport setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public DiscoveryEngineImport set(String parameterName, Object value) {
+                return (DiscoveryEngineImport) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Permanently deletes all SuggestionDenyListEntry for a DataStore.
+             *
+             * Create a request for the method "suggestionDenyListEntries.purge".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent data store resource name for which to import denylist entries. Follows pattern
+             *        projects/locations/collections/dataStores.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeSuggestionDenyListEntriesRequest}
+             * @return the request
+             */
+            public Purge purge(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeSuggestionDenyListEntriesRequest content) throws java.io.IOException {
+              Purge result = new Purge(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Purge extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/suggestionDenyListEntries:purge";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Permanently deletes all SuggestionDenyListEntry for a DataStore.
+               *
+               * Create a request for the method "suggestionDenyListEntries.purge".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent data store resource name for which to import denylist entries. Follows pattern
+             *        projects/locations/collections/dataStores.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeSuggestionDenyListEntriesRequest}
+               * @since 1.13
+               */
+              protected Purge(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeSuggestionDenyListEntriesRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Purge set$Xgafv(java.lang.String $Xgafv) {
+                return (Purge) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Purge setAccessToken(java.lang.String accessToken) {
+                return (Purge) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Purge setAlt(java.lang.String alt) {
+                return (Purge) super.setAlt(alt);
+              }
+
+              @Override
+              public Purge setCallback(java.lang.String callback) {
+                return (Purge) super.setCallback(callback);
+              }
+
+              @Override
+              public Purge setFields(java.lang.String fields) {
+                return (Purge) super.setFields(fields);
+              }
+
+              @Override
+              public Purge setKey(java.lang.String key) {
+                return (Purge) super.setKey(key);
+              }
+
+              @Override
+              public Purge setOauthToken(java.lang.String oauthToken) {
+                return (Purge) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Purge setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Purge) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Purge setQuotaUser(java.lang.String quotaUser) {
+                return (Purge) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Purge setUploadType(java.lang.String uploadType) {
+                return (Purge) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Purge setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Purge) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent data store resource name for which to import denylist entries.
+               * Follows pattern projects/locations/collections/dataStores.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent data store resource name for which to import denylist entries. Follows pattern
+             projects/locations/collections/dataStores.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent data store resource name for which to import denylist entries.
+               * Follows pattern projects/locations/collections/dataStores.
+               */
+              public Purge setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Purge set(String parameterName, Object value) {
+                return (Purge) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
            * An accessor for creating requests from the UserEvents collection.
            *
            * <p>The typical use is:</p>
@@ -12041,7 +12344,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Pauses the training of an existing engine. Only applicable if solution_type is
+           * Pauses the training of an existing engine. Only applicable if SolutionType is
            * SOLUTION_TYPE_RECOMMENDATION.
            *
            * Create a request for the method "engines.pause".
@@ -12069,7 +12372,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
 
             /**
-             * Pauses the training of an existing engine. Only applicable if solution_type is
+             * Pauses the training of an existing engine. Only applicable if SolutionType is
              * SOLUTION_TYPE_RECOMMENDATION.
              *
              * Create a request for the method "engines.pause".
@@ -12185,7 +12488,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Resumes the training of an existing engine. Only applicable if solution_type is
+           * Resumes the training of an existing engine. Only applicable if SolutionType is
            * SOLUTION_TYPE_RECOMMENDATION.
            *
            * Create a request for the method "engines.resume".
@@ -12213,7 +12516,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
 
             /**
-             * Resumes the training of an existing engine. Only applicable if solution_type is
+             * Resumes the training of an existing engine. Only applicable if SolutionType is
              * SOLUTION_TYPE_RECOMMENDATION.
              *
              * Create a request for the method "engines.resume".
@@ -12329,7 +12632,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Tunes an existing engine. Only applicable if solution_type is SOLUTION_TYPE_RECOMMENDATION.
+           * Tunes an existing engine. Only applicable if SolutionType is SOLUTION_TYPE_RECOMMENDATION.
            *
            * Create a request for the method "engines.tune".
            *
@@ -12356,7 +12659,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
 
             /**
-             * Tunes an existing engine. Only applicable if solution_type is SOLUTION_TYPE_RECOMMENDATION.
+             * Tunes an existing engine. Only applicable if SolutionType is SOLUTION_TYPE_RECOMMENDATION.
              *
              * Create a request for the method "engines.tune".
              *
@@ -13471,14 +13774,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Indicates which fields in the provided Conversation to update. The following are
-               * NOT supported: * conversation.name If not set or empty, all supported fields are
+               * NOT supported: * Conversation.name If not set or empty, all supported fields are
                * updated.
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
               /** Indicates which fields in the provided Conversation to update. The following are NOT supported: *
-             conversation.name If not set or empty, all supported fields are updated.
+             Conversation.name If not set or empty, all supported fields are updated.
                */
               public String getUpdateMask() {
                 return updateMask;
@@ -13486,7 +13789,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Indicates which fields in the provided Conversation to update. The following are
-               * NOT supported: * conversation.name If not set or empty, all supported fields are
+               * NOT supported: * Conversation.name If not set or empty, all supported fields are
                * updated.
                */
               public Patch setUpdateMask(String updateMask) {
@@ -13886,7 +14189,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              *        used as the ID of the default serving config. For example, for Engine
              *        `projects/locations/global/collections/engines/my-engine`, you can use
              *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
-             *        your Recommend requests.
+             *        your RecommendationService.Recommend requests.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
              * @return the request
              */
@@ -13921,7 +14224,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              *        used as the ID of the default serving config. For example, for Engine
              *        `projects/locations/global/collections/engines/my-engine`, you can use
              *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
-             *        your Recommend requests.
+             *        your RecommendationService.Recommend requests.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
                * @since 1.13
                */
@@ -13998,7 +14301,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * engine ID will be used as the ID of the default serving config. For example, for
                * Engine `projects/locations/global/collections/engines/my-engine`, you can use
                * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
-               * for your Recommend requests.
+               * for your RecommendationService.Recommend requests.
                */
               @com.google.api.client.util.Key
               private java.lang.String servingConfig;
@@ -14009,7 +14312,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              created along with your recommendation engine creation. The engine ID will be used as the ID of the
              default serving config. For example, for Engine `projects/locations/global/collections/engines/my-
              engine`, you can use `projects/locations/global/collections/engines/my-engine/servingConfigs/my-
-             engine` for your Recommend requests.
+             engine` for your RecommendationService.Recommend requests.
                */
               public java.lang.String getServingConfig() {
                 return servingConfig;
@@ -14023,7 +14326,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * engine ID will be used as the ID of the default serving config. For example, for
                * Engine `projects/locations/global/collections/engines/my-engine`, you can use
                * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
-               * for your Recommend requests.
+               * for your RecommendationService.Recommend requests.
                */
               public Recommend setServingConfig(java.lang.String servingConfig) {
                 if (!getSuppressPatternChecks()) {
@@ -15678,7 +15981,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          *
          * @param parent Required. The parent branch resource name, such as
          *        `projects/{project}/locations/{location}/collections/{collection_id}`. If the caller does
-         *        not have permission to list DataStoress under this location, regardless of whether or not
+         *        not have permission to list DataStores under this location, regardless of whether or not
          *        this data store exists, a PERMISSION_DENIED error is returned.
          * @return the request
          */
@@ -15707,7 +16010,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            *
            * @param parent Required. The parent branch resource name, such as
          *        `projects/{project}/locations/{location}/collections/{collection_id}`. If the caller does
-         *        not have permission to list DataStoress under this location, regardless of whether or not
+         *        not have permission to list DataStores under this location, regardless of whether or not
          *        this data store exists, a PERMISSION_DENIED error is returned.
            * @since 1.13
            */
@@ -15789,7 +16092,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           /**
            * Required. The parent branch resource name, such as
            * `projects/{project}/locations/{location}/collections/{collection_id}`. If the caller
-           * does not have permission to list DataStoress under this location, regardless of whether
+           * does not have permission to list DataStores under this location, regardless of whether
            * or not this data store exists, a PERMISSION_DENIED error is returned.
            */
           @com.google.api.client.util.Key
@@ -15797,7 +16100,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /** Required. The parent branch resource name, such as
          `projects/{project}/locations/{location}/collections/{collection_id}`. If the caller does not have
-         permission to list DataStoress under this location, regardless of whether or not this data store
+         permission to list DataStores under this location, regardless of whether or not this data store
          exists, a PERMISSION_DENIED error is returned.
            */
           public java.lang.String getParent() {
@@ -15807,7 +16110,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           /**
            * Required. The parent branch resource name, such as
            * `projects/{project}/locations/{location}/collections/{collection_id}`. If the caller
-           * does not have permission to list DataStoress under this location, regardless of whether
+           * does not have permission to list DataStores under this location, regardless of whether
            * or not this data store exists, a PERMISSION_DENIED error is returned.
            */
           public List setParent(java.lang.String parent) {
@@ -18805,13 +19108,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Indicates which fields in the provided Conversation to update. The following are NOT
-             * supported: * conversation.name If not set or empty, all supported fields are updated.
+             * supported: * Conversation.name If not set or empty, all supported fields are updated.
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
             /** Indicates which fields in the provided Conversation to update. The following are NOT supported: *
-           conversation.name If not set or empty, all supported fields are updated.
+           Conversation.name If not set or empty, all supported fields are updated.
              */
             public String getUpdateMask() {
               return updateMask;
@@ -18819,7 +19122,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Indicates which fields in the provided Conversation to update. The following are NOT
-             * supported: * conversation.name If not set or empty, all supported fields are updated.
+             * supported: * Conversation.name If not set or empty, all supported fields are updated.
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -20441,7 +20744,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            *        used as the ID of the default serving config. For example, for Engine
            *        `projects/locations/global/collections/engines/my-engine`, you can use
            *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
-           *        your Recommend requests.
+           *        your RecommendationService.Recommend requests.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
            * @return the request
            */
@@ -20476,7 +20779,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            *        used as the ID of the default serving config. For example, for Engine
            *        `projects/locations/global/collections/engines/my-engine`, you can use
            *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
-           *        your Recommend requests.
+           *        your RecommendationService.Recommend requests.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
              * @since 1.13
              */
@@ -20553,7 +20856,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be used as the ID of the default serving config. For example, for Engine
              * `projects/locations/global/collections/engines/my-engine`, you can use
              * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
-             * for your Recommend requests.
+             * for your RecommendationService.Recommend requests.
              */
             @com.google.api.client.util.Key
             private java.lang.String servingConfig;
@@ -20564,7 +20867,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            created along with your recommendation engine creation. The engine ID will be used as the ID of the
            default serving config. For example, for Engine `projects/locations/global/collections/engines/my-
            engine`, you can use `projects/locations/global/collections/engines/my-engine/servingConfigs/my-
-           engine` for your Recommend requests.
+           engine` for your RecommendationService.Recommend requests.
              */
             public java.lang.String getServingConfig() {
               return servingConfig;
@@ -20578,7 +20881,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be used as the ID of the default serving config. For example, for Engine
              * `projects/locations/global/collections/engines/my-engine`, you can use
              * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
-             * for your Recommend requests.
+             * for your RecommendationService.Recommend requests.
              */
             public Recommend setServingConfig(java.lang.String servingConfig) {
               if (!getSuppressPatternChecks()) {
@@ -22183,6 +22486,309 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
           }
+        }
+        /**
+         * An accessor for creating requests from the SuggestionDenyListEntries collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.SuggestionDenyListEntries.List request = discoveryengine.suggestionDenyListEntries().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public SuggestionDenyListEntries suggestionDenyListEntries() {
+          return new SuggestionDenyListEntries();
+        }
+
+        /**
+         * The "suggestionDenyListEntries" collection of methods.
+         */
+        public class SuggestionDenyListEntries {
+
+          /**
+           * Imports all SuggestionDenyListEntry for a DataStore.
+           *
+           * Create a request for the method "suggestionDenyListEntries.import".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. The parent data store resource name for which to import denylist entries. Follows pattern
+           *        projects/locations/collections/dataStores.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesRequest}
+           * @return the request
+           */
+          public DiscoveryEngineImport discoveryengineImport(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesRequest content) throws java.io.IOException {
+            DiscoveryEngineImport result = new DiscoveryEngineImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DiscoveryEngineImport extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/suggestionDenyListEntries:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+
+            /**
+             * Imports all SuggestionDenyListEntry for a DataStore.
+             *
+             * Create a request for the method "suggestionDenyListEntries.import".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the
+             * remote operation. <p> {@link DiscoveryEngineImport#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent data store resource name for which to import denylist entries. Follows pattern
+           *        projects/locations/collections/dataStores.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesRequest}
+             * @since 1.13
+             */
+            protected DiscoveryEngineImport(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public DiscoveryEngineImport set$Xgafv(java.lang.String $Xgafv) {
+              return (DiscoveryEngineImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DiscoveryEngineImport setAccessToken(java.lang.String accessToken) {
+              return (DiscoveryEngineImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DiscoveryEngineImport setAlt(java.lang.String alt) {
+              return (DiscoveryEngineImport) super.setAlt(alt);
+            }
+
+            @Override
+            public DiscoveryEngineImport setCallback(java.lang.String callback) {
+              return (DiscoveryEngineImport) super.setCallback(callback);
+            }
+
+            @Override
+            public DiscoveryEngineImport setFields(java.lang.String fields) {
+              return (DiscoveryEngineImport) super.setFields(fields);
+            }
+
+            @Override
+            public DiscoveryEngineImport setKey(java.lang.String key) {
+              return (DiscoveryEngineImport) super.setKey(key);
+            }
+
+            @Override
+            public DiscoveryEngineImport setOauthToken(java.lang.String oauthToken) {
+              return (DiscoveryEngineImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DiscoveryEngineImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DiscoveryEngineImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DiscoveryEngineImport setQuotaUser(java.lang.String quotaUser) {
+              return (DiscoveryEngineImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DiscoveryEngineImport setUploadType(java.lang.String uploadType) {
+              return (DiscoveryEngineImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DiscoveryEngineImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DiscoveryEngineImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent data store resource name for which to import denylist entries.
+             * Follows pattern projects/locations/collections/dataStores.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent data store resource name for which to import denylist entries. Follows pattern
+           projects/locations/collections/dataStores.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent data store resource name for which to import denylist entries.
+             * Follows pattern projects/locations/collections/dataStores.
+             */
+            public DiscoveryEngineImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public DiscoveryEngineImport set(String parameterName, Object value) {
+              return (DiscoveryEngineImport) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Permanently deletes all SuggestionDenyListEntry for a DataStore.
+           *
+           * Create a request for the method "suggestionDenyListEntries.purge".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent data store resource name for which to import denylist entries. Follows pattern
+           *        projects/locations/collections/dataStores.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeSuggestionDenyListEntriesRequest}
+           * @return the request
+           */
+          public Purge purge(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeSuggestionDenyListEntriesRequest content) throws java.io.IOException {
+            Purge result = new Purge(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Purge extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/suggestionDenyListEntries:purge";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/.*$");
+
+            /**
+             * Permanently deletes all SuggestionDenyListEntry for a DataStore.
+             *
+             * Create a request for the method "suggestionDenyListEntries.purge".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent data store resource name for which to import denylist entries. Follows pattern
+           *        projects/locations/collections/dataStores.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeSuggestionDenyListEntriesRequest}
+             * @since 1.13
+             */
+            protected Purge(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeSuggestionDenyListEntriesRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/.*$");
+              }
+            }
+
+            @Override
+            public Purge set$Xgafv(java.lang.String $Xgafv) {
+              return (Purge) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Purge setAccessToken(java.lang.String accessToken) {
+              return (Purge) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Purge setAlt(java.lang.String alt) {
+              return (Purge) super.setAlt(alt);
+            }
+
+            @Override
+            public Purge setCallback(java.lang.String callback) {
+              return (Purge) super.setCallback(callback);
+            }
+
+            @Override
+            public Purge setFields(java.lang.String fields) {
+              return (Purge) super.setFields(fields);
+            }
+
+            @Override
+            public Purge setKey(java.lang.String key) {
+              return (Purge) super.setKey(key);
+            }
+
+            @Override
+            public Purge setOauthToken(java.lang.String oauthToken) {
+              return (Purge) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Purge setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Purge) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Purge setQuotaUser(java.lang.String quotaUser) {
+              return (Purge) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Purge setUploadType(java.lang.String uploadType) {
+              return (Purge) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Purge setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Purge) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent data store resource name for which to import denylist entries.
+             * Follows pattern projects/locations/collections/dataStores.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent data store resource name for which to import denylist entries. Follows pattern
+           projects/locations/collections/dataStores.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent data store resource name for which to import denylist entries.
+             * Follows pattern projects/locations/collections/dataStores.
+             */
+            public Purge setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/.*$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Purge set(String parameterName, Object value) {
+              return (Purge) super.set(parameterName, value);
+            }
+          }
+
         }
         /**
          * An accessor for creating requests from the UserEvents collection.

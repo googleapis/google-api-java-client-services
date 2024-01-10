@@ -44,7 +44,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2TemporaryQuota extends com.g
   private String quotaDuration;
 
   /**
-   * When this quota will take affect
+   * When this quota will take effect
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2TemporaryQuota extends com.g
   }
 
   /**
-   * When this quota will take affect
+   * When this quota will take effect
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -93,7 +93,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2TemporaryQuota extends com.g
   }
 
   /**
-   * When this quota will take affect
+   * When this quota will take effect
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitAdminV2TemporaryQuota setStartTime(String startTime) {

@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 
 /**
- * Message describing ContactCenter object Next ID: 16
+ * Message describing ContactCenter object Next ID: 18
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Platform API. For a detailed
@@ -94,6 +94,17 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. A list of UJET components that should be privately accessed. This field is set by
+   * reading settings from the data plane. For more information about the format of the component
+   * please refer to go/ccaip-vpc-sc-org-policy. This field is must be fully populated only for
+   * Create/Update resource operations. The main use case for this field is OrgPolicy checks via
+   * CPE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> privateComponents;
 
   /**
    * Optional. Params that sets up Google as IdP.
@@ -284,6 +295,31 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   public ContactCenter setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. A list of UJET components that should be privately accessed. This field is set by
+   * reading settings from the data plane. For more information about the format of the component
+   * please refer to go/ccaip-vpc-sc-org-policy. This field is must be fully populated only for
+   * Create/Update resource operations. The main use case for this field is OrgPolicy checks via
+   * CPE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPrivateComponents() {
+    return privateComponents;
+  }
+
+  /**
+   * Output only. A list of UJET components that should be privately accessed. This field is set by
+   * reading settings from the data plane. For more information about the format of the component
+   * please refer to go/ccaip-vpc-sc-org-policy. This field is must be fully populated only for
+   * Create/Update resource operations. The main use case for this field is OrgPolicy checks via
+   * CPE.
+   * @param privateComponents privateComponents or {@code null} for none
+   */
+  public ContactCenter setPrivateComponents(java.util.List<java.lang.String> privateComponents) {
+    this.privateComponents = privateComponents;
     return this;
   }
 

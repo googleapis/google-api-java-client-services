@@ -58,7 +58,7 @@ public final class LinkMetadata extends com.google.api.client.json.GenericJson {
   private String startTime;
 
   /**
-   * State of an operation.
+   * Output only. State of an operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +133,7 @@ public final class LinkMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * State of an operation.
+   * Output only. State of an operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -141,7 +141,7 @@ public final class LinkMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * State of an operation.
+   * Output only. State of an operation.
    * @param state state or {@code null} for none
    */
   public LinkMetadata setState(java.lang.String state) {

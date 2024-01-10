@@ -37,15 +37,15 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Describes this view.
+   * Optional. Describes this view.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Filter that restricts which log entries in a bucket are visible in this view.Filters must be
-   * logical conjunctions that use the AND operator, and they can use any of the following
+   * Optional. Filter that restricts which log entries in a bucket are visible in this view.Filters
+   * must be logical conjunctions that use the AND operator, and they can use any of the following
    * qualifiers: SOURCE(), which specifies a project, folder, organization, or billing account of
    * origin. resource.type, which specifies the resource type. LOG_ID(), which identifies the
    * log.They can also use the negations of these qualifiers with the NOT operator.For
@@ -57,8 +57,8 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   private java.lang.String filter;
 
   /**
-   * The resource name of the view.For example:projects/my-project/locations/global/buckets/my-
-   * bucket/views/my-view
+   * Output only. The resource name of the view.For example:projects/my-
+   * project/locations/global/buckets/my-bucket/views/my-view
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describes this view.
+   * Optional. Describes this view.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -97,7 +97,7 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describes this view.
+   * Optional. Describes this view.
    * @param description description or {@code null} for none
    */
   public LogView setDescription(java.lang.String description) {
@@ -106,8 +106,8 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter that restricts which log entries in a bucket are visible in this view.Filters must be
-   * logical conjunctions that use the AND operator, and they can use any of the following
+   * Optional. Filter that restricts which log entries in a bucket are visible in this view.Filters
+   * must be logical conjunctions that use the AND operator, and they can use any of the following
    * qualifiers: SOURCE(), which specifies a project, folder, organization, or billing account of
    * origin. resource.type, which specifies the resource type. LOG_ID(), which identifies the
    * log.They can also use the negations of these qualifiers with the NOT operator.For
@@ -120,8 +120,8 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter that restricts which log entries in a bucket are visible in this view.Filters must be
-   * logical conjunctions that use the AND operator, and they can use any of the following
+   * Optional. Filter that restricts which log entries in a bucket are visible in this view.Filters
+   * must be logical conjunctions that use the AND operator, and they can use any of the following
    * qualifiers: SOURCE(), which specifies a project, folder, organization, or billing account of
    * origin. resource.type, which specifies the resource type. LOG_ID(), which identifies the
    * log.They can also use the negations of these qualifiers with the NOT operator.For
@@ -135,8 +135,8 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the view.For example:projects/my-project/locations/global/buckets/my-
-   * bucket/views/my-view
+   * Output only. The resource name of the view.For example:projects/my-
+   * project/locations/global/buckets/my-bucket/views/my-view
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -144,8 +144,8 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the view.For example:projects/my-project/locations/global/buckets/my-
-   * bucket/views/my-view
+   * Output only. The resource name of the view.For example:projects/my-
+   * project/locations/global/buckets/my-bucket/views/my-view
    * @param name name or {@code null} for none
    */
   public LogView setName(java.lang.String name) {

@@ -34,7 +34,7 @@ package com.google.api.services.logging.v2.model;
 public final class CmekSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name for the configured Cloud KMS key.KMS key name format:
+   * Optional. The resource name for the configured Cloud KMS key.KMS key name format:
    * "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]" For
    * example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-key"To enable
    * CMEK for the Log Router, set this field to a valid kms_key_name for which the associated
@@ -52,13 +52,13 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   private java.lang.String kmsKeyName;
 
   /**
-   * The CryptoKeyVersion resource name for the configured Cloud KMS key.KMS key name format: "proje
-   * cts/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]/cryptoKeyVersions/[VE
-   * RSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-
-   * key/cryptoKeyVersions/1"This is a read-only field used to convey the specific configured
-   * CryptoKeyVersion of kms_key that has been configured. It will be populated in cases where the
-   * CMEK settings are bound to a single key version.If this field is populated, the kms_key is tied
-   * to a specific CryptoKeyVersion.
+   * Output only. The CryptoKeyVersion resource name for the configured Cloud KMS key.KMS key name
+   * format: "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]/cryptoK
+   * eyVersions/[VERSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-
+   * ring/cryptoKeys/my-key/cryptoKeyVersions/1"This is a read-only field used to convey the
+   * specific configured CryptoKeyVersion of kms_key that has been configured. It will be populated
+   * in cases where the CMEK settings are bound to a single key version.If this field is populated,
+   * the kms_key is tied to a specific CryptoKeyVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccountId;
 
   /**
-   * The resource name for the configured Cloud KMS key.KMS key name format:
+   * Optional. The resource name for the configured Cloud KMS key.KMS key name format:
    * "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]" For
    * example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-key"To enable
    * CMEK for the Log Router, set this field to a valid kms_key_name for which the associated
@@ -103,7 +103,7 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name for the configured Cloud KMS key.KMS key name format:
+   * Optional. The resource name for the configured Cloud KMS key.KMS key name format:
    * "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]" For
    * example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-key"To enable
    * CMEK for the Log Router, set this field to a valid kms_key_name for which the associated
@@ -123,13 +123,13 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The CryptoKeyVersion resource name for the configured Cloud KMS key.KMS key name format: "proje
-   * cts/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]/cryptoKeyVersions/[VE
-   * RSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-
-   * key/cryptoKeyVersions/1"This is a read-only field used to convey the specific configured
-   * CryptoKeyVersion of kms_key that has been configured. It will be populated in cases where the
-   * CMEK settings are bound to a single key version.If this field is populated, the kms_key is tied
-   * to a specific CryptoKeyVersion.
+   * Output only. The CryptoKeyVersion resource name for the configured Cloud KMS key.KMS key name
+   * format: "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]/cryptoK
+   * eyVersions/[VERSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-
+   * ring/cryptoKeys/my-key/cryptoKeyVersions/1"This is a read-only field used to convey the
+   * specific configured CryptoKeyVersion of kms_key that has been configured. It will be populated
+   * in cases where the CMEK settings are bound to a single key version.If this field is populated,
+   * the kms_key is tied to a specific CryptoKeyVersion.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyVersionName() {
@@ -137,13 +137,13 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The CryptoKeyVersion resource name for the configured Cloud KMS key.KMS key name format: "proje
-   * cts/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]/cryptoKeyVersions/[VE
-   * RSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-
-   * key/cryptoKeyVersions/1"This is a read-only field used to convey the specific configured
-   * CryptoKeyVersion of kms_key that has been configured. It will be populated in cases where the
-   * CMEK settings are bound to a single key version.If this field is populated, the kms_key is tied
-   * to a specific CryptoKeyVersion.
+   * Output only. The CryptoKeyVersion resource name for the configured Cloud KMS key.KMS key name
+   * format: "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]/cryptoK
+   * eyVersions/[VERSION]" For example:"projects/my-project/locations/us-central1/keyRings/my-
+   * ring/cryptoKeys/my-key/cryptoKeyVersions/1"This is a read-only field used to convey the
+   * specific configured CryptoKeyVersion of kms_key that has been configured. It will be populated
+   * in cases where the CMEK settings are bound to a single key version.If this field is populated,
+   * the kms_key is tied to a specific CryptoKeyVersion.
    * @param kmsKeyVersionName kmsKeyVersionName or {@code null} for none
    */
   public CmekSettings setKmsKeyVersionName(java.lang.String kmsKeyVersionName) {

@@ -65,7 +65,7 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   private String startTime;
 
   /**
-   * State of an operation.
+   * Output only. State of an operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +166,7 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * State of an operation.
+   * Output only. State of an operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -174,7 +174,7 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * State of an operation.
+   * Output only. State of an operation.
    * @param state state or {@code null} for none
    */
   public CopyLogEntriesMetadata setState(java.lang.String state) {

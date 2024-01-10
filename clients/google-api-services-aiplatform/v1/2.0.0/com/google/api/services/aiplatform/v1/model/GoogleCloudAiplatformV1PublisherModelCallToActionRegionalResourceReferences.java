@@ -38,7 +38,28 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalReso
   private java.util.Map<String, GoogleCloudAiplatformV1PublisherModelResourceReference> references;
 
   /**
-   * Required. The title of the regional resource reference.
+   * Optional. Description of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceDescription;
+
+  /**
+   * Optional. Title of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceTitle;
+
+  /**
+   * Optional. Use case (CUJ) of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceUseCase;
+
+  /**
+   * Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +83,58 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalReso
   }
 
   /**
-   * Required. The title of the regional resource reference.
+   * Optional. Description of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceDescription() {
+    return resourceDescription;
+  }
+
+  /**
+   * Optional. Description of the resource.
+   * @param resourceDescription resourceDescription or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences setResourceDescription(java.lang.String resourceDescription) {
+    this.resourceDescription = resourceDescription;
+    return this;
+  }
+
+  /**
+   * Optional. Title of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceTitle() {
+    return resourceTitle;
+  }
+
+  /**
+   * Optional. Title of the resource.
+   * @param resourceTitle resourceTitle or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences setResourceTitle(java.lang.String resourceTitle) {
+    this.resourceTitle = resourceTitle;
+    return this;
+  }
+
+  /**
+   * Optional. Use case (CUJ) of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceUseCase() {
+    return resourceUseCase;
+  }
+
+  /**
+   * Optional. Use case (CUJ) of the resource.
+   * @param resourceUseCase resourceUseCase or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences setResourceUseCase(java.lang.String resourceUseCase) {
+    this.resourceUseCase = resourceUseCase;
+    return this;
+  }
+
+  /**
+   * Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -70,7 +142,7 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalReso
   }
 
   /**
-   * Required. The title of the regional resource reference.
+   * Required.
    * @param title title or {@code null} for none
    */
   public GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences setTitle(java.lang.String title) {

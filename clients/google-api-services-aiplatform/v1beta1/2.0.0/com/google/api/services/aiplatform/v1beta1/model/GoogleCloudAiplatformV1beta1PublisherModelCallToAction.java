@@ -58,6 +58,13 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToAction extend
   private GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences openFineTuningPipeline;
 
   /**
+   * Optional. Open fine-tuning pipelines of the PublisherModel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PublisherModelCallToActionOpenFineTuningPipelines openFineTuningPipelines;
+
+  /**
    * Optional. Open in Generation AI Studio.
    * The value may be {@code null}.
    */
@@ -77,6 +84,13 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToAction extend
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences openNotebook;
+
+  /**
+   * Optional. Open notebooks of the PublisherModel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PublisherModelCallToActionOpenNotebooks openNotebooks;
 
   /**
    * Optional. Open prompt-tuning pipeline of the PublisherModel.
@@ -168,6 +182,23 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToAction extend
   }
 
   /**
+   * Optional. Open fine-tuning pipelines of the PublisherModel.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToActionOpenFineTuningPipelines getOpenFineTuningPipelines() {
+    return openFineTuningPipelines;
+  }
+
+  /**
+   * Optional. Open fine-tuning pipelines of the PublisherModel.
+   * @param openFineTuningPipelines openFineTuningPipelines or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToAction setOpenFineTuningPipelines(GoogleCloudAiplatformV1beta1PublisherModelCallToActionOpenFineTuningPipelines openFineTuningPipelines) {
+    this.openFineTuningPipelines = openFineTuningPipelines;
+    return this;
+  }
+
+  /**
    * Optional. Open in Generation AI Studio.
    * @return value or {@code null} for none
    */
@@ -215,6 +246,23 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToAction extend
    */
   public GoogleCloudAiplatformV1beta1PublisherModelCallToAction setOpenNotebook(GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences openNotebook) {
     this.openNotebook = openNotebook;
+    return this;
+  }
+
+  /**
+   * Optional. Open notebooks of the PublisherModel.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToActionOpenNotebooks getOpenNotebooks() {
+    return openNotebooks;
+  }
+
+  /**
+   * Optional. Open notebooks of the PublisherModel.
+   * @param openNotebooks openNotebooks or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToAction setOpenNotebooks(GoogleCloudAiplatformV1beta1PublisherModelCallToActionOpenNotebooks openNotebooks) {
+    this.openNotebooks = openNotebooks;
     return this;
   }
 

@@ -32,8 +32,9 @@ package com.google.api.services.logging.v2.model;
 public final class LoggingQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * An advanced query using the Logging Query Language (https://cloud.google.com/logging/docs/view
-   * /logging-query-language). The maximum length of the filter is 20000 characters.
+   * Required. An advanced query using the Logging Query Language
+   * (https://cloud.google.com/logging/docs/view/logging-query-language). The maximum length of the
+   * filter is 20000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,15 +55,16 @@ public final class LoggingQuery extends com.google.api.client.json.GenericJson {
   private java.lang.Integer summaryFieldStart;
 
   /**
-   * The set of summary fields to display for this saved query.
+   * Optional. The set of summary fields to display for this saved query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SummaryField> summaryFields;
 
   /**
-   * An advanced query using the Logging Query Language (https://cloud.google.com/logging/docs/view
-   * /logging-query-language). The maximum length of the filter is 20000 characters.
+   * Required. An advanced query using the Logging Query Language
+   * (https://cloud.google.com/logging/docs/view/logging-query-language). The maximum length of the
+   * filter is 20000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -70,8 +72,9 @@ public final class LoggingQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An advanced query using the Logging Query Language (https://cloud.google.com/logging/docs/view
-   * /logging-query-language). The maximum length of the filter is 20000 characters.
+   * Required. An advanced query using the Logging Query Language
+   * (https://cloud.google.com/logging/docs/view/logging-query-language). The maximum length of the
+   * filter is 20000 characters.
    * @param filter filter or {@code null} for none
    */
   public LoggingQuery setFilter(java.lang.String filter) {
@@ -114,7 +117,7 @@ public final class LoggingQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of summary fields to display for this saved query.
+   * Optional. The set of summary fields to display for this saved query.
    * @return value or {@code null} for none
    */
   public java.util.List<SummaryField> getSummaryFields() {
@@ -122,7 +125,7 @@ public final class LoggingQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of summary fields to display for this saved query.
+   * Optional. The set of summary fields to display for this saved query.
    * @param summaryFields summaryFields or {@code null} for none
    */
   public LoggingQuery setSummaryFields(java.util.List<SummaryField> summaryFields) {

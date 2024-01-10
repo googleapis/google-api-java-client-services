@@ -30,18 +30,18 @@ package com.google.api.services.logging.v2.model;
 public final class LogBucket extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether log analytics is enabled for this bucket.Once enabled, log analytics features cannot be
-   * disabled.
+   * Optional. Whether log analytics is enabled for this bucket.Once enabled, log analytics features
+   * cannot be disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean analyticsEnabled;
 
   /**
-   * The CMEK settings of the log bucket. If present, new log entries written to this log bucket are
-   * encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings,
-   * the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is
-   * allowed.
+   * Optional. The CMEK settings of the log bucket. If present, new log entries written to this log
+   * bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has
+   * CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing
+   * the KMS key is allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,14 +56,14 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Describes this bucket.
+   * Optional. Describes this bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * A list of indexed fields and related configuration data.
+   * Optional. A list of indexed fields and related configuration data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +83,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private java.lang.String lifecycleState;
 
   /**
-   * Whether the bucket is locked.The retention period on a locked bucket cannot be changed. Locked
-   * buckets may only be deleted if they are empty.
+   * Optional. Whether the bucket is locked.The retention period on a locked bucket cannot be
+   * changed. Locked buckets may only be deleted if they are empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +102,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Log entry field paths that are denied access in this bucket.The following fields and their
-   * children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
+   * Optional. Log entry field paths that are denied access in this bucket.The following fields and
+   * their children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
    * sourceLocation.Restricting a repeated field will restrict all values. Adding a parent will
    * block all child fields. (e.g. foo.bar will block foo.bar.baz)
    * The value may be {@code null}.
@@ -112,9 +112,9 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> restrictedFields;
 
   /**
-   * Logs will be retained by default for this amount of time, after which they will automatically
-   * be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket
-   * creation time, the default time of 30 days will be used.
+   * Optional. Logs will be retained by default for this amount of time, after which they will
+   * automatically be deleted. The minimum retention period is 1 day. If this value is set to zero
+   * at bucket creation time, the default time of 30 days will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +128,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Whether log analytics is enabled for this bucket.Once enabled, log analytics features cannot be
-   * disabled.
+   * Optional. Whether log analytics is enabled for this bucket.Once enabled, log analytics features
+   * cannot be disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAnalyticsEnabled() {
@@ -137,8 +137,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether log analytics is enabled for this bucket.Once enabled, log analytics features cannot be
-   * disabled.
+   * Optional. Whether log analytics is enabled for this bucket.Once enabled, log analytics features
+   * cannot be disabled.
    * @param analyticsEnabled analyticsEnabled or {@code null} for none
    */
   public LogBucket setAnalyticsEnabled(java.lang.Boolean analyticsEnabled) {
@@ -147,10 +147,10 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The CMEK settings of the log bucket. If present, new log entries written to this log bucket are
-   * encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings,
-   * the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is
-   * allowed.
+   * Optional. The CMEK settings of the log bucket. If present, new log entries written to this log
+   * bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has
+   * CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing
+   * the KMS key is allowed.
    * @return value or {@code null} for none
    */
   public CmekSettings getCmekSettings() {
@@ -158,10 +158,10 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The CMEK settings of the log bucket. If present, new log entries written to this log bucket are
-   * encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings,
-   * the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is
-   * allowed.
+   * Optional. The CMEK settings of the log bucket. If present, new log entries written to this log
+   * bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has
+   * CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing
+   * the KMS key is allowed.
    * @param cmekSettings cmekSettings or {@code null} for none
    */
   public LogBucket setCmekSettings(CmekSettings cmekSettings) {
@@ -189,7 +189,7 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describes this bucket.
+   * Optional. Describes this bucket.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -197,7 +197,7 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describes this bucket.
+   * Optional. Describes this bucket.
    * @param description description or {@code null} for none
    */
   public LogBucket setDescription(java.lang.String description) {
@@ -206,7 +206,7 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of indexed fields and related configuration data.
+   * Optional. A list of indexed fields and related configuration data.
    * @return value or {@code null} for none
    */
   public java.util.List<IndexConfig> getIndexConfigs() {
@@ -214,7 +214,7 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of indexed fields and related configuration data.
+   * Optional. A list of indexed fields and related configuration data.
    * @param indexConfigs indexConfigs or {@code null} for none
    */
   public LogBucket setIndexConfigs(java.util.List<IndexConfig> indexConfigs) {
@@ -240,8 +240,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the bucket is locked.The retention period on a locked bucket cannot be changed. Locked
-   * buckets may only be deleted if they are empty.
+   * Optional. Whether the bucket is locked.The retention period on a locked bucket cannot be
+   * changed. Locked buckets may only be deleted if they are empty.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLocked() {
@@ -249,8 +249,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the bucket is locked.The retention period on a locked bucket cannot be changed. Locked
-   * buckets may only be deleted if they are empty.
+   * Optional. Whether the bucket is locked.The retention period on a locked bucket cannot be
+   * changed. Locked buckets may only be deleted if they are empty.
    * @param locked locked or {@code null} for none
    */
   public LogBucket setLocked(java.lang.Boolean locked) {
@@ -284,8 +284,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Log entry field paths that are denied access in this bucket.The following fields and their
-   * children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
+   * Optional. Log entry field paths that are denied access in this bucket.The following fields and
+   * their children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
    * sourceLocation.Restricting a repeated field will restrict all values. Adding a parent will
    * block all child fields. (e.g. foo.bar will block foo.bar.baz)
    * @return value or {@code null} for none
@@ -295,8 +295,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Log entry field paths that are denied access in this bucket.The following fields and their
-   * children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
+   * Optional. Log entry field paths that are denied access in this bucket.The following fields and
+   * their children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
    * sourceLocation.Restricting a repeated field will restrict all values. Adding a parent will
    * block all child fields. (e.g. foo.bar will block foo.bar.baz)
    * @param restrictedFields restrictedFields or {@code null} for none
@@ -307,9 +307,9 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Logs will be retained by default for this amount of time, after which they will automatically
-   * be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket
-   * creation time, the default time of 30 days will be used.
+   * Optional. Logs will be retained by default for this amount of time, after which they will
+   * automatically be deleted. The minimum retention period is 1 day. If this value is set to zero
+   * at bucket creation time, the default time of 30 days will be used.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRetentionDays() {
@@ -317,9 +317,9 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Logs will be retained by default for this amount of time, after which they will automatically
-   * be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket
-   * creation time, the default time of 30 days will be used.
+   * Optional. Logs will be retained by default for this amount of time, after which they will
+   * automatically be deleted. The minimum retention period is 1 day. If this value is set to zero
+   * at bucket creation time, the default time of 30 days will be used.
    * @param retentionDays retentionDays or {@code null} for none
    */
   public LogBucket setRetentionDays(java.lang.Integer retentionDays) {

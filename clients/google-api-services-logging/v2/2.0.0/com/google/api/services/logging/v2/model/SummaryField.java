@@ -32,16 +32,16 @@ package com.google.api.services.logging.v2.model;
 public final class SummaryField extends com.google.api.client.json.GenericJson {
 
   /**
-   * The field from the LogEntry to include in the summary line, for example resource.type or
-   * jsonPayload.name.
+   * Optional. The field from the LogEntry to include in the summary line, for example resource.type
+   * or jsonPayload.name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String field;
 
   /**
-   * The field from the LogEntry to include in the summary line, for example resource.type or
-   * jsonPayload.name.
+   * Optional. The field from the LogEntry to include in the summary line, for example resource.type
+   * or jsonPayload.name.
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -49,8 +49,8 @@ public final class SummaryField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The field from the LogEntry to include in the summary line, for example resource.type or
-   * jsonPayload.name.
+   * Optional. The field from the LogEntry to include in the summary line, for example resource.type
+   * or jsonPayload.name.
    * @param field field or {@code null} for none
    */
   public SummaryField setField(java.lang.String field) {

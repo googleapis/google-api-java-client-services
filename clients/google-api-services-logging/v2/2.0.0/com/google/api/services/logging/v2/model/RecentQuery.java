@@ -31,7 +31,7 @@ package com.google.api.services.logging.v2.model;
 public final class RecentQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * The timestamp when this query was last run.
+   * Output only. The timestamp when this query was last run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class RecentQuery extends com.google.api.client.json.GenericJson {
   private OpsAnalyticsQuery opsAnalyticsQuery;
 
   /**
-   * The timestamp when this query was last run.
+   * Output only. The timestamp when this query was last run.
    * @return value or {@code null} for none
    */
   public String getLastRunTime() {
@@ -70,7 +70,7 @@ public final class RecentQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The timestamp when this query was last run.
+   * Output only. The timestamp when this query was last run.
    * @param lastRunTime lastRunTime or {@code null} for none
    */
   public RecentQuery setLastRunTime(String lastRunTime) {

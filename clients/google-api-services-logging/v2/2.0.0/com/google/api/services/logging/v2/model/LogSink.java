@@ -114,7 +114,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean includeChildren;
 
   /**
-   * Required. The client-assigned sink identifier, unique within the project.For example: "my-
+   * Output only. The client-assigned sink identifier, unique within the project.For example: "my-
    * syslog-errors-to-pubsub".Sink identifiers are limited to 100 characters and can include only
    * the following characters: upper and lower-case alphanumeric characters, underscores, hyphens,
    * periods.First character has to be alphanumeric.
@@ -329,7 +329,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The client-assigned sink identifier, unique within the project.For example: "my-
+   * Output only. The client-assigned sink identifier, unique within the project.For example: "my-
    * syslog-errors-to-pubsub".Sink identifiers are limited to 100 characters and can include only
    * the following characters: upper and lower-case alphanumeric characters, underscores, hyphens,
    * periods.First character has to be alphanumeric.
@@ -340,7 +340,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The client-assigned sink identifier, unique within the project.For example: "my-
+   * Output only. The client-assigned sink identifier, unique within the project.For example: "my-
    * syslog-errors-to-pubsub".Sink identifiers are limited to 100 characters and can include only
    * the following characters: upper and lower-case alphanumeric characters, underscores, hyphens,
    * periods.First character has to be alphanumeric.

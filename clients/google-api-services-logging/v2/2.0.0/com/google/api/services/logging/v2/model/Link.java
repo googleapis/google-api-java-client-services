@@ -30,9 +30,9 @@ package com.google.api.services.logging.v2.model;
 public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
-   * The information of a BigQuery Dataset. When a link is created, a BigQuery dataset is created
-   * along with it, in the same project as the LogBucket it's linked to. This dataset will also have
-   * BigQuery Views corresponding to the LogViews in the bucket.
+   * Optional. The information of a BigQuery Dataset. When a link is created, a BigQuery dataset is
+   * created along with it, in the same project as the LogBucket it's linked to. This dataset will
+   * also have BigQuery Views corresponding to the LogViews in the bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Describes this link.The maximum length of the description is 8000 characters.
+   * Optional. Describes this link.The maximum length of the description is 8000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,9 +60,9 @@ public final class Link extends com.google.api.client.json.GenericJson {
   private java.lang.String lifecycleState;
 
   /**
-   * The resource name of the link. The name can have up to 100 characters. A valid link id (at the
-   * end of the link name) must only have alphanumeric characters and underscores within it.
-   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+   * Output only. The resource name of the link. The name can have up to 100 characters. A valid
+   * link id (at the end of the link name) must only have alphanumeric characters and underscores
+   * within it. "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
    * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
    * billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID
    * ]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" For
@@ -73,9 +73,9 @@ public final class Link extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The information of a BigQuery Dataset. When a link is created, a BigQuery dataset is created
-   * along with it, in the same project as the LogBucket it's linked to. This dataset will also have
-   * BigQuery Views corresponding to the LogViews in the bucket.
+   * Optional. The information of a BigQuery Dataset. When a link is created, a BigQuery dataset is
+   * created along with it, in the same project as the LogBucket it's linked to. This dataset will
+   * also have BigQuery Views corresponding to the LogViews in the bucket.
    * @return value or {@code null} for none
    */
   public BigQueryDataset getBigqueryDataset() {
@@ -83,9 +83,9 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The information of a BigQuery Dataset. When a link is created, a BigQuery dataset is created
-   * along with it, in the same project as the LogBucket it's linked to. This dataset will also have
-   * BigQuery Views corresponding to the LogViews in the bucket.
+   * Optional. The information of a BigQuery Dataset. When a link is created, a BigQuery dataset is
+   * created along with it, in the same project as the LogBucket it's linked to. This dataset will
+   * also have BigQuery Views corresponding to the LogViews in the bucket.
    * @param bigqueryDataset bigqueryDataset or {@code null} for none
    */
   public Link setBigqueryDataset(BigQueryDataset bigqueryDataset) {
@@ -111,7 +111,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describes this link.The maximum length of the description is 8000 characters.
+   * Optional. Describes this link.The maximum length of the description is 8000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -119,7 +119,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describes this link.The maximum length of the description is 8000 characters.
+   * Optional. Describes this link.The maximum length of the description is 8000 characters.
    * @param description description or {@code null} for none
    */
   public Link setDescription(java.lang.String description) {
@@ -145,9 +145,9 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the link. The name can have up to 100 characters. A valid link id (at the
-   * end of the link name) must only have alphanumeric characters and underscores within it.
-   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+   * Output only. The resource name of the link. The name can have up to 100 characters. A valid
+   * link id (at the end of the link name) must only have alphanumeric characters and underscores
+   * within it. "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
    * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
    * billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID
    * ]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" For
@@ -159,9 +159,9 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the link. The name can have up to 100 characters. A valid link id (at the
-   * end of the link name) must only have alphanumeric characters and underscores within it.
-   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+   * Output only. The resource name of the link. The name can have up to 100 characters. A valid
+   * link id (at the end of the link name) must only have alphanumeric characters and underscores
+   * within it. "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
    * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
    * billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID
    * ]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" For

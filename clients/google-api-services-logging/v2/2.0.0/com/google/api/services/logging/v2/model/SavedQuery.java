@@ -37,14 +37,14 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * A human readable description of the saved query.
+   * Optional. A human readable description of the saved query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The user specified title for the SavedQuery.
+   * Optional. The user specified title for the SavedQuery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human readable description of the saved query.
+   * Optional. A human readable description of the saved query.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -108,7 +108,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human readable description of the saved query.
+   * Optional. A human readable description of the saved query.
    * @param description description or {@code null} for none
    */
   public SavedQuery setDescription(java.lang.String description) {
@@ -117,7 +117,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user specified title for the SavedQuery.
+   * Optional. The user specified title for the SavedQuery.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -125,7 +125,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user specified title for the SavedQuery.
+   * Optional. The user specified title for the SavedQuery.
    * @param displayName displayName or {@code null} for none
    */
   public SavedQuery setDisplayName(java.lang.String displayName) {

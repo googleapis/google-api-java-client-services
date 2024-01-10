@@ -60,6 +60,14 @@ public final class RecognizeResponse extends com.google.api.client.json.GenericJ
   private String totalBilledTime;
 
   /**
+   * Whether request used legacy asr models (was not automatically migrated to use conformer
+   * models).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean usingLegacyModels;
+
+  /**
    * The ID associated with the request. This is a unique ID specific only to the given request.
    * @return value or {@code null} for none
    */
@@ -124,6 +132,25 @@ public final class RecognizeResponse extends com.google.api.client.json.GenericJ
    */
   public RecognizeResponse setTotalBilledTime(String totalBilledTime) {
     this.totalBilledTime = totalBilledTime;
+    return this;
+  }
+
+  /**
+   * Whether request used legacy asr models (was not automatically migrated to use conformer
+   * models).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUsingLegacyModels() {
+    return usingLegacyModels;
+  }
+
+  /**
+   * Whether request used legacy asr models (was not automatically migrated to use conformer
+   * models).
+   * @param usingLegacyModels usingLegacyModels or {@code null} for none
+   */
+  public RecognizeResponse setUsingLegacyModels(java.lang.Boolean usingLegacyModels) {
+    this.usingLegacyModels = usingLegacyModels;
     return this;
   }
 

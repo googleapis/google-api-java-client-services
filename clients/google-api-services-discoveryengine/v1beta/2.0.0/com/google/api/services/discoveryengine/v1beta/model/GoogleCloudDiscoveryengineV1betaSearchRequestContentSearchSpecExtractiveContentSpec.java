@@ -34,7 +34,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
    * is a verbatim answer extracted from the original document, which provides a precise and
    * contextually relevant answer to the search query. If the number of matching answers is less
    * than the `max_extractive_answer_count`, return all of the answers. Otherwise, return the
-   * `max_extractive_answer_count`. At most one answer is returned for each SearchResult.
+   * `max_extractive_answer_count`. At most five answers are returned for each SearchResult.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
    * is a verbatim answer extracted from the original document, which provides a precise and
    * contextually relevant answer to the search query. If the number of matching answers is less
    * than the `max_extractive_answer_count`, return all of the answers. Otherwise, return the
-   * `max_extractive_answer_count`. At most one answer is returned for each SearchResult.
+   * `max_extractive_answer_count`. At most five answers are returned for each SearchResult.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxExtractiveAnswerCount() {
@@ -85,7 +85,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
    * is a verbatim answer extracted from the original document, which provides a precise and
    * contextually relevant answer to the search query. If the number of matching answers is less
    * than the `max_extractive_answer_count`, return all of the answers. Otherwise, return the
-   * `max_extractive_answer_count`. At most one answer is returned for each SearchResult.
+   * `max_extractive_answer_count`. At most five answers are returned for each SearchResult.
    * @param maxExtractiveAnswerCount maxExtractiveAnswerCount or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveContentSpec setMaxExtractiveAnswerCount(java.lang.Integer maxExtractiveAnswerCount) {

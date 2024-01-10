@@ -49,6 +49,15 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfigAgentC
   private java.lang.String defaultLanguageCode;
 
   /**
+   * Agent location for Agent creation, supported values: global/us/eu. If not provided, us Engine
+   * will create Agent using us-central-1 by default; eu Engine will create Agent using eu-west-1 by
+   * default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Required. The time zone of the agent from the [time zone database](https://www.iana.org/time-
    * zones), e.g., America/New_York, Europe/Paris.
    * The value may be {@code null}.
@@ -93,6 +102,27 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfigAgentC
    */
   public GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfigAgentCreationConfig setDefaultLanguageCode(java.lang.String defaultLanguageCode) {
     this.defaultLanguageCode = defaultLanguageCode;
+    return this;
+  }
+
+  /**
+   * Agent location for Agent creation, supported values: global/us/eu. If not provided, us Engine
+   * will create Agent using us-central-1 by default; eu Engine will create Agent using eu-west-1 by
+   * default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Agent location for Agent creation, supported values: global/us/eu. If not provided, us Engine
+   * will create Agent using us-central-1 by default; eu Engine will create Agent using eu-west-1 by
+   * default.
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfigAgentCreationConfig setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

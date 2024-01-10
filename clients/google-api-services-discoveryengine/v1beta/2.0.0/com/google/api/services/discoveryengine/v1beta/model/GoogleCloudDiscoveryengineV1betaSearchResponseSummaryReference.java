@@ -45,7 +45,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSummaryReferenc
   private java.lang.String title;
 
   /**
-   * GCS or HTTP uri for the document.
+   * Cloud Storage or HTTP uri for the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSummaryReferenc
   }
 
   /**
-   * GCS or HTTP uri for the document.
+   * Cloud Storage or HTTP uri for the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -96,7 +96,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSummaryReferenc
   }
 
   /**
-   * GCS or HTTP uri for the document.
+   * Cloud Storage or HTTP uri for the document.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponseSummaryReference setUri(java.lang.String uri) {

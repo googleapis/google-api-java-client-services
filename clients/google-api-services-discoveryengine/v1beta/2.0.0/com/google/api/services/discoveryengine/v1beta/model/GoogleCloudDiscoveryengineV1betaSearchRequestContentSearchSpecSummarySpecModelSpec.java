@@ -30,14 +30,20 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The string format of the model version. e.g. stable, preview, etc.
+   * The model version used to generate the summary. Supported values are: * `stable`: string.
+   * Default value when no value is specified. Uses a generally available, fine-tuned version of the
+   * text-bison@001 model. * `preview`: string. (Public preview) Uses a fine-tuned version of the
+   * text-bison@002 model. This model works only for summaries in English.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * The string format of the model version. e.g. stable, preview, etc.
+   * The model version used to generate the summary. Supported values are: * `stable`: string.
+   * Default value when no value is specified. Uses a generally available, fine-tuned version of the
+   * text-bison@001 model. * `preview`: string. (Public preview) Uses a fine-tuned version of the
+   * text-bison@002 model. This model works only for summaries in English.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -45,7 +51,10 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   }
 
   /**
-   * The string format of the model version. e.g. stable, preview, etc.
+   * The model version used to generate the summary. Supported values are: * `stable`: string.
+   * Default value when no value is specified. Uses a generally available, fine-tuned version of the
+   * text-bison@001 model. * `preview`: string. (Public preview) Uses a fine-tuned version of the
+   * text-bison@002 model. This model works only for summaries in English.
    * @param version version or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec setVersion(java.lang.String version) {

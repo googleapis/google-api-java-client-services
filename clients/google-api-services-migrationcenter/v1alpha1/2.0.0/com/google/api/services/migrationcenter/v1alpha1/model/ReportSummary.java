@@ -31,7 +31,7 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class ReportSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Aggregate statistics for all the assets across all the groups.
+   * Aggregate statistics for unique assets across all the groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class ReportSummary extends com.google.api.client.json.GenericJson 
   private java.util.List<ReportSummaryGroupFinding> groupFindings;
 
   /**
-   * Aggregate statistics for all the assets across all the groups.
+   * Aggregate statistics for unique assets across all the groups.
    * @return value or {@code null} for none
    */
   public ReportSummaryAssetAggregateStats getAllAssetsStats() {
@@ -53,7 +53,7 @@ public final class ReportSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Aggregate statistics for all the assets across all the groups.
+   * Aggregate statistics for unique assets across all the groups.
    * @param allAssetsStats allAssetsStats or {@code null} for none
    */
   public ReportSummary setAllAssetsStats(ReportSummaryAssetAggregateStats allAssetsStats) {

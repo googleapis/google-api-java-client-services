@@ -44,7 +44,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private java.lang.String displayName;
 
   /**
-   * A set of findings that applies to all machines in the input.
+   * Output only. A set of findings that applies to all virtual machines in the input. Only present
+   * for virtual machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,14 +66,15 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private Money monthlyCostCompute;
 
   /**
-   * Network Egress monthly cost for this preference set.
+   * Network Egress monthly cost for this preference set. Only present for virtual machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money monthlyCostNetworkEgress;
 
   /**
-   * Licensing monthly cost for this preference set.
+   * Operating system licensing monthly cost for this preference set. Only present for virtual
+   * machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +116,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private java.lang.String pricingTrack;
 
   /**
-   * A set of findings that applies to Stole-Tenant machines in the input.
+   * A set of findings that applies to Stole-Tenant machines in the input. Only present for virtual
+   * machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +131,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private java.lang.String topPriority;
 
   /**
-   * A set of findings that applies to VMWare machines in the input.
+   * A set of findings that applies to VMWare machines in the input. Only present for virtual
+   * machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,7 +173,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * A set of findings that applies to all machines in the input.
+   * Output only. A set of findings that applies to all virtual machines in the input. Only present
+   * for virtual machines.
    * @return value or {@code null} for none
    */
   public ReportSummaryMachineFinding getMachineFinding() {
@@ -177,7 +182,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * A set of findings that applies to all machines in the input.
+   * Output only. A set of findings that applies to all virtual machines in the input. Only present
+   * for virtual machines.
    * @param machineFinding machineFinding or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMachineFinding(ReportSummaryMachineFinding machineFinding) {
@@ -220,7 +226,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Network Egress monthly cost for this preference set.
+   * Network Egress monthly cost for this preference set. Only present for virtual machines.
    * @return value or {@code null} for none
    */
   public Money getMonthlyCostNetworkEgress() {
@@ -228,7 +234,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Network Egress monthly cost for this preference set.
+   * Network Egress monthly cost for this preference set. Only present for virtual machines.
    * @param monthlyCostNetworkEgress monthlyCostNetworkEgress or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostNetworkEgress(Money monthlyCostNetworkEgress) {
@@ -237,7 +243,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Licensing monthly cost for this preference set.
+   * Operating system licensing monthly cost for this preference set. Only present for virtual
+   * machines.
    * @return value or {@code null} for none
    */
   public Money getMonthlyCostOsLicense() {
@@ -245,7 +252,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Licensing monthly cost for this preference set.
+   * Operating system licensing monthly cost for this preference set. Only present for virtual
+   * machines.
    * @param monthlyCostOsLicense monthlyCostOsLicense or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostOsLicense(Money monthlyCostOsLicense) {
@@ -339,7 +347,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * A set of findings that applies to Stole-Tenant machines in the input.
+   * A set of findings that applies to Stole-Tenant machines in the input. Only present for virtual
+   * machines.
    * @return value or {@code null} for none
    */
   public ReportSummarySoleTenantFinding getSoleTenantFinding() {
@@ -347,7 +356,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * A set of findings that applies to Stole-Tenant machines in the input.
+   * A set of findings that applies to Stole-Tenant machines in the input. Only present for virtual
+   * machines.
    * @param soleTenantFinding soleTenantFinding or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setSoleTenantFinding(ReportSummarySoleTenantFinding soleTenantFinding) {
@@ -373,7 +383,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * A set of findings that applies to VMWare machines in the input.
+   * A set of findings that applies to VMWare machines in the input. Only present for virtual
+   * machines.
    * @return value or {@code null} for none
    */
   public ReportSummaryVMWareEngineFinding getVmwareEngineFinding() {
@@ -381,7 +392,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * A set of findings that applies to VMWare machines in the input.
+   * A set of findings that applies to VMWare machines in the input. Only present for virtual
+   * machines.
    * @param vmwareEngineFinding vmwareEngineFinding or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setVmwareEngineFinding(ReportSummaryVMWareEngineFinding vmwareEngineFinding) {

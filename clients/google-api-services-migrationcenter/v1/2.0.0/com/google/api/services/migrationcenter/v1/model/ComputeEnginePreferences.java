@@ -45,6 +45,14 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
   private MachinePreferences machinePreferences;
 
   /**
+   * Persistent disk type to use. If unspecified (default), all types are considered, based on
+   * available usage data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String persistentDiskType;
+
+  /**
    * License type to consider when calculating costs for virtual machine insights and
    * recommendations. If unspecified, costs are calculated based on the default licensing plan.
    * @return value or {@code null} for none
@@ -77,6 +85,25 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
    */
   public ComputeEnginePreferences setMachinePreferences(MachinePreferences machinePreferences) {
     this.machinePreferences = machinePreferences;
+    return this;
+  }
+
+  /**
+   * Persistent disk type to use. If unspecified (default), all types are considered, based on
+   * available usage data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPersistentDiskType() {
+    return persistentDiskType;
+  }
+
+  /**
+   * Persistent disk type to use. If unspecified (default), all types are considered, based on
+   * available usage data.
+   * @param persistentDiskType persistentDiskType or {@code null} for none
+   */
+  public ComputeEnginePreferences setPersistentDiskType(java.lang.String persistentDiskType) {
+    this.persistentDiskType = persistentDiskType;
     return this;
   }
 

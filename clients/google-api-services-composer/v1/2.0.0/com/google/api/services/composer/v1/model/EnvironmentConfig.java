@@ -58,6 +58,13 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private java.lang.String dagGcsPrefix;
 
   /**
+   * Optional. The configuration setting for Airflow database data retention mechanism.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataRetentionConfig dataRetentionConfig;
+
+  /**
    * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow
    * software.
    * The value may be {@code null}.
@@ -243,6 +250,23 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setDagGcsPrefix(java.lang.String dagGcsPrefix) {
     this.dagGcsPrefix = dagGcsPrefix;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration setting for Airflow database data retention mechanism.
+   * @return value or {@code null} for none
+   */
+  public DataRetentionConfig getDataRetentionConfig() {
+    return dataRetentionConfig;
+  }
+
+  /**
+   * Optional. The configuration setting for Airflow database data retention mechanism.
+   * @param dataRetentionConfig dataRetentionConfig or {@code null} for none
+   */
+  public EnvironmentConfig setDataRetentionConfig(DataRetentionConfig dataRetentionConfig) {
+    this.dataRetentionConfig = dataRetentionConfig;
     return this;
   }
 

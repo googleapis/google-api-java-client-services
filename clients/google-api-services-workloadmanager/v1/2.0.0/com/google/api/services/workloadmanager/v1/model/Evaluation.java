@@ -30,6 +30,13 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class Evaluation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. BigQuery destination
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigQueryDestination bigQueryDestination;
+
+  /**
    * Output only. [Output only] Create time stamp
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. BigQuery destination
+   * @return value or {@code null} for none
+   */
+  public BigQueryDestination getBigQueryDestination() {
+    return bigQueryDestination;
+  }
+
+  /**
+   * Optional. BigQuery destination
+   * @param bigQueryDestination bigQueryDestination or {@code null} for none
+   */
+  public Evaluation setBigQueryDestination(BigQueryDestination bigQueryDestination) {
+    this.bigQueryDestination = bigQueryDestination;
+    return this;
+  }
 
   /**
    * Output only. [Output only] Create time stamp

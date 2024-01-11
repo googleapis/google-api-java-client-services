@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * CustomMetadata contains information from a user defined operation.
+ * CustomMetadata contains information from a user-defined operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class CustomMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Key-value pairs provided by the user defined operation.
+   * Output only. Key-value pairs provided by the user-defined operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> values;
 
   /**
-   * Output only. Key-value pairs provided by the user defined operation.
+   * Output only. Key-value pairs provided by the user-defined operation.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getValues() {
@@ -45,7 +45,7 @@ public final class CustomMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Key-value pairs provided by the user defined operation.
+   * Output only. Key-value pairs provided by the user-defined operation.
    * @param values values or {@code null} for none
    */
   public CustomMetadata setValues(java.util.Map<String, java.lang.String> values) {

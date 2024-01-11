@@ -17,9 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Contains criteria for selecting Targets. Attributes provided must match the target resource in
- * order for policy restrictions to apply. E.g. if id "prod" and labels "foo: bar" are given the
- * target resource must match both that id and have that label in order to be selected.
+ * Contains criteria for selecting Targets.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:

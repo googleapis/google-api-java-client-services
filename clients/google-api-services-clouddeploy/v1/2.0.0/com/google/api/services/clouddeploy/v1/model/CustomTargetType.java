@@ -18,8 +18,8 @@ package com.google.api.services.clouddeploy.v1.model;
 
 /**
  * A `CustomTargetType` resource in the Cloud Deploy API. A `CustomTargetType` defines a type of
- * custom target that can be referenced in a `Target` in order to facilitate deploying to a runtime
- * that does not have a 1P integration with Cloud Deploy.
+ * custom target that can be referenced in a `Target` in order to facilitate deploying to other
+ * systems besides the supported runtimes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:

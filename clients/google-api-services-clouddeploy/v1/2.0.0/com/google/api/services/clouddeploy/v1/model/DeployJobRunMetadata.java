@@ -37,7 +37,7 @@ public final class DeployJobRunMetadata extends com.google.api.client.json.Gener
   private CloudRunMetadata cloudRun;
 
   /**
-   * Output only. Custom metadata provided by user defined deploy operation.
+   * Output only. Custom metadata provided by user-defined deploy operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class DeployJobRunMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Custom metadata provided by user defined deploy operation.
+   * Output only. Custom metadata provided by user-defined deploy operation.
    * @return value or {@code null} for none
    */
   public CustomMetadata getCustom() {
@@ -76,7 +76,7 @@ public final class DeployJobRunMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Custom metadata provided by user defined deploy operation.
+   * Output only. Custom metadata provided by user-defined deploy operation.
    * @param custom custom or {@code null} for none
    */
   public DeployJobRunMetadata setCustom(CustomMetadata custom) {

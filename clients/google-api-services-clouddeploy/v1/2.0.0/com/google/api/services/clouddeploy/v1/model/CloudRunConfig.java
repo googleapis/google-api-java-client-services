@@ -39,15 +39,15 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean automaticTrafficControl;
 
   /**
-   * Optional. A list of tags that are added to the canary revision while the canary deployment is
-   * in progress.
+   * Optional. A list of tags that are added to the canary revision while the canary phase is in
+   * progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> canaryRevisionTags;
 
   /**
-   * Optional. A list of tags that are added to the prior revision while the canary deployment is in
+   * Optional. A list of tags that are added to the prior revision while the canary phase is in
    * progress.
    * The value may be {@code null}.
    */
@@ -55,8 +55,8 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> priorRevisionTags;
 
   /**
-   * Optional. A list of tags that are added to the final stable revision after the canary
-   * deployment is completed.
+   * Optional. A list of tags that are added to the final stable revision when the stable phase is
+   * applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +84,8 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A list of tags that are added to the canary revision while the canary deployment is
-   * in progress.
+   * Optional. A list of tags that are added to the canary revision while the canary phase is in
+   * progress.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCanaryRevisionTags() {
@@ -93,8 +93,8 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A list of tags that are added to the canary revision while the canary deployment is
-   * in progress.
+   * Optional. A list of tags that are added to the canary revision while the canary phase is in
+   * progress.
    * @param canaryRevisionTags canaryRevisionTags or {@code null} for none
    */
   public CloudRunConfig setCanaryRevisionTags(java.util.List<java.lang.String> canaryRevisionTags) {
@@ -103,7 +103,7 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A list of tags that are added to the prior revision while the canary deployment is in
+   * Optional. A list of tags that are added to the prior revision while the canary phase is in
    * progress.
    * @return value or {@code null} for none
    */
@@ -112,7 +112,7 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A list of tags that are added to the prior revision while the canary deployment is in
+   * Optional. A list of tags that are added to the prior revision while the canary phase is in
    * progress.
    * @param priorRevisionTags priorRevisionTags or {@code null} for none
    */
@@ -122,8 +122,8 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A list of tags that are added to the final stable revision after the canary
-   * deployment is completed.
+   * Optional. A list of tags that are added to the final stable revision when the stable phase is
+   * applied.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStableRevisionTags() {
@@ -131,8 +131,8 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A list of tags that are added to the final stable revision after the canary
-   * deployment is completed.
+   * Optional. A list of tags that are added to the final stable revision when the stable phase is
+   * applied.
    * @param stableRevisionTags stableRevisionTags or {@code null} for none
    */
   public CloudRunConfig setStableRevisionTags(java.util.List<java.lang.String> stableRevisionTags) {

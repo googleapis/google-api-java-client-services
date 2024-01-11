@@ -37,6 +37,13 @@ public final class SpecificStartPosition extends com.google.api.client.json.Gene
   private MysqlLogPosition mysqlLogPosition;
 
   /**
+   * Oracle specific log position to start replicating from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OracleScnPosition oracleScnPosition;
+
+  /**
    * MySQL specific log position to start replicating from.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class SpecificStartPosition extends com.google.api.client.json.Gene
    */
   public SpecificStartPosition setMysqlLogPosition(MysqlLogPosition mysqlLogPosition) {
     this.mysqlLogPosition = mysqlLogPosition;
+    return this;
+  }
+
+  /**
+   * Oracle specific log position to start replicating from.
+   * @return value or {@code null} for none
+   */
+  public OracleScnPosition getOracleScnPosition() {
+    return oracleScnPosition;
+  }
+
+  /**
+   * Oracle specific log position to start replicating from.
+   * @param oracleScnPosition oracleScnPosition or {@code null} for none
+   */
+  public SpecificStartPosition setOracleScnPosition(OracleScnPosition oracleScnPosition) {
+    this.oracleScnPosition = oracleScnPosition;
     return this;
   }
 

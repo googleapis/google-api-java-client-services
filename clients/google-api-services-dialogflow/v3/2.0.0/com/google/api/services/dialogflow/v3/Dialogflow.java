@@ -6957,6 +6957,192 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (MatchIntent) super.set(parameterName, value);
               }
             }
+            /**
+             * Processes a natural language query and returns structured, actionable data as a result through
+             * server-side streaming. Server-side streaming allows Dialogflow to send [partial
+             * responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
+             * earlier in a single request.
+             *
+             * Create a request for the method "sessions.serverStreamingDetectIntent".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link ServerStreamingDetectIntent#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param session Required. The name of the session this query is sent to. Format:
+             *        `projects//locations//agents//sessions/` or
+             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
+             *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
+             *        appropriate `Session ID`. It can be a random number or some type of session identifiers
+             *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
+             *        more information, see the [sessions
+             *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
+             *        agent versions for production traffic. See [Versions and
+             *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentRequest}
+             * @return the request
+             */
+            public ServerStreamingDetectIntent serverStreamingDetectIntent(java.lang.String session, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentRequest content) throws java.io.IOException {
+              ServerStreamingDetectIntent result = new ServerStreamingDetectIntent(session, content);
+              initialize(result);
+              return result;
+            }
+
+            public class ServerStreamingDetectIntent extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentResponse> {
+
+              private static final String REST_PATH = "v3/{+session}:serverStreamingDetectIntent";
+
+              private final java.util.regex.Pattern SESSION_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+$");
+
+              /**
+               * Processes a natural language query and returns structured, actionable data as a result through
+               * server-side streaming. Server-side streaming allows Dialogflow to send [partial
+               * responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
+               * earlier in a single request.
+               *
+               * Create a request for the method "sessions.serverStreamingDetectIntent".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link ServerStreamingDetectIntent#execute()} method to invoke
+               * the remote operation. <p> {@link ServerStreamingDetectIntent#initialize(com.google.api.client.g
+               * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+               * immediately after invoking the constructor. </p>
+               *
+               * @param session Required. The name of the session this query is sent to. Format:
+             *        `projects//locations//agents//sessions/` or
+             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
+             *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
+             *        appropriate `Session ID`. It can be a random number or some type of session identifiers
+             *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
+             *        more information, see the [sessions
+             *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
+             *        agent versions for production traffic. See [Versions and
+             *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+               * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentRequest}
+               * @since 1.13
+               */
+              protected ServerStreamingDetectIntent(java.lang.String session, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentRequest content) {
+                super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentResponse.class);
+                this.session = com.google.api.client.util.Preconditions.checkNotNull(session, "Required parameter session must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                      "Parameter session must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+$");
+                }
+              }
+
+              @Override
+              public ServerStreamingDetectIntent set$Xgafv(java.lang.String $Xgafv) {
+                return (ServerStreamingDetectIntent) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ServerStreamingDetectIntent setAccessToken(java.lang.String accessToken) {
+                return (ServerStreamingDetectIntent) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ServerStreamingDetectIntent setAlt(java.lang.String alt) {
+                return (ServerStreamingDetectIntent) super.setAlt(alt);
+              }
+
+              @Override
+              public ServerStreamingDetectIntent setCallback(java.lang.String callback) {
+                return (ServerStreamingDetectIntent) super.setCallback(callback);
+              }
+
+              @Override
+              public ServerStreamingDetectIntent setFields(java.lang.String fields) {
+                return (ServerStreamingDetectIntent) super.setFields(fields);
+              }
+
+              @Override
+              public ServerStreamingDetectIntent setKey(java.lang.String key) {
+                return (ServerStreamingDetectIntent) super.setKey(key);
+              }
+
+              @Override
+              public ServerStreamingDetectIntent setOauthToken(java.lang.String oauthToken) {
+                return (ServerStreamingDetectIntent) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ServerStreamingDetectIntent setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ServerStreamingDetectIntent) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ServerStreamingDetectIntent setQuotaUser(java.lang.String quotaUser) {
+                return (ServerStreamingDetectIntent) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ServerStreamingDetectIntent setUploadType(java.lang.String uploadType) {
+                return (ServerStreamingDetectIntent) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ServerStreamingDetectIntent setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ServerStreamingDetectIntent) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the session this query is sent to. Format:
+               * `projects//locations//agents//sessions/` or
+               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
+               * specified, we assume default 'draft' environment. It's up to the API caller to
+               * choose an appropriate `Session ID`. It can be a random number or some type of
+               * session identifiers (preferably hashed). The length of the `Session ID` must not
+               * exceed 36 characters. For more information, see the [sessions
+               * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always
+               * use agent versions for production traffic. See [Versions and
+               * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String session;
+
+              /** Required. The name of the session this query is sent to. Format:
+             `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
+             If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API
+             caller to choose an appropriate `Session ID`. It can be a random number or some type of session
+             identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
+             more information, see the [sessions
+             guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use agent
+             versions for production traffic. See [Versions and
+             environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+               */
+              public java.lang.String getSession() {
+                return session;
+              }
+
+              /**
+               * Required. The name of the session this query is sent to. Format:
+               * `projects//locations//agents//sessions/` or
+               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
+               * specified, we assume default 'draft' environment. It's up to the API caller to
+               * choose an appropriate `Session ID`. It can be a random number or some type of
+               * session identifiers (preferably hashed). The length of the `Session ID` must not
+               * exceed 36 characters. For more information, see the [sessions
+               * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always
+               * use agent versions for production traffic. See [Versions and
+               * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+               */
+              public ServerStreamingDetectIntent setSession(java.lang.String session) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                      "Parameter session must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+$");
+                }
+                this.session = session;
+                return this;
+              }
+
+              @Override
+              public ServerStreamingDetectIntent set(String parameterName, Object value) {
+                return (ServerStreamingDetectIntent) super.set(parameterName, value);
+              }
+            }
 
             /**
              * An accessor for creating requests from the EntityTypes collection.
@@ -15283,6 +15469,192 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             @Override
             public MatchIntent set(String parameterName, Object value) {
               return (MatchIntent) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Processes a natural language query and returns structured, actionable data as a result through
+           * server-side streaming. Server-side streaming allows Dialogflow to send [partial
+           * responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
+           * earlier in a single request.
+           *
+           * Create a request for the method "sessions.serverStreamingDetectIntent".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link ServerStreamingDetectIntent#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param session Required. The name of the session this query is sent to. Format:
+           *        `projects//locations//agents//sessions/` or
+           *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
+           *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
+           *        appropriate `Session ID`. It can be a random number or some type of session identifiers
+           *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
+           *        more information, see the [sessions
+           *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
+           *        agent versions for production traffic. See [Versions and
+           *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+           * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentRequest}
+           * @return the request
+           */
+          public ServerStreamingDetectIntent serverStreamingDetectIntent(java.lang.String session, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentRequest content) throws java.io.IOException {
+            ServerStreamingDetectIntent result = new ServerStreamingDetectIntent(session, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ServerStreamingDetectIntent extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentResponse> {
+
+            private static final String REST_PATH = "v3/{+session}:serverStreamingDetectIntent";
+
+            private final java.util.regex.Pattern SESSION_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
+
+            /**
+             * Processes a natural language query and returns structured, actionable data as a result through
+             * server-side streaming. Server-side streaming allows Dialogflow to send [partial
+             * responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
+             * earlier in a single request.
+             *
+             * Create a request for the method "sessions.serverStreamingDetectIntent".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link ServerStreamingDetectIntent#execute()} method to invoke
+             * the remote operation. <p> {@link ServerStreamingDetectIntent#initialize(com.google.api.client.g
+             * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param session Required. The name of the session this query is sent to. Format:
+           *        `projects//locations//agents//sessions/` or
+           *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
+           *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
+           *        appropriate `Session ID`. It can be a random number or some type of session identifiers
+           *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
+           *        more information, see the [sessions
+           *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
+           *        agent versions for production traffic. See [Versions and
+           *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentRequest}
+             * @since 1.13
+             */
+            protected ServerStreamingDetectIntent(java.lang.String session, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DetectIntentResponse.class);
+              this.session = com.google.api.client.util.Preconditions.checkNotNull(session, "Required parameter session must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                    "Parameter session must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public ServerStreamingDetectIntent set$Xgafv(java.lang.String $Xgafv) {
+              return (ServerStreamingDetectIntent) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ServerStreamingDetectIntent setAccessToken(java.lang.String accessToken) {
+              return (ServerStreamingDetectIntent) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ServerStreamingDetectIntent setAlt(java.lang.String alt) {
+              return (ServerStreamingDetectIntent) super.setAlt(alt);
+            }
+
+            @Override
+            public ServerStreamingDetectIntent setCallback(java.lang.String callback) {
+              return (ServerStreamingDetectIntent) super.setCallback(callback);
+            }
+
+            @Override
+            public ServerStreamingDetectIntent setFields(java.lang.String fields) {
+              return (ServerStreamingDetectIntent) super.setFields(fields);
+            }
+
+            @Override
+            public ServerStreamingDetectIntent setKey(java.lang.String key) {
+              return (ServerStreamingDetectIntent) super.setKey(key);
+            }
+
+            @Override
+            public ServerStreamingDetectIntent setOauthToken(java.lang.String oauthToken) {
+              return (ServerStreamingDetectIntent) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ServerStreamingDetectIntent setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ServerStreamingDetectIntent) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ServerStreamingDetectIntent setQuotaUser(java.lang.String quotaUser) {
+              return (ServerStreamingDetectIntent) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ServerStreamingDetectIntent setUploadType(java.lang.String uploadType) {
+              return (ServerStreamingDetectIntent) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ServerStreamingDetectIntent setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ServerStreamingDetectIntent) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the session this query is sent to. Format:
+             * `projects//locations//agents//sessions/` or
+             * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
+             * specified, we assume default 'draft' environment. It's up to the API caller to choose
+             * an appropriate `Session ID`. It can be a random number or some type of session
+             * identifiers (preferably hashed). The length of the `Session ID` must not exceed 36
+             * characters. For more information, see the [sessions
+             * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
+             * agent versions for production traffic. See [Versions and
+             * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String session;
+
+            /** Required. The name of the session this query is sent to. Format:
+           `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
+           If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API
+           caller to choose an appropriate `Session ID`. It can be a random number or some type of session
+           identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
+           more information, see the [sessions
+           guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use agent
+           versions for production traffic. See [Versions and
+           environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+             */
+            public java.lang.String getSession() {
+              return session;
+            }
+
+            /**
+             * Required. The name of the session this query is sent to. Format:
+             * `projects//locations//agents//sessions/` or
+             * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
+             * specified, we assume default 'draft' environment. It's up to the API caller to choose
+             * an appropriate `Session ID`. It can be a random number or some type of session
+             * identifiers (preferably hashed). The length of the `Session ID` must not exceed 36
+             * characters. For more information, see the [sessions
+             * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
+             * agent versions for production traffic. See [Versions and
+             * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+             */
+            public ServerStreamingDetectIntent setSession(java.lang.String session) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                    "Parameter session must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
+              }
+              this.session = session;
+              return this;
+            }
+
+            @Override
+            public ServerStreamingDetectIntent set(String parameterName, Object value) {
+              return (ServerStreamingDetectIntent) super.set(parameterName, value);
             }
           }
           /**

@@ -30,6 +30,13 @@ package com.google.api.services.cloudfunctions.v2beta.model;
 public final class BuildConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * See the comment next to this message for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutomaticUpdatePolicy automaticUpdatePolicy;
+
+  /**
    * Output only. The Cloud Build name of the latest successful deployment of the function.
    * The value may be {@code null}.
    */
@@ -48,10 +55,10 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String dockerRegistry;
 
   /**
-   * User managed repository created in Artifact Registry optionally with a customer managed
-   * encryption key. This is the repository to which the function docker image will be pushed after
-   * it is built by Cloud Build. If unspecified, GCF will create and use a repository named 'gcf-
-   * artifacts' for every deployed region. It must match the pattern
+   * Repository in Artifact Registry to which the function docker image will be pushed after it is
+   * built by Cloud Build. If specified by user, it is created and managed by user with a customer
+   * managed encryption key. Otherwise, GCF will create and use a repository named 'gcf-artifacts'
+   * for every deployed region. It must match the pattern
    * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
    * are not supported. Cross-location repositories are not supported. Repository format must be
    * 'DOCKER'.
@@ -78,6 +85,13 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> environmentVariables;
 
   /**
+   * See the comment next to this message for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OnDeployUpdatePolicy onDeployUpdatePolicy;
+
+  /**
    * The runtime in which to run the function. Required when deploying a new function, optional when
    * updating an existing function. For a complete list of possible choices, see the [`gcloud`
    * command reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
@@ -85,6 +99,13 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String runtime;
+
+  /**
+   * [Preview] Service account to be used for building the container
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
 
   /**
    * The location of the function source code.
@@ -120,6 +141,23 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String workerPool;
+
+  /**
+   * See the comment next to this message for more details.
+   * @return value or {@code null} for none
+   */
+  public AutomaticUpdatePolicy getAutomaticUpdatePolicy() {
+    return automaticUpdatePolicy;
+  }
+
+  /**
+   * See the comment next to this message for more details.
+   * @param automaticUpdatePolicy automaticUpdatePolicy or {@code null} for none
+   */
+  public BuildConfig setAutomaticUpdatePolicy(AutomaticUpdatePolicy automaticUpdatePolicy) {
+    this.automaticUpdatePolicy = automaticUpdatePolicy;
+    return this;
+  }
 
   /**
    * Output only. The Cloud Build name of the latest successful deployment of the function.
@@ -164,10 +202,10 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User managed repository created in Artifact Registry optionally with a customer managed
-   * encryption key. This is the repository to which the function docker image will be pushed after
-   * it is built by Cloud Build. If unspecified, GCF will create and use a repository named 'gcf-
-   * artifacts' for every deployed region. It must match the pattern
+   * Repository in Artifact Registry to which the function docker image will be pushed after it is
+   * built by Cloud Build. If specified by user, it is created and managed by user with a customer
+   * managed encryption key. Otherwise, GCF will create and use a repository named 'gcf-artifacts'
+   * for every deployed region. It must match the pattern
    * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
    * are not supported. Cross-location repositories are not supported. Repository format must be
    * 'DOCKER'.
@@ -178,10 +216,10 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User managed repository created in Artifact Registry optionally with a customer managed
-   * encryption key. This is the repository to which the function docker image will be pushed after
-   * it is built by Cloud Build. If unspecified, GCF will create and use a repository named 'gcf-
-   * artifacts' for every deployed region. It must match the pattern
+   * Repository in Artifact Registry to which the function docker image will be pushed after it is
+   * built by Cloud Build. If specified by user, it is created and managed by user with a customer
+   * managed encryption key. Otherwise, GCF will create and use a repository named 'gcf-artifacts'
+   * for every deployed region. It must match the pattern
    * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
    * are not supported. Cross-location repositories are not supported. Repository format must be
    * 'DOCKER'.
@@ -233,6 +271,23 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * See the comment next to this message for more details.
+   * @return value or {@code null} for none
+   */
+  public OnDeployUpdatePolicy getOnDeployUpdatePolicy() {
+    return onDeployUpdatePolicy;
+  }
+
+  /**
+   * See the comment next to this message for more details.
+   * @param onDeployUpdatePolicy onDeployUpdatePolicy or {@code null} for none
+   */
+  public BuildConfig setOnDeployUpdatePolicy(OnDeployUpdatePolicy onDeployUpdatePolicy) {
+    this.onDeployUpdatePolicy = onDeployUpdatePolicy;
+    return this;
+  }
+
+  /**
    * The runtime in which to run the function. Required when deploying a new function, optional when
    * updating an existing function. For a complete list of possible choices, see the [`gcloud`
    * command reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
@@ -250,6 +305,23 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
    */
   public BuildConfig setRuntime(java.lang.String runtime) {
     this.runtime = runtime;
+    return this;
+  }
+
+  /**
+   * [Preview] Service account to be used for building the container
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * [Preview] Service account to be used for building the container
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public BuildConfig setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

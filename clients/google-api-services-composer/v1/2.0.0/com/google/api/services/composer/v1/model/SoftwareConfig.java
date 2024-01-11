@@ -46,6 +46,13 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.String> airflowConfigOverrides;
 
   /**
+   * Optional. The configuration for Cloud Data Lineage integration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudDataLineageIntegration cloudDataLineageIntegration;
+
+  /**
    * Optional. Additional environment variables to provide to the Apache Airflow scheduler, worker,
    * and webserver processes. Environment variable names must match the regular expression `a-zA-
    * Z_*`. They cannot specify Apache Airflow software configuration overrides (they cannot match
@@ -139,6 +146,23 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    */
   public SoftwareConfig setAirflowConfigOverrides(java.util.Map<String, java.lang.String> airflowConfigOverrides) {
     this.airflowConfigOverrides = airflowConfigOverrides;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for Cloud Data Lineage integration.
+   * @return value or {@code null} for none
+   */
+  public CloudDataLineageIntegration getCloudDataLineageIntegration() {
+    return cloudDataLineageIntegration;
+  }
+
+  /**
+   * Optional. The configuration for Cloud Data Lineage integration.
+   * @param cloudDataLineageIntegration cloudDataLineageIntegration or {@code null} for none
+   */
+  public SoftwareConfig setCloudDataLineageIntegration(CloudDataLineageIntegration cloudDataLineageIntegration) {
+    this.cloudDataLineageIntegration = cloudDataLineageIntegration;
     return this;
   }
 

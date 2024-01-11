@@ -38,7 +38,11 @@ public final class PullRequestFilter extends com.google.api.client.json.GenericJ
   private java.lang.String branch;
 
   /**
-   * Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
+   * If CommentControl is enabled, depending on the setting, builds may not fire until a repository
+   * writer comments `/gcbrun` on a pull request or `/gcbrun` is in the pull request description.
+   * Only PR comments that contain `/gcbrun` will trigger builds. If CommentControl is set to
+   * disabled, comments with `/gcbrun` from a user with repository write permission or above will
+   * still trigger builds to run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +75,11 @@ public final class PullRequestFilter extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
+   * If CommentControl is enabled, depending on the setting, builds may not fire until a repository
+   * writer comments `/gcbrun` on a pull request or `/gcbrun` is in the pull request description.
+   * Only PR comments that contain `/gcbrun` will trigger builds. If CommentControl is set to
+   * disabled, comments with `/gcbrun` from a user with repository write permission or above will
+   * still trigger builds to run.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommentControl() {
@@ -79,7 +87,11 @@ public final class PullRequestFilter extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
+   * If CommentControl is enabled, depending on the setting, builds may not fire until a repository
+   * writer comments `/gcbrun` on a pull request or `/gcbrun` is in the pull request description.
+   * Only PR comments that contain `/gcbrun` will trigger builds. If CommentControl is set to
+   * disabled, comments with `/gcbrun` from a user with repository write permission or above will
+   * still trigger builds to run.
    * @param commentControl commentControl or {@code null} for none
    */
   public PullRequestFilter setCommentControl(java.lang.String commentControl) {

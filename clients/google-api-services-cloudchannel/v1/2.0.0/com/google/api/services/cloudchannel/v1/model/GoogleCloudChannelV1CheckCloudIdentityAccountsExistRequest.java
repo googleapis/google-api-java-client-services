@@ -30,14 +30,16 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Domain to fetch for Cloud Identity account customer.
+   * Required. Domain to fetch for Cloud Identity account customers, including domained and
+   * domainless.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
 
   /**
-   * Required. Domain to fetch for Cloud Identity account customer.
+   * Required. Domain to fetch for Cloud Identity account customers, including domained and
+   * domainless.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -45,7 +47,8 @@ public final class GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest ex
   }
 
   /**
-   * Required. Domain to fetch for Cloud Identity account customer.
+   * Required. Domain to fetch for Cloud Identity account customers, including domained and
+   * domainless.
    * @param domain domain or {@code null} for none
    */
   public GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest setDomain(java.lang.String domain) {

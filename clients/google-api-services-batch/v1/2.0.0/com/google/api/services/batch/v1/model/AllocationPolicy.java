@@ -56,7 +56,7 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
   private LocationPolicy location;
 
   /**
-   * The network policy. If you define an instance template in the InstancePolicyOrTemplate field,
+   * The network policy. If you define an instance template in the `InstancePolicyOrTemplate` field,
    * Batch will use the network settings in the instance template instead of this field.
    * The value may be {@code null}.
    */
@@ -146,7 +146,7 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The network policy. If you define an instance template in the InstancePolicyOrTemplate field,
+   * The network policy. If you define an instance template in the `InstancePolicyOrTemplate` field,
    * Batch will use the network settings in the instance template instead of this field.
    * @return value or {@code null} for none
    */
@@ -155,7 +155,7 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The network policy. If you define an instance template in the InstancePolicyOrTemplate field,
+   * The network policy. If you define an instance template in the `InstancePolicyOrTemplate` field,
    * Batch will use the network settings in the instance template instead of this field.
    * @param network network or {@code null} for none
    */

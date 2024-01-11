@@ -30,6 +30,14 @@ package com.google.api.services.batch.v1.model;
 public final class LogsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Additional settings for Cloud Logging. It will only take effect when the destination
+   * of `LogsPolicy` is set to `CLOUD_LOGGING`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudLoggingOption cloudLoggingOption;
+
+  /**
    * Where logs should be saved.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class LogsPolicy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String logsPath;
+
+  /**
+   * Optional. Additional settings for Cloud Logging. It will only take effect when the destination
+   * of `LogsPolicy` is set to `CLOUD_LOGGING`.
+   * @return value or {@code null} for none
+   */
+  public CloudLoggingOption getCloudLoggingOption() {
+    return cloudLoggingOption;
+  }
+
+  /**
+   * Optional. Additional settings for Cloud Logging. It will only take effect when the destination
+   * of `LogsPolicy` is set to `CLOUD_LOGGING`.
+   * @param cloudLoggingOption cloudLoggingOption or {@code null} for none
+   */
+  public LogsPolicy setCloudLoggingOption(CloudLoggingOption cloudLoggingOption) {
+    this.cloudLoggingOption = cloudLoggingOption;
+    return this;
+  }
 
   /**
    * Where logs should be saved.

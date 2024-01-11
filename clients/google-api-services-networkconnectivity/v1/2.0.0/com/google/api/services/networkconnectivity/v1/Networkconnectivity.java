@@ -3536,7 +3536,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               }
             }
             /**
-             * Lists route tables in a given project.
+             * Lists route tables in a given hub.
              *
              * Create a request for the method "routeTables.list".
              *
@@ -3560,7 +3560,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
 
               /**
-               * Lists route tables in a given project.
+               * Lists route tables in a given hub.
                *
                * Create a request for the method "routeTables.list".
                *
@@ -3899,7 +3899,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 }
               }
               /**
-               * Lists routes in a given project.
+               * Lists routes in a given route table.
                *
                * Create a request for the method "routes.list".
                *
@@ -3923,7 +3923,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+/routeTables/[^/]+$");
 
                 /**
-                 * Lists routes in a given project.
+                 * Lists routes in a given route table.
                  *
                  * Create a request for the method "routes.list".
                  *

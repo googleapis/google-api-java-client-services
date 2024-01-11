@@ -39,7 +39,15 @@ public final class ReleaseRenderEvent extends com.google.api.client.json.Generic
   private java.lang.String message;
 
   /**
-   * The name of the release.
+   * Unique identifier of the `DeliveryPipeline`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pipelineUid;
+
+  /**
+   * The name of the release. release_uid is not in this log message because we write some of these
+   * log messages at release creation time, before we've generated the uid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,6 +59,13 @@ public final class ReleaseRenderEvent extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String releaseRenderState;
+
+  /**
+   * Type of this notification, e.g. for a release render state change event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
 
   /**
    * Debug message for when a render transition occurs. Provides further details as rendering
@@ -72,7 +87,25 @@ public final class ReleaseRenderEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the release.
+   * Unique identifier of the `DeliveryPipeline`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPipelineUid() {
+    return pipelineUid;
+  }
+
+  /**
+   * Unique identifier of the `DeliveryPipeline`.
+   * @param pipelineUid pipelineUid or {@code null} for none
+   */
+  public ReleaseRenderEvent setPipelineUid(java.lang.String pipelineUid) {
+    this.pipelineUid = pipelineUid;
+    return this;
+  }
+
+  /**
+   * The name of the release. release_uid is not in this log message because we write some of these
+   * log messages at release creation time, before we've generated the uid.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelease() {
@@ -80,7 +113,8 @@ public final class ReleaseRenderEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the release.
+   * The name of the release. release_uid is not in this log message because we write some of these
+   * log messages at release creation time, before we've generated the uid.
    * @param release release or {@code null} for none
    */
   public ReleaseRenderEvent setRelease(java.lang.String release) {
@@ -102,6 +136,23 @@ public final class ReleaseRenderEvent extends com.google.api.client.json.Generic
    */
   public ReleaseRenderEvent setReleaseRenderState(java.lang.String releaseRenderState) {
     this.releaseRenderState = releaseRenderState;
+    return this;
+  }
+
+  /**
+   * Type of this notification, e.g. for a release render state change event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Type of this notification, e.g. for a release render state change event.
+   * @param type type or {@code null} for none
+   */
+  public ReleaseRenderEvent setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

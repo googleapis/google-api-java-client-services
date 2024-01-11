@@ -45,6 +45,13 @@ public final class DeliveryPipelineNotificationEvent extends com.google.api.clie
   private java.lang.String message;
 
   /**
+   * Unique identifier of the `DeliveryPipeline`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pipelineUid;
+
+  /**
    * Type of this notification, e.g. for a Pub/Sub failure.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class DeliveryPipelineNotificationEvent extends com.google.api.clie
    */
   public DeliveryPipelineNotificationEvent setMessage(java.lang.String message) {
     this.message = message;
+    return this;
+  }
+
+  /**
+   * Unique identifier of the `DeliveryPipeline`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPipelineUid() {
+    return pipelineUid;
+  }
+
+  /**
+   * Unique identifier of the `DeliveryPipeline`.
+   * @param pipelineUid pipelineUid or {@code null} for none
+   */
+  public DeliveryPipelineNotificationEvent setPipelineUid(java.lang.String pipelineUid) {
+    this.pipelineUid = pipelineUid;
     return this;
   }
 

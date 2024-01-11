@@ -38,11 +38,25 @@ public final class ReleaseNotificationEvent extends com.google.api.client.json.G
   private java.lang.String message;
 
   /**
+   * Unique identifier of the `DeliveryPipeline`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pipelineUid;
+
+  /**
    * The name of the `Release`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String release;
+
+  /**
+   * Unique identifier of the `Release`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String releaseUid;
 
   /**
    * Type of this notification, e.g. for a Pub/Sub failure.
@@ -69,6 +83,23 @@ public final class ReleaseNotificationEvent extends com.google.api.client.json.G
   }
 
   /**
+   * Unique identifier of the `DeliveryPipeline`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPipelineUid() {
+    return pipelineUid;
+  }
+
+  /**
+   * Unique identifier of the `DeliveryPipeline`.
+   * @param pipelineUid pipelineUid or {@code null} for none
+   */
+  public ReleaseNotificationEvent setPipelineUid(java.lang.String pipelineUid) {
+    this.pipelineUid = pipelineUid;
+    return this;
+  }
+
+  /**
    * The name of the `Release`.
    * @return value or {@code null} for none
    */
@@ -82,6 +113,23 @@ public final class ReleaseNotificationEvent extends com.google.api.client.json.G
    */
   public ReleaseNotificationEvent setRelease(java.lang.String release) {
     this.release = release;
+    return this;
+  }
+
+  /**
+   * Unique identifier of the `Release`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReleaseUid() {
+    return releaseUid;
+  }
+
+  /**
+   * Unique identifier of the `Release`.
+   * @param releaseUid releaseUid or {@code null} for none
+   */
+  public ReleaseNotificationEvent setReleaseUid(java.lang.String releaseUid) {
+    this.releaseUid = releaseUid;
     return this;
   }
 

@@ -45,7 +45,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private CloudRunMetadata cloudRun;
 
   /**
-   * Output only. Custom metadata provided by user defined `Rollout` operations.
+   * Output only. Custom metadata provided by user-defined `Rollout` operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Custom metadata provided by user defined `Rollout` operations.
+   * Output only. Custom metadata provided by user-defined `Rollout` operations.
    * @return value or {@code null} for none
    */
   public CustomMetadata getCustom() {
@@ -96,7 +96,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Custom metadata provided by user defined `Rollout` operations.
+   * Output only. Custom metadata provided by user-defined `Rollout` operations.
    * @param custom custom or {@code null} for none
    */
   public Metadata setCustom(CustomMetadata custom) {

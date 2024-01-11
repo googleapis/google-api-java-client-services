@@ -52,11 +52,25 @@ public final class JobRunNotificationEvent extends com.google.api.client.json.Ge
   private java.lang.String pipelineUid;
 
   /**
+   * The name of the `Release`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String release;
+
+  /**
    * Unique identifier of the `Release`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String releaseUid;
+
+  /**
+   * The name of the `Rollout`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rollout;
 
   /**
    * Unique identifier of the `Rollout`.
@@ -131,6 +145,23 @@ public final class JobRunNotificationEvent extends com.google.api.client.json.Ge
   }
 
   /**
+   * The name of the `Release`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRelease() {
+    return release;
+  }
+
+  /**
+   * The name of the `Release`.
+   * @param release release or {@code null} for none
+   */
+  public JobRunNotificationEvent setRelease(java.lang.String release) {
+    this.release = release;
+    return this;
+  }
+
+  /**
    * Unique identifier of the `Release`.
    * @return value or {@code null} for none
    */
@@ -144,6 +175,23 @@ public final class JobRunNotificationEvent extends com.google.api.client.json.Ge
    */
   public JobRunNotificationEvent setReleaseUid(java.lang.String releaseUid) {
     this.releaseUid = releaseUid;
+    return this;
+  }
+
+  /**
+   * The name of the `Rollout`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRollout() {
+    return rollout;
+  }
+
+  /**
+   * The name of the `Rollout`.
+   * @param rollout rollout or {@code null} for none
+   */
+  public JobRunNotificationEvent setRollout(java.lang.String rollout) {
+    this.rollout = rollout;
     return this;
   }
 

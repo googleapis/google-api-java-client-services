@@ -45,6 +45,13 @@ public final class RolloutUpdateEvent extends com.google.api.client.json.Generic
   private java.lang.String pipelineUid;
 
   /**
+   * The name of the `Release`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String release;
+
+  /**
    * Unique identifier of the release.
    * The value may be {@code null}.
    */
@@ -52,7 +59,8 @@ public final class RolloutUpdateEvent extends com.google.api.client.json.Generic
   private java.lang.String releaseUid;
 
   /**
-   * The name of the rollout.
+   * The name of the rollout. rollout_uid is not in this log message because we write some of these
+   * log messages at rollout creation time, before we've generated the uid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,6 +122,23 @@ public final class RolloutUpdateEvent extends com.google.api.client.json.Generic
   }
 
   /**
+   * The name of the `Release`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRelease() {
+    return release;
+  }
+
+  /**
+   * The name of the `Release`.
+   * @param release release or {@code null} for none
+   */
+  public RolloutUpdateEvent setRelease(java.lang.String release) {
+    this.release = release;
+    return this;
+  }
+
+  /**
    * Unique identifier of the release.
    * @return value or {@code null} for none
    */
@@ -131,7 +156,8 @@ public final class RolloutUpdateEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the rollout.
+   * The name of the rollout. rollout_uid is not in this log message because we write some of these
+   * log messages at rollout creation time, before we've generated the uid.
    * @return value or {@code null} for none
    */
   public java.lang.String getRollout() {
@@ -139,7 +165,8 @@ public final class RolloutUpdateEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the rollout.
+   * The name of the rollout. rollout_uid is not in this log message because we write some of these
+   * log messages at rollout creation time, before we've generated the uid.
    * @param rollout rollout or {@code null} for none
    */
   public RolloutUpdateEvent setRollout(java.lang.String rollout) {

@@ -60,6 +60,15 @@ public final class GatewayServiceMesh extends com.google.api.client.json.Generic
   private java.lang.String service;
 
   /**
+   * Optional. The amount of time to migrate traffic back from the canary Service to the original
+   * Service during the stable phase deployment. If specified, must be between 15s and 3600s. If
+   * unspecified, there is no cutback time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String stableCutbackDuration;
+
+  /**
    * Required. Name of the Kubernetes Deployment whose traffic is managed by the specified HTTPRoute
    * and Service.
    * @return value or {@code null} for none
@@ -128,6 +137,27 @@ public final class GatewayServiceMesh extends com.google.api.client.json.Generic
    */
   public GatewayServiceMesh setService(java.lang.String service) {
     this.service = service;
+    return this;
+  }
+
+  /**
+   * Optional. The amount of time to migrate traffic back from the canary Service to the original
+   * Service during the stable phase deployment. If specified, must be between 15s and 3600s. If
+   * unspecified, there is no cutback time.
+   * @return value or {@code null} for none
+   */
+  public String getStableCutbackDuration() {
+    return stableCutbackDuration;
+  }
+
+  /**
+   * Optional. The amount of time to migrate traffic back from the canary Service to the original
+   * Service during the stable phase deployment. If specified, must be between 15s and 3600s. If
+   * unspecified, there is no cutback time.
+   * @param stableCutbackDuration stableCutbackDuration or {@code null} for none
+   */
+  public GatewayServiceMesh setStableCutbackDuration(String stableCutbackDuration) {
+    this.stableCutbackDuration = stableCutbackDuration;
     return this;
   }
 

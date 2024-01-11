@@ -45,6 +45,13 @@ public final class RolloutNotificationEvent extends com.google.api.client.json.G
   private java.lang.String pipelineUid;
 
   /**
+   * The name of the `Release`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String release;
+
+  /**
    * Unique identifier of the `Release`.
    * The value may be {@code null}.
    */
@@ -57,6 +64,13 @@ public final class RolloutNotificationEvent extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String rollout;
+
+  /**
+   * Unique identifier of the `Rollout`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rolloutUid;
 
   /**
    * ID of the `Target` that the rollout is deployed to.
@@ -107,6 +121,23 @@ public final class RolloutNotificationEvent extends com.google.api.client.json.G
   }
 
   /**
+   * The name of the `Release`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRelease() {
+    return release;
+  }
+
+  /**
+   * The name of the `Release`.
+   * @param release release or {@code null} for none
+   */
+  public RolloutNotificationEvent setRelease(java.lang.String release) {
+    this.release = release;
+    return this;
+  }
+
+  /**
    * Unique identifier of the `Release`.
    * @return value or {@code null} for none
    */
@@ -137,6 +168,23 @@ public final class RolloutNotificationEvent extends com.google.api.client.json.G
    */
   public RolloutNotificationEvent setRollout(java.lang.String rollout) {
     this.rollout = rollout;
+    return this;
+  }
+
+  /**
+   * Unique identifier of the `Rollout`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRolloutUid() {
+    return rolloutUid;
+  }
+
+  /**
+   * Unique identifier of the `Rollout`.
+   * @param rolloutUid rolloutUid or {@code null} for none
+   */
+  public RolloutNotificationEvent setRolloutUid(java.lang.String rolloutUid) {
+    this.rolloutUid = rolloutUid;
     return this;
   }
 

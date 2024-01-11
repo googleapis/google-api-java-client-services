@@ -17,7 +17,9 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * PscConfig contains PSC related configuration at a cluster level.
+ * Any custom metadata associated with the resource. i.e. A spanner instance can have multiple
+ * databases with its own unique metadata. Information for these individual databases can be
+ * captured in custom metadata data
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -27,43 +29,37 @@ package com.google.api.services.alloydb.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PscConfig extends com.google.api.client.json.GenericJson {
+public final class StorageDatabasecenterPartnerapiV1mainCustomMetadataData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Create an instance that allows connections from Private Service Connect endpoints to
-   * the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean pscEnabled;
+  private java.util.List<StorageDatabasecenterPartnerapiV1mainDatabaseMetadata> databaseMetadata;
 
   /**
-   * Optional. Create an instance that allows connections from Private Service Connect endpoints to
-   * the instance.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getPscEnabled() {
-    return pscEnabled;
+  public java.util.List<StorageDatabasecenterPartnerapiV1mainDatabaseMetadata> getDatabaseMetadata() {
+    return databaseMetadata;
   }
 
   /**
-   * Optional. Create an instance that allows connections from Private Service Connect endpoints to
-   * the instance.
-   * @param pscEnabled pscEnabled or {@code null} for none
+   * @param databaseMetadata databaseMetadata or {@code null} for none
    */
-  public PscConfig setPscEnabled(java.lang.Boolean pscEnabled) {
-    this.pscEnabled = pscEnabled;
+  public StorageDatabasecenterPartnerapiV1mainCustomMetadataData setDatabaseMetadata(java.util.List<StorageDatabasecenterPartnerapiV1mainDatabaseMetadata> databaseMetadata) {
+    this.databaseMetadata = databaseMetadata;
     return this;
   }
 
   @Override
-  public PscConfig set(String fieldName, Object value) {
-    return (PscConfig) super.set(fieldName, value);
+  public StorageDatabasecenterPartnerapiV1mainCustomMetadataData set(String fieldName, Object value) {
+    return (StorageDatabasecenterPartnerapiV1mainCustomMetadataData) super.set(fieldName, value);
   }
 
   @Override
-  public PscConfig clone() {
-    return (PscConfig) super.clone();
+  public StorageDatabasecenterPartnerapiV1mainCustomMetadataData clone() {
+    return (StorageDatabasecenterPartnerapiV1mainCustomMetadataData) super.clone();
   }
 
 }

@@ -66,11 +66,11 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   private java.lang.String currentState;
 
   /**
-   * Any custom metadata associated with the resource (a JSON field)
+   * Any custom metadata associated with the resource
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> customMetadata;
+  private StorageDatabasecenterPartnerapiV1mainCustomMetadataData customMetadata;
 
   /**
    * The state that the instance is expected to be in. For example, an instance state can transition
@@ -238,18 +238,18 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Any custom metadata associated with the resource (a JSON field)
+   * Any custom metadata associated with the resource
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getCustomMetadata() {
+  public StorageDatabasecenterPartnerapiV1mainCustomMetadataData getCustomMetadata() {
     return customMetadata;
   }
 
   /**
-   * Any custom metadata associated with the resource (a JSON field)
+   * Any custom metadata associated with the resource
    * @param customMetadata customMetadata or {@code null} for none
    */
-  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setCustomMetadata(java.util.Map<String, java.lang.Object> customMetadata) {
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setCustomMetadata(StorageDatabasecenterPartnerapiV1mainCustomMetadataData customMetadata) {
     this.customMetadata = customMetadata;
     return this;
   }

@@ -48,6 +48,13 @@ public final class WorkerMessage extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * System defined metrics for this worker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PerWorkerMetrics perWorkerMetrics;
+
+  /**
    * Contains per-user worker telemetry used in streaming autoscaling.
    * The value may be {@code null}.
    */
@@ -142,6 +149,23 @@ public final class WorkerMessage extends com.google.api.client.json.GenericJson 
    */
   public WorkerMessage setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * System defined metrics for this worker.
+   * @return value or {@code null} for none
+   */
+  public PerWorkerMetrics getPerWorkerMetrics() {
+    return perWorkerMetrics;
+  }
+
+  /**
+   * System defined metrics for this worker.
+   * @param perWorkerMetrics perWorkerMetrics or {@code null} for none
+   */
+  public WorkerMessage setPerWorkerMetrics(PerWorkerMetrics perWorkerMetrics) {
+    this.perWorkerMetrics = perWorkerMetrics;
     return this;
   }
 

@@ -30,6 +30,15 @@ package com.google.api.services.cloudfunctions.v2beta.model;
 public final class GenerateUploadUrlRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The function environment the generated upload url will be used for. The upload url for 2nd Gen
+   * functions can also be used for 1st gen functions, but not vice versa. If not specified, 2nd
+   * generation-style upload URLs are generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String environment;
+
+  /**
    * [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt
    * function source code objects in intermediate Cloud Storage buckets. When you generate an upload
    * url and upload your source code, it gets copied to an intermediate Cloud Storage bucket. The
@@ -44,6 +53,27 @@ public final class GenerateUploadUrlRequest extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyName;
+
+  /**
+   * The function environment the generated upload url will be used for. The upload url for 2nd Gen
+   * functions can also be used for 1st gen functions, but not vice versa. If not specified, 2nd
+   * generation-style upload URLs are generated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnvironment() {
+    return environment;
+  }
+
+  /**
+   * The function environment the generated upload url will be used for. The upload url for 2nd Gen
+   * functions can also be used for 1st gen functions, but not vice versa. If not specified, 2nd
+   * generation-style upload URLs are generated.
+   * @param environment environment or {@code null} for none
+   */
+  public GenerateUploadUrlRequest setEnvironment(java.lang.String environment) {
+    this.environment = environment;
+    return this;
+  }
 
   /**
    * [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt

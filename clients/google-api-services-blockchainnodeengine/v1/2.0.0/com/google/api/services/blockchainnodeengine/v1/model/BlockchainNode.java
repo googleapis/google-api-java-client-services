@@ -74,15 +74,6 @@ public final class BlockchainNode extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * Optional. When true, the node is only accessible via Private Service Connect; no public
-   * endpoints are exposed. Otherwise, the node is only accessible via public endpoints. See
-   * https://cloud.google.com/vpc/docs/private-service-connect.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean privateServiceConnectEnabled;
-
-  /**
    * Output only. A status representing the state of the node.
    * The value may be {@code null}.
    */
@@ -197,27 +188,6 @@ public final class BlockchainNode extends com.google.api.client.json.GenericJson
    */
   public BlockchainNode setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Optional. When true, the node is only accessible via Private Service Connect; no public
-   * endpoints are exposed. Otherwise, the node is only accessible via public endpoints. See
-   * https://cloud.google.com/vpc/docs/private-service-connect.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPrivateServiceConnectEnabled() {
-    return privateServiceConnectEnabled;
-  }
-
-  /**
-   * Optional. When true, the node is only accessible via Private Service Connect; no public
-   * endpoints are exposed. Otherwise, the node is only accessible via public endpoints. See
-   * https://cloud.google.com/vpc/docs/private-service-connect.
-   * @param privateServiceConnectEnabled privateServiceConnectEnabled or {@code null} for none
-   */
-  public BlockchainNode setPrivateServiceConnectEnabled(java.lang.Boolean privateServiceConnectEnabled) {
-    this.privateServiceConnectEnabled = privateServiceConnectEnabled;
     return this;
   }
 

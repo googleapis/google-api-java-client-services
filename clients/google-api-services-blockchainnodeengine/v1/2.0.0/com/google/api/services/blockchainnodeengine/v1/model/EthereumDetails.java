@@ -52,18 +52,6 @@ public final class EthereumDetails extends com.google.api.client.json.GenericJso
   private java.lang.Boolean apiEnableDebug;
 
   /**
-   * Deprecated: Use the same field in the ValidatorConfig message as replacement. An Ethereum
-   * address which the beacon client will send fee rewards to if no recipient is configured in the
-   * validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html or
-   * https://docs.prylabs.network/docs/execution-node/fee-recipient for examples of how this is
-   * used. Note that while this is often described as "suggested", as we run the execution node we
-   * can trust the execution node, and therefore this is considered enforced.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String beaconFeeRecipient;
-
-  /**
    * Immutable. The consensus client.
    * The value may be {@code null}.
    */
@@ -154,33 +142,6 @@ public final class EthereumDetails extends com.google.api.client.json.GenericJso
    */
   public EthereumDetails setApiEnableDebug(java.lang.Boolean apiEnableDebug) {
     this.apiEnableDebug = apiEnableDebug;
-    return this;
-  }
-
-  /**
-   * Deprecated: Use the same field in the ValidatorConfig message as replacement. An Ethereum
-   * address which the beacon client will send fee rewards to if no recipient is configured in the
-   * validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html or
-   * https://docs.prylabs.network/docs/execution-node/fee-recipient for examples of how this is
-   * used. Note that while this is often described as "suggested", as we run the execution node we
-   * can trust the execution node, and therefore this is considered enforced.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBeaconFeeRecipient() {
-    return beaconFeeRecipient;
-  }
-
-  /**
-   * Deprecated: Use the same field in the ValidatorConfig message as replacement. An Ethereum
-   * address which the beacon client will send fee rewards to if no recipient is configured in the
-   * validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html or
-   * https://docs.prylabs.network/docs/execution-node/fee-recipient for examples of how this is
-   * used. Note that while this is often described as "suggested", as we run the execution node we
-   * can trust the execution node, and therefore this is considered enforced.
-   * @param beaconFeeRecipient beaconFeeRecipient or {@code null} for none
-   */
-  public EthereumDetails setBeaconFeeRecipient(java.lang.String beaconFeeRecipient) {
-    this.beaconFeeRecipient = beaconFeeRecipient;
     return this;
   }
 

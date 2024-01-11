@@ -65,7 +65,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   private ReportSummaryUtilizationChartData memoryUtilizationChart;
 
   /**
-   * Count of assets grouped by Operating System families.
+   * Count of assets grouped by Operating System families. Only present for virtual machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,7 +206,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   }
 
   /**
-   * Count of assets grouped by Operating System families.
+   * Count of assets grouped by Operating System families. Only present for virtual machines.
    * @return value or {@code null} for none
    */
   public ReportSummaryChartData getOperatingSystem() {
@@ -214,7 +214,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   }
 
   /**
-   * Count of assets grouped by Operating System families.
+   * Count of assets grouped by Operating System families. Only present for virtual machines.
    * @param operatingSystem operatingSystem or {@code null} for none
    */
   public ReportSummaryAssetAggregateStats setOperatingSystem(ReportSummaryChartData operatingSystem) {

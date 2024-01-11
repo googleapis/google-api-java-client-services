@@ -37,14 +37,14 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
   private ReportSummaryAssetAggregateStats assetAggregateStats;
 
   /**
-   * Description for the Group.
+   * Description for this group finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Display Name for the Group.
+   * Display Name for this group finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
   }
 
   /**
-   * Description for the Group.
+   * Description for this group finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -90,7 +90,7 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
   }
 
   /**
-   * Description for the Group.
+   * Description for this group finding.
    * @param description description or {@code null} for none
    */
   public ReportSummaryGroupFinding setDescription(java.lang.String description) {
@@ -99,7 +99,7 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
   }
 
   /**
-   * Display Name for the Group.
+   * Display Name for this group finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -107,7 +107,7 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
   }
 
   /**
-   * Display Name for the Group.
+   * Display Name for this group finding.
    * @param displayName displayName or {@code null} for none
    */
   public ReportSummaryGroupFinding setDisplayName(java.lang.String displayName) {

@@ -86,11 +86,31 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private String deleteTime;
 
   /**
+   * Optional. Disables support for plain TCP connections in the workstation. By default the service
+   * supports TCP connections via a websocket relay. Setting this option to true disables that
+   * relay, which prevents the usage of services that require plain tcp connections, such as ssh.
+   * When enabled, all communication must occur over https or wss.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableTcpConnections;
+
+  /**
    * Optional. Human-readable name for this workstation configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a service
+   * account must also be specified that has `logging.buckets.write` permission on the project.
+   * Operating system audit logging is distinct from [Cloud Audit
+   * Logs](https://cloud.google.com/workstations/docs/audit-logging).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAuditAgent;
 
   /**
    * Immutable. Encrypts resources of this workstation configuration using a customer-managed
@@ -335,6 +355,29 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. Disables support for plain TCP connections in the workstation. By default the service
+   * supports TCP connections via a websocket relay. Setting this option to true disables that
+   * relay, which prevents the usage of services that require plain tcp connections, such as ssh.
+   * When enabled, all communication must occur over https or wss.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableTcpConnections() {
+    return disableTcpConnections;
+  }
+
+  /**
+   * Optional. Disables support for plain TCP connections in the workstation. By default the service
+   * supports TCP connections via a websocket relay. Setting this option to true disables that
+   * relay, which prevents the usage of services that require plain tcp connections, such as ssh.
+   * When enabled, all communication must occur over https or wss.
+   * @param disableTcpConnections disableTcpConnections or {@code null} for none
+   */
+  public WorkstationConfig setDisableTcpConnections(java.lang.Boolean disableTcpConnections) {
+    this.disableTcpConnections = disableTcpConnections;
+    return this;
+  }
+
+  /**
    * Optional. Human-readable name for this workstation configuration.
    * @return value or {@code null} for none
    */
@@ -348,6 +391,29 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a service
+   * account must also be specified that has `logging.buckets.write` permission on the project.
+   * Operating system audit logging is distinct from [Cloud Audit
+   * Logs](https://cloud.google.com/workstations/docs/audit-logging).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAuditAgent() {
+    return enableAuditAgent;
+  }
+
+  /**
+   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a service
+   * account must also be specified that has `logging.buckets.write` permission on the project.
+   * Operating system audit logging is distinct from [Cloud Audit
+   * Logs](https://cloud.google.com/workstations/docs/audit-logging).
+   * @param enableAuditAgent enableAuditAgent or {@code null} for none
+   */
+  public WorkstationConfig setEnableAuditAgent(java.lang.Boolean enableAuditAgent) {
+    this.enableAuditAgent = enableAuditAgent;
     return this;
   }
 

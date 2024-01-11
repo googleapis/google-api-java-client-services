@@ -48,11 +48,16 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> commands;
 
   /**
-   * Optional. If set to true, container will run with Image streaming. The container runtime will
-   * be changed to containerd instead of docker. Currently, only imageUri, commands, entrypoint and
-   * volumes are supported and any other fields will be ignored. Please refer
-   * [here](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples/image-
-   * streaming) for the feature requirements and limitations.
+   * Optional. If set to true, this container runnable uses Image streaming. Use Image streaming to
+   * allow the runnable to initialize without waiting for the entire container image to download,
+   * which can significantly reduce startup time for large container images. When
+   * `enableImageStreaming` is set to true, the container runtime is
+   * [containerd](https://containerd.io/) instead of Docker. Additionally, this container runnable
+   * only supports the following `container` subfields: `imageUri`, `commands[]`, `entrypoint`, and
+   * `volumes[]`; any other `container` subfields are ignored. For more information about the
+   * requirements and limitations for using Image streaming with Batch, see the [`image-streaming`
+   * sample on GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples
+   * /image-streaming).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,11 +158,16 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If set to true, container will run with Image streaming. The container runtime will
-   * be changed to containerd instead of docker. Currently, only imageUri, commands, entrypoint and
-   * volumes are supported and any other fields will be ignored. Please refer
-   * [here](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples/image-
-   * streaming) for the feature requirements and limitations.
+   * Optional. If set to true, this container runnable uses Image streaming. Use Image streaming to
+   * allow the runnable to initialize without waiting for the entire container image to download,
+   * which can significantly reduce startup time for large container images. When
+   * `enableImageStreaming` is set to true, the container runtime is
+   * [containerd](https://containerd.io/) instead of Docker. Additionally, this container runnable
+   * only supports the following `container` subfields: `imageUri`, `commands[]`, `entrypoint`, and
+   * `volumes[]`; any other `container` subfields are ignored. For more information about the
+   * requirements and limitations for using Image streaming with Batch, see the [`image-streaming`
+   * sample on GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples
+   * /image-streaming).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableImageStreaming() {
@@ -165,11 +175,16 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If set to true, container will run with Image streaming. The container runtime will
-   * be changed to containerd instead of docker. Currently, only imageUri, commands, entrypoint and
-   * volumes are supported and any other fields will be ignored. Please refer
-   * [here](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples/image-
-   * streaming) for the feature requirements and limitations.
+   * Optional. If set to true, this container runnable uses Image streaming. Use Image streaming to
+   * allow the runnable to initialize without waiting for the entire container image to download,
+   * which can significantly reduce startup time for large container images. When
+   * `enableImageStreaming` is set to true, the container runtime is
+   * [containerd](https://containerd.io/) instead of Docker. Additionally, this container runnable
+   * only supports the following `container` subfields: `imageUri`, `commands[]`, `entrypoint`, and
+   * `volumes[]`; any other `container` subfields are ignored. For more information about the
+   * requirements and limitations for using Image streaming with Batch, see the [`image-streaming`
+   * sample on GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples
+   * /image-streaming).
    * @param enableImageStreaming enableImageStreaming or {@code null} for none
    */
   public Container setEnableImageStreaming(java.lang.Boolean enableImageStreaming) {

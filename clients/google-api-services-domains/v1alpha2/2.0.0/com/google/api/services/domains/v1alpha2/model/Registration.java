@@ -151,7 +151,7 @@ public final class Registration extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Deprecated: For more information, see [Cloud Domains feature
-   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations). The
    * reason the domain transfer failed. Only set for domains in TRANSFER_FAILED state.
    * The value may be {@code null}.
    */
@@ -409,7 +409,7 @@ public final class Registration extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Deprecated: For more information, see [Cloud Domains feature
-   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations). The
    * reason the domain transfer failed. Only set for domains in TRANSFER_FAILED state.
    * @return value or {@code null} for none
    */
@@ -419,7 +419,7 @@ public final class Registration extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Deprecated: For more information, see [Cloud Domains feature
-   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations). The
    * reason the domain transfer failed. Only set for domains in TRANSFER_FAILED state.
    * @param transferFailureReason transferFailureReason or {@code null} for none
    */

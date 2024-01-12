@@ -18,8 +18,8 @@ package com.google.api.services.domains.v1alpha2.model;
 
 /**
  * Deprecated: For more information, see [Cloud Domains feature
- * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) Request for
- * the `ExportRegistration` method.
+ * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations). Request
+ * for the `ExportRegistration` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Domains API. For a detailed explanation see:

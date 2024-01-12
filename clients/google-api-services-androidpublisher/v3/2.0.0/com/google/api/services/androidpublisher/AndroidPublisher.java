@@ -17397,6 +17397,156 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return (Get) super.set(parameterName, value);
         }
       }
+      /**
+       * Revoke a subscription purchase for the user.
+       *
+       * Create a request for the method "subscriptionsv2.revoke".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+       * @param token Required. The token provided to the user's device when the subscription was purchased.
+       * @param content the {@link com.google.api.services.androidpublisher.model.RevokeSubscriptionPurchaseRequest}
+       * @return the request
+       */
+      public Revoke revoke(java.lang.String packageName, java.lang.String token, com.google.api.services.androidpublisher.model.RevokeSubscriptionPurchaseRequest content) throws java.io.IOException {
+        Revoke result = new Revoke(packageName, token, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Revoke extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.RevokeSubscriptionPurchaseResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}:revoke";
+
+        /**
+         * Revoke a subscription purchase for the user.
+         *
+         * Create a request for the method "subscriptionsv2.revoke".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+         * @param token Required. The token provided to the user's device when the subscription was purchased.
+         * @param content the {@link com.google.api.services.androidpublisher.model.RevokeSubscriptionPurchaseRequest}
+         * @since 1.13
+         */
+        protected Revoke(java.lang.String packageName, java.lang.String token, com.google.api.services.androidpublisher.model.RevokeSubscriptionPurchaseRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.RevokeSubscriptionPurchaseResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public Revoke set$Xgafv(java.lang.String $Xgafv) {
+          return (Revoke) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Revoke setAccessToken(java.lang.String accessToken) {
+          return (Revoke) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Revoke setAlt(java.lang.String alt) {
+          return (Revoke) super.setAlt(alt);
+        }
+
+        @Override
+        public Revoke setCallback(java.lang.String callback) {
+          return (Revoke) super.setCallback(callback);
+        }
+
+        @Override
+        public Revoke setFields(java.lang.String fields) {
+          return (Revoke) super.setFields(fields);
+        }
+
+        @Override
+        public Revoke setKey(java.lang.String key) {
+          return (Revoke) super.setKey(key);
+        }
+
+        @Override
+        public Revoke setOauthToken(java.lang.String oauthToken) {
+          return (Revoke) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Revoke setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Revoke) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Revoke setQuotaUser(java.lang.String quotaUser) {
+          return (Revoke) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Revoke setUploadType(java.lang.String uploadType) {
+          return (Revoke) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Revoke setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Revoke) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The package of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The package of the application for which this subscription was purchased (for example,
+       'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The package of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        public Revoke setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public Revoke setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Revoke set(String parameterName, Object value) {
+          return (Revoke) super.set(parameterName, value);
+        }
+      }
 
     }
     /**

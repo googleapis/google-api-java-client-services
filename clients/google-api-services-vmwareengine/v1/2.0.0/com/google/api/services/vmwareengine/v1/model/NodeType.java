@@ -58,6 +58,21 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Output only. Families of the node type. For node types to be in the same cluster they must
+   * share at least one element in the `families`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> families;
+
+  /**
+   * Output only. The type of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kind;
+
+  /**
    * Output only. The amount of physical memory available, defined in GB.
    * The value may be {@code null}.
    */
@@ -160,6 +175,42 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
    */
   public NodeType setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. Families of the node type. For node types to be in the same cluster they must
+   * share at least one element in the `families`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFamilies() {
+    return families;
+  }
+
+  /**
+   * Output only. Families of the node type. For node types to be in the same cluster they must
+   * share at least one element in the `families`.
+   * @param families families or {@code null} for none
+   */
+  public NodeType setFamilies(java.util.List<java.lang.String> families) {
+    this.families = families;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKind() {
+    return kind;
+  }
+
+  /**
+   * Output only. The type of the resource.
+   * @param kind kind or {@code null} for none
+   */
+  public NodeType setKind(java.lang.String kind) {
+    this.kind = kind;
     return this;
   }
 

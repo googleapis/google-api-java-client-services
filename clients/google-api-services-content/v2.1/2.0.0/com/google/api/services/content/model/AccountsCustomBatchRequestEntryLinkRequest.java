@@ -40,7 +40,7 @@ public final class AccountsCustomBatchRequestEntryLinkRequest extends com.google
 
   /**
    * Type of the link between the two accounts. Acceptable values are: - "`channelPartner`" -
-   * "`eCommercePlatform`" - "`paymentServiceProvider`"
+   * "`eCommercePlatform`" - "`paymentServiceProvider`" - "`localProductManager`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class AccountsCustomBatchRequestEntryLinkRequest extends com.google
   /**
    * Provided services. Acceptable values are: - "`shoppingAdsProductManagement`" -
    * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
-   * "`paymentProcessing`"
+   * "`paymentProcessing`" - "`localProductManagement`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class AccountsCustomBatchRequestEntryLinkRequest extends com.google
 
   /**
    * Type of the link between the two accounts. Acceptable values are: - "`channelPartner`" -
-   * "`eCommercePlatform`" - "`paymentServiceProvider`"
+   * "`eCommercePlatform`" - "`paymentServiceProvider`" - "`localProductManager`"
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkType() {
@@ -92,7 +92,7 @@ public final class AccountsCustomBatchRequestEntryLinkRequest extends com.google
 
   /**
    * Type of the link between the two accounts. Acceptable values are: - "`channelPartner`" -
-   * "`eCommercePlatform`" - "`paymentServiceProvider`"
+   * "`eCommercePlatform`" - "`paymentServiceProvider`" - "`localProductManager`"
    * @param linkType linkType or {@code null} for none
    */
   public AccountsCustomBatchRequestEntryLinkRequest setLinkType(java.lang.String linkType) {
@@ -120,7 +120,7 @@ public final class AccountsCustomBatchRequestEntryLinkRequest extends com.google
   /**
    * Provided services. Acceptable values are: - "`shoppingAdsProductManagement`" -
    * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
-   * "`paymentProcessing`"
+   * "`paymentProcessing`" - "`localProductManagement`"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServices() {
@@ -130,7 +130,7 @@ public final class AccountsCustomBatchRequestEntryLinkRequest extends com.google
   /**
    * Provided services. Acceptable values are: - "`shoppingAdsProductManagement`" -
    * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
-   * "`paymentProcessing`"
+   * "`paymentProcessing`" - "`localProductManagement`"
    * @param services services or {@code null} for none
    */
   public AccountsCustomBatchRequestEntryLinkRequest setServices(java.util.List<java.lang.String> services) {

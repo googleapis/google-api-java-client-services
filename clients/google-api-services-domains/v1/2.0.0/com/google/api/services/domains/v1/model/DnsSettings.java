@@ -46,7 +46,7 @@ public final class DnsSettings extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated: For more information, see [Cloud Domains feature
-   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The free
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations). The free
    * DNS zone provided by [Google Domains](https://domains.google/).
    * The value may be {@code null}.
    */
@@ -89,7 +89,7 @@ public final class DnsSettings extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated: For more information, see [Cloud Domains feature
-   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The free
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations). The free
    * DNS zone provided by [Google Domains](https://domains.google/).
    * @return value or {@code null} for none
    */
@@ -99,7 +99,7 @@ public final class DnsSettings extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated: For more information, see [Cloud Domains feature
-   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations) The free
+   * deprecation](https://cloud.google.com/domains/docs/deprecations/feature-deprecations). The free
    * DNS zone provided by [Google Domains](https://domains.google/).
    * @param googleDomainsDns googleDomainsDns or {@code null} for none
    */

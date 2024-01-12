@@ -17,8 +17,7 @@
 package com.google.api.services.prod_tt_sasportal.v1alpha1.model;
 
 /**
- * Response for [ListLegacyOrganizations].
- * [spectrum.sas.portal.v1alpha1.Provisioning.ListLegacyOrganizations].
+ * Organization details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the SAS Portal API (Testing). For a detailed explanation
@@ -29,40 +28,64 @@ package com.google.api.services.prod_tt_sasportal.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SasPortalListLegacyOrganizationsResponse extends com.google.api.client.json.GenericJson {
+public final class SasPortalOrganization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Legacy SAS organizations.
+   * Name of organization
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SasPortalOrganization> organizations;
+  private java.lang.String displayName;
 
   /**
-   * Optional. Legacy SAS organizations.
+   * Id of organization
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long id;
+
+  /**
+   * Name of organization
    * @return value or {@code null} for none
    */
-  public java.util.List<SasPortalOrganization> getOrganizations() {
-    return organizations;
+  public java.lang.String getDisplayName() {
+    return displayName;
   }
 
   /**
-   * Optional. Legacy SAS organizations.
-   * @param organizations organizations or {@code null} for none
+   * Name of organization
+   * @param displayName displayName or {@code null} for none
    */
-  public SasPortalListLegacyOrganizationsResponse setOrganizations(java.util.List<SasPortalOrganization> organizations) {
-    this.organizations = organizations;
+  public SasPortalOrganization setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Id of organization
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getId() {
+    return id;
+  }
+
+  /**
+   * Id of organization
+   * @param id id or {@code null} for none
+   */
+  public SasPortalOrganization setId(java.lang.Long id) {
+    this.id = id;
     return this;
   }
 
   @Override
-  public SasPortalListLegacyOrganizationsResponse set(String fieldName, Object value) {
-    return (SasPortalListLegacyOrganizationsResponse) super.set(fieldName, value);
+  public SasPortalOrganization set(String fieldName, Object value) {
+    return (SasPortalOrganization) super.set(fieldName, value);
   }
 
   @Override
-  public SasPortalListLegacyOrganizationsResponse clone() {
-    return (SasPortalListLegacyOrganizationsResponse) super.clone();
+  public SasPortalOrganization clone() {
+    return (SasPortalOrganization) super.clone();
   }
 
 }

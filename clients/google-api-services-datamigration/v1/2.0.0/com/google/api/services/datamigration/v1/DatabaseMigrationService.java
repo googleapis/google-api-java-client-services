@@ -6296,8 +6296,8 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
         }
         /**
          * Demotes the destination database to become a read replica of the source. This is applicable for
-         * the following migrations: 1. MySQL to Cloud SQL (for MySQL) 2. PostgreSQL to Cloud SQL (for
-         * PostgreSQL) 3. PostgreSQL to AlloyDB.
+         * the following migrations: 1. MySQL to Cloud SQL for MySQL 2. PostgreSQL to Cloud SQL for
+         * PostgreSQL 3. PostgreSQL to AlloyDB for PostgreSQL.
          *
          * Create a request for the method "migrationJobs.demoteDestination".
          *
@@ -6323,8 +6323,8 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * Demotes the destination database to become a read replica of the source. This is applicable for
-           * the following migrations: 1. MySQL to Cloud SQL (for MySQL) 2. PostgreSQL to Cloud SQL (for
-           * PostgreSQL) 3. PostgreSQL to AlloyDB.
+           * the following migrations: 1. MySQL to Cloud SQL for MySQL 2. PostgreSQL to Cloud SQL for
+           * PostgreSQL 3. PostgreSQL to AlloyDB for PostgreSQL.
            *
            * Create a request for the method "migrationJobs.demoteDestination".
            *

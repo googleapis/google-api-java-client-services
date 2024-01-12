@@ -17313,7 +17313,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * Returns uncompressed, unencoded bytes representing the referenced bulkdata tag from an instance.
                    * See [Retrieve Transaction]
-                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4){: .external}.
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4){: .external}. For
+                   * details on the implementation of RetrieveBulkdata, see [Bulkdata
+                   * resources](https://cloud.google.com/healthcare/docs/dicom#bulkdata-resources) in the Cloud
+                   * Healthcare API conformance statement. For samples that show how to call RetrieveBulkdata, see
+                   * [Retrieve bulkdata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-bulkdata).
                    *
                    * Create a request for the method "bulkdata.retrieveBulkdata".
                    *
@@ -17347,6 +17351,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * Returns uncompressed, unencoded bytes representing the referenced bulkdata tag from an
                      * instance. See [Retrieve Transaction]
                      * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4){: .external}.
+                     * For details on the implementation of RetrieveBulkdata, see [Bulkdata
+                     * resources](https://cloud.google.com/healthcare/docs/dicom#bulkdata-resources) in the Cloud
+                     * Healthcare API conformance statement. For samples that show how to call RetrieveBulkdata, see
+                     * [Retrieve bulkdata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+                     * bulkdata).
                      *
                      * Create a request for the method "bulkdata.retrieveBulkdata".
                      *

@@ -37,6 +37,14 @@ public final class GoogleChromePolicyVersionsV1FieldConstraints extends com.goog
   private GoogleChromePolicyVersionsV1NumericRangeConstraint numericRangeConstraint;
 
   /**
+   * Constraints on the uploaded file of a file policy. If present, this policy requires a URL that
+   * can be fetched by uploading a file with the constraints specified in this proto.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromePolicyVersionsV1UploadedFileConstraints uploadedFileConstraints;
+
+  /**
    * The allowed range for numeric fields.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class GoogleChromePolicyVersionsV1FieldConstraints extends com.goog
    */
   public GoogleChromePolicyVersionsV1FieldConstraints setNumericRangeConstraint(GoogleChromePolicyVersionsV1NumericRangeConstraint numericRangeConstraint) {
     this.numericRangeConstraint = numericRangeConstraint;
+    return this;
+  }
+
+  /**
+   * Constraints on the uploaded file of a file policy. If present, this policy requires a URL that
+   * can be fetched by uploading a file with the constraints specified in this proto.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromePolicyVersionsV1UploadedFileConstraints getUploadedFileConstraints() {
+    return uploadedFileConstraints;
+  }
+
+  /**
+   * Constraints on the uploaded file of a file policy. If present, this policy requires a URL that
+   * can be fetched by uploading a file with the constraints specified in this proto.
+   * @param uploadedFileConstraints uploadedFileConstraints or {@code null} for none
+   */
+  public GoogleChromePolicyVersionsV1FieldConstraints setUploadedFileConstraints(GoogleChromePolicyVersionsV1UploadedFileConstraints uploadedFileConstraints) {
+    this.uploadedFileConstraints = uploadedFileConstraints;
     return this;
   }
 

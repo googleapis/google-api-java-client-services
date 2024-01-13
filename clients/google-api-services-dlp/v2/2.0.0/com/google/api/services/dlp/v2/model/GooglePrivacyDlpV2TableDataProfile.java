@@ -52,6 +52,13 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private GooglePrivacyDlpV2DataRiskLevel dataRiskLevel;
 
   /**
+   * The resource type that was profiled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2DataSourceType dataSourceType;
+
+  /**
    * The BigQuery dataset ID.
    * The value may be {@code null}.
    */
@@ -269,6 +276,23 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
    */
   public GooglePrivacyDlpV2TableDataProfile setDataRiskLevel(GooglePrivacyDlpV2DataRiskLevel dataRiskLevel) {
     this.dataRiskLevel = dataRiskLevel;
+    return this;
+  }
+
+  /**
+   * The resource type that was profiled.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataSourceType getDataSourceType() {
+    return dataSourceType;
+  }
+
+  /**
+   * The resource type that was profiled.
+   * @param dataSourceType dataSourceType or {@code null} for none
+   */
+  public GooglePrivacyDlpV2TableDataProfile setDataSourceType(GooglePrivacyDlpV2DataSourceType dataSourceType) {
+    this.dataSourceType = dataSourceType;
     return this;
   }
 

@@ -9343,6 +9343,29 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
+            /**
+             * Optional. The Git revision of the file to return. If left empty, the current contents
+             * of `path` will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String revision;
+
+            /** Optional. The Git revision of the file to return. If left empty, the current contents of `path`
+           will be returned.
+             */
+            public java.lang.String getRevision() {
+              return revision;
+            }
+
+            /**
+             * Optional. The Git revision of the file to return. If left empty, the current contents
+             * of `path` will be returned.
+             */
+            public ReadFile setRevision(java.lang.String revision) {
+              this.revision = revision;
+              return this;
+            }
+
             @Override
             public ReadFile set(String parameterName, Object value) {
               return (ReadFile) super.set(parameterName, value);

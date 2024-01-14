@@ -683,17 +683,27 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Required. The name of the instance to create. */
+          /**
+           * Required. The name of the instance to create. Instance name can only contain lowercase
+           * alphanumeric characters and hyphens. It must start with a letter and must not end with
+           * a hyphen. It can have a maximum of 30 characters.
+           */
           @com.google.api.client.util.Key
           private java.lang.String instanceId;
 
-          /** Required. The name of the instance to create.
+          /** Required. The name of the instance to create. Instance name can only contain lowercase alphanumeric
+         characters and hyphens. It must start with a letter and must not end with a hyphen. It can have a
+         maximum of 30 characters.
            */
           public java.lang.String getInstanceId() {
             return instanceId;
           }
 
-          /** Required. The name of the instance to create. */
+          /**
+           * Required. The name of the instance to create. Instance name can only contain lowercase
+           * alphanumeric characters and hyphens. It must start with a letter and must not end with
+           * a hyphen. It can have a maximum of 30 characters.
+           */
           public Create setInstanceId(java.lang.String instanceId) {
             this.instanceId = instanceId;
             return this;

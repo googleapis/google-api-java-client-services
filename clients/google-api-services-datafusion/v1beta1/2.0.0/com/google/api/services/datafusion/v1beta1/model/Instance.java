@@ -74,7 +74,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private CryptoKeyConfig cryptoKeyConfig;
 
   /**
-   * Optional. Reserved for future use.
+   * Optional. Option to enable the Dataplex Lineage Integration feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -374,7 +374,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Reserved for future use.
+   * Optional. Option to enable the Dataplex Lineage Integration feature.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDataplexDataLineageIntegrationEnabled() {
@@ -382,7 +382,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Reserved for future use.
+   * Optional. Option to enable the Dataplex Lineage Integration feature.
    * @param dataplexDataLineageIntegrationEnabled dataplexDataLineageIntegrationEnabled or {@code null} for none
    */
   public Instance setDataplexDataLineageIntegrationEnabled(java.lang.Boolean dataplexDataLineageIntegrationEnabled) {

@@ -37,6 +37,13 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   private QueryParameterType arrayType;
 
   /**
+   * [Optional] The element type of the range, if this is a range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueryParameterType rangeElementType;
+
+  /**
    * [Optional] The types of the fields of this struct, in order, if this is a struct.
    * The value may be {@code null}.
    */
@@ -70,6 +77,23 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
    */
   public QueryParameterType setArrayType(QueryParameterType arrayType) {
     this.arrayType = arrayType;
+    return this;
+  }
+
+  /**
+   * [Optional] The element type of the range, if this is a range.
+   * @return value or {@code null} for none
+   */
+  public QueryParameterType getRangeElementType() {
+    return rangeElementType;
+  }
+
+  /**
+   * [Optional] The element type of the range, if this is a range.
+   * @param rangeElementType rangeElementType or {@code null} for none
+   */
+  public QueryParameterType setRangeElementType(QueryParameterType rangeElementType) {
+    this.rangeElementType = rangeElementType;
     return this;
   }
 

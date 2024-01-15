@@ -37,6 +37,13 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
   private java.util.List<QueryParameterValue> arrayValues;
 
   /**
+   * [Optional] The range value, if this is a range type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RangeValue rangeValue;
+
+  /**
    * [Optional] The struct field values, in order of the struct type's declaration.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
    */
   public QueryParameterValue setArrayValues(java.util.List<QueryParameterValue> arrayValues) {
     this.arrayValues = arrayValues;
+    return this;
+  }
+
+  /**
+   * [Optional] The range value, if this is a range type.
+   * @return value or {@code null} for none
+   */
+  public RangeValue getRangeValue() {
+    return rangeValue;
+  }
+
+  /**
+   * [Optional] The range value, if this is a range type.
+   * @param rangeValue rangeValue or {@code null} for none
+   */
+  public QueryParameterValue setRangeValue(RangeValue rangeValue) {
+    this.rangeValue = rangeValue;
     return this;
   }
 
@@ -109,6 +133,65 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
   @Override
   public QueryParameterValue clone() {
     return (QueryParameterValue) super.clone();
+  }
+
+  /**
+   * [Optional] The range value, if this is a range type.
+   */
+  public static final class RangeValue extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private QueryParameterValue end;
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private QueryParameterValue start;
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public QueryParameterValue getEnd() {
+      return end;
+    }
+
+    /**
+     * @param end end or {@code null} for none
+     */
+    public RangeValue setEnd(QueryParameterValue end) {
+      this.end = end;
+      return this;
+    }
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public QueryParameterValue getStart() {
+      return start;
+    }
+
+    /**
+     * @param start start or {@code null} for none
+     */
+    public RangeValue setStart(QueryParameterValue start) {
+      this.start = start;
+      return this;
+    }
+
+    @Override
+    public RangeValue set(String fieldName, Object value) {
+      return (RangeValue) super.set(fieldName, value);
+    }
+
+    @Override
+    public RangeValue clone() {
+      return (RangeValue) super.clone();
+    }
+
   }
 
 }

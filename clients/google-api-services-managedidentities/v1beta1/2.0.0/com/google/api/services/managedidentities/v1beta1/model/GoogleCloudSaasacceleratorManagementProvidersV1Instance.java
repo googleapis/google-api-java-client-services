@@ -82,8 +82,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   /**
    * Optional. The MaintenancePolicies that have been attached to the instance. The key must be of
    * the type name of the oneof policy name defined in MaintenancePolicy, and the referenced policy
-   * must define the same policy type. For details, please refer to go/cloud-saas-mw-ug. Should not
-   * be set if maintenance_settings.maintenance_policies is set.
+   * must define the same policy type. For details, please refer to go/mr-user-guide. Should not be
+   * set if maintenance_settings.maintenance_policies is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,8 +274,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   /**
    * Optional. The MaintenancePolicies that have been attached to the instance. The key must be of
    * the type name of the oneof policy name defined in MaintenancePolicy, and the referenced policy
-   * must define the same policy type. For details, please refer to go/cloud-saas-mw-ug. Should not
-   * be set if maintenance_settings.maintenance_policies is set.
+   * must define the same policy type. For details, please refer to go/mr-user-guide. Should not be
+   * set if maintenance_settings.maintenance_policies is set.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMaintenancePolicyNames() {
@@ -285,8 +285,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   /**
    * Optional. The MaintenancePolicies that have been attached to the instance. The key must be of
    * the type name of the oneof policy name defined in MaintenancePolicy, and the referenced policy
-   * must define the same policy type. For details, please refer to go/cloud-saas-mw-ug. Should not
-   * be set if maintenance_settings.maintenance_policies is set.
+   * must define the same policy type. For details, please refer to go/mr-user-guide. Should not be
+   * set if maintenance_settings.maintenance_policies is set.
    * @param maintenancePolicyNames maintenancePolicyNames or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setMaintenancePolicyNames(java.util.Map<String, java.lang.String> maintenancePolicyNames) {

@@ -37,7 +37,7 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private UNDEFINEDPackageNameRevocationContextProratedRefund proratedRefund;
+  private RevocationContextProratedRefund proratedRefund;
 
   /**
    * Optional. Used when users should be refunded a prorated amount they paid for their subscription
@@ -45,7 +45,7 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
    * multiple items.
    * @return value or {@code null} for none
    */
-  public UNDEFINEDPackageNameRevocationContextProratedRefund getProratedRefund() {
+  public RevocationContextProratedRefund getProratedRefund() {
     return proratedRefund;
   }
 
@@ -55,7 +55,7 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
    * multiple items.
    * @param proratedRefund proratedRefund or {@code null} for none
    */
-  public RevocationContext setProratedRefund(UNDEFINEDPackageNameRevocationContextProratedRefund proratedRefund) {
+  public RevocationContext setProratedRefund(RevocationContextProratedRefund proratedRefund) {
     this.proratedRefund = proratedRefund;
     return this;
   }

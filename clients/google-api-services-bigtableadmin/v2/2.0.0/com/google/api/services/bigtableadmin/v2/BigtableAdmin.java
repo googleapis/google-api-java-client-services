@@ -6035,7 +6035,10 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
         }
         /**
          * Permanently drop/delete a row range from a specified table. The request can specify whether to
-         * delete all rows in a table, or only those that match a particular prefix.
+         * delete all rows in a table, or only those that match a particular prefix. Note that row key
+         * prefixes used here are treated as service data. For more information about how service data is
+         * handled, see the [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
+         * notice).
          *
          * Create a request for the method "tables.dropRowRange".
          *
@@ -6062,7 +6065,10 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
 
           /**
            * Permanently drop/delete a row range from a specified table. The request can specify whether to
-           * delete all rows in a table, or only those that match a particular prefix.
+           * delete all rows in a table, or only those that match a particular prefix. Note that row key
+           * prefixes used here are treated as service data. For more information about how service data is
+           * handled, see the [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
+           * notice).
            *
            * Create a request for the method "tables.dropRowRange".
            *

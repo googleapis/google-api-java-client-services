@@ -266,15 +266,13 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
       /**
        * Optional. The parent to create a billing account from. Format: -
-       * `organizations/{organization_id}`, for example, `organizations/12345678` -
        * `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
-     for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for example,
-     `billingAccounts/012345-567890-ABCDEF`
+      /** Optional. The parent to create a billing account from. Format: -
+     `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
        */
       public java.lang.String getParent() {
         return parent;
@@ -282,7 +280,6 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
       /**
        * Optional. The parent to create a billing account from. Format: -
-       * `organizations/{organization_id}`, for example, `organizations/12345678` -
        * `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
        */
       public Create setParent(java.lang.String parent) {
@@ -1703,9 +1700,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
-       *        for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
-       *        example, `billingAccounts/012345-567890-ABCDEF`
+       * @param parent Optional. The parent to create a billing account from. Format: -
+       *        `billingAccounts/{billing_account_id}`, for example,
+       *        `billingAccounts/012345-567890-ABCDEF`
        * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
        * @return the request
        */
@@ -1742,9 +1739,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
-       *        for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
-       *        example, `billingAccounts/012345-567890-ABCDEF`
+         * @param parent Optional. The parent to create a billing account from. Format: -
+       *        `billingAccounts/{billing_account_id}`, for example,
+       *        `billingAccounts/012345-567890-ABCDEF`
          * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
          * @since 1.13
          */
@@ -1815,16 +1812,14 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent to create a billing account from. Format: -
-         * `organizations/{organization_id}`, for example, `organizations/12345678` -
          * `billingAccounts/{billing_account_id}`, for example,
          * `billingAccounts/012345-567890-ABCDEF`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
-       for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for example,
-       `billingAccounts/012345-567890-ABCDEF`
+        /** Optional. The parent to create a billing account from. Format: -
+       `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
          */
         public java.lang.String getParent() {
           return parent;
@@ -1832,7 +1827,6 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent to create a billing account from. Format: -
-         * `organizations/{organization_id}`, for example, `organizations/12345678` -
          * `billingAccounts/{billing_account_id}`, for example,
          * `billingAccounts/012345-567890-ABCDEF`
          */
@@ -2141,9 +2135,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
-       *        for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
-       *        example, `billingAccounts/012345-567890-ABCDEF`
+       * @param parent Optional. The parent to create a billing account from. Format: -
+       *        `billingAccounts/{billing_account_id}`, for example,
+       *        `billingAccounts/012345-567890-ABCDEF`
        * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
        * @return the request
        */
@@ -2180,9 +2174,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
-       *        for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
-       *        example, `billingAccounts/012345-567890-ABCDEF`
+         * @param parent Optional. The parent to create a billing account from. Format: -
+       *        `billingAccounts/{billing_account_id}`, for example,
+       *        `billingAccounts/012345-567890-ABCDEF`
          * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
          * @since 1.13
          */
@@ -2253,16 +2247,14 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent to create a billing account from. Format: -
-         * `organizations/{organization_id}`, for example, `organizations/12345678` -
          * `billingAccounts/{billing_account_id}`, for example,
          * `billingAccounts/012345-567890-ABCDEF`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. The parent to create a billing account from. Format: - `organizations/{organization_id}`,
-       for example, `organizations/12345678` - `billingAccounts/{billing_account_id}`, for example,
-       `billingAccounts/012345-567890-ABCDEF`
+        /** Optional. The parent to create a billing account from. Format: -
+       `billingAccounts/{billing_account_id}`, for example, `billingAccounts/012345-567890-ABCDEF`
          */
         public java.lang.String getParent() {
           return parent;
@@ -2270,7 +2262,6 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. The parent to create a billing account from. Format: -
-         * `organizations/{organization_id}`, for example, `organizations/12345678` -
          * `billingAccounts/{billing_account_id}`, for example,
          * `billingAccounts/012345-567890-ABCDEF`
          */

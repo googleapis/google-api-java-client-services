@@ -86,12 +86,11 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean allPorts;
 
   /**
-   * This field is used along with the backend_service field for internal load balancing or with the
-   * target field for internal TargetInstance. If set to true, clients can access the internal
-   * passthrough Network Load Balancers, the regional internal Application Load Balancer, and the
-   * regional internal proxy Network Load Balancer from all regions. If false, only allows access
-   * from the local region the load balancer is located at. Note that for INTERNAL_MANAGED
-   * forwarding rules, this field cannot be changed after the forwarding rule is created.
+   * If set to true, clients can access the internal passthrough Network Load Balancers, the
+   * regional internal Application Load Balancer, and the regional internal proxy Network Load
+   * Balancer from all regions. If false, only allows access from the local region the load balancer
+   * is located at. Note that for INTERNAL_MANAGED forwarding rules, this field cannot be changed
+   * after the forwarding rule is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -540,12 +539,11 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field is used along with the backend_service field for internal load balancing or with the
-   * target field for internal TargetInstance. If set to true, clients can access the internal
-   * passthrough Network Load Balancers, the regional internal Application Load Balancer, and the
-   * regional internal proxy Network Load Balancer from all regions. If false, only allows access
-   * from the local region the load balancer is located at. Note that for INTERNAL_MANAGED
-   * forwarding rules, this field cannot be changed after the forwarding rule is created.
+   * If set to true, clients can access the internal passthrough Network Load Balancers, the
+   * regional internal Application Load Balancer, and the regional internal proxy Network Load
+   * Balancer from all regions. If false, only allows access from the local region the load balancer
+   * is located at. Note that for INTERNAL_MANAGED forwarding rules, this field cannot be changed
+   * after the forwarding rule is created.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowGlobalAccess() {
@@ -553,12 +551,11 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field is used along with the backend_service field for internal load balancing or with the
-   * target field for internal TargetInstance. If set to true, clients can access the internal
-   * passthrough Network Load Balancers, the regional internal Application Load Balancer, and the
-   * regional internal proxy Network Load Balancer from all regions. If false, only allows access
-   * from the local region the load balancer is located at. Note that for INTERNAL_MANAGED
-   * forwarding rules, this field cannot be changed after the forwarding rule is created.
+   * If set to true, clients can access the internal passthrough Network Load Balancers, the
+   * regional internal Application Load Balancer, and the regional internal proxy Network Load
+   * Balancer from all regions. If false, only allows access from the local region the load balancer
+   * is located at. Note that for INTERNAL_MANAGED forwarding rules, this field cannot be changed
+   * after the forwarding rule is created.
    * @param allowGlobalAccess allowGlobalAccess or {@code null} for none
    */
   public ForwardingRule setAllowGlobalAccess(java.lang.Boolean allowGlobalAccess) {

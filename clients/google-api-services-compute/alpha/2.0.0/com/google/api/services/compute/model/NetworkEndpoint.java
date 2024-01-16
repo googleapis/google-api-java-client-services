@@ -53,9 +53,11 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   private java.lang.String fqdn;
 
   /**
-   * The name for a specific VM instance that the IP address belongs to. This is required for
-   * network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network
-   * endpoint group. The name must be 1-63 characters long, and comply with RFC1035.
+   * The name or a URL of a specific VM instance that the IP address belongs to. This is required
+   * for network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network
+   * endpoint group (for zonal NEGs) or in the zone within the region of the NEG (for regional
+   * NEGs). The name must be 1-63 characters long, and comply with RFC1035 or be a valid URL
+   * pointing to an existing instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,9 +153,11 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name for a specific VM instance that the IP address belongs to. This is required for
-   * network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network
-   * endpoint group. The name must be 1-63 characters long, and comply with RFC1035.
+   * The name or a URL of a specific VM instance that the IP address belongs to. This is required
+   * for network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network
+   * endpoint group (for zonal NEGs) or in the zone within the region of the NEG (for regional
+   * NEGs). The name must be 1-63 characters long, and comply with RFC1035 or be a valid URL
+   * pointing to an existing instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -161,9 +165,11 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name for a specific VM instance that the IP address belongs to. This is required for
-   * network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network
-   * endpoint group. The name must be 1-63 characters long, and comply with RFC1035.
+   * The name or a URL of a specific VM instance that the IP address belongs to. This is required
+   * for network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network
+   * endpoint group (for zonal NEGs) or in the zone within the region of the NEG (for regional
+   * NEGs). The name must be 1-63 characters long, and comply with RFC1035 or be a valid URL
+   * pointing to an existing instance.
    * @param instance instance or {@code null} for none
    */
   public NetworkEndpoint setInstance(java.lang.String instance) {

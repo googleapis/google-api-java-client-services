@@ -28,16 +28,16 @@ package com.google.api.services.androidpublisher.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class UNDEFINEDPackageNameRevocationContextProratedRefund extends com.google.api.client.json.GenericJson {
+public final class RevocationContextProratedRefund extends com.google.api.client.json.GenericJson {
 
   @Override
-  public UNDEFINEDPackageNameRevocationContextProratedRefund set(String fieldName, Object value) {
-    return (UNDEFINEDPackageNameRevocationContextProratedRefund) super.set(fieldName, value);
+  public RevocationContextProratedRefund set(String fieldName, Object value) {
+    return (RevocationContextProratedRefund) super.set(fieldName, value);
   }
 
   @Override
-  public UNDEFINEDPackageNameRevocationContextProratedRefund clone() {
-    return (UNDEFINEDPackageNameRevocationContextProratedRefund) super.clone();
+  public RevocationContextProratedRefund clone() {
+    return (RevocationContextProratedRefund) super.clone();
   }
 
 }

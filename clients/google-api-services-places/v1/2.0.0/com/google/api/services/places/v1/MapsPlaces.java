@@ -154,15 +154,15 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
   public class Places {
 
     /**
-     * Get place details with a place id (in a name) string.
+     * Get the details of a place based on its resource name, which is a string in the
+     * `places/{place_id}` format.
      *
      * Create a request for the method "places.get".
      *
      * This request holds the parameters needed by the places server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name in the
-     *        same Place. Format: `places/{place_id}`.
+     * @param name Required. The resource name of a place, in the `places/{place_id}` format.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -179,7 +179,8 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^places/[^/]+$");
 
       /**
-       * Get place details with a place id (in a name) string.
+       * Get the details of a place based on its resource name, which is a string in the
+       * `places/{place_id}` format.
        *
        * Create a request for the method "places.get".
        *
@@ -188,8 +189,7 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name in the
-     *        same Place. Format: `places/{place_id}`.
+       * @param name Required. The resource name of a place, in the `places/{place_id}` format.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -267,24 +267,17 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name
-       * in the same Place. Format: `places/{place_id}`.
-       */
+      /** Required. The resource name of a place, in the `places/{place_id}` format. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name in the
-     same Place. Format: `places/{place_id}`.
+      /** Required. The resource name of a place, in the `places/{place_id}` format.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. A place ID returned in a Place (with "places/" prefix), or equivalently the name
-       * in the same Place. Format: `places/{place_id}`.
-       */
+      /** Required. The resource name of a place, in the `places/{place_id}` format. */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

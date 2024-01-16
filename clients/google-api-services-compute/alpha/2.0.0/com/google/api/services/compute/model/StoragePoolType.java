@@ -65,42 +65,49 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
+   * [Output Only] Maximum storage pool size in GB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxPoolProvisionedCapacityGb;
+
+  /**
    * [Output Only] Maximum provisioned IOPS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long maxProvisionedIops;
+  private java.lang.Long maxPoolProvisionedIops;
 
   /**
    * [Output Only] Maximum provisioned throughput.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long maxProvisionedThroughput;
+  private java.lang.Long maxPoolProvisionedThroughput;
 
   /**
-   * [Output Only] Maximum storage pool size in GB.
+   * [Output Only] Minimum storage pool size in GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long maxSizeGb;
+  private java.lang.Long minPoolProvisionedCapacityGb;
 
   /**
    * [Output Only] Minimum provisioned IOPS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long minProvisionedIops;
+  private java.lang.Long minPoolProvisionedIops;
 
   /**
    * [Output Only] Minimum provisioned throughput.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long minProvisionedThroughput;
+  private java.lang.Long minPoolProvisionedThroughput;
 
   /**
-   * [Output Only] Minimum storage pool size in GB.
+   * [Deprecated] This field is deprecated. Use minPoolProvisionedCapacityGb instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -228,19 +235,36 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Maximum provisioned IOPS.
+   * [Output Only] Maximum storage pool size in GB.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getMaxProvisionedIops() {
-    return maxProvisionedIops;
+  public java.lang.Long getMaxPoolProvisionedCapacityGb() {
+    return maxPoolProvisionedCapacityGb;
+  }
+
+  /**
+   * [Output Only] Maximum storage pool size in GB.
+   * @param maxPoolProvisionedCapacityGb maxPoolProvisionedCapacityGb or {@code null} for none
+   */
+  public StoragePoolType setMaxPoolProvisionedCapacityGb(java.lang.Long maxPoolProvisionedCapacityGb) {
+    this.maxPoolProvisionedCapacityGb = maxPoolProvisionedCapacityGb;
+    return this;
   }
 
   /**
    * [Output Only] Maximum provisioned IOPS.
-   * @param maxProvisionedIops maxProvisionedIops or {@code null} for none
+   * @return value or {@code null} for none
    */
-  public StoragePoolType setMaxProvisionedIops(java.lang.Long maxProvisionedIops) {
-    this.maxProvisionedIops = maxProvisionedIops;
+  public java.lang.Long getMaxPoolProvisionedIops() {
+    return maxPoolProvisionedIops;
+  }
+
+  /**
+   * [Output Only] Maximum provisioned IOPS.
+   * @param maxPoolProvisionedIops maxPoolProvisionedIops or {@code null} for none
+   */
+  public StoragePoolType setMaxPoolProvisionedIops(java.lang.Long maxPoolProvisionedIops) {
+    this.maxPoolProvisionedIops = maxPoolProvisionedIops;
     return this;
   }
 
@@ -248,72 +272,72 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
    * [Output Only] Maximum provisioned throughput.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getMaxProvisionedThroughput() {
-    return maxProvisionedThroughput;
+  public java.lang.Long getMaxPoolProvisionedThroughput() {
+    return maxPoolProvisionedThroughput;
   }
 
   /**
    * [Output Only] Maximum provisioned throughput.
-   * @param maxProvisionedThroughput maxProvisionedThroughput or {@code null} for none
+   * @param maxPoolProvisionedThroughput maxPoolProvisionedThroughput or {@code null} for none
    */
-  public StoragePoolType setMaxProvisionedThroughput(java.lang.Long maxProvisionedThroughput) {
-    this.maxProvisionedThroughput = maxProvisionedThroughput;
-    return this;
-  }
-
-  /**
-   * [Output Only] Maximum storage pool size in GB.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getMaxSizeGb() {
-    return maxSizeGb;
-  }
-
-  /**
-   * [Output Only] Maximum storage pool size in GB.
-   * @param maxSizeGb maxSizeGb or {@code null} for none
-   */
-  public StoragePoolType setMaxSizeGb(java.lang.Long maxSizeGb) {
-    this.maxSizeGb = maxSizeGb;
-    return this;
-  }
-
-  /**
-   * [Output Only] Minimum provisioned IOPS.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getMinProvisionedIops() {
-    return minProvisionedIops;
-  }
-
-  /**
-   * [Output Only] Minimum provisioned IOPS.
-   * @param minProvisionedIops minProvisionedIops or {@code null} for none
-   */
-  public StoragePoolType setMinProvisionedIops(java.lang.Long minProvisionedIops) {
-    this.minProvisionedIops = minProvisionedIops;
-    return this;
-  }
-
-  /**
-   * [Output Only] Minimum provisioned throughput.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getMinProvisionedThroughput() {
-    return minProvisionedThroughput;
-  }
-
-  /**
-   * [Output Only] Minimum provisioned throughput.
-   * @param minProvisionedThroughput minProvisionedThroughput or {@code null} for none
-   */
-  public StoragePoolType setMinProvisionedThroughput(java.lang.Long minProvisionedThroughput) {
-    this.minProvisionedThroughput = minProvisionedThroughput;
+  public StoragePoolType setMaxPoolProvisionedThroughput(java.lang.Long maxPoolProvisionedThroughput) {
+    this.maxPoolProvisionedThroughput = maxPoolProvisionedThroughput;
     return this;
   }
 
   /**
    * [Output Only] Minimum storage pool size in GB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinPoolProvisionedCapacityGb() {
+    return minPoolProvisionedCapacityGb;
+  }
+
+  /**
+   * [Output Only] Minimum storage pool size in GB.
+   * @param minPoolProvisionedCapacityGb minPoolProvisionedCapacityGb or {@code null} for none
+   */
+  public StoragePoolType setMinPoolProvisionedCapacityGb(java.lang.Long minPoolProvisionedCapacityGb) {
+    this.minPoolProvisionedCapacityGb = minPoolProvisionedCapacityGb;
+    return this;
+  }
+
+  /**
+   * [Output Only] Minimum provisioned IOPS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinPoolProvisionedIops() {
+    return minPoolProvisionedIops;
+  }
+
+  /**
+   * [Output Only] Minimum provisioned IOPS.
+   * @param minPoolProvisionedIops minPoolProvisionedIops or {@code null} for none
+   */
+  public StoragePoolType setMinPoolProvisionedIops(java.lang.Long minPoolProvisionedIops) {
+    this.minPoolProvisionedIops = minPoolProvisionedIops;
+    return this;
+  }
+
+  /**
+   * [Output Only] Minimum provisioned throughput.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinPoolProvisionedThroughput() {
+    return minPoolProvisionedThroughput;
+  }
+
+  /**
+   * [Output Only] Minimum provisioned throughput.
+   * @param minPoolProvisionedThroughput minPoolProvisionedThroughput or {@code null} for none
+   */
+  public StoragePoolType setMinPoolProvisionedThroughput(java.lang.Long minPoolProvisionedThroughput) {
+    this.minPoolProvisionedThroughput = minPoolProvisionedThroughput;
+    return this;
+  }
+
+  /**
+   * [Deprecated] This field is deprecated. Use minPoolProvisionedCapacityGb instead.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinSizeGb() {
@@ -321,7 +345,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Minimum storage pool size in GB.
+   * [Deprecated] This field is deprecated. Use minPoolProvisionedCapacityGb instead.
    * @param minSizeGb minSizeGb or {@code null} for none
    */
   public StoragePoolType setMinSizeGb(java.lang.Long minSizeGb) {

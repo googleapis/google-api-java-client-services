@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-managedidentities</artifactId>
-  <version>v1beta1-rev20231010-2.0.0</version>
-  <name>Managed Service for Microsoft Active Directory API v1beta1-rev20231010-2.0.0</name>
+  <version>v1beta1-rev20240112-2.0.0</version>
+  <name>Managed Service for Microsoft Active Directory API v1beta1-rev20240112-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

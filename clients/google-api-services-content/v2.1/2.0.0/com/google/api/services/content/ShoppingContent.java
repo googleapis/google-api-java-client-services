@@ -23607,7 +23607,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   public class Reports {
 
     /**
-     * Retrieves merchant performance mertrics matching the search query and optionally segmented by
+     * Retrieves merchant performance metrics matching the search query and optionally segmented by
      * selected dimensions.
      *
      * Create a request for the method "reports.search".
@@ -23630,7 +23630,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/reports/search";
 
       /**
-       * Retrieves merchant performance mertrics matching the search query and optionally segmented by
+       * Retrieves merchant performance metrics matching the search query and optionally segmented by
        * selected dimensions.
        *
        * Create a request for the method "reports.search".

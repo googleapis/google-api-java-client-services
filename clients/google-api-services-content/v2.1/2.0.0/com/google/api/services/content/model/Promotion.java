@@ -102,10 +102,10 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.Integer getThisQuantityDiscounted;
 
   /**
-   * Required. Output only. The REST promotion ID to uniquely identify the promotion. Content API
-   * methods that operate on promotions take this as their `promotionId` parameter. The REST ID for
-   * a promotion is of the form channel:contentLanguage:targetCountry:promotionId The `channel`
-   * field has a value of `"online"`, `"in_store"`, or `"online_in_store"`.
+   * Output only. The REST promotion ID to uniquely identify the promotion. Content API methods that
+   * operate on promotions take this as their `promotionId` parameter. The REST ID for a promotion
+   * is of the form channel:contentLanguage:targetCountry:promotionId The `channel` field has a
+   * value of `"online"`, `"in_store"`, or `"online_in_store"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -500,10 +500,10 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Output only. The REST promotion ID to uniquely identify the promotion. Content API
-   * methods that operate on promotions take this as their `promotionId` parameter. The REST ID for
-   * a promotion is of the form channel:contentLanguage:targetCountry:promotionId The `channel`
-   * field has a value of `"online"`, `"in_store"`, or `"online_in_store"`.
+   * Output only. The REST promotion ID to uniquely identify the promotion. Content API methods that
+   * operate on promotions take this as their `promotionId` parameter. The REST ID for a promotion
+   * is of the form channel:contentLanguage:targetCountry:promotionId The `channel` field has a
+   * value of `"online"`, `"in_store"`, or `"online_in_store"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -511,10 +511,10 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Output only. The REST promotion ID to uniquely identify the promotion. Content API
-   * methods that operate on promotions take this as their `promotionId` parameter. The REST ID for
-   * a promotion is of the form channel:contentLanguage:targetCountry:promotionId The `channel`
-   * field has a value of `"online"`, `"in_store"`, or `"online_in_store"`.
+   * Output only. The REST promotion ID to uniquely identify the promotion. Content API methods that
+   * operate on promotions take this as their `promotionId` parameter. The REST ID for a promotion
+   * is of the form channel:contentLanguage:targetCountry:promotionId The `channel` field has a
+   * value of `"online"`, `"in_store"`, or `"online_in_store"`.
    * @param id id or {@code null} for none
    */
   public Promotion setId(java.lang.String id) {

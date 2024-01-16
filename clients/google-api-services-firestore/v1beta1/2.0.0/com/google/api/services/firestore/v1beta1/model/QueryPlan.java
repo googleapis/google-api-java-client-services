@@ -17,7 +17,7 @@
 package com.google.api.services.firestore.v1beta1.model;
 
 /**
- * An order on a field.
+ * Plan for the query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,64 +27,46 @@ package com.google.api.services.firestore.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Order extends com.google.api.client.json.GenericJson {
+public final class QueryPlan extends com.google.api.client.json.GenericJson {
 
   /**
-   * The direction to order by. Defaults to `ASCENDING`.
+   * Planning phase information for the query. It will include: { "indexes_used": [ {"query_scope":
+   * "Collection", "properties": "(foo ASC, __name__ ASC)"}, {"query_scope": "Collection",
+   * "properties": "(bar ASC, __name__ ASC)"} ] }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String direction;
+  private java.util.Map<String, java.lang.Object> planInfo;
 
   /**
-   * The field to order by.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private FieldReference field;
-
-  /**
-   * The direction to order by. Defaults to `ASCENDING`.
+   * Planning phase information for the query. It will include: { "indexes_used": [ {"query_scope":
+   * "Collection", "properties": "(foo ASC, __name__ ASC)"}, {"query_scope": "Collection",
+   * "properties": "(bar ASC, __name__ ASC)"} ] }
    * @return value or {@code null} for none
    */
-  public java.lang.String getDirection() {
-    return direction;
+  public java.util.Map<String, java.lang.Object> getPlanInfo() {
+    return planInfo;
   }
 
   /**
-   * The direction to order by. Defaults to `ASCENDING`.
-   * @param direction direction or {@code null} for none
+   * Planning phase information for the query. It will include: { "indexes_used": [ {"query_scope":
+   * "Collection", "properties": "(foo ASC, __name__ ASC)"}, {"query_scope": "Collection",
+   * "properties": "(bar ASC, __name__ ASC)"} ] }
+   * @param planInfo planInfo or {@code null} for none
    */
-  public Order setDirection(java.lang.String direction) {
-    this.direction = direction;
-    return this;
-  }
-
-  /**
-   * The field to order by.
-   * @return value or {@code null} for none
-   */
-  public FieldReference getField() {
-    return field;
-  }
-
-  /**
-   * The field to order by.
-   * @param field field or {@code null} for none
-   */
-  public Order setField(FieldReference field) {
-    this.field = field;
+  public QueryPlan setPlanInfo(java.util.Map<String, java.lang.Object> planInfo) {
+    this.planInfo = planInfo;
     return this;
   }
 
   @Override
-  public Order set(String fieldName, Object value) {
-    return (Order) super.set(fieldName, value);
+  public QueryPlan set(String fieldName, Object value) {
+    return (QueryPlan) super.set(fieldName, value);
   }
 
   @Override
-  public Order clone() {
-    return (Order) super.clone();
+  public QueryPlan clone() {
+    return (QueryPlan) super.clone();
   }
 
 }

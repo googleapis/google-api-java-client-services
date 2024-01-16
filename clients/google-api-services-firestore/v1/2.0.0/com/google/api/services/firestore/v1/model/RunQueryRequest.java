@@ -30,6 +30,15 @@ package com.google.api.services.firestore.v1.model;
 public final class RunQueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The mode in which the query request is processed. This field is optional, and when
+   * not provided, it defaults to `NORMAL` mode where no additional statistics will be returned with
+   * the query results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * Starts a new transaction and reads the documents. Defaults to a read-only transaction. The new
    * transaction ID will be returned as the first response in the stream.
    * The value may be {@code null}.
@@ -60,6 +69,27 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String transaction;
+
+  /**
+   * Optional. The mode in which the query request is processed. This field is optional, and when
+   * not provided, it defaults to `NORMAL` mode where no additional statistics will be returned with
+   * the query results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Optional. The mode in which the query request is processed. This field is optional, and when
+   * not provided, it defaults to `NORMAL` mode where no additional statistics will be returned with
+   * the query results.
+   * @param mode mode or {@code null} for none
+   */
+  public RunQueryRequest setMode(java.lang.String mode) {
+    this.mode = mode;
+    return this;
+  }
 
   /**
    * Starts a new transaction and reads the documents. Defaults to a read-only transaction. The new

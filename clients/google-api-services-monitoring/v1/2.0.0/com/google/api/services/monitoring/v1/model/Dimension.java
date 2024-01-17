@@ -17,8 +17,8 @@
 package com.google.api.services.monitoring.v1.model;
 
 /**
- * A chart dimension. Dimensions are a structured labewl, class, or category for a set of
- * measurements in your data.
+ * Preview: A chart dimension for an SQL query. This is applied over the x-axis. This is a preview
+ * feature and may be subject to change before final release.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
@@ -31,25 +31,25 @@ package com.google.api.services.monitoring.v1.model;
 public final class Dimension extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the column in the source SQL query that is used to chart the dimension.
+   * Required. The name of the column in the source SQL query that is used to chart the dimension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String column;
 
   /**
-   * The type of the dimension column. This is relevant only if one of the bin_size fields is set.
-   * If it is empty, the type TIMESTAMP or INT64 will be assumed based on which bin_size field is
-   * set. If populated, this should be set to one of the following types: DATE, TIME, DATETIME,
-   * TIMESTAMP, BIGNUMERIC, INT64, NUMERIC, FLOAT64.
+   * Optional. The type of the dimension column. This is relevant only if one of the bin_size fields
+   * is set. If it is empty, the type TIMESTAMP or INT64 will be assumed based on which bin_size
+   * field is set. If populated, this should be set to one of the following types: DATE, TIME,
+   * DATETIME, TIMESTAMP, BIGNUMERIC, INT64, NUMERIC, FLOAT64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String columnType;
 
   /**
-   * float_bin_size is used when the column type used for a dimension is a floating point numeric
-   * column.
+   * Optional. float_bin_size is used when the column type used for a dimension is a floating point
+   * numeric column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,14 +88,15 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
 
   /**
    * time_bin_size is used when the data type specified by column is a time type and the bin size is
-   * determined by a time duration.
+   * determined by a time duration. If column_type is DATE, this must be a whole value multiple of 1
+   * day. If column_type is TIME, this must be less than or equal to 24 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timeBinSize;
 
   /**
-   * The name of the column in the source SQL query that is used to chart the dimension.
+   * Required. The name of the column in the source SQL query that is used to chart the dimension.
    * @return value or {@code null} for none
    */
   public java.lang.String getColumn() {
@@ -103,7 +104,7 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the column in the source SQL query that is used to chart the dimension.
+   * Required. The name of the column in the source SQL query that is used to chart the dimension.
    * @param column column or {@code null} for none
    */
   public Dimension setColumn(java.lang.String column) {
@@ -112,10 +113,10 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the dimension column. This is relevant only if one of the bin_size fields is set.
-   * If it is empty, the type TIMESTAMP or INT64 will be assumed based on which bin_size field is
-   * set. If populated, this should be set to one of the following types: DATE, TIME, DATETIME,
-   * TIMESTAMP, BIGNUMERIC, INT64, NUMERIC, FLOAT64.
+   * Optional. The type of the dimension column. This is relevant only if one of the bin_size fields
+   * is set. If it is empty, the type TIMESTAMP or INT64 will be assumed based on which bin_size
+   * field is set. If populated, this should be set to one of the following types: DATE, TIME,
+   * DATETIME, TIMESTAMP, BIGNUMERIC, INT64, NUMERIC, FLOAT64.
    * @return value or {@code null} for none
    */
   public java.lang.String getColumnType() {
@@ -123,10 +124,10 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the dimension column. This is relevant only if one of the bin_size fields is set.
-   * If it is empty, the type TIMESTAMP or INT64 will be assumed based on which bin_size field is
-   * set. If populated, this should be set to one of the following types: DATE, TIME, DATETIME,
-   * TIMESTAMP, BIGNUMERIC, INT64, NUMERIC, FLOAT64.
+   * Optional. The type of the dimension column. This is relevant only if one of the bin_size fields
+   * is set. If it is empty, the type TIMESTAMP or INT64 will be assumed based on which bin_size
+   * field is set. If populated, this should be set to one of the following types: DATE, TIME,
+   * DATETIME, TIMESTAMP, BIGNUMERIC, INT64, NUMERIC, FLOAT64.
    * @param columnType columnType or {@code null} for none
    */
   public Dimension setColumnType(java.lang.String columnType) {
@@ -135,8 +136,8 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * float_bin_size is used when the column type used for a dimension is a floating point numeric
-   * column.
+   * Optional. float_bin_size is used when the column type used for a dimension is a floating point
+   * numeric column.
    * @return value or {@code null} for none
    */
   public java.lang.Double getFloatBinSize() {
@@ -144,8 +145,8 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * float_bin_size is used when the column type used for a dimension is a floating point numeric
-   * column.
+   * Optional. float_bin_size is used when the column type used for a dimension is a floating point
+   * numeric column.
    * @param floatBinSize floatBinSize or {@code null} for none
    */
   public Dimension setFloatBinSize(java.lang.Double floatBinSize) {
@@ -229,7 +230,8 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
 
   /**
    * time_bin_size is used when the data type specified by column is a time type and the bin size is
-   * determined by a time duration.
+   * determined by a time duration. If column_type is DATE, this must be a whole value multiple of 1
+   * day. If column_type is TIME, this must be less than or equal to 24 hours.
    * @return value or {@code null} for none
    */
   public String getTimeBinSize() {
@@ -238,7 +240,8 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
 
   /**
    * time_bin_size is used when the data type specified by column is a time type and the bin size is
-   * determined by a time duration.
+   * determined by a time duration. If column_type is DATE, this must be a whole value multiple of 1
+   * day. If column_type is TIME, this must be less than or equal to 24 hours.
    * @param timeBinSize timeBinSize or {@code null} for none
    */
   public Dimension setTimeBinSize(String timeBinSize) {

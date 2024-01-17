@@ -37,6 +37,14 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   private java.lang.Boolean cancellationRequested;
 
   /**
+   * Destination to which to copy log entries.For example, a Cloud Storage
+   * bucket:"storage.googleapis.com/my-cloud-storage-bucket"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destination;
+
+  /**
    * The end time of an operation.
    * The value may be {@code null}.
    */
@@ -58,6 +66,14 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   private CopyLogEntriesRequest request;
 
   /**
+   * Source from which to copy log entries.For example, a log bucket:"projects/my-
+   * project/locations/global/buckets/my-source-bucket"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String source;
+
+  /**
    * The create time of an operation.
    * The value may be {@code null}.
    */
@@ -70,6 +86,13 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Name of the verb executed by the operation.For example,"copy"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String verb;
 
   /**
    * The IAM identity of a service account that must be granted access to the destination.If the
@@ -94,6 +117,25 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
    */
   public CopyLogEntriesMetadata setCancellationRequested(java.lang.Boolean cancellationRequested) {
     this.cancellationRequested = cancellationRequested;
+    return this;
+  }
+
+  /**
+   * Destination to which to copy log entries.For example, a Cloud Storage
+   * bucket:"storage.googleapis.com/my-cloud-storage-bucket"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestination() {
+    return destination;
+  }
+
+  /**
+   * Destination to which to copy log entries.For example, a Cloud Storage
+   * bucket:"storage.googleapis.com/my-cloud-storage-bucket"
+   * @param destination destination or {@code null} for none
+   */
+  public CopyLogEntriesMetadata setDestination(java.lang.String destination) {
+    this.destination = destination;
     return this;
   }
 
@@ -149,6 +191,25 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   }
 
   /**
+   * Source from which to copy log entries.For example, a log bucket:"projects/my-
+   * project/locations/global/buckets/my-source-bucket"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSource() {
+    return source;
+  }
+
+  /**
+   * Source from which to copy log entries.For example, a log bucket:"projects/my-
+   * project/locations/global/buckets/my-source-bucket"
+   * @param source source or {@code null} for none
+   */
+  public CopyLogEntriesMetadata setSource(java.lang.String source) {
+    this.source = source;
+    return this;
+  }
+
+  /**
    * The create time of an operation.
    * @return value or {@code null} for none
    */
@@ -179,6 +240,23 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
    */
   public CopyLogEntriesMetadata setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Name of the verb executed by the operation.For example,"copy"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVerb() {
+    return verb;
+  }
+
+  /**
+   * Name of the verb executed by the operation.For example,"copy"
+   * @param verb verb or {@code null} for none
+   */
+  public CopyLogEntriesMetadata setVerb(java.lang.String verb) {
+    this.verb = verb;
     return this;
   }
 

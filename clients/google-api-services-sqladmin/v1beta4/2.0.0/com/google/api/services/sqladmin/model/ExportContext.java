@@ -554,6 +554,13 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     private MysqlExportOptions mysqlExportOptions;
 
     /**
+     * Optional. Whether or not the export should be parallel.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean parallel;
+
+    /**
      * Export only schemas.
      * The value may be {@code null}.
      */
@@ -569,6 +576,13 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     private java.util.List<java.lang.String> tables;
 
     /**
+     * Optional. The number of threads to use for parallel export.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Integer threads;
+
+    /**
      * Options for exporting from MySQL.
      * @return value or {@code null} for none
      */
@@ -582,6 +596,23 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
      */
     public SqlExportOptions setMysqlExportOptions(MysqlExportOptions mysqlExportOptions) {
       this.mysqlExportOptions = mysqlExportOptions;
+      return this;
+    }
+
+    /**
+     * Optional. Whether or not the export should be parallel.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getParallel() {
+      return parallel;
+    }
+
+    /**
+     * Optional. Whether or not the export should be parallel.
+     * @param parallel parallel or {@code null} for none
+     */
+    public SqlExportOptions setParallel(java.lang.Boolean parallel) {
+      this.parallel = parallel;
       return this;
     }
 
@@ -618,6 +649,23 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
      */
     public SqlExportOptions setTables(java.util.List<java.lang.String> tables) {
       this.tables = tables;
+      return this;
+    }
+
+    /**
+     * Optional. The number of threads to use for parallel export.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Integer getThreads() {
+      return threads;
+    }
+
+    /**
+     * Optional. The number of threads to use for parallel export.
+     * @param threads threads or {@code null} for none
+     */
+    public SqlExportOptions setThreads(java.lang.Integer threads) {
+      this.threads = threads;
       return this;
     }
 

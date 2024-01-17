@@ -39,7 +39,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * `run.googleapis.com/binary-authorization-breakglass`: Service, Job, * `run.googleapis.com
    * /binary-authorization`: Service, Job, Execution. * `run.googleapis.com/client-name`: All
    * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
-   * `run.googleapis.com/container-dependencies`: Revision. * `run.googleapis.com/cpu-throttling`:
+   * `run.googleapis.com/container-dependencies`: Revision . * `run.googleapis.com/cpu-throttling`:
    * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/description`:
    * Service. * `run.googleapis.com/encryption-key-shutdown-hours`: Revision * `run.googleapis.com
    * /encryption-key`: Revision, Execution. * `run.googleapis.com/execution-environment`: Revision,
@@ -172,7 +172,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * `run.googleapis.com/binary-authorization-breakglass`: Service, Job, * `run.googleapis.com
    * /binary-authorization`: Service, Job, Execution. * `run.googleapis.com/client-name`: All
    * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
-   * `run.googleapis.com/container-dependencies`: Revision. * `run.googleapis.com/cpu-throttling`:
+   * `run.googleapis.com/container-dependencies`: Revision . * `run.googleapis.com/cpu-throttling`:
    * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/description`:
    * Service. * `run.googleapis.com/encryption-key-shutdown-hours`: Revision * `run.googleapis.com
    * /encryption-key`: Revision, Execution. * `run.googleapis.com/execution-environment`: Revision,
@@ -199,7 +199,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * `run.googleapis.com/binary-authorization-breakglass`: Service, Job, * `run.googleapis.com
    * /binary-authorization`: Service, Job, Execution. * `run.googleapis.com/client-name`: All
    * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
-   * `run.googleapis.com/container-dependencies`: Revision. * `run.googleapis.com/cpu-throttling`:
+   * `run.googleapis.com/container-dependencies`: Revision . * `run.googleapis.com/cpu-throttling`:
    * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/description`:
    * Service. * `run.googleapis.com/encryption-key-shutdown-hours`: Revision * `run.googleapis.com
    * /encryption-key`: Revision, Execution. * `run.googleapis.com/execution-environment`: Revision,

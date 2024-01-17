@@ -31,9 +31,8 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
-   * the agent. Note that this must be set for audio conversations to be properly displayed and
-   * analyzed.
+   * Optional. Indicates which of the channels, 1 or 2, contains the agent. Note that this must be
+   * set for conversations to be properly displayed and analyzed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,18 +46,16 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   private java.lang.String agentId;
 
   /**
-   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
-   * the customer. Note that this must be set for audio conversations to be properly displayed and
-   * analyzed.
+   * Optional. Indicates which of the channels, 1 or 2, contains the agent. Note that this must be
+   * set for conversations to be properly displayed and analyzed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer customerChannel;
 
   /**
-   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
-   * the agent. Note that this must be set for audio conversations to be properly displayed and
-   * analyzed.
+   * Optional. Indicates which of the channels, 1 or 2, contains the agent. Note that this must be
+   * set for conversations to be properly displayed and analyzed.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAgentChannel() {
@@ -66,9 +63,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   }
 
   /**
-   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
-   * the agent. Note that this must be set for audio conversations to be properly displayed and
-   * analyzed.
+   * Optional. Indicates which of the channels, 1 or 2, contains the agent. Note that this must be
+   * set for conversations to be properly displayed and analyzed.
    * @param agentChannel agentChannel or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig setAgentChannel(java.lang.Integer agentChannel) {
@@ -94,9 +90,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   }
 
   /**
-   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
-   * the customer. Note that this must be set for audio conversations to be properly displayed and
-   * analyzed.
+   * Optional. Indicates which of the channels, 1 or 2, contains the agent. Note that this must be
+   * set for conversations to be properly displayed and analyzed.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCustomerChannel() {
@@ -104,9 +99,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   }
 
   /**
-   * Optional. For audio conversations, this field indicates which of the channels, 1 or 2, contains
-   * the customer. Note that this must be set for audio conversations to be properly displayed and
-   * analyzed.
+   * Optional. Indicates which of the channels, 1 or 2, contains the agent. Note that this must be
+   * set for conversations to be properly displayed and analyzed.
    * @param customerChannel customerChannel or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig setCustomerChannel(java.lang.Integer customerChannel) {

@@ -547,7 +547,117 @@ public class SASPortalTesting extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Checks whether account is legacy.
+     * Returns a list of SAS deployments associated with current GCP project. Includes whether SAS
+     * analytics has been enabled or not.
+     *
+     * Create a request for the method "customers.listGcpProjectDeployments".
+     *
+     * This request holds the parameters needed by the prod_tt_sasportal server.  After setting any
+     * optional parameters, call the {@link ListGcpProjectDeployments#execute()} method to invoke the
+     * remote operation.
+     *
+     * @return the request
+     */
+    public ListGcpProjectDeployments listGcpProjectDeployments() throws java.io.IOException {
+      ListGcpProjectDeployments result = new ListGcpProjectDeployments();
+      initialize(result);
+      return result;
+    }
+
+    public class ListGcpProjectDeployments extends SASPortalTestingRequest<com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalListGcpProjectDeploymentsResponse> {
+
+      private static final String REST_PATH = "v1alpha1/customers:listGcpProjectDeployments";
+
+      /**
+       * Returns a list of SAS deployments associated with current GCP project. Includes whether SAS
+       * analytics has been enabled or not.
+       *
+       * Create a request for the method "customers.listGcpProjectDeployments".
+       *
+       * This request holds the parameters needed by the the prod_tt_sasportal server.  After setting
+       * any optional parameters, call the {@link ListGcpProjectDeployments#execute()} method to invoke
+       * the remote operation. <p> {@link ListGcpProjectDeployments#initialize(com.google.api.client.goo
+       * gleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected ListGcpProjectDeployments() {
+        super(SASPortalTesting.this, "GET", REST_PATH, null, com.google.api.services.prod_tt_sasportal.v1alpha1.model.SasPortalListGcpProjectDeploymentsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ListGcpProjectDeployments set$Xgafv(java.lang.String $Xgafv) {
+        return (ListGcpProjectDeployments) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setAccessToken(java.lang.String accessToken) {
+        return (ListGcpProjectDeployments) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setAlt(java.lang.String alt) {
+        return (ListGcpProjectDeployments) super.setAlt(alt);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setCallback(java.lang.String callback) {
+        return (ListGcpProjectDeployments) super.setCallback(callback);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setFields(java.lang.String fields) {
+        return (ListGcpProjectDeployments) super.setFields(fields);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setKey(java.lang.String key) {
+        return (ListGcpProjectDeployments) super.setKey(key);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setOauthToken(java.lang.String oauthToken) {
+        return (ListGcpProjectDeployments) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListGcpProjectDeployments) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setQuotaUser(java.lang.String quotaUser) {
+        return (ListGcpProjectDeployments) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setUploadType(java.lang.String uploadType) {
+        return (ListGcpProjectDeployments) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListGcpProjectDeployments) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ListGcpProjectDeployments set(String parameterName, Object value) {
+        return (ListGcpProjectDeployments) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns a list of legacy organizations.
      *
      * Create a request for the method "customers.listLegacyOrganizations".
      *
@@ -568,7 +678,7 @@ public class SASPortalTesting extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "v1alpha1/customers:listLegacyOrganizations";
 
       /**
-       * Checks whether account is legacy.
+       * Returns a list of legacy organizations.
        *
        * Create a request for the method "customers.listLegacyOrganizations".
        *

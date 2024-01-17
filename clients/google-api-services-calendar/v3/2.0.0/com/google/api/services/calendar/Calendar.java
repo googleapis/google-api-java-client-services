@@ -4494,51 +4494,38 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * Deprecated and ignored. A value will always be returned in the email field for the
-       * organizer, creator and attendees, even if no real email address is available (i.e. a
-       * generated, non-working value will be provided).
-       */
+      /** Deprecated and ignored. */
       @com.google.api.client.util.Key
       private java.lang.Boolean alwaysIncludeEmail;
 
-      /** Deprecated and ignored. A value will always be returned in the email field for the organizer,
-     creator and attendees, even if no real email address is available (i.e. a generated, non-working
-     value will be provided).
+      /** Deprecated and ignored.
        */
       public java.lang.Boolean getAlwaysIncludeEmail() {
         return alwaysIncludeEmail;
       }
 
-      /**
-       * Deprecated and ignored. A value will always be returned in the email field for the
-       * organizer, creator and attendees, even if no real email address is available (i.e. a
-       * generated, non-working value will be provided).
-       */
+      /** Deprecated and ignored. */
       public List setAlwaysIncludeEmail(java.lang.Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;
         return this;
       }
 
       /**
-       * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
-       * "outOfOffice" - "workingLocation"This parameter can be repeated multiple times to return
+       * Event types to return. Optional. This parameter can be repeated multiple times to return
        * events of different types. The default is ["default", "focusTime", "outOfOffice"].
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> eventTypes;
 
-      /** Event types to return. Optional. Possible values are: - "default" - "focusTime" - "outOfOffice" -
-     "workingLocation"This parameter can be repeated multiple times to return events of different types.
-     The default is ["default", "focusTime", "outOfOffice"].
+      /** Event types to return. Optional. This parameter can be repeated multiple times to return events of
+     different types. The default is ["default", "focusTime", "outOfOffice"].
        */
       public java.util.List<java.lang.String> getEventTypes() {
         return eventTypes;
       }
 
       /**
-       * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
-       * "outOfOffice" - "workingLocation"This parameter can be repeated multiple times to return
+       * Event types to return. Optional. This parameter can be repeated multiple times to return
        * events of different types. The default is ["default", "focusTime", "outOfOffice"].
        */
       public List setEventTypes(java.util.List<java.lang.String> eventTypes) {
@@ -4694,6 +4681,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Free text search terms to find events that match these terms in the following fields:
        *
        * - summary - description - location - attendee's displayName - attendee's email -
+       * organizer's displayName - organizer's email -
        * workingLocationProperties.officeLocation.buildingId -
        * workingLocationProperties.officeLocation.deskId -
        * workingLocationProperties.officeLocation.label -
@@ -4708,8 +4696,8 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /** Free text search terms to find events that match these terms in the following fields:
 
-     - summary - description - location - attendee's displayName - attendee's email -
-     workingLocationProperties.officeLocation.buildingId -
+     - summary - description - location - attendee's displayName - attendee's email - organizer's
+     displayName - organizer's email - workingLocationProperties.officeLocation.buildingId -
      workingLocationProperties.officeLocation.deskId - workingLocationProperties.officeLocation.label -
      workingLocationProperties.customLocation.label These search terms also match predefined keywords
      against all display title translations of working location, out-of-office, and focus-time events.
@@ -4725,6 +4713,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Free text search terms to find events that match these terms in the following fields:
        *
        * - summary - description - location - attendee's displayName - attendee's email -
+       * organizer's displayName - organizer's email -
        * workingLocationProperties.officeLocation.buildingId -
        * workingLocationProperties.officeLocation.deskId -
        * workingLocationProperties.officeLocation.label -
@@ -6027,51 +6016,38 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * Deprecated and ignored. A value will always be returned in the email field for the
-       * organizer, creator and attendees, even if no real email address is available (i.e. a
-       * generated, non-working value will be provided).
-       */
+      /** Deprecated and ignored. */
       @com.google.api.client.util.Key
       private java.lang.Boolean alwaysIncludeEmail;
 
-      /** Deprecated and ignored. A value will always be returned in the email field for the organizer,
-     creator and attendees, even if no real email address is available (i.e. a generated, non-working
-     value will be provided).
+      /** Deprecated and ignored.
        */
       public java.lang.Boolean getAlwaysIncludeEmail() {
         return alwaysIncludeEmail;
       }
 
-      /**
-       * Deprecated and ignored. A value will always be returned in the email field for the
-       * organizer, creator and attendees, even if no real email address is available (i.e. a
-       * generated, non-working value will be provided).
-       */
+      /** Deprecated and ignored. */
       public Watch setAlwaysIncludeEmail(java.lang.Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;
         return this;
       }
 
       /**
-       * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
-       * "outOfOffice" - "workingLocation"This parameter can be repeated multiple times to return
+       * Event types to return. Optional. This parameter can be repeated multiple times to return
        * events of different types. The default is ["default", "focusTime", "outOfOffice"].
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> eventTypes;
 
-      /** Event types to return. Optional. Possible values are: - "default" - "focusTime" - "outOfOffice" -
-     "workingLocation"This parameter can be repeated multiple times to return events of different types.
-     The default is ["default", "focusTime", "outOfOffice"].
+      /** Event types to return. Optional. This parameter can be repeated multiple times to return events of
+     different types. The default is ["default", "focusTime", "outOfOffice"].
        */
       public java.util.List<java.lang.String> getEventTypes() {
         return eventTypes;
       }
 
       /**
-       * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
-       * "outOfOffice" - "workingLocation"This parameter can be repeated multiple times to return
+       * Event types to return. Optional. This parameter can be repeated multiple times to return
        * events of different types. The default is ["default", "focusTime", "outOfOffice"].
        */
       public Watch setEventTypes(java.util.List<java.lang.String> eventTypes) {
@@ -6227,6 +6203,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Free text search terms to find events that match these terms in the following fields:
        *
        * - summary - description - location - attendee's displayName - attendee's email -
+       * organizer's displayName - organizer's email -
        * workingLocationProperties.officeLocation.buildingId -
        * workingLocationProperties.officeLocation.deskId -
        * workingLocationProperties.officeLocation.label -
@@ -6241,8 +6218,8 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /** Free text search terms to find events that match these terms in the following fields:
 
-     - summary - description - location - attendee's displayName - attendee's email -
-     workingLocationProperties.officeLocation.buildingId -
+     - summary - description - location - attendee's displayName - attendee's email - organizer's
+     displayName - organizer's email - workingLocationProperties.officeLocation.buildingId -
      workingLocationProperties.officeLocation.deskId - workingLocationProperties.officeLocation.label -
      workingLocationProperties.customLocation.label These search terms also match predefined keywords
      against all display title translations of working location, out-of-office, and focus-time events.
@@ -6258,6 +6235,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Free text search terms to find events that match these terms in the following fields:
        *
        * - summary - description - location - attendee's displayName - attendee's email -
+       * organizer's displayName - organizer's email -
        * workingLocationProperties.officeLocation.buildingId -
        * workingLocationProperties.officeLocation.deskId -
        * workingLocationProperties.officeLocation.label -

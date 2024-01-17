@@ -17,8 +17,8 @@
 package com.google.api.services.monitoring.v1.model;
 
 /**
- * A chart measure. Measures represent a measured property in your chart data such as rainfall in
- * inches, number of units sold, revenue gained, etc.
+ * Preview: A chart measure for an SQL query. This is applied over the y-axis. This is a preview
+ * feature and may be subject to change before final release.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
@@ -31,25 +31,25 @@ package com.google.api.services.monitoring.v1.model;
 public final class Measure extends com.google.api.client.json.GenericJson {
 
   /**
-   * The aggregation function applied to the input column. This must not be set to "none" unless
-   * binning is disabled on the dimension. The aggregation function is used to group points on the
-   * dimension bins.
+   * Required. The aggregation function applied to the input column. This must not be set to "none"
+   * unless binning is disabled on the dimension. The aggregation function is used to group points
+   * on the dimension bins.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AggregationFunction aggregationFunction;
 
   /**
-   * The column name within the dataset used for the measure.
+   * Required. The column name within in the dataset used for the measure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String column;
 
   /**
-   * The aggregation function applied to the input column. This must not be set to "none" unless
-   * binning is disabled on the dimension. The aggregation function is used to group points on the
-   * dimension bins.
+   * Required. The aggregation function applied to the input column. This must not be set to "none"
+   * unless binning is disabled on the dimension. The aggregation function is used to group points
+   * on the dimension bins.
    * @return value or {@code null} for none
    */
   public AggregationFunction getAggregationFunction() {
@@ -57,9 +57,9 @@ public final class Measure extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The aggregation function applied to the input column. This must not be set to "none" unless
-   * binning is disabled on the dimension. The aggregation function is used to group points on the
-   * dimension bins.
+   * Required. The aggregation function applied to the input column. This must not be set to "none"
+   * unless binning is disabled on the dimension. The aggregation function is used to group points
+   * on the dimension bins.
    * @param aggregationFunction aggregationFunction or {@code null} for none
    */
   public Measure setAggregationFunction(AggregationFunction aggregationFunction) {
@@ -68,7 +68,7 @@ public final class Measure extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The column name within the dataset used for the measure.
+   * Required. The column name within in the dataset used for the measure.
    * @return value or {@code null} for none
    */
   public java.lang.String getColumn() {
@@ -76,7 +76,7 @@ public final class Measure extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The column name within the dataset used for the measure.
+   * Required. The column name within in the dataset used for the measure.
    * @param column column or {@code null} for none
    */
   public Measure setColumn(java.lang.String column) {

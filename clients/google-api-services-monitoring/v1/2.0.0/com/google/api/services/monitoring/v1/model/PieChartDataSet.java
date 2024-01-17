@@ -30,33 +30,6 @@ package com.google.api.services.monitoring.v1.model;
 public final class PieChartDataSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * A dimension is a structured label, class, or category for a set of measurements in your data.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Dimension> dimensions;
-
-  static {
-    // hack to force ProGuard to consider Dimension used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Dimension.class);
-  }
-
-  /**
-   * A measure is a measured value of a property in your data. For example, rainfall in inches,
-   * number of units sold, revenue gained, etc.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Measure> measures;
-
-  static {
-    // hack to force ProGuard to consider Measure used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Measure.class);
-  }
-
-  /**
    * Optional. The lower bound on data point frequency for this data set, implemented by specifying
    * the minimum alignment period to use in a time series query. For example, if the data is
    * published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It
@@ -82,42 +55,6 @@ public final class PieChartDataSet extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private TimeSeriesQuery timeSeriesQuery;
-
-  /**
-   * A dimension is a structured label, class, or category for a set of measurements in your data.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Dimension> getDimensions() {
-    return dimensions;
-  }
-
-  /**
-   * A dimension is a structured label, class, or category for a set of measurements in your data.
-   * @param dimensions dimensions or {@code null} for none
-   */
-  public PieChartDataSet setDimensions(java.util.List<Dimension> dimensions) {
-    this.dimensions = dimensions;
-    return this;
-  }
-
-  /**
-   * A measure is a measured value of a property in your data. For example, rainfall in inches,
-   * number of units sold, revenue gained, etc.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Measure> getMeasures() {
-    return measures;
-  }
-
-  /**
-   * A measure is a measured value of a property in your data. For example, rainfall in inches,
-   * number of units sold, revenue gained, etc.
-   * @param measures measures or {@code null} for none
-   */
-  public PieChartDataSet setMeasures(java.util.List<Measure> measures) {
-    this.measures = measures;
-    return this;
-  }
 
   /**
    * Optional. The lower bound on data point frequency for this data set, implemented by specifying

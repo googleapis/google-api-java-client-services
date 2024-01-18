@@ -32,8 +32,7 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Used when users should be refunded a prorated amount they paid for their subscription
-   * based on the amount of time remaining in a subscription. Not supported for subscriptions with
-   * multiple items.
+   * based on the amount of time remaining in a subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,8 +40,7 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Used when users should be refunded a prorated amount they paid for their subscription
-   * based on the amount of time remaining in a subscription. Not supported for subscriptions with
-   * multiple items.
+   * based on the amount of time remaining in a subscription.
    * @return value or {@code null} for none
    */
   public RevocationContextProratedRefund getProratedRefund() {
@@ -51,8 +49,7 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Used when users should be refunded a prorated amount they paid for their subscription
-   * based on the amount of time remaining in a subscription. Not supported for subscriptions with
-   * multiple items.
+   * based on the amount of time remaining in a subscription.
    * @param proratedRefund proratedRefund or {@code null} for none
    */
   public RevocationContext setProratedRefund(RevocationContextProratedRefund proratedRefund) {

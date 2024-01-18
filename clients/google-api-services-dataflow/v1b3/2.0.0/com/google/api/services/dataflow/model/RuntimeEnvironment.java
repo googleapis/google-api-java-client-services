@@ -123,6 +123,16 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.String serviceAccountEmail;
 
   /**
+   * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
+   * latency but might result in duplicate messages committed to storage. Designed to run simple
+   * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
+   * BigQuery is a canonical use case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String streamingMode;
+
+  /**
    * Optional. Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork
    * using either a complete URL or an abbreviated path. Expected to be of the form "https://www.goo
    * gleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or
@@ -390,6 +400,29 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    */
   public RuntimeEnvironment setServiceAccountEmail(java.lang.String serviceAccountEmail) {
     this.serviceAccountEmail = serviceAccountEmail;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
+   * latency but might result in duplicate messages committed to storage. Designed to run simple
+   * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
+   * BigQuery is a canonical use case.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStreamingMode() {
+    return streamingMode;
+  }
+
+  /**
+   * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
+   * latency but might result in duplicate messages committed to storage. Designed to run simple
+   * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
+   * BigQuery is a canonical use case.
+   * @param streamingMode streamingMode or {@code null} for none
+   */
+  public RuntimeEnvironment setStreamingMode(java.lang.String streamingMode) {
+    this.streamingMode = streamingMode;
     return this;
   }
 

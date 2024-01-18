@@ -176,6 +176,16 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.lang.String stagingLocation;
 
   /**
+   * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
+   * latency but might result in duplicate messages committed to storage. Designed to run simple
+   * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
+   * BigQuery is a canonical use case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String streamingMode;
+
+  /**
    * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either
    * a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/c
    * ompute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or
@@ -569,6 +579,29 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   public FlexTemplateRuntimeEnvironment setStagingLocation(java.lang.String stagingLocation) {
     this.stagingLocation = stagingLocation;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
+   * latency but might result in duplicate messages committed to storage. Designed to run simple
+   * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
+   * BigQuery is a canonical use case.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStreamingMode() {
+    return streamingMode;
+  }
+
+  /**
+   * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
+   * latency but might result in duplicate messages committed to storage. Designed to run simple
+   * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
+   * BigQuery is a canonical use case.
+   * @param streamingMode streamingMode or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setStreamingMode(java.lang.String streamingMode) {
+    this.streamingMode = streamingMode;
     return this;
   }
 

@@ -30,7 +30,6 @@ package com.google.api.services.dataflow.model;
 public final class StreamingScalingReport extends com.google.api.client.json.GenericJson {
 
   /**
-   * Current acive bundle count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +43,20 @@ public final class StreamingScalingReport extends com.google.api.client.json.Gen
   private java.lang.Integer activeThreadCount;
 
   /**
-   * Maximum bundle count limit.
+   * Maximum bundle count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maximumBundleCount;
 
   /**
-   * Maximum bytes count limit.
+   * Maximum bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maximumBytes;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,14 +70,26 @@ public final class StreamingScalingReport extends com.google.api.client.json.Gen
   private java.lang.Integer maximumThreadCount;
 
   /**
-   * Current outstanding bytes count.
+   * Current outstanding bundle count.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer outstandingBundleCount;
+
+  /**
+   * Current outstanding bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long outstandingBytes;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer outstandingBytesCount;
 
   /**
-   * Current acive bundle count.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getActiveBundleCount() {
@@ -80,7 +97,6 @@ public final class StreamingScalingReport extends com.google.api.client.json.Gen
   }
 
   /**
-   * Current acive bundle count.
    * @param activeBundleCount activeBundleCount or {@code null} for none
    */
   public StreamingScalingReport setActiveBundleCount(java.lang.Integer activeBundleCount) {
@@ -106,7 +122,7 @@ public final class StreamingScalingReport extends com.google.api.client.json.Gen
   }
 
   /**
-   * Maximum bundle count limit.
+   * Maximum bundle count.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaximumBundleCount() {
@@ -114,7 +130,7 @@ public final class StreamingScalingReport extends com.google.api.client.json.Gen
   }
 
   /**
-   * Maximum bundle count limit.
+   * Maximum bundle count.
    * @param maximumBundleCount maximumBundleCount or {@code null} for none
    */
   public StreamingScalingReport setMaximumBundleCount(java.lang.Integer maximumBundleCount) {
@@ -123,7 +139,23 @@ public final class StreamingScalingReport extends com.google.api.client.json.Gen
   }
 
   /**
-   * Maximum bytes count limit.
+   * Maximum bytes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaximumBytes() {
+    return maximumBytes;
+  }
+
+  /**
+   * Maximum bytes.
+   * @param maximumBytes maximumBytes or {@code null} for none
+   */
+  public StreamingScalingReport setMaximumBytes(java.lang.Long maximumBytes) {
+    this.maximumBytes = maximumBytes;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaximumBytesCount() {
@@ -131,7 +163,6 @@ public final class StreamingScalingReport extends com.google.api.client.json.Gen
   }
 
   /**
-   * Maximum bytes count limit.
    * @param maximumBytesCount maximumBytesCount or {@code null} for none
    */
   public StreamingScalingReport setMaximumBytesCount(java.lang.Integer maximumBytesCount) {
@@ -157,7 +188,40 @@ public final class StreamingScalingReport extends com.google.api.client.json.Gen
   }
 
   /**
-   * Current outstanding bytes count.
+   * Current outstanding bundle count.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOutstandingBundleCount() {
+    return outstandingBundleCount;
+  }
+
+  /**
+   * Current outstanding bundle count.
+   * @param outstandingBundleCount outstandingBundleCount or {@code null} for none
+   */
+  public StreamingScalingReport setOutstandingBundleCount(java.lang.Integer outstandingBundleCount) {
+    this.outstandingBundleCount = outstandingBundleCount;
+    return this;
+  }
+
+  /**
+   * Current outstanding bytes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOutstandingBytes() {
+    return outstandingBytes;
+  }
+
+  /**
+   * Current outstanding bytes.
+   * @param outstandingBytes outstandingBytes or {@code null} for none
+   */
+  public StreamingScalingReport setOutstandingBytes(java.lang.Long outstandingBytes) {
+    this.outstandingBytes = outstandingBytes;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Integer getOutstandingBytesCount() {
@@ -165,7 +229,6 @@ public final class StreamingScalingReport extends com.google.api.client.json.Gen
   }
 
   /**
-   * Current outstanding bytes count.
    * @param outstandingBytesCount outstandingBytesCount or {@code null} for none
    */
   public StreamingScalingReport setOutstandingBytesCount(java.lang.Integer outstandingBytesCount) {

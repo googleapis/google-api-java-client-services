@@ -146,8 +146,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User-defined environment variables associated with this workflow revision. This map
-   * has a maximum length of 20. Each string can take up to 40KiB. Keys cannot be empty strings and
-   * cannot start with “GOOGLE” or “WORKFLOWS".
+   * has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and
+   * cannot start with "GOOGLE" or "WORKFLOWS".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -424,8 +424,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User-defined environment variables associated with this workflow revision. This map
-   * has a maximum length of 20. Each string can take up to 40KiB. Keys cannot be empty strings and
-   * cannot start with “GOOGLE” or “WORKFLOWS".
+   * has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and
+   * cannot start with "GOOGLE" or "WORKFLOWS".
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getUserEnvVars() {
@@ -434,8 +434,8 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User-defined environment variables associated with this workflow revision. This map
-   * has a maximum length of 20. Each string can take up to 40KiB. Keys cannot be empty strings and
-   * cannot start with “GOOGLE” or “WORKFLOWS".
+   * has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and
+   * cannot start with "GOOGLE" or "WORKFLOWS".
    * @param userEnvVars userEnvVars or {@code null} for none
    */
   public Workflow setUserEnvVars(java.util.Map<String, java.lang.String> userEnvVars) {

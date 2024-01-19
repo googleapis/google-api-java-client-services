@@ -54,6 +54,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
+   * Optional. Specifies networking queue count for TPU VM instance's network interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer queueCount;
+
+  /**
    * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine
    * subnetwork. If none is provided, "default" will be used.
    * The value may be {@code null}.
@@ -115,6 +122,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies networking queue count for TPU VM instance's network interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getQueueCount() {
+    return queueCount;
+  }
+
+  /**
+   * Optional. Specifies networking queue count for TPU VM instance's network interface.
+   * @param queueCount queueCount or {@code null} for none
+   */
+  public NetworkConfig setQueueCount(java.lang.Integer queueCount) {
+    this.queueCount = queueCount;
     return this;
   }
 

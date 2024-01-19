@@ -466,9 +466,13 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
     }
     /**
      * Delete an Apigee organization. For organizations with BillingType EVALUATION, an immediate
-     * deletion is performed. For paid organizations, a soft-deletion is performed. The organization can
-     * be restored within the soft-deletion period which can be controlled using the retention field in
-     * the request.
+     * deletion is performed. For paid organizations (Subscription or Pay-as-you-go), a soft-deletion is
+     * performed. The organization can be restored within the soft-deletion period, which is specified
+     * using the `retention` field in the request or by filing a support ticket with Apigee. During the
+     * data retention period specified in the request, the Apigee organization cannot be recreated in
+     * the same Google Cloud project. **IMPORTANT: The default data retention setting for this operation
+     * is 7 days. To permanently delete the organization in 24 hours, set the retention parameter to
+     * `MINIMUM`.**
      *
      * Create a request for the method "organizations.delete".
      *
@@ -494,9 +498,13 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Delete an Apigee organization. For organizations with BillingType EVALUATION, an immediate
-       * deletion is performed. For paid organizations, a soft-deletion is performed. The organization
-       * can be restored within the soft-deletion period which can be controlled using the retention
-       * field in the request.
+       * deletion is performed. For paid organizations (Subscription or Pay-as-you-go), a soft-deletion
+       * is performed. The organization can be restored within the soft-deletion period, which is
+       * specified using the `retention` field in the request or by filing a support ticket with Apigee.
+       * During the data retention period specified in the request, the Apigee organization cannot be
+       * recreated in the same Google Cloud project. **IMPORTANT: The default data retention setting for
+       * this operation is 7 days. To permanently delete the organization in 24 hours, set the retention
+       * parameter to `MINIMUM`.**
        *
        * Create a request for the method "organizations.delete".
        *
@@ -607,7 +615,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * BillingType is not EVALUATION). It controls how long Organization data will be retained
        * after the initial delete operation completes. During this period, the Organization may be
        * restored to its last known state. After this period, the Organization will no longer be
-       * able to be restored.
+       * able to be restored. **Note: During the data retention period specified using this field,
+       * the Apigee organization cannot be recreated in the same GCP project.**
        */
       @com.google.api.client.util.Key
       private java.lang.String retention;
@@ -616,6 +625,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
      BillingType is not EVALUATION). It controls how long Organization data will be retained after the
      initial delete operation completes. During this period, the Organization may be restored to its
      last known state. After this period, the Organization will no longer be able to be restored.
+     **Note: During the data retention period specified using this field, the Apigee organization cannot
+     be recreated in the same GCP project.**
        */
       public java.lang.String getRetention() {
         return retention;
@@ -626,7 +637,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * BillingType is not EVALUATION). It controls how long Organization data will be retained
        * after the initial delete operation completes. During this period, the Organization may be
        * restored to its last known state. After this period, the Organization will no longer be
-       * able to be restored.
+       * able to be restored. **Note: During the data retention period specified using this field,
+       * the Apigee organization cannot be recreated in the same GCP project.**
        */
       public Delete setRetention(java.lang.String retention) {
         this.retention = retention;
@@ -7671,6 +7683,161 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Update key value entry scoped to an organization, environment, or API proxy for an existing key.
+           *
+           * Create a request for the method "entries.update".
+           *
+           * This request holds the parameters needed by the apigee server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
+           * @return the request
+           */
+          public Update update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry content) throws java.io.IOException {
+            Update result = new Update(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Update extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
+
+            /**
+             * Update key value entry scoped to an organization, environment, or API proxy for an existing
+             * key.
+             *
+             * Create a request for the method "entries.update".
+             *
+             * This request holds the parameters needed by the the apigee server.  After setting any optional
+             * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+             * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
+             * @since 1.13
+             */
+            protected Update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry content) {
+              super(Apigee.this, "PUT", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
+              }
+            }
+
+            @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Update setAlt(java.lang.String alt) {
+              return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
+            }
+
+            @Override
+            public Update setFields(java.lang.String fields) {
+              return (Update) super.setFields(fields);
+            }
+
+            @Override
+            public Update setKey(java.lang.String key) {
+              return (Update) super.setKey(key);
+            }
+
+            @Override
+            public Update setOauthToken(java.lang.String oauthToken) {
+              return (Update) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Update) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Update setQuotaUser(java.lang.String quotaUser) {
+              return (Update) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Scope as indicated by the URI in which to create the key value map entry.
+             * Use **one** of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           the following structures in your request: *
+           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Scope as indicated by the URI in which to create the key value map entry.
+             * Use **one** of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             */
+            public Update setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Update set(String parameterName, Object value) {
+              return (Update) super.set(parameterName, value);
             }
           }
 
@@ -16098,7 +16265,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * parameters, call the {@link CreateRequest#execute()} method to invoke the remote operation.
            *
            * @param parent Parent of the developer app key. Use the following structure in your request:
-           *        `organizations/{org}/developers/{developer_email}/apps`
+           *        'organizations/{org}/developers/{developerEmail}/apps/{appName}'
            * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey}
            * @return the request
            */
@@ -16137,7 +16304,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * </p>
              *
              * @param parent Parent of the developer app key. Use the following structure in your request:
-           *        `organizations/{org}/developers/{developer_email}/apps`
+           *        'organizations/{org}/developers/{developerEmail}/apps/{appName}'
              * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey}
              * @since 1.13
              */
@@ -16208,13 +16375,13 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Parent of the developer app key. Use the following structure in your request:
-             * `organizations/{org}/developers/{developer_email}/apps`
+             * 'organizations/{org}/developers/{developerEmail}/apps/{appName}'
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Parent of the developer app key. Use the following structure in your request:
-           `organizations/{org}/developers/{developer_email}/apps`
+           'organizations/{org}/developers/{developerEmail}/apps/{appName}'
              */
             public java.lang.String getParent() {
               return parent;
@@ -16222,7 +16389,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Parent of the developer app key. Use the following structure in your request:
-             * `organizations/{org}/developers/{developer_email}/apps`
+             * 'organizations/{org}/developers/{developerEmail}/apps/{appName}'
              */
             public CreateRequest setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -17233,7 +17400,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * parameters, call the {@link CreateRequest#execute()} method to invoke the remote operation.
              *
              * @param parent Parent of the developer app key. Use the following structure in your request:
-             *        `organizations/{org}/developers/{developer_email}/apps`
+             *        'organizations/{org}/developers/{developerEmail}/apps/{appName}'
              * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey}
              * @return the request
              */
@@ -17272,7 +17439,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                * </p>
                *
                * @param parent Parent of the developer app key. Use the following structure in your request:
-             *        `organizations/{org}/developers/{developer_email}/apps`
+             *        'organizations/{org}/developers/{developerEmail}/apps/{appName}'
                * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey}
                * @since 1.13
                */
@@ -17343,13 +17510,13 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
               /**
                * Parent of the developer app key. Use the following structure in your request:
-               * `organizations/{org}/developers/{developer_email}/apps`
+               * 'organizations/{org}/developers/{developerEmail}/apps/{appName}'
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Parent of the developer app key. Use the following structure in your request:
-             `organizations/{org}/developers/{developer_email}/apps`
+             'organizations/{org}/developers/{developerEmail}/apps/{appName}'
                */
               public java.lang.String getParent() {
                 return parent;
@@ -17357,7 +17524,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
               /**
                * Parent of the developer app key. Use the following structure in your request:
-               * `organizations/{org}/developers/{developer_email}/apps`
+               * 'organizations/{org}/developers/{developerEmail}/apps/{appName}'
                */
               public CreateRequest setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -19745,17 +19912,23 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** ID of the environment group. Overrides any ID in the environment_group resource. */
+        /**
+         * Optional. ID of the environment group. Overrides any ID in the environment_group
+         * resource.
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** ID of the environment group. Overrides any ID in the environment_group resource.
+        /** Optional. ID of the environment group. Overrides any ID in the environment_group resource.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** ID of the environment group. Overrides any ID in the environment_group resource. */
+        /**
+         * Optional. ID of the environment group. Overrides any ID in the environment_group
+         * resource.
+         */
         public Create setName(java.lang.String name) {
           this.name = name;
           return this;
@@ -20542,17 +20715,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** List of fields to be updated. */
+        /** Optional. List of fields to be updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** List of fields to be updated.
+        /** Optional. List of fields to be updated.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** List of fields to be updated. */
+        /** Optional. List of fields to be updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -31597,6 +31770,161 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Update key value entry scoped to an organization, environment, or API proxy for an existing key.
+           *
+           * Create a request for the method "entries.update".
+           *
+           * This request holds the parameters needed by the apigee server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
+           * @return the request
+           */
+          public Update update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry content) throws java.io.IOException {
+            Update result = new Update(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Update extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
+
+            /**
+             * Update key value entry scoped to an organization, environment, or API proxy for an existing
+             * key.
+             *
+             * Create a request for the method "entries.update".
+             *
+             * This request holds the parameters needed by the the apigee server.  After setting any optional
+             * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+             * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           *        the following structures in your request: *
+           *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
+             * @since 1.13
+             */
+            protected Update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry content) {
+              super(Apigee.this, "PUT", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
+              }
+            }
+
+            @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Update setAlt(java.lang.String alt) {
+              return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
+            }
+
+            @Override
+            public Update setFields(java.lang.String fields) {
+              return (Update) super.setFields(fields);
+            }
+
+            @Override
+            public Update setKey(java.lang.String key) {
+              return (Update) super.setKey(key);
+            }
+
+            @Override
+            public Update setOauthToken(java.lang.String oauthToken) {
+              return (Update) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Update) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Update setQuotaUser(java.lang.String quotaUser) {
+              return (Update) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Scope as indicated by the URI in which to create the key value map entry.
+             * Use **one** of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+           the following structures in your request: *
+           `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Scope as indicated by the URI in which to create the key value map entry.
+             * Use **one** of the following structures in your request: *
+             * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+             * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}`
+             * * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+             */
+            public Update setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Update set(String parameterName, Object value) {
+              return (Update) super.set(parameterName, value);
             }
           }
 
@@ -45900,6 +46228,161 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update key value entry scoped to an organization, environment, or API proxy for an existing key.
+         *
+         * Create a request for the method "entries.update".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+         *        the following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
+         * @return the request
+         */
+        public Update update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry content) throws java.io.IOException {
+          Update result = new Update(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Update extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
+
+          /**
+           * Update key value entry scoped to an organization, environment, or API proxy for an existing
+           * key.
+           *
+           * Create a request for the method "entries.update".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+           * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+         *        the following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry}
+           * @since 1.13
+           */
+          protected Update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry content) {
+            super(Apigee.this, "PUT", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueEntry.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Update setAlt(java.lang.String alt) {
+            return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
+          }
+
+          @Override
+          public Update setFields(java.lang.String fields) {
+            return (Update) super.setFields(fields);
+          }
+
+          @Override
+          public Update setKey(java.lang.String key) {
+            return (Update) super.setKey(key);
+          }
+
+          @Override
+          public Update setOauthToken(java.lang.String oauthToken) {
+            return (Update) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Update) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Update setQuotaUser(java.lang.String quotaUser) {
+            return (Update) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Scope as indicated by the URI in which to create the key value map entry. Use
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Scope as indicated by the URI in which to create the key value map entry. Use **one** of
+         the following structures in your request: *
+         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Scope as indicated by the URI in which to create the key value map entry. Use
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+           */
+          public Update setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/keyvaluemaps/[^/]+/entries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Update set(String parameterName, Object value) {
+            return (Update) super.set(parameterName, value);
           }
         }
 

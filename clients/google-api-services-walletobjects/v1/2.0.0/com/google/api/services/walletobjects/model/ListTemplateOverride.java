@@ -31,7 +31,8 @@ public final class ListTemplateOverride extends com.google.api.client.json.Gener
 
   /**
    * Specifies from a predefined set of options or from a reference to the field what will be
-   * displayed in the first row.
+   * displayed in the first row. To set this override, set the FirstRowOption.fieldOption to the
+   * FieldSelector of your choice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,16 +41,15 @@ public final class ListTemplateOverride extends com.google.api.client.json.Gener
   /**
    * A reference to the field to be displayed in the second row. This option is only displayed if
    * there are not multiple user objects in a group. If there is a group, the second row will always
-   * display a field shared by all objects.
+   * display a field shared by all objects. To set this override, please set secondRowOption to the
+   * FieldSelector of you choice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FieldSelector secondRowOption;
 
   /**
-   * A reference to the field to be displayed in the third row. This option is only displayed if
-   * there are not multiple user objects in a group. If there is a group, the third row will always
-   * display the number of objects in the group. Eg: "3 passes"
+   * An unused/deprecated field. Setting it will have no effect on what the user sees.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,8 @@ public final class ListTemplateOverride extends com.google.api.client.json.Gener
 
   /**
    * Specifies from a predefined set of options or from a reference to the field what will be
-   * displayed in the first row.
+   * displayed in the first row. To set this override, set the FirstRowOption.fieldOption to the
+   * FieldSelector of your choice.
    * @return value or {@code null} for none
    */
   public FirstRowOption getFirstRowOption() {
@@ -66,7 +67,8 @@ public final class ListTemplateOverride extends com.google.api.client.json.Gener
 
   /**
    * Specifies from a predefined set of options or from a reference to the field what will be
-   * displayed in the first row.
+   * displayed in the first row. To set this override, set the FirstRowOption.fieldOption to the
+   * FieldSelector of your choice.
    * @param firstRowOption firstRowOption or {@code null} for none
    */
   public ListTemplateOverride setFirstRowOption(FirstRowOption firstRowOption) {
@@ -77,7 +79,8 @@ public final class ListTemplateOverride extends com.google.api.client.json.Gener
   /**
    * A reference to the field to be displayed in the second row. This option is only displayed if
    * there are not multiple user objects in a group. If there is a group, the second row will always
-   * display a field shared by all objects.
+   * display a field shared by all objects. To set this override, please set secondRowOption to the
+   * FieldSelector of you choice.
    * @return value or {@code null} for none
    */
   public FieldSelector getSecondRowOption() {
@@ -87,7 +90,8 @@ public final class ListTemplateOverride extends com.google.api.client.json.Gener
   /**
    * A reference to the field to be displayed in the second row. This option is only displayed if
    * there are not multiple user objects in a group. If there is a group, the second row will always
-   * display a field shared by all objects.
+   * display a field shared by all objects. To set this override, please set secondRowOption to the
+   * FieldSelector of you choice.
    * @param secondRowOption secondRowOption or {@code null} for none
    */
   public ListTemplateOverride setSecondRowOption(FieldSelector secondRowOption) {
@@ -96,9 +100,7 @@ public final class ListTemplateOverride extends com.google.api.client.json.Gener
   }
 
   /**
-   * A reference to the field to be displayed in the third row. This option is only displayed if
-   * there are not multiple user objects in a group. If there is a group, the third row will always
-   * display the number of objects in the group. Eg: "3 passes"
+   * An unused/deprecated field. Setting it will have no effect on what the user sees.
    * @return value or {@code null} for none
    */
   public FieldSelector getThirdRowOption() {
@@ -106,9 +108,7 @@ public final class ListTemplateOverride extends com.google.api.client.json.Gener
   }
 
   /**
-   * A reference to the field to be displayed in the third row. This option is only displayed if
-   * there are not multiple user objects in a group. If there is a group, the third row will always
-   * display the number of objects in the group. Eg: "3 passes"
+   * An unused/deprecated field. Setting it will have no effect on what the user sees.
    * @param thirdRowOption thirdRowOption or {@code null} for none
    */
   public ListTemplateOverride setThirdRowOption(FieldSelector thirdRowOption) {

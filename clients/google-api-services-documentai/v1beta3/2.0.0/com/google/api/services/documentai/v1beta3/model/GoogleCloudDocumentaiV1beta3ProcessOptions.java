@@ -52,7 +52,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptions extends com.google
   private GoogleCloudDocumentaiV1beta3ProcessOptionsIndividualPageSelector individualPageSelector;
 
   /**
-   * Only applicable to `OCR_PROCESSOR`. Returns error if set on other processor types.
+   * Only applicable to `OCR_PROCESSOR` and `FORM_PARSER_PROCESSOR`. Returns error if set on other
+   * processor types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +119,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptions extends com.google
   }
 
   /**
-   * Only applicable to `OCR_PROCESSOR`. Returns error if set on other processor types.
+   * Only applicable to `OCR_PROCESSOR` and `FORM_PARSER_PROCESSOR`. Returns error if set on other
+   * processor types.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3OcrConfig getOcrConfig() {
@@ -126,7 +128,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptions extends com.google
   }
 
   /**
-   * Only applicable to `OCR_PROCESSOR`. Returns error if set on other processor types.
+   * Only applicable to `OCR_PROCESSOR` and `FORM_PARSER_PROCESSOR`. Returns error if set on other
+   * processor types.
    * @param ocrConfig ocrConfig or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessOptions setOcrConfig(GoogleCloudDocumentaiV1beta3OcrConfig ocrConfig) {

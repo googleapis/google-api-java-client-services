@@ -52,6 +52,16 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
   private GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig inputDocuments;
 
   /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * The overall output config for batch process.
    * The value may be {@code null}.
    */
@@ -120,6 +130,29 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
    */
   public GoogleCloudDocumentaiV1beta3BatchProcessRequest setInputDocuments(GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig inputDocuments) {
     this.inputDocuments = inputDocuments;
+    return this;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3BatchProcessRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

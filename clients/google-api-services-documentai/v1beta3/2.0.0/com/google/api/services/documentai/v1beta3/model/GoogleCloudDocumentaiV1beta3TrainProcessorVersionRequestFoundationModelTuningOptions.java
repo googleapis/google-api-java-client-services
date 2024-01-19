@@ -32,14 +32,14 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestFound
 
   /**
    * Optional. The multiplier to apply to the recommended learning rate. Valid values are between
-   * [0.1, 10]. If not provided, recommended learning rate will be used.
+   * 0.1 and 10. If not provided, recommended learning rate will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float learningRateMultiplier;
 
   /**
-   * Optional. The number of steps to run for model tuning. Valid values are between [1, 400]. If
+   * Optional. The number of steps to run for model tuning. Valid values are between 1 and 400. If
    * not provided, recommended steps will be used.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestFound
 
   /**
    * Optional. The multiplier to apply to the recommended learning rate. Valid values are between
-   * [0.1, 10]. If not provided, recommended learning rate will be used.
+   * 0.1 and 10. If not provided, recommended learning rate will be used.
    * @return value or {@code null} for none
    */
   public java.lang.Float getLearningRateMultiplier() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestFound
 
   /**
    * Optional. The multiplier to apply to the recommended learning rate. Valid values are between
-   * [0.1, 10]. If not provided, recommended learning rate will be used.
+   * 0.1 and 10. If not provided, recommended learning rate will be used.
    * @param learningRateMultiplier learningRateMultiplier or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestFoundationModelTuningOptions setLearningRateMultiplier(java.lang.Float learningRateMultiplier) {
@@ -66,7 +66,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestFound
   }
 
   /**
-   * Optional. The number of steps to run for model tuning. Valid values are between [1, 400]. If
+   * Optional. The number of steps to run for model tuning. Valid values are between 1 and 400. If
    * not provided, recommended steps will be used.
    * @return value or {@code null} for none
    */
@@ -75,7 +75,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestFound
   }
 
   /**
-   * Optional. The number of steps to run for model tuning. Valid values are between [1, 400]. If
+   * Optional. The number of steps to run for model tuning. Valid values are between 1 and 400. If
    * not provided, recommended steps will be used.
    * @param trainSteps trainSteps or {@code null} for none
    */

@@ -54,6 +54,16 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
   private GoogleCloudDocumentaiV1Document inlineDocument;
 
   /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Inference-time options for the process API
    * The value may be {@code null}.
    */
@@ -126,6 +136,29 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
    */
   public GoogleCloudDocumentaiV1ProcessRequest setInlineDocument(GoogleCloudDocumentaiV1Document inlineDocument) {
     this.inlineDocument = inlineDocument;
+    return this;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

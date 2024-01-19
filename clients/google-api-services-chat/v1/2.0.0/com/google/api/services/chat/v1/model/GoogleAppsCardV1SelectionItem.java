@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An item that users can select in a selection input, such as a checkbox or switch.
+ * An item that users can select in a selection input, such as a checkbox or switch. [Google
+ * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

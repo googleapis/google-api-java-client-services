@@ -87,12 +87,13 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
-   * has 6 rows. For example, the following JSON creates a 2 column grid with a single item: ```
-   * "grid": { "title": "A fine collection of items", "columnCount": 2, "borderStyle": { "type":
-   * "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
-   * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
-   * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ], "onClick": {
-   * "openLink": { "url": "https://www.example.com" } } } ```
+   * has 6 rows. [Google Workspace Add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend): For example, the following JSON creates
+   * a 2 column grid with a single item: ``` "grid": { "title": "A fine collection of items",
+   * "columnCount": 2, "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image":
+   * { "imageUri": "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" },
+   * "borderStyle": { "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ],
+   * "onClick": { "openLink": { "url": "https://www.example.com" } } } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,12 +276,13 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
-   * has 6 rows. For example, the following JSON creates a 2 column grid with a single item: ```
-   * "grid": { "title": "A fine collection of items", "columnCount": 2, "borderStyle": { "type":
-   * "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
-   * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
-   * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ], "onClick": {
-   * "openLink": { "url": "https://www.example.com" } } } ```
+   * has 6 rows. [Google Workspace Add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend): For example, the following JSON creates
+   * a 2 column grid with a single item: ``` "grid": { "title": "A fine collection of items",
+   * "columnCount": 2, "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image":
+   * { "imageUri": "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" },
+   * "borderStyle": { "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ],
+   * "onClick": { "openLink": { "url": "https://www.example.com" } } } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Grid getGrid() {
@@ -291,12 +293,13 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
-   * has 6 rows. For example, the following JSON creates a 2 column grid with a single item: ```
-   * "grid": { "title": "A fine collection of items", "columnCount": 2, "borderStyle": { "type":
-   * "STROKE", "cornerRadius": 4 }, "items": [ { "image": { "imageUri":
-   * "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" }, "borderStyle": {
-   * "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ], "onClick": {
-   * "openLink": { "url": "https://www.example.com" } } } ```
+   * has 6 rows. [Google Workspace Add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend): For example, the following JSON creates
+   * a 2 column grid with a single item: ``` "grid": { "title": "A fine collection of items",
+   * "columnCount": 2, "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image":
+   * { "imageUri": "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" },
+   * "borderStyle": { "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ],
+   * "onClick": { "openLink": { "url": "https://www.example.com" } } } ```
    * @param grid grid or {@code null} for none
    */
   public GoogleAppsCardV1Widget setGrid(GoogleAppsCardV1Grid grid) {

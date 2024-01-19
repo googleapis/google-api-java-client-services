@@ -21,7 +21,8 @@ package com.google.api.services.chat.v1.model;
  * three snooze buttons: snooze now, snooze one day, or snooze next week. You might use `action
  * method = snooze()`, passing the snooze type and snooze time in the list of string parameters. To
  * learn more, see [`CommonEventObject`](https://developers.google.com/chat/api/reference/rest/v1/Ev
- * ent#commoneventobject).
+ * ent#commoneventobject). [Google Workspace Add-ons and Chat
+ * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

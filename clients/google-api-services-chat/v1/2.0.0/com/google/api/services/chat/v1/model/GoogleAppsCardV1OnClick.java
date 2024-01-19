@@ -18,6 +18,7 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * Represents how to respond when users click an interactive element on a card, such as a button.
+ * [Google Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -37,8 +38,8 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   private GoogleAppsCardV1Action action;
 
   /**
-   * A new card is pushed to the card stack after clicking if specified. Supported by Google
-   * Workspace Add-ons, but not Google Chat apps.
+   * A new card is pushed to the card stack after clicking if specified. [Google Workspace Add-
+   * ons](https://developers.google.com/workspace/add-ons):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +48,8 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   /**
    * An add-on triggers this action when the action needs to open a link. This differs from the
    * `open_link` above in that this needs to talk to server to get the link. Thus some preparation
-   * work is required for web client to do before the open link action response comes back.
-   * Supported by Google Workspace Add-ons, but not Google Chat apps.
+   * work is required for web client to do before the open link action response comes back. [Google
+   * Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +80,8 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   }
 
   /**
-   * A new card is pushed to the card stack after clicking if specified. Supported by Google
-   * Workspace Add-ons, but not Google Chat apps.
+   * A new card is pushed to the card stack after clicking if specified. [Google Workspace Add-
+   * ons](https://developers.google.com/workspace/add-ons):
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Card getCard() {
@@ -88,8 +89,8 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   }
 
   /**
-   * A new card is pushed to the card stack after clicking if specified. Supported by Google
-   * Workspace Add-ons, but not Google Chat apps.
+   * A new card is pushed to the card stack after clicking if specified. [Google Workspace Add-
+   * ons](https://developers.google.com/workspace/add-ons):
    * @param card card or {@code null} for none
    */
   public GoogleAppsCardV1OnClick setCard(GoogleAppsCardV1Card card) {
@@ -100,8 +101,8 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   /**
    * An add-on triggers this action when the action needs to open a link. This differs from the
    * `open_link` above in that this needs to talk to server to get the link. Thus some preparation
-   * work is required for web client to do before the open link action response comes back.
-   * Supported by Google Workspace Add-ons, but not Google Chat apps.
+   * work is required for web client to do before the open link action response comes back. [Google
+   * Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOpenDynamicLinkAction() {
@@ -111,8 +112,8 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   /**
    * An add-on triggers this action when the action needs to open a link. This differs from the
    * `open_link` above in that this needs to talk to server to get the link. Thus some preparation
-   * work is required for web client to do before the open link action response comes back.
-   * Supported by Google Workspace Add-ons, but not Google Chat apps.
+   * work is required for web client to do before the open link action response comes back. [Google
+   * Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * @param openDynamicLinkAction openDynamicLinkAction or {@code null} for none
    */
   public GoogleAppsCardV1OnClick setOpenDynamicLinkAction(GoogleAppsCardV1Action openDynamicLinkAction) {

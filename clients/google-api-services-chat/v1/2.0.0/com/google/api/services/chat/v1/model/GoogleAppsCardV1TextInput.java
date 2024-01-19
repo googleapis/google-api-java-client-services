@@ -22,7 +22,8 @@ package com.google.api.services.chat.v1.model;
  * Chat apps receive and can process the value of entered text during form input events. For details
  * about working with form inputs, see [Receive form data](https://developers.google.com/chat/ui
  * /read-form-data). When you need to collect undefined or abstract data from users, use a text
- * input. To collect defined or enumerated data from users, use the SelectionInput widget.
+ * input. To collect defined or enumerated data from users, use the SelectionInput widget. [Google
+ * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -38,7 +39,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * Optional. Specify what action to take when the text input field provides suggestions to users
    * who interact with it. If unspecified, the suggestions are set by `initialSuggestions` and are
    * processed by the client. If specified, the app takes the action specified here, such as running
-   * a custom function. Supported by Google Workspace Add-ons, but not Google Chat apps.
+   * a custom function. [Google Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,6 +63,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * app can make sense of. When referring to JavaScript, some users might enter `javascript` and
    * others `java script`. Suggesting `JavaScript` can standardize how users interact with your app.
    * When specified, `TextInput.type` is always `SINGLE_LINE`, even if it's set to `MULTIPLE_LINE`.
+   * [Google Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +127,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * Optional. Specify what action to take when the text input field provides suggestions to users
    * who interact with it. If unspecified, the suggestions are set by `initialSuggestions` and are
    * processed by the client. If specified, the app takes the action specified here, such as running
-   * a custom function. Supported by Google Workspace Add-ons, but not Google Chat apps.
+   * a custom function. [Google Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getAutoCompleteAction() {
@@ -136,7 +138,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * Optional. Specify what action to take when the text input field provides suggestions to users
    * who interact with it. If unspecified, the suggestions are set by `initialSuggestions` and are
    * processed by the client. If specified, the app takes the action specified here, such as running
-   * a custom function. Supported by Google Workspace Add-ons, but not Google Chat apps.
+   * a custom function. [Google Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * @param autoCompleteAction autoCompleteAction or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setAutoCompleteAction(GoogleAppsCardV1Action autoCompleteAction) {
@@ -174,6 +176,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * app can make sense of. When referring to JavaScript, some users might enter `javascript` and
    * others `java script`. Suggesting `JavaScript` can standardize how users interact with your app.
    * When specified, `TextInput.type` is always `SINGLE_LINE`, even if it's set to `MULTIPLE_LINE`.
+   * [Google Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Suggestions getInitialSuggestions() {
@@ -189,6 +192,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * app can make sense of. When referring to JavaScript, some users might enter `javascript` and
    * others `java script`. Suggesting `JavaScript` can standardize how users interact with your app.
    * When specified, `TextInput.type` is always `SINGLE_LINE`, even if it's set to `MULTIPLE_LINE`.
+   * [Google Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * @param initialSuggestions initialSuggestions or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setInitialSuggestions(GoogleAppsCardV1Suggestions initialSuggestions) {

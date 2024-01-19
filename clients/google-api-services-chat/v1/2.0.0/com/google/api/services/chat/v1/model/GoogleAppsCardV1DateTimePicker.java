@@ -20,7 +20,8 @@ package com.google.api.services.chat.v1.model;
  * Lets users input a date, a time, or both a date and a time. For an example in Google Chat apps,
  * see [Date time picker](https://developers.google.com/chat/ui/widgets/date-time-picker). Users can
  * input text or use the picker to select dates and times. If users input an invalid date or time,
- * the picker shows an error that prompts users to input the information correctly.
+ * the picker shows an error that prompts users to input the information correctly. [Google
+ * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

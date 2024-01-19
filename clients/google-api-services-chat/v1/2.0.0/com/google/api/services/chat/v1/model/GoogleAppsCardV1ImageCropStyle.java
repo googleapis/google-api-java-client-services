@@ -17,8 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents the crop style applied to an image. For example, here's how to apply a 16:9 aspect
- * ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 } ```
+ * Represents the crop style applied to an image. [Google Workspace Add-ons and Chat
+ * apps](https://developers.google.com/workspace/extend): For example, here's how to apply a 16:9
+ * aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

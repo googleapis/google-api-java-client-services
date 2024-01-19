@@ -21,7 +21,8 @@ package com.google.api.services.chat.v1.model;
  * columns, or to include more than text or images, use `Columns`. For an example in Google Chat
  * apps, see [Grid](https://developers.google.com/chat/ui/widgets/grid). A grid supports any number
  * of columns and items. The number of rows is determined by items divided by columns. A grid with
- * 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns has 6 rows. For example,
+ * 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns has 6 rows. [Google
+ * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend): For example,
  * the following JSON creates a 2 column grid with a single item: ``` "grid": { "title": "A fine
  * collection of items", "columnCount": 2, "borderStyle": { "type": "STROKE", "cornerRadius": 4 },
  * "items": [ { "image": { "imageUri": "https://www.example.com/image.png", "cropStyle": { "type":

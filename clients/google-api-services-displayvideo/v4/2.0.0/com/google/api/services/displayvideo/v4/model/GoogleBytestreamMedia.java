@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.displayvideo.v3.model;
+package com.google.api.services.displayvideo.v4.model;
 
 /**
- * Rule-based algorithm.
+ * Media resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.displayvideo.v3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AlgorithmRules extends com.google.api.client.json.GenericJson {
+public final class GoogleBytestreamMedia extends com.google.api.client.json.GenericJson {
 
   /**
-   * Rules for the impression signals.
+   * Name of the media resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AlgorithmRulesRuleset impressionSignalRuleset;
+  private java.lang.String resourceName;
 
   /**
-   * Rules for the impression signals.
+   * Name of the media resource.
    * @return value or {@code null} for none
    */
-  public AlgorithmRulesRuleset getImpressionSignalRuleset() {
-    return impressionSignalRuleset;
+  public java.lang.String getResourceName() {
+    return resourceName;
   }
 
   /**
-   * Rules for the impression signals.
-   * @param impressionSignalRuleset impressionSignalRuleset or {@code null} for none
+   * Name of the media resource.
+   * @param resourceName resourceName or {@code null} for none
    */
-  public AlgorithmRules setImpressionSignalRuleset(AlgorithmRulesRuleset impressionSignalRuleset) {
-    this.impressionSignalRuleset = impressionSignalRuleset;
+  public GoogleBytestreamMedia setResourceName(java.lang.String resourceName) {
+    this.resourceName = resourceName;
     return this;
   }
 
   @Override
-  public AlgorithmRules set(String fieldName, Object value) {
-    return (AlgorithmRules) super.set(fieldName, value);
+  public GoogleBytestreamMedia set(String fieldName, Object value) {
+    return (GoogleBytestreamMedia) super.set(fieldName, value);
   }
 
   @Override
-  public AlgorithmRules clone() {
-    return (AlgorithmRules) super.clone();
+  public GoogleBytestreamMedia clone() {
+    return (GoogleBytestreamMedia) super.clone();
   }
 
 }

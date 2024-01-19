@@ -40,9 +40,9 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxImpressions;
 
   /**
-   * The maximum number of times a user may click-through or fully view an ad during this period
-   * until it is no longer served to them. Must be greater than 0. Only applicable to YouTube and
-   * Partners resources. Required when unlimited is `false` and max_impressions is not set.
+   * Optional. The maximum number of times a user may click-through or fully view an ad during this
+   * period until it is no longer served to them. Must be greater than 0. Only applicable to YouTube
+   * and Partners resources. Required when unlimited is `false` and max_impressions is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,9 +94,9 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maximum number of times a user may click-through or fully view an ad during this period
-   * until it is no longer served to them. Must be greater than 0. Only applicable to YouTube and
-   * Partners resources. Required when unlimited is `false` and max_impressions is not set.
+   * Optional. The maximum number of times a user may click-through or fully view an ad during this
+   * period until it is no longer served to them. Must be greater than 0. Only applicable to YouTube
+   * and Partners resources. Required when unlimited is `false` and max_impressions is not set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxViews() {
@@ -104,9 +104,9 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maximum number of times a user may click-through or fully view an ad during this period
-   * until it is no longer served to them. Must be greater than 0. Only applicable to YouTube and
-   * Partners resources. Required when unlimited is `false` and max_impressions is not set.
+   * Optional. The maximum number of times a user may click-through or fully view an ad during this
+   * period until it is no longer served to them. Must be greater than 0. Only applicable to YouTube
+   * and Partners resources. Required when unlimited is `false` and max_impressions is not set.
    * @param maxViews maxViews or {@code null} for none
    */
   public FrequencyCap setMaxViews(java.lang.Integer maxViews) {

@@ -312,6 +312,174 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
         }
       }
       /**
+       * Gets all the principals having bind permission on the intranet VPC associated with the consumer
+       * project granted by the Grant API. DnsBindPermission is a global resource and location can only be
+       * global.
+       *
+       * Create a request for the method "locations.getDnsBindPermission".
+       *
+       * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+       * parameters, call the {@link GetDnsBindPermission#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the resource which stores the users/service accounts having the permission to
+       *        bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a
+       *        global resource. Resource names are schemeless URIs that follow the conventions in
+       *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+       *        project/locations/global/dnsBindPermission`
+       * @return the request
+       */
+      public GetDnsBindPermission getDnsBindPermission(java.lang.String name) throws java.io.IOException {
+        GetDnsBindPermission result = new GetDnsBindPermission(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetDnsBindPermission extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.DnsBindPermission> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dnsBindPermission$");
+
+        /**
+         * Gets all the principals having bind permission on the intranet VPC associated with the consumer
+         * project granted by the Grant API. DnsBindPermission is a global resource and location can only
+         * be global.
+         *
+         * Create a request for the method "locations.getDnsBindPermission".
+         *
+         * This request holds the parameters needed by the the vmwareengine server.  After setting any
+         * optional parameters, call the {@link GetDnsBindPermission#execute()} method to invoke the
+         * remote operation. <p> {@link GetDnsBindPermission#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the resource which stores the users/service accounts having the permission to
+       *        bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a
+       *        global resource. Resource names are schemeless URIs that follow the conventions in
+       *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+       *        project/locations/global/dnsBindPermission`
+         * @since 1.13
+         */
+        protected GetDnsBindPermission(java.lang.String name) {
+          super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.DnsBindPermission.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/dnsBindPermission$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetDnsBindPermission set$Xgafv(java.lang.String $Xgafv) {
+          return (GetDnsBindPermission) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetDnsBindPermission setAccessToken(java.lang.String accessToken) {
+          return (GetDnsBindPermission) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetDnsBindPermission setAlt(java.lang.String alt) {
+          return (GetDnsBindPermission) super.setAlt(alt);
+        }
+
+        @Override
+        public GetDnsBindPermission setCallback(java.lang.String callback) {
+          return (GetDnsBindPermission) super.setCallback(callback);
+        }
+
+        @Override
+        public GetDnsBindPermission setFields(java.lang.String fields) {
+          return (GetDnsBindPermission) super.setFields(fields);
+        }
+
+        @Override
+        public GetDnsBindPermission setKey(java.lang.String key) {
+          return (GetDnsBindPermission) super.setKey(key);
+        }
+
+        @Override
+        public GetDnsBindPermission setOauthToken(java.lang.String oauthToken) {
+          return (GetDnsBindPermission) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetDnsBindPermission setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetDnsBindPermission) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetDnsBindPermission setQuotaUser(java.lang.String quotaUser) {
+          return (GetDnsBindPermission) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetDnsBindPermission setUploadType(java.lang.String uploadType) {
+          return (GetDnsBindPermission) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetDnsBindPermission setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetDnsBindPermission) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the resource which stores the users/service accounts having the
+         * permission to bind to the corresponding intranet VPC of the consumer project.
+         * DnsBindPermission is a global resource. Resource names are schemeless URIs that follow
+         * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+         * `projects/my-project/locations/global/dnsBindPermission`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the resource which stores the users/service accounts having the permission to
+       bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a global
+       resource. Resource names are schemeless URIs that follow the conventions in
+       https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+       project/locations/global/dnsBindPermission`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the resource which stores the users/service accounts having the
+         * permission to bind to the corresponding intranet VPC of the consumer project.
+         * DnsBindPermission is a global resource. Resource names are schemeless URIs that follow
+         * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+         * `projects/my-project/locations/global/dnsBindPermission`
+         */
+        public GetDnsBindPermission setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/dnsBindPermission$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetDnsBindPermission set(String parameterName, Object value) {
+          return (GetDnsBindPermission) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -515,147 +683,140 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * An accessor for creating requests from the Global collection.
+       * An accessor for creating requests from the DnsBindPermission collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code VMwareEngine vmwareengine = new VMwareEngine(...);}
-       *   {@code VMwareEngine.Global.List request = vmwareengine.global().list(parameters ...)}
+       *   {@code VMwareEngine.DnsBindPermission.List request = vmwareengine.dnsBindPermission().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Global global() {
-        return new Global();
+      public DnsBindPermission dnsBindPermission() {
+        return new DnsBindPermission();
       }
 
       /**
-       * The "global" collection of methods.
+       * The "dnsBindPermission" collection of methods.
        */
-      public class Global {
+      public class DnsBindPermission {
 
         /**
-         * Gets all the principals having bind permission on the intranet VPC associated with the consumer
-         * project granted by the Grant API.
+         * Grants the bind permission to the customer provided principal(user / service account) to bind
+         * their DNS zone with the intranet VPC associated with the project. DnsBindPermission is a global
+         * resource and location can only be global.
          *
-         * Create a request for the method "global.getDnsBindPermission".
+         * Create a request for the method "dnsBindPermission.grant".
          *
          * This request holds the parameters needed by the vmwareengine server.  After setting any optional
-         * parameters, call the {@link GetDnsBindPermission#execute()} method to invoke the remote
-         * operation.
+         * parameters, call the {@link Grant#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the resource which stores the users/service accounts having the permission to
          *        bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a
          *        global resource. Resource names are schemeless URIs that follow the conventions in
          *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
          *        project/locations/global/dnsBindPermission`
+         * @param content the {@link com.google.api.services.vmwareengine.v1.model.GrantDnsBindPermissionRequest}
          * @return the request
          */
-        public GetDnsBindPermission getDnsBindPermission(java.lang.String name) throws java.io.IOException {
-          GetDnsBindPermission result = new GetDnsBindPermission(name);
+        public Grant grant(java.lang.String name, com.google.api.services.vmwareengine.v1.model.GrantDnsBindPermissionRequest content) throws java.io.IOException {
+          Grant result = new Grant(name, content);
           initialize(result);
           return result;
         }
 
-        public class GetDnsBindPermission extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.DnsBindPermission> {
+        public class Grant extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1/{+name}";
+          private static final String REST_PATH = "v1/{+name}:grant";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/dnsBindPermission$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dnsBindPermission$");
 
           /**
-           * Gets all the principals having bind permission on the intranet VPC associated with the consumer
-           * project granted by the Grant API.
+           * Grants the bind permission to the customer provided principal(user / service account) to bind
+           * their DNS zone with the intranet VPC associated with the project. DnsBindPermission is a global
+           * resource and location can only be global.
            *
-           * Create a request for the method "global.getDnsBindPermission".
+           * Create a request for the method "dnsBindPermission.grant".
            *
            * This request holds the parameters needed by the the vmwareengine server.  After setting any
-           * optional parameters, call the {@link GetDnsBindPermission#execute()} method to invoke the
-           * remote operation. <p> {@link GetDnsBindPermission#initialize(com.google.api.client.googleapis.s
-           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-           * after invoking the constructor. </p>
+           * optional parameters, call the {@link Grant#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Grant#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the resource which stores the users/service accounts having the permission to
          *        bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a
          *        global resource. Resource names are schemeless URIs that follow the conventions in
          *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
          *        project/locations/global/dnsBindPermission`
+           * @param content the {@link com.google.api.services.vmwareengine.v1.model.GrantDnsBindPermissionRequest}
            * @since 1.13
            */
-          protected GetDnsBindPermission(java.lang.String name) {
-            super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.DnsBindPermission.class);
+          protected Grant(java.lang.String name, com.google.api.services.vmwareengine.v1.model.GrantDnsBindPermissionRequest content) {
+            super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/global/dnsBindPermission$");
+                  "^projects/[^/]+/locations/[^/]+/dnsBindPermission$");
             }
           }
 
           @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
+          public Grant set$Xgafv(java.lang.String $Xgafv) {
+            return (Grant) super.set$Xgafv($Xgafv);
           }
 
           @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
+          public Grant setAccessToken(java.lang.String accessToken) {
+            return (Grant) super.setAccessToken(accessToken);
           }
 
           @Override
-          public GetDnsBindPermission set$Xgafv(java.lang.String $Xgafv) {
-            return (GetDnsBindPermission) super.set$Xgafv($Xgafv);
+          public Grant setAlt(java.lang.String alt) {
+            return (Grant) super.setAlt(alt);
           }
 
           @Override
-          public GetDnsBindPermission setAccessToken(java.lang.String accessToken) {
-            return (GetDnsBindPermission) super.setAccessToken(accessToken);
+          public Grant setCallback(java.lang.String callback) {
+            return (Grant) super.setCallback(callback);
           }
 
           @Override
-          public GetDnsBindPermission setAlt(java.lang.String alt) {
-            return (GetDnsBindPermission) super.setAlt(alt);
+          public Grant setFields(java.lang.String fields) {
+            return (Grant) super.setFields(fields);
           }
 
           @Override
-          public GetDnsBindPermission setCallback(java.lang.String callback) {
-            return (GetDnsBindPermission) super.setCallback(callback);
+          public Grant setKey(java.lang.String key) {
+            return (Grant) super.setKey(key);
           }
 
           @Override
-          public GetDnsBindPermission setFields(java.lang.String fields) {
-            return (GetDnsBindPermission) super.setFields(fields);
+          public Grant setOauthToken(java.lang.String oauthToken) {
+            return (Grant) super.setOauthToken(oauthToken);
           }
 
           @Override
-          public GetDnsBindPermission setKey(java.lang.String key) {
-            return (GetDnsBindPermission) super.setKey(key);
+          public Grant setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Grant) super.setPrettyPrint(prettyPrint);
           }
 
           @Override
-          public GetDnsBindPermission setOauthToken(java.lang.String oauthToken) {
-            return (GetDnsBindPermission) super.setOauthToken(oauthToken);
+          public Grant setQuotaUser(java.lang.String quotaUser) {
+            return (Grant) super.setQuotaUser(quotaUser);
           }
 
           @Override
-          public GetDnsBindPermission setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (GetDnsBindPermission) super.setPrettyPrint(prettyPrint);
+          public Grant setUploadType(java.lang.String uploadType) {
+            return (Grant) super.setUploadType(uploadType);
           }
 
           @Override
-          public GetDnsBindPermission setQuotaUser(java.lang.String quotaUser) {
-            return (GetDnsBindPermission) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public GetDnsBindPermission setUploadType(java.lang.String uploadType) {
-            return (GetDnsBindPermission) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public GetDnsBindPermission setUploadProtocol(java.lang.String uploadProtocol) {
-            return (GetDnsBindPermission) super.setUploadProtocol(uploadProtocol);
+          public Grant setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Grant) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -685,975 +846,1335 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
            * `projects/my-project/locations/global/dnsBindPermission`
            */
-          public GetDnsBindPermission setName(java.lang.String name) {
+          public Grant setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/global/dnsBindPermission$");
+                  "^projects/[^/]+/locations/[^/]+/dnsBindPermission$");
             }
             this.name = name;
             return this;
           }
 
           @Override
-          public GetDnsBindPermission set(String parameterName, Object value) {
-            return (GetDnsBindPermission) super.set(parameterName, value);
+          public Grant set(String parameterName, Object value) {
+            return (Grant) super.set(parameterName, value);
           }
         }
-
         /**
-         * An accessor for creating requests from the DnsBindPermission collection.
+         * Revokes the bind permission from the customer provided principal(user / service account) on the
+         * intranet VPC associated with the consumer project. DnsBindPermission is a global resource and
+         * location can only be global.
          *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code VMwareEngine vmwareengine = new VMwareEngine(...);}
-         *   {@code VMwareEngine.DnsBindPermission.List request = vmwareengine.dnsBindPermission().list(parameters ...)}
-         * </pre>
+         * Create a request for the method "dnsBindPermission.revoke".
          *
-         * @return the resource collection
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the resource which stores the users/service accounts having the permission to
+         *        bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a
+         *        global resource. Resource names are schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/global/dnsBindPermission`
+         * @param content the {@link com.google.api.services.vmwareengine.v1.model.RevokeDnsBindPermissionRequest}
+         * @return the request
          */
-        public DnsBindPermission dnsBindPermission() {
-          return new DnsBindPermission();
+        public Revoke revoke(java.lang.String name, com.google.api.services.vmwareengine.v1.model.RevokeDnsBindPermissionRequest content) throws java.io.IOException {
+          Revoke result = new Revoke(name, content);
+          initialize(result);
+          return result;
         }
 
-        /**
-         * The "dnsBindPermission" collection of methods.
-         */
-        public class DnsBindPermission {
+        public class Revoke extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
 
-          /**
-           * Grants the bind permission to the customer provided principal(user / service account) to bind
-           * their DNS zone with the intranet VPC associated with the project.
-           *
-           * Create a request for the method "dnsBindPermission.grant".
-           *
-           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
-           * parameters, call the {@link Grant#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. The name of the resource which stores the users/service accounts having the permission to
-           *        bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a
-           *        global resource. Resource names are schemeless URIs that follow the conventions in
-           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           *        project/locations/global/dnsBindPermission`
-           * @param content the {@link com.google.api.services.vmwareengine.v1.model.GrantDnsBindPermissionRequest}
-           * @return the request
-           */
-          public Grant grant(java.lang.String name, com.google.api.services.vmwareengine.v1.model.GrantDnsBindPermissionRequest content) throws java.io.IOException {
-            Grant result = new Grant(name, content);
-            initialize(result);
-            return result;
-          }
+          private static final String REST_PATH = "v1/{+name}:revoke";
 
-          public class Grant extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dnsBindPermission$");
 
-            private static final String REST_PATH = "v1/{+name}:grant";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/dnsBindPermission$");
-
-            /**
-             * Grants the bind permission to the customer provided principal(user / service account) to bind
-             * their DNS zone with the intranet VPC associated with the project.
-             *
-             * Create a request for the method "dnsBindPermission.grant".
-             *
-             * This request holds the parameters needed by the the vmwareengine server.  After setting any
-             * optional parameters, call the {@link Grant#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Grant#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. The name of the resource which stores the users/service accounts having the permission to
-           *        bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a
-           *        global resource. Resource names are schemeless URIs that follow the conventions in
-           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           *        project/locations/global/dnsBindPermission`
-             * @param content the {@link com.google.api.services.vmwareengine.v1.model.GrantDnsBindPermissionRequest}
-             * @since 1.13
-             */
-            protected Grant(java.lang.String name, com.google.api.services.vmwareengine.v1.model.GrantDnsBindPermissionRequest content) {
-              super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/dnsBindPermission$");
-              }
-            }
-
-            @Override
-            public Grant set$Xgafv(java.lang.String $Xgafv) {
-              return (Grant) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Grant setAccessToken(java.lang.String accessToken) {
-              return (Grant) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Grant setAlt(java.lang.String alt) {
-              return (Grant) super.setAlt(alt);
-            }
-
-            @Override
-            public Grant setCallback(java.lang.String callback) {
-              return (Grant) super.setCallback(callback);
-            }
-
-            @Override
-            public Grant setFields(java.lang.String fields) {
-              return (Grant) super.setFields(fields);
-            }
-
-            @Override
-            public Grant setKey(java.lang.String key) {
-              return (Grant) super.setKey(key);
-            }
-
-            @Override
-            public Grant setOauthToken(java.lang.String oauthToken) {
-              return (Grant) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Grant setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Grant) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Grant setQuotaUser(java.lang.String quotaUser) {
-              return (Grant) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Grant setUploadType(java.lang.String uploadType) {
-              return (Grant) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Grant setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Grant) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The name of the resource which stores the users/service accounts having the
-             * permission to bind to the corresponding intranet VPC of the consumer project.
-             * DnsBindPermission is a global resource. Resource names are schemeless URIs that
-             * follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-             * example: `projects/my-project/locations/global/dnsBindPermission`
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. The name of the resource which stores the users/service accounts having the permission to
-           bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a global
-           resource. Resource names are schemeless URIs that follow the conventions in
-           https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           project/locations/global/dnsBindPermission`
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Required. The name of the resource which stores the users/service accounts having the
-             * permission to bind to the corresponding intranet VPC of the consumer project.
-             * DnsBindPermission is a global resource. Resource names are schemeless URIs that
-             * follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-             * example: `projects/my-project/locations/global/dnsBindPermission`
-             */
-            public Grant setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/dnsBindPermission$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public Grant set(String parameterName, Object value) {
-              return (Grant) super.set(parameterName, value);
-            }
-          }
           /**
            * Revokes the bind permission from the customer provided principal(user / service account) on the
-           * intranet VPC associated with the consumer project.
+           * intranet VPC associated with the consumer project. DnsBindPermission is a global resource and
+           * location can only be global.
            *
            * Create a request for the method "dnsBindPermission.revoke".
            *
-           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
-           * parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the resource which stores the users/service accounts having the permission to
-           *        bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a
-           *        global resource. Resource names are schemeless URIs that follow the conventions in
-           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           *        project/locations/global/dnsBindPermission`
+         *        bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a
+         *        global resource. Resource names are schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/global/dnsBindPermission`
            * @param content the {@link com.google.api.services.vmwareengine.v1.model.RevokeDnsBindPermissionRequest}
-           * @return the request
+           * @since 1.13
            */
-          public Revoke revoke(java.lang.String name, com.google.api.services.vmwareengine.v1.model.RevokeDnsBindPermissionRequest content) throws java.io.IOException {
-            Revoke result = new Revoke(name, content);
-            initialize(result);
-            return result;
-          }
-
-          public class Revoke extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
-
-            private static final String REST_PATH = "v1/{+name}:revoke";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/dnsBindPermission$");
-
-            /**
-             * Revokes the bind permission from the customer provided principal(user / service account) on the
-             * intranet VPC associated with the consumer project.
-             *
-             * Create a request for the method "dnsBindPermission.revoke".
-             *
-             * This request holds the parameters needed by the the vmwareengine server.  After setting any
-             * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. The name of the resource which stores the users/service accounts having the permission to
-           *        bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a
-           *        global resource. Resource names are schemeless URIs that follow the conventions in
-           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           *        project/locations/global/dnsBindPermission`
-             * @param content the {@link com.google.api.services.vmwareengine.v1.model.RevokeDnsBindPermissionRequest}
-             * @since 1.13
-             */
-            protected Revoke(java.lang.String name, com.google.api.services.vmwareengine.v1.model.RevokeDnsBindPermissionRequest content) {
-              super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/dnsBindPermission$");
-              }
-            }
-
-            @Override
-            public Revoke set$Xgafv(java.lang.String $Xgafv) {
-              return (Revoke) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Revoke setAccessToken(java.lang.String accessToken) {
-              return (Revoke) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Revoke setAlt(java.lang.String alt) {
-              return (Revoke) super.setAlt(alt);
-            }
-
-            @Override
-            public Revoke setCallback(java.lang.String callback) {
-              return (Revoke) super.setCallback(callback);
-            }
-
-            @Override
-            public Revoke setFields(java.lang.String fields) {
-              return (Revoke) super.setFields(fields);
-            }
-
-            @Override
-            public Revoke setKey(java.lang.String key) {
-              return (Revoke) super.setKey(key);
-            }
-
-            @Override
-            public Revoke setOauthToken(java.lang.String oauthToken) {
-              return (Revoke) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Revoke setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Revoke) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Revoke setQuotaUser(java.lang.String quotaUser) {
-              return (Revoke) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Revoke setUploadType(java.lang.String uploadType) {
-              return (Revoke) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Revoke setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Revoke) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The name of the resource which stores the users/service accounts having the
-             * permission to bind to the corresponding intranet VPC of the consumer project.
-             * DnsBindPermission is a global resource. Resource names are schemeless URIs that
-             * follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-             * example: `projects/my-project/locations/global/dnsBindPermission`
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. The name of the resource which stores the users/service accounts having the permission to
-           bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a global
-           resource. Resource names are schemeless URIs that follow the conventions in
-           https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           project/locations/global/dnsBindPermission`
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Required. The name of the resource which stores the users/service accounts having the
-             * permission to bind to the corresponding intranet VPC of the consumer project.
-             * DnsBindPermission is a global resource. Resource names are schemeless URIs that
-             * follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-             * example: `projects/my-project/locations/global/dnsBindPermission`
-             */
-            public Revoke setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/dnsBindPermission$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public Revoke set(String parameterName, Object value) {
-              return (Revoke) super.set(parameterName, value);
+          protected Revoke(java.lang.String name, com.google.api.services.vmwareengine.v1.model.RevokeDnsBindPermissionRequest content) {
+            super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dnsBindPermission$");
             }
           }
 
+          @Override
+          public Revoke set$Xgafv(java.lang.String $Xgafv) {
+            return (Revoke) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Revoke setAccessToken(java.lang.String accessToken) {
+            return (Revoke) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Revoke setAlt(java.lang.String alt) {
+            return (Revoke) super.setAlt(alt);
+          }
+
+          @Override
+          public Revoke setCallback(java.lang.String callback) {
+            return (Revoke) super.setCallback(callback);
+          }
+
+          @Override
+          public Revoke setFields(java.lang.String fields) {
+            return (Revoke) super.setFields(fields);
+          }
+
+          @Override
+          public Revoke setKey(java.lang.String key) {
+            return (Revoke) super.setKey(key);
+          }
+
+          @Override
+          public Revoke setOauthToken(java.lang.String oauthToken) {
+            return (Revoke) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Revoke setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Revoke) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Revoke setQuotaUser(java.lang.String quotaUser) {
+            return (Revoke) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Revoke setUploadType(java.lang.String uploadType) {
+            return (Revoke) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Revoke setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Revoke) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the resource which stores the users/service accounts having the
+           * permission to bind to the corresponding intranet VPC of the consumer project.
+           * DnsBindPermission is a global resource. Resource names are schemeless URIs that follow
+           * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+           * `projects/my-project/locations/global/dnsBindPermission`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the resource which stores the users/service accounts having the permission to
+         bind to the corresponding intranet VPC of the consumer project. DnsBindPermission is a global
+         resource. Resource names are schemeless URIs that follow the conventions in
+         https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         project/locations/global/dnsBindPermission`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the resource which stores the users/service accounts having the
+           * permission to bind to the corresponding intranet VPC of the consumer project.
+           * DnsBindPermission is a global resource. Resource names are schemeless URIs that follow
+           * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+           * `projects/my-project/locations/global/dnsBindPermission`
+           */
+          public Revoke setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dnsBindPermission$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Revoke set(String parameterName, Object value) {
+            return (Revoke) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the NetworkPeerings collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code VMwareEngine vmwareengine = new VMwareEngine(...);}
+       *   {@code VMwareEngine.NetworkPeerings.List request = vmwareengine.networkPeerings().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public NetworkPeerings networkPeerings() {
+        return new NetworkPeerings();
+      }
+
+      /**
+       * The "networkPeerings" collection of methods.
+       */
+      public class NetworkPeerings {
+
+        /**
+         * Creates a new network peering between the peer network and VMware Engine network provided in a
+         * `NetworkPeering` resource. NetworkPeering is a global resource and location can only be global.
+         *
+         * Create a request for the method "networkPeerings.create".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location to create the new network peering in. This value is
+         *        always `global`, because `NetworkPeering` is a global resource. Resource names are
+         *        schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/global`
+         * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPeering}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.vmwareengine.v1.model.NetworkPeering content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/networkPeerings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new network peering between the peer network and VMware Engine network provided in a
+           * `NetworkPeering` resource. NetworkPeering is a global resource and location can only be global.
+           *
+           * Create a request for the method "networkPeerings.create".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location to create the new network peering in. This value is
+         *        always `global`, because `NetworkPeering` is a global resource. Resource names are
+         *        schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/global`
+           * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPeering}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.vmwareengine.v1.model.NetworkPeering content) {
+            super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location to create the new network peering in. This
+           * value is always `global`, because `NetworkPeering` is a global resource. Resource names
+           * are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/global`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location to create the new network peering in. This value is
+         always `global`, because `NetworkPeering` is a global resource. Resource names are schemeless URIs
+         that follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+         `projects/my-project/locations/global`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location to create the new network peering in. This
+           * value is always `global`, because `NetworkPeering` is a global resource. Resource names
+           * are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/global`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The user-provided identifier of the new `NetworkPeering`. This identifier
+           * must be unique among `NetworkPeering` resources within the parent and becomes the final
+           * token in the name URI. The identifier must meet the following requirements: * Only
+           * contains 1-63 alphanumeric characters and hyphens * Begins with an alphabetical
+           * character * Ends with a non-hyphen character * Not formatted as a UUID * Complies with
+           * [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String networkPeeringId;
+
+          /** Required. The user-provided identifier of the new `NetworkPeering`. This identifier must be unique
+         among `NetworkPeering` resources within the parent and becomes the final token in the name URI. The
+         identifier must meet the following requirements: * Only contains 1-63 alphanumeric characters and
+         hyphens * Begins with an alphabetical character * Ends with a non-hyphen character * Not formatted
+         as a UUID * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
+           */
+          public java.lang.String getNetworkPeeringId() {
+            return networkPeeringId;
+          }
+
+          /**
+           * Required. The user-provided identifier of the new `NetworkPeering`. This identifier
+           * must be unique among `NetworkPeering` resources within the parent and becomes the final
+           * token in the name URI. The identifier must meet the following requirements: * Only
+           * contains 1-63 alphanumeric characters and hyphens * Begins with an alphabetical
+           * character * Ends with a non-hyphen character * Not formatted as a UUID * Complies with
+           * [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
+           */
+          public Create setNetworkPeeringId(java.lang.String networkPeeringId) {
+            this.networkPeeringId = networkPeeringId;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server guarantees that a request doesn't result in creation of
+           * duplicate commitments for at least 60 minutes. For example, consider a situation where
+           * you make an initial request and the request times out. If you make the request again
+           * with the same request ID, the server can check if original operation with the same
+           * request ID was received, and if so, will ignore the second request. This prevents
+           * clients from accidentally creating duplicate commitments. The request ID must be a
+           * valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+         your request, the server will know to ignore the request if it has already been completed. The
+         server guarantees that a request doesn't result in creation of duplicate commitments for at least
+         60 minutes. For example, consider a situation where you make an initial request and the request
+         times out. If you make the request again with the same request ID, the server can check if original
+         operation with the same request ID was received, and if so, will ignore the second request. This
+         prevents clients from accidentally creating duplicate commitments. The request ID must be a valid
+         UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server guarantees that a request doesn't result in creation of
+           * duplicate commitments for at least 60 minutes. For example, consider a situation where
+           * you make an initial request and the request times out. If you make the request again
+           * with the same request ID, the server can check if original operation with the same
+           * request ID was received, and if so, will ignore the second request. This prevents
+           * clients from accidentally creating duplicate commitments. The request ID must be a
+           * valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
         }
         /**
-         * An accessor for creating requests from the NetworkPeerings collection.
+         * Deletes a `NetworkPeering` resource. When a network peering is deleted for a VMware Engine
+         * network, the peer network becomes inaccessible to that VMware Engine network. NetworkPeering is a
+         * global resource and location can only be global.
+         *
+         * Create a request for the method "networkPeerings.delete".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the network peering to be deleted. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/global/networkPeerings/my-peering`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
+
+          /**
+           * Deletes a `NetworkPeering` resource. When a network peering is deleted for a VMware Engine
+           * network, the peer network becomes inaccessible to that VMware Engine network. NetworkPeering is
+           * a global resource and location can only be global.
+           *
+           * Create a request for the method "networkPeerings.delete".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the network peering to be deleted. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/global/networkPeerings/my-peering`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(VMwareEngine.this, "DELETE", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the network peering to be deleted. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/global/networkPeerings/my-peering`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the network peering to be deleted. Resource names are schemeless
+         URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         example: `projects/my-project/locations/global/networkPeerings/my-peering`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the network peering to be deleted. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/global/networkPeerings/my-peering`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server guarantees that a request doesn't result in creation of
+           * duplicate commitments for at least 60 minutes. For example, consider a situation where
+           * you make an initial request and the request times out. If you make the request again
+           * with the same request ID, the server can check if original operation with the same
+           * request ID was received, and if so, will ignore the second request. This prevents
+           * clients from accidentally creating duplicate commitments. The request ID must be a
+           * valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+         your request, the server will know to ignore the request if it has already been completed. The
+         server guarantees that a request doesn't result in creation of duplicate commitments for at least
+         60 minutes. For example, consider a situation where you make an initial request and the request
+         times out. If you make the request again with the same request ID, the server can check if original
+         operation with the same request ID was received, and if so, will ignore the second request. This
+         prevents clients from accidentally creating duplicate commitments. The request ID must be a valid
+         UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server guarantees that a request doesn't result in creation of
+           * duplicate commitments for at least 60 minutes. For example, consider a situation where
+           * you make an initial request and the request times out. If you make the request again
+           * with the same request ID, the server can check if original operation with the same
+           * request ID was received, and if so, will ignore the second request. This prevents
+           * clients from accidentally creating duplicate commitments. The request ID must be a
+           * valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a `NetworkPeering` resource by its resource name. The resource contains details of the
+         * network peering, such as peered networks, import and export custom route configurations, and
+         * peering state. NetworkPeering is a global resource and location can only be global.
+         *
+         * Create a request for the method "networkPeerings.get".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the network peering to retrieve. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/global/networkPeerings/my-peering`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.NetworkPeering> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
+
+          /**
+           * Retrieves a `NetworkPeering` resource by its resource name. The resource contains details of
+           * the network peering, such as peered networks, import and export custom route configurations,
+           * and peering state. NetworkPeering is a global resource and location can only be global.
+           *
+           * Create a request for the method "networkPeerings.get".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the network peering to retrieve. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/global/networkPeerings/my-peering`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.NetworkPeering.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the network peering to retrieve. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/global/networkPeerings/my-peering`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the network peering to retrieve. Resource names are schemeless URIs
+         that follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+         `projects/my-project/locations/global/networkPeerings/my-peering`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the network peering to retrieve. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/global/networkPeerings/my-peering`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists `NetworkPeering` resources in a given project. NetworkPeering is a global resource and
+         * location can only be global.
+         *
+         * Create a request for the method "networkPeerings.list".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location (global) to query for network peerings. Resource names
+         *        are schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/global`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.ListNetworkPeeringsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/networkPeerings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists `NetworkPeering` resources in a given project. NetworkPeering is a global resource and
+           * location can only be global.
+           *
+           * Create a request for the method "networkPeerings.list".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location (global) to query for network peerings. Resource names
+         *        are schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/global`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.ListNetworkPeeringsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location (global) to query for network peerings.
+           * Resource names are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/global`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location (global) to query for network peerings. Resource names
+         are schemeless URIs that follow the conventions in
+         https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         project/locations/global`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location (global) to query for network peerings.
+           * Resource names are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/global`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A filter expression that matches resources returned in the response. The expression
+           * must specify the field name, a comparison operator, and the value that you want to use
+           * for filtering. The value must be a string, a number, or a boolean. The comparison
+           * operator must be `=`, `!=`, `>`, or `<`. For example, if you are filtering a list of
+           * network peerings, you can exclude the ones named `example-peering` by specifying `name
+           * != "example-peering"`. To filter on multiple expressions, provide each separate
+           * expression within parentheses. For example: ``` (name = "example-peering") (createTime
+           * > "2021-04-12T08:15:10.40Z") ``` By default, each expression is an `AND` expression.
+           * However, you can include `AND` and `OR` expressions explicitly. For example: ``` (name
+           * = "example-peering-1") AND (createTime > "2021-04-12T08:15:10.40Z") OR (name =
+           * "example-peering-2") ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** A filter expression that matches resources returned in the response. The expression must specify
+         the field name, a comparison operator, and the value that you want to use for filtering. The value
+         must be a string, a number, or a boolean. The comparison operator must be `=`, `!=`, `>`, or `<`.
+         For example, if you are filtering a list of network peerings, you can exclude the ones named
+         `example-peering` by specifying `name != "example-peering"`. To filter on multiple expressions,
+         provide each separate expression within parentheses. For example: ``` (name = "example-peering")
+         (createTime > "2021-04-12T08:15:10.40Z") ``` By default, each expression is an `AND` expression.
+         However, you can include `AND` and `OR` expressions explicitly. For example: ``` (name = "example-
+         peering-1") AND (createTime > "2021-04-12T08:15:10.40Z") OR (name = "example-peering-2") ```
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * A filter expression that matches resources returned in the response. The expression
+           * must specify the field name, a comparison operator, and the value that you want to use
+           * for filtering. The value must be a string, a number, or a boolean. The comparison
+           * operator must be `=`, `!=`, `>`, or `<`. For example, if you are filtering a list of
+           * network peerings, you can exclude the ones named `example-peering` by specifying `name
+           * != "example-peering"`. To filter on multiple expressions, provide each separate
+           * expression within parentheses. For example: ``` (name = "example-peering") (createTime
+           * > "2021-04-12T08:15:10.40Z") ``` By default, each expression is an `AND` expression.
+           * However, you can include `AND` and `OR` expressions explicitly. For example: ``` (name
+           * = "example-peering-1") AND (createTime > "2021-04-12T08:15:10.40Z") OR (name =
+           * "example-peering-2") ```
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Sorts list results by a certain order. By default, returned results are ordered by
+           * `name` in ascending order. You can also sort results in descending order based on the
+           * `name` value using `orderBy="name desc"`. Currently, only ordering by `name` is
+           * supported.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Sorts list results by a certain order. By default, returned results are ordered by `name` in
+         ascending order. You can also sort results in descending order based on the `name` value using
+         `orderBy="name desc"`. Currently, only ordering by `name` is supported.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Sorts list results by a certain order. By default, returned results are ordered by
+           * `name` in ascending order. You can also sort results in descending order based on the
+           * `name` value using `orderBy="name desc"`. Currently, only ordering by `name` is
+           * supported.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * The maximum number of network peerings to return in one page. The maximum value is
+           * coerced to 1000. The default value of this field is 500.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of network peerings to return in one page. The maximum value is coerced to 1000.
+         The default value of this field is 500.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of network peerings to return in one page. The maximum value is
+           * coerced to 1000. The default value of this field is 500.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListNetworkPeerings` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListNetworkPeerings` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListNetworkPeerings` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListNetworkPeerings` must match
+         the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListNetworkPeerings` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListNetworkPeerings` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Modifies a `NetworkPeering` resource. Only the `description` field can be updated. Only fields
+         * specified in `updateMask` are applied. NetworkPeering is a global resource and location can only
+         * be global.
+         *
+         * Create a request for the method "networkPeerings.patch".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The resource name of the network peering. NetworkPeering is a global resource and
+         *        location can only be global. Resource names are scheme-less URIs that follow the
+         *        conventions in https://cloud.google.com/apis/design/resource_names. For example: `projects
+         *        /my-project/locations/global/networkPeerings/my-peering`
+         * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPeering}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.vmwareengine.v1.model.NetworkPeering content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
+
+          /**
+           * Modifies a `NetworkPeering` resource. Only the `description` field can be updated. Only fields
+           * specified in `updateMask` are applied. NetworkPeering is a global resource and location can
+           * only be global.
+           *
+           * Create a request for the method "networkPeerings.patch".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The resource name of the network peering. NetworkPeering is a global resource and
+         *        location can only be global. Resource names are scheme-less URIs that follow the
+         *        conventions in https://cloud.google.com/apis/design/resource_names. For example: `projects
+         *        /my-project/locations/global/networkPeerings/my-peering`
+           * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPeering}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.vmwareengine.v1.model.NetworkPeering content) {
+            super(VMwareEngine.this, "PATCH", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The resource name of the network peering. NetworkPeering is a global
+           * resource and location can only be global. Resource names are scheme-less URIs that
+           * follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           * example: `projects/my-project/locations/global/networkPeerings/my-peering`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The resource name of the network peering. NetworkPeering is a global resource and
+         location can only be global. Resource names are scheme-less URIs that follow the conventions in
+         https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         project/locations/global/networkPeerings/my-peering`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The resource name of the network peering. NetworkPeering is a global
+           * resource and location can only be global. Resource names are scheme-less URIs that
+           * follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           * example: `projects/my-project/locations/global/networkPeerings/my-peering`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server guarantees that a request doesn't result in creation of
+           * duplicate commitments for at least 60 minutes. For example, consider a situation where
+           * you make an initial request and the request times out. If you make the request again
+           * with the same request ID, the server can check if original operation with the same
+           * request ID was received, and if so, will ignore the second request. This prevents
+           * clients from accidentally creating duplicate commitments. The request ID must be a
+           * valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+         your request, the server will know to ignore the request if it has already been completed. The
+         server guarantees that a request doesn't result in creation of duplicate commitments for at least
+         60 minutes. For example, consider a situation where you make an initial request and the request
+         times out. If you make the request again with the same request ID, the server can check if original
+         operation with the same request ID was received, and if so, will ignore the second request. This
+         prevents clients from accidentally creating duplicate commitments. The request ID must be a valid
+         UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server guarantees that a request doesn't result in creation of
+           * duplicate commitments for at least 60 minutes. For example, consider a situation where
+           * you make an initial request and the request times out. If you make the request again
+           * with the same request ID, the server can check if original operation with the same
+           * request ID was received, and if so, will ignore the second request. This prevents
+           * clients from accidentally creating duplicate commitments. The request ID must be a
+           * valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. Field mask is used to specify the fields to be overwritten in the
+           * `NetworkPeering` resource by the update. The fields specified in the `update_mask` are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask is used to specify the fields to be overwritten in the `NetworkPeering`
+         resource by the update. The fields specified in the `update_mask` are relative to the resource, not
+         the full request. A field will be overwritten if it is in the mask. If the user does not provide a
+         mask then all fields will be overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask is used to specify the fields to be overwritten in the
+           * `NetworkPeering` resource by the update. The fields specified in the `update_mask` are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the PeeringRoutes collection.
          *
          * <p>The typical use is:</p>
          * <pre>
          *   {@code VMwareEngine vmwareengine = new VMwareEngine(...);}
-         *   {@code VMwareEngine.NetworkPeerings.List request = vmwareengine.networkPeerings().list(parameters ...)}
+         *   {@code VMwareEngine.PeeringRoutes.List request = vmwareengine.peeringRoutes().list(parameters ...)}
          * </pre>
          *
          * @return the resource collection
          */
-        public NetworkPeerings networkPeerings() {
-          return new NetworkPeerings();
+        public PeeringRoutes peeringRoutes() {
+          return new PeeringRoutes();
         }
 
         /**
-         * The "networkPeerings" collection of methods.
+         * The "peeringRoutes" collection of methods.
          */
-        public class NetworkPeerings {
+        public class PeeringRoutes {
 
           /**
-           * Creates a new network peering between the peer network and VMware Engine network provided in a
-           * `NetworkPeering` resource.
+           * Lists the network peering routes exchanged over a peering connection. NetworkPeering is a global
+           * resource and location can only be global.
            *
-           * Create a request for the method "networkPeerings.create".
-           *
-           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
-           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-           *
-           * @param parent Required. The resource name of the location to create the new network peering in. This value is
-           *        always `global`, because `NetworkPeering` is a global resource. Resource names are
-           *        schemeless URIs that follow the conventions in
-           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           *        project/locations/global`
-           * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPeering}
-           * @return the request
-           */
-          public Create create(java.lang.String parent, com.google.api.services.vmwareengine.v1.model.NetworkPeering content) throws java.io.IOException {
-            Create result = new Create(parent, content);
-            initialize(result);
-            return result;
-          }
-
-          public class Create extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
-
-            private static final String REST_PATH = "v1/{+parent}/networkPeerings";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
-
-            /**
-             * Creates a new network peering between the peer network and VMware Engine network provided in a
-             * `NetworkPeering` resource.
-             *
-             * Create a request for the method "networkPeerings.create".
-             *
-             * This request holds the parameters needed by the the vmwareengine server.  After setting any
-             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param parent Required. The resource name of the location to create the new network peering in. This value is
-           *        always `global`, because `NetworkPeering` is a global resource. Resource names are
-           *        schemeless URIs that follow the conventions in
-           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           *        project/locations/global`
-             * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPeering}
-             * @since 1.13
-             */
-            protected Create(java.lang.String parent, com.google.api.services.vmwareengine.v1.model.NetworkPeering content) {
-              super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/global$");
-              }
-            }
-
-            @Override
-            public Create set$Xgafv(java.lang.String $Xgafv) {
-              return (Create) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Create setAccessToken(java.lang.String accessToken) {
-              return (Create) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Create setAlt(java.lang.String alt) {
-              return (Create) super.setAlt(alt);
-            }
-
-            @Override
-            public Create setCallback(java.lang.String callback) {
-              return (Create) super.setCallback(callback);
-            }
-
-            @Override
-            public Create setFields(java.lang.String fields) {
-              return (Create) super.setFields(fields);
-            }
-
-            @Override
-            public Create setKey(java.lang.String key) {
-              return (Create) super.setKey(key);
-            }
-
-            @Override
-            public Create setOauthToken(java.lang.String oauthToken) {
-              return (Create) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Create) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Create setQuotaUser(java.lang.String quotaUser) {
-              return (Create) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Create setUploadType(java.lang.String uploadType) {
-              return (Create) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Create setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Create) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The resource name of the location to create the new network peering in.
-             * This value is always `global`, because `NetworkPeering` is a global resource.
-             * Resource names are schemeless URIs that follow the conventions in
-             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             * project/locations/global`
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Required. The resource name of the location to create the new network peering in. This value is
-           always `global`, because `NetworkPeering` is a global resource. Resource names are schemeless URIs
-           that follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-           `projects/my-project/locations/global`
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /**
-             * Required. The resource name of the location to create the new network peering in.
-             * This value is always `global`, because `NetworkPeering` is a global resource.
-             * Resource names are schemeless URIs that follow the conventions in
-             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             * project/locations/global`
-             */
-            public Create setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/global$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            /**
-             * Required. The user-provided identifier of the new `NetworkPeering`. This identifier
-             * must be unique among `NetworkPeering` resources within the parent and becomes the
-             * final token in the name URI. The identifier must meet the following requirements: *
-             * Only contains 1-63 alphanumeric characters and hyphens * Begins with an alphabetical
-             * character * Ends with a non-hyphen character * Not formatted as a UUID * Complies
-             * with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String networkPeeringId;
-
-            /** Required. The user-provided identifier of the new `NetworkPeering`. This identifier must be unique
-           among `NetworkPeering` resources within the parent and becomes the final token in the name URI. The
-           identifier must meet the following requirements: * Only contains 1-63 alphanumeric characters and
-           hyphens * Begins with an alphabetical character * Ends with a non-hyphen character * Not formatted
-           as a UUID * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
-             */
-            public java.lang.String getNetworkPeeringId() {
-              return networkPeeringId;
-            }
-
-            /**
-             * Required. The user-provided identifier of the new `NetworkPeering`. This identifier
-             * must be unique among `NetworkPeering` resources within the parent and becomes the
-             * final token in the name URI. The identifier must meet the following requirements: *
-             * Only contains 1-63 alphanumeric characters and hyphens * Begins with an alphabetical
-             * character * Ends with a non-hyphen character * Not formatted as a UUID * Complies
-             * with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
-             */
-            public Create setNetworkPeeringId(java.lang.String networkPeeringId) {
-              this.networkPeeringId = networkPeeringId;
-              return this;
-            }
-
-            /**
-             * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check if original
-             * operation with the same request ID was received, and if so, will ignore the second
-             * request. This prevents clients from accidentally creating duplicate commitments. The
-             * request ID must be a valid UUID with the exception that zero UUID is not supported
-             * (00000000-0000-0000-0000-000000000000).
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String requestId;
-
-            /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-           your request, the server will know to ignore the request if it has already been completed. The
-           server guarantees that a request doesn't result in creation of duplicate commitments for at least
-           60 minutes. For example, consider a situation where you make an initial request and the request
-           times out. If you make the request again with the same request ID, the server can check if original
-           operation with the same request ID was received, and if so, will ignore the second request. This
-           prevents clients from accidentally creating duplicate commitments. The request ID must be a valid
-           UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-             */
-            public java.lang.String getRequestId() {
-              return requestId;
-            }
-
-            /**
-             * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check if original
-             * operation with the same request ID was received, and if so, will ignore the second
-             * request. This prevents clients from accidentally creating duplicate commitments. The
-             * request ID must be a valid UUID with the exception that zero UUID is not supported
-             * (00000000-0000-0000-0000-000000000000).
-             */
-            public Create setRequestId(java.lang.String requestId) {
-              this.requestId = requestId;
-              return this;
-            }
-
-            @Override
-            public Create set(String parameterName, Object value) {
-              return (Create) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Deletes a `NetworkPeering` resource. When a network peering is deleted for a VMware Engine
-           * network, the peer network becomes inaccessible to that VMware Engine network.
-           *
-           * Create a request for the method "networkPeerings.delete".
-           *
-           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
-           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. The resource name of the network peering to be deleted. Resource names are schemeless URIs
-           *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           *        example: `projects/my-project/locations/global/networkPeerings/my-peering`
-           * @return the request
-           */
-          public Delete delete(java.lang.String name) throws java.io.IOException {
-            Delete result = new Delete(name);
-            initialize(result);
-            return result;
-          }
-
-          public class Delete extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
-
-            private static final String REST_PATH = "v1/{+name}";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-
-            /**
-             * Deletes a `NetworkPeering` resource. When a network peering is deleted for a VMware Engine
-             * network, the peer network becomes inaccessible to that VMware Engine network.
-             *
-             * Create a request for the method "networkPeerings.delete".
-             *
-             * This request holds the parameters needed by the the vmwareengine server.  After setting any
-             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. The resource name of the network peering to be deleted. Resource names are schemeless URIs
-           *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           *        example: `projects/my-project/locations/global/networkPeerings/my-peering`
-             * @since 1.13
-             */
-            protected Delete(java.lang.String name) {
-              super(VMwareEngine.this, "DELETE", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.Operation.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-              }
-            }
-
-            @Override
-            public Delete set$Xgafv(java.lang.String $Xgafv) {
-              return (Delete) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Delete setAccessToken(java.lang.String accessToken) {
-              return (Delete) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Delete setAlt(java.lang.String alt) {
-              return (Delete) super.setAlt(alt);
-            }
-
-            @Override
-            public Delete setCallback(java.lang.String callback) {
-              return (Delete) super.setCallback(callback);
-            }
-
-            @Override
-            public Delete setFields(java.lang.String fields) {
-              return (Delete) super.setFields(fields);
-            }
-
-            @Override
-            public Delete setKey(java.lang.String key) {
-              return (Delete) super.setKey(key);
-            }
-
-            @Override
-            public Delete setOauthToken(java.lang.String oauthToken) {
-              return (Delete) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Delete) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Delete setQuotaUser(java.lang.String quotaUser) {
-              return (Delete) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Delete setUploadType(java.lang.String uploadType) {
-              return (Delete) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Delete) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The resource name of the network peering to be deleted. Resource names are
-             * schemeless URIs that follow the conventions in
-             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             * project/locations/global/networkPeerings/my-peering`
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. The resource name of the network peering to be deleted. Resource names are schemeless
-           URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           example: `projects/my-project/locations/global/networkPeerings/my-peering`
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Required. The resource name of the network peering to be deleted. Resource names are
-             * schemeless URIs that follow the conventions in
-             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             * project/locations/global/networkPeerings/my-peering`
-             */
-            public Delete setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            /**
-             * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check if original
-             * operation with the same request ID was received, and if so, will ignore the second
-             * request. This prevents clients from accidentally creating duplicate commitments. The
-             * request ID must be a valid UUID with the exception that zero UUID is not supported
-             * (00000000-0000-0000-0000-000000000000).
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String requestId;
-
-            /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-           your request, the server will know to ignore the request if it has already been completed. The
-           server guarantees that a request doesn't result in creation of duplicate commitments for at least
-           60 minutes. For example, consider a situation where you make an initial request and the request
-           times out. If you make the request again with the same request ID, the server can check if original
-           operation with the same request ID was received, and if so, will ignore the second request. This
-           prevents clients from accidentally creating duplicate commitments. The request ID must be a valid
-           UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-             */
-            public java.lang.String getRequestId() {
-              return requestId;
-            }
-
-            /**
-             * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check if original
-             * operation with the same request ID was received, and if so, will ignore the second
-             * request. This prevents clients from accidentally creating duplicate commitments. The
-             * request ID must be a valid UUID with the exception that zero UUID is not supported
-             * (00000000-0000-0000-0000-000000000000).
-             */
-            public Delete setRequestId(java.lang.String requestId) {
-              this.requestId = requestId;
-              return this;
-            }
-
-            @Override
-            public Delete set(String parameterName, Object value) {
-              return (Delete) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Retrieves a `NetworkPeering` resource by its resource name. The resource contains details of the
-           * network peering, such as peered networks, import and export custom route configurations, and
-           * peering state.
-           *
-           * Create a request for the method "networkPeerings.get".
-           *
-           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
-           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. The resource name of the network peering to retrieve. Resource names are schemeless URIs
-           *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           *        example: `projects/my-project/locations/global/networkPeerings/my-peering`
-           * @return the request
-           */
-          public Get get(java.lang.String name) throws java.io.IOException {
-            Get result = new Get(name);
-            initialize(result);
-            return result;
-          }
-
-          public class Get extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.NetworkPeering> {
-
-            private static final String REST_PATH = "v1/{+name}";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-
-            /**
-             * Retrieves a `NetworkPeering` resource by its resource name. The resource contains details of
-             * the network peering, such as peered networks, import and export custom route configurations,
-             * and peering state.
-             *
-             * Create a request for the method "networkPeerings.get".
-             *
-             * This request holds the parameters needed by the the vmwareengine server.  After setting any
-             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. The resource name of the network peering to retrieve. Resource names are schemeless URIs
-           *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           *        example: `projects/my-project/locations/global/networkPeerings/my-peering`
-             * @since 1.13
-             */
-            protected Get(java.lang.String name) {
-              super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.NetworkPeering.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-              }
-            }
-
-            @Override
-            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-              return super.executeUsingHead();
-            }
-
-            @Override
-            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-              return super.buildHttpRequestUsingHead();
-            }
-
-            @Override
-            public Get set$Xgafv(java.lang.String $Xgafv) {
-              return (Get) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Get setAccessToken(java.lang.String accessToken) {
-              return (Get) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Get setAlt(java.lang.String alt) {
-              return (Get) super.setAlt(alt);
-            }
-
-            @Override
-            public Get setCallback(java.lang.String callback) {
-              return (Get) super.setCallback(callback);
-            }
-
-            @Override
-            public Get setFields(java.lang.String fields) {
-              return (Get) super.setFields(fields);
-            }
-
-            @Override
-            public Get setKey(java.lang.String key) {
-              return (Get) super.setKey(key);
-            }
-
-            @Override
-            public Get setOauthToken(java.lang.String oauthToken) {
-              return (Get) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Get) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Get setQuotaUser(java.lang.String quotaUser) {
-              return (Get) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Get setUploadType(java.lang.String uploadType) {
-              return (Get) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Get setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Get) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The resource name of the network peering to retrieve. Resource names are
-             * schemeless URIs that follow the conventions in
-             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             * project/locations/global/networkPeerings/my-peering`
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. The resource name of the network peering to retrieve. Resource names are schemeless URIs
-           that follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-           `projects/my-project/locations/global/networkPeerings/my-peering`
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Required. The resource name of the network peering to retrieve. Resource names are
-             * schemeless URIs that follow the conventions in
-             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             * project/locations/global/networkPeerings/my-peering`
-             */
-            public Get setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public Get set(String parameterName, Object value) {
-              return (Get) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Lists `NetworkPeering` resources in a given project.
-           *
-           * Create a request for the method "networkPeerings.list".
+           * Create a request for the method "peeringRoutes.list".
            *
            * This request holds the parameters needed by the vmwareengine server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource name of the location (global) to query for network peerings. Resource names
+           * @param parent Required. The resource name of the network peering to retrieve peering routes from. Resource names
            *        are schemeless URIs that follow the conventions in
            *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           *        project/locations/global`
+           *        project/locations/global/networkPeerings/my-peering`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1662,36 +2183,37 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             return result;
           }
 
-          public class List extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.ListNetworkPeeringsResponse> {
+          public class List extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.ListPeeringRoutesResponse> {
 
-            private static final String REST_PATH = "v1/{+parent}/networkPeerings";
+            private static final String REST_PATH = "v1/{+parent}/peeringRoutes";
 
             private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
 
             /**
-             * Lists `NetworkPeering` resources in a given project.
+             * Lists the network peering routes exchanged over a peering connection. NetworkPeering is a
+             * global resource and location can only be global.
              *
-             * Create a request for the method "networkPeerings.list".
+             * Create a request for the method "peeringRoutes.list".
              *
              * This request holds the parameters needed by the the vmwareengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource name of the location (global) to query for network peerings. Resource names
+             * @param parent Required. The resource name of the network peering to retrieve peering routes from. Resource names
            *        are schemeless URIs that follow the conventions in
            *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           *        project/locations/global`
+           *        project/locations/global/networkPeerings/my-peering`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
-              super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.ListNetworkPeeringsResponse.class);
+              super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.ListPeeringRoutesResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                     "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/global$");
+                    "^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
               }
             }
 
@@ -1761,81 +2283,64 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The resource name of the location (global) to query for network peerings.
+             * Required. The resource name of the network peering to retrieve peering routes from.
              * Resource names are schemeless URIs that follow the conventions in
              * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             * project/locations/global`
+             * project/locations/global/networkPeerings/my-peering`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The resource name of the location (global) to query for network peerings. Resource names
+            /** Required. The resource name of the network peering to retrieve peering routes from. Resource names
            are schemeless URIs that follow the conventions in
            https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           project/locations/global`
+           project/locations/global/networkPeerings/my-peering`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The resource name of the location (global) to query for network peerings.
+             * Required. The resource name of the network peering to retrieve peering routes from.
              * Resource names are schemeless URIs that follow the conventions in
              * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             * project/locations/global`
+             * project/locations/global/networkPeerings/my-peering`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                     "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/global$");
+                    "^projects/[^/]+/locations/[^/]+/networkPeerings/[^/]+$");
               }
               this.parent = parent;
               return this;
             }
 
             /**
-             * A filter expression that matches resources returned in the response. The expression
-             * must specify the field name, a comparison operator, and the value that you want to
-             * use for filtering. The value must be a string, a number, or a boolean. The comparison
-             * operator must be `=`, `!=`, `>`, or `<`. For example, if you are filtering a list of
-             * network peerings, you can exclude the ones named `example-peering` by specifying
-             * `name != "example-peering"`. To filter on multiple expressions, provide each separate
-             * expression within parentheses. For example: ``` (name = "example-peering")
-             * (createTime > "2021-04-12T08:15:10.40Z") ``` By default, each expression is an `AND`
-             * expression. However, you can include `AND` and `OR` expressions explicitly. For
-             * example: ``` (name = "example-peering-1") AND (createTime >
-             * "2021-04-12T08:15:10.40Z") OR (name = "example-peering-2") ```
+             * A filter expression that matches resources returned in the response. Currently, only
+             * filtering on the `direction` field is supported. To return routes imported from the
+             * peer network, provide "direction=INCOMING". To return routes exported from the VMware
+             * Engine network, provide "direction=OUTGOING". Other filter expressions return an
+             * error.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** A filter expression that matches resources returned in the response. The expression must specify
-           the field name, a comparison operator, and the value that you want to use for filtering. The value
-           must be a string, a number, or a boolean. The comparison operator must be `=`, `!=`, `>`, or `<`.
-           For example, if you are filtering a list of network peerings, you can exclude the ones named
-           `example-peering` by specifying `name != "example-peering"`. To filter on multiple expressions,
-           provide each separate expression within parentheses. For example: ``` (name = "example-peering")
-           (createTime > "2021-04-12T08:15:10.40Z") ``` By default, each expression is an `AND` expression.
-           However, you can include `AND` and `OR` expressions explicitly. For example: ``` (name = "example-
-           peering-1") AND (createTime > "2021-04-12T08:15:10.40Z") OR (name = "example-peering-2") ```
+            /** A filter expression that matches resources returned in the response. Currently, only filtering on
+           the `direction` field is supported. To return routes imported from the peer network, provide
+           "direction=INCOMING". To return routes exported from the VMware Engine network, provide
+           "direction=OUTGOING". Other filter expressions return an error.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * A filter expression that matches resources returned in the response. The expression
-             * must specify the field name, a comparison operator, and the value that you want to
-             * use for filtering. The value must be a string, a number, or a boolean. The comparison
-             * operator must be `=`, `!=`, `>`, or `<`. For example, if you are filtering a list of
-             * network peerings, you can exclude the ones named `example-peering` by specifying
-             * `name != "example-peering"`. To filter on multiple expressions, provide each separate
-             * expression within parentheses. For example: ``` (name = "example-peering")
-             * (createTime > "2021-04-12T08:15:10.40Z") ``` By default, each expression is an `AND`
-             * expression. However, you can include `AND` and `OR` expressions explicitly. For
-             * example: ``` (name = "example-peering-1") AND (createTime >
-             * "2021-04-12T08:15:10.40Z") OR (name = "example-peering-2") ```
+             * A filter expression that matches resources returned in the response. Currently, only
+             * filtering on the `direction` field is supported. To return routes imported from the
+             * peer network, provide "direction=INCOMING". To return routes exported from the VMware
+             * Engine network, provide "direction=OUTGOING". Other filter expressions return an
+             * error.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -1843,50 +2348,24 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Sorts list results by a certain order. By default, returned results are ordered by
-             * `name` in ascending order. You can also sort results in descending order based on the
-             * `name` value using `orderBy="name desc"`. Currently, only ordering by `name` is
-             * supported.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String orderBy;
-
-            /** Sorts list results by a certain order. By default, returned results are ordered by `name` in
-           ascending order. You can also sort results in descending order based on the `name` value using
-           `orderBy="name desc"`. Currently, only ordering by `name` is supported.
-             */
-            public java.lang.String getOrderBy() {
-              return orderBy;
-            }
-
-            /**
-             * Sorts list results by a certain order. By default, returned results are ordered by
-             * `name` in ascending order. You can also sort results in descending order based on the
-             * `name` value using `orderBy="name desc"`. Currently, only ordering by `name` is
-             * supported.
-             */
-            public List setOrderBy(java.lang.String orderBy) {
-              this.orderBy = orderBy;
-              return this;
-            }
-
-            /**
-             * The maximum number of network peerings to return in one page. The maximum value is
-             * coerced to 1000. The default value of this field is 500.
+             * The maximum number of peering routes to return in one page. The service may return
+             * fewer than this value. The maximum value is coerced to 1000. The default value of
+             * this field is 500.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of network peerings to return in one page. The maximum value is coerced to 1000.
-           The default value of this field is 500.
+            /** The maximum number of peering routes to return in one page. The service may return fewer than this
+           value. The maximum value is coerced to 1000. The default value of this field is 500.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of network peerings to return in one page. The maximum value is
-             * coerced to 1000. The default value of this field is 500.
+             * The maximum number of peering routes to return in one page. The service may return
+             * fewer than this value. The maximum value is coerced to 1000. The default value of
+             * this field is 500.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -1894,15 +2373,15 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * A page token, received from a previous `ListNetworkPeerings` call. Provide this to
+             * A page token, received from a previous `ListPeeringRoutes` call. Provide this to
              * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListNetworkPeerings` must match the call that provided the page token.
+             * `ListPeeringRoutes` must match the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** A page token, received from a previous `ListNetworkPeerings` call. Provide this to retrieve the
-           subsequent page. When paginating, all other parameters provided to `ListNetworkPeerings` must match
+            /** A page token, received from a previous `ListPeeringRoutes` call. Provide this to retrieve the
+           subsequent page. When paginating, all other parameters provided to `ListPeeringRoutes` must match
            the call that provided the page token.
              */
             public java.lang.String getPageToken() {
@@ -1910,9 +2389,9 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * A page token, received from a previous `ListNetworkPeerings` call. Provide this to
+             * A page token, received from a previous `ListPeeringRoutes` call. Provide this to
              * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListNetworkPeerings` must match the call that provided the page token.
+             * `ListPeeringRoutes` must match the call that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -1924,493 +2403,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
               return (List) super.set(parameterName, value);
             }
           }
-          /**
-           * Modifies a `NetworkPeering` resource. Only the `description` field can be updated. Only fields
-           * specified in `updateMask` are applied.
-           *
-           * Create a request for the method "networkPeerings.patch".
-           *
-           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
-           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-           *
-           * @param name Output only. The resource name of the network peering. Resource names are scheme-less URIs that
-           *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           *        example: `projects/my-project/locations/global/networkPeerings/my-peering`
-           * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPeering}
-           * @return the request
-           */
-          public Patch patch(java.lang.String name, com.google.api.services.vmwareengine.v1.model.NetworkPeering content) throws java.io.IOException {
-            Patch result = new Patch(name, content);
-            initialize(result);
-            return result;
-          }
 
-          public class Patch extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
-
-            private static final String REST_PATH = "v1/{+name}";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-
-            /**
-             * Modifies a `NetworkPeering` resource. Only the `description` field can be updated. Only fields
-             * specified in `updateMask` are applied.
-             *
-             * Create a request for the method "networkPeerings.patch".
-             *
-             * This request holds the parameters needed by the the vmwareengine server.  After setting any
-             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Output only. The resource name of the network peering. Resource names are scheme-less URIs that
-           *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           *        example: `projects/my-project/locations/global/networkPeerings/my-peering`
-             * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPeering}
-             * @since 1.13
-             */
-            protected Patch(java.lang.String name, com.google.api.services.vmwareengine.v1.model.NetworkPeering content) {
-              super(VMwareEngine.this, "PATCH", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-              }
-            }
-
-            @Override
-            public Patch set$Xgafv(java.lang.String $Xgafv) {
-              return (Patch) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Patch setAccessToken(java.lang.String accessToken) {
-              return (Patch) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Patch setAlt(java.lang.String alt) {
-              return (Patch) super.setAlt(alt);
-            }
-
-            @Override
-            public Patch setCallback(java.lang.String callback) {
-              return (Patch) super.setCallback(callback);
-            }
-
-            @Override
-            public Patch setFields(java.lang.String fields) {
-              return (Patch) super.setFields(fields);
-            }
-
-            @Override
-            public Patch setKey(java.lang.String key) {
-              return (Patch) super.setKey(key);
-            }
-
-            @Override
-            public Patch setOauthToken(java.lang.String oauthToken) {
-              return (Patch) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Patch) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Patch setQuotaUser(java.lang.String quotaUser) {
-              return (Patch) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Patch setUploadType(java.lang.String uploadType) {
-              return (Patch) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Patch) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Output only. The resource name of the network peering. Resource names are scheme-less
-             * URIs that follow the conventions in
-             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             * project/locations/global/networkPeerings/my-peering`
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Output only. The resource name of the network peering. Resource names are scheme-less URIs that
-           follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-           `projects/my-project/locations/global/networkPeerings/my-peering`
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Output only. The resource name of the network peering. Resource names are scheme-less
-             * URIs that follow the conventions in
-             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             * project/locations/global/networkPeerings/my-peering`
-             */
-            public Patch setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            /**
-             * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check if original
-             * operation with the same request ID was received, and if so, will ignore the second
-             * request. This prevents clients from accidentally creating duplicate commitments. The
-             * request ID must be a valid UUID with the exception that zero UUID is not supported
-             * (00000000-0000-0000-0000-000000000000).
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String requestId;
-
-            /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
-           your request, the server will know to ignore the request if it has already been completed. The
-           server guarantees that a request doesn't result in creation of duplicate commitments for at least
-           60 minutes. For example, consider a situation where you make an initial request and the request
-           times out. If you make the request again with the same request ID, the server can check if original
-           operation with the same request ID was received, and if so, will ignore the second request. This
-           prevents clients from accidentally creating duplicate commitments. The request ID must be a valid
-           UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-             */
-            public java.lang.String getRequestId() {
-              return requestId;
-            }
-
-            /**
-             * Optional. A request ID to identify requests. Specify a unique request ID so that if
-             * you must retry your request, the server will know to ignore the request if it has
-             * already been completed. The server guarantees that a request doesn't result in
-             * creation of duplicate commitments for at least 60 minutes. For example, consider a
-             * situation where you make an initial request and the request times out. If you make
-             * the request again with the same request ID, the server can check if original
-             * operation with the same request ID was received, and if so, will ignore the second
-             * request. This prevents clients from accidentally creating duplicate commitments. The
-             * request ID must be a valid UUID with the exception that zero UUID is not supported
-             * (00000000-0000-0000-0000-000000000000).
-             */
-            public Patch setRequestId(java.lang.String requestId) {
-              this.requestId = requestId;
-              return this;
-            }
-
-            /**
-             * Required. Field mask is used to specify the fields to be overwritten in the
-             * `NetworkPeering` resource by the update. The fields specified in the `update_mask`
-             * are relative to the resource, not the full request. A field will be overwritten if it
-             * is in the mask. If the user does not provide a mask then all fields will be
-             * overwritten.
-             */
-            @com.google.api.client.util.Key
-            private String updateMask;
-
-            /** Required. Field mask is used to specify the fields to be overwritten in the `NetworkPeering`
-           resource by the update. The fields specified in the `update_mask` are relative to the resource, not
-           the full request. A field will be overwritten if it is in the mask. If the user does not provide a
-           mask then all fields will be overwritten.
-             */
-            public String getUpdateMask() {
-              return updateMask;
-            }
-
-            /**
-             * Required. Field mask is used to specify the fields to be overwritten in the
-             * `NetworkPeering` resource by the update. The fields specified in the `update_mask`
-             * are relative to the resource, not the full request. A field will be overwritten if it
-             * is in the mask. If the user does not provide a mask then all fields will be
-             * overwritten.
-             */
-            public Patch setUpdateMask(String updateMask) {
-              this.updateMask = updateMask;
-              return this;
-            }
-
-            @Override
-            public Patch set(String parameterName, Object value) {
-              return (Patch) super.set(parameterName, value);
-            }
-          }
-
-          /**
-           * An accessor for creating requests from the PeeringRoutes collection.
-           *
-           * <p>The typical use is:</p>
-           * <pre>
-           *   {@code VMwareEngine vmwareengine = new VMwareEngine(...);}
-           *   {@code VMwareEngine.PeeringRoutes.List request = vmwareengine.peeringRoutes().list(parameters ...)}
-           * </pre>
-           *
-           * @return the resource collection
-           */
-          public PeeringRoutes peeringRoutes() {
-            return new PeeringRoutes();
-          }
-
-          /**
-           * The "peeringRoutes" collection of methods.
-           */
-          public class PeeringRoutes {
-
-            /**
-             * Lists the network peering routes exchanged over a peering connection.
-             *
-             * Create a request for the method "peeringRoutes.list".
-             *
-             * This request holds the parameters needed by the vmwareengine server.  After setting any optional
-             * parameters, call the {@link List#execute()} method to invoke the remote operation.
-             *
-             * @param parent Required. The resource name of the network peering to retrieve peering routes from. Resource names
-             *        are schemeless URIs that follow the conventions in
-             *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             *        project/locations/global/networkPeerings/my-peering`
-             * @return the request
-             */
-            public List list(java.lang.String parent) throws java.io.IOException {
-              List result = new List(parent);
-              initialize(result);
-              return result;
-            }
-
-            public class List extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.ListPeeringRoutesResponse> {
-
-              private static final String REST_PATH = "v1/{+parent}/peeringRoutes";
-
-              private final java.util.regex.Pattern PARENT_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-
-              /**
-               * Lists the network peering routes exchanged over a peering connection.
-               *
-               * Create a request for the method "peeringRoutes.list".
-               *
-               * This request holds the parameters needed by the the vmwareengine server.  After setting any
-               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param parent Required. The resource name of the network peering to retrieve peering routes from. Resource names
-             *        are schemeless URIs that follow the conventions in
-             *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             *        project/locations/global/networkPeerings/my-peering`
-               * @since 1.13
-               */
-              protected List(java.lang.String parent) {
-                super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.ListPeeringRoutesResponse.class);
-                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-                }
-              }
-
-              @Override
-              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                return super.executeUsingHead();
-              }
-
-              @Override
-              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                return super.buildHttpRequestUsingHead();
-              }
-
-              @Override
-              public List set$Xgafv(java.lang.String $Xgafv) {
-                return (List) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public List setAccessToken(java.lang.String accessToken) {
-                return (List) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public List setAlt(java.lang.String alt) {
-                return (List) super.setAlt(alt);
-              }
-
-              @Override
-              public List setCallback(java.lang.String callback) {
-                return (List) super.setCallback(callback);
-              }
-
-              @Override
-              public List setFields(java.lang.String fields) {
-                return (List) super.setFields(fields);
-              }
-
-              @Override
-              public List setKey(java.lang.String key) {
-                return (List) super.setKey(key);
-              }
-
-              @Override
-              public List setOauthToken(java.lang.String oauthToken) {
-                return (List) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (List) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public List setQuotaUser(java.lang.String quotaUser) {
-                return (List) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public List setUploadType(java.lang.String uploadType) {
-                return (List) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public List setUploadProtocol(java.lang.String uploadProtocol) {
-                return (List) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * Required. The resource name of the network peering to retrieve peering routes from.
-               * Resource names are schemeless URIs that follow the conventions in
-               * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-               * project/locations/global/networkPeerings/my-peering`
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String parent;
-
-              /** Required. The resource name of the network peering to retrieve peering routes from. Resource names
-             are schemeless URIs that follow the conventions in
-             https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-             project/locations/global/networkPeerings/my-peering`
-               */
-              public java.lang.String getParent() {
-                return parent;
-              }
-
-              /**
-               * Required. The resource name of the network peering to retrieve peering routes from.
-               * Resource names are schemeless URIs that follow the conventions in
-               * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-               * project/locations/global/networkPeerings/my-peering`
-               */
-              public List setParent(java.lang.String parent) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/networkPeerings/[^/]+$");
-                }
-                this.parent = parent;
-                return this;
-              }
-
-              /**
-               * A filter expression that matches resources returned in the response. Currently,
-               * only filtering on the `direction` field is supported. To return routes imported
-               * from the peer network, provide "direction=INCOMING". To return routes exported from
-               * the VMware Engine network, provide "direction=OUTGOING". Other filter expressions
-               * return an error.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String filter;
-
-              /** A filter expression that matches resources returned in the response. Currently, only filtering on
-             the `direction` field is supported. To return routes imported from the peer network, provide
-             "direction=INCOMING". To return routes exported from the VMware Engine network, provide
-             "direction=OUTGOING". Other filter expressions return an error.
-               */
-              public java.lang.String getFilter() {
-                return filter;
-              }
-
-              /**
-               * A filter expression that matches resources returned in the response. Currently,
-               * only filtering on the `direction` field is supported. To return routes imported
-               * from the peer network, provide "direction=INCOMING". To return routes exported from
-               * the VMware Engine network, provide "direction=OUTGOING". Other filter expressions
-               * return an error.
-               */
-              public List setFilter(java.lang.String filter) {
-                this.filter = filter;
-                return this;
-              }
-
-              /**
-               * The maximum number of peering routes to return in one page. The service may return
-               * fewer than this value. The maximum value is coerced to 1000. The default value of
-               * this field is 500.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.Integer pageSize;
-
-              /** The maximum number of peering routes to return in one page. The service may return fewer than this
-             value. The maximum value is coerced to 1000. The default value of this field is 500.
-               */
-              public java.lang.Integer getPageSize() {
-                return pageSize;
-              }
-
-              /**
-               * The maximum number of peering routes to return in one page. The service may return
-               * fewer than this value. The maximum value is coerced to 1000. The default value of
-               * this field is 500.
-               */
-              public List setPageSize(java.lang.Integer pageSize) {
-                this.pageSize = pageSize;
-                return this;
-              }
-
-              /**
-               * A page token, received from a previous `ListPeeringRoutes` call. Provide this to
-               * retrieve the subsequent page. When paginating, all other parameters provided to
-               * `ListPeeringRoutes` must match the call that provided the page token.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String pageToken;
-
-              /** A page token, received from a previous `ListPeeringRoutes` call. Provide this to retrieve the
-             subsequent page. When paginating, all other parameters provided to `ListPeeringRoutes` must match
-             the call that provided the page token.
-               */
-              public java.lang.String getPageToken() {
-                return pageToken;
-              }
-
-              /**
-               * A page token, received from a previous `ListPeeringRoutes` call. Provide this to
-               * retrieve the subsequent page. When paginating, all other parameters provided to
-               * `ListPeeringRoutes` must match the call that provided the page token.
-               */
-              public List setPageToken(java.lang.String pageToken) {
-                this.pageToken = pageToken;
-                return this;
-              }
-
-              @Override
-              public List set(String parameterName, Object value) {
-                return (List) super.set(parameterName, value);
-              }
-            }
-
-          }
         }
       }
       /**

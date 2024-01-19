@@ -18,7 +18,8 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * Represents a card header. For an example in Google Chat apps, see [Card
- * header](https://developers.google.com/chat/ui/widgets/card-header).
+ * header](https://developers.google.com/chat/ui/widgets/card-header). [Google Workspace Add-ons and
+ * Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -38,7 +39,8 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   private java.lang.String imageAltText;
 
   /**
-   * The shape used to crop the image.
+   * The shape used to crop the image. [Google Workspace Add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +87,8 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The shape used to crop the image.
+   * The shape used to crop the image. [Google Workspace Add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
    * @return value or {@code null} for none
    */
   public java.lang.String getImageType() {
@@ -93,7 +96,8 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The shape used to crop the image.
+   * The shape used to crop the image. [Google Workspace Add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
    * @param imageType imageType or {@code null} for none
    */
   public GoogleAppsCardV1CardHeader setImageType(java.lang.String imageType) {

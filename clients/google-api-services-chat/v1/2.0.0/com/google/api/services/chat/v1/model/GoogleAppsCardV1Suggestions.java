@@ -24,7 +24,8 @@ package com.google.api.services.chat.v1.model;
  * `JavaScript`. Suggested values help guide users to enter values that your app can make sense of.
  * When referring to JavaScript, some users might enter `javascript` and others `java script`.
  * Suggesting `JavaScript` can standardize how users interact with your app. When specified,
- * `TextInput.type` is always `SINGLE_LINE`, even if it's set to `MULTIPLE_LINE`.
+ * `TextInput.type` is always `SINGLE_LINE`, even if it's set to `MULTIPLE_LINE`. [Google Workspace
+ * Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

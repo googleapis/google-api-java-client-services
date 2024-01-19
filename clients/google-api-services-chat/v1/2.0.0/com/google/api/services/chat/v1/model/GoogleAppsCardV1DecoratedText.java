@@ -20,7 +20,7 @@ package com.google.api.services.chat.v1.model;
  * A widget that displays text with optional decorations such as a label above or below the text, an
  * icon in front of the text, a selection widget, or a button after the text. For an example in
  * Google Chat apps, see [Decorated text](https://developers.google.com/chat/ui/widgets/decorated-
- * text).
+ * text). [Google Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

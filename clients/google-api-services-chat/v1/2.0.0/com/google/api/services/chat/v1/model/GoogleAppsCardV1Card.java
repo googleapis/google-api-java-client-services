@@ -49,8 +49,8 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Card extends com.google.api.client.json.GenericJson {
 
   /**
-   * The card's actions. Actions are added to the card's toolbar menu. Because Chat app cards have
-   * no toolbar, `cardActions[]` isn't supported by Chat apps. For example, the following JSON
+   * The card's actions. Actions are added to the card's toolbar menu. [Google Workspace Add-
+   * ons](https://developers.google.com/workspace/add-ons): For example, the following JSON
    * constructs a card action menu with `Settings` and `Send Feedback` options: ``` "card_actions":
    * [ { "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView",
    * "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
@@ -62,8 +62,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private java.util.List<GoogleAppsCardV1CardAction> cardActions;
 
   /**
-   * In Google Workspace add-ons, sets the display properties of the `peekCardHeader`. Not supported
-   * by Chat apps.
+   * In Google Workspace Add-ons, sets the display properties of the `peekCardHeader`. [Google
+   * Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,10 +71,10 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
-   * `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons
-   * and Chat apps. For Chat apps, you can use fixed footers in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
-   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create).
+   * `primaryButton` or a `secondaryButton` causes an error. For Chat apps, you can use fixed
+   * footers in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
+   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create). [Google
+   * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private GoogleAppsCardV1CardHeader header;
 
   /**
-   * Name of the card. Used as a card identifier in card navigation. Because Chat apps don't support
-   * card navigation, they ignore this field.
+   * Name of the card. Used as a card identifier in card navigation. [Google Workspace Add-
+   * ons](https://developers.google.com/workspace/add-ons):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +98,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * When displaying contextual content, the peek card header acts as a placeholder so that the user
-   * can navigate forward between the homepage cards and the contextual cards. Not supported by Chat
-   * apps.
+   * can navigate forward between the homepage cards and the contextual cards. [Google Workspace
+   * Add-ons](https://developers.google.com/workspace/add-ons):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,8 +122,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private java.util.List<GoogleAppsCardV1Section> sections;
 
   /**
-   * The card's actions. Actions are added to the card's toolbar menu. Because Chat app cards have
-   * no toolbar, `cardActions[]` isn't supported by Chat apps. For example, the following JSON
+   * The card's actions. Actions are added to the card's toolbar menu. [Google Workspace Add-
+   * ons](https://developers.google.com/workspace/add-ons): For example, the following JSON
    * constructs a card action menu with `Settings` and `Send Feedback` options: ``` "card_actions":
    * [ { "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView",
    * "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
@@ -136,8 +136,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The card's actions. Actions are added to the card's toolbar menu. Because Chat app cards have
-   * no toolbar, `cardActions[]` isn't supported by Chat apps. For example, the following JSON
+   * The card's actions. Actions are added to the card's toolbar menu. [Google Workspace Add-
+   * ons](https://developers.google.com/workspace/add-ons): For example, the following JSON
    * constructs a card action menu with `Settings` and `Send Feedback` options: ``` "card_actions":
    * [ { "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView",
    * "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
@@ -151,8 +151,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * In Google Workspace add-ons, sets the display properties of the `peekCardHeader`. Not supported
-   * by Chat apps.
+   * In Google Workspace Add-ons, sets the display properties of the `peekCardHeader`. [Google
+   * Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayStyle() {
@@ -160,8 +160,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * In Google Workspace add-ons, sets the display properties of the `peekCardHeader`. Not supported
-   * by Chat apps.
+   * In Google Workspace Add-ons, sets the display properties of the `peekCardHeader`. [Google
+   * Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * @param displayStyle displayStyle or {@code null} for none
    */
   public GoogleAppsCardV1Card setDisplayStyle(java.lang.String displayStyle) {
@@ -171,10 +171,10 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
-   * `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons
-   * and Chat apps. For Chat apps, you can use fixed footers in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
-   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create).
+   * `primaryButton` or a `secondaryButton` causes an error. For Chat apps, you can use fixed
+   * footers in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
+   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create). [Google
+   * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1CardFixedFooter getFixedFooter() {
@@ -183,10 +183,10 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
-   * `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons
-   * and Chat apps. For Chat apps, you can use fixed footers in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
-   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create).
+   * `primaryButton` or a `secondaryButton` causes an error. For Chat apps, you can use fixed
+   * footers in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
+   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create). [Google
+   * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * @param fixedFooter fixedFooter or {@code null} for none
    */
   public GoogleAppsCardV1Card setFixedFooter(GoogleAppsCardV1CardFixedFooter fixedFooter) {
@@ -214,8 +214,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * Name of the card. Used as a card identifier in card navigation. Because Chat apps don't support
-   * card navigation, they ignore this field.
+   * Name of the card. Used as a card identifier in card navigation. [Google Workspace Add-
+   * ons](https://developers.google.com/workspace/add-ons):
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -223,8 +223,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * Name of the card. Used as a card identifier in card navigation. Because Chat apps don't support
-   * card navigation, they ignore this field.
+   * Name of the card. Used as a card identifier in card navigation. [Google Workspace Add-
+   * ons](https://developers.google.com/workspace/add-ons):
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1Card setName(java.lang.String name) {
@@ -234,8 +234,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * When displaying contextual content, the peek card header acts as a placeholder so that the user
-   * can navigate forward between the homepage cards and the contextual cards. Not supported by Chat
-   * apps.
+   * can navigate forward between the homepage cards and the contextual cards. [Google Workspace
+   * Add-ons](https://developers.google.com/workspace/add-ons):
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1CardHeader getPeekCardHeader() {
@@ -244,8 +244,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * When displaying contextual content, the peek card header acts as a placeholder so that the user
-   * can navigate forward between the homepage cards and the contextual cards. Not supported by Chat
-   * apps.
+   * can navigate forward between the homepage cards and the contextual cards. [Google Workspace
+   * Add-ons](https://developers.google.com/workspace/add-ons):
    * @param peekCardHeader peekCardHeader or {@code null} for none
    */
   public GoogleAppsCardV1Card setPeekCardHeader(GoogleAppsCardV1CardHeader peekCardHeader) {

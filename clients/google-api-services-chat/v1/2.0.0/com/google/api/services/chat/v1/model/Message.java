@@ -117,16 +117,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A custom name for a Chat message assigned at creation. Must start with `client-` and contain
-   * only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this field
-   * to get, update, or delete the message with the specified value. Assigning a custom name lets a
-   * Chat app recall the message without saving the message `name` from the [response
-   * body](/chat/api/reference/rest/v1/spaces.messages/get#response-body) returned when creating the
-   * message. Assigning a custom name doesn't replace the generated `name` field, the message's
-   * resource name. Instead, it sets the custom name as the `clientAssignedMessageId` field, which
-   * you can reference while processing later operations, like updating or deleting the message. For
-   * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/v1/me
-   * ssages/create#name_a_created_message).
+   * Optional. A custom ID for the message. You can use field to identify a message, or to get,
+   * delete, or update a message. To set a custom ID, specify the [`messageId`](https://developers.g
+   * oogle.com/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.message_id)
+   * field when you create the message. For details, see [Name a message](https://developers.google.
+   * com/chat/api/guides/v1/messages/create#name_a_created_message).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,8 +207,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private MatchedUrl matchedUrl;
 
   /**
-   * Resource name in the form `spaces/messages`. Example:
-   * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+   * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is
+   * the ID of the space where the message is posted and `{message}` is a system-assigned ID for the
+   * message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
+   * custom ID when you create a message, you can use this ID to specify the message in a request by
+   * replacing `{message}` with the value from the `clientAssignedMessageId` field. For example,
+   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a message](https://dev
+   * elopers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -432,16 +432,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A custom name for a Chat message assigned at creation. Must start with `client-` and contain
-   * only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this field
-   * to get, update, or delete the message with the specified value. Assigning a custom name lets a
-   * Chat app recall the message without saving the message `name` from the [response
-   * body](/chat/api/reference/rest/v1/spaces.messages/get#response-body) returned when creating the
-   * message. Assigning a custom name doesn't replace the generated `name` field, the message's
-   * resource name. Instead, it sets the custom name as the `clientAssignedMessageId` field, which
-   * you can reference while processing later operations, like updating or deleting the message. For
-   * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/v1/me
-   * ssages/create#name_a_created_message).
+   * Optional. A custom ID for the message. You can use field to identify a message, or to get,
+   * delete, or update a message. To set a custom ID, specify the [`messageId`](https://developers.g
+   * oogle.com/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.message_id)
+   * field when you create the message. For details, see [Name a message](https://developers.google.
+   * com/chat/api/guides/v1/messages/create#name_a_created_message).
    * @return value or {@code null} for none
    */
   public java.lang.String getClientAssignedMessageId() {
@@ -449,16 +444,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A custom name for a Chat message assigned at creation. Must start with `client-` and contain
-   * only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this field
-   * to get, update, or delete the message with the specified value. Assigning a custom name lets a
-   * Chat app recall the message without saving the message `name` from the [response
-   * body](/chat/api/reference/rest/v1/spaces.messages/get#response-body) returned when creating the
-   * message. Assigning a custom name doesn't replace the generated `name` field, the message's
-   * resource name. Instead, it sets the custom name as the `clientAssignedMessageId` field, which
-   * you can reference while processing later operations, like updating or deleting the message. For
-   * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/v1/me
-   * ssages/create#name_a_created_message).
+   * Optional. A custom ID for the message. You can use field to identify a message, or to get,
+   * delete, or update a message. To set a custom ID, specify the [`messageId`](https://developers.g
+   * oogle.com/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.message_id)
+   * field when you create the message. For details, see [Name a message](https://developers.google.
+   * com/chat/api/guides/v1/messages/create#name_a_created_message).
    * @param clientAssignedMessageId clientAssignedMessageId or {@code null} for none
    */
   public Message setClientAssignedMessageId(java.lang.String clientAssignedMessageId) {
@@ -637,8 +627,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name in the form `spaces/messages`. Example:
-   * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+   * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is
+   * the ID of the space where the message is posted and `{message}` is a system-assigned ID for the
+   * message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
+   * custom ID when you create a message, you can use this ID to specify the message in a request by
+   * replacing `{message}` with the value from the `clientAssignedMessageId` field. For example,
+   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a message](https://dev
+   * elopers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -646,8 +641,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name in the form `spaces/messages`. Example:
-   * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+   * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is
+   * the ID of the space where the message is posted and `{message}` is a system-assigned ID for the
+   * message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
+   * custom ID when you create a message, you can use this ID to specify the message in a request by
+   * replacing `{message}` with the value from the `clientAssignedMessageId` field. For example,
+   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a message](https://dev
+   * elopers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
    * @param name name or {@code null} for none
    */
   public Message setName(java.lang.String name) {

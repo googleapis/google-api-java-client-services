@@ -18,7 +18,8 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * Displays a divider between widgets as a horizontal line. For an example in Google Chat apps, see
- * [Divider](https://developers.google.com/chat/ui/widgets/divider). For example, the following JSON
+ * [Divider](https://developers.google.com/chat/ui/widgets/divider). [Google Workspace Add-ons and
+ * Chat apps](https://developers.google.com/workspace/extend): For example, the following JSON
  * creates a divider: ``` "divider": {} ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

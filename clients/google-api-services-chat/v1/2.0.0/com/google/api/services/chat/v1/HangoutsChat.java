@@ -1630,7 +1630,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * (Supports [turning history on or off for the
        * space](https://support.google.com/chat/answer/7664687) if [the organization allows users to
        * change their history setting](https://support.google.com/a/answer/7664184). Warning:
-       * mutually exclusive with all other field paths.)
+       * mutually exclusive with all other field paths.) - Developer Preview:
+       * `access_settings.audience` (Supports changing the [access
+       * setting](https://support.google.com/chat/answer/11971020) of a space. If no audience is
+       * specified in the access setting, the space's access setting is updated to restricted.
+       * Warning: mutually exclusive with all other field paths.)
        */
       @com.google.api.client.util.Key
       private String updateMask;
@@ -1649,7 +1653,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      in an invalid argument error). - `space_details` - `space_history_state` (Supports [turning history
      on or off for the space](https://support.google.com/chat/answer/7664687) if [the organization
      allows users to change their history setting](https://support.google.com/a/answer/7664184).
-     Warning: mutually exclusive with all other field paths.)
+     Warning: mutually exclusive with all other field paths.) - Developer Preview:
+     `access_settings.audience` (Supports changing the [access
+     setting](https://support.google.com/chat/answer/11971020) of a space. If no audience is specified
+     in the access setting, the space's access setting is updated to restricted. Warning: mutually
+     exclusive with all other field paths.)
        */
       public String getUpdateMask() {
         return updateMask;
@@ -1672,7 +1680,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * (Supports [turning history on or off for the
        * space](https://support.google.com/chat/answer/7664687) if [the organization allows users to
        * change their history setting](https://support.google.com/a/answer/7664184). Warning:
-       * mutually exclusive with all other field paths.)
+       * mutually exclusive with all other field paths.) - Developer Preview:
+       * `access_settings.audience` (Supports changing the [access
+       * setting](https://support.google.com/chat/answer/11971020) of a space. If no audience is
+       * specified in the access setting, the space's access setting is updated to restricted.
+       * Warning: mutually exclusive with all other field paths.)
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -2847,30 +2859,24 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. A custom name for a Chat message assigned at creation. Must start with
-         * `client-` and contain only lowercase letters, numbers, and hyphens up to 63 characters in
-         * length. Specify this field to get, update, or delete the message with the specified
-         * value. Assigning a custom name lets a a Chat app recall the message without saving the
-         * message `name` from the [response body](/chat/api/reference/rest/v1/spaces.messages/get
-         * #response-body) returned when creating the message. Assigning a custom name doesn't
-         * replace the generated `name` field, the message's resource name. Instead, it sets the
-         * custom name as the `clientAssignedMessageId` field, which you can reference while
-         * processing later operations, like updating or deleting the message. For example usage,
-         * see [Name a created message](https://developers.google.com/chat/api/guides/v1/messages/cr
-         * eate#name_a_created_message).
+         * Optional. A custom ID for a message. Lets Chat apps get, update, or delete a message
+         * without needing to store the system-assigned ID in the message's resource name
+         * (represented in the message `name` field). The value for this field must meet the
+         * following requirements: * Begins with `client-`. For example, `client-custom-name` is a
+         * valid custom ID, but `custom-name` is not. * Contains up to 63 characters and only
+         * lowercase letters, numbers, and hyphens. * Is unique within a space. A Chat app can't use
+         * the same custom ID for different messages. For details, see [Name a message](https://deve
+         * lopers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         @com.google.api.client.util.Key
         private java.lang.String messageId;
 
-        /** Optional. A custom name for a Chat message assigned at creation. Must start with `client-` and
-       contain only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this
-       field to get, update, or delete the message with the specified value. Assigning a custom name lets
-       a a Chat app recall the message without saving the message `name` from the [response
-       body](/chat/api/reference/rest/v1/spaces.messages/get#response-body) returned when creating the
-       message. Assigning a custom name doesn't replace the generated `name` field, the message's resource
-       name. Instead, it sets the custom name as the `clientAssignedMessageId` field, which you can
-       reference while processing later operations, like updating or deleting the message. For example
-       usage, see [Name a created
+        /** Optional. A custom ID for a message. Lets Chat apps get, update, or delete a message without
+       needing to store the system-assigned ID in the message's resource name (represented in the message
+       `name` field). The value for this field must meet the following requirements: * Begins with
+       `client-`. For example, `client-custom-name` is a valid custom ID, but `custom-name` is not. *
+       Contains up to 63 characters and only lowercase letters, numbers, and hyphens. * Is unique within a
+       space. A Chat app can't use the same custom ID for different messages. For details, see [Name a
        message](https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         public java.lang.String getMessageId() {
@@ -2878,17 +2884,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. A custom name for a Chat message assigned at creation. Must start with
-         * `client-` and contain only lowercase letters, numbers, and hyphens up to 63 characters in
-         * length. Specify this field to get, update, or delete the message with the specified
-         * value. Assigning a custom name lets a a Chat app recall the message without saving the
-         * message `name` from the [response body](/chat/api/reference/rest/v1/spaces.messages/get
-         * #response-body) returned when creating the message. Assigning a custom name doesn't
-         * replace the generated `name` field, the message's resource name. Instead, it sets the
-         * custom name as the `clientAssignedMessageId` field, which you can reference while
-         * processing later operations, like updating or deleting the message. For example usage,
-         * see [Name a created message](https://developers.google.com/chat/api/guides/v1/messages/cr
-         * eate#name_a_created_message).
+         * Optional. A custom ID for a message. Lets Chat apps get, update, or delete a message
+         * without needing to store the system-assigned ID in the message's resource name
+         * (represented in the message `name` field). The value for this field must meet the
+         * following requirements: * Begins with `client-`. For example, `client-custom-name` is a
+         * valid custom ID, but `custom-name` is not. * Contains up to 63 characters and only
+         * lowercase letters, numbers, and hyphens. * Is unique within a space. A Chat app can't use
+         * the same custom ID for different messages. For details, see [Name a message](https://deve
+         * lopers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         public Create setMessageId(java.lang.String messageId) {
           this.messageId = messageId;
@@ -2990,8 +2993,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the message that you want to delete, in the form `spaces/messages`
-       *        Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+       * @param name Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If you've set a
+       *        custom ID for your message, you can use the value from the `clientAssignedMessageId` field
+       *        for `{message}`. For details, see [Name a message]
+       *        (https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3022,8 +3027,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the message that you want to delete, in the form `spaces/messages`
-       *        Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         * @param name Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If you've set a
+       *        custom ID for your message, you can use the value from the `clientAssignedMessageId` field
+       *        for `{message}`. For details, see [Name a message]
+       *        (https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -3092,22 +3099,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. Resource name of the message that you want to delete, in the form
-         * `spaces/messages` Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         * Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If
+         * you've set a custom ID for your message, you can use the value from the
+         * `clientAssignedMessageId` field for `{message}`. For details, see [Name a message] (https
+         * ://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the message that you want to delete, in the form `spaces/messages`
-       Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+        /** Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If you've set a
+       custom ID for your message, you can use the value from the `clientAssignedMessageId` field for
+       `{message}`. For details, see [Name a message]
+       (https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name of the message that you want to delete, in the form
-         * `spaces/messages` Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         * Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If
+         * you've set a custom ID for your message, you can use the value from the
+         * `clientAssignedMessageId` field for `{message}`. For details, see [Name a message] (https
+         * ://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3168,10 +3181,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the message to retrieve. Format: `spaces/{space}/messages/{message}` If
-       *        the message begins with `client-`, then it has a custom name assigned by a Chat app that
-       *        created it with the Chat REST API. That Chat app (but not others) can pass the custom name
-       *        to get, update, or delete the message. To learn more, see [create and name a message]
+       * @param name Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If you've set a
+       *        custom ID for your message, you can use the value from the `clientAssignedMessageId` field
+       *        for `{message}`. For details, see [Name a message]
        *        (https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
        * @return the request
        */
@@ -3203,10 +3215,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the message to retrieve. Format: `spaces/{space}/messages/{message}` If
-       *        the message begins with `client-`, then it has a custom name assigned by a Chat app that
-       *        created it with the Chat REST API. That Chat app (but not others) can pass the custom name
-       *        to get, update, or delete the message. To learn more, see [create and name a message]
+         * @param name Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If you've set a
+       *        custom ID for your message, you can use the value from the `clientAssignedMessageId` field
+       *        for `{message}`. For details, see [Name a message]
        *        (https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          * @since 1.13
          */
@@ -3286,20 +3297,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. Resource name of the message to retrieve. Format:
-         * `spaces/{space}/messages/{message}` If the message begins with `client-`, then it has a
-         * custom name assigned by a Chat app that created it with the Chat REST API. That Chat app
-         * (but not others) can pass the custom name to get, update, or delete the message. To learn
-         * more, see [create and name a message] (https://developers.google.com/chat/api/guides/v1/m
-         * essages/create#name_a_created_message).
+         * Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If
+         * you've set a custom ID for your message, you can use the value from the
+         * `clientAssignedMessageId` field for `{message}`. For details, see [Name a message] (https
+         * ://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the message to retrieve. Format: `spaces/{space}/messages/{message}` If
-       the message begins with `client-`, then it has a custom name assigned by a Chat app that created it
-       with the Chat REST API. That Chat app (but not others) can pass the custom name to get, update, or
-       delete the message. To learn more, see [create and name a message]
+        /** Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If you've set a
+       custom ID for your message, you can use the value from the `clientAssignedMessageId` field for
+       `{message}`. For details, see [Name a message]
        (https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         public java.lang.String getName() {
@@ -3307,12 +3315,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. Resource name of the message to retrieve. Format:
-         * `spaces/{space}/messages/{message}` If the message begins with `client-`, then it has a
-         * custom name assigned by a Chat app that created it with the Chat REST API. That Chat app
-         * (but not others) can pass the custom name to get, update, or delete the message. To learn
-         * more, see [create and name a message] (https://developers.google.com/chat/api/guides/v1/m
-         * essages/create#name_a_created_message).
+         * Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If
+         * you've set a custom ID for your message, you can use the value from the
+         * `clientAssignedMessageId` field for `{message}`. For details, see [Name a message] (https
+         * ://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3659,8 +3665,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name in the form `spaces/messages`. Example:
-       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+       * @param name Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
+       *        of the space where the message is posted and `{message}` is a system-assigned ID for the
+       *        message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
+       *        custom ID when you create a message, you can use this ID to specify the message in a
+       *        request by replacing `{message}` with the value from the `clientAssignedMessageId` field.
+       *        For example, `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a me
+       *        ssage](https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_mes
+       *        sage).
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -3694,8 +3706,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name in the form `spaces/messages`. Example:
-       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         * @param name Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
+       *        of the space where the message is posted and `{message}` is a system-assigned ID for the
+       *        message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
+       *        custom ID when you create a message, you can use this ID to specify the message in a
+       *        request by replacing `{message}` with the value from the `clientAssignedMessageId` field.
+       *        For example, `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a me
+       *        ssage](https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_mes
+       *        sage).
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -3765,22 +3783,39 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Resource name in the form `spaces/messages`. Example:
-         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}`
+         * is the ID of the space where the message is posted and `{message}` is a system-assigned
+         * ID for the message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
+         * If you set a custom ID when you create a message, you can use this ID to specify the
+         * message in a request by replacing `{message}` with the value from the
+         * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
+         * name`. For details, see [Name a message](https://developers.google.com/chat/api/guides/v1
+         * /messages/create#name_a_created_message).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name in the form `spaces/messages`. Example:
-       `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+        /** Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
+       of the space where the message is posted and `{message}` is a system-assigned ID for the message.
+       For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
+       create a message, you can use this ID to specify the message in a request by replacing `{message}`
+       with the value from the `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages
+       /client-custom-name`. For details, see [Name a
+       message](https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Resource name in the form `spaces/messages`. Example:
-         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}`
+         * is the ID of the space where the message is posted and `{message}` is a system-assigned
+         * ID for the message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
+         * If you set a custom ID when you create a message, you can use this ID to specify the
+         * message in a request by replacing `{message}` with the value from the
+         * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
+         * name`. For details, see [Name a message](https://developers.google.com/chat/api/guides/v1
+         * /messages/create#name_a_created_message).
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3822,27 +3857,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. The field paths to update. Separate multiple values with commas. Currently
-         * supported field paths: - `text` - `attachment` - `cards` (Requires [app
-         * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2` (Requires [app
+         * Required. The field paths to update. Separate multiple values with commas or use `*` to
+         * update all field paths. Currently supported field paths: - `text` - `attachment` -
+         * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
+         * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
+         * Developer Preview: `accessory_widgets` (Requires [app
          * authentication](/chat/api/guides/auth/service-accounts).)
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. The field paths to update. Separate multiple values with commas. Currently supported
-       field paths: - `text` - `attachment` - `cards` (Requires [app authentication](/chat/api/guides/auth
-       /service-accounts).) - `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-
-       accounts).)
+        /** Required. The field paths to update. Separate multiple values with commas or use `*` to update all
+       field paths. Currently supported field paths: - `text` - `attachment` - `cards` (Requires [app
+       authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2` (Requires [app
+       authentication](/chat/api/guides/auth/service-accounts).) - Developer Preview: `accessory_widgets`
+       (Requires [app authentication](/chat/api/guides/auth/service-accounts).)
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Required. The field paths to update. Separate multiple values with commas. Currently
-         * supported field paths: - `text` - `attachment` - `cards` (Requires [app
-         * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2` (Requires [app
+         * Required. The field paths to update. Separate multiple values with commas or use `*` to
+         * update all field paths. Currently supported field paths: - `text` - `attachment` -
+         * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
+         * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
+         * Developer Preview: `accessory_widgets` (Requires [app
          * authentication](/chat/api/guides/auth/service-accounts).)
          */
         public Patch setUpdateMask(String updateMask) {
@@ -3870,8 +3910,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name in the form `spaces/messages`. Example:
-       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+       * @param name Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
+       *        of the space where the message is posted and `{message}` is a system-assigned ID for the
+       *        message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
+       *        custom ID when you create a message, you can use this ID to specify the message in a
+       *        request by replacing `{message}` with the value from the `clientAssignedMessageId` field.
+       *        For example, `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a me
+       *        ssage](https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_mes
+       *        sage).
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -3905,8 +3951,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name in the form `spaces/messages`. Example:
-       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         * @param name Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
+       *        of the space where the message is posted and `{message}` is a system-assigned ID for the
+       *        message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
+       *        custom ID when you create a message, you can use this ID to specify the message in a
+       *        request by replacing `{message}` with the value from the `clientAssignedMessageId` field.
+       *        For example, `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a me
+       *        ssage](https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_mes
+       *        sage).
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -3976,22 +4028,39 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Resource name in the form `spaces/messages`. Example:
-         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}`
+         * is the ID of the space where the message is posted and `{message}` is a system-assigned
+         * ID for the message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
+         * If you set a custom ID when you create a message, you can use this ID to specify the
+         * message in a request by replacing `{message}` with the value from the
+         * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
+         * name`. For details, see [Name a message](https://developers.google.com/chat/api/guides/v1
+         * /messages/create#name_a_created_message).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name in the form `spaces/messages`. Example:
-       `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+        /** Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
+       of the space where the message is posted and `{message}` is a system-assigned ID for the message.
+       For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
+       create a message, you can use this ID to specify the message in a request by replacing `{message}`
+       with the value from the `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages
+       /client-custom-name`. For details, see [Name a
+       message](https://developers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Resource name in the form `spaces/messages`. Example:
-         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+         * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}`
+         * is the ID of the space where the message is posted and `{message}` is a system-assigned
+         * ID for the message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
+         * If you set a custom ID when you create a message, you can use this ID to specify the
+         * message in a request by replacing `{message}` with the value from the
+         * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
+         * name`. For details, see [Name a message](https://developers.google.com/chat/api/guides/v1
+         * /messages/create#name_a_created_message).
          */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4033,27 +4102,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. The field paths to update. Separate multiple values with commas. Currently
-         * supported field paths: - `text` - `attachment` - `cards` (Requires [app
-         * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2` (Requires [app
+         * Required. The field paths to update. Separate multiple values with commas or use `*` to
+         * update all field paths. Currently supported field paths: - `text` - `attachment` -
+         * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
+         * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
+         * Developer Preview: `accessory_widgets` (Requires [app
          * authentication](/chat/api/guides/auth/service-accounts).)
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. The field paths to update. Separate multiple values with commas. Currently supported
-       field paths: - `text` - `attachment` - `cards` (Requires [app authentication](/chat/api/guides/auth
-       /service-accounts).) - `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-
-       accounts).)
+        /** Required. The field paths to update. Separate multiple values with commas or use `*` to update all
+       field paths. Currently supported field paths: - `text` - `attachment` - `cards` (Requires [app
+       authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2` (Requires [app
+       authentication](/chat/api/guides/auth/service-accounts).) - Developer Preview: `accessory_widgets`
+       (Requires [app authentication](/chat/api/guides/auth/service-accounts).)
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Required. The field paths to update. Separate multiple values with commas. Currently
-         * supported field paths: - `text` - `attachment` - `cards` (Requires [app
-         * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2` (Requires [app
+         * Required. The field paths to update. Separate multiple values with commas or use `*` to
+         * update all field paths. Currently supported field paths: - `text` - `attachment` -
+         * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
+         * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
+         * Developer Preview: `accessory_widgets` (Requires [app
          * authentication](/chat/api/guides/auth/service-accounts).)
          */
         public Update setUpdateMask(String updateMask) {

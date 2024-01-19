@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents an `onClick` event that opens a hyperlink.
+ * Represents an `onClick` event that opens a hyperlink. [Google Workspace Add-ons and Chat
+ * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,14 +32,15 @@ public final class GoogleAppsCardV1OpenLink extends com.google.api.client.json.G
 
   /**
    * Whether the client forgets about a link after opening it, or observes it until the window
-   * closes. Not supported by Chat apps.
+   * closes. [Google Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String onClose;
 
   /**
-   * How to open a link. Not supported by Chat apps.
+   * How to open a link. [Google Workspace Add-ons](https://developers.google.com/workspace/add-
+   * ons):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +55,7 @@ public final class GoogleAppsCardV1OpenLink extends com.google.api.client.json.G
 
   /**
    * Whether the client forgets about a link after opening it, or observes it until the window
-   * closes. Not supported by Chat apps.
+   * closes. [Google Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * @return value or {@code null} for none
    */
   public java.lang.String getOnClose() {
@@ -62,7 +64,7 @@ public final class GoogleAppsCardV1OpenLink extends com.google.api.client.json.G
 
   /**
    * Whether the client forgets about a link after opening it, or observes it until the window
-   * closes. Not supported by Chat apps.
+   * closes. [Google Workspace Add-ons](https://developers.google.com/workspace/add-ons):
    * @param onClose onClose or {@code null} for none
    */
   public GoogleAppsCardV1OpenLink setOnClose(java.lang.String onClose) {
@@ -71,7 +73,8 @@ public final class GoogleAppsCardV1OpenLink extends com.google.api.client.json.G
   }
 
   /**
-   * How to open a link. Not supported by Chat apps.
+   * How to open a link. [Google Workspace Add-ons](https://developers.google.com/workspace/add-
+   * ons):
    * @return value or {@code null} for none
    */
   public java.lang.String getOpenAs() {
@@ -79,7 +82,8 @@ public final class GoogleAppsCardV1OpenLink extends com.google.api.client.json.G
   }
 
   /**
-   * How to open a link. Not supported by Chat apps.
+   * How to open a link. [Google Workspace Add-ons](https://developers.google.com/workspace/add-
+   * ons):
    * @param openAs openAs or {@code null} for none
    */
   public GoogleAppsCardV1OpenLink setOpenAs(java.lang.String openAs) {

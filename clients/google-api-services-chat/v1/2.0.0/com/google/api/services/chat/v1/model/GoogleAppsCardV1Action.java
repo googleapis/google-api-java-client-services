@@ -19,7 +19,8 @@ package com.google.api.services.chat.v1.model;
 /**
  * An action that describes the behavior when the form is submitted. For example, you can invoke an
  * Apps Script script to handle the form. If the action is triggered, the form values are sent to
- * the server.
+ * the server. [Google Workspace Add-ons and Chat
+ * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -47,8 +48,8 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * running a function—as normal. By specifying an `interaction`, the app can respond in special
    * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
    * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
-   * indicator isn't shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
-   * for an add-on, the entire card is stripped and nothing is shown in the client.
+   * indicator isn't shown. If specified for an add-on, the entire card is stripped and nothing is
+   * shown in the client. [Google Chat apps](https://developers.google.com/chat):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +115,8 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * running a function—as normal. By specifying an `interaction`, the app can respond in special
    * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
    * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
-   * indicator isn't shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
-   * for an add-on, the entire card is stripped and nothing is shown in the client.
+   * indicator isn't shown. If specified for an add-on, the entire card is stripped and nothing is
+   * shown in the client. [Google Chat apps](https://developers.google.com/chat):
    * @return value or {@code null} for none
    */
   public java.lang.String getInteraction() {
@@ -129,8 +130,8 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * running a function—as normal. By specifying an `interaction`, the app can respond in special
    * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
    * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
-   * indicator isn't shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
-   * for an add-on, the entire card is stripped and nothing is shown in the client.
+   * indicator isn't shown. If specified for an add-on, the entire card is stripped and nothing is
+   * shown in the client. [Google Chat apps](https://developers.google.com/chat):
    * @param interaction interaction or {@code null} for none
    */
   public GoogleAppsCardV1Action setInteraction(java.lang.String interaction) {

@@ -18,7 +18,8 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A data source that populates Google Chat spaces as selection items for a multiselect menu. Only
- * populates spaces that the user is a member of.
+ * populates spaces that the user is a member of. [Google Chat
+ * apps](https://developers.google.com/chat):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

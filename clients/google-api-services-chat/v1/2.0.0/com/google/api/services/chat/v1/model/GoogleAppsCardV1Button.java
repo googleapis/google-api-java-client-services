@@ -20,6 +20,7 @@ package com.google.api.services.chat.v1.model;
  * A text, icon, or text and icon button that users can click. For an example in Google Chat apps,
  * see [Button list](https://developers.google.com/chat/ui/widgets/button-list). To make an image a
  * clickable button, specify an `Image` (not an `ImageComponent`) and set an `onClick` action.
+ * [Google Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

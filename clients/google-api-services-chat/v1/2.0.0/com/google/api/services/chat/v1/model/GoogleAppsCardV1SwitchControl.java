@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Either a toggle-style switch or a checkbox inside a `decoratedText` widget. Only supported in the
+ * Either a toggle-style switch or a checkbox inside a `decoratedText` widget. [Google Workspace
+ * Add-ons and Chat apps](https://developers.google.com/workspace/extend): Only supported in the
  * `decoratedText` widget.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,7 +32,8 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.json.GenericJson {
 
   /**
-   * How the switch appears in the user interface.
+   * How the switch appears in the user interface. [Google Workspace Add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +72,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   private java.lang.String value;
 
   /**
-   * How the switch appears in the user interface.
+   * How the switch appears in the user interface. [Google Workspace Add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
    * @return value or {@code null} for none
    */
   public java.lang.String getControlType() {
@@ -78,7 +81,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * How the switch appears in the user interface.
+   * How the switch appears in the user interface. [Google Workspace Add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
    * @param controlType controlType or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setControlType(java.lang.String controlType) {

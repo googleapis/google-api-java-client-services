@@ -20,7 +20,8 @@ package com.google.api.services.chat.v1.model;
  * An icon displayed in a widget on a card. For an example in Google Chat apps, see
  * [Icon](https://developers.google.com/chat/ui/widgets/icon). Supports [built-
  * in](https://developers.google.com/chat/format-messages#builtinicons) and
- * [custom](https://developers.google.com/chat/format-messages#customicons) icons.
+ * [custom](https://developers.google.com/chat/format-messages#customicons) icons. [Google Workspace
+ * Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

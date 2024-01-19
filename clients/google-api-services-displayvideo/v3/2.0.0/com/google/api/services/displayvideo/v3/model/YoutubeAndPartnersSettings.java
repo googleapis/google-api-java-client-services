@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v3.model;
 
 /**
- * Settings for YouTube and Partners line items. Next ID: 15
+ * Settings for YouTube and Partners line items.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -54,30 +54,30 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   private YoutubeAndPartnersInventorySourceConfig inventorySourceSettings;
 
   /**
-   * The ID of the form to generate leads.
+   * Optional. The ID of the form to generate leads.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long leadFormId;
 
   /**
-   * The ID of the merchant which is linked to the line item for product feed.
+   * Optional. The ID of the merchant which is linked to the line item for product feed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long linkedMerchantId;
 
   /**
-   * The IDs of the videos appear below the primary video ad when the ad is playing in the YouTube
-   * app on mobile devices.
+   * Optional. The IDs of the videos appear below the primary video ad when the ad is playing in the
+   * YouTube app on mobile devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> relatedVideoIds;
 
   /**
-   * The average number of times you want ads from this line item to show to the same person over a
-   * certain period of time.
+   * Optional. The average number of times you want ads from this line item to show to the same
+   * person over a certain period of time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   private ThirdPartyMeasurementConfigs thirdPartyMeasurementConfigs;
 
   /**
-   * The settings related to VideoAdSequence.
+   * Optional. The settings related to VideoAdSequence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +161,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The ID of the form to generate leads.
+   * Optional. The ID of the form to generate leads.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLeadFormId() {
@@ -169,7 +169,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The ID of the form to generate leads.
+   * Optional. The ID of the form to generate leads.
    * @param leadFormId leadFormId or {@code null} for none
    */
   public YoutubeAndPartnersSettings setLeadFormId(java.lang.Long leadFormId) {
@@ -178,7 +178,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The ID of the merchant which is linked to the line item for product feed.
+   * Optional. The ID of the merchant which is linked to the line item for product feed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLinkedMerchantId() {
@@ -186,7 +186,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The ID of the merchant which is linked to the line item for product feed.
+   * Optional. The ID of the merchant which is linked to the line item for product feed.
    * @param linkedMerchantId linkedMerchantId or {@code null} for none
    */
   public YoutubeAndPartnersSettings setLinkedMerchantId(java.lang.Long linkedMerchantId) {
@@ -195,8 +195,8 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The IDs of the videos appear below the primary video ad when the ad is playing in the YouTube
-   * app on mobile devices.
+   * Optional. The IDs of the videos appear below the primary video ad when the ad is playing in the
+   * YouTube app on mobile devices.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRelatedVideoIds() {
@@ -204,8 +204,8 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The IDs of the videos appear below the primary video ad when the ad is playing in the YouTube
-   * app on mobile devices.
+   * Optional. The IDs of the videos appear below the primary video ad when the ad is playing in the
+   * YouTube app on mobile devices.
    * @param relatedVideoIds relatedVideoIds or {@code null} for none
    */
   public YoutubeAndPartnersSettings setRelatedVideoIds(java.util.List<java.lang.String> relatedVideoIds) {
@@ -214,8 +214,8 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The average number of times you want ads from this line item to show to the same person over a
-   * certain period of time.
+   * Optional. The average number of times you want ads from this line item to show to the same
+   * person over a certain period of time.
    * @return value or {@code null} for none
    */
   public TargetFrequency getTargetFrequency() {
@@ -223,8 +223,8 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The average number of times you want ads from this line item to show to the same person over a
-   * certain period of time.
+   * Optional. The average number of times you want ads from this line item to show to the same
+   * person over a certain period of time.
    * @param targetFrequency targetFrequency or {@code null} for none
    */
   public YoutubeAndPartnersSettings setTargetFrequency(TargetFrequency targetFrequency) {
@@ -250,7 +250,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The settings related to VideoAdSequence.
+   * Optional. The settings related to VideoAdSequence.
    * @return value or {@code null} for none
    */
   public VideoAdSequenceSettings getVideoAdSequenceSettings() {
@@ -258,7 +258,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The settings related to VideoAdSequence.
+   * Optional. The settings related to VideoAdSequence.
    * @param videoAdSequenceSettings videoAdSequenceSettings or {@code null} for none
    */
   public YoutubeAndPartnersSettings setVideoAdSequenceSettings(VideoAdSequenceSettings videoAdSequenceSettings) {

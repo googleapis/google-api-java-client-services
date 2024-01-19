@@ -31,7 +31,9 @@ package com.google.api.services.displayvideo.v1.model;
 public final class ContactInfoList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. The consent setting for the users in contact_infos.
+   * Input only. The consent setting for the users in contact_infos. Leaving this field unset
+   * indicates that consent is not specified. If ad_user_data or ad_personalization fields are set
+   * to `CONSENT_STATUS_DENIED`, the request will return an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +54,9 @@ public final class ContactInfoList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Input only. The consent setting for the users in contact_infos.
+   * Input only. The consent setting for the users in contact_infos. Leaving this field unset
+   * indicates that consent is not specified. If ad_user_data or ad_personalization fields are set
+   * to `CONSENT_STATUS_DENIED`, the request will return an error.
    * @return value or {@code null} for none
    */
   public Consent getConsent() {
@@ -60,7 +64,9 @@ public final class ContactInfoList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Input only. The consent setting for the users in contact_infos.
+   * Input only. The consent setting for the users in contact_infos. Leaving this field unset
+   * indicates that consent is not specified. If ad_user_data or ad_personalization fields are set
+   * to `CONSENT_STATUS_DENIED`, the request will return an error.
    * @param consent consent or {@code null} for none
    */
   public ContactInfoList setConsent(Consent consent) {

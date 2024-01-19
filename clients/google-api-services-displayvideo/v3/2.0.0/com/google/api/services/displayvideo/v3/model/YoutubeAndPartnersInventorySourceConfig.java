@@ -32,7 +32,15 @@ package com.google.api.services.displayvideo.v3.model;
 public final class YoutubeAndPartnersInventorySourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to target inventory on YouTube. This includes both search, channels and videos.
+   * Optional. Whether to target inventory in video apps available with Google TV.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeGoogleTv;
+
+  /**
+   * Optional. Whether to target inventory on YouTube. This includes both search, channels and
+   * videos.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +55,25 @@ public final class YoutubeAndPartnersInventorySourceConfig extends com.google.ap
   private java.lang.Boolean includeYoutubeVideoPartners;
 
   /**
-   * Whether to target inventory on YouTube. This includes both search, channels and videos.
+   * Optional. Whether to target inventory in video apps available with Google TV.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeGoogleTv() {
+    return includeGoogleTv;
+  }
+
+  /**
+   * Optional. Whether to target inventory in video apps available with Google TV.
+   * @param includeGoogleTv includeGoogleTv or {@code null} for none
+   */
+  public YoutubeAndPartnersInventorySourceConfig setIncludeGoogleTv(java.lang.Boolean includeGoogleTv) {
+    this.includeGoogleTv = includeGoogleTv;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to target inventory on YouTube. This includes both search, channels and
+   * videos.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeYoutube() {
@@ -55,7 +81,8 @@ public final class YoutubeAndPartnersInventorySourceConfig extends com.google.ap
   }
 
   /**
-   * Whether to target inventory on YouTube. This includes both search, channels and videos.
+   * Optional. Whether to target inventory on YouTube. This includes both search, channels and
+   * videos.
    * @param includeYoutube includeYoutube or {@code null} for none
    */
   public YoutubeAndPartnersInventorySourceConfig setIncludeYoutube(java.lang.Boolean includeYoutube) {

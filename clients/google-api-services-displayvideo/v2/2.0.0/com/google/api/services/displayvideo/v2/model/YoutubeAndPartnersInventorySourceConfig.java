@@ -32,6 +32,13 @@ package com.google.api.services.displayvideo.v2.model;
 public final class YoutubeAndPartnersInventorySourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether to target inventory in video apps available with Google TV.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeGoogleTv;
+
+  /**
    * Whether to target inventory on the YouTube search results page.
    * The value may be {@code null}.
    */
@@ -53,6 +60,23 @@ public final class YoutubeAndPartnersInventorySourceConfig extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeYoutubeVideos;
+
+  /**
+   * Optional. Whether to target inventory in video apps available with Google TV.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeGoogleTv() {
+    return includeGoogleTv;
+  }
+
+  /**
+   * Optional. Whether to target inventory in video apps available with Google TV.
+   * @param includeGoogleTv includeGoogleTv or {@code null} for none
+   */
+  public YoutubeAndPartnersInventorySourceConfig setIncludeGoogleTv(java.lang.Boolean includeGoogleTv) {
+    this.includeGoogleTv = includeGoogleTv;
+    return this;
+  }
 
   /**
    * Whether to target inventory on the YouTube search results page.

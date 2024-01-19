@@ -21,7 +21,7 @@ package com.google.api.services.apigee.v1.model;
  * condition. Within a condition, each element is ORed. Across conditions elements are ANDed. For
  * example if a SecurityAction has the following: api_keys: ["key1", "key2"] and developers:
  * ["dev1", "dev2"] then this is interpreted as: enforce the action if the incoming request has
- * ((api_key = "key1" OR api_key="key") AND (developer="dev1" OR developer="dev2"))
+ * ((api_key = "key1" OR api_key="key") AND (developer="dev1" OR developer="dev2")).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -35,8 +35,9 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
 
   /**
    * Optional. A list of Bot Reasons. Current options: Flooder, Brute Guessor, Static Content
-   * Scraper, OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection and Advanced API
-   * Scraper.
+   * Scraper, OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection, Advanced API
+   * Scraper, Search Engine Crawlers, Public Cloud, Public Cloud AWS, Public Cloud Azure, and Public
+   * Cloud GCP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +52,9 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
 
   /**
    * Optional. A list of Bot Reasons. Current options: Flooder, Brute Guessor, Static Content
-   * Scraper, OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection and Advanced API
-   * Scraper.
+   * Scraper, OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection, Advanced API
+   * Scraper, Search Engine Crawlers, Public Cloud, Public Cloud AWS, Public Cloud Azure, and Public
+   * Cloud GCP.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBotReasons() {
@@ -61,8 +63,9 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
 
   /**
    * Optional. A list of Bot Reasons. Current options: Flooder, Brute Guessor, Static Content
-   * Scraper, OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection and Advanced API
-   * Scraper.
+   * Scraper, OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection, Advanced API
+   * Scraper, Search Engine Crawlers, Public Cloud, Public Cloud AWS, Public Cloud Azure, and Public
+   * Cloud GCP.
    * @param botReasons botReasons or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityActionConditionConfig setBotReasons(java.util.List<java.lang.String> botReasons) {

@@ -90,9 +90,10 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.Boolean importCustomRoutesWithPublicIp;
 
   /**
-   * Output only. The resource name of the network peering. Resource names are scheme-less URIs that
-   * follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/global/networkPeerings/my-peering`
+   * Output only. The resource name of the network peering. NetworkPeering is a global resource and
+   * location can only be global. Resource names are scheme-less URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/global/networkPeerings/my-peering`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -307,9 +308,10 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The resource name of the network peering. Resource names are scheme-less URIs that
-   * follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/global/networkPeerings/my-peering`
+   * Output only. The resource name of the network peering. NetworkPeering is a global resource and
+   * location can only be global. Resource names are scheme-less URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/global/networkPeerings/my-peering`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -317,9 +319,10 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The resource name of the network peering. Resource names are scheme-less URIs that
-   * follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/global/networkPeerings/my-peering`
+   * Output only. The resource name of the network peering. NetworkPeering is a global resource and
+   * location can only be global. Resource names are scheme-less URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/global/networkPeerings/my-peering`
    * @param name name or {@code null} for none
    */
   public NetworkPeering setName(java.lang.String name) {

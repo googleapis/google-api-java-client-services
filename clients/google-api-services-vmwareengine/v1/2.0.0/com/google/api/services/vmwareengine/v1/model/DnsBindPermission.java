@@ -33,8 +33,9 @@ public final class DnsBindPermission extends com.google.api.client.json.GenericJ
   /**
    * Required. Output only. The name of the resource which stores the users/service accounts having
    * the permission to bind to the corresponding intranet VPC of the consumer project.
-   * DnsBindPermission is a global resource. Resource names are schemeless URIs that follow the
-   * conventions in https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * DnsBindPermission is a global resource and location can only be global. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
    * project/locations/global/dnsBindPermission`
    * The value may be {@code null}.
    */
@@ -52,8 +53,9 @@ public final class DnsBindPermission extends com.google.api.client.json.GenericJ
   /**
    * Required. Output only. The name of the resource which stores the users/service accounts having
    * the permission to bind to the corresponding intranet VPC of the consumer project.
-   * DnsBindPermission is a global resource. Resource names are schemeless URIs that follow the
-   * conventions in https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * DnsBindPermission is a global resource and location can only be global. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
    * project/locations/global/dnsBindPermission`
    * @return value or {@code null} for none
    */
@@ -64,8 +66,9 @@ public final class DnsBindPermission extends com.google.api.client.json.GenericJ
   /**
    * Required. Output only. The name of the resource which stores the users/service accounts having
    * the permission to bind to the corresponding intranet VPC of the consumer project.
-   * DnsBindPermission is a global resource. Resource names are schemeless URIs that follow the
-   * conventions in https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * DnsBindPermission is a global resource and location can only be global. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
    * project/locations/global/dnsBindPermission`
    * @param name name or {@code null} for none
    */

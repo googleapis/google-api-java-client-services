@@ -51,6 +51,20 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
+   * The state of the Reposync CRD
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reposyncCrd;
+
+  /**
+   * The state of the RootSync CRD
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rootsyncCrd;
+
+  /**
    * The state of ConfigSync's process to sync configs to a cluster
    * The value may be {@code null}.
    */
@@ -97,6 +111,40 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
    */
   public ConfigManagementConfigSyncState setErrors(java.util.List<ConfigManagementConfigSyncError> errors) {
     this.errors = errors;
+    return this;
+  }
+
+  /**
+   * The state of the Reposync CRD
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReposyncCrd() {
+    return reposyncCrd;
+  }
+
+  /**
+   * The state of the Reposync CRD
+   * @param reposyncCrd reposyncCrd or {@code null} for none
+   */
+  public ConfigManagementConfigSyncState setReposyncCrd(java.lang.String reposyncCrd) {
+    this.reposyncCrd = reposyncCrd;
+    return this;
+  }
+
+  /**
+   * The state of the RootSync CRD
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRootsyncCrd() {
+    return rootsyncCrd;
+  }
+
+  /**
+   * The state of the RootSync CRD
+   * @param rootsyncCrd rootsyncCrd or {@code null} for none
+   */
+  public ConfigManagementConfigSyncState setRootsyncCrd(java.lang.String rootsyncCrd) {
+    this.rootsyncCrd = rootsyncCrd;
     return this;
   }
 

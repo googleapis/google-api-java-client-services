@@ -51,6 +51,13 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private ClusterUpgradeFleetSpec clusterupgrade;
 
   /**
+   * DataplaneV2 feature spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataplaneV2FeatureSpec dataplanev2;
+
+  /**
    * FleetObservability feature spec.
    * The value may be {@code null}.
    */
@@ -112,6 +119,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setClusterupgrade(ClusterUpgradeFleetSpec clusterupgrade) {
     this.clusterupgrade = clusterupgrade;
+    return this;
+  }
+
+  /**
+   * DataplaneV2 feature spec.
+   * @return value or {@code null} for none
+   */
+  public DataplaneV2FeatureSpec getDataplanev2() {
+    return dataplanev2;
+  }
+
+  /**
+   * DataplaneV2 feature spec.
+   * @param dataplanev2 dataplanev2 or {@code null} for none
+   */
+  public CommonFeatureSpec setDataplanev2(DataplaneV2FeatureSpec dataplanev2) {
+    this.dataplanev2 = dataplanev2;
     return this;
   }
 

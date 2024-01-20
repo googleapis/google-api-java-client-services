@@ -86,6 +86,13 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean privateConnectivityEnabled;
 
   /**
+   * Optional. Proxy for Eventing auto-registration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DestinationConfig proxyDestinationConfig;
+
+  /**
    * Registration endpoint for auto registration.
    * The value may be {@code null}.
    */
@@ -210,6 +217,23 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   public EventingConfig setPrivateConnectivityEnabled(java.lang.Boolean privateConnectivityEnabled) {
     this.privateConnectivityEnabled = privateConnectivityEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Proxy for Eventing auto-registration.
+   * @return value or {@code null} for none
+   */
+  public DestinationConfig getProxyDestinationConfig() {
+    return proxyDestinationConfig;
+  }
+
+  /**
+   * Optional. Proxy for Eventing auto-registration.
+   * @param proxyDestinationConfig proxyDestinationConfig or {@code null} for none
+   */
+  public EventingConfig setProxyDestinationConfig(DestinationConfig proxyDestinationConfig) {
+    this.proxyDestinationConfig = proxyDestinationConfig;
     return this;
   }
 

@@ -2263,6 +2263,141 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Resize a notebook instance disk to a higher capacity.
+         *
+         * Create a request for the method "instances.resizeDisk".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link ResizeDisk#execute()} method to invoke the remote operation.
+         *
+         * @param notebookInstance Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.ResizeDiskRequest}
+         * @return the request
+         */
+        public ResizeDisk resizeDisk(java.lang.String notebookInstance, com.google.api.services.notebooks.v2.model.ResizeDiskRequest content) throws java.io.IOException {
+          ResizeDisk result = new ResizeDisk(notebookInstance, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ResizeDisk extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+notebookInstance}:resizeDisk";
+
+          private final java.util.regex.Pattern NOTEBOOK_INSTANCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Resize a notebook instance disk to a higher capacity.
+           *
+           * Create a request for the method "instances.resizeDisk".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link ResizeDisk#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ResizeDisk#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param notebookInstance Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.ResizeDiskRequest}
+           * @since 1.13
+           */
+          protected ResizeDisk(java.lang.String notebookInstance, com.google.api.services.notebooks.v2.model.ResizeDiskRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.notebookInstance = com.google.api.client.util.Preconditions.checkNotNull(notebookInstance, "Required parameter notebookInstance must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NOTEBOOK_INSTANCE_PATTERN.matcher(notebookInstance).matches(),
+                  "Parameter notebookInstance must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public ResizeDisk set$Xgafv(java.lang.String $Xgafv) {
+            return (ResizeDisk) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ResizeDisk setAccessToken(java.lang.String accessToken) {
+            return (ResizeDisk) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ResizeDisk setAlt(java.lang.String alt) {
+            return (ResizeDisk) super.setAlt(alt);
+          }
+
+          @Override
+          public ResizeDisk setCallback(java.lang.String callback) {
+            return (ResizeDisk) super.setCallback(callback);
+          }
+
+          @Override
+          public ResizeDisk setFields(java.lang.String fields) {
+            return (ResizeDisk) super.setFields(fields);
+          }
+
+          @Override
+          public ResizeDisk setKey(java.lang.String key) {
+            return (ResizeDisk) super.setKey(key);
+          }
+
+          @Override
+          public ResizeDisk setOauthToken(java.lang.String oauthToken) {
+            return (ResizeDisk) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ResizeDisk setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ResizeDisk) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ResizeDisk setQuotaUser(java.lang.String quotaUser) {
+            return (ResizeDisk) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ResizeDisk setUploadType(java.lang.String uploadType) {
+            return (ResizeDisk) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ResizeDisk setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ResizeDisk) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String notebookInstance;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getNotebookInstance() {
+            return notebookInstance;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public ResizeDisk setNotebookInstance(java.lang.String notebookInstance) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NOTEBOOK_INSTANCE_PATTERN.matcher(notebookInstance).matches(),
+                  "Parameter notebookInstance must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.notebookInstance = notebookInstance;
+            return this;
+          }
+
+          @Override
+          public ResizeDisk set(String parameterName, Object value) {
+            return (ResizeDisk) super.set(parameterName, value);
+          }
+        }
+        /**
          * Rollbacks a notebook instance to the previous version.
          *
          * Create a request for the method "instances.rollback".

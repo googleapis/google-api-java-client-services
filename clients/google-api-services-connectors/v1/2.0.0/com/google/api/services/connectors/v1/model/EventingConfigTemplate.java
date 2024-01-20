@@ -111,6 +111,13 @@ public final class EventingConfigTemplate extends com.google.api.client.json.Gen
   }
 
   /**
+   * Proxy destination config template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DestinationConfigTemplate proxyDestinationConfig;
+
+  /**
    * Registration host destination config template.
    * The value may be {@code null}.
    */
@@ -267,6 +274,23 @@ public final class EventingConfigTemplate extends com.google.api.client.json.Gen
    */
   public EventingConfigTemplate setListenerAuthConfigTemplates(java.util.List<AuthConfigTemplate> listenerAuthConfigTemplates) {
     this.listenerAuthConfigTemplates = listenerAuthConfigTemplates;
+    return this;
+  }
+
+  /**
+   * Proxy destination config template.
+   * @return value or {@code null} for none
+   */
+  public DestinationConfigTemplate getProxyDestinationConfig() {
+    return proxyDestinationConfig;
+  }
+
+  /**
+   * Proxy destination config template.
+   * @param proxyDestinationConfig proxyDestinationConfig or {@code null} for none
+   */
+  public EventingConfigTemplate setProxyDestinationConfig(DestinationConfigTemplate proxyDestinationConfig) {
+    this.proxyDestinationConfig = proxyDestinationConfig;
     return this;
   }
 

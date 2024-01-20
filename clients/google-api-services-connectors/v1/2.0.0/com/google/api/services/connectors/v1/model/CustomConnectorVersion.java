@@ -91,7 +91,7 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
-   * Required. Service account used by runtime plane to access auth config secrets.
+   * Optional. Service account used by runtime plane to access auth config secrets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -243,7 +243,7 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Service account used by runtime plane to access auth config secrets.
+   * Optional. Service account used by runtime plane to access auth config secrets.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -251,7 +251,7 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Service account used by runtime plane to access auth config secrets.
+   * Optional. Service account used by runtime plane to access auth config secrets.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public CustomConnectorVersion setServiceAccount(java.lang.String serviceAccount) {

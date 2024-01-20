@@ -52,6 +52,13 @@ public final class RegionalSettings extends com.google.api.client.json.GenericJs
   private NetworkConfig networkConfig;
 
   /**
+   * Output only. Specifies whether the region is provisioned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean provisioned;
+
+  /**
    * Optional. Regional encryption config to hold CMEK details.
    * @return value or {@code null} for none
    */
@@ -101,6 +108,23 @@ public final class RegionalSettings extends com.google.api.client.json.GenericJs
    */
   public RegionalSettings setNetworkConfig(NetworkConfig networkConfig) {
     this.networkConfig = networkConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Specifies whether the region is provisioned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProvisioned() {
+    return provisioned;
+  }
+
+  /**
+   * Output only. Specifies whether the region is provisioned.
+   * @param provisioned provisioned or {@code null} for none
+   */
+  public RegionalSettings setProvisioned(java.lang.Boolean provisioned) {
+    this.provisioned = provisioned;
     return this;
   }
 

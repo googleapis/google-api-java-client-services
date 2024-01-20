@@ -68,6 +68,14 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfig extends com.go
   private java.lang.String modelVariant;
 
   /**
+   * If `true`, the request will opt out for STT conformer model migration. This field will be
+   * deprecated once force migration takes place in June 2024.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean optOutConformerModelMigration;
+
+  /**
    * Optional. A list of strings containing words and phrases that the speech recognizer should
    * recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com
    * /speech-to-text/docs/basics#phrase-hints) for more details.
@@ -183,6 +191,25 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfig extends com.go
    */
   public GoogleCloudDialogflowCxV3beta1InputAudioConfig setModelVariant(java.lang.String modelVariant) {
     this.modelVariant = modelVariant;
+    return this;
+  }
+
+  /**
+   * If `true`, the request will opt out for STT conformer model migration. This field will be
+   * deprecated once force migration takes place in June 2024.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOptOutConformerModelMigration() {
+    return optOutConformerModelMigration;
+  }
+
+  /**
+   * If `true`, the request will opt out for STT conformer model migration. This field will be
+   * deprecated once force migration takes place in June 2024.
+   * @param optOutConformerModelMigration optOutConformerModelMigration or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1InputAudioConfig setOptOutConformerModelMigration(java.lang.Boolean optOutConformerModelMigration) {
+    this.optOutConformerModelMigration = optOutConformerModelMigration;
     return this;
   }
 

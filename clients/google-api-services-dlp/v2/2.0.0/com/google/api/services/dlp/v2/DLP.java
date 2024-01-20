@@ -15784,7 +15784,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Finish#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the DlpJob resource to be cancelled.
+         * @param name Required. The name of the DlpJob resource to be finished.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2FinishDlpJobRequest}
          * @return the request
          */
@@ -15812,7 +15812,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Finish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the DlpJob resource to be cancelled.
+           * @param name Required. The name of the DlpJob resource to be finished.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2FinishDlpJobRequest}
            * @since 1.13
            */
@@ -15881,17 +15881,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Finish) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the DlpJob resource to be cancelled. */
+          /** Required. The name of the DlpJob resource to be finished. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the DlpJob resource to be cancelled.
+          /** Required. The name of the DlpJob resource to be finished.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the DlpJob resource to be cancelled. */
+          /** Required. The name of the DlpJob resource to be finished. */
           public Finish setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

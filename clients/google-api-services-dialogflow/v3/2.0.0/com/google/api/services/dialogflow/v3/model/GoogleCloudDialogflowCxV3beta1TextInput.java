@@ -30,16 +30,14 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1TextInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed
-   * 256 characters.
+   * Required. The UTF-8 encoded natural language text to be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed
-   * 256 characters.
+   * Required. The UTF-8 encoded natural language text to be processed.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -47,8 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1TextInput extends com.google.ap
   }
 
   /**
-   * Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed
-   * 256 characters.
+   * Required. The UTF-8 encoded natural language text to be processed.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TextInput setText(java.lang.String text) {

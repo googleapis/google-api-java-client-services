@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3FilterSpecs extends com.google.api.c
    * Optional. Data Stores where the boosting configuration is applied. The full names of the
    * referenced data stores. Formats:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}
+   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3FilterSpecs extends com.google.api.c
    * Optional. Data Stores where the boosting configuration is applied. The full names of the
    * referenced data stores. Formats:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}
+   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDataStores() {
@@ -63,7 +63,7 @@ public final class GoogleCloudDialogflowCxV3FilterSpecs extends com.google.api.c
    * Optional. Data Stores where the boosting configuration is applied. The full names of the
    * referenced data stores. Formats:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}
+   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * @param dataStores dataStores or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FilterSpecs setDataStores(java.util.List<java.lang.String> dataStores) {

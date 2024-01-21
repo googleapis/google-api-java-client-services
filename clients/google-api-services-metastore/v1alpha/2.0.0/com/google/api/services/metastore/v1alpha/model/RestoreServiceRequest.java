@@ -31,9 +31,10 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class RestoreServiceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The relative resource name of the metastore service backup to restore from, in the
+   * Optional. The relative resource name of the metastore service backup to restore from, in the
    * following
    * form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
+   * Mutually exclusive with backup_location, and exactly one of the two must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,9 +61,10 @@ public final class RestoreServiceRequest extends com.google.api.client.json.Gene
   private java.lang.String restoreType;
 
   /**
-   * Required. The relative resource name of the metastore service backup to restore from, in the
+   * Optional. The relative resource name of the metastore service backup to restore from, in the
    * following
    * form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
+   * Mutually exclusive with backup_location, and exactly one of the two must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackup() {
@@ -70,9 +72,10 @@ public final class RestoreServiceRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The relative resource name of the metastore service backup to restore from, in the
+   * Optional. The relative resource name of the metastore service backup to restore from, in the
    * following
    * form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
+   * Mutually exclusive with backup_location, and exactly one of the two must be set.
    * @param backup backup or {@code null} for none
    */
   public RestoreServiceRequest setBackup(java.lang.String backup) {

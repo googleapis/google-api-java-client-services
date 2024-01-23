@@ -30,10 +30,10 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The optimization objective e.g. `cvr`. This field together with optimization_objective describe
-   * engine metadata to use to control engine training and serving. Currently supported values:
-   * `ctr`, `cvr`. If not specified, we choose default based on engine type. Default depends on type
-   * of recommendation: `recommended-for-you` => `ctr` `others-you-may-like` => `ctr`
+   * The optimization objective. e.g., `cvr`. This field together with optimization_objective
+   * describe engine metadata to use to control engine training and serving. Currently supported
+   * values: `ctr`, `cvr`. If not specified, we choose default based on engine type. Default depends
+   * on type of recommendation: `recommended-for-you` => `ctr` `others-you-may-like` => `ctr`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEng
   private java.lang.String trainingState;
 
   /**
-   * Required. The type of engine e.g. `recommended-for-you`. This field together with
+   * Required. The type of engine. e.g., `recommended-for-you`. This field together with
    * optimization_objective describe engine metadata to use to control engine training and serving.
    * Currently supported values: `recommended-for-you`, `others-you-may-like`, `more-like-this`,
    * `most-popular-items`.
@@ -72,10 +72,10 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEng
   private java.lang.String type;
 
   /**
-   * The optimization objective e.g. `cvr`. This field together with optimization_objective describe
-   * engine metadata to use to control engine training and serving. Currently supported values:
-   * `ctr`, `cvr`. If not specified, we choose default based on engine type. Default depends on type
-   * of recommendation: `recommended-for-you` => `ctr` `others-you-may-like` => `ctr`
+   * The optimization objective. e.g., `cvr`. This field together with optimization_objective
+   * describe engine metadata to use to control engine training and serving. Currently supported
+   * values: `ctr`, `cvr`. If not specified, we choose default based on engine type. Default depends
+   * on type of recommendation: `recommended-for-you` => `ctr` `others-you-may-like` => `ctr`
    * @return value or {@code null} for none
    */
   public java.lang.String getOptimizationObjective() {
@@ -83,10 +83,10 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEng
   }
 
   /**
-   * The optimization objective e.g. `cvr`. This field together with optimization_objective describe
-   * engine metadata to use to control engine training and serving. Currently supported values:
-   * `ctr`, `cvr`. If not specified, we choose default based on engine type. Default depends on type
-   * of recommendation: `recommended-for-you` => `ctr` `others-you-may-like` => `ctr`
+   * The optimization objective. e.g., `cvr`. This field together with optimization_objective
+   * describe engine metadata to use to control engine training and serving. Currently supported
+   * values: `ctr`, `cvr`. If not specified, we choose default based on engine type. Default depends
+   * on type of recommendation: `recommended-for-you` => `ctr` `others-you-may-like` => `ctr`
    * @param optimizationObjective optimizationObjective or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig setOptimizationObjective(java.lang.String optimizationObjective) {
@@ -145,7 +145,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEng
   }
 
   /**
-   * Required. The type of engine e.g. `recommended-for-you`. This field together with
+   * Required. The type of engine. e.g., `recommended-for-you`. This field together with
    * optimization_objective describe engine metadata to use to control engine training and serving.
    * Currently supported values: `recommended-for-you`, `others-you-may-like`, `more-like-this`,
    * `most-popular-items`.
@@ -156,7 +156,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEng
   }
 
   /**
-   * Required. The type of engine e.g. `recommended-for-you`. This field together with
+   * Required. The type of engine. e.g., `recommended-for-you`. This field together with
    * optimization_objective describe engine metadata to use to control engine training and serving.
    * Currently supported values: `recommended-for-you`, `others-you-may-like`, `more-like-this`,
    * `most-popular-items`.

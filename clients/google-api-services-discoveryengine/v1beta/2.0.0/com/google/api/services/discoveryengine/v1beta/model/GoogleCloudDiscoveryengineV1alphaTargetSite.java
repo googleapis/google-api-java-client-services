@@ -86,7 +86,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   private GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo siteVerificationInfo;
 
   /**
-   * The type of the target site, e.g. whether the site is to be included or excluded.
+   * The type of the target site, e.g., whether the site is to be included or excluded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -233,7 +233,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   }
 
   /**
-   * The type of the target site, e.g. whether the site is to be included or excluded.
+   * The type of the target site, e.g., whether the site is to be included or excluded.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -241,7 +241,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   }
 
   /**
-   * The type of the target site, e.g. whether the site is to be included or excluded.
+   * The type of the target site, e.g., whether the site is to be included or excluded.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaTargetSite setType(java.lang.String type) {

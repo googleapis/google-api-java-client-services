@@ -63,7 +63,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * SOLUTION_TYPE_RECOMMENDATION type of engines, they can only associate with at most one data
    * store. If solution_type is SOLUTION_TYPE_CHAT, multiple DataStores in the same Collection can
    * be associated here. Note that when used in CreateEngineRequest, one DataStore id must be
-   * provided as the system will use it for necessary intializations.
+   * provided as the system will use it for necessary initializations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,7 +216,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * SOLUTION_TYPE_RECOMMENDATION type of engines, they can only associate with at most one data
    * store. If solution_type is SOLUTION_TYPE_CHAT, multiple DataStores in the same Collection can
    * be associated here. Note that when used in CreateEngineRequest, one DataStore id must be
-   * provided as the system will use it for necessary intializations.
+   * provided as the system will use it for necessary initializations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDataStoreIds() {
@@ -228,7 +228,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * SOLUTION_TYPE_RECOMMENDATION type of engines, they can only associate with at most one data
    * store. If solution_type is SOLUTION_TYPE_CHAT, multiple DataStores in the same Collection can
    * be associated here. Note that when used in CreateEngineRequest, one DataStore id must be
-   * provided as the system will use it for necessary intializations.
+   * provided as the system will use it for necessary initializations.
    * @param dataStoreIds dataStoreIds or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setDataStoreIds(java.util.List<java.lang.String> dataStoreIds) {

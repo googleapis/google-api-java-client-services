@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1beta.model;
 
 /**
- * Details about why crawling failed for a particular CorpusType, e.g. DESKTOP and MOBILE crawling
+ * Details about why crawling failed for a particular CorpusType, e.g., DESKTOP and MOBILE crawling
  * may fail for different reasons.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

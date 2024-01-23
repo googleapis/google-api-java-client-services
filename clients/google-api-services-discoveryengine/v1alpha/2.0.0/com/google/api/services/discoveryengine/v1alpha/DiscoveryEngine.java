@@ -1511,20 +1511,23 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Selects data model of query suggestions for serving. Currently supported values: *
-             * `document` - Using suggestions generated from user-imported documents. * `search-
-             * history` - Using suggestions generated from the past history of SearchService.Search
-             * API calls. Do not use it when there is no traffic for Search API. * `user-event` -
-             * Using suggestions generated from user-imported search events. * `document-
-             * completable` - Using suggestions taken directly from user-imported document fields
-             * marked as completable. Default values: * `document` is the default model for regular
-             * dataStores. * `search-history` is the default model for site search dataStores.
+             * Specifies the autocomplete data model. This overrides any model specified in the
+             * Configuration > Autocomplete section of the Cloud console. Currently supported
+             * values: * `document` - Using suggestions generated from user-imported documents. *
+             * `search-history` - Using suggestions generated from the past history of
+             * SearchService.Search API calls. Do not use it when there is no traffic for Search
+             * API. * `user-event` - Using suggestions generated from user-imported search events. *
+             * `document-completable` - Using suggestions taken directly from user-imported document
+             * fields marked as completable. Default values: * `document` is the default model for
+             * regular dataStores. * `search-history` is the default model for site search
+             * dataStores.
              */
             @com.google.api.client.util.Key
             private java.lang.String queryModel;
 
-            /** Selects data model of query suggestions for serving. Currently supported values: * `document` -
-           Using suggestions generated from user-imported documents. * `search-history` - Using suggestions
+            /** Specifies the autocomplete data model. This overrides any model specified in the Configuration >
+           Autocomplete section of the Cloud console. Currently supported values: * `document` - Using
+           suggestions generated from user-imported documents. * `search-history` - Using suggestions
            generated from the past history of SearchService.Search API calls. Do not use it when there is no
            traffic for Search API. * `user-event` - Using suggestions generated from user-imported search
            events. * `document-completable` - Using suggestions taken directly from user-imported document
@@ -1536,14 +1539,16 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Selects data model of query suggestions for serving. Currently supported values: *
-             * `document` - Using suggestions generated from user-imported documents. * `search-
-             * history` - Using suggestions generated from the past history of SearchService.Search
-             * API calls. Do not use it when there is no traffic for Search API. * `user-event` -
-             * Using suggestions generated from user-imported search events. * `document-
-             * completable` - Using suggestions taken directly from user-imported document fields
-             * marked as completable. Default values: * `document` is the default model for regular
-             * dataStores. * `search-history` is the default model for site search dataStores.
+             * Specifies the autocomplete data model. This overrides any model specified in the
+             * Configuration > Autocomplete section of the Cloud console. Currently supported
+             * values: * `document` - Using suggestions generated from user-imported documents. *
+             * `search-history` - Using suggestions generated from the past history of
+             * SearchService.Search API calls. Do not use it when there is no traffic for Search
+             * API. * `user-event` - Using suggestions generated from user-imported search events. *
+             * `document-completable` - Using suggestions taken directly from user-imported document
+             * fields marked as completable. Default values: * `document` is the default model for
+             * regular dataStores. * `search-history` is the default model for site search
+             * dataStores.
              */
             public CompleteQuery setQueryModel(java.lang.String queryModel) {
               this.queryModel = queryModel;
@@ -15067,8 +15072,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Selects data model of query suggestions for serving. Currently supported values: *
-           * `document` - Using suggestions generated from user-imported documents. * `search-
+           * Specifies the autocomplete data model. This overrides any model specified in the
+           * Configuration > Autocomplete section of the Cloud console. Currently supported values:
+           * * `document` - Using suggestions generated from user-imported documents. * `search-
            * history` - Using suggestions generated from the past history of SearchService.Search
            * API calls. Do not use it when there is no traffic for Search API. * `user-event` -
            * Using suggestions generated from user-imported search events. * `document-completable`
@@ -15079,8 +15085,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           @com.google.api.client.util.Key
           private java.lang.String queryModel;
 
-          /** Selects data model of query suggestions for serving. Currently supported values: * `document` -
-         Using suggestions generated from user-imported documents. * `search-history` - Using suggestions
+          /** Specifies the autocomplete data model. This overrides any model specified in the Configuration >
+         Autocomplete section of the Cloud console. Currently supported values: * `document` - Using
+         suggestions generated from user-imported documents. * `search-history` - Using suggestions
          generated from the past history of SearchService.Search API calls. Do not use it when there is no
          traffic for Search API. * `user-event` - Using suggestions generated from user-imported search
          events. * `document-completable` - Using suggestions taken directly from user-imported document
@@ -15092,8 +15099,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Selects data model of query suggestions for serving. Currently supported values: *
-           * `document` - Using suggestions generated from user-imported documents. * `search-
+           * Specifies the autocomplete data model. This overrides any model specified in the
+           * Configuration > Autocomplete section of the Cloud console. Currently supported values:
+           * * `document` - Using suggestions generated from user-imported documents. * `search-
            * history` - Using suggestions generated from the past history of SearchService.Search
            * API calls. Do not use it when there is no traffic for Search API. * `user-event` -
            * Using suggestions generated from user-imported search events. * `document-completable`

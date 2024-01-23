@@ -149,6 +149,14 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
   private java.util.Map<String, GoogleCloudDiscoveryengineV1alphaWidgetConfigUIComponentField> fieldsUiComponentsMap;
 
   /**
+   * Output only. The industry vertical that the WidgetConfig registers. The WidgetConfig industry
+   * vertical is based on the associated Engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String industryVertical;
+
+  /**
    * Output only. Whether LLM is enabled in the corresponding data store.
    * The value may be {@code null}.
    */
@@ -477,6 +485,25 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfig setFieldsUiComponentsMap(java.util.Map<String, GoogleCloudDiscoveryengineV1alphaWidgetConfigUIComponentField> fieldsUiComponentsMap) {
     this.fieldsUiComponentsMap = fieldsUiComponentsMap;
+    return this;
+  }
+
+  /**
+   * Output only. The industry vertical that the WidgetConfig registers. The WidgetConfig industry
+   * vertical is based on the associated Engine.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIndustryVertical() {
+    return industryVertical;
+  }
+
+  /**
+   * Output only. The industry vertical that the WidgetConfig registers. The WidgetConfig industry
+   * vertical is based on the associated Engine.
+   * @param industryVertical industryVertical or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfig setIndustryVertical(java.lang.String industryVertical) {
+    this.industryVertical = industryVertical;
     return this;
   }
 

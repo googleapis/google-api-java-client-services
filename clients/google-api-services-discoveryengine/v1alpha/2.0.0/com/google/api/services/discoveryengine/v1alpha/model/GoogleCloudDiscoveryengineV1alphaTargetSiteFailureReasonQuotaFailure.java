@@ -29,6 +29,33 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure extends com.google.api.client.json.GenericJson {
 
+  /**
+   * This number is an estimation on how much total quota this project needs to successfully
+   * complete indexing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalRequiredQuota;
+
+  /**
+   * This number is an estimation on how much total quota this project needs to successfully
+   * complete indexing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalRequiredQuota() {
+    return totalRequiredQuota;
+  }
+
+  /**
+   * This number is an estimation on how much total quota this project needs to successfully
+   * complete indexing.
+   * @param totalRequiredQuota totalRequiredQuota or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure setTotalRequiredQuota(java.lang.Long totalRequiredQuota) {
+    this.totalRequiredQuota = totalRequiredQuota;
+    return this;
+  }
+
   @Override
   public GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure set(String fieldName, Object value) {
     return (GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure) super.set(fieldName, value);

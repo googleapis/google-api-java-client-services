@@ -30,16 +30,16 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaEngineCommonConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the company, business or entity that is associated with the engine. Setting this
-   * may help improve LLM related features.
+   * Immutable. The name of the company, business or entity that is associated with the engine.
+   * Setting this may help improve LLM related features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String companyName;
 
   /**
-   * The name of the company, business or entity that is associated with the engine. Setting this
-   * may help improve LLM related features.
+   * Immutable. The name of the company, business or entity that is associated with the engine.
+   * Setting this may help improve LLM related features.
    * @return value or {@code null} for none
    */
   public java.lang.String getCompanyName() {
@@ -47,8 +47,8 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineCommonConfig extends c
   }
 
   /**
-   * The name of the company, business or entity that is associated with the engine. Setting this
-   * may help improve LLM related features.
+   * Immutable. The name of the company, business or entity that is associated with the engine.
+   * Setting this may help improve LLM related features.
    * @param companyName companyName or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngineCommonConfig setCompanyName(java.lang.String companyName) {

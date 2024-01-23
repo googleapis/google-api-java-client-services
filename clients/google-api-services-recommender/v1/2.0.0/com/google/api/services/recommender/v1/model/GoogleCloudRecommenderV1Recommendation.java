@@ -120,6 +120,13 @@ public final class GoogleCloudRecommenderV1Recommendation extends com.google.api
   private GoogleCloudRecommenderV1RecommendationStateInfo stateInfo;
 
   /**
+   * Fully qualified resource names that this recommendation is targeting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> targetResources;
+
+  /**
    * Corresponds to a mutually exclusive group ID within a recommender. A non-empty ID indicates
    * that the recommendation belongs to a mutually exclusive group. This means that only one
    * recommendation within the group is suggested to be applied.
@@ -324,6 +331,23 @@ public final class GoogleCloudRecommenderV1Recommendation extends com.google.api
    */
   public GoogleCloudRecommenderV1Recommendation setStateInfo(GoogleCloudRecommenderV1RecommendationStateInfo stateInfo) {
     this.stateInfo = stateInfo;
+    return this;
+  }
+
+  /**
+   * Fully qualified resource names that this recommendation is targeting.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTargetResources() {
+    return targetResources;
+  }
+
+  /**
+   * Fully qualified resource names that this recommendation is targeting.
+   * @param targetResources targetResources or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1Recommendation setTargetResources(java.util.List<java.lang.String> targetResources) {
+    this.targetResources = targetResources;
     return this;
   }
 

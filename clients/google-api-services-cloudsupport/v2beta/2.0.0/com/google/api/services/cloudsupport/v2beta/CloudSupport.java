@@ -1213,6 +1213,22 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** The product line to request cases for. */
+      @com.google.api.client.util.Key
+      private java.lang.String productLine;
+
+      /** The product line to request cases for.
+       */
+      public java.lang.String getProductLine() {
+        return productLine;
+      }
+
+      /** The product line to request cases for. */
+      public List setProductLine(java.lang.String productLine) {
+        this.productLine = productLine;
+        return this;
+      }
+
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);

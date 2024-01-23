@@ -30,21 +30,21 @@ package com.google.api.services.policysimulator.v1beta.model;
 public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayCustomConstraintOverlay extends com.google.api.client.json.GenericJson {
 
   /**
-   * The new or updated custom constraint.
+   * Optional. The new or updated custom constraint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudOrgpolicyV2CustomConstraint customConstraint;
 
   /**
-   * Resource the constraint is attached to. Example: "organization/987654"
+   * Optional. Resource the constraint is attached to. Example: "organization/987654"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customConstraintParent;
 
   /**
-   * The new or updated custom constraint.
+   * Optional. The new or updated custom constraint.
    * @return value or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2CustomConstraint getCustomConstraint() {
@@ -52,7 +52,7 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayCustomConstr
   }
 
   /**
-   * The new or updated custom constraint.
+   * Optional. The new or updated custom constraint.
    * @param customConstraint customConstraint or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayCustomConstraintOverlay setCustomConstraint(GoogleCloudOrgpolicyV2CustomConstraint customConstraint) {
@@ -61,7 +61,7 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayCustomConstr
   }
 
   /**
-   * Resource the constraint is attached to. Example: "organization/987654"
+   * Optional. Resource the constraint is attached to. Example: "organization/987654"
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomConstraintParent() {
@@ -69,7 +69,7 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayCustomConstr
   }
 
   /**
-   * Resource the constraint is attached to. Example: "organization/987654"
+   * Optional. Resource the constraint is attached to. Example: "organization/987654"
    * @param customConstraintParent customConstraintParent or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayCustomConstraintOverlay setCustomConstraintParent(java.lang.String customConstraintParent) {

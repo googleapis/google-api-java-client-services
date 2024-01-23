@@ -2043,6 +2043,152 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
       public class OrgPolicyViolationsPreviews {
 
         /**
+         * GenerateOrgPolicyViolationsPreview generates an OrgPolicyViolationsPreview for the proposed
+         * changes in the provided OrgPolicyViolationsPreview.OrgPolicyOverlay. The changes to OrgPolicy are
+         * specified by this `OrgPolicyOverlay`. The resources to scan are inferred from these specified
+         * changes.
+         *
+         * Create a request for the method "orgPolicyViolationsPreviews.generate".
+         *
+         * This request holds the parameters needed by the policysimulator server.  After setting any
+         * optional parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
+         *        `organizations/my-example-org/locations/global`
+         * @param content the {@link com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreview}
+         * @return the request
+         */
+        public Generate generate(java.lang.String parent, com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreview content) throws java.io.IOException {
+          Generate result = new Generate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Generate extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/orgPolicyViolationsPreviews:generate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * GenerateOrgPolicyViolationsPreview generates an OrgPolicyViolationsPreview for the proposed
+           * changes in the provided OrgPolicyViolationsPreview.OrgPolicyOverlay. The changes to OrgPolicy
+           * are specified by this `OrgPolicyOverlay`. The resources to scan are inferred from these
+           * specified changes.
+           *
+           * Create a request for the method "orgPolicyViolationsPreviews.generate".
+           *
+           * This request holds the parameters needed by the the policysimulator server.  After setting any
+           * optional parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
+         *        `organizations/my-example-org/locations/global`
+           * @param content the {@link com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreview}
+           * @since 1.13
+           */
+          protected Generate(java.lang.String parent, com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreview content) {
+            super(PolicySimulator.this, "POST", REST_PATH, content, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Generate set$Xgafv(java.lang.String $Xgafv) {
+            return (Generate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Generate setAccessToken(java.lang.String accessToken) {
+            return (Generate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Generate setAlt(java.lang.String alt) {
+            return (Generate) super.setAlt(alt);
+          }
+
+          @Override
+          public Generate setCallback(java.lang.String callback) {
+            return (Generate) super.setCallback(callback);
+          }
+
+          @Override
+          public Generate setFields(java.lang.String fields) {
+            return (Generate) super.setFields(fields);
+          }
+
+          @Override
+          public Generate setKey(java.lang.String key) {
+            return (Generate) super.setKey(key);
+          }
+
+          @Override
+          public Generate setOauthToken(java.lang.String oauthToken) {
+            return (Generate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Generate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Generate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Generate setQuotaUser(java.lang.String quotaUser) {
+            return (Generate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Generate setUploadType(java.lang.String uploadType) {
+            return (Generate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Generate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Generate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The organization under which this OrgPolicyViolationsPreview will be created.
+           * Example: `organizations/my-example-org/locations/global`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
+         `organizations/my-example-org/locations/global`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The organization under which this OrgPolicyViolationsPreview will be created.
+           * Example: `organizations/my-example-org/locations/global`
+           */
+          public Generate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Generate set(String parameterName, Object value) {
+            return (Generate) super.set(parameterName, value);
+          }
+        }
+        /**
          * GetOrgPolicyViolationsPreview gets the specified OrgPolicyViolationsPreview. Each
          * OrgPolicyViolationsPreview is available for at least 7 days.
          *
@@ -2332,14 +2478,14 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The maximum number of items to return. The service may return fewer than this value. If
-           * unspecified, at most 5 items will be returned. The maximum value is 10; values above 10
-           * will be coerced to 10.
+           * Optional. The maximum number of items to return. The service may return fewer than this
+           * value. If unspecified, at most 5 items will be returned. The maximum value is 10;
+           * values above 10 will be coerced to 10.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of items to return. The service may return fewer than this value. If
+          /** Optional. The maximum number of items to return. The service may return fewer than this value. If
          unspecified, at most 5 items will be returned. The maximum value is 10; values above 10 will be
          coerced to 10.
            */
@@ -2348,9 +2494,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The maximum number of items to return. The service may return fewer than this value. If
-           * unspecified, at most 5 items will be returned. The maximum value is 10; values above 10
-           * will be coerced to 10.
+           * Optional. The maximum number of items to return. The service may return fewer than this
+           * value. If unspecified, at most 5 items will be returned. The maximum value is 10;
+           * values above 10 will be coerced to 10.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -2358,24 +2504,24 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * A page token, received from a previous call. Provide this to retrieve the subsequent
-           * page. When paginating, all other parameters must match the call that provided the page
-           * token.
+           * Optional. A page token, received from a previous call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters must match the call that
+           * provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous call. Provide this to retrieve the subsequent page. When
-         paginating, all other parameters must match the call that provided the page token.
+          /** Optional. A page token, received from a previous call. Provide this to retrieve the subsequent
+         page. When paginating, all other parameters must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A page token, received from a previous call. Provide this to retrieve the subsequent
-           * page. When paginating, all other parameters must match the call that provided the page
-           * token.
+           * Optional. A page token, received from a previous call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters must match the call that
+           * provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -2717,14 +2863,14 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The maximum number of items to return. The service may return fewer than this value.
-             * If unspecified, at most 50 items will be returned. The maximum value is 1000; values
-             * above 1000 will be coerced to 1000.
+             * Optional. The maximum number of items to return. The service may return fewer than
+             * this value. If unspecified, at most 50 items will be returned. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return. The service may return fewer than this value. If
+            /** Optional. The maximum number of items to return. The service may return fewer than this value. If
            unspecified, at most 50 items will be returned. The maximum value is 1000; values above 1000 will
            be coerced to 1000.
              */
@@ -2733,9 +2879,9 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The maximum number of items to return. The service may return fewer than this value.
-             * If unspecified, at most 50 items will be returned. The maximum value is 1000; values
-             * above 1000 will be coerced to 1000.
+             * Optional. The maximum number of items to return. The service may return fewer than
+             * this value. If unspecified, at most 50 items will be returned. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -2743,24 +2889,24 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * A page token, received from a previous call. Provide this to retrieve the subsequent
-             * page. When paginating, all other parameters must match the call that provided the
-             * page token.
+             * Optional. A page token, received from a previous call. Provide this to retrieve the
+             * subsequent page. When paginating, all other parameters must match the call that
+             * provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** A page token, received from a previous call. Provide this to retrieve the subsequent page. When
-           paginating, all other parameters must match the call that provided the page token.
+            /** Optional. A page token, received from a previous call. Provide this to retrieve the subsequent
+           page. When paginating, all other parameters must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * A page token, received from a previous call. Provide this to retrieve the subsequent
-             * page. When paginating, all other parameters must match the call that provided the
-             * page token.
+             * Optional. A page token, received from a previous call. Provide this to retrieve the
+             * subsequent page. When paginating, all other parameters must match the call that
+             * provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;

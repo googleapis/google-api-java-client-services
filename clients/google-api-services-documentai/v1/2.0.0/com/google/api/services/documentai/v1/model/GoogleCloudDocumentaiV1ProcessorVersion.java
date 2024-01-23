@@ -89,6 +89,13 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   private GoogleCloudDocumentaiV1EvaluationReference latestEvaluation;
 
   /**
+   * Output only. The model type of this processor version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelType;
+
+  /**
    * The resource name of the processor version. Format: `projects/{project}/locations/{location}/pr
    * ocessors/{processor}/processorVersions/{processor_version}`
    * The value may be {@code null}.
@@ -236,6 +243,23 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setLatestEvaluation(GoogleCloudDocumentaiV1EvaluationReference latestEvaluation) {
     this.latestEvaluation = latestEvaluation;
+    return this;
+  }
+
+  /**
+   * Output only. The model type of this processor version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelType() {
+    return modelType;
+  }
+
+  /**
+   * Output only. The model type of this processor version.
+   * @param modelType modelType or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessorVersion setModelType(java.lang.String modelType) {
+    this.modelType = modelType;
     return this;
   }
 

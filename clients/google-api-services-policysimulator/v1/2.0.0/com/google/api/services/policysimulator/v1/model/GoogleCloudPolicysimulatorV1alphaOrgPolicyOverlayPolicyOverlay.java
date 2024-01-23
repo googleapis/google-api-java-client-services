@@ -30,21 +30,21 @@ package com.google.api.services.policysimulator.v1.model;
 public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayPolicyOverlay extends com.google.api.client.json.GenericJson {
 
   /**
-   * The new or updated OrgPolicy.
+   * Optional. The new or updated OrgPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudOrgpolicyV2Policy policy;
 
   /**
-   * The parent of the policy we are attaching to. Example: "projects/123456"
+   * Optional. The parent of the policy we are attaching to. Example: "projects/123456"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyParent;
 
   /**
-   * The new or updated OrgPolicy.
+   * Optional. The new or updated OrgPolicy.
    * @return value or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2Policy getPolicy() {
@@ -52,7 +52,7 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayPolicyOverla
   }
 
   /**
-   * The new or updated OrgPolicy.
+   * Optional. The new or updated OrgPolicy.
    * @param policy policy or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayPolicyOverlay setPolicy(GoogleCloudOrgpolicyV2Policy policy) {
@@ -61,7 +61,7 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayPolicyOverla
   }
 
   /**
-   * The parent of the policy we are attaching to. Example: "projects/123456"
+   * Optional. The parent of the policy we are attaching to. Example: "projects/123456"
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyParent() {
@@ -69,7 +69,7 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayPolicyOverla
   }
 
   /**
-   * The parent of the policy we are attaching to. Example: "projects/123456"
+   * Optional. The parent of the policy we are attaching to. Example: "projects/123456"
    * @param policyParent policyParent or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayPolicyOverlay setPolicyParent(java.lang.String policyParent) {

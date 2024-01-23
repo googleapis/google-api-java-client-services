@@ -30,44 +30,44 @@ package com.google.api.services.policysimulator.v1beta.model;
 public final class GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewResourceCounts extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of scanned resources with zero violations.
+   * Output only. Number of scanned resources with zero violations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer compliant;
 
   /**
-   * Number of resources that returned an error when scanned.
+   * Output only. Number of resources that returned an error when scanned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer errors;
 
   /**
-   * Number of scanned resources with at least one violation.
+   * Output only. Number of scanned resources with at least one violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer noncompliant;
 
   /**
-   * Number of resources checked for compliance. Must equal: unenforced + noncompliant + compliant +
-   * error
+   * Output only. Number of resources checked for compliance. Must equal: unenforced + noncompliant
+   * + compliant + error
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer scanned;
 
   /**
-   * Number of resources where the constraint was not enforced, i.e. the Policy set `enforced:
-   * false` for that resource.
+   * Output only. Number of resources where the constraint was not enforced, i.e. the Policy set
+   * `enforced: false` for that resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer unenforced;
 
   /**
-   * Number of scanned resources with zero violations.
+   * Output only. Number of scanned resources with zero violations.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCompliant() {
@@ -75,7 +75,7 @@ public final class GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewRes
   }
 
   /**
-   * Number of scanned resources with zero violations.
+   * Output only. Number of scanned resources with zero violations.
    * @param compliant compliant or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewResourceCounts setCompliant(java.lang.Integer compliant) {
@@ -84,7 +84,7 @@ public final class GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewRes
   }
 
   /**
-   * Number of resources that returned an error when scanned.
+   * Output only. Number of resources that returned an error when scanned.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getErrors() {
@@ -92,7 +92,7 @@ public final class GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewRes
   }
 
   /**
-   * Number of resources that returned an error when scanned.
+   * Output only. Number of resources that returned an error when scanned.
    * @param errors errors or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewResourceCounts setErrors(java.lang.Integer errors) {
@@ -101,7 +101,7 @@ public final class GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewRes
   }
 
   /**
-   * Number of scanned resources with at least one violation.
+   * Output only. Number of scanned resources with at least one violation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNoncompliant() {
@@ -109,7 +109,7 @@ public final class GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewRes
   }
 
   /**
-   * Number of scanned resources with at least one violation.
+   * Output only. Number of scanned resources with at least one violation.
    * @param noncompliant noncompliant or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewResourceCounts setNoncompliant(java.lang.Integer noncompliant) {
@@ -118,8 +118,8 @@ public final class GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewRes
   }
 
   /**
-   * Number of resources checked for compliance. Must equal: unenforced + noncompliant + compliant +
-   * error
+   * Output only. Number of resources checked for compliance. Must equal: unenforced + noncompliant
+   * + compliant + error
    * @return value or {@code null} for none
    */
   public java.lang.Integer getScanned() {
@@ -127,8 +127,8 @@ public final class GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewRes
   }
 
   /**
-   * Number of resources checked for compliance. Must equal: unenforced + noncompliant + compliant +
-   * error
+   * Output only. Number of resources checked for compliance. Must equal: unenforced + noncompliant
+   * + compliant + error
    * @param scanned scanned or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewResourceCounts setScanned(java.lang.Integer scanned) {
@@ -137,8 +137,8 @@ public final class GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewRes
   }
 
   /**
-   * Number of resources where the constraint was not enforced, i.e. the Policy set `enforced:
-   * false` for that resource.
+   * Output only. Number of resources where the constraint was not enforced, i.e. the Policy set
+   * `enforced: false` for that resource.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUnenforced() {
@@ -146,8 +146,8 @@ public final class GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewRes
   }
 
   /**
-   * Number of resources where the constraint was not enforced, i.e. the Policy set `enforced:
-   * false` for that resource.
+   * Output only. Number of resources where the constraint was not enforced, i.e. the Policy set
+   * `enforced: false` for that resource.
    * @param unenforced unenforced or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreviewResourceCounts setUnenforced(java.lang.Integer unenforced) {

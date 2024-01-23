@@ -30,7 +30,7 @@ package com.google.api.services.policysimulator.v1beta.model;
 public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay extends com.google.api.client.json.GenericJson {
 
   /**
-   * The OrgPolicy CustomConstraint changes to preview violations for. Any existing
+   * Optional. The OrgPolicy CustomConstraint changes to preview violations for. Any existing
    * CustomConstraints with the same name will be overridden in the simulation. That is, violations
    * will be determined as if all custom constraints in the overlay were instantiated. Only a single
    * custom_constraint is supported in the overlay at a time. For evaluating multiple constraints,
@@ -42,16 +42,16 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay extends com
   private java.util.List<GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayCustomConstraintOverlay> customConstraints;
 
   /**
-   * The OrgPolicy changes to preview violations for. Any existing OrgPolicies with the same name
-   * will be overridden in the simulation. That is, violations will be determined as if all policies
-   * in the overlay were created or updated.
+   * Optional. The OrgPolicy changes to preview violations for. Any existing OrgPolicies with the
+   * same name will be overridden in the simulation. That is, violations will be determined as if
+   * all policies in the overlay were created or updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayPolicyOverlay> policies;
 
   /**
-   * The OrgPolicy CustomConstraint changes to preview violations for. Any existing
+   * Optional. The OrgPolicy CustomConstraint changes to preview violations for. Any existing
    * CustomConstraints with the same name will be overridden in the simulation. That is, violations
    * will be determined as if all custom constraints in the overlay were instantiated. Only a single
    * custom_constraint is supported in the overlay at a time. For evaluating multiple constraints,
@@ -64,7 +64,7 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay extends com
   }
 
   /**
-   * The OrgPolicy CustomConstraint changes to preview violations for. Any existing
+   * Optional. The OrgPolicy CustomConstraint changes to preview violations for. Any existing
    * CustomConstraints with the same name will be overridden in the simulation. That is, violations
    * will be determined as if all custom constraints in the overlay were instantiated. Only a single
    * custom_constraint is supported in the overlay at a time. For evaluating multiple constraints,
@@ -78,9 +78,9 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay extends com
   }
 
   /**
-   * The OrgPolicy changes to preview violations for. Any existing OrgPolicies with the same name
-   * will be overridden in the simulation. That is, violations will be determined as if all policies
-   * in the overlay were created or updated.
+   * Optional. The OrgPolicy changes to preview violations for. Any existing OrgPolicies with the
+   * same name will be overridden in the simulation. That is, violations will be determined as if
+   * all policies in the overlay were created or updated.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayPolicyOverlay> getPolicies() {
@@ -88,9 +88,9 @@ public final class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay extends com
   }
 
   /**
-   * The OrgPolicy changes to preview violations for. Any existing OrgPolicies with the same name
-   * will be overridden in the simulation. That is, violations will be determined as if all policies
-   * in the overlay were created or updated.
+   * Optional. The OrgPolicy changes to preview violations for. Any existing OrgPolicies with the
+   * same name will be overridden in the simulation. That is, violations will be determined as if
+   * all policies in the overlay were created or updated.
    * @param policies policies or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay setPolicies(java.util.List<GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayPolicyOverlay> policies) {

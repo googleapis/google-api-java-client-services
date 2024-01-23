@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-prod_tt_sasportal</artifactId>
-  <version>v1alpha1-rev20240115-2.0.0</version>
-  <name>SAS Portal API (Testing) v1alpha1-rev20240115-2.0.0</name>
+  <version>v1alpha1-rev20240120-2.0.0</version>
+  <name>SAS Portal API (Testing) v1alpha1-rev20240120-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -39,10 +39,10 @@ public final class WeekDayOfMonth extends com.google.api.client.json.GenericJson
   /**
    * Optional. Represents the number of days before or after the given week day of month that the
    * patch deployment is scheduled for. For example if `week_ordinal` and `day_of_week` values point
-   * to the second day of the month and this `day_offset` value is set to `3`, the patch deployment
+   * to the second Tuesday of the month and the `day_offset` value is set to `3`, patch deployment
    * takes place three days after the second Tuesday of the month. If this value is negative, for
-   * example -5, the patches are deployed five days before before the second Tuesday of the month.
-   * Allowed values are in range [-30, 30].
+   * example -5, patches are deployed five days before the second Tuesday of the month. Allowed
+   * values are in range [-30, 30].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,10 +76,10 @@ public final class WeekDayOfMonth extends com.google.api.client.json.GenericJson
   /**
    * Optional. Represents the number of days before or after the given week day of month that the
    * patch deployment is scheduled for. For example if `week_ordinal` and `day_of_week` values point
-   * to the second day of the month and this `day_offset` value is set to `3`, the patch deployment
+   * to the second Tuesday of the month and the `day_offset` value is set to `3`, patch deployment
    * takes place three days after the second Tuesday of the month. If this value is negative, for
-   * example -5, the patches are deployed five days before before the second Tuesday of the month.
-   * Allowed values are in range [-30, 30].
+   * example -5, patches are deployed five days before the second Tuesday of the month. Allowed
+   * values are in range [-30, 30].
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDayOffset() {
@@ -89,10 +89,10 @@ public final class WeekDayOfMonth extends com.google.api.client.json.GenericJson
   /**
    * Optional. Represents the number of days before or after the given week day of month that the
    * patch deployment is scheduled for. For example if `week_ordinal` and `day_of_week` values point
-   * to the second day of the month and this `day_offset` value is set to `3`, the patch deployment
+   * to the second Tuesday of the month and the `day_offset` value is set to `3`, patch deployment
    * takes place three days after the second Tuesday of the month. If this value is negative, for
-   * example -5, the patches are deployed five days before before the second Tuesday of the month.
-   * Allowed values are in range [-30, 30].
+   * example -5, patches are deployed five days before the second Tuesday of the month. Allowed
+   * values are in range [-30, 30].
    * @param dayOffset dayOffset or {@code null} for none
    */
   public WeekDayOfMonth setDayOffset(java.lang.Integer dayOffset) {

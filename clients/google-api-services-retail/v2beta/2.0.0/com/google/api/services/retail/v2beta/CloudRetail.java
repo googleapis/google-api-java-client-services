@@ -558,6 +558,146 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
+         * Exports analytics metrics. `Operation.response` is of type `ExportAnalyticsMetricsResponse`.
+         * `Operation.metadata` is of type `ExportMetadata`.
+         *
+         * Create a request for the method "catalogs.exportAnalyticsMetrics".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link ExportAnalyticsMetrics#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param catalog Required. Full resource name of the parent catalog. Expected format: `projects/locations/catalogs`
+         * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaExportAnalyticsMetricsRequest}
+         * @return the request
+         */
+        public ExportAnalyticsMetrics exportAnalyticsMetrics(java.lang.String catalog, com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaExportAnalyticsMetricsRequest content) throws java.io.IOException {
+          ExportAnalyticsMetrics result = new ExportAnalyticsMetrics(catalog, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ExportAnalyticsMetrics extends CloudRetailRequest<com.google.api.services.retail.v2beta.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2beta/{+catalog}:exportAnalyticsMetrics";
+
+          private final java.util.regex.Pattern CATALOG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+          /**
+           * Exports analytics metrics. `Operation.response` is of type `ExportAnalyticsMetricsResponse`.
+           * `Operation.metadata` is of type `ExportMetadata`.
+           *
+           * Create a request for the method "catalogs.exportAnalyticsMetrics".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link ExportAnalyticsMetrics#execute()} method to invoke the remote
+           * operation. <p> {@link ExportAnalyticsMetrics#initialize(com.google.api.client.googleapis.servic
+           * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param catalog Required. Full resource name of the parent catalog. Expected format: `projects/locations/catalogs`
+           * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaExportAnalyticsMetricsRequest}
+           * @since 1.13
+           */
+          protected ExportAnalyticsMetrics(java.lang.String catalog, com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaExportAnalyticsMetricsRequest content) {
+            super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2beta.model.GoogleLongrunningOperation.class);
+            this.catalog = com.google.api.client.util.Preconditions.checkNotNull(catalog, "Required parameter catalog must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public ExportAnalyticsMetrics set$Xgafv(java.lang.String $Xgafv) {
+            return (ExportAnalyticsMetrics) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ExportAnalyticsMetrics setAccessToken(java.lang.String accessToken) {
+            return (ExportAnalyticsMetrics) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ExportAnalyticsMetrics setAlt(java.lang.String alt) {
+            return (ExportAnalyticsMetrics) super.setAlt(alt);
+          }
+
+          @Override
+          public ExportAnalyticsMetrics setCallback(java.lang.String callback) {
+            return (ExportAnalyticsMetrics) super.setCallback(callback);
+          }
+
+          @Override
+          public ExportAnalyticsMetrics setFields(java.lang.String fields) {
+            return (ExportAnalyticsMetrics) super.setFields(fields);
+          }
+
+          @Override
+          public ExportAnalyticsMetrics setKey(java.lang.String key) {
+            return (ExportAnalyticsMetrics) super.setKey(key);
+          }
+
+          @Override
+          public ExportAnalyticsMetrics setOauthToken(java.lang.String oauthToken) {
+            return (ExportAnalyticsMetrics) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ExportAnalyticsMetrics setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ExportAnalyticsMetrics) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ExportAnalyticsMetrics setQuotaUser(java.lang.String quotaUser) {
+            return (ExportAnalyticsMetrics) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ExportAnalyticsMetrics setUploadType(java.lang.String uploadType) {
+            return (ExportAnalyticsMetrics) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ExportAnalyticsMetrics setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ExportAnalyticsMetrics) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of the parent catalog. Expected format:
+           * `projects/locations/catalogs`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String catalog;
+
+          /** Required. Full resource name of the parent catalog. Expected format: `projects/locations/catalogs`
+           */
+          public java.lang.String getCatalog() {
+            return catalog;
+          }
+
+          /**
+           * Required. Full resource name of the parent catalog. Expected format:
+           * `projects/locations/catalogs`
+           */
+          public ExportAnalyticsMetrics setCatalog(java.lang.String catalog) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+            this.catalog = catalog;
+            return this;
+          }
+
+          @Override
+          public ExportAnalyticsMetrics set(String parameterName, Object value) {
+            return (ExportAnalyticsMetrics) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets an AttributesConfig.
          *
          * Create a request for the method "catalogs.getAttributesConfig".

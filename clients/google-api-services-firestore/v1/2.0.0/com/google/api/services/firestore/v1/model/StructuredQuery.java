@@ -17,7 +17,8 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * A Firestore query.
+ * A Firestore query. The query stages are executed in the following order: 1. from 2. where 3.
+ * select 4. order_by + start_at + end_at 5. offset 6. limit
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:

@@ -2292,7 +2292,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Lists the field configuration and metadata for this database. Currently,
            * FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To
            * issue this query, call FirestoreAdmin.ListFields with the filter set to
-           * `indexConfig.usesAncestorConfig:false or `ttlConfig:*`.
+           * `indexConfig.usesAncestorConfig:false` or `ttlConfig:*`.
            *
            * Create a request for the method "fields.list".
            *
@@ -2320,7 +2320,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * Lists the field configuration and metadata for this database. Currently,
              * FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To
              * issue this query, call FirestoreAdmin.ListFields with the filter set to
-             * `indexConfig.usesAncestorConfig:false or `ttlConfig:*`.
+             * `indexConfig.usesAncestorConfig:false` or `ttlConfig:*`.
              *
              * Create a request for the method "fields.list".
              *

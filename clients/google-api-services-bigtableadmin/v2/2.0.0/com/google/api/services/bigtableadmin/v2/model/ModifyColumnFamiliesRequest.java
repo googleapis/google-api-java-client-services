@@ -31,6 +31,13 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class ModifyColumnFamiliesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, ignore safety checks when modifying the column families.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreWarnings;
+
+  /**
    * Required. Modifications to be atomically applied to the specified table's families. Entries are
    * applied in order, meaning that earlier modifications can be masked by later ones (in the case
    * of repeated updates to the same family, for example).
@@ -43,6 +50,23 @@ public final class ModifyColumnFamiliesRequest extends com.google.api.client.jso
     // hack to force ProGuard to consider Modification used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(Modification.class);
+  }
+
+  /**
+   * Optional. If true, ignore safety checks when modifying the column families.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreWarnings() {
+    return ignoreWarnings;
+  }
+
+  /**
+   * Optional. If true, ignore safety checks when modifying the column families.
+   * @param ignoreWarnings ignoreWarnings or {@code null} for none
+   */
+  public ModifyColumnFamiliesRequest setIgnoreWarnings(java.lang.Boolean ignoreWarnings) {
+    this.ignoreWarnings = ignoreWarnings;
+    return this;
   }
 
   /**

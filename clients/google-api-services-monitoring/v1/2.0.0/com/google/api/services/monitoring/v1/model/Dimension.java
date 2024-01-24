@@ -17,8 +17,8 @@
 package com.google.api.services.monitoring.v1.model;
 
 /**
- * Preview: A chart dimension for an SQL query. This is applied over the x-axis. This is a preview
- * feature and may be subject to change before final release.
+ * A chart dimension. Dimensions are a structured label, class, or category for a set of
+ * measurements in your data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

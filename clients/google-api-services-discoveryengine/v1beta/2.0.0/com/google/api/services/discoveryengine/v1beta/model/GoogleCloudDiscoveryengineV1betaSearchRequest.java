@@ -71,7 +71,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    * based on the dot product of SearchRequest.EmbeddingSpec.EmbeddingVector.vector and the document
    * embedding that is provided in SearchRequest.EmbeddingSpec.EmbeddingVector.field_path. If
    * SearchRequest.EmbeddingSpec.EmbeddingVector.field_path is not provided, it will use
-   * ServingConfig.EmbeddingConfig.field_paths.
+   * ServingConfig.EmbeddingConfig.field_path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -332,7 +332,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    * based on the dot product of SearchRequest.EmbeddingSpec.EmbeddingVector.vector and the document
    * embedding that is provided in SearchRequest.EmbeddingSpec.EmbeddingVector.field_path. If
    * SearchRequest.EmbeddingSpec.EmbeddingVector.field_path is not provided, it will use
-   * ServingConfig.EmbeddingConfig.field_paths.
+   * ServingConfig.EmbeddingConfig.field_path.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec getEmbeddingSpec() {
@@ -344,7 +344,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    * based on the dot product of SearchRequest.EmbeddingSpec.EmbeddingVector.vector and the document
    * embedding that is provided in SearchRequest.EmbeddingSpec.EmbeddingVector.field_path. If
    * SearchRequest.EmbeddingSpec.EmbeddingVector.field_path is not provided, it will use
-   * ServingConfig.EmbeddingConfig.field_paths.
+   * ServingConfig.EmbeddingConfig.field_path.
    * @param embeddingSpec embeddingSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setEmbeddingSpec(GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec embeddingSpec) {

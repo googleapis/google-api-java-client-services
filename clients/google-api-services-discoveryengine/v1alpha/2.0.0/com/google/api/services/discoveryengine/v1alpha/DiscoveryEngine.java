@@ -775,7 +775,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link EstimateDataSize#execute()} method to invoke the remote
        * operation.
        *
-       * @param location Required. Full resource name of the Location, such as `projects/{project}/locations/{location}`.
+       * @param location Required. Full resource name of the location, such as `projects/{project}/locations/{location}`.
        * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaEstimateDataSizeRequest}
        * @return the request
        */
@@ -803,7 +803,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * tractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param location Required. Full resource name of the Location, such as `projects/{project}/locations/{location}`.
+         * @param location Required. Full resource name of the location, such as `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaEstimateDataSizeRequest}
          * @since 1.13
          */
@@ -873,20 +873,20 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. Full resource name of the Location, such as
+         * Required. Full resource name of the location, such as
          * `projects/{project}/locations/{location}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** Required. Full resource name of the Location, such as `projects/{project}/locations/{location}`.
+        /** Required. Full resource name of the location, such as `projects/{project}/locations/{location}`.
          */
         public java.lang.String getLocation() {
           return location;
         }
 
         /**
-         * Required. Full resource name of the Location, such as
+         * Required. Full resource name of the location, such as
          * `projects/{project}/locations/{location}`.
          */
         public EstimateDataSize setLocation(java.lang.String location) {
@@ -3110,14 +3110,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Indicates which fields in the provided DocumentProcessingConfig to update. The
-             * following are the only supported fields: * DocumentProcessingConfig.orc_config If not
+             * following are the only supported fields: * DocumentProcessingConfig.ocr_config If not
              * set, all supported fields are updated.
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
             /** Indicates which fields in the provided DocumentProcessingConfig to update. The following are the
-           only supported fields: * DocumentProcessingConfig.orc_config If not set, all supported fields are
+           only supported fields: * DocumentProcessingConfig.ocr_config If not set, all supported fields are
            updated.
              */
             public String getUpdateMask() {
@@ -3126,7 +3126,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Indicates which fields in the provided DocumentProcessingConfig to update. The
-             * following are the only supported fields: * DocumentProcessingConfig.orc_config If not
+             * following are the only supported fields: * DocumentProcessingConfig.ocr_config If not
              * set, all supported fields are updated.
              */
             public UpdateDocumentProcessingConfig setUpdateMask(String updateMask) {
@@ -16523,14 +16523,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Indicates which fields in the provided DocumentProcessingConfig to update. The
-           * following are the only supported fields: * DocumentProcessingConfig.orc_config If not
+           * following are the only supported fields: * DocumentProcessingConfig.ocr_config If not
            * set, all supported fields are updated.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Indicates which fields in the provided DocumentProcessingConfig to update. The following are the
-         only supported fields: * DocumentProcessingConfig.orc_config If not set, all supported fields are
+         only supported fields: * DocumentProcessingConfig.ocr_config If not set, all supported fields are
          updated.
            */
           public String getUpdateMask() {
@@ -16539,7 +16539,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Indicates which fields in the provided DocumentProcessingConfig to update. The
-           * following are the only supported fields: * DocumentProcessingConfig.orc_config If not
+           * following are the only supported fields: * DocumentProcessingConfig.ocr_config If not
            * set, all supported fields are updated.
            */
           public UpdateDocumentProcessingConfig setUpdateMask(String updateMask) {

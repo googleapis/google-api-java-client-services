@@ -94,7 +94,9 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
 
   /**
    * Role that is assigned to the list of `members`, or principals. For example, `roles/viewer`,
-   * `roles/editor`, or `roles/owner`.
+   * `roles/editor`, or `roles/owner`. For an overview of the IAM roles and permissions, see the
+   * [IAM documentation](https://cloud.google.com/iam/docs/roles-overview). For a list of the
+   * available pre-defined roles, see [here](https://cloud.google.com/iam/docs/understanding-roles).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,7 +236,9 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
 
   /**
    * Role that is assigned to the list of `members`, or principals. For example, `roles/viewer`,
-   * `roles/editor`, or `roles/owner`.
+   * `roles/editor`, or `roles/owner`. For an overview of the IAM roles and permissions, see the
+   * [IAM documentation](https://cloud.google.com/iam/docs/roles-overview). For a list of the
+   * available pre-defined roles, see [here](https://cloud.google.com/iam/docs/understanding-roles).
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -243,7 +247,9 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
 
   /**
    * Role that is assigned to the list of `members`, or principals. For example, `roles/viewer`,
-   * `roles/editor`, or `roles/owner`.
+   * `roles/editor`, or `roles/owner`. For an overview of the IAM roles and permissions, see the
+   * [IAM documentation](https://cloud.google.com/iam/docs/roles-overview). For a list of the
+   * available pre-defined roles, see [here](https://cloud.google.com/iam/docs/understanding-roles).
    * @param role role or {@code null} for none
    */
   public GoogleIamV1Binding setRole(java.lang.String role) {

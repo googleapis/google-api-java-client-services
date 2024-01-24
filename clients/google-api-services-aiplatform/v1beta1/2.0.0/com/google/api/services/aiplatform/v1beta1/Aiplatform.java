@@ -24965,7 +24965,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the Location to create FeatureOnlineStores. Format:
-         *        `projects/{project}/locations/{location}'`
+         *        `projects/{project}/locations/{location}`
          * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore}
          * @return the request
          */
@@ -24994,7 +24994,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the Location to create FeatureOnlineStores. Format:
-         *        `projects/{project}/locations/{location}'`
+         *        `projects/{project}/locations/{location}`
            * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1FeatureOnlineStore}
            * @since 1.13
            */
@@ -25065,13 +25065,13 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The resource name of the Location to create FeatureOnlineStores. Format:
-           * `projects/{project}/locations/{location}'`
+           * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the Location to create FeatureOnlineStores. Format:
-         `projects/{project}/locations/{location}'`
+         `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -25079,7 +25079,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The resource name of the Location to create FeatureOnlineStores. Format:
-           * `projects/{project}/locations/{location}'`
+           * `projects/{project}/locations/{location}`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

@@ -16211,6 +16211,142 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Create a request for the method "endpoints.streamRawPredict".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link StreamRawPredict#execute()} method to invoke the remote operation.
+         *
+         * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StreamRawPredictRequest}
+         * @return the request
+         */
+        public StreamRawPredict streamRawPredict(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StreamRawPredictRequest content) throws java.io.IOException {
+          StreamRawPredict result = new StreamRawPredict(endpoint, content);
+          initialize(result);
+          return result;
+        }
+
+        public class StreamRawPredict extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody> {
+
+          private static final String REST_PATH = "v1/{+endpoint}:streamRawPredict";
+
+          private final java.util.regex.Pattern ENDPOINT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Create a request for the method "endpoints.streamRawPredict".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link StreamRawPredict#execute()} method to invoke the remote
+           * operation. <p> {@link StreamRawPredict#initialize(com.google.api.client.googleapis.services.Abs
+           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StreamRawPredictRequest}
+           * @since 1.13
+           */
+          protected StreamRawPredict(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StreamRawPredictRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody.class);
+            this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public StreamRawPredict set$Xgafv(java.lang.String $Xgafv) {
+            return (StreamRawPredict) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public StreamRawPredict setAccessToken(java.lang.String accessToken) {
+            return (StreamRawPredict) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public StreamRawPredict setAlt(java.lang.String alt) {
+            return (StreamRawPredict) super.setAlt(alt);
+          }
+
+          @Override
+          public StreamRawPredict setCallback(java.lang.String callback) {
+            return (StreamRawPredict) super.setCallback(callback);
+          }
+
+          @Override
+          public StreamRawPredict setFields(java.lang.String fields) {
+            return (StreamRawPredict) super.setFields(fields);
+          }
+
+          @Override
+          public StreamRawPredict setKey(java.lang.String key) {
+            return (StreamRawPredict) super.setKey(key);
+          }
+
+          @Override
+          public StreamRawPredict setOauthToken(java.lang.String oauthToken) {
+            return (StreamRawPredict) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public StreamRawPredict setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (StreamRawPredict) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public StreamRawPredict setQuotaUser(java.lang.String quotaUser) {
+            return (StreamRawPredict) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public StreamRawPredict setUploadType(java.lang.String uploadType) {
+            return (StreamRawPredict) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public StreamRawPredict setUploadProtocol(java.lang.String uploadProtocol) {
+            return (StreamRawPredict) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String endpoint;
+
+          /** Required. The name of the Endpoint requested to serve the prediction. Format:
+         `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          public java.lang.String getEndpoint() {
+            return endpoint;
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           */
+          public StreamRawPredict setEndpoint(java.lang.String endpoint) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.endpoint = endpoint;
+            return this;
+          }
+
+          @Override
+          public StreamRawPredict set(String parameterName, Object value) {
+            return (StreamRawPredict) super.set(parameterName, value);
+          }
+        }
+        /**
          * Undeploys a Model from an Endpoint, removing a DeployedModel from it, and freeing all resources
          * it's using.
          *
@@ -20428,7 +20564,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the Location to create FeatureOnlineStores. Format:
-         *        `projects/{project}/locations/{location}'`
+         *        `projects/{project}/locations/{location}`
          * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FeatureOnlineStore}
          * @return the request
          */
@@ -20457,7 +20593,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the Location to create FeatureOnlineStores. Format:
-         *        `projects/{project}/locations/{location}'`
+         *        `projects/{project}/locations/{location}`
            * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FeatureOnlineStore}
            * @since 1.13
            */
@@ -20528,13 +20664,13 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The resource name of the Location to create FeatureOnlineStores. Format:
-           * `projects/{project}/locations/{location}'`
+           * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the Location to create FeatureOnlineStores. Format:
-         `projects/{project}/locations/{location}'`
+         `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -20542,7 +20678,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The resource name of the Location to create FeatureOnlineStores. Format:
-           * `projects/{project}/locations/{location}'`
+           * `projects/{project}/locations/{location}`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -61610,6 +61746,142 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             @Override
             public StreamGenerateContent set(String parameterName, Object value) {
               return (StreamGenerateContent) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Create a request for the method "models.streamRawPredict".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link StreamRawPredict#execute()} method to invoke the remote operation.
+           *
+           * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StreamRawPredictRequest}
+           * @return the request
+           */
+          public StreamRawPredict streamRawPredict(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StreamRawPredictRequest content) throws java.io.IOException {
+            StreamRawPredict result = new StreamRawPredict(endpoint, content);
+            initialize(result);
+            return result;
+          }
+
+          public class StreamRawPredict extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody> {
+
+            private static final String REST_PATH = "v1/{+endpoint}:streamRawPredict";
+
+            private final java.util.regex.Pattern ENDPOINT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+
+            /**
+             * Create a request for the method "models.streamRawPredict".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link StreamRawPredict#execute()} method to invoke the remote
+             * operation. <p> {@link StreamRawPredict#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StreamRawPredictRequest}
+             * @since 1.13
+             */
+            protected StreamRawPredict(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StreamRawPredictRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody.class);
+              this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public StreamRawPredict set$Xgafv(java.lang.String $Xgafv) {
+              return (StreamRawPredict) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public StreamRawPredict setAccessToken(java.lang.String accessToken) {
+              return (StreamRawPredict) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public StreamRawPredict setAlt(java.lang.String alt) {
+              return (StreamRawPredict) super.setAlt(alt);
+            }
+
+            @Override
+            public StreamRawPredict setCallback(java.lang.String callback) {
+              return (StreamRawPredict) super.setCallback(callback);
+            }
+
+            @Override
+            public StreamRawPredict setFields(java.lang.String fields) {
+              return (StreamRawPredict) super.setFields(fields);
+            }
+
+            @Override
+            public StreamRawPredict setKey(java.lang.String key) {
+              return (StreamRawPredict) super.setKey(key);
+            }
+
+            @Override
+            public StreamRawPredict setOauthToken(java.lang.String oauthToken) {
+              return (StreamRawPredict) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public StreamRawPredict setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (StreamRawPredict) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public StreamRawPredict setQuotaUser(java.lang.String quotaUser) {
+              return (StreamRawPredict) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public StreamRawPredict setUploadType(java.lang.String uploadType) {
+              return (StreamRawPredict) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public StreamRawPredict setUploadProtocol(java.lang.String uploadProtocol) {
+              return (StreamRawPredict) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String endpoint;
+
+            /** Required. The name of the Endpoint requested to serve the prediction. Format:
+           `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            public java.lang.String getEndpoint() {
+              return endpoint;
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            public StreamRawPredict setEndpoint(java.lang.String endpoint) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+              this.endpoint = endpoint;
+              return this;
+            }
+
+            @Override
+            public StreamRawPredict set(String parameterName, Object value) {
+              return (StreamRawPredict) super.set(parameterName, value);
             }
           }
 

@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1CreatePersistentResourceOperation
   private GoogleCloudAiplatformV1beta1GenericOperationMetadata genericMetadata;
 
   /**
+   * Progress Message for Create LRO
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String progressMessage;
+
+  /**
    * Operation metadata for PersistentResource.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1beta1CreatePersistentResourceOperation
    */
   public GoogleCloudAiplatformV1beta1CreatePersistentResourceOperationMetadata setGenericMetadata(GoogleCloudAiplatformV1beta1GenericOperationMetadata genericMetadata) {
     this.genericMetadata = genericMetadata;
+    return this;
+  }
+
+  /**
+   * Progress Message for Create LRO
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProgressMessage() {
+    return progressMessage;
+  }
+
+  /**
+   * Progress Message for Create LRO
+   * @param progressMessage progressMessage or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CreatePersistentResourceOperationMetadata setProgressMessage(java.lang.String progressMessage) {
+    this.progressMessage = progressMessage;
     return this;
   }
 

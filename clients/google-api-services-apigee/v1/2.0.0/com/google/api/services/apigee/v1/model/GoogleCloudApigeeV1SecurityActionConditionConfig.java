@@ -36,8 +36,8 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
   /**
    * Optional. A list of Bot Reasons. Current options: Flooder, Brute Guessor, Static Content
    * Scraper, OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection, Advanced API
-   * Scraper, Search Engine Crawlers, Public Cloud, Public Cloud AWS, Public Cloud Azure, and Public
-   * Cloud GCP.
+   * Scraper, Search Engine Crawlers, Public Clouds, Public Cloud AWS, Public Cloud Azure, and
+   * Public Cloud Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
   /**
    * Optional. A list of Bot Reasons. Current options: Flooder, Brute Guessor, Static Content
    * Scraper, OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection, Advanced API
-   * Scraper, Search Engine Crawlers, Public Cloud, Public Cloud AWS, Public Cloud Azure, and Public
-   * Cloud GCP.
+   * Scraper, Search Engine Crawlers, Public Clouds, Public Cloud AWS, Public Cloud Azure, and
+   * Public Cloud Google.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBotReasons() {
@@ -64,8 +64,8 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
   /**
    * Optional. A list of Bot Reasons. Current options: Flooder, Brute Guessor, Static Content
    * Scraper, OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection, Advanced API
-   * Scraper, Search Engine Crawlers, Public Cloud, Public Cloud AWS, Public Cloud Azure, and Public
-   * Cloud GCP.
+   * Scraper, Search Engine Crawlers, Public Clouds, Public Cloud AWS, Public Cloud Azure, and
+   * Public Cloud Google.
    * @param botReasons botReasons or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityActionConditionConfig setBotReasons(java.util.List<java.lang.String> botReasons) {

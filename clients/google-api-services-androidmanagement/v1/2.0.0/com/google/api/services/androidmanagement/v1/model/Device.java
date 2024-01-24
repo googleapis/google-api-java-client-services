@@ -117,6 +117,14 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.util.List<Display> displays;
 
   /**
+   * Output only. Information related to whether this device was migrated from being managed by
+   * another Device Policy Controller (DPC).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DpcMigrationInfo dpcMigrationInfo;
+
+  /**
    * The time of device enrollment.
    * The value may be {@code null}.
    */
@@ -493,6 +501,25 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setDisplays(java.util.List<Display> displays) {
     this.displays = displays;
+    return this;
+  }
+
+  /**
+   * Output only. Information related to whether this device was migrated from being managed by
+   * another Device Policy Controller (DPC).
+   * @return value or {@code null} for none
+   */
+  public DpcMigrationInfo getDpcMigrationInfo() {
+    return dpcMigrationInfo;
+  }
+
+  /**
+   * Output only. Information related to whether this device was migrated from being managed by
+   * another Device Policy Controller (DPC).
+   * @param dpcMigrationInfo dpcMigrationInfo or {@code null} for none
+   */
+  public Device setDpcMigrationInfo(DpcMigrationInfo dpcMigrationInfo) {
+    this.dpcMigrationInfo = dpcMigrationInfo;
     return this;
   }
 

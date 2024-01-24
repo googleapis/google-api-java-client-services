@@ -30,8 +30,9 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class SearchResourcesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the
-   * FHIR Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+   * Required. The FHIR resource type to search, such as Patient or Observation. For a complete
+   * list, see the FHIR Resource Index
+   * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
    * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
    * The value may be {@code null}.
@@ -40,8 +41,9 @@ public final class SearchResourcesRequest extends com.google.api.client.json.Gen
   private java.lang.String resourceType;
 
   /**
-   * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the
-   * FHIR Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+   * Required. The FHIR resource type to search, such as Patient or Observation. For a complete
+   * list, see the FHIR Resource Index
+   * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
    * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
    * @return value or {@code null} for none
@@ -51,8 +53,9 @@ public final class SearchResourcesRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the
-   * FHIR Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+   * Required. The FHIR resource type to search, such as Patient or Observation. For a complete
+   * list, see the FHIR Resource Index
+   * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
    * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
    * @param resourceType resourceType or {@code null} for none

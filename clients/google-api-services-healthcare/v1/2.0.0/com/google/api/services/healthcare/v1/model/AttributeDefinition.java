@@ -70,9 +70,9 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   private java.lang.String description;
 
   /**
-   * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{locati
-   * on_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
-   * efinition_id}`. Cannot be changed after creation.
+   * Identifier. Resource name of the Attribute definition, of the form `projects/{project_id}/locat
+   * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/
+   * {attribute_definition_id}`. Cannot be changed after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,9 +174,9 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{locati
-   * on_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
-   * efinition_id}`. Cannot be changed after creation.
+   * Identifier. Resource name of the Attribute definition, of the form `projects/{project_id}/locat
+   * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/
+   * {attribute_definition_id}`. Cannot be changed after creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -184,9 +184,9 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{locati
-   * on_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
-   * efinition_id}`. Cannot be changed after creation.
+   * Identifier. Resource name of the Attribute definition, of the form `projects/{project_id}/locat
+   * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/
+   * {attribute_definition_id}`. Cannot be changed after creation.
    * @param name name or {@code null} for none
    */
   public AttributeDefinition setName(java.lang.String name) {

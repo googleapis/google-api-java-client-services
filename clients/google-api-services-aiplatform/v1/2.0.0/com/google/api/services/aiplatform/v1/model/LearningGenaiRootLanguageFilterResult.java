@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Model definition for LearningServingLlmLanguageFilterResult.
+ * Model definition for LearningGenaiRootLanguageFilterResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LearningServingLlmLanguageFilterResult extends com.google.api.client.json.GenericJson {
+public final class LearningGenaiRootLanguageFilterResult extends com.google.api.client.json.GenericJson {
 
   /**
    * False when query or response should be filtered out due to unsupported language.
@@ -62,7 +62,7 @@ public final class LearningServingLlmLanguageFilterResult extends com.google.api
    * False when query or response should be filtered out due to unsupported language.
    * @param allowed allowed or {@code null} for none
    */
-  public LearningServingLlmLanguageFilterResult setAllowed(java.lang.Boolean allowed) {
+  public LearningGenaiRootLanguageFilterResult setAllowed(java.lang.Boolean allowed) {
     this.allowed = allowed;
     return this;
   }
@@ -79,7 +79,7 @@ public final class LearningServingLlmLanguageFilterResult extends com.google.api
    * Language of the query or response.
    * @param detectedLanguage detectedLanguage or {@code null} for none
    */
-  public LearningServingLlmLanguageFilterResult setDetectedLanguage(java.lang.String detectedLanguage) {
+  public LearningGenaiRootLanguageFilterResult setDetectedLanguage(java.lang.String detectedLanguage) {
     this.detectedLanguage = detectedLanguage;
     return this;
   }
@@ -96,19 +96,19 @@ public final class LearningServingLlmLanguageFilterResult extends com.google.api
    * Probability of the language predicted as returned by LangID.
    * @param detectedLanguageProbability detectedLanguageProbability or {@code null} for none
    */
-  public LearningServingLlmLanguageFilterResult setDetectedLanguageProbability(java.lang.Float detectedLanguageProbability) {
+  public LearningGenaiRootLanguageFilterResult setDetectedLanguageProbability(java.lang.Float detectedLanguageProbability) {
     this.detectedLanguageProbability = detectedLanguageProbability;
     return this;
   }
 
   @Override
-  public LearningServingLlmLanguageFilterResult set(String fieldName, Object value) {
-    return (LearningServingLlmLanguageFilterResult) super.set(fieldName, value);
+  public LearningGenaiRootLanguageFilterResult set(String fieldName, Object value) {
+    return (LearningGenaiRootLanguageFilterResult) super.set(fieldName, value);
   }
 
   @Override
-  public LearningServingLlmLanguageFilterResult clone() {
-    return (LearningServingLlmLanguageFilterResult) super.clone();
+  public LearningGenaiRootLanguageFilterResult clone() {
+    return (LearningGenaiRootLanguageFilterResult) super.clone();
   }
 
 }

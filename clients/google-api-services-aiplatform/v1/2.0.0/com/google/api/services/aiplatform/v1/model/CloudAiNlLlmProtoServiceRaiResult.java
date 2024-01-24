@@ -64,7 +64,7 @@ public final class CloudAiNlLlmProtoServiceRaiResult extends com.google.api.clie
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private LearningServingLlmLanguageFilterResult languageFilterResult;
+  private LearningGenaiRootLanguageFilterResult languageFilterResult;
 
   /**
    * The RAI signals for the text.
@@ -173,7 +173,7 @@ public final class CloudAiNlLlmProtoServiceRaiResult extends com.google.api.clie
    * Language filter result from SAFT LangId.
    * @return value or {@code null} for none
    */
-  public LearningServingLlmLanguageFilterResult getLanguageFilterResult() {
+  public LearningGenaiRootLanguageFilterResult getLanguageFilterResult() {
     return languageFilterResult;
   }
 
@@ -181,7 +181,7 @@ public final class CloudAiNlLlmProtoServiceRaiResult extends com.google.api.clie
    * Language filter result from SAFT LangId.
    * @param languageFilterResult languageFilterResult or {@code null} for none
    */
-  public CloudAiNlLlmProtoServiceRaiResult setLanguageFilterResult(LearningServingLlmLanguageFilterResult languageFilterResult) {
+  public CloudAiNlLlmProtoServiceRaiResult setLanguageFilterResult(LearningGenaiRootLanguageFilterResult languageFilterResult) {
     this.languageFilterResult = languageFilterResult;
     return this;
   }

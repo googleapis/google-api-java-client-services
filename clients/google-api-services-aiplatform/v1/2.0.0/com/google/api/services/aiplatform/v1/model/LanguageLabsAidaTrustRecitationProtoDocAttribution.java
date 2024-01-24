@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1.model;
  * The proto defines the attribution information for a document using whatever fields are most
  * applicable for that document's datasource. For example, a Wikipedia article's attribution is in
  * the form of its article title, a website is in the form of a URL, and a Github repo is in the
- * form of a repo name. Next id:28
+ * form of a repo name. Next id: 30
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -55,6 +55,13 @@ public final class LanguageLabsAidaTrustRecitationProtoDocAttribution extends co
    */
   @com.google.api.client.util.Key
   private java.lang.String bibkey;
+
+  /**
+   * ID of the paper in bioarxiv like ddoi.org/{biorxiv_id} eg: https://doi.org/10.1101/343517
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String biorxivId;
 
   /**
    * The value may be {@code null}.
@@ -215,6 +222,13 @@ public final class LanguageLabsAidaTrustRecitationProtoDocAttribution extends co
   private java.lang.String wikipediaArticleTitle;
 
   /**
+   * The unique video id from Youtube. Example: AkoGsW52Ir0
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String youtubeVideoId;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getAmarnaId() {
@@ -271,6 +285,23 @@ public final class LanguageLabsAidaTrustRecitationProtoDocAttribution extends co
    */
   public LanguageLabsAidaTrustRecitationProtoDocAttribution setBibkey(java.lang.String bibkey) {
     this.bibkey = bibkey;
+    return this;
+  }
+
+  /**
+   * ID of the paper in bioarxiv like ddoi.org/{biorxiv_id} eg: https://doi.org/10.1101/343517
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBiorxivId() {
+    return biorxivId;
+  }
+
+  /**
+   * ID of the paper in bioarxiv like ddoi.org/{biorxiv_id} eg: https://doi.org/10.1101/343517
+   * @param biorxivId biorxivId or {@code null} for none
+   */
+  public LanguageLabsAidaTrustRecitationProtoDocAttribution setBiorxivId(java.lang.String biorxivId) {
+    this.biorxivId = biorxivId;
     return this;
   }
 
@@ -656,6 +687,23 @@ public final class LanguageLabsAidaTrustRecitationProtoDocAttribution extends co
    */
   public LanguageLabsAidaTrustRecitationProtoDocAttribution setWikipediaArticleTitle(java.lang.String wikipediaArticleTitle) {
     this.wikipediaArticleTitle = wikipediaArticleTitle;
+    return this;
+  }
+
+  /**
+   * The unique video id from Youtube. Example: AkoGsW52Ir0
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getYoutubeVideoId() {
+    return youtubeVideoId;
+  }
+
+  /**
+   * The unique video id from Youtube. Example: AkoGsW52Ir0
+   * @param youtubeVideoId youtubeVideoId or {@code null} for none
+   */
+  public LanguageLabsAidaTrustRecitationProtoDocAttribution setYoutubeVideoId(java.lang.String youtubeVideoId) {
+    this.youtubeVideoId = youtubeVideoId;
     return this;
   }
 

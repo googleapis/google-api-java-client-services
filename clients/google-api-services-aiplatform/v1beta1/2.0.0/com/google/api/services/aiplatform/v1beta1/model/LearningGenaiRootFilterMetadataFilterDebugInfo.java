@@ -45,7 +45,7 @@ public final class LearningGenaiRootFilterMetadataFilterDebugInfo extends com.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private LearningServingLlmLanguageFilterResult languageFilterResult;
+  private LearningGenaiRootLanguageFilterResult languageFilterResult;
 
   /**
    * Safety filter output information for LLM Root RAI harm check.
@@ -117,14 +117,14 @@ public final class LearningGenaiRootFilterMetadataFilterDebugInfo extends com.go
   /**
    * @return value or {@code null} for none
    */
-  public LearningServingLlmLanguageFilterResult getLanguageFilterResult() {
+  public LearningGenaiRootLanguageFilterResult getLanguageFilterResult() {
     return languageFilterResult;
   }
 
   /**
    * @param languageFilterResult languageFilterResult or {@code null} for none
    */
-  public LearningGenaiRootFilterMetadataFilterDebugInfo setLanguageFilterResult(LearningServingLlmLanguageFilterResult languageFilterResult) {
+  public LearningGenaiRootFilterMetadataFilterDebugInfo setLanguageFilterResult(LearningGenaiRootLanguageFilterResult languageFilterResult) {
     this.languageFilterResult = languageFilterResult;
     return this;
   }

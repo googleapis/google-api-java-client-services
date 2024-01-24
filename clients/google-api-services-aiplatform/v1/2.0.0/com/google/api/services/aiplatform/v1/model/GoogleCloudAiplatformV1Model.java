@@ -163,7 +163,7 @@ public final class GoogleCloudAiplatformV1Model extends com.google.api.client.js
 
   /**
    * Output only. Source of a model. It can either be automl training pipeline, custom training
-   * pipeline, BigQuery ML, or existing Vertex AI Model.
+   * pipeline, BigQuery ML, or saved and tuned from Genie or Model Garden.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -610,7 +610,7 @@ public final class GoogleCloudAiplatformV1Model extends com.google.api.client.js
 
   /**
    * Output only. Source of a model. It can either be automl training pipeline, custom training
-   * pipeline, BigQuery ML, or existing Vertex AI Model.
+   * pipeline, BigQuery ML, or saved and tuned from Genie or Model Garden.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1ModelSourceInfo getModelSourceInfo() {
@@ -619,7 +619,7 @@ public final class GoogleCloudAiplatformV1Model extends com.google.api.client.js
 
   /**
    * Output only. Source of a model. It can either be automl training pipeline, custom training
-   * pipeline, BigQuery ML, or existing Vertex AI Model.
+   * pipeline, BigQuery ML, or saved and tuned from Genie or Model Garden.
    * @param modelSourceInfo modelSourceInfo or {@code null} for none
    */
   public GoogleCloudAiplatformV1Model setModelSourceInfo(GoogleCloudAiplatformV1ModelSourceInfo modelSourceInfo) {

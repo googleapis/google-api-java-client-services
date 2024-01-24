@@ -142,6 +142,13 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String state;
 
   /**
+   * Output only. The storage limit in bytes per processing unit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long storageLimitPerProcessingUnit;
+
+  /**
    * Base configuration name, e.g. projects//instanceConfigs/nam3, based on which this configuration
    * is created. Only set for user managed configurations. `base_config` must refer to a
    * configuration of type GOOGLE_MANAGED in the same project as this configuration.
@@ -396,6 +403,23 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
    */
   public InstanceConfig setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The storage limit in bytes per processing unit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getStorageLimitPerProcessingUnit() {
+    return storageLimitPerProcessingUnit;
+  }
+
+  /**
+   * Output only. The storage limit in bytes per processing unit.
+   * @param storageLimitPerProcessingUnit storageLimitPerProcessingUnit or {@code null} for none
+   */
+  public InstanceConfig setStorageLimitPerProcessingUnit(java.lang.Long storageLimitPerProcessingUnit) {
+    this.storageLimitPerProcessingUnit = storageLimitPerProcessingUnit;
     return this;
   }
 

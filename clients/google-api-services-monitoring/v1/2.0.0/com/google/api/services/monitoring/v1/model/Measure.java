@@ -17,8 +17,8 @@
 package com.google.api.services.monitoring.v1.model;
 
 /**
- * Preview: A chart measure for an SQL query. This is applied over the y-axis. This is a preview
- * feature and may be subject to change before final release.
+ * A chart measure. Measures represent a measured property in your chart data such as rainfall in
+ * inches, number of units sold, revenue gained, etc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

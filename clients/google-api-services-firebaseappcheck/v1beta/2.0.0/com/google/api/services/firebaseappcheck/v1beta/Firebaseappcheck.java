@@ -9003,6 +9003,46 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
+           * Optional. Filters the results by the specified rule. For the exact syntax of this
+           * field, please consult the [AIP-160](https://google.aip.dev/160) standard. Currently,
+           * since the only fields in the ResourcePolicy resource are the scalar fields
+           * `enforcement_mode` and `target_resource`, this method does not support the traversal
+           * operator (`.`) or the has operator (`:`). Here are some examples of valid filters: *
+           * `enforcement_mode = ENFORCED` * `target_resource =
+           * "//oauth2.googleapis.com/projects/12345/oauthClients/"` * `enforcement_mode = ENFORCED
+           * AND target_resource = "//oauth2.googleapis.com/projects/12345/oauthClients/"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filters the results by the specified rule. For the exact syntax of this field, please
+         consult the [AIP-160](https://google.aip.dev/160) standard. Currently, since the only fields in the
+         ResourcePolicy resource are the scalar fields `enforcement_mode` and `target_resource`, this method
+         does not support the traversal operator (`.`) or the has operator (`:`). Here are some examples of
+         valid filters: * `enforcement_mode = ENFORCED` * `target_resource =
+         "//oauth2.googleapis.com/projects/12345/oauthClients/"` * `enforcement_mode = ENFORCED AND
+         target_resource = "//oauth2.googleapis.com/projects/12345/oauthClients/"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filters the results by the specified rule. For the exact syntax of this
+           * field, please consult the [AIP-160](https://google.aip.dev/160) standard. Currently,
+           * since the only fields in the ResourcePolicy resource are the scalar fields
+           * `enforcement_mode` and `target_resource`, this method does not support the traversal
+           * operator (`.`) or the has operator (`:`). Here are some examples of valid filters: *
+           * `enforcement_mode = ENFORCED` * `target_resource =
+           * "//oauth2.googleapis.com/projects/12345/oauthClients/"` * `enforcement_mode = ENFORCED
+           * AND target_resource = "//oauth2.googleapis.com/projects/12345/oauthClients/"`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * The maximum number of ResourcePolicys to return in the response. Only explicitly
            * configured policies are returned. The server may return fewer than this at its own
            * discretion. If no value is specified (or too large a value is specified), the server

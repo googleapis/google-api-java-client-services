@@ -59,9 +59,9 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_i
-   * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id
-   * }`. Cannot be changed after creation.
+   * Identifier. Resource name of the Consent artifact, of the form `projects/{project_id}/locations
+   * /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent
+   * _artifact_id}`. Cannot be changed after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,9 +159,9 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_i
-   * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id
-   * }`. Cannot be changed after creation.
+   * Identifier. Resource name of the Consent artifact, of the form `projects/{project_id}/locations
+   * /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent
+   * _artifact_id}`. Cannot be changed after creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -169,9 +169,9 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_i
-   * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id
-   * }`. Cannot be changed after creation.
+   * Identifier. Resource name of the Consent artifact, of the form `projects/{project_id}/locations
+   * /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent
+   * _artifact_id}`. Cannot be changed after creation.
    * @param name name or {@code null} for none
    */
   public ConsentArtifact setName(java.lang.String name) {

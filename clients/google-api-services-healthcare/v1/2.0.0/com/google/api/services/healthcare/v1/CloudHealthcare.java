@@ -715,7 +715,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
          *
-         * @param sourceDataset Source dataset resource name. For example,
+         * @param sourceDataset Required. Source dataset resource name. For example,
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
          * @param content the {@link com.google.api.services.healthcare.v1.model.DeidentifyDatasetRequest}
          * @return the request
@@ -750,7 +750,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param sourceDataset Source dataset resource name. For example,
+           * @param sourceDataset Required. Source dataset resource name. For example,
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.DeidentifyDatasetRequest}
            * @since 1.13
@@ -821,13 +821,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Source dataset resource name. For example,
+           * Required. Source dataset resource name. For example,
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String sourceDataset;
 
-          /** Source dataset resource name. For example,
+          /** Required. Source dataset resource name. For example,
          `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public java.lang.String getSourceDataset() {
@@ -835,7 +835,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Source dataset resource name. For example,
+           * Required. Source dataset resource name. For example,
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public Deidentify setSourceDataset(java.lang.String sourceDataset) {
@@ -4432,9 +4432,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id
-             *        }/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
-             *        efinition_id}`. Cannot be changed after creation.
+             * @param name Identifier. Resource name of the Attribute definition, of the form `projects/{project_id}/locations/
+             *        {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/
+             *        {attribute_definition_id}`. Cannot be changed after creation.
              * @param content the {@link com.google.api.services.healthcare.v1.model.AttributeDefinition}
              * @return the request
              */
@@ -4462,9 +4462,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id
-             *        }/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
-             *        efinition_id}`. Cannot be changed after creation.
+               * @param name Identifier. Resource name of the Attribute definition, of the form `projects/{project_id}/locations/
+             *        {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/
+             *        {attribute_definition_id}`. Cannot be changed after creation.
                * @param content the {@link com.google.api.services.healthcare.v1.model.AttributeDefinition}
                * @since 1.13
                */
@@ -4534,25 +4534,27 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Resource name of the Attribute definition, of the form `projects/{project_id}/locat
-               * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attribute
-               * Definitions/{attribute_definition_id}`. Cannot be changed after creation.
+               * Identifier. Resource name of the Attribute definition, of the form `projects/{proje
+               * ct_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_i
+               * d}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after
+               * creation.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_i
-             d}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definitio
-             n_id}`. Cannot be changed after creation.
+              /** Identifier. Resource name of the Attribute definition, of the form `projects/{project_id}/locations
+             /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribu
+             te_definition_id}`. Cannot be changed after creation.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Resource name of the Attribute definition, of the form `projects/{project_id}/locat
-               * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attribute
-               * Definitions/{attribute_definition_id}`. Cannot be changed after creation.
+               * Identifier. Resource name of the Attribute definition, of the form `projects/{proje
+               * ct_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_i
+               * d}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after
+               * creation.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -8102,7 +8104,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the dataset this DICOM store belongs to.
+           * @param parent Required. The name of the dataset this DICOM store belongs to.
            * @param content the {@link com.google.api.services.healthcare.v1.model.DicomStore}
            * @return the request
            */
@@ -8130,7 +8132,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The name of the dataset this DICOM store belongs to.
+             * @param parent Required. The name of the dataset this DICOM store belongs to.
              * @param content the {@link com.google.api.services.healthcare.v1.model.DicomStore}
              * @since 1.13
              */
@@ -8199,17 +8201,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The name of the dataset this DICOM store belongs to. */
+            /** Required. The name of the dataset this DICOM store belongs to. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the dataset this DICOM store belongs to.
+            /** Required. The name of the dataset this DICOM store belongs to.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** The name of the dataset this DICOM store belongs to. */
+            /** Required. The name of the dataset this DICOM store belongs to. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8221,20 +8223,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The ID of the DICOM store that is being created. Any string value up to 256
+             * Required. The ID of the DICOM store that is being created. Any string value up to 256
              * characters in length.
              */
             @com.google.api.client.util.Key
             private java.lang.String dicomStoreId;
 
-            /** The ID of the DICOM store that is being created. Any string value up to 256 characters in length.
+            /** Required. The ID of the DICOM store that is being created. Any string value up to 256 characters in
+           length.
              */
             public java.lang.String getDicomStoreId() {
               return dicomStoreId;
             }
 
             /**
-             * The ID of the DICOM store that is being created. Any string value up to 256
+             * Required. The ID of the DICOM store that is being created. Any string value up to 256
              * characters in length.
              */
             public Create setDicomStoreId(java.lang.String dicomStoreId) {
@@ -8261,7 +8264,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
            *
-           * @param sourceStore Source DICOM store resource name. For example,
+           * @param sourceStore Required. Source DICOM store resource name. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.DeidentifyDicomStoreRequest}
@@ -8297,7 +8300,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param sourceStore Source DICOM store resource name. For example,
+             * @param sourceStore Required. Source DICOM store resource name. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.DeidentifyDicomStoreRequest}
@@ -8369,13 +8372,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Source DICOM store resource name. For example, `projects/{project_id}/locations/{loca
-             * tion_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Required. Source DICOM store resource name. For example, `projects/{project_id}/locat
+             * ions/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String sourceStore;
 
-            /** Source DICOM store resource name. For example,
+            /** Required. Source DICOM store resource name. For example,
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getSourceStore() {
@@ -8383,8 +8386,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Source DICOM store resource name. For example, `projects/{project_id}/locations/{loca
-             * tion_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Required. Source DICOM store resource name. For example, `projects/{project_id}/locat
+             * ions/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public Deidentify setSourceStore(java.lang.String sourceStore) {
               if (!getSuppressPatternChecks()) {
@@ -8409,7 +8412,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the DICOM store to delete.
+           * @param name Required. The resource name of the DICOM store to delete.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -8436,7 +8439,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the DICOM store to delete.
+             * @param name Required. The resource name of the DICOM store to delete.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -8504,17 +8507,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the DICOM store to delete. */
+            /** Required. The resource name of the DICOM store to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the DICOM store to delete.
+            /** Required. The resource name of the DICOM store to delete.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the DICOM store to delete. */
+            /** Required. The resource name of the DICOM store to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8541,7 +8544,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param name The DICOM store resource name from which to export the data. For example,
+           * @param name Required. The DICOM store resource name from which to export the data. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.ExportDicomDataRequest}
@@ -8574,7 +8577,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The DICOM store resource name from which to export the data. For example,
+             * @param name Required. The DICOM store resource name from which to export the data. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.ExportDicomDataRequest}
@@ -8646,14 +8649,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The DICOM store resource name from which to export the data. For example, `projects/{
-             * project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id
-             * }`.
+             * Required. The DICOM store resource name from which to export the data. For example, `
+             * projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dico
+             * m_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The DICOM store resource name from which to export the data. For example,
+            /** Required. The DICOM store resource name from which to export the data. For example,
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getName() {
@@ -8661,9 +8664,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The DICOM store resource name from which to export the data. For example, `projects/{
-             * project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id
-             * }`.
+             * Required. The DICOM store resource name from which to export the data. For example, `
+             * projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dico
+             * m_store_id}`.
              */
             public Export setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -8688,7 +8691,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the DICOM store to get.
+           * @param name Required. The resource name of the DICOM store to get.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -8714,7 +8717,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the DICOM store to get.
+             * @param name Required. The resource name of the DICOM store to get.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -8792,17 +8795,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the DICOM store to get. */
+            /** Required. The resource name of the DICOM store to get. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the DICOM store to get.
+            /** Required. The resource name of the DICOM store to get.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the DICOM store to get. */
+            /** Required. The resource name of the DICOM store to get. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8827,7 +8830,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link GetDICOMStoreMetrics#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The resource name of the DICOM store to get metrics for.
+           * @param name Required. The resource name of the DICOM store to get metrics for.
            * @return the request
            */
           public GetDICOMStoreMetrics getDICOMStoreMetrics(java.lang.String name) throws java.io.IOException {
@@ -8854,7 +8857,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The resource name of the DICOM store to get metrics for.
+             * @param name Required. The resource name of the DICOM store to get metrics for.
              * @since 1.13
              */
             protected GetDICOMStoreMetrics(java.lang.String name) {
@@ -8932,17 +8935,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (GetDICOMStoreMetrics) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the DICOM store to get metrics for. */
+            /** Required. The resource name of the DICOM store to get metrics for. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the DICOM store to get metrics for.
+            /** Required. The resource name of the DICOM store to get metrics for.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the DICOM store to get metrics for. */
+            /** Required. The resource name of the DICOM store to get metrics for. */
             public GetDICOMStoreMetrics setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9168,7 +9171,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The name of the DICOM store resource into which the data is imported. For example,
+           * @param name Required. The name of the DICOM store resource into which the data is imported. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.ImportDicomDataRequest}
@@ -9201,7 +9204,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The name of the DICOM store resource into which the data is imported. For example,
+             * @param name Required. The name of the DICOM store resource into which the data is imported. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.ImportDicomDataRequest}
@@ -9273,14 +9276,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store resource into which the data is imported. For example, `p
-             * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
-             * _store_id}`.
+             * Required. The name of the DICOM store resource into which the data is imported. For
+             * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomSt
+             * ores/{dicom_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the DICOM store resource into which the data is imported. For example,
+            /** Required. The name of the DICOM store resource into which the data is imported. For example,
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getName() {
@@ -9288,9 +9291,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store resource into which the data is imported. For example, `p
-             * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
-             * _store_id}`.
+             * Required. The name of the DICOM store resource into which the data is imported. For
+             * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomSt
+             * ores/{dicom_store_id}`.
              */
             public CloudHealthcareImport setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -9315,7 +9318,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Name of the dataset.
+           * @param parent Required. Name of the dataset.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -9341,7 +9344,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Name of the dataset.
+             * @param parent Required. Name of the dataset.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -9419,17 +9422,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the dataset. */
+            /** Required. Name of the dataset. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Name of the dataset.
+            /** Required. Name of the dataset.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Name of the dataset. */
+            /** Required. Name of the dataset. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9566,7 +9569,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Resource name of the DICOM store, of the form
+           * @param name Identifier. Resource name of the DICOM store, of the form
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.DicomStore}
@@ -9596,7 +9599,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Resource name of the DICOM store, of the form
+             * @param name Identifier. Resource name of the DICOM store, of the form
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.DicomStore}
@@ -9668,13 +9671,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{locat
-             * ion_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Identifier. Resource name of the DICOM store, of the form `projects/{project_id}/loca
+             * tions/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Resource name of the DICOM store, of the form
+            /** Identifier. Resource name of the DICOM store, of the form
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getName() {
@@ -9682,8 +9685,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{locat
-             * ion_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Identifier. Resource name of the DICOM store, of the form `projects/{project_id}/loca
+             * tions/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -9696,14 +9699,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The update mask applies to the resource. For the `FieldMask` definition, see
-             * https://developers.google.com/protocol-
+             * Required. The update mask applies to the resource. For the `FieldMask` definition,
+             * see https://developers.google.com/protocol-
              * buffers/docs/reference/google.protobuf#fieldmask
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The update mask applies to the resource. For the `FieldMask` definition, see
+            /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
            https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
              */
             public String getUpdateMask() {
@@ -9711,8 +9714,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The update mask applies to the resource. For the `FieldMask` definition, see
-             * https://developers.google.com/protocol-
+             * Required. The update mask applies to the resource. For the `FieldMask` definition,
+             * see https://developers.google.com/protocol-
              * buffers/docs/reference/google.protobuf#fieldmask
              */
             public Patch setUpdateMask(String updateMask) {
@@ -9738,10 +9741,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SearchForInstances#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the DICOM store that is being accessed. For example,
+           * @param parent Required. The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-           * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+           * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
            *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
            * @return the request
            */
@@ -9778,10 +9781,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param parent The name of the DICOM store that is being accessed. For example,
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+             * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
            *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              * @since 1.13
              */
@@ -9867,13 +9870,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Required. The name of the DICOM store that is being accessed. For example, `projects/
+             * {project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
+             * d}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the DICOM store that is being accessed. For example,
+            /** Required. The name of the DICOM store that is being accessed. For example,
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getParent() {
@@ -9881,8 +9885,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Required. The name of the DICOM store that is being accessed. For example, `projects/
+             * {project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
+             * d}`.
              */
             public SearchForInstances setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -9895,13 +9900,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-             * `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+             * Required. The path of the SearchForInstancesRequest DICOMweb request. For example,
+             * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              */
             @com.google.api.client.util.Key
             private java.lang.String dicomWebPath;
 
-            /** The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+            /** Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
            `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              */
             public java.lang.String getDicomWebPath() {
@@ -9909,8 +9914,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-             * `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+             * Required. The path of the SearchForInstancesRequest DICOMweb request. For example,
+             * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              */
             public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
               if (!getSuppressPatternChecks()) {
@@ -9940,10 +9945,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SearchForSeries#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the DICOM store that is being accessed. For example,
+           * @param parent Required. The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-           * @param dicomWebPath The path of the SearchForSeries DICOMweb request. For example, `series` or
+           * @param dicomWebPath Required. The path of the SearchForSeries DICOMweb request. For example, `series` or
            *        `studies/{study_uid}/series`.
            * @return the request
            */
@@ -9980,10 +9985,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param parent The name of the DICOM store that is being accessed. For example,
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-             * @param dicomWebPath The path of the SearchForSeries DICOMweb request. For example, `series` or
+             * @param dicomWebPath Required. The path of the SearchForSeries DICOMweb request. For example, `series` or
            *        `studies/{study_uid}/series`.
              * @since 1.13
              */
@@ -10069,13 +10074,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Required. The name of the DICOM store that is being accessed. For example, `projects/
+             * {project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
+             * d}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the DICOM store that is being accessed. For example,
+            /** Required. The name of the DICOM store that is being accessed. For example,
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getParent() {
@@ -10083,8 +10089,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Required. The name of the DICOM store that is being accessed. For example, `projects/
+             * {project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
+             * d}`.
              */
             public SearchForSeries setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -10097,13 +10104,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The path of the SearchForSeries DICOMweb request. For example, `series` or
+             * Required. The path of the SearchForSeries DICOMweb request. For example, `series` or
              * `studies/{study_uid}/series`.
              */
             @com.google.api.client.util.Key
             private java.lang.String dicomWebPath;
 
-            /** The path of the SearchForSeries DICOMweb request. For example, `series` or
+            /** Required. The path of the SearchForSeries DICOMweb request. For example, `series` or
            `studies/{study_uid}/series`.
              */
             public java.lang.String getDicomWebPath() {
@@ -10111,7 +10118,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The path of the SearchForSeries DICOMweb request. For example, `series` or
+             * Required. The path of the SearchForSeries DICOMweb request. For example, `series` or
              * `studies/{study_uid}/series`.
              */
             public SearchForSeries setDicomWebPath(java.lang.String dicomWebPath) {
@@ -10142,10 +10149,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SearchForStudies#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the DICOM store that is being accessed. For example,
+           * @param parent Required. The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-           * @param dicomWebPath The path of the SearchForStudies DICOMweb request. For example, `studies`.
+           * @param dicomWebPath Required. The path of the SearchForStudies DICOMweb request. For example, `studies`.
            * @return the request
            */
           public SearchForStudies searchForStudies(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -10181,10 +10188,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * tractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param parent The name of the DICOM store that is being accessed. For example,
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-             * @param dicomWebPath The path of the SearchForStudies DICOMweb request. For example, `studies`.
+             * @param dicomWebPath Required. The path of the SearchForStudies DICOMweb request. For example, `studies`.
              * @since 1.13
              */
             protected SearchForStudies(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -10269,13 +10276,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Required. The name of the DICOM store that is being accessed. For example, `projects/
+             * {project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
+             * d}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the DICOM store that is being accessed. For example,
+            /** Required. The name of the DICOM store that is being accessed. For example,
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getParent() {
@@ -10283,8 +10291,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Required. The name of the DICOM store that is being accessed. For example, `projects/
+             * {project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
+             * d}`.
              */
             public SearchForStudies setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -10296,17 +10305,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return this;
             }
 
-            /** The path of the SearchForStudies DICOMweb request. For example, `studies`. */
+            /**
+             * Required. The path of the SearchForStudies DICOMweb request. For example, `studies`.
+             */
             @com.google.api.client.util.Key
             private java.lang.String dicomWebPath;
 
-            /** The path of the SearchForStudies DICOMweb request. For example, `studies`.
+            /** Required. The path of the SearchForStudies DICOMweb request. For example, `studies`.
              */
             public java.lang.String getDicomWebPath() {
               return dicomWebPath;
             }
 
-            /** The path of the SearchForStudies DICOMweb request. For example, `studies`. */
+            /**
+             * Required. The path of the SearchForStudies DICOMweb request. For example, `studies`.
+             */
             public SearchForStudies setDicomWebPath(java.lang.String dicomWebPath) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
@@ -10483,11 +10496,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link StoreInstances#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the DICOM store that is being accessed. For example,
+           * @param parent Required. The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-           * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
-           *        `study_uid` is optional.
+           * @param dicomWebPath Required. The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+           *        Note that the `study_uid` is optional.
            * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
            * @return the request
            */
@@ -10524,11 +10537,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param parent The name of the DICOM store that is being accessed. For example,
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
-           *        `study_uid` is optional.
+             * @param dicomWebPath Required. The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+           *        Note that the `study_uid` is optional.
              * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
              * @since 1.13
              */
@@ -10604,13 +10617,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Required. The name of the DICOM store that is being accessed. For example, `projects/
+             * {project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
+             * d}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the DICOM store that is being accessed. For example,
+            /** Required. The name of the DICOM store that is being accessed. For example,
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getParent() {
@@ -10618,8 +10632,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Required. The name of the DICOM store that is being accessed. For example, `projects/
+             * {project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
+             * d}`.
              */
             public StoreInstances setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -10632,21 +10647,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The path of the StoreInstances DICOMweb request. For example,
+             * Required. The path of the StoreInstances DICOMweb request. For example,
              * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
              */
             @com.google.api.client.util.Key
             private java.lang.String dicomWebPath;
 
-            /** The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that
-           the `study_uid` is optional.
+            /** Required. The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+           Note that the `study_uid` is optional.
              */
             public java.lang.String getDicomWebPath() {
               return dicomWebPath;
             }
 
             /**
-             * The path of the StoreInstances DICOMweb request. For example,
+             * Required. The path of the StoreInstances DICOMweb request. For example,
              * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
              */
             public StoreInstances setDicomWebPath(java.lang.String dicomWebPath) {
@@ -10864,8 +10879,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the healthcare server.  After setting any optional
                * parameters, call the {@link GetStudyMetrics#execute()} method to invoke the remote operation.
                *
-               * @param study The study resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{datas
-               *        et_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}`.
+               * @param study Required. The study resource path. For example, `projects/{project_id}/locations/{location_id}/datas
+               *        ets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}`.
                * @return the request
                */
               public GetStudyMetrics getStudyMetrics(java.lang.String study) throws java.io.IOException {
@@ -10892,8 +10907,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                  * the constructor. </p>
                  *
-                 * @param study The study resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{datas
-               *        et_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}`.
+                 * @param study Required. The study resource path. For example, `projects/{project_id}/locations/{location_id}/datas
+               *        ets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}`.
                  * @since 1.13
                  */
                 protected GetStudyMetrics(java.lang.String study) {
@@ -10972,24 +10987,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The study resource path. For example, `projects/{project_id}/locations/{location_
-                 * id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_ui
-                 * d}`.
+                 * Required. The study resource path. For example, `projects/{project_id}/locations/
+                 * {location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies
+                 * /{study_uid}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String study;
 
-                /** The study resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{data
-               set_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}`.
+                /** Required. The study resource path. For example, `projects/{project_id}/locations/{location_id}/data
+               sets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}`.
                  */
                 public java.lang.String getStudy() {
                   return study;
                 }
 
                 /**
-                 * The study resource path. For example, `projects/{project_id}/locations/{location_
-                 * id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_ui
-                 * d}`.
+                 * Required. The study resource path. For example, `projects/{project_id}/locations/
+                 * {location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies
+                 * /{study_uid}`.
                  */
                 public GetStudyMetrics setStudy(java.lang.String study) {
                   if (!getSuppressPatternChecks()) {
@@ -11035,8 +11050,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * This request holds the parameters needed by the healthcare server.  After setting any optional
                  * parameters, call the {@link GetSeriesMetrics#execute()} method to invoke the remote operation.
                  *
-                 * @param series The series resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{data
-                 *        set_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}/series/{series_uid}`.
+                 * @param series Required. The series resource path. For example, `projects/{project_id}/locations/{location_id}/data
+                 *        sets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}/series/{series
+                 *        _uid}`.
                  * @return the request
                  */
                 public GetSeriesMetrics getSeriesMetrics(java.lang.String series) throws java.io.IOException {
@@ -11063,8 +11079,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                    * invoking the constructor. </p>
                    *
-                   * @param series The series resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{data
-                 *        set_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}/series/{series_uid}`.
+                   * @param series Required. The series resource path. For example, `projects/{project_id}/locations/{location_id}/data
+                 *        sets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}/series/{series
+                 *        _uid}`.
                    * @since 1.13
                    */
                   protected GetSeriesMetrics(java.lang.String series) {
@@ -11143,24 +11160,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The series resource path. For example, `projects/{project_id}/locations/{locati
-                   * on_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{stu
-                   * dy_uid}/series/{series_uid}`.
+                   * Required. The series resource path. For example, `projects/{project_id}/locatio
+                   * ns/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/st
+                   * udies/{study_uid}/series/{series_uid}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String series;
 
-                  /** The series resource path. For example, `projects/{project_id}/locations/{location_id}/datasets/{dat
-                 aset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}/series/{series_uid}`.
+                  /** Required. The series resource path. For example, `projects/{project_id}/locations/{location_id}/dat
+                 asets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{study_uid}/series/{series_uid}`.
                    */
                   public java.lang.String getSeries() {
                     return series;
                   }
 
                   /**
-                   * The series resource path. For example, `projects/{project_id}/locations/{locati
-                   * on_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studies/{stu
-                   * dy_uid}/series/{series_uid}`.
+                   * Required. The series resource path. For example, `projects/{project_id}/locatio
+                   * ns/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/st
+                   * udies/{study_uid}/series/{series_uid}`.
                    */
                   public GetSeriesMetrics setSeries(java.lang.String series) {
                     if (!getSuppressPatternChecks()) {
@@ -11215,7 +11232,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
              * @param parent
-             * @param dicomWebPath The path of the DeleteStudy request. For example, `studies/{study_uid}`.
+             * @param dicomWebPath Required. The path of the DeleteStudy request. For example, `studies/{study_uid}`.
              * @return the request
              */
             public Delete delete(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -11251,7 +11268,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent
-               * @param dicomWebPath The path of the DeleteStudy request. For example, `studies/{study_uid}`.
+               * @param dicomWebPath Required. The path of the DeleteStudy request. For example, `studies/{study_uid}`.
                * @since 1.13
                */
               protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -11345,17 +11362,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** The path of the DeleteStudy request. For example, `studies/{study_uid}`. */
+              /**
+               * Required. The path of the DeleteStudy request. For example, `studies/{study_uid}`.
+               */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the DeleteStudy request. For example, `studies/{study_uid}`.
+              /** Required. The path of the DeleteStudy request. For example, `studies/{study_uid}`.
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
-              /** The path of the DeleteStudy request. For example, `studies/{study_uid}`. */
+              /**
+               * Required. The path of the DeleteStudy request. For example, `studies/{study_uid}`.
+               */
               public Delete setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
@@ -11386,10 +11407,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link RetrieveMetadata#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed. For example,
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example, `studies/{study_uid}/metadata`.
+             * @param dicomWebPath Required. The path of the RetrieveStudyMetadata DICOMweb request. For example,
+             *        `studies/{study_uid}/metadata`.
              * @return the request
              */
             public RetrieveMetadata retrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -11426,10 +11448,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                * invoking the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed. For example,
+               * @param parent Required. The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example, `studies/{study_uid}/metadata`.
+               * @param dicomWebPath Required. The path of the RetrieveStudyMetadata DICOMweb request. For example,
+             *        `studies/{study_uid}/metadata`.
                * @since 1.13
                */
               protected RetrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -11514,13 +11537,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed. For example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed. For example,
+              /** Required. The name of the DICOM store that is being accessed. For example,
              `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public java.lang.String getParent() {
@@ -11528,8 +11552,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed. For example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
                */
               public RetrieveMetadata setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -11542,13 +11567,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the RetrieveStudyMetadata DICOMweb request. For example,
+               * Required. The path of the RetrieveStudyMetadata DICOMweb request. For example,
                * `studies/{study_uid}/metadata`.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the RetrieveStudyMetadata DICOMweb request. For example,
+              /** Required. The path of the RetrieveStudyMetadata DICOMweb request. For example,
              `studies/{study_uid}/metadata`.
                */
               public java.lang.String getDicomWebPath() {
@@ -11556,7 +11581,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the RetrieveStudyMetadata DICOMweb request. For example,
+               * Required. The path of the RetrieveStudyMetadata DICOMweb request. For example,
                * `studies/{study_uid}/metadata`.
                */
               public RetrieveMetadata setDicomWebPath(java.lang.String dicomWebPath) {
@@ -11587,10 +11612,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link RetrieveStudy#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed. For example,
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
+             * @param dicomWebPath Required. The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
              * @return the request
              */
             public RetrieveStudy retrieveStudy(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -11625,10 +11650,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed. For example,
+               * @param parent Required. The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
+               * @param dicomWebPath Required. The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
                * @since 1.13
                */
               protected RetrieveStudy(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -11713,13 +11738,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed. For example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed. For example,
+              /** Required. The name of the DICOM store that is being accessed. For example,
              `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public java.lang.String getParent() {
@@ -11727,8 +11753,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed. For example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
                */
               public RetrieveStudy setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -11741,19 +11768,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
+               * Required. The path of the RetrieveStudy DICOMweb request. For example,
+               * `studies/{study_uid}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
+              /** Required. The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
               /**
-               * The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
+               * Required. The path of the RetrieveStudy DICOMweb request. For example,
+               * `studies/{study_uid}`.
                */
               public RetrieveStudy setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -11783,10 +11812,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link SearchForInstances#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed. For example,
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+             * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
              *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              * @return the request
              */
@@ -11823,10 +11852,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
                * invoking the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed. For example,
+               * @param parent Required. The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+               * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
              *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                * @since 1.13
                */
@@ -11912,13 +11941,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed. For example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed. For example,
+              /** Required. The name of the DICOM store that is being accessed. For example,
              `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public java.lang.String getParent() {
@@ -11926,8 +11956,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed. For example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
                */
               public SearchForInstances setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -11940,13 +11971,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the SearchForInstancesRequest DICOMweb request. For example,
+               * Required. The path of the SearchForInstancesRequest DICOMweb request. For example,
                * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+              /** Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
              `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                */
               public java.lang.String getDicomWebPath() {
@@ -11954,7 +11985,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the SearchForInstancesRequest DICOMweb request. For example,
+               * Required. The path of the SearchForInstancesRequest DICOMweb request. For example,
                * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                */
               public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
@@ -11985,10 +12016,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link SearchForSeries#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed. For example,
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the SearchForSeries DICOMweb request. For example, `series` or
+             * @param dicomWebPath Required. The path of the SearchForSeries DICOMweb request. For example, `series` or
              *        `studies/{study_uid}/series`.
              * @return the request
              */
@@ -12025,10 +12056,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed. For example,
+               * @param parent Required. The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the SearchForSeries DICOMweb request. For example, `series` or
+               * @param dicomWebPath Required. The path of the SearchForSeries DICOMweb request. For example, `series` or
              *        `studies/{study_uid}/series`.
                * @since 1.13
                */
@@ -12114,13 +12145,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed. For example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed. For example,
+              /** Required. The name of the DICOM store that is being accessed. For example,
              `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public java.lang.String getParent() {
@@ -12128,8 +12160,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed. For example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
                */
               public SearchForSeries setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -12142,13 +12175,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the SearchForSeries DICOMweb request. For example, `series` or
-               * `studies/{study_uid}/series`.
+               * Required. The path of the SearchForSeries DICOMweb request. For example, `series`
+               * or `studies/{study_uid}/series`.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the SearchForSeries DICOMweb request. For example, `series` or
+              /** Required. The path of the SearchForSeries DICOMweb request. For example, `series` or
              `studies/{study_uid}/series`.
                */
               public java.lang.String getDicomWebPath() {
@@ -12156,8 +12189,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the SearchForSeries DICOMweb request. For example, `series` or
-               * `studies/{study_uid}/series`.
+               * Required. The path of the SearchForSeries DICOMweb request. For example, `series`
+               * or `studies/{study_uid}/series`.
                */
               public SearchForSeries setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -12188,11 +12221,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link StoreInstances#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed. For example,
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
-             *        `study_uid` is optional.
+             * @param dicomWebPath Required. The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+             *        Note that the `study_uid` is optional.
              * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
              * @return the request
              */
@@ -12229,11 +12262,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed. For example,
+               * @param parent Required. The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
-             *        `study_uid` is optional.
+               * @param dicomWebPath Required. The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+             *        Note that the `study_uid` is optional.
                * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
                * @since 1.13
                */
@@ -12309,13 +12342,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed. For example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed. For example,
+              /** Required. The name of the DICOM store that is being accessed. For example,
              `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public java.lang.String getParent() {
@@ -12323,8 +12357,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed. For example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
                */
               public StoreInstances setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -12337,21 +12372,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the StoreInstances DICOMweb request. For example,
+               * Required. The path of the StoreInstances DICOMweb request. For example,
                * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that
-             the `study_uid` is optional.
+              /** Required. The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+             Note that the `study_uid` is optional.
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
               /**
-               * The path of the StoreInstances DICOMweb request. For example,
+               * Required. The path of the StoreInstances DICOMweb request. For example,
                * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
                */
               public StoreInstances setDicomWebPath(java.lang.String dicomWebPath) {
@@ -12403,10 +12438,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the healthcare server.  After setting any optional
                * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
                *
-               * @param parent The name of the DICOM store that is being accessed. For example,
+               * @param parent Required. The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-               * @param dicomWebPath The path of the DeleteSeries request. For example, `studies/{study_uid}/series/{series_uid}`.
+               * @param dicomWebPath Required. The path of the DeleteSeries request. For example,
+               *        `studies/{study_uid}/series/{series_uid}`.
                * @return the request
                */
               public Delete delete(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -12441,10 +12477,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                  * be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param parent The name of the DICOM store that is being accessed. For example,
+                 * @param parent Required. The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-                 * @param dicomWebPath The path of the DeleteSeries request. For example, `studies/{study_uid}/series/{series_uid}`.
+                 * @param dicomWebPath Required. The path of the DeleteSeries request. For example,
+               *        `studies/{study_uid}/series/{series_uid}`.
                  * @since 1.13
                  */
                 protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -12519,14 +12556,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
-                 * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `.
+                 * Required. The name of the DICOM store that is being accessed. For example, `proje
+                 * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
+                 * _store_id}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** The name of the DICOM store that is being accessed. For example,
+                /** Required. The name of the DICOM store that is being accessed. For example,
                `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                  */
                 public java.lang.String getParent() {
@@ -12534,9 +12571,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
-                 * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `.
+                 * Required. The name of the DICOM store that is being accessed. For example, `proje
+                 * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
+                 * _store_id}`.
                  */
                 public Delete setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
@@ -12549,20 +12586,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the DeleteSeries request. For example,
+                 * Required. The path of the DeleteSeries request. For example,
                  * `studies/{study_uid}/series/{series_uid}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the DeleteSeries request. For example, `studies/{study_uid}/series/{series_uid}`.
+                /** Required. The path of the DeleteSeries request. For example,
+               `studies/{study_uid}/series/{series_uid}`.
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
                 /**
-                 * The path of the DeleteSeries request. For example,
+                 * Required. The path of the DeleteSeries request. For example,
                  * `studies/{study_uid}/series/{series_uid}`.
                  */
                 public Delete setDicomWebPath(java.lang.String dicomWebPath) {
@@ -12595,10 +12633,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the healthcare server.  After setting any optional
                * parameters, call the {@link RetrieveMetadata#execute()} method to invoke the remote operation.
                *
-               * @param parent The name of the DICOM store that is being accessed. For example,
+               * @param parent Required. The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-               * @param dicomWebPath The path of the RetrieveSeriesMetadata DICOMweb request. For example,
+               * @param dicomWebPath Required. The path of the RetrieveSeriesMetadata DICOMweb request. For example,
                *        `studies/{study_uid}/series/{series_uid}/metadata`.
                * @return the request
                */
@@ -12636,10 +12674,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                  * invoking the constructor. </p>
                  *
-                 * @param parent The name of the DICOM store that is being accessed. For example,
+                 * @param parent Required. The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-                 * @param dicomWebPath The path of the RetrieveSeriesMetadata DICOMweb request. For example,
+                 * @param dicomWebPath Required. The path of the RetrieveSeriesMetadata DICOMweb request. For example,
                *        `studies/{study_uid}/series/{series_uid}/metadata`.
                  * @since 1.13
                  */
@@ -12725,14 +12763,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
-                 * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `.
+                 * Required. The name of the DICOM store that is being accessed. For example, `proje
+                 * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
+                 * _store_id}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** The name of the DICOM store that is being accessed. For example,
+                /** Required. The name of the DICOM store that is being accessed. For example,
                `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                  */
                 public java.lang.String getParent() {
@@ -12740,9 +12778,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
-                 * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `.
+                 * Required. The name of the DICOM store that is being accessed. For example, `proje
+                 * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
+                 * _store_id}`.
                  */
                 public RetrieveMetadata setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
@@ -12755,13 +12793,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the RetrieveSeriesMetadata DICOMweb request. For example,
+                 * Required. The path of the RetrieveSeriesMetadata DICOMweb request. For example,
                  * `studies/{study_uid}/series/{series_uid}/metadata`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the RetrieveSeriesMetadata DICOMweb request. For example,
+                /** Required. The path of the RetrieveSeriesMetadata DICOMweb request. For example,
                `studies/{study_uid}/series/{series_uid}/metadata`.
                  */
                 public java.lang.String getDicomWebPath() {
@@ -12769,7 +12807,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the RetrieveSeriesMetadata DICOMweb request. For example,
+                 * Required. The path of the RetrieveSeriesMetadata DICOMweb request. For example,
                  * `studies/{study_uid}/series/{series_uid}/metadata`.
                  */
                 public RetrieveMetadata setDicomWebPath(java.lang.String dicomWebPath) {
@@ -12800,10 +12838,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the healthcare server.  After setting any optional
                * parameters, call the {@link RetrieveSeries#execute()} method to invoke the remote operation.
                *
-               * @param parent The name of the DICOM store that is being accessed. For example,
+               * @param parent Required. The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-               * @param dicomWebPath The path of the RetrieveSeries DICOMweb request. For example,
+               * @param dicomWebPath Required. The path of the RetrieveSeries DICOMweb request. For example,
                *        `studies/{study_uid}/series/{series_uid}`.
                * @return the request
                */
@@ -12840,10 +12878,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                  * the constructor. </p>
                  *
-                 * @param parent The name of the DICOM store that is being accessed. For example,
+                 * @param parent Required. The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-                 * @param dicomWebPath The path of the RetrieveSeries DICOMweb request. For example,
+                 * @param dicomWebPath Required. The path of the RetrieveSeries DICOMweb request. For example,
                *        `studies/{study_uid}/series/{series_uid}`.
                  * @since 1.13
                  */
@@ -12929,14 +12967,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
-                 * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `.
+                 * Required. The name of the DICOM store that is being accessed. For example, `proje
+                 * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
+                 * _store_id}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** The name of the DICOM store that is being accessed. For example,
+                /** Required. The name of the DICOM store that is being accessed. For example,
                `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                  */
                 public java.lang.String getParent() {
@@ -12944,9 +12982,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
-                 * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `.
+                 * Required. The name of the DICOM store that is being accessed. For example, `proje
+                 * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
+                 * _store_id}`.
                  */
                 public RetrieveSeries setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
@@ -12959,13 +12997,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the RetrieveSeries DICOMweb request. For example,
+                 * Required. The path of the RetrieveSeries DICOMweb request. For example,
                  * `studies/{study_uid}/series/{series_uid}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the RetrieveSeries DICOMweb request. For example,
+                /** Required. The path of the RetrieveSeries DICOMweb request. For example,
                `studies/{study_uid}/series/{series_uid}`.
                  */
                 public java.lang.String getDicomWebPath() {
@@ -12973,7 +13011,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the RetrieveSeries DICOMweb request. For example,
+                 * Required. The path of the RetrieveSeries DICOMweb request. For example,
                  * `studies/{study_uid}/series/{series_uid}`.
                  */
                 public RetrieveSeries setDicomWebPath(java.lang.String dicomWebPath) {
@@ -13004,10 +13042,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the healthcare server.  After setting any optional
                * parameters, call the {@link SearchForInstances#execute()} method to invoke the remote operation.
                *
-               * @param parent The name of the DICOM store that is being accessed. For example,
+               * @param parent Required. The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+               * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
                *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                * @return the request
                */
@@ -13044,10 +13082,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
                  * invoking the constructor. </p>
                  *
-                 * @param parent The name of the DICOM store that is being accessed. For example,
+                 * @param parent Required. The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-                 * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+                 * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
                *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                  * @since 1.13
                  */
@@ -13133,14 +13171,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
-                 * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `.
+                 * Required. The name of the DICOM store that is being accessed. For example, `proje
+                 * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
+                 * _store_id}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** The name of the DICOM store that is being accessed. For example,
+                /** Required. The name of the DICOM store that is being accessed. For example,
                `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                  */
                 public java.lang.String getParent() {
@@ -13148,9 +13186,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
-                 * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `.
+                 * Required. The name of the DICOM store that is being accessed. For example, `proje
+                 * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
+                 * _store_id}`.
                  */
                 public SearchForInstances setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
@@ -13163,13 +13201,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the SearchForInstancesRequest DICOMweb request. For example,
-                 * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+                 * Required. The path of the SearchForInstancesRequest DICOMweb request. For
+                 * example, `instances`, `series/{series_uid}/instances`, or
+                 * `studies/{study_uid}/instances`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+                /** Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
                `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                  */
                 public java.lang.String getDicomWebPath() {
@@ -13177,8 +13216,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the SearchForInstancesRequest DICOMweb request. For example,
-                 * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+                 * Required. The path of the SearchForInstancesRequest DICOMweb request. For
+                 * example, `instances`, `series/{series_uid}/instances`, or
+                 * `studies/{study_uid}/instances`.
                  */
                 public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
@@ -13228,10 +13268,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * This request holds the parameters needed by the healthcare server.  After setting any optional
                  * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
                  *
-                 * @param parent The name of the DICOM store that is being accessed. For example,
+                 * @param parent Required. The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`.
-                 * @param dicomWebPath The path of the DeleteInstance request. For example,
+                 * @param dicomWebPath Required. The path of the DeleteInstance request. For example,
                  *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                  * @return the request
                  */
@@ -13267,10 +13307,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                    * be called to initialize this instance immediately after invoking the constructor. </p>
                    *
-                   * @param parent The name of the DICOM store that is being accessed. For example,
+                   * @param parent Required. The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`.
-                   * @param dicomWebPath The path of the DeleteInstance request. For example,
+                   * @param dicomWebPath Required. The path of the DeleteInstance request. For example,
                  *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    * @since 1.13
                    */
@@ -13346,14 +13386,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
-                   * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`.
+                   * Required. The name of the DICOM store that is being accessed. For example, `pro
+                   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+                   * icom_store_id}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String parent;
 
-                  /** The name of the DICOM store that is being accessed. For example,
+                  /** Required. The name of the DICOM store that is being accessed. For example,
                  `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                    */
                   public java.lang.String getParent() {
@@ -13361,9 +13401,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
-                   * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`.
+                   * Required. The name of the DICOM store that is being accessed. For example, `pro
+                   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+                   * icom_store_id}`.
                    */
                   public Delete setParent(java.lang.String parent) {
                     if (!getSuppressPatternChecks()) {
@@ -13376,13 +13416,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the DeleteInstance request. For example,
+                   * Required. The path of the DeleteInstance request. For example,
                    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the DeleteInstance request. For example,
+                  /** Required. The path of the DeleteInstance request. For example,
                  `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   public java.lang.String getDicomWebPath() {
@@ -13390,7 +13430,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the DeleteInstance request. For example,
+                   * Required. The path of the DeleteInstance request. For example,
                    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   public Delete setDicomWebPath(java.lang.String dicomWebPath) {
@@ -13424,10 +13464,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * This request holds the parameters needed by the healthcare server.  After setting any optional
                  * parameters, call the {@link RetrieveInstance#execute()} method to invoke the remote operation.
                  *
-                 * @param parent The name of the DICOM store that is being accessed. For example,
+                 * @param parent Required. The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`.
-                 * @param dicomWebPath The path of the RetrieveInstance DICOMweb request. For example,
+                 * @param dicomWebPath Required. The path of the RetrieveInstance DICOMweb request. For example,
                  *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                  * @return the request
                  */
@@ -13466,10 +13506,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                    * invoking the constructor. </p>
                    *
-                   * @param parent The name of the DICOM store that is being accessed. For example,
+                   * @param parent Required. The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`.
-                   * @param dicomWebPath The path of the RetrieveInstance DICOMweb request. For example,
+                   * @param dicomWebPath Required. The path of the RetrieveInstance DICOMweb request. For example,
                  *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    * @since 1.13
                    */
@@ -13555,14 +13595,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
-                   * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`.
+                   * Required. The name of the DICOM store that is being accessed. For example, `pro
+                   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+                   * icom_store_id}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String parent;
 
-                  /** The name of the DICOM store that is being accessed. For example,
+                  /** Required. The name of the DICOM store that is being accessed. For example,
                  `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                    */
                   public java.lang.String getParent() {
@@ -13570,9 +13610,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
-                   * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`.
+                   * Required. The name of the DICOM store that is being accessed. For example, `pro
+                   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+                   * icom_store_id}`.
                    */
                   public RetrieveInstance setParent(java.lang.String parent) {
                     if (!getSuppressPatternChecks()) {
@@ -13585,13 +13625,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the RetrieveInstance DICOMweb request. For example,
+                   * Required. The path of the RetrieveInstance DICOMweb request. For example,
                    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the RetrieveInstance DICOMweb request. For example,
+                  /** Required. The path of the RetrieveInstance DICOMweb request. For example,
                  `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   public java.lang.String getDicomWebPath() {
@@ -13599,7 +13639,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the RetrieveInstance DICOMweb request. For example,
+                   * Required. The path of the RetrieveInstance DICOMweb request. For example,
                    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   public RetrieveInstance setDicomWebPath(java.lang.String dicomWebPath) {
@@ -13632,10 +13672,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * This request holds the parameters needed by the healthcare server.  After setting any optional
                  * parameters, call the {@link RetrieveMetadata#execute()} method to invoke the remote operation.
                  *
-                 * @param parent The name of the DICOM store that is being accessed. For example,
+                 * @param parent Required. The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`.
-                 * @param dicomWebPath The path of the RetrieveInstanceMetadata DICOMweb request. For example,
+                 * @param dicomWebPath Required. The path of the RetrieveInstanceMetadata DICOMweb request. For example,
                  *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
                  * @return the request
                  */
@@ -13673,10 +13713,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                    * invoking the constructor. </p>
                    *
-                   * @param parent The name of the DICOM store that is being accessed. For example,
+                   * @param parent Required. The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`.
-                   * @param dicomWebPath The path of the RetrieveInstanceMetadata DICOMweb request. For example,
+                   * @param dicomWebPath Required. The path of the RetrieveInstanceMetadata DICOMweb request. For example,
                  *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
                    * @since 1.13
                    */
@@ -13762,14 +13802,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
-                   * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`.
+                   * Required. The name of the DICOM store that is being accessed. For example, `pro
+                   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+                   * icom_store_id}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String parent;
 
-                  /** The name of the DICOM store that is being accessed. For example,
+                  /** Required. The name of the DICOM store that is being accessed. For example,
                  `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                    */
                   public java.lang.String getParent() {
@@ -13777,9 +13817,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
-                   * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`.
+                   * Required. The name of the DICOM store that is being accessed. For example, `pro
+                   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+                   * icom_store_id}`.
                    */
                   public RetrieveMetadata setParent(java.lang.String parent) {
                     if (!getSuppressPatternChecks()) {
@@ -13792,13 +13832,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the RetrieveInstanceMetadata DICOMweb request. For example,
+                   * Required. The path of the RetrieveInstanceMetadata DICOMweb request. For
+                   * example,
                    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the RetrieveInstanceMetadata DICOMweb request. For example,
+                  /** Required. The path of the RetrieveInstanceMetadata DICOMweb request. For example,
                  `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
                    */
                   public java.lang.String getDicomWebPath() {
@@ -13806,7 +13847,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the RetrieveInstanceMetadata DICOMweb request. For example,
+                   * Required. The path of the RetrieveInstanceMetadata DICOMweb request. For
+                   * example,
                    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
                    */
                   public RetrieveMetadata setDicomWebPath(java.lang.String dicomWebPath) {
@@ -13839,10 +13881,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * This request holds the parameters needed by the healthcare server.  After setting any optional
                  * parameters, call the {@link RetrieveRendered#execute()} method to invoke the remote operation.
                  *
-                 * @param parent The name of the DICOM store that is being accessed. For example,
+                 * @param parent Required. The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`.
-                 * @param dicomWebPath The path of the RetrieveRenderedInstance DICOMweb request. For example,
+                 * @param dicomWebPath Required. The path of the RetrieveRenderedInstance DICOMweb request. For example,
                  *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
                  * @return the request
                  */
@@ -13880,10 +13922,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                    * invoking the constructor. </p>
                    *
-                   * @param parent The name of the DICOM store that is being accessed. For example,
+                   * @param parent Required. The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`.
-                   * @param dicomWebPath The path of the RetrieveRenderedInstance DICOMweb request. For example,
+                   * @param dicomWebPath Required. The path of the RetrieveRenderedInstance DICOMweb request. For example,
                  *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
                    * @since 1.13
                    */
@@ -13969,14 +14011,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
-                   * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`.
+                   * Required. The name of the DICOM store that is being accessed. For example, `pro
+                   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+                   * icom_store_id}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String parent;
 
-                  /** The name of the DICOM store that is being accessed. For example,
+                  /** Required. The name of the DICOM store that is being accessed. For example,
                  `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                    */
                   public java.lang.String getParent() {
@@ -13984,9 +14026,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
-                   * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`.
+                   * Required. The name of the DICOM store that is being accessed. For example, `pro
+                   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+                   * icom_store_id}`.
                    */
                   public RetrieveRendered setParent(java.lang.String parent) {
                     if (!getSuppressPatternChecks()) {
@@ -13999,13 +14041,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the RetrieveRenderedInstance DICOMweb request. For example,
+                   * Required. The path of the RetrieveRenderedInstance DICOMweb request. For
+                   * example,
                    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the RetrieveRenderedInstance DICOMweb request. For example,
+                  /** Required. The path of the RetrieveRenderedInstance DICOMweb request. For example,
                  `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
                    */
                   public java.lang.String getDicomWebPath() {
@@ -14013,7 +14056,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the RetrieveRenderedInstance DICOMweb request. For example,
+                   * Required. The path of the RetrieveRenderedInstance DICOMweb request. For
+                   * example,
                    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
                    */
                   public RetrieveRendered setDicomWebPath(java.lang.String dicomWebPath) {
@@ -14066,10 +14110,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * This request holds the parameters needed by the healthcare server.  After setting any optional
                    * parameters, call the {@link RetrieveFrames#execute()} method to invoke the remote operation.
                    *
-                   * @param parent The name of the DICOM store that is being accessed. For example,
+                   * @param parent Required. The name of the DICOM store that is being accessed. For example,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`.
-                   * @param dicomWebPath The path of the RetrieveFrames DICOMweb request. For example,
+                   * @param dicomWebPath Required. The path of the RetrieveFrames DICOMweb request. For example,
                    *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`.
                    * @return the request
                    */
@@ -14106,10 +14150,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                      * the constructor. </p>
                      *
-                     * @param parent The name of the DICOM store that is being accessed. For example,
+                     * @param parent Required. The name of the DICOM store that is being accessed. For example,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`.
-                     * @param dicomWebPath The path of the RetrieveFrames DICOMweb request. For example,
+                     * @param dicomWebPath Required. The path of the RetrieveFrames DICOMweb request. For example,
                    *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`.
                      * @since 1.13
                      */
@@ -14195,14 +14239,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The name of the DICOM store that is being accessed. For example, `projects/{p
-                     * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_s
-                     * tore_id}`.
+                     * Required. The name of the DICOM store that is being accessed. For example, `p
+                     * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStore
+                     * s/{dicom_store_id}`.
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String parent;
 
-                    /** The name of the DICOM store that is being accessed. For example,
+                    /** Required. The name of the DICOM store that is being accessed. For example,
                    `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                      */
                     public java.lang.String getParent() {
@@ -14210,9 +14254,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The name of the DICOM store that is being accessed. For example, `projects/{p
-                     * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_s
-                     * tore_id}`.
+                     * Required. The name of the DICOM store that is being accessed. For example, `p
+                     * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStore
+                     * s/{dicom_store_id}`.
                      */
                     public RetrieveFrames setParent(java.lang.String parent) {
                       if (!getSuppressPatternChecks()) {
@@ -14225,13 +14269,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the RetrieveFrames DICOMweb request. For example, `studies/{study
-                     * _uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`.
+                     * Required. The path of the RetrieveFrames DICOMweb request. For example, `stud
+                     * ies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_li
+                     * st}`.
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String dicomWebPath;
 
-                    /** The path of the RetrieveFrames DICOMweb request. For example,
+                    /** Required. The path of the RetrieveFrames DICOMweb request. For example,
                    `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`.
                      */
                     public java.lang.String getDicomWebPath() {
@@ -14239,8 +14284,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the RetrieveFrames DICOMweb request. For example, `studies/{study
-                     * _uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`.
+                     * Required. The path of the RetrieveFrames DICOMweb request. For example, `stud
+                     * ies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_li
+                     * st}`.
                      */
                     public RetrieveFrames setDicomWebPath(java.lang.String dicomWebPath) {
                       if (!getSuppressPatternChecks()) {
@@ -14272,10 +14318,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * This request holds the parameters needed by the healthcare server.  After setting any optional
                    * parameters, call the {@link RetrieveRendered#execute()} method to invoke the remote operation.
                    *
-                   * @param parent The name of the DICOM store that is being accessed. For example,
+                   * @param parent Required. The name of the DICOM store that is being accessed. For example,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`.
-                   * @param dicomWebPath The path of the RetrieveRenderedFrames DICOMweb request. For example,
+                   * @param dicomWebPath Required. The path of the RetrieveRenderedFrames DICOMweb request. For example,
                    *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}/rend
                    *        ered`.
                    * @return the request
@@ -14314,10 +14360,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                      * invoking the constructor. </p>
                      *
-                     * @param parent The name of the DICOM store that is being accessed. For example,
+                     * @param parent Required. The name of the DICOM store that is being accessed. For example,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`.
-                     * @param dicomWebPath The path of the RetrieveRenderedFrames DICOMweb request. For example,
+                     * @param dicomWebPath Required. The path of the RetrieveRenderedFrames DICOMweb request. For example,
                    *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}/rend
                    *        ered`.
                      * @since 1.13
@@ -14404,14 +14450,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The name of the DICOM store that is being accessed. For example, `projects/{p
-                     * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_s
-                     * tore_id}`.
+                     * Required. The name of the DICOM store that is being accessed. For example, `p
+                     * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStore
+                     * s/{dicom_store_id}`.
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String parent;
 
-                    /** The name of the DICOM store that is being accessed. For example,
+                    /** Required. The name of the DICOM store that is being accessed. For example,
                    `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                      */
                     public java.lang.String getParent() {
@@ -14419,9 +14465,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The name of the DICOM store that is being accessed. For example, `projects/{p
-                     * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_s
-                     * tore_id}`.
+                     * Required. The name of the DICOM store that is being accessed. For example, `p
+                     * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStore
+                     * s/{dicom_store_id}`.
                      */
                     public RetrieveRendered setParent(java.lang.String parent) {
                       if (!getSuppressPatternChecks()) {
@@ -14434,14 +14480,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the RetrieveRenderedFrames DICOMweb request. For example, `studie
-                     * s/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list
-                     * }/rendered`.
+                     * Required. The path of the RetrieveRenderedFrames DICOMweb request. For
+                     * example, `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/fr
+                     * ames/{frame_list}/rendered`.
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String dicomWebPath;
 
-                    /** The path of the RetrieveRenderedFrames DICOMweb request. For example,
+                    /** Required. The path of the RetrieveRenderedFrames DICOMweb request. For example,
                    `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}/rendered`.
                      */
                     public java.lang.String getDicomWebPath() {
@@ -14449,9 +14495,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the RetrieveRenderedFrames DICOMweb request. For example, `studie
-                     * s/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list
-                     * }/rendered`.
+                     * Required. The path of the RetrieveRenderedFrames DICOMweb request. For
+                     * example, `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/fr
+                     * ames/{frame_list}/rendered`.
                      */
                     public RetrieveRendered setDicomWebPath(java.lang.String dicomWebPath) {
                       if (!getSuppressPatternChecks()) {
@@ -14502,7 +14548,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the dataset this FHIR store belongs to.
+           * @param parent Required. The name of the dataset this FHIR store belongs to.
            * @param content the {@link com.google.api.services.healthcare.v1.model.FhirStore}
            * @return the request
            */
@@ -14530,7 +14576,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The name of the dataset this FHIR store belongs to.
+             * @param parent Required. The name of the dataset this FHIR store belongs to.
              * @param content the {@link com.google.api.services.healthcare.v1.model.FhirStore}
              * @since 1.13
              */
@@ -14599,17 +14645,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The name of the dataset this FHIR store belongs to. */
+            /** Required. The name of the dataset this FHIR store belongs to. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the dataset this FHIR store belongs to.
+            /** Required. The name of the dataset this FHIR store belongs to.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** The name of the dataset this FHIR store belongs to. */
+            /** Required. The name of the dataset this FHIR store belongs to. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14621,22 +14667,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The ID of the FHIR store that is being created. The string must match the following
-             * regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+             * Required. The ID of the FHIR store that is being created. The string must match the
+             * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String fhirStoreId;
 
-            /** The ID of the FHIR store that is being created. The string must match the following regex:
-           `[\p{L}\p{N}_\-\.]{1,256}`.
+            /** Required. The ID of the FHIR store that is being created. The string must match the following
+           regex: `[\p{L}\p{N}_\-\.]{1,256}`.
              */
             public java.lang.String getFhirStoreId() {
               return fhirStoreId;
             }
 
             /**
-             * The ID of the FHIR store that is being created. The string must match the following
-             * regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+             * Required. The ID of the FHIR store that is being created. The string must match the
+             * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
              */
             public Create setFhirStoreId(java.lang.String fhirStoreId) {
               this.fhirStoreId = fhirStoreId;
@@ -14660,7 +14706,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
            *
-           * @param sourceStore Source FHIR store resource name. For example,
+           * @param sourceStore Required. Source FHIR store resource name. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.DeidentifyFhirStoreRequest}
@@ -14694,7 +14740,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param sourceStore Source FHIR store resource name. For example,
+             * @param sourceStore Required. Source FHIR store resource name. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.DeidentifyFhirStoreRequest}
@@ -14766,13 +14812,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Source FHIR store resource name. For example, `projects/{project_id}/locations/{locat
-             * ion_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             * Required. Source FHIR store resource name. For example, `projects/{project_id}/locati
+             * ons/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String sourceStore;
 
-            /** Source FHIR store resource name. For example,
+            /** Required. Source FHIR store resource name. For example,
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public java.lang.String getSourceStore() {
@@ -14780,8 +14826,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Source FHIR store resource name. For example, `projects/{project_id}/locations/{locat
-             * ion_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             * Required. Source FHIR store resource name. For example, `projects/{project_id}/locati
+             * ons/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public Deidentify setSourceStore(java.lang.String sourceStore) {
               if (!getSuppressPatternChecks()) {
@@ -14806,7 +14852,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the FHIR store to delete.
+           * @param name Required. The resource name of the FHIR store to delete.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -14833,7 +14879,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the FHIR store to delete.
+             * @param name Required. The resource name of the FHIR store to delete.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -14901,17 +14947,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the FHIR store to delete. */
+            /** Required. The resource name of the FHIR store to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the FHIR store to delete.
+            /** Required. The resource name of the FHIR store to delete.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the FHIR store to delete. */
+            /** Required. The resource name of the FHIR store to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -14940,7 +14986,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the FHIR store to export resource from, in the format of
+           * @param name Required. The name of the FHIR store to export resource from, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.ExportResourcesRequest}
@@ -14976,7 +15022,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the FHIR store to export resource from, in the format of
+             * @param name Required. The name of the FHIR store to export resource from, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.ExportResourcesRequest}
@@ -15048,13 +15094,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to export resource from, in the format of `projects/{proje
-             * ct_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             * Required. The name of the FHIR store to export resource from, in the format of `proje
+             * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store
+             * _id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the FHIR store to export resource from, in the format of
+            /** Required. The name of the FHIR store to export resource from, in the format of
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public java.lang.String getName() {
@@ -15062,8 +15109,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to export resource from, in the format of `projects/{proje
-             * ct_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             * Required. The name of the FHIR store to export resource from, in the format of `proje
+             * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store
+             * _id}`.
              */
             public Export setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -15088,7 +15136,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the FHIR store to get.
+           * @param name Required. The resource name of the FHIR store to get.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -15114,7 +15162,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the FHIR store to get.
+             * @param name Required. The resource name of the FHIR store to get.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -15192,17 +15240,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the FHIR store to get. */
+            /** Required. The resource name of the FHIR store to get. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the FHIR store to get.
+            /** Required. The resource name of the FHIR store to get.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the FHIR store to get. */
+            /** Required. The resource name of the FHIR store to get. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15226,7 +15274,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link GetFHIRStoreMetrics#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the FHIR store to get metrics for.
+           * @param name Required. The resource name of the FHIR store to get metrics for.
            * @return the request
            */
           public GetFHIRStoreMetrics getFHIRStoreMetrics(java.lang.String name) throws java.io.IOException {
@@ -15253,7 +15301,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param name The resource name of the FHIR store to get metrics for.
+             * @param name Required. The resource name of the FHIR store to get metrics for.
              * @since 1.13
              */
             protected GetFHIRStoreMetrics(java.lang.String name) {
@@ -15331,17 +15379,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (GetFHIRStoreMetrics) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the FHIR store to get metrics for. */
+            /** Required. The resource name of the FHIR store to get metrics for. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the FHIR store to get metrics for.
+            /** Required. The resource name of the FHIR store to get metrics for.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the FHIR store to get metrics for. */
+            /** Required. The resource name of the FHIR store to get metrics for. */
             public GetFHIRStoreMetrics setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15605,7 +15653,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The name of the FHIR store to import FHIR resources to, in the format of
+           * @param name Required. The name of the FHIR store to import FHIR resources to, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.ImportResourcesRequest}
@@ -15678,7 +15726,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The name of the FHIR store to import FHIR resources to, in the format of
+             * @param name Required. The name of the FHIR store to import FHIR resources to, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.ImportResourcesRequest}
@@ -15750,13 +15798,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to import FHIR resources to, in the format of `projects/{p
-             * roject_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             * Required. The name of the FHIR store to import FHIR resources to, in the format of `p
+             * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_s
+             * tore_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the FHIR store to import FHIR resources to, in the format of
+            /** Required. The name of the FHIR store to import FHIR resources to, in the format of
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public java.lang.String getName() {
@@ -15764,8 +15813,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to import FHIR resources to, in the format of `projects/{p
-             * roject_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             * Required. The name of the FHIR store to import FHIR resources to, in the format of `p
+             * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_s
+             * tore_id}`.
              */
             public CloudHealthcareImport setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -15790,7 +15840,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Name of the dataset.
+           * @param parent Required. Name of the dataset.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -15816,7 +15866,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Name of the dataset.
+             * @param parent Required. Name of the dataset.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -15894,17 +15944,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the dataset. */
+            /** Required. Name of the dataset. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Name of the dataset.
+            /** Required. Name of the dataset.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Name of the dataset. */
+            /** Required. Name of the dataset. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -16041,7 +16091,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Resource name of the FHIR store, of the form
+           * @param name Output only. Identifier. Resource name of the FHIR store, of the form
            *        `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.FhirStore}
            * @return the request
@@ -16070,7 +16120,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Resource name of the FHIR store, of the form
+             * @param name Output only. Identifier. Resource name of the FHIR store, of the form
            *        `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.FhirStore}
              * @since 1.13
@@ -16141,13 +16191,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Resource name of the FHIR store, of the form
+             * Output only. Identifier. Resource name of the FHIR store, of the form
              * `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Resource name of the FHIR store, of the form
+            /** Output only. Identifier. Resource name of the FHIR store, of the form
            `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public java.lang.String getName() {
@@ -16155,7 +16205,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Resource name of the FHIR store, of the form
+             * Output only. Identifier. Resource name of the FHIR store, of the form
              * `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public Patch setName(java.lang.String name) {
@@ -16169,14 +16219,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The update mask applies to the resource. For the `FieldMask` definition, see
-             * https://developers.google.com/protocol-
+             * Required. The update mask applies to the resource. For the `FieldMask` definition,
+             * see https://developers.google.com/protocol-
              * buffers/docs/reference/google.protobuf#fieldmask
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The update mask applies to the resource. For the `FieldMask` definition, see
+            /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
            https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
              */
             public String getUpdateMask() {
@@ -16184,8 +16234,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The update mask applies to the resource. For the `FieldMask` definition, see
-             * https://developers.google.com/protocol-
+             * Required. The update mask applies to the resource. For the `FieldMask` definition,
+             * see https://developers.google.com/protocol-
              * buffers/docs/reference/google.protobuf#fieldmask
              */
             public Patch setUpdateMask(String updateMask) {
@@ -16196,6 +16246,161 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Rolls back resources from the FHIR store to the specified time. This method returns an Operation
+           * that can be used to track the status of the rollback by calling GetOperation. Immediate fatal
+           * errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing error
+           * logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise,
+           * when the operation finishes, a detailed response of type RollbackFhirResourcesResponse is
+           * returned in the response field. The metadata field type for this operation is OperationMetadata.
+           *
+           * Create a request for the method "fhirStores.rollback".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FHIR store to rollback, in the format of
+           *        "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+           *        /fhirStores/{fhir_store_id}".
+           * @param content the {@link com.google.api.services.healthcare.v1.model.RollbackFhirResourcesRequest}
+           * @return the request
+           */
+          public Rollback rollback(java.lang.String name, com.google.api.services.healthcare.v1.model.RollbackFhirResourcesRequest content) throws java.io.IOException {
+            Rollback result = new Rollback(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Rollback extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:rollback";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Rolls back resources from the FHIR store to the specified time. This method returns an
+             * Operation that can be used to track the status of the rollback by calling GetOperation.
+             * Immediate fatal errors appear in the error field, errors are also logged to Cloud Logging (see
+             * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+             * tos/logging)). Otherwise, when the operation finishes, a detailed response of type
+             * RollbackFhirResourcesResponse is returned in the response field. The metadata field type for
+             * this operation is OperationMetadata.
+             *
+             * Create a request for the method "fhirStores.rollback".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the FHIR store to rollback, in the format of
+           *        "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+           *        /fhirStores/{fhir_store_id}".
+             * @param content the {@link com.google.api.services.healthcare.v1.model.RollbackFhirResourcesRequest}
+             * @since 1.13
+             */
+            protected Rollback(java.lang.String name, com.google.api.services.healthcare.v1.model.RollbackFhirResourcesRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Rollback set$Xgafv(java.lang.String $Xgafv) {
+              return (Rollback) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Rollback setAccessToken(java.lang.String accessToken) {
+              return (Rollback) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Rollback setAlt(java.lang.String alt) {
+              return (Rollback) super.setAlt(alt);
+            }
+
+            @Override
+            public Rollback setCallback(java.lang.String callback) {
+              return (Rollback) super.setCallback(callback);
+            }
+
+            @Override
+            public Rollback setFields(java.lang.String fields) {
+              return (Rollback) super.setFields(fields);
+            }
+
+            @Override
+            public Rollback setKey(java.lang.String key) {
+              return (Rollback) super.setKey(key);
+            }
+
+            @Override
+            public Rollback setOauthToken(java.lang.String oauthToken) {
+              return (Rollback) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Rollback setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Rollback) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Rollback setQuotaUser(java.lang.String quotaUser) {
+              return (Rollback) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Rollback setUploadType(java.lang.String uploadType) {
+              return (Rollback) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Rollback setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Rollback) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FHIR store to rollback, in the format of
+             * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+             * /fhirStores/{fhir_store_id}".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FHIR store to rollback, in the format of
+           "projects/{project_id}/locations/{location_id}/datasets/{dataset_id} /fhirStores/{fhir_store_id}".
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FHIR store to rollback, in the format of
+             * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+             * /fhirStores/{fhir_store_id}".
+             */
+            public Rollback setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Rollback set(String parameterName, Object value) {
+              return (Rollback) super.set(parameterName, value);
             }
           }
           /**
@@ -16543,7 +16748,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link PatientEverything#execute()} method to invoke the remote operation.
              *
-             * @param name Name of the `Patient` resource for which the information is required.
+             * @param name Required. Name of the `Patient` resource for which the information is required.
              * @return the request
              */
             public PatientEverything patientEverything(java.lang.String name) throws java.io.IOException {
@@ -16588,7 +16793,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * stractGoogleClientRequest)} must be called to initialize this instance immediately after
                * invoking the constructor. </p>
                *
-               * @param name Name of the `Patient` resource for which the information is required.
+               * @param name Required. Name of the `Patient` resource for which the information is required.
                * @since 1.13
                */
               protected PatientEverything(java.lang.String name) {
@@ -16666,17 +16871,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (PatientEverything) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Name of the `Patient` resource for which the information is required. */
+              /**
+               * Required. Name of the `Patient` resource for which the information is required.
+               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Name of the `Patient` resource for which the information is required.
+              /** Required. Name of the `Patient` resource for which the information is required.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Name of the `Patient` resource for which the information is required. */
+              /**
+               * Required. Name of the `Patient` resource for which the information is required.
+               */
               public PatientEverything setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16688,21 +16897,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Maximum number of resources in a page. If not specified, 100 is used. May not be
-               * larger than 1000.
+               * Optional. Maximum number of resources in a page. If not specified, 100 is used. May
+               * not be larger than 1000.
                */
               @com.google.api.client.util.Key("_count")
               private java.lang.Integer count;
 
-              /** Maximum number of resources in a page. If not specified, 100 is used. May not be larger than 1000.
+              /** Optional. Maximum number of resources in a page. If not specified, 100 is used. May not be larger
+             than 1000.
                */
               public java.lang.Integer getCount() {
                 return count;
               }
 
               /**
-               * Maximum number of resources in a page. If not specified, 100 is used. May not be
-               * larger than 1000.
+               * Optional. Maximum number of resources in a page. If not specified, 100 is used. May
+               * not be larger than 1000.
                */
               public PatientEverything setCount(java.lang.Integer count) {
                 this.count = count;
@@ -16741,27 +16951,27 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * If provided, only resources updated after this time are returned. The time uses the
-               * format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00`
-               * or `2017-01-01T00:00:00Z`. The time must be specified to the second and include a
-               * time zone.
+               * Optional. If provided, only resources updated after this time are returned. The
+               * time uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example,
+               * `2015-02-07T13:28:17.239+02:00` or `2017-01-01T00:00:00Z`. The time must be
+               * specified to the second and include a time zone.
                */
               @com.google.api.client.util.Key("_since")
               private java.lang.String since;
 
-              /** If provided, only resources updated after this time are returned. The time uses the format YYYY-MM-
-             DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00` or `2017-01-01T00:00:00Z`. The
-             time must be specified to the second and include a time zone.
+              /** Optional. If provided, only resources updated after this time are returned. The time uses the
+             format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00` or
+             `2017-01-01T00:00:00Z`. The time must be specified to the second and include a time zone.
                */
               public java.lang.String getSince() {
                 return since;
               }
 
               /**
-               * If provided, only resources updated after this time are returned. The time uses the
-               * format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00`
-               * or `2017-01-01T00:00:00Z`. The time must be specified to the second and include a
-               * time zone.
+               * Optional. If provided, only resources updated after this time are returned. The
+               * time uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example,
+               * `2015-02-07T13:28:17.239+02:00` or `2017-01-01T00:00:00Z`. The time must be
+               * specified to the second and include a time zone.
                */
               public PatientEverything setSince(java.lang.String since) {
                 this.since = since;
@@ -16769,28 +16979,30 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * String of comma-delimited FHIR resource types. If provided, only resources of the
-               * specified resource type(s) are returned. Specifying multiple `_type` parameters
-               * isn't supported. For example, the result of `_type=Observation&_type=Encounter` is
-               * undefined. Use `_type=Observation,Encounter` instead.
+               * Optional. String of comma-delimited FHIR resource types. If provided, only
+               * resources of the specified resource type(s) are returned. Specifying multiple
+               * `_type` parameters isn't supported. For example, the result of
+               * `_type=Observation&_type=Encounter` is undefined. Use `_type=Observation,Encounter`
+               * instead.
                */
               @com.google.api.client.util.Key("_type")
               private java.lang.String type;
 
-              /** String of comma-delimited FHIR resource types. If provided, only resources of the specified
-             resource type(s) are returned. Specifying multiple `_type` parameters isn't supported. For example,
-             the result of `_type=Observation&_type=Encounter` is undefined. Use `_type=Observation,Encounter`
-             instead.
+              /** Optional. String of comma-delimited FHIR resource types. If provided, only resources of the
+             specified resource type(s) are returned. Specifying multiple `_type` parameters isn't supported.
+             For example, the result of `_type=Observation&_type=Encounter` is undefined. Use
+             `_type=Observation,Encounter` instead.
                */
               public java.lang.String getType() {
                 return type;
               }
 
               /**
-               * String of comma-delimited FHIR resource types. If provided, only resources of the
-               * specified resource type(s) are returned. Specifying multiple `_type` parameters
-               * isn't supported. For example, the result of `_type=Observation&_type=Encounter` is
-               * undefined. Use `_type=Observation,Encounter` instead.
+               * Optional. String of comma-delimited FHIR resource types. If provided, only
+               * resources of the specified resource type(s) are returned. Specifying multiple
+               * `_type` parameters isn't supported. For example, the result of
+               * `_type=Observation&_type=Encounter` is undefined. Use `_type=Observation,Encounter`
+               * instead.
                */
               public PatientEverything setType(java.lang.String type) {
                 this.type = type;
@@ -16798,24 +17010,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The response includes records prior to the end date. The date uses the format YYYY-
-               * MM-DD. If no end date is provided, all records subsequent to the start date are in
-               * scope.
+               * Optional. The response includes records prior to the end date. The date uses the
+               * format YYYY-MM-DD. If no end date is provided, all records subsequent to the start
+               * date are in scope.
                */
               @com.google.api.client.util.Key
               private java.lang.String end;
 
-              /** The response includes records prior to the end date. The date uses the format YYYY-MM-DD. If no end
-             date is provided, all records subsequent to the start date are in scope.
+              /** Optional. The response includes records prior to the end date. The date uses the format YYYY-MM-DD.
+             If no end date is provided, all records subsequent to the start date are in scope.
                */
               public java.lang.String getEnd() {
                 return end;
               }
 
               /**
-               * The response includes records prior to the end date. The date uses the format YYYY-
-               * MM-DD. If no end date is provided, all records subsequent to the start date are in
-               * scope.
+               * Optional. The response includes records prior to the end date. The date uses the
+               * format YYYY-MM-DD. If no end date is provided, all records subsequent to the start
+               * date are in scope.
                */
               public PatientEverything setEnd(java.lang.String end) {
                 this.end = end;
@@ -16823,24 +17035,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The response includes records subsequent to the start date. The date uses the
-               * format YYYY-MM-DD. If no start date is provided, all records prior to the end date
-               * are in scope.
+               * Optional. The response includes records subsequent to the start date. The date uses
+               * the format YYYY-MM-DD. If no start date is provided, all records prior to the end
+               * date are in scope.
                */
               @com.google.api.client.util.Key
               private java.lang.String start;
 
-              /** The response includes records subsequent to the start date. The date uses the format YYYY-MM-DD. If
-             no start date is provided, all records prior to the end date are in scope.
+              /** Optional. The response includes records subsequent to the start date. The date uses the format
+             YYYY-MM-DD. If no start date is provided, all records prior to the end date are in scope.
                */
               public java.lang.String getStart() {
                 return start;
               }
 
               /**
-               * The response includes records subsequent to the start date. The date uses the
-               * format YYYY-MM-DD. If no start date is provided, all records prior to the end date
-               * are in scope.
+               * Optional. The response includes records subsequent to the start date. The date uses
+               * the format YYYY-MM-DD. If no start date is provided, all records prior to the end
+               * date are in scope.
                */
               public PatientEverything setStart(java.lang.String start) {
                 this.start = start;
@@ -16865,7 +17077,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link ResourcePurge#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the resource to purge.
+             * @param name Required. The name of the resource to purge.
              * @return the request
              */
             public ResourcePurge resourcePurge(java.lang.String name) throws java.io.IOException {
@@ -16897,7 +17109,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param name The name of the resource to purge.
+               * @param name Required. The name of the resource to purge.
                * @since 1.13
                */
               protected ResourcePurge(java.lang.String name) {
@@ -16965,17 +17177,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (ResourcePurge) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the resource to purge. */
+              /** Required. The name of the resource to purge. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the resource to purge.
+              /** Required. The name of the resource to purge.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The name of the resource to purge. */
+              /** Required. The name of the resource to purge. */
               public ResourcePurge setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17010,9 +17222,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link ResourceValidate#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the FHIR store that holds the profiles being used for validation.
-             * @param type The FHIR resource type of the resource being validated. For a complete list, see the FHIR Resource
-             *        Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             * @param parent Required. The name of the FHIR store that holds the profiles being used for validation.
+             * @param type Required. The FHIR resource type of the resource being validated. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
              *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
@@ -17057,9 +17269,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                * invoking the constructor. </p>
                *
-               * @param parent The name of the FHIR store that holds the profiles being used for validation.
-               * @param type The FHIR resource type of the resource being validated. For a complete list, see the FHIR Resource
-             *        Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * @param parent Required. The name of the FHIR store that holds the profiles being used for validation.
+               * @param type Required. The FHIR resource type of the resource being validated. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
              *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
@@ -17137,17 +17349,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (ResourceValidate) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the FHIR store that holds the profiles being used for validation. */
+              /**
+               * Required. The name of the FHIR store that holds the profiles being used for
+               * validation.
+               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the FHIR store that holds the profiles being used for validation.
+              /** Required. The name of the FHIR store that holds the profiles being used for validation.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** The name of the FHIR store that holds the profiles being used for validation. */
+              /**
+               * Required. The name of the FHIR store that holds the profiles being used for
+               * validation.
+               */
               public ResourceValidate setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -17159,8 +17377,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type of the resource being validated. For a complete list, see
-               * the FHIR Resource Index
+               * Required. The FHIR resource type of the resource being validated. For a complete
+               * list, see the FHIR Resource Index
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
                * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
@@ -17169,8 +17387,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The FHIR resource type of the resource being validated. For a complete list, see the FHIR Resource
-             Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+              /** Required. The FHIR resource type of the resource being validated. For a complete list, see the FHIR
+             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
              [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the resource type
              in the provided content.
@@ -17180,8 +17398,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type of the resource being validated. For a complete list, see
-               * the FHIR Resource Index
+               * Required. The FHIR resource type of the resource being validated. For a complete
+               * list, see the FHIR Resource Index
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
                * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
@@ -17198,17 +17416,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The canonical URL of a profile that this resource should be validated against. For
-               * example, to validate a Patient resource against the US Core Patient profile this
-               * parameter would be `http://hl7.org/fhir/us/core/StructureDefinition/us-core-
-               * patient`. A StructureDefinition with this canonical URL must exist in the FHIR
-               * store.
+               * Required. The canonical URL of a profile that this resource should be validated
+               * against. For example, to validate a Patient resource against the US Core Patient
+               * profile this parameter would be `http://hl7.org/fhir/us/core/StructureDefinition
+               * /us-core-patient`. A StructureDefinition with this canonical URL must exist in the
+               * FHIR store.
                */
               @com.google.api.client.util.Key
               private java.lang.String profile;
 
-              /** The canonical URL of a profile that this resource should be validated against. For example, to
-             validate a Patient resource against the US Core Patient profile this parameter would be
+              /** Required. The canonical URL of a profile that this resource should be validated against. For
+             example, to validate a Patient resource against the US Core Patient profile this parameter would be
              `http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient`. A StructureDefinition with this
              canonical URL must exist in the FHIR store.
                */
@@ -17217,11 +17435,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The canonical URL of a profile that this resource should be validated against. For
-               * example, to validate a Patient resource against the US Core Patient profile this
-               * parameter would be `http://hl7.org/fhir/us/core/StructureDefinition/us-core-
-               * patient`. A StructureDefinition with this canonical URL must exist in the FHIR
-               * store.
+               * Required. The canonical URL of a profile that this resource should be validated
+               * against. For example, to validate a Patient resource against the US Core Patient
+               * profile this parameter would be `http://hl7.org/fhir/us/core/StructureDefinition
+               * /us-core-patient`. A StructureDefinition with this canonical URL must exist in the
+               * FHIR store.
                */
               public ResourceValidate setProfile(java.lang.String profile) {
                 this.profile = profile;
@@ -17251,7 +17469,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Capabilities#execute()} method to invoke the remote operation.
              *
-             * @param name Name of the FHIR store to retrieve the capabilities for.
+             * @param name Required. Name of the FHIR store to retrieve the capabilities for.
              * @return the request
              */
             public Capabilities capabilities(java.lang.String name) throws java.io.IOException {
@@ -17288,7 +17506,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Capabilities#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Name of the FHIR store to retrieve the capabilities for.
+               * @param name Required. Name of the FHIR store to retrieve the capabilities for.
                * @since 1.13
                */
               protected Capabilities(java.lang.String name) {
@@ -17366,17 +17584,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Capabilities) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Name of the FHIR store to retrieve the capabilities for. */
+              /** Required. Name of the FHIR store to retrieve the capabilities for. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Name of the FHIR store to retrieve the capabilities for.
+              /** Required. Name of the FHIR store to retrieve the capabilities for.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Name of the FHIR store to retrieve the capabilities for. */
+              /** Required. Name of the FHIR store to retrieve the capabilities for. */
               public Capabilities setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17410,9 +17628,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link ConditionalDelete#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the FHIR
-             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             * @param parent Required. The name of the FHIR store this resource belongs to.
+             * @param type Required. The FHIR resource type to delete, such as Patient or Observation. For a complete list, see
+             *        the FHIR Resource Index
+             *        ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
              * @return the request
@@ -17454,9 +17673,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * stractGoogleClientRequest)} must be called to initialize this instance immediately after
                * invoking the constructor. </p>
                *
-               * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the FHIR
-             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * @param parent Required. The name of the FHIR store this resource belongs to.
+               * @param type Required. The FHIR resource type to delete, such as Patient or Observation. For a complete list, see
+             *        the FHIR Resource Index
+             *        ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                * @since 1.13
@@ -17532,17 +17752,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (ConditionalDelete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the FHIR store this resource belongs to. */
+              /** Required. The name of the FHIR store this resource belongs to. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the FHIR store this resource belongs to.
+              /** Required. The name of the FHIR store this resource belongs to.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** The name of the FHIR store this resource belongs to. */
+              /** Required. The name of the FHIR store this resource belongs to. */
               public ConditionalDelete setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -17554,8 +17774,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type to delete, such as Patient or Observation. For a complete
-               * list, see the FHIR Resource Index
+               * Required. The FHIR resource type to delete, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
                * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
                * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
@@ -17563,8 +17783,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the FHIR
-             Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+              /** Required. The FHIR resource type to delete, such as Patient or Observation. For a complete list,
+             see the FHIR Resource Index
+             ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                */
@@ -17573,8 +17794,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type to delete, such as Patient or Observation. For a complete
-               * list, see the FHIR Resource Index
+               * Required. The FHIR resource type to delete, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
                * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
                * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
@@ -17617,9 +17838,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link ConditionalPatch#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
-             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             * @param parent Required. The name of the FHIR store this resource belongs to.
+             * @param type Required. The FHIR resource type to update, such as Patient or Observation. For a complete list, see
+             *        the FHIR Resource Index
+             *        ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
              * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
@@ -17667,9 +17889,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                * invoking the constructor. </p>
                *
-               * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
-             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * @param parent Required. The name of the FHIR store this resource belongs to.
+               * @param type Required. The FHIR resource type to update, such as Patient or Observation. For a complete list, see
+             *        the FHIR Resource Index
+             *        ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
@@ -17746,17 +17969,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (ConditionalPatch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the FHIR store this resource belongs to. */
+              /** Required. The name of the FHIR store this resource belongs to. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the FHIR store this resource belongs to.
+              /** Required. The name of the FHIR store this resource belongs to.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** The name of the FHIR store this resource belongs to. */
+              /** Required. The name of the FHIR store this resource belongs to. */
               public ConditionalPatch setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -17768,8 +17991,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type to update, such as Patient or Observation. For a complete
-               * list, see the FHIR Resource Index
+               * Required. The FHIR resource type to update, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
                * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
                * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
@@ -17777,8 +18000,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
-             Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+              /** Required. The FHIR resource type to update, such as Patient or Observation. For a complete list,
+             see the FHIR Resource Index
+             ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                */
@@ -17787,8 +18011,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type to update, such as Patient or Observation. For a complete
-               * list, see the FHIR Resource Index
+               * Required. The FHIR resource type to update, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
                * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
                * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
@@ -17836,9 +18060,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link ConditionalUpdate#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
-             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             * @param parent Required. The name of the FHIR store this resource belongs to.
+             * @param type Required. The FHIR resource type to update, such as Patient or Observation. For a complete list, see
+             *        the FHIR Resource Index
+             *        ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
@@ -17893,9 +18118,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * stractGoogleClientRequest)} must be called to initialize this instance immediately after
                * invoking the constructor. </p>
                *
-               * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
-             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * @param parent Required. The name of the FHIR store this resource belongs to.
+               * @param type Required. The FHIR resource type to update, such as Patient or Observation. For a complete list, see
+             *        the FHIR Resource Index
+             *        ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
@@ -17973,17 +18199,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (ConditionalUpdate) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the FHIR store this resource belongs to. */
+              /** Required. The name of the FHIR store this resource belongs to. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the FHIR store this resource belongs to.
+              /** Required. The name of the FHIR store this resource belongs to.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** The name of the FHIR store this resource belongs to. */
+              /** Required. The name of the FHIR store this resource belongs to. */
               public ConditionalUpdate setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -17995,8 +18221,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type to update, such as Patient or Observation. For a complete
-               * list, see the FHIR Resource Index
+               * Required. The FHIR resource type to update, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
                * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
                * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match
@@ -18005,8 +18231,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
-             Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+              /** Required. The FHIR resource type to update, such as Patient or Observation. For a complete list,
+             see the FHIR Resource Index
+             ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the resource type
              in the provided content.
@@ -18016,8 +18243,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type to update, such as Patient or Observation. For a complete
-               * list, see the FHIR Resource Index
+               * Required. The FHIR resource type to update, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
                * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
                * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match
@@ -18066,9 +18293,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The FHIR resource type to create, such as Patient or Observation. For a complete list, see the FHIR
-             *        Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             * @param parent Required. The name of the FHIR store this resource belongs to.
+             * @param type Required. The FHIR resource type to create, such as Patient or Observation. For a complete list, see
+             *        the FHIR Resource Index
+             *        ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
@@ -18122,9 +18350,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The FHIR resource type to create, such as Patient or Observation. For a complete list, see the FHIR
-             *        Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * @param parent Required. The name of the FHIR store this resource belongs to.
+               * @param type Required. The FHIR resource type to create, such as Patient or Observation. For a complete list, see
+             *        the FHIR Resource Index
+             *        ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
@@ -18202,17 +18431,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the FHIR store this resource belongs to. */
+              /** Required. The name of the FHIR store this resource belongs to. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the FHIR store this resource belongs to.
+              /** Required. The name of the FHIR store this resource belongs to.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** The name of the FHIR store this resource belongs to. */
+              /** Required. The name of the FHIR store this resource belongs to. */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -18224,8 +18453,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type to create, such as Patient or Observation. For a complete
-               * list, see the FHIR Resource Index
+               * Required. The FHIR resource type to create, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
                * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
@@ -18234,8 +18463,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The FHIR resource type to create, such as Patient or Observation. For a complete list, see the FHIR
-             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+              /** Required. The FHIR resource type to create, such as Patient or Observation. For a complete list,
+             see the FHIR Resource Index
+             ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the resource type
              in the provided content.
@@ -18245,8 +18475,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type to create, such as Patient or Observation. For a complete
-               * list, see the FHIR Resource Index
+               * Required. The FHIR resource type to create, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
                * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
@@ -18283,7 +18513,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the resource to delete.
+             * @param name Required. The name of the resource to delete.
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -18318,7 +18548,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the resource to delete.
+               * @param name Required. The name of the resource to delete.
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -18386,17 +18616,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the resource to delete. */
+              /** Required. The name of the resource to delete. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the resource to delete.
+              /** Required. The name of the resource to delete.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The name of the resource to delete. */
+              /** Required. The name of the resource to delete. */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -18447,7 +18677,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link ExecuteBundle#execute()} method to invoke the remote operation.
              *
-             * @param parent Name of the FHIR store in which this bundle will be executed.
+             * @param parent Required. Name of the FHIR store in which this bundle will be executed.
              * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
              * @return the request
              */
@@ -18502,7 +18732,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param parent Name of the FHIR store in which this bundle will be executed.
+               * @param parent Required. Name of the FHIR store in which this bundle will be executed.
                * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
                * @since 1.13
                */
@@ -18571,17 +18801,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (ExecuteBundle) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Name of the FHIR store in which this bundle will be executed. */
+              /** Required. Name of the FHIR store in which this bundle will be executed. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Name of the FHIR store in which this bundle will be executed.
+              /** Required. Name of the FHIR store in which this bundle will be executed.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Name of the FHIR store in which this bundle will be executed. */
+              /** Required. Name of the FHIR store in which this bundle will be executed. */
               public ExecuteBundle setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -18616,7 +18846,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link History#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the resource to retrieve.
+             * @param name Required. The name of the resource to retrieve.
              * @return the request
              */
             public History history(java.lang.String name) throws java.io.IOException {
@@ -18654,7 +18884,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * History#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the resource to retrieve.
+               * @param name Required. The name of the resource to retrieve.
                * @since 1.13
                */
               protected History(java.lang.String name) {
@@ -18732,17 +18962,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (History) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the resource to retrieve. */
+              /** Required. The name of the resource to retrieve. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the resource to retrieve.
+              /** Required. The name of the resource to retrieve.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The name of the resource to retrieve. */
+              /** Required. The name of the resource to retrieve. */
               public History setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -18891,7 +19121,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the resource to update.
+             * @param name Required. The name of the resource to update.
              * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
              * @return the request
              */
@@ -18931,7 +19161,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the resource to update.
+               * @param name Required. The name of the resource to update.
                * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
                * @since 1.13
                */
@@ -19000,17 +19230,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the resource to update. */
+              /** Required. The name of the resource to update. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the resource to update.
+              /** Required. The name of the resource to update.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The name of the resource to update. */
+              /** Required. The name of the resource to update. */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -19048,7 +19278,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Read#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the resource to retrieve.
+             * @param name Required. The name of the resource to retrieve.
              * @return the request
              */
             public Read read(java.lang.String name) throws java.io.IOException {
@@ -19088,7 +19318,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link Read#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the resource to retrieve.
+               * @param name Required. The name of the resource to retrieve.
                * @since 1.13
                */
               protected Read(java.lang.String name) {
@@ -19166,17 +19396,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Read) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the resource to retrieve. */
+              /** Required. The name of the resource to retrieve. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the resource to retrieve.
+              /** Required. The name of the resource to retrieve.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The name of the resource to retrieve. */
+              /** Required. The name of the resource to retrieve. */
               public Read setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -19252,7 +19482,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Search#execute()} method to invoke the remote operation.
              *
-             * @param parent Name of the FHIR store to retrieve resources from.
+             * @param parent Required. Name of the FHIR store to retrieve resources from.
              * @param content the {@link com.google.api.services.healthcare.v1.model.SearchResourcesRequest}
              * @return the request
              */
@@ -19332,7 +19562,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Name of the FHIR store to retrieve resources from.
+               * @param parent Required. Name of the FHIR store to retrieve resources from.
                * @param content the {@link com.google.api.services.healthcare.v1.model.SearchResourcesRequest}
                * @since 1.13
                */
@@ -19401,17 +19631,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Search) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Name of the FHIR store to retrieve resources from. */
+              /** Required. Name of the FHIR store to retrieve resources from. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Name of the FHIR store to retrieve resources from.
+              /** Required. Name of the FHIR store to retrieve resources from.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Name of the FHIR store to retrieve resources from. */
+              /** Required. Name of the FHIR store to retrieve resources from. */
               public Search setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -19487,9 +19717,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link SearchType#execute()} method to invoke the remote operation.
              *
-             * @param parent Name of the FHIR store to retrieve resources from.
-             * @param resourceType The FHIR resource type to search, such as Patient or Observation. For a complete list, see the FHIR
-             *        Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             * @param parent Required. Name of the FHIR store to retrieve resources from.
+             * @param resourceType Required. The FHIR resource type to search, such as Patient or Observation. For a complete list, see
+             *        the FHIR Resource Index
+             *        ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
              * @param content the {@link com.google.api.services.healthcare.v1.model.SearchResourcesRequest}
@@ -19571,9 +19802,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * SearchType#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Name of the FHIR store to retrieve resources from.
-               * @param resourceType The FHIR resource type to search, such as Patient or Observation. For a complete list, see the FHIR
-             *        Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * @param parent Required. Name of the FHIR store to retrieve resources from.
+               * @param resourceType Required. The FHIR resource type to search, such as Patient or Observation. For a complete list, see
+             *        the FHIR Resource Index
+             *        ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                * @param content the {@link com.google.api.services.healthcare.v1.model.SearchResourcesRequest}
@@ -19645,17 +19877,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (SearchType) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Name of the FHIR store to retrieve resources from. */
+              /** Required. Name of the FHIR store to retrieve resources from. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Name of the FHIR store to retrieve resources from.
+              /** Required. Name of the FHIR store to retrieve resources from.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Name of the FHIR store to retrieve resources from. */
+              /** Required. Name of the FHIR store to retrieve resources from. */
               public SearchType setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -19667,8 +19899,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type to search, such as Patient or Observation. For a complete
-               * list, see the FHIR Resource Index
+               * Required. The FHIR resource type to search, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
                * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
@@ -19676,8 +19908,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String resourceType;
 
-              /** The FHIR resource type to search, such as Patient or Observation. For a complete list, see the FHIR
-             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+              /** Required. The FHIR resource type to search, such as Patient or Observation. For a complete list,
+             see the FHIR Resource Index
+             ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
              [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                */
@@ -19686,8 +19919,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The FHIR resource type to search, such as Patient or Observation. For a complete
-               * list, see the FHIR Resource Index
+               * Required. The FHIR resource type to search, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
                * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
@@ -19727,7 +19960,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Update#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the resource to update.
+             * @param name Required. The name of the resource to update.
              * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
              * @return the request
              */
@@ -19772,7 +20005,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the resource to update.
+               * @param name Required. The name of the resource to update.
                * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
                * @since 1.13
                */
@@ -19841,17 +20074,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Update) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the resource to update. */
+              /** Required. The name of the resource to update. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the resource to update.
+              /** Required. The name of the resource to update.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The name of the resource to update. */
+              /** Required. The name of the resource to update. */
               public Update setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -19885,7 +20118,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Vread#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the resource version to retrieve.
+             * @param name Required. The name of the resource version to retrieve.
              * @return the request
              */
             public Vread vread(java.lang.String name) throws java.io.IOException {
@@ -19922,7 +20155,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Vread#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the resource version to retrieve.
+               * @param name Required. The name of the resource version to retrieve.
                * @since 1.13
                */
               protected Vread(java.lang.String name) {
@@ -20000,17 +20233,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Vread) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the resource version to retrieve. */
+              /** Required. The name of the resource version to retrieve. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the resource version to retrieve.
+              /** Required. The name of the resource version to retrieve.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The name of the resource version to retrieve. */
+              /** Required. The name of the resource version to retrieve. */
               public Vread setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

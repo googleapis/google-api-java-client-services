@@ -37,11 +37,11 @@ public final class DeidentifyDicomStoreRequest extends com.google.api.client.jso
   private DeidentifyConfig config;
 
   /**
-   * The name of the DICOM store to create and write the redacted data to. For example, `projects/{p
-   * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`. * The
-   * destination dataset must exist. * The source dataset and destination dataset must both reside
-   * in the same location. De-identifying data across multiple locations is not supported. * The
-   * destination DICOM store must not exist. * The caller must have the necessary permissions to
+   * Required. The name of the DICOM store to create and write the redacted data to. For example, `p
+   * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
+   * `. * The destination dataset must exist. * The source dataset and destination dataset must both
+   * reside in the same location. De-identifying data across multiple locations is not supported. *
+   * The destination DICOM store must not exist. * The caller must have the necessary permissions to
    * create the destination DICOM store.
    * The value may be {@code null}.
    */
@@ -84,11 +84,11 @@ public final class DeidentifyDicomStoreRequest extends com.google.api.client.jso
   }
 
   /**
-   * The name of the DICOM store to create and write the redacted data to. For example, `projects/{p
-   * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`. * The
-   * destination dataset must exist. * The source dataset and destination dataset must both reside
-   * in the same location. De-identifying data across multiple locations is not supported. * The
-   * destination DICOM store must not exist. * The caller must have the necessary permissions to
+   * Required. The name of the DICOM store to create and write the redacted data to. For example, `p
+   * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
+   * `. * The destination dataset must exist. * The source dataset and destination dataset must both
+   * reside in the same location. De-identifying data across multiple locations is not supported. *
+   * The destination DICOM store must not exist. * The caller must have the necessary permissions to
    * create the destination DICOM store.
    * @return value or {@code null} for none
    */
@@ -97,11 +97,11 @@ public final class DeidentifyDicomStoreRequest extends com.google.api.client.jso
   }
 
   /**
-   * The name of the DICOM store to create and write the redacted data to. For example, `projects/{p
-   * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`. * The
-   * destination dataset must exist. * The source dataset and destination dataset must both reside
-   * in the same location. De-identifying data across multiple locations is not supported. * The
-   * destination DICOM store must not exist. * The caller must have the necessary permissions to
+   * Required. The name of the DICOM store to create and write the redacted data to. For example, `p
+   * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
+   * `. * The destination dataset must exist. * The source dataset and destination dataset must both
+   * reside in the same location. De-identifying data across multiple locations is not supported. *
+   * The destination DICOM store must not exist. * The caller must have the necessary permissions to
    * create the destination DICOM store.
    * @param destinationStore destinationStore or {@code null} for none
    */

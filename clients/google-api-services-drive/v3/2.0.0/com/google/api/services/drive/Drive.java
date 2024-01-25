@@ -263,6 +263,339 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   }
 
   /**
+   * An accessor for creating requests from the Apps collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Drive drive = new Drive(...);}
+   *   {@code Drive.Apps.List request = drive.apps().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Apps apps() {
+    return new Apps();
+  }
+
+  /**
+   * The "apps" collection of methods.
+   */
+  public class Apps {
+
+    /**
+     * Gets a specific app.
+     *
+     * Create a request for the method "apps.get".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param appId The ID of the app.
+     * @return the request
+     */
+    public Get get(java.lang.String appId) throws java.io.IOException {
+      Get result = new Get(appId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DriveRequest<com.google.api.services.drive.model.App> {
+
+      private static final String REST_PATH = "apps/{appId}";
+
+      /**
+       * Gets a specific app.
+       *
+       * Create a request for the method "apps.get".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param appId The ID of the app.
+       * @since 1.13
+       */
+      protected Get(java.lang.String appId) {
+        super(Drive.this, "GET", REST_PATH, null, com.google.api.services.drive.model.App.class);
+        this.appId = com.google.api.client.util.Preconditions.checkNotNull(appId, "Required parameter appId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The ID of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String appId;
+
+      /** The ID of the app.
+       */
+      public java.lang.String getAppId() {
+        return appId;
+      }
+
+      /** The ID of the app. */
+      public Get setAppId(java.lang.String appId) {
+        this.appId = appId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists a user's installed apps.
+     *
+     * Create a request for the method "apps.list".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DriveRequest<com.google.api.services.drive.model.AppList> {
+
+      private static final String REST_PATH = "apps";
+
+      /**
+       * Lists a user's installed apps.
+       *
+       * Create a request for the method "apps.list".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(Drive.this, "GET", REST_PATH, null, com.google.api.services.drive.model.AppList.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * A comma-separated list of file extensions to limit returned results. All results within the
+       * given app query scope which can open any of the given file extensions are included in the
+       * response. If `appFilterMimeTypes` are provided as well, the result is a union of the two
+       * resulting app lists.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String appFilterExtensions;
+
+      /** A comma-separated list of file extensions to limit returned results. All results within the given
+     app query scope which can open any of the given file extensions are included in the response. If
+     `appFilterMimeTypes` are provided as well, the result is a union of the two resulting app lists.
+       */
+      public java.lang.String getAppFilterExtensions() {
+        return appFilterExtensions;
+      }
+
+      /**
+       * A comma-separated list of file extensions to limit returned results. All results within the
+       * given app query scope which can open any of the given file extensions are included in the
+       * response. If `appFilterMimeTypes` are provided as well, the result is a union of the two
+       * resulting app lists.
+       */
+      public List setAppFilterExtensions(java.lang.String appFilterExtensions) {
+        this.appFilterExtensions = appFilterExtensions;
+        return this;
+      }
+
+      /**
+       * A comma-separated list of file extensions to limit returned results. All results within the
+       * given app query scope which can open any of the given MIME types will be included in the
+       * response. If `appFilterExtensions` are provided as well, the result is a union of the two
+       * resulting app lists.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String appFilterMimeTypes;
+
+      /** A comma-separated list of file extensions to limit returned results. All results within the given
+     app query scope which can open any of the given MIME types will be included in the response. If
+     `appFilterExtensions` are provided as well, the result is a union of the two resulting app lists.
+       */
+      public java.lang.String getAppFilterMimeTypes() {
+        return appFilterMimeTypes;
+      }
+
+      /**
+       * A comma-separated list of file extensions to limit returned results. All results within the
+       * given app query scope which can open any of the given MIME types will be included in the
+       * response. If `appFilterExtensions` are provided as well, the result is a union of the two
+       * resulting app lists.
+       */
+      public List setAppFilterMimeTypes(java.lang.String appFilterMimeTypes) {
+        this.appFilterMimeTypes = appFilterMimeTypes;
+        return this;
+      }
+
+      /**
+       * A language or locale code, as defined by BCP 47, with some extensions from Unicode's LDML
+       * format (http://www.unicode.org/reports/tr35/).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** A language or locale code, as defined by BCP 47, with some extensions from Unicode's LDML format
+     (http://www.unicode.org/reports/tr35/).
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * A language or locale code, as defined by BCP 47, with some extensions from Unicode's LDML
+       * format (http://www.unicode.org/reports/tr35/).
+       */
+      public List setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Changes collection.
    *
    * <p>The typical use is:</p>

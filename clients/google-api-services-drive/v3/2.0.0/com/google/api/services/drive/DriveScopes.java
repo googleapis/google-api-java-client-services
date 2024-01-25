@@ -29,6 +29,9 @@ public class DriveScopes {
   /** See, create, and delete its own configuration data in your Google Drive. */
   public static final String DRIVE_APPDATA = "https://www.googleapis.com/auth/drive.appdata";
 
+  /** View your Google Drive apps. */
+  public static final String DRIVE_APPS_READONLY = "https://www.googleapis.com/auth/drive.apps.readonly";
+
   /** See, edit, create, and delete only the specific Google Drive files you use with this app. */
   public static final String DRIVE_FILE = "https://www.googleapis.com/auth/drive.file";
 
@@ -56,6 +59,7 @@ public class DriveScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(DRIVE);
     set.add(DRIVE_APPDATA);
+    set.add(DRIVE_APPS_READONLY);
     set.add(DRIVE_FILE);
     set.add(DRIVE_METADATA);
     set.add(DRIVE_METADATA_READONLY);

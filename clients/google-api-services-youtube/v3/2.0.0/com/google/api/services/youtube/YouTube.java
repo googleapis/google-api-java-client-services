@@ -3119,6 +3119,22 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Return the channel associated with a YouTube handle. */
+      @com.google.api.client.util.Key
+      private java.lang.String forHandle;
+
+      /** Return the channel associated with a YouTube handle.
+       */
+      public java.lang.String getForHandle() {
+        return forHandle;
+      }
+
+      /** Return the channel associated with a YouTube handle. */
+      public List setForHandle(java.lang.String forHandle) {
+        this.forHandle = forHandle;
+        return this;
+      }
+
       /** Return the channel associated with a YouTube username. */
       @com.google.api.client.util.Key
       private java.lang.String forUsername;

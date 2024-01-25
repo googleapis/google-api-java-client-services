@@ -361,9 +361,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
      * organizes into types of events. For `eventName` request parameters in general: - If no
      * `eventName` is given, the report returns all possible instances of an `eventName`. - When you
      * request an `eventName`, the API's response returns all activities which contain that
-     * `eventName`. It is possible that the returned activities will have other `eventName` properties
-     * in addition to the one requested. For more information about `eventName` properties, see the
-     * list of event names for various applications above in `applicationName`.
+     * `eventName`. For more information about `eventName` properties, see the list of event names for
+     * various applications above in `applicationName`.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -399,9 +398,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
      * organizes into types of events. For `eventName` request parameters in general: - If no
      * `eventName` is given, the report returns all possible instances of an `eventName`. - When you
      * request an `eventName`, the API's response returns all activities which contain that
-     * `eventName`. It is possible that the returned activities will have other `eventName` properties
-     * in addition to the one requested. For more information about `eventName` properties, see the
-     * list of event names for various applications above in `applicationName`.
+     * `eventName`. For more information about `eventName` properties, see the list of event names for
+     * various applications above in `applicationName`.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -414,9 +412,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
      * organizes into types of events. For `eventName` request parameters in general: - If no
      * `eventName` is given, the report returns all possible instances of an `eventName`. - When you
      * request an `eventName`, the API's response returns all activities which contain that
-     * `eventName`. It is possible that the returned activities will have other `eventName` properties
-     * in addition to the one requested. For more information about `eventName` properties, see the
-     * list of event names for various applications above in `applicationName`.
+     * `eventName`. For more information about `eventName` properties, see the list of event names for
+     * various applications above in `applicationName`.
      * @param name name or {@code null} for none
      */
     public Events setName(java.lang.String name) {

@@ -202,6 +202,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Display information of a Storage Bucket. Used only for return traces.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageBucketInfo storageBucket;
+
+  /**
    * Display information of a VPC connector.
    * The value may be {@code null}.
    */
@@ -631,6 +638,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Display information of a Storage Bucket. Used only for return traces.
+   * @return value or {@code null} for none
+   */
+  public StorageBucketInfo getStorageBucket() {
+    return storageBucket;
+  }
+
+  /**
+   * Display information of a Storage Bucket. Used only for return traces.
+   * @param storageBucket storageBucket or {@code null} for none
+   */
+  public Step setStorageBucket(StorageBucketInfo storageBucket) {
+    this.storageBucket = storageBucket;
     return this;
   }
 

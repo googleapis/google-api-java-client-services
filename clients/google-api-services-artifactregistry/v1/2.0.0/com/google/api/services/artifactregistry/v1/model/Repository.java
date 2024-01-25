@@ -67,6 +67,12 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disallowUnspecifiedMode;
+
+  /**
    * Docker repository config contains repository level configuration for the repositories of docker
    * type.
    * The value may be {@code null}.
@@ -227,6 +233,21 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisallowUnspecifiedMode() {
+    return disallowUnspecifiedMode;
+  }
+
+  /**
+   * @param disallowUnspecifiedMode disallowUnspecifiedMode or {@code null} for none
+   */
+  public Repository setDisallowUnspecifiedMode(java.lang.Boolean disallowUnspecifiedMode) {
+    this.disallowUnspecifiedMode = disallowUnspecifiedMode;
     return this;
   }
 

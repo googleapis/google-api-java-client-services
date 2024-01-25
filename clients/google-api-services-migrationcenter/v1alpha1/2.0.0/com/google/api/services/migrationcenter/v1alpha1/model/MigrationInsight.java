@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class MigrationInsight extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A Google Compute Engine Sole Tenant target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComputeEngineSoleTenantMigrationTarget computeEngineSoleTenantTarget;
+
+  /**
    * Output only. A Google Compute Engine target.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class MigrationInsight extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private VmwareEngineMigrationTarget vmwareEngineTarget;
+
+  /**
+   * Output only. A Google Compute Engine Sole Tenant target.
+   * @return value or {@code null} for none
+   */
+  public ComputeEngineSoleTenantMigrationTarget getComputeEngineSoleTenantTarget() {
+    return computeEngineSoleTenantTarget;
+  }
+
+  /**
+   * Output only. A Google Compute Engine Sole Tenant target.
+   * @param computeEngineSoleTenantTarget computeEngineSoleTenantTarget or {@code null} for none
+   */
+  public MigrationInsight setComputeEngineSoleTenantTarget(ComputeEngineSoleTenantMigrationTarget computeEngineSoleTenantTarget) {
+    this.computeEngineSoleTenantTarget = computeEngineSoleTenantTarget;
+    return this;
+  }
 
   /**
    * Output only. A Google Compute Engine target.

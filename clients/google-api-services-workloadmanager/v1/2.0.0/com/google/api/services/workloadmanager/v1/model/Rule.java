@@ -93,6 +93,13 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   private java.lang.String severity;
 
   /**
+   * List of user-defined tags
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tags;
+
+  /**
    * the docuement url for the rule
    * The value may be {@code null}.
    */
@@ -249,6 +256,23 @@ public final class Rule extends com.google.api.client.json.GenericJson {
    */
   public Rule setSeverity(java.lang.String severity) {
     this.severity = severity;
+    return this;
+  }
+
+  /**
+   * List of user-defined tags
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * List of user-defined tags
+   * @param tags tags or {@code null} for none
+   */
+  public Rule setTags(java.util.List<java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

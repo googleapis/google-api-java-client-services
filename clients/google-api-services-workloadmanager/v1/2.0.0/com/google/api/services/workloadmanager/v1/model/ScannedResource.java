@@ -37,6 +37,13 @@ public final class ScannedResource extends com.google.api.client.json.GenericJso
   private java.lang.String resource;
 
   /**
+   * resource type
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * resource name
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class ScannedResource extends com.google.api.client.json.GenericJso
    */
   public ScannedResource setResource(java.lang.String resource) {
     this.resource = resource;
+    return this;
+  }
+
+  /**
+   * resource type
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * resource type
+   * @param type type or {@code null} for none
+   */
+  public ScannedResource setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

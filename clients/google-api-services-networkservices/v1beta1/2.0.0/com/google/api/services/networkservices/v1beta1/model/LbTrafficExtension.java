@@ -89,7 +89,7 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   private java.lang.String loadBalancingScheme;
 
   /**
-   * Required. Name of the `LbTrafficExtension` resource in the following format:
+   * Required. Identifier. Name of the `LbTrafficExtension` resource in the following format:
    * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
    * The value may be {@code null}.
    */
@@ -224,7 +224,7 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Name of the `LbTrafficExtension` resource in the following format:
+   * Required. Identifier. Name of the `LbTrafficExtension` resource in the following format:
    * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
    * @return value or {@code null} for none
    */
@@ -233,7 +233,7 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Name of the `LbTrafficExtension` resource in the following format:
+   * Required. Identifier. Name of the `LbTrafficExtension` resource in the following format:
    * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
    * @param name name or {@code null} for none
    */

@@ -5549,7 +5549,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the `LbRouteExtension` resource in the following format:
+         * @param name Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
          *        `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbRouteExtension}
          * @return the request
@@ -5578,7 +5578,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the `LbRouteExtension` resource in the following format:
+           * @param name Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
          *        `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbRouteExtension}
            * @since 1.13
@@ -5649,13 +5649,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the `LbRouteExtension` resource in the following format:
+           * Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
            * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the `LbRouteExtension` resource in the following format:
+          /** Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
          `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
            */
           public java.lang.String getName() {
@@ -5663,7 +5663,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the `LbRouteExtension` resource in the following format:
+           * Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
            * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
            */
           public Patch setName(java.lang.String name) {
@@ -6530,7 +6530,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the `LbTrafficExtension` resource in the following format:
+         * @param name Required. Identifier. Name of the `LbTrafficExtension` resource in the following format:
          *        `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension}
          * @return the request
@@ -6559,7 +6559,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the `LbTrafficExtension` resource in the following format:
+           * @param name Required. Identifier. Name of the `LbTrafficExtension` resource in the following format:
          *        `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.LbTrafficExtension}
            * @since 1.13
@@ -6630,13 +6630,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the `LbTrafficExtension` resource in the following format:
+           * Required. Identifier. Name of the `LbTrafficExtension` resource in the following
+           * format:
            * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the `LbTrafficExtension` resource in the following format:
+          /** Required. Identifier. Name of the `LbTrafficExtension` resource in the following format:
          `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
            */
           public java.lang.String getName() {
@@ -6644,7 +6645,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the `LbTrafficExtension` resource in the following format:
+           * Required. Identifier. Name of the `LbTrafficExtension` resource in the following
+           * format:
            * `projects/{project}/locations/{location}/lbTrafficExtensions/{lb_traffic_extension}`.
            */
           public Patch setName(java.lang.String name) {

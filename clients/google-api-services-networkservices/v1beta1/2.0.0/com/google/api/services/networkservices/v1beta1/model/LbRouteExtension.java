@@ -88,7 +88,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   private java.lang.String loadBalancingScheme;
 
   /**
-   * Required. Name of the `LbRouteExtension` resource in the following format:
+   * Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
    * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
    * The value may be {@code null}.
    */
@@ -223,7 +223,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Name of the `LbRouteExtension` resource in the following format:
+   * Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
    * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
    * @return value or {@code null} for none
    */
@@ -232,7 +232,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Name of the `LbRouteExtension` resource in the following format:
+   * Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
    * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
    * @param name name or {@code null} for none
    */

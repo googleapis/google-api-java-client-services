@@ -38,8 +38,8 @@ public final class MetadataLabelMatcher extends com.google.api.client.json.Gener
    * MATCH_ALL , and P3 has MATCH_ALL . If a client with label connects, the config from P1 will be
    * selected. If a client with label connects, the config from P2 will be selected. If a client
    * with label connects, the config from P3 will be selected. If there is more than one best match,
-   * (for example, if a config P4 with selector exists and if a client with label connects), an
-   * error will be thrown.
+   * (for example, if a config P4 with selector exists and if a client with label connects), pick up
+   * the one with older creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class MetadataLabelMatcher extends com.google.api.client.json.Gener
    * MATCH_ALL , and P3 has MATCH_ALL . If a client with label connects, the config from P1 will be
    * selected. If a client with label connects, the config from P2 will be selected. If a client
    * with label connects, the config from P3 will be selected. If there is more than one best match,
-   * (for example, if a config P4 with selector exists and if a client with label connects), an
-   * error will be thrown.
+   * (for example, if a config P4 with selector exists and if a client with label connects), pick up
+   * the one with older creation time.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetadataLabelMatchCriteria() {
@@ -80,8 +80,8 @@ public final class MetadataLabelMatcher extends com.google.api.client.json.Gener
    * MATCH_ALL , and P3 has MATCH_ALL . If a client with label connects, the config from P1 will be
    * selected. If a client with label connects, the config from P2 will be selected. If a client
    * with label connects, the config from P3 will be selected. If there is more than one best match,
-   * (for example, if a config P4 with selector exists and if a client with label connects), an
-   * error will be thrown.
+   * (for example, if a config P4 with selector exists and if a client with label connects), pick up
+   * the one with older creation time.
    * @param metadataLabelMatchCriteria metadataLabelMatchCriteria or {@code null} for none
    */
   public MetadataLabelMatcher setMetadataLabelMatchCriteria(java.lang.String metadataLabelMatchCriteria) {

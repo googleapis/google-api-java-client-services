@@ -44,7 +44,10 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Long adId;
 
   /**
-   * Ad user data consent for this conversion.
+   * Represents consent for core platform services (CPS) preferences in settings. No default value.
+   * Acceptable values are: GRANTED: The desired consent status is to grant. Read the CPS
+   * preferences from GTE settings. DENIED: The desired consent status is to deny; CPS list is
+   * empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -326,7 +329,10 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Ad user data consent for this conversion.
+   * Represents consent for core platform services (CPS) preferences in settings. No default value.
+   * Acceptable values are: GRANTED: The desired consent status is to grant. Read the CPS
+   * preferences from GTE settings. DENIED: The desired consent status is to deny; CPS list is
+   * empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdUserDataConsent() {
@@ -334,7 +340,10 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Ad user data consent for this conversion.
+   * Represents consent for core platform services (CPS) preferences in settings. No default value.
+   * Acceptable values are: GRANTED: The desired consent status is to grant. Read the CPS
+   * preferences from GTE settings. DENIED: The desired consent status is to deny; CPS list is
+   * empty.
    * @param adUserDataConsent adUserDataConsent or {@code null} for none
    */
   public Conversion setAdUserDataConsent(java.lang.String adUserDataConsent) {

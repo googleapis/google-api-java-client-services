@@ -174,7 +174,9 @@ public class CloudProfiler extends com.google.api.client.googleapis.services.jso
     public class Profiles {
 
       /**
-       * CreateProfile creates a new profile resource in the online mode. The server ensures that the new
+       * CreateProfile creates a new profile resource in the online mode. _Direct use of this API is
+       * discouraged, please use a [supported profiler agent](https://cloud.google.com/profiler/docs
+       * /about-profiler#profiling_agent) instead for profile collection._ The server ensures that the new
        * profiles are created at a constant rate per deployment, so the creation request may hang for some
        * time until the next profile session is available. The request may fail with ABORTED error if the
        * creation is not available within ~1m, the response will indicate the duration of the backoff the
@@ -206,7 +208,9 @@ public class CloudProfiler extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * CreateProfile creates a new profile resource in the online mode. The server ensures that the
+         * CreateProfile creates a new profile resource in the online mode. _Direct use of this API is
+         * discouraged, please use a [supported profiler agent](https://cloud.google.com/profiler/docs
+         * /about-profiler#profiling_agent) instead for profile collection._ The server ensures that the
          * new profiles are created at a constant rate per deployment, so the creation request may hang
          * for some time until the next profile session is available. The request may fail with ABORTED
          * error if the creation is not available within ~1m, the response will indicate the duration of
@@ -320,7 +324,9 @@ public class CloudProfiler extends com.google.api.client.googleapis.services.jso
       }
       /**
        * CreateOfflineProfile creates a new profile resource in the offline mode. The client provides the
-       * profile to create along with the profile bytes, the server records it.
+       * profile to create along with the profile bytes, the server records it. _Direct use of this API is
+       * discouraged, please use a [supported profiler agent](https://cloud.google.com/profiler/docs
+       * /about-profiler#profiling_agent) instead for profile collection._
        *
        * Create a request for the method "profiles.createOffline".
        *
@@ -346,7 +352,10 @@ public class CloudProfiler extends com.google.api.client.googleapis.services.jso
 
         /**
          * CreateOfflineProfile creates a new profile resource in the offline mode. The client provides
-         * the profile to create along with the profile bytes, the server records it.
+         * the profile to create along with the profile bytes, the server records it. _Direct use of this
+         * API is discouraged, please use a [supported profiler
+         * agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent) instead for
+         * profile collection._
          *
          * Create a request for the method "profiles.createOffline".
          *
@@ -640,7 +649,9 @@ public class CloudProfiler extends com.google.api.client.googleapis.services.jso
       /**
        * UpdateProfile updates the profile bytes and labels on the profile resource created in the online
        * mode. Updating the bytes for profiles created in the offline mode is currently not supported: the
-       * profile content must be provided at the time of the profile creation.
+       * profile content must be provided at the time of the profile creation. _Direct use of this API is
+       * discouraged, please use a [supported profiler agent](https://cloud.google.com/profiler/docs
+       * /about-profiler#profiling_agent) instead for profile collection._
        *
        * Create a request for the method "profiles.patch".
        *
@@ -667,7 +678,10 @@ public class CloudProfiler extends com.google.api.client.googleapis.services.jso
         /**
          * UpdateProfile updates the profile bytes and labels on the profile resource created in the
          * online mode. Updating the bytes for profiles created in the offline mode is currently not
-         * supported: the profile content must be provided at the time of the profile creation.
+         * supported: the profile content must be provided at the time of the profile creation. _Direct
+         * use of this API is discouraged, please use a [supported profiler
+         * agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent) instead for
+         * profile collection._
          *
          * Create a request for the method "profiles.patch".
          *

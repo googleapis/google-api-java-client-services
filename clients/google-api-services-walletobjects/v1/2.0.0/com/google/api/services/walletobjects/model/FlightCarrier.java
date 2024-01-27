@@ -30,7 +30,7 @@ package com.google.api.services.walletobjects.model;
 public final class FlightCarrier extends com.google.api.client.json.GenericJson {
 
   /**
-   * A logo for the airline alliance, displayed above the QR code that the passenger scans to board.
+   * A logo for the airline alliance, displayed below the QR code that the passenger scans to board.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class FlightCarrier extends com.google.api.client.json.GenericJson 
   private Image wideAirlineLogo;
 
   /**
-   * A logo for the airline alliance, displayed above the QR code that the passenger scans to board.
+   * A logo for the airline alliance, displayed below the QR code that the passenger scans to board.
    * @return value or {@code null} for none
    */
   public Image getAirlineAllianceLogo() {
@@ -96,7 +96,7 @@ public final class FlightCarrier extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A logo for the airline alliance, displayed above the QR code that the passenger scans to board.
+   * A logo for the airline alliance, displayed below the QR code that the passenger scans to board.
    * @param airlineAllianceLogo airlineAllianceLogo or {@code null} for none
    */
   public FlightCarrier setAirlineAllianceLogo(Image airlineAllianceLogo) {

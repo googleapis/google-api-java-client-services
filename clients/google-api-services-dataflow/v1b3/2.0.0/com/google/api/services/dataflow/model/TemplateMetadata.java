@@ -57,6 +57,27 @@ public final class TemplateMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. Indicates if the template is streaming or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean streaming;
+
+  /**
+   * Optional. Indicates if the streaming template supports at least once mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsAtLeastOnce;
+
+  /**
+   * Optional. Indicates if the streaming template supports exactly once mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsExactlyOnce;
+
+  /**
    * Optional. A description of the template.
    * @return value or {@code null} for none
    */
@@ -104,6 +125,57 @@ public final class TemplateMetadata extends com.google.api.client.json.GenericJs
    */
   public TemplateMetadata setParameters(java.util.List<ParameterMetadata> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the template is streaming or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStreaming() {
+    return streaming;
+  }
+
+  /**
+   * Optional. Indicates if the template is streaming or not.
+   * @param streaming streaming or {@code null} for none
+   */
+  public TemplateMetadata setStreaming(java.lang.Boolean streaming) {
+    this.streaming = streaming;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the streaming template supports at least once mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsAtLeastOnce() {
+    return supportsAtLeastOnce;
+  }
+
+  /**
+   * Optional. Indicates if the streaming template supports at least once mode.
+   * @param supportsAtLeastOnce supportsAtLeastOnce or {@code null} for none
+   */
+  public TemplateMetadata setSupportsAtLeastOnce(java.lang.Boolean supportsAtLeastOnce) {
+    this.supportsAtLeastOnce = supportsAtLeastOnce;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the streaming template supports exactly once mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsExactlyOnce() {
+    return supportsExactlyOnce;
+  }
+
+  /**
+   * Optional. Indicates if the streaming template supports exactly once mode.
+   * @param supportsExactlyOnce supportsExactlyOnce or {@code null} for none
+   */
+  public TemplateMetadata setSupportsExactlyOnce(java.lang.Boolean supportsExactlyOnce) {
+    this.supportsExactlyOnce = supportsExactlyOnce;
     return this;
   }
 

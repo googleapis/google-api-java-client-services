@@ -69,6 +69,13 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String helpText;
 
   /**
+   * Optional. Whether the parameter should be hidden in the UI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hiddenUi;
+
+  /**
    * Optional. Whether the parameter is optional. Defaults to false.
    * The value may be {@code null}.
    */
@@ -212,6 +219,23 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
    */
   public ParameterMetadata setHelpText(java.lang.String helpText) {
     this.helpText = helpText;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the parameter should be hidden in the UI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHiddenUi() {
+    return hiddenUi;
+  }
+
+  /**
+   * Optional. Whether the parameter should be hidden in the UI.
+   * @param hiddenUi hiddenUi or {@code null} for none
+   */
+  public ParameterMetadata setHiddenUi(java.lang.Boolean hiddenUi) {
+    this.hiddenUi = hiddenUi;
     return this;
   }
 

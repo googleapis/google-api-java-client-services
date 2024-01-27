@@ -132,6 +132,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private NetworkPolicyConfig networkPolicyConfig;
 
   /**
+   * Optional. Configuration for the StatefulHA add-on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StatefulHAConfig statefulHaConfig;
+
+  /**
    * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to
    * enable Cloud Run addon. This option can only be enabled at cluster creation time.
    * @return value or {@code null} for none
@@ -367,6 +374,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setNetworkPolicyConfig(NetworkPolicyConfig networkPolicyConfig) {
     this.networkPolicyConfig = networkPolicyConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the StatefulHA add-on.
+   * @return value or {@code null} for none
+   */
+  public StatefulHAConfig getStatefulHaConfig() {
+    return statefulHaConfig;
+  }
+
+  /**
+   * Optional. Configuration for the StatefulHA add-on.
+   * @param statefulHaConfig statefulHaConfig or {@code null} for none
+   */
+  public AddonsConfig setStatefulHaConfig(StatefulHAConfig statefulHaConfig) {
+    this.statefulHaConfig = statefulHaConfig;
     return this;
   }
 

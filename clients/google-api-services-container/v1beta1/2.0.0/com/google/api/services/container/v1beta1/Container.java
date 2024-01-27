@@ -1685,8 +1685,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Gets the public component of the cluster signing keys in JSON Web Key format. This API is not yet
-         * intended for general use, and is not available for all clusters.
+         * Gets the public component of the cluster signing keys in JSON Web Key format.
          *
          * Create a request for the method "clusters.getJwks".
          *
@@ -1711,8 +1710,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Gets the public component of the cluster signing keys in JSON Web Key format. This API is not
-           * yet intended for general use, and is not available for all clusters.
+           * Gets the public component of the cluster signing keys in JSON Web Key format.
            *
            * Create a request for the method "clusters.getJwks".
            *
@@ -5456,8 +5454,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Gets the OIDC discovery document for the cluster. See the [OpenID Connect Discovery 1.0
-           * specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details. This API
-           * is not yet intended for general use, and is not available for all clusters.
+           * specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details.
            *
            * Create a request for the method "well-known.getOpenid-configuration".
            *
@@ -5484,8 +5481,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Gets the OIDC discovery document for the cluster. See the [OpenID Connect Discovery 1.0
-             * specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details. This
-             * API is not yet intended for general use, and is not available for all clusters.
+             * specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details.
              *
              * Create a request for the method "well-known.getOpenid-configuration".
              *

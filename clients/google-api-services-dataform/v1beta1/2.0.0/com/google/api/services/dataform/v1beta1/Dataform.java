@@ -3848,6 +3848,22 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
+            /** Optional. Filter for the returned list. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter for the returned list.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Filter for the returned list. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
             /**
              * Optional. Maximum number of compilation results to return. The server may return
              * fewer items than requested. If unspecified, the server will pick an appropriate

@@ -39,6 +39,13 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   private java.lang.Long cmAccountId;
 
   /**
+   * Output only. The set of CM360 Advertiser IDs sharing the CM360 Floodlight configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> cmAdvertiserIds;
+
+  /**
    * Required. Immutable. ID of the CM360 Floodlight configuration linked with the DV360 advertiser.
    * The value may be {@code null}.
    */
@@ -94,6 +101,23 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
    */
   public CmHybridConfig setCmAccountId(java.lang.Long cmAccountId) {
     this.cmAccountId = cmAccountId;
+    return this;
+  }
+
+  /**
+   * Output only. The set of CM360 Advertiser IDs sharing the CM360 Floodlight configuration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getCmAdvertiserIds() {
+    return cmAdvertiserIds;
+  }
+
+  /**
+   * Output only. The set of CM360 Advertiser IDs sharing the CM360 Floodlight configuration.
+   * @param cmAdvertiserIds cmAdvertiserIds or {@code null} for none
+   */
+  public CmHybridConfig setCmAdvertiserIds(java.util.List<java.lang.Long> cmAdvertiserIds) {
+    this.cmAdvertiserIds = cmAdvertiserIds;
     return this;
   }
 

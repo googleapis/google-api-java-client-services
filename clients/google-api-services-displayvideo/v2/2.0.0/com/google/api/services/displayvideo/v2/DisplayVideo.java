@@ -22416,6 +22416,440 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
 
+    /**
+     * An accessor for creating requests from the FloodlightActivities collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.FloodlightActivities.List request = displayvideo.floodlightActivities().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public FloodlightActivities floodlightActivities() {
+      return new FloodlightActivities();
+    }
+
+    /**
+     * The "floodlightActivities" collection of methods.
+     */
+    public class FloodlightActivities {
+
+      /**
+       * Gets a Floodlight activity.
+       *
+       * Create a request for the method "floodlightActivities.get".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param floodlightGroupId Required. The ID of the parent Floodlight group to which the requested Floodlight activity belongs.
+       * @param floodlightActivityId Required. The ID of the Floodlight activity to fetch.
+       * @return the request
+       */
+      public Get get(java.lang.Long floodlightGroupId, java.lang.Long floodlightActivityId) throws java.io.IOException {
+        Get result = new Get(floodlightGroupId, floodlightActivityId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.FloodlightActivity> {
+
+        private static final String REST_PATH = "v2/floodlightGroups/{+floodlightGroupId}/floodlightActivities/{+floodlightActivityId}";
+
+        private final java.util.regex.Pattern FLOODLIGHT_GROUP_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern FLOODLIGHT_ACTIVITY_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Gets a Floodlight activity.
+         *
+         * Create a request for the method "floodlightActivities.get".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param floodlightGroupId Required. The ID of the parent Floodlight group to which the requested Floodlight activity belongs.
+         * @param floodlightActivityId Required. The ID of the Floodlight activity to fetch.
+         * @since 1.13
+         */
+        protected Get(java.lang.Long floodlightGroupId, java.lang.Long floodlightActivityId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v2.model.FloodlightActivity.class);
+          this.floodlightGroupId = com.google.api.client.util.Preconditions.checkNotNull(floodlightGroupId, "Required parameter floodlightGroupId must be specified.");
+          this.floodlightActivityId = com.google.api.client.util.Preconditions.checkNotNull(floodlightActivityId, "Required parameter floodlightActivityId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The ID of the parent Floodlight group to which the requested Floodlight
+         * activity belongs.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long floodlightGroupId;
+
+        /** Required. The ID of the parent Floodlight group to which the requested Floodlight activity belongs.
+         */
+        public java.lang.Long getFloodlightGroupId() {
+          return floodlightGroupId;
+        }
+
+        /**
+         * Required. The ID of the parent Floodlight group to which the requested Floodlight
+         * activity belongs.
+         */
+        public Get setFloodlightGroupId(java.lang.Long floodlightGroupId) {
+          this.floodlightGroupId = floodlightGroupId;
+          return this;
+        }
+
+        /** Required. The ID of the Floodlight activity to fetch. */
+        @com.google.api.client.util.Key
+        private java.lang.Long floodlightActivityId;
+
+        /** Required. The ID of the Floodlight activity to fetch.
+         */
+        public java.lang.Long getFloodlightActivityId() {
+          return floodlightActivityId;
+        }
+
+        /** Required. The ID of the Floodlight activity to fetch. */
+        public Get setFloodlightActivityId(java.lang.Long floodlightActivityId) {
+          this.floodlightActivityId = floodlightActivityId;
+          return this;
+        }
+
+        /**
+         * Required. The ID of the partner through which the Floodlight activity is being accessed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** Required. The ID of the partner through which the Floodlight activity is being accessed.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /**
+         * Required. The ID of the partner through which the Floodlight activity is being accessed.
+         */
+        public Get setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists Floodlight activities in a Floodlight group.
+       *
+       * Create a request for the method "floodlightActivities.list".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param floodlightGroupId Required. The ID of the parent Floodlight group to which the requested Floodlight activities belong.
+       * @return the request
+       */
+      public List list(java.lang.Long floodlightGroupId) throws java.io.IOException {
+        List result = new List(floodlightGroupId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v2.model.ListFloodlightActivitiesResponse> {
+
+        private static final String REST_PATH = "v2/floodlightGroups/{+floodlightGroupId}/floodlightActivities";
+
+        private final java.util.regex.Pattern FLOODLIGHT_GROUP_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lists Floodlight activities in a Floodlight group.
+         *
+         * Create a request for the method "floodlightActivities.list".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param floodlightGroupId Required. The ID of the parent Floodlight group to which the requested Floodlight activities belong.
+         * @since 1.13
+         */
+        protected List(java.lang.Long floodlightGroupId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v2.model.ListFloodlightActivitiesResponse.class);
+          this.floodlightGroupId = com.google.api.client.util.Preconditions.checkNotNull(floodlightGroupId, "Required parameter floodlightGroupId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The ID of the parent Floodlight group to which the requested Floodlight
+         * activities belong.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long floodlightGroupId;
+
+        /** Required. The ID of the parent Floodlight group to which the requested Floodlight activities
+       belong.
+         */
+        public java.lang.Long getFloodlightGroupId() {
+          return floodlightGroupId;
+        }
+
+        /**
+         * Required. The ID of the parent Floodlight group to which the requested Floodlight
+         * activities belong.
+         */
+        public List setFloodlightGroupId(java.lang.Long floodlightGroupId) {
+          this.floodlightGroupId = floodlightGroupId;
+          return this;
+        }
+
+        /**
+         * Optional. Field by which to sort the list. Acceptable values are: * `displayName`
+         * (default) * `floodlightActivityId` The default sorting order is ascending. To specify
+         * descending order for a field, a suffix "desc" should be added to the field name. Example:
+         * `displayName desc`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+       `floodlightActivityId` The default sorting order is ascending. To specify descending order for a
+       field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. Field by which to sort the list. Acceptable values are: * `displayName`
+         * (default) * `floodlightActivityId` The default sorting order is ascending. To specify
+         * descending order for a field, a suffix "desc" should be added to the field name. Example:
+         * `displayName desc`.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. Requested page size. Must be between `1` and `100`. If unspecified will default
+         * to `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+       Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Requested page size. Must be between `1` and `100`. If unspecified will default
+         * to `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A token identifying a page of results the server should return. Typically, this
+         * is the value of next_page_token returned from the previous call to
+         * `ListFloodlightActivities` method. If not specified, the first page of results will be
+         * returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A token identifying a page of results the server should return. Typically, this is the
+       value of next_page_token returned from the previous call to `ListFloodlightActivities` method. If
+       not specified, the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A token identifying a page of results the server should return. Typically, this
+         * is the value of next_page_token returned from the previous call to
+         * `ListFloodlightActivities` method. If not specified, the first page of results will be
+         * returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Required. The ID of the partner through which the Floodlight activities are being
+         * accessed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** Required. The ID of the partner through which the Floodlight activities are being accessed.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /**
+         * Required. The ID of the partner through which the Floodlight activities are being
+         * accessed.
+         */
+        public List setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

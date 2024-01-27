@@ -49,6 +49,21 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private java.lang.String callLogLevel;
 
   /**
+   * Output only. Marks the creation of the execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
+   * Optional. If set to true, the execution will not be backlogged when the concurrency quota is
+   * exhausted. The backlog execution starts when the concurrency quota becomes available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableConcurrencyQuotaOverflowBuffering;
+
+  /**
    * Output only. Measures the duration of the execution.
    * The value may be {@code null}.
    */
@@ -170,6 +185,42 @@ public final class Execution extends com.google.api.client.json.GenericJson {
    */
   public Execution setCallLogLevel(java.lang.String callLogLevel) {
     this.callLogLevel = callLogLevel;
+    return this;
+  }
+
+  /**
+   * Output only. Marks the creation of the execution.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. Marks the creation of the execution.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Execution setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, the execution will not be backlogged when the concurrency quota is
+   * exhausted. The backlog execution starts when the concurrency quota becomes available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableConcurrencyQuotaOverflowBuffering() {
+    return disableConcurrencyQuotaOverflowBuffering;
+  }
+
+  /**
+   * Optional. If set to true, the execution will not be backlogged when the concurrency quota is
+   * exhausted. The backlog execution starts when the concurrency quota becomes available.
+   * @param disableConcurrencyQuotaOverflowBuffering disableConcurrencyQuotaOverflowBuffering or {@code null} for none
+   */
+  public Execution setDisableConcurrencyQuotaOverflowBuffering(java.lang.Boolean disableConcurrencyQuotaOverflowBuffering) {
+    this.disableConcurrencyQuotaOverflowBuffering = disableConcurrencyQuotaOverflowBuffering;
     return this;
   }
 

@@ -88,7 +88,8 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
 
   /**
    * If `true`, the request will opt out for STT conformer model migration. This field will be
-   * deprecated once force migration takes place in June 2024.
+   * deprecated once force migration takes place in June 2024. Please refer to [Dialogflow ES Speech
+   * model migration](https://cloud.google.com/dialogflow/es/docs/speech-model-migration).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,7 +274,8 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
 
   /**
    * If `true`, the request will opt out for STT conformer model migration. This field will be
-   * deprecated once force migration takes place in June 2024.
+   * deprecated once force migration takes place in June 2024. Please refer to [Dialogflow ES Speech
+   * model migration](https://cloud.google.com/dialogflow/es/docs/speech-model-migration).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOptOutConformerModelMigration() {
@@ -282,7 +284,8 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
 
   /**
    * If `true`, the request will opt out for STT conformer model migration. This field will be
-   * deprecated once force migration takes place in June 2024.
+   * deprecated once force migration takes place in June 2024. Please refer to [Dialogflow ES Speech
+   * model migration](https://cloud.google.com/dialogflow/es/docs/speech-model-migration).
    * @param optOutConformerModelMigration optOutConformerModelMigration or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setOptOutConformerModelMigration(java.lang.Boolean optOutConformerModelMigration) {

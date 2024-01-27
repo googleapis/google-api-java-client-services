@@ -67,7 +67,7 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   private java.lang.Integer maxConcurrentCdcTasks;
 
   /**
-   * Stream large object values. NOTE: This feature is currently experimental.
+   * Stream large object values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Stream large object values. NOTE: This feature is currently experimental.
+   * Stream large object values.
    * @return value or {@code null} for none
    */
   public StreamLargeObjects getStreamLargeObjects() {
@@ -171,7 +171,7 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Stream large object values. NOTE: This feature is currently experimental.
+   * Stream large object values.
    * @param streamLargeObjects streamLargeObjects or {@code null} for none
    */
   public OracleSourceConfig setStreamLargeObjects(StreamLargeObjects streamLargeObjects) {

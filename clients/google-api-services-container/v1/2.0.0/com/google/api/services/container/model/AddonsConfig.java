@@ -117,6 +117,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private NetworkPolicyConfig networkPolicyConfig;
 
   /**
+   * Optional. Configuration for the StatefulHA add-on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StatefulHAConfig statefulHaConfig;
+
+  /**
    * Configuration for the Cloud Run addon, which allows the user to use a managed Knative service.
    * @return value or {@code null} for none
    */
@@ -316,6 +323,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setNetworkPolicyConfig(NetworkPolicyConfig networkPolicyConfig) {
     this.networkPolicyConfig = networkPolicyConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the StatefulHA add-on.
+   * @return value or {@code null} for none
+   */
+  public StatefulHAConfig getStatefulHaConfig() {
+    return statefulHaConfig;
+  }
+
+  /**
+   * Optional. Configuration for the StatefulHA add-on.
+   * @param statefulHaConfig statefulHaConfig or {@code null} for none
+   */
+  public AddonsConfig setStatefulHaConfig(StatefulHAConfig statefulHaConfig) {
+    this.statefulHaConfig = statefulHaConfig;
     return this;
   }
 

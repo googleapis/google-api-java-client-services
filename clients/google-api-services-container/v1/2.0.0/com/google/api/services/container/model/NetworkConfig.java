@@ -91,6 +91,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private GatewayAPIConfig gatewayApiConfig;
 
   /**
+   * Specify the details of in-transit encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String inTransitEncryptionConfig;
+
+  /**
    * Output only. The relative name of the Google Compute Engine
    * network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
    * cluster is connected. Example: projects/my-project/global/networks/my-network
@@ -271,6 +278,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setGatewayApiConfig(GatewayAPIConfig gatewayApiConfig) {
     this.gatewayApiConfig = gatewayApiConfig;
+    return this;
+  }
+
+  /**
+   * Specify the details of in-transit encryption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInTransitEncryptionConfig() {
+    return inTransitEncryptionConfig;
+  }
+
+  /**
+   * Specify the details of in-transit encryption.
+   * @param inTransitEncryptionConfig inTransitEncryptionConfig or {@code null} for none
+   */
+  public NetworkConfig setInTransitEncryptionConfig(java.lang.String inTransitEncryptionConfig) {
+    this.inTransitEncryptionConfig = inTransitEncryptionConfig;
     return this;
   }
 

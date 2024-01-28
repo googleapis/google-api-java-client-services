@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for QueryRequest.
+ * Describes the format of the jobs.query request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Connection properties.
+   * Optional. Connection properties which can modify the query behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,16 +51,17 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean continuous;
 
   /**
-   * If true, creates a new session, where session id will be a server generated random id. If
-   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
-   * query in non-session mode.
+   * Optional. If true, creates a new session using a randomly generated session_id. If false, runs
+   * query with an existing session_id passed in ConnectionProperty, otherwise runs query in non-
+   * session mode. The session location will be set to QueryRequest.location if it is present,
+   * otherwise it's set to the default location based on existing routing logic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean createSession;
 
   /**
-   * [Optional] Specifies the default datasetId and projectId to assume for any unqualified table
+   * Optional. Specifies the default datasetId and projectId to assume for any unqualified table
    * names in the query. If not set, all table names in the query string must be qualified in the
    * format 'datasetId.tableId'.
    * The value may be {@code null}.
@@ -69,13 +70,20 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private DatasetReference defaultDataset;
 
   /**
-   * [Optional] If set to true, BigQuery doesn't run the job. Instead, if the query is valid,
+   * Optional. If set to true, BigQuery doesn't run the job. Instead, if the query is valid,
    * BigQuery returns statistics about the job such as how many bytes would be processed. If the
    * query is invalid, an error returns. The default value is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dryRun;
+
+  /**
+   * Optional. Output format adjustments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataFormatOptions formatOptions;
 
   /**
    * Optional. If not set, jobs are always required. If set, the query request will follow the
@@ -94,11 +102,10 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The labels associated with this job. You can use these to organize and group your jobs. Label
-   * keys and values can be no longer than 63 characters, can only contain lowercase letters,
-   * numeric characters, underscores and dashes. International characters are allowed. Label values
-   * are optional. Label keys must start with a letter and each label in the list must have a
-   * different key.
+   * Optional. The labels associated with this query. Labels can be used to organize and group query
+   * jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase
+   * letters, numeric characters, underscores and dashes. International characters are allowed.
+   * Label keys must start with a letter and each label in the list must have a different key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +120,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
-   * [Optional] The maximum number of rows of data to return per page of results. Setting this flag
+   * Optional. The maximum number of rows of data to return per page of results. Setting this flag
    * to a small value such as 1000 and then paging through results might improve reliability when
    * the query result set is large. In addition to this limit, responses are also limited to 10 MB.
    * By default, there is no maximum row count, and only the byte limit applies.
@@ -123,16 +130,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxResults;
 
   /**
-   * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond
-   * this limit will fail (without incurring a charge). If unspecified, this will be set to your
-   * project default.
+   * Optional. Limits the bytes billed for this query. Queries with bytes billed above this limit
+   * will fail (without incurring a charge). If unspecified, the project default is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maximumBytesBilled;
 
   /**
-   * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
+   * GoogleSQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
    * named (@myparam) query parameters in this query.
    * The value may be {@code null}.
    */
@@ -140,22 +146,22 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String parameterMode;
 
   /**
-   * [Deprecated] This property is deprecated.
+   * This property is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preserveNulls;
 
   /**
-   * [Required] A query string, following the BigQuery query syntax, of the query to execute.
-   * Example: "SELECT count(f1) FROM [myProjectId:myDatasetId.myTableId]".
+   * Required. A query string to execute, using Google Standard SQL or legacy SQL syntax. Example:
+   * "SELECT COUNT(f1) FROM myProjectId.myDatasetId.myTableId".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
 
   /**
-   * Query parameters for Standard SQL queries.
+   * Query parameters for GoogleSQL queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,32 +174,36 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique user provided identifier to ensure idempotent behavior for queries. Note that this is
-   * different from the job_id. It has the following properties: 1. It is case-sensitive, limited to
-   * up to 36 ASCII characters. A UUID is recommended. 2. Read only queries can ignore this token
-   * since they are nullipotent by definition. 3. For the purposes of idempotency ensured by the
-   * request_id, a request is considered duplicate of another only if they have the same request_id
-   * and are actually duplicates. When determining whether a request is a duplicate of the previous
-   * request, all parameters in the request that may affect the behavior are considered. For
-   * example, query, connection_properties, query_parameters, use_legacy_sql are parameters that
-   * affect the result and are considered when determining whether a request is a duplicate, but
-   * properties like timeout_ms don't affect the result and are thus not considered. Dry run query
-   * requests are never considered duplicate of another request. 4. When a duplicate mutating query
-   * request is detected, it returns: a. the results of the mutation if it completes successfully
-   * within the timeout. b. the running operation if it is still in progress at the end of the
-   * timeout. 5. Its lifetime is limited to 15 minutes. In other words, if two requests are sent
-   * with the same request_id, but more than 15 minutes apart, idempotency is not guaranteed.
+   * Optional. A unique user provided identifier to ensure idempotent behavior for queries. Note
+   * that this is different from the job_id. It has the following properties: 1. It is case-
+   * sensitive, limited to up to 36 ASCII characters. A UUID is recommended. 2. Read only queries
+   * can ignore this token since they are nullipotent by definition. 3. For the purposes of
+   * idempotency ensured by the request_id, a request is considered duplicate of another only if
+   * they have the same request_id and are actually duplicates. When determining whether a request
+   * is a duplicate of another request, all parameters in the request that may affect the result are
+   * considered. For example, query, connection_properties, query_parameters, use_legacy_sql are
+   * parameters that affect the result and are considered when determining whether a request is a
+   * duplicate, but properties like timeout_ms don't affect the result and are thus not considered.
+   * Dry run query requests are never considered duplicate of another request. 4. When a duplicate
+   * mutating query request is detected, it returns: a. the results of the mutation if it completes
+   * successfully within the timeout. b. the running operation if it is still in progress at the end
+   * of the timeout. 5. Its lifetime is limited to 15 minutes. In other words, if two requests are
+   * sent with the same request_id, but more than 15 minutes apart, idempotency is not guaranteed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
 
   /**
-   * [Optional] How long to wait for the query to complete, in milliseconds, before the request
-   * times out and returns. Note that this is only a timeout for the request, not the query. If the
-   * query takes longer to run than the timeout value, the call returns without any results and with
-   * the 'jobComplete' flag set to false. You can call GetQueryResults() to wait for the query to
-   * complete and read the results. The default value is 10000 milliseconds (10 seconds).
+   * Optional. Optional: Specifies the maximum amount of time, in milliseconds, that the client is
+   * willing to wait for the query to complete. By default, this limit is 10 seconds (10,000
+   * milliseconds). If the query is complete, the jobComplete field in the response is true. If the
+   * query has not yet completed, jobComplete is false. You can request a longer timeout period in
+   * the timeoutMs field. However, the call is not guaranteed to wait for the specified timeout; it
+   * typically returns after around 200 seconds (200,000 milliseconds), even if the query is not
+   * complete. If jobComplete is false, you can continue to wait for the query to complete by
+   * calling the getQueryResults method until the jobComplete field in the getQueryResults response
+   * is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,7 +211,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is
-   * true. If set to false, the query will use BigQuery's standard SQL:
+   * true. If set to false, the query will use BigQuery's GoogleSQL:
    * https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
    * of flattenResults is ignored; query will be run as if flattenResults is false.
    * The value may be {@code null}.
@@ -210,7 +220,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean useLegacySql;
 
   /**
-   * [Optional] Whether to look for the result in the query cache. The query cache is a best-effort
+   * Optional. Whether to look for the result in the query cache. The query cache is a best-effort
    * cache that will be flushed whenever tables in the query are modified. The default value is
    * true.
    * The value may be {@code null}.
@@ -219,7 +229,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean useQueryCache;
 
   /**
-   * Connection properties.
+   * Optional. Connection properties which can modify the query behavior.
    * @return value or {@code null} for none
    */
   public java.util.List<ConnectionProperty> getConnectionProperties() {
@@ -227,7 +237,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Connection properties.
+   * Optional. Connection properties which can modify the query behavior.
    * @param connectionProperties connectionProperties or {@code null} for none
    */
   public QueryRequest setConnectionProperties(java.util.List<ConnectionProperty> connectionProperties) {
@@ -255,9 +265,10 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, creates a new session, where session id will be a server generated random id. If
-   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
-   * query in non-session mode.
+   * Optional. If true, creates a new session using a randomly generated session_id. If false, runs
+   * query with an existing session_id passed in ConnectionProperty, otherwise runs query in non-
+   * session mode. The session location will be set to QueryRequest.location if it is present,
+   * otherwise it's set to the default location based on existing routing logic.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCreateSession() {
@@ -265,9 +276,10 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, creates a new session, where session id will be a server generated random id. If
-   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
-   * query in non-session mode.
+   * Optional. If true, creates a new session using a randomly generated session_id. If false, runs
+   * query with an existing session_id passed in ConnectionProperty, otherwise runs query in non-
+   * session mode. The session location will be set to QueryRequest.location if it is present,
+   * otherwise it's set to the default location based on existing routing logic.
    * @param createSession createSession or {@code null} for none
    */
   public QueryRequest setCreateSession(java.lang.Boolean createSession) {
@@ -276,7 +288,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Specifies the default datasetId and projectId to assume for any unqualified table
+   * Optional. Specifies the default datasetId and projectId to assume for any unqualified table
    * names in the query. If not set, all table names in the query string must be qualified in the
    * format 'datasetId.tableId'.
    * @return value or {@code null} for none
@@ -286,7 +298,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Specifies the default datasetId and projectId to assume for any unqualified table
+   * Optional. Specifies the default datasetId and projectId to assume for any unqualified table
    * names in the query. If not set, all table names in the query string must be qualified in the
    * format 'datasetId.tableId'.
    * @param defaultDataset defaultDataset or {@code null} for none
@@ -297,7 +309,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] If set to true, BigQuery doesn't run the job. Instead, if the query is valid,
+   * Optional. If set to true, BigQuery doesn't run the job. Instead, if the query is valid,
    * BigQuery returns statistics about the job such as how many bytes would be processed. If the
    * query is invalid, an error returns. The default value is false.
    * @return value or {@code null} for none
@@ -307,13 +319,30 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] If set to true, BigQuery doesn't run the job. Instead, if the query is valid,
+   * Optional. If set to true, BigQuery doesn't run the job. Instead, if the query is valid,
    * BigQuery returns statistics about the job such as how many bytes would be processed. If the
    * query is invalid, an error returns. The default value is false.
    * @param dryRun dryRun or {@code null} for none
    */
   public QueryRequest setDryRun(java.lang.Boolean dryRun) {
     this.dryRun = dryRun;
+    return this;
+  }
+
+  /**
+   * Optional. Output format adjustments.
+   * @return value or {@code null} for none
+   */
+  public DataFormatOptions getFormatOptions() {
+    return formatOptions;
+  }
+
+  /**
+   * Optional. Output format adjustments.
+   * @param formatOptions formatOptions or {@code null} for none
+   */
+  public QueryRequest setFormatOptions(DataFormatOptions formatOptions) {
+    this.formatOptions = formatOptions;
     return this;
   }
 
@@ -356,11 +385,10 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The labels associated with this job. You can use these to organize and group your jobs. Label
-   * keys and values can be no longer than 63 characters, can only contain lowercase letters,
-   * numeric characters, underscores and dashes. International characters are allowed. Label values
-   * are optional. Label keys must start with a letter and each label in the list must have a
-   * different key.
+   * Optional. The labels associated with this query. Labels can be used to organize and group query
+   * jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase
+   * letters, numeric characters, underscores and dashes. International characters are allowed.
+   * Label keys must start with a letter and each label in the list must have a different key.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -368,11 +396,10 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The labels associated with this job. You can use these to organize and group your jobs. Label
-   * keys and values can be no longer than 63 characters, can only contain lowercase letters,
-   * numeric characters, underscores and dashes. International characters are allowed. Label values
-   * are optional. Label keys must start with a letter and each label in the list must have a
-   * different key.
+   * Optional. The labels associated with this query. Labels can be used to organize and group query
+   * jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase
+   * letters, numeric characters, underscores and dashes. International characters are allowed.
+   * Label keys must start with a letter and each label in the list must have a different key.
    * @param labels labels or {@code null} for none
    */
   public QueryRequest setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -400,7 +427,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The maximum number of rows of data to return per page of results. Setting this flag
+   * Optional. The maximum number of rows of data to return per page of results. Setting this flag
    * to a small value such as 1000 and then paging through results might improve reliability when
    * the query result set is large. In addition to this limit, responses are also limited to 10 MB.
    * By default, there is no maximum row count, and only the byte limit applies.
@@ -411,7 +438,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The maximum number of rows of data to return per page of results. Setting this flag
+   * Optional. The maximum number of rows of data to return per page of results. Setting this flag
    * to a small value such as 1000 and then paging through results might improve reliability when
    * the query result set is large. In addition to this limit, responses are also limited to 10 MB.
    * By default, there is no maximum row count, and only the byte limit applies.
@@ -423,9 +450,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond
-   * this limit will fail (without incurring a charge). If unspecified, this will be set to your
-   * project default.
+   * Optional. Limits the bytes billed for this query. Queries with bytes billed above this limit
+   * will fail (without incurring a charge). If unspecified, the project default is used.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaximumBytesBilled() {
@@ -433,9 +459,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond
-   * this limit will fail (without incurring a charge). If unspecified, this will be set to your
-   * project default.
+   * Optional. Limits the bytes billed for this query. Queries with bytes billed above this limit
+   * will fail (without incurring a charge). If unspecified, the project default is used.
    * @param maximumBytesBilled maximumBytesBilled or {@code null} for none
    */
   public QueryRequest setMaximumBytesBilled(java.lang.Long maximumBytesBilled) {
@@ -444,7 +469,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
+   * GoogleSQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
    * named (@myparam) query parameters in this query.
    * @return value or {@code null} for none
    */
@@ -453,7 +478,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
+   * GoogleSQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
    * named (@myparam) query parameters in this query.
    * @param parameterMode parameterMode or {@code null} for none
    */
@@ -463,7 +488,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Deprecated] This property is deprecated.
+   * This property is deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreserveNulls() {
@@ -471,7 +496,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Deprecated] This property is deprecated.
+   * This property is deprecated.
    * @param preserveNulls preserveNulls or {@code null} for none
    */
   public QueryRequest setPreserveNulls(java.lang.Boolean preserveNulls) {
@@ -480,8 +505,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Required] A query string, following the BigQuery query syntax, of the query to execute.
-   * Example: "SELECT count(f1) FROM [myProjectId:myDatasetId.myTableId]".
+   * Required. A query string to execute, using Google Standard SQL or legacy SQL syntax. Example:
+   * "SELECT COUNT(f1) FROM myProjectId.myDatasetId.myTableId".
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -489,8 +514,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Required] A query string, following the BigQuery query syntax, of the query to execute.
-   * Example: "SELECT count(f1) FROM [myProjectId:myDatasetId.myTableId]".
+   * Required. A query string to execute, using Google Standard SQL or legacy SQL syntax. Example:
+   * "SELECT COUNT(f1) FROM myProjectId.myDatasetId.myTableId".
    * @param query query or {@code null} for none
    */
   public QueryRequest setQuery(java.lang.String query) {
@@ -499,7 +524,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Query parameters for Standard SQL queries.
+   * Query parameters for GoogleSQL queries.
    * @return value or {@code null} for none
    */
   public java.util.List<QueryParameter> getQueryParameters() {
@@ -507,7 +532,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Query parameters for Standard SQL queries.
+   * Query parameters for GoogleSQL queries.
    * @param queryParameters queryParameters or {@code null} for none
    */
   public QueryRequest setQueryParameters(java.util.List<QueryParameter> queryParameters) {
@@ -516,21 +541,21 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique user provided identifier to ensure idempotent behavior for queries. Note that this is
-   * different from the job_id. It has the following properties: 1. It is case-sensitive, limited to
-   * up to 36 ASCII characters. A UUID is recommended. 2. Read only queries can ignore this token
-   * since they are nullipotent by definition. 3. For the purposes of idempotency ensured by the
-   * request_id, a request is considered duplicate of another only if they have the same request_id
-   * and are actually duplicates. When determining whether a request is a duplicate of the previous
-   * request, all parameters in the request that may affect the behavior are considered. For
-   * example, query, connection_properties, query_parameters, use_legacy_sql are parameters that
-   * affect the result and are considered when determining whether a request is a duplicate, but
-   * properties like timeout_ms don't affect the result and are thus not considered. Dry run query
-   * requests are never considered duplicate of another request. 4. When a duplicate mutating query
-   * request is detected, it returns: a. the results of the mutation if it completes successfully
-   * within the timeout. b. the running operation if it is still in progress at the end of the
-   * timeout. 5. Its lifetime is limited to 15 minutes. In other words, if two requests are sent
-   * with the same request_id, but more than 15 minutes apart, idempotency is not guaranteed.
+   * Optional. A unique user provided identifier to ensure idempotent behavior for queries. Note
+   * that this is different from the job_id. It has the following properties: 1. It is case-
+   * sensitive, limited to up to 36 ASCII characters. A UUID is recommended. 2. Read only queries
+   * can ignore this token since they are nullipotent by definition. 3. For the purposes of
+   * idempotency ensured by the request_id, a request is considered duplicate of another only if
+   * they have the same request_id and are actually duplicates. When determining whether a request
+   * is a duplicate of another request, all parameters in the request that may affect the result are
+   * considered. For example, query, connection_properties, query_parameters, use_legacy_sql are
+   * parameters that affect the result and are considered when determining whether a request is a
+   * duplicate, but properties like timeout_ms don't affect the result and are thus not considered.
+   * Dry run query requests are never considered duplicate of another request. 4. When a duplicate
+   * mutating query request is detected, it returns: a. the results of the mutation if it completes
+   * successfully within the timeout. b. the running operation if it is still in progress at the end
+   * of the timeout. 5. Its lifetime is limited to 15 minutes. In other words, if two requests are
+   * sent with the same request_id, but more than 15 minutes apart, idempotency is not guaranteed.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -538,21 +563,21 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique user provided identifier to ensure idempotent behavior for queries. Note that this is
-   * different from the job_id. It has the following properties: 1. It is case-sensitive, limited to
-   * up to 36 ASCII characters. A UUID is recommended. 2. Read only queries can ignore this token
-   * since they are nullipotent by definition. 3. For the purposes of idempotency ensured by the
-   * request_id, a request is considered duplicate of another only if they have the same request_id
-   * and are actually duplicates. When determining whether a request is a duplicate of the previous
-   * request, all parameters in the request that may affect the behavior are considered. For
-   * example, query, connection_properties, query_parameters, use_legacy_sql are parameters that
-   * affect the result and are considered when determining whether a request is a duplicate, but
-   * properties like timeout_ms don't affect the result and are thus not considered. Dry run query
-   * requests are never considered duplicate of another request. 4. When a duplicate mutating query
-   * request is detected, it returns: a. the results of the mutation if it completes successfully
-   * within the timeout. b. the running operation if it is still in progress at the end of the
-   * timeout. 5. Its lifetime is limited to 15 minutes. In other words, if two requests are sent
-   * with the same request_id, but more than 15 minutes apart, idempotency is not guaranteed.
+   * Optional. A unique user provided identifier to ensure idempotent behavior for queries. Note
+   * that this is different from the job_id. It has the following properties: 1. It is case-
+   * sensitive, limited to up to 36 ASCII characters. A UUID is recommended. 2. Read only queries
+   * can ignore this token since they are nullipotent by definition. 3. For the purposes of
+   * idempotency ensured by the request_id, a request is considered duplicate of another only if
+   * they have the same request_id and are actually duplicates. When determining whether a request
+   * is a duplicate of another request, all parameters in the request that may affect the result are
+   * considered. For example, query, connection_properties, query_parameters, use_legacy_sql are
+   * parameters that affect the result and are considered when determining whether a request is a
+   * duplicate, but properties like timeout_ms don't affect the result and are thus not considered.
+   * Dry run query requests are never considered duplicate of another request. 4. When a duplicate
+   * mutating query request is detected, it returns: a. the results of the mutation if it completes
+   * successfully within the timeout. b. the running operation if it is still in progress at the end
+   * of the timeout. 5. Its lifetime is limited to 15 minutes. In other words, if two requests are
+   * sent with the same request_id, but more than 15 minutes apart, idempotency is not guaranteed.
    * @param requestId requestId or {@code null} for none
    */
   public QueryRequest setRequestId(java.lang.String requestId) {
@@ -561,11 +586,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] How long to wait for the query to complete, in milliseconds, before the request
-   * times out and returns. Note that this is only a timeout for the request, not the query. If the
-   * query takes longer to run than the timeout value, the call returns without any results and with
-   * the 'jobComplete' flag set to false. You can call GetQueryResults() to wait for the query to
-   * complete and read the results. The default value is 10000 milliseconds (10 seconds).
+   * Optional. Optional: Specifies the maximum amount of time, in milliseconds, that the client is
+   * willing to wait for the query to complete. By default, this limit is 10 seconds (10,000
+   * milliseconds). If the query is complete, the jobComplete field in the response is true. If the
+   * query has not yet completed, jobComplete is false. You can request a longer timeout period in
+   * the timeoutMs field. However, the call is not guaranteed to wait for the specified timeout; it
+   * typically returns after around 200 seconds (200,000 milliseconds), even if the query is not
+   * complete. If jobComplete is false, you can continue to wait for the query to complete by
+   * calling the getQueryResults method until the jobComplete field in the getQueryResults response
+   * is true.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTimeoutMs() {
@@ -573,11 +602,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] How long to wait for the query to complete, in milliseconds, before the request
-   * times out and returns. Note that this is only a timeout for the request, not the query. If the
-   * query takes longer to run than the timeout value, the call returns without any results and with
-   * the 'jobComplete' flag set to false. You can call GetQueryResults() to wait for the query to
-   * complete and read the results. The default value is 10000 milliseconds (10 seconds).
+   * Optional. Optional: Specifies the maximum amount of time, in milliseconds, that the client is
+   * willing to wait for the query to complete. By default, this limit is 10 seconds (10,000
+   * milliseconds). If the query is complete, the jobComplete field in the response is true. If the
+   * query has not yet completed, jobComplete is false. You can request a longer timeout period in
+   * the timeoutMs field. However, the call is not guaranteed to wait for the specified timeout; it
+   * typically returns after around 200 seconds (200,000 milliseconds), even if the query is not
+   * complete. If jobComplete is false, you can continue to wait for the query to complete by
+   * calling the getQueryResults method until the jobComplete field in the getQueryResults response
+   * is true.
    * @param timeoutMs timeoutMs or {@code null} for none
    */
   public QueryRequest setTimeoutMs(java.lang.Long timeoutMs) {
@@ -587,7 +620,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is
-   * true. If set to false, the query will use BigQuery's standard SQL:
+   * true. If set to false, the query will use BigQuery's GoogleSQL:
    * https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
    * of flattenResults is ignored; query will be run as if flattenResults is false.
    * @return value or {@code null} for none
@@ -598,7 +631,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is
-   * true. If set to false, the query will use BigQuery's standard SQL:
+   * true. If set to false, the query will use BigQuery's GoogleSQL:
    * https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
    * of flattenResults is ignored; query will be run as if flattenResults is false.
    * @param useLegacySql useLegacySql or {@code null} for none
@@ -626,7 +659,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    *
    * <p>
    * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true.
- If set to false, the query will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-
+ If set to false, the query will use BigQuery's GoogleSQL: https://cloud.google.com/bigquery/sql-
  reference/ When useLegacySql is set to false, the value of flattenResults is ignored; query will be
  run as if flattenResults is false.
    * </p>
@@ -639,7 +672,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Whether to look for the result in the query cache. The query cache is a best-effort
+   * Optional. Whether to look for the result in the query cache. The query cache is a best-effort
    * cache that will be flushed whenever tables in the query are modified. The default value is
    * true.
    * @return value or {@code null} for none
@@ -649,7 +682,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Whether to look for the result in the query cache. The query cache is a best-effort
+   * Optional. Whether to look for the result in the query cache. The query cache is a best-effort
    * cache that will be flushed whenever tables in the query are modified. The default value is
    * true.
    * @param useQueryCache useQueryCache or {@code null} for none
@@ -676,8 +709,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    * </p>
    *
    * <p>
-   *[ Optional] Whether to look for the result in the query cache. The query cache is a best-effort
-[ cache that will be flushed whenever tables in the query are modified. The default value is true.
+   * Optional. Whether to look for the result in the query cache. The query cache is a best-effort cache
+ that will be flushed whenever tables in the query are modified. The default value is true.
    * </p>
    */
   public boolean isUseQueryCache() {

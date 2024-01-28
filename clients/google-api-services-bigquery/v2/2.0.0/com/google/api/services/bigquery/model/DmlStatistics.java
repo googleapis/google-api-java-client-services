@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for DmlStatistics.
+ * Detailed statistics for DML statements
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.bigquery.model;
 public final class DmlStatistics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
+   * Output only. Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long deletedRowCount;
 
   /**
-   * Number of inserted Rows. Populated by DML INSERT and MERGE statements.
+   * Output only. Number of inserted Rows. Populated by DML INSERT and MERGE statements
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long insertedRowCount;
 
   /**
-   * Number of updated Rows. Populated by DML UPDATE and MERGE statements.
+   * Output only. Number of updated Rows. Populated by DML UPDATE and MERGE statements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long updatedRowCount;
 
   /**
-   * Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
+   * Output only. Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDeletedRowCount() {
@@ -59,7 +59,7 @@ public final class DmlStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
+   * Output only. Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
    * @param deletedRowCount deletedRowCount or {@code null} for none
    */
   public DmlStatistics setDeletedRowCount(java.lang.Long deletedRowCount) {
@@ -68,7 +68,7 @@ public final class DmlStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Number of inserted Rows. Populated by DML INSERT and MERGE statements.
+   * Output only. Number of inserted Rows. Populated by DML INSERT and MERGE statements
    * @return value or {@code null} for none
    */
   public java.lang.Long getInsertedRowCount() {
@@ -76,7 +76,7 @@ public final class DmlStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Number of inserted Rows. Populated by DML INSERT and MERGE statements.
+   * Output only. Number of inserted Rows. Populated by DML INSERT and MERGE statements
    * @param insertedRowCount insertedRowCount or {@code null} for none
    */
   public DmlStatistics setInsertedRowCount(java.lang.Long insertedRowCount) {
@@ -85,7 +85,7 @@ public final class DmlStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Number of updated Rows. Populated by DML UPDATE and MERGE statements.
+   * Output only. Number of updated Rows. Populated by DML UPDATE and MERGE statements.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUpdatedRowCount() {
@@ -93,7 +93,7 @@ public final class DmlStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Number of updated Rows. Populated by DML UPDATE and MERGE statements.
+   * Output only. Number of updated Rows. Populated by DML UPDATE and MERGE statements.
    * @param updatedRowCount updatedRowCount or {@code null} for none
    */
   public DmlStatistics setUpdatedRowCount(java.lang.Long updatedRowCount) {

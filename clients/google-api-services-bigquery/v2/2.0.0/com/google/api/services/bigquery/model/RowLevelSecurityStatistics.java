@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for RowLevelSecurityStatistics.
+ * Statistics for row-level security.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class RowLevelSecurityStatistics extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] [Preview] Whether any accessed data was protected by row access policies.
+   * Whether any accessed data was protected by row access policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean rowLevelSecurityApplied;
 
   /**
-   * [Output-only] [Preview] Whether any accessed data was protected by row access policies.
+   * Whether any accessed data was protected by row access policies.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRowLevelSecurityApplied() {
@@ -45,7 +45,7 @@ public final class RowLevelSecurityStatistics extends com.google.api.client.json
   }
 
   /**
-   * [Output-only] [Preview] Whether any accessed data was protected by row access policies.
+   * Whether any accessed data was protected by row access policies.
    * @param rowLevelSecurityApplied rowLevelSecurityApplied or {@code null} for none
    */
   public RowLevelSecurityStatistics setRowLevelSecurityApplied(java.lang.Boolean rowLevelSecurityApplied) {

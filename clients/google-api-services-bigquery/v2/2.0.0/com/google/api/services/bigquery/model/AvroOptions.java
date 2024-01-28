@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for AvroOptions.
+ * Options for external data sources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,18 +30,18 @@ package com.google.api.services.bigquery.model;
 public final class AvroOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
-   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
-   * (for example, INTEGER).
+   * Optional. If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the
+   * corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for
+   * example, INTEGER).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useAvroLogicalTypes;
 
   /**
-   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
-   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
-   * (for example, INTEGER).
+   * Optional. If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the
+   * corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for
+   * example, INTEGER).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAvroLogicalTypes() {
@@ -49,9 +49,9 @@ public final class AvroOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
-   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
-   * (for example, INTEGER).
+   * Optional. If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the
+   * corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for
+   * example, INTEGER).
    * @param useAvroLogicalTypes useAvroLogicalTypes or {@code null} for none
    */
   public AvroOptions setUseAvroLogicalTypes(java.lang.Boolean useAvroLogicalTypes) {

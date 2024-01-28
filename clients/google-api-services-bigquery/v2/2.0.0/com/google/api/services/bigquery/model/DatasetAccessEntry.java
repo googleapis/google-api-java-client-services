@@ -17,7 +17,10 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for DatasetAccessEntry.
+ * Grants all resources of particular types in a particular dataset read access to the current
+ * dataset. Similar to how individually authorized views work, updates to any resource granted
+ * through its dataset (including creation of new resources) requires read permission to referenced
+ * resources, plus write permission to the authorizing dataset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,20 +33,22 @@ package com.google.api.services.bigquery.model;
 public final class DatasetAccessEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] The dataset this entry applies to.
+   * The dataset this entry applies to
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DatasetReference dataset;
 
   /**
+   * Which resources in the dataset this entry applies to. Currently, only views are supported, but
+   * additional target types may be added in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> targetTypes;
 
   /**
-   * [Required] The dataset this entry applies to.
+   * The dataset this entry applies to
    * @return value or {@code null} for none
    */
   public DatasetReference getDataset() {
@@ -51,7 +56,7 @@ public final class DatasetAccessEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] The dataset this entry applies to.
+   * The dataset this entry applies to
    * @param dataset dataset or {@code null} for none
    */
   public DatasetAccessEntry setDataset(DatasetReference dataset) {
@@ -60,6 +65,8 @@ public final class DatasetAccessEntry extends com.google.api.client.json.Generic
   }
 
   /**
+   * Which resources in the dataset this entry applies to. Currently, only views are supported, but
+   * additional target types may be added in the future.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetTypes() {
@@ -67,6 +74,8 @@ public final class DatasetAccessEntry extends com.google.api.client.json.Generic
   }
 
   /**
+   * Which resources in the dataset this entry applies to. Currently, only views are supported, but
+   * additional target types may be added in the future.
    * @param targetTypes targetTypes or {@code null} for none
    */
   public DatasetAccessEntry setTargetTypes(java.util.List<java.lang.String> targetTypes) {

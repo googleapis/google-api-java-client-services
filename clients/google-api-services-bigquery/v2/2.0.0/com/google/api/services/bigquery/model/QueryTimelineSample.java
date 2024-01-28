@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for QueryTimelineSample.
+ * Summary of the state of query execution at a given time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.bigquery.model;
 public final class QueryTimelineSample extends com.google.api.client.json.GenericJson {
 
   /**
-   * Total number of units currently being processed by workers. This does not correspond directly
-   * to slot usage. This is the largest value observed since the last sample.
+   * Total number of active workers. This does not correspond directly to slot usage. This is the
+   * largest value observed since the last sample.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -53,8 +53,7 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
 
   /**
    * Units of work that can be scheduled immediately. Providing additional slots for these units of
-   * work will speed up the query, provided no other query in the reservation needs additional
-   * slots.
+   * work will accelerate the query, if no other query in the reservation needs additional slots.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -76,8 +75,8 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
   private java.lang.Long totalSlotMs;
 
   /**
-   * Total number of units currently being processed by workers. This does not correspond directly
-   * to slot usage. This is the largest value observed since the last sample.
+   * Total number of active workers. This does not correspond directly to slot usage. This is the
+   * largest value observed since the last sample.
    * @return value or {@code null} for none
    */
   public java.lang.Long getActiveUnits() {
@@ -85,8 +84,8 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
   }
 
   /**
-   * Total number of units currently being processed by workers. This does not correspond directly
-   * to slot usage. This is the largest value observed since the last sample.
+   * Total number of active workers. This does not correspond directly to slot usage. This is the
+   * largest value observed since the last sample.
    * @param activeUnits activeUnits or {@code null} for none
    */
   public QueryTimelineSample setActiveUnits(java.lang.Long activeUnits) {
@@ -130,8 +129,7 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
 
   /**
    * Units of work that can be scheduled immediately. Providing additional slots for these units of
-   * work will speed up the query, provided no other query in the reservation needs additional
-   * slots.
+   * work will accelerate the query, if no other query in the reservation needs additional slots.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEstimatedRunnableUnits() {
@@ -140,8 +138,7 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
 
   /**
    * Units of work that can be scheduled immediately. Providing additional slots for these units of
-   * work will speed up the query, provided no other query in the reservation needs additional
-   * slots.
+   * work will accelerate the query, if no other query in the reservation needs additional slots.
    * @param estimatedRunnableUnits estimatedRunnableUnits or {@code null} for none
    */
   public QueryTimelineSample setEstimatedRunnableUnits(java.lang.Long estimatedRunnableUnits) {

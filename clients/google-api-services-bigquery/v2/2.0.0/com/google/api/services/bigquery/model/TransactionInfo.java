@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for TransactionInfo.
+ * [Alpha] Information of a multi-statement transaction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class TransactionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] // [Alpha] Id of the transaction.
+   * Output only. [Alpha] Id of the transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transactionId;
 
   /**
-   * [Output-only] // [Alpha] Id of the transaction.
+   * Output only. [Alpha] Id of the transaction.
    * @return value or {@code null} for none
    */
   public java.lang.String getTransactionId() {
@@ -45,7 +45,7 @@ public final class TransactionInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only] // [Alpha] Id of the transaction.
+   * Output only. [Alpha] Id of the transaction.
    * @param transactionId transactionId or {@code null} for none
    */
   public TransactionInfo setTransactionId(java.lang.String transactionId) {

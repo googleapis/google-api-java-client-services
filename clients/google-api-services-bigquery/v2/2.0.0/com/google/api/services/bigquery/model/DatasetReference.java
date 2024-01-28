@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class DatasetReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] A unique ID for this dataset, without the project name. The ID must contain only
+   * Required. A unique ID for this dataset, without the project name. The ID must contain only
    * letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
    * The value may be {@code null}.
    */
@@ -38,14 +38,14 @@ public final class DatasetReference extends com.google.api.client.json.GenericJs
   private java.lang.String datasetId;
 
   /**
-   * [Optional] The ID of the project containing this dataset.
+   * Optional. The ID of the project containing this dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * [Required] A unique ID for this dataset, without the project name. The ID must contain only
+   * Required. A unique ID for this dataset, without the project name. The ID must contain only
    * letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class DatasetReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] A unique ID for this dataset, without the project name. The ID must contain only
+   * Required. A unique ID for this dataset, without the project name. The ID must contain only
    * letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
    * @param datasetId datasetId or {@code null} for none
    */
@@ -64,7 +64,7 @@ public final class DatasetReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] The ID of the project containing this dataset.
+   * Optional. The ID of the project containing this dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -72,7 +72,7 @@ public final class DatasetReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] The ID of the project containing this dataset.
+   * Optional. The ID of the project containing this dataset.
    * @param projectId projectId or {@code null} for none
    */
   public DatasetReference setProjectId(java.lang.String projectId) {

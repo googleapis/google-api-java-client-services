@@ -30,50 +30,58 @@ package com.google.api.services.bigquery.model;
 public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] Specifies the configuration of a BigLake managed table.
+   * Optional. Specifies the configuration of a BigLake managed table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BigLakeConfiguration biglakeConfiguration;
 
   /**
-   * [Output-only] Clone definition.
+   * Output only. Contains information about the clone. This value is set via the clone operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloneDefinition cloneDefinition;
 
   /**
-   * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the
-   * table will be first partitioned and subsequently clustered.
+   * Clustering specification for the table. Must be specified with time-based partitioning, data in
+   * the table will be first partitioned and subsequently clustered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Clustering clustering;
 
   /**
-   * [Output-only] The time when this table was created, in milliseconds since the epoch.
+   * Output only. The time when this table was created, in milliseconds since the epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long creationTime;
 
   /**
-   * [Output-only] The default collation of the table.
+   * Optional. Defines the default collation specification of new STRING fields in the table. During
+   * table creation or update, if a STRING field is added to this table without explicit collation
+   * specified, then the table inherits the table default collation. A change to this field affects
+   * only fields added afterwards, and does not alter the existing fields. The following values are
+   * supported: * 'und:ci': undetermined locale, case insensitive. * '': empty string. Default to
+   * case-sensitive behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultCollation;
 
   /**
-   * [Output-only] The default rounding mode of the table.
+   * Optional. Defines the default rounding mode specification of new decimal fields (NUMERIC OR
+   * BIGNUMERIC) in the table. During table creation or update, if a decimal field is added to this
+   * table without an explicit rounding mode specified, then the field inherits the table default
+   * rounding mode. Changing this field doesn't affect existing fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultRoundingMode;
 
   /**
-   * [Optional] A user-friendly description of this table.
+   * Optional. A user-friendly description of this table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,16 +95,14 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private EncryptionConfiguration encryptionConfiguration;
 
   /**
-   * [Output-only] A hash of the table metadata. Used to ensure there were no concurrent
-   * modifications to the resource when attempting an update. Not guaranteed to change when the
-   * table contents or the fields numRows, numBytes, numLongTermBytes or lastModifiedTime change.
+   * Output only. A hash of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * [Optional] The time when this table expires, in milliseconds since the epoch. If not present,
+   * Optional. The time when this table expires, in milliseconds since the epoch. If not present,
    * the table will persist indefinitely. Expired tables will be deleted and their storage
    * reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to
    * set a default expirationTime on newly created tables.
@@ -106,7 +112,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long expirationTime;
 
   /**
-   * [Optional] Describes the data format, location, and other properties of a table stored outside
+   * Optional. Describes the data format, location, and other properties of a table stored outside
    * of BigQuery. By defining these properties, the data source can then be queried as if it were a
    * standard BigQuery table.
    * The value may be {@code null}.
@@ -115,21 +121,21 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private ExternalDataConfiguration externalDataConfiguration;
 
   /**
-   * [Optional] A descriptive name for this table.
+   * Optional. A descriptive name for this table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String friendlyName;
 
   /**
-   * [Output-only] An opaque ID uniquely identifying the table.
+   * Output only. An opaque ID uniquely identifying the table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * [Output-only] The type of the resource.
+   * The type of resource ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,14 +153,14 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * [Output-only] The time when this table was last modified, in milliseconds since the epoch.
+   * Output only. The time when this table was last modified, in milliseconds since the epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger lastModifiedTime;
 
   /**
-   * [Output-only] The geographic location where the table resides. This value is inherited from the
+   * Output only. The geographic location where the table resides. This value is inherited from the
    * dataset.
    * The value may be {@code null}.
    */
@@ -162,37 +168,43 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
-   * [Optional] Materialized view definition.
+   * Optional. The materialized view definition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MaterializedViewDefinition materializedView;
 
   /**
-   * [Optional] Max staleness of data that could be returned when table or materialized view is
-   * queried (formatted as Google SQL Interval type).
+   * Output only. The materialized view status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaterializedViewStatus materializedViewStatus;
+
+  /**
+   * Optional. The maximum staleness of data that could be returned when the table (or stale MV) is
+   * queried. Staleness encoded as a string encoding of sql IntervalValue type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String maxStaleness;
 
   /**
-   * [Output-only, Beta] Present iff this table represents a ML model. Describes the training
-   * information for the model, and it is required to run 'PREDICT' queries.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ModelDefinition model;
 
   /**
-   * [Output-only] Number of logical bytes that are less than 90 days old.
+   * Output only. Number of logical bytes that are less than 90 days old.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numActiveLogicalBytes;
 
   /**
-   * [Output-only] Number of physical bytes less than 90 days old. This data is not kept in real
+   * Output only. Number of physical bytes less than 90 days old. This data is not kept in real
    * time, and might be delayed by a few seconds to a few minutes.
    * The value may be {@code null}.
    */
@@ -200,28 +212,29 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long numActivePhysicalBytes;
 
   /**
-   * [Output-only] The size of this table in bytes, excluding any data in the streaming buffer.
+   * Output only. The size of this table in logical bytes, excluding any data in the streaming
+   * buffer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numBytes;
 
   /**
-   * [Output-only] The number of bytes in the table that are considered "long-term storage".
+   * Output only. The number of logical bytes in the table that are considered "long-term storage".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numLongTermBytes;
 
   /**
-   * [Output-only] Number of logical bytes that are more than 90 days old.
+   * Output only. Number of logical bytes that are more than 90 days old.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numLongTermLogicalBytes;
 
   /**
-   * [Output-only] Number of physical bytes more than 90 days old. This data is not kept in real
+   * Output only. Number of physical bytes more than 90 days old. This data is not kept in real
    * time, and might be delayed by a few seconds to a few minutes.
    * The value may be {@code null}.
    */
@@ -229,7 +242,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long numLongTermPhysicalBytes;
 
   /**
-   * [Output-only] The number of partitions present in the table or materialized view. This data is
+   * Output only. The number of partitions present in the table or materialized view. This data is
    * not kept in real time, and might be delayed by a few seconds to a few minutes.
    * The value may be {@code null}.
    */
@@ -237,15 +250,15 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long numPartitions;
 
   /**
-   * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
-   * the streaming buffer. This includes compression and storage used for time travel.
+   * Output only. The physical size of this table in bytes. This includes storage used for time
+   * travel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numPhysicalBytes;
 
   /**
-   * [Output-only] The number of rows of data in this table, excluding any data in the streaming
+   * Output only. The number of rows of data in this table, excluding any data in the streaming
    * buffer.
    * The value may be {@code null}.
    */
@@ -253,7 +266,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger numRows;
 
   /**
-   * [Output-only] Number of physical bytes used by time travel storage (deleted or changed data).
+   * Output only. Number of physical bytes used by time travel storage (deleted or changed data).
    * This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
    * The value may be {@code null}.
    */
@@ -261,15 +274,15 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long numTimeTravelPhysicalBytes;
 
   /**
-   * [Output-only] Total number of logical bytes in the table or materialized view.
+   * Output only. Total number of logical bytes in the table or materialized view.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numTotalLogicalBytes;
 
   /**
-   * [Output-only] The physical size of this table in bytes. This also includes storage used for
-   * time travel. This data is not kept in real time, and might be delayed by a few seconds to a few
+   * Output only. The physical size of this table in bytes. This also includes storage used for time
+   * travel. This data is not kept in real time, and might be delayed by a few seconds to a few
    * minutes.
    * The value may be {@code null}.
    */
@@ -277,15 +290,21 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long numTotalPhysicalBytes;
 
   /**
-   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
-   * and rangePartitioning should be specified.
+   * If specified, configures range partitioning for this table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RangePartitioning rangePartitioning;
 
   /**
-   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * Optional. Output only. Table references of all replicas currently active on the table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TableReference> replicas;
+
+  /**
+   * Optional. If set to true, queries over this table require a partition filter that can be used
    * for partition elimination to be specified.
    * The value may be {@code null}.
    */
@@ -304,28 +323,28 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> resourceTags;
 
   /**
-   * [Optional] Describes the schema of this table.
+   * Optional. Describes the schema of this table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableSchema schema;
 
   /**
-   * [Output-only] A URL that can be used to access this resource again.
+   * Output only. A URL that can be used to access this resource again.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output-only] Snapshot definition.
+   * Output only. Contains information about the snapshot. This value is set via snapshot creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SnapshotDefinition snapshotDefinition;
 
   /**
-   * [Output-only] Contains information regarding this table's streaming buffer, if one is present.
+   * Output only. Contains information regarding this table's streaming buffer, if one is present.
    * This field will be absent if the table is not being streamed to or if there is no data in the
    * streaming buffer.
    * The value may be {@code null}.
@@ -334,47 +353,56 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private Streamingbuffer streamingBuffer;
 
   /**
-   * [Optional] The table constraints on the table.
+   * Optional. Tables Primary Key and Foreign Key information
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableConstraints tableConstraints;
 
   /**
-   * [Required] Reference describing the ID of this table.
+   * Required. Reference describing the ID of this table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableReference tableReference;
 
   /**
-   * Time-based partitioning specification for this table. Only one of timePartitioning and
-   * rangePartitioning should be specified.
+   * Optional. Table replication info for table created `AS REPLICA` DDL like: `CREATE MATERIALIZED
+   * VIEW mv1 AS REPLICA OF src_mv`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TableReplicationInfo tableReplicationInfo;
+
+  /**
+   * If specified, configures time-based partitioning for this table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimePartitioning timePartitioning;
 
   /**
-   * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. SNAPSHOT: An immutable, read-only
-   * table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW: SQL query whose
-   * result is persisted. EXTERNAL: A table that references data stored in an external storage
-   * system, such as Google Cloud Storage. The default value is TABLE.
+   * Output only. Describes the table type. The following values are supported: * `TABLE`: A normal
+   * BigQuery table. * `VIEW`: A virtual table defined by a SQL query. * `EXTERNAL`: A table that
+   * references data stored in an external storage system, such as Google Cloud Storage. *
+   * `MATERIALIZED_VIEW`: A precomputed view defined by a SQL query. * `SNAPSHOT`: An immutable
+   * BigQuery table that preserves the contents of a base table at a particular time. See additional
+   * information on [table snapshots](/bigquery/docs/table-snapshots-intro). The default value is
+   * `TABLE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * [Optional] The view definition.
+   * Optional. The view definition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ViewDefinition view;
 
   /**
-   * [Optional] Specifies the configuration of a BigLake managed table.
+   * Optional. Specifies the configuration of a BigLake managed table.
    * @return value or {@code null} for none
    */
   public BigLakeConfiguration getBiglakeConfiguration() {
@@ -382,7 +410,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Specifies the configuration of a BigLake managed table.
+   * Optional. Specifies the configuration of a BigLake managed table.
    * @param biglakeConfiguration biglakeConfiguration or {@code null} for none
    */
   public Table setBiglakeConfiguration(BigLakeConfiguration biglakeConfiguration) {
@@ -391,7 +419,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Clone definition.
+   * Output only. Contains information about the clone. This value is set via the clone operation.
    * @return value or {@code null} for none
    */
   public CloneDefinition getCloneDefinition() {
@@ -399,7 +427,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Clone definition.
+   * Output only. Contains information about the clone. This value is set via the clone operation.
    * @param cloneDefinition cloneDefinition or {@code null} for none
    */
   public Table setCloneDefinition(CloneDefinition cloneDefinition) {
@@ -408,8 +436,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the
-   * table will be first partitioned and subsequently clustered.
+   * Clustering specification for the table. Must be specified with time-based partitioning, data in
+   * the table will be first partitioned and subsequently clustered.
    * @return value or {@code null} for none
    */
   public Clustering getClustering() {
@@ -417,8 +445,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the
-   * table will be first partitioned and subsequently clustered.
+   * Clustering specification for the table. Must be specified with time-based partitioning, data in
+   * the table will be first partitioned and subsequently clustered.
    * @param clustering clustering or {@code null} for none
    */
   public Table setClustering(Clustering clustering) {
@@ -427,7 +455,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The time when this table was created, in milliseconds since the epoch.
+   * Output only. The time when this table was created, in milliseconds since the epoch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCreationTime() {
@@ -435,7 +463,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The time when this table was created, in milliseconds since the epoch.
+   * Output only. The time when this table was created, in milliseconds since the epoch.
    * @param creationTime creationTime or {@code null} for none
    */
   public Table setCreationTime(java.lang.Long creationTime) {
@@ -444,7 +472,12 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The default collation of the table.
+   * Optional. Defines the default collation specification of new STRING fields in the table. During
+   * table creation or update, if a STRING field is added to this table without explicit collation
+   * specified, then the table inherits the table default collation. A change to this field affects
+   * only fields added afterwards, and does not alter the existing fields. The following values are
+   * supported: * 'und:ci': undetermined locale, case insensitive. * '': empty string. Default to
+   * case-sensitive behavior.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultCollation() {
@@ -452,7 +485,12 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The default collation of the table.
+   * Optional. Defines the default collation specification of new STRING fields in the table. During
+   * table creation or update, if a STRING field is added to this table without explicit collation
+   * specified, then the table inherits the table default collation. A change to this field affects
+   * only fields added afterwards, and does not alter the existing fields. The following values are
+   * supported: * 'und:ci': undetermined locale, case insensitive. * '': empty string. Default to
+   * case-sensitive behavior.
    * @param defaultCollation defaultCollation or {@code null} for none
    */
   public Table setDefaultCollation(java.lang.String defaultCollation) {
@@ -461,7 +499,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The default rounding mode of the table.
+   * Optional. Defines the default rounding mode specification of new decimal fields (NUMERIC OR
+   * BIGNUMERIC) in the table. During table creation or update, if a decimal field is added to this
+   * table without an explicit rounding mode specified, then the field inherits the table default
+   * rounding mode. Changing this field doesn't affect existing fields.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultRoundingMode() {
@@ -469,7 +510,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The default rounding mode of the table.
+   * Optional. Defines the default rounding mode specification of new decimal fields (NUMERIC OR
+   * BIGNUMERIC) in the table. During table creation or update, if a decimal field is added to this
+   * table without an explicit rounding mode specified, then the field inherits the table default
+   * rounding mode. Changing this field doesn't affect existing fields.
    * @param defaultRoundingMode defaultRoundingMode or {@code null} for none
    */
   public Table setDefaultRoundingMode(java.lang.String defaultRoundingMode) {
@@ -478,7 +522,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A user-friendly description of this table.
+   * Optional. A user-friendly description of this table.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -486,7 +530,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A user-friendly description of this table.
+   * Optional. A user-friendly description of this table.
    * @param description description or {@code null} for none
    */
   public Table setDescription(java.lang.String description) {
@@ -512,9 +556,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A hash of the table metadata. Used to ensure there were no concurrent
-   * modifications to the resource when attempting an update. Not guaranteed to change when the
-   * table contents or the fields numRows, numBytes, numLongTermBytes or lastModifiedTime change.
+   * Output only. A hash of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -522,9 +564,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A hash of the table metadata. Used to ensure there were no concurrent
-   * modifications to the resource when attempting an update. Not guaranteed to change when the
-   * table contents or the fields numRows, numBytes, numLongTermBytes or lastModifiedTime change.
+   * Output only. A hash of this resource.
    * @param etag etag or {@code null} for none
    */
   public Table setEtag(java.lang.String etag) {
@@ -533,7 +573,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The time when this table expires, in milliseconds since the epoch. If not present,
+   * Optional. The time when this table expires, in milliseconds since the epoch. If not present,
    * the table will persist indefinitely. Expired tables will be deleted and their storage
    * reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to
    * set a default expirationTime on newly created tables.
@@ -544,7 +584,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The time when this table expires, in milliseconds since the epoch. If not present,
+   * Optional. The time when this table expires, in milliseconds since the epoch. If not present,
    * the table will persist indefinitely. Expired tables will be deleted and their storage
    * reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to
    * set a default expirationTime on newly created tables.
@@ -556,7 +596,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Describes the data format, location, and other properties of a table stored outside
+   * Optional. Describes the data format, location, and other properties of a table stored outside
    * of BigQuery. By defining these properties, the data source can then be queried as if it were a
    * standard BigQuery table.
    * @return value or {@code null} for none
@@ -566,7 +606,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Describes the data format, location, and other properties of a table stored outside
+   * Optional. Describes the data format, location, and other properties of a table stored outside
    * of BigQuery. By defining these properties, the data source can then be queried as if it were a
    * standard BigQuery table.
    * @param externalDataConfiguration externalDataConfiguration or {@code null} for none
@@ -577,7 +617,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A descriptive name for this table.
+   * Optional. A descriptive name for this table.
    * @return value or {@code null} for none
    */
   public java.lang.String getFriendlyName() {
@@ -585,7 +625,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A descriptive name for this table.
+   * Optional. A descriptive name for this table.
    * @param friendlyName friendlyName or {@code null} for none
    */
   public Table setFriendlyName(java.lang.String friendlyName) {
@@ -594,7 +634,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] An opaque ID uniquely identifying the table.
+   * Output only. An opaque ID uniquely identifying the table.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -602,7 +642,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] An opaque ID uniquely identifying the table.
+   * Output only. An opaque ID uniquely identifying the table.
    * @param id id or {@code null} for none
    */
   public Table setId(java.lang.String id) {
@@ -611,7 +651,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The type of the resource.
+   * The type of resource ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -619,7 +659,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The type of the resource.
+   * The type of resource ID.
    * @param kind kind or {@code null} for none
    */
   public Table setKind(java.lang.String kind) {
@@ -653,7 +693,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The time when this table was last modified, in milliseconds since the epoch.
+   * Output only. The time when this table was last modified, in milliseconds since the epoch.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getLastModifiedTime() {
@@ -661,7 +701,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The time when this table was last modified, in milliseconds since the epoch.
+   * Output only. The time when this table was last modified, in milliseconds since the epoch.
    * @param lastModifiedTime lastModifiedTime or {@code null} for none
    */
   public Table setLastModifiedTime(java.math.BigInteger lastModifiedTime) {
@@ -670,7 +710,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The geographic location where the table resides. This value is inherited from the
+   * Output only. The geographic location where the table resides. This value is inherited from the
    * dataset.
    * @return value or {@code null} for none
    */
@@ -679,7 +719,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The geographic location where the table resides. This value is inherited from the
+   * Output only. The geographic location where the table resides. This value is inherited from the
    * dataset.
    * @param location location or {@code null} for none
    */
@@ -689,7 +729,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Materialized view definition.
+   * Optional. The materialized view definition.
    * @return value or {@code null} for none
    */
   public MaterializedViewDefinition getMaterializedView() {
@@ -697,7 +737,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Materialized view definition.
+   * Optional. The materialized view definition.
    * @param materializedView materializedView or {@code null} for none
    */
   public Table setMaterializedView(MaterializedViewDefinition materializedView) {
@@ -706,9 +746,25 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Max staleness of data that could be returned when table or materialized view is
-   * queried (formatted as Google SQL Interval type).
-   * @see #decodeMaxStaleness()
+   * Output only. The materialized view status.
+   * @return value or {@code null} for none
+   */
+  public MaterializedViewStatus getMaterializedViewStatus() {
+    return materializedViewStatus;
+  }
+
+  /**
+   * Output only. The materialized view status.
+   * @param materializedViewStatus materializedViewStatus or {@code null} for none
+   */
+  public Table setMaterializedViewStatus(MaterializedViewStatus materializedViewStatus) {
+    this.materializedViewStatus = materializedViewStatus;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum staleness of data that could be returned when the table (or stale MV) is
+   * queried. Staleness encoded as a string encoding of sql IntervalValue type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaxStaleness() {
@@ -716,21 +772,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Max staleness of data that could be returned when table or materialized view is
-   * queried (formatted as Google SQL Interval type).
-   * @see #getMaxStaleness()
-   * @return Base64 decoded value or {@code null} for none
-   *
-   * @since 1.14
-   */
-  public byte[] decodeMaxStaleness() {
-    return com.google.api.client.util.Base64.decodeBase64(maxStaleness);
-  }
-
-  /**
-   * [Optional] Max staleness of data that could be returned when table or materialized view is
-   * queried (formatted as Google SQL Interval type).
-   * @see #encodeMaxStaleness()
+   * Optional. The maximum staleness of data that could be returned when the table (or stale MV) is
+   * queried. Staleness encoded as a string encoding of sql IntervalValue type.
    * @param maxStaleness maxStaleness or {@code null} for none
    */
   public Table setMaxStaleness(java.lang.String maxStaleness) {
@@ -739,24 +782,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Max staleness of data that could be returned when table or materialized view is
-   * queried (formatted as Google SQL Interval type).
-   * @see #setMaxStaleness()
-   *
-   * <p>
-   * The value is encoded Base64 or {@code null} for none.
-   * </p>
-   *
-   * @since 1.14
-   */
-  public Table encodeMaxStaleness(byte[] maxStaleness) {
-    this.maxStaleness = com.google.api.client.util.Base64.encodeBase64URLSafeString(maxStaleness);
-    return this;
-  }
-
-  /**
-   * [Output-only, Beta] Present iff this table represents a ML model. Describes the training
-   * information for the model, and it is required to run 'PREDICT' queries.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public ModelDefinition getModel() {
@@ -764,8 +790,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only, Beta] Present iff this table represents a ML model. Describes the training
-   * information for the model, and it is required to run 'PREDICT' queries.
+   * Deprecated.
    * @param model model or {@code null} for none
    */
   public Table setModel(ModelDefinition model) {
@@ -774,7 +799,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Number of logical bytes that are less than 90 days old.
+   * Output only. Number of logical bytes that are less than 90 days old.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumActiveLogicalBytes() {
@@ -782,7 +807,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Number of logical bytes that are less than 90 days old.
+   * Output only. Number of logical bytes that are less than 90 days old.
    * @param numActiveLogicalBytes numActiveLogicalBytes or {@code null} for none
    */
   public Table setNumActiveLogicalBytes(java.lang.Long numActiveLogicalBytes) {
@@ -791,7 +816,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Number of physical bytes less than 90 days old. This data is not kept in real
+   * Output only. Number of physical bytes less than 90 days old. This data is not kept in real
    * time, and might be delayed by a few seconds to a few minutes.
    * @return value or {@code null} for none
    */
@@ -800,7 +825,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Number of physical bytes less than 90 days old. This data is not kept in real
+   * Output only. Number of physical bytes less than 90 days old. This data is not kept in real
    * time, and might be delayed by a few seconds to a few minutes.
    * @param numActivePhysicalBytes numActivePhysicalBytes or {@code null} for none
    */
@@ -810,7 +835,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The size of this table in bytes, excluding any data in the streaming buffer.
+   * Output only. The size of this table in logical bytes, excluding any data in the streaming
+   * buffer.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumBytes() {
@@ -818,7 +844,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The size of this table in bytes, excluding any data in the streaming buffer.
+   * Output only. The size of this table in logical bytes, excluding any data in the streaming
+   * buffer.
    * @param numBytes numBytes or {@code null} for none
    */
   public Table setNumBytes(java.lang.Long numBytes) {
@@ -827,7 +854,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The number of bytes in the table that are considered "long-term storage".
+   * Output only. The number of logical bytes in the table that are considered "long-term storage".
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumLongTermBytes() {
@@ -835,7 +862,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The number of bytes in the table that are considered "long-term storage".
+   * Output only. The number of logical bytes in the table that are considered "long-term storage".
    * @param numLongTermBytes numLongTermBytes or {@code null} for none
    */
   public Table setNumLongTermBytes(java.lang.Long numLongTermBytes) {
@@ -844,7 +871,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Number of logical bytes that are more than 90 days old.
+   * Output only. Number of logical bytes that are more than 90 days old.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumLongTermLogicalBytes() {
@@ -852,7 +879,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Number of logical bytes that are more than 90 days old.
+   * Output only. Number of logical bytes that are more than 90 days old.
    * @param numLongTermLogicalBytes numLongTermLogicalBytes or {@code null} for none
    */
   public Table setNumLongTermLogicalBytes(java.lang.Long numLongTermLogicalBytes) {
@@ -861,7 +888,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Number of physical bytes more than 90 days old. This data is not kept in real
+   * Output only. Number of physical bytes more than 90 days old. This data is not kept in real
    * time, and might be delayed by a few seconds to a few minutes.
    * @return value or {@code null} for none
    */
@@ -870,7 +897,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Number of physical bytes more than 90 days old. This data is not kept in real
+   * Output only. Number of physical bytes more than 90 days old. This data is not kept in real
    * time, and might be delayed by a few seconds to a few minutes.
    * @param numLongTermPhysicalBytes numLongTermPhysicalBytes or {@code null} for none
    */
@@ -880,7 +907,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The number of partitions present in the table or materialized view. This data is
+   * Output only. The number of partitions present in the table or materialized view. This data is
    * not kept in real time, and might be delayed by a few seconds to a few minutes.
    * @return value or {@code null} for none
    */
@@ -889,7 +916,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The number of partitions present in the table or materialized view. This data is
+   * Output only. The number of partitions present in the table or materialized view. This data is
    * not kept in real time, and might be delayed by a few seconds to a few minutes.
    * @param numPartitions numPartitions or {@code null} for none
    */
@@ -899,8 +926,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
-   * the streaming buffer. This includes compression and storage used for time travel.
+   * Output only. The physical size of this table in bytes. This includes storage used for time
+   * travel.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumPhysicalBytes() {
@@ -908,8 +935,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
-   * the streaming buffer. This includes compression and storage used for time travel.
+   * Output only. The physical size of this table in bytes. This includes storage used for time
+   * travel.
    * @param numPhysicalBytes numPhysicalBytes or {@code null} for none
    */
   public Table setNumPhysicalBytes(java.lang.Long numPhysicalBytes) {
@@ -918,7 +945,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The number of rows of data in this table, excluding any data in the streaming
+   * Output only. The number of rows of data in this table, excluding any data in the streaming
    * buffer.
    * @return value or {@code null} for none
    */
@@ -927,7 +954,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The number of rows of data in this table, excluding any data in the streaming
+   * Output only. The number of rows of data in this table, excluding any data in the streaming
    * buffer.
    * @param numRows numRows or {@code null} for none
    */
@@ -937,7 +964,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Number of physical bytes used by time travel storage (deleted or changed data).
+   * Output only. Number of physical bytes used by time travel storage (deleted or changed data).
    * This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
    * @return value or {@code null} for none
    */
@@ -946,7 +973,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Number of physical bytes used by time travel storage (deleted or changed data).
+   * Output only. Number of physical bytes used by time travel storage (deleted or changed data).
    * This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
    * @param numTimeTravelPhysicalBytes numTimeTravelPhysicalBytes or {@code null} for none
    */
@@ -956,7 +983,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Total number of logical bytes in the table or materialized view.
+   * Output only. Total number of logical bytes in the table or materialized view.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumTotalLogicalBytes() {
@@ -964,7 +991,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Total number of logical bytes in the table or materialized view.
+   * Output only. Total number of logical bytes in the table or materialized view.
    * @param numTotalLogicalBytes numTotalLogicalBytes or {@code null} for none
    */
   public Table setNumTotalLogicalBytes(java.lang.Long numTotalLogicalBytes) {
@@ -973,8 +1000,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The physical size of this table in bytes. This also includes storage used for
-   * time travel. This data is not kept in real time, and might be delayed by a few seconds to a few
+   * Output only. The physical size of this table in bytes. This also includes storage used for time
+   * travel. This data is not kept in real time, and might be delayed by a few seconds to a few
    * minutes.
    * @return value or {@code null} for none
    */
@@ -983,8 +1010,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The physical size of this table in bytes. This also includes storage used for
-   * time travel. This data is not kept in real time, and might be delayed by a few seconds to a few
+   * Output only. The physical size of this table in bytes. This also includes storage used for time
+   * travel. This data is not kept in real time, and might be delayed by a few seconds to a few
    * minutes.
    * @param numTotalPhysicalBytes numTotalPhysicalBytes or {@code null} for none
    */
@@ -994,8 +1021,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
-   * and rangePartitioning should be specified.
+   * If specified, configures range partitioning for this table.
    * @return value or {@code null} for none
    */
   public RangePartitioning getRangePartitioning() {
@@ -1003,8 +1029,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
-   * and rangePartitioning should be specified.
+   * If specified, configures range partitioning for this table.
    * @param rangePartitioning rangePartitioning or {@code null} for none
    */
   public Table setRangePartitioning(RangePartitioning rangePartitioning) {
@@ -1013,7 +1038,24 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * Optional. Output only. Table references of all replicas currently active on the table.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TableReference> getReplicas() {
+    return replicas;
+  }
+
+  /**
+   * Optional. Output only. Table references of all replicas currently active on the table.
+   * @param replicas replicas or {@code null} for none
+   */
+  public Table setReplicas(java.util.List<TableReference> replicas) {
+    this.replicas = replicas;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, queries over this table require a partition filter that can be used
    * for partition elimination to be specified.
    * @return value or {@code null} for none
    */
@@ -1022,7 +1064,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * Optional. If set to true, queries over this table require a partition filter that can be used
    * for partition elimination to be specified.
    * @param requirePartitionFilter requirePartitionFilter or {@code null} for none
    */
@@ -1048,8 +1090,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
    * </p>
    *
    * <p>
-   *[ Optional] If set to true, queries over this table require a partition filter that can be used for
-[ partition elimination to be specified.
+   * Optional. If set to true, queries over this table require a partition filter that can be used for
+ partition elimination to be specified.
    * </p>
    */
   public boolean isRequirePartitionFilter() {
@@ -1085,7 +1127,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Describes the schema of this table.
+   * Optional. Describes the schema of this table.
    * @return value or {@code null} for none
    */
   public TableSchema getSchema() {
@@ -1093,7 +1135,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Describes the schema of this table.
+   * Optional. Describes the schema of this table.
    * @param schema schema or {@code null} for none
    */
   public Table setSchema(TableSchema schema) {
@@ -1102,7 +1144,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A URL that can be used to access this resource again.
+   * Output only. A URL that can be used to access this resource again.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -1110,7 +1152,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A URL that can be used to access this resource again.
+   * Output only. A URL that can be used to access this resource again.
    * @param selfLink selfLink or {@code null} for none
    */
   public Table setSelfLink(java.lang.String selfLink) {
@@ -1119,7 +1161,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Snapshot definition.
+   * Output only. Contains information about the snapshot. This value is set via snapshot creation.
    * @return value or {@code null} for none
    */
   public SnapshotDefinition getSnapshotDefinition() {
@@ -1127,7 +1169,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Snapshot definition.
+   * Output only. Contains information about the snapshot. This value is set via snapshot creation.
    * @param snapshotDefinition snapshotDefinition or {@code null} for none
    */
   public Table setSnapshotDefinition(SnapshotDefinition snapshotDefinition) {
@@ -1136,7 +1178,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Contains information regarding this table's streaming buffer, if one is present.
+   * Output only. Contains information regarding this table's streaming buffer, if one is present.
    * This field will be absent if the table is not being streamed to or if there is no data in the
    * streaming buffer.
    * @return value or {@code null} for none
@@ -1146,7 +1188,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Contains information regarding this table's streaming buffer, if one is present.
+   * Output only. Contains information regarding this table's streaming buffer, if one is present.
    * This field will be absent if the table is not being streamed to or if there is no data in the
    * streaming buffer.
    * @param streamingBuffer streamingBuffer or {@code null} for none
@@ -1157,7 +1199,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The table constraints on the table.
+   * Optional. Tables Primary Key and Foreign Key information
    * @return value or {@code null} for none
    */
   public TableConstraints getTableConstraints() {
@@ -1165,7 +1207,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The table constraints on the table.
+   * Optional. Tables Primary Key and Foreign Key information
    * @param tableConstraints tableConstraints or {@code null} for none
    */
   public Table setTableConstraints(TableConstraints tableConstraints) {
@@ -1174,7 +1216,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Required] Reference describing the ID of this table.
+   * Required. Reference describing the ID of this table.
    * @return value or {@code null} for none
    */
   public TableReference getTableReference() {
@@ -1182,7 +1224,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Required] Reference describing the ID of this table.
+   * Required. Reference describing the ID of this table.
    * @param tableReference tableReference or {@code null} for none
    */
   public Table setTableReference(TableReference tableReference) {
@@ -1191,8 +1233,26 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time-based partitioning specification for this table. Only one of timePartitioning and
-   * rangePartitioning should be specified.
+   * Optional. Table replication info for table created `AS REPLICA` DDL like: `CREATE MATERIALIZED
+   * VIEW mv1 AS REPLICA OF src_mv`
+   * @return value or {@code null} for none
+   */
+  public TableReplicationInfo getTableReplicationInfo() {
+    return tableReplicationInfo;
+  }
+
+  /**
+   * Optional. Table replication info for table created `AS REPLICA` DDL like: `CREATE MATERIALIZED
+   * VIEW mv1 AS REPLICA OF src_mv`
+   * @param tableReplicationInfo tableReplicationInfo or {@code null} for none
+   */
+  public Table setTableReplicationInfo(TableReplicationInfo tableReplicationInfo) {
+    this.tableReplicationInfo = tableReplicationInfo;
+    return this;
+  }
+
+  /**
+   * If specified, configures time-based partitioning for this table.
    * @return value or {@code null} for none
    */
   public TimePartitioning getTimePartitioning() {
@@ -1200,8 +1260,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time-based partitioning specification for this table. Only one of timePartitioning and
-   * rangePartitioning should be specified.
+   * If specified, configures time-based partitioning for this table.
    * @param timePartitioning timePartitioning or {@code null} for none
    */
   public Table setTimePartitioning(TimePartitioning timePartitioning) {
@@ -1210,11 +1269,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. SNAPSHOT: An immutable, read-only
-   * table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW: SQL query whose
-   * result is persisted. EXTERNAL: A table that references data stored in an external storage
-   * system, such as Google Cloud Storage. The default value is TABLE.
+   * Output only. Describes the table type. The following values are supported: * `TABLE`: A normal
+   * BigQuery table. * `VIEW`: A virtual table defined by a SQL query. * `EXTERNAL`: A table that
+   * references data stored in an external storage system, such as Google Cloud Storage. *
+   * `MATERIALIZED_VIEW`: A precomputed view defined by a SQL query. * `SNAPSHOT`: An immutable
+   * BigQuery table that preserves the contents of a base table at a particular time. See additional
+   * information on [table snapshots](/bigquery/docs/table-snapshots-intro). The default value is
+   * `TABLE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -1222,11 +1283,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. SNAPSHOT: An immutable, read-only
-   * table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW: SQL query whose
-   * result is persisted. EXTERNAL: A table that references data stored in an external storage
-   * system, such as Google Cloud Storage. The default value is TABLE.
+   * Output only. Describes the table type. The following values are supported: * `TABLE`: A normal
+   * BigQuery table. * `VIEW`: A virtual table defined by a SQL query. * `EXTERNAL`: A table that
+   * references data stored in an external storage system, such as Google Cloud Storage. *
+   * `MATERIALIZED_VIEW`: A precomputed view defined by a SQL query. * `SNAPSHOT`: An immutable
+   * BigQuery table that preserves the contents of a base table at a particular time. See additional
+   * information on [table snapshots](/bigquery/docs/table-snapshots-intro). The default value is
+   * `TABLE`.
    * @param type type or {@code null} for none
    */
   public Table setType(java.lang.String type) {
@@ -1235,7 +1298,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The view definition.
+   * Optional. The view definition.
    * @return value or {@code null} for none
    */
   public ViewDefinition getView() {
@@ -1243,7 +1306,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The view definition.
+   * Optional. The view definition.
    * @param view view or {@code null} for none
    */
   public Table setView(ViewDefinition view) {

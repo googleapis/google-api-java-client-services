@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class JobStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] Final error result of the job. If present, indicates that the job has completed
+   * Output only. Final error result of the job. If present, indicates that the job has completed
    * and was unsuccessful.
    * The value may be {@code null}.
    */
@@ -38,9 +38,9 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   private ErrorProto errorResult;
 
   /**
-   * [Output-only] The first errors encountered during the running of the job. The final message
+   * Output only. The first errors encountered during the running of the job. The final message
    * includes the number of errors that caused the process to stop. Errors here do not necessarily
-   * mean that the job has completed or was unsuccessful.
+   * mean that the job has not completed or was unsuccessful.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,14 +53,14 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Running state of the job.
+   * Output only. Running state of the job. Valid states include 'PENDING', 'RUNNING', and 'DONE'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * [Output-only] Final error result of the job. If present, indicates that the job has completed
+   * Output only. Final error result of the job. If present, indicates that the job has completed
    * and was unsuccessful.
    * @return value or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Final error result of the job. If present, indicates that the job has completed
+   * Output only. Final error result of the job. If present, indicates that the job has completed
    * and was unsuccessful.
    * @param errorResult errorResult or {@code null} for none
    */
@@ -79,9 +79,9 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The first errors encountered during the running of the job. The final message
+   * Output only. The first errors encountered during the running of the job. The final message
    * includes the number of errors that caused the process to stop. Errors here do not necessarily
-   * mean that the job has completed or was unsuccessful.
+   * mean that the job has not completed or was unsuccessful.
    * @return value or {@code null} for none
    */
   public java.util.List<ErrorProto> getErrors() {
@@ -89,9 +89,9 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The first errors encountered during the running of the job. The final message
+   * Output only. The first errors encountered during the running of the job. The final message
    * includes the number of errors that caused the process to stop. Errors here do not necessarily
-   * mean that the job has completed or was unsuccessful.
+   * mean that the job has not completed or was unsuccessful.
    * @param errors errors or {@code null} for none
    */
   public JobStatus setErrors(java.util.List<ErrorProto> errors) {
@@ -100,7 +100,7 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Running state of the job.
+   * Output only. Running state of the job. Valid states include 'PENDING', 'RUNNING', and 'DONE'.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -108,7 +108,7 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Running state of the job.
+   * Output only. Running state of the job. Valid states include 'PENDING', 'RUNNING', and 'DONE'.
    * @param state state or {@code null} for none
    */
   public JobStatus setState(java.lang.String state) {

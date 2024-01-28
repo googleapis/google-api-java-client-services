@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for SnapshotDefinition.
+ * Information about base table and snapshot time of the snapshot.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class SnapshotDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] Reference describing the ID of the table that was snapshot.
+   * Required. Reference describing the ID of the table that was snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableReference baseTableReference;
 
   /**
-   * [Required] The time at which the base table was snapshot. This value is reported in the JSON
+   * Required. The time at which the base table was snapshot. This value is reported in the JSON
    * response using RFC3339 format.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class SnapshotDefinition extends com.google.api.client.json.Generic
   private com.google.api.client.util.DateTime snapshotTime;
 
   /**
-   * [Required] Reference describing the ID of the table that was snapshot.
+   * Required. Reference describing the ID of the table that was snapshot.
    * @return value or {@code null} for none
    */
   public TableReference getBaseTableReference() {
@@ -53,7 +53,7 @@ public final class SnapshotDefinition extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] Reference describing the ID of the table that was snapshot.
+   * Required. Reference describing the ID of the table that was snapshot.
    * @param baseTableReference baseTableReference or {@code null} for none
    */
   public SnapshotDefinition setBaseTableReference(TableReference baseTableReference) {
@@ -62,7 +62,7 @@ public final class SnapshotDefinition extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] The time at which the base table was snapshot. This value is reported in the JSON
+   * Required. The time at which the base table was snapshot. This value is reported in the JSON
    * response using RFC3339 format.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class SnapshotDefinition extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] The time at which the base table was snapshot. This value is reported in the JSON
+   * Required. The time at which the base table was snapshot. This value is reported in the JSON
    * response using RFC3339 format.
    * @param snapshotTime snapshotTime or {@code null} for none
    */

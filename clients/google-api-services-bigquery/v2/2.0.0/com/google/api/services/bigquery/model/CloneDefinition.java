@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for CloneDefinition.
+ * Information about base table and clone time of a table clone.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class CloneDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] Reference describing the ID of the table that was cloned.
+   * Required. Reference describing the ID of the table that was cloned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableReference baseTableReference;
 
   /**
-   * [Required] The time at which the base table was cloned. This value is reported in the JSON
+   * Required. The time at which the base table was cloned. This value is reported in the JSON
    * response using RFC3339 format.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class CloneDefinition extends com.google.api.client.json.GenericJso
   private com.google.api.client.util.DateTime cloneTime;
 
   /**
-   * [Required] Reference describing the ID of the table that was cloned.
+   * Required. Reference describing the ID of the table that was cloned.
    * @return value or {@code null} for none
    */
   public TableReference getBaseTableReference() {
@@ -53,7 +53,7 @@ public final class CloneDefinition extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Required] Reference describing the ID of the table that was cloned.
+   * Required. Reference describing the ID of the table that was cloned.
    * @param baseTableReference baseTableReference or {@code null} for none
    */
   public CloneDefinition setBaseTableReference(TableReference baseTableReference) {
@@ -62,7 +62,7 @@ public final class CloneDefinition extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Required] The time at which the base table was cloned. This value is reported in the JSON
+   * Required. The time at which the base table was cloned. This value is reported in the JSON
    * response using RFC3339 format.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class CloneDefinition extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Required] The time at which the base table was cloned. This value is reported in the JSON
+   * Required. The time at which the base table was cloned. This value is reported in the JSON
    * response using RFC3339 format.
    * @param cloneTime cloneTime or {@code null} for none
    */

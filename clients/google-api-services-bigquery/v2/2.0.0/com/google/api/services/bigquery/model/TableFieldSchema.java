@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for TableFieldSchema.
+ * A field in TableSchema
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,48 +30,45 @@ package com.google.api.services.bigquery.model;
 public final class TableFieldSchema extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] The categories attached to this field, used for field-level access control.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Categories categories;
 
   /**
-   * Optional. Collation specification of the field. It only can be set on string type field.
+   * Optional. Field collation can be set only when the type of field is STRING. The following
+   * values are supported: * 'und:ci': undetermined locale, case insensitive. * '': empty string.
+   * Default to case-sensitive behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String collation;
 
   /**
-   * Optional. A SQL expression to specify the default value for this field. It can only be set for
-   * top level fields (columns). You can use struct or array expression to specify default value for
-   * the entire struct or array. The valid SQL expressions are: - Literals for all data types,
-   * including STRUCT and ARRAY. - Following functions: - CURRENT_TIMESTAMP - CURRENT_TIME -
-   * CURRENT_DATE - CURRENT_DATETIME - GENERATE_UUID - RAND - SESSION_USER - ST_GEOGPOINT - Struct
-   * or array composed with the above allowed functions, for example, [CURRENT_DATE(), DATE
-   * '2020-01-01']
+   * Optional. A SQL expression to specify the [default value]
+   * (https://cloud.google.com/bigquery/docs/default-values) for this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultValueExpression;
 
   /**
-   * [Optional] The field description. The maximum length is 1,024 characters.
+   * Optional. The field description. The maximum length is 1,024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * [Optional] Describes the nested schema fields if the type property is set to RECORD.
+   * Optional. Describes the nested schema fields if the type property is set to RECORD.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TableFieldSchema> fields;
 
   /**
-   * [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not
+   * Optional. Maximum length of values of this field for STRINGS or BYTES. If max_length is not
    * specified, no maximum length constraint is imposed on this field. If type = "STRING", then
    * max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES",
    * then max_length represents the maximum number of bytes in this field. It is invalid to set this
@@ -82,7 +79,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.Long maxLength;
 
   /**
-   * [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default
+   * Optional. The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default
    * value is NULLABLE.
    * The value may be {@code null}.
    */
@@ -90,7 +87,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.String mode;
 
   /**
-   * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
+   * Required. The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
    * underscores (_), and must start with a letter or underscore. The maximum length is 300
    * characters.
    * The value may be {@code null}.
@@ -99,24 +96,26 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * Optional. The policy tags attached to this field, used for field-level access control. If not
+   * set, defaults to empty policy_tags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PolicyTags policyTags;
 
   /**
-   * [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of
+   * Optional. Precision (maximum number of total digits in base 10) and scale (maximum number of
    * digits in the fractional part in base 10) constraints for values of this field for NUMERIC or
    * BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If
    * precision and scale are not specified, no value range constraint is imposed on this field
    * insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be
-   * in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S]
-   * - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero):
-   * [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type
-   * = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤
+   * in this range when: * Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S]
+   * * Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero):
+   * [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: * If type
+   * = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. * If type = "BIGNUMERIC": 1 ≤
    * precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is
-   * specified but not scale (and thus scale is interpreted to be equal to zero): - If type =
-   * "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is
+   * specified but not scale (and thus scale is interpreted to be equal to zero): * If type =
+   * "NUMERIC": 1 ≤ precision ≤ 29. * If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is
    * specified but not precision, then it is invalid.
    * The value may be {@code null}.
    */
@@ -124,41 +123,39 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.Long precision;
 
   /**
-   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
-   * this field is required. Possible values for the field element type of a RANGE include: - DATE -
-   * DATETIME - TIMESTAMP
+   * Represents the type of a field element.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RangeElementType rangeElementType;
 
   /**
-   * Optional. Rounding Mode specification of the field. It only can be set on NUMERIC or BIGNUMERIC
-   * type fields.
+   * Optional. Specifies the rounding mode to be used when storing values of NUMERIC and BIGNUMERIC
+   * type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String roundingMode;
 
   /**
-   * [Optional] See documentation for precision.
+   * Optional. See documentation for precision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long scale;
 
   /**
-   * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
-   * INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN),
-   * TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field
-   * contains a nested schema) or STRUCT (same as RECORD).
+   * Required. The field data type. Possible values include: * STRING * BYTES * INTEGER (or INT64) *
+   * FLOAT (or FLOAT64) * BOOLEAN (or BOOL) * TIMESTAMP * DATE * TIME * DATETIME * GEOGRAPHY *
+   * NUMERIC * BIGNUMERIC * JSON * RECORD (or STRUCT) Use of RECORD/STRUCT indicates that the field
+   * contains a nested schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * [Optional] The categories attached to this field, used for field-level access control.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public Categories getCategories() {
@@ -166,7 +163,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] The categories attached to this field, used for field-level access control.
+   * Deprecated.
    * @param categories categories or {@code null} for none
    */
   public TableFieldSchema setCategories(Categories categories) {
@@ -175,7 +172,9 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Collation specification of the field. It only can be set on string type field.
+   * Optional. Field collation can be set only when the type of field is STRING. The following
+   * values are supported: * 'und:ci': undetermined locale, case insensitive. * '': empty string.
+   * Default to case-sensitive behavior.
    * @return value or {@code null} for none
    */
   public java.lang.String getCollation() {
@@ -183,7 +182,9 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Collation specification of the field. It only can be set on string type field.
+   * Optional. Field collation can be set only when the type of field is STRING. The following
+   * values are supported: * 'und:ci': undetermined locale, case insensitive. * '': empty string.
+   * Default to case-sensitive behavior.
    * @param collation collation or {@code null} for none
    */
   public TableFieldSchema setCollation(java.lang.String collation) {
@@ -192,13 +193,8 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. A SQL expression to specify the default value for this field. It can only be set for
-   * top level fields (columns). You can use struct or array expression to specify default value for
-   * the entire struct or array. The valid SQL expressions are: - Literals for all data types,
-   * including STRUCT and ARRAY. - Following functions: - CURRENT_TIMESTAMP - CURRENT_TIME -
-   * CURRENT_DATE - CURRENT_DATETIME - GENERATE_UUID - RAND - SESSION_USER - ST_GEOGPOINT - Struct
-   * or array composed with the above allowed functions, for example, [CURRENT_DATE(), DATE
-   * '2020-01-01']
+   * Optional. A SQL expression to specify the [default value]
+   * (https://cloud.google.com/bigquery/docs/default-values) for this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultValueExpression() {
@@ -206,13 +202,8 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. A SQL expression to specify the default value for this field. It can only be set for
-   * top level fields (columns). You can use struct or array expression to specify default value for
-   * the entire struct or array. The valid SQL expressions are: - Literals for all data types,
-   * including STRUCT and ARRAY. - Following functions: - CURRENT_TIMESTAMP - CURRENT_TIME -
-   * CURRENT_DATE - CURRENT_DATETIME - GENERATE_UUID - RAND - SESSION_USER - ST_GEOGPOINT - Struct
-   * or array composed with the above allowed functions, for example, [CURRENT_DATE(), DATE
-   * '2020-01-01']
+   * Optional. A SQL expression to specify the [default value]
+   * (https://cloud.google.com/bigquery/docs/default-values) for this field.
    * @param defaultValueExpression defaultValueExpression or {@code null} for none
    */
   public TableFieldSchema setDefaultValueExpression(java.lang.String defaultValueExpression) {
@@ -221,7 +212,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] The field description. The maximum length is 1,024 characters.
+   * Optional. The field description. The maximum length is 1,024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -229,7 +220,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] The field description. The maximum length is 1,024 characters.
+   * Optional. The field description. The maximum length is 1,024 characters.
    * @param description description or {@code null} for none
    */
   public TableFieldSchema setDescription(java.lang.String description) {
@@ -238,7 +229,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] Describes the nested schema fields if the type property is set to RECORD.
+   * Optional. Describes the nested schema fields if the type property is set to RECORD.
    * @return value or {@code null} for none
    */
   public java.util.List<TableFieldSchema> getFields() {
@@ -246,7 +237,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] Describes the nested schema fields if the type property is set to RECORD.
+   * Optional. Describes the nested schema fields if the type property is set to RECORD.
    * @param fields fields or {@code null} for none
    */
   public TableFieldSchema setFields(java.util.List<TableFieldSchema> fields) {
@@ -255,7 +246,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not
+   * Optional. Maximum length of values of this field for STRINGS or BYTES. If max_length is not
    * specified, no maximum length constraint is imposed on this field. If type = "STRING", then
    * max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES",
    * then max_length represents the maximum number of bytes in this field. It is invalid to set this
@@ -267,7 +258,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not
+   * Optional. Maximum length of values of this field for STRINGS or BYTES. If max_length is not
    * specified, no maximum length constraint is imposed on this field. If type = "STRING", then
    * max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES",
    * then max_length represents the maximum number of bytes in this field. It is invalid to set this
@@ -280,7 +271,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default
+   * Optional. The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default
    * value is NULLABLE.
    * @return value or {@code null} for none
    */
@@ -289,7 +280,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default
+   * Optional. The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default
    * value is NULLABLE.
    * @param mode mode or {@code null} for none
    */
@@ -299,7 +290,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
+   * Required. The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
    * underscores (_), and must start with a letter or underscore. The maximum length is 300
    * characters.
    * @return value or {@code null} for none
@@ -309,7 +300,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
+   * Required. The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
    * underscores (_), and must start with a letter or underscore. The maximum length is 300
    * characters.
    * @param name name or {@code null} for none
@@ -320,6 +311,8 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. The policy tags attached to this field, used for field-level access control. If not
+   * set, defaults to empty policy_tags.
    * @return value or {@code null} for none
    */
   public PolicyTags getPolicyTags() {
@@ -327,6 +320,8 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. The policy tags attached to this field, used for field-level access control. If not
+   * set, defaults to empty policy_tags.
    * @param policyTags policyTags or {@code null} for none
    */
   public TableFieldSchema setPolicyTags(PolicyTags policyTags) {
@@ -335,18 +330,18 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of
+   * Optional. Precision (maximum number of total digits in base 10) and scale (maximum number of
    * digits in the fractional part in base 10) constraints for values of this field for NUMERIC or
    * BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If
    * precision and scale are not specified, no value range constraint is imposed on this field
    * insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be
-   * in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S]
-   * - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero):
-   * [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type
-   * = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤
+   * in this range when: * Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S]
+   * * Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero):
+   * [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: * If type
+   * = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. * If type = "BIGNUMERIC": 1 ≤
    * precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is
-   * specified but not scale (and thus scale is interpreted to be equal to zero): - If type =
-   * "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is
+   * specified but not scale (and thus scale is interpreted to be equal to zero): * If type =
+   * "NUMERIC": 1 ≤ precision ≤ 29. * If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is
    * specified but not precision, then it is invalid.
    * @return value or {@code null} for none
    */
@@ -355,18 +350,18 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of
+   * Optional. Precision (maximum number of total digits in base 10) and scale (maximum number of
    * digits in the fractional part in base 10) constraints for values of this field for NUMERIC or
    * BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If
    * precision and scale are not specified, no value range constraint is imposed on this field
    * insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be
-   * in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S]
-   * - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero):
-   * [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type
-   * = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤
+   * in this range when: * Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S]
+   * * Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero):
+   * [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: * If type
+   * = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. * If type = "BIGNUMERIC": 1 ≤
    * precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is
-   * specified but not scale (and thus scale is interpreted to be equal to zero): - If type =
-   * "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is
+   * specified but not scale (and thus scale is interpreted to be equal to zero): * If type =
+   * "NUMERIC": 1 ≤ precision ≤ 29. * If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is
    * specified but not precision, then it is invalid.
    * @param precision precision or {@code null} for none
    */
@@ -376,9 +371,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
-   * this field is required. Possible values for the field element type of a RANGE include: - DATE -
-   * DATETIME - TIMESTAMP
+   * Represents the type of a field element.
    * @return value or {@code null} for none
    */
   public RangeElementType getRangeElementType() {
@@ -386,9 +379,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
-   * this field is required. Possible values for the field element type of a RANGE include: - DATE -
-   * DATETIME - TIMESTAMP
+   * Represents the type of a field element.
    * @param rangeElementType rangeElementType or {@code null} for none
    */
   public TableFieldSchema setRangeElementType(RangeElementType rangeElementType) {
@@ -397,8 +388,8 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Rounding Mode specification of the field. It only can be set on NUMERIC or BIGNUMERIC
-   * type fields.
+   * Optional. Specifies the rounding mode to be used when storing values of NUMERIC and BIGNUMERIC
+   * type.
    * @return value or {@code null} for none
    */
   public java.lang.String getRoundingMode() {
@@ -406,8 +397,8 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Rounding Mode specification of the field. It only can be set on NUMERIC or BIGNUMERIC
-   * type fields.
+   * Optional. Specifies the rounding mode to be used when storing values of NUMERIC and BIGNUMERIC
+   * type.
    * @param roundingMode roundingMode or {@code null} for none
    */
   public TableFieldSchema setRoundingMode(java.lang.String roundingMode) {
@@ -416,7 +407,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] See documentation for precision.
+   * Optional. See documentation for precision.
    * @return value or {@code null} for none
    */
   public java.lang.Long getScale() {
@@ -424,7 +415,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] See documentation for precision.
+   * Optional. See documentation for precision.
    * @param scale scale or {@code null} for none
    */
   public TableFieldSchema setScale(java.lang.Long scale) {
@@ -433,10 +424,10 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
-   * INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN),
-   * TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field
-   * contains a nested schema) or STRUCT (same as RECORD).
+   * Required. The field data type. Possible values include: * STRING * BYTES * INTEGER (or INT64) *
+   * FLOAT (or FLOAT64) * BOOLEAN (or BOOL) * TIMESTAMP * DATE * TIME * DATETIME * GEOGRAPHY *
+   * NUMERIC * BIGNUMERIC * JSON * RECORD (or STRUCT) Use of RECORD/STRUCT indicates that the field
+   * contains a nested schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -444,10 +435,10 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
-   * INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN),
-   * TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field
-   * contains a nested schema) or STRUCT (same as RECORD).
+   * Required. The field data type. Possible values include: * STRING * BYTES * INTEGER (or INT64) *
+   * FLOAT (or FLOAT64) * BOOLEAN (or BOOL) * TIMESTAMP * DATE * TIME * DATETIME * GEOGRAPHY *
+   * NUMERIC * BIGNUMERIC * JSON * RECORD (or STRUCT) Use of RECORD/STRUCT indicates that the field
+   * contains a nested schema.
    * @param type type or {@code null} for none
    */
   public TableFieldSchema setType(java.lang.String type) {
@@ -466,21 +457,19 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] The categories attached to this field, used for field-level access control.
+   * Deprecated.
    */
   public static final class Categories extends com.google.api.client.json.GenericJson {
 
     /**
-     * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most
-     * 5 categories are allowed.
+     * Deprecated.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.util.List<java.lang.String> names;
 
     /**
-     * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most
-     * 5 categories are allowed.
+     * Deprecated.
      * @return value or {@code null} for none
      */
     public java.util.List<java.lang.String> getNames() {
@@ -488,8 +477,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
     }
 
     /**
-     * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most
-     * 5 categories are allowed.
+     * Deprecated.
      * @param names names or {@code null} for none
      */
     public Categories setNames(java.util.List<java.lang.String> names) {
@@ -510,21 +498,22 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Model definition for TableFieldSchemaPolicyTags.
+   * Optional. The policy tags attached to this field, used for field-level access control. If not
+   * set, defaults to empty policy_tags.
    */
   public static final class PolicyTags extends com.google.api.client.json.GenericJson {
 
     /**
-     * A list of category resource names. For example,
-     * "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     * A list of policy tag resource names. For example,
+     * "projects/1/locations/eu/taxonomies/2/policyTags/3". At most 1 policy tag is currently allowed.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.util.List<java.lang.String> names;
 
     /**
-     * A list of category resource names. For example,
-     * "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     * A list of policy tag resource names. For example,
+     * "projects/1/locations/eu/taxonomies/2/policyTags/3". At most 1 policy tag is currently allowed.
      * @return value or {@code null} for none
      */
     public java.util.List<java.lang.String> getNames() {
@@ -532,8 +521,8 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
     }
 
     /**
-     * A list of category resource names. For example,
-     * "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     * A list of policy tag resource names. For example,
+     * "projects/1/locations/eu/taxonomies/2/policyTags/3". At most 1 policy tag is currently allowed.
      * @param names names or {@code null} for none
      */
     public PolicyTags setNames(java.util.List<java.lang.String> names) {
@@ -554,21 +543,19 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
-   * this field is required. Possible values for the field element type of a RANGE include: - DATE -
-   * DATETIME - TIMESTAMP
+   * Represents the type of a field element.
    */
   public static final class RangeElementType extends com.google.api.client.json.GenericJson {
 
     /**
-     * The field element type of a RANGE
+     * Required. The type of a field element. See TableFieldSchema.type.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String type;
 
     /**
-     * The field element type of a RANGE
+     * Required. The type of a field element. See TableFieldSchema.type.
      * @return value or {@code null} for none
      */
     public java.lang.String getType() {
@@ -576,7 +563,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
     }
 
     /**
-     * The field element type of a RANGE
+     * Required. The type of a field element. See TableFieldSchema.type.
      * @param type type or {@code null} for none
      */
     public RangeElementType setType(java.lang.String type) {

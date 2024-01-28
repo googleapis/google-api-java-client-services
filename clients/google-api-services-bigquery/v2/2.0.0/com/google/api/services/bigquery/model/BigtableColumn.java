@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for BigtableColumn.
+ * Information related to a Bigtable column.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class BigtableColumn extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values
+   * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
    * encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column
    * family level. However, the setting at this level takes precedence if 'encoding' is set at both
@@ -41,16 +41,16 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   private java.lang.String encoding;
 
   /**
-   * [Optional] If the qualifier is not a valid BigQuery field identifier i.e. does not match
-   * [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used
-   * as field name in queries.
+   * Optional. If the qualifier is not a valid BigQuery field identifier i.e. does not match
+   * a-zA-Z*, a valid identifier must be provided as the column field name and is used as field name
+   * in queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldName;
 
   /**
-   * [Optional] If this is set, only the latest version of value in this column are exposed.
+   * Optional. If this is set, only the latest version of value in this column are exposed.
    * 'onlyReadLatest' can also be set at the column family level. However, the setting at this level
    * takes precedence if 'onlyReadLatest' is set at both levels.
    * The value may be {@code null}.
@@ -63,32 +63,33 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
    * qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified
    * in the qualifier_string field. Otherwise, a base-64 encoded value must be set to
    * qualifier_encoded. The column field name is the same as the column qualifier. However, if the
-   * qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a
-   * valid identifier must be provided as field_name.
+   * qualifier is not a valid BigQuery field identifier i.e. does not match a-zA-Z*, a valid
+   * identifier must be provided as field_name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String qualifierEncoded;
 
   /**
+   * Qualifier string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String qualifierString;
 
   /**
-   * [Optional] The type to convert the value in cells of this column. The values are expected to be
+   * Optional. The type to convert the value in cells of this column. The values are expected to be
    * encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following
-   * BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type
-   * is BYTES. 'type' can also be set at the column family level. However, the setting at this level
-   * takes precedence if 'type' is set at both levels.
+   * BigQuery types are allowed (case-sensitive): * BYTES * STRING * INTEGER * FLOAT * BOOLEAN *
+   * JSON Default type is BYTES. 'type' can also be set at the column family level. However, the
+   * setting at this level takes precedence if 'type' is set at both levels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values
+   * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
    * encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column
    * family level. However, the setting at this level takes precedence if 'encoding' is set at both
@@ -100,7 +101,7 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values
+   * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
    * encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column
    * family level. However, the setting at this level takes precedence if 'encoding' is set at both
@@ -113,9 +114,9 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] If the qualifier is not a valid BigQuery field identifier i.e. does not match
-   * [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used
-   * as field name in queries.
+   * Optional. If the qualifier is not a valid BigQuery field identifier i.e. does not match
+   * a-zA-Z*, a valid identifier must be provided as the column field name and is used as field name
+   * in queries.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldName() {
@@ -123,9 +124,9 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] If the qualifier is not a valid BigQuery field identifier i.e. does not match
-   * [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used
-   * as field name in queries.
+   * Optional. If the qualifier is not a valid BigQuery field identifier i.e. does not match
+   * a-zA-Z*, a valid identifier must be provided as the column field name and is used as field name
+   * in queries.
    * @param fieldName fieldName or {@code null} for none
    */
   public BigtableColumn setFieldName(java.lang.String fieldName) {
@@ -134,7 +135,7 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] If this is set, only the latest version of value in this column are exposed.
+   * Optional. If this is set, only the latest version of value in this column are exposed.
    * 'onlyReadLatest' can also be set at the column family level. However, the setting at this level
    * takes precedence if 'onlyReadLatest' is set at both levels.
    * @return value or {@code null} for none
@@ -144,7 +145,7 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] If this is set, only the latest version of value in this column are exposed.
+   * Optional. If this is set, only the latest version of value in this column are exposed.
    * 'onlyReadLatest' can also be set at the column family level. However, the setting at this level
    * takes precedence if 'onlyReadLatest' is set at both levels.
    * @param onlyReadLatest onlyReadLatest or {@code null} for none
@@ -159,8 +160,8 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
    * qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified
    * in the qualifier_string field. Otherwise, a base-64 encoded value must be set to
    * qualifier_encoded. The column field name is the same as the column qualifier. However, if the
-   * qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a
-   * valid identifier must be provided as field_name.
+   * qualifier is not a valid BigQuery field identifier i.e. does not match a-zA-Z*, a valid
+   * identifier must be provided as field_name.
    * @see #decodeQualifierEncoded()
    * @return value or {@code null} for none
    */
@@ -173,8 +174,8 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
    * qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified
    * in the qualifier_string field. Otherwise, a base-64 encoded value must be set to
    * qualifier_encoded. The column field name is the same as the column qualifier. However, if the
-   * qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a
-   * valid identifier must be provided as field_name.
+   * qualifier is not a valid BigQuery field identifier i.e. does not match a-zA-Z*, a valid
+   * identifier must be provided as field_name.
    * @see #getQualifierEncoded()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -189,8 +190,8 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
    * qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified
    * in the qualifier_string field. Otherwise, a base-64 encoded value must be set to
    * qualifier_encoded. The column field name is the same as the column qualifier. However, if the
-   * qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a
-   * valid identifier must be provided as field_name.
+   * qualifier is not a valid BigQuery field identifier i.e. does not match a-zA-Z*, a valid
+   * identifier must be provided as field_name.
    * @see #encodeQualifierEncoded()
    * @param qualifierEncoded qualifierEncoded or {@code null} for none
    */
@@ -204,8 +205,8 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
    * qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified
    * in the qualifier_string field. Otherwise, a base-64 encoded value must be set to
    * qualifier_encoded. The column field name is the same as the column qualifier. However, if the
-   * qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a
-   * valid identifier must be provided as field_name.
+   * qualifier is not a valid BigQuery field identifier i.e. does not match a-zA-Z*, a valid
+   * identifier must be provided as field_name.
    * @see #setQualifierEncoded()
    *
    * <p>
@@ -220,6 +221,7 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Qualifier string.
    * @return value or {@code null} for none
    */
   public java.lang.String getQualifierString() {
@@ -227,6 +229,7 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Qualifier string.
    * @param qualifierString qualifierString or {@code null} for none
    */
   public BigtableColumn setQualifierString(java.lang.String qualifierString) {
@@ -235,11 +238,11 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] The type to convert the value in cells of this column. The values are expected to be
+   * Optional. The type to convert the value in cells of this column. The values are expected to be
    * encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following
-   * BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type
-   * is BYTES. 'type' can also be set at the column family level. However, the setting at this level
-   * takes precedence if 'type' is set at both levels.
+   * BigQuery types are allowed (case-sensitive): * BYTES * STRING * INTEGER * FLOAT * BOOLEAN *
+   * JSON Default type is BYTES. 'type' can also be set at the column family level. However, the
+   * setting at this level takes precedence if 'type' is set at both levels.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -247,11 +250,11 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] The type to convert the value in cells of this column. The values are expected to be
+   * Optional. The type to convert the value in cells of this column. The values are expected to be
    * encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following
-   * BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type
-   * is BYTES. 'type' can also be set at the column family level. However, the setting at this level
-   * takes precedence if 'type' is set at both levels.
+   * BigQuery types are allowed (case-sensitive): * BYTES * STRING * INTEGER * FLOAT * BOOLEAN *
+   * JSON Default type is BYTES. 'type' can also be set at the column family level. However, the
+   * setting at this level takes precedence if 'type' is set at both levels.
    * @param type type or {@code null} for none
    */
   public BigtableColumn setType(java.lang.String type) {

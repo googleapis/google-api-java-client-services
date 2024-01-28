@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JsonOptions.
+ * Json Options for load and make external tables.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class JsonOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
+   * Optional. The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
    * 16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class JsonOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String encoding;
 
   /**
-   * [Optional] The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
+   * Optional. The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
    * 16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class JsonOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
+   * Optional. The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
    * 16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
    * @param encoding encoding or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for TableList.
+ * Partial projection of the metadata for a given table in a list response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -171,23 +171,22 @@ public final class TableList extends com.google.api.client.json.GenericJson {
   public static final class Tables extends com.google.api.client.json.GenericJson {
 
     /**
-     * [Beta] Clustering specification for this table, if configured.
+     * Clustering specification for this table, if configured.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private Clustering clustering;
 
     /**
-     * The time when this table was created, in milliseconds since the epoch.
+     * Output only. The time when this table was created, in milliseconds since the epoch.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long creationTime;
 
     /**
-     * [Optional] The time when this table expires, in milliseconds since the epoch. If not present,
-     * the table will persist indefinitely. Expired tables will be deleted and their storage
-     * reclaimed.
+     * The time when this table expires, in milliseconds since the epoch. If not present, the table
+     * will persist indefinitely. Expired tables will be deleted and their storage reclaimed.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -201,7 +200,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     private java.lang.String friendlyName;
 
     /**
-     * An opaque ID of the table
+     * An opaque ID of the table.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -222,42 +221,50 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     private java.util.Map<String, java.lang.String> labels;
 
     /**
-     * The range partitioning specification for this table, if configured.
+     * The range partitioning for this table.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private RangePartitioning rangePartitioning;
 
     /**
-     * A reference uniquely identifying the table.
+     * Optional. If set to true, queries including this table must specify a partition filter. This
+     * filter is used for partition elimination.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean requirePartitionFilter;
+
+    /**
+     * A reference uniquely identifying table.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private TableReference tableReference;
 
     /**
-     * The time-based partitioning specification for this table, if configured.
+     * The time-based partitioning for this table.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private TimePartitioning timePartitioning;
 
     /**
-     * The type of table. Possible values are: TABLE, VIEW.
+     * The type of table.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String type;
 
     /**
-     * Additional details for a view.
+     * Information about a logical view.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private View view;
 
     /**
-     * [Beta] Clustering specification for this table, if configured.
+     * Clustering specification for this table, if configured.
      * @return value or {@code null} for none
      */
     public Clustering getClustering() {
@@ -265,7 +272,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Beta] Clustering specification for this table, if configured.
+     * Clustering specification for this table, if configured.
      * @param clustering clustering or {@code null} for none
      */
     public Tables setClustering(Clustering clustering) {
@@ -274,7 +281,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The time when this table was created, in milliseconds since the epoch.
+     * Output only. The time when this table was created, in milliseconds since the epoch.
      * @return value or {@code null} for none
      */
     public java.lang.Long getCreationTime() {
@@ -282,7 +289,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The time when this table was created, in milliseconds since the epoch.
+     * Output only. The time when this table was created, in milliseconds since the epoch.
      * @param creationTime creationTime or {@code null} for none
      */
     public Tables setCreationTime(java.lang.Long creationTime) {
@@ -291,9 +298,8 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Optional] The time when this table expires, in milliseconds since the epoch. If not present,
-     * the table will persist indefinitely. Expired tables will be deleted and their storage
-     * reclaimed.
+     * The time when this table expires, in milliseconds since the epoch. If not present, the table
+     * will persist indefinitely. Expired tables will be deleted and their storage reclaimed.
      * @return value or {@code null} for none
      */
     public java.lang.Long getExpirationTime() {
@@ -301,9 +307,8 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Optional] The time when this table expires, in milliseconds since the epoch. If not present,
-     * the table will persist indefinitely. Expired tables will be deleted and their storage
-     * reclaimed.
+     * The time when this table expires, in milliseconds since the epoch. If not present, the table
+     * will persist indefinitely. Expired tables will be deleted and their storage reclaimed.
      * @param expirationTime expirationTime or {@code null} for none
      */
     public Tables setExpirationTime(java.lang.Long expirationTime) {
@@ -329,7 +334,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * An opaque ID of the table
+     * An opaque ID of the table.
      * @return value or {@code null} for none
      */
     public java.lang.String getId() {
@@ -337,7 +342,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * An opaque ID of the table
+     * An opaque ID of the table.
      * @param id id or {@code null} for none
      */
     public Tables setId(java.lang.String id) {
@@ -380,7 +385,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The range partitioning specification for this table, if configured.
+     * The range partitioning for this table.
      * @return value or {@code null} for none
      */
     public RangePartitioning getRangePartitioning() {
@@ -388,7 +393,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The range partitioning specification for this table, if configured.
+     * The range partitioning for this table.
      * @param rangePartitioning rangePartitioning or {@code null} for none
      */
     public Tables setRangePartitioning(RangePartitioning rangePartitioning) {
@@ -397,7 +402,54 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * A reference uniquely identifying the table.
+     * Optional. If set to true, queries including this table must specify a partition filter. This
+     * filter is used for partition elimination.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getRequirePartitionFilter() {
+      return requirePartitionFilter;
+    }
+
+    /**
+     * Optional. If set to true, queries including this table must specify a partition filter. This
+     * filter is used for partition elimination.
+     * @param requirePartitionFilter requirePartitionFilter or {@code null} for none
+     */
+    public Tables setRequirePartitionFilter(java.lang.Boolean requirePartitionFilter) {
+      this.requirePartitionFilter = requirePartitionFilter;
+      return this;
+    }
+
+    /**
+     * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+     *
+     * <p>
+     * Boolean properties can have four possible values:
+     * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+     * or {@link Boolean#FALSE}.
+     * </p>
+     *
+     * <p>
+     * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+     * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+     * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+     * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+     * </p>
+     *
+     * <p>
+     * Optional. If set to true, queries including this table must specify a partition filter. This filter
+   is used for partition elimination.
+     * </p>
+     */
+    public boolean isRequirePartitionFilter() {
+      if (requirePartitionFilter == null || requirePartitionFilter == com.google.api.client.util.Data.NULL_BOOLEAN) {
+        return false;
+      }
+      return requirePartitionFilter;
+    }
+
+    /**
+     * A reference uniquely identifying table.
      * @return value or {@code null} for none
      */
     public TableReference getTableReference() {
@@ -405,7 +457,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * A reference uniquely identifying the table.
+     * A reference uniquely identifying table.
      * @param tableReference tableReference or {@code null} for none
      */
     public Tables setTableReference(TableReference tableReference) {
@@ -414,7 +466,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The time-based partitioning specification for this table, if configured.
+     * The time-based partitioning for this table.
      * @return value or {@code null} for none
      */
     public TimePartitioning getTimePartitioning() {
@@ -422,7 +474,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The time-based partitioning specification for this table, if configured.
+     * The time-based partitioning for this table.
      * @param timePartitioning timePartitioning or {@code null} for none
      */
     public Tables setTimePartitioning(TimePartitioning timePartitioning) {
@@ -431,7 +483,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The type of table. Possible values are: TABLE, VIEW.
+     * The type of table.
      * @return value or {@code null} for none
      */
     public java.lang.String getType() {
@@ -439,7 +491,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The type of table. Possible values are: TABLE, VIEW.
+     * The type of table.
      * @param type type or {@code null} for none
      */
     public Tables setType(java.lang.String type) {
@@ -448,7 +500,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Additional details for a view.
+     * Information about a logical view.
      * @return value or {@code null} for none
      */
     public View getView() {
@@ -456,7 +508,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Additional details for a view.
+     * Information about a logical view.
      * @param view view or {@code null} for none
      */
     public Tables setView(View view) {
@@ -475,19 +527,43 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Additional details for a view.
+     * Information about a logical view.
      */
     public static final class View extends com.google.api.client.json.GenericJson {
 
       /**
-       * True if view is defined in legacy SQL dialect, false if in standard SQL.
+       * Specifices the privacy policy for the view.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private PrivacyPolicy privacyPolicy;
+
+      /**
+       * True if view is defined in legacy SQL dialect, false if in GoogleSQL.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useLegacySql;
 
       /**
-       * True if view is defined in legacy SQL dialect, false if in standard SQL.
+       * Specifices the privacy policy for the view.
+       * @return value or {@code null} for none
+       */
+      public PrivacyPolicy getPrivacyPolicy() {
+        return privacyPolicy;
+      }
+
+      /**
+       * Specifices the privacy policy for the view.
+       * @param privacyPolicy privacyPolicy or {@code null} for none
+       */
+      public View setPrivacyPolicy(PrivacyPolicy privacyPolicy) {
+        this.privacyPolicy = privacyPolicy;
+        return this;
+      }
+
+      /**
+       * True if view is defined in legacy SQL dialect, false if in GoogleSQL.
        * @return value or {@code null} for none
        */
       public java.lang.Boolean getUseLegacySql() {
@@ -495,7 +571,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * True if view is defined in legacy SQL dialect, false if in standard SQL.
+       * True if view is defined in legacy SQL dialect, false if in GoogleSQL.
        * @param useLegacySql useLegacySql or {@code null} for none
        */
       public View setUseLegacySql(java.lang.Boolean useLegacySql) {

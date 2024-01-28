@@ -30,25 +30,21 @@ package com.google.api.services.bigquery.model;
 public final class BigQueryModelTraining extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only, Beta] Index of current ML training iteration. Updated during create model query
-   * job to show job progress.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer currentIteration;
 
   /**
-   * [Output-only, Beta] Expected number of iterations for the create model query job specified as
-   * num_iterations in the input query. The actual total number of iterations may be less than this
-   * number due to early stop.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long expectedTotalIterations;
 
   /**
-   * [Output-only, Beta] Index of current ML training iteration. Updated during create model query
-   * job to show job progress.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCurrentIteration() {
@@ -56,8 +52,7 @@ public final class BigQueryModelTraining extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output-only, Beta] Index of current ML training iteration. Updated during create model query
-   * job to show job progress.
+   * Deprecated.
    * @param currentIteration currentIteration or {@code null} for none
    */
   public BigQueryModelTraining setCurrentIteration(java.lang.Integer currentIteration) {
@@ -66,9 +61,7 @@ public final class BigQueryModelTraining extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output-only, Beta] Expected number of iterations for the create model query job specified as
-   * num_iterations in the input query. The actual total number of iterations may be less than this
-   * number due to early stop.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExpectedTotalIterations() {
@@ -76,9 +69,7 @@ public final class BigQueryModelTraining extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output-only, Beta] Expected number of iterations for the create model query job specified as
-   * num_iterations in the input query. The actual total number of iterations may be less than this
-   * number due to early stop.
+   * Deprecated.
    * @param expectedTotalIterations expectedTotalIterations or {@code null} for none
    */
   public BigQueryModelTraining setExpectedTotalIterations(java.lang.Long expectedTotalIterations) {

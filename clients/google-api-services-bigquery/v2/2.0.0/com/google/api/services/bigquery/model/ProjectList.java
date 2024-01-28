@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for ProjectList.
+ * Response object of ListProjects
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.bigquery.model;
 public final class ProjectList extends com.google.api.client.json.GenericJson {
 
   /**
-   * A hash of the page of results
+   * A hash of the page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * The type of list.
+   * The resource type of the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * A token to request the next page of results.
+   * Use this token to request the next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Projects to which you have at least READ access.
+   * Projects to which the user has at least READ access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,14 +64,15 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total number of projects in the list.
+   * The total number of projects in the page. A wrapper is used here because the field should still
+   * be in the response when the value is 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalItems;
 
   /**
-   * A hash of the page of results
+   * A hash of the page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -79,7 +80,7 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A hash of the page of results
+   * A hash of the page of results.
    * @param etag etag or {@code null} for none
    */
   public ProjectList setEtag(java.lang.String etag) {
@@ -88,7 +89,7 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of list.
+   * The resource type of the response.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -96,7 +97,7 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of list.
+   * The resource type of the response.
    * @param kind kind or {@code null} for none
    */
   public ProjectList setKind(java.lang.String kind) {
@@ -105,7 +106,7 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A token to request the next page of results.
+   * Use this token to request the next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -113,7 +114,7 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A token to request the next page of results.
+   * Use this token to request the next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ProjectList setNextPageToken(java.lang.String nextPageToken) {
@@ -122,7 +123,7 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Projects to which you have at least READ access.
+   * Projects to which the user has at least READ access.
    * @return value or {@code null} for none
    */
   public java.util.List<Projects> getProjects() {
@@ -130,7 +131,7 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Projects to which you have at least READ access.
+   * Projects to which the user has at least READ access.
    * @param projects projects or {@code null} for none
    */
   public ProjectList setProjects(java.util.List<Projects> projects) {
@@ -139,7 +140,8 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total number of projects in the list.
+   * The total number of projects in the page. A wrapper is used here because the field should still
+   * be in the response when the value is 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalItems() {
@@ -147,7 +149,8 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total number of projects in the list.
+   * The total number of projects in the page. A wrapper is used here because the field should still
+   * be in the response when the value is 0.
    * @param totalItems totalItems or {@code null} for none
    */
   public ProjectList setTotalItems(java.lang.Integer totalItems) {
@@ -166,12 +169,13 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Model definition for ProjectListProjects.
+   * Information about a single project.
    */
   public static final class Projects extends com.google.api.client.json.GenericJson {
 
     /**
-     * A descriptive name for this project.
+     * A descriptive name for this project. A wrapper is used here because friendlyName can be set to
+     * the empty string.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -206,7 +210,8 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
     private ProjectReference projectReference;
 
     /**
-     * A descriptive name for this project.
+     * A descriptive name for this project. A wrapper is used here because friendlyName can be set to
+     * the empty string.
      * @return value or {@code null} for none
      */
     public java.lang.String getFriendlyName() {
@@ -214,7 +219,8 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * A descriptive name for this project.
+     * A descriptive name for this project. A wrapper is used here because friendlyName can be set to
+     * the empty string.
      * @param friendlyName friendlyName or {@code null} for none
      */
     public Projects setFriendlyName(java.lang.String friendlyName) {

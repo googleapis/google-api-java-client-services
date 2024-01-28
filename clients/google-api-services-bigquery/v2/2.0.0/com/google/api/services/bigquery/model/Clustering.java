@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for Clustering.
+ * Configures table clustering.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,20 +30,20 @@ package com.google.api.services.bigquery.model;
 public final class Clustering extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated,
-   * simple-type fields are supported. When you cluster a table using multiple columns, the order of
-   * columns you specify is important. The order of the specified columns determines the sort order
-   * of the data.
+   * One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type
+   * fields are supported. The ordering of the clustering fields should be prioritized from most to
+   * least important for filtering purposes. Additional information on limitations can be found
+   * here: https://cloud.google.com/bigquery/docs/creating-clustered-tables#limitations
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> fields;
 
   /**
-   * [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated,
-   * simple-type fields are supported. When you cluster a table using multiple columns, the order of
-   * columns you specify is important. The order of the specified columns determines the sort order
-   * of the data.
+   * One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type
+   * fields are supported. The ordering of the clustering fields should be prioritized from most to
+   * least important for filtering purposes. Additional information on limitations can be found
+   * here: https://cloud.google.com/bigquery/docs/creating-clustered-tables#limitations
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFields() {
@@ -51,10 +51,10 @@ public final class Clustering extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated,
-   * simple-type fields are supported. When you cluster a table using multiple columns, the order of
-   * columns you specify is important. The order of the specified columns determines the sort order
-   * of the data.
+   * One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type
+   * fields are supported. The ordering of the clustering fields should be prioritized from most to
+   * least important for filtering purposes. Additional information on limitations can be found
+   * here: https://cloud.google.com/bigquery/docs/creating-clustered-tables#limitations
    * @param fields fields or {@code null} for none
    */
   public Clustering setFields(java.util.List<java.lang.String> fields) {

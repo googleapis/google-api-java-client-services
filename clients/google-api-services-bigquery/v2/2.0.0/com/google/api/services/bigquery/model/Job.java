@@ -30,80 +30,89 @@ package com.google.api.services.bigquery.model;
 public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] Describes the job configuration.
+   * Required. Describes the job configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JobConfiguration configuration;
 
   /**
-   * [Output-only] A hash of this resource.
+   * Output only. A hash of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * [Output-only] Opaque ID field of the job
+   * Output only. Opaque ID field of the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * [Output-only] If set, it provides the reason why a Job was created. If not set, it should be
+   * Output only. If set, it provides the reason why a Job was created. If not set, it should be
    * treated as the default: REQUESTED. This feature is not yet available. Jobs will always be
    * created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Object jobCreationReason;
+  private JobCreationReason jobCreationReason;
 
   /**
-   * [Optional] Reference describing the unique-per-user name of the job.
+   * Optional. Reference describing the unique-per-user name of the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JobReference jobReference;
 
   /**
-   * [Output-only] The type of the resource.
+   * Output only. The type of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * [Output-only] A URL that can be used to access this resource again.
+   * Output only. [Full-projection-only] String representation of identity of requesting party.
+   * Populated for both first- and third-party identities. Only present for APIs that support third-
+   * party identities.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("principal_subject")
+  private java.lang.String principalSubject;
+
+  /**
+   * Output only. A URL that can be used to access the resource again.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output-only] Information about the job, including starting time and ending time of the job.
+   * Output only. Information about the job, including starting time and ending time of the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JobStatistics statistics;
 
   /**
-   * [Output-only] The status of this job. Examine this value when polling an asynchronous job to
-   * see if the job is complete.
+   * Output only. The status of this job. Examine this value when polling an asynchronous job to see
+   * if the job is complete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JobStatus status;
 
   /**
-   * [Output-only] Email address of the user who ran the job.
+   * Output only. Email address of the user who ran the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("user_email")
   private java.lang.String userEmail;
 
   /**
-   * [Required] Describes the job configuration.
+   * Required. Describes the job configuration.
    * @return value or {@code null} for none
    */
   public JobConfiguration getConfiguration() {
@@ -111,7 +120,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Required] Describes the job configuration.
+   * Required. Describes the job configuration.
    * @param configuration configuration or {@code null} for none
    */
   public Job setConfiguration(JobConfiguration configuration) {
@@ -120,7 +129,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A hash of this resource.
+   * Output only. A hash of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -128,7 +137,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A hash of this resource.
+   * Output only. A hash of this resource.
    * @param etag etag or {@code null} for none
    */
   public Job setEtag(java.lang.String etag) {
@@ -137,7 +146,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Opaque ID field of the job
+   * Output only. Opaque ID field of the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -145,7 +154,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Opaque ID field of the job
+   * Output only. Opaque ID field of the job.
    * @param id id or {@code null} for none
    */
   public Job setId(java.lang.String id) {
@@ -154,28 +163,28 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] If set, it provides the reason why a Job was created. If not set, it should be
+   * Output only. If set, it provides the reason why a Job was created. If not set, it should be
    * treated as the default: REQUESTED. This feature is not yet available. Jobs will always be
    * created.
    * @return value or {@code null} for none
    */
-  public java.lang.Object getJobCreationReason() {
+  public JobCreationReason getJobCreationReason() {
     return jobCreationReason;
   }
 
   /**
-   * [Output-only] If set, it provides the reason why a Job was created. If not set, it should be
+   * Output only. If set, it provides the reason why a Job was created. If not set, it should be
    * treated as the default: REQUESTED. This feature is not yet available. Jobs will always be
    * created.
    * @param jobCreationReason jobCreationReason or {@code null} for none
    */
-  public Job setJobCreationReason(java.lang.Object jobCreationReason) {
+  public Job setJobCreationReason(JobCreationReason jobCreationReason) {
     this.jobCreationReason = jobCreationReason;
     return this;
   }
 
   /**
-   * [Optional] Reference describing the unique-per-user name of the job.
+   * Optional. Reference describing the unique-per-user name of the job.
    * @return value or {@code null} for none
    */
   public JobReference getJobReference() {
@@ -183,7 +192,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Reference describing the unique-per-user name of the job.
+   * Optional. Reference describing the unique-per-user name of the job.
    * @param jobReference jobReference or {@code null} for none
    */
   public Job setJobReference(JobReference jobReference) {
@@ -192,7 +201,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The type of the resource.
+   * Output only. The type of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -200,7 +209,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The type of the resource.
+   * Output only. The type of the resource.
    * @param kind kind or {@code null} for none
    */
   public Job setKind(java.lang.String kind) {
@@ -209,7 +218,28 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A URL that can be used to access this resource again.
+   * Output only. [Full-projection-only] String representation of identity of requesting party.
+   * Populated for both first- and third-party identities. Only present for APIs that support third-
+   * party identities.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrincipalSubject() {
+    return principalSubject;
+  }
+
+  /**
+   * Output only. [Full-projection-only] String representation of identity of requesting party.
+   * Populated for both first- and third-party identities. Only present for APIs that support third-
+   * party identities.
+   * @param principalSubject principalSubject or {@code null} for none
+   */
+  public Job setPrincipalSubject(java.lang.String principalSubject) {
+    this.principalSubject = principalSubject;
+    return this;
+  }
+
+  /**
+   * Output only. A URL that can be used to access the resource again.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -217,7 +247,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A URL that can be used to access this resource again.
+   * Output only. A URL that can be used to access the resource again.
    * @param selfLink selfLink or {@code null} for none
    */
   public Job setSelfLink(java.lang.String selfLink) {
@@ -226,7 +256,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Information about the job, including starting time and ending time of the job.
+   * Output only. Information about the job, including starting time and ending time of the job.
    * @return value or {@code null} for none
    */
   public JobStatistics getStatistics() {
@@ -234,7 +264,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Information about the job, including starting time and ending time of the job.
+   * Output only. Information about the job, including starting time and ending time of the job.
    * @param statistics statistics or {@code null} for none
    */
   public Job setStatistics(JobStatistics statistics) {
@@ -243,8 +273,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The status of this job. Examine this value when polling an asynchronous job to
-   * see if the job is complete.
+   * Output only. The status of this job. Examine this value when polling an asynchronous job to see
+   * if the job is complete.
    * @return value or {@code null} for none
    */
   public JobStatus getStatus() {
@@ -252,8 +282,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The status of this job. Examine this value when polling an asynchronous job to
-   * see if the job is complete.
+   * Output only. The status of this job. Examine this value when polling an asynchronous job to see
+   * if the job is complete.
    * @param status status or {@code null} for none
    */
   public Job setStatus(JobStatus status) {
@@ -262,7 +292,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Email address of the user who ran the job.
+   * Output only. Email address of the user who ran the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserEmail() {
@@ -270,7 +300,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Email address of the user who ran the job.
+   * Output only. Email address of the user who ran the job.
    * @param userEmail userEmail or {@code null} for none
    */
   public Job setUserEmail(java.lang.String userEmail) {

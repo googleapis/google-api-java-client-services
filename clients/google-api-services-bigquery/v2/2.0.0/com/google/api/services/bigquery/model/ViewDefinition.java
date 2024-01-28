@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for ViewDefinition.
+ * Describes the definition of a logical view.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class ViewDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] A query that BigQuery executes when the view is referenced.
+   * Optional. Specifices the privacy policy for the view.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivacyPolicy privacyPolicy;
+
+  /**
+   * Required. A query that BigQuery executes when the view is referenced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,8 +45,7 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
 
   /**
    * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1,
-   * c2) AS ...' syntax. Can only be set using BigQuery's standard SQL:
-   * https://cloud.google.com/bigquery/sql-reference/
+   * c2) AS ...' syntax. Can only be set for GoogleSQL views.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +53,9 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set
-   * to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-
-   * reference/ Queries and views that reference this view must use the same flag value.
+   * to false, the view will use BigQuery's GoogleSQL: https://cloud.google.com/bigquery/sql-
+   * reference/ Queries and views that reference this view must use the same flag value. A wrapper
+   * is used here because the default value is True.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +75,24 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] A query that BigQuery executes when the view is referenced.
+   * Optional. Specifices the privacy policy for the view.
+   * @return value or {@code null} for none
+   */
+  public PrivacyPolicy getPrivacyPolicy() {
+    return privacyPolicy;
+  }
+
+  /**
+   * Optional. Specifices the privacy policy for the view.
+   * @param privacyPolicy privacyPolicy or {@code null} for none
+   */
+  public ViewDefinition setPrivacyPolicy(PrivacyPolicy privacyPolicy) {
+    this.privacyPolicy = privacyPolicy;
+    return this;
+  }
+
+  /**
+   * Required. A query that BigQuery executes when the view is referenced.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -76,7 +100,7 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] A query that BigQuery executes when the view is referenced.
+   * Required. A query that BigQuery executes when the view is referenced.
    * @param query query or {@code null} for none
    */
   public ViewDefinition setQuery(java.lang.String query) {
@@ -86,8 +110,7 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
 
   /**
    * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1,
-   * c2) AS ...' syntax. Can only be set using BigQuery's standard SQL:
-   * https://cloud.google.com/bigquery/sql-reference/
+   * c2) AS ...' syntax. Can only be set for GoogleSQL views.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseExplicitColumnNames() {
@@ -96,8 +119,7 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
 
   /**
    * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1,
-   * c2) AS ...' syntax. Can only be set using BigQuery's standard SQL:
-   * https://cloud.google.com/bigquery/sql-reference/
+   * c2) AS ...' syntax. Can only be set for GoogleSQL views.
    * @param useExplicitColumnNames useExplicitColumnNames or {@code null} for none
    */
   public ViewDefinition setUseExplicitColumnNames(java.lang.Boolean useExplicitColumnNames) {
@@ -107,8 +129,9 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set
-   * to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-
-   * reference/ Queries and views that reference this view must use the same flag value.
+   * to false, the view will use BigQuery's GoogleSQL: https://cloud.google.com/bigquery/sql-
+   * reference/ Queries and views that reference this view must use the same flag value. A wrapper
+   * is used here because the default value is True.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseLegacySql() {
@@ -117,8 +140,9 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set
-   * to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-
-   * reference/ Queries and views that reference this view must use the same flag value.
+   * to false, the view will use BigQuery's GoogleSQL: https://cloud.google.com/bigquery/sql-
+   * reference/ Queries and views that reference this view must use the same flag value. A wrapper
+   * is used here because the default value is True.
    * @param useLegacySql useLegacySql or {@code null} for none
    */
   public ViewDefinition setUseLegacySql(java.lang.Boolean useLegacySql) {

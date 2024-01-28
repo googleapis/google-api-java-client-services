@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for BigtableOptions.
+ * Options specific to Google Cloud Bigtable data sources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class BigtableOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] List of column families to expose in the table schema along with their types. This
+   * Optional. List of column families to expose in the table schema along with their types. This
    * list restricts the column families that can be referenced in queries and specifies their value
    * types. You can use this list to do type conversions - see the 'type' field for more details. If
    * you leave this list empty, all column families are present in the table schema and their values
@@ -48,7 +48,7 @@ public final class BigtableOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Optional] If field is true, then the column families that are not specified in columnFamilies
+   * Optional. If field is true, then the column families that are not specified in columnFamilies
    * list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The
    * default value is false.
    * The value may be {@code null}.
@@ -57,7 +57,16 @@ public final class BigtableOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean ignoreUnspecifiedColumnFamilies;
 
   /**
-   * [Optional] If field is true, then the rowkey column families will be read and converted to
+   * Optional. If field is true, then each column family will be read as a single JSON column.
+   * Otherwise they are read as a repeated cell structure containing timestamp/value tuples. The
+   * default value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean outputColumnFamiliesAsJson;
+
+  /**
+   * Optional. If field is true, then the rowkey column families will be read and converted to
    * string. Otherwise they are read with BYTES type values and users need to manually cast them
    * with CAST if necessary. The default value is false.
    * The value may be {@code null}.
@@ -66,7 +75,7 @@ public final class BigtableOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean readRowkeyAsString;
 
   /**
-   * [Optional] List of column families to expose in the table schema along with their types. This
+   * Optional. List of column families to expose in the table schema along with their types. This
    * list restricts the column families that can be referenced in queries and specifies their value
    * types. You can use this list to do type conversions - see the 'type' field for more details. If
    * you leave this list empty, all column families are present in the table schema and their values
@@ -79,7 +88,7 @@ public final class BigtableOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Optional] List of column families to expose in the table schema along with their types. This
+   * Optional. List of column families to expose in the table schema along with their types. This
    * list restricts the column families that can be referenced in queries and specifies their value
    * types. You can use this list to do type conversions - see the 'type' field for more details. If
    * you leave this list empty, all column families are present in the table schema and their values
@@ -93,7 +102,7 @@ public final class BigtableOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Optional] If field is true, then the column families that are not specified in columnFamilies
+   * Optional. If field is true, then the column families that are not specified in columnFamilies
    * list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The
    * default value is false.
    * @return value or {@code null} for none
@@ -103,7 +112,7 @@ public final class BigtableOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Optional] If field is true, then the column families that are not specified in columnFamilies
+   * Optional. If field is true, then the column families that are not specified in columnFamilies
    * list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The
    * default value is false.
    * @param ignoreUnspecifiedColumnFamilies ignoreUnspecifiedColumnFamilies or {@code null} for none
@@ -114,7 +123,28 @@ public final class BigtableOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Optional] If field is true, then the rowkey column families will be read and converted to
+   * Optional. If field is true, then each column family will be read as a single JSON column.
+   * Otherwise they are read as a repeated cell structure containing timestamp/value tuples. The
+   * default value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOutputColumnFamiliesAsJson() {
+    return outputColumnFamiliesAsJson;
+  }
+
+  /**
+   * Optional. If field is true, then each column family will be read as a single JSON column.
+   * Otherwise they are read as a repeated cell structure containing timestamp/value tuples. The
+   * default value is false.
+   * @param outputColumnFamiliesAsJson outputColumnFamiliesAsJson or {@code null} for none
+   */
+  public BigtableOptions setOutputColumnFamiliesAsJson(java.lang.Boolean outputColumnFamiliesAsJson) {
+    this.outputColumnFamiliesAsJson = outputColumnFamiliesAsJson;
+    return this;
+  }
+
+  /**
+   * Optional. If field is true, then the rowkey column families will be read and converted to
    * string. Otherwise they are read with BYTES type values and users need to manually cast them
    * with CAST if necessary. The default value is false.
    * @return value or {@code null} for none
@@ -124,7 +154,7 @@ public final class BigtableOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Optional] If field is true, then the rowkey column families will be read and converted to
+   * Optional. If field is true, then the rowkey column families will be read and converted to
    * string. Otherwise they are read with BYTES type values and users need to manually cast them
    * with CAST if necessary. The default value is false.
    * @param readRowkeyAsString readRowkeyAsString or {@code null} for none

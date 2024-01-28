@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JobStatistics3.
+ * Statistics for a load job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class JobStatistics3 extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] The number of bad records encountered. Note that if the job has failed because of
+   * Output only. The number of bad records encountered. Note that if the job has failed because of
    * more bad records encountered than the maximum allowed in the load job configuration, then this
    * number can be less than the total number of bad records present in the input data.
    * The value may be {@code null}.
@@ -39,21 +39,21 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   private java.lang.Long badRecords;
 
   /**
-   * [Output-only] Number of bytes of source data in a load job.
+   * Output only. Number of bytes of source data in a load job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long inputFileBytes;
 
   /**
-   * [Output-only] Number of source files in a load job.
+   * Output only. Number of source files in a load job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long inputFiles;
 
   /**
-   * [Output-only] Size of the loaded data in bytes. Note that while a load job is in the running
+   * Output only. Size of the loaded data in bytes. Note that while a load job is in the running
    * state, this value may change.
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   private java.lang.Long outputBytes;
 
   /**
-   * [Output-only] Number of rows imported in a load job. Note that while an import job is in the
+   * Output only. Number of rows imported in a load job. Note that while an import job is in the
    * running state, this value may change.
    * The value may be {@code null}.
    */
@@ -69,7 +69,14 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   private java.lang.Long outputRows;
 
   /**
-   * [Output-only] The number of bad records encountered. Note that if the job has failed because of
+   * Output only. Describes a timeline of job execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QueryTimelineSample> timeline;
+
+  /**
+   * Output only. The number of bad records encountered. Note that if the job has failed because of
    * more bad records encountered than the maximum allowed in the load job configuration, then this
    * number can be less than the total number of bad records present in the input data.
    * @return value or {@code null} for none
@@ -79,7 +86,7 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] The number of bad records encountered. Note that if the job has failed because of
+   * Output only. The number of bad records encountered. Note that if the job has failed because of
    * more bad records encountered than the maximum allowed in the load job configuration, then this
    * number can be less than the total number of bad records present in the input data.
    * @param badRecords badRecords or {@code null} for none
@@ -90,7 +97,7 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of bytes of source data in a load job.
+   * Output only. Number of bytes of source data in a load job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getInputFileBytes() {
@@ -98,7 +105,7 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of bytes of source data in a load job.
+   * Output only. Number of bytes of source data in a load job.
    * @param inputFileBytes inputFileBytes or {@code null} for none
    */
   public JobStatistics3 setInputFileBytes(java.lang.Long inputFileBytes) {
@@ -107,7 +114,7 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of source files in a load job.
+   * Output only. Number of source files in a load job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getInputFiles() {
@@ -115,7 +122,7 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of source files in a load job.
+   * Output only. Number of source files in a load job.
    * @param inputFiles inputFiles or {@code null} for none
    */
   public JobStatistics3 setInputFiles(java.lang.Long inputFiles) {
@@ -124,7 +131,7 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Size of the loaded data in bytes. Note that while a load job is in the running
+   * Output only. Size of the loaded data in bytes. Note that while a load job is in the running
    * state, this value may change.
    * @return value or {@code null} for none
    */
@@ -133,7 +140,7 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Size of the loaded data in bytes. Note that while a load job is in the running
+   * Output only. Size of the loaded data in bytes. Note that while a load job is in the running
    * state, this value may change.
    * @param outputBytes outputBytes or {@code null} for none
    */
@@ -143,7 +150,7 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of rows imported in a load job. Note that while an import job is in the
+   * Output only. Number of rows imported in a load job. Note that while an import job is in the
    * running state, this value may change.
    * @return value or {@code null} for none
    */
@@ -152,12 +159,29 @@ public final class JobStatistics3 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of rows imported in a load job. Note that while an import job is in the
+   * Output only. Number of rows imported in a load job. Note that while an import job is in the
    * running state, this value may change.
    * @param outputRows outputRows or {@code null} for none
    */
   public JobStatistics3 setOutputRows(java.lang.Long outputRows) {
     this.outputRows = outputRows;
+    return this;
+  }
+
+  /**
+   * Output only. Describes a timeline of job execution.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QueryTimelineSample> getTimeline() {
+    return timeline;
+  }
+
+  /**
+   * Output only. Describes a timeline of job execution.
+   * @param timeline timeline or {@code null} for none
+   */
+  public JobStatistics3 setTimeline(java.util.List<QueryTimelineSample> timeline) {
+    this.timeline = timeline;
     return this;
   }
 

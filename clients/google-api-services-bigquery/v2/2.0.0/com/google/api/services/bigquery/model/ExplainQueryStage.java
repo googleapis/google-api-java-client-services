@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for ExplainQueryStage.
+ * A single stage of query execution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -35,6 +35,13 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long completedParallelInputs;
+
+  /**
+   * Output only. Compute mode for this stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String computeMode;
 
   /**
    * Milliseconds the average shard spent on CPU-bound tasks.
@@ -65,14 +72,14 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   private java.lang.Double computeRatioMax;
 
   /**
-   * Stage end time represented as milliseconds since epoch.
+   * Stage end time represented as milliseconds since the epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long endMs;
 
   /**
-   * Unique ID for stage within plan.
+   * Unique ID for the stage within the plan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -86,14 +93,14 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.Long> inputStages;
 
   /**
-   * Human-readable name for stage.
+   * Human-readable name for the stage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Number of parallel input segments to be processed.
+   * Number of parallel input segments to be processed
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -163,14 +170,14 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   private java.lang.Long slotMs;
 
   /**
-   * Stage start time represented as milliseconds since epoch.
+   * Stage start time represented as milliseconds since the epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long startMs;
 
   /**
-   * Current status for the stage.
+   * Current status for this stage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,6 +264,23 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Output only. Compute mode for this stage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getComputeMode() {
+    return computeMode;
+  }
+
+  /**
+   * Output only. Compute mode for this stage.
+   * @param computeMode computeMode or {@code null} for none
+   */
+  public ExplainQueryStage setComputeMode(java.lang.String computeMode) {
+    this.computeMode = computeMode;
+    return this;
+  }
+
+  /**
    * Milliseconds the average shard spent on CPU-bound tasks.
    * @return value or {@code null} for none
    */
@@ -325,7 +349,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Stage end time represented as milliseconds since epoch.
+   * Stage end time represented as milliseconds since the epoch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEndMs() {
@@ -333,7 +357,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Stage end time represented as milliseconds since epoch.
+   * Stage end time represented as milliseconds since the epoch.
    * @param endMs endMs or {@code null} for none
    */
   public ExplainQueryStage setEndMs(java.lang.Long endMs) {
@@ -342,7 +366,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Unique ID for stage within plan.
+   * Unique ID for the stage within the plan.
    * @return value or {@code null} for none
    */
   public java.lang.Long getId() {
@@ -350,7 +374,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Unique ID for stage within plan.
+   * Unique ID for the stage within the plan.
    * @param id id or {@code null} for none
    */
   public ExplainQueryStage setId(java.lang.Long id) {
@@ -376,7 +400,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Human-readable name for stage.
+   * Human-readable name for the stage.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -384,7 +408,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Human-readable name for stage.
+   * Human-readable name for the stage.
    * @param name name or {@code null} for none
    */
   public ExplainQueryStage setName(java.lang.String name) {
@@ -393,7 +417,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of parallel input segments to be processed.
+   * Number of parallel input segments to be processed
    * @return value or {@code null} for none
    */
   public java.lang.Long getParallelInputs() {
@@ -401,7 +425,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of parallel input segments to be processed.
+   * Number of parallel input segments to be processed
    * @param parallelInputs parallelInputs or {@code null} for none
    */
   public ExplainQueryStage setParallelInputs(java.lang.Long parallelInputs) {
@@ -563,7 +587,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Stage start time represented as milliseconds since epoch.
+   * Stage start time represented as milliseconds since the epoch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getStartMs() {
@@ -571,7 +595,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Stage start time represented as milliseconds since epoch.
+   * Stage start time represented as milliseconds since the epoch.
    * @param startMs startMs or {@code null} for none
    */
   public ExplainQueryStage setStartMs(java.lang.Long startMs) {
@@ -580,7 +604,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Current status for the stage.
+   * Current status for this stage.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -588,7 +612,7 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Current status for the stage.
+   * Current status for this stage.
    * @param status status or {@code null} for none
    */
   public ExplainQueryStage setStatus(java.lang.String status) {

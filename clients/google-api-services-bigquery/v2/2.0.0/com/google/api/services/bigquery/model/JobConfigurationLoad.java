@@ -17,7 +17,8 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JobConfigurationLoad.
+ * JobConfigurationLoad contains the configuration properties for loading data into a destination
+ * table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +31,7 @@ package com.google.api.services.bigquery.model;
 public final class JobConfigurationLoad extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] Accept rows that are missing trailing optional columns. The missing values are
+   * Optional. Accept rows that are missing trailing optional columns. The missing values are
    * treated as nulls. If false, records with missing trailing columns are treated as bad records,
    * and if there are too many bad records, an invalid error is returned in the job result. The
    * default value is false. Only applicable to CSV, ignored for other formats.
@@ -48,7 +49,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.Boolean allowQuotedNewlines;
 
   /**
-   * [Optional] Indicates if we should automatically infer the options and schema for CSV and JSON
+   * Optional. Indicates if we should automatically infer the options and schema for CSV and JSON
    * sources.
    * The value may be {@code null}.
    */
@@ -56,15 +57,16 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.Boolean autodetect;
 
   /**
-   * [Beta] Clustering specification for the destination table. Must be specified with time-based
-   * partitioning, data in the table will be first partitioned and subsequently clustered.
+   * Clustering specification for the destination table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Clustering clustering;
 
   /**
-   * Connection properties.
+   * Optional. Connection properties which can modify the load job behavior. Currently, only the
+   * 'session_id' connection property is supported, and is used to resolve _SESSION appearing as the
+   * dataset id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +79,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Specifies whether the job is allowed to create new tables. The following values are
-   * supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+   * Optional. Specifies whether the job is allowed to create new tables. The following values are
+   * supported: * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. *
    * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
    * the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions
    * occur as one atomic update upon job completion.
@@ -88,27 +90,30 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String createDisposition;
 
   /**
-   * If true, creates a new session, where session id will be a server generated random id. If
-   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs the
-   * load job in non-session mode.
+   * Optional. If this property is true, the job creates a new session using a randomly generated
+   * session_id. To continue using a created session with subsequent queries, pass the existing
+   * session identifier as a `ConnectionProperty` value. The session identifier is returned as part
+   * of the `SessionInfo` message within the query statistics. The new session's location will be
+   * set to `Job.JobReference.location` if it is present, otherwise it's set to the default location
+   * based on existing routing logic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean createSession;
 
   /**
-   * [Optional] Defines the list of possible SQL data types to which the source decimal values are
-   * converted. This list and the precision and the scale parameters of the decimal field determine
-   * the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in
-   * the specified list and if it supports the precision and the scale. STRING supports all
-   * precision and scale values. If none of the listed types supports the precision and the scale,
-   * the type supporting the widest range in the specified list is picked, and if a value exceeds
-   * the supported range when reading the data, an error will be thrown. Example: Suppose the value
-   * of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9)
-   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot
-   * hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds
-   * supported range). This field cannot contain duplicate types. The order of the types in this
-   * field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
+   * Defines the list of possible SQL data types to which the source decimal values are converted.
+   * This list and the precision and the scale parameters of the decimal field determine the target
+   * type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the
+   * specified list and if it supports the precision and the scale. STRING supports all precision
+   * and scale values. If none of the listed types supports the precision and the scale, the type
+   * supporting the widest range in the specified list is picked, and if a value exceeds the
+   * supported range when reading the data, an error will be thrown. Example: Suppose the value of
+   * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
+   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
+   * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
+   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
    * The value may be {@code null}.
@@ -117,7 +122,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> decimalTargetTypes;
 
   /**
-   * Custom encryption configuration (e.g., Cloud KMS keys).
+   * Custom encryption configuration (e.g., Cloud KMS keys)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,82 +136,93 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private TableReference destinationTable;
 
   /**
-   * [Beta] [Optional] Properties with which to create the destination table if it is new.
+   * Optional. [Experimental] Properties with which to create the destination table if it is new.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DestinationTableProperties destinationTableProperties;
 
   /**
-   * [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
-   * The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split
-   * using the values of the quote and fieldDelimiter properties.
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
+   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
+   * after the raw, binary data has been split using the values of the `quote` and `fieldDelimiter`
+   * properties. If you don't specify an encoding, or if you specify a UTF-8 encoding when the CSV
+   * file is not UTF-8 encoded, BigQuery attempts to convert the data to UTF-8. Generally, your data
+   * loads successfully, but it may not match byte-for-byte what you expect. To avoid this, specify
+   * the correct encoding by using the `--encoding` flag. If BigQuery can't convert a character
+   * other than the ASCII `0` character, BigQuery converts the character to the standard Unicode
+   * replacement character: �.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String encoding;
 
   /**
-   * [Optional] The separator for fields in a CSV file. The separator can be any ISO-8859-1 single-
-   * byte character. To use a character in the range 128-255, you must encode the character as UTF8.
-   * BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the
-   * encoded string to split the data in its raw, binary state. BigQuery also supports the escape
-   * sequence "\t" to specify a tab separator. The default value is a comma (',').
+   * Optional. The separator character for fields in a CSV file. The separator is interpreted as a
+   * single byte. For files encoded in ISO-8859-1, any single character can be used as a separator.
+   * For files encoded in UTF-8, characters represented in decimal range 1-127 (U+0001-U+007F) can
+   * be used without any modification. UTF-8 characters encoded with multiple bytes (i.e. U+0080 and
+   * above) will have only the first byte used for separating fields. The remaining bytes will be
+   * treated as a part of the field. BigQuery also supports the escape sequence "\t" (U+0009) to
+   * specify a tab separator. The default value is comma (",", U+002C).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldDelimiter;
 
   /**
-   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
-   * default source URIs are expanded against the underlying storage. Other options include
-   * specifying manifest files. Only applicable to object storage systems.
+   * Optional. Specifies how source URIs are interpreted for constructing the file set to load. By
+   * default, source URIs are expanded against the underlying storage. You can also specify manifest
+   * files to control how the file set is constructed. This option is only applicable to object
+   * storage systems.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileSetSpecType;
 
   /**
-   * [Optional] Options to configure hive partitioning support.
+   * Optional. When set, configures hive partitioning support. Not all storage formats support hive
+   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as
+   * will providing an invalid specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HivePartitioningOptions hivePartitioningOptions;
 
   /**
-   * [Optional] Indicates if BigQuery should allow extra values that are not represented in the
-   * table schema. If true, the extra values are ignored. If false, records with extra columns are
-   * treated as bad records, and if there are too many bad records, an invalid error is returned in
-   * the job result. The default value is false. The sourceFormat property determines what BigQuery
-   * treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column
-   * names
+   * Optional. Indicates if BigQuery should allow extra values that are not represented in the table
+   * schema. If true, the extra values are ignored. If false, records with extra columns are treated
+   * as bad records, and if there are too many bad records, an invalid error is returned in the job
+   * result. The default value is false. The sourceFormat property determines what BigQuery treats
+   * as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names
+   * in the table schema Avro, Parquet, ORC: Fields in the file schema that don't exist in the table
+   * schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ignoreUnknownValues;
 
   /**
-   * [Optional] If sourceFormat is set to newline-delimited JSON, indicates whether it should be
-   * processed as a JSON variant such as GeoJSON. For a sourceFormat other than JSON, omit this
-   * field. If the sourceFormat is newline-delimited JSON: - for newline-delimited GeoJSON: set to
-   * GEOJSON.
+   * Optional. Load option to be used together with source_format newline-delimited JSON to indicate
+   * that a variant of JSON is being loaded. To load newline-delimited GeoJSON, specify GEOJSON (and
+   * source_format must be set to NEWLINE_DELIMITED_JSON).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String jsonExtension;
 
   /**
-   * [Optional] The maximum number of bad records that BigQuery can ignore when running the job. If
+   * Optional. The maximum number of bad records that BigQuery can ignore when running the job. If
    * the number of bad records exceeds this value, an invalid error is returned in the job result.
-   * This is only valid for CSV and JSON. The default value is 0, which requires that all records
-   * are valid.
+   * The default value is 0, which requires that all records are valid. This is only supported for
+   * CSV and NEWLINE_DELIMITED_JSON file formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxBadRecords;
 
   /**
-   * [Optional] Specifies a string that represents a null value in a CSV file. For example, if you
+   * Optional. Specifies a string that represents a null value in a CSV file. For example, if you
    * specify "\N", BigQuery interprets "\N" as a null value when loading a CSV file. The default
    * value is the empty string. If you set this property to a custom value, BigQuery throws an error
    * if an empty string is present for all data types except for STRING and BYTE. For STRING and
@@ -217,16 +233,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String nullMarker;
 
   /**
-   * [Optional] Options to configure parquet support.
+   * Optional. Additional properties to set if sourceFormat is set to PARQUET.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ParquetOptions parquetOptions;
 
   /**
-   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
-   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
-   * other formats.
+   * Optional. When sourceFormat is set to "CSV", this indicates whether the embedded ASCII control
+   * characters (the first 32 characters in the ASCII-table, from '\x00' to '\x1F') are preserved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,34 +259,38 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> projectionFields;
 
   /**
-   * [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the
+   * Optional. The value that is used to quote data sections in a CSV file. BigQuery converts the
    * string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the
    * data in its raw, binary state. The default value is a double-quote ('"'). If your data does not
    * contain quoted sections, set the property value to an empty string. If your data contains
-   * quoted newline characters, you must also set the allowQuotedNewlines property to true.
+   * quoted newline characters, you must also set the allowQuotedNewlines property to true. To
+   * include the specific quote character within a quoted value, precede it with an additional
+   * matching quote character. For example, if you want to escape the default character ' " ', use '
+   * "" '. @default "
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String quote;
 
   /**
-   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
-   * and rangePartitioning should be specified.
+   * Range partitioning specification for the destination table. Only one of timePartitioning and
+   * rangePartitioning should be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RangePartitioning rangePartitioning;
 
   /**
-   * User provided referencing file with the expected reader schema, Available for the format: AVRO,
-   * PARQUET, ORC.
+   * Optional. The user can provide a reference file with the reader schema. This file is only
+   * loaded if it is part of source URIs, but is not loaded otherwise. It is enabled for the
+   * following formats: AVRO, PARQUET, ORC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String referenceFileSchemaUri;
 
   /**
-   * [Optional] The schema for the destination table. The schema can be omitted if the destination
+   * Optional. The schema for the destination table. The schema can be omitted if the destination
    * table already exists, or if you're loading data from Google Cloud Datastore.
    * The value may be {@code null}.
    */
@@ -299,8 +318,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    * supported in two cases: when writeDisposition is WRITE_APPEND; when writeDisposition is
    * WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition
    * decorators. For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of
-   * the following values are specified: ALLOW_FIELD_ADDITION: allow adding a nullable field to the
-   * schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to
+   * the following values are specified: * ALLOW_FIELD_ADDITION: allow adding a nullable field to
+   * the schema. * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to
    * nullable.
    * The value may be {@code null}.
    */
@@ -308,16 +327,22 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> schemaUpdateOptions;
 
   /**
-   * [Optional] The number of rows at the top of a CSV file that BigQuery will skip when loading the
+   * Optional. The number of rows at the top of a CSV file that BigQuery will skip when loading the
    * data. The default value is 0. This property is useful if you have header rows in the file that
-   * should be skipped.
+   * should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows
+   * unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
+   * the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows
+   * is 0 - Instructs autodetect that there are no headers and data should be read starting from the
+   * first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in
+   * row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract
+   * column names for the detected schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer skipLeadingRows;
 
   /**
-   * [Optional] The format of the data files. For CSV files, specify "CSV". For datastore backups,
+   * Optional. The format of the data files. For CSV files, specify "CSV". For datastore backups,
    * specify "DATASTORE_BACKUP". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For
    * Avro, specify "AVRO". For parquet, specify "PARQUET". For orc, specify "ORC". The default value
    * is CSV.
@@ -347,29 +372,30 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private TimePartitioning timePartitioning;
 
   /**
-   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
-   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
-   * (for example, INTEGER).
+   * Optional. If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the
+   * corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for
+   * example, INTEGER).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useAvroLogicalTypes;
 
   /**
-   * [Optional] Specifies the action that occurs if the destination table already exists. The
-   * following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery
-   * overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data
-   * to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error
-   * is returned in the job result. The default value is WRITE_APPEND. Each action is atomic and
-   * only occurs if BigQuery is able to complete the job successfully. Creation, truncation and
-   * append actions occur as one atomic update upon job completion.
+   * Optional. Specifies the action that occurs if the destination table already exists. The
+   * following values are supported: * WRITE_TRUNCATE: If the table already exists, BigQuery
+   * overwrites the data, removes the constraints and uses the schema from the load job. *
+   * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. *
+   * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in
+   * the job result. The default value is WRITE_APPEND. Each action is atomic and only occurs if
+   * BigQuery is able to complete the job successfully. Creation, truncation and append actions
+   * occur as one atomic update upon job completion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String writeDisposition;
 
   /**
-   * [Optional] Accept rows that are missing trailing optional columns. The missing values are
+   * Optional. Accept rows that are missing trailing optional columns. The missing values are
    * treated as nulls. If false, records with missing trailing columns are treated as bad records,
    * and if there are too many bad records, an invalid error is returned in the job result. The
    * default value is false. Only applicable to CSV, ignored for other formats.
@@ -380,7 +406,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Accept rows that are missing trailing optional columns. The missing values are
+   * Optional. Accept rows that are missing trailing optional columns. The missing values are
    * treated as nulls. If false, records with missing trailing columns are treated as bad records,
    * and if there are too many bad records, an invalid error is returned in the job result. The
    * default value is false. Only applicable to CSV, ignored for other formats.
@@ -411,7 +437,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Indicates if we should automatically infer the options and schema for CSV and JSON
+   * Optional. Indicates if we should automatically infer the options and schema for CSV and JSON
    * sources.
    * @return value or {@code null} for none
    */
@@ -420,7 +446,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Indicates if we should automatically infer the options and schema for CSV and JSON
+   * Optional. Indicates if we should automatically infer the options and schema for CSV and JSON
    * sources.
    * @param autodetect autodetect or {@code null} for none
    */
@@ -430,8 +456,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Beta] Clustering specification for the destination table. Must be specified with time-based
-   * partitioning, data in the table will be first partitioned and subsequently clustered.
+   * Clustering specification for the destination table.
    * @return value or {@code null} for none
    */
   public Clustering getClustering() {
@@ -439,8 +464,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Beta] Clustering specification for the destination table. Must be specified with time-based
-   * partitioning, data in the table will be first partitioned and subsequently clustered.
+   * Clustering specification for the destination table.
    * @param clustering clustering or {@code null} for none
    */
   public JobConfigurationLoad setClustering(Clustering clustering) {
@@ -449,7 +473,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Connection properties.
+   * Optional. Connection properties which can modify the load job behavior. Currently, only the
+   * 'session_id' connection property is supported, and is used to resolve _SESSION appearing as the
+   * dataset id.
    * @return value or {@code null} for none
    */
   public java.util.List<ConnectionProperty> getConnectionProperties() {
@@ -457,7 +483,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Connection properties.
+   * Optional. Connection properties which can modify the load job behavior. Currently, only the
+   * 'session_id' connection property is supported, and is used to resolve _SESSION appearing as the
+   * dataset id.
    * @param connectionProperties connectionProperties or {@code null} for none
    */
   public JobConfigurationLoad setConnectionProperties(java.util.List<ConnectionProperty> connectionProperties) {
@@ -466,8 +494,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Specifies whether the job is allowed to create new tables. The following values are
-   * supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+   * Optional. Specifies whether the job is allowed to create new tables. The following values are
+   * supported: * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. *
    * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
    * the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions
    * occur as one atomic update upon job completion.
@@ -478,8 +506,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Specifies whether the job is allowed to create new tables. The following values are
-   * supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+   * Optional. Specifies whether the job is allowed to create new tables. The following values are
+   * supported: * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. *
    * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
    * the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions
    * occur as one atomic update upon job completion.
@@ -491,9 +519,12 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * If true, creates a new session, where session id will be a server generated random id. If
-   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs the
-   * load job in non-session mode.
+   * Optional. If this property is true, the job creates a new session using a randomly generated
+   * session_id. To continue using a created session with subsequent queries, pass the existing
+   * session identifier as a `ConnectionProperty` value. The session identifier is returned as part
+   * of the `SessionInfo` message within the query statistics. The new session's location will be
+   * set to `Job.JobReference.location` if it is present, otherwise it's set to the default location
+   * based on existing routing logic.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCreateSession() {
@@ -501,9 +532,12 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * If true, creates a new session, where session id will be a server generated random id. If
-   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs the
-   * load job in non-session mode.
+   * Optional. If this property is true, the job creates a new session using a randomly generated
+   * session_id. To continue using a created session with subsequent queries, pass the existing
+   * session identifier as a `ConnectionProperty` value. The session identifier is returned as part
+   * of the `SessionInfo` message within the query statistics. The new session's location will be
+   * set to `Job.JobReference.location` if it is present, otherwise it's set to the default location
+   * based on existing routing logic.
    * @param createSession createSession or {@code null} for none
    */
   public JobConfigurationLoad setCreateSession(java.lang.Boolean createSession) {
@@ -512,18 +546,18 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Defines the list of possible SQL data types to which the source decimal values are
-   * converted. This list and the precision and the scale parameters of the decimal field determine
-   * the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in
-   * the specified list and if it supports the precision and the scale. STRING supports all
-   * precision and scale values. If none of the listed types supports the precision and the scale,
-   * the type supporting the widest range in the specified list is picked, and if a value exceeds
-   * the supported range when reading the data, an error will be thrown. Example: Suppose the value
-   * of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9)
-   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot
-   * hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds
-   * supported range). This field cannot contain duplicate types. The order of the types in this
-   * field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
+   * Defines the list of possible SQL data types to which the source decimal values are converted.
+   * This list and the precision and the scale parameters of the decimal field determine the target
+   * type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the
+   * specified list and if it supports the precision and the scale. STRING supports all precision
+   * and scale values. If none of the listed types supports the precision and the scale, the type
+   * supporting the widest range in the specified list is picked, and if a value exceeds the
+   * supported range when reading the data, an error will be thrown. Example: Suppose the value of
+   * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
+   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
+   * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
+   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
    * @return value or {@code null} for none
@@ -533,18 +567,18 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Defines the list of possible SQL data types to which the source decimal values are
-   * converted. This list and the precision and the scale parameters of the decimal field determine
-   * the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in
-   * the specified list and if it supports the precision and the scale. STRING supports all
-   * precision and scale values. If none of the listed types supports the precision and the scale,
-   * the type supporting the widest range in the specified list is picked, and if a value exceeds
-   * the supported range when reading the data, an error will be thrown. Example: Suppose the value
-   * of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9)
-   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot
-   * hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds
-   * supported range). This field cannot contain duplicate types. The order of the types in this
-   * field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
+   * Defines the list of possible SQL data types to which the source decimal values are converted.
+   * This list and the precision and the scale parameters of the decimal field determine the target
+   * type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the
+   * specified list and if it supports the precision and the scale. STRING supports all precision
+   * and scale values. If none of the listed types supports the precision and the scale, the type
+   * supporting the widest range in the specified list is picked, and if a value exceeds the
+   * supported range when reading the data, an error will be thrown. Example: Suppose the value of
+   * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
+   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
+   * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
+   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
    * @param decimalTargetTypes decimalTargetTypes or {@code null} for none
@@ -555,7 +589,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Custom encryption configuration (e.g., Cloud KMS keys).
+   * Custom encryption configuration (e.g., Cloud KMS keys)
    * @return value or {@code null} for none
    */
   public EncryptionConfiguration getDestinationEncryptionConfiguration() {
@@ -563,7 +597,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Custom encryption configuration (e.g., Cloud KMS keys).
+   * Custom encryption configuration (e.g., Cloud KMS keys)
    * @param destinationEncryptionConfiguration destinationEncryptionConfiguration or {@code null} for none
    */
   public JobConfigurationLoad setDestinationEncryptionConfiguration(EncryptionConfiguration destinationEncryptionConfiguration) {
@@ -589,7 +623,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Beta] [Optional] Properties with which to create the destination table if it is new.
+   * Optional. [Experimental] Properties with which to create the destination table if it is new.
    * @return value or {@code null} for none
    */
   public DestinationTableProperties getDestinationTableProperties() {
@@ -597,7 +631,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Beta] [Optional] Properties with which to create the destination table if it is new.
+   * Optional. [Experimental] Properties with which to create the destination table if it is new.
    * @param destinationTableProperties destinationTableProperties or {@code null} for none
    */
   public JobConfigurationLoad setDestinationTableProperties(DestinationTableProperties destinationTableProperties) {
@@ -606,9 +640,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
-   * The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split
-   * using the values of the quote and fieldDelimiter properties.
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
+   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
+   * after the raw, binary data has been split using the values of the `quote` and `fieldDelimiter`
+   * properties. If you don't specify an encoding, or if you specify a UTF-8 encoding when the CSV
+   * file is not UTF-8 encoded, BigQuery attempts to convert the data to UTF-8. Generally, your data
+   * loads successfully, but it may not match byte-for-byte what you expect. To avoid this, specify
+   * the correct encoding by using the `--encoding` flag. If BigQuery can't convert a character
+   * other than the ASCII `0` character, BigQuery converts the character to the standard Unicode
+   * replacement character: �.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncoding() {
@@ -616,9 +656,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
-   * The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split
-   * using the values of the quote and fieldDelimiter properties.
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
+   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
+   * after the raw, binary data has been split using the values of the `quote` and `fieldDelimiter`
+   * properties. If you don't specify an encoding, or if you specify a UTF-8 encoding when the CSV
+   * file is not UTF-8 encoded, BigQuery attempts to convert the data to UTF-8. Generally, your data
+   * loads successfully, but it may not match byte-for-byte what you expect. To avoid this, specify
+   * the correct encoding by using the `--encoding` flag. If BigQuery can't convert a character
+   * other than the ASCII `0` character, BigQuery converts the character to the standard Unicode
+   * replacement character: �.
    * @param encoding encoding or {@code null} for none
    */
   public JobConfigurationLoad setEncoding(java.lang.String encoding) {
@@ -627,11 +673,13 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The separator for fields in a CSV file. The separator can be any ISO-8859-1 single-
-   * byte character. To use a character in the range 128-255, you must encode the character as UTF8.
-   * BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the
-   * encoded string to split the data in its raw, binary state. BigQuery also supports the escape
-   * sequence "\t" to specify a tab separator. The default value is a comma (',').
+   * Optional. The separator character for fields in a CSV file. The separator is interpreted as a
+   * single byte. For files encoded in ISO-8859-1, any single character can be used as a separator.
+   * For files encoded in UTF-8, characters represented in decimal range 1-127 (U+0001-U+007F) can
+   * be used without any modification. UTF-8 characters encoded with multiple bytes (i.e. U+0080 and
+   * above) will have only the first byte used for separating fields. The remaining bytes will be
+   * treated as a part of the field. BigQuery also supports the escape sequence "\t" (U+0009) to
+   * specify a tab separator. The default value is comma (",", U+002C).
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldDelimiter() {
@@ -639,11 +687,13 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The separator for fields in a CSV file. The separator can be any ISO-8859-1 single-
-   * byte character. To use a character in the range 128-255, you must encode the character as UTF8.
-   * BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the
-   * encoded string to split the data in its raw, binary state. BigQuery also supports the escape
-   * sequence "\t" to specify a tab separator. The default value is a comma (',').
+   * Optional. The separator character for fields in a CSV file. The separator is interpreted as a
+   * single byte. For files encoded in ISO-8859-1, any single character can be used as a separator.
+   * For files encoded in UTF-8, characters represented in decimal range 1-127 (U+0001-U+007F) can
+   * be used without any modification. UTF-8 characters encoded with multiple bytes (i.e. U+0080 and
+   * above) will have only the first byte used for separating fields. The remaining bytes will be
+   * treated as a part of the field. BigQuery also supports the escape sequence "\t" (U+0009) to
+   * specify a tab separator. The default value is comma (",", U+002C).
    * @param fieldDelimiter fieldDelimiter or {@code null} for none
    */
   public JobConfigurationLoad setFieldDelimiter(java.lang.String fieldDelimiter) {
@@ -652,9 +702,10 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
-   * default source URIs are expanded against the underlying storage. Other options include
-   * specifying manifest files. Only applicable to object storage systems.
+   * Optional. Specifies how source URIs are interpreted for constructing the file set to load. By
+   * default, source URIs are expanded against the underlying storage. You can also specify manifest
+   * files to control how the file set is constructed. This option is only applicable to object
+   * storage systems.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileSetSpecType() {
@@ -662,9 +713,10 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
-   * default source URIs are expanded against the underlying storage. Other options include
-   * specifying manifest files. Only applicable to object storage systems.
+   * Optional. Specifies how source URIs are interpreted for constructing the file set to load. By
+   * default, source URIs are expanded against the underlying storage. You can also specify manifest
+   * files to control how the file set is constructed. This option is only applicable to object
+   * storage systems.
    * @param fileSetSpecType fileSetSpecType or {@code null} for none
    */
   public JobConfigurationLoad setFileSetSpecType(java.lang.String fileSetSpecType) {
@@ -673,7 +725,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Options to configure hive partitioning support.
+   * Optional. When set, configures hive partitioning support. Not all storage formats support hive
+   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as
+   * will providing an invalid specification.
    * @return value or {@code null} for none
    */
   public HivePartitioningOptions getHivePartitioningOptions() {
@@ -681,7 +735,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Options to configure hive partitioning support.
+   * Optional. When set, configures hive partitioning support. Not all storage formats support hive
+   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as
+   * will providing an invalid specification.
    * @param hivePartitioningOptions hivePartitioningOptions or {@code null} for none
    */
   public JobConfigurationLoad setHivePartitioningOptions(HivePartitioningOptions hivePartitioningOptions) {
@@ -690,12 +746,13 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Indicates if BigQuery should allow extra values that are not represented in the
-   * table schema. If true, the extra values are ignored. If false, records with extra columns are
-   * treated as bad records, and if there are too many bad records, an invalid error is returned in
-   * the job result. The default value is false. The sourceFormat property determines what BigQuery
-   * treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column
-   * names
+   * Optional. Indicates if BigQuery should allow extra values that are not represented in the table
+   * schema. If true, the extra values are ignored. If false, records with extra columns are treated
+   * as bad records, and if there are too many bad records, an invalid error is returned in the job
+   * result. The default value is false. The sourceFormat property determines what BigQuery treats
+   * as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names
+   * in the table schema Avro, Parquet, ORC: Fields in the file schema that don't exist in the table
+   * schema.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreUnknownValues() {
@@ -703,12 +760,13 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Indicates if BigQuery should allow extra values that are not represented in the
-   * table schema. If true, the extra values are ignored. If false, records with extra columns are
-   * treated as bad records, and if there are too many bad records, an invalid error is returned in
-   * the job result. The default value is false. The sourceFormat property determines what BigQuery
-   * treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column
-   * names
+   * Optional. Indicates if BigQuery should allow extra values that are not represented in the table
+   * schema. If true, the extra values are ignored. If false, records with extra columns are treated
+   * as bad records, and if there are too many bad records, an invalid error is returned in the job
+   * result. The default value is false. The sourceFormat property determines what BigQuery treats
+   * as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names
+   * in the table schema Avro, Parquet, ORC: Fields in the file schema that don't exist in the table
+   * schema.
    * @param ignoreUnknownValues ignoreUnknownValues or {@code null} for none
    */
   public JobConfigurationLoad setIgnoreUnknownValues(java.lang.Boolean ignoreUnknownValues) {
@@ -717,10 +775,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] If sourceFormat is set to newline-delimited JSON, indicates whether it should be
-   * processed as a JSON variant such as GeoJSON. For a sourceFormat other than JSON, omit this
-   * field. If the sourceFormat is newline-delimited JSON: - for newline-delimited GeoJSON: set to
-   * GEOJSON.
+   * Optional. Load option to be used together with source_format newline-delimited JSON to indicate
+   * that a variant of JSON is being loaded. To load newline-delimited GeoJSON, specify GEOJSON (and
+   * source_format must be set to NEWLINE_DELIMITED_JSON).
    * @return value or {@code null} for none
    */
   public java.lang.String getJsonExtension() {
@@ -728,10 +785,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] If sourceFormat is set to newline-delimited JSON, indicates whether it should be
-   * processed as a JSON variant such as GeoJSON. For a sourceFormat other than JSON, omit this
-   * field. If the sourceFormat is newline-delimited JSON: - for newline-delimited GeoJSON: set to
-   * GEOJSON.
+   * Optional. Load option to be used together with source_format newline-delimited JSON to indicate
+   * that a variant of JSON is being loaded. To load newline-delimited GeoJSON, specify GEOJSON (and
+   * source_format must be set to NEWLINE_DELIMITED_JSON).
    * @param jsonExtension jsonExtension or {@code null} for none
    */
   public JobConfigurationLoad setJsonExtension(java.lang.String jsonExtension) {
@@ -740,10 +796,10 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The maximum number of bad records that BigQuery can ignore when running the job. If
+   * Optional. The maximum number of bad records that BigQuery can ignore when running the job. If
    * the number of bad records exceeds this value, an invalid error is returned in the job result.
-   * This is only valid for CSV and JSON. The default value is 0, which requires that all records
-   * are valid.
+   * The default value is 0, which requires that all records are valid. This is only supported for
+   * CSV and NEWLINE_DELIMITED_JSON file formats.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxBadRecords() {
@@ -751,10 +807,10 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The maximum number of bad records that BigQuery can ignore when running the job. If
+   * Optional. The maximum number of bad records that BigQuery can ignore when running the job. If
    * the number of bad records exceeds this value, an invalid error is returned in the job result.
-   * This is only valid for CSV and JSON. The default value is 0, which requires that all records
-   * are valid.
+   * The default value is 0, which requires that all records are valid. This is only supported for
+   * CSV and NEWLINE_DELIMITED_JSON file formats.
    * @param maxBadRecords maxBadRecords or {@code null} for none
    */
   public JobConfigurationLoad setMaxBadRecords(java.lang.Integer maxBadRecords) {
@@ -763,7 +819,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Specifies a string that represents a null value in a CSV file. For example, if you
+   * Optional. Specifies a string that represents a null value in a CSV file. For example, if you
    * specify "\N", BigQuery interprets "\N" as a null value when loading a CSV file. The default
    * value is the empty string. If you set this property to a custom value, BigQuery throws an error
    * if an empty string is present for all data types except for STRING and BYTE. For STRING and
@@ -775,7 +831,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Specifies a string that represents a null value in a CSV file. For example, if you
+   * Optional. Specifies a string that represents a null value in a CSV file. For example, if you
    * specify "\N", BigQuery interprets "\N" as a null value when loading a CSV file. The default
    * value is the empty string. If you set this property to a custom value, BigQuery throws an error
    * if an empty string is present for all data types except for STRING and BYTE. For STRING and
@@ -788,7 +844,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Options to configure parquet support.
+   * Optional. Additional properties to set if sourceFormat is set to PARQUET.
    * @return value or {@code null} for none
    */
   public ParquetOptions getParquetOptions() {
@@ -796,7 +852,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Options to configure parquet support.
+   * Optional. Additional properties to set if sourceFormat is set to PARQUET.
    * @param parquetOptions parquetOptions or {@code null} for none
    */
   public JobConfigurationLoad setParquetOptions(ParquetOptions parquetOptions) {
@@ -805,9 +861,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
-   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
-   * other formats.
+   * Optional. When sourceFormat is set to "CSV", this indicates whether the embedded ASCII control
+   * characters (the first 32 characters in the ASCII-table, from '\x00' to '\x1F') are preserved.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreserveAsciiControlCharacters() {
@@ -815,9 +870,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
-   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
-   * other formats.
+   * Optional. When sourceFormat is set to "CSV", this indicates whether the embedded ASCII control
+   * characters (the first 32 characters in the ASCII-table, from '\x00' to '\x1F') are preserved.
    * @param preserveAsciiControlCharacters preserveAsciiControlCharacters or {@code null} for none
    */
   public JobConfigurationLoad setPreserveAsciiControlCharacters(java.lang.Boolean preserveAsciiControlCharacters) {
@@ -851,11 +905,14 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the
+   * Optional. The value that is used to quote data sections in a CSV file. BigQuery converts the
    * string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the
    * data in its raw, binary state. The default value is a double-quote ('"'). If your data does not
    * contain quoted sections, set the property value to an empty string. If your data contains
-   * quoted newline characters, you must also set the allowQuotedNewlines property to true.
+   * quoted newline characters, you must also set the allowQuotedNewlines property to true. To
+   * include the specific quote character within a quoted value, precede it with an additional
+   * matching quote character. For example, if you want to escape the default character ' " ', use '
+   * "" '. @default "
    * @return value or {@code null} for none
    */
   public java.lang.String getQuote() {
@@ -863,11 +920,14 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the
+   * Optional. The value that is used to quote data sections in a CSV file. BigQuery converts the
    * string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the
    * data in its raw, binary state. The default value is a double-quote ('"'). If your data does not
    * contain quoted sections, set the property value to an empty string. If your data contains
-   * quoted newline characters, you must also set the allowQuotedNewlines property to true.
+   * quoted newline characters, you must also set the allowQuotedNewlines property to true. To
+   * include the specific quote character within a quoted value, precede it with an additional
+   * matching quote character. For example, if you want to escape the default character ' " ', use '
+   * "" '. @default "
    * @param quote quote or {@code null} for none
    */
   public JobConfigurationLoad setQuote(java.lang.String quote) {
@@ -876,8 +936,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
-   * and rangePartitioning should be specified.
+   * Range partitioning specification for the destination table. Only one of timePartitioning and
+   * rangePartitioning should be specified.
    * @return value or {@code null} for none
    */
   public RangePartitioning getRangePartitioning() {
@@ -885,8 +945,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
-   * and rangePartitioning should be specified.
+   * Range partitioning specification for the destination table. Only one of timePartitioning and
+   * rangePartitioning should be specified.
    * @param rangePartitioning rangePartitioning or {@code null} for none
    */
   public JobConfigurationLoad setRangePartitioning(RangePartitioning rangePartitioning) {
@@ -895,8 +955,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * User provided referencing file with the expected reader schema, Available for the format: AVRO,
-   * PARQUET, ORC.
+   * Optional. The user can provide a reference file with the reader schema. This file is only
+   * loaded if it is part of source URIs, but is not loaded otherwise. It is enabled for the
+   * following formats: AVRO, PARQUET, ORC.
    * @return value or {@code null} for none
    */
   public java.lang.String getReferenceFileSchemaUri() {
@@ -904,8 +965,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * User provided referencing file with the expected reader schema, Available for the format: AVRO,
-   * PARQUET, ORC.
+   * Optional. The user can provide a reference file with the reader schema. This file is only
+   * loaded if it is part of source URIs, but is not loaded otherwise. It is enabled for the
+   * following formats: AVRO, PARQUET, ORC.
    * @param referenceFileSchemaUri referenceFileSchemaUri or {@code null} for none
    */
   public JobConfigurationLoad setReferenceFileSchemaUri(java.lang.String referenceFileSchemaUri) {
@@ -914,7 +976,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The schema for the destination table. The schema can be omitted if the destination
+   * Optional. The schema for the destination table. The schema can be omitted if the destination
    * table already exists, or if you're loading data from Google Cloud Datastore.
    * @return value or {@code null} for none
    */
@@ -923,7 +985,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The schema for the destination table. The schema can be omitted if the destination
+   * Optional. The schema for the destination table. The schema can be omitted if the destination
    * table already exists, or if you're loading data from Google Cloud Datastore.
    * @param schema schema or {@code null} for none
    */
@@ -974,8 +1036,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    * supported in two cases: when writeDisposition is WRITE_APPEND; when writeDisposition is
    * WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition
    * decorators. For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of
-   * the following values are specified: ALLOW_FIELD_ADDITION: allow adding a nullable field to the
-   * schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to
+   * the following values are specified: * ALLOW_FIELD_ADDITION: allow adding a nullable field to
+   * the schema. * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to
    * nullable.
    * @return value or {@code null} for none
    */
@@ -989,8 +1051,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    * supported in two cases: when writeDisposition is WRITE_APPEND; when writeDisposition is
    * WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition
    * decorators. For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of
-   * the following values are specified: ALLOW_FIELD_ADDITION: allow adding a nullable field to the
-   * schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to
+   * the following values are specified: * ALLOW_FIELD_ADDITION: allow adding a nullable field to
+   * the schema. * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to
    * nullable.
    * @param schemaUpdateOptions schemaUpdateOptions or {@code null} for none
    */
@@ -1000,9 +1062,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The number of rows at the top of a CSV file that BigQuery will skip when loading the
+   * Optional. The number of rows at the top of a CSV file that BigQuery will skip when loading the
    * data. The default value is 0. This property is useful if you have header rows in the file that
-   * should be skipped.
+   * should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows
+   * unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
+   * the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows
+   * is 0 - Instructs autodetect that there are no headers and data should be read starting from the
+   * first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in
+   * row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract
+   * column names for the detected schema.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSkipLeadingRows() {
@@ -1010,9 +1078,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The number of rows at the top of a CSV file that BigQuery will skip when loading the
+   * Optional. The number of rows at the top of a CSV file that BigQuery will skip when loading the
    * data. The default value is 0. This property is useful if you have header rows in the file that
-   * should be skipped.
+   * should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows
+   * unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
+   * the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows
+   * is 0 - Instructs autodetect that there are no headers and data should be read starting from the
+   * first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in
+   * row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract
+   * column names for the detected schema.
    * @param skipLeadingRows skipLeadingRows or {@code null} for none
    */
   public JobConfigurationLoad setSkipLeadingRows(java.lang.Integer skipLeadingRows) {
@@ -1021,7 +1095,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The format of the data files. For CSV files, specify "CSV". For datastore backups,
+   * Optional. The format of the data files. For CSV files, specify "CSV". For datastore backups,
    * specify "DATASTORE_BACKUP". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For
    * Avro, specify "AVRO". For parquet, specify "PARQUET". For orc, specify "ORC". The default value
    * is CSV.
@@ -1032,7 +1106,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The format of the data files. For CSV files, specify "CSV". For datastore backups,
+   * Optional. The format of the data files. For CSV files, specify "CSV". For datastore backups,
    * specify "DATASTORE_BACKUP". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For
    * Avro, specify "AVRO". For parquet, specify "PARQUET". For orc, specify "ORC". The default value
    * is CSV.
@@ -1090,9 +1164,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
-   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
-   * (for example, INTEGER).
+   * Optional. If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the
+   * corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for
+   * example, INTEGER).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAvroLogicalTypes() {
@@ -1100,9 +1174,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
-   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
-   * (for example, INTEGER).
+   * Optional. If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the
+   * corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for
+   * example, INTEGER).
    * @param useAvroLogicalTypes useAvroLogicalTypes or {@code null} for none
    */
   public JobConfigurationLoad setUseAvroLogicalTypes(java.lang.Boolean useAvroLogicalTypes) {
@@ -1111,13 +1185,14 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Specifies the action that occurs if the destination table already exists. The
-   * following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery
-   * overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data
-   * to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error
-   * is returned in the job result. The default value is WRITE_APPEND. Each action is atomic and
-   * only occurs if BigQuery is able to complete the job successfully. Creation, truncation and
-   * append actions occur as one atomic update upon job completion.
+   * Optional. Specifies the action that occurs if the destination table already exists. The
+   * following values are supported: * WRITE_TRUNCATE: If the table already exists, BigQuery
+   * overwrites the data, removes the constraints and uses the schema from the load job. *
+   * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. *
+   * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in
+   * the job result. The default value is WRITE_APPEND. Each action is atomic and only occurs if
+   * BigQuery is able to complete the job successfully. Creation, truncation and append actions
+   * occur as one atomic update upon job completion.
    * @return value or {@code null} for none
    */
   public java.lang.String getWriteDisposition() {
@@ -1125,13 +1200,14 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Specifies the action that occurs if the destination table already exists. The
-   * following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery
-   * overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data
-   * to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error
-   * is returned in the job result. The default value is WRITE_APPEND. Each action is atomic and
-   * only occurs if BigQuery is able to complete the job successfully. Creation, truncation and
-   * append actions occur as one atomic update upon job completion.
+   * Optional. Specifies the action that occurs if the destination table already exists. The
+   * following values are supported: * WRITE_TRUNCATE: If the table already exists, BigQuery
+   * overwrites the data, removes the constraints and uses the schema from the load job. *
+   * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. *
+   * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in
+   * the job result. The default value is WRITE_APPEND. Each action is atomic and only occurs if
+   * BigQuery is able to complete the job successfully. Creation, truncation and append actions
+   * occur as one atomic update upon job completion.
    * @param writeDisposition writeDisposition or {@code null} for none
    */
   public JobConfigurationLoad setWriteDisposition(java.lang.String writeDisposition) {

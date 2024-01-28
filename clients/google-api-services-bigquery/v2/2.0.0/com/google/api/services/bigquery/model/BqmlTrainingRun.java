@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class BqmlTrainingRun extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only, Beta] List of each iteration results.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,33 +43,28 @@ public final class BqmlTrainingRun extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Training run start time in milliseconds since the epoch.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private com.google.api.client.util.DateTime startTime;
 
   /**
-   * [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is
-   * in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run
-   * successfully completed. CANCELLED: Training run cancelled by the user.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * [Output-only, Beta] Training options used by this training run. These options are mutable for
-   * subsequent training runs. Default values are explicitly stored for options not specified in the
-   * input query of the first training run. For subsequent training runs, any option not explicitly
-   * specified in the input query will be copied from the previous training run.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TrainingOptions trainingOptions;
 
   /**
-   * [Output-only, Beta] List of each iteration results.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.util.List<BqmlIterationResult> getIterationResults() {
@@ -77,7 +72,7 @@ public final class BqmlTrainingRun extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] List of each iteration results.
+   * Deprecated.
    * @param iterationResults iterationResults or {@code null} for none
    */
   public BqmlTrainingRun setIterationResults(java.util.List<BqmlIterationResult> iterationResults) {
@@ -86,7 +81,7 @@ public final class BqmlTrainingRun extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Training run start time in milliseconds since the epoch.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getStartTime() {
@@ -94,7 +89,7 @@ public final class BqmlTrainingRun extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Training run start time in milliseconds since the epoch.
+   * Deprecated.
    * @param startTime startTime or {@code null} for none
    */
   public BqmlTrainingRun setStartTime(com.google.api.client.util.DateTime startTime) {
@@ -103,9 +98,7 @@ public final class BqmlTrainingRun extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is
-   * in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run
-   * successfully completed. CANCELLED: Training run cancelled by the user.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -113,9 +106,7 @@ public final class BqmlTrainingRun extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is
-   * in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run
-   * successfully completed. CANCELLED: Training run cancelled by the user.
+   * Deprecated.
    * @param state state or {@code null} for none
    */
   public BqmlTrainingRun setState(java.lang.String state) {
@@ -124,10 +115,7 @@ public final class BqmlTrainingRun extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Training options used by this training run. These options are mutable for
-   * subsequent training runs. Default values are explicitly stored for options not specified in the
-   * input query of the first training run. For subsequent training runs, any option not explicitly
-   * specified in the input query will be copied from the previous training run.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public TrainingOptions getTrainingOptions() {
@@ -135,10 +123,7 @@ public final class BqmlTrainingRun extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Training options used by this training run. These options are mutable for
-   * subsequent training runs. Default values are explicitly stored for options not specified in the
-   * input query of the first training run. For subsequent training runs, any option not explicitly
-   * specified in the input query will be copied from the previous training run.
+   * Deprecated.
    * @param trainingOptions trainingOptions or {@code null} for none
    */
   public BqmlTrainingRun setTrainingOptions(TrainingOptions trainingOptions) {
@@ -157,10 +142,7 @@ public final class BqmlTrainingRun extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Training options used by this training run. These options are mutable for
-   * subsequent training runs. Default values are explicitly stored for options not specified in the
-   * input query of the first training run. For subsequent training runs, any option not explicitly
-   * specified in the input query will be copied from the previous training run.
+   * Deprecated.
    */
   public static final class TrainingOptions extends com.google.api.client.json.GenericJson {
 

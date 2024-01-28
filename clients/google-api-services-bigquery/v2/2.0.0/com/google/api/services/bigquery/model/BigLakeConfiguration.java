@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for BigLakeConfiguration.
+ * Configuration for BigLake managed tables.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,42 +30,41 @@ package com.google.api.services.bigquery.model;
 public final class BigLakeConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] Required and immutable. Credential reference for accessing external storage system.
-   * Normalized as project_id.location_id.connection_id.
+   * Required. The connection specifying the credentials to be used to read and write to external
+   * storage, such as Cloud Storage. The connection_id can have the form ".." or
+   * "projects//locations//connections/".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectionId;
 
   /**
-   * [Required] Required and immutable. Open source file format that the table data is stored in.
-   * Currently only PARQUET is supported.
+   * Required. The file format the table data is stored in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileFormat;
 
   /**
-   * [Required] Required and immutable. Fully qualified location prefix of the external folder where
-   * data is stored. Normalized to standard format: "gs:/". Starts with "gs://" rather than
-   * "/bigstore/". Ends with "/". Does not contain "*". See also BigLakeStorageMetadata on how it is
-   * used.
+   * Required. The fully qualified location prefix of the external folder where table data is
+   * stored. The '*' wildcard character is not allowed. The URI should be in the format
+   * "gs://bucket/path_to_table/"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String storageUri;
 
   /**
-   * [Required] Required and immutable. Open source file format that the table data is stored in.
-   * Currently only PARQUET is supported.
+   * Required. The table format the metadata only snapshots are stored in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tableFormat;
 
   /**
-   * [Required] Required and immutable. Credential reference for accessing external storage system.
-   * Normalized as project_id.location_id.connection_id.
+   * Required. The connection specifying the credentials to be used to read and write to external
+   * storage, such as Cloud Storage. The connection_id can have the form ".." or
+   * "projects//locations//connections/".
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionId() {
@@ -73,8 +72,9 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Required] Required and immutable. Credential reference for accessing external storage system.
-   * Normalized as project_id.location_id.connection_id.
+   * Required. The connection specifying the credentials to be used to read and write to external
+   * storage, such as Cloud Storage. The connection_id can have the form ".." or
+   * "projects//locations//connections/".
    * @param connectionId connectionId or {@code null} for none
    */
   public BigLakeConfiguration setConnectionId(java.lang.String connectionId) {
@@ -83,8 +83,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Required] Required and immutable. Open source file format that the table data is stored in.
-   * Currently only PARQUET is supported.
+   * Required. The file format the table data is stored in.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileFormat() {
@@ -92,8 +91,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Required] Required and immutable. Open source file format that the table data is stored in.
-   * Currently only PARQUET is supported.
+   * Required. The file format the table data is stored in.
    * @param fileFormat fileFormat or {@code null} for none
    */
   public BigLakeConfiguration setFileFormat(java.lang.String fileFormat) {
@@ -102,10 +100,9 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Required] Required and immutable. Fully qualified location prefix of the external folder where
-   * data is stored. Normalized to standard format: "gs:/". Starts with "gs://" rather than
-   * "/bigstore/". Ends with "/". Does not contain "*". See also BigLakeStorageMetadata on how it is
-   * used.
+   * Required. The fully qualified location prefix of the external folder where table data is
+   * stored. The '*' wildcard character is not allowed. The URI should be in the format
+   * "gs://bucket/path_to_table/"
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageUri() {
@@ -113,10 +110,9 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Required] Required and immutable. Fully qualified location prefix of the external folder where
-   * data is stored. Normalized to standard format: "gs:/". Starts with "gs://" rather than
-   * "/bigstore/". Ends with "/". Does not contain "*". See also BigLakeStorageMetadata on how it is
-   * used.
+   * Required. The fully qualified location prefix of the external folder where table data is
+   * stored. The '*' wildcard character is not allowed. The URI should be in the format
+   * "gs://bucket/path_to_table/"
    * @param storageUri storageUri or {@code null} for none
    */
   public BigLakeConfiguration setStorageUri(java.lang.String storageUri) {
@@ -125,8 +121,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Required] Required and immutable. Open source file format that the table data is stored in.
-   * Currently only PARQUET is supported.
+   * Required. The table format the metadata only snapshots are stored in.
    * @return value or {@code null} for none
    */
   public java.lang.String getTableFormat() {
@@ -134,8 +129,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Required] Required and immutable. Open source file format that the table data is stored in.
-   * Currently only PARQUET is supported.
+   * Required. The table format the metadata only snapshots are stored in.
    * @param tableFormat tableFormat or {@code null} for none
    */
   public BigLakeConfiguration setTableFormat(java.lang.String tableFormat) {

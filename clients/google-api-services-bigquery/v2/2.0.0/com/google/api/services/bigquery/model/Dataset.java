@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] An array of objects that define dataset access for one or more entities. You can set
+   * Optional. An array of objects that define dataset access for one or more entities. You can set
    * this property when inserting or updating a dataset in order to control who is allowed to access
    * the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
    * following entities: access.specialGroup: projectReaders; access.role: READER;
@@ -48,85 +48,96 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The time when this dataset was created, in milliseconds since the epoch.
+   * Output only. The time when this dataset was created, in milliseconds since the epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long creationTime;
 
   /**
-   * [Required] A reference that identifies the dataset.
+   * Required. A reference that identifies the dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DatasetReference datasetReference;
 
   /**
-   * [Output-only] The default collation of the dataset.
+   * Optional. Defines the default collation specification of future tables created in the dataset.
+   * If a table is created in this dataset without table-level default collation, then the table
+   * inherits the dataset default collation, which is applied to the string fields that do not have
+   * explicit collation specified. A change to this field affects only tables created afterwards,
+   * and does not alter the existing tables. The following values are supported: * 'und:ci':
+   * undetermined locale, case insensitive. * '': empty string. Default to case-sensitive behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultCollation;
 
   /**
+   * The default encryption key for all tables in the dataset. Once this property is set, all newly-
+   * created partitioned tables in the dataset will have encryption key set to this value, unless
+   * table creation request (or query) overrides the key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EncryptionConfiguration defaultEncryptionConfiguration;
 
   /**
-   * [Optional] The default partition expiration for all partitioned tables in the dataset, in
-   * milliseconds. Once this property is set, all newly-created partitioned tables in the dataset
-   * will have an expirationMs property in the timePartitioning settings set to this value, and
-   * changing the value will only affect new tables, not existing ones. The storage in a partition
-   * will have an expiration time of its partition time plus this value. Setting this property
-   * overrides the use of defaultTableExpirationMs for partitioned tables: only one of
-   * defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned
-   * table. If you provide an explicit timePartitioning.expirationMs when creating or updating a
-   * partitioned table, that value takes precedence over the default partition expiration time
-   * indicated by this property.
+   * This default partition expiration, expressed in milliseconds. When new time-partitioned tables
+   * are created in a dataset where this property is set, the table will inherit this value,
+   * propagated as the `TimePartitioning.expirationMs` property on the new table. If you set
+   * `TimePartitioning.expirationMs` explicitly when creating a table, the
+   * `defaultPartitionExpirationMs` of the containing dataset is ignored. When creating a
+   * partitioned table, if `defaultPartitionExpirationMs` is set, the `defaultTableExpirationMs`
+   * value is ignored and the table will not be inherit a table expiration deadline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long defaultPartitionExpirationMs;
 
   /**
-   * [Output-only] The default rounding mode of the dataset.
+   * Optional. Defines the default rounding mode specification of new tables created within this
+   * dataset. During table creation, if this field is specified, the table within this dataset will
+   * inherit the default rounding mode of the dataset. Setting the default rounding mode on a table
+   * overrides this option. Existing tables in the dataset are unaffected. If columns are defined
+   * during that table creation, they will immediately inherit the table's default rounding mode,
+   * unless otherwise specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultRoundingMode;
 
   /**
-   * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum
-   * value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables
-   * in the dataset will have an expirationTime property set to the creation time plus the value in
-   * this property, and changing the value will only affect new tables, not existing ones. When the
-   * expirationTime for a given table is reached, that table will be deleted automatically. If a
-   * table's expirationTime is modified or removed before the table expires, or if you provide an
-   * explicit expirationTime when creating a table, that value takes precedence over the default
-   * expiration time indicated by this property.
+   * Optional. The default lifetime of all tables in the dataset, in milliseconds. The minimum
+   * lifetime value is 3600000 milliseconds (one hour). To clear an existing default expiration with
+   * a PATCH request, set to 0. Once this property is set, all newly-created tables in the dataset
+   * will have an expirationTime property set to the creation time plus the value in this property,
+   * and changing the value will only affect new tables, not existing ones. When the expirationTime
+   * for a given table is reached, that table will be deleted automatically. If a table's
+   * expirationTime is modified or removed before the table expires, or if you provide an explicit
+   * expirationTime when creating a table, that value takes precedence over the default expiration
+   * time indicated by this property.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long defaultTableExpirationMs;
 
   /**
-   * [Optional] A user-friendly description of the dataset.
+   * Optional. A user-friendly description of the dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * [Output-only] A hash of the resource.
+   * Output only. A hash of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * [Optional] Information about the external metadata storage where the dataset is defined. Filled
+   * Optional. Information about the external metadata storage where the dataset is defined. Filled
    * out when the dataset type is EXTERNAL.
    * The value may be {@code null}.
    */
@@ -134,14 +145,14 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private ExternalDatasetReference externalDatasetReference;
 
   /**
-   * [Optional] A descriptive name for the dataset.
+   * Optional. A descriptive name for the dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String friendlyName;
 
   /**
-   * [Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId.
+   * Output only. The fully-qualified unique name of the dataset in the format projectId:datasetId.
    * The dataset name without the project name is given in the datasetId field. When creating a new
    * dataset, leave this field blank, and instead specify the datasetId field.
    * The value may be {@code null}.
@@ -150,14 +161,16 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * [Optional] Indicates if table names are case insensitive in the dataset.
+   * Optional. TRUE if the dataset and its table names are case-insensitive, otherwise FALSE. By
+   * default, this is FALSE, which means the dataset and its table names are case-sensitive. This
+   * field does not affect routine references.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isCaseInsensitive;
 
   /**
-   * [Output-only] The resource type.
+   * Output only. The resource type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,37 +186,46 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * [Output-only] The date when this dataset or any of its tables was last modified, in
-   * milliseconds since the epoch.
+   * Output only. The date when this dataset was last modified, in milliseconds since the epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long lastModifiedTime;
 
   /**
-   * The geographic location where the dataset should reside. The default value is US. See details
-   * at https://cloud.google.com/bigquery/docs/locations.
+   * Optional. The source dataset reference when the dataset is of type LINKED. For all other
+   * dataset types it is not set. This field cannot be updated once it is set. Any attempt to update
+   * this field using Update and Patch API Operations will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LinkedDatasetSource linkedDatasetSource;
+
+  /**
+   * The geographic location where the dataset should reside. See
+   * https://cloud.google.com/bigquery/docs/locations for supported locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * [Optional] Number of hours for the max time travel for all tables in the dataset.
+   * Optional. Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to
+   * 7 days). The default value is 168 hours if this is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxTimeTravelHours;
 
   /**
-   * [Output-only] Reserved for future use.
+   * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * [Output-only] A URL that can be used to access the resource again. You can use this URL in Get
+   * Output only. A URL that can be used to access the resource again. You can use this URL in Get
    * or Update requests to the resource.
    * The value may be {@code null}.
    */
@@ -211,15 +233,14 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Optional] Storage billing model to be used for all tables in the dataset. Can be set to
-   * PHYSICAL. Default is LOGICAL.
+   * Optional. Updates storage_billing_model for the dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String storageBillingModel;
 
   /**
-   * [Optional]The tags associated with this dataset. Tag keys are globally unique.
+   * Output only. Tags for the Dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,7 +253,17 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] An array of objects that define dataset access for one or more entities. You can set
+   * Output only. Same as `type` in `ListFormatDataset`. The type of the dataset, one of: * DEFAULT
+   * - only accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED
+   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog. --
+   * *BIGLAKE_METASTORE - dataset that references a database created in BigLakeMetastore service. --
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * Optional. An array of objects that define dataset access for one or more entities. You can set
    * this property when inserting or updating a dataset in order to control who is allowed to access
    * the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
    * following entities: access.specialGroup: projectReaders; access.role: READER;
@@ -245,7 +276,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] An array of objects that define dataset access for one or more entities. You can set
+   * Optional. An array of objects that define dataset access for one or more entities. You can set
    * this property when inserting or updating a dataset in order to control who is allowed to access
    * the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
    * following entities: access.specialGroup: projectReaders; access.role: READER;
@@ -259,7 +290,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The time when this dataset was created, in milliseconds since the epoch.
+   * Output only. The time when this dataset was created, in milliseconds since the epoch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCreationTime() {
@@ -267,7 +298,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The time when this dataset was created, in milliseconds since the epoch.
+   * Output only. The time when this dataset was created, in milliseconds since the epoch.
    * @param creationTime creationTime or {@code null} for none
    */
   public Dataset setCreationTime(java.lang.Long creationTime) {
@@ -276,7 +307,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Required] A reference that identifies the dataset.
+   * Required. A reference that identifies the dataset.
    * @return value or {@code null} for none
    */
   public DatasetReference getDatasetReference() {
@@ -284,7 +315,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Required] A reference that identifies the dataset.
+   * Required. A reference that identifies the dataset.
    * @param datasetReference datasetReference or {@code null} for none
    */
   public Dataset setDatasetReference(DatasetReference datasetReference) {
@@ -293,7 +324,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The default collation of the dataset.
+   * Optional. Defines the default collation specification of future tables created in the dataset.
+   * If a table is created in this dataset without table-level default collation, then the table
+   * inherits the dataset default collation, which is applied to the string fields that do not have
+   * explicit collation specified. A change to this field affects only tables created afterwards,
+   * and does not alter the existing tables. The following values are supported: * 'und:ci':
+   * undetermined locale, case insensitive. * '': empty string. Default to case-sensitive behavior.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultCollation() {
@@ -301,7 +337,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The default collation of the dataset.
+   * Optional. Defines the default collation specification of future tables created in the dataset.
+   * If a table is created in this dataset without table-level default collation, then the table
+   * inherits the dataset default collation, which is applied to the string fields that do not have
+   * explicit collation specified. A change to this field affects only tables created afterwards,
+   * and does not alter the existing tables. The following values are supported: * 'und:ci':
+   * undetermined locale, case insensitive. * '': empty string. Default to case-sensitive behavior.
    * @param defaultCollation defaultCollation or {@code null} for none
    */
   public Dataset setDefaultCollation(java.lang.String defaultCollation) {
@@ -310,6 +351,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The default encryption key for all tables in the dataset. Once this property is set, all newly-
+   * created partitioned tables in the dataset will have encryption key set to this value, unless
+   * table creation request (or query) overrides the key.
    * @return value or {@code null} for none
    */
   public EncryptionConfiguration getDefaultEncryptionConfiguration() {
@@ -317,6 +361,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The default encryption key for all tables in the dataset. Once this property is set, all newly-
+   * created partitioned tables in the dataset will have encryption key set to this value, unless
+   * table creation request (or query) overrides the key.
    * @param defaultEncryptionConfiguration defaultEncryptionConfiguration or {@code null} for none
    */
   public Dataset setDefaultEncryptionConfiguration(EncryptionConfiguration defaultEncryptionConfiguration) {
@@ -325,16 +372,13 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The default partition expiration for all partitioned tables in the dataset, in
-   * milliseconds. Once this property is set, all newly-created partitioned tables in the dataset
-   * will have an expirationMs property in the timePartitioning settings set to this value, and
-   * changing the value will only affect new tables, not existing ones. The storage in a partition
-   * will have an expiration time of its partition time plus this value. Setting this property
-   * overrides the use of defaultTableExpirationMs for partitioned tables: only one of
-   * defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned
-   * table. If you provide an explicit timePartitioning.expirationMs when creating or updating a
-   * partitioned table, that value takes precedence over the default partition expiration time
-   * indicated by this property.
+   * This default partition expiration, expressed in milliseconds. When new time-partitioned tables
+   * are created in a dataset where this property is set, the table will inherit this value,
+   * propagated as the `TimePartitioning.expirationMs` property on the new table. If you set
+   * `TimePartitioning.expirationMs` explicitly when creating a table, the
+   * `defaultPartitionExpirationMs` of the containing dataset is ignored. When creating a
+   * partitioned table, if `defaultPartitionExpirationMs` is set, the `defaultTableExpirationMs`
+   * value is ignored and the table will not be inherit a table expiration deadline.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDefaultPartitionExpirationMs() {
@@ -342,16 +386,13 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The default partition expiration for all partitioned tables in the dataset, in
-   * milliseconds. Once this property is set, all newly-created partitioned tables in the dataset
-   * will have an expirationMs property in the timePartitioning settings set to this value, and
-   * changing the value will only affect new tables, not existing ones. The storage in a partition
-   * will have an expiration time of its partition time plus this value. Setting this property
-   * overrides the use of defaultTableExpirationMs for partitioned tables: only one of
-   * defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned
-   * table. If you provide an explicit timePartitioning.expirationMs when creating or updating a
-   * partitioned table, that value takes precedence over the default partition expiration time
-   * indicated by this property.
+   * This default partition expiration, expressed in milliseconds. When new time-partitioned tables
+   * are created in a dataset where this property is set, the table will inherit this value,
+   * propagated as the `TimePartitioning.expirationMs` property on the new table. If you set
+   * `TimePartitioning.expirationMs` explicitly when creating a table, the
+   * `defaultPartitionExpirationMs` of the containing dataset is ignored. When creating a
+   * partitioned table, if `defaultPartitionExpirationMs` is set, the `defaultTableExpirationMs`
+   * value is ignored and the table will not be inherit a table expiration deadline.
    * @param defaultPartitionExpirationMs defaultPartitionExpirationMs or {@code null} for none
    */
   public Dataset setDefaultPartitionExpirationMs(java.lang.Long defaultPartitionExpirationMs) {
@@ -360,7 +401,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The default rounding mode of the dataset.
+   * Optional. Defines the default rounding mode specification of new tables created within this
+   * dataset. During table creation, if this field is specified, the table within this dataset will
+   * inherit the default rounding mode of the dataset. Setting the default rounding mode on a table
+   * overrides this option. Existing tables in the dataset are unaffected. If columns are defined
+   * during that table creation, they will immediately inherit the table's default rounding mode,
+   * unless otherwise specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultRoundingMode() {
@@ -368,7 +414,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The default rounding mode of the dataset.
+   * Optional. Defines the default rounding mode specification of new tables created within this
+   * dataset. During table creation, if this field is specified, the table within this dataset will
+   * inherit the default rounding mode of the dataset. Setting the default rounding mode on a table
+   * overrides this option. Existing tables in the dataset are unaffected. If columns are defined
+   * during that table creation, they will immediately inherit the table's default rounding mode,
+   * unless otherwise specified.
    * @param defaultRoundingMode defaultRoundingMode or {@code null} for none
    */
   public Dataset setDefaultRoundingMode(java.lang.String defaultRoundingMode) {
@@ -377,14 +428,15 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum
-   * value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables
-   * in the dataset will have an expirationTime property set to the creation time plus the value in
-   * this property, and changing the value will only affect new tables, not existing ones. When the
-   * expirationTime for a given table is reached, that table will be deleted automatically. If a
-   * table's expirationTime is modified or removed before the table expires, or if you provide an
-   * explicit expirationTime when creating a table, that value takes precedence over the default
-   * expiration time indicated by this property.
+   * Optional. The default lifetime of all tables in the dataset, in milliseconds. The minimum
+   * lifetime value is 3600000 milliseconds (one hour). To clear an existing default expiration with
+   * a PATCH request, set to 0. Once this property is set, all newly-created tables in the dataset
+   * will have an expirationTime property set to the creation time plus the value in this property,
+   * and changing the value will only affect new tables, not existing ones. When the expirationTime
+   * for a given table is reached, that table will be deleted automatically. If a table's
+   * expirationTime is modified or removed before the table expires, or if you provide an explicit
+   * expirationTime when creating a table, that value takes precedence over the default expiration
+   * time indicated by this property.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDefaultTableExpirationMs() {
@@ -392,14 +444,15 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum
-   * value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables
-   * in the dataset will have an expirationTime property set to the creation time plus the value in
-   * this property, and changing the value will only affect new tables, not existing ones. When the
-   * expirationTime for a given table is reached, that table will be deleted automatically. If a
-   * table's expirationTime is modified or removed before the table expires, or if you provide an
-   * explicit expirationTime when creating a table, that value takes precedence over the default
-   * expiration time indicated by this property.
+   * Optional. The default lifetime of all tables in the dataset, in milliseconds. The minimum
+   * lifetime value is 3600000 milliseconds (one hour). To clear an existing default expiration with
+   * a PATCH request, set to 0. Once this property is set, all newly-created tables in the dataset
+   * will have an expirationTime property set to the creation time plus the value in this property,
+   * and changing the value will only affect new tables, not existing ones. When the expirationTime
+   * for a given table is reached, that table will be deleted automatically. If a table's
+   * expirationTime is modified or removed before the table expires, or if you provide an explicit
+   * expirationTime when creating a table, that value takes precedence over the default expiration
+   * time indicated by this property.
    * @param defaultTableExpirationMs defaultTableExpirationMs or {@code null} for none
    */
   public Dataset setDefaultTableExpirationMs(java.lang.Long defaultTableExpirationMs) {
@@ -408,7 +461,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A user-friendly description of the dataset.
+   * Optional. A user-friendly description of the dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -416,7 +469,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A user-friendly description of the dataset.
+   * Optional. A user-friendly description of the dataset.
    * @param description description or {@code null} for none
    */
   public Dataset setDescription(java.lang.String description) {
@@ -425,7 +478,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A hash of the resource.
+   * Output only. A hash of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -433,7 +486,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A hash of the resource.
+   * Output only. A hash of the resource.
    * @param etag etag or {@code null} for none
    */
   public Dataset setEtag(java.lang.String etag) {
@@ -442,7 +495,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Information about the external metadata storage where the dataset is defined. Filled
+   * Optional. Information about the external metadata storage where the dataset is defined. Filled
    * out when the dataset type is EXTERNAL.
    * @return value or {@code null} for none
    */
@@ -451,7 +504,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Information about the external metadata storage where the dataset is defined. Filled
+   * Optional. Information about the external metadata storage where the dataset is defined. Filled
    * out when the dataset type is EXTERNAL.
    * @param externalDatasetReference externalDatasetReference or {@code null} for none
    */
@@ -461,7 +514,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A descriptive name for the dataset.
+   * Optional. A descriptive name for the dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getFriendlyName() {
@@ -469,7 +522,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A descriptive name for the dataset.
+   * Optional. A descriptive name for the dataset.
    * @param friendlyName friendlyName or {@code null} for none
    */
   public Dataset setFriendlyName(java.lang.String friendlyName) {
@@ -478,7 +531,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId.
+   * Output only. The fully-qualified unique name of the dataset in the format projectId:datasetId.
    * The dataset name without the project name is given in the datasetId field. When creating a new
    * dataset, leave this field blank, and instead specify the datasetId field.
    * @return value or {@code null} for none
@@ -488,7 +541,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId.
+   * Output only. The fully-qualified unique name of the dataset in the format projectId:datasetId.
    * The dataset name without the project name is given in the datasetId field. When creating a new
    * dataset, leave this field blank, and instead specify the datasetId field.
    * @param id id or {@code null} for none
@@ -499,7 +552,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Indicates if table names are case insensitive in the dataset.
+   * Optional. TRUE if the dataset and its table names are case-insensitive, otherwise FALSE. By
+   * default, this is FALSE, which means the dataset and its table names are case-sensitive. This
+   * field does not affect routine references.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsCaseInsensitive() {
@@ -507,7 +562,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Indicates if table names are case insensitive in the dataset.
+   * Optional. TRUE if the dataset and its table names are case-insensitive, otherwise FALSE. By
+   * default, this is FALSE, which means the dataset and its table names are case-sensitive. This
+   * field does not affect routine references.
    * @param isCaseInsensitive isCaseInsensitive or {@code null} for none
    */
   public Dataset setIsCaseInsensitive(java.lang.Boolean isCaseInsensitive) {
@@ -516,7 +573,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The resource type.
+   * Output only. The resource type.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -524,7 +581,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The resource type.
+   * Output only. The resource type.
    * @param kind kind or {@code null} for none
    */
   public Dataset setKind(java.lang.String kind) {
@@ -554,8 +611,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The date when this dataset or any of its tables was last modified, in
-   * milliseconds since the epoch.
+   * Output only. The date when this dataset was last modified, in milliseconds since the epoch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLastModifiedTime() {
@@ -563,8 +619,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The date when this dataset or any of its tables was last modified, in
-   * milliseconds since the epoch.
+   * Output only. The date when this dataset was last modified, in milliseconds since the epoch.
    * @param lastModifiedTime lastModifiedTime or {@code null} for none
    */
   public Dataset setLastModifiedTime(java.lang.Long lastModifiedTime) {
@@ -573,8 +628,29 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The geographic location where the dataset should reside. The default value is US. See details
-   * at https://cloud.google.com/bigquery/docs/locations.
+   * Optional. The source dataset reference when the dataset is of type LINKED. For all other
+   * dataset types it is not set. This field cannot be updated once it is set. Any attempt to update
+   * this field using Update and Patch API Operations will be ignored.
+   * @return value or {@code null} for none
+   */
+  public LinkedDatasetSource getLinkedDatasetSource() {
+    return linkedDatasetSource;
+  }
+
+  /**
+   * Optional. The source dataset reference when the dataset is of type LINKED. For all other
+   * dataset types it is not set. This field cannot be updated once it is set. Any attempt to update
+   * this field using Update and Patch API Operations will be ignored.
+   * @param linkedDatasetSource linkedDatasetSource or {@code null} for none
+   */
+  public Dataset setLinkedDatasetSource(LinkedDatasetSource linkedDatasetSource) {
+    this.linkedDatasetSource = linkedDatasetSource;
+    return this;
+  }
+
+  /**
+   * The geographic location where the dataset should reside. See
+   * https://cloud.google.com/bigquery/docs/locations for supported locations.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -582,8 +658,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The geographic location where the dataset should reside. The default value is US. See details
-   * at https://cloud.google.com/bigquery/docs/locations.
+   * The geographic location where the dataset should reside. See
+   * https://cloud.google.com/bigquery/docs/locations for supported locations.
    * @param location location or {@code null} for none
    */
   public Dataset setLocation(java.lang.String location) {
@@ -592,7 +668,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Number of hours for the max time travel for all tables in the dataset.
+   * Optional. Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to
+   * 7 days). The default value is 168 hours if this is not set.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxTimeTravelHours() {
@@ -600,7 +677,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Number of hours for the max time travel for all tables in the dataset.
+   * Optional. Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to
+   * 7 days). The default value is 168 hours if this is not set.
    * @param maxTimeTravelHours maxTimeTravelHours or {@code null} for none
    */
   public Dataset setMaxTimeTravelHours(java.lang.Long maxTimeTravelHours) {
@@ -609,7 +687,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Reserved for future use.
+   * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -617,7 +695,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] Reserved for future use.
+   * Output only. Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Dataset setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -626,7 +704,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A URL that can be used to access the resource again. You can use this URL in Get
+   * Output only. A URL that can be used to access the resource again. You can use this URL in Get
    * or Update requests to the resource.
    * @return value or {@code null} for none
    */
@@ -635,7 +713,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] A URL that can be used to access the resource again. You can use this URL in Get
+   * Output only. A URL that can be used to access the resource again. You can use this URL in Get
    * or Update requests to the resource.
    * @param selfLink selfLink or {@code null} for none
    */
@@ -645,8 +723,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Storage billing model to be used for all tables in the dataset. Can be set to
-   * PHYSICAL. Default is LOGICAL.
+   * Optional. Updates storage_billing_model for the dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageBillingModel() {
@@ -654,8 +731,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Storage billing model to be used for all tables in the dataset. Can be set to
-   * PHYSICAL. Default is LOGICAL.
+   * Optional. Updates storage_billing_model for the dataset.
    * @param storageBillingModel storageBillingModel or {@code null} for none
    */
   public Dataset setStorageBillingModel(java.lang.String storageBillingModel) {
@@ -664,7 +740,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional]The tags associated with this dataset. Tag keys are globally unique.
+   * Output only. Tags for the Dataset.
    * @return value or {@code null} for none
    */
   public java.util.List<Tags> getTags() {
@@ -672,11 +748,34 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional]The tags associated with this dataset. Tag keys are globally unique.
+   * Output only. Tags for the Dataset.
    * @param tags tags or {@code null} for none
    */
   public Dataset setTags(java.util.List<Tags> tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * Output only. Same as `type` in `ListFormatDataset`. The type of the dataset, one of: * DEFAULT
+   * - only accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED
+   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog. --
+   * *BIGLAKE_METASTORE - dataset that references a database created in BigLakeMetastore service. --
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Output only. Same as `type` in `ListFormatDataset`. The type of the dataset, one of: * DEFAULT
+   * - only accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED
+   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog. --
+   * *BIGLAKE_METASTORE - dataset that references a database created in BigLakeMetastore service. --
+   * @param type type or {@code null} for none
+   */
+  public Dataset setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
@@ -691,7 +790,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Model definition for DatasetAccess.
+   * An object that defines dataset access for an entity.
    */
   public static final class Access extends com.google.api.client.json.GenericJson {
 
@@ -731,12 +830,11 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     private java.lang.String iamMember;
 
     /**
-     * [Required] An IAM role ID that should be granted to the user, group, or domain specified in
-     * this access entry. The following legacy mappings will be applied: OWNER
-     * roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer
-     * This field will accept any of the above formats, but will return only the legacy format. For
-     * example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as
-     * "OWNER".
+     * An IAM role ID that should be granted to the user, group, or domain specified in this access
+     * entry. The following legacy mappings will be applied: OWNER <=> roles/bigquery.dataOwner WRITER
+     * <=> roles/bigquery.dataEditor READER <=> roles/bigquery.dataViewer This field will accept any
+     * of the above formats, but will return only the legacy format. For example, if you set this
+     * field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -772,9 +870,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * [Pick one] A view from a different dataset to grant access to. Queries executed against that
-     * view will have read access to tables in this dataset. The role field is not required when this
-     * field is set. If that view is updated by any user, access to the view needs to be granted again
-     * via an update operation.
+     * view will have read access to views/tables/routines in this dataset. The role field is not
+     * required when this field is set. If that view is updated by any user, access to the view needs
+     * to be granted again via an update operation.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -863,12 +961,11 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Required] An IAM role ID that should be granted to the user, group, or domain specified in
-     * this access entry. The following legacy mappings will be applied: OWNER
-     * roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer
-     * This field will accept any of the above formats, but will return only the legacy format. For
-     * example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as
-     * "OWNER".
+     * An IAM role ID that should be granted to the user, group, or domain specified in this access
+     * entry. The following legacy mappings will be applied: OWNER <=> roles/bigquery.dataOwner WRITER
+     * <=> roles/bigquery.dataEditor READER <=> roles/bigquery.dataViewer This field will accept any
+     * of the above formats, but will return only the legacy format. For example, if you set this
+     * field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
      * @return value or {@code null} for none
      */
     public java.lang.String getRole() {
@@ -876,12 +973,11 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Required] An IAM role ID that should be granted to the user, group, or domain specified in
-     * this access entry. The following legacy mappings will be applied: OWNER
-     * roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer
-     * This field will accept any of the above formats, but will return only the legacy format. For
-     * example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as
-     * "OWNER".
+     * An IAM role ID that should be granted to the user, group, or domain specified in this access
+     * entry. The following legacy mappings will be applied: OWNER <=> roles/bigquery.dataOwner WRITER
+     * <=> roles/bigquery.dataEditor READER <=> roles/bigquery.dataViewer This field will accept any
+     * of the above formats, but will return only the legacy format. For example, if you set this
+     * field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
      * @param role role or {@code null} for none
      */
     public Access setRole(java.lang.String role) {
@@ -956,9 +1052,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * [Pick one] A view from a different dataset to grant access to. Queries executed against that
-     * view will have read access to tables in this dataset. The role field is not required when this
-     * field is set. If that view is updated by any user, access to the view needs to be granted again
-     * via an update operation.
+     * view will have read access to views/tables/routines in this dataset. The role field is not
+     * required when this field is set. If that view is updated by any user, access to the view needs
+     * to be granted again via an update operation.
      * @return value or {@code null} for none
      */
     public TableReference getView() {
@@ -967,9 +1063,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * [Pick one] A view from a different dataset to grant access to. Queries executed against that
-     * view will have read access to tables in this dataset. The role field is not required when this
-     * field is set. If that view is updated by any user, access to the view needs to be granted again
-     * via an update operation.
+     * view will have read access to views/tables/routines in this dataset. The role field is not
+     * required when this field is set. If that view is updated by any user, access to the view needs
+     * to be granted again via an update operation.
      * @param view view or {@code null} for none
      */
     public Access setView(TableReference view) {
@@ -990,12 +1086,13 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Model definition for DatasetTags.
+   * A global tag managed by Resource Manager. https://cloud.google.com/iam/docs/tags-access-
+   * control#definitions
    */
   public static final class Tags extends com.google.api.client.json.GenericJson {
 
     /**
-     * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is
+     * Required. The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is
      * org id.
      * The value may be {@code null}.
      */
@@ -1003,14 +1100,14 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     private java.lang.String tagKey;
 
     /**
-     * [Required] Friendly short name of the tag value, e.g. "production".
+     * Required. The friendly short name of the tag value, e.g. "production".
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String tagValue;
 
     /**
-     * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is
+     * Required. The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is
      * org id.
      * @return value or {@code null} for none
      */
@@ -1019,7 +1116,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is
+     * Required. The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is
      * org id.
      * @param tagKey tagKey or {@code null} for none
      */
@@ -1029,7 +1126,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Required] Friendly short name of the tag value, e.g. "production".
+     * Required. The friendly short name of the tag value, e.g. "production".
      * @return value or {@code null} for none
      */
     public java.lang.String getTagValue() {
@@ -1037,7 +1134,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Required] Friendly short name of the tag value, e.g. "production".
+     * Required. The friendly short name of the tag value, e.g. "production".
      * @param tagValue tagValue or {@code null} for none
      */
     public Tags setTagValue(java.lang.String tagValue) {

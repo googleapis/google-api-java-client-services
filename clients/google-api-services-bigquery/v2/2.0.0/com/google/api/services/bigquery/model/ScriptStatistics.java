@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for ScriptStatistics.
+ * Job statistics specific to the child job of a script.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class ScriptStatistics extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] Whether this child job was a statement or expression.
+   * Whether this child job was a statement or expression.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class ScriptStatistics extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output-only] Whether this child job was a statement or expression.
+   * Whether this child job was a statement or expression.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvaluationKind() {
@@ -60,7 +60,7 @@ public final class ScriptStatistics extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output-only] Whether this child job was a statement or expression.
+   * Whether this child job was a statement or expression.
    * @param evaluationKind evaluationKind or {@code null} for none
    */
   public ScriptStatistics setEvaluationKind(java.lang.String evaluationKind) {

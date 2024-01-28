@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for GoogleSheetsOptions.
+ * Options specific to Google Sheets data sources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class GoogleSheetsOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] Range of a sheet to query from. Only used when non-empty. Typical format:
+   * Optional. Range of a sheet to query from. Only used when non-empty. Typical format:
    * sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20
    * The value may be {@code null}.
    */
@@ -38,9 +38,9 @@ public final class GoogleSheetsOptions extends com.google.api.client.json.Generi
   private java.lang.String range;
 
   /**
-   * [Optional] The number of rows at the top of a sheet that BigQuery will skip when reading the
+   * Optional. The number of rows at the top of a sheet that BigQuery will skip when reading the
    * data. The default value is 0. This property is useful if you have header rows that should be
-   * skipped. When autodetect is on, behavior is the following: * skipLeadingRows unspecified -
+   * skipped. When autodetect is on, the behavior is the following: * skipLeadingRows unspecified -
    * Autodetect tries to detect headers in the first row. If they are not detected, the row is read
    * as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 -
    * Instructs autodetect that there are no headers and data should be read starting from the first
@@ -53,7 +53,7 @@ public final class GoogleSheetsOptions extends com.google.api.client.json.Generi
   private java.lang.Long skipLeadingRows;
 
   /**
-   * [Optional] Range of a sheet to query from. Only used when non-empty. Typical format:
+   * Optional. Range of a sheet to query from. Only used when non-empty. Typical format:
    * sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class GoogleSheetsOptions extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Optional] Range of a sheet to query from. Only used when non-empty. Typical format:
+   * Optional. Range of a sheet to query from. Only used when non-empty. Typical format:
    * sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20
    * @param range range or {@code null} for none
    */
@@ -72,9 +72,9 @@ public final class GoogleSheetsOptions extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Optional] The number of rows at the top of a sheet that BigQuery will skip when reading the
+   * Optional. The number of rows at the top of a sheet that BigQuery will skip when reading the
    * data. The default value is 0. This property is useful if you have header rows that should be
-   * skipped. When autodetect is on, behavior is the following: * skipLeadingRows unspecified -
+   * skipped. When autodetect is on, the behavior is the following: * skipLeadingRows unspecified -
    * Autodetect tries to detect headers in the first row. If they are not detected, the row is read
    * as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 -
    * Instructs autodetect that there are no headers and data should be read starting from the first
@@ -88,9 +88,9 @@ public final class GoogleSheetsOptions extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Optional] The number of rows at the top of a sheet that BigQuery will skip when reading the
+   * Optional. The number of rows at the top of a sheet that BigQuery will skip when reading the
    * data. The default value is 0. This property is useful if you have header rows that should be
-   * skipped. When autodetect is on, behavior is the following: * skipLeadingRows unspecified -
+   * skipped. When autodetect is on, the behavior is the following: * skipLeadingRows unspecified -
    * Autodetect tries to detect headers in the first row. If they are not detected, the row is read
    * as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 -
    * Instructs autodetect that there are no headers and data should be read starting from the first

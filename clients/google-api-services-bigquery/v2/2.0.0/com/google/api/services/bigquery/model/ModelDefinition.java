@@ -30,18 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class ModelDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only, Beta] Model options used for the first training run. These options are immutable
-   * for subsequent training runs. Default values are used for any options not specified in the
-   * input query.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ModelOptions modelOptions;
 
   /**
-   * [Output-only, Beta] Information about ml training runs, each training run comprises of multiple
-   * iterations and there may be multiple training runs for the model if warm start is used or if a
-   * user decides to continue a previously cancelled query.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +50,7 @@ public final class ModelDefinition extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Model options used for the first training run. These options are immutable
-   * for subsequent training runs. Default values are used for any options not specified in the
-   * input query.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public ModelOptions getModelOptions() {
@@ -64,9 +58,7 @@ public final class ModelDefinition extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Model options used for the first training run. These options are immutable
-   * for subsequent training runs. Default values are used for any options not specified in the
-   * input query.
+   * Deprecated.
    * @param modelOptions modelOptions or {@code null} for none
    */
   public ModelDefinition setModelOptions(ModelOptions modelOptions) {
@@ -75,9 +67,7 @@ public final class ModelDefinition extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Information about ml training runs, each training run comprises of multiple
-   * iterations and there may be multiple training runs for the model if warm start is used or if a
-   * user decides to continue a previously cancelled query.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.util.List<BqmlTrainingRun> getTrainingRuns() {
@@ -85,9 +75,7 @@ public final class ModelDefinition extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Information about ml training runs, each training run comprises of multiple
-   * iterations and there may be multiple training runs for the model if warm start is used or if a
-   * user decides to continue a previously cancelled query.
+   * Deprecated.
    * @param trainingRuns trainingRuns or {@code null} for none
    */
   public ModelDefinition setTrainingRuns(java.util.List<BqmlTrainingRun> trainingRuns) {
@@ -106,9 +94,7 @@ public final class ModelDefinition extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Model options used for the first training run. These options are immutable
-   * for subsequent training runs. Default values are used for any options not specified in the input
-   * query.
+   * Deprecated.
    */
   public static final class ModelOptions extends com.google.api.client.json.GenericJson {
 

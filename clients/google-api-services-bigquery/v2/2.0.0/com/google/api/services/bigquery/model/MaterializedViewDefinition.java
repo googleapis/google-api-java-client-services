@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for MaterializedViewDefinition.
+ * Definition and configuration of a materialized view.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,23 +30,24 @@ package com.google.api.services.bigquery.model;
 public final class MaterializedViewDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] Allow non incremental materialized view definition. The default value is "false".
+   * Optional. This option declares authors intention to construct a materialized view that will not
+   * be refreshed incrementally.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowNonIncrementalDefinition;
 
   /**
-   * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base
-   * table is updated. The default value is "true".
+   * Optional. Enable automatic refresh of the materialized view when the base table is updated. The
+   * default value is "true".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableRefresh;
 
   /**
-   * [Output-only] [TrustedTester] The time when this materialized view was last modified, in
-   * milliseconds since the epoch.
+   * Output only. The time when this materialized view was last refreshed, in milliseconds since the
+   * epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -61,22 +62,23 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   private java.lang.String maxStaleness;
 
   /**
-   * [Required] A query whose result is persisted.
+   * Required. A query whose results are persisted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
 
   /**
-   * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be
-   * refreshed. The default value is "1800000" (30 minutes).
+   * Optional. The maximum frequency at which this materialized view will be refreshed. The default
+   * value is "1800000" (30 minutes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long refreshIntervalMs;
 
   /**
-   * [Optional] Allow non incremental materialized view definition. The default value is "false".
+   * Optional. This option declares authors intention to construct a materialized view that will not
+   * be refreshed incrementally.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowNonIncrementalDefinition() {
@@ -84,7 +86,8 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   }
 
   /**
-   * [Optional] Allow non incremental materialized view definition. The default value is "false".
+   * Optional. This option declares authors intention to construct a materialized view that will not
+   * be refreshed incrementally.
    * @param allowNonIncrementalDefinition allowNonIncrementalDefinition or {@code null} for none
    */
   public MaterializedViewDefinition setAllowNonIncrementalDefinition(java.lang.Boolean allowNonIncrementalDefinition) {
@@ -93,8 +96,8 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   }
 
   /**
-   * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base
-   * table is updated. The default value is "true".
+   * Optional. Enable automatic refresh of the materialized view when the base table is updated. The
+   * default value is "true".
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableRefresh() {
@@ -102,8 +105,8 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   }
 
   /**
-   * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base
-   * table is updated. The default value is "true".
+   * Optional. Enable automatic refresh of the materialized view when the base table is updated. The
+   * default value is "true".
    * @param enableRefresh enableRefresh or {@code null} for none
    */
   public MaterializedViewDefinition setEnableRefresh(java.lang.Boolean enableRefresh) {
@@ -112,8 +115,8 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   }
 
   /**
-   * [Output-only] [TrustedTester] The time when this materialized view was last modified, in
-   * milliseconds since the epoch.
+   * Output only. The time when this materialized view was last refreshed, in milliseconds since the
+   * epoch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLastRefreshTime() {
@@ -121,8 +124,8 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   }
 
   /**
-   * [Output-only] [TrustedTester] The time when this materialized view was last modified, in
-   * milliseconds since the epoch.
+   * Output only. The time when this materialized view was last refreshed, in milliseconds since the
+   * epoch.
    * @param lastRefreshTime lastRefreshTime or {@code null} for none
    */
   public MaterializedViewDefinition setLastRefreshTime(java.lang.Long lastRefreshTime) {
@@ -180,7 +183,7 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   }
 
   /**
-   * [Required] A query whose result is persisted.
+   * Required. A query whose results are persisted.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -188,7 +191,7 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   }
 
   /**
-   * [Required] A query whose result is persisted.
+   * Required. A query whose results are persisted.
    * @param query query or {@code null} for none
    */
   public MaterializedViewDefinition setQuery(java.lang.String query) {
@@ -197,8 +200,8 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   }
 
   /**
-   * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be
-   * refreshed. The default value is "1800000" (30 minutes).
+   * Optional. The maximum frequency at which this materialized view will be refreshed. The default
+   * value is "1800000" (30 minutes).
    * @return value or {@code null} for none
    */
   public java.lang.Long getRefreshIntervalMs() {
@@ -206,8 +209,8 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   }
 
   /**
-   * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be
-   * refreshed. The default value is "1800000" (30 minutes).
+   * Optional. The maximum frequency at which this materialized view will be refreshed. The default
+   * value is "1800000" (30 minutes).
    * @param refreshIntervalMs refreshIntervalMs or {@code null} for none
    */
   public MaterializedViewDefinition setRefreshIntervalMs(java.lang.Long refreshIntervalMs) {

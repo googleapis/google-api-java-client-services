@@ -30,29 +30,33 @@ package com.google.api.services.bigquery.model;
 public final class TableReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] The ID of the dataset containing this table.
+   * Required. The ID of the dataset containing this table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String datasetId;
 
   /**
-   * [Required] The ID of the project containing this table.
+   * Required. The ID of the project containing this table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-   * underscores (_). The maximum length is 1,024 characters.
+   * Required. The ID of the table. The ID can contain Unicode characters in category L (letter), M
+   * (mark), N (number), Pc (connector, including underscore), Pd (dash), and Zs (space). For more
+   * information, see [General
+   * Category](https://wikipedia.org/wiki/Unicode_character_property#General_Category). The maximum
+   * length is 1,024 characters. Certain operations allow suffixing of the table ID with a partition
+   * decorator, such as `sample_table$20190123`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tableId;
 
   /**
-   * [Required] The ID of the dataset containing this table.
+   * Required. The ID of the dataset containing this table.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetId() {
@@ -60,7 +64,7 @@ public final class TableReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The ID of the dataset containing this table.
+   * Required. The ID of the dataset containing this table.
    * @param datasetId datasetId or {@code null} for none
    */
   public TableReference setDatasetId(java.lang.String datasetId) {
@@ -69,7 +73,7 @@ public final class TableReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The ID of the project containing this table.
+   * Required. The ID of the project containing this table.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -77,7 +81,7 @@ public final class TableReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The ID of the project containing this table.
+   * Required. The ID of the project containing this table.
    * @param projectId projectId or {@code null} for none
    */
   public TableReference setProjectId(java.lang.String projectId) {
@@ -86,8 +90,12 @@ public final class TableReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-   * underscores (_). The maximum length is 1,024 characters.
+   * Required. The ID of the table. The ID can contain Unicode characters in category L (letter), M
+   * (mark), N (number), Pc (connector, including underscore), Pd (dash), and Zs (space). For more
+   * information, see [General
+   * Category](https://wikipedia.org/wiki/Unicode_character_property#General_Category). The maximum
+   * length is 1,024 characters. Certain operations allow suffixing of the table ID with a partition
+   * decorator, such as `sample_table$20190123`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTableId() {
@@ -95,8 +103,12 @@ public final class TableReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
-   * underscores (_). The maximum length is 1,024 characters.
+   * Required. The ID of the table. The ID can contain Unicode characters in category L (letter), M
+   * (mark), N (number), Pc (connector, including underscore), Pd (dash), and Zs (space). For more
+   * information, see [General
+   * Category](https://wikipedia.org/wiki/Unicode_character_property#General_Category). The maximum
+   * length is 1,024 characters. Certain operations allow suffixing of the table ID with a partition
+   * decorator, such as `sample_table$20190123`.
    * @param tableId tableId or {@code null} for none
    */
   public TableReference setTableId(java.lang.String tableId) {

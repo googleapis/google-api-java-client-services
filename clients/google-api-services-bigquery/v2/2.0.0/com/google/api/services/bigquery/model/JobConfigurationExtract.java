@@ -17,7 +17,8 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JobConfigurationExtract.
+ * JobConfigurationExtract configures a job that exports data from a BigQuery table into Google
+ * Cloud Storage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,17 +31,18 @@ package com.google.api.services.bigquery.model;
 public final class JobConfigurationExtract extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] The compression type to use for exported files. Possible values include GZIP,
-   * DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for
-   * Avro. Not applicable when extracting models.
+   * Optional. The compression type to use for exported files. Possible values include DEFLATE,
+   * GZIP, NONE, SNAPPY, and ZSTD. The default value is NONE. Not all compression formats are
+   * support for all file formats. DEFLATE is only supported for Avro. ZSTD is only supported for
+   * Parquet. Not applicable when extracting models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String compression;
 
   /**
-   * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON,
-   * PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default
+   * Optional. The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON,
+   * PARQUET, or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default
    * value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The
    * default value for models is ML_TF_SAVED_MODEL.
    * The value may be {@code null}.
@@ -65,15 +67,22 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> destinationUris;
 
   /**
-   * [Optional] Delimiter to use between fields in the exported data. Default is ','. Not applicable
-   * when extracting models.
+   * Optional. When extracting data in CSV format, this defines the delimiter to use between fields
+   * in the exported data. Default is ','. Not applicable when extracting models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldDelimiter;
 
   /**
-   * [Optional] Whether to print out a header row in the results. Default is true. Not applicable
+   * Optional. Model extract options only applicable when extracting models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ModelExtractOptions modelExtractOptions;
+
+  /**
+   * Optional. Whether to print out a header row in the results. Default is true. Not applicable
    * when extracting models.
    * The value may be {@code null}.
    */
@@ -95,19 +104,18 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   private TableReference sourceTable;
 
   /**
-   * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable
-   * extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical
-   * types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable
-   * when extracting models.
+   * Whether to use logical types when extracting to AVRO format. Not applicable when extracting
+   * models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useAvroLogicalTypes;
 
   /**
-   * [Optional] The compression type to use for exported files. Possible values include GZIP,
-   * DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for
-   * Avro. Not applicable when extracting models.
+   * Optional. The compression type to use for exported files. Possible values include DEFLATE,
+   * GZIP, NONE, SNAPPY, and ZSTD. The default value is NONE. Not all compression formats are
+   * support for all file formats. DEFLATE is only supported for Avro. ZSTD is only supported for
+   * Parquet. Not applicable when extracting models.
    * @return value or {@code null} for none
    */
   public java.lang.String getCompression() {
@@ -115,9 +123,10 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] The compression type to use for exported files. Possible values include GZIP,
-   * DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for
-   * Avro. Not applicable when extracting models.
+   * Optional. The compression type to use for exported files. Possible values include DEFLATE,
+   * GZIP, NONE, SNAPPY, and ZSTD. The default value is NONE. Not all compression formats are
+   * support for all file formats. DEFLATE is only supported for Avro. ZSTD is only supported for
+   * Parquet. Not applicable when extracting models.
    * @param compression compression or {@code null} for none
    */
   public JobConfigurationExtract setCompression(java.lang.String compression) {
@@ -126,8 +135,8 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON,
-   * PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default
+   * Optional. The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON,
+   * PARQUET, or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default
    * value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The
    * default value for models is ML_TF_SAVED_MODEL.
    * @return value or {@code null} for none
@@ -137,8 +146,8 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON,
-   * PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default
+   * Optional. The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON,
+   * PARQUET, or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default
    * value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The
    * default value for models is ML_TF_SAVED_MODEL.
    * @param destinationFormat destinationFormat or {@code null} for none
@@ -187,8 +196,8 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] Delimiter to use between fields in the exported data. Default is ','. Not applicable
-   * when extracting models.
+   * Optional. When extracting data in CSV format, this defines the delimiter to use between fields
+   * in the exported data. Default is ','. Not applicable when extracting models.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldDelimiter() {
@@ -196,8 +205,8 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] Delimiter to use between fields in the exported data. Default is ','. Not applicable
-   * when extracting models.
+   * Optional. When extracting data in CSV format, this defines the delimiter to use between fields
+   * in the exported data. Default is ','. Not applicable when extracting models.
    * @param fieldDelimiter fieldDelimiter or {@code null} for none
    */
   public JobConfigurationExtract setFieldDelimiter(java.lang.String fieldDelimiter) {
@@ -206,7 +215,24 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] Whether to print out a header row in the results. Default is true. Not applicable
+   * Optional. Model extract options only applicable when extracting models.
+   * @return value or {@code null} for none
+   */
+  public ModelExtractOptions getModelExtractOptions() {
+    return modelExtractOptions;
+  }
+
+  /**
+   * Optional. Model extract options only applicable when extracting models.
+   * @param modelExtractOptions modelExtractOptions or {@code null} for none
+   */
+  public JobConfigurationExtract setModelExtractOptions(ModelExtractOptions modelExtractOptions) {
+    this.modelExtractOptions = modelExtractOptions;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to print out a header row in the results. Default is true. Not applicable
    * when extracting models.
    * @return value or {@code null} for none
    */
@@ -215,7 +241,7 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] Whether to print out a header row in the results. Default is true. Not applicable
+   * Optional. Whether to print out a header row in the results. Default is true. Not applicable
    * when extracting models.
    * @param printHeader printHeader or {@code null} for none
    */
@@ -241,8 +267,8 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
    * </p>
    *
    * <p>
-   *[ Optional] Whether to print out a header row in the results. Default is true. Not applicable when
-[ extracting models.
+   * Optional. Whether to print out a header row in the results. Default is true. Not applicable when
+ extracting models.
    * </p>
    */
   public boolean isPrintHeader() {
@@ -287,10 +313,8 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable
-   * extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical
-   * types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable
-   * when extracting models.
+   * Whether to use logical types when extracting to AVRO format. Not applicable when extracting
+   * models.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAvroLogicalTypes() {
@@ -298,10 +322,8 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable
-   * extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical
-   * types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable
-   * when extracting models.
+   * Whether to use logical types when extracting to AVRO format. Not applicable when extracting
+   * models.
    * @param useAvroLogicalTypes useAvroLogicalTypes or {@code null} for none
    */
   public JobConfigurationExtract setUseAvroLogicalTypes(java.lang.Boolean useAvroLogicalTypes) {

@@ -58,6 +58,14 @@ public final class CloudAiNlLlmProtoServiceCandidate extends com.google.api.clie
   private java.lang.String finishReason;
 
   /**
+   * Grounding metadata. Combine with the facts list from response to generate grounding citations
+   * for this choice.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LearningGenaiRootGroundingMetadata groundingMetadata;
+
+  /**
    * Index of the candidate.
    * The value may be {@code null}.
    */
@@ -136,6 +144,25 @@ public final class CloudAiNlLlmProtoServiceCandidate extends com.google.api.clie
    */
   public CloudAiNlLlmProtoServiceCandidate setFinishReason(java.lang.String finishReason) {
     this.finishReason = finishReason;
+    return this;
+  }
+
+  /**
+   * Grounding metadata. Combine with the facts list from response to generate grounding citations
+   * for this choice.
+   * @return value or {@code null} for none
+   */
+  public LearningGenaiRootGroundingMetadata getGroundingMetadata() {
+    return groundingMetadata;
+  }
+
+  /**
+   * Grounding metadata. Combine with the facts list from response to generate grounding citations
+   * for this choice.
+   * @param groundingMetadata groundingMetadata or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServiceCandidate setGroundingMetadata(LearningGenaiRootGroundingMetadata groundingMetadata) {
+    this.groundingMetadata = groundingMetadata;
     return this;
   }
 

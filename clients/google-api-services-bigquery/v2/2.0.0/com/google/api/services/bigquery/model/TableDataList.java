@@ -59,7 +59,8 @@ public final class TableDataList extends com.google.api.client.json.GenericJson 
   private java.util.List<TableRow> rows;
 
   /**
-   * The total number of rows in the complete table.
+   * Total rows of the entire table. In order to show default value 0 we have to present it as
+   * string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -136,7 +137,8 @@ public final class TableDataList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The total number of rows in the complete table.
+   * Total rows of the entire table. In order to show default value 0 we have to present it as
+   * string.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalRows() {
@@ -144,7 +146,8 @@ public final class TableDataList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The total number of rows in the complete table.
+   * Total rows of the entire table. In order to show default value 0 we have to present it as
+   * string.
    * @param totalRows totalRows or {@code null} for none
    */
   public TableDataList setTotalRows(java.lang.Long totalRows) {

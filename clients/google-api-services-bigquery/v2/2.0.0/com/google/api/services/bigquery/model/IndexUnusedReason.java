@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for IndexUnusedReason.
+ * Reason about why no search index was used in the search query (or sub-query).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,35 +30,35 @@ package com.google.api.services.bigquery.model;
 public final class IndexUnusedReason extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] Specifies the base table involved in the reason that no search index was used.
+   * Specifies the base table involved in the reason that no search index was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableReference baseTable;
 
   /**
-   * [Output-only] Specifies the high-level reason for the scenario when no search index was used.
+   * Specifies the high-level reason for the scenario when no search index was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
-   * [Output-only] Specifies the name of the unused search index, if available.
+   * Specifies the name of the unused search index, if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String indexName;
 
   /**
-   * [Output-only] Free form human-readable reason for the scenario when no search index was used.
+   * Free form human-readable reason for the scenario when no search index was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * [Output-only] Specifies the base table involved in the reason that no search index was used.
+   * Specifies the base table involved in the reason that no search index was used.
    * @return value or {@code null} for none
    */
   public TableReference getBaseTable() {
@@ -66,7 +66,7 @@ public final class IndexUnusedReason extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output-only] Specifies the base table involved in the reason that no search index was used.
+   * Specifies the base table involved in the reason that no search index was used.
    * @param baseTable baseTable or {@code null} for none
    */
   public IndexUnusedReason setBaseTable(TableReference baseTable) {
@@ -75,7 +75,7 @@ public final class IndexUnusedReason extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output-only] Specifies the high-level reason for the scenario when no search index was used.
+   * Specifies the high-level reason for the scenario when no search index was used.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -83,7 +83,7 @@ public final class IndexUnusedReason extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output-only] Specifies the high-level reason for the scenario when no search index was used.
+   * Specifies the high-level reason for the scenario when no search index was used.
    * @param code code or {@code null} for none
    */
   public IndexUnusedReason setCode(java.lang.String code) {
@@ -92,7 +92,7 @@ public final class IndexUnusedReason extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output-only] Specifies the name of the unused search index, if available.
+   * Specifies the name of the unused search index, if available.
    * @return value or {@code null} for none
    */
   public java.lang.String getIndexName() {
@@ -100,7 +100,7 @@ public final class IndexUnusedReason extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output-only] Specifies the name of the unused search index, if available.
+   * Specifies the name of the unused search index, if available.
    * @param indexName indexName or {@code null} for none
    */
   public IndexUnusedReason setIndexName(java.lang.String indexName) {
@@ -109,7 +109,7 @@ public final class IndexUnusedReason extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output-only] Free form human-readable reason for the scenario when no search index was used.
+   * Free form human-readable reason for the scenario when no search index was used.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -117,7 +117,7 @@ public final class IndexUnusedReason extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output-only] Free form human-readable reason for the scenario when no search index was used.
+   * Free form human-readable reason for the scenario when no search index was used.
    * @param message message or {@code null} for none
    */
   public IndexUnusedReason setMessage(java.lang.String message) {

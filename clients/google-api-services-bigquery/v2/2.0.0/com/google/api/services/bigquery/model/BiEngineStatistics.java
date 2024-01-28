@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for BiEngineStatistics.
+ * Statistics for a BI Engine specific query. Populated as part of JobStatistics2
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class BiEngineStatistics extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] Specifies which mode of BI Engine acceleration was performed (if any).
+   * Output only. Specifies which mode of BI Engine acceleration was performed (if any).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accelerationMode;
 
   /**
-   * [Output-only] Specifies which mode of BI Engine acceleration was performed (if any).
+   * Output only. Specifies which mode of BI Engine acceleration was performed (if any).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class BiEngineStatistics extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output-only] Specifies which mode of BI Engine acceleration was performed (if any).
+   * Output only. Specifies which mode of BI Engine acceleration was performed (if any).
    * @return value or {@code null} for none
    */
   public java.lang.String getAccelerationMode() {
@@ -67,7 +67,7 @@ public final class BiEngineStatistics extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output-only] Specifies which mode of BI Engine acceleration was performed (if any).
+   * Output only. Specifies which mode of BI Engine acceleration was performed (if any).
    * @param accelerationMode accelerationMode or {@code null} for none
    */
   public BiEngineStatistics setAccelerationMode(java.lang.String accelerationMode) {
@@ -76,7 +76,7 @@ public final class BiEngineStatistics extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output-only] Specifies which mode of BI Engine acceleration was performed (if any).
+   * Output only. Specifies which mode of BI Engine acceleration was performed (if any).
    * @return value or {@code null} for none
    */
   public java.lang.String getBiEngineMode() {
@@ -84,7 +84,7 @@ public final class BiEngineStatistics extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output-only] Specifies which mode of BI Engine acceleration was performed (if any).
+   * Output only. Specifies which mode of BI Engine acceleration was performed (if any).
    * @param biEngineMode biEngineMode or {@code null} for none
    */
   public BiEngineStatistics setBiEngineMode(java.lang.String biEngineMode) {

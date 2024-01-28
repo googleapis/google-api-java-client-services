@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for DatasetList.
+ * Response format for a page of results when listing datasets.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -45,15 +45,15 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A hash value of the results page. You can use this property to determine if the page has
-   * changed since the last request.
+   * Output only. A hash value of the results page. You can use this property to determine if the
+   * page has changed since the last request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * The list type. This property always returns the value "bigquery#datasetList".
+   * Output only. The resource type. This property always returns the value "bigquery#datasetList"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,6 +66,14 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
+
+  /**
+   * A list of skipped locations that were unreachable. For more information about BigQuery
+   * locations, see: https://cloud.google.com/bigquery/docs/locations. Example: "europe-west5"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
 
   /**
    * An array of the dataset resources in the project. Each resource contains basic information. For
@@ -89,8 +97,8 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A hash value of the results page. You can use this property to determine if the page has
-   * changed since the last request.
+   * Output only. A hash value of the results page. You can use this property to determine if the
+   * page has changed since the last request.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -98,8 +106,8 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A hash value of the results page. You can use this property to determine if the page has
-   * changed since the last request.
+   * Output only. A hash value of the results page. You can use this property to determine if the
+   * page has changed since the last request.
    * @param etag etag or {@code null} for none
    */
   public DatasetList setEtag(java.lang.String etag) {
@@ -108,7 +116,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list type. This property always returns the value "bigquery#datasetList".
+   * Output only. The resource type. This property always returns the value "bigquery#datasetList"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -116,7 +124,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list type. This property always returns the value "bigquery#datasetList".
+   * Output only. The resource type. This property always returns the value "bigquery#datasetList"
    * @param kind kind or {@code null} for none
    */
   public DatasetList setKind(java.lang.String kind) {
@@ -143,6 +151,25 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     return this;
   }
 
+  /**
+   * A list of skipped locations that were unreachable. For more information about BigQuery
+   * locations, see: https://cloud.google.com/bigquery/docs/locations. Example: "europe-west5"
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * A list of skipped locations that were unreachable. For more information about BigQuery
+   * locations, see: https://cloud.google.com/bigquery/docs/locations. Example: "europe-west5"
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public DatasetList setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
+    return this;
+  }
+
   @Override
   public DatasetList set(String fieldName, Object value) {
     return (DatasetList) super.set(fieldName, value);
@@ -154,7 +181,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Model definition for DatasetListDatasets.
+   * A dataset resource with only a subset of fields, to be returned in a list of datasets.
    */
   public static final class Datasets extends com.google.api.client.json.GenericJson {
 
@@ -167,7 +194,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     private DatasetReference datasetReference;
 
     /**
-     * A descriptive name for the dataset, if one exists.
+     * An alternate name for the dataset. The friendly name is purely decorative in nature.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -181,7 +208,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     private java.lang.String id;
 
     /**
-     * The resource type. This property always returns the value "bigquery#dataset".
+     * The resource type. This property always returns the value "bigquery#dataset"
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -195,7 +222,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     private java.util.Map<String, java.lang.String> labels;
 
     /**
-     * The geographic location where the data resides.
+     * The geographic location where the dataset resides.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -221,7 +248,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * A descriptive name for the dataset, if one exists.
+     * An alternate name for the dataset. The friendly name is purely decorative in nature.
      * @return value or {@code null} for none
      */
     public java.lang.String getFriendlyName() {
@@ -229,7 +256,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * A descriptive name for the dataset, if one exists.
+     * An alternate name for the dataset. The friendly name is purely decorative in nature.
      * @param friendlyName friendlyName or {@code null} for none
      */
     public Datasets setFriendlyName(java.lang.String friendlyName) {
@@ -255,7 +282,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The resource type. This property always returns the value "bigquery#dataset".
+     * The resource type. This property always returns the value "bigquery#dataset"
      * @return value or {@code null} for none
      */
     public java.lang.String getKind() {
@@ -263,7 +290,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The resource type. This property always returns the value "bigquery#dataset".
+     * The resource type. This property always returns the value "bigquery#dataset"
      * @param kind kind or {@code null} for none
      */
     public Datasets setKind(java.lang.String kind) {
@@ -289,7 +316,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The geographic location where the data resides.
+     * The geographic location where the dataset resides.
      * @return value or {@code null} for none
      */
     public java.lang.String getLocation() {
@@ -297,7 +324,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The geographic location where the data resides.
+     * The geographic location where the dataset resides.
      * @param location location or {@code null} for none
      */
     public Datasets setLocation(java.lang.String location) {

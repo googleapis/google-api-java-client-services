@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JobStatistics4.
+ * Statistics for an extract job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class JobStatistics4 extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] Number of files per destination URI or URI pattern specified in the extract
+   * Output only. Number of files per destination URI or URI pattern specified in the extract
    * configuration. These values will be in the same order as the URIs specified in the
    * 'destinationUris' field.
    * The value may be {@code null}.
@@ -39,15 +39,23 @@ public final class JobStatistics4 extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.Long> destinationUriFileCounts;
 
   /**
-   * [Output-only] Number of user bytes extracted into the result. This is the byte count as
-   * computed by BigQuery for billing purposes.
+   * Output only. Number of user bytes extracted into the result. This is the byte count as computed
+   * by BigQuery for billing purposes and doesn't have any relationship with the number of actual
+   * result bytes extracted in the desired format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long inputBytes;
 
   /**
-   * [Output-only] Number of files per destination URI or URI pattern specified in the extract
+   * Output only. Describes a timeline of job execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QueryTimelineSample> timeline;
+
+  /**
+   * Output only. Number of files per destination URI or URI pattern specified in the extract
    * configuration. These values will be in the same order as the URIs specified in the
    * 'destinationUris' field.
    * @return value or {@code null} for none
@@ -57,7 +65,7 @@ public final class JobStatistics4 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of files per destination URI or URI pattern specified in the extract
+   * Output only. Number of files per destination URI or URI pattern specified in the extract
    * configuration. These values will be in the same order as the URIs specified in the
    * 'destinationUris' field.
    * @param destinationUriFileCounts destinationUriFileCounts or {@code null} for none
@@ -68,8 +76,9 @@ public final class JobStatistics4 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of user bytes extracted into the result. This is the byte count as
-   * computed by BigQuery for billing purposes.
+   * Output only. Number of user bytes extracted into the result. This is the byte count as computed
+   * by BigQuery for billing purposes and doesn't have any relationship with the number of actual
+   * result bytes extracted in the desired format.
    * @return value or {@code null} for none
    */
   public java.lang.Long getInputBytes() {
@@ -77,12 +86,30 @@ public final class JobStatistics4 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of user bytes extracted into the result. This is the byte count as
-   * computed by BigQuery for billing purposes.
+   * Output only. Number of user bytes extracted into the result. This is the byte count as computed
+   * by BigQuery for billing purposes and doesn't have any relationship with the number of actual
+   * result bytes extracted in the desired format.
    * @param inputBytes inputBytes or {@code null} for none
    */
   public JobStatistics4 setInputBytes(java.lang.Long inputBytes) {
     this.inputBytes = inputBytes;
+    return this;
+  }
+
+  /**
+   * Output only. Describes a timeline of job execution.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QueryTimelineSample> getTimeline() {
+    return timeline;
+  }
+
+  /**
+   * Output only. Describes a timeline of job execution.
+   * @param timeline timeline or {@code null} for none
+   */
+  public JobStatistics4 setTimeline(java.util.List<QueryTimelineSample> timeline) {
+    this.timeline = timeline;
     return this;
   }
 

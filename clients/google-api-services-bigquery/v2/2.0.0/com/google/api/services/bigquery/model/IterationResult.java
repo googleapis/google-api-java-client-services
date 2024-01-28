@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for IterationResult.
+ * Information about a single iteration of the training run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -28,6 +28,26 @@ package com.google.api.services.bigquery.model;
  */
 @SuppressWarnings("javadoc")
 public final class IterationResult extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Arima result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ArimaResult arimaResult;
+
+  /**
+   * Information about top clusters for clustering models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ClusterInfo> clusterInfos;
+
+  static {
+    // hack to force ProGuard to consider ClusterInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ClusterInfo.class);
+  }
 
   /**
    * Time taken to run the iteration in milliseconds.
@@ -58,11 +78,52 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   private java.lang.Double learnRate;
 
   /**
+   * The information of the principal components.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PrincipalComponentInfo> principalComponentInfos;
+
+  /**
    * Loss computed on the training data at the end of iteration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double trainingLoss;
+
+  /**
+   * Arima result.
+   * @return value or {@code null} for none
+   */
+  public ArimaResult getArimaResult() {
+    return arimaResult;
+  }
+
+  /**
+   * Arima result.
+   * @param arimaResult arimaResult or {@code null} for none
+   */
+  public IterationResult setArimaResult(ArimaResult arimaResult) {
+    this.arimaResult = arimaResult;
+    return this;
+  }
+
+  /**
+   * Information about top clusters for clustering models.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ClusterInfo> getClusterInfos() {
+    return clusterInfos;
+  }
+
+  /**
+   * Information about top clusters for clustering models.
+   * @param clusterInfos clusterInfos or {@code null} for none
+   */
+  public IterationResult setClusterInfos(java.util.List<ClusterInfo> clusterInfos) {
+    this.clusterInfos = clusterInfos;
+    return this;
+  }
 
   /**
    * Time taken to run the iteration in milliseconds.
@@ -129,6 +190,23 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
    */
   public IterationResult setLearnRate(java.lang.Double learnRate) {
     this.learnRate = learnRate;
+    return this;
+  }
+
+  /**
+   * The information of the principal components.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PrincipalComponentInfo> getPrincipalComponentInfos() {
+    return principalComponentInfos;
+  }
+
+  /**
+   * The information of the principal components.
+   * @param principalComponentInfos principalComponentInfos or {@code null} for none
+   */
+  public IterationResult setPrincipalComponentInfos(java.util.List<PrincipalComponentInfo> principalComponentInfos) {
+    this.principalComponentInfos = principalComponentInfos;
     return this;
   }
 

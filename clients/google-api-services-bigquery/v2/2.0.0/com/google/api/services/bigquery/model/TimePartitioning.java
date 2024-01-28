@@ -30,41 +30,44 @@ package com.google.api.services.bigquery.model;
 public final class TimePartitioning extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] Number of milliseconds for which to keep the storage for partitions in the table.
-   * The storage in a partition will have an expiration time of its partition time plus this value.
+   * Optional. Number of milliseconds for which to keep the storage for a partition. A wrapper is
+   * used here because 0 is an invalid value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long expirationMs;
 
   /**
-   * [Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either
-   * '_PARTITIONTIME' as TIMESTAMP type, or '_PARTITIONDATE' as DATE type. If field is specified,
-   * the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE
-   * field. Its mode must be NULLABLE or REQUIRED.
+   * Optional. If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the
+   * table is partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its
+   * mode must be NULLABLE or REQUIRED. A wrapper is used here because an empty string is an invalid
+   * value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String field;
 
   /**
+   * If set to true, queries over this table require a partition filter that can be used for
+   * partition elimination to be specified. This field is deprecated; please set the field with the
+   * same name on the table itself instead. This field needs a wrapper because we want to output the
+   * default value, false, if the user explicitly set it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requirePartitionFilter;
 
   /**
-   * [Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one
-   * partition per day, hour, month, and year, respectively. When the type is not specified, the
-   * default behavior is DAY.
+   * Required. The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition
+   * per day, hour, month, and year, respectively.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * [Optional] Number of milliseconds for which to keep the storage for partitions in the table.
-   * The storage in a partition will have an expiration time of its partition time plus this value.
+   * Optional. Number of milliseconds for which to keep the storage for a partition. A wrapper is
+   * used here because 0 is an invalid value.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExpirationMs() {
@@ -72,8 +75,8 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] Number of milliseconds for which to keep the storage for partitions in the table.
-   * The storage in a partition will have an expiration time of its partition time plus this value.
+   * Optional. Number of milliseconds for which to keep the storage for a partition. A wrapper is
+   * used here because 0 is an invalid value.
    * @param expirationMs expirationMs or {@code null} for none
    */
   public TimePartitioning setExpirationMs(java.lang.Long expirationMs) {
@@ -82,10 +85,10 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either
-   * '_PARTITIONTIME' as TIMESTAMP type, or '_PARTITIONDATE' as DATE type. If field is specified,
-   * the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE
-   * field. Its mode must be NULLABLE or REQUIRED.
+   * Optional. If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the
+   * table is partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its
+   * mode must be NULLABLE or REQUIRED. A wrapper is used here because an empty string is an invalid
+   * value.
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -93,10 +96,10 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either
-   * '_PARTITIONTIME' as TIMESTAMP type, or '_PARTITIONDATE' as DATE type. If field is specified,
-   * the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE
-   * field. Its mode must be NULLABLE or REQUIRED.
+   * Optional. If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the
+   * table is partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its
+   * mode must be NULLABLE or REQUIRED. A wrapper is used here because an empty string is an invalid
+   * value.
    * @param field field or {@code null} for none
    */
   public TimePartitioning setField(java.lang.String field) {
@@ -105,6 +108,10 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * If set to true, queries over this table require a partition filter that can be used for
+   * partition elimination to be specified. This field is deprecated; please set the field with the
+   * same name on the table itself instead. This field needs a wrapper because we want to output the
+   * default value, false, if the user explicitly set it.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequirePartitionFilter() {
@@ -112,6 +119,10 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * If set to true, queries over this table require a partition filter that can be used for
+   * partition elimination to be specified. This field is deprecated; please set the field with the
+   * same name on the table itself instead. This field needs a wrapper because we want to output the
+   * default value, false, if the user explicitly set it.
    * @param requirePartitionFilter requirePartitionFilter or {@code null} for none
    */
   public TimePartitioning setRequirePartitionFilter(java.lang.Boolean requirePartitionFilter) {
@@ -120,9 +131,38 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one
-   * partition per day, hour, month, and year, respectively. When the type is not specified, the
-   * default behavior is DAY.
+   * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+   *
+   * <p>
+   * Boolean properties can have four possible values:
+   * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+   * or {@link Boolean#FALSE}.
+   * </p>
+   *
+   * <p>
+   * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+   * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+   * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+   * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+   * </p>
+   *
+   * <p>
+   * If set to true, queries over this table require a partition filter that can be used for partition
+ elimination to be specified. This field is deprecated; please set the field with the same name on
+ the table itself instead. This field needs a wrapper because we want to output the default value,
+ false, if the user explicitly set it.
+   * </p>
+   */
+  public boolean isRequirePartitionFilter() {
+    if (requirePartitionFilter == null || requirePartitionFilter == com.google.api.client.util.Data.NULL_BOOLEAN) {
+      return false;
+    }
+    return requirePartitionFilter;
+  }
+
+  /**
+   * Required. The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition
+   * per day, hour, month, and year, respectively.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -130,9 +170,8 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one
-   * partition per day, hour, month, and year, respectively. When the type is not specified, the
-   * default behavior is DAY.
+   * Required. The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition
+   * per day, hour, month, and year, respectively.
    * @param type type or {@code null} for none
    */
   public TimePartitioning setType(java.lang.String type) {

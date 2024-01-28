@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for SearchStatistics.
+ * Statistics for a search query. Populated as part of JobStatistics2.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.bigquery.model;
 public final class SearchStatistics extends com.google.api.client.json.GenericJson {
 
   /**
-   * When index_usage_mode is UNUSED or PARTIALLY_USED, this field explains why index was not used
-   * in all or part of the search query. If index_usage_mode is FULLLY_USED, this field is not
+   * When `indexUsageMode` is `UNUSED` or `PARTIALLY_USED`, this field explains why indexes were not
+   * used in all or part of the search query. If `indexUsageMode` is `FULLY_USED`, this field is not
    * populated.
    * The value may be {@code null}.
    */
@@ -45,15 +45,15 @@ public final class SearchStatistics extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specifies index usage mode for the query.
+   * Specifies the index usage mode for the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String indexUsageMode;
 
   /**
-   * When index_usage_mode is UNUSED or PARTIALLY_USED, this field explains why index was not used
-   * in all or part of the search query. If index_usage_mode is FULLLY_USED, this field is not
+   * When `indexUsageMode` is `UNUSED` or `PARTIALLY_USED`, this field explains why indexes were not
+   * used in all or part of the search query. If `indexUsageMode` is `FULLY_USED`, this field is not
    * populated.
    * @return value or {@code null} for none
    */
@@ -62,8 +62,8 @@ public final class SearchStatistics extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * When index_usage_mode is UNUSED or PARTIALLY_USED, this field explains why index was not used
-   * in all or part of the search query. If index_usage_mode is FULLLY_USED, this field is not
+   * When `indexUsageMode` is `UNUSED` or `PARTIALLY_USED`, this field explains why indexes were not
+   * used in all or part of the search query. If `indexUsageMode` is `FULLY_USED`, this field is not
    * populated.
    * @param indexUnusedReasons indexUnusedReasons or {@code null} for none
    */
@@ -73,7 +73,7 @@ public final class SearchStatistics extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specifies index usage mode for the query.
+   * Specifies the index usage mode for the query.
    * @return value or {@code null} for none
    */
   public java.lang.String getIndexUsageMode() {
@@ -81,7 +81,7 @@ public final class SearchStatistics extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specifies index usage mode for the query.
+   * Specifies the index usage mode for the query.
    * @param indexUsageMode indexUsageMode or {@code null} for none
    */
   public SearchStatistics setIndexUsageMode(java.lang.String indexUsageMode) {

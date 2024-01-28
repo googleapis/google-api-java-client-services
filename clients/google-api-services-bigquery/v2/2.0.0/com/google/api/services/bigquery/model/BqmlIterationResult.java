@@ -30,47 +30,42 @@ package com.google.api.services.bigquery.model;
 public final class BqmlIterationResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only, Beta] Time taken to run the training iteration in milliseconds.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long durationMs;
 
   /**
-   * [Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval
-   * loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option
-   * is specified as no_split or auto_split with input data size less than 500 rows.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double evalLoss;
 
   /**
-   * [Output-only, Beta] Index of the ML training iteration, starting from zero for each training
-   * run.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer index;
 
   /**
-   * [Output-only, Beta] Learning rate used for this iteration, it varies for different training
-   * iterations if learn_rate_strategy option is not constant.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double learnRate;
 
   /**
-   * [Output-only, Beta] Training loss computed on the training data at the end of the iteration.
-   * The training loss function is defined by model type.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double trainingLoss;
 
   /**
-   * [Output-only, Beta] Time taken to run the training iteration in milliseconds.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDurationMs() {
@@ -78,7 +73,7 @@ public final class BqmlIterationResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output-only, Beta] Time taken to run the training iteration in milliseconds.
+   * Deprecated.
    * @param durationMs durationMs or {@code null} for none
    */
   public BqmlIterationResult setDurationMs(java.lang.Long durationMs) {
@@ -87,9 +82,7 @@ public final class BqmlIterationResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval
-   * loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option
-   * is specified as no_split or auto_split with input data size less than 500 rows.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Double getEvalLoss() {
@@ -97,9 +90,7 @@ public final class BqmlIterationResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval
-   * loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option
-   * is specified as no_split or auto_split with input data size less than 500 rows.
+   * Deprecated.
    * @param evalLoss evalLoss or {@code null} for none
    */
   public BqmlIterationResult setEvalLoss(java.lang.Double evalLoss) {
@@ -108,8 +99,7 @@ public final class BqmlIterationResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output-only, Beta] Index of the ML training iteration, starting from zero for each training
-   * run.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -117,8 +107,7 @@ public final class BqmlIterationResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output-only, Beta] Index of the ML training iteration, starting from zero for each training
-   * run.
+   * Deprecated.
    * @param index index or {@code null} for none
    */
   public BqmlIterationResult setIndex(java.lang.Integer index) {
@@ -127,8 +116,7 @@ public final class BqmlIterationResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output-only, Beta] Learning rate used for this iteration, it varies for different training
-   * iterations if learn_rate_strategy option is not constant.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLearnRate() {
@@ -136,8 +124,7 @@ public final class BqmlIterationResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output-only, Beta] Learning rate used for this iteration, it varies for different training
-   * iterations if learn_rate_strategy option is not constant.
+   * Deprecated.
    * @param learnRate learnRate or {@code null} for none
    */
   public BqmlIterationResult setLearnRate(java.lang.Double learnRate) {
@@ -146,8 +133,7 @@ public final class BqmlIterationResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output-only, Beta] Training loss computed on the training data at the end of the iteration.
-   * The training loss function is defined by model type.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Double getTrainingLoss() {
@@ -155,8 +141,7 @@ public final class BqmlIterationResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output-only, Beta] Training loss computed on the training data at the end of the iteration.
-   * The training loss function is defined by model type.
+   * Deprecated.
    * @param trainingLoss trainingLoss or {@code null} for none
    */
   public BqmlIterationResult setTrainingLoss(java.lang.Double trainingLoss) {

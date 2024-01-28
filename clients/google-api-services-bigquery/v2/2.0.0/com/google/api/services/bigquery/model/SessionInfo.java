@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for SessionInfo.
+ * [Preview] Information related to sessions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class SessionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] // [Preview] Id of the session.
+   * Output only. The id of the session.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sessionId;
 
   /**
-   * [Output-only] // [Preview] Id of the session.
+   * Output only. The id of the session.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionId() {
@@ -45,7 +45,7 @@ public final class SessionInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] // [Preview] Id of the session.
+   * Output only. The id of the session.
    * @param sessionId sessionId or {@code null} for none
    */
   public SessionInfo setSessionId(java.lang.String sessionId) {

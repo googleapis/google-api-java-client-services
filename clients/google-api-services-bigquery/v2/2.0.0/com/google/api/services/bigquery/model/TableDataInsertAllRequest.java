@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for TableDataInsertAllRequest.
+ * Request for sending a single streaming insert.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class TableDataInsertAllRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] Accept rows that contain values that do not match the schema. The unknown values are
+   * Optional. Accept rows that contain values that do not match the schema. The unknown values are
    * ignored. Default is false, which treats unknown values as errors.
    * The value may be {@code null}.
    */
@@ -38,14 +38,15 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   private java.lang.Boolean ignoreUnknownValues;
 
   /**
-   * The resource type of the response.
+   * Optional. The resource type of the response. The value is not checked at the backend.
+   * Historically, it has been set to "bigquery#tableDataInsertAllRequest" but you are not required
+   * to set it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The rows to insert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +59,7 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Insert all valid rows of a request, even if invalid rows exist. The default value is
+   * Optional. Insert all valid rows of a request, even if invalid rows exist. The default value is
    * false, which causes the entire request to fail if any invalid rows exist.
    * The value may be {@code null}.
    */
@@ -66,9 +67,9 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   private java.lang.Boolean skipInvalidRows;
 
   /**
-   * If specified, treats the destination table as a base template, and inserts the rows into an
-   * instance table named "{destination}{templateSuffix}". BigQuery will manage creation of the
-   * instance table, using the schema of the base template table. See
+   * Optional. If specified, treats the destination table as a base template, and inserts the rows
+   * into an instance table named "{destination}{templateSuffix}". BigQuery will manage creation of
+   * the instance table, using the schema of the base template table. See
    * https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables for
    * considerations when working with templates tables.
    * The value may be {@code null}.
@@ -77,7 +78,15 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   private java.lang.String templateSuffix;
 
   /**
-   * [Optional] Accept rows that contain values that do not match the schema. The unknown values are
+   * Optional. Unique request trace id. Used for debugging purposes only. It is case-sensitive,
+   * limited to up to 36 ASCII characters. A UUID is recommended.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String traceId;
+
+  /**
+   * Optional. Accept rows that contain values that do not match the schema. The unknown values are
    * ignored. Default is false, which treats unknown values as errors.
    * @return value or {@code null} for none
    */
@@ -86,7 +95,7 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Accept rows that contain values that do not match the schema. The unknown values are
+   * Optional. Accept rows that contain values that do not match the schema. The unknown values are
    * ignored. Default is false, which treats unknown values as errors.
    * @param ignoreUnknownValues ignoreUnknownValues or {@code null} for none
    */
@@ -96,7 +105,9 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * The resource type of the response.
+   * Optional. The resource type of the response. The value is not checked at the backend.
+   * Historically, it has been set to "bigquery#tableDataInsertAllRequest" but you are not required
+   * to set it.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -104,7 +115,9 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * The resource type of the response.
+   * Optional. The resource type of the response. The value is not checked at the backend.
+   * Historically, it has been set to "bigquery#tableDataInsertAllRequest" but you are not required
+   * to set it.
    * @param kind kind or {@code null} for none
    */
   public TableDataInsertAllRequest setKind(java.lang.String kind) {
@@ -113,7 +126,6 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * The rows to insert.
    * @return value or {@code null} for none
    */
   public java.util.List<Rows> getRows() {
@@ -121,7 +133,6 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * The rows to insert.
    * @param rows rows or {@code null} for none
    */
   public TableDataInsertAllRequest setRows(java.util.List<Rows> rows) {
@@ -130,7 +141,7 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Insert all valid rows of a request, even if invalid rows exist. The default value is
+   * Optional. Insert all valid rows of a request, even if invalid rows exist. The default value is
    * false, which causes the entire request to fail if any invalid rows exist.
    * @return value or {@code null} for none
    */
@@ -139,7 +150,7 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Insert all valid rows of a request, even if invalid rows exist. The default value is
+   * Optional. Insert all valid rows of a request, even if invalid rows exist. The default value is
    * false, which causes the entire request to fail if any invalid rows exist.
    * @param skipInvalidRows skipInvalidRows or {@code null} for none
    */
@@ -149,9 +160,9 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * If specified, treats the destination table as a base template, and inserts the rows into an
-   * instance table named "{destination}{templateSuffix}". BigQuery will manage creation of the
-   * instance table, using the schema of the base template table. See
+   * Optional. If specified, treats the destination table as a base template, and inserts the rows
+   * into an instance table named "{destination}{templateSuffix}". BigQuery will manage creation of
+   * the instance table, using the schema of the base template table. See
    * https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables for
    * considerations when working with templates tables.
    * @return value or {@code null} for none
@@ -161,15 +172,34 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * If specified, treats the destination table as a base template, and inserts the rows into an
-   * instance table named "{destination}{templateSuffix}". BigQuery will manage creation of the
-   * instance table, using the schema of the base template table. See
+   * Optional. If specified, treats the destination table as a base template, and inserts the rows
+   * into an instance table named "{destination}{templateSuffix}". BigQuery will manage creation of
+   * the instance table, using the schema of the base template table. See
    * https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables for
    * considerations when working with templates tables.
    * @param templateSuffix templateSuffix or {@code null} for none
    */
   public TableDataInsertAllRequest setTemplateSuffix(java.lang.String templateSuffix) {
     this.templateSuffix = templateSuffix;
+    return this;
+  }
+
+  /**
+   * Optional. Unique request trace id. Used for debugging purposes only. It is case-sensitive,
+   * limited to up to 36 ASCII characters. A UUID is recommended.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTraceId() {
+    return traceId;
+  }
+
+  /**
+   * Optional. Unique request trace id. Used for debugging purposes only. It is case-sensitive,
+   * limited to up to 36 ASCII characters. A UUID is recommended.
+   * @param traceId traceId or {@code null} for none
+   */
+  public TableDataInsertAllRequest setTraceId(java.lang.String traceId) {
+    this.traceId = traceId;
     return this;
   }
 
@@ -184,29 +214,30 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * Model definition for TableDataInsertAllRequestRows.
+   * Data for a single insertion row.
    */
   public static final class Rows extends com.google.api.client.json.GenericJson {
 
     /**
-     * [Optional] A unique ID for each row. BigQuery uses this property to detect duplicate insertion
-     * requests on a best-effort basis.
+     * Insertion ID for best-effort deduplication. This feature is not recommended, and users seeking
+     * stronger insertion semantics are encouraged to use other mechanisms such as the BigQuery Write
+     * API.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String insertId;
 
     /**
-     * [Required] A JSON object that contains a row of data. The object's properties and values must
-     * match the destination table's schema.
+     * Data for a single row.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.util.Map<String, java.lang.Object> json;
 
     /**
-     * [Optional] A unique ID for each row. BigQuery uses this property to detect duplicate insertion
-     * requests on a best-effort basis.
+     * Insertion ID for best-effort deduplication. This feature is not recommended, and users seeking
+     * stronger insertion semantics are encouraged to use other mechanisms such as the BigQuery Write
+     * API.
      * @return value or {@code null} for none
      */
     public java.lang.String getInsertId() {
@@ -214,8 +245,9 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
     }
 
     /**
-     * [Optional] A unique ID for each row. BigQuery uses this property to detect duplicate insertion
-     * requests on a best-effort basis.
+     * Insertion ID for best-effort deduplication. This feature is not recommended, and users seeking
+     * stronger insertion semantics are encouraged to use other mechanisms such as the BigQuery Write
+     * API.
      * @param insertId insertId or {@code null} for none
      */
     public Rows setInsertId(java.lang.String insertId) {
@@ -224,8 +256,7 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
     }
 
     /**
-     * [Required] A JSON object that contains a row of data. The object's properties and values must
-     * match the destination table's schema.
+     * Data for a single row.
      * @return value or {@code null} for none
      */
     public java.util.Map<String, java.lang.Object> getJson() {
@@ -233,8 +264,7 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
     }
 
     /**
-     * [Required] A JSON object that contains a row of data. The object's properties and values must
-     * match the destination table's schema.
+     * Data for a single row.
      * @param json json or {@code null} for none
      */
     public Rows setJson(java.util.Map<String, java.lang.Object> json) {

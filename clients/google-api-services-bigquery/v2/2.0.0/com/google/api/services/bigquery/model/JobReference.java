@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JobReference.
+ * A job reference is a fully qualified identifier for referring to a job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class JobReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+   * Required. The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9),
    * underscores (_), or dashes (-). The maximum length is 1,024 characters.
    * The value may be {@code null}.
    */
@@ -38,22 +38,22 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   private java.lang.String jobId;
 
   /**
-   * The geographic location of the job. See details at
-   * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+   * Optional. The geographic location of the job. The default value is US. For more information
+   * about BigQuery locations, see: https://cloud.google.com/bigquery/docs/locations
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * [Required] The ID of the project containing this job.
+   * Required. The ID of the project containing this job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+   * Required. The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9),
    * underscores (_), or dashes (-). The maximum length is 1,024 characters.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+   * Required. The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9),
    * underscores (_), or dashes (-). The maximum length is 1,024 characters.
    * @param jobId jobId or {@code null} for none
    */
@@ -72,8 +72,8 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The geographic location of the job. See details at
-   * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+   * Optional. The geographic location of the job. The default value is US. For more information
+   * about BigQuery locations, see: https://cloud.google.com/bigquery/docs/locations
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -81,8 +81,8 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The geographic location of the job. See details at
-   * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+   * Optional. The geographic location of the job. The default value is US. For more information
+   * about BigQuery locations, see: https://cloud.google.com/bigquery/docs/locations
    * @param location location or {@code null} for none
    */
   public JobReference setLocation(java.lang.String location) {
@@ -91,7 +91,7 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Required] The ID of the project containing this job.
+   * Required. The ID of the project containing this job.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -99,7 +99,7 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Required] The ID of the project containing this job.
+   * Required. The ID of the project containing this job.
    * @param projectId projectId or {@code null} for none
    */
   public JobReference setProjectId(java.lang.String projectId) {

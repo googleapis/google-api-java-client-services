@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JobStatistics5.
+ * Statistics for a copy job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.bigquery.model;
 public final class JobStatistics5 extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] Number of logical bytes copied to the destination table.
+   * Output only. Number of logical bytes copied to the destination table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long copiedLogicalBytes;
 
   /**
-   * [Output-only] Number of rows copied to the destination table.
+   * Output only. Number of rows copied to the destination table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long copiedRows;
 
   /**
-   * [Output-only] Number of logical bytes copied to the destination table.
+   * Output only. Number of logical bytes copied to the destination table.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCopiedLogicalBytes() {
@@ -52,7 +52,7 @@ public final class JobStatistics5 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of logical bytes copied to the destination table.
+   * Output only. Number of logical bytes copied to the destination table.
    * @param copiedLogicalBytes copiedLogicalBytes or {@code null} for none
    */
   public JobStatistics5 setCopiedLogicalBytes(java.lang.Long copiedLogicalBytes) {
@@ -61,7 +61,7 @@ public final class JobStatistics5 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of rows copied to the destination table.
+   * Output only. Number of rows copied to the destination table.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCopiedRows() {
@@ -69,7 +69,7 @@ public final class JobStatistics5 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Number of rows copied to the destination table.
+   * Output only. Number of rows copied to the destination table.
    * @param copiedRows copiedRows or {@code null} for none
    */
   public JobStatistics5 setCopiedRows(java.lang.Long copiedRows) {

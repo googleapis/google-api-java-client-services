@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for BigtableColumnFamily.
+ * Information related to a Bigtable column family.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class BigtableColumnFamily extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] Lists of columns that should be exposed as individual fields as opposed to a list of
+   * Optional. Lists of columns that should be exposed as individual fields as opposed to a list of
    * (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be
    * accessed as .. Other columns can be accessed as a list through .Column field.
    * The value may be {@code null}.
@@ -45,7 +45,7 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values
+   * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
    * encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific
    * column by listing that column in 'columns' and specifying an encoding for it.
@@ -62,7 +62,7 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   private java.lang.String familyId;
 
   /**
-   * [Optional] If this is set only the latest version of value are exposed for all columns in this
+   * Optional. If this is set only the latest version of value are exposed for all columns in this
    * column family. This can be overridden for a specific column by listing that column in 'columns'
    * and specifying a different setting for that column.
    * The value may be {@code null}.
@@ -71,18 +71,18 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   private java.lang.Boolean onlyReadLatest;
 
   /**
-   * [Optional] The type to convert the value in cells of this column family. The values are
-   * expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value.
-   * Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN
-   * Default type is BYTES. This can be overridden for a specific column by listing that column in
-   * 'columns' and specifying a type for it.
+   * Optional. The type to convert the value in cells of this column family. The values are expected
+   * to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value.
+   * Following BigQuery types are allowed (case-sensitive): * BYTES * STRING * INTEGER * FLOAT *
+   * BOOLEAN * JSON Default type is BYTES. This can be overridden for a specific column by listing
+   * that column in 'columns' and specifying a type for it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * [Optional] Lists of columns that should be exposed as individual fields as opposed to a list of
+   * Optional. Lists of columns that should be exposed as individual fields as opposed to a list of
    * (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be
    * accessed as .. Other columns can be accessed as a list through .Column field.
    * @return value or {@code null} for none
@@ -92,7 +92,7 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] Lists of columns that should be exposed as individual fields as opposed to a list of
+   * Optional. Lists of columns that should be exposed as individual fields as opposed to a list of
    * (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be
    * accessed as .. Other columns can be accessed as a list through .Column field.
    * @param columns columns or {@code null} for none
@@ -103,7 +103,7 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values
+   * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
    * encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific
    * column by listing that column in 'columns' and specifying an encoding for it.
@@ -114,7 +114,7 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values
+   * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
    * encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific
    * column by listing that column in 'columns' and specifying an encoding for it.
@@ -143,7 +143,7 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] If this is set only the latest version of value are exposed for all columns in this
+   * Optional. If this is set only the latest version of value are exposed for all columns in this
    * column family. This can be overridden for a specific column by listing that column in 'columns'
    * and specifying a different setting for that column.
    * @return value or {@code null} for none
@@ -153,7 +153,7 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] If this is set only the latest version of value are exposed for all columns in this
+   * Optional. If this is set only the latest version of value are exposed for all columns in this
    * column family. This can be overridden for a specific column by listing that column in 'columns'
    * and specifying a different setting for that column.
    * @param onlyReadLatest onlyReadLatest or {@code null} for none
@@ -164,11 +164,11 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The type to convert the value in cells of this column family. The values are
-   * expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value.
-   * Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN
-   * Default type is BYTES. This can be overridden for a specific column by listing that column in
-   * 'columns' and specifying a type for it.
+   * Optional. The type to convert the value in cells of this column family. The values are expected
+   * to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value.
+   * Following BigQuery types are allowed (case-sensitive): * BYTES * STRING * INTEGER * FLOAT *
+   * BOOLEAN * JSON Default type is BYTES. This can be overridden for a specific column by listing
+   * that column in 'columns' and specifying a type for it.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -176,11 +176,11 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] The type to convert the value in cells of this column family. The values are
-   * expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value.
-   * Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN
-   * Default type is BYTES. This can be overridden for a specific column by listing that column in
-   * 'columns' and specifying a type for it.
+   * Optional. The type to convert the value in cells of this column family. The values are expected
+   * to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value.
+   * Following BigQuery types are allowed (case-sensitive): * BYTES * STRING * INTEGER * FLOAT *
+   * BOOLEAN * JSON Default type is BYTES. This can be overridden for a specific column by listing
+   * that column in 'columns' and specifying a type for it.
    * @param type type or {@code null} for none
    */
   public BigtableColumnFamily setType(java.lang.String type) {

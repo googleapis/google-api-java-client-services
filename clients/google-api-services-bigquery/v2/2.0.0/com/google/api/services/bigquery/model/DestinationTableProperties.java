@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for DestinationTableProperties.
+ * Properties for the destination table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class DestinationTableProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] The description for the destination table. This will only be used if the destination
+   * Optional. The description for the destination table. This will only be used if the destination
    * table is newly created. If the table already exists and a value different than the current
    * description is provided, the job will fail.
    * The value may be {@code null}.
@@ -39,23 +39,22 @@ public final class DestinationTableProperties extends com.google.api.client.json
   private java.lang.String description;
 
   /**
-   * [Internal] This field is for Google internal use only.
+   * Internal use only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private com.google.api.client.util.DateTime expirationTime;
 
   /**
-   * [Optional] The friendly name for the destination table. This will only be used if the
-   * destination table is newly created. If the table already exists and a value different than the
-   * current friendly name is provided, the job will fail.
+   * Optional. Friendly name for the destination table. If the table already exists, it should be
+   * same as the existing friendly name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String friendlyName;
 
   /**
-   * [Optional] The labels associated with this table. You can use these to organize and group your
+   * Optional. The labels associated with this table. You can use these to organize and group your
    * tables. This will only be used if the destination table is newly created. If the table already
    * exists and labels are different than the current labels are provided, the job will fail.
    * The value may be {@code null}.
@@ -64,7 +63,7 @@ public final class DestinationTableProperties extends com.google.api.client.json
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * [Optional] The description for the destination table. This will only be used if the destination
+   * Optional. The description for the destination table. This will only be used if the destination
    * table is newly created. If the table already exists and a value different than the current
    * description is provided, the job will fail.
    * @return value or {@code null} for none
@@ -74,7 +73,7 @@ public final class DestinationTableProperties extends com.google.api.client.json
   }
 
   /**
-   * [Optional] The description for the destination table. This will only be used if the destination
+   * Optional. The description for the destination table. This will only be used if the destination
    * table is newly created. If the table already exists and a value different than the current
    * description is provided, the job will fail.
    * @param description description or {@code null} for none
@@ -85,7 +84,7 @@ public final class DestinationTableProperties extends com.google.api.client.json
   }
 
   /**
-   * [Internal] This field is for Google internal use only.
+   * Internal use only.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getExpirationTime() {
@@ -93,7 +92,7 @@ public final class DestinationTableProperties extends com.google.api.client.json
   }
 
   /**
-   * [Internal] This field is for Google internal use only.
+   * Internal use only.
    * @param expirationTime expirationTime or {@code null} for none
    */
   public DestinationTableProperties setExpirationTime(com.google.api.client.util.DateTime expirationTime) {
@@ -102,9 +101,8 @@ public final class DestinationTableProperties extends com.google.api.client.json
   }
 
   /**
-   * [Optional] The friendly name for the destination table. This will only be used if the
-   * destination table is newly created. If the table already exists and a value different than the
-   * current friendly name is provided, the job will fail.
+   * Optional. Friendly name for the destination table. If the table already exists, it should be
+   * same as the existing friendly name.
    * @return value or {@code null} for none
    */
   public java.lang.String getFriendlyName() {
@@ -112,9 +110,8 @@ public final class DestinationTableProperties extends com.google.api.client.json
   }
 
   /**
-   * [Optional] The friendly name for the destination table. This will only be used if the
-   * destination table is newly created. If the table already exists and a value different than the
-   * current friendly name is provided, the job will fail.
+   * Optional. Friendly name for the destination table. If the table already exists, it should be
+   * same as the existing friendly name.
    * @param friendlyName friendlyName or {@code null} for none
    */
   public DestinationTableProperties setFriendlyName(java.lang.String friendlyName) {
@@ -123,7 +120,7 @@ public final class DestinationTableProperties extends com.google.api.client.json
   }
 
   /**
-   * [Optional] The labels associated with this table. You can use these to organize and group your
+   * Optional. The labels associated with this table. You can use these to organize and group your
    * tables. This will only be used if the destination table is newly created. If the table already
    * exists and labels are different than the current labels are provided, the job will fail.
    * @return value or {@code null} for none
@@ -133,7 +130,7 @@ public final class DestinationTableProperties extends com.google.api.client.json
   }
 
   /**
-   * [Optional] The labels associated with this table. You can use these to organize and group your
+   * Optional. The labels associated with this table. You can use these to organize and group your
    * tables. This will only be used if the destination table is newly created. If the table already
    * exists and labels are different than the current labels are provided, the job will fail.
    * @param labels labels or {@code null} for none

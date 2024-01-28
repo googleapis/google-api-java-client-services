@@ -38,55 +38,57 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.lang.Boolean autodetect;
 
   /**
-   * Additional properties to set if sourceFormat is set to Avro.
+   * Optional. Additional properties to set if sourceFormat is set to AVRO.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AvroOptions avroOptions;
 
   /**
-   * [Optional] Additional options if sourceFormat is set to BIGTABLE.
+   * Optional. Additional options if sourceFormat is set to BIGTABLE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BigtableOptions bigtableOptions;
 
   /**
-   * [Optional] The compression type of the data source. Possible values include GZIP and NONE. The
+   * Optional. The compression type of the data source. Possible values include GZIP and NONE. The
    * default value is NONE. This setting is ignored for Google Cloud Bigtable, Google Cloud
-   * Datastore backups and Avro formats.
+   * Datastore backups, Avro, ORC and Parquet formats. An empty string is an invalid value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String compression;
 
   /**
-   * [Optional, Trusted Tester] Connection for external data source.
+   * Optional. The connection specifying the credentials to be used to read external storage, such
+   * as Azure Blob, Cloud Storage, or S3. The connection_id can have the form ".." or
+   * "projects//locations//connections/".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectionId;
 
   /**
-   * Additional properties to set if sourceFormat is set to CSV.
+   * Optional. Additional properties to set if sourceFormat is set to CSV.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CsvOptions csvOptions;
 
   /**
-   * [Optional] Defines the list of possible SQL data types to which the source decimal values are
-   * converted. This list and the precision and the scale parameters of the decimal field determine
-   * the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in
-   * the specified list and if it supports the precision and the scale. STRING supports all
-   * precision and scale values. If none of the listed types supports the precision and the scale,
-   * the type supporting the widest range in the specified list is picked, and if a value exceeds
-   * the supported range when reading the data, an error will be thrown. Example: Suppose the value
-   * of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9)
-   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot
-   * hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds
-   * supported range). This field cannot contain duplicate types. The order of the types in this
-   * field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
+   * Defines the list of possible SQL data types to which the source decimal values are converted.
+   * This list and the precision and the scale parameters of the decimal field determine the target
+   * type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the
+   * specified list and if it supports the precision and the scale. STRING supports all precision
+   * and scale values. If none of the listed types supports the precision and the scale, the type
+   * supporting the widest range in the specified list is picked, and if a value exceeds the
+   * supported range when reading the data, an error will be thrown. Example: Suppose the value of
+   * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
+   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
+   * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
+   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
    * The value may be {@code null}.
@@ -95,7 +97,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.util.List<java.lang.String> decimalTargetTypes;
 
   /**
-   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
+   * Optional. Specifies how source URIs are interpreted for constructing the file set to load. By
    * default source URIs are expanded against the underlying storage. Other options include
    * specifying manifest files. Only applicable to object storage systems.
    * The value may be {@code null}.
@@ -104,52 +106,63 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.lang.String fileSetSpecType;
 
   /**
-   * [Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.
+   * Optional. Additional options if sourceFormat is set to GOOGLE_SHEETS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleSheetsOptions googleSheetsOptions;
 
   /**
-   * [Optional] Options to configure hive partitioning support.
+   * Optional. When set, configures hive partitioning support. Not all storage formats support hive
+   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as
+   * will providing an invalid specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HivePartitioningOptions hivePartitioningOptions;
 
   /**
-   * [Optional] Indicates if BigQuery should allow extra values that are not represented in the
-   * table schema. If true, the extra values are ignored. If false, records with extra columns are
-   * treated as bad records, and if there are too many bad records, an invalid error is returned in
-   * the job result. The default value is false. The sourceFormat property determines what BigQuery
-   * treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column
-   * names Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This
-   * setting is ignored. Avro: This setting is ignored.
+   * Optional. Indicates if BigQuery should allow extra values that are not represented in the table
+   * schema. If true, the extra values are ignored. If false, records with extra columns are treated
+   * as bad records, and if there are too many bad records, an invalid error is returned in the job
+   * result. The default value is false. The sourceFormat property determines what BigQuery treats
+   * as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names
+   * Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This setting is
+   * ignored. Avro: This setting is ignored. ORC: This setting is ignored. Parquet: This setting is
+   * ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ignoreUnknownValues;
 
   /**
-   * Additional properties to set if `sourceFormat` is set to `NEWLINE_DELIMITED_JSON`.
+   * Optional. Load option to be used together with source_format newline-delimited JSON to indicate
+   * that a variant of JSON is being loaded. To load newline-delimited GeoJSON, specify GEOJSON (and
+   * source_format must be set to NEWLINE_DELIMITED_JSON).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jsonExtension;
+
+  /**
+   * Optional. Additional properties to set if sourceFormat is set to JSON.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JsonOptions jsonOptions;
 
   /**
-   * [Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the
-   * number of bad records exceeds this value, an invalid error is returned in the job result. This
-   * is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all
-   * records are valid. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore
-   * backups and Avro formats.
+   * Optional. The maximum number of bad records that BigQuery can ignore when reading data. If the
+   * number of bad records exceeds this value, an invalid error is returned in the job result. The
+   * default value is 0, which requires that all records are valid. This setting is ignored for
+   * Google Cloud Bigtable, Google Cloud Datastore backups, Avro, ORC and Parquet formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxBadRecords;
 
   /**
-   * [Optional] Metadata Cache Mode for the table. Set this to enable caching of metadata from
+   * Optional. Metadata Cache Mode for the table. Set this to enable caching of metadata from
    * external data source.
    * The value may be {@code null}.
    */
@@ -157,32 +170,33 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.lang.String metadataCacheMode;
 
   /**
-   * ObjectMetadata is used to create Object Tables. Object Tables contain a listing of objects
-   * (with their metadata) found at the source_uris. If ObjectMetadata is set, source_format should
-   * be omitted. Currently SIMPLE is the only supported Object Metadata type.
+   * Optional. ObjectMetadata is used to create Object Tables. Object Tables contain a listing of
+   * objects (with their metadata) found at the source_uris. If ObjectMetadata is set, source_format
+   * should be omitted. Currently SIMPLE is the only supported Object Metadata type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String objectMetadata;
 
   /**
-   * Additional properties to set if sourceFormat is set to Parquet.
+   * Optional. Additional properties to set if sourceFormat is set to PARQUET.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ParquetOptions parquetOptions;
 
   /**
-   * [Optional] Provide a referencing file with the expected table schema. Enabled for the format:
-   * AVRO, PARQUET, ORC.
+   * Optional. When creating an external table, the user can provide a reference file with the table
+   * schema. This is enabled for the following formats: AVRO, PARQUET, ORC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String referenceFileSchemaUri;
 
   /**
-   * [Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is
-   * disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.
+   * Optional. The schema for the data. Schema is required for CSV and JSON formats if autodetect is
+   * not on. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and
+   * Parquet formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,8 +205,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   /**
    * [Required] The data format. For CSV files, specify "CSV". For Google sheets, specify
    * "GOOGLE_SHEETS". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro files,
-   * specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". [Beta] For
-   * Google Cloud Bigtable, specify "BIGTABLE".
+   * specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". For Apache
+   * Iceberg tables, specify "ICEBERG". For ORC files, specify "ORC". For Parquet files, specify
+   * "PARQUET". [Beta] For Google Cloud Bigtable, specify "BIGTABLE".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -230,7 +245,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * Additional properties to set if sourceFormat is set to Avro.
+   * Optional. Additional properties to set if sourceFormat is set to AVRO.
    * @return value or {@code null} for none
    */
   public AvroOptions getAvroOptions() {
@@ -238,7 +253,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * Additional properties to set if sourceFormat is set to Avro.
+   * Optional. Additional properties to set if sourceFormat is set to AVRO.
    * @param avroOptions avroOptions or {@code null} for none
    */
   public ExternalDataConfiguration setAvroOptions(AvroOptions avroOptions) {
@@ -247,7 +262,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Additional options if sourceFormat is set to BIGTABLE.
+   * Optional. Additional options if sourceFormat is set to BIGTABLE.
    * @return value or {@code null} for none
    */
   public BigtableOptions getBigtableOptions() {
@@ -255,7 +270,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Additional options if sourceFormat is set to BIGTABLE.
+   * Optional. Additional options if sourceFormat is set to BIGTABLE.
    * @param bigtableOptions bigtableOptions or {@code null} for none
    */
   public ExternalDataConfiguration setBigtableOptions(BigtableOptions bigtableOptions) {
@@ -264,9 +279,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] The compression type of the data source. Possible values include GZIP and NONE. The
+   * Optional. The compression type of the data source. Possible values include GZIP and NONE. The
    * default value is NONE. This setting is ignored for Google Cloud Bigtable, Google Cloud
-   * Datastore backups and Avro formats.
+   * Datastore backups, Avro, ORC and Parquet formats. An empty string is an invalid value.
    * @return value or {@code null} for none
    */
   public java.lang.String getCompression() {
@@ -274,9 +289,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] The compression type of the data source. Possible values include GZIP and NONE. The
+   * Optional. The compression type of the data source. Possible values include GZIP and NONE. The
    * default value is NONE. This setting is ignored for Google Cloud Bigtable, Google Cloud
-   * Datastore backups and Avro formats.
+   * Datastore backups, Avro, ORC and Parquet formats. An empty string is an invalid value.
    * @param compression compression or {@code null} for none
    */
   public ExternalDataConfiguration setCompression(java.lang.String compression) {
@@ -285,7 +300,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional, Trusted Tester] Connection for external data source.
+   * Optional. The connection specifying the credentials to be used to read external storage, such
+   * as Azure Blob, Cloud Storage, or S3. The connection_id can have the form ".." or
+   * "projects//locations//connections/".
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionId() {
@@ -293,7 +310,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional, Trusted Tester] Connection for external data source.
+   * Optional. The connection specifying the credentials to be used to read external storage, such
+   * as Azure Blob, Cloud Storage, or S3. The connection_id can have the form ".." or
+   * "projects//locations//connections/".
    * @param connectionId connectionId or {@code null} for none
    */
   public ExternalDataConfiguration setConnectionId(java.lang.String connectionId) {
@@ -302,7 +321,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * Additional properties to set if sourceFormat is set to CSV.
+   * Optional. Additional properties to set if sourceFormat is set to CSV.
    * @return value or {@code null} for none
    */
   public CsvOptions getCsvOptions() {
@@ -310,7 +329,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * Additional properties to set if sourceFormat is set to CSV.
+   * Optional. Additional properties to set if sourceFormat is set to CSV.
    * @param csvOptions csvOptions or {@code null} for none
    */
   public ExternalDataConfiguration setCsvOptions(CsvOptions csvOptions) {
@@ -319,18 +338,18 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Defines the list of possible SQL data types to which the source decimal values are
-   * converted. This list and the precision and the scale parameters of the decimal field determine
-   * the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in
-   * the specified list and if it supports the precision and the scale. STRING supports all
-   * precision and scale values. If none of the listed types supports the precision and the scale,
-   * the type supporting the widest range in the specified list is picked, and if a value exceeds
-   * the supported range when reading the data, an error will be thrown. Example: Suppose the value
-   * of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9)
-   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot
-   * hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds
-   * supported range). This field cannot contain duplicate types. The order of the types in this
-   * field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
+   * Defines the list of possible SQL data types to which the source decimal values are converted.
+   * This list and the precision and the scale parameters of the decimal field determine the target
+   * type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the
+   * specified list and if it supports the precision and the scale. STRING supports all precision
+   * and scale values. If none of the listed types supports the precision and the scale, the type
+   * supporting the widest range in the specified list is picked, and if a value exceeds the
+   * supported range when reading the data, an error will be thrown. Example: Suppose the value of
+   * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
+   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
+   * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
+   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
    * @return value or {@code null} for none
@@ -340,18 +359,18 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Defines the list of possible SQL data types to which the source decimal values are
-   * converted. This list and the precision and the scale parameters of the decimal field determine
-   * the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in
-   * the specified list and if it supports the precision and the scale. STRING supports all
-   * precision and scale values. If none of the listed types supports the precision and the scale,
-   * the type supporting the widest range in the specified list is picked, and if a value exceeds
-   * the supported range when reading the data, an error will be thrown. Example: Suppose the value
-   * of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9)
-   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot
-   * hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds
-   * supported range). This field cannot contain duplicate types. The order of the types in this
-   * field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
+   * Defines the list of possible SQL data types to which the source decimal values are converted.
+   * This list and the precision and the scale parameters of the decimal field determine the target
+   * type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the
+   * specified list and if it supports the precision and the scale. STRING supports all precision
+   * and scale values. If none of the listed types supports the precision and the scale, the type
+   * supporting the widest range in the specified list is picked, and if a value exceeds the
+   * supported range when reading the data, an error will be thrown. Example: Suppose the value of
+   * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
+   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
+   * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
+   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
    * @param decimalTargetTypes decimalTargetTypes or {@code null} for none
@@ -362,7 +381,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
+   * Optional. Specifies how source URIs are interpreted for constructing the file set to load. By
    * default source URIs are expanded against the underlying storage. Other options include
    * specifying manifest files. Only applicable to object storage systems.
    * @return value or {@code null} for none
@@ -372,7 +391,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
+   * Optional. Specifies how source URIs are interpreted for constructing the file set to load. By
    * default source URIs are expanded against the underlying storage. Other options include
    * specifying manifest files. Only applicable to object storage systems.
    * @param fileSetSpecType fileSetSpecType or {@code null} for none
@@ -383,7 +402,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.
+   * Optional. Additional options if sourceFormat is set to GOOGLE_SHEETS.
    * @return value or {@code null} for none
    */
   public GoogleSheetsOptions getGoogleSheetsOptions() {
@@ -391,7 +410,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.
+   * Optional. Additional options if sourceFormat is set to GOOGLE_SHEETS.
    * @param googleSheetsOptions googleSheetsOptions or {@code null} for none
    */
   public ExternalDataConfiguration setGoogleSheetsOptions(GoogleSheetsOptions googleSheetsOptions) {
@@ -400,7 +419,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Options to configure hive partitioning support.
+   * Optional. When set, configures hive partitioning support. Not all storage formats support hive
+   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as
+   * will providing an invalid specification.
    * @return value or {@code null} for none
    */
   public HivePartitioningOptions getHivePartitioningOptions() {
@@ -408,7 +429,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Options to configure hive partitioning support.
+   * Optional. When set, configures hive partitioning support. Not all storage formats support hive
+   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as
+   * will providing an invalid specification.
    * @param hivePartitioningOptions hivePartitioningOptions or {@code null} for none
    */
   public ExternalDataConfiguration setHivePartitioningOptions(HivePartitioningOptions hivePartitioningOptions) {
@@ -417,13 +440,14 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Indicates if BigQuery should allow extra values that are not represented in the
-   * table schema. If true, the extra values are ignored. If false, records with extra columns are
-   * treated as bad records, and if there are too many bad records, an invalid error is returned in
-   * the job result. The default value is false. The sourceFormat property determines what BigQuery
-   * treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column
-   * names Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This
-   * setting is ignored. Avro: This setting is ignored.
+   * Optional. Indicates if BigQuery should allow extra values that are not represented in the table
+   * schema. If true, the extra values are ignored. If false, records with extra columns are treated
+   * as bad records, and if there are too many bad records, an invalid error is returned in the job
+   * result. The default value is false. The sourceFormat property determines what BigQuery treats
+   * as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names
+   * Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This setting is
+   * ignored. Avro: This setting is ignored. ORC: This setting is ignored. Parquet: This setting is
+   * ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreUnknownValues() {
@@ -431,13 +455,14 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Indicates if BigQuery should allow extra values that are not represented in the
-   * table schema. If true, the extra values are ignored. If false, records with extra columns are
-   * treated as bad records, and if there are too many bad records, an invalid error is returned in
-   * the job result. The default value is false. The sourceFormat property determines what BigQuery
-   * treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column
-   * names Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This
-   * setting is ignored. Avro: This setting is ignored.
+   * Optional. Indicates if BigQuery should allow extra values that are not represented in the table
+   * schema. If true, the extra values are ignored. If false, records with extra columns are treated
+   * as bad records, and if there are too many bad records, an invalid error is returned in the job
+   * result. The default value is false. The sourceFormat property determines what BigQuery treats
+   * as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names
+   * Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This setting is
+   * ignored. Avro: This setting is ignored. ORC: This setting is ignored. Parquet: This setting is
+   * ignored.
    * @param ignoreUnknownValues ignoreUnknownValues or {@code null} for none
    */
   public ExternalDataConfiguration setIgnoreUnknownValues(java.lang.Boolean ignoreUnknownValues) {
@@ -446,7 +471,28 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * Additional properties to set if `sourceFormat` is set to `NEWLINE_DELIMITED_JSON`.
+   * Optional. Load option to be used together with source_format newline-delimited JSON to indicate
+   * that a variant of JSON is being loaded. To load newline-delimited GeoJSON, specify GEOJSON (and
+   * source_format must be set to NEWLINE_DELIMITED_JSON).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJsonExtension() {
+    return jsonExtension;
+  }
+
+  /**
+   * Optional. Load option to be used together with source_format newline-delimited JSON to indicate
+   * that a variant of JSON is being loaded. To load newline-delimited GeoJSON, specify GEOJSON (and
+   * source_format must be set to NEWLINE_DELIMITED_JSON).
+   * @param jsonExtension jsonExtension or {@code null} for none
+   */
+  public ExternalDataConfiguration setJsonExtension(java.lang.String jsonExtension) {
+    this.jsonExtension = jsonExtension;
+    return this;
+  }
+
+  /**
+   * Optional. Additional properties to set if sourceFormat is set to JSON.
    * @return value or {@code null} for none
    */
   public JsonOptions getJsonOptions() {
@@ -454,7 +500,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * Additional properties to set if `sourceFormat` is set to `NEWLINE_DELIMITED_JSON`.
+   * Optional. Additional properties to set if sourceFormat is set to JSON.
    * @param jsonOptions jsonOptions or {@code null} for none
    */
   public ExternalDataConfiguration setJsonOptions(JsonOptions jsonOptions) {
@@ -463,11 +509,10 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the
-   * number of bad records exceeds this value, an invalid error is returned in the job result. This
-   * is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all
-   * records are valid. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore
-   * backups and Avro formats.
+   * Optional. The maximum number of bad records that BigQuery can ignore when reading data. If the
+   * number of bad records exceeds this value, an invalid error is returned in the job result. The
+   * default value is 0, which requires that all records are valid. This setting is ignored for
+   * Google Cloud Bigtable, Google Cloud Datastore backups, Avro, ORC and Parquet formats.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxBadRecords() {
@@ -475,11 +520,10 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the
-   * number of bad records exceeds this value, an invalid error is returned in the job result. This
-   * is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all
-   * records are valid. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore
-   * backups and Avro formats.
+   * Optional. The maximum number of bad records that BigQuery can ignore when reading data. If the
+   * number of bad records exceeds this value, an invalid error is returned in the job result. The
+   * default value is 0, which requires that all records are valid. This setting is ignored for
+   * Google Cloud Bigtable, Google Cloud Datastore backups, Avro, ORC and Parquet formats.
    * @param maxBadRecords maxBadRecords or {@code null} for none
    */
   public ExternalDataConfiguration setMaxBadRecords(java.lang.Integer maxBadRecords) {
@@ -488,7 +532,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Metadata Cache Mode for the table. Set this to enable caching of metadata from
+   * Optional. Metadata Cache Mode for the table. Set this to enable caching of metadata from
    * external data source.
    * @return value or {@code null} for none
    */
@@ -497,7 +541,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Metadata Cache Mode for the table. Set this to enable caching of metadata from
+   * Optional. Metadata Cache Mode for the table. Set this to enable caching of metadata from
    * external data source.
    * @param metadataCacheMode metadataCacheMode or {@code null} for none
    */
@@ -507,9 +551,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * ObjectMetadata is used to create Object Tables. Object Tables contain a listing of objects
-   * (with their metadata) found at the source_uris. If ObjectMetadata is set, source_format should
-   * be omitted. Currently SIMPLE is the only supported Object Metadata type.
+   * Optional. ObjectMetadata is used to create Object Tables. Object Tables contain a listing of
+   * objects (with their metadata) found at the source_uris. If ObjectMetadata is set, source_format
+   * should be omitted. Currently SIMPLE is the only supported Object Metadata type.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectMetadata() {
@@ -517,9 +561,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * ObjectMetadata is used to create Object Tables. Object Tables contain a listing of objects
-   * (with their metadata) found at the source_uris. If ObjectMetadata is set, source_format should
-   * be omitted. Currently SIMPLE is the only supported Object Metadata type.
+   * Optional. ObjectMetadata is used to create Object Tables. Object Tables contain a listing of
+   * objects (with their metadata) found at the source_uris. If ObjectMetadata is set, source_format
+   * should be omitted. Currently SIMPLE is the only supported Object Metadata type.
    * @param objectMetadata objectMetadata or {@code null} for none
    */
   public ExternalDataConfiguration setObjectMetadata(java.lang.String objectMetadata) {
@@ -528,7 +572,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * Additional properties to set if sourceFormat is set to Parquet.
+   * Optional. Additional properties to set if sourceFormat is set to PARQUET.
    * @return value or {@code null} for none
    */
   public ParquetOptions getParquetOptions() {
@@ -536,7 +580,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * Additional properties to set if sourceFormat is set to Parquet.
+   * Optional. Additional properties to set if sourceFormat is set to PARQUET.
    * @param parquetOptions parquetOptions or {@code null} for none
    */
   public ExternalDataConfiguration setParquetOptions(ParquetOptions parquetOptions) {
@@ -545,8 +589,8 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Provide a referencing file with the expected table schema. Enabled for the format:
-   * AVRO, PARQUET, ORC.
+   * Optional. When creating an external table, the user can provide a reference file with the table
+   * schema. This is enabled for the following formats: AVRO, PARQUET, ORC.
    * @return value or {@code null} for none
    */
   public java.lang.String getReferenceFileSchemaUri() {
@@ -554,8 +598,8 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] Provide a referencing file with the expected table schema. Enabled for the format:
-   * AVRO, PARQUET, ORC.
+   * Optional. When creating an external table, the user can provide a reference file with the table
+   * schema. This is enabled for the following formats: AVRO, PARQUET, ORC.
    * @param referenceFileSchemaUri referenceFileSchemaUri or {@code null} for none
    */
   public ExternalDataConfiguration setReferenceFileSchemaUri(java.lang.String referenceFileSchemaUri) {
@@ -564,8 +608,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is
-   * disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.
+   * Optional. The schema for the data. Schema is required for CSV and JSON formats if autodetect is
+   * not on. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and
+   * Parquet formats.
    * @return value or {@code null} for none
    */
   public TableSchema getSchema() {
@@ -573,8 +618,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is
-   * disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.
+   * Optional. The schema for the data. Schema is required for CSV and JSON formats if autodetect is
+   * not on. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and
+   * Parquet formats.
    * @param schema schema or {@code null} for none
    */
   public ExternalDataConfiguration setSchema(TableSchema schema) {
@@ -585,8 +631,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   /**
    * [Required] The data format. For CSV files, specify "CSV". For Google sheets, specify
    * "GOOGLE_SHEETS". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro files,
-   * specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". [Beta] For
-   * Google Cloud Bigtable, specify "BIGTABLE".
+   * specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". For Apache
+   * Iceberg tables, specify "ICEBERG". For ORC files, specify "ORC". For Parquet files, specify
+   * "PARQUET". [Beta] For Google Cloud Bigtable, specify "BIGTABLE".
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceFormat() {
@@ -596,8 +643,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   /**
    * [Required] The data format. For CSV files, specify "CSV". For Google sheets, specify
    * "GOOGLE_SHEETS". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro files,
-   * specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". [Beta] For
-   * Google Cloud Bigtable, specify "BIGTABLE".
+   * specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". For Apache
+   * Iceberg tables, specify "ICEBERG". For ORC files, specify "ORC". For Parquet files, specify
+   * "PARQUET". [Beta] For Google Cloud Bigtable, specify "BIGTABLE".
    * @param sourceFormat sourceFormat or {@code null} for none
    */
   public ExternalDataConfiguration setSourceFormat(java.lang.String sourceFormat) {

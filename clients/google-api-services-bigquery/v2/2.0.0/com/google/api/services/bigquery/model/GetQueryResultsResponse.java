@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for GetQueryResultsResponse.
+ * Response object of GetQueryResults.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -37,9 +37,10 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   private java.lang.Boolean cacheHit;
 
   /**
-   * [Output-only] The first errors or warnings encountered during the running of the job. The final
+   * Output only. The first errors or warnings encountered during the running of the job. The final
    * message includes the number of errors that caused the process to stop. Errors here do not
-   * necessarily mean that the job has completed or was unsuccessful.
+   * necessarily mean that the job has completed or was unsuccessful. For more information about
+   * error messages, see [Error messages](https://cloud.google.com/bigquery/docs/error-messages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +85,7 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   private java.lang.String kind;
 
   /**
-   * [Output-only] The number of rows affected by a DML statement. Present only for DML statements
+   * Output only. The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * The value may be {@code null}.
    */
@@ -92,7 +93,8 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   private java.lang.Long numDmlAffectedRows;
 
   /**
-   * A token used for paging results.
+   * A token used for paging results. When this token is non-empty, it indicates additional results
+   * are available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +103,8 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   /**
    * An object with as many results as can be contained within the maximum permitted reply size. To
    * get any additional rows, you can call GetQueryResults and specify the jobReference returned
-   * above. Present only when the query completes successfully.
+   * above. Present only when the query completes successfully. The REST-based representation of
+   * this data leverages a series of JSON f,v objects for indicating fields and values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,9 +150,10 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output-only] The first errors or warnings encountered during the running of the job. The final
+   * Output only. The first errors or warnings encountered during the running of the job. The final
    * message includes the number of errors that caused the process to stop. Errors here do not
-   * necessarily mean that the job has completed or was unsuccessful.
+   * necessarily mean that the job has completed or was unsuccessful. For more information about
+   * error messages, see [Error messages](https://cloud.google.com/bigquery/docs/error-messages).
    * @return value or {@code null} for none
    */
   public java.util.List<ErrorProto> getErrors() {
@@ -157,9 +161,10 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output-only] The first errors or warnings encountered during the running of the job. The final
+   * Output only. The first errors or warnings encountered during the running of the job. The final
    * message includes the number of errors that caused the process to stop. Errors here do not
-   * necessarily mean that the job has completed or was unsuccessful.
+   * necessarily mean that the job has completed or was unsuccessful. For more information about
+   * error messages, see [Error messages](https://cloud.google.com/bigquery/docs/error-messages).
    * @param errors errors or {@code null} for none
    */
   public GetQueryResultsResponse setErrors(java.util.List<ErrorProto> errors) {
@@ -244,7 +249,7 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output-only] The number of rows affected by a DML statement. Present only for DML statements
+   * Output only. The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * @return value or {@code null} for none
    */
@@ -253,7 +258,7 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output-only] The number of rows affected by a DML statement. Present only for DML statements
+   * Output only. The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * @param numDmlAffectedRows numDmlAffectedRows or {@code null} for none
    */
@@ -263,7 +268,8 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A token used for paging results.
+   * A token used for paging results. When this token is non-empty, it indicates additional results
+   * are available.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -271,7 +277,8 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A token used for paging results.
+   * A token used for paging results. When this token is non-empty, it indicates additional results
+   * are available.
    * @param pageToken pageToken or {@code null} for none
    */
   public GetQueryResultsResponse setPageToken(java.lang.String pageToken) {
@@ -282,7 +289,8 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   /**
    * An object with as many results as can be contained within the maximum permitted reply size. To
    * get any additional rows, you can call GetQueryResults and specify the jobReference returned
-   * above. Present only when the query completes successfully.
+   * above. Present only when the query completes successfully. The REST-based representation of
+   * this data leverages a series of JSON f,v objects for indicating fields and values.
    * @return value or {@code null} for none
    */
   public java.util.List<TableRow> getRows() {
@@ -292,7 +300,8 @@ public final class GetQueryResultsResponse extends com.google.api.client.json.Ge
   /**
    * An object with as many results as can be contained within the maximum permitted reply size. To
    * get any additional rows, you can call GetQueryResults and specify the jobReference returned
-   * above. Present only when the query completes successfully.
+   * above. Present only when the query completes successfully. The REST-based representation of
+   * this data leverages a series of JSON f,v objects for indicating fields and values.
    * @param rows rows or {@code null} for none
    */
   public GetQueryResultsResponse setRows(java.util.List<TableRow> rows) {

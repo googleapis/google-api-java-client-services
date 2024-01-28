@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JobStatistics2.
+ * Statistics for a query job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,78 +30,100 @@ package com.google.api.services.bigquery.model;
 public final class JobStatistics2 extends com.google.api.client.json.GenericJson {
 
   /**
-   * BI Engine specific Statistics. [Output only] BI Engine specific Statistics.
+   * Output only. BI Engine specific Statistics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BiEngineStatistics biEngineStatistics;
 
   /**
-   * [Output only] Billing tier for the job.
+   * Output only. Billing tier for the job. This is a BigQuery-specific concept which is not related
+   * to the Google Cloud notion of "free tier". The value here is a measure of the query's resource
+   * consumption relative to the amount of data scanned. For on-demand queries, the limit is 100,
+   * and all queries within this limit are billed at the standard on-demand rates. On-demand queries
+   * that exceed this limit will fail with a billingTierLimitExceeded error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer billingTier;
 
   /**
-   * [Output only] Whether the query result was fetched from the query cache.
+   * Output only. Whether the query result was fetched from the query cache.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean cacheHit;
 
   /**
-   * [Output only] [Preview] The number of row access policies affected by a DDL statement. Present
-   * only for DROP ALL ROW ACCESS POLICIES queries.
+   * Output only. Referenced dataset for DCL statement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatasetReference dclTargetDataset;
+
+  /**
+   * Output only. Referenced table for DCL statement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TableReference dclTargetTable;
+
+  /**
+   * Output only. Referenced view for DCL statement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TableReference dclTargetView;
+
+  /**
+   * Output only. The number of row access policies affected by a DDL statement. Present only for
+   * DROP ALL ROW ACCESS POLICIES queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long ddlAffectedRowAccessPolicyCount;
 
   /**
-   * [Output only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
-   * that ddl_target_table is used just for its type information.
+   * Output only. The table after rename. Present only for ALTER TABLE RENAME TO query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableReference ddlDestinationTable;
 
   /**
-   * The DDL operation performed, possibly dependent on the pre-existence of the DDL target.
-   * Possible values (new values might be added in the future): "CREATE": The query created the DDL
-   * target. "SKIP": No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table
-   * already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. "REPLACE":
-   * The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the
-   * table already exists. "DROP": The query deleted the DDL target.
+   * Output only. The DDL operation performed, possibly dependent on the pre-existence of the DDL
+   * target.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ddlOperationPerformed;
 
   /**
-   * [Output only] The DDL target dataset. Present only for CREATE/ALTER/DROP/UNDROP SCHEMA queries.
+   * Output only. The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA(dataset)
+   * queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DatasetReference ddlTargetDataset;
 
   /**
-   * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
+   * Output only. [Beta] The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE
+   * queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RoutineReference ddlTargetRoutine;
 
   /**
-   * [Output only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
-   * ACCESS POLICY queries.
+   * Output only. The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY
+   * queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RowAccessPolicyReference ddlTargetRowAccessPolicy;
 
   /**
-   * [Output only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
+   * Output only. The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
    * ACCESS POLICIES queries.
    * The value may be {@code null}.
    */
@@ -109,50 +131,90 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private TableReference ddlTargetTable;
 
   /**
-   * [Output only] Detailed statistics for DML statements Present only for DML statements INSERT,
-   * UPDATE, DELETE or TRUNCATE.
+   * Output only. Detailed statistics for DML statements INSERT, UPDATE, DELETE, MERGE or TRUNCATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DmlStatistics dmlStats;
 
   /**
-   * [Output only] The original estimate of bytes processed for the job.
+   * Output only. The original estimate of bytes processed for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long estimatedBytesProcessed;
 
   /**
-   * [Output only] Statistics of a BigQuery ML training job.
+   * Output only. Stats for EXPORT DATA statement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExportDataStatistics exportDataStatistics;
+
+  /**
+   * Output only. Job cost breakdown as bigquery internal cost and external service costs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ExternalServiceCost> externalServiceCosts;
+
+  static {
+    // hack to force ProGuard to consider ExternalServiceCost used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExternalServiceCost.class);
+  }
+
+  /**
+   * Output only. Statistics for a LOAD query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LoadQueryStatistics loadQueryStatistics;
+
+  /**
+   * Output only. Statistics of materialized views of a query job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaterializedViewStatistics materializedViewStatistics;
+
+  /**
+   * Output only. Statistics of metadata cache usage in a query for BigLake tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MetadataCacheStatistics metadataCacheStatistics;
+
+  /**
+   * Output only. Statistics of a BigQuery ML training job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MlStatistics mlStatistics;
 
   /**
-   * [Output only, Beta] Information about create model query job progress.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BigQueryModelTraining modelTraining;
 
   /**
-   * [Output only, Beta] Deprecated; do not use.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer modelTrainingCurrentIteration;
 
   /**
-   * [Output only, Beta] Deprecated; do not use.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long modelTrainingExpectedTotalIteration;
 
   /**
-   * [Output only] The number of rows affected by a DML statement. Present only for DML statements
+   * Output only. The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * The value may be {@code null}.
    */
@@ -160,7 +222,21 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long numDmlAffectedRows;
 
   /**
-   * [Output only] Describes execution plan for the query.
+   * Output only. Performance insights.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PerformanceInsights performanceInsights;
+
+  /**
+   * Output only. Query optimization information for a QUERY job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueryInfo queryInfo;
+
+  /**
+   * Output only. Describes execution plan for the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,23 +249,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Referenced routines (persistent user-defined functions and stored procedures) for
-   * the job.
+   * Output only. Referenced routines for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<RoutineReference> referencedRoutines;
 
   /**
-   * [Output only] Referenced tables for the job. Queries that reference more than 50 tables will
-   * not have a complete list.
+   * Output only. Referenced tables for the job. Queries that reference more than 50 tables will not
+   * have a complete list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TableReference> referencedTables;
 
   /**
-   * [Output only] Job resource usage breakdown by reservation.
+   * Output only. Job resource usage breakdown by reservation. This field reported misleading
+   * information and will no longer be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +278,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The schema of the results. Present only for successful dry run of non-legacy SQL
+   * Output only. The schema of the results. Present only for successful dry run of non-legacy SQL
    * queries.
    * The value may be {@code null}.
    */
@@ -210,62 +286,117 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private TableSchema schema;
 
   /**
-   * [Output only] Search query specific statistics.
+   * Output only. Search query specific statistics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SearchStatistics searchStatistics;
 
   /**
-   * [Output only] Statistics of a Spark procedure job.
+   * Output only. Statistics of a Spark procedure job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SparkStatistics sparkStatistics;
 
   /**
-   * The type of query statement, if valid. Possible values (new values might be added in the
-   * future): "SELECT": SELECT query. "INSERT": INSERT query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
-   * "UPDATE": UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language. "DELETE": DELETE query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
-   * "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
-   * "ASSERT": ASSERT condition AS 'description'. "CREATE_FUNCTION": CREATE FUNCTION query.
-   * "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS SELECT ... . "CREATE_PROCEDURE": CREATE
-   * PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
-   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "CREATE_VIEW": CREATE
-   * [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION query. "DROP_PROCEDURE":
-   * DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW": DROP VIEW query.
+   * Output only. The type of query statement, if valid. Possible values: * `SELECT`:
+   * [`SELECT`](/bigquery/docs/reference/standard-sql/query-syntax#select_list) statement. *
+   * `ASSERT`: [`ASSERT`](/bigquery/docs/reference/standard-sql/debugging-statements#assert)
+   * statement. * `INSERT`: [`INSERT`](/bigquery/docs/reference/standard-sql/dml-
+   * syntax#insert_statement) statement. * `UPDATE`: [`UPDATE`](/bigquery/docs/reference/standard-
+   * sql/query-syntax#update_statement) statement. * `DELETE`: [`DELETE`](/bigquery/docs/reference
+   * /standard-sql/data-manipulation-language) statement. * `MERGE`:
+   * [`MERGE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement. *
+   * `CREATE_TABLE`: [`CREATE TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_table_statement) statement, without `AS SELECT`. * `CREATE_TABLE_AS_SELECT`:
+   * [`CREATE TABLE AS SELECT`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#query_statement) statement. * `CREATE_VIEW`: [`CREATE VIEW`](/bigquery/docs/reference
+   * /standard-sql/data-definition-language#create_view_statement) statement. * `CREATE_MODEL`:
+   * [`CREATE MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * create#create_model_statement) statement. * `CREATE_MATERIALIZED_VIEW`: [`CREATE MATERIALIZED
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_materialized_view_statement) statement. * `CREATE_FUNCTION`: [`CREATE
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_function_statement) statement. * `CREATE_TABLE_FUNCTION`: [`CREATE TABLE
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_table_function_statement) statement. * `CREATE_PROCEDURE`: [`CREATE
+   * PROCEDURE`](/bigquery/docs/reference/standard-sql/data-definition-language#create_procedure)
+   * statement. * `CREATE_ROW_ACCESS_POLICY`: [`CREATE ROW ACCESS POLICY`](/bigquery/docs/reference
+   * /standard-sql/data-definition-language#create_row_access_policy_statement) statement. *
+   * `CREATE_SCHEMA`: [`CREATE SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_schema_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE SNAPSHOT
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_snapshot_table_statement) statement. * `CREATE_SEARCH_INDEX`: [`CREATE SEARCH
+   * INDEX`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_search_index_statement) statement. * `DROP_TABLE`: [`DROP
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_table_statement)
+   * statement. * `DROP_EXTERNAL_TABLE`: [`DROP EXTERNAL TABLE`](/bigquery/docs/reference/standard-
+   * sql/data-definition-language#drop_external_table_statement) statement. * `DROP_VIEW`: [`DROP
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_view_statement)
+   * statement. * `DROP_MODEL`: [`DROP MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-
+   * syntax-drop-model) statement. * `DROP_MATERIALIZED_VIEW`: [`DROP MATERIALIZED
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_materialized_view_statement) statement. * `DROP_FUNCTION` : [`DROP
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_function_statement) statement. * `DROP_TABLE_FUNCTION` : [`DROP TABLE
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_table_function)
+   * statement. * `DROP_PROCEDURE`: [`DROP PROCEDURE`](/bigquery/docs/reference/standard-sql/data-
+   * definition-language#drop_procedure_statement) statement. * `DROP_SEARCH_INDEX`: [`DROP SEARCH
+   * INDEX`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_search_index)
+   * statement. * `DROP_SCHEMA`: [`DROP SCHEMA`](/bigquery/docs/reference/standard-sql/data-
+   * definition-language#drop_schema_statement) statement. * `DROP_SNAPSHOT_TABLE`: [`DROP SNAPSHOT
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_snapshot_table_statement) statement. * `DROP_ROW_ACCESS_POLICY`: [`DROP [ALL] ROW
+   * ACCESS POLICY|POLICIES`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_row_access_policy_statement) statement. * `ALTER_TABLE`: [`ALTER
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_table_set_options_statement) statement. * `ALTER_VIEW`: [`ALTER
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_view_set_options_statement) statement. * `ALTER_MATERIALIZED_VIEW`: [`ALTER
+   * MATERIALIZED VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_materialized_view_set_options_statement) statement. * `ALTER_SCHEMA`: [`ALTER
+   * SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#aalter_schema_set_options_statement) statement. * `SCRIPT`:
+   * [`SCRIPT`](/bigquery/docs/reference/standard-sql/procedural-language). * `TRUNCATE_TABLE`:
+   * [`TRUNCATE TABLE`](/bigquery/docs/reference/standard-sql/dml-syntax#truncate_table_statement)
+   * statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL TABLE`](/bigquery/docs/reference
+   * /standard-sql/data-definition-language#create_external_table_statement) statement. *
+   * `EXPORT_DATA`: [`EXPORT DATA`](/bigquery/docs/reference/standard-sql/other-
+   * statements#export_data_statement) statement. * `EXPORT_MODEL`: [`EXPORT MODEL`](/bigquery-
+   * ml/docs/reference/standard-sql/bigqueryml-syntax-export-model) statement. * `LOAD_DATA`: [`LOAD
+   * DATA`](/bigquery/docs/reference/standard-sql/other-statements#load_data_statement) statement. *
+   * `CALL`: [`CALL`](/bigquery/docs/reference/standard-sql/procedural-language#call) statement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String statementType;
 
   /**
-   * [Output only] [Beta] Describes a timeline of job execution.
+   * Output only. Describes a timeline of job execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<QueryTimelineSample> timeline;
 
   /**
-   * [Output only] Total bytes billed for the job.
+   * Output only. If the project is configured to use on-demand pricing, then this field contains
+   * the total bytes billed for the job. If the project is configured to use flat-rate pricing, then
+   * you are not billed for bytes and this field is informational only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalBytesBilled;
 
   /**
-   * [Output only] Total bytes processed for the job.
+   * Output only. Total bytes processed for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalBytesProcessed;
 
   /**
-   * [Output only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
+   * Output only. For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
    * accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown.
    * PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would
    * cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
@@ -275,22 +406,22 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.String totalBytesProcessedAccuracy;
 
   /**
-   * [Output only] Total number of partitions processed from all partitioned tables referenced in
-   * the job.
+   * Output only. Total number of partitions processed from all partitioned tables referenced in the
+   * job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalPartitionsProcessed;
 
   /**
-   * [Output only] Slot-milliseconds for the job.
+   * Output only. Slot-milliseconds for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalSlotMs;
 
   /**
-   * [Output-only] Total bytes transferred for cross-cloud queries such as Cross Cloud Transfer and
+   * Output only. Total bytes transferred for cross-cloud queries such as Cross Cloud Transfer and
    * CREATE TABLE AS SELECT (CTAS).
    * The value may be {@code null}.
    */
@@ -298,14 +429,22 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long transferredBytes;
 
   /**
-   * Standard SQL only: list of undeclared query parameters detected during a dry run validation.
+   * Output only. GoogleSQL only: list of undeclared query parameters detected during a dry run
+   * validation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<QueryParameter> undeclaredQueryParameters;
 
   /**
-   * BI Engine specific Statistics. [Output only] BI Engine specific Statistics.
+   * Output only. Search query specific statistics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VectorSearchStatistics vectorSearchStatistics;
+
+  /**
+   * Output only. BI Engine specific Statistics.
    * @return value or {@code null} for none
    */
   public BiEngineStatistics getBiEngineStatistics() {
@@ -313,7 +452,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * BI Engine specific Statistics. [Output only] BI Engine specific Statistics.
+   * Output only. BI Engine specific Statistics.
    * @param biEngineStatistics biEngineStatistics or {@code null} for none
    */
   public JobStatistics2 setBiEngineStatistics(BiEngineStatistics biEngineStatistics) {
@@ -322,7 +461,11 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Billing tier for the job.
+   * Output only. Billing tier for the job. This is a BigQuery-specific concept which is not related
+   * to the Google Cloud notion of "free tier". The value here is a measure of the query's resource
+   * consumption relative to the amount of data scanned. For on-demand queries, the limit is 100,
+   * and all queries within this limit are billed at the standard on-demand rates. On-demand queries
+   * that exceed this limit will fail with a billingTierLimitExceeded error.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBillingTier() {
@@ -330,7 +473,11 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Billing tier for the job.
+   * Output only. Billing tier for the job. This is a BigQuery-specific concept which is not related
+   * to the Google Cloud notion of "free tier". The value here is a measure of the query's resource
+   * consumption relative to the amount of data scanned. For on-demand queries, the limit is 100,
+   * and all queries within this limit are billed at the standard on-demand rates. On-demand queries
+   * that exceed this limit will fail with a billingTierLimitExceeded error.
    * @param billingTier billingTier or {@code null} for none
    */
   public JobStatistics2 setBillingTier(java.lang.Integer billingTier) {
@@ -339,7 +486,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Whether the query result was fetched from the query cache.
+   * Output only. Whether the query result was fetched from the query cache.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCacheHit() {
@@ -347,7 +494,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Whether the query result was fetched from the query cache.
+   * Output only. Whether the query result was fetched from the query cache.
    * @param cacheHit cacheHit or {@code null} for none
    */
   public JobStatistics2 setCacheHit(java.lang.Boolean cacheHit) {
@@ -356,8 +503,59 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] [Preview] The number of row access policies affected by a DDL statement. Present
-   * only for DROP ALL ROW ACCESS POLICIES queries.
+   * Output only. Referenced dataset for DCL statement.
+   * @return value or {@code null} for none
+   */
+  public DatasetReference getDclTargetDataset() {
+    return dclTargetDataset;
+  }
+
+  /**
+   * Output only. Referenced dataset for DCL statement.
+   * @param dclTargetDataset dclTargetDataset or {@code null} for none
+   */
+  public JobStatistics2 setDclTargetDataset(DatasetReference dclTargetDataset) {
+    this.dclTargetDataset = dclTargetDataset;
+    return this;
+  }
+
+  /**
+   * Output only. Referenced table for DCL statement.
+   * @return value or {@code null} for none
+   */
+  public TableReference getDclTargetTable() {
+    return dclTargetTable;
+  }
+
+  /**
+   * Output only. Referenced table for DCL statement.
+   * @param dclTargetTable dclTargetTable or {@code null} for none
+   */
+  public JobStatistics2 setDclTargetTable(TableReference dclTargetTable) {
+    this.dclTargetTable = dclTargetTable;
+    return this;
+  }
+
+  /**
+   * Output only. Referenced view for DCL statement.
+   * @return value or {@code null} for none
+   */
+  public TableReference getDclTargetView() {
+    return dclTargetView;
+  }
+
+  /**
+   * Output only. Referenced view for DCL statement.
+   * @param dclTargetView dclTargetView or {@code null} for none
+   */
+  public JobStatistics2 setDclTargetView(TableReference dclTargetView) {
+    this.dclTargetView = dclTargetView;
+    return this;
+  }
+
+  /**
+   * Output only. The number of row access policies affected by a DDL statement. Present only for
+   * DROP ALL ROW ACCESS POLICIES queries.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDdlAffectedRowAccessPolicyCount() {
@@ -365,8 +563,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] [Preview] The number of row access policies affected by a DDL statement. Present
-   * only for DROP ALL ROW ACCESS POLICIES queries.
+   * Output only. The number of row access policies affected by a DDL statement. Present only for
+   * DROP ALL ROW ACCESS POLICIES queries.
    * @param ddlAffectedRowAccessPolicyCount ddlAffectedRowAccessPolicyCount or {@code null} for none
    */
   public JobStatistics2 setDdlAffectedRowAccessPolicyCount(java.lang.Long ddlAffectedRowAccessPolicyCount) {
@@ -375,8 +573,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
-   * that ddl_target_table is used just for its type information.
+   * Output only. The table after rename. Present only for ALTER TABLE RENAME TO query.
    * @return value or {@code null} for none
    */
   public TableReference getDdlDestinationTable() {
@@ -384,8 +581,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
-   * that ddl_target_table is used just for its type information.
+   * Output only. The table after rename. Present only for ALTER TABLE RENAME TO query.
    * @param ddlDestinationTable ddlDestinationTable or {@code null} for none
    */
   public JobStatistics2 setDdlDestinationTable(TableReference ddlDestinationTable) {
@@ -394,12 +590,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The DDL operation performed, possibly dependent on the pre-existence of the DDL target.
-   * Possible values (new values might be added in the future): "CREATE": The query created the DDL
-   * target. "SKIP": No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table
-   * already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. "REPLACE":
-   * The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the
-   * table already exists. "DROP": The query deleted the DDL target.
+   * Output only. The DDL operation performed, possibly dependent on the pre-existence of the DDL
+   * target.
    * @return value or {@code null} for none
    */
   public java.lang.String getDdlOperationPerformed() {
@@ -407,12 +599,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The DDL operation performed, possibly dependent on the pre-existence of the DDL target.
-   * Possible values (new values might be added in the future): "CREATE": The query created the DDL
-   * target. "SKIP": No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table
-   * already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. "REPLACE":
-   * The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the
-   * table already exists. "DROP": The query deleted the DDL target.
+   * Output only. The DDL operation performed, possibly dependent on the pre-existence of the DDL
+   * target.
    * @param ddlOperationPerformed ddlOperationPerformed or {@code null} for none
    */
   public JobStatistics2 setDdlOperationPerformed(java.lang.String ddlOperationPerformed) {
@@ -421,7 +609,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The DDL target dataset. Present only for CREATE/ALTER/DROP/UNDROP SCHEMA queries.
+   * Output only. The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA(dataset)
+   * queries.
    * @return value or {@code null} for none
    */
   public DatasetReference getDdlTargetDataset() {
@@ -429,7 +618,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The DDL target dataset. Present only for CREATE/ALTER/DROP/UNDROP SCHEMA queries.
+   * Output only. The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA(dataset)
+   * queries.
    * @param ddlTargetDataset ddlTargetDataset or {@code null} for none
    */
   public JobStatistics2 setDdlTargetDataset(DatasetReference ddlTargetDataset) {
@@ -438,7 +628,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
+   * Output only. [Beta] The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE
+   * queries.
    * @return value or {@code null} for none
    */
   public RoutineReference getDdlTargetRoutine() {
@@ -446,7 +637,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
+   * Output only. [Beta] The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE
+   * queries.
    * @param ddlTargetRoutine ddlTargetRoutine or {@code null} for none
    */
   public JobStatistics2 setDdlTargetRoutine(RoutineReference ddlTargetRoutine) {
@@ -455,8 +647,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
-   * ACCESS POLICY queries.
+   * Output only. The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY
+   * queries.
    * @return value or {@code null} for none
    */
   public RowAccessPolicyReference getDdlTargetRowAccessPolicy() {
@@ -464,8 +656,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
-   * ACCESS POLICY queries.
+   * Output only. The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY
+   * queries.
    * @param ddlTargetRowAccessPolicy ddlTargetRowAccessPolicy or {@code null} for none
    */
   public JobStatistics2 setDdlTargetRowAccessPolicy(RowAccessPolicyReference ddlTargetRowAccessPolicy) {
@@ -474,7 +666,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
+   * Output only. The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
    * ACCESS POLICIES queries.
    * @return value or {@code null} for none
    */
@@ -483,7 +675,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
+   * Output only. The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
    * ACCESS POLICIES queries.
    * @param ddlTargetTable ddlTargetTable or {@code null} for none
    */
@@ -493,8 +685,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Detailed statistics for DML statements Present only for DML statements INSERT,
-   * UPDATE, DELETE or TRUNCATE.
+   * Output only. Detailed statistics for DML statements INSERT, UPDATE, DELETE, MERGE or TRUNCATE.
    * @return value or {@code null} for none
    */
   public DmlStatistics getDmlStats() {
@@ -502,8 +693,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Detailed statistics for DML statements Present only for DML statements INSERT,
-   * UPDATE, DELETE or TRUNCATE.
+   * Output only. Detailed statistics for DML statements INSERT, UPDATE, DELETE, MERGE or TRUNCATE.
    * @param dmlStats dmlStats or {@code null} for none
    */
   public JobStatistics2 setDmlStats(DmlStatistics dmlStats) {
@@ -512,7 +702,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The original estimate of bytes processed for the job.
+   * Output only. The original estimate of bytes processed for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEstimatedBytesProcessed() {
@@ -520,7 +710,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The original estimate of bytes processed for the job.
+   * Output only. The original estimate of bytes processed for the job.
    * @param estimatedBytesProcessed estimatedBytesProcessed or {@code null} for none
    */
   public JobStatistics2 setEstimatedBytesProcessed(java.lang.Long estimatedBytesProcessed) {
@@ -529,7 +719,92 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Statistics of a BigQuery ML training job.
+   * Output only. Stats for EXPORT DATA statement.
+   * @return value or {@code null} for none
+   */
+  public ExportDataStatistics getExportDataStatistics() {
+    return exportDataStatistics;
+  }
+
+  /**
+   * Output only. Stats for EXPORT DATA statement.
+   * @param exportDataStatistics exportDataStatistics or {@code null} for none
+   */
+  public JobStatistics2 setExportDataStatistics(ExportDataStatistics exportDataStatistics) {
+    this.exportDataStatistics = exportDataStatistics;
+    return this;
+  }
+
+  /**
+   * Output only. Job cost breakdown as bigquery internal cost and external service costs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ExternalServiceCost> getExternalServiceCosts() {
+    return externalServiceCosts;
+  }
+
+  /**
+   * Output only. Job cost breakdown as bigquery internal cost and external service costs.
+   * @param externalServiceCosts externalServiceCosts or {@code null} for none
+   */
+  public JobStatistics2 setExternalServiceCosts(java.util.List<ExternalServiceCost> externalServiceCosts) {
+    this.externalServiceCosts = externalServiceCosts;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics for a LOAD query.
+   * @return value or {@code null} for none
+   */
+  public LoadQueryStatistics getLoadQueryStatistics() {
+    return loadQueryStatistics;
+  }
+
+  /**
+   * Output only. Statistics for a LOAD query.
+   * @param loadQueryStatistics loadQueryStatistics or {@code null} for none
+   */
+  public JobStatistics2 setLoadQueryStatistics(LoadQueryStatistics loadQueryStatistics) {
+    this.loadQueryStatistics = loadQueryStatistics;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics of materialized views of a query job.
+   * @return value or {@code null} for none
+   */
+  public MaterializedViewStatistics getMaterializedViewStatistics() {
+    return materializedViewStatistics;
+  }
+
+  /**
+   * Output only. Statistics of materialized views of a query job.
+   * @param materializedViewStatistics materializedViewStatistics or {@code null} for none
+   */
+  public JobStatistics2 setMaterializedViewStatistics(MaterializedViewStatistics materializedViewStatistics) {
+    this.materializedViewStatistics = materializedViewStatistics;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics of metadata cache usage in a query for BigLake tables.
+   * @return value or {@code null} for none
+   */
+  public MetadataCacheStatistics getMetadataCacheStatistics() {
+    return metadataCacheStatistics;
+  }
+
+  /**
+   * Output only. Statistics of metadata cache usage in a query for BigLake tables.
+   * @param metadataCacheStatistics metadataCacheStatistics or {@code null} for none
+   */
+  public JobStatistics2 setMetadataCacheStatistics(MetadataCacheStatistics metadataCacheStatistics) {
+    this.metadataCacheStatistics = metadataCacheStatistics;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics of a BigQuery ML training job.
    * @return value or {@code null} for none
    */
   public MlStatistics getMlStatistics() {
@@ -537,7 +812,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Statistics of a BigQuery ML training job.
+   * Output only. Statistics of a BigQuery ML training job.
    * @param mlStatistics mlStatistics or {@code null} for none
    */
   public JobStatistics2 setMlStatistics(MlStatistics mlStatistics) {
@@ -546,7 +821,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only, Beta] Information about create model query job progress.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public BigQueryModelTraining getModelTraining() {
@@ -554,7 +829,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only, Beta] Information about create model query job progress.
+   * Deprecated.
    * @param modelTraining modelTraining or {@code null} for none
    */
   public JobStatistics2 setModelTraining(BigQueryModelTraining modelTraining) {
@@ -563,7 +838,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only, Beta] Deprecated; do not use.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getModelTrainingCurrentIteration() {
@@ -571,7 +846,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only, Beta] Deprecated; do not use.
+   * Deprecated.
    * @param modelTrainingCurrentIteration modelTrainingCurrentIteration or {@code null} for none
    */
   public JobStatistics2 setModelTrainingCurrentIteration(java.lang.Integer modelTrainingCurrentIteration) {
@@ -580,7 +855,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only, Beta] Deprecated; do not use.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Long getModelTrainingExpectedTotalIteration() {
@@ -588,7 +863,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only, Beta] Deprecated; do not use.
+   * Deprecated.
    * @param modelTrainingExpectedTotalIteration modelTrainingExpectedTotalIteration or {@code null} for none
    */
   public JobStatistics2 setModelTrainingExpectedTotalIteration(java.lang.Long modelTrainingExpectedTotalIteration) {
@@ -597,7 +872,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The number of rows affected by a DML statement. Present only for DML statements
+   * Output only. The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * @return value or {@code null} for none
    */
@@ -606,7 +881,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The number of rows affected by a DML statement. Present only for DML statements
+   * Output only. The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * @param numDmlAffectedRows numDmlAffectedRows or {@code null} for none
    */
@@ -616,7 +891,41 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Describes execution plan for the query.
+   * Output only. Performance insights.
+   * @return value or {@code null} for none
+   */
+  public PerformanceInsights getPerformanceInsights() {
+    return performanceInsights;
+  }
+
+  /**
+   * Output only. Performance insights.
+   * @param performanceInsights performanceInsights or {@code null} for none
+   */
+  public JobStatistics2 setPerformanceInsights(PerformanceInsights performanceInsights) {
+    this.performanceInsights = performanceInsights;
+    return this;
+  }
+
+  /**
+   * Output only. Query optimization information for a QUERY job.
+   * @return value or {@code null} for none
+   */
+  public QueryInfo getQueryInfo() {
+    return queryInfo;
+  }
+
+  /**
+   * Output only. Query optimization information for a QUERY job.
+   * @param queryInfo queryInfo or {@code null} for none
+   */
+  public JobStatistics2 setQueryInfo(QueryInfo queryInfo) {
+    this.queryInfo = queryInfo;
+    return this;
+  }
+
+  /**
+   * Output only. Describes execution plan for the query.
    * @return value or {@code null} for none
    */
   public java.util.List<ExplainQueryStage> getQueryPlan() {
@@ -624,7 +933,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Describes execution plan for the query.
+   * Output only. Describes execution plan for the query.
    * @param queryPlan queryPlan or {@code null} for none
    */
   public JobStatistics2 setQueryPlan(java.util.List<ExplainQueryStage> queryPlan) {
@@ -633,8 +942,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Referenced routines (persistent user-defined functions and stored procedures) for
-   * the job.
+   * Output only. Referenced routines for the job.
    * @return value or {@code null} for none
    */
   public java.util.List<RoutineReference> getReferencedRoutines() {
@@ -642,8 +950,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Referenced routines (persistent user-defined functions and stored procedures) for
-   * the job.
+   * Output only. Referenced routines for the job.
    * @param referencedRoutines referencedRoutines or {@code null} for none
    */
   public JobStatistics2 setReferencedRoutines(java.util.List<RoutineReference> referencedRoutines) {
@@ -652,8 +959,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Referenced tables for the job. Queries that reference more than 50 tables will
-   * not have a complete list.
+   * Output only. Referenced tables for the job. Queries that reference more than 50 tables will not
+   * have a complete list.
    * @return value or {@code null} for none
    */
   public java.util.List<TableReference> getReferencedTables() {
@@ -661,8 +968,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Referenced tables for the job. Queries that reference more than 50 tables will
-   * not have a complete list.
+   * Output only. Referenced tables for the job. Queries that reference more than 50 tables will not
+   * have a complete list.
    * @param referencedTables referencedTables or {@code null} for none
    */
   public JobStatistics2 setReferencedTables(java.util.List<TableReference> referencedTables) {
@@ -671,7 +978,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Job resource usage breakdown by reservation.
+   * Output only. Job resource usage breakdown by reservation. This field reported misleading
+   * information and will no longer be populated.
    * @return value or {@code null} for none
    */
   public java.util.List<ReservationUsage> getReservationUsage() {
@@ -679,7 +987,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Job resource usage breakdown by reservation.
+   * Output only. Job resource usage breakdown by reservation. This field reported misleading
+   * information and will no longer be populated.
    * @param reservationUsage reservationUsage or {@code null} for none
    */
   public JobStatistics2 setReservationUsage(java.util.List<ReservationUsage> reservationUsage) {
@@ -688,7 +997,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The schema of the results. Present only for successful dry run of non-legacy SQL
+   * Output only. The schema of the results. Present only for successful dry run of non-legacy SQL
    * queries.
    * @return value or {@code null} for none
    */
@@ -697,7 +1006,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] The schema of the results. Present only for successful dry run of non-legacy SQL
+   * Output only. The schema of the results. Present only for successful dry run of non-legacy SQL
    * queries.
    * @param schema schema or {@code null} for none
    */
@@ -707,7 +1016,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Search query specific statistics.
+   * Output only. Search query specific statistics.
    * @return value or {@code null} for none
    */
   public SearchStatistics getSearchStatistics() {
@@ -715,7 +1024,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Search query specific statistics.
+   * Output only. Search query specific statistics.
    * @param searchStatistics searchStatistics or {@code null} for none
    */
   public JobStatistics2 setSearchStatistics(SearchStatistics searchStatistics) {
@@ -724,7 +1033,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Statistics of a Spark procedure job.
+   * Output only. Statistics of a Spark procedure job.
    * @return value or {@code null} for none
    */
   public SparkStatistics getSparkStatistics() {
@@ -732,7 +1041,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Statistics of a Spark procedure job.
+   * Output only. Statistics of a Spark procedure job.
    * @param sparkStatistics sparkStatistics or {@code null} for none
    */
   public JobStatistics2 setSparkStatistics(SparkStatistics sparkStatistics) {
@@ -741,20 +1050,73 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of query statement, if valid. Possible values (new values might be added in the
-   * future): "SELECT": SELECT query. "INSERT": INSERT query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
-   * "UPDATE": UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language. "DELETE": DELETE query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
-   * "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
-   * "ASSERT": ASSERT condition AS 'description'. "CREATE_FUNCTION": CREATE FUNCTION query.
-   * "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS SELECT ... . "CREATE_PROCEDURE": CREATE
-   * PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
-   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "CREATE_VIEW": CREATE
-   * [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION query. "DROP_PROCEDURE":
-   * DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW": DROP VIEW query.
+   * Output only. The type of query statement, if valid. Possible values: * `SELECT`:
+   * [`SELECT`](/bigquery/docs/reference/standard-sql/query-syntax#select_list) statement. *
+   * `ASSERT`: [`ASSERT`](/bigquery/docs/reference/standard-sql/debugging-statements#assert)
+   * statement. * `INSERT`: [`INSERT`](/bigquery/docs/reference/standard-sql/dml-
+   * syntax#insert_statement) statement. * `UPDATE`: [`UPDATE`](/bigquery/docs/reference/standard-
+   * sql/query-syntax#update_statement) statement. * `DELETE`: [`DELETE`](/bigquery/docs/reference
+   * /standard-sql/data-manipulation-language) statement. * `MERGE`:
+   * [`MERGE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement. *
+   * `CREATE_TABLE`: [`CREATE TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_table_statement) statement, without `AS SELECT`. * `CREATE_TABLE_AS_SELECT`:
+   * [`CREATE TABLE AS SELECT`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#query_statement) statement. * `CREATE_VIEW`: [`CREATE VIEW`](/bigquery/docs/reference
+   * /standard-sql/data-definition-language#create_view_statement) statement. * `CREATE_MODEL`:
+   * [`CREATE MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * create#create_model_statement) statement. * `CREATE_MATERIALIZED_VIEW`: [`CREATE MATERIALIZED
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_materialized_view_statement) statement. * `CREATE_FUNCTION`: [`CREATE
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_function_statement) statement. * `CREATE_TABLE_FUNCTION`: [`CREATE TABLE
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_table_function_statement) statement. * `CREATE_PROCEDURE`: [`CREATE
+   * PROCEDURE`](/bigquery/docs/reference/standard-sql/data-definition-language#create_procedure)
+   * statement. * `CREATE_ROW_ACCESS_POLICY`: [`CREATE ROW ACCESS POLICY`](/bigquery/docs/reference
+   * /standard-sql/data-definition-language#create_row_access_policy_statement) statement. *
+   * `CREATE_SCHEMA`: [`CREATE SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_schema_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE SNAPSHOT
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_snapshot_table_statement) statement. * `CREATE_SEARCH_INDEX`: [`CREATE SEARCH
+   * INDEX`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_search_index_statement) statement. * `DROP_TABLE`: [`DROP
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_table_statement)
+   * statement. * `DROP_EXTERNAL_TABLE`: [`DROP EXTERNAL TABLE`](/bigquery/docs/reference/standard-
+   * sql/data-definition-language#drop_external_table_statement) statement. * `DROP_VIEW`: [`DROP
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_view_statement)
+   * statement. * `DROP_MODEL`: [`DROP MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-
+   * syntax-drop-model) statement. * `DROP_MATERIALIZED_VIEW`: [`DROP MATERIALIZED
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_materialized_view_statement) statement. * `DROP_FUNCTION` : [`DROP
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_function_statement) statement. * `DROP_TABLE_FUNCTION` : [`DROP TABLE
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_table_function)
+   * statement. * `DROP_PROCEDURE`: [`DROP PROCEDURE`](/bigquery/docs/reference/standard-sql/data-
+   * definition-language#drop_procedure_statement) statement. * `DROP_SEARCH_INDEX`: [`DROP SEARCH
+   * INDEX`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_search_index)
+   * statement. * `DROP_SCHEMA`: [`DROP SCHEMA`](/bigquery/docs/reference/standard-sql/data-
+   * definition-language#drop_schema_statement) statement. * `DROP_SNAPSHOT_TABLE`: [`DROP SNAPSHOT
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_snapshot_table_statement) statement. * `DROP_ROW_ACCESS_POLICY`: [`DROP [ALL] ROW
+   * ACCESS POLICY|POLICIES`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_row_access_policy_statement) statement. * `ALTER_TABLE`: [`ALTER
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_table_set_options_statement) statement. * `ALTER_VIEW`: [`ALTER
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_view_set_options_statement) statement. * `ALTER_MATERIALIZED_VIEW`: [`ALTER
+   * MATERIALIZED VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_materialized_view_set_options_statement) statement. * `ALTER_SCHEMA`: [`ALTER
+   * SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#aalter_schema_set_options_statement) statement. * `SCRIPT`:
+   * [`SCRIPT`](/bigquery/docs/reference/standard-sql/procedural-language). * `TRUNCATE_TABLE`:
+   * [`TRUNCATE TABLE`](/bigquery/docs/reference/standard-sql/dml-syntax#truncate_table_statement)
+   * statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL TABLE`](/bigquery/docs/reference
+   * /standard-sql/data-definition-language#create_external_table_statement) statement. *
+   * `EXPORT_DATA`: [`EXPORT DATA`](/bigquery/docs/reference/standard-sql/other-
+   * statements#export_data_statement) statement. * `EXPORT_MODEL`: [`EXPORT MODEL`](/bigquery-
+   * ml/docs/reference/standard-sql/bigqueryml-syntax-export-model) statement. * `LOAD_DATA`: [`LOAD
+   * DATA`](/bigquery/docs/reference/standard-sql/other-statements#load_data_statement) statement. *
+   * `CALL`: [`CALL`](/bigquery/docs/reference/standard-sql/procedural-language#call) statement.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatementType() {
@@ -762,20 +1124,73 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of query statement, if valid. Possible values (new values might be added in the
-   * future): "SELECT": SELECT query. "INSERT": INSERT query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
-   * "UPDATE": UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language. "DELETE": DELETE query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
-   * "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
-   * "ASSERT": ASSERT condition AS 'description'. "CREATE_FUNCTION": CREATE FUNCTION query.
-   * "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS SELECT ... . "CREATE_PROCEDURE": CREATE
-   * PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
-   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "CREATE_VIEW": CREATE
-   * [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION query. "DROP_PROCEDURE":
-   * DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW": DROP VIEW query.
+   * Output only. The type of query statement, if valid. Possible values: * `SELECT`:
+   * [`SELECT`](/bigquery/docs/reference/standard-sql/query-syntax#select_list) statement. *
+   * `ASSERT`: [`ASSERT`](/bigquery/docs/reference/standard-sql/debugging-statements#assert)
+   * statement. * `INSERT`: [`INSERT`](/bigquery/docs/reference/standard-sql/dml-
+   * syntax#insert_statement) statement. * `UPDATE`: [`UPDATE`](/bigquery/docs/reference/standard-
+   * sql/query-syntax#update_statement) statement. * `DELETE`: [`DELETE`](/bigquery/docs/reference
+   * /standard-sql/data-manipulation-language) statement. * `MERGE`:
+   * [`MERGE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement. *
+   * `CREATE_TABLE`: [`CREATE TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_table_statement) statement, without `AS SELECT`. * `CREATE_TABLE_AS_SELECT`:
+   * [`CREATE TABLE AS SELECT`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#query_statement) statement. * `CREATE_VIEW`: [`CREATE VIEW`](/bigquery/docs/reference
+   * /standard-sql/data-definition-language#create_view_statement) statement. * `CREATE_MODEL`:
+   * [`CREATE MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * create#create_model_statement) statement. * `CREATE_MATERIALIZED_VIEW`: [`CREATE MATERIALIZED
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_materialized_view_statement) statement. * `CREATE_FUNCTION`: [`CREATE
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_function_statement) statement. * `CREATE_TABLE_FUNCTION`: [`CREATE TABLE
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_table_function_statement) statement. * `CREATE_PROCEDURE`: [`CREATE
+   * PROCEDURE`](/bigquery/docs/reference/standard-sql/data-definition-language#create_procedure)
+   * statement. * `CREATE_ROW_ACCESS_POLICY`: [`CREATE ROW ACCESS POLICY`](/bigquery/docs/reference
+   * /standard-sql/data-definition-language#create_row_access_policy_statement) statement. *
+   * `CREATE_SCHEMA`: [`CREATE SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_schema_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE SNAPSHOT
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_snapshot_table_statement) statement. * `CREATE_SEARCH_INDEX`: [`CREATE SEARCH
+   * INDEX`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_search_index_statement) statement. * `DROP_TABLE`: [`DROP
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_table_statement)
+   * statement. * `DROP_EXTERNAL_TABLE`: [`DROP EXTERNAL TABLE`](/bigquery/docs/reference/standard-
+   * sql/data-definition-language#drop_external_table_statement) statement. * `DROP_VIEW`: [`DROP
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_view_statement)
+   * statement. * `DROP_MODEL`: [`DROP MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-
+   * syntax-drop-model) statement. * `DROP_MATERIALIZED_VIEW`: [`DROP MATERIALIZED
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_materialized_view_statement) statement. * `DROP_FUNCTION` : [`DROP
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_function_statement) statement. * `DROP_TABLE_FUNCTION` : [`DROP TABLE
+   * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_table_function)
+   * statement. * `DROP_PROCEDURE`: [`DROP PROCEDURE`](/bigquery/docs/reference/standard-sql/data-
+   * definition-language#drop_procedure_statement) statement. * `DROP_SEARCH_INDEX`: [`DROP SEARCH
+   * INDEX`](/bigquery/docs/reference/standard-sql/data-definition-language#drop_search_index)
+   * statement. * `DROP_SCHEMA`: [`DROP SCHEMA`](/bigquery/docs/reference/standard-sql/data-
+   * definition-language#drop_schema_statement) statement. * `DROP_SNAPSHOT_TABLE`: [`DROP SNAPSHOT
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_snapshot_table_statement) statement. * `DROP_ROW_ACCESS_POLICY`: [`DROP [ALL] ROW
+   * ACCESS POLICY|POLICIES`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_row_access_policy_statement) statement. * `ALTER_TABLE`: [`ALTER
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_table_set_options_statement) statement. * `ALTER_VIEW`: [`ALTER
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_view_set_options_statement) statement. * `ALTER_MATERIALIZED_VIEW`: [`ALTER
+   * MATERIALIZED VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_materialized_view_set_options_statement) statement. * `ALTER_SCHEMA`: [`ALTER
+   * SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#aalter_schema_set_options_statement) statement. * `SCRIPT`:
+   * [`SCRIPT`](/bigquery/docs/reference/standard-sql/procedural-language). * `TRUNCATE_TABLE`:
+   * [`TRUNCATE TABLE`](/bigquery/docs/reference/standard-sql/dml-syntax#truncate_table_statement)
+   * statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL TABLE`](/bigquery/docs/reference
+   * /standard-sql/data-definition-language#create_external_table_statement) statement. *
+   * `EXPORT_DATA`: [`EXPORT DATA`](/bigquery/docs/reference/standard-sql/other-
+   * statements#export_data_statement) statement. * `EXPORT_MODEL`: [`EXPORT MODEL`](/bigquery-
+   * ml/docs/reference/standard-sql/bigqueryml-syntax-export-model) statement. * `LOAD_DATA`: [`LOAD
+   * DATA`](/bigquery/docs/reference/standard-sql/other-statements#load_data_statement) statement. *
+   * `CALL`: [`CALL`](/bigquery/docs/reference/standard-sql/procedural-language#call) statement.
    * @param statementType statementType or {@code null} for none
    */
   public JobStatistics2 setStatementType(java.lang.String statementType) {
@@ -784,7 +1199,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] [Beta] Describes a timeline of job execution.
+   * Output only. Describes a timeline of job execution.
    * @return value or {@code null} for none
    */
   public java.util.List<QueryTimelineSample> getTimeline() {
@@ -792,7 +1207,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] [Beta] Describes a timeline of job execution.
+   * Output only. Describes a timeline of job execution.
    * @param timeline timeline or {@code null} for none
    */
   public JobStatistics2 setTimeline(java.util.List<QueryTimelineSample> timeline) {
@@ -801,7 +1216,9 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Total bytes billed for the job.
+   * Output only. If the project is configured to use on-demand pricing, then this field contains
+   * the total bytes billed for the job. If the project is configured to use flat-rate pricing, then
+   * you are not billed for bytes and this field is informational only.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalBytesBilled() {
@@ -809,7 +1226,9 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Total bytes billed for the job.
+   * Output only. If the project is configured to use on-demand pricing, then this field contains
+   * the total bytes billed for the job. If the project is configured to use flat-rate pricing, then
+   * you are not billed for bytes and this field is informational only.
    * @param totalBytesBilled totalBytesBilled or {@code null} for none
    */
   public JobStatistics2 setTotalBytesBilled(java.lang.Long totalBytesBilled) {
@@ -818,7 +1237,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Total bytes processed for the job.
+   * Output only. Total bytes processed for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalBytesProcessed() {
@@ -826,7 +1245,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Total bytes processed for the job.
+   * Output only. Total bytes processed for the job.
    * @param totalBytesProcessed totalBytesProcessed or {@code null} for none
    */
   public JobStatistics2 setTotalBytesProcessed(java.lang.Long totalBytesProcessed) {
@@ -835,7 +1254,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
+   * Output only. For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
    * accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown.
    * PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would
    * cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
@@ -846,7 +1265,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
+   * Output only. For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
    * accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown.
    * PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would
    * cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
@@ -858,8 +1277,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Total number of partitions processed from all partitioned tables referenced in
-   * the job.
+   * Output only. Total number of partitions processed from all partitioned tables referenced in the
+   * job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalPartitionsProcessed() {
@@ -867,8 +1286,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Total number of partitions processed from all partitioned tables referenced in
-   * the job.
+   * Output only. Total number of partitions processed from all partitioned tables referenced in the
+   * job.
    * @param totalPartitionsProcessed totalPartitionsProcessed or {@code null} for none
    */
   public JobStatistics2 setTotalPartitionsProcessed(java.lang.Long totalPartitionsProcessed) {
@@ -877,7 +1296,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Slot-milliseconds for the job.
+   * Output only. Slot-milliseconds for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalSlotMs() {
@@ -885,7 +1304,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Slot-milliseconds for the job.
+   * Output only. Slot-milliseconds for the job.
    * @param totalSlotMs totalSlotMs or {@code null} for none
    */
   public JobStatistics2 setTotalSlotMs(java.lang.Long totalSlotMs) {
@@ -894,7 +1313,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Total bytes transferred for cross-cloud queries such as Cross Cloud Transfer and
+   * Output only. Total bytes transferred for cross-cloud queries such as Cross Cloud Transfer and
    * CREATE TABLE AS SELECT (CTAS).
    * @return value or {@code null} for none
    */
@@ -903,7 +1322,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Total bytes transferred for cross-cloud queries such as Cross Cloud Transfer and
+   * Output only. Total bytes transferred for cross-cloud queries such as Cross Cloud Transfer and
    * CREATE TABLE AS SELECT (CTAS).
    * @param transferredBytes transferredBytes or {@code null} for none
    */
@@ -913,7 +1332,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Standard SQL only: list of undeclared query parameters detected during a dry run validation.
+   * Output only. GoogleSQL only: list of undeclared query parameters detected during a dry run
+   * validation.
    * @return value or {@code null} for none
    */
   public java.util.List<QueryParameter> getUndeclaredQueryParameters() {
@@ -921,11 +1341,29 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Standard SQL only: list of undeclared query parameters detected during a dry run validation.
+   * Output only. GoogleSQL only: list of undeclared query parameters detected during a dry run
+   * validation.
    * @param undeclaredQueryParameters undeclaredQueryParameters or {@code null} for none
    */
   public JobStatistics2 setUndeclaredQueryParameters(java.util.List<QueryParameter> undeclaredQueryParameters) {
     this.undeclaredQueryParameters = undeclaredQueryParameters;
+    return this;
+  }
+
+  /**
+   * Output only. Search query specific statistics.
+   * @return value or {@code null} for none
+   */
+  public VectorSearchStatistics getVectorSearchStatistics() {
+    return vectorSearchStatistics;
+  }
+
+  /**
+   * Output only. Search query specific statistics.
+   * @param vectorSearchStatistics vectorSearchStatistics or {@code null} for none
+   */
+  public JobStatistics2 setVectorSearchStatistics(VectorSearchStatistics vectorSearchStatistics) {
+    this.vectorSearchStatistics = vectorSearchStatistics;
     return this;
   }
 
@@ -940,26 +1378,26 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Model definition for JobStatistics2ReservationUsage.
+   * Job resource usage breakdown by reservation.
    */
   public static final class ReservationUsage extends com.google.api.client.json.GenericJson {
 
     /**
-     * [Output only] Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or "unreserved" for on-demand resources usage.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String name;
 
     /**
-     * [Output only] Slot-milliseconds the job spent in the given reservation.
+     * Total slot milliseconds used by the reservation for a particular job.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long slotMs;
 
     /**
-     * [Output only] Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or "unreserved" for on-demand resources usage.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -967,7 +1405,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
     }
 
     /**
-     * [Output only] Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or "unreserved" for on-demand resources usage.
      * @param name name or {@code null} for none
      */
     public ReservationUsage setName(java.lang.String name) {
@@ -976,7 +1414,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
     }
 
     /**
-     * [Output only] Slot-milliseconds the job spent in the given reservation.
+     * Total slot milliseconds used by the reservation for a particular job.
      * @return value or {@code null} for none
      */
     public java.lang.Long getSlotMs() {
@@ -984,7 +1422,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
     }
 
     /**
-     * [Output only] Slot-milliseconds the job spent in the given reservation.
+     * Total slot milliseconds used by the reservation for a particular job.
      * @param slotMs slotMs or {@code null} for none
      */
     public ReservationUsage setSlotMs(java.lang.Long slotMs) {

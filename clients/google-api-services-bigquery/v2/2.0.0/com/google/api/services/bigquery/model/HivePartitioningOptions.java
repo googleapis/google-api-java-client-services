@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for HivePartitioningOptions.
+ * Options for configuring hive partitioning detect.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class HivePartitioningOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] For permanent external tables, this field is populated with the hive partition
+   * Output only. For permanent external tables, this field is populated with the hive partition
    * keys in the order they were inferred. The types of the partition keys can be deduced by
    * checking the table schema (which will include the partition keys). Not every API will populate
    * this field in the output. For example, Tables.Get will populate it, but Tables.List will not
@@ -41,42 +41,47 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> fields;
 
   /**
-   * [Optional] When set, what mode of hive partitioning to use when reading data. The following
-   * modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2)
-   * STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3)
-   * CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats
-   * support hive partitioning. Requesting hive partitioning on an unsupported format will lead to
-   * an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.
+   * Optional. When set, what mode of hive partitioning to use when reading data. The following
+   * modes are supported: * AUTO: automatically infer partition key name(s) and type(s). * STRINGS:
+   * automatically infer partition key name(s). All types are strings. * CUSTOM: partition key
+   * schema is encoded in the source URI prefix. Not all storage formats support hive partitioning.
+   * Requesting hive partitioning on an unsupported format will lead to an error. Currently
+   * supported formats are: JSON, CSV, ORC, Avro and Parquet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mode;
 
   /**
-   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * Optional. If set to true, queries over this table require a partition filter that can be used
    * for partition elimination to be specified. Note that this field should only be true when
    * creating a permanent external table or querying a temporary external table. Hive-partitioned
-   * loads with requirePartitionFilter explicitly set to true will fail.
+   * loads with require_partition_filter explicitly set to true will fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requirePartitionFilter;
 
   /**
-   * [Optional] When hive partition detection is requested, a common prefix for all source uris
-   * should be supplied. The prefix must end immediately before the partition key encoding begins.
-   * For example, consider files following this data layout.
-   * gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro
-   * gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is
+   * Optional. When hive partition detection is requested, a common prefix for all source uris must
+   * be required. The prefix must end immediately before the partition key encoding begins. For
+   * example, consider files following this data layout:
+   * gs://bucket/path_to_table/dt=2019-06-01/country=USA/id=7/file.avro
+   * gs://bucket/path_to_table/dt=2019-05-31/country=CA/id=3/file.avro When hive partitioning is
    * requested with either AUTO or STRINGS detection, the common prefix can be either of
-   * gs://bucket/path_to_table or gs://bucket/path_to_table/ (trailing slash does not matter).
+   * gs://bucket/path_to_table or gs://bucket/path_to_table/. CUSTOM detection requires encoding the
+   * partitioning schema immediately after the common prefix. For CUSTOM, any of *
+   * gs://bucket/path_to_table/{dt:DATE}/{country:STRING}/{id:INTEGER} *
+   * gs://bucket/path_to_table/{dt:STRING}/{country:STRING}/{id:INTEGER} *
+   * gs://bucket/path_to_table/{dt:DATE}/{country:STRING}/{id:STRING} would all be valid source URI
+   * prefixes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceUriPrefix;
 
   /**
-   * [Output-only] For permanent external tables, this field is populated with the hive partition
+   * Output only. For permanent external tables, this field is populated with the hive partition
    * keys in the order they were inferred. The types of the partition keys can be deduced by
    * checking the table schema (which will include the partition keys). Not every API will populate
    * this field in the output. For example, Tables.Get will populate it, but Tables.List will not
@@ -88,7 +93,7 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output-only] For permanent external tables, this field is populated with the hive partition
+   * Output only. For permanent external tables, this field is populated with the hive partition
    * keys in the order they were inferred. The types of the partition keys can be deduced by
    * checking the table schema (which will include the partition keys). Not every API will populate
    * this field in the output. For example, Tables.Get will populate it, but Tables.List will not
@@ -101,12 +106,12 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] When set, what mode of hive partitioning to use when reading data. The following
-   * modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2)
-   * STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3)
-   * CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats
-   * support hive partitioning. Requesting hive partitioning on an unsupported format will lead to
-   * an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.
+   * Optional. When set, what mode of hive partitioning to use when reading data. The following
+   * modes are supported: * AUTO: automatically infer partition key name(s) and type(s). * STRINGS:
+   * automatically infer partition key name(s). All types are strings. * CUSTOM: partition key
+   * schema is encoded in the source URI prefix. Not all storage formats support hive partitioning.
+   * Requesting hive partitioning on an unsupported format will lead to an error. Currently
+   * supported formats are: JSON, CSV, ORC, Avro and Parquet.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -114,12 +119,12 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] When set, what mode of hive partitioning to use when reading data. The following
-   * modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2)
-   * STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3)
-   * CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats
-   * support hive partitioning. Requesting hive partitioning on an unsupported format will lead to
-   * an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.
+   * Optional. When set, what mode of hive partitioning to use when reading data. The following
+   * modes are supported: * AUTO: automatically infer partition key name(s) and type(s). * STRINGS:
+   * automatically infer partition key name(s). All types are strings. * CUSTOM: partition key
+   * schema is encoded in the source URI prefix. Not all storage formats support hive partitioning.
+   * Requesting hive partitioning on an unsupported format will lead to an error. Currently
+   * supported formats are: JSON, CSV, ORC, Avro and Parquet.
    * @param mode mode or {@code null} for none
    */
   public HivePartitioningOptions setMode(java.lang.String mode) {
@@ -128,10 +133,10 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * Optional. If set to true, queries over this table require a partition filter that can be used
    * for partition elimination to be specified. Note that this field should only be true when
    * creating a permanent external table or querying a temporary external table. Hive-partitioned
-   * loads with requirePartitionFilter explicitly set to true will fail.
+   * loads with require_partition_filter explicitly set to true will fail.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequirePartitionFilter() {
@@ -139,10 +144,10 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * Optional. If set to true, queries over this table require a partition filter that can be used
    * for partition elimination to be specified. Note that this field should only be true when
    * creating a permanent external table or querying a temporary external table. Hive-partitioned
-   * loads with requirePartitionFilter explicitly set to true will fail.
+   * loads with require_partition_filter explicitly set to true will fail.
    * @param requirePartitionFilter requirePartitionFilter or {@code null} for none
    */
   public HivePartitioningOptions setRequirePartitionFilter(java.lang.Boolean requirePartitionFilter) {
@@ -151,13 +156,48 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] When hive partition detection is requested, a common prefix for all source uris
-   * should be supplied. The prefix must end immediately before the partition key encoding begins.
-   * For example, consider files following this data layout.
-   * gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro
-   * gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is
+   * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+   *
+   * <p>
+   * Boolean properties can have four possible values:
+   * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+   * or {@link Boolean#FALSE}.
+   * </p>
+   *
+   * <p>
+   * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+   * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+   * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+   * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+   * </p>
+   *
+   * <p>
+   * Optional. If set to true, queries over this table require a partition filter that can be used for
+ partition elimination to be specified. Note that this field should only be true when creating a
+ permanent external table or querying a temporary external table. Hive-partitioned loads with
+ require_partition_filter explicitly set to true will fail.
+   * </p>
+   */
+  public boolean isRequirePartitionFilter() {
+    if (requirePartitionFilter == null || requirePartitionFilter == com.google.api.client.util.Data.NULL_BOOLEAN) {
+      return false;
+    }
+    return requirePartitionFilter;
+  }
+
+  /**
+   * Optional. When hive partition detection is requested, a common prefix for all source uris must
+   * be required. The prefix must end immediately before the partition key encoding begins. For
+   * example, consider files following this data layout:
+   * gs://bucket/path_to_table/dt=2019-06-01/country=USA/id=7/file.avro
+   * gs://bucket/path_to_table/dt=2019-05-31/country=CA/id=3/file.avro When hive partitioning is
    * requested with either AUTO or STRINGS detection, the common prefix can be either of
-   * gs://bucket/path_to_table or gs://bucket/path_to_table/ (trailing slash does not matter).
+   * gs://bucket/path_to_table or gs://bucket/path_to_table/. CUSTOM detection requires encoding the
+   * partitioning schema immediately after the common prefix. For CUSTOM, any of *
+   * gs://bucket/path_to_table/{dt:DATE}/{country:STRING}/{id:INTEGER} *
+   * gs://bucket/path_to_table/{dt:STRING}/{country:STRING}/{id:INTEGER} *
+   * gs://bucket/path_to_table/{dt:DATE}/{country:STRING}/{id:STRING} would all be valid source URI
+   * prefixes.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceUriPrefix() {
@@ -165,13 +205,18 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] When hive partition detection is requested, a common prefix for all source uris
-   * should be supplied. The prefix must end immediately before the partition key encoding begins.
-   * For example, consider files following this data layout.
-   * gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro
-   * gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is
+   * Optional. When hive partition detection is requested, a common prefix for all source uris must
+   * be required. The prefix must end immediately before the partition key encoding begins. For
+   * example, consider files following this data layout:
+   * gs://bucket/path_to_table/dt=2019-06-01/country=USA/id=7/file.avro
+   * gs://bucket/path_to_table/dt=2019-05-31/country=CA/id=3/file.avro When hive partitioning is
    * requested with either AUTO or STRINGS detection, the common prefix can be either of
-   * gs://bucket/path_to_table or gs://bucket/path_to_table/ (trailing slash does not matter).
+   * gs://bucket/path_to_table or gs://bucket/path_to_table/. CUSTOM detection requires encoding the
+   * partitioning schema immediately after the common prefix. For CUSTOM, any of *
+   * gs://bucket/path_to_table/{dt:DATE}/{country:STRING}/{id:INTEGER} *
+   * gs://bucket/path_to_table/{dt:STRING}/{country:STRING}/{id:INTEGER} *
+   * gs://bucket/path_to_table/{dt:DATE}/{country:STRING}/{id:STRING} would all be valid source URI
+   * prefixes.
    * @param sourceUriPrefix sourceUriPrefix or {@code null} for none
    */
   public HivePartitioningOptions setSourceUriPrefix(java.lang.String sourceUriPrefix) {

@@ -30,23 +30,23 @@ package com.google.api.services.bigquery.model;
 public final class RangePartitioning extends com.google.api.client.json.GenericJson {
 
   /**
-   * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-
-   * level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
+   * Required. [Experimental] The table is partitioned by this field. The field must be a top-level
+   * NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String field;
 
   /**
-   * [TrustedTester] [Required] Defines the ranges for range partitioning.
+   * [Experimental] Defines the ranges for range partitioning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Range range;
 
   /**
-   * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-
-   * level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
+   * Required. [Experimental] The table is partitioned by this field. The field must be a top-level
+   * NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -54,8 +54,8 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-
-   * level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
+   * Required. [Experimental] The table is partitioned by this field. The field must be a top-level
+   * NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
    * @param field field or {@code null} for none
    */
   public RangePartitioning setField(java.lang.String field) {
@@ -64,7 +64,7 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [TrustedTester] [Required] Defines the ranges for range partitioning.
+   * [Experimental] Defines the ranges for range partitioning.
    * @return value or {@code null} for none
    */
   public Range getRange() {
@@ -72,7 +72,7 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [TrustedTester] [Required] Defines the ranges for range partitioning.
+   * [Experimental] Defines the ranges for range partitioning.
    * @param range range or {@code null} for none
    */
   public RangePartitioning setRange(Range range) {
@@ -91,33 +91,33 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [TrustedTester] [Required] Defines the ranges for range partitioning.
+   * [Experimental] Defines the ranges for range partitioning.
    */
   public static final class Range extends com.google.api.client.json.GenericJson {
 
     /**
-     * [TrustedTester] [Required] The end of range partitioning, exclusive.
+     * [Experimental] The end of range partitioning, exclusive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long end;
 
     /**
-     * [TrustedTester] [Required] The width of each interval.
+     * [Experimental] The width of each interval.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long interval;
 
     /**
-     * [TrustedTester] [Required] The start of range partitioning, inclusive.
+     * [Experimental] The start of range partitioning, inclusive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long start;
 
     /**
-     * [TrustedTester] [Required] The end of range partitioning, exclusive.
+     * [Experimental] The end of range partitioning, exclusive.
      * @return value or {@code null} for none
      */
     public java.lang.Long getEnd() {
@@ -125,7 +125,7 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
     }
 
     /**
-     * [TrustedTester] [Required] The end of range partitioning, exclusive.
+     * [Experimental] The end of range partitioning, exclusive.
      * @param end end or {@code null} for none
      */
     public Range setEnd(java.lang.Long end) {
@@ -134,7 +134,7 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
     }
 
     /**
-     * [TrustedTester] [Required] The width of each interval.
+     * [Experimental] The width of each interval.
      * @return value or {@code null} for none
      */
     public java.lang.Long getInterval() {
@@ -142,7 +142,7 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
     }
 
     /**
-     * [TrustedTester] [Required] The width of each interval.
+     * [Experimental] The width of each interval.
      * @param interval interval or {@code null} for none
      */
     public Range setInterval(java.lang.Long interval) {
@@ -151,7 +151,7 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
     }
 
     /**
-     * [TrustedTester] [Required] The start of range partitioning, inclusive.
+     * [Experimental] The start of range partitioning, inclusive.
      * @return value or {@code null} for none
      */
     public java.lang.Long getStart() {
@@ -159,7 +159,7 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
     }
 
     /**
-     * [TrustedTester] [Required] The start of range partitioning, inclusive.
+     * [Experimental] The start of range partitioning, inclusive.
      * @param start start or {@code null} for none
      */
     public Range setStart(java.lang.Long start) {

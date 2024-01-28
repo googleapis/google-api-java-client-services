@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for TableDataInsertAllResponse.
+ * Describes the format of a streaming insert response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class TableDataInsertAllResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array of errors for rows that were not inserted.
+   * Describes specific errors encountered while processing the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +43,14 @@ public final class TableDataInsertAllResponse extends com.google.api.client.json
   }
 
   /**
-   * The resource type of the response.
+   * Returns "bigquery#tableDataInsertAllResponse".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * An array of errors for rows that were not inserted.
+   * Describes specific errors encountered while processing the request.
    * @return value or {@code null} for none
    */
   public java.util.List<InsertErrors> getInsertErrors() {
@@ -58,7 +58,7 @@ public final class TableDataInsertAllResponse extends com.google.api.client.json
   }
 
   /**
-   * An array of errors for rows that were not inserted.
+   * Describes specific errors encountered while processing the request.
    * @param insertErrors insertErrors or {@code null} for none
    */
   public TableDataInsertAllResponse setInsertErrors(java.util.List<InsertErrors> insertErrors) {
@@ -67,7 +67,7 @@ public final class TableDataInsertAllResponse extends com.google.api.client.json
   }
 
   /**
-   * The resource type of the response.
+   * Returns "bigquery#tableDataInsertAllResponse".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -75,7 +75,7 @@ public final class TableDataInsertAllResponse extends com.google.api.client.json
   }
 
   /**
-   * The resource type of the response.
+   * Returns "bigquery#tableDataInsertAllResponse".
    * @param kind kind or {@code null} for none
    */
   public TableDataInsertAllResponse setKind(java.lang.String kind) {
@@ -94,7 +94,7 @@ public final class TableDataInsertAllResponse extends com.google.api.client.json
   }
 
   /**
-   * Model definition for TableDataInsertAllResponseInsertErrors.
+   * Error details about a single row's insertion.
    */
   public static final class InsertErrors extends com.google.api.client.json.GenericJson {
 

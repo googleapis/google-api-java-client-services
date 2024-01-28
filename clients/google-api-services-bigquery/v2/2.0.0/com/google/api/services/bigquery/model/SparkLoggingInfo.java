@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for SparkLoggingInfo.
+ * Spark job logs can be filtered by these fields in Cloud Logging.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.bigquery.model;
 public final class SparkLoggingInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] Project ID used for logging
+   * Output only. Project ID where the Spark logs were written.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * [Output-only] Resource type used for logging
+   * Output only. Resource type used for logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
 
   /**
-   * [Output-only] Project ID used for logging
+   * Output only. Project ID where the Spark logs were written.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -52,7 +52,7 @@ public final class SparkLoggingInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output-only] Project ID used for logging
+   * Output only. Project ID where the Spark logs were written.
    * @param projectId projectId or {@code null} for none
    */
   public SparkLoggingInfo setProjectId(java.lang.String projectId) {
@@ -61,7 +61,7 @@ public final class SparkLoggingInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output-only] Resource type used for logging
+   * Output only. Resource type used for logging.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -69,7 +69,7 @@ public final class SparkLoggingInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output-only] Resource type used for logging
+   * Output only. Resource type used for logging.
    * @param resourceType resourceType or {@code null} for none
    */
   public SparkLoggingInfo setResourceType(java.lang.String resourceType) {

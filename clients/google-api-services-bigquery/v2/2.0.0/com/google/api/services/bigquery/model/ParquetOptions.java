@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for ParquetOptions.
+ * Parquet Options for load and make external tables.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,15 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class ParquetOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical
-   * type.
+   * Optional. Indicates whether to use schema inference specifically for Parquet LIST logical type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableListInference;
 
   /**
-   * [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by
+   * Optional. Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by
    * default.
    * The value may be {@code null}.
    */
@@ -46,8 +45,7 @@ public final class ParquetOptions extends com.google.api.client.json.GenericJson
   private java.lang.Boolean enumAsString;
 
   /**
-   * [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical
-   * type.
+   * Optional. Indicates whether to use schema inference specifically for Parquet LIST logical type.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableListInference() {
@@ -55,8 +53,7 @@ public final class ParquetOptions extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical
-   * type.
+   * Optional. Indicates whether to use schema inference specifically for Parquet LIST logical type.
    * @param enableListInference enableListInference or {@code null} for none
    */
   public ParquetOptions setEnableListInference(java.lang.Boolean enableListInference) {
@@ -65,7 +62,7 @@ public final class ParquetOptions extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by
+   * Optional. Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by
    * default.
    * @return value or {@code null} for none
    */
@@ -74,7 +71,7 @@ public final class ParquetOptions extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by
+   * Optional. Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by
    * default.
    * @param enumAsString enumAsString or {@code null} for none
    */

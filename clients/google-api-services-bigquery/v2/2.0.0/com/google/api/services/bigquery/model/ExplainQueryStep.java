@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for ExplainQueryStep.
+ * An operation within a stage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class ExplainQueryStep extends com.google.api.client.json.GenericJs
   private java.lang.String kind;
 
   /**
-   * Human-readable stage descriptions.
+   * Human-readable description of the step(s).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class ExplainQueryStep extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Human-readable stage descriptions.
+   * Human-readable description of the step(s).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubsteps() {
@@ -69,7 +69,7 @@ public final class ExplainQueryStep extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Human-readable stage descriptions.
+   * Human-readable description of the step(s).
    * @param substeps substeps or {@code null} for none
    */
   public ExplainQueryStep setSubsteps(java.util.List<java.lang.String> substeps) {

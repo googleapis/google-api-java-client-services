@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for DataMaskingStatistics.
+ * Statistics for data-masking.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,20 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class DataMaskingStatistics extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] [Preview] Whether any accessed data was protected by data masking. The actual
-   * evaluation is done by accessStats.masked_field_count > 0. Since this is only used for the
-   * discovery_doc generation purpose, as long as the type (boolean) matches, client library can
-   * leverage this. The actual evaluation of the variable is done else-where.
+   * Whether any accessed data was protected by the data masking.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dataMaskingApplied;
 
   /**
-   * [Output-only] [Preview] Whether any accessed data was protected by data masking. The actual
-   * evaluation is done by accessStats.masked_field_count > 0. Since this is only used for the
-   * discovery_doc generation purpose, as long as the type (boolean) matches, client library can
-   * leverage this. The actual evaluation of the variable is done else-where.
+   * Whether any accessed data was protected by the data masking.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDataMaskingApplied() {
@@ -51,45 +45,12 @@ public final class DataMaskingStatistics extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output-only] [Preview] Whether any accessed data was protected by data masking. The actual
-   * evaluation is done by accessStats.masked_field_count > 0. Since this is only used for the
-   * discovery_doc generation purpose, as long as the type (boolean) matches, client library can
-   * leverage this. The actual evaluation of the variable is done else-where.
+   * Whether any accessed data was protected by the data masking.
    * @param dataMaskingApplied dataMaskingApplied or {@code null} for none
    */
   public DataMaskingStatistics setDataMaskingApplied(java.lang.Boolean dataMaskingApplied) {
     this.dataMaskingApplied = dataMaskingApplied;
     return this;
-  }
-
-  /**
-   * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
-   *
-   * <p>
-   * Boolean properties can have four possible values:
-   * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
-   * or {@link Boolean#FALSE}.
-   * </p>
-   *
-   * <p>
-   * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
-   * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
-   * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * </p>
-   *
-   * <p>
-   *[ Output-only] [Preview] Whether any accessed data was protected by data masking. The actual
-[ evaluation is done by accessStats.masked_field_count > 0. Since this is only used for the
-[ discovery_doc generation purpose, as long as the type (boolean) matches, client library can
-[ leverage this. The actual evaluation of the variable is done else-where.
-   * </p>
-   */
-  public boolean isDataMaskingApplied() {
-    if (dataMaskingApplied == null || dataMaskingApplied == com.google.api.client.util.Data.NULL_BOOLEAN) {
-      return false;
-    }
-    return dataMaskingApplied;
   }
 
   @Override

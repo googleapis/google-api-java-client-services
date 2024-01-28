@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for QueryParameter.
+ * A parameter given to a query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,30 +30,28 @@ package com.google.api.services.bigquery.model;
 public final class QueryParameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a
-   * query.
+   * Optional. If unset, this is a positional parameter. Otherwise, should be unique within a query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Required] The type of this parameter.
+   * Required. The type of this parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QueryParameterType parameterType;
 
   /**
-   * [Required] The value of this parameter.
+   * Required. The value of this parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QueryParameterValue parameterValue;
 
   /**
-   * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a
-   * query.
+   * Optional. If unset, this is a positional parameter. Otherwise, should be unique within a query.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -61,8 +59,7 @@ public final class QueryParameter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a
-   * query.
+   * Optional. If unset, this is a positional parameter. Otherwise, should be unique within a query.
    * @param name name or {@code null} for none
    */
   public QueryParameter setName(java.lang.String name) {
@@ -71,7 +68,7 @@ public final class QueryParameter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The type of this parameter.
+   * Required. The type of this parameter.
    * @return value or {@code null} for none
    */
   public QueryParameterType getParameterType() {
@@ -79,7 +76,7 @@ public final class QueryParameter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The type of this parameter.
+   * Required. The type of this parameter.
    * @param parameterType parameterType or {@code null} for none
    */
   public QueryParameter setParameterType(QueryParameterType parameterType) {
@@ -88,7 +85,7 @@ public final class QueryParameter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The value of this parameter.
+   * Required. The value of this parameter.
    * @return value or {@code null} for none
    */
   public QueryParameterValue getParameterValue() {
@@ -96,7 +93,7 @@ public final class QueryParameter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The value of this parameter.
+   * Required. The value of this parameter.
    * @param parameterValue parameterValue or {@code null} for none
    */
   public QueryParameter setParameterValue(QueryParameterValue parameterValue) {

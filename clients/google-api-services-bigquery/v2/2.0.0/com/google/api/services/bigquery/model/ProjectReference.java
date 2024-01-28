@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for ProjectReference.
+ * A unique reference to a project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class ProjectReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] ID of the project. Can be either the numeric ID or the assigned ID of the project.
+   * Required. ID of the project. Can be either the numeric ID or the assigned ID of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * [Required] ID of the project. Can be either the numeric ID or the assigned ID of the project.
+   * Required. ID of the project. Can be either the numeric ID or the assigned ID of the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -45,7 +45,7 @@ public final class ProjectReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] ID of the project. Can be either the numeric ID or the assigned ID of the project.
+   * Required. ID of the project. Can be either the numeric ID or the assigned ID of the project.
    * @param projectId projectId or {@code null} for none
    */
   public ProjectReference setProjectId(java.lang.String projectId) {

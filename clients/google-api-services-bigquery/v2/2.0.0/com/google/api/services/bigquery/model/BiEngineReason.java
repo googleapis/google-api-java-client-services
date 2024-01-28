@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for BiEngineReason.
+ * Reason why BI Engine didn't accelerate the query (or sub-query).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.bigquery.model;
 public final class BiEngineReason extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] High-level BI Engine reason for partial or disabled acceleration.
+   * Output only. High-level BI Engine reason for partial or disabled acceleration
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
-   * [Output-only] Free form human-readable reason for partial or disabled acceleration.
+   * Output only. Free form human-readable reason for partial or disabled acceleration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * [Output-only] High-level BI Engine reason for partial or disabled acceleration.
+   * Output only. High-level BI Engine reason for partial or disabled acceleration
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -52,7 +52,7 @@ public final class BiEngineReason extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] High-level BI Engine reason for partial or disabled acceleration.
+   * Output only. High-level BI Engine reason for partial or disabled acceleration
    * @param code code or {@code null} for none
    */
   public BiEngineReason setCode(java.lang.String code) {
@@ -61,7 +61,7 @@ public final class BiEngineReason extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Free form human-readable reason for partial or disabled acceleration.
+   * Output only. Free form human-readable reason for partial or disabled acceleration.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -69,7 +69,7 @@ public final class BiEngineReason extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output-only] Free form human-readable reason for partial or disabled acceleration.
+   * Output only. Free form human-readable reason for partial or disabled acceleration.
    * @param message message or {@code null} for none
    */
   public BiEngineReason setMessage(java.lang.String message) {

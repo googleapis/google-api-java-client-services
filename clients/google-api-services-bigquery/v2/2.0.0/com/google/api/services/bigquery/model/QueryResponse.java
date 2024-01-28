@@ -37,17 +37,17 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean cacheHit;
 
   /**
-   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
-   * UPDATE, DELETE or TRUNCATE.
+   * Output only. Detailed statistics for DML statements INSERT, UPDATE, DELETE, MERGE or TRUNCATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DmlStatistics dmlStats;
 
   /**
-   * [Output-only] The first errors or warnings encountered during the running of the job. The final
+   * Output only. The first errors or warnings encountered during the running of the job. The final
    * message includes the number of errors that caused the process to stop. Errors here do not
-   * necessarily mean that the job has completed or was unsuccessful.
+   * necessarily mean that the job has completed or was unsuccessful. For more information about
+   * error messages, see [Error messages](https://cloud.google.com/bigquery/docs/error-messages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Object jobCreationReason;
+  private JobCreationReason jobCreationReason;
 
   /**
    * Reference to the Job that was created to run the query. This field will be present even if the
@@ -96,7 +96,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
-   * [Output-only] The number of rows affected by a DML statement. Present only for DML statements
+   * Output only. The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * The value may be {@code null}.
    */
@@ -104,7 +104,10 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.Long numDmlAffectedRows;
 
   /**
-   * A token used for paging results.
+   * A token used for paging results. A non-empty token indicates that additional results are
+   * available. To see additional results, query the [`jobs.getQueryResults`](https://cloud.google.c
+   * om/bigquery/docs/reference/rest/v2/jobs/getQueryResults) method. For more information, see
+   * [Paging through table data](https://cloud.google.com/bigquery/docs/paging-results).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +138,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private TableSchema schema;
 
   /**
-   * [Output-only] [Preview] Information of the session if this job is part of one.
+   * Output only. Information of the session if this job is part of one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,8 +178,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
-   * UPDATE, DELETE or TRUNCATE.
+   * Output only. Detailed statistics for DML statements INSERT, UPDATE, DELETE, MERGE or TRUNCATE.
    * @return value or {@code null} for none
    */
   public DmlStatistics getDmlStats() {
@@ -184,8 +186,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
-   * UPDATE, DELETE or TRUNCATE.
+   * Output only. Detailed statistics for DML statements INSERT, UPDATE, DELETE, MERGE or TRUNCATE.
    * @param dmlStats dmlStats or {@code null} for none
    */
   public QueryResponse setDmlStats(DmlStatistics dmlStats) {
@@ -194,9 +195,10 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] The first errors or warnings encountered during the running of the job. The final
+   * Output only. The first errors or warnings encountered during the running of the job. The final
    * message includes the number of errors that caused the process to stop. Errors here do not
-   * necessarily mean that the job has completed or was unsuccessful.
+   * necessarily mean that the job has completed or was unsuccessful. For more information about
+   * error messages, see [Error messages](https://cloud.google.com/bigquery/docs/error-messages).
    * @return value or {@code null} for none
    */
   public java.util.List<ErrorProto> getErrors() {
@@ -204,9 +206,10 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] The first errors or warnings encountered during the running of the job. The final
+   * Output only. The first errors or warnings encountered during the running of the job. The final
    * message includes the number of errors that caused the process to stop. Errors here do not
-   * necessarily mean that the job has completed or was unsuccessful.
+   * necessarily mean that the job has completed or was unsuccessful. For more information about
+   * error messages, see [Error messages](https://cloud.google.com/bigquery/docs/error-messages).
    * @param errors errors or {@code null} for none
    */
   public QueryResponse setErrors(java.util.List<ErrorProto> errors) {
@@ -241,7 +244,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * will always be created.
    * @return value or {@code null} for none
    */
-  public java.lang.Object getJobCreationReason() {
+  public JobCreationReason getJobCreationReason() {
     return jobCreationReason;
   }
 
@@ -253,7 +256,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * will always be created.
    * @param jobCreationReason jobCreationReason or {@code null} for none
    */
-  public QueryResponse setJobCreationReason(java.lang.Object jobCreationReason) {
+  public QueryResponse setJobCreationReason(JobCreationReason jobCreationReason) {
     this.jobCreationReason = jobCreationReason;
     return this;
   }
@@ -299,7 +302,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] The number of rows affected by a DML statement. Present only for DML statements
+   * Output only. The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * @return value or {@code null} for none
    */
@@ -308,7 +311,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] The number of rows affected by a DML statement. Present only for DML statements
+   * Output only. The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * @param numDmlAffectedRows numDmlAffectedRows or {@code null} for none
    */
@@ -318,7 +321,10 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A token used for paging results.
+   * A token used for paging results. A non-empty token indicates that additional results are
+   * available. To see additional results, query the [`jobs.getQueryResults`](https://cloud.google.c
+   * om/bigquery/docs/reference/rest/v2/jobs/getQueryResults) method. For more information, see
+   * [Paging through table data](https://cloud.google.com/bigquery/docs/paging-results).
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -326,7 +332,10 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A token used for paging results.
+   * A token used for paging results. A non-empty token indicates that additional results are
+   * available. To see additional results, query the [`jobs.getQueryResults`](https://cloud.google.c
+   * om/bigquery/docs/reference/rest/v2/jobs/getQueryResults) method. For more information, see
+   * [Paging through table data](https://cloud.google.com/bigquery/docs/paging-results).
    * @param pageToken pageToken or {@code null} for none
    */
   public QueryResponse setPageToken(java.lang.String pageToken) {
@@ -392,7 +401,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] [Preview] Information of the session if this job is part of one.
+   * Output only. Information of the session if this job is part of one.
    * @return value or {@code null} for none
    */
   public SessionInfo getSessionInfo() {
@@ -400,7 +409,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] [Preview] Information of the session if this job is part of one.
+   * Output only. Information of the session if this job is part of one.
    * @param sessionInfo sessionInfo or {@code null} for none
    */
   public QueryResponse setSessionInfo(SessionInfo sessionInfo) {

@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JobStatistics.
+ * Statistics for a single job execution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.bigquery.model;
 public final class JobStatistics extends com.google.api.client.json.GenericJson {
 
   /**
-   * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
+   * Output only. [TrustedTester] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double completionRatio;
 
   /**
-   * [Output-only] Statistics for a copy job.
+   * Output only. Statistics for a copy job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JobStatistics5 copy;
 
   /**
-   * [Output-only] Creation time of this job, in milliseconds since the epoch. This field will be
+   * Output only. Creation time of this job, in milliseconds since the epoch. This field will be
    * present on all jobs.
    * The value may be {@code null}.
    */
@@ -52,14 +52,14 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.Long creationTime;
 
   /**
-   * [Output-only] Statistics for data masking. Present only for query and extract jobs.
+   * Output only. Statistics for data-masking. Present only for query and extract jobs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DataMaskingStatistics dataMaskingStatistics;
 
   /**
-   * [Output-only] End time of this job, in milliseconds since the epoch. This field will be present
+   * Output only. End time of this job, in milliseconds since the epoch. This field will be present
    * whenever a job is in the DONE state.
    * The value may be {@code null}.
    */
@@ -67,49 +67,58 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.Long endTime;
 
   /**
-   * [Output-only] Statistics for an extract job.
+   * Output only. Statistics for an extract job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JobStatistics4 extract;
 
   /**
-   * [Output-only] Statistics for a load job.
+   * Output only. The duration in milliseconds of the execution of the final attempt of this job, as
+   * BigQuery may internally re-attempt to execute the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long finalExecutionDurationMs;
+
+  /**
+   * Output only. Statistics for a load job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JobStatistics3 load;
 
   /**
-   * [Output-only] Number of child jobs executed.
+   * Output only. Number of child jobs executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numChildJobs;
 
   /**
-   * [Output-only] If this is a child job, the id of the parent.
+   * Output only. If this is a child job, specifies the job ID of the parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentJobId;
 
   /**
-   * [Output-only] Statistics for a query job.
+   * Output only. Statistics for a query job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JobStatistics2 query;
 
   /**
-   * [Output-only] Quotas which delayed this job's start time.
+   * Output only. Quotas which delayed this job's start time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> quotaDeferments;
 
   /**
-   * [Output-only] Job resource usage breakdown by reservation.
+   * Output only. Job resource usage breakdown by reservation. This field reported misleading
+   * information and will no longer be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +131,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Name of the primary reservation assigned to this job. Note that this could be
+   * Output only. Name of the primary reservation assigned to this job. Note that this could be
    * different than reservations reported in the reservation usage field if parent reservations were
    * used to execute this job.
    * The value may be {@code null}.
@@ -131,29 +140,29 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.String reservationId;
 
   /**
-   * [Output-only] [Preview] Statistics for row-level security. Present only for query and extract
-   * jobs.
+   * Output only. Statistics for row-level security. Present only for query and extract jobs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RowLevelSecurityStatistics rowLevelSecurityStatistics;
 
   /**
-   * [Output-only] Statistics for a child job of a script.
+   * Output only. If this a child job of a script, specifies information about the context of this
+   * job within the script.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ScriptStatistics scriptStatistics;
 
   /**
-   * [Output-only] [Preview] Information of the session if this job is part of one.
+   * Output only. Information of the session if this job is part of one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SessionInfo sessionInfo;
 
   /**
-   * [Output-only] Start time of this job, in milliseconds since the epoch. This field will be
+   * Output only. Start time of this job, in milliseconds since the epoch. This field will be
    * present when the job transitions from the PENDING state to either RUNNING or DONE.
    * The value may be {@code null}.
    */
@@ -161,29 +170,30 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.Long startTime;
 
   /**
-   * [Output-only] [Deprecated] Use the bytes processed in the query statistics instead.
+   * Output only. Total bytes processed for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalBytesProcessed;
 
   /**
-   * [Output-only] Slot-milliseconds for the job.
+   * Output only. Slot-milliseconds for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalSlotMs;
 
   /**
-   * [Output-only] [Alpha] Information of the multi-statement transaction if this job is part of
-   * one.
+   * Output only. [Alpha] Information of the multi-statement transaction if this job is part of one.
+   * This property is only expected on a child job or a job that is in a session. A script parent
+   * job is not part of the transaction started in the script.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TransactionInfo transactionInfo;
 
   /**
-   * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
+   * Output only. [TrustedTester] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
    * @return value or {@code null} for none
    */
   public java.lang.Double getCompletionRatio() {
@@ -191,7 +201,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
+   * Output only. [TrustedTester] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
    * @param completionRatio completionRatio or {@code null} for none
    */
   public JobStatistics setCompletionRatio(java.lang.Double completionRatio) {
@@ -200,7 +210,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for a copy job.
+   * Output only. Statistics for a copy job.
    * @return value or {@code null} for none
    */
   public JobStatistics5 getCopy() {
@@ -208,7 +218,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for a copy job.
+   * Output only. Statistics for a copy job.
    * @param copy copy or {@code null} for none
    */
   public JobStatistics setCopy(JobStatistics5 copy) {
@@ -217,7 +227,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Creation time of this job, in milliseconds since the epoch. This field will be
+   * Output only. Creation time of this job, in milliseconds since the epoch. This field will be
    * present on all jobs.
    * @return value or {@code null} for none
    */
@@ -226,7 +236,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Creation time of this job, in milliseconds since the epoch. This field will be
+   * Output only. Creation time of this job, in milliseconds since the epoch. This field will be
    * present on all jobs.
    * @param creationTime creationTime or {@code null} for none
    */
@@ -236,7 +246,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for data masking. Present only for query and extract jobs.
+   * Output only. Statistics for data-masking. Present only for query and extract jobs.
    * @return value or {@code null} for none
    */
   public DataMaskingStatistics getDataMaskingStatistics() {
@@ -244,7 +254,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for data masking. Present only for query and extract jobs.
+   * Output only. Statistics for data-masking. Present only for query and extract jobs.
    * @param dataMaskingStatistics dataMaskingStatistics or {@code null} for none
    */
   public JobStatistics setDataMaskingStatistics(DataMaskingStatistics dataMaskingStatistics) {
@@ -253,7 +263,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] End time of this job, in milliseconds since the epoch. This field will be present
+   * Output only. End time of this job, in milliseconds since the epoch. This field will be present
    * whenever a job is in the DONE state.
    * @return value or {@code null} for none
    */
@@ -262,7 +272,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] End time of this job, in milliseconds since the epoch. This field will be present
+   * Output only. End time of this job, in milliseconds since the epoch. This field will be present
    * whenever a job is in the DONE state.
    * @param endTime endTime or {@code null} for none
    */
@@ -272,7 +282,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for an extract job.
+   * Output only. Statistics for an extract job.
    * @return value or {@code null} for none
    */
   public JobStatistics4 getExtract() {
@@ -280,7 +290,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for an extract job.
+   * Output only. Statistics for an extract job.
    * @param extract extract or {@code null} for none
    */
   public JobStatistics setExtract(JobStatistics4 extract) {
@@ -289,7 +299,26 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for a load job.
+   * Output only. The duration in milliseconds of the execution of the final attempt of this job, as
+   * BigQuery may internally re-attempt to execute the job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getFinalExecutionDurationMs() {
+    return finalExecutionDurationMs;
+  }
+
+  /**
+   * Output only. The duration in milliseconds of the execution of the final attempt of this job, as
+   * BigQuery may internally re-attempt to execute the job.
+   * @param finalExecutionDurationMs finalExecutionDurationMs or {@code null} for none
+   */
+  public JobStatistics setFinalExecutionDurationMs(java.lang.Long finalExecutionDurationMs) {
+    this.finalExecutionDurationMs = finalExecutionDurationMs;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics for a load job.
    * @return value or {@code null} for none
    */
   public JobStatistics3 getLoad() {
@@ -297,7 +326,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for a load job.
+   * Output only. Statistics for a load job.
    * @param load load or {@code null} for none
    */
   public JobStatistics setLoad(JobStatistics3 load) {
@@ -306,7 +335,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Number of child jobs executed.
+   * Output only. Number of child jobs executed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumChildJobs() {
@@ -314,7 +343,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Number of child jobs executed.
+   * Output only. Number of child jobs executed.
    * @param numChildJobs numChildJobs or {@code null} for none
    */
   public JobStatistics setNumChildJobs(java.lang.Long numChildJobs) {
@@ -323,7 +352,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] If this is a child job, the id of the parent.
+   * Output only. If this is a child job, specifies the job ID of the parent.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentJobId() {
@@ -331,7 +360,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] If this is a child job, the id of the parent.
+   * Output only. If this is a child job, specifies the job ID of the parent.
    * @param parentJobId parentJobId or {@code null} for none
    */
   public JobStatistics setParentJobId(java.lang.String parentJobId) {
@@ -340,7 +369,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for a query job.
+   * Output only. Statistics for a query job.
    * @return value or {@code null} for none
    */
   public JobStatistics2 getQuery() {
@@ -348,7 +377,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for a query job.
+   * Output only. Statistics for a query job.
    * @param query query or {@code null} for none
    */
   public JobStatistics setQuery(JobStatistics2 query) {
@@ -357,7 +386,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Quotas which delayed this job's start time.
+   * Output only. Quotas which delayed this job's start time.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getQuotaDeferments() {
@@ -365,7 +394,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Quotas which delayed this job's start time.
+   * Output only. Quotas which delayed this job's start time.
    * @param quotaDeferments quotaDeferments or {@code null} for none
    */
   public JobStatistics setQuotaDeferments(java.util.List<java.lang.String> quotaDeferments) {
@@ -374,7 +403,8 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Job resource usage breakdown by reservation.
+   * Output only. Job resource usage breakdown by reservation. This field reported misleading
+   * information and will no longer be populated.
    * @return value or {@code null} for none
    */
   public java.util.List<ReservationUsage> getReservationUsage() {
@@ -382,7 +412,8 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Job resource usage breakdown by reservation.
+   * Output only. Job resource usage breakdown by reservation. This field reported misleading
+   * information and will no longer be populated.
    * @param reservationUsage reservationUsage or {@code null} for none
    */
   public JobStatistics setReservationUsage(java.util.List<ReservationUsage> reservationUsage) {
@@ -391,7 +422,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Name of the primary reservation assigned to this job. Note that this could be
+   * Output only. Name of the primary reservation assigned to this job. Note that this could be
    * different than reservations reported in the reservation usage field if parent reservations were
    * used to execute this job.
    * @return value or {@code null} for none
@@ -401,7 +432,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Name of the primary reservation assigned to this job. Note that this could be
+   * Output only. Name of the primary reservation assigned to this job. Note that this could be
    * different than reservations reported in the reservation usage field if parent reservations were
    * used to execute this job.
    * @param reservationId reservationId or {@code null} for none
@@ -412,8 +443,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] [Preview] Statistics for row-level security. Present only for query and extract
-   * jobs.
+   * Output only. Statistics for row-level security. Present only for query and extract jobs.
    * @return value or {@code null} for none
    */
   public RowLevelSecurityStatistics getRowLevelSecurityStatistics() {
@@ -421,8 +451,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] [Preview] Statistics for row-level security. Present only for query and extract
-   * jobs.
+   * Output only. Statistics for row-level security. Present only for query and extract jobs.
    * @param rowLevelSecurityStatistics rowLevelSecurityStatistics or {@code null} for none
    */
   public JobStatistics setRowLevelSecurityStatistics(RowLevelSecurityStatistics rowLevelSecurityStatistics) {
@@ -431,7 +460,8 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for a child job of a script.
+   * Output only. If this a child job of a script, specifies information about the context of this
+   * job within the script.
    * @return value or {@code null} for none
    */
   public ScriptStatistics getScriptStatistics() {
@@ -439,7 +469,8 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Statistics for a child job of a script.
+   * Output only. If this a child job of a script, specifies information about the context of this
+   * job within the script.
    * @param scriptStatistics scriptStatistics or {@code null} for none
    */
   public JobStatistics setScriptStatistics(ScriptStatistics scriptStatistics) {
@@ -448,7 +479,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] [Preview] Information of the session if this job is part of one.
+   * Output only. Information of the session if this job is part of one.
    * @return value or {@code null} for none
    */
   public SessionInfo getSessionInfo() {
@@ -456,7 +487,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] [Preview] Information of the session if this job is part of one.
+   * Output only. Information of the session if this job is part of one.
    * @param sessionInfo sessionInfo or {@code null} for none
    */
   public JobStatistics setSessionInfo(SessionInfo sessionInfo) {
@@ -465,7 +496,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Start time of this job, in milliseconds since the epoch. This field will be
+   * Output only. Start time of this job, in milliseconds since the epoch. This field will be
    * present when the job transitions from the PENDING state to either RUNNING or DONE.
    * @return value or {@code null} for none
    */
@@ -474,7 +505,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Start time of this job, in milliseconds since the epoch. This field will be
+   * Output only. Start time of this job, in milliseconds since the epoch. This field will be
    * present when the job transitions from the PENDING state to either RUNNING or DONE.
    * @param startTime startTime or {@code null} for none
    */
@@ -484,7 +515,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] [Deprecated] Use the bytes processed in the query statistics instead.
+   * Output only. Total bytes processed for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalBytesProcessed() {
@@ -492,7 +523,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] [Deprecated] Use the bytes processed in the query statistics instead.
+   * Output only. Total bytes processed for the job.
    * @param totalBytesProcessed totalBytesProcessed or {@code null} for none
    */
   public JobStatistics setTotalBytesProcessed(java.lang.Long totalBytesProcessed) {
@@ -501,7 +532,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Slot-milliseconds for the job.
+   * Output only. Slot-milliseconds for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalSlotMs() {
@@ -509,7 +540,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] Slot-milliseconds for the job.
+   * Output only. Slot-milliseconds for the job.
    * @param totalSlotMs totalSlotMs or {@code null} for none
    */
   public JobStatistics setTotalSlotMs(java.lang.Long totalSlotMs) {
@@ -518,8 +549,9 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] [Alpha] Information of the multi-statement transaction if this job is part of
-   * one.
+   * Output only. [Alpha] Information of the multi-statement transaction if this job is part of one.
+   * This property is only expected on a child job or a job that is in a session. A script parent
+   * job is not part of the transaction started in the script.
    * @return value or {@code null} for none
    */
   public TransactionInfo getTransactionInfo() {
@@ -527,8 +559,9 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output-only] [Alpha] Information of the multi-statement transaction if this job is part of
-   * one.
+   * Output only. [Alpha] Information of the multi-statement transaction if this job is part of one.
+   * This property is only expected on a child job or a job that is in a session. A script parent
+   * job is not part of the transaction started in the script.
    * @param transactionInfo transactionInfo or {@code null} for none
    */
   public JobStatistics setTransactionInfo(TransactionInfo transactionInfo) {
@@ -547,26 +580,26 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Model definition for JobStatisticsReservationUsage.
+   * Job resource usage breakdown by reservation.
    */
   public static final class ReservationUsage extends com.google.api.client.json.GenericJson {
 
     /**
-     * [Output-only] Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or "unreserved" for on-demand resources usage.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String name;
 
     /**
-     * [Output-only] Slot-milliseconds the job spent in the given reservation.
+     * Total slot milliseconds used by the reservation for a particular job.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long slotMs;
 
     /**
-     * [Output-only] Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or "unreserved" for on-demand resources usage.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -574,7 +607,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * [Output-only] Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or "unreserved" for on-demand resources usage.
      * @param name name or {@code null} for none
      */
     public ReservationUsage setName(java.lang.String name) {
@@ -583,7 +616,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * [Output-only] Slot-milliseconds the job spent in the given reservation.
+     * Total slot milliseconds used by the reservation for a particular job.
      * @return value or {@code null} for none
      */
     public java.lang.Long getSlotMs() {
@@ -591,7 +624,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * [Output-only] Slot-milliseconds the job spent in the given reservation.
+     * Total slot milliseconds used by the reservation for a particular job.
      * @param slotMs slotMs or {@code null} for none
      */
     public ReservationUsage setSlotMs(java.lang.Long slotMs) {

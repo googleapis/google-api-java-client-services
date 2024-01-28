@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for MlStatistics.
+ * Job statistics specific to a BigQuery ML training job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,22 @@ package com.google.api.services.bigquery.model;
 public final class MlStatistics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Results for all completed iterations.
+   * Output only. Trials of a [hyperparameter tuning job](/bigquery-ml/docs/reference/standard-sql
+   * /bigqueryml-syntax-hp-tuning-overview) sorted by trial_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<HparamTuningTrial> hparamTrials;
+
+  static {
+    // hack to force ProGuard to consider HparamTuningTrial used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HparamTuningTrial.class);
+  }
+
+  /**
+   * Results for all completed iterations. Empty for [hyperparameter tuning jobs](/bigquery-
+   * ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,15 +58,49 @@ public final class MlStatistics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The
-   * actual number of iterations may be less than this number due to early stop.
+   * Output only. Maximum number of iterations specified as max_iterations in the 'CREATE MODEL'
+   * query. The actual number of iterations may be less than this number due to early stop.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxIterations;
 
   /**
-   * Results for all completed iterations.
+   * Output only. The type of the model that is being trained.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelType;
+
+  /**
+   * Output only. Training type of the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trainingType;
+
+  /**
+   * Output only. Trials of a [hyperparameter tuning job](/bigquery-ml/docs/reference/standard-sql
+   * /bigqueryml-syntax-hp-tuning-overview) sorted by trial_id.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<HparamTuningTrial> getHparamTrials() {
+    return hparamTrials;
+  }
+
+  /**
+   * Output only. Trials of a [hyperparameter tuning job](/bigquery-ml/docs/reference/standard-sql
+   * /bigqueryml-syntax-hp-tuning-overview) sorted by trial_id.
+   * @param hparamTrials hparamTrials or {@code null} for none
+   */
+  public MlStatistics setHparamTrials(java.util.List<HparamTuningTrial> hparamTrials) {
+    this.hparamTrials = hparamTrials;
+    return this;
+  }
+
+  /**
+   * Results for all completed iterations. Empty for [hyperparameter tuning jobs](/bigquery-
+   * ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview).
    * @return value or {@code null} for none
    */
   public java.util.List<IterationResult> getIterationResults() {
@@ -59,7 +108,8 @@ public final class MlStatistics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Results for all completed iterations.
+   * Results for all completed iterations. Empty for [hyperparameter tuning jobs](/bigquery-
+   * ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview).
    * @param iterationResults iterationResults or {@code null} for none
    */
   public MlStatistics setIterationResults(java.util.List<IterationResult> iterationResults) {
@@ -68,8 +118,8 @@ public final class MlStatistics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The
-   * actual number of iterations may be less than this number due to early stop.
+   * Output only. Maximum number of iterations specified as max_iterations in the 'CREATE MODEL'
+   * query. The actual number of iterations may be less than this number due to early stop.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxIterations() {
@@ -77,12 +127,46 @@ public final class MlStatistics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The
-   * actual number of iterations may be less than this number due to early stop.
+   * Output only. Maximum number of iterations specified as max_iterations in the 'CREATE MODEL'
+   * query. The actual number of iterations may be less than this number due to early stop.
    * @param maxIterations maxIterations or {@code null} for none
    */
   public MlStatistics setMaxIterations(java.lang.Long maxIterations) {
     this.maxIterations = maxIterations;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the model that is being trained.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelType() {
+    return modelType;
+  }
+
+  /**
+   * Output only. The type of the model that is being trained.
+   * @param modelType modelType or {@code null} for none
+   */
+  public MlStatistics setModelType(java.lang.String modelType) {
+    this.modelType = modelType;
+    return this;
+  }
+
+  /**
+   * Output only. Training type of the job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrainingType() {
+    return trainingType;
+  }
+
+  /**
+   * Output only. Training type of the job.
+   * @param trainingType trainingType or {@code null} for none
+   */
+  public MlStatistics setTrainingType(java.lang.String trainingType) {
+    this.trainingType = trainingType;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for QueryParameterValue.
+ * The value of a query parameter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,35 +30,35 @@ package com.google.api.services.bigquery.model;
 public final class QueryParameterValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] The array values, if this is an array type.
+   * Optional. The array values, if this is an array type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<QueryParameterValue> arrayValues;
 
   /**
-   * [Optional] The range value, if this is a range type.
+   * Optional. The range value, if this is a range type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RangeValue rangeValue;
 
   /**
-   * [Optional] The struct field values, in order of the struct type's declaration.
+   * The struct field values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, QueryParameterValue> structValues;
 
   /**
-   * [Optional] The value of this value, if a simple scalar type.
+   * Optional. The value of this value, if a simple scalar type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * [Optional] The array values, if this is an array type.
+   * Optional. The array values, if this is an array type.
    * @return value or {@code null} for none
    */
   public java.util.List<QueryParameterValue> getArrayValues() {
@@ -66,7 +66,7 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Optional] The array values, if this is an array type.
+   * Optional. The array values, if this is an array type.
    * @param arrayValues arrayValues or {@code null} for none
    */
   public QueryParameterValue setArrayValues(java.util.List<QueryParameterValue> arrayValues) {
@@ -75,7 +75,7 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Optional] The range value, if this is a range type.
+   * Optional. The range value, if this is a range type.
    * @return value or {@code null} for none
    */
   public RangeValue getRangeValue() {
@@ -83,7 +83,7 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Optional] The range value, if this is a range type.
+   * Optional. The range value, if this is a range type.
    * @param rangeValue rangeValue or {@code null} for none
    */
   public QueryParameterValue setRangeValue(RangeValue rangeValue) {
@@ -92,7 +92,7 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Optional] The struct field values, in order of the struct type's declaration.
+   * The struct field values.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, QueryParameterValue> getStructValues() {
@@ -100,7 +100,7 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Optional] The struct field values, in order of the struct type's declaration.
+   * The struct field values.
    * @param structValues structValues or {@code null} for none
    */
   public QueryParameterValue setStructValues(java.util.Map<String, QueryParameterValue> structValues) {
@@ -109,7 +109,7 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Optional] The value of this value, if a simple scalar type.
+   * Optional. The value of this value, if a simple scalar type.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -117,7 +117,7 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Optional] The value of this value, if a simple scalar type.
+   * Optional. The value of this value, if a simple scalar type.
    * @param value value or {@code null} for none
    */
   public QueryParameterValue setValue(java.lang.String value) {
@@ -133,65 +133,6 @@ public final class QueryParameterValue extends com.google.api.client.json.Generi
   @Override
   public QueryParameterValue clone() {
     return (QueryParameterValue) super.clone();
-  }
-
-  /**
-   * [Optional] The range value, if this is a range type.
-   */
-  public static final class RangeValue extends com.google.api.client.json.GenericJson {
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private QueryParameterValue end;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private QueryParameterValue start;
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public QueryParameterValue getEnd() {
-      return end;
-    }
-
-    /**
-     * @param end end or {@code null} for none
-     */
-    public RangeValue setEnd(QueryParameterValue end) {
-      this.end = end;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public QueryParameterValue getStart() {
-      return start;
-    }
-
-    /**
-     * @param start start or {@code null} for none
-     */
-    public RangeValue setStart(QueryParameterValue start) {
-      this.start = start;
-      return this;
-    }
-
-    @Override
-    public RangeValue set(String fieldName, Object value) {
-      return (RangeValue) super.set(fieldName, value);
-    }
-
-    @Override
-    public RangeValue clone() {
-      return (RangeValue) super.clone();
-    }
-
   }
 
 }

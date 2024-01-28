@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for ExternalDatasetReference.
+ * Configures the access a dataset defined in an external metadata storage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class ExternalDatasetReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] The connection id that is used to access the external_source. Format:
+   * Required. The connection id that is used to access the external_source. Format:
    * projects/{project_id}/locations/{location_id}/connections/{connection_id}
    * The value may be {@code null}.
    */
@@ -38,14 +38,14 @@ public final class ExternalDatasetReference extends com.google.api.client.json.G
   private java.lang.String connection;
 
   /**
-   * [Required] External source that backs this dataset.
+   * Required. External source that backs this dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalSource;
 
   /**
-   * [Required] The connection id that is used to access the external_source. Format:
+   * Required. The connection id that is used to access the external_source. Format:
    * projects/{project_id}/locations/{location_id}/connections/{connection_id}
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class ExternalDatasetReference extends com.google.api.client.json.G
   }
 
   /**
-   * [Required] The connection id that is used to access the external_source. Format:
+   * Required. The connection id that is used to access the external_source. Format:
    * projects/{project_id}/locations/{location_id}/connections/{connection_id}
    * @param connection connection or {@code null} for none
    */
@@ -64,7 +64,7 @@ public final class ExternalDatasetReference extends com.google.api.client.json.G
   }
 
   /**
-   * [Required] External source that backs this dataset.
+   * Required. External source that backs this dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalSource() {
@@ -72,7 +72,7 @@ public final class ExternalDatasetReference extends com.google.api.client.json.G
   }
 
   /**
-   * [Required] External source that backs this dataset.
+   * Required. External source that backs this dataset.
    * @param externalSource externalSource or {@code null} for none
    */
   public ExternalDatasetReference setExternalSource(java.lang.String externalSource) {

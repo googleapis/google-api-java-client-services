@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for CsvOptions.
+ * Information related to a CSV data source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class CsvOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns.
+   * Optional. Indicates if BigQuery should accept rows that are missing trailing optional columns.
    * If true, BigQuery treats missing trailing columns as null values. If false, records with
    * missing trailing columns are treated as bad records, and if there are too many bad records, an
    * invalid error is returned in the job result. The default value is false.
@@ -40,7 +40,7 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allowJaggedRows;
 
   /**
-   * [Optional] Indicates if BigQuery should allow quoted data sections that contain newline
+   * Optional. Indicates if BigQuery should allow quoted data sections that contain newline
    * characters in a CSV file. The default value is false.
    * The value may be {@code null}.
    */
@@ -48,53 +48,59 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allowQuotedNewlines;
 
   /**
-   * [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
-   * The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split
-   * using the values of the quote and fieldDelimiter properties.
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
+   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
+   * after the raw, binary data has been split using the values of the quote and fieldDelimiter
+   * properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String encoding;
 
   /**
-   * [Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1
-   * encoding, and then uses the first byte of the encoded string to split the data in its raw,
-   * binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The
-   * default value is a comma (',').
+   * Optional. The separator character for fields in a CSV file. The separator is interpreted as a
+   * single byte. For files encoded in ISO-8859-1, any single character can be used as a separator.
+   * For files encoded in UTF-8, characters represented in decimal range 1-127 (U+0001-U+007F) can
+   * be used without any modification. UTF-8 characters encoded with multiple bytes (i.e. U+0080 and
+   * above) will have only the first byte used for separating fields. The remaining bytes will be
+   * treated as a part of the field. BigQuery also supports the escape sequence "\t" (U+0009) to
+   * specify a tab separator. The default value is comma (",", U+002C).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldDelimiter;
 
   /**
-   * [Optional] An custom string that will represent a NULL value in CSV import data.
+   * [Optional] A custom string that will represent a NULL value in CSV import data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nullMarker;
 
   /**
-   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
-   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
-   * other formats.
+   * Optional. Indicates if the embedded ASCII control characters (the first 32 characters in the
+   * ASCII-table, from '\x00' to '\x1F') are preserved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preserveAsciiControlCharacters;
 
   /**
-   * [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the
+   * Optional. The value that is used to quote data sections in a CSV file. BigQuery converts the
    * string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the
-   * data in its raw, binary state. The default value is a double-quote ('"'). If your data does not
+   * data in its raw, binary state. The default value is a double-quote ("). If your data does not
    * contain quoted sections, set the property value to an empty string. If your data contains
-   * quoted newline characters, you must also set the allowQuotedNewlines property to true.
+   * quoted newline characters, you must also set the allowQuotedNewlines property to true. To
+   * include the specific quote character within a quoted value, precede it with an additional
+   * matching quote character. For example, if you want to escape the default character ' " ', use '
+   * "" '.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String quote;
 
   /**
-   * [Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the
+   * Optional. The number of rows at the top of a CSV file that BigQuery will skip when reading the
    * data. The default value is 0. This property is useful if you have header rows in the file that
    * should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows
    * unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
@@ -109,7 +115,7 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   private java.lang.Long skipLeadingRows;
 
   /**
-   * [Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns.
+   * Optional. Indicates if BigQuery should accept rows that are missing trailing optional columns.
    * If true, BigQuery treats missing trailing columns as null values. If false, records with
    * missing trailing columns are treated as bad records, and if there are too many bad records, an
    * invalid error is returned in the job result. The default value is false.
@@ -120,7 +126,7 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns.
+   * Optional. Indicates if BigQuery should accept rows that are missing trailing optional columns.
    * If true, BigQuery treats missing trailing columns as null values. If false, records with
    * missing trailing columns are treated as bad records, and if there are too many bad records, an
    * invalid error is returned in the job result. The default value is false.
@@ -132,7 +138,7 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Indicates if BigQuery should allow quoted data sections that contain newline
+   * Optional. Indicates if BigQuery should allow quoted data sections that contain newline
    * characters in a CSV file. The default value is false.
    * @return value or {@code null} for none
    */
@@ -141,7 +147,7 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Indicates if BigQuery should allow quoted data sections that contain newline
+   * Optional. Indicates if BigQuery should allow quoted data sections that contain newline
    * characters in a CSV file. The default value is false.
    * @param allowQuotedNewlines allowQuotedNewlines or {@code null} for none
    */
@@ -151,9 +157,10 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
-   * The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split
-   * using the values of the quote and fieldDelimiter properties.
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
+   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
+   * after the raw, binary data has been split using the values of the quote and fieldDelimiter
+   * properties.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncoding() {
@@ -161,9 +168,10 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
-   * The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split
-   * using the values of the quote and fieldDelimiter properties.
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
+   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
+   * after the raw, binary data has been split using the values of the quote and fieldDelimiter
+   * properties.
    * @param encoding encoding or {@code null} for none
    */
   public CsvOptions setEncoding(java.lang.String encoding) {
@@ -172,10 +180,13 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1
-   * encoding, and then uses the first byte of the encoded string to split the data in its raw,
-   * binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The
-   * default value is a comma (',').
+   * Optional. The separator character for fields in a CSV file. The separator is interpreted as a
+   * single byte. For files encoded in ISO-8859-1, any single character can be used as a separator.
+   * For files encoded in UTF-8, characters represented in decimal range 1-127 (U+0001-U+007F) can
+   * be used without any modification. UTF-8 characters encoded with multiple bytes (i.e. U+0080 and
+   * above) will have only the first byte used for separating fields. The remaining bytes will be
+   * treated as a part of the field. BigQuery also supports the escape sequence "\t" (U+0009) to
+   * specify a tab separator. The default value is comma (",", U+002C).
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldDelimiter() {
@@ -183,10 +194,13 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1
-   * encoding, and then uses the first byte of the encoded string to split the data in its raw,
-   * binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The
-   * default value is a comma (',').
+   * Optional. The separator character for fields in a CSV file. The separator is interpreted as a
+   * single byte. For files encoded in ISO-8859-1, any single character can be used as a separator.
+   * For files encoded in UTF-8, characters represented in decimal range 1-127 (U+0001-U+007F) can
+   * be used without any modification. UTF-8 characters encoded with multiple bytes (i.e. U+0080 and
+   * above) will have only the first byte used for separating fields. The remaining bytes will be
+   * treated as a part of the field. BigQuery also supports the escape sequence "\t" (U+0009) to
+   * specify a tab separator. The default value is comma (",", U+002C).
    * @param fieldDelimiter fieldDelimiter or {@code null} for none
    */
   public CsvOptions setFieldDelimiter(java.lang.String fieldDelimiter) {
@@ -195,7 +209,7 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] An custom string that will represent a NULL value in CSV import data.
+   * [Optional] A custom string that will represent a NULL value in CSV import data.
    * @return value or {@code null} for none
    */
   public java.lang.String getNullMarker() {
@@ -203,7 +217,7 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] An custom string that will represent a NULL value in CSV import data.
+   * [Optional] A custom string that will represent a NULL value in CSV import data.
    * @param nullMarker nullMarker or {@code null} for none
    */
   public CsvOptions setNullMarker(java.lang.String nullMarker) {
@@ -212,9 +226,8 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
-   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
-   * other formats.
+   * Optional. Indicates if the embedded ASCII control characters (the first 32 characters in the
+   * ASCII-table, from '\x00' to '\x1F') are preserved.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreserveAsciiControlCharacters() {
@@ -222,9 +235,8 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the
-   * ASCII-table, from '\x00' to '\x1F') when loading from CSV. Only applicable to CSV, ignored for
-   * other formats.
+   * Optional. Indicates if the embedded ASCII control characters (the first 32 characters in the
+   * ASCII-table, from '\x00' to '\x1F') are preserved.
    * @param preserveAsciiControlCharacters preserveAsciiControlCharacters or {@code null} for none
    */
   public CsvOptions setPreserveAsciiControlCharacters(java.lang.Boolean preserveAsciiControlCharacters) {
@@ -233,11 +245,14 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the
+   * Optional. The value that is used to quote data sections in a CSV file. BigQuery converts the
    * string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the
-   * data in its raw, binary state. The default value is a double-quote ('"'). If your data does not
+   * data in its raw, binary state. The default value is a double-quote ("). If your data does not
    * contain quoted sections, set the property value to an empty string. If your data contains
-   * quoted newline characters, you must also set the allowQuotedNewlines property to true.
+   * quoted newline characters, you must also set the allowQuotedNewlines property to true. To
+   * include the specific quote character within a quoted value, precede it with an additional
+   * matching quote character. For example, if you want to escape the default character ' " ', use '
+   * "" '.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuote() {
@@ -245,11 +260,14 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the
+   * Optional. The value that is used to quote data sections in a CSV file. BigQuery converts the
    * string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the
-   * data in its raw, binary state. The default value is a double-quote ('"'). If your data does not
+   * data in its raw, binary state. The default value is a double-quote ("). If your data does not
    * contain quoted sections, set the property value to an empty string. If your data contains
-   * quoted newline characters, you must also set the allowQuotedNewlines property to true.
+   * quoted newline characters, you must also set the allowQuotedNewlines property to true. To
+   * include the specific quote character within a quoted value, precede it with an additional
+   * matching quote character. For example, if you want to escape the default character ' " ', use '
+   * "" '.
    * @param quote quote or {@code null} for none
    */
   public CsvOptions setQuote(java.lang.String quote) {
@@ -258,7 +276,7 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the
+   * Optional. The number of rows at the top of a CSV file that BigQuery will skip when reading the
    * data. The default value is 0. This property is useful if you have header rows in the file that
    * should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows
    * unspecified - Autodetect tries to detect headers in the first row. If they are not detected,
@@ -274,7 +292,7 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the
+   * Optional. The number of rows at the top of a CSV file that BigQuery will skip when reading the
    * data. The default value is 0. This property is useful if you have header rows in the file that
    * should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows
    * unspecified - Autodetect tries to detect headers in the first row. If they are not detected,

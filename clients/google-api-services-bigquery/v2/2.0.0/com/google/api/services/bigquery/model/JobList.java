@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JobList.
+ * JobList is the response format for a jobs.list call.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -62,6 +62,14 @@ public final class JobList extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
+
+  /**
+   * A list of skipped locations that were unreachable. For more information about BigQuery
+   * locations, see: https://cloud.google.com/bigquery/docs/locations. Example: "europe-west5"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
 
   /**
    * A hash of this page of results.
@@ -131,6 +139,25 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     return this;
   }
 
+  /**
+   * A list of skipped locations that were unreachable. For more information about BigQuery
+   * locations, see: https://cloud.google.com/bigquery/docs/locations. Example: "europe-west5"
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * A list of skipped locations that were unreachable. For more information about BigQuery
+   * locations, see: https://cloud.google.com/bigquery/docs/locations. Example: "europe-west5"
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public JobList setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
+    return this;
+  }
+
   @Override
   public JobList set(String fieldName, Object value) {
     return (JobList) super.set(fieldName, value);
@@ -142,12 +169,13 @@ public final class JobList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Model definition for JobListJobs.
+   * ListFormatJob is a partial projection of job information returned as part of a jobs.list
+   * response.
    */
   public static final class Jobs extends com.google.api.client.json.GenericJson {
 
     /**
-     * [Full-projection-only] Specifies the job configuration.
+     * Required. Describes the job configuration.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -168,7 +196,7 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     private java.lang.String id;
 
     /**
-     * Job reference uniquely identifying the job.
+     * Unique opaque ID of the job.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -182,6 +210,15 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     private java.lang.String kind;
 
     /**
+     * [Full-projection-only] String representation of identity of requesting party. Populated for
+     * both first- and third-party identities. Only present for APIs that support third-party
+     * identities.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key("principal_subject")
+    private java.lang.String principalSubject;
+
+    /**
      * Running state of the job. When the state is DONE, errorResult can be checked to determine
      * whether the job succeeded or failed.
      * The value may be {@code null}.
@@ -190,14 +227,14 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     private java.lang.String state;
 
     /**
-     * [Output-only] Information about the job, including starting time and ending time of the job.
+     * Output only. Information about the job, including starting time and ending time of the job.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private JobStatistics statistics;
 
     /**
-     * [Full-projection-only] Describes the state of the job.
+     * [Full-projection-only] Describes the status of this job.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -211,7 +248,7 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     private java.lang.String userEmail;
 
     /**
-     * [Full-projection-only] Specifies the job configuration.
+     * Required. Describes the job configuration.
      * @return value or {@code null} for none
      */
     public JobConfiguration getConfiguration() {
@@ -219,7 +256,7 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Full-projection-only] Specifies the job configuration.
+     * Required. Describes the job configuration.
      * @param configuration configuration or {@code null} for none
      */
     public Jobs setConfiguration(JobConfiguration configuration) {
@@ -262,7 +299,7 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Job reference uniquely identifying the job.
+     * Unique opaque ID of the job.
      * @return value or {@code null} for none
      */
     public JobReference getJobReference() {
@@ -270,7 +307,7 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Job reference uniquely identifying the job.
+     * Unique opaque ID of the job.
      * @param jobReference jobReference or {@code null} for none
      */
     public Jobs setJobReference(JobReference jobReference) {
@@ -296,6 +333,27 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     }
 
     /**
+     * [Full-projection-only] String representation of identity of requesting party. Populated for
+     * both first- and third-party identities. Only present for APIs that support third-party
+     * identities.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getPrincipalSubject() {
+      return principalSubject;
+    }
+
+    /**
+     * [Full-projection-only] String representation of identity of requesting party. Populated for
+     * both first- and third-party identities. Only present for APIs that support third-party
+     * identities.
+     * @param principalSubject principalSubject or {@code null} for none
+     */
+    public Jobs setPrincipalSubject(java.lang.String principalSubject) {
+      this.principalSubject = principalSubject;
+      return this;
+    }
+
+    /**
      * Running state of the job. When the state is DONE, errorResult can be checked to determine
      * whether the job succeeded or failed.
      * @return value or {@code null} for none
@@ -315,7 +373,7 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Output-only] Information about the job, including starting time and ending time of the job.
+     * Output only. Information about the job, including starting time and ending time of the job.
      * @return value or {@code null} for none
      */
     public JobStatistics getStatistics() {
@@ -323,7 +381,7 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Output-only] Information about the job, including starting time and ending time of the job.
+     * Output only. Information about the job, including starting time and ending time of the job.
      * @param statistics statistics or {@code null} for none
      */
     public Jobs setStatistics(JobStatistics statistics) {
@@ -332,7 +390,7 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Full-projection-only] Describes the state of the job.
+     * [Full-projection-only] Describes the status of this job.
      * @return value or {@code null} for none
      */
     public JobStatus getStatus() {
@@ -340,7 +398,7 @@ public final class JobList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Full-projection-only] Describes the state of the job.
+     * [Full-projection-only] Describes the status of this job.
      * @param status status or {@code null} for none
      */
     public Jobs setStatus(JobStatus status) {

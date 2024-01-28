@@ -163,8 +163,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the dataset being deleted
-     * @param datasetId Dataset ID of dataset being deleted
+     * @param projectId Required. Project ID of the dataset being deleted
+     * @param datasetId Required. Dataset ID of dataset being deleted
      * @return the request
      */
     public Delete delete(java.lang.String projectId, java.lang.String datasetId) throws java.io.IOException {
@@ -175,7 +175,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Delete extends BigqueryRequest<Void> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes the dataset specified by the datasetId value. Before you can delete a dataset, you must
@@ -190,19 +196,44 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the dataset being deleted
-       * @param datasetId Dataset ID of dataset being deleted
+       * @param projectId Required. Project ID of the dataset being deleted
+       * @param datasetId Required. Dataset ID of dataset being deleted
        * @since 1.13
        */
       protected Delete(java.lang.String projectId, java.lang.String datasetId) {
         super(Bigquery.this, "DELETE", REST_PATH, null, Void.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
       }
 
       @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -231,38 +262,53 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the dataset being deleted */
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the dataset being deleted */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the dataset being deleted
+      /** Required. Project ID of the dataset being deleted
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the dataset being deleted */
+      /** Required. Project ID of the dataset being deleted */
       public Delete setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of dataset being deleted */
+      /** Required. Dataset ID of dataset being deleted */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of dataset being deleted
+      /** Required. Dataset ID of dataset being deleted
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of dataset being deleted */
+      /** Required. Dataset ID of dataset being deleted */
       public Delete setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
@@ -303,8 +349,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the requested dataset
-     * @param datasetId Dataset ID of the requested dataset
+     * @param projectId Required. Project ID of the requested dataset
+     * @param datasetId Required. Dataset ID of the requested dataset
      * @return the request
      */
     public Get get(java.lang.String projectId, java.lang.String datasetId) throws java.io.IOException {
@@ -315,7 +361,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Get extends BigqueryRequest<com.google.api.services.bigquery.model.Dataset> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Returns the dataset specified by datasetID.
@@ -327,14 +379,24 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the requested dataset
-       * @param datasetId Dataset ID of the requested dataset
+       * @param projectId Required. Project ID of the requested dataset
+       * @param datasetId Required. Dataset ID of the requested dataset
        * @since 1.13
        */
       protected Get(java.lang.String projectId, java.lang.String datasetId) {
         super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.Dataset.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -348,8 +410,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -378,59 +455,74 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the requested dataset */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the requested dataset */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the requested dataset
+      /** Required. Project ID of the requested dataset
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the requested dataset */
+      /** Required. Project ID of the requested dataset */
       public Get setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the requested dataset */
+      /** Required. Dataset ID of the requested dataset */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the requested dataset
+      /** Required. Dataset ID of the requested dataset
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the requested dataset */
+      /** Required. Dataset ID of the requested dataset */
       public Get setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
 
       /**
-       * Specifies the view that determines which dataset information is returned. By default,
-       * metadata and ACL information are returned. Allowed values: METADATA, ACL, FULL.
+       * Optional. Specifies the view that determines which dataset information is returned. By
+       * default, metadata and ACL information are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String datasetView;
 
-      /** Specifies the view that determines which dataset information is returned. By default, metadata and
-     ACL information are returned. Allowed values: METADATA, ACL, FULL.
+      /** Optional. Specifies the view that determines which dataset information is returned. By default,
+     metadata and ACL information are returned.
        */
       public java.lang.String getDatasetView() {
         return datasetView;
       }
 
       /**
-       * Specifies the view that determines which dataset information is returned. By default,
-       * metadata and ACL information are returned. Allowed values: METADATA, ACL, FULL.
+       * Optional. Specifies the view that determines which dataset information is returned. By
+       * default, metadata and ACL information are returned.
        */
       public Get setDatasetView(java.lang.String datasetView) {
         this.datasetView = datasetView;
@@ -450,7 +542,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the new dataset
+     * @param projectId Required. Project ID of the new dataset
      * @param content the {@link com.google.api.services.bigquery.model.Dataset}
      * @return the request
      */
@@ -462,7 +554,10 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Insert extends BigqueryRequest<com.google.api.services.bigquery.model.Dataset> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets";
+      private static final String REST_PATH = "projects/{+projectId}/datasets";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Creates a new empty dataset.
@@ -475,18 +570,38 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the new dataset
+       * @param projectId Required. Project ID of the new dataset
        * @param content the {@link com.google.api.services.bigquery.model.Dataset}
        * @since 1.13
        */
       protected Insert(java.lang.String projectId, com.google.api.services.bigquery.model.Dataset content) {
         super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.Dataset.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
       }
 
       @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -515,22 +630,32 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the new dataset */
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the new dataset */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the new dataset
+      /** Required. Project ID of the new dataset
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the new dataset */
+      /** Required. Project ID of the new dataset */
       public Insert setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
@@ -541,7 +666,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Lists all datasets in the specified project to which you have been granted the READER dataset
+     * Lists all datasets in the specified project to which the user has been granted the READER dataset
      * role.
      *
      * Create a request for the method "datasets.list".
@@ -549,7 +674,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the datasets to be listed
+     * @param projectId Required. Project ID of the datasets to be listed
      * @return the request
      */
     public List list(java.lang.String projectId) throws java.io.IOException {
@@ -560,11 +685,14 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends BigqueryRequest<com.google.api.services.bigquery.model.DatasetList> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets";
+      private static final String REST_PATH = "projects/{+projectId}/datasets";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Lists all datasets in the specified project to which you have been granted the READER dataset
-       * role.
+       * Lists all datasets in the specified project to which the user has been granted the READER
+       * dataset role.
        *
        * Create a request for the method "datasets.list".
        *
@@ -573,12 +701,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the datasets to be listed
+       * @param projectId Required. Project ID of the datasets to be listed
        * @since 1.13
        */
       protected List(java.lang.String projectId) {
         super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.DatasetList.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -592,8 +725,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -622,22 +770,32 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the datasets to be listed */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the datasets to be listed */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the datasets to be listed
+      /** Required. Project ID of the datasets to be listed
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the datasets to be listed */
+      /** Required. Project ID of the datasets to be listed */
       public List setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
@@ -660,16 +818,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * An expression for filtering the results of the request by label. The syntax is
-       * "labels.[:]". Multiple filters can be ANDed together by connecting with a space. Example:
-       * "labels.department:receiving labels.active". See Filtering datasets using labels for
-       * details.
+       * \"labels.[:]\". Multiple filters can be ANDed together by connecting with a space. Example:
+       * \"labels.department:receiving labels.active\". See [Filtering datasets using
+       * labels](/bigquery/docs/labeling-datasets#filtering_datasets_using_labels) for details.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** An expression for filtering the results of the request by label. The syntax is "labels.[:]".
+      /** An expression for filtering the results of the request by label. The syntax is \"labels.[:]\".
      Multiple filters can be ANDed together by connecting with a space. Example:
-     "labels.department:receiving labels.active". See Filtering datasets using labels for details.
+     \"labels.department:receiving labels.active\". See [Filtering datasets using labels](/bigquery/docs
+     /labeling-datasets#filtering_datasets_using_labels) for details.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -677,26 +836,33 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * An expression for filtering the results of the request by label. The syntax is
-       * "labels.[:]". Multiple filters can be ANDed together by connecting with a space. Example:
-       * "labels.department:receiving labels.active". See Filtering datasets using labels for
-       * details.
+       * \"labels.[:]\". Multiple filters can be ANDed together by connecting with a space. Example:
+       * \"labels.department:receiving labels.active\". See [Filtering datasets using
+       * labels](/bigquery/docs/labeling-datasets#filtering_datasets_using_labels) for details.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
         return this;
       }
 
-      /** The maximum number of results to return */
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** The maximum number of results to return
+      /** The maximum number of results to return in a single response page. Leverage the page tokens to
+     iterate through the entire collection.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** The maximum number of results to return */
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -726,15 +892,15 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Updates information in an existing dataset. The update method replaces the entire dataset
      * resource, whereas the patch method only replaces fields that are provided in the submitted
-     * dataset resource. This method supports patch semantics.
+     * dataset resource. This method supports RFC5789 patch semantics.
      *
      * Create a request for the method "datasets.patch".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the dataset being updated
-     * @param datasetId Dataset ID of the dataset being updated
+     * @param projectId Required. Project ID of the dataset being updated
+     * @param datasetId Required. Dataset ID of the dataset being updated
      * @param content the {@link com.google.api.services.bigquery.model.Dataset}
      * @return the request
      */
@@ -746,12 +912,18 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Patch extends BigqueryRequest<com.google.api.services.bigquery.model.Dataset> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates information in an existing dataset. The update method replaces the entire dataset
        * resource, whereas the patch method only replaces fields that are provided in the submitted
-       * dataset resource. This method supports patch semantics.
+       * dataset resource. This method supports RFC5789 patch semantics.
        *
        * Create a request for the method "datasets.patch".
        *
@@ -761,20 +933,45 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the dataset being updated
-       * @param datasetId Dataset ID of the dataset being updated
+       * @param projectId Required. Project ID of the dataset being updated
+       * @param datasetId Required. Dataset ID of the dataset being updated
        * @param content the {@link com.google.api.services.bigquery.model.Dataset}
        * @since 1.13
        */
       protected Patch(java.lang.String projectId, java.lang.String datasetId, com.google.api.services.bigquery.model.Dataset content) {
         super(Bigquery.this, "PATCH", REST_PATH, content, com.google.api.services.bigquery.model.Dataset.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -803,38 +1000,53 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the dataset being updated */
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the dataset being updated */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the dataset being updated
+      /** Required. Project ID of the dataset being updated
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the dataset being updated */
+      /** Required. Project ID of the dataset being updated */
       public Patch setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the dataset being updated */
+      /** Required. Dataset ID of the dataset being updated */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the dataset being updated
+      /** Required. Dataset ID of the dataset being updated
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the dataset being updated */
+      /** Required. Dataset ID of the dataset being updated */
       public Patch setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
@@ -842,6 +1054,173 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Undeletes a dataset which is within time travel window based on datasetId. If a time is
+     * specified, the dataset version deleted at that time is undeleted, else the last live version is
+     * undeleted.
+     *
+     * Create a request for the method "datasets.undelete".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Required. Project ID of the dataset to be undeleted
+     * @param datasetId Required. Dataset ID of dataset being deleted
+     * @param content the {@link com.google.api.services.bigquery.model.UndeleteDatasetRequest}
+     * @return the request
+     */
+    public Undelete undelete(java.lang.String projectId, java.lang.String datasetId, com.google.api.services.bigquery.model.UndeleteDatasetRequest content) throws java.io.IOException {
+      Undelete result = new Undelete(projectId, datasetId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Undelete extends BigqueryRequest<com.google.api.services.bigquery.model.Dataset> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}:undelete";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Undeletes a dataset which is within time travel window based on datasetId. If a time is
+       * specified, the dataset version deleted at that time is undeleted, else the last live version is
+       * undeleted.
+       *
+       * Create a request for the method "datasets.undelete".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Required. Project ID of the dataset to be undeleted
+       * @param datasetId Required. Dataset ID of dataset being deleted
+       * @param content the {@link com.google.api.services.bigquery.model.UndeleteDatasetRequest}
+       * @since 1.13
+       */
+      protected Undelete(java.lang.String projectId, java.lang.String datasetId, com.google.api.services.bigquery.model.UndeleteDatasetRequest content) {
+        super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.Dataset.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Undelete set$Xgafv(java.lang.String $Xgafv) {
+        return (Undelete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Undelete setAccessToken(java.lang.String accessToken) {
+        return (Undelete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Undelete setAlt(java.lang.String alt) {
+        return (Undelete) super.setAlt(alt);
+      }
+
+      @Override
+      public Undelete setCallback(java.lang.String callback) {
+        return (Undelete) super.setCallback(callback);
+      }
+
+      @Override
+      public Undelete setFields(java.lang.String fields) {
+        return (Undelete) super.setFields(fields);
+      }
+
+      @Override
+      public Undelete setKey(java.lang.String key) {
+        return (Undelete) super.setKey(key);
+      }
+
+      @Override
+      public Undelete setOauthToken(java.lang.String oauthToken) {
+        return (Undelete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Undelete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Undelete setQuotaUser(java.lang.String quotaUser) {
+        return (Undelete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Undelete setUploadType(java.lang.String uploadType) {
+        return (Undelete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Undelete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the dataset to be undeleted */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Required. Project ID of the dataset to be undeleted
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Required. Project ID of the dataset to be undeleted */
+      public Undelete setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Required. Dataset ID of dataset being deleted */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Required. Dataset ID of dataset being deleted
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Required. Dataset ID of dataset being deleted */
+      public Undelete setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      @Override
+      public Undelete set(String parameterName, Object value) {
+        return (Undelete) super.set(parameterName, value);
       }
     }
     /**
@@ -854,8 +1233,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the dataset being updated
-     * @param datasetId Dataset ID of the dataset being updated
+     * @param projectId Required. Project ID of the dataset being updated
+     * @param datasetId Required. Dataset ID of the dataset being updated
      * @param content the {@link com.google.api.services.bigquery.model.Dataset}
      * @return the request
      */
@@ -867,7 +1246,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Update extends BigqueryRequest<com.google.api.services.bigquery.model.Dataset> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates information in an existing dataset. The update method replaces the entire dataset
@@ -882,20 +1267,45 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the dataset being updated
-       * @param datasetId Dataset ID of the dataset being updated
+       * @param projectId Required. Project ID of the dataset being updated
+       * @param datasetId Required. Dataset ID of the dataset being updated
        * @param content the {@link com.google.api.services.bigquery.model.Dataset}
        * @since 1.13
        */
       protected Update(java.lang.String projectId, java.lang.String datasetId, com.google.api.services.bigquery.model.Dataset content) {
         super(Bigquery.this, "PUT", REST_PATH, content, com.google.api.services.bigquery.model.Dataset.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
       }
 
       @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -924,38 +1334,53 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the dataset being updated */
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the dataset being updated */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the dataset being updated
+      /** Required. Project ID of the dataset being updated
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the dataset being updated */
+      /** Required. Project ID of the dataset being updated */
       public Update setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the dataset being updated */
+      /** Required. Dataset ID of the dataset being updated */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the dataset being updated
+      /** Required. Dataset ID of the dataset being updated
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the dataset being updated */
+      /** Required. Dataset ID of the dataset being updated */
       public Update setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
@@ -998,8 +1423,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
      *
-     * @param projectId [Required] Project ID of the job to cancel
-     * @param jobId [Required] Job ID of the job to cancel
+     * @param projectId Required. Project ID of the job to cancel
+     * @param jobId Required. Job ID of the job to cancel
      * @return the request
      */
     public Cancel cancel(java.lang.String projectId, java.lang.String jobId) throws java.io.IOException {
@@ -1010,7 +1435,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Cancel extends BigqueryRequest<com.google.api.services.bigquery.model.JobCancelResponse> {
 
-      private static final String REST_PATH = "projects/{projectId}/jobs/{jobId}/cancel";
+      private static final String REST_PATH = "projects/{+projectId}/jobs/{+jobId}/cancel";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern JOB_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Requests that a job be cancelled. This call will return immediately, and the client will need
@@ -1025,19 +1456,44 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId [Required] Project ID of the job to cancel
-       * @param jobId [Required] Job ID of the job to cancel
+       * @param projectId Required. Project ID of the job to cancel
+       * @param jobId Required. Job ID of the job to cancel
        * @since 1.13
        */
       protected Cancel(java.lang.String projectId, java.lang.String jobId) {
         super(Bigquery.this, "POST", REST_PATH, null, com.google.api.services.bigquery.model.JobCancelResponse.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+              "Parameter jobId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancel) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancel setAccessToken(java.lang.String accessToken) {
+        return (Cancel) super.setAccessToken(accessToken);
       }
 
       @Override
       public Cancel setAlt(java.lang.String alt) {
         return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setCallback(java.lang.String callback) {
+        return (Cancel) super.setCallback(callback);
       }
 
       @Override
@@ -1066,54 +1522,70 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Cancel setUserIp(java.lang.String userIp) {
-        return (Cancel) super.setUserIp(userIp);
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
       }
 
-      /** [Required] Project ID of the job to cancel */
+      @Override
+      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancel) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the job to cancel */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /**[ Required] Project ID of the job to cancel
-    [
-
+      /** Required. Project ID of the job to cancel
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** [Required] Project ID of the job to cancel */
+      /** Required. Project ID of the job to cancel */
       public Cancel setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** [Required] Job ID of the job to cancel */
+      /** Required. Job ID of the job to cancel */
       @com.google.api.client.util.Key
       private java.lang.String jobId;
 
-      /**[ Required] Job ID of the job to cancel
-    [
-
+      /** Required. Job ID of the job to cancel
        */
       public java.lang.String getJobId() {
         return jobId;
       }
 
-      /** [Required] Job ID of the job to cancel */
+      /** Required. Job ID of the job to cancel */
       public Cancel setJobId(java.lang.String jobId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+              "Parameter jobId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.jobId = jobId;
         return this;
       }
 
       /**
-       * The geographic location of the job. Required except for US and EU. See details at
+       * The geographic location of the job. You must specify the location to run the job for the
+       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location - If the job's location is in a single region (for example, `us-
+       * central1`) For more information, see
        * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       @com.google.api.client.util.Key
       private java.lang.String location;
 
-      /** The geographic location of the job. Required except for US and EU. See details at
+      /** The geographic location of the job. You must specify the location to run the job for the following
+     scenarios: - If the location to run a job is not in the `us` or the `eu` multi-regional location -
+     If the job's location is in a single region (for example, `us-central1`) For more information, see
      https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public java.lang.String getLocation() {
@@ -1121,7 +1593,10 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * The geographic location of the job. Required except for US and EU. See details at
+       * The geographic location of the job. You must specify the location to run the job for the
+       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location - If the job's location is in a single region (for example, `us-
+       * central1`) For more information, see
        * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public Cancel setLocation(java.lang.String location) {
@@ -1200,8 +1675,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -1230,8 +1720,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the job for which metadata is to be deleted. */
@@ -1324,8 +1819,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param projectId [Required] Project ID of the requested job
-     * @param jobId [Required] Job ID of the requested job
+     * @param projectId Required. Project ID of the requested job.
+     * @param jobId Required. Job ID of the requested job.
      * @return the request
      */
     public Get get(java.lang.String projectId, java.lang.String jobId) throws java.io.IOException {
@@ -1336,7 +1831,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Get extends BigqueryRequest<com.google.api.services.bigquery.model.Job> {
 
-      private static final String REST_PATH = "projects/{projectId}/jobs/{jobId}";
+      private static final String REST_PATH = "projects/{+projectId}/jobs/{+jobId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern JOB_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Returns information about a specific job. Job information is available for a six month period
@@ -1350,14 +1851,24 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId [Required] Project ID of the requested job
-       * @param jobId [Required] Job ID of the requested job
+       * @param projectId Required. Project ID of the requested job.
+       * @param jobId Required. Job ID of the requested job.
        * @since 1.13
        */
       protected Get(java.lang.String projectId, java.lang.String jobId) {
         super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.Job.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+              "Parameter jobId must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -1371,8 +1882,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1401,54 +1927,70 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /** [Required] Project ID of the requested job */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the requested job. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /**[ Required] Project ID of the requested job
-    [
-
+      /** Required. Project ID of the requested job.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** [Required] Project ID of the requested job */
+      /** Required. Project ID of the requested job. */
       public Get setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** [Required] Job ID of the requested job */
+      /** Required. Job ID of the requested job. */
       @com.google.api.client.util.Key
       private java.lang.String jobId;
 
-      /**[ Required] Job ID of the requested job
-    [
-
+      /** Required. Job ID of the requested job.
        */
       public java.lang.String getJobId() {
         return jobId;
       }
 
-      /** [Required] Job ID of the requested job */
+      /** Required. Job ID of the requested job. */
       public Get setJobId(java.lang.String jobId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+              "Parameter jobId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.jobId = jobId;
         return this;
       }
 
       /**
-       * The geographic location of the job. Required except for US and EU. See details at
+       * The geographic location of the job. You must specify the location to run the job for the
+       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location - If the job's location is in a single region (for example, `us-
+       * central1`) For more information, see
        * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       @com.google.api.client.util.Key
       private java.lang.String location;
 
-      /** The geographic location of the job. Required except for US and EU. See details at
+      /** The geographic location of the job. You must specify the location to run the job for the following
+     scenarios: - If the location to run a job is not in the `us` or the `eu` multi-regional location -
+     If the job's location is in a single region (for example, `us-central1`) For more information, see
      https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public java.lang.String getLocation() {
@@ -1456,7 +1998,10 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * The geographic location of the job. Required except for US and EU. See details at
+       * The geographic location of the job. You must specify the location to run the job for the
+       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location - If the job's location is in a single region (for example, `us-
+       * central1`) For more information, see
        * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public Get setLocation(java.lang.String location) {
@@ -1470,15 +2015,15 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Retrieves the results of a query job.
+     * RPC to get the results of a query job.
      *
      * Create a request for the method "jobs.getQueryResults".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link GetQueryResults#execute()} method to invoke the remote operation.
      *
-     * @param projectId [Required] Project ID of the query job
-     * @param jobId [Required] Job ID of the query job
+     * @param projectId Required. Project ID of the query job.
+     * @param jobId Required. Job ID of the query job.
      * @return the request
      */
     public GetQueryResults getQueryResults(java.lang.String projectId, java.lang.String jobId) throws java.io.IOException {
@@ -1489,10 +2034,16 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class GetQueryResults extends BigqueryRequest<com.google.api.services.bigquery.model.GetQueryResultsResponse> {
 
-      private static final String REST_PATH = "projects/{projectId}/queries/{jobId}";
+      private static final String REST_PATH = "projects/{+projectId}/queries/{+jobId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern JOB_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Retrieves the results of a query job.
+       * RPC to get the results of a query job.
        *
        * Create a request for the method "jobs.getQueryResults".
        *
@@ -1502,14 +2053,24 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param projectId [Required] Project ID of the query job
-       * @param jobId [Required] Job ID of the query job
+       * @param projectId Required. Project ID of the query job.
+       * @param jobId Required. Job ID of the query job.
        * @since 1.13
        */
       protected GetQueryResults(java.lang.String projectId, java.lang.String jobId) {
         super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.GetQueryResultsResponse.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+              "Parameter jobId must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -1523,8 +2084,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public GetQueryResults set$Xgafv(java.lang.String $Xgafv) {
+        return (GetQueryResults) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetQueryResults setAccessToken(java.lang.String accessToken) {
+        return (GetQueryResults) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetQueryResults setAlt(java.lang.String alt) {
         return (GetQueryResults) super.setAlt(alt);
+      }
+
+      @Override
+      public GetQueryResults setCallback(java.lang.String callback) {
+        return (GetQueryResults) super.setCallback(callback);
       }
 
       @Override
@@ -1553,54 +2129,86 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public GetQueryResults setUserIp(java.lang.String userIp) {
-        return (GetQueryResults) super.setUserIp(userIp);
+      public GetQueryResults setUploadType(java.lang.String uploadType) {
+        return (GetQueryResults) super.setUploadType(uploadType);
       }
 
-      /** [Required] Project ID of the query job */
+      @Override
+      public GetQueryResults setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetQueryResults) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the query job. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /**[ Required] Project ID of the query job
-    [
-
+      /** Required. Project ID of the query job.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** [Required] Project ID of the query job */
+      /** Required. Project ID of the query job. */
       public GetQueryResults setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** [Required] Job ID of the query job */
+      /** Required. Job ID of the query job. */
       @com.google.api.client.util.Key
       private java.lang.String jobId;
 
-      /**[ Required] Job ID of the query job
-    [
-
+      /** Required. Job ID of the query job.
        */
       public java.lang.String getJobId() {
         return jobId;
       }
 
-      /** [Required] Job ID of the query job */
+      /** Required. Job ID of the query job. */
       public GetQueryResults setJobId(java.lang.String jobId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+              "Parameter jobId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.jobId = jobId;
         return this;
       }
 
+      /** Optional. Output timestamp as usec int64. Default is false. */
+      @com.google.api.client.util.Key("formatOptions.useInt64Timestamp")
+      private java.lang.Boolean formatOptionsUseInt64Timestamp;
+
+      /** Optional. Output timestamp as usec int64. Default is false.
+       */
+      public java.lang.Boolean getFormatOptionsUseInt64Timestamp() {
+        return formatOptionsUseInt64Timestamp;
+      }
+
+      /** Optional. Output timestamp as usec int64. Default is false. */
+      public GetQueryResults setFormatOptionsUseInt64Timestamp(java.lang.Boolean formatOptionsUseInt64Timestamp) {
+        this.formatOptionsUseInt64Timestamp = formatOptionsUseInt64Timestamp;
+        return this;
+      }
+
       /**
-       * The geographic location where the job should run. Required except for US and EU. See
-       * details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       * The geographic location of the job. You must specify the location to run the job for the
+       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location - If the job's location is in a single region (for example, `us-
+       * central1`) For more information, see
+       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       @com.google.api.client.util.Key
       private java.lang.String location;
 
-      /** The geographic location where the job should run. Required except for US and EU. See details at
+      /** The geographic location of the job. You must specify the location to run the job for the following
+     scenarios: - If the location to run a job is not in the `us` or the `eu` multi-regional location -
+     If the job's location is in a single region (for example, `us-central1`) For more information, see
      https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public java.lang.String getLocation() {
@@ -1608,82 +2216,102 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * The geographic location where the job should run. Required except for US and EU. See
-       * details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       * The geographic location of the job. You must specify the location to run the job for the
+       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location - If the job's location is in a single region (for example, `us-
+       * central1`) For more information, see
+       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public GetQueryResults setLocation(java.lang.String location) {
         this.location = location;
         return this;
       }
 
-      /** Maximum number of results to read */
+      /** Maximum number of results to read. */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of results to read
+      /** Maximum number of results to read.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to read */
+      /** Maximum number of results to read. */
       public GetQueryResults setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
-      /** Page token, returned by a previous call, to request the next page of results */
+      /** Page token, returned by a previous call, to request the next page of results. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Page token, returned by a previous call, to request the next page of results
+      /** Page token, returned by a previous call, to request the next page of results.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Page token, returned by a previous call, to request the next page of results */
+      /** Page token, returned by a previous call, to request the next page of results. */
       public GetQueryResults setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
-      /** Zero-based index of the starting row */
+      /** Zero-based index of the starting row. */
       @com.google.api.client.util.Key
       private java.math.BigInteger startIndex;
 
-      /** Zero-based index of the starting row
+      /** Zero-based index of the starting row.
        */
       public java.math.BigInteger getStartIndex() {
         return startIndex;
       }
 
-      /** Zero-based index of the starting row */
+      /** Zero-based index of the starting row. */
       public GetQueryResults setStartIndex(java.math.BigInteger startIndex) {
         this.startIndex = startIndex;
         return this;
       }
 
       /**
-       * How long to wait for the query to complete, in milliseconds, before returning. Default is
-       * 10 seconds. If the timeout passes before the job completes, the 'jobComplete' field in the
-       * response will be false
+       * Optional: Specifies the maximum amount of time, in milliseconds, that the client is willing
+       * to wait for the query to complete. By default, this limit is 10 seconds (10,000
+       * milliseconds). If the query is complete, the jobComplete field in the response is true. If
+       * the query has not yet completed, jobComplete is false. You can request a longer timeout
+       * period in the timeoutMs field. However, the call is not guaranteed to wait for the
+       * specified timeout; it typically returns after around 200 seconds (200,000 milliseconds),
+       * even if the query is not complete. If jobComplete is false, you can continue to wait for
+       * the query to complete by calling the getQueryResults method until the jobComplete field in
+       * the getQueryResults response is true.
        */
       @com.google.api.client.util.Key
       private java.lang.Long timeoutMs;
 
-      /** How long to wait for the query to complete, in milliseconds, before returning. Default is 10
-     seconds. If the timeout passes before the job completes, the 'jobComplete' field in the response
-     will be false
+      /** Optional: Specifies the maximum amount of time, in milliseconds, that the client is willing to wait
+     for the query to complete. By default, this limit is 10 seconds (10,000 milliseconds). If the query
+     is complete, the jobComplete field in the response is true. If the query has not yet completed,
+     jobComplete is false. You can request a longer timeout period in the timeoutMs field. However, the
+     call is not guaranteed to wait for the specified timeout; it typically returns after around 200
+     seconds (200,000 milliseconds), even if the query is not complete. If jobComplete is false, you can
+     continue to wait for the query to complete by calling the getQueryResults method until the
+     jobComplete field in the getQueryResults response is true.
        */
       public java.lang.Long getTimeoutMs() {
         return timeoutMs;
       }
 
       /**
-       * How long to wait for the query to complete, in milliseconds, before returning. Default is
-       * 10 seconds. If the timeout passes before the job completes, the 'jobComplete' field in the
-       * response will be false
+       * Optional: Specifies the maximum amount of time, in milliseconds, that the client is willing
+       * to wait for the query to complete. By default, this limit is 10 seconds (10,000
+       * milliseconds). If the query is complete, the jobComplete field in the response is true. If
+       * the query has not yet completed, jobComplete is false. You can request a longer timeout
+       * period in the timeoutMs field. However, the call is not guaranteed to wait for the
+       * specified timeout; it typically returns after around 200 seconds (200,000 milliseconds),
+       * even if the query is not complete. If jobComplete is false, you can continue to wait for
+       * the query to complete by calling the getQueryResults method until the jobComplete field in
+       * the getQueryResults response is true.
        */
       public GetQueryResults setTimeoutMs(java.lang.Long timeoutMs) {
         this.timeoutMs = timeoutMs;
@@ -1696,14 +2324,18 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Starts a new asynchronous job. Requires the Can View project role.
+     * Starts a new asynchronous job. This API has two different kinds of endpoint URIs, as this method
+     * supports a variety of use cases. * The *Metadata* URI is used for most interactions, as it
+     * accepts the job configuration directly. * The *Upload* URI is ONLY for the case when you're
+     * sending both a load job configuration and a data stream together. In this case, the Upload URI
+     * accepts the job configuration and the data as two distinct multipart MIME parts.
      *
      * Create a request for the method "jobs.insert".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the project that will be billed for the job
+     * @param projectId Project ID of project that will be billed for the job.
      * @param content the {@link com.google.api.services.bigquery.model.Job}
      * @return the request
      */
@@ -1714,7 +2346,11 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
     }
 
     /**
-     * Starts a new asynchronous job. Requires the Can View project role.
+     * Starts a new asynchronous job. This API has two different kinds of endpoint URIs, as this method
+     * supports a variety of use cases. * The *Metadata* URI is used for most interactions, as it
+     * accepts the job configuration directly. * The *Upload* URI is ONLY for the case when you're
+     * sending both a load job configuration and a data stream together. In this case, the Upload URI
+     * accepts the job configuration and the data as two distinct multipart MIME parts.
      *
      * Create a request for the method "jobs.insert".
      *
@@ -1725,7 +2361,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This method should be used for uploading media content.
      * </p>
      *
-     * @param projectId Project ID of the project that will be billed for the job
+     * @param projectId Project ID of project that will be billed for the job.
      * @param content the {@link com.google.api.services.bigquery.model.Job} media metadata or {@code null} if none
      * @param mediaContent The media HTTP content.
      * @return the request
@@ -1739,10 +2375,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Insert extends BigqueryRequest<com.google.api.services.bigquery.model.Job> {
 
-      private static final String REST_PATH = "projects/{projectId}/jobs";
+      private static final String REST_PATH = "projects/{+projectId}/jobs";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Starts a new asynchronous job. Requires the Can View project role.
+       * Starts a new asynchronous job. This API has two different kinds of endpoint URIs, as this
+       * method supports a variety of use cases. * The *Metadata* URI is used for most interactions, as
+       * it accepts the job configuration directly. * The *Upload* URI is ONLY for the case when you're
+       * sending both a load job configuration and a data stream together. In this case, the Upload URI
+       * accepts the job configuration and the data as two distinct multipart MIME parts.
        *
        * Create a request for the method "jobs.insert".
        *
@@ -1752,17 +2395,26 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the project that will be billed for the job
+       * @param projectId Project ID of project that will be billed for the job.
        * @param content the {@link com.google.api.services.bigquery.model.Job}
        * @since 1.13
        */
       protected Insert(java.lang.String projectId, com.google.api.services.bigquery.model.Job content) {
         super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.Job.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       /**
-       * Starts a new asynchronous job. Requires the Can View project role.
+       * Starts a new asynchronous job. This API has two different kinds of endpoint URIs, as this
+       * method supports a variety of use cases. * The *Metadata* URI is used for most interactions, as
+       * it accepts the job configuration directly. * The *Upload* URI is ONLY for the case when you're
+       * sending both a load job configuration and a data stream together. In this case, the Upload URI
+       * accepts the job configuration and the data as two distinct multipart MIME parts.
        *
        * Create a request for the method "jobs.insert".
        *
@@ -1776,7 +2428,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * This constructor should be used for uploading media content.
        * </p>
        *
-       * @param projectId Project ID of the project that will be billed for the job
+       * @param projectId Project ID of project that will be billed for the job.
        * @param content the {@link com.google.api.services.bigquery.model.Job} media metadata or {@code null} if none
        * @param mediaContent The media HTTP content.
        * @since 1.13
@@ -1789,8 +2441,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -1819,22 +2486,32 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the project that will be billed for the job */
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Project ID of project that will be billed for the job. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the project that will be billed for the job
+      /** Project ID of project that will be billed for the job.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the project that will be billed for the job */
+      /** Project ID of project that will be billed for the job. */
       public Insert setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
@@ -1855,7 +2532,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the jobs to list
+     * @param projectId Project ID of the jobs to list.
      * @return the request
      */
     public List list(java.lang.String projectId) throws java.io.IOException {
@@ -1866,7 +2543,10 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends BigqueryRequest<com.google.api.services.bigquery.model.JobList> {
 
-      private static final String REST_PATH = "projects/{projectId}/jobs";
+      private static final String REST_PATH = "projects/{+projectId}/jobs";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Lists all jobs that you started in the specified project. Job information is available for a
@@ -1881,12 +2561,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the jobs to list
+       * @param projectId Project ID of the jobs to list.
        * @since 1.13
        */
       protected List(java.lang.String projectId) {
         super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.JobList.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -1900,8 +2585,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1930,37 +2630,47 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the jobs to list */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Project ID of the jobs to list. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the jobs to list
+      /** Project ID of the jobs to list.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the jobs to list */
+      /** Project ID of the jobs to list. */
       public List setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Whether to display jobs owned by all users in the project. Default false */
+      /** Whether to display jobs owned by all users in the project. Default False. */
       @com.google.api.client.util.Key
       private java.lang.Boolean allUsers;
 
-      /** Whether to display jobs owned by all users in the project. Default false
+      /** Whether to display jobs owned by all users in the project. Default False.
        */
       public java.lang.Boolean getAllUsers() {
         return allUsers;
       }
 
-      /** Whether to display jobs owned by all users in the project. Default false */
+      /** Whether to display jobs owned by all users in the project. Default False. */
       public List setAllUsers(java.lang.Boolean allUsers) {
         this.allUsers = allUsers;
         return this;
@@ -1968,13 +2678,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Max value for job creation time, in milliseconds since the POSIX epoch. If set, only jobs
-       * created before or at this timestamp are returned
+       * created before or at this timestamp are returned.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger maxCreationTime;
 
       /** Max value for job creation time, in milliseconds since the POSIX epoch. If set, only jobs created
-     before or at this timestamp are returned
+     before or at this timestamp are returned.
        */
       public java.math.BigInteger getMaxCreationTime() {
         return maxCreationTime;
@@ -1982,24 +2692,31 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Max value for job creation time, in milliseconds since the POSIX epoch. If set, only jobs
-       * created before or at this timestamp are returned
+       * created before or at this timestamp are returned.
        */
       public List setMaxCreationTime(java.math.BigInteger maxCreationTime) {
         this.maxCreationTime = maxCreationTime;
         return this;
       }
 
-      /** Maximum number of results to return */
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of results to return
+      /** The maximum number of results to return in a single response page. Leverage the page tokens to
+     iterate through the entire collection.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return */
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -2007,13 +2724,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Min value for job creation time, in milliseconds since the POSIX epoch. If set, only jobs
-       * created after or at this timestamp are returned
+       * created after or at this timestamp are returned.
        */
       @com.google.api.client.util.Key
       private java.math.BigInteger minCreationTime;
 
       /** Min value for job creation time, in milliseconds since the POSIX epoch. If set, only jobs created
-     after or at this timestamp are returned
+     after or at this timestamp are returned.
        */
       public java.math.BigInteger getMinCreationTime() {
         return minCreationTime;
@@ -2021,46 +2738,43 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Min value for job creation time, in milliseconds since the POSIX epoch. If set, only jobs
-       * created after or at this timestamp are returned
+       * created after or at this timestamp are returned.
        */
       public List setMinCreationTime(java.math.BigInteger minCreationTime) {
         this.minCreationTime = minCreationTime;
         return this;
       }
 
-      /** Page token, returned by a previous call, to request the next page of results */
+      /** Page token, returned by a previous call, to request the next page of results. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Page token, returned by a previous call, to request the next page of results
+      /** Page token, returned by a previous call, to request the next page of results.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Page token, returned by a previous call, to request the next page of results */
+      /** Page token, returned by a previous call, to request the next page of results. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
       /**
-       * If set, retrieves only jobs whose parent is this job. Otherwise, retrieves only jobs which
-       * have no parent
+       * If set, show only child jobs of the specified parent. Otherwise, show all top-level jobs.
        */
       @com.google.api.client.util.Key
       private java.lang.String parentJobId;
 
-      /** If set, retrieves only jobs whose parent is this job. Otherwise, retrieves only jobs which have no
-     parent
+      /** If set, show only child jobs of the specified parent. Otherwise, show all top-level jobs.
        */
       public java.lang.String getParentJobId() {
         return parentJobId;
       }
 
       /**
-       * If set, retrieves only jobs whose parent is this job. Otherwise, retrieves only jobs which
-       * have no parent
+       * If set, show only child jobs of the specified parent. Otherwise, show all top-level jobs.
        */
       public List setParentJobId(java.lang.String parentJobId) {
         this.parentJobId = parentJobId;
@@ -2113,7 +2827,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Query#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the project billed for the query
+     * @param projectId Required. Project ID of the query request.
      * @param content the {@link com.google.api.services.bigquery.model.QueryRequest}
      * @return the request
      */
@@ -2125,7 +2839,10 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Query extends BigqueryRequest<com.google.api.services.bigquery.model.QueryResponse> {
 
-      private static final String REST_PATH = "projects/{projectId}/queries";
+      private static final String REST_PATH = "projects/{+projectId}/queries";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Runs a BigQuery SQL query synchronously and returns query results if the query completes within
@@ -2139,18 +2856,38 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the project billed for the query
+       * @param projectId Required. Project ID of the query request.
        * @param content the {@link com.google.api.services.bigquery.model.QueryRequest}
        * @since 1.13
        */
       protected Query(java.lang.String projectId, com.google.api.services.bigquery.model.QueryRequest content) {
         super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.QueryResponse.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Query set$Xgafv(java.lang.String $Xgafv) {
+        return (Query) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Query setAccessToken(java.lang.String accessToken) {
+        return (Query) super.setAccessToken(accessToken);
       }
 
       @Override
       public Query setAlt(java.lang.String alt) {
         return (Query) super.setAlt(alt);
+      }
+
+      @Override
+      public Query setCallback(java.lang.String callback) {
+        return (Query) super.setCallback(callback);
       }
 
       @Override
@@ -2179,22 +2916,32 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Query setUserIp(java.lang.String userIp) {
-        return (Query) super.setUserIp(userIp);
+      public Query setUploadType(java.lang.String uploadType) {
+        return (Query) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the project billed for the query */
+      @Override
+      public Query setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Query) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the query request. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the project billed for the query
+      /** Required. Project ID of the query request.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the project billed for the query */
+      /** Required. Project ID of the query request. */
       public Query setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
@@ -2298,8 +3045,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -2328,8 +3090,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the model to delete. */
@@ -2480,8 +3247,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2510,8 +3292,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the requested model. */
@@ -2655,8 +3442,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2685,8 +3487,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the models to list. */
@@ -2848,8 +3655,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -2878,8 +3700,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the model to patch. */
@@ -2974,15 +3801,14 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
   public class Projects {
 
     /**
-     * Returns the email address of the service account for your project used for interactions with
-     * Google Cloud KMS.
+     * RPC to get the service account for a project used for interactions with Google Cloud KMS
      *
      * Create a request for the method "projects.getServiceAccount".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link GetServiceAccount#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID for which the service account is requested.
+     * @param projectId Required. ID of the project.
      * @return the request
      */
     public GetServiceAccount getServiceAccount(java.lang.String projectId) throws java.io.IOException {
@@ -2993,11 +3819,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class GetServiceAccount extends BigqueryRequest<com.google.api.services.bigquery.model.GetServiceAccountResponse> {
 
-      private static final String REST_PATH = "projects/{projectId}/serviceAccount";
+      private static final String REST_PATH = "projects/{+projectId}/serviceAccount";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Returns the email address of the service account for your project used for interactions with
-       * Google Cloud KMS.
+       * RPC to get the service account for a project used for interactions with Google Cloud KMS
        *
        * Create a request for the method "projects.getServiceAccount".
        *
@@ -3007,12 +3835,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * stractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param projectId Project ID for which the service account is requested.
+       * @param projectId Required. ID of the project.
        * @since 1.13
        */
       protected GetServiceAccount(java.lang.String projectId) {
         super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.GetServiceAccountResponse.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -3026,8 +3859,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public GetServiceAccount set$Xgafv(java.lang.String $Xgafv) {
+        return (GetServiceAccount) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetServiceAccount setAccessToken(java.lang.String accessToken) {
+        return (GetServiceAccount) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetServiceAccount setAlt(java.lang.String alt) {
         return (GetServiceAccount) super.setAlt(alt);
+      }
+
+      @Override
+      public GetServiceAccount setCallback(java.lang.String callback) {
+        return (GetServiceAccount) super.setCallback(callback);
       }
 
       @Override
@@ -3056,22 +3904,32 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public GetServiceAccount setUserIp(java.lang.String userIp) {
-        return (GetServiceAccount) super.setUserIp(userIp);
+      public GetServiceAccount setUploadType(java.lang.String uploadType) {
+        return (GetServiceAccount) super.setUploadType(uploadType);
       }
 
-      /** Project ID for which the service account is requested. */
+      @Override
+      public GetServiceAccount setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetServiceAccount) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. ID of the project. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID for which the service account is requested.
+      /** Required. ID of the project.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID for which the service account is requested. */
+      /** Required. ID of the project. */
       public GetServiceAccount setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
@@ -3082,7 +3940,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Lists all projects to which you have been granted any project role.
+     * RPC to list projects to which the user has been granted any project role. Users of this method
+     * are encouraged to consider the [Resource Manager](https://cloud.google.com/resource-
+     * manager/docs/) API, which provides the underlying data for this method and has more capabilities.
      *
      * Create a request for the method "projects.list".
      *
@@ -3102,7 +3962,10 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "projects";
 
       /**
-       * Lists all projects to which you have been granted any project role.
+       * RPC to list projects to which the user has been granted any project role. Users of this method
+       * are encouraged to consider the [Resource Manager](https://cloud.google.com/resource-
+       * manager/docs/) API, which provides the underlying data for this method and has more
+       * capabilities.
        *
        * Create a request for the method "projects.list".
        *
@@ -3128,8 +3991,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3158,37 +4036,61 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** Maximum number of results to return */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * `maxResults` unset returns all results, up to 50 per page. Additionally, the number of
+       * projects in a page may be fewer than `maxResults` because projects are retrieved and then
+       * filtered to only projects with the BigQuery API enabled.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of results to return
+      /**` maxResults` unset returns all results, up to 50 per page. Additionally, the number of projects in
+    ` a page may be fewer than `maxResults` because projects are retrieved and then filtered to only
+    ` projects with the BigQuery API enabled.
+    `
+
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return */
+      /**
+       * `maxResults` unset returns all results, up to 50 per page. Additionally, the number of
+       * projects in a page may be fewer than `maxResults` because projects are retrieved and then
+       * filtered to only projects with the BigQuery API enabled.
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
-      /** Page token, returned by a previous call, to request the next page of results */
+      /**
+       * Page token, returned by a previous call, to request the next page of results. If not
+       * present, no further pages are present.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Page token, returned by a previous call, to request the next page of results
+      /** Page token, returned by a previous call, to request the next page of results. If not present, no
+     further pages are present.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Page token, returned by a previous call, to request the next page of results */
+      /**
+       * Page token, returned by a previous call, to request the next page of results. If not
+       * present, no further pages are present.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -3293,8 +4195,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -3323,8 +4240,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the routine to delete */
@@ -3475,8 +4397,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -3505,8 +4442,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the requested routine */
@@ -3662,8 +4604,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -3692,8 +4649,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the new routine */
@@ -3812,8 +4774,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3842,8 +4819,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the routines to list */
@@ -4062,8 +5044,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -4092,8 +5089,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the routine to update */
@@ -4244,8 +5246,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetIamPolicy setAlt(java.lang.String alt) {
         return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
       }
 
       @Override
@@ -4274,8 +5291,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public GetIamPolicy setUserIp(java.lang.String userIp) {
-        return (GetIamPolicy) super.setUserIp(userIp);
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -4394,8 +5416,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -4424,8 +5461,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Required. Project ID of the row access policies to list. */
@@ -4596,8 +5638,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public TestIamPermissions setAlt(java.lang.String alt) {
         return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
       }
 
       @Override
@@ -4626,8 +5683,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public TestIamPermissions setUserIp(java.lang.String userIp) {
-        return (TestIamPermissions) super.setUserIp(userIp);
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -4690,17 +5752,16 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
   public class Tabledata {
 
     /**
-     * Streams data into BigQuery one record at a time without needing to run a load job. Requires the
-     * WRITER dataset role.
+     * Streams data into BigQuery one record at a time without needing to run a load job.
      *
      * Create a request for the method "tabledata.insertAll".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link InsertAll#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the destination table.
-     * @param datasetId Dataset ID of the destination table.
-     * @param tableId Table ID of the destination table.
+     * @param projectId Required. Project ID of the destination.
+     * @param datasetId Required. Dataset ID of the destination.
+     * @param tableId Required. Table ID of the destination.
      * @param content the {@link com.google.api.services.bigquery.model.TableDataInsertAllRequest}
      * @return the request
      */
@@ -4712,11 +5773,19 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class InsertAll extends BigqueryRequest<com.google.api.services.bigquery.model.TableDataInsertAllResponse> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}/tables/{tableId}/insertAll";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}/insertAll";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Streams data into BigQuery one record at a time without needing to run a load job. Requires the
-       * WRITER dataset role.
+       * Streams data into BigQuery one record at a time without needing to run a load job.
        *
        * Create a request for the method "tabledata.insertAll".
        *
@@ -4726,22 +5795,52 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * InsertAll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the destination table.
-       * @param datasetId Dataset ID of the destination table.
-       * @param tableId Table ID of the destination table.
+       * @param projectId Required. Project ID of the destination.
+       * @param datasetId Required. Dataset ID of the destination.
+       * @param tableId Required. Table ID of the destination.
        * @param content the {@link com.google.api.services.bigquery.model.TableDataInsertAllRequest}
        * @since 1.13
        */
       protected InsertAll(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, com.google.api.services.bigquery.model.TableDataInsertAllRequest content) {
         super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.TableDataInsertAllResponse.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public InsertAll set$Xgafv(java.lang.String $Xgafv) {
+        return (InsertAll) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public InsertAll setAccessToken(java.lang.String accessToken) {
+        return (InsertAll) super.setAccessToken(accessToken);
       }
 
       @Override
       public InsertAll setAlt(java.lang.String alt) {
         return (InsertAll) super.setAlt(alt);
+      }
+
+      @Override
+      public InsertAll setCallback(java.lang.String callback) {
+        return (InsertAll) super.setCallback(callback);
       }
 
       @Override
@@ -4770,54 +5869,74 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public InsertAll setUserIp(java.lang.String userIp) {
-        return (InsertAll) super.setUserIp(userIp);
+      public InsertAll setUploadType(java.lang.String uploadType) {
+        return (InsertAll) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the destination table. */
+      @Override
+      public InsertAll setUploadProtocol(java.lang.String uploadProtocol) {
+        return (InsertAll) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the destination. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the destination table.
+      /** Required. Project ID of the destination.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the destination table. */
+      /** Required. Project ID of the destination. */
       public InsertAll setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the destination table. */
+      /** Required. Dataset ID of the destination. */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the destination table.
+      /** Required. Dataset ID of the destination.
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the destination table. */
+      /** Required. Dataset ID of the destination. */
       public InsertAll setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
 
-      /** Table ID of the destination table. */
+      /** Required. Table ID of the destination. */
       @com.google.api.client.util.Key
       private java.lang.String tableId;
 
-      /** Table ID of the destination table.
+      /** Required. Table ID of the destination.
        */
       public java.lang.String getTableId() {
         return tableId;
       }
 
-      /** Table ID of the destination table. */
+      /** Required. Table ID of the destination. */
       public InsertAll setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = tableId;
         return this;
       }
@@ -4828,16 +5947,16 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Retrieves table data from a specified set of rows. Requires the READER dataset role.
+     * List the content of a table in rows.
      *
      * Create a request for the method "tabledata.list".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the table to read
-     * @param datasetId Dataset ID of the table to read
-     * @param tableId Table ID of the table to read
+     * @param projectId Required. Project id of the table to list.
+     * @param datasetId Required. Dataset id of the table to list.
+     * @param tableId Required. Table id of the table to list.
      * @return the request
      */
     public List list(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId) throws java.io.IOException {
@@ -4848,10 +5967,19 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends BigqueryRequest<com.google.api.services.bigquery.model.TableDataList> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}/tables/{tableId}/data";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}/data";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Retrieves table data from a specified set of rows. Requires the READER dataset role.
+       * List the content of a table in rows.
        *
        * Create a request for the method "tabledata.list".
        *
@@ -4860,16 +5988,31 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the table to read
-       * @param datasetId Dataset ID of the table to read
-       * @param tableId Table ID of the table to read
+       * @param projectId Required. Project id of the table to list.
+       * @param datasetId Required. Dataset id of the table to list.
+       * @param tableId Required. Table id of the table to list.
        * @since 1.13
        */
       protected List(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId) {
         super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.TableDataList.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -4883,8 +6026,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -4913,117 +6071,166 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the table to read */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project id of the table to list. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the table to read
+      /** Required. Project id of the table to list.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the table to read */
+      /** Required. Project id of the table to list. */
       public List setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the table to read */
+      /** Required. Dataset id of the table to list. */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the table to read
+      /** Required. Dataset id of the table to list.
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the table to read */
+      /** Required. Dataset id of the table to list. */
       public List setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
 
-      /** Table ID of the table to read */
+      /** Required. Table id of the table to list. */
       @com.google.api.client.util.Key
       private java.lang.String tableId;
 
-      /** Table ID of the table to read
+      /** Required. Table id of the table to list.
        */
       public java.lang.String getTableId() {
         return tableId;
       }
 
-      /** Table ID of the table to read */
+      /** Required. Table id of the table to list. */
       public List setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = tableId;
         return this;
       }
 
-      /** Maximum number of results to return */
+      /** Optional. Output timestamp as usec int64. Default is false. */
+      @com.google.api.client.util.Key("formatOptions.useInt64Timestamp")
+      private java.lang.Boolean formatOptionsUseInt64Timestamp;
+
+      /** Optional. Output timestamp as usec int64. Default is false.
+       */
+      public java.lang.Boolean getFormatOptionsUseInt64Timestamp() {
+        return formatOptionsUseInt64Timestamp;
+      }
+
+      /** Optional. Output timestamp as usec int64. Default is false. */
+      public List setFormatOptionsUseInt64Timestamp(java.lang.Boolean formatOptionsUseInt64Timestamp) {
+        this.formatOptionsUseInt64Timestamp = formatOptionsUseInt64Timestamp;
+        return this;
+      }
+
+      /** Row limit of the table. */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of results to return
+      /** Row limit of the table.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return */
+      /** Row limit of the table. */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
-      /** Page token, returned by a previous call, identifying the result set */
+      /**
+       * To retrieve the next page of table data, set this field to the string provided in the
+       * pageToken field of the response body from your previous call to tabledata.list.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Page token, returned by a previous call, identifying the result set
+      /** To retrieve the next page of table data, set this field to the string provided in the pageToken
+     field of the response body from your previous call to tabledata.list.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Page token, returned by a previous call, identifying the result set */
+      /**
+       * To retrieve the next page of table data, set this field to the string provided in the
+       * pageToken field of the response body from your previous call to tabledata.list.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
-      /** List of fields to return (comma-separated). If unspecified, all fields are returned */
+      /**
+       * Subset of fields to return, supports select into sub fields. Example: selected_fields =
+       * "a,e.d.f";
+       */
       @com.google.api.client.util.Key
       private java.lang.String selectedFields;
 
-      /** List of fields to return (comma-separated). If unspecified, all fields are returned
+      /** Subset of fields to return, supports select into sub fields. Example: selected_fields = "a,e.d.f";
        */
       public java.lang.String getSelectedFields() {
         return selectedFields;
       }
 
-      /** List of fields to return (comma-separated). If unspecified, all fields are returned */
+      /**
+       * Subset of fields to return, supports select into sub fields. Example: selected_fields =
+       * "a,e.d.f";
+       */
       public List setSelectedFields(java.lang.String selectedFields) {
         this.selectedFields = selectedFields;
         return this;
       }
 
-      /** Zero-based index of the starting row to read */
+      /** Start row index of the table. */
       @com.google.api.client.util.Key
       private java.math.BigInteger startIndex;
 
-      /** Zero-based index of the starting row to read
+      /** Start row index of the table.
        */
       public java.math.BigInteger getStartIndex() {
         return startIndex;
       }
 
-      /** Zero-based index of the starting row to read */
+      /** Start row index of the table. */
       public List setStartIndex(java.math.BigInteger startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -5066,9 +6273,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the table to delete
-     * @param datasetId Dataset ID of the table to delete
-     * @param tableId Table ID of the table to delete
+     * @param projectId Required. Project ID of the table to delete
+     * @param datasetId Required. Dataset ID of the table to delete
+     * @param tableId Required. Table ID of the table to delete
      * @return the request
      */
     public Delete delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId) throws java.io.IOException {
@@ -5079,7 +6286,16 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Delete extends BigqueryRequest<Void> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}/tables/{tableId}";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes the table specified by tableId from the dataset. If the table contains data, all the
@@ -5093,21 +6309,51 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the table to delete
-       * @param datasetId Dataset ID of the table to delete
-       * @param tableId Table ID of the table to delete
+       * @param projectId Required. Project ID of the table to delete
+       * @param datasetId Required. Dataset ID of the table to delete
+       * @param tableId Required. Table ID of the table to delete
        * @since 1.13
        */
       protected Delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId) {
         super(Bigquery.this, "DELETE", REST_PATH, null, Void.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
       }
 
       @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -5136,54 +6382,74 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the table to delete */
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the table to delete */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the table to delete
+      /** Required. Project ID of the table to delete
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the table to delete */
+      /** Required. Project ID of the table to delete */
       public Delete setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the table to delete */
+      /** Required. Dataset ID of the table to delete */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the table to delete
+      /** Required. Dataset ID of the table to delete
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the table to delete */
+      /** Required. Dataset ID of the table to delete */
       public Delete setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
 
-      /** Table ID of the table to delete */
+      /** Required. Table ID of the table to delete */
       @com.google.api.client.util.Key
       private java.lang.String tableId;
 
-      /** Table ID of the table to delete
+      /** Required. Table ID of the table to delete
        */
       public java.lang.String getTableId() {
         return tableId;
       }
 
-      /** Table ID of the table to delete */
+      /** Required. Table ID of the table to delete */
       public Delete setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = tableId;
         return this;
       }
@@ -5202,9 +6468,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the requested table
-     * @param datasetId Dataset ID of the requested table
-     * @param tableId Table ID of the requested table
+     * @param projectId Required. Project ID of the requested table
+     * @param datasetId Required. Dataset ID of the requested table
+     * @param tableId Required. Table ID of the requested table
      * @return the request
      */
     public Get get(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId) throws java.io.IOException {
@@ -5215,7 +6481,16 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Get extends BigqueryRequest<com.google.api.services.bigquery.model.Table> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}/tables/{tableId}";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets the specified table resource by table ID. This method does not return the data in the
@@ -5228,16 +6503,31 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the requested table
-       * @param datasetId Dataset ID of the requested table
-       * @param tableId Table ID of the requested table
+       * @param projectId Required. Project ID of the requested table
+       * @param datasetId Required. Dataset ID of the requested table
+       * @param tableId Required. Table ID of the requested table
        * @since 1.13
        */
       protected Get(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId) {
         super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.Table.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -5251,8 +6541,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -5281,91 +6586,124 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the requested table */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the requested table */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the requested table
+      /** Required. Project ID of the requested table
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the requested table */
+      /** Required. Project ID of the requested table */
       public Get setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the requested table */
+      /** Required. Dataset ID of the requested table */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the requested table
+      /** Required. Dataset ID of the requested table
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the requested table */
+      /** Required. Dataset ID of the requested table */
       public Get setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
 
-      /** Table ID of the requested table */
+      /** Required. Table ID of the requested table */
       @com.google.api.client.util.Key
       private java.lang.String tableId;
 
-      /** Table ID of the requested table
+      /** Required. Table ID of the requested table
        */
       public java.lang.String getTableId() {
         return tableId;
       }
 
-      /** Table ID of the requested table */
+      /** Required. Table ID of the requested table */
       public Get setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = tableId;
         return this;
       }
 
-      /** List of fields to return (comma-separated). If unspecified, all fields are returned */
+      /**
+       * List of table schema fields to return (comma-separated). If unspecified, all fields are
+       * returned. A fieldMask cannot be used here because the fields will automatically be
+       * converted from camelCase to snake_case and the conversion will fail if there are
+       * underscores. Since these are fields in BigQuery table schemas, underscores are allowed.
+       */
       @com.google.api.client.util.Key
       private java.lang.String selectedFields;
 
-      /** List of fields to return (comma-separated). If unspecified, all fields are returned
+      /** List of table schema fields to return (comma-separated). If unspecified, all fields are returned. A
+     fieldMask cannot be used here because the fields will automatically be converted from camelCase to
+     snake_case and the conversion will fail if there are underscores. Since these are fields in
+     BigQuery table schemas, underscores are allowed.
        */
       public java.lang.String getSelectedFields() {
         return selectedFields;
       }
 
-      /** List of fields to return (comma-separated). If unspecified, all fields are returned */
+      /**
+       * List of table schema fields to return (comma-separated). If unspecified, all fields are
+       * returned. A fieldMask cannot be used here because the fields will automatically be
+       * converted from camelCase to snake_case and the conversion will fail if there are
+       * underscores. Since these are fields in BigQuery table schemas, underscores are allowed.
+       */
       public Get setSelectedFields(java.lang.String selectedFields) {
         this.selectedFields = selectedFields;
         return this;
       }
 
       /**
-       * Specifies the view that determines which table information is returned. By default, basic
-       * table information and storage statistics (STORAGE_STATS) are returned.
+       * Optional. Specifies the view that determines which table information is returned. By
+       * default, basic table information and storage statistics (STORAGE_STATS) are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** Specifies the view that determines which table information is returned. By default, basic table
-     information and storage statistics (STORAGE_STATS) are returned.
+      /** Optional. Specifies the view that determines which table information is returned. By default, basic
+     table information and storage statistics (STORAGE_STATS) are returned.
        */
       public java.lang.String getView() {
         return view;
       }
 
       /**
-       * Specifies the view that determines which table information is returned. By default, basic
-       * table information and storage statistics (STORAGE_STATS) are returned.
+       * Optional. Specifies the view that determines which table information is returned. By
+       * default, basic table information and storage statistics (STORAGE_STATS) are returned.
        */
       public Get setView(java.lang.String view) {
         this.view = view;
@@ -5434,8 +6772,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetIamPolicy setAlt(java.lang.String alt) {
         return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
       }
 
       @Override
@@ -5464,8 +6817,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public GetIamPolicy setUserIp(java.lang.String userIp) {
-        return (GetIamPolicy) super.setUserIp(userIp);
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -5512,8 +6870,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the new table
-     * @param datasetId Dataset ID of the new table
+     * @param projectId Required. Project ID of the new table
+     * @param datasetId Required. Dataset ID of the new table
      * @param content the {@link com.google.api.services.bigquery.model.Table}
      * @return the request
      */
@@ -5525,7 +6883,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Insert extends BigqueryRequest<com.google.api.services.bigquery.model.Table> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}/tables";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Creates a new, empty table in the dataset.
@@ -5538,20 +6902,45 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the new table
-       * @param datasetId Dataset ID of the new table
+       * @param projectId Required. Project ID of the new table
+       * @param datasetId Required. Dataset ID of the new table
        * @param content the {@link com.google.api.services.bigquery.model.Table}
        * @since 1.13
        */
       protected Insert(java.lang.String projectId, java.lang.String datasetId, com.google.api.services.bigquery.model.Table content) {
         super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.Table.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
       }
 
       @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -5580,38 +6969,53 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the new table */
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the new table */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the new table
+      /** Required. Project ID of the new table
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the new table */
+      /** Required. Project ID of the new table */
       public Insert setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the new table */
+      /** Required. Dataset ID of the new table */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the new table
+      /** Required. Dataset ID of the new table
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the new table */
+      /** Required. Dataset ID of the new table */
       public Insert setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
@@ -5629,8 +7033,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the tables to list
-     * @param datasetId Dataset ID of the tables to list
+     * @param projectId Required. Project ID of the tables to list
+     * @param datasetId Required. Dataset ID of the tables to list
      * @return the request
      */
     public List list(java.lang.String projectId, java.lang.String datasetId) throws java.io.IOException {
@@ -5641,7 +7045,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends BigqueryRequest<com.google.api.services.bigquery.model.TableList> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}/tables";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Lists all tables in the specified dataset. Requires the READER dataset role.
@@ -5653,14 +7063,24 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the tables to list
-       * @param datasetId Dataset ID of the tables to list
+       * @param projectId Required. Project ID of the tables to list
+       * @param datasetId Required. Dataset ID of the tables to list
        * @since 1.13
        */
       protected List(java.lang.String projectId, java.lang.String datasetId) {
         super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.TableList.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -5674,8 +7094,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -5704,53 +7139,75 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the tables to list */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the tables to list */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the tables to list
+      /** Required. Project ID of the tables to list
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the tables to list */
+      /** Required. Project ID of the tables to list */
       public List setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the tables to list */
+      /** Required. Dataset ID of the tables to list */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the tables to list
+      /** Required. Dataset ID of the tables to list
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the tables to list */
+      /** Required. Dataset ID of the tables to list */
       public List setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
 
-      /** Maximum number of results to return */
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of results to return
+      /** The maximum number of results to return in a single response page. Leverage the page tokens to
+     iterate through the entire collection.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return */
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -5780,16 +7237,16 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Updates information in an existing table. The update method replaces the entire table resource,
      * whereas the patch method only replaces fields that are provided in the submitted table resource.
-     * This method supports patch semantics.
+     * This method supports RFC5789 patch semantics.
      *
      * Create a request for the method "tables.patch".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the table to update
-     * @param datasetId Dataset ID of the table to update
-     * @param tableId Table ID of the table to update
+     * @param projectId Required. Project ID of the table to update
+     * @param datasetId Required. Dataset ID of the table to update
+     * @param tableId Required. Table ID of the table to update
      * @param content the {@link com.google.api.services.bigquery.model.Table}
      * @return the request
      */
@@ -5801,12 +7258,21 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Patch extends BigqueryRequest<com.google.api.services.bigquery.model.Table> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}/tables/{tableId}";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates information in an existing table. The update method replaces the entire table resource,
        * whereas the patch method only replaces fields that are provided in the submitted table
-       * resource. This method supports patch semantics.
+       * resource. This method supports RFC5789 patch semantics.
        *
        * Create a request for the method "tables.patch".
        *
@@ -5816,22 +7282,52 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the table to update
-       * @param datasetId Dataset ID of the table to update
-       * @param tableId Table ID of the table to update
+       * @param projectId Required. Project ID of the table to update
+       * @param datasetId Required. Dataset ID of the table to update
+       * @param tableId Required. Table ID of the table to update
        * @param content the {@link com.google.api.services.bigquery.model.Table}
        * @since 1.13
        */
       protected Patch(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, com.google.api.services.bigquery.model.Table content) {
         super(Bigquery.this, "PATCH", REST_PATH, content, com.google.api.services.bigquery.model.Table.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -5860,69 +7356,89 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the table to update */
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the table to update */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the table to update
+      /** Required. Project ID of the table to update
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the table to update */
+      /** Required. Project ID of the table to update */
       public Patch setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the table to update */
+      /** Required. Dataset ID of the table to update */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the table to update
+      /** Required. Dataset ID of the table to update
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the table to update */
+      /** Required. Dataset ID of the table to update */
       public Patch setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
 
-      /** Table ID of the table to update */
+      /** Required. Table ID of the table to update */
       @com.google.api.client.util.Key
       private java.lang.String tableId;
 
-      /** Table ID of the table to update
+      /** Required. Table ID of the table to update
        */
       public java.lang.String getTableId() {
         return tableId;
       }
 
-      /** Table ID of the table to update */
+      /** Required. Table ID of the table to update */
       public Patch setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = tableId;
         return this;
       }
 
-      /** When true will autodetect schema, else will keep original schema */
+      /** Optional.  When true will autodetect schema, else will keep original schema */
       @com.google.api.client.util.Key("autodetect_schema")
       private java.lang.Boolean autodetectSchema;
 
-      /** When true will autodetect schema, else will keep original schema
+      /** Optional.  When true will autodetect schema, else will keep original schema
        */
       public java.lang.Boolean getAutodetectSchema() {
         return autodetectSchema;
       }
 
-      /** When true will autodetect schema, else will keep original schema */
+      /** Optional.  When true will autodetect schema, else will keep original schema */
       public Patch setAutodetectSchema(java.lang.Boolean autodetectSchema) {
         this.autodetectSchema = autodetectSchema;
         return this;
@@ -5990,8 +7506,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SetIamPolicy setAlt(java.lang.String alt) {
         return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
       }
 
       @Override
@@ -6020,8 +7551,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public SetIamPolicy setUserIp(java.lang.String userIp) {
-        return (SetIamPolicy) super.setUserIp(userIp);
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -6121,8 +7657,23 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public TestIamPermissions setAlt(java.lang.String alt) {
         return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
       }
 
       @Override
@@ -6151,8 +7702,13 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public TestIamPermissions setUserIp(java.lang.String userIp) {
-        return (TestIamPermissions) super.setUserIp(userIp);
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -6192,17 +7748,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates information in an existing table. The update method replaces the entire table resource,
-     * whereas the patch method only replaces fields that are provided in the submitted table resource.
+     * Updates information in an existing table. The update method replaces the entire Table resource,
+     * whereas the patch method only replaces fields that are provided in the submitted Table resource.
      *
      * Create a request for the method "tables.update".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the table to update
-     * @param datasetId Dataset ID of the table to update
-     * @param tableId Table ID of the table to update
+     * @param projectId Required. Project ID of the table to update
+     * @param datasetId Required. Dataset ID of the table to update
+     * @param tableId Required. Table ID of the table to update
      * @param content the {@link com.google.api.services.bigquery.model.Table}
      * @return the request
      */
@@ -6214,11 +7770,20 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
     public class Update extends BigqueryRequest<com.google.api.services.bigquery.model.Table> {
 
-      private static final String REST_PATH = "projects/{projectId}/datasets/{datasetId}/tables/{tableId}";
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates information in an existing table. The update method replaces the entire table resource,
-       * whereas the patch method only replaces fields that are provided in the submitted table
+       * Updates information in an existing table. The update method replaces the entire Table resource,
+       * whereas the patch method only replaces fields that are provided in the submitted Table
        * resource.
        *
        * Create a request for the method "tables.update".
@@ -6229,22 +7794,52 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the table to update
-       * @param datasetId Dataset ID of the table to update
-       * @param tableId Table ID of the table to update
+       * @param projectId Required. Project ID of the table to update
+       * @param datasetId Required. Dataset ID of the table to update
+       * @param tableId Required. Table ID of the table to update
        * @param content the {@link com.google.api.services.bigquery.model.Table}
        * @since 1.13
        */
       protected Update(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, com.google.api.services.bigquery.model.Table content) {
         super(Bigquery.this, "PUT", REST_PATH, content, com.google.api.services.bigquery.model.Table.class);
         this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
       }
 
       @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -6273,69 +7868,89 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
       }
 
-      /** Project ID of the table to update */
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the table to update */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the table to update
+      /** Required. Project ID of the table to update
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the table to update */
+      /** Required. Project ID of the table to update */
       public Update setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.projectId = projectId;
         return this;
       }
 
-      /** Dataset ID of the table to update */
+      /** Required. Dataset ID of the table to update */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the table to update
+      /** Required. Dataset ID of the table to update
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the table to update */
+      /** Required. Dataset ID of the table to update */
       public Update setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.datasetId = datasetId;
         return this;
       }
 
-      /** Table ID of the table to update */
+      /** Required. Table ID of the table to update */
       @com.google.api.client.util.Key
       private java.lang.String tableId;
 
-      /** Table ID of the table to update
+      /** Required. Table ID of the table to update
        */
       public java.lang.String getTableId() {
         return tableId;
       }
 
-      /** Table ID of the table to update */
+      /** Required. Table ID of the table to update */
       public Update setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.tableId = tableId;
         return this;
       }
 
-      /** When true will autodetect schema, else will keep original schema */
+      /** Optional.  When true will autodetect schema, else will keep original schema */
       @com.google.api.client.util.Key("autodetect_schema")
       private java.lang.Boolean autodetectSchema;
 
-      /** When true will autodetect schema, else will keep original schema
+      /** Optional.  When true will autodetect schema, else will keep original schema
        */
       public java.lang.Boolean getAutodetectSchema() {
         return autodetectSchema;
       }
 
-      /** When true will autodetect schema, else will keep original schema */
+      /** Optional.  When true will autodetect schema, else will keep original schema */
       public Update setAutodetectSchema(java.lang.Boolean autodetectSchema) {
         this.autodetectSchema = autodetectSchema;
         return this;

@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for QueryParameterType.
+ * The type of a query parameter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.bigquery.model;
 public final class QueryParameterType extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] The type of the array's elements, if this is an array.
+   * Optional. The type of the array's elements, if this is an array.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QueryParameterType arrayType;
 
   /**
-   * [Optional] The element type of the range, if this is a range.
+   * Optional. The element type of the range, if this is a range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QueryParameterType rangeElementType;
 
   /**
-   * [Optional] The types of the fields of this struct, in order, if this is a struct.
+   * Optional. The types of the fields of this struct, in order, if this is a struct.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,14 +57,14 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] The top level type of this field.
+   * Required. The top level type of this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * [Optional] The type of the array's elements, if this is an array.
+   * Optional. The type of the array's elements, if this is an array.
    * @return value or {@code null} for none
    */
   public QueryParameterType getArrayType() {
@@ -72,7 +72,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Optional] The type of the array's elements, if this is an array.
+   * Optional. The type of the array's elements, if this is an array.
    * @param arrayType arrayType or {@code null} for none
    */
   public QueryParameterType setArrayType(QueryParameterType arrayType) {
@@ -81,7 +81,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Optional] The element type of the range, if this is a range.
+   * Optional. The element type of the range, if this is a range.
    * @return value or {@code null} for none
    */
   public QueryParameterType getRangeElementType() {
@@ -89,7 +89,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Optional] The element type of the range, if this is a range.
+   * Optional. The element type of the range, if this is a range.
    * @param rangeElementType rangeElementType or {@code null} for none
    */
   public QueryParameterType setRangeElementType(QueryParameterType rangeElementType) {
@@ -98,7 +98,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Optional] The types of the fields of this struct, in order, if this is a struct.
+   * Optional. The types of the fields of this struct, in order, if this is a struct.
    * @return value or {@code null} for none
    */
   public java.util.List<StructTypes> getStructTypes() {
@@ -106,7 +106,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Optional] The types of the fields of this struct, in order, if this is a struct.
+   * Optional. The types of the fields of this struct, in order, if this is a struct.
    * @param structTypes structTypes or {@code null} for none
    */
   public QueryParameterType setStructTypes(java.util.List<StructTypes> structTypes) {
@@ -115,7 +115,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] The top level type of this field.
+   * Required. The top level type of this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -123,7 +123,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] The top level type of this field.
+   * Required. The top level type of this field.
    * @param type type or {@code null} for none
    */
   public QueryParameterType setType(java.lang.String type) {
@@ -142,33 +142,33 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   }
 
   /**
-   * Model definition for QueryParameterTypeStructTypes.
+   * The type of a struct parameter.
    */
   public static final class StructTypes extends com.google.api.client.json.GenericJson {
 
     /**
-     * [Optional] Human-oriented description of the field.
+     * Optional. Human-oriented description of the field.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String description;
 
     /**
-     * [Optional] The name of this field.
+     * Optional. The name of this field.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String name;
 
     /**
-     * [Required] The type of this field.
+     * Required. The type of this field.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private QueryParameterType type;
 
     /**
-     * [Optional] Human-oriented description of the field.
+     * Optional. Human-oriented description of the field.
      * @return value or {@code null} for none
      */
     public java.lang.String getDescription() {
@@ -176,7 +176,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
     }
 
     /**
-     * [Optional] Human-oriented description of the field.
+     * Optional. Human-oriented description of the field.
      * @param description description or {@code null} for none
      */
     public StructTypes setDescription(java.lang.String description) {
@@ -185,7 +185,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
     }
 
     /**
-     * [Optional] The name of this field.
+     * Optional. The name of this field.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -193,7 +193,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
     }
 
     /**
-     * [Optional] The name of this field.
+     * Optional. The name of this field.
      * @param name name or {@code null} for none
      */
     public StructTypes setName(java.lang.String name) {
@@ -202,7 +202,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
     }
 
     /**
-     * [Required] The type of this field.
+     * Required. The type of this field.
      * @return value or {@code null} for none
      */
     public QueryParameterType getType() {
@@ -210,7 +210,7 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
     }
 
     /**
-     * [Required] The type of this field.
+     * Required. The type of this field.
      * @param type type or {@code null} for none
      */
     public StructTypes setType(QueryParameterType type) {

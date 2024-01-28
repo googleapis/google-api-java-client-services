@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for JobConfigurationQuery.
+ * JobConfigurationQuery configures a BigQuery query job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,25 +30,24 @@ package com.google.api.services.bigquery.model;
 public final class JobConfigurationQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily
+   * Optional. If true and query uses legacy SQL dialect, allows the query to produce arbitrarily
    * large result tables at a slight cost in performance. Requires destinationTable to be set. For
-   * standard SQL queries, this flag is ignored and large results are always allowed. However, you
-   * must still set destinationTable when result size exceeds the allowed maximum response size.
+   * GoogleSQL queries, this flag is ignored and large results are always allowed. However, you must
+   * still set destinationTable when result size exceeds the allowed maximum response size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowLargeResults;
 
   /**
-   * [Beta] Clustering specification for the destination table. Must be specified with time-based
-   * partitioning, data in the table will be first partitioned and subsequently clustered.
+   * Clustering specification for the destination table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Clustering clustering;
 
   /**
-   * Connection properties.
+   * Connection properties which can modify the query behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +68,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private java.lang.Boolean continuous;
 
   /**
-   * [Optional] Specifies whether the job is allowed to create new tables. The following values are
-   * supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+   * Optional. Specifies whether the job is allowed to create new tables. The following values are
+   * supported: * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. *
    * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
    * the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions
    * occur as one atomic update upon job completion.
@@ -80,41 +79,46 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private java.lang.String createDisposition;
 
   /**
-   * If true, creates a new session, where session id will be a server generated random id. If
-   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
-   * query in non-session mode.
+   * If this property is true, the job creates a new session using a randomly generated session_id.
+   * To continue using a created session with subsequent queries, pass the existing session
+   * identifier as a `ConnectionProperty` value. The session identifier is returned as part of the
+   * `SessionInfo` message within the query statistics. The new session's location will be set to
+   * `Job.JobReference.location` if it is present, otherwise it's set to the default location based
+   * on existing routing logic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean createSession;
 
   /**
-   * [Optional] Specifies the default dataset to use for unqualified table names in the query. Note
-   * that this does not alter behavior of unqualified dataset names.
+   * Optional. Specifies the default dataset to use for unqualified table names in the query. This
+   * setting does not alter behavior of unqualified dataset names. Setting the system variable
+   * `@@dataset_id` achieves the same behavior. See https://cloud.google.com/bigquery/docs/reference
+   * /system-variables for more information on system variables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DatasetReference defaultDataset;
 
   /**
-   * Custom encryption configuration (e.g., Cloud KMS keys).
+   * Custom encryption configuration (e.g., Cloud KMS keys)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EncryptionConfiguration destinationEncryptionConfiguration;
 
   /**
-   * [Optional] Describes the table where the query results should be stored. If not present, a new
-   * table will be created to store the results. This property must be set for large results that
-   * exceed the maximum response size.
+   * Optional. Describes the table where the query results should be stored. This property must be
+   * set for large results that exceed the maximum response size. For queries that produce anonymous
+   * (cached) results, this field will be populated by BigQuery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableReference destinationTable;
 
   /**
-   * [Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields
-   * in the query results. allowLargeResults must be true if this is set to false. For standard SQL
+   * Optional. If true and query uses legacy SQL dialect, flattens all nested and repeated fields in
+   * the query results. allowLargeResults must be true if this is set to false. For GoogleSQL
    * queries, this flag is ignored and results are never flattened.
    * The value may be {@code null}.
    */
@@ -122,25 +126,29 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private java.lang.Boolean flattenResults;
 
   /**
-   * [Optional] Limits the billing tier for this job. Queries that have resource usage beyond this
-   * tier will fail (without incurring a charge). If unspecified, this will be set to your project
-   * default.
+   * Optional. [Deprecated] Maximum billing tier allowed for this query. The billing tier controls
+   * the amount of compute resources allotted to the query, and multiplies the on-demand cost of the
+   * query accordingly. A query that runs within its allotted resources will succeed and indicate
+   * its billing tier in statistics.query.billingTier, but if the query exceeds its allotted
+   * resources, it will fail with billingTierLimitExceeded. WARNING: The billed byte amount can be
+   * multiplied by an amount up to this number! Most users should not need to alter this setting,
+   * and we recommend that you avoid introducing new uses of it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maximumBillingTier;
 
   /**
-   * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond
-   * this limit will fail (without incurring a charge). If unspecified, this will be set to your
-   * project default.
+   * Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit
+   * will fail (without incurring a charge). If unspecified, this will be set to your project
+   * default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maximumBytesBilled;
 
   /**
-   * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
+   * GoogleSQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
    * named (@myparam) query parameters in this query.
    * The value may be {@code null}.
    */
@@ -155,7 +163,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private java.lang.Boolean preserveNulls;
 
   /**
-   * [Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH.
+   * Optional. Specifies a priority for the query. Possible values include INTERACTIVE and BATCH.
    * The default value is INTERACTIVE.
    * The value may be {@code null}.
    */
@@ -164,22 +172,22 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
 
   /**
    * [Required] SQL query text to execute. The useLegacySql field can be used to indicate whether
-   * the query uses legacy SQL or standard SQL.
+   * the query uses legacy SQL or GoogleSQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
 
   /**
-   * Query parameters for standard SQL queries.
+   * Query parameters for GoogleSQL queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<QueryParameter> queryParameters;
 
   /**
-   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
-   * and rangePartitioning should be specified.
+   * Range partitioning specification for the destination table. Only one of timePartitioning and
+   * rangePartitioning should be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,18 +198,35 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    * Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when
    * writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table,
    * specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the
-   * schema. One or more of the following values are specified: ALLOW_FIELD_ADDITION: allow adding a
-   * nullable field to the schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the
-   * original schema to nullable.
+   * schema. One or more of the following values are specified: * ALLOW_FIELD_ADDITION: allow adding
+   * a nullable field to the schema. * ALLOW_FIELD_RELAXATION: allow relaxing a required field in
+   * the original schema to nullable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> schemaUpdateOptions;
 
   /**
-   * [Optional] If querying an external data source outside of BigQuery, describes the data format,
-   * location and other properties of the data source. By defining these properties, the data source
-   * can then be queried as if it were a standard BigQuery table.
+   * Options controlling the execution of scripts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScriptOptions scriptOptions;
+
+  /**
+   * Output only. System variables for GoogleSQL queries. A system variable is output if the
+   * variable is settable and its value differs from the system default. "@@" prefix is not included
+   * in the name of the System variables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SystemVariables systemVariables;
+
+  /**
+   * Optional. You can specify external table definitions, which operate as ephemeral tables that
+   * can be queried. These definitions are configured using a JSON map, where the string key
+   * represents the table identifier, and the value is the corresponding external data configuration
+   * object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,8 +247,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private TimePartitioning timePartitioning;
 
   /**
-   * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is
-   * true. If set to false, the query will use BigQuery's standard SQL:
+   * Optional. Specifies whether to use BigQuery's legacy SQL dialect for this query. The default
+   * value is true. If set to false, the query will use BigQuery's GoogleSQL:
    * https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
    * of flattenResults is ignored; query will be run as if flattenResults is false.
    * The value may be {@code null}.
@@ -232,7 +257,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private java.lang.Boolean useLegacySql;
 
   /**
-   * [Optional] Whether to look for the result in the query cache. The query cache is a best-effort
+   * Optional. Whether to look for the result in the query cache. The query cache is a best-effort
    * cache that will be flushed whenever tables in the query are modified. Moreover, the query cache
    * is only available when a query does not have a destination table specified. The default value
    * is true.
@@ -249,24 +274,24 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private java.util.List<UserDefinedFunctionResource> userDefinedFunctionResources;
 
   /**
-   * [Optional] Specifies the action that occurs if the destination table already exists. The
-   * following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery
-   * overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table
-   * already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already
-   * exists and contains data, a 'duplicate' error is returned in the job result. The default value
-   * is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job
-   * successfully. Creation, truncation and append actions occur as one atomic update upon job
-   * completion.
+   * Optional. Specifies the action that occurs if the destination table already exists. The
+   * following values are supported: * WRITE_TRUNCATE: If the table already exists, BigQuery
+   * overwrites the data, removes the constraints, and uses the schema from the query result. *
+   * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. *
+   * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in
+   * the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if
+   * BigQuery is able to complete the job successfully. Creation, truncation and append actions
+   * occur as one atomic update upon job completion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String writeDisposition;
 
   /**
-   * [Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily
+   * Optional. If true and query uses legacy SQL dialect, allows the query to produce arbitrarily
    * large result tables at a slight cost in performance. Requires destinationTable to be set. For
-   * standard SQL queries, this flag is ignored and large results are always allowed. However, you
-   * must still set destinationTable when result size exceeds the allowed maximum response size.
+   * GoogleSQL queries, this flag is ignored and large results are always allowed. However, you must
+   * still set destinationTable when result size exceeds the allowed maximum response size.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowLargeResults() {
@@ -274,10 +299,10 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily
+   * Optional. If true and query uses legacy SQL dialect, allows the query to produce arbitrarily
    * large result tables at a slight cost in performance. Requires destinationTable to be set. For
-   * standard SQL queries, this flag is ignored and large results are always allowed. However, you
-   * must still set destinationTable when result size exceeds the allowed maximum response size.
+   * GoogleSQL queries, this flag is ignored and large results are always allowed. However, you must
+   * still set destinationTable when result size exceeds the allowed maximum response size.
    * @param allowLargeResults allowLargeResults or {@code null} for none
    */
   public JobConfigurationQuery setAllowLargeResults(java.lang.Boolean allowLargeResults) {
@@ -302,10 +327,10 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    * </p>
    *
    * <p>
-   *[ Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large
-[ result tables at a slight cost in performance. Requires destinationTable to be set. For standard
-[ SQL queries, this flag is ignored and large results are always allowed. However, you must still
-[ set destinationTable when result size exceeds the allowed maximum response size.
+   * Optional. If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large
+ result tables at a slight cost in performance. Requires destinationTable to be set. For GoogleSQL
+ queries, this flag is ignored and large results are always allowed. However, you must still set
+ destinationTable when result size exceeds the allowed maximum response size.
    * </p>
    */
   public boolean isAllowLargeResults() {
@@ -316,8 +341,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Beta] Clustering specification for the destination table. Must be specified with time-based
-   * partitioning, data in the table will be first partitioned and subsequently clustered.
+   * Clustering specification for the destination table.
    * @return value or {@code null} for none
    */
   public Clustering getClustering() {
@@ -325,8 +349,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Beta] Clustering specification for the destination table. Must be specified with time-based
-   * partitioning, data in the table will be first partitioned and subsequently clustered.
+   * Clustering specification for the destination table.
    * @param clustering clustering or {@code null} for none
    */
   public JobConfigurationQuery setClustering(Clustering clustering) {
@@ -335,7 +358,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Connection properties.
+   * Connection properties which can modify the query behavior.
    * @return value or {@code null} for none
    */
   public java.util.List<ConnectionProperty> getConnectionProperties() {
@@ -343,7 +366,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Connection properties.
+   * Connection properties which can modify the query behavior.
    * @param connectionProperties connectionProperties or {@code null} for none
    */
   public JobConfigurationQuery setConnectionProperties(java.util.List<ConnectionProperty> connectionProperties) {
@@ -371,8 +394,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Specifies whether the job is allowed to create new tables. The following values are
-   * supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+   * Optional. Specifies whether the job is allowed to create new tables. The following values are
+   * supported: * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. *
    * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
    * the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions
    * occur as one atomic update upon job completion.
@@ -383,8 +406,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Specifies whether the job is allowed to create new tables. The following values are
-   * supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
+   * Optional. Specifies whether the job is allowed to create new tables. The following values are
+   * supported: * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. *
    * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
    * the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions
    * occur as one atomic update upon job completion.
@@ -396,9 +419,12 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * If true, creates a new session, where session id will be a server generated random id. If
-   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
-   * query in non-session mode.
+   * If this property is true, the job creates a new session using a randomly generated session_id.
+   * To continue using a created session with subsequent queries, pass the existing session
+   * identifier as a `ConnectionProperty` value. The session identifier is returned as part of the
+   * `SessionInfo` message within the query statistics. The new session's location will be set to
+   * `Job.JobReference.location` if it is present, otherwise it's set to the default location based
+   * on existing routing logic.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCreateSession() {
@@ -406,9 +432,12 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * If true, creates a new session, where session id will be a server generated random id. If
-   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
-   * query in non-session mode.
+   * If this property is true, the job creates a new session using a randomly generated session_id.
+   * To continue using a created session with subsequent queries, pass the existing session
+   * identifier as a `ConnectionProperty` value. The session identifier is returned as part of the
+   * `SessionInfo` message within the query statistics. The new session's location will be set to
+   * `Job.JobReference.location` if it is present, otherwise it's set to the default location based
+   * on existing routing logic.
    * @param createSession createSession or {@code null} for none
    */
   public JobConfigurationQuery setCreateSession(java.lang.Boolean createSession) {
@@ -417,8 +446,10 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Specifies the default dataset to use for unqualified table names in the query. Note
-   * that this does not alter behavior of unqualified dataset names.
+   * Optional. Specifies the default dataset to use for unqualified table names in the query. This
+   * setting does not alter behavior of unqualified dataset names. Setting the system variable
+   * `@@dataset_id` achieves the same behavior. See https://cloud.google.com/bigquery/docs/reference
+   * /system-variables for more information on system variables.
    * @return value or {@code null} for none
    */
   public DatasetReference getDefaultDataset() {
@@ -426,8 +457,10 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Specifies the default dataset to use for unqualified table names in the query. Note
-   * that this does not alter behavior of unqualified dataset names.
+   * Optional. Specifies the default dataset to use for unqualified table names in the query. This
+   * setting does not alter behavior of unqualified dataset names. Setting the system variable
+   * `@@dataset_id` achieves the same behavior. See https://cloud.google.com/bigquery/docs/reference
+   * /system-variables for more information on system variables.
    * @param defaultDataset defaultDataset or {@code null} for none
    */
   public JobConfigurationQuery setDefaultDataset(DatasetReference defaultDataset) {
@@ -436,7 +469,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Custom encryption configuration (e.g., Cloud KMS keys).
+   * Custom encryption configuration (e.g., Cloud KMS keys)
    * @return value or {@code null} for none
    */
   public EncryptionConfiguration getDestinationEncryptionConfiguration() {
@@ -444,7 +477,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Custom encryption configuration (e.g., Cloud KMS keys).
+   * Custom encryption configuration (e.g., Cloud KMS keys)
    * @param destinationEncryptionConfiguration destinationEncryptionConfiguration or {@code null} for none
    */
   public JobConfigurationQuery setDestinationEncryptionConfiguration(EncryptionConfiguration destinationEncryptionConfiguration) {
@@ -453,9 +486,9 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Describes the table where the query results should be stored. If not present, a new
-   * table will be created to store the results. This property must be set for large results that
-   * exceed the maximum response size.
+   * Optional. Describes the table where the query results should be stored. This property must be
+   * set for large results that exceed the maximum response size. For queries that produce anonymous
+   * (cached) results, this field will be populated by BigQuery.
    * @return value or {@code null} for none
    */
   public TableReference getDestinationTable() {
@@ -463,9 +496,9 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Describes the table where the query results should be stored. If not present, a new
-   * table will be created to store the results. This property must be set for large results that
-   * exceed the maximum response size.
+   * Optional. Describes the table where the query results should be stored. This property must be
+   * set for large results that exceed the maximum response size. For queries that produce anonymous
+   * (cached) results, this field will be populated by BigQuery.
    * @param destinationTable destinationTable or {@code null} for none
    */
   public JobConfigurationQuery setDestinationTable(TableReference destinationTable) {
@@ -474,8 +507,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields
-   * in the query results. allowLargeResults must be true if this is set to false. For standard SQL
+   * Optional. If true and query uses legacy SQL dialect, flattens all nested and repeated fields in
+   * the query results. allowLargeResults must be true if this is set to false. For GoogleSQL
    * queries, this flag is ignored and results are never flattened.
    * @return value or {@code null} for none
    */
@@ -484,8 +517,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields
-   * in the query results. allowLargeResults must be true if this is set to false. For standard SQL
+   * Optional. If true and query uses legacy SQL dialect, flattens all nested and repeated fields in
+   * the query results. allowLargeResults must be true if this is set to false. For GoogleSQL
    * queries, this flag is ignored and results are never flattened.
    * @param flattenResults flattenResults or {@code null} for none
    */
@@ -511,9 +544,9 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    * </p>
    *
    * <p>
-   *[ Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields in
-[ the query results. allowLargeResults must be true if this is set to false. For standard SQL
-[ queries, this flag is ignored and results are never flattened.
+   * Optional. If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the
+ query results. allowLargeResults must be true if this is set to false. For GoogleSQL queries, this
+ flag is ignored and results are never flattened.
    * </p>
    */
   public boolean isFlattenResults() {
@@ -524,9 +557,13 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Limits the billing tier for this job. Queries that have resource usage beyond this
-   * tier will fail (without incurring a charge). If unspecified, this will be set to your project
-   * default.
+   * Optional. [Deprecated] Maximum billing tier allowed for this query. The billing tier controls
+   * the amount of compute resources allotted to the query, and multiplies the on-demand cost of the
+   * query accordingly. A query that runs within its allotted resources will succeed and indicate
+   * its billing tier in statistics.query.billingTier, but if the query exceeds its allotted
+   * resources, it will fail with billingTierLimitExceeded. WARNING: The billed byte amount can be
+   * multiplied by an amount up to this number! Most users should not need to alter this setting,
+   * and we recommend that you avoid introducing new uses of it.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaximumBillingTier() {
@@ -534,9 +571,13 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Limits the billing tier for this job. Queries that have resource usage beyond this
-   * tier will fail (without incurring a charge). If unspecified, this will be set to your project
-   * default.
+   * Optional. [Deprecated] Maximum billing tier allowed for this query. The billing tier controls
+   * the amount of compute resources allotted to the query, and multiplies the on-demand cost of the
+   * query accordingly. A query that runs within its allotted resources will succeed and indicate
+   * its billing tier in statistics.query.billingTier, but if the query exceeds its allotted
+   * resources, it will fail with billingTierLimitExceeded. WARNING: The billed byte amount can be
+   * multiplied by an amount up to this number! Most users should not need to alter this setting,
+   * and we recommend that you avoid introducing new uses of it.
    * @param maximumBillingTier maximumBillingTier or {@code null} for none
    */
   public JobConfigurationQuery setMaximumBillingTier(java.lang.Integer maximumBillingTier) {
@@ -545,9 +586,9 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond
-   * this limit will fail (without incurring a charge). If unspecified, this will be set to your
-   * project default.
+   * Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit
+   * will fail (without incurring a charge). If unspecified, this will be set to your project
+   * default.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaximumBytesBilled() {
@@ -555,9 +596,9 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond
-   * this limit will fail (without incurring a charge). If unspecified, this will be set to your
-   * project default.
+   * Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit
+   * will fail (without incurring a charge). If unspecified, this will be set to your project
+   * default.
    * @param maximumBytesBilled maximumBytesBilled or {@code null} for none
    */
   public JobConfigurationQuery setMaximumBytesBilled(java.lang.Long maximumBytesBilled) {
@@ -566,7 +607,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
+   * GoogleSQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
    * named (@myparam) query parameters in this query.
    * @return value or {@code null} for none
    */
@@ -575,7 +616,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
+   * GoogleSQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use
    * named (@myparam) query parameters in this query.
    * @param parameterMode parameterMode or {@code null} for none
    */
@@ -602,7 +643,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH.
+   * Optional. Specifies a priority for the query. Possible values include INTERACTIVE and BATCH.
    * The default value is INTERACTIVE.
    * @return value or {@code null} for none
    */
@@ -611,7 +652,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH.
+   * Optional. Specifies a priority for the query. Possible values include INTERACTIVE and BATCH.
    * The default value is INTERACTIVE.
    * @param priority priority or {@code null} for none
    */
@@ -622,7 +663,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
 
   /**
    * [Required] SQL query text to execute. The useLegacySql field can be used to indicate whether
-   * the query uses legacy SQL or standard SQL.
+   * the query uses legacy SQL or GoogleSQL.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -631,7 +672,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
 
   /**
    * [Required] SQL query text to execute. The useLegacySql field can be used to indicate whether
-   * the query uses legacy SQL or standard SQL.
+   * the query uses legacy SQL or GoogleSQL.
    * @param query query or {@code null} for none
    */
   public JobConfigurationQuery setQuery(java.lang.String query) {
@@ -640,7 +681,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Query parameters for standard SQL queries.
+   * Query parameters for GoogleSQL queries.
    * @return value or {@code null} for none
    */
   public java.util.List<QueryParameter> getQueryParameters() {
@@ -648,7 +689,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Query parameters for standard SQL queries.
+   * Query parameters for GoogleSQL queries.
    * @param queryParameters queryParameters or {@code null} for none
    */
   public JobConfigurationQuery setQueryParameters(java.util.List<QueryParameter> queryParameters) {
@@ -657,8 +698,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
-   * and rangePartitioning should be specified.
+   * Range partitioning specification for the destination table. Only one of timePartitioning and
+   * rangePartitioning should be specified.
    * @return value or {@code null} for none
    */
   public RangePartitioning getRangePartitioning() {
@@ -666,8 +707,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
-   * and rangePartitioning should be specified.
+   * Range partitioning specification for the destination table. Only one of timePartitioning and
+   * rangePartitioning should be specified.
    * @param rangePartitioning rangePartitioning or {@code null} for none
    */
   public JobConfigurationQuery setRangePartitioning(RangePartitioning rangePartitioning) {
@@ -680,9 +721,9 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    * Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when
    * writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table,
    * specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the
-   * schema. One or more of the following values are specified: ALLOW_FIELD_ADDITION: allow adding a
-   * nullable field to the schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the
-   * original schema to nullable.
+   * schema. One or more of the following values are specified: * ALLOW_FIELD_ADDITION: allow adding
+   * a nullable field to the schema. * ALLOW_FIELD_RELAXATION: allow relaxing a required field in
+   * the original schema to nullable.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSchemaUpdateOptions() {
@@ -694,9 +735,9 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    * Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when
    * writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table,
    * specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the
-   * schema. One or more of the following values are specified: ALLOW_FIELD_ADDITION: allow adding a
-   * nullable field to the schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the
-   * original schema to nullable.
+   * schema. One or more of the following values are specified: * ALLOW_FIELD_ADDITION: allow adding
+   * a nullable field to the schema. * ALLOW_FIELD_RELAXATION: allow relaxing a required field in
+   * the original schema to nullable.
    * @param schemaUpdateOptions schemaUpdateOptions or {@code null} for none
    */
   public JobConfigurationQuery setSchemaUpdateOptions(java.util.List<java.lang.String> schemaUpdateOptions) {
@@ -705,9 +746,48 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] If querying an external data source outside of BigQuery, describes the data format,
-   * location and other properties of the data source. By defining these properties, the data source
-   * can then be queried as if it were a standard BigQuery table.
+   * Options controlling the execution of scripts.
+   * @return value or {@code null} for none
+   */
+  public ScriptOptions getScriptOptions() {
+    return scriptOptions;
+  }
+
+  /**
+   * Options controlling the execution of scripts.
+   * @param scriptOptions scriptOptions or {@code null} for none
+   */
+  public JobConfigurationQuery setScriptOptions(ScriptOptions scriptOptions) {
+    this.scriptOptions = scriptOptions;
+    return this;
+  }
+
+  /**
+   * Output only. System variables for GoogleSQL queries. A system variable is output if the
+   * variable is settable and its value differs from the system default. "@@" prefix is not included
+   * in the name of the System variables.
+   * @return value or {@code null} for none
+   */
+  public SystemVariables getSystemVariables() {
+    return systemVariables;
+  }
+
+  /**
+   * Output only. System variables for GoogleSQL queries. A system variable is output if the
+   * variable is settable and its value differs from the system default. "@@" prefix is not included
+   * in the name of the System variables.
+   * @param systemVariables systemVariables or {@code null} for none
+   */
+  public JobConfigurationQuery setSystemVariables(SystemVariables systemVariables) {
+    this.systemVariables = systemVariables;
+    return this;
+  }
+
+  /**
+   * Optional. You can specify external table definitions, which operate as ephemeral tables that
+   * can be queried. These definitions are configured using a JSON map, where the string key
+   * represents the table identifier, and the value is the corresponding external data configuration
+   * object.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ExternalDataConfiguration> getTableDefinitions() {
@@ -715,9 +795,10 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] If querying an external data source outside of BigQuery, describes the data format,
-   * location and other properties of the data source. By defining these properties, the data source
-   * can then be queried as if it were a standard BigQuery table.
+   * Optional. You can specify external table definitions, which operate as ephemeral tables that
+   * can be queried. These definitions are configured using a JSON map, where the string key
+   * represents the table identifier, and the value is the corresponding external data configuration
+   * object.
    * @param tableDefinitions tableDefinitions or {@code null} for none
    */
   public JobConfigurationQuery setTableDefinitions(java.util.Map<String, ExternalDataConfiguration> tableDefinitions) {
@@ -745,8 +826,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is
-   * true. If set to false, the query will use BigQuery's standard SQL:
+   * Optional. Specifies whether to use BigQuery's legacy SQL dialect for this query. The default
+   * value is true. If set to false, the query will use BigQuery's GoogleSQL:
    * https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
    * of flattenResults is ignored; query will be run as if flattenResults is false.
    * @return value or {@code null} for none
@@ -756,8 +837,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is
-   * true. If set to false, the query will use BigQuery's standard SQL:
+   * Optional. Specifies whether to use BigQuery's legacy SQL dialect for this query. The default
+   * value is true. If set to false, the query will use BigQuery's GoogleSQL:
    * https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
    * of flattenResults is ignored; query will be run as if flattenResults is false.
    * @param useLegacySql useLegacySql or {@code null} for none
@@ -784,10 +865,10 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    * </p>
    *
    * <p>
-   * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true.
- If set to false, the query will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-
- reference/ When useLegacySql is set to false, the value of flattenResults is ignored; query will be
- run as if flattenResults is false.
+   * Optional. Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value
+ is true. If set to false, the query will use BigQuery's GoogleSQL:
+ https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value of
+ flattenResults is ignored; query will be run as if flattenResults is false.
    * </p>
    */
   public boolean isUseLegacySql() {
@@ -798,7 +879,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Whether to look for the result in the query cache. The query cache is a best-effort
+   * Optional. Whether to look for the result in the query cache. The query cache is a best-effort
    * cache that will be flushed whenever tables in the query are modified. Moreover, the query cache
    * is only available when a query does not have a destination table specified. The default value
    * is true.
@@ -809,7 +890,7 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Whether to look for the result in the query cache. The query cache is a best-effort
+   * Optional. Whether to look for the result in the query cache. The query cache is a best-effort
    * cache that will be flushed whenever tables in the query are modified. Moreover, the query cache
    * is only available when a query does not have a destination table specified. The default value
    * is true.
@@ -837,10 +918,9 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    * </p>
    *
    * <p>
-   *[ Optional] Whether to look for the result in the query cache. The query cache is a best-effort
-[ cache that will be flushed whenever tables in the query are modified. Moreover, the query cache is
-[ only available when a query does not have a destination table specified. The default value is
-[ true.
+   * Optional. Whether to look for the result in the query cache. The query cache is a best-effort cache
+ that will be flushed whenever tables in the query are modified. Moreover, the query cache is only
+ available when a query does not have a destination table specified. The default value is true.
    * </p>
    */
   public boolean isUseQueryCache() {
@@ -868,14 +948,14 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Specifies the action that occurs if the destination table already exists. The
-   * following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery
-   * overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table
-   * already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already
-   * exists and contains data, a 'duplicate' error is returned in the job result. The default value
-   * is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job
-   * successfully. Creation, truncation and append actions occur as one atomic update upon job
-   * completion.
+   * Optional. Specifies the action that occurs if the destination table already exists. The
+   * following values are supported: * WRITE_TRUNCATE: If the table already exists, BigQuery
+   * overwrites the data, removes the constraints, and uses the schema from the query result. *
+   * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. *
+   * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in
+   * the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if
+   * BigQuery is able to complete the job successfully. Creation, truncation and append actions
+   * occur as one atomic update upon job completion.
    * @return value or {@code null} for none
    */
   public java.lang.String getWriteDisposition() {
@@ -883,14 +963,14 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Optional] Specifies the action that occurs if the destination table already exists. The
-   * following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery
-   * overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table
-   * already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already
-   * exists and contains data, a 'duplicate' error is returned in the job result. The default value
-   * is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job
-   * successfully. Creation, truncation and append actions occur as one atomic update upon job
-   * completion.
+   * Optional. Specifies the action that occurs if the destination table already exists. The
+   * following values are supported: * WRITE_TRUNCATE: If the table already exists, BigQuery
+   * overwrites the data, removes the constraints, and uses the schema from the query result. *
+   * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. *
+   * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in
+   * the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if
+   * BigQuery is able to complete the job successfully. Creation, truncation and append actions
+   * occur as one atomic update upon job completion.
    * @param writeDisposition writeDisposition or {@code null} for none
    */
   public JobConfigurationQuery setWriteDisposition(java.lang.String writeDisposition) {

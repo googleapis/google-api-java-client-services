@@ -30,21 +30,21 @@ package com.google.api.services.bigquery.model;
 public final class Streamingbuffer extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only] A lower-bound estimate of the number of bytes currently in the streaming buffer.
+   * Output only. A lower-bound estimate of the number of bytes currently in the streaming buffer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger estimatedBytes;
 
   /**
-   * [Output-only] A lower-bound estimate of the number of rows currently in the streaming buffer.
+   * Output only. A lower-bound estimate of the number of rows currently in the streaming buffer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger estimatedRows;
 
   /**
-   * [Output-only] Contains the timestamp of the oldest entry in the streaming buffer, in
+   * Output only. Contains the timestamp of the oldest entry in the streaming buffer, in
    * milliseconds since the epoch, if the streaming buffer is available.
    * The value may be {@code null}.
    */
@@ -52,7 +52,7 @@ public final class Streamingbuffer extends com.google.api.client.json.GenericJso
   private java.math.BigInteger oldestEntryTime;
 
   /**
-   * [Output-only] A lower-bound estimate of the number of bytes currently in the streaming buffer.
+   * Output only. A lower-bound estimate of the number of bytes currently in the streaming buffer.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getEstimatedBytes() {
@@ -60,7 +60,7 @@ public final class Streamingbuffer extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only] A lower-bound estimate of the number of bytes currently in the streaming buffer.
+   * Output only. A lower-bound estimate of the number of bytes currently in the streaming buffer.
    * @param estimatedBytes estimatedBytes or {@code null} for none
    */
   public Streamingbuffer setEstimatedBytes(java.math.BigInteger estimatedBytes) {
@@ -69,7 +69,7 @@ public final class Streamingbuffer extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only] A lower-bound estimate of the number of rows currently in the streaming buffer.
+   * Output only. A lower-bound estimate of the number of rows currently in the streaming buffer.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getEstimatedRows() {
@@ -77,7 +77,7 @@ public final class Streamingbuffer extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only] A lower-bound estimate of the number of rows currently in the streaming buffer.
+   * Output only. A lower-bound estimate of the number of rows currently in the streaming buffer.
    * @param estimatedRows estimatedRows or {@code null} for none
    */
   public Streamingbuffer setEstimatedRows(java.math.BigInteger estimatedRows) {
@@ -86,7 +86,7 @@ public final class Streamingbuffer extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only] Contains the timestamp of the oldest entry in the streaming buffer, in
+   * Output only. Contains the timestamp of the oldest entry in the streaming buffer, in
    * milliseconds since the epoch, if the streaming buffer is available.
    * @return value or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class Streamingbuffer extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only] Contains the timestamp of the oldest entry in the streaming buffer, in
+   * Output only. Contains the timestamp of the oldest entry in the streaming buffer, in
    * milliseconds since the epoch, if the streaming buffer is available.
    * @param oldestEntryTime oldestEntryTime or {@code null} for none
    */

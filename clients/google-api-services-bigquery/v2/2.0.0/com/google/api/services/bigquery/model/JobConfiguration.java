@@ -37,7 +37,7 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   private JobConfigurationTableCopy copy;
 
   /**
-   * [Optional] If set, don't actually run this job. A valid query will return a mostly empty
+   * Optional. If set, don't actually run this job. A valid query will return a mostly empty
    * response with some processing statistics, while an invalid query will return the same error it
    * would if it wasn't a dry run. Behavior of non-query jobs is undefined.
    * The value may be {@code null}.
@@ -53,15 +53,15 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   private JobConfigurationExtract extract;
 
   /**
-   * [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to
-   * terminate the job.
+   * Optional. Job timeout in milliseconds. If this time limit is exceeded, BigQuery might attempt
+   * to stop the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long jobTimeoutMs;
 
   /**
-   * [Output-only] The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
+   * Output only. The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] If set, don't actually run this job. A valid query will return a mostly empty
+   * Optional. If set, don't actually run this job. A valid query will return a mostly empty
    * response with some processing statistics, while an invalid query will return the same error it
    * would if it wasn't a dry run. Behavior of non-query jobs is undefined.
    * @return value or {@code null} for none
@@ -120,7 +120,7 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] If set, don't actually run this job. A valid query will return a mostly empty
+   * Optional. If set, don't actually run this job. A valid query will return a mostly empty
    * response with some processing statistics, while an invalid query will return the same error it
    * would if it wasn't a dry run. Behavior of non-query jobs is undefined.
    * @param dryRun dryRun or {@code null} for none
@@ -148,8 +148,8 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to
-   * terminate the job.
+   * Optional. Job timeout in milliseconds. If this time limit is exceeded, BigQuery might attempt
+   * to stop the job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getJobTimeoutMs() {
@@ -157,8 +157,8 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to
-   * terminate the job.
+   * Optional. Job timeout in milliseconds. If this time limit is exceeded, BigQuery might attempt
+   * to stop the job.
    * @param jobTimeoutMs jobTimeoutMs or {@code null} for none
    */
   public JobConfiguration setJobTimeoutMs(java.lang.Long jobTimeoutMs) {
@@ -167,7 +167,7 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output-only] The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
+   * Output only. The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
    * @return value or {@code null} for none
    */
   public java.lang.String getJobType() {
@@ -175,7 +175,7 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output-only] The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
+   * Output only. The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
    * @param jobType jobType or {@code null} for none
    */
   public JobConfiguration setJobType(java.lang.String jobType) {

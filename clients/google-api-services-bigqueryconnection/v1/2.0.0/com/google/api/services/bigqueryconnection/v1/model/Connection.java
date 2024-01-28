@@ -67,6 +67,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private CloudSqlProperties cloudSql;
 
   /**
+   * Optional. Connector configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConnectorConfiguration configuration;
+
+  /**
    * Output only. The creation timestamp of the connection.
    * The value may be {@code null}.
    */
@@ -214,6 +221,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setCloudSql(CloudSqlProperties cloudSql) {
     this.cloudSql = cloudSql;
+    return this;
+  }
+
+  /**
+   * Optional. Connector configuration.
+   * @return value or {@code null} for none
+   */
+  public ConnectorConfiguration getConfiguration() {
+    return configuration;
+  }
+
+  /**
+   * Optional. Connector configuration.
+   * @param configuration configuration or {@code null} for none
+   */
+  public Connection setConfiguration(ConnectorConfiguration configuration) {
+    this.configuration = configuration;
     return this;
   }
 

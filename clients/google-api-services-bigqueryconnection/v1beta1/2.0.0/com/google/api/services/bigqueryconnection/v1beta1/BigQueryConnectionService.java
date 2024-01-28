@@ -25,7 +25,7 @@ package com.google.api.services.bigqueryconnection.v1beta1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/bigquery/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/bigquery/docs/connections-api-intro" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

@@ -51,6 +51,19 @@ public final class CloudAiNlLlmProtoServiceGenerateMultiModalResponse extends co
   private CloudAiNlLlmProtoServiceMessageMetadata debugMetadata;
 
   /**
+   * External facts retrieved for factuality/grounding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CloudAiNlLlmProtoServiceFact> facts;
+
+  static {
+    // hack to force ProGuard to consider CloudAiNlLlmProtoServiceFact used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CloudAiNlLlmProtoServiceFact.class);
+  }
+
+  /**
    * Content filter results for a prompt sent in the request. Note: Sent only in the first stream
    * chunk. Only happens when no candidates were generated due to content violations.
    * The value may be {@code null}.
@@ -105,6 +118,23 @@ public final class CloudAiNlLlmProtoServiceGenerateMultiModalResponse extends co
    */
   public CloudAiNlLlmProtoServiceGenerateMultiModalResponse setDebugMetadata(CloudAiNlLlmProtoServiceMessageMetadata debugMetadata) {
     this.debugMetadata = debugMetadata;
+    return this;
+  }
+
+  /**
+   * External facts retrieved for factuality/grounding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CloudAiNlLlmProtoServiceFact> getFacts() {
+    return facts;
+  }
+
+  /**
+   * External facts retrieved for factuality/grounding.
+   * @param facts facts or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServiceGenerateMultiModalResponse setFacts(java.util.List<CloudAiNlLlmProtoServiceFact> facts) {
+    this.facts = facts;
     return this;
   }
 

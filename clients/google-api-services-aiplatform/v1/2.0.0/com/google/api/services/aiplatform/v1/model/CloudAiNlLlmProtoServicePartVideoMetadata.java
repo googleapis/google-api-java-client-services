@@ -37,6 +37,13 @@ public final class CloudAiNlLlmProtoServicePartVideoMetadata extends com.google.
   private String endOffset;
 
   /**
+   * Internal only model level metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiNlLlmProtoServicePartVideoMetadataModelLevelMetadata modelLevelMetaData;
+
+  /**
    * The start offset of the video.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class CloudAiNlLlmProtoServicePartVideoMetadata extends com.google.
    */
   public CloudAiNlLlmProtoServicePartVideoMetadata setEndOffset(String endOffset) {
     this.endOffset = endOffset;
+    return this;
+  }
+
+  /**
+   * Internal only model level metadata.
+   * @return value or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServicePartVideoMetadataModelLevelMetadata getModelLevelMetaData() {
+    return modelLevelMetaData;
+  }
+
+  /**
+   * Internal only model level metadata.
+   * @param modelLevelMetaData modelLevelMetaData or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServicePartVideoMetadata setModelLevelMetaData(CloudAiNlLlmProtoServicePartVideoMetadataModelLevelMetadata modelLevelMetaData) {
+    this.modelLevelMetaData = modelLevelMetaData;
     return this;
   }
 

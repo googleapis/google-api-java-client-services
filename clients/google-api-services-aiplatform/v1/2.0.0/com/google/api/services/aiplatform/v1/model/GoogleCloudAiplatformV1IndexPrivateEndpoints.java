@@ -40,6 +40,14 @@ public final class GoogleCloudAiplatformV1IndexPrivateEndpoints extends com.goog
   private java.lang.String matchGrpcAddress;
 
   /**
+   * Output only. PscAutomatedEndpoints is populated if private service connect is enabled if
+   * PscAutomatedConfig is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1PscAutomatedEndpoints> pscAutomatedEndpoints;
+
+  /**
    * Output only. The name of the service attachment resource. Populated if private service connect
    * is enabled.
    * The value may be {@code null}.
@@ -61,6 +69,25 @@ public final class GoogleCloudAiplatformV1IndexPrivateEndpoints extends com.goog
    */
   public GoogleCloudAiplatformV1IndexPrivateEndpoints setMatchGrpcAddress(java.lang.String matchGrpcAddress) {
     this.matchGrpcAddress = matchGrpcAddress;
+    return this;
+  }
+
+  /**
+   * Output only. PscAutomatedEndpoints is populated if private service connect is enabled if
+   * PscAutomatedConfig is set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1PscAutomatedEndpoints> getPscAutomatedEndpoints() {
+    return pscAutomatedEndpoints;
+  }
+
+  /**
+   * Output only. PscAutomatedEndpoints is populated if private service connect is enabled if
+   * PscAutomatedConfig is set.
+   * @param pscAutomatedEndpoints pscAutomatedEndpoints or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1IndexPrivateEndpoints setPscAutomatedEndpoints(java.util.List<GoogleCloudAiplatformV1PscAutomatedEndpoints> pscAutomatedEndpoints) {
+    this.pscAutomatedEndpoints = pscAutomatedEndpoints;
     return this;
   }
 

@@ -36,9 +36,15 @@ public final class GoogleCloudAiplatformV1Explanation extends com.google.api.cli
    * that explains the predicted output. For Models that predict multiple outputs, such as
    * multiclass Models that predict multiple classes, each element explains one specific item.
    * Attribution.output_index can be used to identify which output this attribution is explaining.
-   * If users set ExplanationParameters.top_k, the attributions are sorted by instance_output_value
-   * in descending order. If ExplanationParameters.output_indices is specified, the attributions are
-   * stored by Attribution.output_index in the same order as they appear in the output_indices.
+   * By default, we provide Shapley values for the predicted class. However, you can configure the
+   * explanation request to generate Shapley values for any other classes too. For example, if a
+   * model predicts a probability of `0.4` for approving a loan application, the model's decision is
+   * to reject the application since `p(reject) = 0.6 > p(approve) = 0.4`, and the default Shapley
+   * values would be computed for rejection decision and not approval, even though the latter might
+   * be the positive class. If users set ExplanationParameters.top_k, the attributions are sorted by
+   * instance_output_value in descending order. If ExplanationParameters.output_indices is
+   * specified, the attributions are stored by Attribution.output_index in the same order as they
+   * appear in the output_indices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +71,15 @@ public final class GoogleCloudAiplatformV1Explanation extends com.google.api.cli
    * that explains the predicted output. For Models that predict multiple outputs, such as
    * multiclass Models that predict multiple classes, each element explains one specific item.
    * Attribution.output_index can be used to identify which output this attribution is explaining.
-   * If users set ExplanationParameters.top_k, the attributions are sorted by instance_output_value
-   * in descending order. If ExplanationParameters.output_indices is specified, the attributions are
-   * stored by Attribution.output_index in the same order as they appear in the output_indices.
+   * By default, we provide Shapley values for the predicted class. However, you can configure the
+   * explanation request to generate Shapley values for any other classes too. For example, if a
+   * model predicts a probability of `0.4` for approving a loan application, the model's decision is
+   * to reject the application since `p(reject) = 0.6 > p(approve) = 0.4`, and the default Shapley
+   * values would be computed for rejection decision and not approval, even though the latter might
+   * be the positive class. If users set ExplanationParameters.top_k, the attributions are sorted by
+   * instance_output_value in descending order. If ExplanationParameters.output_indices is
+   * specified, the attributions are stored by Attribution.output_index in the same order as they
+   * appear in the output_indices.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1Attribution> getAttributions() {
@@ -80,9 +92,15 @@ public final class GoogleCloudAiplatformV1Explanation extends com.google.api.cli
    * that explains the predicted output. For Models that predict multiple outputs, such as
    * multiclass Models that predict multiple classes, each element explains one specific item.
    * Attribution.output_index can be used to identify which output this attribution is explaining.
-   * If users set ExplanationParameters.top_k, the attributions are sorted by instance_output_value
-   * in descending order. If ExplanationParameters.output_indices is specified, the attributions are
-   * stored by Attribution.output_index in the same order as they appear in the output_indices.
+   * By default, we provide Shapley values for the predicted class. However, you can configure the
+   * explanation request to generate Shapley values for any other classes too. For example, if a
+   * model predicts a probability of `0.4` for approving a loan application, the model's decision is
+   * to reject the application since `p(reject) = 0.6 > p(approve) = 0.4`, and the default Shapley
+   * values would be computed for rejection decision and not approval, even though the latter might
+   * be the positive class. If users set ExplanationParameters.top_k, the attributions are sorted by
+   * instance_output_value in descending order. If ExplanationParameters.output_indices is
+   * specified, the attributions are stored by Attribution.output_index in the same order as they
+   * appear in the output_indices.
    * @param attributions attributions or {@code null} for none
    */
   public GoogleCloudAiplatformV1Explanation setAttributions(java.util.List<GoogleCloudAiplatformV1Attribution> attributions) {

@@ -105,6 +105,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> customAudiences;
 
   /**
+   * Optional. Disables public resolution of the default URI of this service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultUriDisabled;
+
+  /**
    * Output only. The deletion time.
    * The value may be {@code null}.
    */
@@ -459,6 +466,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setCustomAudiences(java.util.List<java.lang.String> customAudiences) {
     this.customAudiences = customAudiences;
+    return this;
+  }
+
+  /**
+   * Optional. Disables public resolution of the default URI of this service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultUriDisabled() {
+    return defaultUriDisabled;
+  }
+
+  /**
+   * Optional. Disables public resolution of the default URI of this service.
+   * @param defaultUriDisabled defaultUriDisabled or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setDefaultUriDisabled(java.lang.Boolean defaultUriDisabled) {
+    this.defaultUriDisabled = defaultUriDisabled;
     return this;
   }
 

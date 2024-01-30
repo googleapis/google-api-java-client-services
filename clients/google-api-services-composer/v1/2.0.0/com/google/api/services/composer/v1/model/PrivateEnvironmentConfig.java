@@ -66,6 +66,18 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   private java.lang.String cloudSqlIpv4CidrBlock;
 
   /**
+   * Optional. If `true`, builds performed during operations that install Python packages have only
+   * private connectivity to Google services (including Artifact Registry) and VPC network (if
+   * either `NodeConfig.network` and `NodeConfig.subnetwork` fields or
+   * `NodeConfig.composer_network_attachment` field are specified). If `false`, the builds also have
+   * access to the internet. This field is supported for Cloud Composer environments in versions
+   * composer-3.*.*-airflow-*.*.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enablePrivateBuildsOnly;
+
+  /**
    * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set
    * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer
    * environments in versions composer-1.*.*-airflow-*.*.*.
@@ -196,6 +208,33 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
    */
   public PrivateEnvironmentConfig setCloudSqlIpv4CidrBlock(java.lang.String cloudSqlIpv4CidrBlock) {
     this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * Optional. If `true`, builds performed during operations that install Python packages have only
+   * private connectivity to Google services (including Artifact Registry) and VPC network (if
+   * either `NodeConfig.network` and `NodeConfig.subnetwork` fields or
+   * `NodeConfig.composer_network_attachment` field are specified). If `false`, the builds also have
+   * access to the internet. This field is supported for Cloud Composer environments in versions
+   * composer-3.*.*-airflow-*.*.* and newer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnablePrivateBuildsOnly() {
+    return enablePrivateBuildsOnly;
+  }
+
+  /**
+   * Optional. If `true`, builds performed during operations that install Python packages have only
+   * private connectivity to Google services (including Artifact Registry) and VPC network (if
+   * either `NodeConfig.network` and `NodeConfig.subnetwork` fields or
+   * `NodeConfig.composer_network_attachment` field are specified). If `false`, the builds also have
+   * access to the internet. This field is supported for Cloud Composer environments in versions
+   * composer-3.*.*-airflow-*.*.* and newer.
+   * @param enablePrivateBuildsOnly enablePrivateBuildsOnly or {@code null} for none
+   */
+  public PrivateEnvironmentConfig setEnablePrivateBuildsOnly(java.lang.Boolean enablePrivateBuildsOnly) {
+    this.enablePrivateBuildsOnly = enablePrivateBuildsOnly;
     return this;
   }
 

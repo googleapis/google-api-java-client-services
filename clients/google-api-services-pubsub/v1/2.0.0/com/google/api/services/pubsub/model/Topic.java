@@ -30,6 +30,13 @@ package com.google.api.services.pubsub.model;
 public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Settings for managed ingestion from a data source into this topic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IngestionDataSourceSettings ingestionDataSourceSettings;
+
+  /**
    * Optional. The resource name of the Cloud KMS CryptoKey to be used to protect access to messages
    * published on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
    * The value may be {@code null}.
@@ -89,6 +96,30 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SchemaSettings schemaSettings;
+
+  /**
+   * Output only. An output-only field indicating the state of the topic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * Optional. Settings for managed ingestion from a data source into this topic.
+   * @return value or {@code null} for none
+   */
+  public IngestionDataSourceSettings getIngestionDataSourceSettings() {
+    return ingestionDataSourceSettings;
+  }
+
+  /**
+   * Optional. Settings for managed ingestion from a data source into this topic.
+   * @param ingestionDataSourceSettings ingestionDataSourceSettings or {@code null} for none
+   */
+  public Topic setIngestionDataSourceSettings(IngestionDataSourceSettings ingestionDataSourceSettings) {
+    this.ingestionDataSourceSettings = ingestionDataSourceSettings;
+    return this;
+  }
 
   /**
    * Optional. The resource name of the Cloud KMS CryptoKey to be used to protect access to messages
@@ -230,6 +261,23 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    */
   public Topic setSchemaSettings(SchemaSettings schemaSettings) {
     this.schemaSettings = schemaSettings;
+    return this;
+  }
+
+  /**
+   * Output only. An output-only field indicating the state of the topic.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. An output-only field indicating the state of the topic.
+   * @param state state or {@code null} for none
+   */
+  public Topic setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

@@ -35,7 +35,7 @@ public final class ModifyAckDeadlineRequest extends com.google.api.client.json.G
    * `ModifyAckDeadline` call was made. Specifying zero might immediately make the message available
    * for delivery to another subscriber client. This typically results in an increase in the rate of
    * message redeliveries (that is, duplicates). The minimum deadline you can specify is 0 seconds.
-   * The maximum deadline you can specify is 600 seconds (10 minutes).
+   * The maximum deadline you can specify in a single request is 600 seconds (10 minutes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class ModifyAckDeadlineRequest extends com.google.api.client.json.G
    * `ModifyAckDeadline` call was made. Specifying zero might immediately make the message available
    * for delivery to another subscriber client. This typically results in an increase in the rate of
    * message redeliveries (that is, duplicates). The minimum deadline you can specify is 0 seconds.
-   * The maximum deadline you can specify is 600 seconds (10 minutes).
+   * The maximum deadline you can specify in a single request is 600 seconds (10 minutes).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAckDeadlineSeconds() {
@@ -67,7 +67,7 @@ public final class ModifyAckDeadlineRequest extends com.google.api.client.json.G
    * `ModifyAckDeadline` call was made. Specifying zero might immediately make the message available
    * for delivery to another subscriber client. This typically results in an increase in the rate of
    * message redeliveries (that is, duplicates). The minimum deadline you can specify is 0 seconds.
-   * The maximum deadline you can specify is 600 seconds (10 minutes).
+   * The maximum deadline you can specify in a single request is 600 seconds (10 minutes).
    * @param ackDeadlineSeconds ackDeadlineSeconds or {@code null} for none
    */
   public ModifyAckDeadlineRequest setAckDeadlineSeconds(java.lang.Integer ackDeadlineSeconds) {

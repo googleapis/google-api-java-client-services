@@ -103,7 +103,8 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
 
   /**
    * A condition control that determines how metric-threshold conditions are evaluated when data
-   * stops arriving.
+   * stops arriving. To use this control, the value of the duration field must be greater than or
+   * equal to 60 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,7 +286,8 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
 
   /**
    * A condition control that determines how metric-threshold conditions are evaluated when data
-   * stops arriving.
+   * stops arriving. To use this control, the value of the duration field must be greater than or
+   * equal to 60 seconds.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvaluationMissingData() {
@@ -294,7 +296,8 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
 
   /**
    * A condition control that determines how metric-threshold conditions are evaluated when data
-   * stops arriving.
+   * stops arriving. To use this control, the value of the duration field must be greater than or
+   * equal to 60 seconds.
    * @param evaluationMissingData evaluationMissingData or {@code null} for none
    */
   public MetricThreshold setEvaluationMissingData(java.lang.String evaluationMissingData) {

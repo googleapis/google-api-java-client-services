@@ -46,7 +46,11 @@ public final class DimensionMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String category;
 
   /**
-   * True if the dimension is a custom dimension for this property.
+   * True if the dimension is custom to this property. This includes user, event, & item scoped
+   * custom dimensions; to learn more about custom dimensions, see
+   * https://support.google.com/analytics/answer/14240153. This also include custom channel groups;
+   * to learn more about custom channel groups, see
+   * https://support.google.com/analytics/answer/13051316.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +116,11 @@ public final class DimensionMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * True if the dimension is a custom dimension for this property.
+   * True if the dimension is custom to this property. This includes user, event, & item scoped
+   * custom dimensions; to learn more about custom dimensions, see
+   * https://support.google.com/analytics/answer/14240153. This also include custom channel groups;
+   * to learn more about custom channel groups, see
+   * https://support.google.com/analytics/answer/13051316.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCustomDefinition() {
@@ -120,7 +128,11 @@ public final class DimensionMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * True if the dimension is a custom dimension for this property.
+   * True if the dimension is custom to this property. This includes user, event, & item scoped
+   * custom dimensions; to learn more about custom dimensions, see
+   * https://support.google.com/analytics/answer/14240153. This also include custom channel groups;
+   * to learn more about custom channel groups, see
+   * https://support.google.com/analytics/answer/13051316.
    * @param customDefinition customDefinition or {@code null} for none
    */
   public DimensionMetadata setCustomDefinition(java.lang.Boolean customDefinition) {

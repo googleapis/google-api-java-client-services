@@ -154,6 +154,125 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   public class Applications {
 
     /**
+     * Writes the Safety Labels declaration of an app.
+     *
+     * Create a request for the method "applications.dataSafety".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link DataSafety#execute()} method to invoke the remote operation.
+     *
+     * @param packageName Required. Package name of the app.
+     * @param content the {@link com.google.api.services.androidpublisher.model.SafetyLabelsUpdateRequest}
+     * @return the request
+     */
+    public DataSafety dataSafety(java.lang.String packageName, com.google.api.services.androidpublisher.model.SafetyLabelsUpdateRequest content) throws java.io.IOException {
+      DataSafety result = new DataSafety(packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class DataSafety extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SafetyLabelsUpdateResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/dataSafety";
+
+      /**
+       * Writes the Safety Labels declaration of an app.
+       *
+       * Create a request for the method "applications.dataSafety".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link DataSafety#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * DataSafety#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Required. Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.SafetyLabelsUpdateRequest}
+       * @since 1.13
+       */
+      protected DataSafety(java.lang.String packageName, com.google.api.services.androidpublisher.model.SafetyLabelsUpdateRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.SafetyLabelsUpdateResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      @Override
+      public DataSafety set$Xgafv(java.lang.String $Xgafv) {
+        return (DataSafety) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DataSafety setAccessToken(java.lang.String accessToken) {
+        return (DataSafety) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DataSafety setAlt(java.lang.String alt) {
+        return (DataSafety) super.setAlt(alt);
+      }
+
+      @Override
+      public DataSafety setCallback(java.lang.String callback) {
+        return (DataSafety) super.setCallback(callback);
+      }
+
+      @Override
+      public DataSafety setFields(java.lang.String fields) {
+        return (DataSafety) super.setFields(fields);
+      }
+
+      @Override
+      public DataSafety setKey(java.lang.String key) {
+        return (DataSafety) super.setKey(key);
+      }
+
+      @Override
+      public DataSafety setOauthToken(java.lang.String oauthToken) {
+        return (DataSafety) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DataSafety setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DataSafety) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DataSafety setQuotaUser(java.lang.String quotaUser) {
+        return (DataSafety) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DataSafety setUploadType(java.lang.String uploadType) {
+        return (DataSafety) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DataSafety setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DataSafety) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app. */
+      public DataSafety setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public DataSafety set(String parameterName, Object value) {
+        return (DataSafety) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the DeviceTierConfigs collection.
      *
      * <p>The typical use is:</p>

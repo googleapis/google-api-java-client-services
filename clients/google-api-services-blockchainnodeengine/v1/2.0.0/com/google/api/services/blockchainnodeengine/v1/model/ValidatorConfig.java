@@ -32,12 +32,36 @@ package com.google.api.services.blockchainnodeengine.v1.model;
 public final class ValidatorConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. When true, deploys a GCP-managed validator client alongside the beacon client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean managedValidatorClient;
+
+  /**
    * URLs for MEV-relay services to use for block building. When set, a GCP-managed MEV-boost
    * service is configured on the beacon client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> mevRelayUrls;
+
+  /**
+   * Immutable. When true, deploys a GCP-managed validator client alongside the beacon client.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getManagedValidatorClient() {
+    return managedValidatorClient;
+  }
+
+  /**
+   * Immutable. When true, deploys a GCP-managed validator client alongside the beacon client.
+   * @param managedValidatorClient managedValidatorClient or {@code null} for none
+   */
+  public ValidatorConfig setManagedValidatorClient(java.lang.Boolean managedValidatorClient) {
+    this.managedValidatorClient = managedValidatorClient;
+    return this;
+  }
 
   /**
    * URLs for MEV-relay services to use for block building. When set, a GCP-managed MEV-boost

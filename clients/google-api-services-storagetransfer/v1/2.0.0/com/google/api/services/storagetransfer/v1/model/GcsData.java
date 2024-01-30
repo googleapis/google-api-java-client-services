@@ -40,6 +40,16 @@ public final class GcsData extends com.google.api.client.json.GenericJson {
   private java.lang.String bucketName;
 
   /**
+   * Transfer managed folders is in public preview. This option is only applicable to the Cloud
+   * Storage source bucket. If set to true: - The source managed folder will be transferred to the
+   * destination bucket - The destination managed folder will always be overwritten, other OVERWRITE
+   * options will not be supported
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean managedFolderTransferEnabled;
+
+  /**
    * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
    * This field is treated as an object prefix. As such, it should generally not begin with a '/'.
    * The root path value must meet [Object Name Requirements](/storage/docs/naming#objectnames).
@@ -64,6 +74,29 @@ public final class GcsData extends com.google.api.client.json.GenericJson {
    */
   public GcsData setBucketName(java.lang.String bucketName) {
     this.bucketName = bucketName;
+    return this;
+  }
+
+  /**
+   * Transfer managed folders is in public preview. This option is only applicable to the Cloud
+   * Storage source bucket. If set to true: - The source managed folder will be transferred to the
+   * destination bucket - The destination managed folder will always be overwritten, other OVERWRITE
+   * options will not be supported
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getManagedFolderTransferEnabled() {
+    return managedFolderTransferEnabled;
+  }
+
+  /**
+   * Transfer managed folders is in public preview. This option is only applicable to the Cloud
+   * Storage source bucket. If set to true: - The source managed folder will be transferred to the
+   * destination bucket - The destination managed folder will always be overwritten, other OVERWRITE
+   * options will not be supported
+   * @param managedFolderTransferEnabled managedFolderTransferEnabled or {@code null} for none
+   */
+  public GcsData setManagedFolderTransferEnabled(java.lang.Boolean managedFolderTransferEnabled) {
+    this.managedFolderTransferEnabled = managedFolderTransferEnabled;
     return this;
   }
 

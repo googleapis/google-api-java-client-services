@@ -3341,7 +3341,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the file to delete, in form of `projects/{project-number-or-
-           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3369,7 +3369,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the file to delete, in form of `projects/{project-number-or-
-           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -3439,13 +3439,14 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. The resource name of the file to delete, in form of `projects/{project-
-             * number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             * number-or-
+             * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the file to delete, in form of `projects/{project-number-or-
-           id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+           id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
              */
             public java.lang.String getName() {
               return name;
@@ -3453,7 +3454,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. The resource name of the file to delete, in form of `projects/{project-
-             * number-or-id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             * number-or-
+             * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3479,7 +3481,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the file, in form of `projects/{project-number-or-
-           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3506,7 +3508,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the file, in form of `projects/{project-number-or-
-           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+           *        id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3586,13 +3588,13 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. The resource name of the file, in form of `projects/{project-number-or-
-             * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the file, in form of `projects/{project-number-or-
-           id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+           id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
              */
             public java.lang.String getName() {
               return name;
@@ -3600,7 +3602,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Required. The resource name of the file, in form of `projects/{project-number-or-
-             * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+             * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

@@ -53,7 +53,7 @@ public final class AdaptiveMtFile extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The resource name of the file, in form of `projects/{project-number-or-
-   * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+   * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class AdaptiveMtFile extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The resource name of the file, in form of `projects/{project-number-or-
-   * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+   * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -128,7 +128,7 @@ public final class AdaptiveMtFile extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The resource name of the file, in form of `projects/{project-number-or-
-   * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/files/{file}`
+   * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
    * @param name name or {@code null} for none
    */
   public AdaptiveMtFile setName(java.lang.String name) {

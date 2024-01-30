@@ -2121,6 +2121,244 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           }
         }
 
+        /**
+         * An accessor for creating requests from the Workloads collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudComposer composer = new CloudComposer(...);}
+         *   {@code CloudComposer.Workloads.List request = composer.workloads().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Workloads workloads() {
+          return new Workloads();
+        }
+
+        /**
+         * The "workloads" collection of methods.
+         */
+        public class Workloads {
+
+          /**
+           * Lists workloads in a Cloud Composer environment. Workload is a unit that runs a single Composer
+           * component. This method is supported for Cloud Composer environments in versions
+           * composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "workloads.list".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The environment name to get workloads for, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudComposerRequest<com.google.api.services.composer.v1.model.ListWorkloadsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/workloads";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+            /**
+             * Lists workloads in a Cloud Composer environment. Workload is a unit that runs a single Composer
+             * component. This method is supported for Cloud Composer environments in versions
+             * composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "workloads.list".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The environment name to get workloads for, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudComposer.this, "GET", REST_PATH, null, com.google.api.services.composer.v1.model.ListWorkloadsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The environment name to get workloads for, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The environment name to get workloads for, in the form:
+           "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The environment name to get workloads for, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The list filter. Currently only supports equality on the type field. The
+             * value of a field specified in the filter expression must be one ComposerWorkloadType
+             * enum option. It's possible to get multiple types using "OR" operator, e.g.:
+             * "type=SCHEDULER OR type=CELERY_WORKER". If not specified, all items are returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. The list filter. Currently only supports equality on the type field. The value of a field
+           specified in the filter expression must be one ComposerWorkloadType enum option. It's possible to
+           get multiple types using "OR" operator, e.g.: "type=SCHEDULER OR type=CELERY_WORKER". If not
+           specified, all items are returned.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. The list filter. Currently only supports equality on the type field. The
+             * value of a field specified in the filter expression must be one ComposerWorkloadType
+             * enum option. It's possible to get multiple types using "OR" operator, e.g.:
+             * "type=SCHEDULER OR type=CELERY_WORKER". If not specified, all items are returned.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. The maximum number of environments to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of environments to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. The maximum number of environments to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the ImageVersions collection.

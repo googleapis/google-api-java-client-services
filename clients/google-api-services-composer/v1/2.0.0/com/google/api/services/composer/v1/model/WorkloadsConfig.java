@@ -32,6 +32,14 @@ package com.google.api.services.composer.v1.model;
 public final class WorkloadsConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Resources used by Airflow DAG processors. This field is supported for Cloud Composer
+   * environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DagProcessorResource dagProcessor;
+
+  /**
    * Optional. Resources used by Airflow schedulers.
    * The value may be {@code null}.
    */
@@ -58,6 +66,25 @@ public final class WorkloadsConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private WorkerResource worker;
+
+  /**
+   * Optional. Resources used by Airflow DAG processors. This field is supported for Cloud Composer
+   * environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * @return value or {@code null} for none
+   */
+  public DagProcessorResource getDagProcessor() {
+    return dagProcessor;
+  }
+
+  /**
+   * Optional. Resources used by Airflow DAG processors. This field is supported for Cloud Composer
+   * environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * @param dagProcessor dagProcessor or {@code null} for none
+   */
+  public WorkloadsConfig setDagProcessor(DagProcessorResource dagProcessor) {
+    this.dagProcessor = dagProcessor;
+    return this;
+  }
 
   /**
    * Optional. Resources used by Airflow schedulers.

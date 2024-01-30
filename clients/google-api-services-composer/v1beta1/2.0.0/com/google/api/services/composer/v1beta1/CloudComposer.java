@@ -2442,6 +2442,1818 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           }
         }
 
+        /**
+         * An accessor for creating requests from the UserWorkloadsConfigMaps collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudComposer composer = new CloudComposer(...);}
+         *   {@code CloudComposer.UserWorkloadsConfigMaps.List request = composer.userWorkloadsConfigMaps().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public UserWorkloadsConfigMaps userWorkloadsConfigMaps() {
+          return new UserWorkloadsConfigMaps();
+        }
+
+        /**
+         * The "userWorkloadsConfigMaps" collection of methods.
+         */
+        public class UserWorkloadsConfigMaps {
+
+          /**
+           * Creates a user workloads ConfigMap. This method is supported for Cloud Composer environments in
+           * versions composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "userWorkloadsConfigMaps.create".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The environment name to create a ConfigMap for, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/userWorkloadsConfigMaps";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+            /**
+             * Creates a user workloads ConfigMap. This method is supported for Cloud Composer environments in
+             * versions composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "userWorkloadsConfigMaps.create".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The environment name to create a ConfigMap for, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             * @param content the {@link com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap content) {
+              super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The environment name to create a ConfigMap for, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The environment name to create a ConfigMap for, in the form:
+           "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The environment name to create a ConfigMap for, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a user workloads ConfigMap. This method is supported for Cloud Composer environments in
+           * versions composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "userWorkloadsConfigMaps.delete".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The ConfigMap to delete, in the form: "projects/{projectId}/locations/{locationId}/environ
+           *        ments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsConfigMaps/[^/]+$");
+
+            /**
+             * Deletes a user workloads ConfigMap. This method is supported for Cloud Composer environments in
+             * versions composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "userWorkloadsConfigMaps.delete".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The ConfigMap to delete, in the form: "projects/{projectId}/locations/{locationId}/environ
+           *        ments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudComposer.this, "DELETE", REST_PATH, null, com.google.api.services.composer.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsConfigMaps/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The ConfigMap to delete, in the form: "projects/{projectId}/locations/{loca
+             * tionId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapI
+             * d}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The ConfigMap to delete, in the form: "projects/{projectId}/locations/{locationId}/enviro
+           nments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The ConfigMap to delete, in the form: "projects/{projectId}/locations/{loca
+             * tionId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapI
+             * d}"
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsConfigMaps/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets an existing user workloads ConfigMap. This method is supported for Cloud Composer
+           * environments in versions composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "userWorkloadsConfigMaps.get".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the ConfigMap to get, in the form: "projects/{projectId}/locations/{l
+           *        ocationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}
+           *        "
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsConfigMaps/[^/]+$");
+
+            /**
+             * Gets an existing user workloads ConfigMap. This method is supported for Cloud Composer
+             * environments in versions composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "userWorkloadsConfigMaps.get".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the ConfigMap to get, in the form: "projects/{projectId}/locations/{l
+           *        ocationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}
+           *        "
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudComposer.this, "GET", REST_PATH, null, com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsConfigMaps/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the ConfigMap to get, in the form: "projects/{projectI
+             * d}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userW
+             * orkloadsConfigMapId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the ConfigMap to get, in the form: "projects/{projectId}/locations/{
+           locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the ConfigMap to get, in the form: "projects/{projectI
+             * d}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userW
+             * orkloadsConfigMapId}"
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsConfigMaps/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists user workloads ConfigMaps. This method is supported for Cloud Composer environments in
+           * versions composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "userWorkloadsConfigMaps.list".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. List ConfigMaps in the given environment, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.ListUserWorkloadsConfigMapsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/userWorkloadsConfigMaps";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+            /**
+             * Lists user workloads ConfigMaps. This method is supported for Cloud Composer environments in
+             * versions composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "userWorkloadsConfigMaps.list".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. List ConfigMaps in the given environment, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudComposer.this, "GET", REST_PATH, null, com.google.api.services.composer.v1beta1.model.ListUserWorkloadsConfigMapsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. List ConfigMaps in the given environment, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. List ConfigMaps in the given environment, in the form:
+           "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. List ConfigMaps in the given environment, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. The maximum number of ConfigMaps to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of ConfigMaps to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. The maximum number of ConfigMaps to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a user workloads ConfigMap. This method is supported for Cloud Composer environments in
+           * versions composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "userWorkloadsConfigMaps.update".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. The resource name of the ConfigMap, in the form: "projects/{projectId}/locations/{locati
+           *        onId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap}
+           * @return the request
+           */
+          public Update update(java.lang.String name, com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap content) throws java.io.IOException {
+            Update result = new Update(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Update extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsConfigMaps/[^/]+$");
+
+            /**
+             * Updates a user workloads ConfigMap. This method is supported for Cloud Composer environments in
+             * versions composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "userWorkloadsConfigMaps.update".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. The resource name of the ConfigMap, in the form: "projects/{projectId}/locations/{locati
+           *        onId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+             * @param content the {@link com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap}
+             * @since 1.13
+             */
+            protected Update(java.lang.String name, com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap content) {
+              super(CloudComposer.this, "PUT", REST_PATH, content, com.google.api.services.composer.v1beta1.model.UserWorkloadsConfigMap.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsConfigMaps/[^/]+$");
+              }
+            }
+
+            @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Update setAlt(java.lang.String alt) {
+              return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
+            }
+
+            @Override
+            public Update setFields(java.lang.String fields) {
+              return (Update) super.setFields(fields);
+            }
+
+            @Override
+            public Update setKey(java.lang.String key) {
+              return (Update) super.setKey(key);
+            }
+
+            @Override
+            public Update setOauthToken(java.lang.String oauthToken) {
+              return (Update) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Update) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Update setQuotaUser(java.lang.String quotaUser) {
+              return (Update) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Identifier. The resource name of the ConfigMap, in the form: "projects/{projectId}/lo
+             * cations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorklo
+             * adsConfigMapId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. The resource name of the ConfigMap, in the form: "projects/{projectId}/locations/{locat
+           ionId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Identifier. The resource name of the ConfigMap, in the form: "projects/{projectId}/lo
+             * cations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorklo
+             * adsConfigMapId}"
+             */
+            public Update setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsConfigMaps/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Update set(String parameterName, Object value) {
+              return (Update) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the UserWorkloadsSecrets collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudComposer composer = new CloudComposer(...);}
+         *   {@code CloudComposer.UserWorkloadsSecrets.List request = composer.userWorkloadsSecrets().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public UserWorkloadsSecrets userWorkloadsSecrets() {
+          return new UserWorkloadsSecrets();
+        }
+
+        /**
+         * The "userWorkloadsSecrets" collection of methods.
+         */
+        public class UserWorkloadsSecrets {
+
+          /**
+           * Creates a user workloads Secret. This method is supported for Cloud Composer environments in
+           * versions composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "userWorkloadsSecrets.create".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The environment name to create a Secret for, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/userWorkloadsSecrets";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+            /**
+             * Creates a user workloads Secret. This method is supported for Cloud Composer environments in
+             * versions composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "userWorkloadsSecrets.create".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The environment name to create a Secret for, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             * @param content the {@link com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret content) {
+              super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The environment name to create a Secret for, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The environment name to create a Secret for, in the form:
+           "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The environment name to create a Secret for, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a user workloads Secret. This method is supported for Cloud Composer environments in
+           * versions composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "userWorkloadsSecrets.delete".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The Secret to delete, in the form: "projects/{projectId}/locations/{locationId}/environmen
+           *        ts/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsSecrets/[^/]+$");
+
+            /**
+             * Deletes a user workloads Secret. This method is supported for Cloud Composer environments in
+             * versions composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "userWorkloadsSecrets.delete".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The Secret to delete, in the form: "projects/{projectId}/locations/{locationId}/environmen
+           *        ts/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudComposer.this, "DELETE", REST_PATH, null, com.google.api.services.composer.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsSecrets/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The Secret to delete, in the form: "projects/{projectId}/locations/{locatio
+             * nId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The Secret to delete, in the form: "projects/{projectId}/locations/{locationId}/environme
+           nts/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The Secret to delete, in the form: "projects/{projectId}/locations/{locatio
+             * nId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsSecrets/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets an existing user workloads Secret. Values of the "data" field in the response are cleared.
+           * This method is supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.*
+           * and newer.
+           *
+           * Create a request for the method "userWorkloadsSecrets.get".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Secret to get, in the form: "projects/{projectId}/locations/{loca
+           *        tionId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsSecrets/[^/]+$");
+
+            /**
+             * Gets an existing user workloads Secret. Values of the "data" field in the response are cleared.
+             * This method is supported for Cloud Composer environments in versions
+             * composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "userWorkloadsSecrets.get".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Secret to get, in the form: "projects/{projectId}/locations/{loca
+           *        tionId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudComposer.this, "GET", REST_PATH, null, com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsSecrets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Secret to get, in the form: "projects/{projectId}/
+             * locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloa
+             * dsSecretId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Secret to get, in the form: "projects/{projectId}/locations/{loc
+           ationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Secret to get, in the form: "projects/{projectId}/
+             * locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloa
+             * dsSecretId}"
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsSecrets/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists user workloads Secrets. This method is supported for Cloud Composer environments in
+           * versions composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "userWorkloadsSecrets.list".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. List Secrets in the given environment, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.ListUserWorkloadsSecretsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/userWorkloadsSecrets";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+            /**
+             * Lists user workloads Secrets. This method is supported for Cloud Composer environments in
+             * versions composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "userWorkloadsSecrets.list".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. List Secrets in the given environment, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudComposer.this, "GET", REST_PATH, null, com.google.api.services.composer.v1beta1.model.ListUserWorkloadsSecretsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. List Secrets in the given environment, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. List Secrets in the given environment, in the form:
+           "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. List Secrets in the given environment, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. The maximum number of Secrets to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of Secrets to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. The maximum number of Secrets to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a user workloads Secret. This method is supported for Cloud Composer environments in
+           * versions composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "userWorkloadsSecrets.update".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. The resource name of the Secret, in the form: "projects/{projectId}/locations/{locationI
+           *        d}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret}
+           * @return the request
+           */
+          public Update update(java.lang.String name, com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret content) throws java.io.IOException {
+            Update result = new Update(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Update extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsSecrets/[^/]+$");
+
+            /**
+             * Updates a user workloads Secret. This method is supported for Cloud Composer environments in
+             * versions composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "userWorkloadsSecrets.update".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. The resource name of the Secret, in the form: "projects/{projectId}/locations/{locationI
+           *        d}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+             * @param content the {@link com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret}
+             * @since 1.13
+             */
+            protected Update(java.lang.String name, com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret content) {
+              super(CloudComposer.this, "PUT", REST_PATH, content, com.google.api.services.composer.v1beta1.model.UserWorkloadsSecret.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsSecrets/[^/]+$");
+              }
+            }
+
+            @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Update setAlt(java.lang.String alt) {
+              return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
+            }
+
+            @Override
+            public Update setFields(java.lang.String fields) {
+              return (Update) super.setFields(fields);
+            }
+
+            @Override
+            public Update setKey(java.lang.String key) {
+              return (Update) super.setKey(key);
+            }
+
+            @Override
+            public Update setOauthToken(java.lang.String oauthToken) {
+              return (Update) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Update) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Update setQuotaUser(java.lang.String quotaUser) {
+              return (Update) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Identifier. The resource name of the Secret, in the form: "projects/{projectId}/locat
+             * ions/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSec
+             * retId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. The resource name of the Secret, in the form: "projects/{projectId}/locations/{location
+           Id}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Identifier. The resource name of the Secret, in the form: "projects/{projectId}/locat
+             * ions/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSec
+             * retId}"
+             */
+            public Update setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+/userWorkloadsSecrets/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Update set(String parameterName, Object value) {
+              return (Update) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Workloads collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudComposer composer = new CloudComposer(...);}
+         *   {@code CloudComposer.Workloads.List request = composer.workloads().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Workloads workloads() {
+          return new Workloads();
+        }
+
+        /**
+         * The "workloads" collection of methods.
+         */
+        public class Workloads {
+
+          /**
+           * Lists workloads in a Cloud Composer environment. Workload is a unit that runs a single Composer
+           * component. This method is supported for Cloud Composer environments in versions
+           * composer-3.*.*-airflow-*.*.* and newer.
+           *
+           * Create a request for the method "workloads.list".
+           *
+           * This request holds the parameters needed by the composer server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The environment name to get workloads for, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.ListWorkloadsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/workloads";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+            /**
+             * Lists workloads in a Cloud Composer environment. Workload is a unit that runs a single Composer
+             * component. This method is supported for Cloud Composer environments in versions
+             * composer-3.*.*-airflow-*.*.* and newer.
+             *
+             * Create a request for the method "workloads.list".
+             *
+             * This request holds the parameters needed by the the composer server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The environment name to get workloads for, in the form:
+           *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudComposer.this, "GET", REST_PATH, null, com.google.api.services.composer.v1beta1.model.ListWorkloadsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The environment name to get workloads for, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The environment name to get workloads for, in the form:
+           "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The environment name to get workloads for, in the form:
+             * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The list filter. Currently only supports equality on the type field. The
+             * value of a field specified in the filter expression must be one ComposerWorkloadType
+             * enum option. It's possible to get multiple types using "OR" operator, e.g.:
+             * "type=SCHEDULER OR type=CELERY_WORKER". If not specified, all items are returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. The list filter. Currently only supports equality on the type field. The value of a field
+           specified in the filter expression must be one ComposerWorkloadType enum option. It's possible to
+           get multiple types using "OR" operator, e.g.: "type=SCHEDULER OR type=CELERY_WORKER". If not
+           specified, all items are returned.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. The list filter. Currently only supports equality on the type field. The
+             * value of a field specified in the filter expression must be one ComposerWorkloadType
+             * enum option. It's possible to get multiple types using "OR" operator, e.g.:
+             * "type=SCHEDULER OR type=CELERY_WORKER". If not specified, all items are returned.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. The maximum number of environments to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of environments to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. The maximum number of environments to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the ImageVersions collection.

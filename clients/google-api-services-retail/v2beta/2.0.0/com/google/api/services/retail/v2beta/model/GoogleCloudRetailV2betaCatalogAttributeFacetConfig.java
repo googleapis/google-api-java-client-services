@@ -51,6 +51,13 @@ public final class GoogleCloudRetailV2betaCatalogAttributeFacetConfig extends co
   private java.util.List<GoogleCloudRetailV2betaCatalogAttributeFacetConfigIgnoredFacetValues> ignoredFacetValues;
 
   /**
+   * Use this field only if you want to merge a facet key into another facet key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet mergedFacet;
+
+  /**
    * Each instance replaces a list of facet values by a merged facet value. If a facet value is not
    * in any list, then it will stay the same. To avoid conflicts, only paths of length 1 are
    * accepted. In other words, if "dark_blue" merged into "BLUE", then the latter can't merge into
@@ -115,6 +122,23 @@ public final class GoogleCloudRetailV2betaCatalogAttributeFacetConfig extends co
    */
   public GoogleCloudRetailV2betaCatalogAttributeFacetConfig setIgnoredFacetValues(java.util.List<GoogleCloudRetailV2betaCatalogAttributeFacetConfigIgnoredFacetValues> ignoredFacetValues) {
     this.ignoredFacetValues = ignoredFacetValues;
+    return this;
+  }
+
+  /**
+   * Use this field only if you want to merge a facet key into another facet key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet getMergedFacet() {
+    return mergedFacet;
+  }
+
+  /**
+   * Use this field only if you want to merge a facet key into another facet key.
+   * @param mergedFacet mergedFacet or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaCatalogAttributeFacetConfig setMergedFacet(GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet mergedFacet) {
+    this.mergedFacet = mergedFacet;
     return this;
   }
 

@@ -73,7 +73,8 @@ public final class GoogleCloudRetailV2betaImportProductsRequest extends com.goog
 
   /**
    * Indicates which fields in the provided imported `products` to update. If not set, all fields
-   * are updated.
+   * are updated. If provided, only the existing product fields are updated. Missing products will
+   * not be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +181,8 @@ public final class GoogleCloudRetailV2betaImportProductsRequest extends com.goog
 
   /**
    * Indicates which fields in the provided imported `products` to update. If not set, all fields
-   * are updated.
+   * are updated. If provided, only the existing product fields are updated. Missing products will
+   * not be created.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -189,7 +191,8 @@ public final class GoogleCloudRetailV2betaImportProductsRequest extends com.goog
 
   /**
    * Indicates which fields in the provided imported `products` to update. If not set, all fields
-   * are updated.
+   * are updated. If provided, only the existing product fields are updated. Missing products will
+   * not be created.
    * @param updateMask updateMask or {@code null} for none
    */
   public GoogleCloudRetailV2betaImportProductsRequest setUpdateMask(String updateMask) {

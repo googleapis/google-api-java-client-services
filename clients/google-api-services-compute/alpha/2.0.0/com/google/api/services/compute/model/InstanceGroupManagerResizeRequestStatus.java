@@ -31,13 +31,25 @@ public final class InstanceGroupManagerResizeRequestStatus extends com.google.ap
 
   /**
    * [Output only] Fatal errors encountered during the queueing or provisioning phases of the
-   * ResizeRequest that caused the transition to the FAILED state. As a contrary to the last_attempt
-   * errors, this field is final and errors are never removed from here, as the RR is not going to
-   * retry.
+   * ResizeRequest that caused the transition to the FAILED state. Contrary to the last_attempt
+   * errors, this field is final and errors are never removed from here, as the ResizeRequest is not
+   * going to retry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Error error;
+
+  /**
+   * [Output only] Information about the last attempt to fulfill the request. The value is temporary
+   * since the ResizeRequest can retry, as long as it's still active and the last attempt value can
+   * either be cleared or replaced with a different error. Since ResizeRequest retries infrequently,
+   * the value may be stale and no longer show an active problem. The value is cleared when
+   * ResizeRequest transitions to the final state (becomes inactive). If the final state is FAILED
+   * the error describing it will be storred in the "error" field only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerResizeRequestStatusLastAttempt lastAttempt;
 
   /**
    * Constraints for the time when the instances start provisioning. Always exposed as absolute
@@ -49,9 +61,9 @@ public final class InstanceGroupManagerResizeRequestStatus extends com.google.ap
 
   /**
    * [Output only] Fatal errors encountered during the queueing or provisioning phases of the
-   * ResizeRequest that caused the transition to the FAILED state. As a contrary to the last_attempt
-   * errors, this field is final and errors are never removed from here, as the RR is not going to
-   * retry.
+   * ResizeRequest that caused the transition to the FAILED state. Contrary to the last_attempt
+   * errors, this field is final and errors are never removed from here, as the ResizeRequest is not
+   * going to retry.
    * @return value or {@code null} for none
    */
   public Error getError() {
@@ -60,13 +72,40 @@ public final class InstanceGroupManagerResizeRequestStatus extends com.google.ap
 
   /**
    * [Output only] Fatal errors encountered during the queueing or provisioning phases of the
-   * ResizeRequest that caused the transition to the FAILED state. As a contrary to the last_attempt
-   * errors, this field is final and errors are never removed from here, as the RR is not going to
-   * retry.
+   * ResizeRequest that caused the transition to the FAILED state. Contrary to the last_attempt
+   * errors, this field is final and errors are never removed from here, as the ResizeRequest is not
+   * going to retry.
    * @param error error or {@code null} for none
    */
   public InstanceGroupManagerResizeRequestStatus setError(Error error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * [Output only] Information about the last attempt to fulfill the request. The value is temporary
+   * since the ResizeRequest can retry, as long as it's still active and the last attempt value can
+   * either be cleared or replaced with a different error. Since ResizeRequest retries infrequently,
+   * the value may be stale and no longer show an active problem. The value is cleared when
+   * ResizeRequest transitions to the final state (becomes inactive). If the final state is FAILED
+   * the error describing it will be storred in the "error" field only.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerResizeRequestStatusLastAttempt getLastAttempt() {
+    return lastAttempt;
+  }
+
+  /**
+   * [Output only] Information about the last attempt to fulfill the request. The value is temporary
+   * since the ResizeRequest can retry, as long as it's still active and the last attempt value can
+   * either be cleared or replaced with a different error. Since ResizeRequest retries infrequently,
+   * the value may be stale and no longer show an active problem. The value is cleared when
+   * ResizeRequest transitions to the final state (becomes inactive). If the final state is FAILED
+   * the error describing it will be storred in the "error" field only.
+   * @param lastAttempt lastAttempt or {@code null} for none
+   */
+  public InstanceGroupManagerResizeRequestStatus setLastAttempt(InstanceGroupManagerResizeRequestStatusLastAttempt lastAttempt) {
+    this.lastAttempt = lastAttempt;
     return this;
   }
 
@@ -101,9 +140,9 @@ public final class InstanceGroupManagerResizeRequestStatus extends com.google.ap
 
   /**
    * [Output only] Fatal errors encountered during the queueing or provisioning phases of the
-   * ResizeRequest that caused the transition to the FAILED state. As a contrary to the last_attempt
-   * errors, this field is final and errors are never removed from here, as the RR is not going to
-   * retry.
+   * ResizeRequest that caused the transition to the FAILED state. Contrary to the last_attempt
+   * errors, this field is final and errors are never removed from here, as the ResizeRequest is not
+   * going to retry.
    */
   public static final class Error extends com.google.api.client.json.GenericJson {
 

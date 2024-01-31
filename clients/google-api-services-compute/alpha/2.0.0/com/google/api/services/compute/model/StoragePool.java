@@ -110,7 +110,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Long poolProvisionedCapacityGb;
 
   /**
-   * Provsioned IOPS of the storage pool. Only relevant if the storage pool type is hyperdisk-
+   * Provisioned IOPS of the storage pool. Only relevant if the storage pool type is hyperdisk-
    * balanced.
    * The value may be {@code null}.
    */
@@ -427,7 +427,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provsioned IOPS of the storage pool. Only relevant if the storage pool type is hyperdisk-
+   * Provisioned IOPS of the storage pool. Only relevant if the storage pool type is hyperdisk-
    * balanced.
    * @return value or {@code null} for none
    */
@@ -436,7 +436,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provsioned IOPS of the storage pool. Only relevant if the storage pool type is hyperdisk-
+   * Provisioned IOPS of the storage pool. Only relevant if the storage pool type is hyperdisk-
    * balanced.
    * @param poolProvisionedIops poolProvisionedIops or {@code null} for none
    */

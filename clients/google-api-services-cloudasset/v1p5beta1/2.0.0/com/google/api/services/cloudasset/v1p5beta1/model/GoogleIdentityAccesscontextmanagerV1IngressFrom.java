@@ -32,9 +32,8 @@ package com.google.api.services.cloudasset.v1p5beta1.model;
 public final class GoogleIdentityAccesscontextmanagerV1IngressFrom extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of identities that are allowed access through this ingress policy. Should be in the
-   * format of email address. The email address should represent individual user or service account
-   * only.
+   * A list of identities that are allowed access through this ingress policy, in the format of
+   * `user:{email_id}` or `serviceAccount:{email_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,9 +55,8 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressFrom extends com.g
   private java.util.List<GoogleIdentityAccesscontextmanagerV1IngressSource> sources;
 
   /**
-   * A list of identities that are allowed access through this ingress policy. Should be in the
-   * format of email address. The email address should represent individual user or service account
-   * only.
+   * A list of identities that are allowed access through this ingress policy, in the format of
+   * `user:{email_id}` or `serviceAccount:{email_id}`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIdentities() {
@@ -66,9 +64,8 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressFrom extends com.g
   }
 
   /**
-   * A list of identities that are allowed access through this ingress policy. Should be in the
-   * format of email address. The email address should represent individual user or service account
-   * only.
+   * A list of identities that are allowed access through this ingress policy, in the format of
+   * `user:{email_id}` or `serviceAccount:{email_id}`.
    * @param identities identities or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1IngressFrom setIdentities(java.util.List<java.lang.String> identities) {

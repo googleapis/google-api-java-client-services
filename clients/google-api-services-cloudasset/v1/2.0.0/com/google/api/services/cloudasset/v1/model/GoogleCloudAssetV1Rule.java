@@ -47,6 +47,17 @@ public final class GoogleCloudAssetV1Rule extends com.google.api.client.json.Gen
   private Expr condition;
 
   /**
+   * The condition evaluation result for this rule. Only populated if it meets all the following
+   * criteria: * there is a condition defined for this rule * this rule is within a
+   * consolidated_policy * the consolidated_policy is within
+   * AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer or
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConditionEvaluation conditionEvaluation;
+
+  /**
    * Setting this to true means that all values are denied. This field can be set only in Policies
    * for list constraints.
    * The value may be {@code null}.
@@ -103,6 +114,31 @@ public final class GoogleCloudAssetV1Rule extends com.google.api.client.json.Gen
    */
   public GoogleCloudAssetV1Rule setCondition(Expr condition) {
     this.condition = condition;
+    return this;
+  }
+
+  /**
+   * The condition evaluation result for this rule. Only populated if it meets all the following
+   * criteria: * there is a condition defined for this rule * this rule is within a
+   * consolidated_policy * the consolidated_policy is within
+   * AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer or
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource
+   * @return value or {@code null} for none
+   */
+  public ConditionEvaluation getConditionEvaluation() {
+    return conditionEvaluation;
+  }
+
+  /**
+   * The condition evaluation result for this rule. Only populated if it meets all the following
+   * criteria: * there is a condition defined for this rule * this rule is within a
+   * consolidated_policy * the consolidated_policy is within
+   * AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer or
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource
+   * @param conditionEvaluation conditionEvaluation or {@code null} for none
+   */
+  public GoogleCloudAssetV1Rule setConditionEvaluation(ConditionEvaluation conditionEvaluation) {
+    this.conditionEvaluation = conditionEvaluation;
     return this;
   }
 

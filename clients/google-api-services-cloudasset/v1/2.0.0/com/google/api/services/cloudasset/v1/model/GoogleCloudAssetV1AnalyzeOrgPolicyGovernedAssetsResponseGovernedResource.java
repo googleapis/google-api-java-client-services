@@ -31,6 +31,30 @@ package com.google.api.services.cloudasset.v1.model;
 public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource extends com.google.api.client.json.GenericJson {
 
   /**
+   * The asset type of the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name Example:
+   * `cloudresourcemanager.googleapis.com/Project` See [Cloud Asset Inventory Supported Asset
+   * Types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for all supported
+   * asset types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assetType;
+
+  /**
+   * The effective tags on this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EffectiveTagDetails> effectiveTags;
+
+  static {
+    // hack to force ProGuard to consider EffectiveTagDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EffectiveTagDetails.class);
+  }
+
+  /**
    * The folder(s) that this resource belongs to, in the format of folders/{FOLDER_NUMBER}. This
    * field is available when the resource belongs (directly or cascadingly) to one or more folders.
    * The value may be {@code null}.
@@ -70,6 +94,48 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
+
+  /**
+   * The asset type of the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name Example:
+   * `cloudresourcemanager.googleapis.com/Project` See [Cloud Asset Inventory Supported Asset
+   * Types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for all supported
+   * asset types.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssetType() {
+    return assetType;
+  }
+
+  /**
+   * The asset type of the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name Example:
+   * `cloudresourcemanager.googleapis.com/Project` See [Cloud Asset Inventory Supported Asset
+   * Types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for all supported
+   * asset types.
+   * @param assetType assetType or {@code null} for none
+   */
+  public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource setAssetType(java.lang.String assetType) {
+    this.assetType = assetType;
+    return this;
+  }
+
+  /**
+   * The effective tags on this resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EffectiveTagDetails> getEffectiveTags() {
+    return effectiveTags;
+  }
+
+  /**
+   * The effective tags on this resource.
+   * @param effectiveTags effectiveTags or {@code null} for none
+   */
+  public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource setEffectiveTags(java.util.List<EffectiveTagDetails> effectiveTags) {
+    this.effectiveTags = effectiveTags;
+    return this;
+  }
 
   /**
    * The folder(s) that this resource belongs to, in the format of folders/{FOLDER_NUMBER}. This

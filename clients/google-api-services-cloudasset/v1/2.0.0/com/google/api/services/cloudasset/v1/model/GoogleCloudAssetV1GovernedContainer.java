@@ -42,12 +42,42 @@ public final class GoogleCloudAssetV1GovernedContainer extends com.google.api.cl
   private AnalyzerOrgPolicy consolidatedPolicy;
 
   /**
+   * The effective tags on this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EffectiveTagDetails> effectiveTags;
+
+  static {
+    // hack to force ProGuard to consider EffectiveTagDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EffectiveTagDetails.class);
+  }
+
+  /**
+   * The folder(s) that this resource belongs to, in the format of folders/{FOLDER_NUMBER}. This
+   * field is available when the resource belongs (directly or cascadingly) to one or more folders.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> folders;
+
+  /**
    * The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format)
    * of an organization/folder/project resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullResourceName;
+
+  /**
+   * The organization that this resource belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs
+   * (directly or cascadingly) to an organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String organization;
 
   /**
    * The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format)
@@ -75,6 +105,14 @@ public final class GoogleCloudAssetV1GovernedContainer extends com.google.api.cl
   }
 
   /**
+   * The project that this resource belongs to, in the format of projects/{PROJECT_NUMBER}. This
+   * field is available when the resource belongs to a project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String project;
+
+  /**
    * The consolidated organization policy for the analyzed resource. The consolidated organization
    * policy is computed by merging and evaluating
    * AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.policy_bundle. The evaluation will
@@ -100,6 +138,42 @@ public final class GoogleCloudAssetV1GovernedContainer extends com.google.api.cl
   }
 
   /**
+   * The effective tags on this resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EffectiveTagDetails> getEffectiveTags() {
+    return effectiveTags;
+  }
+
+  /**
+   * The effective tags on this resource.
+   * @param effectiveTags effectiveTags or {@code null} for none
+   */
+  public GoogleCloudAssetV1GovernedContainer setEffectiveTags(java.util.List<EffectiveTagDetails> effectiveTags) {
+    this.effectiveTags = effectiveTags;
+    return this;
+  }
+
+  /**
+   * The folder(s) that this resource belongs to, in the format of folders/{FOLDER_NUMBER}. This
+   * field is available when the resource belongs (directly or cascadingly) to one or more folders.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFolders() {
+    return folders;
+  }
+
+  /**
+   * The folder(s) that this resource belongs to, in the format of folders/{FOLDER_NUMBER}. This
+   * field is available when the resource belongs (directly or cascadingly) to one or more folders.
+   * @param folders folders or {@code null} for none
+   */
+  public GoogleCloudAssetV1GovernedContainer setFolders(java.util.List<java.lang.String> folders) {
+    this.folders = folders;
+    return this;
+  }
+
+  /**
    * The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format)
    * of an organization/folder/project resource.
    * @return value or {@code null} for none
@@ -115,6 +189,27 @@ public final class GoogleCloudAssetV1GovernedContainer extends com.google.api.cl
    */
   public GoogleCloudAssetV1GovernedContainer setFullResourceName(java.lang.String fullResourceName) {
     this.fullResourceName = fullResourceName;
+    return this;
+  }
+
+  /**
+   * The organization that this resource belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs
+   * (directly or cascadingly) to an organization.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrganization() {
+    return organization;
+  }
+
+  /**
+   * The organization that this resource belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs
+   * (directly or cascadingly) to an organization.
+   * @param organization organization or {@code null} for none
+   */
+  public GoogleCloudAssetV1GovernedContainer setOrganization(java.lang.String organization) {
+    this.organization = organization;
     return this;
   }
 
@@ -159,6 +254,25 @@ public final class GoogleCloudAssetV1GovernedContainer extends com.google.api.cl
    */
   public GoogleCloudAssetV1GovernedContainer setPolicyBundle(java.util.List<AnalyzerOrgPolicy> policyBundle) {
     this.policyBundle = policyBundle;
+    return this;
+  }
+
+  /**
+   * The project that this resource belongs to, in the format of projects/{PROJECT_NUMBER}. This
+   * field is available when the resource belongs to a project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProject() {
+    return project;
+  }
+
+  /**
+   * The project that this resource belongs to, in the format of projects/{PROJECT_NUMBER}. This
+   * field is available when the resource belongs to a project.
+   * @param project project or {@code null} for none
+   */
+  public GoogleCloudAssetV1GovernedContainer setProject(java.lang.String project) {
+    this.project = project;
     return this;
   }
 

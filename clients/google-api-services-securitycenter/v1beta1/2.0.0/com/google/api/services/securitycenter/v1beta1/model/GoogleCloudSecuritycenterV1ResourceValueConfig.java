@@ -86,6 +86,15 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   private java.lang.String scope;
 
   /**
+   * A mapping of the sensitivity on Sensitive Data Protection finding to resource values. This
+   * mapping can only be used in combination with a resource_type that is related to BigQuery, e.g.
+   * "bigquery.googleapis.com/Dataset".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV1SensitiveDataProtectionMapping sensitiveDataProtectionMapping;
+
+  /**
    * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
    * E.g. [ "tagValues/123", "tagValues/456", "tagValues/789" ] https://cloud.google.com/resource-
    * manager/docs/tags/tags-creating-and-managing
@@ -227,6 +236,27 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setScope(java.lang.String scope) {
     this.scope = scope;
+    return this;
+  }
+
+  /**
+   * A mapping of the sensitivity on Sensitive Data Protection finding to resource values. This
+   * mapping can only be used in combination with a resource_type that is related to BigQuery, e.g.
+   * "bigquery.googleapis.com/Dataset".
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1SensitiveDataProtectionMapping getSensitiveDataProtectionMapping() {
+    return sensitiveDataProtectionMapping;
+  }
+
+  /**
+   * A mapping of the sensitivity on Sensitive Data Protection finding to resource values. This
+   * mapping can only be used in combination with a resource_type that is related to BigQuery, e.g.
+   * "bigquery.googleapis.com/Dataset".
+   * @param sensitiveDataProtectionMapping sensitiveDataProtectionMapping or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ResourceValueConfig setSensitiveDataProtectionMapping(GoogleCloudSecuritycenterV1SensitiveDataProtectionMapping sensitiveDataProtectionMapping) {
+    this.sensitiveDataProtectionMapping = sensitiveDataProtectionMapping;
     return this;
   }
 

@@ -17,7 +17,8 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * CVE stands for Common Vulnerabilities and Exposures. More information: https://cve.mitre.org
+ * CVE stands for Common Vulnerabilities and Exposures. Information from the [CVE
+ * record](https://www.cve.org/ResourcesSupport/Glossary) that describes this vulnerability.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

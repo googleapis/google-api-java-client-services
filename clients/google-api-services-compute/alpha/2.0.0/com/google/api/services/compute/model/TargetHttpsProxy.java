@@ -227,6 +227,24 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   private java.lang.String sslPolicy;
 
   /**
+   * Specifies whether TLS 1.3 0-RTT Data ("Early Data") should be accepted for this service. Early
+   * Data allows a TLS resumption handshake to include the initial application payload (a HTTP
+   * request) alongside the handshake, reducing the effective round trips to "zero". This applies to
+   * TLS 1.3 connections over TCP (HTTP/2) as well as over UDP (QUIC/h3). This can improve
+   * application performance, especially on networks where interruptions may be common, such as on
+   * mobile. Requests with Early Data will have the "Early-Data" HTTP header set on the request,
+   * with a value of "1", to allow the backend to determine whether Early Data was included. Note:
+   * TLS Early Data may allow requests to be replayed, as the data is sent to the backend before the
+   * handshake has fully completed. Applications that allow idempotent HTTP methods to make non-
+   * idempotent changes, such as a GET request updating a database, should not accept Early Data on
+   * those requests, and reject requests with the "Early-Data: 1" HTTP header by returning a HTTP
+   * 425 (Too Early) status code, in order to remain RFC compliant. The default value is DISABLED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tlsEarlyData;
+
+  /**
    * A fully-qualified or valid partial URL to the UrlMap resource that defines the mapping from URL
    * to the BackendService. For example, the following are all valid URLs for specifying a URL map:
    * - https://www.googleapis.compute/v1/projects/project/global/urlMaps/ url-map -
@@ -707,6 +725,45 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    */
   public TargetHttpsProxy setSslPolicy(java.lang.String sslPolicy) {
     this.sslPolicy = sslPolicy;
+    return this;
+  }
+
+  /**
+   * Specifies whether TLS 1.3 0-RTT Data ("Early Data") should be accepted for this service. Early
+   * Data allows a TLS resumption handshake to include the initial application payload (a HTTP
+   * request) alongside the handshake, reducing the effective round trips to "zero". This applies to
+   * TLS 1.3 connections over TCP (HTTP/2) as well as over UDP (QUIC/h3). This can improve
+   * application performance, especially on networks where interruptions may be common, such as on
+   * mobile. Requests with Early Data will have the "Early-Data" HTTP header set on the request,
+   * with a value of "1", to allow the backend to determine whether Early Data was included. Note:
+   * TLS Early Data may allow requests to be replayed, as the data is sent to the backend before the
+   * handshake has fully completed. Applications that allow idempotent HTTP methods to make non-
+   * idempotent changes, such as a GET request updating a database, should not accept Early Data on
+   * those requests, and reject requests with the "Early-Data: 1" HTTP header by returning a HTTP
+   * 425 (Too Early) status code, in order to remain RFC compliant. The default value is DISABLED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTlsEarlyData() {
+    return tlsEarlyData;
+  }
+
+  /**
+   * Specifies whether TLS 1.3 0-RTT Data ("Early Data") should be accepted for this service. Early
+   * Data allows a TLS resumption handshake to include the initial application payload (a HTTP
+   * request) alongside the handshake, reducing the effective round trips to "zero". This applies to
+   * TLS 1.3 connections over TCP (HTTP/2) as well as over UDP (QUIC/h3). This can improve
+   * application performance, especially on networks where interruptions may be common, such as on
+   * mobile. Requests with Early Data will have the "Early-Data" HTTP header set on the request,
+   * with a value of "1", to allow the backend to determine whether Early Data was included. Note:
+   * TLS Early Data may allow requests to be replayed, as the data is sent to the backend before the
+   * handshake has fully completed. Applications that allow idempotent HTTP methods to make non-
+   * idempotent changes, such as a GET request updating a database, should not accept Early Data on
+   * those requests, and reject requests with the "Early-Data: 1" HTTP header by returning a HTTP
+   * 425 (Too Early) status code, in order to remain RFC compliant. The default value is DISABLED.
+   * @param tlsEarlyData tlsEarlyData or {@code null} for none
+   */
+  public TargetHttpsProxy setTlsEarlyData(java.lang.String tlsEarlyData) {
+    this.tlsEarlyData = tlsEarlyData;
     return this;
   }
 

@@ -40,6 +40,24 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
   private AnalyzerOrgPolicy consolidatedPolicy;
 
   /**
+   * The folder(s) that this consolidated policy belongs to, in the format of
+   * folders/{FOLDER_NUMBER}. This field is available when the consolidated policy belongs (directly
+   * or cascadingly) to one or more folders.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> folders;
+
+  /**
+   * The organization that this consolidated policy belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the consolidated policy
+   * belongs (directly or cascadingly) to an organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String organization;
+
+  /**
    * The ordered list of all organization policies from the
    * AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource. to the scope
    * specified in the request. If the constraint is defined with default policy, it will also appear
@@ -54,6 +72,15 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(AnalyzerOrgPolicy.class);
   }
+
+  /**
+   * The project that this consolidated policy belongs to, in the format of
+   * projects/{PROJECT_NUMBER}. This field is available when the consolidated policy belongs to a
+   * project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String project;
 
   /**
    * The consolidated organization policy for the analyzed resource. The consolidated organization
@@ -79,6 +106,48 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The folder(s) that this consolidated policy belongs to, in the format of
+   * folders/{FOLDER_NUMBER}. This field is available when the consolidated policy belongs (directly
+   * or cascadingly) to one or more folders.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFolders() {
+    return folders;
+  }
+
+  /**
+   * The folder(s) that this consolidated policy belongs to, in the format of
+   * folders/{FOLDER_NUMBER}. This field is available when the consolidated policy belongs (directly
+   * or cascadingly) to one or more folders.
+   * @param folders folders or {@code null} for none
+   */
+  public OrgPolicyResult setFolders(java.util.List<java.lang.String> folders) {
+    this.folders = folders;
+    return this;
+  }
+
+  /**
+   * The organization that this consolidated policy belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the consolidated policy
+   * belongs (directly or cascadingly) to an organization.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrganization() {
+    return organization;
+  }
+
+  /**
+   * The organization that this consolidated policy belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the consolidated policy
+   * belongs (directly or cascadingly) to an organization.
+   * @param organization organization or {@code null} for none
+   */
+  public OrgPolicyResult setOrganization(java.lang.String organization) {
+    this.organization = organization;
+    return this;
+  }
+
+  /**
    * The ordered list of all organization policies from the
    * AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource. to the scope
    * specified in the request. If the constraint is defined with default policy, it will also appear
@@ -98,6 +167,27 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
    */
   public OrgPolicyResult setPolicyBundle(java.util.List<AnalyzerOrgPolicy> policyBundle) {
     this.policyBundle = policyBundle;
+    return this;
+  }
+
+  /**
+   * The project that this consolidated policy belongs to, in the format of
+   * projects/{PROJECT_NUMBER}. This field is available when the consolidated policy belongs to a
+   * project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProject() {
+    return project;
+  }
+
+  /**
+   * The project that this consolidated policy belongs to, in the format of
+   * projects/{PROJECT_NUMBER}. This field is available when the consolidated policy belongs to a
+   * project.
+   * @param project project or {@code null} for none
+   */
+  public OrgPolicyResult setProject(java.lang.String project) {
+    this.project = project;
     return this;
   }
 

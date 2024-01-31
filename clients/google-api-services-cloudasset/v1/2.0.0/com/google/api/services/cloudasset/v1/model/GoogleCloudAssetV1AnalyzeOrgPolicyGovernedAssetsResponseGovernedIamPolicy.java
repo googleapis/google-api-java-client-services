@@ -31,6 +31,17 @@ package com.google.api.services.cloudasset.v1.model;
 public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * The asset type of the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedIamPolicy.attached_resource. Example:
+   * `cloudresourcemanager.googleapis.com/Project` See [Cloud Asset Inventory Supported Asset
+   * Types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for all supported
+   * asset types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assetType;
+
+  /**
    * The full resource name of the resource on which this IAM policy is set. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
@@ -72,6 +83,31 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
+
+  /**
+   * The asset type of the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedIamPolicy.attached_resource. Example:
+   * `cloudresourcemanager.googleapis.com/Project` See [Cloud Asset Inventory Supported Asset
+   * Types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for all supported
+   * asset types.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssetType() {
+    return assetType;
+  }
+
+  /**
+   * The asset type of the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedIamPolicy.attached_resource. Example:
+   * `cloudresourcemanager.googleapis.com/Project` See [Cloud Asset Inventory Supported Asset
+   * Types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for all supported
+   * asset types.
+   * @param assetType assetType or {@code null} for none
+   */
+  public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy setAssetType(java.lang.String assetType) {
+    this.assetType = assetType;
+    return this;
+  }
 
   /**
    * The full resource name of the resource on which this IAM policy is set. Example:

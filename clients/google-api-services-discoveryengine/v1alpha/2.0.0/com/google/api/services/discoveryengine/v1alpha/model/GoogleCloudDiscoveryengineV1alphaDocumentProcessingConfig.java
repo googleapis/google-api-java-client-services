@@ -32,7 +32,16 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The full resource name of the Document Processing Config. Format:
+   * Configurations for default Document parser. If not specified, we will configure it as default
+   * DigitalParsingConfig, and the default parsing config will be applied to all file types for
+   * Document parsing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig defaultParsingConfig;
+
+  /**
+   * The full resource name of the Document Processing Config. Format:
    * `projects/locations/collections/dataStores/documentProcessingConfig`.
    * The value may be {@code null}.
    */
@@ -40,14 +49,47 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig ext
   private java.lang.String name;
 
   /**
-   * The OCR config. Currently it only applies to PDFs.
+   * [DEPRECATED] This field is deprecated. To specify OCR parsing config, please specify
+   * `ocr_parsing_config` in `default_parsing_config` field The OCR config. Currently it only
+   * applies to PDFs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaOcrConfig ocrConfig;
 
   /**
-   * Output only. The full resource name of the Document Processing Config. Format:
+   * Map from file type to override the default parsing configuration based on the file type.
+   * Supported keys: * `pdf`: Override parsing config for PDF files, either digital parsing, ocr
+   * parsing or layout parsing is supported. * `html`: Override parsing config for HTML files, only
+   * digital parsing and or layout parsing are supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig> parsingConfigOverrides;
+
+  /**
+   * Configurations for default Document parser. If not specified, we will configure it as default
+   * DigitalParsingConfig, and the default parsing config will be applied to all file types for
+   * Document parsing.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig getDefaultParsingConfig() {
+    return defaultParsingConfig;
+  }
+
+  /**
+   * Configurations for default Document parser. If not specified, we will configure it as default
+   * DigitalParsingConfig, and the default parsing config will be applied to all file types for
+   * Document parsing.
+   * @param defaultParsingConfig defaultParsingConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig setDefaultParsingConfig(GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig defaultParsingConfig) {
+    this.defaultParsingConfig = defaultParsingConfig;
+    return this;
+  }
+
+  /**
+   * The full resource name of the Document Processing Config. Format:
    * `projects/locations/collections/dataStores/documentProcessingConfig`.
    * @return value or {@code null} for none
    */
@@ -56,7 +98,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig ext
   }
 
   /**
-   * Output only. The full resource name of the Document Processing Config. Format:
+   * The full resource name of the Document Processing Config. Format:
    * `projects/locations/collections/dataStores/documentProcessingConfig`.
    * @param name name or {@code null} for none
    */
@@ -66,7 +108,9 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig ext
   }
 
   /**
-   * The OCR config. Currently it only applies to PDFs.
+   * [DEPRECATED] This field is deprecated. To specify OCR parsing config, please specify
+   * `ocr_parsing_config` in `default_parsing_config` field The OCR config. Currently it only
+   * applies to PDFs.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaOcrConfig getOcrConfig() {
@@ -74,11 +118,36 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig ext
   }
 
   /**
-   * The OCR config. Currently it only applies to PDFs.
+   * [DEPRECATED] This field is deprecated. To specify OCR parsing config, please specify
+   * `ocr_parsing_config` in `default_parsing_config` field The OCR config. Currently it only
+   * applies to PDFs.
    * @param ocrConfig ocrConfig or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig setOcrConfig(GoogleCloudDiscoveryengineV1alphaOcrConfig ocrConfig) {
     this.ocrConfig = ocrConfig;
+    return this;
+  }
+
+  /**
+   * Map from file type to override the default parsing configuration based on the file type.
+   * Supported keys: * `pdf`: Override parsing config for PDF files, either digital parsing, ocr
+   * parsing or layout parsing is supported. * `html`: Override parsing config for HTML files, only
+   * digital parsing and or layout parsing are supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig> getParsingConfigOverrides() {
+    return parsingConfigOverrides;
+  }
+
+  /**
+   * Map from file type to override the default parsing configuration based on the file type.
+   * Supported keys: * `pdf`: Override parsing config for PDF files, either digital parsing, ocr
+   * parsing or layout parsing is supported. * `html`: Override parsing config for HTML files, only
+   * digital parsing and or layout parsing are supported.
+   * @param parsingConfigOverrides parsingConfigOverrides or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig setParsingConfigOverrides(java.util.Map<String, GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig> parsingConfigOverrides) {
+    this.parsingConfigOverrides = parsingConfigOverrides;
     return this;
   }
 

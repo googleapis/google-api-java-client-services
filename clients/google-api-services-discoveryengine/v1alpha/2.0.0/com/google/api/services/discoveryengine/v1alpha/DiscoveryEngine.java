@@ -2979,7 +2979,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link UpdateDocumentProcessingConfig#execute()} method to invoke
            * the remote operation.
            *
-           * @param name Output only. The full resource name of the Document Processing Config. Format:
+           * @param name The full resource name of the Document Processing Config. Format:
            *        `projects/locations/collections/dataStores/documentProcessingConfig`.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig}
            * @return the request
@@ -3010,7 +3010,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
              * immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The full resource name of the Document Processing Config. Format:
+             * @param name The full resource name of the Document Processing Config. Format:
            *        `projects/locations/collections/dataStores/documentProcessingConfig`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig}
              * @since 1.13
@@ -3081,13 +3081,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. The full resource name of the Document Processing Config. Format:
+             * The full resource name of the Document Processing Config. Format:
              * `projects/locations/collections/dataStores/documentProcessingConfig`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The full resource name of the Document Processing Config. Format:
+            /** The full resource name of the Document Processing Config. Format:
            `projects/locations/collections/dataStores/documentProcessingConfig`.
              */
             public java.lang.String getName() {
@@ -3095,7 +3095,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. The full resource name of the Document Processing Config. Format:
+             * The full resource name of the Document Processing Config. Format:
              * `projects/locations/collections/dataStores/documentProcessingConfig`.
              */
             public UpdateDocumentProcessingConfig setName(java.lang.String name) {
@@ -16392,7 +16392,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link UpdateDocumentProcessingConfig#execute()} method to invoke
          * the remote operation.
          *
-         * @param name Output only. The full resource name of the Document Processing Config. Format:
+         * @param name The full resource name of the Document Processing Config. Format:
          *        `projects/locations/collections/dataStores/documentProcessingConfig`.
          * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig}
          * @return the request
@@ -16423,7 +16423,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
            * immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The full resource name of the Document Processing Config. Format:
+           * @param name The full resource name of the Document Processing Config. Format:
          *        `projects/locations/collections/dataStores/documentProcessingConfig`.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig}
            * @since 1.13
@@ -16494,13 +16494,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Output only. The full resource name of the Document Processing Config. Format:
+           * The full resource name of the Document Processing Config. Format:
            * `projects/locations/collections/dataStores/documentProcessingConfig`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The full resource name of the Document Processing Config. Format:
+          /** The full resource name of the Document Processing Config. Format:
          `projects/locations/collections/dataStores/documentProcessingConfig`.
            */
           public java.lang.String getName() {
@@ -16508,7 +16508,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Output only. The full resource name of the Document Processing Config. Format:
+           * The full resource name of the Document Processing Config. Format:
            * `projects/locations/collections/dataStores/documentProcessingConfig`.
            */
           public UpdateDocumentProcessingConfig setName(java.lang.String name) {

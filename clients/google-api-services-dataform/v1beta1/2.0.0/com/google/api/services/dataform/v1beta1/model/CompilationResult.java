@@ -74,9 +74,8 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * Immutable. The name of the release config to compile. The release config's
-   * 'current_compilation_result' field will be updated to this compilation result. Must be in the
-   * format `projects/locations/repositories/releaseConfigs`.
+   * Immutable. The name of the release config to compile. Must be in the format
+   * `projects/locations/repositories/releaseConfigs`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,9 +189,8 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Immutable. The name of the release config to compile. The release config's
-   * 'current_compilation_result' field will be updated to this compilation result. Must be in the
-   * format `projects/locations/repositories/releaseConfigs`.
+   * Immutable. The name of the release config to compile. Must be in the format
+   * `projects/locations/repositories/releaseConfigs`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReleaseConfig() {
@@ -200,9 +198,8 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Immutable. The name of the release config to compile. The release config's
-   * 'current_compilation_result' field will be updated to this compilation result. Must be in the
-   * format `projects/locations/repositories/releaseConfigs`.
+   * Immutable. The name of the release config to compile. Must be in the format
+   * `projects/locations/repositories/releaseConfigs`.
    * @param releaseConfig releaseConfig or {@code null} for none
    */
   public CompilationResult setReleaseConfig(java.lang.String releaseConfig) {

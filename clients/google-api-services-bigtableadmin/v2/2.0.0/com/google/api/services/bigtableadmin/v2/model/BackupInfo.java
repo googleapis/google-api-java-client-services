@@ -48,7 +48,7 @@ public final class BackupInfo extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Name of the backup from which this backup was copied. If a backup is not created
    * by copying a backup, this field will be empty. Values are of the form:
-   * projects//instances//backups/.
+   * projects//instances//clusters//backups/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class BackupInfo extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Name of the backup from which this backup was copied. If a backup is not created
    * by copying a backup, this field will be empty. Values are of the form:
-   * projects//instances//backups/.
+   * projects//instances//clusters//backups/
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceBackup() {
@@ -118,7 +118,7 @@ public final class BackupInfo extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Name of the backup from which this backup was copied. If a backup is not created
    * by copying a backup, this field will be empty. Values are of the form:
-   * projects//instances//backups/.
+   * projects//instances//clusters//backups/
    * @param sourceBackup sourceBackup or {@code null} for none
    */
   public BackupInfo setSourceBackup(java.lang.String sourceBackup) {

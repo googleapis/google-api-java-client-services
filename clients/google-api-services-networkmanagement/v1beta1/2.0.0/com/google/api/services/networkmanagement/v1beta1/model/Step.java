@@ -146,7 +146,8 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private InstanceInfo instance;
 
   /**
-   * Display information of the load balancers.
+   * Display information of the load balancers. Deprecated in favor of the
+   * `load_balancer_backend_info` field, not used in new tests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -506,7 +507,8 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display information of the load balancers.
+   * Display information of the load balancers. Deprecated in favor of the
+   * `load_balancer_backend_info` field, not used in new tests.
    * @return value or {@code null} for none
    */
   public LoadBalancerInfo getLoadBalancer() {
@@ -514,7 +516,8 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display information of the load balancers.
+   * Display information of the load balancers. Deprecated in favor of the
+   * `load_balancer_backend_info` field, not used in new tests.
    * @param loadBalancer loadBalancer or {@code null} for none
    */
   public Step setLoadBalancer(LoadBalancerInfo loadBalancer) {

@@ -45,6 +45,13 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload exten
   private java.util.List<java.lang.String> partnerEligibilityIds;
 
   /**
+   * Optional. Specifies the plan type offered to the end user by the partner.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String partnerPlanType;
+
+  /**
    * Output only. The access expiration time for this line item.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload exten
    */
   public GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload setPartnerEligibilityIds(java.util.List<java.lang.String> partnerEligibilityIds) {
     this.partnerEligibilityIds = partnerEligibilityIds;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the plan type offered to the end user by the partner.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPartnerPlanType() {
+    return partnerPlanType;
+  }
+
+  /**
+   * Optional. Specifies the plan type offered to the end user by the partner.
+   * @param partnerPlanType partnerPlanType or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload setPartnerPlanType(java.lang.String partnerPlanType) {
+    this.partnerPlanType = partnerPlanType;
     return this;
   }
 

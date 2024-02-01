@@ -4149,6 +4149,215 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
       public class DiscoveredServices {
 
         /**
+         * Finds discovered services that could be added to an application in a host project and location.
+         *
+         * Create a request for the method "discoveredServices.find".
+         *
+         * This request holds the parameters needed by the apphub server.  After setting any optional
+         * parameters, call the {@link Find#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Value for parent.
+         * @return the request
+         */
+        public Find find(java.lang.String parent) throws java.io.IOException {
+          Find result = new Find(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Find extends AppHubRequest<com.google.api.services.apphub.v1alpha.model.FindDiscoveredServicesResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/discoveredServices:find";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Finds discovered services that could be added to an application in a host project and location.
+           *
+           * Create a request for the method "discoveredServices.find".
+           *
+           * This request holds the parameters needed by the the apphub server.  After setting any optional
+           * parameters, call the {@link Find#execute()} method to invoke the remote operation. <p> {@link
+           * Find#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Value for parent.
+           * @since 1.13
+           */
+          protected Find(java.lang.String parent) {
+            super(AppHub.this, "GET", REST_PATH, null, com.google.api.services.apphub.v1alpha.model.FindDiscoveredServicesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Find set$Xgafv(java.lang.String $Xgafv) {
+            return (Find) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Find setAccessToken(java.lang.String accessToken) {
+            return (Find) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Find setAlt(java.lang.String alt) {
+            return (Find) super.setAlt(alt);
+          }
+
+          @Override
+          public Find setCallback(java.lang.String callback) {
+            return (Find) super.setCallback(callback);
+          }
+
+          @Override
+          public Find setFields(java.lang.String fields) {
+            return (Find) super.setFields(fields);
+          }
+
+          @Override
+          public Find setKey(java.lang.String key) {
+            return (Find) super.setKey(key);
+          }
+
+          @Override
+          public Find setOauthToken(java.lang.String oauthToken) {
+            return (Find) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Find setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Find) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Find setQuotaUser(java.lang.String quotaUser) {
+            return (Find) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Find setUploadType(java.lang.String uploadType) {
+            return (Find) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Find setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Find) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Value for parent. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Value for parent.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Value for parent. */
+          public Find setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filtering results */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filtering results */
+          public Find setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results */
+          public Find setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          public Find setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public Find setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public Find set(String parameterName, Object value) {
+            return (Find) super.set(parameterName, value);
+          }
+        }
+        /**
          * Finds unregistered services in a host project and location.
          *
          * Create a request for the method "discoveredServices.findUnregistered".
@@ -4727,6 +4936,216 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
        */
       public class DiscoveredWorkloads {
 
+        /**
+         * Finds discovered workloads that could be added to an application in a host project and location.
+         *
+         * Create a request for the method "discoveredWorkloads.find".
+         *
+         * This request holds the parameters needed by the apphub server.  After setting any optional
+         * parameters, call the {@link Find#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Value for parent.
+         * @return the request
+         */
+        public Find find(java.lang.String parent) throws java.io.IOException {
+          Find result = new Find(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Find extends AppHubRequest<com.google.api.services.apphub.v1alpha.model.FindDiscoveredWorkloadsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/discoveredWorkloads:find";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Finds discovered workloads that could be added to an application in a host project and
+           * location.
+           *
+           * Create a request for the method "discoveredWorkloads.find".
+           *
+           * This request holds the parameters needed by the the apphub server.  After setting any optional
+           * parameters, call the {@link Find#execute()} method to invoke the remote operation. <p> {@link
+           * Find#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Value for parent.
+           * @since 1.13
+           */
+          protected Find(java.lang.String parent) {
+            super(AppHub.this, "GET", REST_PATH, null, com.google.api.services.apphub.v1alpha.model.FindDiscoveredWorkloadsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Find set$Xgafv(java.lang.String $Xgafv) {
+            return (Find) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Find setAccessToken(java.lang.String accessToken) {
+            return (Find) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Find setAlt(java.lang.String alt) {
+            return (Find) super.setAlt(alt);
+          }
+
+          @Override
+          public Find setCallback(java.lang.String callback) {
+            return (Find) super.setCallback(callback);
+          }
+
+          @Override
+          public Find setFields(java.lang.String fields) {
+            return (Find) super.setFields(fields);
+          }
+
+          @Override
+          public Find setKey(java.lang.String key) {
+            return (Find) super.setKey(key);
+          }
+
+          @Override
+          public Find setOauthToken(java.lang.String oauthToken) {
+            return (Find) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Find setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Find) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Find setQuotaUser(java.lang.String quotaUser) {
+            return (Find) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Find setUploadType(java.lang.String uploadType) {
+            return (Find) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Find setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Find) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Value for parent. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Value for parent.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Value for parent. */
+          public Find setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filtering results */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filtering results */
+          public Find setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results */
+          public Find setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          public Find setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public Find setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public Find set(String parameterName, Object value) {
+            return (Find) super.set(parameterName, value);
+          }
+        }
         /**
          * Finds unregistered workloads in a host project and location.
          *

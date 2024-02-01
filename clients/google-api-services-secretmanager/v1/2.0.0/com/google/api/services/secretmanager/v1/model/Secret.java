@@ -83,7 +83,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. Immutable. The replication policy of the secret data attached to the Secret. The
+   * Optional. Immutable. The replication policy of the secret data attached to the Secret. The
    * replication policy cannot be changed after the Secret has been created.
    * The value may be {@code null}.
    */
@@ -118,8 +118,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    * maximum length of 63 characters and can contain uppercase and lowercase letters, numerals, and
    * the hyphen (`-`) and underscore ('_') characters. An alias string must start with a letter and
    * cannot be the string 'latest' or 'NEW'. No more than 50 aliases can be assigned to a given
-   * secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret. At
-   * launch Access by Allias will only be supported on GetSecretVersion and AccessSecretVersion.
+   * secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret.
+   * Access by alias is only be supported on GetSecretVersion and AccessSecretVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -248,7 +248,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The replication policy of the secret data attached to the Secret. The
+   * Optional. Immutable. The replication policy of the secret data attached to the Secret. The
    * replication policy cannot be changed after the Secret has been created.
    * @return value or {@code null} for none
    */
@@ -257,7 +257,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The replication policy of the secret data attached to the Secret. The
+   * Optional. Immutable. The replication policy of the secret data attached to the Secret. The
    * replication policy cannot be changed after the Secret has been created.
    * @param replication replication or {@code null} for none
    */
@@ -326,8 +326,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    * maximum length of 63 characters and can contain uppercase and lowercase letters, numerals, and
    * the hyphen (`-`) and underscore ('_') characters. An alias string must start with a letter and
    * cannot be the string 'latest' or 'NEW'. No more than 50 aliases can be assigned to a given
-   * secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret. At
-   * launch Access by Allias will only be supported on GetSecretVersion and AccessSecretVersion.
+   * secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret.
+   * Access by alias is only be supported on GetSecretVersion and AccessSecretVersion.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Long> getVersionAliases() {
@@ -339,8 +339,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    * maximum length of 63 characters and can contain uppercase and lowercase letters, numerals, and
    * the hyphen (`-`) and underscore ('_') characters. An alias string must start with a letter and
    * cannot be the string 'latest' or 'NEW'. No more than 50 aliases can be assigned to a given
-   * secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret. At
-   * launch Access by Allias will only be supported on GetSecretVersion and AccessSecretVersion.
+   * secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret.
+   * Access by alias is only be supported on GetSecretVersion and AccessSecretVersion.
    * @param versionAliases versionAliases or {@code null} for none
    */
   public Secret setVersionAliases(java.util.Map<String, java.lang.Long> versionAliases) {

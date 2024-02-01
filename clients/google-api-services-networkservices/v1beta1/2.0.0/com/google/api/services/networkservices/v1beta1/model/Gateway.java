@@ -20,7 +20,7 @@ package com.google.api.services.networkservices.v1beta1.model;
  * Gateway represents the configuration for a proxy, typically a load balancer. It captures the
  * ip:port over which the services are exposed by the proxy, along with any policy configurations.
  * Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
- * Next id: 29
+ * Next id: 30
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:

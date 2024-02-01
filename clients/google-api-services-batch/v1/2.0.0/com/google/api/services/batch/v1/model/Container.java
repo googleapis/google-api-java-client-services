@@ -86,16 +86,29 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String options;
 
   /**
-   * Optional password for logging in to a docker registry. If password matches
-   * `projects/secrets/versions` then Batch will read the password from the Secret Manager;
+   * Required if the container image is from a private Docker registry. The password to login to the
+   * Docker registry that contains the image. For security, it is strongly recommended to specify an
+   * encrypted password by using a Secret Manager secret: `projects/secrets/versions`. Warning: If
+   * you specify the password using plain text, you risk the password being exposed to any users who
+   * can view the job or its logs. To avoid this risk, specify a secret that contains the password
+   * instead. Learn more about [Secret Manager](https://cloud.google.com/secret-manager/docs/) and
+   * [using Secret Manager with Batch](https://cloud.google.com/batch/docs/create-run-job-secret-
+   * manager).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String password;
 
   /**
-   * Optional username for logging in to a docker registry. If username matches
-   * `projects/secrets/versions` then Batch will read the username from the Secret Manager.
+   * Required if the container image is from a private Docker registry. The username to login to the
+   * Docker registry that contains the image. You can either specify the username directly by using
+   * plain text or specify an encrypted username by using a Secret Manager secret:
+   * `projects/secrets/versions`. However, using a secret is recommended for enhanced security.
+   * Caution: If you specify the username using plain text, you risk the username being exposed to
+   * any users who can view the job or its logs. To avoid this risk, specify a secret that contains
+   * the username instead. Learn more about [Secret Manager](https://cloud.google.com/secret-
+   * manager/docs/) and [using Secret Manager with Batch](https://cloud.google.com/batch/docs
+   * /create-run-job-secret-manager).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,8 +259,14 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional password for logging in to a docker registry. If password matches
-   * `projects/secrets/versions` then Batch will read the password from the Secret Manager;
+   * Required if the container image is from a private Docker registry. The password to login to the
+   * Docker registry that contains the image. For security, it is strongly recommended to specify an
+   * encrypted password by using a Secret Manager secret: `projects/secrets/versions`. Warning: If
+   * you specify the password using plain text, you risk the password being exposed to any users who
+   * can view the job or its logs. To avoid this risk, specify a secret that contains the password
+   * instead. Learn more about [Secret Manager](https://cloud.google.com/secret-manager/docs/) and
+   * [using Secret Manager with Batch](https://cloud.google.com/batch/docs/create-run-job-secret-
+   * manager).
    * @return value or {@code null} for none
    */
   public java.lang.String getPassword() {
@@ -255,8 +274,14 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional password for logging in to a docker registry. If password matches
-   * `projects/secrets/versions` then Batch will read the password from the Secret Manager;
+   * Required if the container image is from a private Docker registry. The password to login to the
+   * Docker registry that contains the image. For security, it is strongly recommended to specify an
+   * encrypted password by using a Secret Manager secret: `projects/secrets/versions`. Warning: If
+   * you specify the password using plain text, you risk the password being exposed to any users who
+   * can view the job or its logs. To avoid this risk, specify a secret that contains the password
+   * instead. Learn more about [Secret Manager](https://cloud.google.com/secret-manager/docs/) and
+   * [using Secret Manager with Batch](https://cloud.google.com/batch/docs/create-run-job-secret-
+   * manager).
    * @param password password or {@code null} for none
    */
   public Container setPassword(java.lang.String password) {
@@ -265,8 +290,15 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional username for logging in to a docker registry. If username matches
-   * `projects/secrets/versions` then Batch will read the username from the Secret Manager.
+   * Required if the container image is from a private Docker registry. The username to login to the
+   * Docker registry that contains the image. You can either specify the username directly by using
+   * plain text or specify an encrypted username by using a Secret Manager secret:
+   * `projects/secrets/versions`. However, using a secret is recommended for enhanced security.
+   * Caution: If you specify the username using plain text, you risk the username being exposed to
+   * any users who can view the job or its logs. To avoid this risk, specify a secret that contains
+   * the username instead. Learn more about [Secret Manager](https://cloud.google.com/secret-
+   * manager/docs/) and [using Secret Manager with Batch](https://cloud.google.com/batch/docs
+   * /create-run-job-secret-manager).
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -274,8 +306,15 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional username for logging in to a docker registry. If username matches
-   * `projects/secrets/versions` then Batch will read the username from the Secret Manager.
+   * Required if the container image is from a private Docker registry. The username to login to the
+   * Docker registry that contains the image. You can either specify the username directly by using
+   * plain text or specify an encrypted username by using a Secret Manager secret:
+   * `projects/secrets/versions`. However, using a secret is recommended for enhanced security.
+   * Caution: If you specify the username using plain text, you risk the username being exposed to
+   * any users who can view the job or its logs. To avoid this risk, specify a secret that contains
+   * the username instead. Learn more about [Secret Manager](https://cloud.google.com/secret-
+   * manager/docs/) and [using Secret Manager with Batch](https://cloud.google.com/batch/docs
+   * /create-run-job-secret-manager).
    * @param username username or {@code null} for none
    */
   public Container setUsername(java.lang.String username) {

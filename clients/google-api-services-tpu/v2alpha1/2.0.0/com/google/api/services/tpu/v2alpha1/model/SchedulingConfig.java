@@ -44,6 +44,13 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean reserved;
 
   /**
+   * Optional. Defines whether the node is Spot VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean spot;
+
+  /**
    * Defines whether the node is preemptible.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
    */
   public SchedulingConfig setReserved(java.lang.Boolean reserved) {
     this.reserved = reserved;
+    return this;
+  }
+
+  /**
+   * Optional. Defines whether the node is Spot VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSpot() {
+    return spot;
+  }
+
+  /**
+   * Optional. Defines whether the node is Spot VM.
+   * @param spot spot or {@code null} for none
+   */
+  public SchedulingConfig setSpot(java.lang.Boolean spot) {
+    this.spot = spot;
     return this;
   }
 

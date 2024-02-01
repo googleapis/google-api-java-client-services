@@ -30,7 +30,8 @@ package com.google.api.services.secretmanager.v1.model;
 public final class AccessSecretVersionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the SecretVersion in the format `projects/secrets/versions`.
+   * The resource name of the SecretVersion in the format `projects/secrets/versions` or
+   * `projects/locations/secrets/versions`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class AccessSecretVersionResponse extends com.google.api.client.jso
   private SecretPayload payload;
 
   /**
-   * The resource name of the SecretVersion in the format `projects/secrets/versions`.
+   * The resource name of the SecretVersion in the format `projects/secrets/versions` or
+   * `projects/locations/secrets/versions`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -52,7 +54,8 @@ public final class AccessSecretVersionResponse extends com.google.api.client.jso
   }
 
   /**
-   * The resource name of the SecretVersion in the format `projects/secrets/versions`.
+   * The resource name of the SecretVersion in the format `projects/secrets/versions` or
+   * `projects/locations/secrets/versions`.
    * @param name name or {@code null} for none
    */
   public AccessSecretVersionResponse setName(java.lang.String name) {

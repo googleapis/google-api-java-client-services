@@ -514,6 +514,2484 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
       }
 
+      /**
+       * An accessor for creating requests from the Secrets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SecretManager secretmanager = new SecretManager(...);}
+       *   {@code SecretManager.Secrets.List request = secretmanager.secrets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Secrets secrets() {
+        return new Secrets();
+      }
+
+      /**
+       * The "secrets" collection of methods.
+       */
+      public class Secrets {
+
+        /**
+         * Creates a new SecretVersion containing secret data and attaches it to an existing Secret.
+         *
+         * Create a request for the method "secrets.addVersion".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link AddVersion#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
+         *        `projects/secrets` or `projects/locations/secrets`.
+         * @param content the {@link com.google.api.services.secretmanager.v1.model.AddSecretVersionRequest}
+         * @return the request
+         */
+        public AddVersion addVersion(java.lang.String parent, com.google.api.services.secretmanager.v1.model.AddSecretVersionRequest content) throws java.io.IOException {
+          AddVersion result = new AddVersion(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AddVersion extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.SecretVersion> {
+
+          private static final String REST_PATH = "v1/{+parent}:addVersion";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Creates a new SecretVersion containing secret data and attaches it to an existing Secret.
+           *
+           * Create a request for the method "secrets.addVersion".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link AddVersion#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * AddVersion#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
+         *        `projects/secrets` or `projects/locations/secrets`.
+           * @param content the {@link com.google.api.services.secretmanager.v1.model.AddSecretVersionRequest}
+           * @since 1.13
+           */
+          protected AddVersion(java.lang.String parent, com.google.api.services.secretmanager.v1.model.AddSecretVersionRequest content) {
+            super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.SecretVersion.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public AddVersion set$Xgafv(java.lang.String $Xgafv) {
+            return (AddVersion) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AddVersion setAccessToken(java.lang.String accessToken) {
+            return (AddVersion) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AddVersion setAlt(java.lang.String alt) {
+            return (AddVersion) super.setAlt(alt);
+          }
+
+          @Override
+          public AddVersion setCallback(java.lang.String callback) {
+            return (AddVersion) super.setCallback(callback);
+          }
+
+          @Override
+          public AddVersion setFields(java.lang.String fields) {
+            return (AddVersion) super.setFields(fields);
+          }
+
+          @Override
+          public AddVersion setKey(java.lang.String key) {
+            return (AddVersion) super.setKey(key);
+          }
+
+          @Override
+          public AddVersion setOauthToken(java.lang.String oauthToken) {
+            return (AddVersion) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AddVersion setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AddVersion) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AddVersion setQuotaUser(java.lang.String quotaUser) {
+            return (AddVersion) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AddVersion setUploadType(java.lang.String uploadType) {
+            return (AddVersion) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AddVersion setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AddVersion) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Secret to associate with the SecretVersion in the
+           * format `projects/secrets` or `projects/locations/secrets`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the Secret to associate with the SecretVersion in the format
+         `projects/secrets` or `projects/locations/secrets`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the Secret to associate with the SecretVersion in the
+           * format `projects/secrets` or `projects/locations/secrets`.
+           */
+          public AddVersion setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public AddVersion set(String parameterName, Object value) {
+            return (AddVersion) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new Secret containing no SecretVersions.
+         *
+         * Create a request for the method "secrets.create".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the project to associate with the Secret, in the format `projects` or
+         *        `projects/locations`.
+         * @param content the {@link com.google.api.services.secretmanager.v1.model.Secret}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.secretmanager.v1.model.Secret content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.Secret> {
+
+          private static final String REST_PATH = "v1/{+parent}/secrets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new Secret containing no SecretVersions.
+           *
+           * Create a request for the method "secrets.create".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the project to associate with the Secret, in the format `projects` or
+         *        `projects/locations`.
+           * @param content the {@link com.google.api.services.secretmanager.v1.model.Secret}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.secretmanager.v1.model.Secret content) {
+            super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.Secret.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the project to associate with the Secret, in the format
+           * `projects` or `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the project to associate with the Secret, in the format `projects`
+         or `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the project to associate with the Secret, in the format
+           * `projects` or `projects/locations`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. This must be unique within the project. A secret ID is a string with a
+           * maximum length of 255 characters and can contain uppercase and lowercase letters,
+           * numerals, and the hyphen (`-`) and underscore (`_`) characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String secretId;
+
+          /** Required. This must be unique within the project. A secret ID is a string with a maximum length of
+         255 characters and can contain uppercase and lowercase letters, numerals, and the hyphen (`-`) and
+         underscore (`_`) characters.
+           */
+          public java.lang.String getSecretId() {
+            return secretId;
+          }
+
+          /**
+           * Required. This must be unique within the project. A secret ID is a string with a
+           * maximum length of 255 characters and can contain uppercase and lowercase letters,
+           * numerals, and the hyphen (`-`) and underscore (`_`) characters.
+           */
+          public Create setSecretId(java.lang.String secretId) {
+            this.secretId = secretId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a Secret.
+         *
+         * Create a request for the method "secrets.delete".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the Secret to delete in the format `projects/secrets`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Deletes a Secret.
+           *
+           * Create a request for the method "secrets.delete".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the Secret to delete in the format `projects/secrets`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(SecretManager.this, "DELETE", REST_PATH, null, com.google.api.services.secretmanager.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Secret to delete in the format `projects/secrets`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the Secret to delete in the format `projects/secrets`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the Secret to delete in the format `projects/secrets`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Etag of the Secret. The request succeeds if it matches the etag of the
+           * currently stored secret object. If the etag is omitted, the request succeeds.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. Etag of the Secret. The request succeeds if it matches the etag of the currently stored
+         secret object. If the etag is omitted, the request succeeds.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. Etag of the Secret. The request succeeds if it matches the etag of the
+           * currently stored secret object. If the etag is omitted, the request succeeds.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets metadata for a given Secret.
+         *
+         * Create a request for the method "secrets.get".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the Secret, in the format `projects/secrets` or
+         *        `projects/locations/secrets`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.Secret> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Gets metadata for a given Secret.
+           *
+           * Create a request for the method "secrets.get".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the Secret, in the format `projects/secrets` or
+         *        `projects/locations/secrets`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(SecretManager.this, "GET", REST_PATH, null, com.google.api.services.secretmanager.v1.model.Secret.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Secret, in the format `projects/secrets` or
+           * `projects/locations/secrets`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the Secret, in the format `projects/secrets` or
+         `projects/locations/secrets`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the Secret, in the format `projects/secrets` or
+           * `projects/locations/secrets`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the access control policy for a secret. Returns empty policy if the secret exists and does
+         * not have a policy set.
+         *
+         * Create a request for the method "secrets.getIamPolicy".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Gets the access control policy for a secret. Returns empty policy if the secret exists and does
+           * not have a policy set.
+           *
+           * Create a request for the method "secrets.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(SecretManager.this, "GET", REST_PATH, null, com.google.api.services.secretmanager.v1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Secrets.
+         *
+         * Create a request for the method "secrets.list".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the project associated with the Secrets, in the format `projects` or
+         *        `projects/locations`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.ListSecretsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/secrets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Secrets.
+           *
+           * Create a request for the method "secrets.list".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the project associated with the Secrets, in the format `projects` or
+         *        `projects/locations`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(SecretManager.this, "GET", REST_PATH, null, com.google.api.services.secretmanager.v1.model.ListSecretsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the project associated with the Secrets, in the format
+           * `projects` or `projects/locations`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the project associated with the Secrets, in the format `projects` or
+         `projects/locations`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the project associated with the Secrets, in the format
+           * `projects` or `projects/locations`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter string, adhering to the rules in [List-operation
+           * filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secrets
+           * matching the filter. If filter is empty, all secrets are listed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter string, adhering to the rules in [List-operation
+         filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secrets matching the
+         filter. If filter is empty, all secrets are listed.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter string, adhering to the rules in [List-operation
+           * filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secrets
+           * matching the filter. If filter is empty, all secrets are listed.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to be returned in a single page. If set to 0,
+           * the server decides the number of results to return. If the number is greater than
+           * 25000, it is capped at 25000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to be returned in a single page. If set to 0, the server
+         decides the number of results to return. If the number is greater than 25000, it is capped at
+         25000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to be returned in a single page. If set to 0,
+           * the server decides the number of results to return. If the number is greater than
+           * 25000, it is capped at 25000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Pagination token, returned earlier via ListSecretsResponse.next_page_token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Pagination token, returned earlier via ListSecretsResponse.next_page_token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Pagination token, returned earlier via ListSecretsResponse.next_page_token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates metadata of an existing Secret.
+         *
+         * Create a request for the method "secrets.patch".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The resource name of the Secret in the format `projects/secrets`.
+         * @param content the {@link com.google.api.services.secretmanager.v1.model.Secret}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.secretmanager.v1.model.Secret content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.Secret> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Updates metadata of an existing Secret.
+           *
+           * Create a request for the method "secrets.patch".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The resource name of the Secret in the format `projects/secrets`.
+           * @param content the {@link com.google.api.services.secretmanager.v1.model.Secret}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.secretmanager.v1.model.Secret content) {
+            super(SecretManager.this, "PATCH", REST_PATH, content, com.google.api.services.secretmanager.v1.model.Secret.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Output only. The resource name of the Secret in the format `projects/secrets`. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The resource name of the Secret in the format `projects/secrets`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Output only. The resource name of the Secret in the format `projects/secrets`. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. Specifies the fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Specifies the fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. Specifies the fields to be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the access control policy on the specified secret. Replaces any existing policy. Permissions
+         * on SecretVersions are enforced according to the policy set on the associated Secret.
+         *
+         * Create a request for the method "secrets.setIamPolicy".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.secretmanager.v1.model.SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.secretmanager.v1.model.SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Sets the access control policy on the specified secret. Replaces any existing policy.
+           * Permissions on SecretVersions are enforced according to the policy set on the associated
+           * Secret.
+           *
+           * Create a request for the method "secrets.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.secretmanager.v1.model.SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.secretmanager.v1.model.SetIamPolicyRequest content) {
+            super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns permissions that a caller has for the specified secret. If the secret does not exist,
+         * this call returns an empty set of permissions, not a NOT_FOUND error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
+         *
+         * Create a request for the method "secrets.testIamPermissions".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.secretmanager.v1.model.TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.secretmanager.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Returns permissions that a caller has for the specified secret. If the secret does not exist,
+           * this call returns an empty set of permissions, not a NOT_FOUND error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "secrets.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.secretmanager.v1.model.TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.secretmanager.v1.model.TestIamPermissionsRequest content) {
+            super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Versions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code SecretManager secretmanager = new SecretManager(...);}
+         *   {@code SecretManager.Versions.List request = secretmanager.versions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Versions versions() {
+          return new Versions();
+        }
+
+        /**
+         * The "versions" collection of methods.
+         */
+        public class Versions {
+
+          /**
+           * Accesses a SecretVersion. This call returns the secret data. `projects/secrets/versions/latest`
+           * is an alias to the most recently created SecretVersion.
+           *
+           * Create a request for the method "versions.access".
+           *
+           * This request holds the parameters needed by the secretmanager server.  After setting any optional
+           * parameters, call the {@link Access#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+           *        `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+           *        `projects/locations/secrets/versions/latest` is an alias to the most recently created
+           *        SecretVersion.
+           * @return the request
+           */
+          public Access access(java.lang.String name) throws java.io.IOException {
+            Access result = new Access(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Access extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.AccessSecretVersionResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:access";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+
+            /**
+             * Accesses a SecretVersion. This call returns the secret data. `projects/secrets/versions/latest`
+             * is an alias to the most recently created SecretVersion.
+             *
+             * Create a request for the method "versions.access".
+             *
+             * This request holds the parameters needed by the the secretmanager server.  After setting any
+             * optional parameters, call the {@link Access#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Access#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+           *        `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+           *        `projects/locations/secrets/versions/latest` is an alias to the most recently created
+           *        SecretVersion.
+             * @since 1.13
+             */
+            protected Access(java.lang.String name) {
+              super(SecretManager.this, "GET", REST_PATH, null, com.google.api.services.secretmanager.v1.model.AccessSecretVersionResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Access set$Xgafv(java.lang.String $Xgafv) {
+              return (Access) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Access setAccessToken(java.lang.String accessToken) {
+              return (Access) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Access setAlt(java.lang.String alt) {
+              return (Access) super.setAlt(alt);
+            }
+
+            @Override
+            public Access setCallback(java.lang.String callback) {
+              return (Access) super.setCallback(callback);
+            }
+
+            @Override
+            public Access setFields(java.lang.String fields) {
+              return (Access) super.setFields(fields);
+            }
+
+            @Override
+            public Access setKey(java.lang.String key) {
+              return (Access) super.setKey(key);
+            }
+
+            @Override
+            public Access setOauthToken(java.lang.String oauthToken) {
+              return (Access) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Access setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Access) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Access setQuotaUser(java.lang.String quotaUser) {
+              return (Access) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Access setUploadType(java.lang.String uploadType) {
+              return (Access) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Access setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Access) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the SecretVersion in the format
+             * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             * `projects/secrets/versions/latest` or `projects/locations/secrets/versions/latest` is
+             * an alias to the most recently created SecretVersion.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+           `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+           `projects/locations/secrets/versions/latest` is an alias to the most recently created
+           SecretVersion.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the SecretVersion in the format
+             * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             * `projects/secrets/versions/latest` or `projects/locations/secrets/versions/latest` is
+             * an alias to the most recently created SecretVersion.
+             */
+            public Access setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Access set(String parameterName, Object value) {
+              return (Access) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Destroys a SecretVersion. Sets the state of the SecretVersion to DESTROYED and irrevocably
+           * destroys the secret data.
+           *
+           * Create a request for the method "versions.destroy".
+           *
+           * This request holds the parameters needed by the secretmanager server.  After setting any optional
+           * parameters, call the {@link Destroy#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the SecretVersion to destroy in the format
+           *        `projects/secrets/versions` or `projects/locations/secrets/versions`.
+           * @param content the {@link com.google.api.services.secretmanager.v1.model.DestroySecretVersionRequest}
+           * @return the request
+           */
+          public Destroy destroy(java.lang.String name, com.google.api.services.secretmanager.v1.model.DestroySecretVersionRequest content) throws java.io.IOException {
+            Destroy result = new Destroy(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Destroy extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.SecretVersion> {
+
+            private static final String REST_PATH = "v1/{+name}:destroy";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+
+            /**
+             * Destroys a SecretVersion. Sets the state of the SecretVersion to DESTROYED and irrevocably
+             * destroys the secret data.
+             *
+             * Create a request for the method "versions.destroy".
+             *
+             * This request holds the parameters needed by the the secretmanager server.  After setting any
+             * optional parameters, call the {@link Destroy#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Destroy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the SecretVersion to destroy in the format
+           *        `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             * @param content the {@link com.google.api.services.secretmanager.v1.model.DestroySecretVersionRequest}
+             * @since 1.13
+             */
+            protected Destroy(java.lang.String name, com.google.api.services.secretmanager.v1.model.DestroySecretVersionRequest content) {
+              super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.SecretVersion.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Destroy set$Xgafv(java.lang.String $Xgafv) {
+              return (Destroy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Destroy setAccessToken(java.lang.String accessToken) {
+              return (Destroy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Destroy setAlt(java.lang.String alt) {
+              return (Destroy) super.setAlt(alt);
+            }
+
+            @Override
+            public Destroy setCallback(java.lang.String callback) {
+              return (Destroy) super.setCallback(callback);
+            }
+
+            @Override
+            public Destroy setFields(java.lang.String fields) {
+              return (Destroy) super.setFields(fields);
+            }
+
+            @Override
+            public Destroy setKey(java.lang.String key) {
+              return (Destroy) super.setKey(key);
+            }
+
+            @Override
+            public Destroy setOauthToken(java.lang.String oauthToken) {
+              return (Destroy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Destroy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Destroy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Destroy setQuotaUser(java.lang.String quotaUser) {
+              return (Destroy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Destroy setUploadType(java.lang.String uploadType) {
+              return (Destroy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Destroy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Destroy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the SecretVersion to destroy in the format
+             * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the SecretVersion to destroy in the format
+           `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the SecretVersion to destroy in the format
+             * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             */
+            public Destroy setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Destroy set(String parameterName, Object value) {
+              return (Destroy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Disables a SecretVersion. Sets the state of the SecretVersion to DISABLED.
+           *
+           * Create a request for the method "versions.disable".
+           *
+           * This request holds the parameters needed by the secretmanager server.  After setting any optional
+           * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the SecretVersion to disable in the format
+           *        `projects/secrets/versions` or `projects/locations/secrets/versions`.
+           * @param content the {@link com.google.api.services.secretmanager.v1.model.DisableSecretVersionRequest}
+           * @return the request
+           */
+          public Disable disable(java.lang.String name, com.google.api.services.secretmanager.v1.model.DisableSecretVersionRequest content) throws java.io.IOException {
+            Disable result = new Disable(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Disable extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.SecretVersion> {
+
+            private static final String REST_PATH = "v1/{+name}:disable";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+
+            /**
+             * Disables a SecretVersion. Sets the state of the SecretVersion to DISABLED.
+             *
+             * Create a request for the method "versions.disable".
+             *
+             * This request holds the parameters needed by the the secretmanager server.  After setting any
+             * optional parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the SecretVersion to disable in the format
+           *        `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             * @param content the {@link com.google.api.services.secretmanager.v1.model.DisableSecretVersionRequest}
+             * @since 1.13
+             */
+            protected Disable(java.lang.String name, com.google.api.services.secretmanager.v1.model.DisableSecretVersionRequest content) {
+              super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.SecretVersion.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Disable set$Xgafv(java.lang.String $Xgafv) {
+              return (Disable) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Disable setAccessToken(java.lang.String accessToken) {
+              return (Disable) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Disable setAlt(java.lang.String alt) {
+              return (Disable) super.setAlt(alt);
+            }
+
+            @Override
+            public Disable setCallback(java.lang.String callback) {
+              return (Disable) super.setCallback(callback);
+            }
+
+            @Override
+            public Disable setFields(java.lang.String fields) {
+              return (Disable) super.setFields(fields);
+            }
+
+            @Override
+            public Disable setKey(java.lang.String key) {
+              return (Disable) super.setKey(key);
+            }
+
+            @Override
+            public Disable setOauthToken(java.lang.String oauthToken) {
+              return (Disable) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Disable setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Disable) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Disable setQuotaUser(java.lang.String quotaUser) {
+              return (Disable) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Disable setUploadType(java.lang.String uploadType) {
+              return (Disable) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Disable setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Disable) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the SecretVersion to disable in the format
+             * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the SecretVersion to disable in the format
+           `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the SecretVersion to disable in the format
+             * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             */
+            public Disable setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Disable set(String parameterName, Object value) {
+              return (Disable) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Enables a SecretVersion. Sets the state of the SecretVersion to ENABLED.
+           *
+           * Create a request for the method "versions.enable".
+           *
+           * This request holds the parameters needed by the secretmanager server.  After setting any optional
+           * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the SecretVersion to enable in the format `projects/secrets/versions`
+           *        or `projects/locations/secrets/versions`.
+           * @param content the {@link com.google.api.services.secretmanager.v1.model.EnableSecretVersionRequest}
+           * @return the request
+           */
+          public Enable enable(java.lang.String name, com.google.api.services.secretmanager.v1.model.EnableSecretVersionRequest content) throws java.io.IOException {
+            Enable result = new Enable(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Enable extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.SecretVersion> {
+
+            private static final String REST_PATH = "v1/{+name}:enable";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+
+            /**
+             * Enables a SecretVersion. Sets the state of the SecretVersion to ENABLED.
+             *
+             * Create a request for the method "versions.enable".
+             *
+             * This request holds the parameters needed by the the secretmanager server.  After setting any
+             * optional parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the SecretVersion to enable in the format `projects/secrets/versions`
+           *        or `projects/locations/secrets/versions`.
+             * @param content the {@link com.google.api.services.secretmanager.v1.model.EnableSecretVersionRequest}
+             * @since 1.13
+             */
+            protected Enable(java.lang.String name, com.google.api.services.secretmanager.v1.model.EnableSecretVersionRequest content) {
+              super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.SecretVersion.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Enable set$Xgafv(java.lang.String $Xgafv) {
+              return (Enable) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Enable setAccessToken(java.lang.String accessToken) {
+              return (Enable) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Enable setAlt(java.lang.String alt) {
+              return (Enable) super.setAlt(alt);
+            }
+
+            @Override
+            public Enable setCallback(java.lang.String callback) {
+              return (Enable) super.setCallback(callback);
+            }
+
+            @Override
+            public Enable setFields(java.lang.String fields) {
+              return (Enable) super.setFields(fields);
+            }
+
+            @Override
+            public Enable setKey(java.lang.String key) {
+              return (Enable) super.setKey(key);
+            }
+
+            @Override
+            public Enable setOauthToken(java.lang.String oauthToken) {
+              return (Enable) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Enable setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Enable) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Enable setQuotaUser(java.lang.String quotaUser) {
+              return (Enable) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Enable setUploadType(java.lang.String uploadType) {
+              return (Enable) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Enable setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Enable) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the SecretVersion to enable in the format
+             * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the SecretVersion to enable in the format
+           `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the SecretVersion to enable in the format
+             * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             */
+            public Enable setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Enable set(String parameterName, Object value) {
+              return (Enable) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets metadata for a SecretVersion. `projects/secrets/versions/latest` is an alias to the most
+           * recently created SecretVersion.
+           *
+           * Create a request for the method "versions.get".
+           *
+           * This request holds the parameters needed by the secretmanager server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+           *        `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+           *        `projects/locations/secrets/versions/latest` is an alias to the most recently created
+           *        SecretVersion.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.SecretVersion> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+
+            /**
+             * Gets metadata for a SecretVersion. `projects/secrets/versions/latest` is an alias to the most
+             * recently created SecretVersion.
+             *
+             * Create a request for the method "versions.get".
+             *
+             * This request holds the parameters needed by the the secretmanager server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+           *        `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+           *        `projects/locations/secrets/versions/latest` is an alias to the most recently created
+           *        SecretVersion.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(SecretManager.this, "GET", REST_PATH, null, com.google.api.services.secretmanager.v1.model.SecretVersion.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the SecretVersion in the format
+             * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             * `projects/secrets/versions/latest` or `projects/locations/secrets/versions/latest` is
+             * an alias to the most recently created SecretVersion.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+           `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+           `projects/locations/secrets/versions/latest` is an alias to the most recently created
+           SecretVersion.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the SecretVersion in the format
+             * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+             * `projects/secrets/versions/latest` or `projects/locations/secrets/versions/latest` is
+             * an alias to the most recently created SecretVersion.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+/versions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists SecretVersions. This call does not return secret data.
+           *
+           * Create a request for the method "versions.list".
+           *
+           * This request holds the parameters needed by the secretmanager server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the Secret associated with the SecretVersions to list, in the format
+           *        `projects/secrets` or `projects/locations/secrets`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.ListSecretVersionsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/versions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+            /**
+             * Lists SecretVersions. This call does not return secret data.
+             *
+             * Create a request for the method "versions.list".
+             *
+             * This request holds the parameters needed by the the secretmanager server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the Secret associated with the SecretVersions to list, in the format
+           *        `projects/secrets` or `projects/locations/secrets`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(SecretManager.this, "GET", REST_PATH, null, com.google.api.services.secretmanager.v1.model.ListSecretVersionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Secret associated with the SecretVersions to list,
+             * in the format `projects/secrets` or `projects/locations/secrets`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the Secret associated with the SecretVersions to list, in the format
+           `projects/secrets` or `projects/locations/secrets`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the Secret associated with the SecretVersions to list,
+             * in the format `projects/secrets` or `projects/locations/secrets`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter string, adhering to the rules in [List-operation
+             * filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secret
+             * versions matching the filter. If filter is empty, all secret versions are listed.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter string, adhering to the rules in [List-operation
+           filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secret versions
+           matching the filter. If filter is empty, all secret versions are listed.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter string, adhering to the rules in [List-operation
+             * filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secret
+             * versions matching the filter. If filter is empty, all secret versions are listed.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of results to be returned in a single page. If set to 0,
+             * the server decides the number of results to return. If the number is greater than
+             * 25000, it is capped at 25000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of results to be returned in a single page. If set to 0, the server
+           decides the number of results to return. If the number is greater than 25000, it is capped at
+           25000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of results to be returned in a single page. If set to 0,
+             * the server decides the number of results to return. If the number is greater than
+             * 25000, it is capped at 25000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Pagination token, returned earlier via
+             * ListSecretVersionsResponse.next_page_token][].
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Pagination token, returned earlier via ListSecretVersionsResponse.next_page_token][].
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Pagination token, returned earlier via
+             * ListSecretVersionsResponse.next_page_token][].
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
     /**
      * An accessor for creating requests from the Secrets collection.
@@ -544,7 +3022,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link AddVersion#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
-       *        `projects/secrets`.
+       *        `projects/secrets` or `projects/locations/secrets`.
        * @param content the {@link com.google.api.services.secretmanager.v1.model.AddSecretVersionRequest}
        * @return the request
        */
@@ -573,7 +3051,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
-       *        `projects/secrets`.
+       *        `projects/secrets` or `projects/locations/secrets`.
          * @param content the {@link com.google.api.services.secretmanager.v1.model.AddSecretVersionRequest}
          * @since 1.13
          */
@@ -644,13 +3122,13 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The resource name of the Secret to associate with the SecretVersion in the
-         * format `projects/secrets`.
+         * format `projects/secrets` or `projects/locations/secrets`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The resource name of the Secret to associate with the SecretVersion in the format
-       `projects/secrets`.
+       `projects/secrets` or `projects/locations/secrets`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -658,7 +3136,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The resource name of the Secret to associate with the SecretVersion in the
-         * format `projects/secrets`.
+         * format `projects/secrets` or `projects/locations/secrets`.
          */
         public AddVersion setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -683,7 +3161,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the secretmanager server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the project to associate with the Secret, in the format `projects`.
+       * @param parent Required. The resource name of the project to associate with the Secret, in the format `projects` or
+       *        `projects/locations`.
        * @param content the {@link com.google.api.services.secretmanager.v1.model.Secret}
        * @return the request
        */
@@ -711,7 +3190,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the project to associate with the Secret, in the format `projects`.
+         * @param parent Required. The resource name of the project to associate with the Secret, in the format `projects` or
+       *        `projects/locations`.
          * @param content the {@link com.google.api.services.secretmanager.v1.model.Secret}
          * @since 1.13
          */
@@ -782,12 +3262,13 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The resource name of the project to associate with the Secret, in the format
-         * `projects`.
+         * `projects` or `projects/locations`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the project to associate with the Secret, in the format `projects`.
+        /** Required. The resource name of the project to associate with the Secret, in the format `projects`
+       or `projects/locations`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -795,7 +3276,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The resource name of the project to associate with the Secret, in the format
-         * `projects`.
+         * `projects` or `projects/locations`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1002,7 +3483,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the secretmanager server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the Secret, in the format `projects/secrets`.
+       * @param name Required. The resource name of the Secret, in the format `projects/secrets` or
+       *        `projects/locations/secrets`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1028,7 +3510,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the Secret, in the format `projects/secrets`.
+         * @param name Required. The resource name of the Secret, in the format `projects/secrets` or
+       *        `projects/locations/secrets`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1106,17 +3589,24 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The resource name of the Secret, in the format `projects/secrets`. */
+        /**
+         * Required. The resource name of the Secret, in the format `projects/secrets` or
+         * `projects/locations/secrets`.
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the Secret, in the format `projects/secrets`.
+        /** Required. The resource name of the Secret, in the format `projects/secrets` or
+       `projects/locations/secrets`.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The resource name of the Secret, in the format `projects/secrets`. */
+        /**
+         * Required. The resource name of the Secret, in the format `projects/secrets` or
+         * `projects/locations/secrets`.
+         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1338,7 +3828,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the secretmanager server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the project associated with the Secrets, in the format `projects`.
+       * @param parent Required. The resource name of the project associated with the Secrets, in the format `projects` or
+       *        `projects/locations`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1364,7 +3855,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the project associated with the Secrets, in the format `projects`.
+         * @param parent Required. The resource name of the project associated with the Secrets, in the format `projects` or
+       *        `projects/locations`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1444,12 +3936,13 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The resource name of the project associated with the Secrets, in the format
-         * `projects`.
+         * `projects` or `projects/locations`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the project associated with the Secrets, in the format `projects`.
+        /** Required. The resource name of the project associated with the Secrets, in the format `projects` or
+       `projects/locations`
          */
         public java.lang.String getParent() {
           return parent;
@@ -1457,7 +3950,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The resource name of the project associated with the Secrets, in the format
-         * `projects`.
+         * `projects` or `projects/locations`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2022,8 +4515,10 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the secretmanager server.  After setting any optional
          * parameters, call the {@link Access#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-         *        `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
+         * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+         *        `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+         *        `projects/locations/secrets/versions/latest` is an alias to the most recently created
+         *        SecretVersion.
          * @return the request
          */
         public Access access(java.lang.String name) throws java.io.IOException {
@@ -2051,8 +4546,10 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * Access#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-         *        `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
+           * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+         *        `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+         *        `projects/locations/secrets/versions/latest` is an alias to the most recently created
+         *        SecretVersion.
            * @since 1.13
            */
           protected Access(java.lang.String name) {
@@ -2132,14 +4629,17 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion in the format
-           * `projects/secrets/versions`. `projects/secrets/versions/latest` is an alias to the most
-           * recently created SecretVersion.
+           * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+           * `projects/secrets/versions/latest` or `projects/locations/secrets/versions/latest` is
+           * an alias to the most recently created SecretVersion.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-         `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
+          /** Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+         `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+         `projects/locations/secrets/versions/latest` is an alias to the most recently created
+         SecretVersion.
            */
           public java.lang.String getName() {
             return name;
@@ -2147,8 +4647,9 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion in the format
-           * `projects/secrets/versions`. `projects/secrets/versions/latest` is an alias to the most
-           * recently created SecretVersion.
+           * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+           * `projects/secrets/versions/latest` or `projects/locations/secrets/versions/latest` is
+           * an alias to the most recently created SecretVersion.
            */
           public Access setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2175,7 +4676,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Destroy#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the SecretVersion to destroy in the format
-         *        `projects/secrets/versions`.
+         *        `projects/secrets/versions` or `projects/locations/secrets/versions`.
          * @param content the {@link com.google.api.services.secretmanager.v1.model.DestroySecretVersionRequest}
          * @return the request
          */
@@ -2205,7 +4706,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the SecretVersion to destroy in the format
-         *        `projects/secrets/versions`.
+         *        `projects/secrets/versions` or `projects/locations/secrets/versions`.
            * @param content the {@link com.google.api.services.secretmanager.v1.model.DestroySecretVersionRequest}
            * @since 1.13
            */
@@ -2276,13 +4777,13 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion to destroy in the format
-           * `projects/secrets/versions`.
+           * `projects/secrets/versions` or `projects/locations/secrets/versions`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the SecretVersion to destroy in the format
-         `projects/secrets/versions`.
+         `projects/secrets/versions` or `projects/locations/secrets/versions`.
            */
           public java.lang.String getName() {
             return name;
@@ -2290,7 +4791,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion to destroy in the format
-           * `projects/secrets/versions`.
+           * `projects/secrets/versions` or `projects/locations/secrets/versions`.
            */
           public Destroy setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2316,7 +4817,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the SecretVersion to disable in the format
-         *        `projects/secrets/versions`.
+         *        `projects/secrets/versions` or `projects/locations/secrets/versions`.
          * @param content the {@link com.google.api.services.secretmanager.v1.model.DisableSecretVersionRequest}
          * @return the request
          */
@@ -2345,7 +4846,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the SecretVersion to disable in the format
-         *        `projects/secrets/versions`.
+         *        `projects/secrets/versions` or `projects/locations/secrets/versions`.
            * @param content the {@link com.google.api.services.secretmanager.v1.model.DisableSecretVersionRequest}
            * @since 1.13
            */
@@ -2416,13 +4917,13 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion to disable in the format
-           * `projects/secrets/versions`.
+           * `projects/secrets/versions` or `projects/locations/secrets/versions`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the SecretVersion to disable in the format
-         `projects/secrets/versions`.
+         `projects/secrets/versions` or `projects/locations/secrets/versions`.
            */
           public java.lang.String getName() {
             return name;
@@ -2430,7 +4931,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion to disable in the format
-           * `projects/secrets/versions`.
+           * `projects/secrets/versions` or `projects/locations/secrets/versions`.
            */
           public Disable setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2455,8 +4956,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the secretmanager server.  After setting any optional
          * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the SecretVersion to enable in the format
-         *        `projects/secrets/versions`.
+         * @param name Required. The resource name of the SecretVersion to enable in the format `projects/secrets/versions`
+         *        or `projects/locations/secrets/versions`.
          * @param content the {@link com.google.api.services.secretmanager.v1.model.EnableSecretVersionRequest}
          * @return the request
          */
@@ -2484,8 +4985,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the SecretVersion to enable in the format
-         *        `projects/secrets/versions`.
+           * @param name Required. The resource name of the SecretVersion to enable in the format `projects/secrets/versions`
+         *        or `projects/locations/secrets/versions`.
            * @param content the {@link com.google.api.services.secretmanager.v1.model.EnableSecretVersionRequest}
            * @since 1.13
            */
@@ -2556,13 +5057,13 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion to enable in the format
-           * `projects/secrets/versions`.
+           * `projects/secrets/versions` or `projects/locations/secrets/versions`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the SecretVersion to enable in the format
-         `projects/secrets/versions`.
+         `projects/secrets/versions` or `projects/locations/secrets/versions`.
            */
           public java.lang.String getName() {
             return name;
@@ -2570,7 +5071,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion to enable in the format
-           * `projects/secrets/versions`.
+           * `projects/secrets/versions` or `projects/locations/secrets/versions`.
            */
           public Enable setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2596,8 +5097,10 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the secretmanager server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-         *        `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
+         * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+         *        `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+         *        `projects/locations/secrets/versions/latest` is an alias to the most recently created
+         *        SecretVersion.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2624,8 +5127,10 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-         *        `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
+           * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+         *        `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+         *        `projects/locations/secrets/versions/latest` is an alias to the most recently created
+         *        SecretVersion.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2705,14 +5210,17 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion in the format
-           * `projects/secrets/versions`. `projects/secrets/versions/latest` is an alias to the most
-           * recently created SecretVersion.
+           * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+           * `projects/secrets/versions/latest` or `projects/locations/secrets/versions/latest` is
+           * an alias to the most recently created SecretVersion.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-         `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
+          /** Required. The resource name of the SecretVersion in the format `projects/secrets/versions` or
+         `projects/locations/secrets/versions`. `projects/secrets/versions/latest` or
+         `projects/locations/secrets/versions/latest` is an alias to the most recently created
+         SecretVersion.
            */
           public java.lang.String getName() {
             return name;
@@ -2720,8 +5228,9 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion in the format
-           * `projects/secrets/versions`. `projects/secrets/versions/latest` is an alias to the most
-           * recently created SecretVersion.
+           * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+           * `projects/secrets/versions/latest` or `projects/locations/secrets/versions/latest` is
+           * an alias to the most recently created SecretVersion.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2747,7 +5256,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the Secret associated with the SecretVersions to list, in the format
-         *        `projects/secrets`.
+         *        `projects/secrets` or `projects/locations/secrets`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2774,7 +5283,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the Secret associated with the SecretVersions to list, in the format
-         *        `projects/secrets`.
+         *        `projects/secrets` or `projects/locations/secrets`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2854,13 +5363,13 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the Secret associated with the SecretVersions to list,
-           * in the format `projects/secrets`.
+           * in the format `projects/secrets` or `projects/locations/secrets`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the Secret associated with the SecretVersions to list, in the format
-         `projects/secrets`.
+         `projects/secrets` or `projects/locations/secrets`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2868,7 +5377,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the Secret associated with the SecretVersions to list,
-           * in the format `projects/secrets`.
+           * in the format `projects/secrets` or `projects/locations/secrets`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

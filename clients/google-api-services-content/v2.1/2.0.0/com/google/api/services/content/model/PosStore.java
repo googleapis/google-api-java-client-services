@@ -70,10 +70,7 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
    * or Google Business Profile store address to match correctly. - "`store-match-unverified`": The
    * provided POS store couldn't be matched to any of the connected Google Business Profile stores,
    * as the matched Google Business Profile store is unverified. Go through the Google Business
-   * Profile verification process to match correctly. - "`store-match-unavailable`": The provided
-   * POS store couldn't be matched to any of the connected Google Business Profile stores, as the
-   * matched Google Business Profile store is in an invalid state. Fix any issues on your Google
-   * Business Profile store to match correctly.
+   * Profile verification process to match correctly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,10 +195,7 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
    * or Google Business Profile store address to match correctly. - "`store-match-unverified`": The
    * provided POS store couldn't be matched to any of the connected Google Business Profile stores,
    * as the matched Google Business Profile store is unverified. Go through the Google Business
-   * Profile verification process to match correctly. - "`store-match-unavailable`": The provided
-   * POS store couldn't be matched to any of the connected Google Business Profile stores, as the
-   * matched Google Business Profile store is in an invalid state. Fix any issues on your Google
-   * Business Profile store to match correctly.
+   * Profile verification process to match correctly.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchingStatusHint() {
@@ -220,10 +214,7 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
    * or Google Business Profile store address to match correctly. - "`store-match-unverified`": The
    * provided POS store couldn't be matched to any of the connected Google Business Profile stores,
    * as the matched Google Business Profile store is unverified. Go through the Google Business
-   * Profile verification process to match correctly. - "`store-match-unavailable`": The provided
-   * POS store couldn't be matched to any of the connected Google Business Profile stores, as the
-   * matched Google Business Profile store is in an invalid state. Fix any issues on your Google
-   * Business Profile store to match correctly.
+   * Profile verification process to match correctly.
    * @param matchingStatusHint matchingStatusHint or {@code null} for none
    */
   public PosStore setMatchingStatusHint(java.lang.String matchingStatusHint) {

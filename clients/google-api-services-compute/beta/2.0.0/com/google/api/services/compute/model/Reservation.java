@@ -53,16 +53,16 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
-   * Duration time relative to reservation creation when GCE will automatically delete this
-   * resource.
+   * Duration time relative to reservation creation when Compute Engine will automatically delete
+   * this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Duration deleteAfterDuration;
 
   /**
-   * Absolute time in future when the reservation will be auto-deleted by GCE. Timestamp is
-   * represented in RFC3339 text format.
+   * Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp
+   * is represented in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,8 +223,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Duration time relative to reservation creation when GCE will automatically delete this
-   * resource.
+   * Duration time relative to reservation creation when Compute Engine will automatically delete
+   * this resource.
    * @return value or {@code null} for none
    */
   public Duration getDeleteAfterDuration() {
@@ -232,8 +232,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Duration time relative to reservation creation when GCE will automatically delete this
-   * resource.
+   * Duration time relative to reservation creation when Compute Engine will automatically delete
+   * this resource.
    * @param deleteAfterDuration deleteAfterDuration or {@code null} for none
    */
   public Reservation setDeleteAfterDuration(Duration deleteAfterDuration) {
@@ -242,8 +242,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Absolute time in future when the reservation will be auto-deleted by GCE. Timestamp is
-   * represented in RFC3339 text format.
+   * Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp
+   * is represented in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeleteAtTime() {
@@ -251,8 +251,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Absolute time in future when the reservation will be auto-deleted by GCE. Timestamp is
-   * represented in RFC3339 text format.
+   * Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp
+   * is represented in RFC3339 text format.
    * @param deleteAtTime deleteAtTime or {@code null} for none
    */
   public Reservation setDeleteAtTime(java.lang.String deleteAtTime) {

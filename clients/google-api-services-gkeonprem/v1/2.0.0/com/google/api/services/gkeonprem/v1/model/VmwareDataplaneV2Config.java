@@ -45,6 +45,13 @@ public final class VmwareDataplaneV2Config extends com.google.api.client.json.Ge
   private java.lang.Boolean dataplaneV2Enabled;
 
   /**
+   * Configure ForwardMode for Dataplane v2.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forwardMode;
+
+  /**
    * Enable Dataplane V2 for clusters with Windows nodes.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class VmwareDataplaneV2Config extends com.google.api.client.json.Ge
    */
   public VmwareDataplaneV2Config setDataplaneV2Enabled(java.lang.Boolean dataplaneV2Enabled) {
     this.dataplaneV2Enabled = dataplaneV2Enabled;
+    return this;
+  }
+
+  /**
+   * Configure ForwardMode for Dataplane v2.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForwardMode() {
+    return forwardMode;
+  }
+
+  /**
+   * Configure ForwardMode for Dataplane v2.
+   * @param forwardMode forwardMode or {@code null} for none
+   */
+  public VmwareDataplaneV2Config setForwardMode(java.lang.String forwardMode) {
+    this.forwardMode = forwardMode;
     return this;
   }
 

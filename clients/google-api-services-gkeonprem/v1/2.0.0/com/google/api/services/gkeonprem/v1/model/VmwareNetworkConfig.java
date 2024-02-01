@@ -74,7 +74,7 @@ public final class VmwareNetworkConfig extends com.google.api.client.json.Generi
   private VmwareStaticIpConfig staticIpConfig;
 
   /**
-   * Output only. vcenter_network specifies vCenter network name. Inherited from the admin cluster.
+   * vcenter_network specifies vCenter network name. Inherited from the admin cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +187,7 @@ public final class VmwareNetworkConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. vcenter_network specifies vCenter network name. Inherited from the admin cluster.
+   * vcenter_network specifies vCenter network name. Inherited from the admin cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getVcenterNetwork() {
@@ -195,7 +195,7 @@ public final class VmwareNetworkConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. vcenter_network specifies vCenter network name. Inherited from the admin cluster.
+   * vcenter_network specifies vCenter network name. Inherited from the admin cluster.
    * @param vcenterNetwork vcenterNetwork or {@code null} for none
    */
   public VmwareNetworkConfig setVcenterNetwork(java.lang.String vcenterNetwork) {

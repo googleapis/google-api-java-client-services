@@ -17,7 +17,7 @@
 package com.google.api.services.gkeonprem.v1.model;
 
 /**
- * Resource that represents a bare metal user cluster. LINT.IfChange
+ * Resource that represents a bare metal user cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Anthos On-Prem API. For a detailed explanation see:

@@ -46,9 +46,9 @@ public final class GoogleCloudDocumentaiV1BatchProcessRequest extends com.google
 
   /**
    * Optional. The labels with user-defined metadata for the request. Label keys and values can be
-   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
-   * characters, underscores and dashes. International characters are allowed. Label values are
-   * optional. Label keys must start with a letter.
+   * no longer than 63 characters (Unicode codepoints) and can only contain lowercase letters,
+   * numeric characters, underscores, and dashes. International characters are allowed. Label values
+   * are optional. Label keys must start with a letter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,9 +104,9 @@ public final class GoogleCloudDocumentaiV1BatchProcessRequest extends com.google
 
   /**
    * Optional. The labels with user-defined metadata for the request. Label keys and values can be
-   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
-   * characters, underscores and dashes. International characters are allowed. Label values are
-   * optional. Label keys must start with a letter.
+   * no longer than 63 characters (Unicode codepoints) and can only contain lowercase letters,
+   * numeric characters, underscores, and dashes. International characters are allowed. Label values
+   * are optional. Label keys must start with a letter.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -115,9 +115,9 @@ public final class GoogleCloudDocumentaiV1BatchProcessRequest extends com.google
 
   /**
    * Optional. The labels with user-defined metadata for the request. Label keys and values can be
-   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
-   * characters, underscores and dashes. International characters are allowed. Label values are
-   * optional. Label keys must start with a letter.
+   * no longer than 63 characters (Unicode codepoints) and can only contain lowercase letters,
+   * numeric characters, underscores, and dashes. International characters are allowed. Label values
+   * are optional. Label keys must start with a letter.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudDocumentaiV1BatchProcessRequest setLabels(java.util.Map<String, java.lang.String> labels) {

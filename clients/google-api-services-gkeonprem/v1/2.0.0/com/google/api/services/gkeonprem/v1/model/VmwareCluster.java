@@ -79,6 +79,13 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
   private VmwareAutoRepairConfig autoRepairConfig;
 
   /**
+   * Binary Authorization related configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BinaryAuthorization binaryAuthorization;
+
+  /**
    * VMware user cluster control plane nodes must have either 1 or 3 replicas.
    * The value may be {@code null}.
    */
@@ -375,6 +382,23 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
    */
   public VmwareCluster setAutoRepairConfig(VmwareAutoRepairConfig autoRepairConfig) {
     this.autoRepairConfig = autoRepairConfig;
+    return this;
+  }
+
+  /**
+   * Binary Authorization related configurations.
+   * @return value or {@code null} for none
+   */
+  public BinaryAuthorization getBinaryAuthorization() {
+    return binaryAuthorization;
+  }
+
+  /**
+   * Binary Authorization related configurations.
+   * @param binaryAuthorization binaryAuthorization or {@code null} for none
+   */
+  public VmwareCluster setBinaryAuthorization(BinaryAuthorization binaryAuthorization) {
+    this.binaryAuthorization = binaryAuthorization;
     return this;
   }
 

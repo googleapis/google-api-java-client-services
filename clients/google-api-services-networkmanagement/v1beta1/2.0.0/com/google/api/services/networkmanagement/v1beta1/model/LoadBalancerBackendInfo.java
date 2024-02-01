@@ -31,6 +31,13 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class LoadBalancerBackendInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * URI of the backend bucket this backend targets (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backendBucketUri;
+
+  /**
    * URI of the backend service this backend belongs to (if applicable).
    * The value may be {@code null}.
    */
@@ -84,6 +91,37 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String networkEndpointGroupUri;
+
+  /**
+   * PSC Google API target this PSC NEG backend targets (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscGoogleApiTarget;
+
+  /**
+   * URI of the PSC service attachment this PSC NEG backend targets (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscServiceAttachmentUri;
+
+  /**
+   * URI of the backend bucket this backend targets (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackendBucketUri() {
+    return backendBucketUri;
+  }
+
+  /**
+   * URI of the backend bucket this backend targets (if applicable).
+   * @param backendBucketUri backendBucketUri or {@code null} for none
+   */
+  public LoadBalancerBackendInfo setBackendBucketUri(java.lang.String backendBucketUri) {
+    this.backendBucketUri = backendBucketUri;
+    return this;
+  }
 
   /**
    * URI of the backend service this backend belongs to (if applicable).
@@ -213,6 +251,40 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
    */
   public LoadBalancerBackendInfo setNetworkEndpointGroupUri(java.lang.String networkEndpointGroupUri) {
     this.networkEndpointGroupUri = networkEndpointGroupUri;
+    return this;
+  }
+
+  /**
+   * PSC Google API target this PSC NEG backend targets (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscGoogleApiTarget() {
+    return pscGoogleApiTarget;
+  }
+
+  /**
+   * PSC Google API target this PSC NEG backend targets (if applicable).
+   * @param pscGoogleApiTarget pscGoogleApiTarget or {@code null} for none
+   */
+  public LoadBalancerBackendInfo setPscGoogleApiTarget(java.lang.String pscGoogleApiTarget) {
+    this.pscGoogleApiTarget = pscGoogleApiTarget;
+    return this;
+  }
+
+  /**
+   * URI of the PSC service attachment this PSC NEG backend targets (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscServiceAttachmentUri() {
+    return pscServiceAttachmentUri;
+  }
+
+  /**
+   * URI of the PSC service attachment this PSC NEG backend targets (if applicable).
+   * @param pscServiceAttachmentUri pscServiceAttachmentUri or {@code null} for none
+   */
+  public LoadBalancerBackendInfo setPscServiceAttachmentUri(java.lang.String pscServiceAttachmentUri) {
+    this.pscServiceAttachmentUri = pscServiceAttachmentUri;
     return this;
   }
 

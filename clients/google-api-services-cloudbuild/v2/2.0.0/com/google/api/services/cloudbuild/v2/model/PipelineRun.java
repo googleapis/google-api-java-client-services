@@ -93,6 +93,13 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   private String finallyStartTime;
 
   /**
+   * Output only. GCB default params.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> gcbParams;
+
+  /**
    * Output only. The `PipelineRun` name with format
    * `projects/{project}/locations/{location}/pipelineRuns/{pipeline_run}`
    * The value may be {@code null}.
@@ -135,11 +142,25 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   private PipelineSpec pipelineSpec;
 
   /**
+   * Optional. Provenance configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Provenance provenance;
+
+  /**
    * Output only. The exact PipelineSpec used to instantiate the run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PipelineSpec resolvedPipelineSpec;
+
+  /**
+   * Optional. Security configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Security security;
 
   /**
    * Service account used in the Pipeline.
@@ -183,6 +204,13 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Worker configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Worker worker;
 
   /**
    * Output only. The WorkerPool used to run this PipelineRun.
@@ -329,6 +357,23 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. GCB default params.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getGcbParams() {
+    return gcbParams;
+  }
+
+  /**
+   * Output only. GCB default params.
+   * @param gcbParams gcbParams or {@code null} for none
+   */
+  public PipelineRun setGcbParams(java.util.Map<String, java.lang.String> gcbParams) {
+    this.gcbParams = gcbParams;
+    return this;
+  }
+
+  /**
    * Output only. The `PipelineRun` name with format
    * `projects/{project}/locations/{location}/pipelineRuns/{pipeline_run}`
    * @return value or {@code null} for none
@@ -416,6 +461,23 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Provenance configuration.
+   * @return value or {@code null} for none
+   */
+  public Provenance getProvenance() {
+    return provenance;
+  }
+
+  /**
+   * Optional. Provenance configuration.
+   * @param provenance provenance or {@code null} for none
+   */
+  public PipelineRun setProvenance(Provenance provenance) {
+    this.provenance = provenance;
+    return this;
+  }
+
+  /**
    * Output only. The exact PipelineSpec used to instantiate the run.
    * @return value or {@code null} for none
    */
@@ -429,6 +491,23 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    */
   public PipelineRun setResolvedPipelineSpec(PipelineSpec resolvedPipelineSpec) {
     this.resolvedPipelineSpec = resolvedPipelineSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Security configuration.
+   * @return value or {@code null} for none
+   */
+  public Security getSecurity() {
+    return security;
+  }
+
+  /**
+   * Optional. Security configuration.
+   * @param security security or {@code null} for none
+   */
+  public PipelineRun setSecurity(Security security) {
+    this.security = security;
     return this;
   }
 
@@ -533,6 +612,23 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    */
   public PipelineRun setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Worker configuration.
+   * @return value or {@code null} for none
+   */
+  public Worker getWorker() {
+    return worker;
+  }
+
+  /**
+   * Optional. Worker configuration.
+   * @param worker worker or {@code null} for none
+   */
+  public PipelineRun setWorker(Worker worker) {
+    this.worker = worker;
     return this;
   }
 

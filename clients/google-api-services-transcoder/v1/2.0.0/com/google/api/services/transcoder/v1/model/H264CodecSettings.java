@@ -133,6 +133,13 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
   private java.lang.Integer heightPixels;
 
   /**
+   * Optional. HLG color format setting for H264.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private H264ColorFormatHLG hlg;
+
+  /**
    * Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel
    * format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format
    * - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12`
@@ -171,6 +178,13 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String rateControlMode;
+
+  /**
+   * Optional. SDR color format setting for H264.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private H264ColorFormatSDR sdr;
 
   /**
    * Enforces the specified codec tune. The available options are [FFmpeg-
@@ -453,6 +467,23 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. HLG color format setting for H264.
+   * @return value or {@code null} for none
+   */
+  public H264ColorFormatHLG getHlg() {
+    return hlg;
+  }
+
+  /**
+   * Optional. HLG color format setting for H264.
+   * @param hlg hlg or {@code null} for none
+   */
+  public H264CodecSettings setHlg(H264ColorFormatHLG hlg) {
+    this.hlg = hlg;
+    return this;
+  }
+
+  /**
    * Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel
    * format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format
    * - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12`
@@ -541,6 +572,23 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
    */
   public H264CodecSettings setRateControlMode(java.lang.String rateControlMode) {
     this.rateControlMode = rateControlMode;
+    return this;
+  }
+
+  /**
+   * Optional. SDR color format setting for H264.
+   * @return value or {@code null} for none
+   */
+  public H264ColorFormatSDR getSdr() {
+    return sdr;
+  }
+
+  /**
+   * Optional. SDR color format setting for H264.
+   * @param sdr sdr or {@code null} for none
+   */
+  public H264CodecSettings setSdr(H264ColorFormatSDR sdr) {
+    this.sdr = sdr;
     return this;
   }
 

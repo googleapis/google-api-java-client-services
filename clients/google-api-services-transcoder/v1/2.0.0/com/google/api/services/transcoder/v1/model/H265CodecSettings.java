@@ -114,6 +114,13 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
   private java.lang.Integer gopFrameCount;
 
   /**
+   * Optional. HDR10 color format setting for H265.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private H265ColorFormatHDR10 hdr10;
+
+  /**
    * The height of the video in pixels. Must be an even integer. When not specified, the height is
    * adjusted to match the specified width and input aspect ratio. If both are omitted, the input
    * height is used. For portrait videos that contain horizontal ASR and rotation metadata, provide
@@ -124,6 +131,13 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Integer heightPixels;
+
+  /**
+   * Optional. HLG color format setting for H265.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private H265ColorFormatHLG hlg;
 
   /**
    * Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel
@@ -166,6 +180,13 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String rateControlMode;
+
+  /**
+   * Optional. SDR color format setting for H265.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private H265ColorFormatSDR sdr;
 
   /**
    * Enforces the specified codec tune. The available options are [FFmpeg-
@@ -403,6 +424,23 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. HDR10 color format setting for H265.
+   * @return value or {@code null} for none
+   */
+  public H265ColorFormatHDR10 getHdr10() {
+    return hdr10;
+  }
+
+  /**
+   * Optional. HDR10 color format setting for H265.
+   * @param hdr10 hdr10 or {@code null} for none
+   */
+  public H265CodecSettings setHdr10(H265ColorFormatHDR10 hdr10) {
+    this.hdr10 = hdr10;
+    return this;
+  }
+
+  /**
    * The height of the video in pixels. Must be an even integer. When not specified, the height is
    * adjusted to match the specified width and input aspect ratio. If both are omitted, the input
    * height is used. For portrait videos that contain horizontal ASR and rotation metadata, provide
@@ -426,6 +464,23 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
    */
   public H265CodecSettings setHeightPixels(java.lang.Integer heightPixels) {
     this.heightPixels = heightPixels;
+    return this;
+  }
+
+  /**
+   * Optional. HLG color format setting for H265.
+   * @return value or {@code null} for none
+   */
+  public H265ColorFormatHLG getHlg() {
+    return hlg;
+  }
+
+  /**
+   * Optional. HLG color format setting for H265.
+   * @param hlg hlg or {@code null} for none
+   */
+  public H265CodecSettings setHlg(H265ColorFormatHLG hlg) {
+    this.hlg = hlg;
     return this;
   }
 
@@ -522,6 +577,23 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
    */
   public H265CodecSettings setRateControlMode(java.lang.String rateControlMode) {
     this.rateControlMode = rateControlMode;
+    return this;
+  }
+
+  /**
+   * Optional. SDR color format setting for H265.
+   * @return value or {@code null} for none
+   */
+  public H265ColorFormatSDR getSdr() {
+    return sdr;
+  }
+
+  /**
+   * Optional. SDR color format setting for H265.
+   * @param sdr sdr or {@code null} for none
+   */
+  public H265CodecSettings setSdr(H265ColorFormatSDR sdr) {
+    this.sdr = sdr;
     return this;
   }
 

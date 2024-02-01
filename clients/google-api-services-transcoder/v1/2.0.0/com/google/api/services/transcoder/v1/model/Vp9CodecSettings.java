@@ -85,6 +85,13 @@ public final class Vp9CodecSettings extends com.google.api.client.json.GenericJs
   private java.lang.Integer heightPixels;
 
   /**
+   * Optional. HLG color format setting for VP9.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Vp9ColorFormatHLG hlg;
+
+  /**
    * Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel
    * format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format
    * - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12`
@@ -112,6 +119,13 @@ public final class Vp9CodecSettings extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String rateControlMode;
+
+  /**
+   * Optional. SDR color format setting for VP9.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Vp9ColorFormatSDR sdr;
 
   /**
    * The width of the video in pixels. Must be an even integer. When not specified, the width is
@@ -254,6 +268,23 @@ public final class Vp9CodecSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. HLG color format setting for VP9.
+   * @return value or {@code null} for none
+   */
+  public Vp9ColorFormatHLG getHlg() {
+    return hlg;
+  }
+
+  /**
+   * Optional. HLG color format setting for VP9.
+   * @param hlg hlg or {@code null} for none
+   */
+  public Vp9CodecSettings setHlg(Vp9ColorFormatHLG hlg) {
+    this.hlg = hlg;
+    return this;
+  }
+
+  /**
    * Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel
    * format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format
    * - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12`
@@ -317,6 +348,23 @@ public final class Vp9CodecSettings extends com.google.api.client.json.GenericJs
    */
   public Vp9CodecSettings setRateControlMode(java.lang.String rateControlMode) {
     this.rateControlMode = rateControlMode;
+    return this;
+  }
+
+  /**
+   * Optional. SDR color format setting for VP9.
+   * @return value or {@code null} for none
+   */
+  public Vp9ColorFormatSDR getSdr() {
+    return sdr;
+  }
+
+  /**
+   * Optional. SDR color format setting for VP9.
+   * @param sdr sdr or {@code null} for none
+   */
+  public Vp9CodecSettings setSdr(Vp9ColorFormatSDR sdr) {
+    this.sdr = sdr;
     return this;
   }
 

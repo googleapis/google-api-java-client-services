@@ -39,7 +39,7 @@ public final class ReplicaInfo extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean defaultLeaderLocation;
 
   /**
-   * The location of the serving resources, e.g. "us-central1".
+   * The location of the serving resources, e.g., "us-central1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class ReplicaInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The location of the serving resources, e.g. "us-central1".
+   * The location of the serving resources, e.g., "us-central1".
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -82,7 +82,7 @@ public final class ReplicaInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The location of the serving resources, e.g. "us-central1".
+   * The location of the serving resources, e.g., "us-central1".
    * @param location location or {@code null} for none
    */
   public ReplicaInfo setLocation(java.lang.String location) {

@@ -227,10 +227,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String pscServiceAttachmentLink;
 
   /**
-   * The geographical region of the Cloud SQL instance. It can be one of the
-   * [regions](https://cloud.google.com/sql/docs/mysql/locations#location-r) where Cloud SQL
-   * operates: For example, `asia-east1`, `europe-west1`, and `us-central1`. The default value is
-   * `us-central1`.
+   * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1`
+   * (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or
+   * `us-central1` depending on the instance type. The region cannot be changed after instance
+   * creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -809,10 +809,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The geographical region of the Cloud SQL instance. It can be one of the
-   * [regions](https://cloud.google.com/sql/docs/mysql/locations#location-r) where Cloud SQL
-   * operates: For example, `asia-east1`, `europe-west1`, and `us-central1`. The default value is
-   * `us-central1`.
+   * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1`
+   * (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or
+   * `us-central1` depending on the instance type. The region cannot be changed after instance
+   * creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -820,10 +820,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The geographical region of the Cloud SQL instance. It can be one of the
-   * [regions](https://cloud.google.com/sql/docs/mysql/locations#location-r) where Cloud SQL
-   * operates: For example, `asia-east1`, `europe-west1`, and `us-central1`. The default value is
-   * `us-central1`.
+   * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1`
+   * (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or
+   * `us-central1` depending on the instance type. The region cannot be changed after instance
+   * creation.
    * @param region region or {@code null} for none
    */
   public DatabaseInstance setRegion(java.lang.String region) {

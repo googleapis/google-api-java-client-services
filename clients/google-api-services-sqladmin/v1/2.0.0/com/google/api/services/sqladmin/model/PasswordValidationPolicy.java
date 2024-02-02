@@ -37,7 +37,7 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
   private java.lang.String complexity;
 
   /**
-   * This field is deprecated and will be removed in a future version of the API.
+   * Disallow credentials that have been previously compromised by a public data breach.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
   }
 
   /**
-   * This field is deprecated and will be removed in a future version of the API.
+   * Disallow credentials that have been previously compromised by a public data breach.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisallowCompromisedCredentials() {
@@ -105,7 +105,7 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
   }
 
   /**
-   * This field is deprecated and will be removed in a future version of the API.
+   * Disallow credentials that have been previously compromised by a public data breach.
    * @param disallowCompromisedCredentials disallowCompromisedCredentials or {@code null} for none
    */
   public PasswordValidationPolicy setDisallowCompromisedCredentials(java.lang.Boolean disallowCompromisedCredentials) {

@@ -46,9 +46,12 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   private java.lang.Long iasClientId;
 
   /**
-   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance. Warning: Changing
-   * OBA settings may cause the audit status of your creatives to be reset by some ad exchanges,
-   * making them ineligible to serve until they are re-approved.
+   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance. Starting on
+   * February 9, 2024, this field will be affected by an update to the Display & Video 360 API Terms
+   * of Service. See our [announcement](//ads-developers.googleblog.com/2024/01/update-to-display-
+   * video-360-api-terms.html) for more detail. Warning: Changing OBA settings may cause the audit
+   * status of your creatives to be reset by some ad exchanges, making them ineligible to serve
+   * until they are re-approved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,9 +104,12 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance. Warning: Changing
-   * OBA settings may cause the audit status of your creatives to be reset by some ad exchanges,
-   * making them ineligible to serve until they are re-approved.
+   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance. Starting on
+   * February 9, 2024, this field will be affected by an update to the Display & Video 360 API Terms
+   * of Service. See our [announcement](//ads-developers.googleblog.com/2024/01/update-to-display-
+   * video-360-api-terms.html) for more detail. Warning: Changing OBA settings may cause the audit
+   * status of your creatives to be reset by some ad exchanges, making them ineligible to serve
+   * until they are re-approved.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getObaComplianceDisabled() {
@@ -111,9 +117,12 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance. Warning: Changing
-   * OBA settings may cause the audit status of your creatives to be reset by some ad exchanges,
-   * making them ineligible to serve until they are re-approved.
+   * Whether or not to use DV360's Online Behavioral Advertising (OBA) compliance. Starting on
+   * February 9, 2024, this field will be affected by an update to the Display & Video 360 API Terms
+   * of Service. See our [announcement](//ads-developers.googleblog.com/2024/01/update-to-display-
+   * video-360-api-terms.html) for more detail. Warning: Changing OBA settings may cause the audit
+   * status of your creatives to be reset by some ad exchanges, making them ineligible to serve
+   * until they are re-approved.
    * @param obaComplianceDisabled obaComplianceDisabled or {@code null} for none
    */
   public AdvertiserCreativeConfig setObaComplianceDisabled(java.lang.Boolean obaComplianceDisabled) {

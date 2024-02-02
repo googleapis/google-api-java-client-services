@@ -44,6 +44,13 @@ public final class ListAddressGroupReferencesResponseAddressGroupReference exten
   private java.lang.Integer rulePriority;
 
   /**
+   * Cloud Armor SecurityPolicy that is using the Address Group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securityPolicy;
+
+  /**
    * FirewallPolicy that is using the Address Group.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class ListAddressGroupReferencesResponseAddressGroupReference exten
    */
   public ListAddressGroupReferencesResponseAddressGroupReference setRulePriority(java.lang.Integer rulePriority) {
     this.rulePriority = rulePriority;
+    return this;
+  }
+
+  /**
+   * Cloud Armor SecurityPolicy that is using the Address Group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecurityPolicy() {
+    return securityPolicy;
+  }
+
+  /**
+   * Cloud Armor SecurityPolicy that is using the Address Group.
+   * @param securityPolicy securityPolicy or {@code null} for none
+   */
+  public ListAddressGroupReferencesResponseAddressGroupReference setSecurityPolicy(java.lang.String securityPolicy) {
+    this.securityPolicy = securityPolicy;
     return this;
   }
 

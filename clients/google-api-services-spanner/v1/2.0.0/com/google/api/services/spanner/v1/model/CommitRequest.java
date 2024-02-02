@@ -30,6 +30,16 @@ package com.google.api.services.spanner.v1.model;
 public final class CommitRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The amount of latency this request is willing to incur in order to improve
+   * throughput. If this field is not set, Spanner assumes requests are relatively latency sensitive
+   * and automatically determines an appropriate delay time. You can specify a batching delay value
+   * between 0 and 500 ms.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String maxCommitDelay;
+
+  /**
    * The mutations to be executed when this transaction commits. All mutations are applied
    * atomically, in the order they appear in this list.
    * The value may be {@code null}.
@@ -69,6 +79,29 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String transactionId;
+
+  /**
+   * Optional. The amount of latency this request is willing to incur in order to improve
+   * throughput. If this field is not set, Spanner assumes requests are relatively latency sensitive
+   * and automatically determines an appropriate delay time. You can specify a batching delay value
+   * between 0 and 500 ms.
+   * @return value or {@code null} for none
+   */
+  public String getMaxCommitDelay() {
+    return maxCommitDelay;
+  }
+
+  /**
+   * Optional. The amount of latency this request is willing to incur in order to improve
+   * throughput. If this field is not set, Spanner assumes requests are relatively latency sensitive
+   * and automatically determines an appropriate delay time. You can specify a batching delay value
+   * between 0 and 500 ms.
+   * @param maxCommitDelay maxCommitDelay or {@code null} for none
+   */
+  public CommitRequest setMaxCommitDelay(String maxCommitDelay) {
+    this.maxCommitDelay = maxCommitDelay;
+    return this;
+  }
 
   /**
    * The mutations to be executed when this transaction commits. All mutations are applied

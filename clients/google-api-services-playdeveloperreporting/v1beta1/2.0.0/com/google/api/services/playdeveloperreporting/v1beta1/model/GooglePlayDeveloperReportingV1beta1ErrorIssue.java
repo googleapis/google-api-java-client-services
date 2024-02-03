@@ -125,7 +125,7 @@ public final class GooglePlayDeveloperReportingV1beta1ErrorIssue extends com.goo
   private java.lang.String location;
 
   /**
-   * Identifier. The resource name of the issue. Format: apps/{app}/errorIssues/{issue}
+   * Identifier. The resource name of the issue. Format: apps/{app}/{issue}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -350,7 +350,7 @@ public final class GooglePlayDeveloperReportingV1beta1ErrorIssue extends com.goo
   }
 
   /**
-   * Identifier. The resource name of the issue. Format: apps/{app}/errorIssues/{issue}
+   * Identifier. The resource name of the issue. Format: apps/{app}/{issue}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -358,7 +358,7 @@ public final class GooglePlayDeveloperReportingV1beta1ErrorIssue extends com.goo
   }
 
   /**
-   * Identifier. The resource name of the issue. Format: apps/{app}/errorIssues/{issue}
+   * Identifier. The resource name of the issue. Format: apps/{app}/{issue}
    * @param name name or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1ErrorIssue setName(java.lang.String name) {

@@ -70,6 +70,13 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disablePublicIpAddresses;
 
   /**
+   * Optional. Whether to disable SSH access to the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableSsh;
+
+  /**
    * Optional. Whether to enable nested virtualization on Cloud Workstations VMs created under this
    * workstation configuration. Nested virtualization lets you run virtual machine (VM) instances
    * inside your workstation. Before enabling nested virtualization, consider the following
@@ -238,6 +245,23 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    */
   public GceInstance setDisablePublicIpAddresses(java.lang.Boolean disablePublicIpAddresses) {
     this.disablePublicIpAddresses = disablePublicIpAddresses;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to disable SSH access to the VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableSsh() {
+    return disableSsh;
+  }
+
+  /**
+   * Optional. Whether to disable SSH access to the VM.
+   * @param disableSsh disableSsh or {@code null} for none
+   */
+  public GceInstance setDisableSsh(java.lang.Boolean disableSsh) {
+    this.disableSsh = disableSsh;
     return this;
   }
 

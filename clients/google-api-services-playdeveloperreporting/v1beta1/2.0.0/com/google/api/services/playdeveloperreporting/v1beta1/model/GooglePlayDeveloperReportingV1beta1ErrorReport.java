@@ -64,7 +64,7 @@ public final class GooglePlayDeveloperReportingV1beta1ErrorReport extends com.go
   private java.lang.String issue;
 
   /**
-   * The resource name of the report. Format: apps/{app}/errorReports/{report}
+   * The resource name of the report. Format: apps/{app}/{report}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +176,7 @@ public final class GooglePlayDeveloperReportingV1beta1ErrorReport extends com.go
   }
 
   /**
-   * The resource name of the report. Format: apps/{app}/errorReports/{report}
+   * The resource name of the report. Format: apps/{app}/{report}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -184,7 +184,7 @@ public final class GooglePlayDeveloperReportingV1beta1ErrorReport extends com.go
   }
 
   /**
-   * The resource name of the report. Format: apps/{app}/errorReports/{report}
+   * The resource name of the report. Format: apps/{app}/{report}
    * @param name name or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1ErrorReport setName(java.lang.String name) {

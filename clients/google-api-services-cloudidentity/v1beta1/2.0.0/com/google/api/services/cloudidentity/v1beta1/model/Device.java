@@ -129,7 +129,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String encryptionState;
 
   /**
-   * Output only. Attributes specific to Endpoint Verification devices.
+   * Output only. Attributes specific to [Endpoint Verification](https://cloud.google.com/endpoint-
+   * verification/docs/overview) devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -497,7 +498,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Attributes specific to Endpoint Verification devices.
+   * Output only. Attributes specific to [Endpoint Verification](https://cloud.google.com/endpoint-
+   * verification/docs/overview) devices.
    * @return value or {@code null} for none
    */
   public EndpointVerificationSpecificAttributes getEndpointVerificationSpecificAttributes() {
@@ -505,7 +507,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Attributes specific to Endpoint Verification devices.
+   * Output only. Attributes specific to [Endpoint Verification](https://cloud.google.com/endpoint-
+   * verification/docs/overview) devices.
    * @param endpointVerificationSpecificAttributes endpointVerificationSpecificAttributes or {@code null} for none
    */
   public Device setEndpointVerificationSpecificAttributes(EndpointVerificationSpecificAttributes endpointVerificationSpecificAttributes) {

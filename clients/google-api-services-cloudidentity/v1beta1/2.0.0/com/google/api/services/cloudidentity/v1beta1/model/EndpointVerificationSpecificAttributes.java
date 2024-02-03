@@ -17,8 +17,8 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Resource representing the Endpoint Verification-specific attributes of a Device.
- * https://cloud.google.com/endpoint-verification/docs/overview
+ * Resource representing the [Endpoint Verification-specific attributes](https://cloud.google.com
+ * /endpoint-verification/docs/device-information) of a device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -31,6 +31,29 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class EndpointVerificationSpecificAttributes extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional signals reported by Endpoint Verification. It includes the following attributes: 1.
+   * Non-configurable attributes: hotfixes, av_installed, av_enabled, windows_domain_name,
+   * is_os_native_firewall_enabled, and is_secure_boot_enabled. 2. Configurable attributes:
+   * file_config, registry_config, and plist_config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> additionalSignals;
+
+  /**
+   * Details of browser profiles reported by Endpoint Verification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BrowserAttributes> browserAttributes;
+
+  static {
+    // hack to force ProGuard to consider BrowserAttributes used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BrowserAttributes.class);
+  }
+
+  /**
    * Details of certificates.
    * The value may be {@code null}.
    */
@@ -41,6 +64,46 @@ public final class EndpointVerificationSpecificAttributes extends com.google.api
     // hack to force ProGuard to consider CertificateAttributes used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(CertificateAttributes.class);
+  }
+
+  /**
+   * Additional signals reported by Endpoint Verification. It includes the following attributes: 1.
+   * Non-configurable attributes: hotfixes, av_installed, av_enabled, windows_domain_name,
+   * is_os_native_firewall_enabled, and is_secure_boot_enabled. 2. Configurable attributes:
+   * file_config, registry_config, and plist_config.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getAdditionalSignals() {
+    return additionalSignals;
+  }
+
+  /**
+   * Additional signals reported by Endpoint Verification. It includes the following attributes: 1.
+   * Non-configurable attributes: hotfixes, av_installed, av_enabled, windows_domain_name,
+   * is_os_native_firewall_enabled, and is_secure_boot_enabled. 2. Configurable attributes:
+   * file_config, registry_config, and plist_config.
+   * @param additionalSignals additionalSignals or {@code null} for none
+   */
+  public EndpointVerificationSpecificAttributes setAdditionalSignals(java.util.Map<String, java.lang.Object> additionalSignals) {
+    this.additionalSignals = additionalSignals;
+    return this;
+  }
+
+  /**
+   * Details of browser profiles reported by Endpoint Verification.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BrowserAttributes> getBrowserAttributes() {
+    return browserAttributes;
+  }
+
+  /**
+   * Details of browser profiles reported by Endpoint Verification.
+   * @param browserAttributes browserAttributes or {@code null} for none
+   */
+  public EndpointVerificationSpecificAttributes setBrowserAttributes(java.util.List<BrowserAttributes> browserAttributes) {
+    this.browserAttributes = browserAttributes;
+    return this;
   }
 
   /**

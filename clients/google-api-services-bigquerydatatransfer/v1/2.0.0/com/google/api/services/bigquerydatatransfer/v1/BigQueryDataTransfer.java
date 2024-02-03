@@ -1306,6 +1306,142 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Unenroll data sources in a user project. This allows users to remove transfer configurations for
+       * these data sources. They will no longer appear in the ListDataSources RPC and will also no longer
+       * appear in the [BigQuery UI](https://console.cloud.google.com/bigquery).
+       *
+       * Create a request for the method "locations.unenrollDataSources".
+       *
+       * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
+       * optional parameters, call the {@link UnenrollDataSources#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name The name of the project resource in the form: `projects/{project_id}`
+       * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.UnenrollDataSourcesRequest}
+       * @return the request
+       */
+      public UnenrollDataSources unenrollDataSources(java.lang.String name, com.google.api.services.bigquerydatatransfer.v1.model.UnenrollDataSourcesRequest content) throws java.io.IOException {
+        UnenrollDataSources result = new UnenrollDataSources(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UnenrollDataSources extends BigQueryDataTransferRequest<com.google.api.services.bigquerydatatransfer.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}:unenrollDataSources";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Unenroll data sources in a user project. This allows users to remove transfer configurations
+         * for these data sources. They will no longer appear in the ListDataSources RPC and will also no
+         * longer appear in the [BigQuery UI](https://console.cloud.google.com/bigquery).
+         *
+         * Create a request for the method "locations.unenrollDataSources".
+         *
+         * This request holds the parameters needed by the the bigquerydatatransfer server.  After setting
+         * any optional parameters, call the {@link UnenrollDataSources#execute()} method to invoke the
+         * remote operation. <p> {@link UnenrollDataSources#initialize(com.google.api.client.googleapis.se
+         * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name The name of the project resource in the form: `projects/{project_id}`
+         * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.UnenrollDataSourcesRequest}
+         * @since 1.13
+         */
+        protected UnenrollDataSources(java.lang.String name, com.google.api.services.bigquerydatatransfer.v1.model.UnenrollDataSourcesRequest content) {
+          super(BigQueryDataTransfer.this, "POST", REST_PATH, content, com.google.api.services.bigquerydatatransfer.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public UnenrollDataSources set$Xgafv(java.lang.String $Xgafv) {
+          return (UnenrollDataSources) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UnenrollDataSources setAccessToken(java.lang.String accessToken) {
+          return (UnenrollDataSources) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UnenrollDataSources setAlt(java.lang.String alt) {
+          return (UnenrollDataSources) super.setAlt(alt);
+        }
+
+        @Override
+        public UnenrollDataSources setCallback(java.lang.String callback) {
+          return (UnenrollDataSources) super.setCallback(callback);
+        }
+
+        @Override
+        public UnenrollDataSources setFields(java.lang.String fields) {
+          return (UnenrollDataSources) super.setFields(fields);
+        }
+
+        @Override
+        public UnenrollDataSources setKey(java.lang.String key) {
+          return (UnenrollDataSources) super.setKey(key);
+        }
+
+        @Override
+        public UnenrollDataSources setOauthToken(java.lang.String oauthToken) {
+          return (UnenrollDataSources) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UnenrollDataSources setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UnenrollDataSources) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UnenrollDataSources setQuotaUser(java.lang.String quotaUser) {
+          return (UnenrollDataSources) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UnenrollDataSources setUploadType(java.lang.String uploadType) {
+          return (UnenrollDataSources) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UnenrollDataSources setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UnenrollDataSources) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the project resource in the form: `projects/{project_id}` */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the project resource in the form: `projects/{project_id}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the project resource in the form: `projects/{project_id}` */
+        public UnenrollDataSources setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public UnenrollDataSources set(String parameterName, Object value) {
+          return (UnenrollDataSources) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the DataSources collection.

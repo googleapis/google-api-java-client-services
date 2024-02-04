@@ -51,10 +51,10 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   private java.lang.String data;
 
   /**
-   * Optional. ID of this message, assigned by the server when the message is published. Guaranteed
-   * to be unique within the topic. This value may be read by a subscriber that receives a
-   * `PubsubMessage` via a `Pull` call or a push delivery. It must not be populated by the publisher
-   * in a `Publish` call.
+   * ID of this message, assigned by the server when the message is published. Guaranteed to be
+   * unique within the topic. This value may be read by a subscriber that receives a `PubsubMessage`
+   * via a `Pull` call or a push delivery. It must not be populated by the publisher in a `Publish`
+   * call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   private java.lang.String orderingKey;
 
   /**
-   * Optional. The time at which the message was published, populated by the server when it receives
-   * the `Publish` call. It must not be populated by the publisher in a `Publish` call.
+   * The time at which the message was published, populated by the server when it receives the
+   * `Publish` call. It must not be populated by the publisher in a `Publish` call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,10 +149,10 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. ID of this message, assigned by the server when the message is published. Guaranteed
-   * to be unique within the topic. This value may be read by a subscriber that receives a
-   * `PubsubMessage` via a `Pull` call or a push delivery. It must not be populated by the publisher
-   * in a `Publish` call.
+   * ID of this message, assigned by the server when the message is published. Guaranteed to be
+   * unique within the topic. This value may be read by a subscriber that receives a `PubsubMessage`
+   * via a `Pull` call or a push delivery. It must not be populated by the publisher in a `Publish`
+   * call.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageId() {
@@ -160,10 +160,10 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. ID of this message, assigned by the server when the message is published. Guaranteed
-   * to be unique within the topic. This value may be read by a subscriber that receives a
-   * `PubsubMessage` via a `Pull` call or a push delivery. It must not be populated by the publisher
-   * in a `Publish` call.
+   * ID of this message, assigned by the server when the message is published. Guaranteed to be
+   * unique within the topic. This value may be read by a subscriber that receives a `PubsubMessage`
+   * via a `Pull` call or a push delivery. It must not be populated by the publisher in a `Publish`
+   * call.
    * @param messageId messageId or {@code null} for none
    */
   public PubsubMessage setMessageId(java.lang.String messageId) {
@@ -199,8 +199,8 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The time at which the message was published, populated by the server when it receives
-   * the `Publish` call. It must not be populated by the publisher in a `Publish` call.
+   * The time at which the message was published, populated by the server when it receives the
+   * `Publish` call. It must not be populated by the publisher in a `Publish` call.
    * @return value or {@code null} for none
    */
   public String getPublishTime() {
@@ -208,8 +208,8 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The time at which the message was published, populated by the server when it receives
-   * the `Publish` call. It must not be populated by the publisher in a `Publish` call.
+   * The time at which the message was published, populated by the server when it receives the
+   * `Publish` call. It must not be populated by the publisher in a `Publish` call.
    * @param publishTime publishTime or {@code null} for none
    */
   public PubsubMessage setPublishTime(String publishTime) {

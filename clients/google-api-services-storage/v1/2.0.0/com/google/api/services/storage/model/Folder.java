@@ -52,13 +52,6 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * User-provided metadata, in key/value pairs.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> metadata;
-
-  /**
    * The version of the metadata for this folder. Used for preconditions and for detecting changes
    * in metadata.
    * The value may be {@code null}.
@@ -150,23 +143,6 @@ public final class Folder extends com.google.api.client.json.GenericJson {
    */
   public Folder setKind(java.lang.String kind) {
     this.kind = kind;
-    return this;
-  }
-
-  /**
-   * User-provided metadata, in key/value pairs.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getMetadata() {
-    return metadata;
-  }
-
-  /**
-   * User-provided metadata, in key/value pairs.
-   * @param metadata metadata or {@code null} for none
-   */
-  public Folder setMetadata(java.util.Map<String, java.lang.String> metadata) {
-    this.metadata = metadata;
     return this;
   }
 

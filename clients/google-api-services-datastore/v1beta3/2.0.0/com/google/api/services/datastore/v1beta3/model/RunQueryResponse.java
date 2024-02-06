@@ -44,14 +44,6 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   private Query query;
 
   /**
-   * Query plan and execution statistics. Note that the returned stats are subject to change as
-   * Firestore evolves. This is only present when the request specifies a mode other than `NORMAL`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ResultSetStats stats;
-
-  /**
    * A batch of query results (always present).
    * @return value or {@code null} for none
    */
@@ -82,25 +74,6 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
    */
   public RunQueryResponse setQuery(Query query) {
     this.query = query;
-    return this;
-  }
-
-  /**
-   * Query plan and execution statistics. Note that the returned stats are subject to change as
-   * Firestore evolves. This is only present when the request specifies a mode other than `NORMAL`.
-   * @return value or {@code null} for none
-   */
-  public ResultSetStats getStats() {
-    return stats;
-  }
-
-  /**
-   * Query plan and execution statistics. Note that the returned stats are subject to change as
-   * Firestore evolves. This is only present when the request specifies a mode other than `NORMAL`.
-   * @param stats stats or {@code null} for none
-   */
-  public RunQueryResponse setStats(ResultSetStats stats) {
-    this.stats = stats;
     return this;
   }
 

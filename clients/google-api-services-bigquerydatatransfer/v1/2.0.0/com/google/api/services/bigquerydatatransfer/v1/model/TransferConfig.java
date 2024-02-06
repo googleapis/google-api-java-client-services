@@ -67,7 +67,7 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   private java.lang.String destinationDatasetId;
 
   /**
-   * Is this config disabled. When set to true, no runs are scheduled for a given transfer.
+   * Is this config disabled. When set to true, no runs will be scheduled for this transfer config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   /**
    * Pub/Sub topic where notifications will be sent after transfer runs associated with this
    * transfer config finish. The format for specifying a pubsub topic is:
-   * `projects/{project}/topics/{topic}`
+   * `projects/{project_id}/topics/{topic_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,7 +263,7 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Is this config disabled. When set to true, no runs are scheduled for a given transfer.
+   * Is this config disabled. When set to true, no runs will be scheduled for this transfer config.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -271,7 +271,7 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Is this config disabled. When set to true, no runs are scheduled for a given transfer.
+   * Is this config disabled. When set to true, no runs will be scheduled for this transfer config.
    * @param disabled disabled or {@code null} for none
    */
   public TransferConfig setDisabled(java.lang.Boolean disabled) {
@@ -381,7 +381,7 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   /**
    * Pub/Sub topic where notifications will be sent after transfer runs associated with this
    * transfer config finish. The format for specifying a pubsub topic is:
-   * `projects/{project}/topics/{topic}`
+   * `projects/{project_id}/topics/{topic_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationPubsubTopic() {
@@ -391,7 +391,7 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   /**
    * Pub/Sub topic where notifications will be sent after transfer runs associated with this
    * transfer config finish. The format for specifying a pubsub topic is:
-   * `projects/{project}/topics/{topic}`
+   * `projects/{project_id}/topics/{topic_id}`
    * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
    */
   public TransferConfig setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {

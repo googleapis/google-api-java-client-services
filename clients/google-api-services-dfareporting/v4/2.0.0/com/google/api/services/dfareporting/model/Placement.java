@@ -114,6 +114,13 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   private java.lang.Long contentCategoryId;
 
   /**
+   * Optional. Conversion domain overrides for a placement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PlacementConversionDomainOverride conversionDomainOverride;
+
+  /**
    * Information about the creation of this placement. This is a read-only field.
    * The value may be {@code null}.
    */
@@ -561,6 +568,23 @@ public final class Placement extends com.google.api.client.json.GenericJson {
    */
   public Placement setContentCategoryId(java.lang.Long contentCategoryId) {
     this.contentCategoryId = contentCategoryId;
+    return this;
+  }
+
+  /**
+   * Optional. Conversion domain overrides for a placement.
+   * @return value or {@code null} for none
+   */
+  public PlacementConversionDomainOverride getConversionDomainOverride() {
+    return conversionDomainOverride;
+  }
+
+  /**
+   * Optional. Conversion domain overrides for a placement.
+   * @param conversionDomainOverride conversionDomainOverride or {@code null} for none
+   */
+  public Placement setConversionDomainOverride(PlacementConversionDomainOverride conversionDomainOverride) {
+    this.conversionDomainOverride = conversionDomainOverride;
     return this;
   }
 

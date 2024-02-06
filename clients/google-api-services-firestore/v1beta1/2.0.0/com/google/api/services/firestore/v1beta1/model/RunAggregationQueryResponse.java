@@ -48,15 +48,6 @@ public final class RunAggregationQueryResponse extends com.google.api.client.jso
   private AggregationResult result;
 
   /**
-   * Query plan and execution statistics. Note that the returned stats are subject to change as
-   * Firestore evolves. This is only present when the request specifies a mode other than `NORMAL`
-   * and is sent only once with the last response in the stream.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ResultSetStats stats;
-
-  /**
    * The transaction that was started as part of this request. Only present on the first response
    * when the request requested to start a new transaction.
    * The value may be {@code null}.
@@ -103,27 +94,6 @@ public final class RunAggregationQueryResponse extends com.google.api.client.jso
    */
   public RunAggregationQueryResponse setResult(AggregationResult result) {
     this.result = result;
-    return this;
-  }
-
-  /**
-   * Query plan and execution statistics. Note that the returned stats are subject to change as
-   * Firestore evolves. This is only present when the request specifies a mode other than `NORMAL`
-   * and is sent only once with the last response in the stream.
-   * @return value or {@code null} for none
-   */
-  public ResultSetStats getStats() {
-    return stats;
-  }
-
-  /**
-   * Query plan and execution statistics. Note that the returned stats are subject to change as
-   * Firestore evolves. This is only present when the request specifies a mode other than `NORMAL`
-   * and is sent only once with the last response in the stream.
-   * @param stats stats or {@code null} for none
-   */
-  public RunAggregationQueryResponse setStats(ResultSetStats stats) {
-    this.stats = stats;
     return this;
   }
 

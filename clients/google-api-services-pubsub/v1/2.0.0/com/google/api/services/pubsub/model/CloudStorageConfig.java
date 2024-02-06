@@ -80,6 +80,17 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   private String maxDuration;
 
   /**
+   * Optional. The service account to use to write to Cloud Storage. The subscription creator or
+   * updater that specifies this field must have `iam.serviceAccounts.actAs` permission on the
+   * service account. If not specified, the Pub/Sub [service
+   * agent](https://cloud.google.com/iam/docs/service-agents), service-{project_number}@gcp-sa-
+   * pubsub.iam.gserviceaccount.com, is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccountEmail;
+
+  /**
    * Output only. An output-only field that indicates whether or not the subscription can receive
    * messages.
    * The value may be {@code null}.
@@ -209,6 +220,31 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
    */
   public CloudStorageConfig setMaxDuration(String maxDuration) {
     this.maxDuration = maxDuration;
+    return this;
+  }
+
+  /**
+   * Optional. The service account to use to write to Cloud Storage. The subscription creator or
+   * updater that specifies this field must have `iam.serviceAccounts.actAs` permission on the
+   * service account. If not specified, the Pub/Sub [service
+   * agent](https://cloud.google.com/iam/docs/service-agents), service-{project_number}@gcp-sa-
+   * pubsub.iam.gserviceaccount.com, is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccountEmail() {
+    return serviceAccountEmail;
+  }
+
+  /**
+   * Optional. The service account to use to write to Cloud Storage. The subscription creator or
+   * updater that specifies this field must have `iam.serviceAccounts.actAs` permission on the
+   * service account. If not specified, the Pub/Sub [service
+   * agent](https://cloud.google.com/iam/docs/service-agents), service-{project_number}@gcp-sa-
+   * pubsub.iam.gserviceaccount.com, is used.
+   * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
+   */
+  public CloudStorageConfig setServiceAccountEmail(java.lang.String serviceAccountEmail) {
+    this.serviceAccountEmail = serviceAccountEmail;
     return this;
   }
 

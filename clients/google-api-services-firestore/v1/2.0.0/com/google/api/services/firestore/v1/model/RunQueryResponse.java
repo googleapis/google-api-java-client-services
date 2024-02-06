@@ -63,15 +63,6 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   private java.lang.Integer skippedResults;
 
   /**
-   * Query plan and execution statistics. Note that the returned stats are subject to change as
-   * Firestore evolves. This is only present when the request specifies a mode other than `NORMAL`
-   * and is sent only once with the last response in the stream.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ResultSetStats stats;
-
-  /**
    * The transaction that was started as part of this request. Can only be set in the first
    * response, and only if RunQueryRequest.new_transaction was set in the request. If set, no other
    * fields will be set in this response.
@@ -155,27 +146,6 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
    */
   public RunQueryResponse setSkippedResults(java.lang.Integer skippedResults) {
     this.skippedResults = skippedResults;
-    return this;
-  }
-
-  /**
-   * Query plan and execution statistics. Note that the returned stats are subject to change as
-   * Firestore evolves. This is only present when the request specifies a mode other than `NORMAL`
-   * and is sent only once with the last response in the stream.
-   * @return value or {@code null} for none
-   */
-  public ResultSetStats getStats() {
-    return stats;
-  }
-
-  /**
-   * Query plan and execution statistics. Note that the returned stats are subject to change as
-   * Firestore evolves. This is only present when the request specifies a mode other than `NORMAL`
-   * and is sent only once with the last response in the stream.
-   * @param stats stats or {@code null} for none
-   */
-  public RunQueryResponse setStats(ResultSetStats stats) {
-    this.stats = stats;
     return this;
   }
 

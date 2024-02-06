@@ -31,6 +31,13 @@ package com.google.api.services.dfareporting.model;
 public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
+   * This represents consent for ad user data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String adUserDataConsent;
+
+  /**
    * Whether this particular request may come from a user under the age of 13, under COPPA
    * compliance.
    * The value may be {@code null}.
@@ -199,6 +206,23 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Double value;
+
+  /**
+   * This represents consent for ad user data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdUserDataConsent() {
+    return adUserDataConsent;
+  }
+
+  /**
+   * This represents consent for ad user data.
+   * @param adUserDataConsent adUserDataConsent or {@code null} for none
+   */
+  public Conversion setAdUserDataConsent(java.lang.String adUserDataConsent) {
+    this.adUserDataConsent = adUserDataConsent;
+    return this;
+  }
 
   /**
    * Whether this particular request may come from a user under the age of 13, under COPPA

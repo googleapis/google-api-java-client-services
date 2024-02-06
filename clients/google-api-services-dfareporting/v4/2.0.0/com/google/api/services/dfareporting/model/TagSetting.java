@@ -40,8 +40,8 @@ public final class TagSetting extends com.google.api.client.json.GenericJson {
   private java.lang.String additionalKeyValues;
 
   /**
-   * Whether static landing page URLs should be included in the tags. This setting applies only to
-   * placements.
+   * Whether static landing page URLs should be included in the tags. New placements will default to
+   * the value set on their site.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +85,8 @@ public final class TagSetting extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether static landing page URLs should be included in the tags. This setting applies only to
-   * placements.
+   * Whether static landing page URLs should be included in the tags. New placements will default to
+   * the value set on their site.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeClickThroughUrls() {
@@ -94,8 +94,8 @@ public final class TagSetting extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether static landing page URLs should be included in the tags. This setting applies only to
-   * placements.
+   * Whether static landing page URLs should be included in the tags. New placements will default to
+   * the value set on their site.
    * @param includeClickThroughUrls includeClickThroughUrls or {@code null} for none
    */
   public TagSetting setIncludeClickThroughUrls(java.lang.Boolean includeClickThroughUrls) {

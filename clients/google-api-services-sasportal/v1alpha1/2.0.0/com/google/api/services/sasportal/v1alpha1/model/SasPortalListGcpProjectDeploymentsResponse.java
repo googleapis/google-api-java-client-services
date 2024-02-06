@@ -17,8 +17,7 @@
 package com.google.api.services.sasportal.v1alpha1.model;
 
 /**
- * Response for [CheckHasProvisionedDeployment].
- * [spectrum.sas.portal.v1alpha1.Provisioning.CheckHasProvisionedDeployment].
+ * Response for [ListGcpProjectDeployments].
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the SAS Portal API. For a detailed explanation see:
@@ -28,40 +27,46 @@ package com.google.api.services.sasportal.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SasPortalCheckHasProvisionedDeploymentResponse extends com.google.api.client.json.GenericJson {
+public final class SasPortalListGcpProjectDeploymentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether a SAS deployment for the authentication context exists.
+   * Optional. Deployments associated with the GCP project
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean hasProvisionedDeployment;
+  private java.util.List<SasPortalGcpProjectDeployment> deployments;
 
-  /**
-   * Whether a SAS deployment for the authentication context exists.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getHasProvisionedDeployment() {
-    return hasProvisionedDeployment;
+  static {
+    // hack to force ProGuard to consider SasPortalGcpProjectDeployment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SasPortalGcpProjectDeployment.class);
   }
 
   /**
-   * Whether a SAS deployment for the authentication context exists.
-   * @param hasProvisionedDeployment hasProvisionedDeployment or {@code null} for none
+   * Optional. Deployments associated with the GCP project
+   * @return value or {@code null} for none
    */
-  public SasPortalCheckHasProvisionedDeploymentResponse setHasProvisionedDeployment(java.lang.Boolean hasProvisionedDeployment) {
-    this.hasProvisionedDeployment = hasProvisionedDeployment;
+  public java.util.List<SasPortalGcpProjectDeployment> getDeployments() {
+    return deployments;
+  }
+
+  /**
+   * Optional. Deployments associated with the GCP project
+   * @param deployments deployments or {@code null} for none
+   */
+  public SasPortalListGcpProjectDeploymentsResponse setDeployments(java.util.List<SasPortalGcpProjectDeployment> deployments) {
+    this.deployments = deployments;
     return this;
   }
 
   @Override
-  public SasPortalCheckHasProvisionedDeploymentResponse set(String fieldName, Object value) {
-    return (SasPortalCheckHasProvisionedDeploymentResponse) super.set(fieldName, value);
+  public SasPortalListGcpProjectDeploymentsResponse set(String fieldName, Object value) {
+    return (SasPortalListGcpProjectDeploymentsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public SasPortalCheckHasProvisionedDeploymentResponse clone() {
-    return (SasPortalCheckHasProvisionedDeploymentResponse) super.clone();
+  public SasPortalListGcpProjectDeploymentsResponse clone() {
+    return (SasPortalListGcpProjectDeploymentsResponse) super.clone();
   }
 
 }

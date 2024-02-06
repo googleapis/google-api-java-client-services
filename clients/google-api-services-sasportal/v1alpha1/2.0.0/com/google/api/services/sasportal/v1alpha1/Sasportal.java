@@ -154,114 +154,6 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
   public class Customers {
 
     /**
-     * Checks whether a SAS deployment for the authentication context exists.
-     *
-     * Create a request for the method "customers.checkHasProvisionedDeployment".
-     *
-     * This request holds the parameters needed by the sasportal server.  After setting any optional
-     * parameters, call the {@link CheckHasProvisionedDeployment#execute()} method to invoke the remote
-     * operation.
-     *
-     * @return the request
-     */
-    public CheckHasProvisionedDeployment checkHasProvisionedDeployment() throws java.io.IOException {
-      CheckHasProvisionedDeployment result = new CheckHasProvisionedDeployment();
-      initialize(result);
-      return result;
-    }
-
-    public class CheckHasProvisionedDeployment extends SasportalRequest<com.google.api.services.sasportal.v1alpha1.model.SasPortalCheckHasProvisionedDeploymentResponse> {
-
-      private static final String REST_PATH = "v1alpha1/customers:checkHasProvisionedDeployment";
-
-      /**
-       * Checks whether a SAS deployment for the authentication context exists.
-       *
-       * Create a request for the method "customers.checkHasProvisionedDeployment".
-       *
-       * This request holds the parameters needed by the the sasportal server.  After setting any
-       * optional parameters, call the {@link CheckHasProvisionedDeployment#execute()} method to invoke
-       * the remote operation. <p> {@link CheckHasProvisionedDeployment#initialize(com.google.api.client
-       * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-       * immediately after invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected CheckHasProvisionedDeployment() {
-        super(Sasportal.this, "GET", REST_PATH, null, com.google.api.services.sasportal.v1alpha1.model.SasPortalCheckHasProvisionedDeploymentResponse.class);
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment set$Xgafv(java.lang.String $Xgafv) {
-        return (CheckHasProvisionedDeployment) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment setAccessToken(java.lang.String accessToken) {
-        return (CheckHasProvisionedDeployment) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment setAlt(java.lang.String alt) {
-        return (CheckHasProvisionedDeployment) super.setAlt(alt);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment setCallback(java.lang.String callback) {
-        return (CheckHasProvisionedDeployment) super.setCallback(callback);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment setFields(java.lang.String fields) {
-        return (CheckHasProvisionedDeployment) super.setFields(fields);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment setKey(java.lang.String key) {
-        return (CheckHasProvisionedDeployment) super.setKey(key);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment setOauthToken(java.lang.String oauthToken) {
-        return (CheckHasProvisionedDeployment) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (CheckHasProvisionedDeployment) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment setQuotaUser(java.lang.String quotaUser) {
-        return (CheckHasProvisionedDeployment) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment setUploadType(java.lang.String uploadType) {
-        return (CheckHasProvisionedDeployment) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment setUploadProtocol(java.lang.String uploadProtocol) {
-        return (CheckHasProvisionedDeployment) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public CheckHasProvisionedDeployment set(String parameterName, Object value) {
-        return (CheckHasProvisionedDeployment) super.set(parameterName, value);
-      }
-    }
-    /**
      * Returns a requested customer.
      *
      * Create a request for the method "customers.get".
@@ -545,7 +437,117 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Checks whether account is legacy.
+     * Returns a list of SAS deployments associated with current GCP project. Includes whether SAS
+     * analytics has been enabled or not.
+     *
+     * Create a request for the method "customers.listGcpProjectDeployments".
+     *
+     * This request holds the parameters needed by the sasportal server.  After setting any optional
+     * parameters, call the {@link ListGcpProjectDeployments#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public ListGcpProjectDeployments listGcpProjectDeployments() throws java.io.IOException {
+      ListGcpProjectDeployments result = new ListGcpProjectDeployments();
+      initialize(result);
+      return result;
+    }
+
+    public class ListGcpProjectDeployments extends SasportalRequest<com.google.api.services.sasportal.v1alpha1.model.SasPortalListGcpProjectDeploymentsResponse> {
+
+      private static final String REST_PATH = "v1alpha1/customers:listGcpProjectDeployments";
+
+      /**
+       * Returns a list of SAS deployments associated with current GCP project. Includes whether SAS
+       * analytics has been enabled or not.
+       *
+       * Create a request for the method "customers.listGcpProjectDeployments".
+       *
+       * This request holds the parameters needed by the the sasportal server.  After setting any
+       * optional parameters, call the {@link ListGcpProjectDeployments#execute()} method to invoke the
+       * remote operation. <p> {@link ListGcpProjectDeployments#initialize(com.google.api.client.googlea
+       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected ListGcpProjectDeployments() {
+        super(Sasportal.this, "GET", REST_PATH, null, com.google.api.services.sasportal.v1alpha1.model.SasPortalListGcpProjectDeploymentsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ListGcpProjectDeployments set$Xgafv(java.lang.String $Xgafv) {
+        return (ListGcpProjectDeployments) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setAccessToken(java.lang.String accessToken) {
+        return (ListGcpProjectDeployments) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setAlt(java.lang.String alt) {
+        return (ListGcpProjectDeployments) super.setAlt(alt);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setCallback(java.lang.String callback) {
+        return (ListGcpProjectDeployments) super.setCallback(callback);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setFields(java.lang.String fields) {
+        return (ListGcpProjectDeployments) super.setFields(fields);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setKey(java.lang.String key) {
+        return (ListGcpProjectDeployments) super.setKey(key);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setOauthToken(java.lang.String oauthToken) {
+        return (ListGcpProjectDeployments) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListGcpProjectDeployments) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setQuotaUser(java.lang.String quotaUser) {
+        return (ListGcpProjectDeployments) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setUploadType(java.lang.String uploadType) {
+        return (ListGcpProjectDeployments) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListGcpProjectDeployments setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListGcpProjectDeployments) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ListGcpProjectDeployments set(String parameterName, Object value) {
+        return (ListGcpProjectDeployments) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns a list of legacy organizations.
      *
      * Create a request for the method "customers.listLegacyOrganizations".
      *
@@ -566,7 +568,7 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1alpha1/customers:listLegacyOrganizations";
 
       /**
-       * Checks whether account is legacy.
+       * Returns a list of legacy organizations.
        *
        * Create a request for the method "customers.listLegacyOrganizations".
        *

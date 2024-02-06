@@ -17,7 +17,8 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * An event related to memory and storage measurements.
+ * An event related to memory and storage measurements.To distinguish between new and old events, we
+ * recommend using the createTime field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

@@ -192,7 +192,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Events related to memory and storage measurements in chronological order. This information is
-   * only available if memoryInfoEnabled is true in the device's policy.
+   * only available if memoryInfoEnabled is true in the device's policy.Events are retained for a
+   * certain period of time and old events are deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -684,7 +685,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Events related to memory and storage measurements in chronological order. This information is
-   * only available if memoryInfoEnabled is true in the device's policy.
+   * only available if memoryInfoEnabled is true in the device's policy.Events are retained for a
+   * certain period of time and old events are deleted.
    * @return value or {@code null} for none
    */
   public java.util.List<MemoryEvent> getMemoryEvents() {
@@ -693,7 +695,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Events related to memory and storage measurements in chronological order. This information is
-   * only available if memoryInfoEnabled is true in the device's policy.
+   * only available if memoryInfoEnabled is true in the device's policy.Events are retained for a
+   * certain period of time and old events are deleted.
    * @param memoryEvents memoryEvents or {@code null} for none
    */
   public Device setMemoryEvents(java.util.List<MemoryEvent> memoryEvents) {

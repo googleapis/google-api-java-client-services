@@ -105,6 +105,24 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private ExtensionConfig extensionConfig;
 
   /**
+   * Optional. The constraints for installing the app. You can specify a maximum of one
+   * InstallConstraint. Multiple constraints are rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InstallConstraint> installConstraint;
+
+  /**
+   * Optional. Amongst apps with installTypeset to:FORCE_INSTALLEDPREINSTALLED this controls the
+   * relative priority of installation. A value of 0 (default) means this app has no priority over
+   * other apps. For values between 1 and 10,000, a lower value means a higher priority. Values
+   * outside of the range 0 to 10,000 inclusive are rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer installPriority;
+
+  /**
    * The type of installation to perform.
    * The value may be {@code null}.
    */
@@ -337,6 +355,48 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   public ApplicationPolicy setExtensionConfig(ExtensionConfig extensionConfig) {
     this.extensionConfig = extensionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The constraints for installing the app. You can specify a maximum of one
+   * InstallConstraint. Multiple constraints are rejected.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InstallConstraint> getInstallConstraint() {
+    return installConstraint;
+  }
+
+  /**
+   * Optional. The constraints for installing the app. You can specify a maximum of one
+   * InstallConstraint. Multiple constraints are rejected.
+   * @param installConstraint installConstraint or {@code null} for none
+   */
+  public ApplicationPolicy setInstallConstraint(java.util.List<InstallConstraint> installConstraint) {
+    this.installConstraint = installConstraint;
+    return this;
+  }
+
+  /**
+   * Optional. Amongst apps with installTypeset to:FORCE_INSTALLEDPREINSTALLED this controls the
+   * relative priority of installation. A value of 0 (default) means this app has no priority over
+   * other apps. For values between 1 and 10,000, a lower value means a higher priority. Values
+   * outside of the range 0 to 10,000 inclusive are rejected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInstallPriority() {
+    return installPriority;
+  }
+
+  /**
+   * Optional. Amongst apps with installTypeset to:FORCE_INSTALLEDPREINSTALLED this controls the
+   * relative priority of installation. A value of 0 (default) means this app has no priority over
+   * other apps. For values between 1 and 10,000, a lower value means a higher priority. Values
+   * outside of the range 0 to 10,000 inclusive are rejected.
+   * @param installPriority installPriority or {@code null} for none
+   */
+  public ApplicationPolicy setInstallPriority(java.lang.Integer installPriority) {
+    this.installPriority = installPriority;
     return this;
   }
 

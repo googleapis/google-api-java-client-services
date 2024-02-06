@@ -37,15 +37,6 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   private GqlQuery gqlQuery;
 
   /**
-   * Optional. The mode in which the query request is processed. This field is optional, and when
-   * not provided, it defaults to `NORMAL` mode where no additional statistics will be returned with
-   * the query results.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String mode;
-
-  /**
    * Entities are partitioned into subsets, identified by a partition ID. Queries are scoped to a
    * single partition. This partition ID is normalized with the standard default context partition
    * ID.
@@ -82,27 +73,6 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
    */
   public RunQueryRequest setGqlQuery(GqlQuery gqlQuery) {
     this.gqlQuery = gqlQuery;
-    return this;
-  }
-
-  /**
-   * Optional. The mode in which the query request is processed. This field is optional, and when
-   * not provided, it defaults to `NORMAL` mode where no additional statistics will be returned with
-   * the query results.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMode() {
-    return mode;
-  }
-
-  /**
-   * Optional. The mode in which the query request is processed. This field is optional, and when
-   * not provided, it defaults to `NORMAL` mode where no additional statistics will be returned with
-   * the query results.
-   * @param mode mode or {@code null} for none
-   */
-  public RunQueryRequest setMode(java.lang.String mode) {
-    this.mode = mode;
     return this;
   }
 

@@ -30,12 +30,14 @@ package com.google.api.services.walletobjects.model;
 public final class AppLinkDataAppLinkInfoAppTarget extends com.google.api.client.json.GenericJson {
 
   /**
+   * URI for AppTarget. The description on the URI must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Uri targetUri;
 
   /**
+   * URI for AppTarget. The description on the URI must be set.
    * @return value or {@code null} for none
    */
   public Uri getTargetUri() {
@@ -43,6 +45,7 @@ public final class AppLinkDataAppLinkInfoAppTarget extends com.google.api.client
   }
 
   /**
+   * URI for AppTarget. The description on the URI must be set.
    * @param targetUri targetUri or {@code null} for none
    */
   public AppLinkDataAppLinkInfoAppTarget setTargetUri(Uri targetUri) {

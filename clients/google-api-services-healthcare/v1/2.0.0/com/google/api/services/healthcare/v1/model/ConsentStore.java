@@ -59,8 +59,9 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/
-   * datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
+   * Identifier. Resource name of the consent store, of the form `projects/{project_id}/locations/{l
+   * ocation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after
+   * creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +135,9 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/
-   * datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
+   * Identifier. Resource name of the consent store, of the form `projects/{project_id}/locations/{l
+   * ocation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after
+   * creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -143,8 +145,9 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/
-   * datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
+   * Identifier. Resource name of the consent store, of the form `projects/{project_id}/locations/{l
+   * ocation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after
+   * creation.
    * @param name name or {@code null} for none
    */
   public ConsentStore setName(java.lang.String name) {

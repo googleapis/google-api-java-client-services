@@ -544,7 +544,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The name of the project where the server creates the dataset. For example,
+         * @param parent Required. The name of the project where the server creates the dataset. For example,
          *        `projects/{project_id}/locations/{location_id}`.
          * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Dataset}
          * @return the request
@@ -575,7 +575,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The name of the project where the server creates the dataset. For example,
+           * @param parent Required. The name of the project where the server creates the dataset. For example,
          *        `projects/{project_id}/locations/{location_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Dataset}
            * @since 1.13
@@ -646,13 +646,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The name of the project where the server creates the dataset. For example,
+           * Required. The name of the project where the server creates the dataset. For example,
            * `projects/{project_id}/locations/{location_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The name of the project where the server creates the dataset. For example,
+          /** Required. The name of the project where the server creates the dataset. For example,
          `projects/{project_id}/locations/{location_id}`.
            */
           public java.lang.String getParent() {
@@ -660,7 +660,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The name of the project where the server creates the dataset. For example,
+           * Required. The name of the project where the server creates the dataset. For example,
            * `projects/{project_id}/locations/{location_id}`.
            */
           public Create setParent(java.lang.String parent) {
@@ -674,13 +674,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The ID of the dataset that is being created. The string must match the following regex:
-           * `[\p{L}\p{N}_\-\.]{1,256}`.
+           * Required. The ID of the dataset that is being created. The string must match the
+           * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String datasetId;
 
-          /** The ID of the dataset that is being created. The string must match the following regex:
+          /** Required. The ID of the dataset that is being created. The string must match the following regex:
          `[\p{L}\p{N}_\-\.]{1,256}`.
            */
           public java.lang.String getDatasetId() {
@@ -688,8 +688,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The ID of the dataset that is being created. The string must match the following regex:
-           * `[\p{L}\p{N}_\-\.]{1,256}`.
+           * Required. The ID of the dataset that is being created. The string must match the
+           * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
            */
           public Create setDatasetId(java.lang.String datasetId) {
             this.datasetId = datasetId;
@@ -862,7 +862,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the dataset to delete. For example,
+         * @param name Required. The name of the dataset to delete. For example,
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
          * @return the request
          */
@@ -891,7 +891,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the dataset to delete. For example,
+           * @param name Required. The name of the dataset to delete. For example,
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            * @since 1.13
            */
@@ -961,13 +961,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The name of the dataset to delete. For example,
+           * Required. The name of the dataset to delete. For example,
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the dataset to delete. For example,
+          /** Required. The name of the dataset to delete. For example,
          `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public java.lang.String getName() {
@@ -975,7 +975,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The name of the dataset to delete. For example,
+           * Required. The name of the dataset to delete. For example,
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public Delete setName(java.lang.String name) {
@@ -1001,7 +1001,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the dataset to read. For example,
+         * @param name Required. The name of the dataset to read. For example,
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
          * @return the request
          */
@@ -1028,7 +1028,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the dataset to read. For example,
+           * @param name Required. The name of the dataset to read. For example,
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            * @since 1.13
            */
@@ -1108,13 +1108,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The name of the dataset to read. For example,
+           * Required. The name of the dataset to read. For example,
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the dataset to read. For example,
+          /** Required. The name of the dataset to read. For example,
          `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public java.lang.String getName() {
@@ -1122,7 +1122,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The name of the dataset to read. For example,
+           * Required. The name of the dataset to read. For example,
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public Get setName(java.lang.String name) {
@@ -1346,7 +1346,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The name of the project whose datasets should be listed. For example,
+         * @param parent Required. The name of the project whose datasets should be listed. For example,
          *        `projects/{project_id}/locations/{location_id}`.
          * @return the request
          */
@@ -1373,7 +1373,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The name of the project whose datasets should be listed. For example,
+           * @param parent Required. The name of the project whose datasets should be listed. For example,
          *        `projects/{project_id}/locations/{location_id}`.
            * @since 1.13
            */
@@ -1453,13 +1453,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The name of the project whose datasets should be listed. For example,
+           * Required. The name of the project whose datasets should be listed. For example,
            * `projects/{project_id}/locations/{location_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The name of the project whose datasets should be listed. For example,
+          /** Required. The name of the project whose datasets should be listed. For example,
          `projects/{project_id}/locations/{location_id}`.
            */
           public java.lang.String getParent() {
@@ -1467,7 +1467,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The name of the project whose datasets should be listed. For example,
+           * Required. The name of the project whose datasets should be listed. For example,
            * `projects/{project_id}/locations/{location_id}`.
            */
           public List setParent(java.lang.String parent) {
@@ -1531,7 +1531,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the dataset, of the form
+         * @param name Identifier. Resource name of the dataset, of the form
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
          * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Dataset}
          * @return the request
@@ -1560,7 +1560,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the dataset, of the form
+           * @param name Identifier. Resource name of the dataset, of the form
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Dataset}
            * @since 1.13
@@ -1631,13 +1631,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Resource name of the dataset, of the form
+           * Identifier. Resource name of the dataset, of the form
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the dataset, of the form
+          /** Identifier. Resource name of the dataset, of the form
          `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public java.lang.String getName() {
@@ -1645,7 +1645,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Resource name of the dataset, of the form
+           * Identifier. Resource name of the dataset, of the form
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public Patch setName(java.lang.String name) {
@@ -1659,13 +1659,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The update mask applies to the resource. For the `FieldMask` definition, see
+           * Required. The update mask applies to the resource. For the `FieldMask` definition, see
            * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The update mask applies to the resource. For the `FieldMask` definition, see
+          /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
          https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
@@ -1673,7 +1673,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The update mask applies to the resource. For the `FieldMask` definition, see
+           * Required. The update mask applies to the resource. For the `FieldMask` definition, see
            * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
            */
           public Patch setUpdateMask(String updateMask) {
@@ -2013,7 +2013,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the dataset this Annotation store belongs to.
+           * @param parent Required. The name of the dataset this Annotation store belongs to.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
            * @return the request
            */
@@ -2041,7 +2041,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The name of the dataset this Annotation store belongs to.
+             * @param parent Required. The name of the dataset this Annotation store belongs to.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
              * @since 1.13
              */
@@ -2110,17 +2110,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The name of the dataset this Annotation store belongs to. */
+            /** Required. The name of the dataset this Annotation store belongs to. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the dataset this Annotation store belongs to.
+            /** Required. The name of the dataset this Annotation store belongs to.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** The name of the dataset this Annotation store belongs to. */
+            /** Required. The name of the dataset this Annotation store belongs to. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2132,22 +2132,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The ID of the Annotation store that is being created. The string must match the
-             * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+             * Required. The ID of the Annotation store that is being created. The string must match
+             * the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String annotationStoreId;
 
-            /** The ID of the Annotation store that is being created. The string must match the following regex:
-           `[\p{L}\p{N}_\-\.]{1,256}`.
+            /** Required. The ID of the Annotation store that is being created. The string must match the following
+           regex: `[\p{L}\p{N}_\-\.]{1,256}`.
              */
             public java.lang.String getAnnotationStoreId() {
               return annotationStoreId;
             }
 
             /**
-             * The ID of the Annotation store that is being created. The string must match the
-             * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+             * Required. The ID of the Annotation store that is being created. The string must match
+             * the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
              */
             public Create setAnnotationStoreId(java.lang.String annotationStoreId) {
               this.annotationStoreId = annotationStoreId;
@@ -2167,7 +2167,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the Annotation store to delete.
+           * @param name Required. The resource name of the Annotation store to delete.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2195,7 +2195,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the Annotation store to delete.
+             * @param name Required. The resource name of the Annotation store to delete.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -2263,17 +2263,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the Annotation store to delete. */
+            /** Required. The resource name of the Annotation store to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the Annotation store to delete.
+            /** Required. The resource name of the Annotation store to delete.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the Annotation store to delete. */
+            /** Required. The resource name of the Annotation store to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2301,8 +2301,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Evaluate#execute()} method to invoke the remote operation.
            *
-           * @param name The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loca
-           *        tions/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+           * @param name Required. The Annotation store to compare against `golden_store`, in the format of `projects/{projec
+           *        t_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}
+           *        `.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest}
            * @return the request
            */
@@ -2334,8 +2335,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Evaluate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loca
-           *        tions/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * @param name Required. The Annotation store to compare against `golden_store`, in the format of `projects/{projec
+           *        t_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}
+           *        `.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest}
              * @since 1.13
              */
@@ -2405,24 +2407,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The Annotation store to compare against `golden_store`, in the format of `projects/{p
-             * roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation
-             * _store_id}`.
+             * Required. The Annotation store to compare against `golden_store`, in the format of `p
+             * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{
+             * annotation_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loc
-           ations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+            /** Required. The Annotation store to compare against `golden_store`, in the format of `projects/{proje
+           ct_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The Annotation store to compare against `golden_store`, in the format of `projects/{p
-             * roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation
-             * _store_id}`.
+             * Required. The Annotation store to compare against `golden_store`, in the format of `p
+             * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{
+             * annotation_store_id}`.
              */
             public Evaluate setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2450,8 +2452,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/l
-           *        ocations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+           * @param name Required. The name of the Annotation store to export annotations to, in the format of `projects/{pro
+           *        ject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_
+           *        id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest}
            * @return the request
            */
@@ -2483,8 +2486,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/l
-           *        ocations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * @param name Required. The name of the Annotation store to export annotations to, in the format of `projects/{pro
+           *        ject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_
+           *        id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest}
              * @since 1.13
              */
@@ -2554,24 +2558,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the Annotation store to export annotations to, in the format of `projects
-             * /{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotat
-             * ion_store_id}`.
+             * Required. The name of the Annotation store to export annotations to, in the format of
+             * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores
+             * /{annotation_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/
-           locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+            /** Required. The name of the Annotation store to export annotations to, in the format of `projects/{pr
+           oject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The name of the Annotation store to export annotations to, in the format of `projects
-             * /{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotat
-             * ion_store_id}`.
+             * Required. The name of the Annotation store to export annotations to, in the format of
+             * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores
+             * /{annotation_store_id}`.
              */
             public Export setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2596,7 +2600,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the Annotation store to get.
+           * @param name Required. The resource name of the Annotation store to get.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2622,7 +2626,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the Annotation store to get.
+             * @param name Required. The resource name of the Annotation store to get.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2700,17 +2704,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the Annotation store to get. */
+            /** Required. The resource name of the Annotation store to get. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the Annotation store to get.
+            /** Required. The resource name of the Annotation store to get.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the Annotation store to get. */
+            /** Required. The resource name of the Annotation store to get. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2937,9 +2941,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The name of the Annotation store to which the server imports annotations, in the format `projects/{p
-           *        roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
-           *        e_id}`.
+           * @param name Required. The name of the Annotation store to which the server imports annotations, in the format `p
+           *        rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annot
+           *        ation_store_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest}
            * @return the request
            */
@@ -2971,9 +2975,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The name of the Annotation store to which the server imports annotations, in the format `projects/{p
-           *        roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
-           *        e_id}`.
+             * @param name Required. The name of the Annotation store to which the server imports annotations, in the format `p
+           *        rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annot
+           *        ation_store_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest}
              * @since 1.13
              */
@@ -3043,24 +3047,25 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the Annotation store to which the server imports annotations, in the
-             * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotatio
-             * nStores/{annotation_store_id}`.
+             * Required. The name of the Annotation store to which the server imports annotations,
+             * in the format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/an
+             * notationStores/{annotation_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the Annotation store to which the server imports annotations, in the format `projects/{
-           project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+            /** Required. The name of the Annotation store to which the server imports annotations, in the format `
+           projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_st
+           ore_id}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The name of the Annotation store to which the server imports annotations, in the
-             * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotatio
-             * nStores/{annotation_store_id}`.
+             * Required. The name of the Annotation store to which the server imports annotations,
+             * in the format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/an
+             * notationStores/{annotation_store_id}`.
              */
             public CloudHealthcareImport setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3085,7 +3090,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Name of the dataset.
+           * @param parent Required. Name of the dataset.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3111,7 +3116,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Name of the dataset.
+             * @param parent Required. Name of the dataset.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3189,17 +3194,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the dataset. */
+            /** Required. Name of the dataset. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Name of the dataset.
+            /** Required. Name of the dataset.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Name of the dataset. */
+            /** Required. Name of the dataset. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3336,8 +3341,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Resource name of the Annotation store, of the form `projects/{project_id}/locations/{location_id}/da
-           *        tasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+           * @param name Identifier. Resource name of the Annotation store, of the form `projects/{project_id}/locations/{loc
+           *        ation_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
            * @return the request
            */
@@ -3365,8 +3370,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Resource name of the Annotation store, of the form `projects/{project_id}/locations/{location_id}/da
-           *        tasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * @param name Identifier. Resource name of the Annotation store, of the form `projects/{project_id}/locations/{loc
+           *        ation_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
              * @since 1.13
              */
@@ -3436,22 +3441,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Resource name of the Annotation store, of the form `projects/{project_id}/locations/{
-             * location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * Identifier. Resource name of the Annotation store, of the form `projects/{project_id}
+             * /locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}
+             * `.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Resource name of the Annotation store, of the form `projects/{project_id}/locations/{location_id}/d
-           atasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+            /** Identifier. Resource name of the Annotation store, of the form `projects/{project_id}/locations/{lo
+           cation_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Resource name of the Annotation store, of the form `projects/{project_id}/locations/{
-             * location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * Identifier. Resource name of the Annotation store, of the form `projects/{project_id}
+             * /locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}
+             * `.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3464,14 +3471,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The update mask applies to the resource. For the `FieldMask` definition, see
-             * https://developers.google.com/protocol-
+             * Required. The update mask applies to the resource. For the `FieldMask` definition,
+             * see https://developers.google.com/protocol-
              * buffers/docs/reference/google.protobuf#fieldmask
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The update mask applies to the resource. For the `FieldMask` definition, see
+            /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
            https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
              */
             public String getUpdateMask() {
@@ -3479,8 +3486,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The update mask applies to the resource. For the `FieldMask` definition, see
-             * https://developers.google.com/protocol-
+             * Required. The update mask applies to the resource. For the `FieldMask` definition,
+             * see https://developers.google.com/protocol-
              * buffers/docs/reference/google.protobuf#fieldmask
              */
             public Patch setUpdateMask(String updateMask) {
@@ -3821,7 +3828,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the Annotation store this annotation belongs to. For example, `projects/my-
+             * @param parent Required. The name of the Annotation store this annotation belongs to. For example, `projects/my-
              *        project/locations/us-central1/datasets/mydataset/annotationStores/myannotationstore`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
              * @return the request
@@ -3851,7 +3858,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent The name of the Annotation store this annotation belongs to. For example, `projects/my-
+               * @param parent Required. The name of the Annotation store this annotation belongs to. For example, `projects/my-
              *        project/locations/us-central1/datasets/mydataset/annotationStores/myannotationstore`.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
                * @since 1.13
@@ -3922,14 +3929,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the Annotation store this annotation belongs to. For example, `projects
-               * /my-project/locations/us-
+               * Required. The name of the Annotation store this annotation belongs to. For example,
+               * `projects/my-project/locations/us-
                * central1/datasets/mydataset/annotationStores/myannotationstore`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the Annotation store this annotation belongs to. For example, `projects/my-
+              /** Required. The name of the Annotation store this annotation belongs to. For example, `projects/my-
              project/locations/us-central1/datasets/mydataset/annotationStores/myannotationstore`.
                */
               public java.lang.String getParent() {
@@ -3937,8 +3944,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the Annotation store this annotation belongs to. For example, `projects
-               * /my-project/locations/us-
+               * Required. The name of the Annotation store this annotation belongs to. For example,
+               * `projects/my-project/locations/us-
                * central1/datasets/mydataset/annotationStores/myannotationstore`.
                */
               public Create setParent(java.lang.String parent) {
@@ -3964,7 +3971,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name The resource name of the Annotation to delete.
+             * @param name Required. The resource name of the Annotation to delete.
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3991,7 +3998,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The resource name of the Annotation to delete.
+               * @param name Required. The resource name of the Annotation to delete.
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -4059,17 +4066,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The resource name of the Annotation to delete. */
+              /** Required. The resource name of the Annotation to delete. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The resource name of the Annotation to delete.
+              /** Required. The resource name of the Annotation to delete.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The resource name of the Annotation to delete. */
+              /** Required. The resource name of the Annotation to delete. */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4093,7 +4100,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name The resource name of the Annotation to retrieve.
+             * @param name Required. The resource name of the Annotation to retrieve.
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -4119,7 +4126,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The resource name of the Annotation to retrieve.
+               * @param name Required. The resource name of the Annotation to retrieve.
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -4197,17 +4204,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The resource name of the Annotation to retrieve. */
+              /** Required. The resource name of the Annotation to retrieve. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The resource name of the Annotation to retrieve.
+              /** Required. The resource name of the Annotation to retrieve.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The resource name of the Annotation to retrieve. */
+              /** Required. The resource name of the Annotation to retrieve. */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4231,7 +4238,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Name of the Annotation store to retrieve Annotations from.
+             * @param parent Required. Name of the Annotation store to retrieve Annotations from.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -4257,7 +4264,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Name of the Annotation store to retrieve Annotations from.
+               * @param parent Required. Name of the Annotation store to retrieve Annotations from.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -4335,17 +4342,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Name of the Annotation store to retrieve Annotations from. */
+              /** Required. Name of the Annotation store to retrieve Annotations from. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Name of the Annotation store to retrieve Annotations from.
+              /** Required. Name of the Annotation store to retrieve Annotations from.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Name of the Annotation store to retrieve Annotations from. */
+              /** Required. Name of the Annotation store to retrieve Annotations from. */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4462,8 +4469,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets
-             *        /{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+             * @param name Identifier. Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_
+             *        id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_i
+             *        d}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
              * @return the request
              */
@@ -4491,8 +4499,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets
-             *        /{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+               * @param name Identifier. Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_
+             *        id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_i
+             *        d}`.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
                * @since 1.13
                */
@@ -4562,24 +4571,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Resource name of the Annotation, of the form `projects/{project_id}/locations/{loca
-               * tion_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{
-               * annotation_id}`.
+               * Identifier. Resource name of the Annotation, of the form `projects/{project_id}/loc
+               * ations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/a
+               * nnotations/{annotation_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/dataset
-             s/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+              /** Identifier. Resource name of the Annotation, of the form `projects/{project_id}/locations/{location
+             _id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Resource name of the Annotation, of the form `projects/{project_id}/locations/{loca
-               * tion_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{
-               * annotation_id}`.
+               * Identifier. Resource name of the Annotation, of the form `projects/{project_id}/loc
+               * ations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/a
+               * nnotations/{annotation_id}`.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -4592,14 +4601,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The update mask applies to the resource. For the `FieldMask` definition, see
-               * https://developers.google.com/protocol-
+               * Required. The update mask applies to the resource. For the `FieldMask` definition,
+               * see https://developers.google.com/protocol-
                * buffers/docs/reference/google.protobuf#fieldmask
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** The update mask applies to the resource. For the `FieldMask` definition, see
+              /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
              https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
                */
               public String getUpdateMask() {
@@ -4607,8 +4616,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The update mask applies to the resource. For the `FieldMask` definition, see
-               * https://developers.google.com/protocol-
+               * Required. The update mask applies to the resource. For the `FieldMask` definition,
+               * see https://developers.google.com/protocol-
                * buffers/docs/reference/google.protobuf#fieldmask
                */
               public Patch setUpdateMask(String updateMask) {
@@ -9360,9 +9369,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
-             *        ataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed
-             *        after creation.
+             * @param name Identifier. Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}
+             *        /datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be
+             *        changed after creation.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Consent}
              * @return the request
              */
@@ -9392,9 +9401,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
-             *        ataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed
-             *        after creation.
+               * @param name Identifier. Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}
+             *        /datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be
+             *        changed after creation.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Consent}
                * @since 1.13
                */
@@ -9464,25 +9473,25 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Resource name of the Consent, of the form `projects/{project_id}/locations/{locatio
-               * n_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
-               * . Cannot be changed after creation.
+               * Identifier. Resource name of the Consent, of the form `projects/{project_id}/locati
+               * ons/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{
+               * consent_id}`. Cannot be changed after creation.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{
-             dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed after
-             creation.
+              /** Identifier. Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id
+             }/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed
+             after creation.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Resource name of the Consent, of the form `projects/{project_id}/locations/{locatio
-               * n_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
-               * . Cannot be changed after creation.
+               * Identifier. Resource name of the Consent, of the form `projects/{project_id}/locati
+               * ons/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{
+               * consent_id}`. Cannot be changed after creation.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -18935,6 +18944,176 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Explains all the permitted/denied actor, purpose and environment for a given resource.
+           *
+           * Create a request for the method "fhirStores.explainDataAccess".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link ExplainDataAccess#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FHIR store to enforce, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @return the request
+           */
+          public ExplainDataAccess explainDataAccess(java.lang.String name) throws java.io.IOException {
+            ExplainDataAccess result = new ExplainDataAccess(name);
+            initialize(result);
+            return result;
+          }
+
+          public class ExplainDataAccess extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ExplainDataAccessResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:explainDataAccess";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Explains all the permitted/denied actor, purpose and environment for a given resource.
+             *
+             * Create a request for the method "fhirStores.explainDataAccess".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link ExplainDataAccess#execute()} method to invoke the remote
+             * operation. <p> {@link ExplainDataAccess#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The name of the FHIR store to enforce, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @since 1.13
+             */
+            protected ExplainDataAccess(java.lang.String name) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ExplainDataAccessResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public ExplainDataAccess set$Xgafv(java.lang.String $Xgafv) {
+              return (ExplainDataAccess) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExplainDataAccess setAccessToken(java.lang.String accessToken) {
+              return (ExplainDataAccess) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExplainDataAccess setAlt(java.lang.String alt) {
+              return (ExplainDataAccess) super.setAlt(alt);
+            }
+
+            @Override
+            public ExplainDataAccess setCallback(java.lang.String callback) {
+              return (ExplainDataAccess) super.setCallback(callback);
+            }
+
+            @Override
+            public ExplainDataAccess setFields(java.lang.String fields) {
+              return (ExplainDataAccess) super.setFields(fields);
+            }
+
+            @Override
+            public ExplainDataAccess setKey(java.lang.String key) {
+              return (ExplainDataAccess) super.setKey(key);
+            }
+
+            @Override
+            public ExplainDataAccess setOauthToken(java.lang.String oauthToken) {
+              return (ExplainDataAccess) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExplainDataAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExplainDataAccess) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExplainDataAccess setQuotaUser(java.lang.String quotaUser) {
+              return (ExplainDataAccess) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExplainDataAccess setUploadType(java.lang.String uploadType) {
+              return (ExplainDataAccess) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExplainDataAccess setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExplainDataAccess) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FHIR store to enforce, in the format `projects/{project_id}
+             * /locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FHIR store to enforce, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FHIR store to enforce, in the format `projects/{project_id}
+             * /locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public ExplainDataAccess setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. The ID (`{resourceType}/{id}`) of the resource to explain data access on.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resourceId;
+
+            /** Required. The ID (`{resourceType}/{id}`) of the resource to explain data access on.
+             */
+            public java.lang.String getResourceId() {
+              return resourceId;
+            }
+
+            /**
+             * Required. The ID (`{resourceType}/{id}`) of the resource to explain data access on.
+             */
+            public ExplainDataAccess setResourceId(java.lang.String resourceId) {
+              this.resourceId = resourceId;
+              return this;
+            }
+
+            @Override
+            public ExplainDataAccess set(String parameterName, Object value) {
+              return (ExplainDataAccess) super.set(parameterName, value);
+            }
+          }
+          /**
            * Export resources from the FHIR store to the specified destination. This method returns an
            * Operation that can be used to track the status of the export by calling GetOperation. Immediate
            * fatal errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing
@@ -25588,7 +25767,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the dataset this HL7v2 store belongs to.
+           * @param parent Required. The name of the dataset this HL7v2 store belongs to.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Hl7V2Store}
            * @return the request
            */
@@ -25616,7 +25795,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The name of the dataset this HL7v2 store belongs to.
+             * @param parent Required. The name of the dataset this HL7v2 store belongs to.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Hl7V2Store}
              * @since 1.13
              */
@@ -25685,17 +25864,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The name of the dataset this HL7v2 store belongs to. */
+            /** Required. The name of the dataset this HL7v2 store belongs to. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the dataset this HL7v2 store belongs to.
+            /** Required. The name of the dataset this HL7v2 store belongs to.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** The name of the dataset this HL7v2 store belongs to. */
+            /** Required. The name of the dataset this HL7v2 store belongs to. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -25707,22 +25886,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The ID of the HL7v2 store that is being created. The string must match the following
-             * regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+             * Required. The ID of the HL7v2 store that is being created. The string must match the
+             * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String hl7V2StoreId;
 
-            /** The ID of the HL7v2 store that is being created. The string must match the following regex:
-           `[\p{L}\p{N}_\-\.]{1,256}`.
+            /** Required. The ID of the HL7v2 store that is being created. The string must match the following
+           regex: `[\p{L}\p{N}_\-\.]{1,256}`.
              */
             public java.lang.String getHl7V2StoreId() {
               return hl7V2StoreId;
             }
 
             /**
-             * The ID of the HL7v2 store that is being created. The string must match the following
-             * regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+             * Required. The ID of the HL7v2 store that is being created. The string must match the
+             * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
              */
             public Create setHl7V2StoreId(java.lang.String hl7V2StoreId) {
               this.hl7V2StoreId = hl7V2StoreId;
@@ -25742,7 +25921,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the HL7v2 store to delete.
+           * @param name Required. The resource name of the HL7v2 store to delete.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -25769,7 +25948,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the HL7v2 store to delete.
+             * @param name Required. The resource name of the HL7v2 store to delete.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -25837,17 +26016,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the HL7v2 store to delete. */
+            /** Required. The resource name of the HL7v2 store to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the HL7v2 store to delete.
+            /** Required. The resource name of the HL7v2 store to delete.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the HL7v2 store to delete. */
+            /** Required. The resource name of the HL7v2 store to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -25876,7 +26055,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the source HL7v2 store, in the format
+           * @param name Required. The name of the source HL7v2 store, in the format
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
            *        ore_id}`
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportMessagesRequest}
@@ -25911,7 +26090,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the source HL7v2 store, in the format
+             * @param name Required. The name of the source HL7v2 store, in the format
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
            *        ore_id}`
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportMessagesRequest}
@@ -25983,13 +26162,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the source HL7v2 store, in the format `projects/{project_id}/locations/{l
-             * ocation_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             * Required. The name of the source HL7v2 store, in the format `projects/{project_id}/lo
+             * cations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the source HL7v2 store, in the format
+            /** Required. The name of the source HL7v2 store, in the format
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
              */
             public java.lang.String getName() {
@@ -25997,8 +26176,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the source HL7v2 store, in the format `projects/{project_id}/locations/{l
-             * ocation_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             * Required. The name of the source HL7v2 store, in the format `projects/{project_id}/lo
+             * cations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
              */
             public Export setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -26023,7 +26202,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the HL7v2 store to get.
+           * @param name Required. The resource name of the HL7v2 store to get.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -26049,7 +26228,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the HL7v2 store to get.
+             * @param name Required. The resource name of the HL7v2 store to get.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -26127,17 +26306,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the HL7v2 store to get. */
+            /** Required. The resource name of the HL7v2 store to get. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the HL7v2 store to get.
+            /** Required. The resource name of the HL7v2 store to get.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the HL7v2 store to get. */
+            /** Required. The resource name of the HL7v2 store to get. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -26162,7 +26341,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link GetHL7v2StoreMetrics#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The resource name of the HL7v2 store to get metrics for, in the format
+           * @param name Required. The resource name of the HL7v2 store to get metrics for, in the format
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_st
            *        ore_id}`.
            * @return the request
@@ -26191,7 +26370,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The resource name of the HL7v2 store to get metrics for, in the format
+             * @param name Required. The resource name of the HL7v2 store to get metrics for, in the format
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_st
            *        ore_id}`.
              * @since 1.13
@@ -26272,13 +26451,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The resource name of the HL7v2 store to get metrics for, in the format `projects/{pro
-             * ject_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+             * Required. The resource name of the HL7v2 store to get metrics for, in the format `pro
+             * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_s
+             * tore_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the HL7v2 store to get metrics for, in the format
+            /** Required. The resource name of the HL7v2 store to get metrics for, in the format
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             public java.lang.String getName() {
@@ -26286,8 +26466,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The resource name of the HL7v2 store to get metrics for, in the format `projects/{pro
-             * ject_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+             * Required. The resource name of the HL7v2 store to get metrics for, in the format `pro
+             * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_s
+             * tore_id}`.
              */
             public GetHL7v2StoreMetrics setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -26529,7 +26710,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The name of the target HL7v2 store, in the format
+           * @param name Required. The name of the target HL7v2 store, in the format
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
            *        ore_id}`
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportMessagesRequest}
@@ -26577,7 +26758,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The name of the target HL7v2 store, in the format
+             * @param name Required. The name of the target HL7v2 store, in the format
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
            *        ore_id}`
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportMessagesRequest}
@@ -26649,13 +26830,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the target HL7v2 store, in the format `projects/{project_id}/locations/{l
-             * ocation_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             * Required. The name of the target HL7v2 store, in the format `projects/{project_id}/lo
+             * cations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the target HL7v2 store, in the format
+            /** Required. The name of the target HL7v2 store, in the format
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
              */
             public java.lang.String getName() {
@@ -26663,8 +26844,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the target HL7v2 store, in the format `projects/{project_id}/locations/{l
-             * ocation_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             * Required. The name of the target HL7v2 store, in the format `projects/{project_id}/lo
+             * cations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
              */
             public CloudHealthcareImport setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -26689,7 +26870,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Name of the dataset.
+           * @param parent Required. Name of the dataset.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -26715,7 +26896,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Name of the dataset.
+             * @param parent Required. Name of the dataset.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -26793,17 +26974,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the dataset. */
+            /** Required. Name of the dataset. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Name of the dataset.
+            /** Required. Name of the dataset.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Name of the dataset. */
+            /** Required. Name of the dataset. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -26940,7 +27121,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Resource name of the HL7v2 store, of the form
+           * @param name Identifier. Resource name of the HL7v2 store, of the form
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Hl7V2Store}
@@ -26970,7 +27151,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Resource name of the HL7v2 store, of the form
+             * @param name Identifier. Resource name of the HL7v2 store, of the form
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Hl7V2Store}
@@ -27042,13 +27223,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Resource name of the HL7v2 store, of the form `projects/{project_id}/locations/{locat
-             * ion_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+             * Identifier. Resource name of the HL7v2 store, of the form `projects/{project_id}/loca
+             * tions/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Resource name of the HL7v2 store, of the form
+            /** Identifier. Resource name of the HL7v2 store, of the form
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             public java.lang.String getName() {
@@ -27056,8 +27237,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Resource name of the HL7v2 store, of the form `projects/{project_id}/locations/{locat
-             * ion_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+             * Identifier. Resource name of the HL7v2 store, of the form `projects/{project_id}/loca
+             * tions/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -27070,14 +27251,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The update mask applies to the resource. For the `FieldMask` definition, see
-             * https://developers.google.com/protocol-
+             * Required. The update mask applies to the resource. For the `FieldMask` definition,
+             * see https://developers.google.com/protocol-
              * buffers/docs/reference/google.protobuf#fieldmask
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The update mask applies to the resource. For the `FieldMask` definition, see
+            /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
            https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
              */
             public String getUpdateMask() {
@@ -27085,8 +27266,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The update mask applies to the resource. For the `FieldMask` definition, see
-             * https://developers.google.com/protocol-
+             * Required. The update mask applies to the resource. For the `FieldMask` definition,
+             * see https://developers.google.com/protocol-
              * buffers/docs/reference/google.protobuf#fieldmask
              */
             public Patch setUpdateMask(String updateMask) {
@@ -27426,7 +27607,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
              *
-             * @param parent Name of the HL7v2 store to retrieve messages from, in the format:
+             * @param parent Required. Name of the HL7v2 store to retrieve messages from, in the format:
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
              *        ore_id}`.
              * @return the request
@@ -27455,7 +27636,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Name of the HL7v2 store to retrieve messages from, in the format:
+               * @param parent Required. Name of the HL7v2 store to retrieve messages from, in the format:
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
              *        ore_id}`.
                * @since 1.13
@@ -27536,13 +27717,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Name of the HL7v2 store to retrieve messages from, in the format: `projects/{projec
-               * t_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`.
+               * Required. Name of the HL7v2 store to retrieve messages from, in the format: `projec
+               * ts/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
+               * ore_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Name of the HL7v2 store to retrieve messages from, in the format:
+              /** Required. Name of the HL7v2 store to retrieve messages from, in the format:
              `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`.
                */
               public java.lang.String getParent() {
@@ -27550,8 +27732,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Name of the HL7v2 store to retrieve messages from, in the format: `projects/{projec
-               * t_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`.
+               * Required. Name of the HL7v2 store to retrieve messages from, in the format: `projec
+               * ts/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
+               * ore_id}`.
                */
               public BatchGet setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -27628,7 +27811,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the HL7v2 store this message belongs to.
+             * @param parent Required. The name of the HL7v2 store this message belongs to.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.CreateMessageRequest}
              * @return the request
              */
@@ -27659,7 +27842,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent The name of the HL7v2 store this message belongs to.
+               * @param parent Required. The name of the HL7v2 store this message belongs to.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.CreateMessageRequest}
                * @since 1.13
                */
@@ -27728,17 +27911,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the HL7v2 store this message belongs to. */
+              /** Required. The name of the HL7v2 store this message belongs to. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the HL7v2 store this message belongs to.
+              /** Required. The name of the HL7v2 store this message belongs to.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** The name of the HL7v2 store this message belongs to. */
+              /** Required. The name of the HL7v2 store this message belongs to. */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -27762,7 +27945,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name The resource name of the HL7v2 message to delete.
+             * @param name Required. The resource name of the HL7v2 message to delete.
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -27789,7 +27972,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The resource name of the HL7v2 message to delete.
+               * @param name Required. The resource name of the HL7v2 message to delete.
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -27857,17 +28040,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The resource name of the HL7v2 message to delete. */
+              /** Required. The resource name of the HL7v2 message to delete. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The resource name of the HL7v2 message to delete.
+              /** Required. The resource name of the HL7v2 message to delete.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The resource name of the HL7v2 message to delete. */
+              /** Required. The resource name of the HL7v2 message to delete. */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -27891,7 +28074,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name The resource name of the HL7v2 message to retrieve.
+             * @param name Required. The resource name of the HL7v2 message to retrieve.
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -27917,7 +28100,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The resource name of the HL7v2 message to retrieve.
+               * @param name Required. The resource name of the HL7v2 message to retrieve.
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -27995,17 +28178,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The resource name of the HL7v2 message to retrieve. */
+              /** Required. The resource name of the HL7v2 message to retrieve. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The resource name of the HL7v2 message to retrieve.
+              /** Required. The resource name of the HL7v2 message to retrieve.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The resource name of the HL7v2 message to retrieve. */
+              /** Required. The resource name of the HL7v2 message to retrieve. */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -28058,7 +28241,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Ingest#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the HL7v2 store this message belongs to.
+             * @param parent Required. The name of the HL7v2 store this message belongs to.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.IngestMessageRequest}
              * @return the request
              */
@@ -28092,7 +28275,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Ingest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent The name of the HL7v2 store this message belongs to.
+               * @param parent Required. The name of the HL7v2 store this message belongs to.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.IngestMessageRequest}
                * @since 1.13
                */
@@ -28161,17 +28344,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Ingest) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the HL7v2 store this message belongs to. */
+              /** Required. The name of the HL7v2 store this message belongs to. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the HL7v2 store this message belongs to.
+              /** Required. The name of the HL7v2 store this message belongs to.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** The name of the HL7v2 store this message belongs to. */
+              /** Required. The name of the HL7v2 store this message belongs to. */
               public Ingest setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -28197,7 +28380,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Name of the HL7v2 store to retrieve messages from.
+             * @param parent Required. Name of the HL7v2 store to retrieve messages from.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -28225,7 +28408,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Name of the HL7v2 store to retrieve messages from.
+               * @param parent Required. Name of the HL7v2 store to retrieve messages from.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -28303,17 +28486,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Name of the HL7v2 store to retrieve messages from. */
+              /** Required. Name of the HL7v2 store to retrieve messages from. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Name of the HL7v2 store to retrieve messages from.
+              /** Required. Name of the HL7v2 store to retrieve messages from.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Name of the HL7v2 store to retrieve messages from. */
+              /** Required. Name of the HL7v2 store to retrieve messages from. */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -28550,8 +28733,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Resource name of the Message, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
-             *        ataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+             * @param name Output only. Resource name of the Message, of the form `projects/{project_id}/locations/{location_id
+             *        }/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by
+             *        the server.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Message}
              * @return the request
              */
@@ -28582,8 +28766,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Resource name of the Message, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
-             *        ataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+               * @param name Output only. Resource name of the Message, of the form `projects/{project_id}/locations/{location_id
+             *        }/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by
+             *        the server.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Message}
                * @since 1.13
                */
@@ -28653,24 +28838,25 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Resource name of the Message, of the form `projects/{project_id}/locations/{locatio
-               * n_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`.
-               * Assigned by the server.
+               * Output only. Resource name of the Message, of the form `projects/{project_id}/locat
+               * ions/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{me
+               * ssage_id}`. Assigned by the server.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Resource name of the Message, of the form `projects/{project_id}/locations/{location_id}/datasets/{
-             dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
+              /** Output only. Resource name of the Message, of the form `projects/{project_id}/locations/{location_i
+             d}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the
+             server.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Resource name of the Message, of the form `projects/{project_id}/locations/{locatio
-               * n_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`.
-               * Assigned by the server.
+               * Output only. Resource name of the Message, of the form `projects/{project_id}/locat
+               * ions/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{me
+               * ssage_id}`. Assigned by the server.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -28683,14 +28869,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The update mask applies to the resource. For the `FieldMask` definition, see
-               * https://developers.google.com/protocol-
+               * Required. The update mask applies to the resource. For the `FieldMask` definition,
+               * see https://developers.google.com/protocol-
                * buffers/docs/reference/google.protobuf#fieldmask
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** The update mask applies to the resource. For the `FieldMask` definition, see
+              /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
              https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
                */
               public String getUpdateMask() {
@@ -28698,8 +28884,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The update mask applies to the resource. For the `FieldMask` definition, see
-               * https://developers.google.com/protocol-
+               * Required. The update mask applies to the resource. For the `FieldMask` definition,
+               * see https://developers.google.com/protocol-
                * buffers/docs/reference/google.protobuf#fieldmask
                */
               public Patch setUpdateMask(String updateMask) {

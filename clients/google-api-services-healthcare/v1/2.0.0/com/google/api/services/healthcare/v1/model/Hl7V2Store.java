@@ -42,8 +42,8 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Resource name of the HL7v2 store, of the form `projects/{project_id}/locations/{location_id}/da
-   * tasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+   * Identifier. Resource name of the HL7v2 store, of the form `projects/{project_id}/locations/{loc
+   * ation_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +112,8 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the HL7v2 store, of the form `projects/{project_id}/locations/{location_id}/da
-   * tasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+   * Identifier. Resource name of the HL7v2 store, of the form `projects/{project_id}/locations/{loc
+   * ation_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -121,8 +121,8 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the HL7v2 store, of the form `projects/{project_id}/locations/{location_id}/da
-   * tasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
+   * Identifier. Resource name of the HL7v2 store, of the form `projects/{project_id}/locations/{loc
+   * ation_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
    * @param name name or {@code null} for none
    */
   public Hl7V2Store setName(java.lang.String name) {

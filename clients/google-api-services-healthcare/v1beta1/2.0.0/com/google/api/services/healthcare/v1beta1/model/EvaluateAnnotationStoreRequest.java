@@ -58,8 +58,8 @@ public final class EvaluateAnnotationStoreRequest extends com.google.api.client.
   private java.util.Map<String, java.lang.String> goldenInfoTypeMapping;
 
   /**
-   * The Annotation store to use as ground truth, in the format of `projects/{project_id}/locations/
-   * {location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+   * Required. The Annotation store to use as ground truth, in the format of `projects/{project_id}/
+   * locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +137,8 @@ public final class EvaluateAnnotationStoreRequest extends com.google.api.client.
   }
 
   /**
-   * The Annotation store to use as ground truth, in the format of `projects/{project_id}/locations/
-   * {location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+   * Required. The Annotation store to use as ground truth, in the format of `projects/{project_id}/
+   * locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoldenStore() {
@@ -146,8 +146,8 @@ public final class EvaluateAnnotationStoreRequest extends com.google.api.client.
   }
 
   /**
-   * The Annotation store to use as ground truth, in the format of `projects/{project_id}/locations/
-   * {location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+   * Required. The Annotation store to use as ground truth, in the format of `projects/{project_id}/
+   * locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
    * @param goldenStore goldenStore or {@code null} for none
    */
   public EvaluateAnnotationStoreRequest setGoldenStore(java.lang.String goldenStore) {

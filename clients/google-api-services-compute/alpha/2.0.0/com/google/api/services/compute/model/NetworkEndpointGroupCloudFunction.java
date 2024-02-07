@@ -33,18 +33,19 @@ public final class NetworkEndpointGroupCloudFunction extends com.google.api.clie
 
   /**
    * A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63
-   * characters long. Example value: "func1".
+   * characters long. Example value: func1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String function;
 
   /**
-   * A template to parse function field from a request URL. URL mask allows for routing to multiple
-   * Cloud Functions without having to create multiple Network Endpoint Groups and backend services.
-   * For example, request URLs " mydomain.com/function1" and "mydomain.com/function2" can be backed
-   * by the same Serverless NEG with URL mask "/". The URL mask will parse them to { function =
-   * "function1" } and { function = "function2" } respectively.
+   * An URL mask is one of the main components of the Cloud Function. A template to parse function
+   * field from a request URL. URL mask allows for routing to multiple Cloud Functions without
+   * having to create multiple Network Endpoint Groups and backend services. For example, request
+   * URLs mydomain.com/function1 and mydomain.com/function2 can be backed by the same Serverless NEG
+   * with URL mask /. The URL mask will parse them to { function = "function1" } and { function =
+   * "function2" } respectively.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,7 @@ public final class NetworkEndpointGroupCloudFunction extends com.google.api.clie
 
   /**
    * A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63
-   * characters long. Example value: "func1".
+   * characters long. Example value: func1.
    * @return value or {@code null} for none
    */
   public java.lang.String getFunction() {
@@ -61,7 +62,7 @@ public final class NetworkEndpointGroupCloudFunction extends com.google.api.clie
 
   /**
    * A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63
-   * characters long. Example value: "func1".
+   * characters long. Example value: func1.
    * @param function function or {@code null} for none
    */
   public NetworkEndpointGroupCloudFunction setFunction(java.lang.String function) {
@@ -70,11 +71,12 @@ public final class NetworkEndpointGroupCloudFunction extends com.google.api.clie
   }
 
   /**
-   * A template to parse function field from a request URL. URL mask allows for routing to multiple
-   * Cloud Functions without having to create multiple Network Endpoint Groups and backend services.
-   * For example, request URLs " mydomain.com/function1" and "mydomain.com/function2" can be backed
-   * by the same Serverless NEG with URL mask "/". The URL mask will parse them to { function =
-   * "function1" } and { function = "function2" } respectively.
+   * An URL mask is one of the main components of the Cloud Function. A template to parse function
+   * field from a request URL. URL mask allows for routing to multiple Cloud Functions without
+   * having to create multiple Network Endpoint Groups and backend services. For example, request
+   * URLs mydomain.com/function1 and mydomain.com/function2 can be backed by the same Serverless NEG
+   * with URL mask /. The URL mask will parse them to { function = "function1" } and { function =
+   * "function2" } respectively.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrlMask() {
@@ -82,11 +84,12 @@ public final class NetworkEndpointGroupCloudFunction extends com.google.api.clie
   }
 
   /**
-   * A template to parse function field from a request URL. URL mask allows for routing to multiple
-   * Cloud Functions without having to create multiple Network Endpoint Groups and backend services.
-   * For example, request URLs " mydomain.com/function1" and "mydomain.com/function2" can be backed
-   * by the same Serverless NEG with URL mask "/". The URL mask will parse them to { function =
-   * "function1" } and { function = "function2" } respectively.
+   * An URL mask is one of the main components of the Cloud Function. A template to parse function
+   * field from a request URL. URL mask allows for routing to multiple Cloud Functions without
+   * having to create multiple Network Endpoint Groups and backend services. For example, request
+   * URLs mydomain.com/function1 and mydomain.com/function2 can be backed by the same Serverless NEG
+   * with URL mask /. The URL mask will parse them to { function = "function1" } and { function =
+   * "function2" } respectively.
    * @param urlMask urlMask or {@code null} for none
    */
   public NetworkEndpointGroupCloudFunction setUrlMask(java.lang.String urlMask) {

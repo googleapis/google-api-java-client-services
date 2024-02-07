@@ -30,15 +30,16 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * The default port used if the port number is not specified in the network endpoint. [Deprecated]
-   * This field is deprecated.
+   * The default port used if the port number is not specified in the network endpoint. If the
+   * network endpoint type is either GCE_VM_IP, SERVERLESS or PRIVATE_SERVICE_CONNECT, this field
+   * must not be specified. [Deprecated] This field is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer defaultPort;
 
   /**
-   * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project
+   * The URL of the network to which all network endpoints in the NEG belong. Uses default project
    * network if unspecified. [Deprecated] This field is deprecated.
    * The value may be {@code null}.
    */
@@ -62,8 +63,9 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   private java.lang.String zone;
 
   /**
-   * The default port used if the port number is not specified in the network endpoint. [Deprecated]
-   * This field is deprecated.
+   * The default port used if the port number is not specified in the network endpoint. If the
+   * network endpoint type is either GCE_VM_IP, SERVERLESS or PRIVATE_SERVICE_CONNECT, this field
+   * must not be specified. [Deprecated] This field is deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDefaultPort() {
@@ -71,8 +73,9 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   }
 
   /**
-   * The default port used if the port number is not specified in the network endpoint. [Deprecated]
-   * This field is deprecated.
+   * The default port used if the port number is not specified in the network endpoint. If the
+   * network endpoint type is either GCE_VM_IP, SERVERLESS or PRIVATE_SERVICE_CONNECT, this field
+   * must not be specified. [Deprecated] This field is deprecated.
    * @param defaultPort defaultPort or {@code null} for none
    */
   public NetworkEndpointGroupLbNetworkEndpointGroup setDefaultPort(java.lang.Integer defaultPort) {
@@ -81,7 +84,7 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   }
 
   /**
-   * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project
+   * The URL of the network to which all network endpoints in the NEG belong. Uses default project
    * network if unspecified. [Deprecated] This field is deprecated.
    * @return value or {@code null} for none
    */
@@ -90,7 +93,7 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   }
 
   /**
-   * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project
+   * The URL of the network to which all network endpoints in the NEG belong. Uses default project
    * network if unspecified. [Deprecated] This field is deprecated.
    * @param network network or {@code null} for none
    */

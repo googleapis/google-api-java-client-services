@@ -50,11 +50,12 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   private java.lang.String resource;
 
   /**
-   * A template to parse platform-specific fields from a request URL. URL mask allows for routing to
-   * multiple resources on the same serverless platform without having to create multiple Network
-   * Endpoint Groups and backend resources. The fields parsed by this template are platform-specific
-   * and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3.
-   * Cloud Functions: The function name 4. Cloud Run: The service and tag
+   * An URL mask is one of the main components of the Cloud Function. A template to parse platform-
+   * specific fields from a request URL. URL mask allows for routing to multiple resources on the
+   * same serverless platform without having to create multiple Network Endpoint Groups and backend
+   * resources. The fields parsed by this template are platform-specific and are as follows: 1. API
+   * Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function
+   * name 4. Cloud Run: The service and tag
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,11 +113,12 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   }
 
   /**
-   * A template to parse platform-specific fields from a request URL. URL mask allows for routing to
-   * multiple resources on the same serverless platform without having to create multiple Network
-   * Endpoint Groups and backend resources. The fields parsed by this template are platform-specific
-   * and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3.
-   * Cloud Functions: The function name 4. Cloud Run: The service and tag
+   * An URL mask is one of the main components of the Cloud Function. A template to parse platform-
+   * specific fields from a request URL. URL mask allows for routing to multiple resources on the
+   * same serverless platform without having to create multiple Network Endpoint Groups and backend
+   * resources. The fields parsed by this template are platform-specific and are as follows: 1. API
+   * Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function
+   * name 4. Cloud Run: The service and tag
    * @return value or {@code null} for none
    */
   public java.lang.String getUrlMask() {
@@ -124,11 +126,12 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   }
 
   /**
-   * A template to parse platform-specific fields from a request URL. URL mask allows for routing to
-   * multiple resources on the same serverless platform without having to create multiple Network
-   * Endpoint Groups and backend resources. The fields parsed by this template are platform-specific
-   * and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3.
-   * Cloud Functions: The function name 4. Cloud Run: The service and tag
+   * An URL mask is one of the main components of the Cloud Function. A template to parse platform-
+   * specific fields from a request URL. URL mask allows for routing to multiple resources on the
+   * same serverless platform without having to create multiple Network Endpoint Groups and backend
+   * resources. The fields parsed by this template are platform-specific and are as follows: 1. API
+   * Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function
+   * name 4. Cloud Run: The service and tag
    * @param urlMask urlMask or {@code null} for none
    */
   public NetworkEndpointGroupServerlessDeployment setUrlMask(java.lang.String urlMask) {

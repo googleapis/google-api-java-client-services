@@ -34,19 +34,20 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
 
   /**
    * Optional serving service. The service name is case-sensitive and must be 1-63 characters long.
-   * Example value: "default", "my-service".
+   * Example value: default, my-service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * A template to parse service and version fields from a request URL. URL mask allows for routing
-   * to multiple App Engine services without having to create multiple Network Endpoint Groups and
-   * backend services. For example, the request URLs "foo1-dot-appname.appspot.com/v1" and "foo1
-   * -dot-appname.appspot.com/v2" can be backed by the same Serverless NEG with URL mask "-dot-
-   * appname.appspot.com/". The URL mask will parse them to { service = "foo1", version = "v1" } and
-   * { service = "foo1", version = "v2" } respectively.
+   * An URL mask is one of the main components of the Cloud Function. A template to parse service
+   * and version fields from a request URL. URL mask allows for routing to multiple App Engine
+   * services without having to create multiple Network Endpoint Groups and backend services. For
+   * example, the request URLs foo1-dot-appname.appspot.com/v1 and foo1-dot-appname.appspot.com/v2
+   * can be backed by the same Serverless NEG with URL mask -dot-appname.appspot.com/. The URL mask
+   * will parse them to { service = "foo1", version = "v1" } and { service = "foo1", version = "v2"
+   * } respectively.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +55,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
 
   /**
    * Optional serving version. The version name is case-sensitive and must be 1-100 characters long.
-   * Example value: "v1", "v2".
+   * Example value: v1, v2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
 
   /**
    * Optional serving service. The service name is case-sensitive and must be 1-63 characters long.
-   * Example value: "default", "my-service".
+   * Example value: default, my-service.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -71,7 +72,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
 
   /**
    * Optional serving service. The service name is case-sensitive and must be 1-63 characters long.
-   * Example value: "default", "my-service".
+   * Example value: default, my-service.
    * @param service service or {@code null} for none
    */
   public NetworkEndpointGroupAppEngine setService(java.lang.String service) {
@@ -80,12 +81,13 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
   }
 
   /**
-   * A template to parse service and version fields from a request URL. URL mask allows for routing
-   * to multiple App Engine services without having to create multiple Network Endpoint Groups and
-   * backend services. For example, the request URLs "foo1-dot-appname.appspot.com/v1" and "foo1
-   * -dot-appname.appspot.com/v2" can be backed by the same Serverless NEG with URL mask "-dot-
-   * appname.appspot.com/". The URL mask will parse them to { service = "foo1", version = "v1" } and
-   * { service = "foo1", version = "v2" } respectively.
+   * An URL mask is one of the main components of the Cloud Function. A template to parse service
+   * and version fields from a request URL. URL mask allows for routing to multiple App Engine
+   * services without having to create multiple Network Endpoint Groups and backend services. For
+   * example, the request URLs foo1-dot-appname.appspot.com/v1 and foo1-dot-appname.appspot.com/v2
+   * can be backed by the same Serverless NEG with URL mask -dot-appname.appspot.com/. The URL mask
+   * will parse them to { service = "foo1", version = "v1" } and { service = "foo1", version = "v2"
+   * } respectively.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrlMask() {
@@ -93,12 +95,13 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
   }
 
   /**
-   * A template to parse service and version fields from a request URL. URL mask allows for routing
-   * to multiple App Engine services without having to create multiple Network Endpoint Groups and
-   * backend services. For example, the request URLs "foo1-dot-appname.appspot.com/v1" and "foo1
-   * -dot-appname.appspot.com/v2" can be backed by the same Serverless NEG with URL mask "-dot-
-   * appname.appspot.com/". The URL mask will parse them to { service = "foo1", version = "v1" } and
-   * { service = "foo1", version = "v2" } respectively.
+   * An URL mask is one of the main components of the Cloud Function. A template to parse service
+   * and version fields from a request URL. URL mask allows for routing to multiple App Engine
+   * services without having to create multiple Network Endpoint Groups and backend services. For
+   * example, the request URLs foo1-dot-appname.appspot.com/v1 and foo1-dot-appname.appspot.com/v2
+   * can be backed by the same Serverless NEG with URL mask -dot-appname.appspot.com/. The URL mask
+   * will parse them to { service = "foo1", version = "v1" } and { service = "foo1", version = "v2"
+   * } respectively.
    * @param urlMask urlMask or {@code null} for none
    */
   public NetworkEndpointGroupAppEngine setUrlMask(java.lang.String urlMask) {
@@ -108,7 +111,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
 
   /**
    * Optional serving version. The version name is case-sensitive and must be 1-100 characters long.
-   * Example value: "v1", "v2".
+   * Example value: v1, v2.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -117,7 +120,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
 
   /**
    * Optional serving version. The version name is case-sensitive and must be 1-100 characters long.
-   * Example value: "v1", "v2".
+   * Example value: v1, v2.
    * @param version version or {@code null} for none
    */
   public NetworkEndpointGroupAppEngine setVersion(java.lang.String version) {

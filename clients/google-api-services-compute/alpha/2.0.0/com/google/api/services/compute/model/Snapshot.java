@@ -206,6 +206,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
+   * [Output only] ResourceStatus of the Snapshot resource
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SnapshotResourceStatus resourceStatus;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -805,6 +812,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * [Output only] ResourceStatus of the Snapshot resource
+   * @return value or {@code null} for none
+   */
+  public SnapshotResourceStatus getResourceStatus() {
+    return resourceStatus;
+  }
+
+  /**
+   * [Output only] ResourceStatus of the Snapshot resource
+   * @param resourceStatus resourceStatus or {@code null} for none
+   */
+  public Snapshot setResourceStatus(SnapshotResourceStatus resourceStatus) {
+    this.resourceStatus = resourceStatus;
     return this;
   }
 

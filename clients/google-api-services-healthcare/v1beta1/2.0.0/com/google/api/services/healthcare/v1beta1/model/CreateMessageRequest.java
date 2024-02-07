@@ -30,14 +30,14 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class CreateMessageRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * HL7v2 message.
+   * Required. HL7v2 message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Message message;
 
   /**
-   * HL7v2 message.
+   * Required. HL7v2 message.
    * @return value or {@code null} for none
    */
   public Message getMessage() {
@@ -45,7 +45,7 @@ public final class CreateMessageRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * HL7v2 message.
+   * Required. HL7v2 message.
    * @param message message or {@code null} for none
    */
   public CreateMessageRequest setMessage(Message message) {

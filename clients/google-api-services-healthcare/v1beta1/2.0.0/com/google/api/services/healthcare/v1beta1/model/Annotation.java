@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class Annotation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details of the source.
+   * Required. Details of the source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,9 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   private ImageAnnotation imageAnnotation;
 
   /**
-   * Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/dat
-   * asets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+   * Identifier. Resource name of the Annotation, of the form `projects/{project_id}/locations/{loca
+   * tion_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_i
+   * d}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +76,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   private SensitiveTextAnnotation textAnnotation;
 
   /**
-   * Details of the source.
+   * Required. Details of the source.
    * @return value or {@code null} for none
    */
   public AnnotationSource getAnnotationSource() {
@@ -83,7 +84,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of the source.
+   * Required. Details of the source.
    * @param annotationSource annotationSource or {@code null} for none
    */
   public Annotation setAnnotationSource(AnnotationSource annotationSource) {
@@ -128,8 +129,9 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/dat
-   * asets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+   * Identifier. Resource name of the Annotation, of the form `projects/{project_id}/locations/{loca
+   * tion_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_i
+   * d}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -137,8 +139,9 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/dat
-   * asets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+   * Identifier. Resource name of the Annotation, of the form `projects/{project_id}/locations/{loca
+   * tion_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_i
+   * d}`.
    * @param name name or {@code null} for none
    */
   public Annotation setName(java.lang.String name) {

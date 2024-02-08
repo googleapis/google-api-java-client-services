@@ -30,6 +30,13 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class Repository extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The timestamp of when the repository was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Optional. The repository's user-friendly name.
    * The value may be {@code null}.
    */
@@ -91,6 +98,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WorkspaceCompilationOverrides workspaceCompilationOverrides;
+
+  /**
+   * Output only. The timestamp of when the repository was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The timestamp of when the repository was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Repository setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Optional. The repository's user-friendly name.

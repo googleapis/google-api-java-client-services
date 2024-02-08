@@ -66,6 +66,13 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String buildName;
 
   /**
+   * Optional. A service account the user provides for use with Cloud Build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buildServiceAccount;
+
+  /**
    * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The
    * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
    * `{project}` and `{region}` are the project id and region respectively where the worker pool is
@@ -407,6 +414,23 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setBuildName(java.lang.String buildName) {
     this.buildName = buildName;
+    return this;
+  }
+
+  /**
+   * Optional. A service account the user provides for use with Cloud Build.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuildServiceAccount() {
+    return buildServiceAccount;
+  }
+
+  /**
+   * Optional. A service account the user provides for use with Cloud Build.
+   * @param buildServiceAccount buildServiceAccount or {@code null} for none
+   */
+  public CloudFunction setBuildServiceAccount(java.lang.String buildServiceAccount) {
+    this.buildServiceAccount = buildServiceAccount;
     return this;
   }
 

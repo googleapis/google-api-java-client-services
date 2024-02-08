@@ -38,6 +38,14 @@ public final class Function extends com.google.api.client.json.GenericJson {
   private BuildConfig buildConfig;
 
   /**
+   * Output only. The create timestamp of a Cloud Function. This is only applicable to 2nd Gen
+   * functions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * User-provided description of a function.
    * The value may be {@code null}.
    */
@@ -119,6 +127,13 @@ public final class Function extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. UpgradeInfo for this Cloud Function
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpgradeInfo upgradeInfo;
+
+  /**
    * Output only. The deployed url for the function.
    * The value may be {@code null}.
    */
@@ -139,6 +154,25 @@ public final class Function extends com.google.api.client.json.GenericJson {
    */
   public Function setBuildConfig(BuildConfig buildConfig) {
     this.buildConfig = buildConfig;
+    return this;
+  }
+
+  /**
+   * Output only. The create timestamp of a Cloud Function. This is only applicable to 2nd Gen
+   * functions.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The create timestamp of a Cloud Function. This is only applicable to 2nd Gen
+   * functions.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Function setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
@@ -334,6 +368,23 @@ public final class Function extends com.google.api.client.json.GenericJson {
    */
   public Function setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. UpgradeInfo for this Cloud Function
+   * @return value or {@code null} for none
+   */
+  public UpgradeInfo getUpgradeInfo() {
+    return upgradeInfo;
+  }
+
+  /**
+   * Output only. UpgradeInfo for this Cloud Function
+   * @param upgradeInfo upgradeInfo or {@code null} for none
+   */
+  public Function setUpgradeInfo(UpgradeInfo upgradeInfo) {
+    this.upgradeInfo = upgradeInfo;
     return this;
   }
 

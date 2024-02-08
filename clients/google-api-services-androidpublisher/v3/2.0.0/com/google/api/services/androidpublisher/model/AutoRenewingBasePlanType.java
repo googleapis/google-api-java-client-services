@@ -31,6 +31,15 @@ package com.google.api.services.androidpublisher.model;
 public final class AutoRenewingBasePlanType extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Account hold period of the subscription, specified in ISO 8601 format. Acceptable
+   * values must be in DAYS and in the range P0D (zero days) to P30D (30 days). If not specified,
+   * the default value is P30D (30 days).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accountHoldDuration;
+
+  /**
    * Required. Subscription period, specified in ISO 8601 format. For a list of acceptable billing
    * periods, refer to the help center.
    * The value may be {@code null}.
@@ -81,6 +90,27 @@ public final class AutoRenewingBasePlanType extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String resubscribeState;
+
+  /**
+   * Optional. Account hold period of the subscription, specified in ISO 8601 format. Acceptable
+   * values must be in DAYS and in the range P0D (zero days) to P30D (30 days). If not specified,
+   * the default value is P30D (30 days).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccountHoldDuration() {
+    return accountHoldDuration;
+  }
+
+  /**
+   * Optional. Account hold period of the subscription, specified in ISO 8601 format. Acceptable
+   * values must be in DAYS and in the range P0D (zero days) to P30D (30 days). If not specified,
+   * the default value is P30D (30 days).
+   * @param accountHoldDuration accountHoldDuration or {@code null} for none
+   */
+  public AutoRenewingBasePlanType setAccountHoldDuration(java.lang.String accountHoldDuration) {
+    this.accountHoldDuration = accountHoldDuration;
+    return this;
+  }
 
   /**
    * Required. Subscription period, specified in ISO 8601 format. For a list of acceptable billing

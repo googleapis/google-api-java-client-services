@@ -17,8 +17,7 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Browser-specific fields reported by the Endpoint Verification extension. See
- * go/additionalattributesdesign and go/caa-webprotect-attributes-extension LINT.IfChange
+ * Browser-specific fields reported by the Endpoint Verification extension. LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:

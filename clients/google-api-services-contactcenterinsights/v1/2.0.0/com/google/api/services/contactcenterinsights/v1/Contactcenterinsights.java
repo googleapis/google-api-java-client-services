@@ -1681,6 +1681,38 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
 
           /**
+           * Optional. The attribute by which to order conversations in the response. If empty,
+           * conversations will be ordered by descending creation time. Supported values are one of
+           * the following: * create_time * duration * turn_count * latest_analysis The default sort
+           * order is ascending. To specify order, append `asc` or `desc`, i.e. `create_time desc`.
+           * See https://google.aip.dev/132#ordering for more details.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The attribute by which to order conversations in the response. If empty, conversations
+         will be ordered by descending creation time. Supported values are one of the following: *
+         create_time * duration * turn_count * latest_analysis The default sort order is ascending. To
+         specify order, append `asc` or `desc`, i.e. `create_time desc`. See
+         https://google.aip.dev/132#ordering for more details.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. The attribute by which to order conversations in the response. If empty,
+           * conversations will be ordered by descending creation time. Supported values are one of
+           * the following: * create_time * duration * turn_count * latest_analysis The default sort
+           * order is ascending. To specify order, append `asc` or `desc`, i.e. `create_time desc`.
+           * See https://google.aip.dev/132#ordering for more details.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
            * The maximum number of conversations to return in the response. A valid page size ranges
            * from 0 to 1,000 inclusive. If the page size is zero or unspecified, a default page size
            * of 100 will be chosen. Note that a call might return fewer results than the requested
@@ -3387,6 +3419,137 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
         }
         /**
+         * Exports an issue model to the provided destination.
+         *
+         * Create a request for the method "issueModels.export".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The issue model to export
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ExportIssueModelRequest}
+         * @return the request
+         */
+        public Export export(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ExportIssueModelRequest content) throws java.io.IOException {
+          Export result = new Export(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Export extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}:export";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/issueModels/[^/]+$");
+
+          /**
+           * Exports an issue model to the provided destination.
+           *
+           * Create a request for the method "issueModels.export".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Export#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The issue model to export
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ExportIssueModelRequest}
+           * @since 1.13
+           */
+          protected Export(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ExportIssueModelRequest content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/issueModels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Export set$Xgafv(java.lang.String $Xgafv) {
+            return (Export) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Export setAccessToken(java.lang.String accessToken) {
+            return (Export) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Export setAlt(java.lang.String alt) {
+            return (Export) super.setAlt(alt);
+          }
+
+          @Override
+          public Export setCallback(java.lang.String callback) {
+            return (Export) super.setCallback(callback);
+          }
+
+          @Override
+          public Export setFields(java.lang.String fields) {
+            return (Export) super.setFields(fields);
+          }
+
+          @Override
+          public Export setKey(java.lang.String key) {
+            return (Export) super.setKey(key);
+          }
+
+          @Override
+          public Export setOauthToken(java.lang.String oauthToken) {
+            return (Export) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Export) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Export setQuotaUser(java.lang.String quotaUser) {
+            return (Export) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Export setUploadType(java.lang.String uploadType) {
+            return (Export) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Export setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Export) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The issue model to export */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The issue model to export
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The issue model to export */
+          public Export setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/issueModels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Export set(String parameterName, Object value) {
+            return (Export) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets an issue model.
          *
          * Create a request for the method "issueModels.get".
@@ -3523,6 +3686,138 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Imports an issue model from a Cloud Storage bucket.
+         *
+         * Create a request for the method "issueModels.import".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link ContactcenterinsightsImport#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param parent Required. The parent resource of the issue model.
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ImportIssueModelRequest}
+         * @return the request
+         */
+        public ContactcenterinsightsImport contactcenterinsightsImport(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ImportIssueModelRequest content) throws java.io.IOException {
+          ContactcenterinsightsImport result = new ContactcenterinsightsImport(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ContactcenterinsightsImport extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/issueModels:import";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Imports an issue model from a Cloud Storage bucket.
+           *
+           * Create a request for the method "issueModels.import".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link ContactcenterinsightsImport#execute()} method
+           * to invoke the remote operation. <p> {@link ContactcenterinsightsImport#initialize(com.google.ap
+           * i.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the issue model.
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ImportIssueModelRequest}
+           * @since 1.13
+           */
+          protected ContactcenterinsightsImport(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ImportIssueModelRequest content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public ContactcenterinsightsImport set$Xgafv(java.lang.String $Xgafv) {
+            return (ContactcenterinsightsImport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ContactcenterinsightsImport setAccessToken(java.lang.String accessToken) {
+            return (ContactcenterinsightsImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ContactcenterinsightsImport setAlt(java.lang.String alt) {
+            return (ContactcenterinsightsImport) super.setAlt(alt);
+          }
+
+          @Override
+          public ContactcenterinsightsImport setCallback(java.lang.String callback) {
+            return (ContactcenterinsightsImport) super.setCallback(callback);
+          }
+
+          @Override
+          public ContactcenterinsightsImport setFields(java.lang.String fields) {
+            return (ContactcenterinsightsImport) super.setFields(fields);
+          }
+
+          @Override
+          public ContactcenterinsightsImport setKey(java.lang.String key) {
+            return (ContactcenterinsightsImport) super.setKey(key);
+          }
+
+          @Override
+          public ContactcenterinsightsImport setOauthToken(java.lang.String oauthToken) {
+            return (ContactcenterinsightsImport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ContactcenterinsightsImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ContactcenterinsightsImport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ContactcenterinsightsImport setQuotaUser(java.lang.String quotaUser) {
+            return (ContactcenterinsightsImport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ContactcenterinsightsImport setUploadType(java.lang.String uploadType) {
+            return (ContactcenterinsightsImport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ContactcenterinsightsImport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ContactcenterinsightsImport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource of the issue model. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the issue model.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource of the issue model. */
+          public ContactcenterinsightsImport setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ContactcenterinsightsImport set(String parameterName, Object value) {
+            return (ContactcenterinsightsImport) super.set(parameterName, value);
           }
         }
         /**

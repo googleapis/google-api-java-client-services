@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * Response containing the details of the specified Android application APK.
+ * Response containing the details of the specified Android application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.testing.model;
 public final class GetApkDetailsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details of the Android APK.
+   * Details of the Android App.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ApkDetail apkDetail;
 
   /**
-   * Details of the Android APK.
+   * Details of the Android App.
    * @return value or {@code null} for none
    */
   public ApkDetail getApkDetail() {
@@ -45,7 +45,7 @@ public final class GetApkDetailsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * Details of the Android APK.
+   * Details of the Android App.
    * @param apkDetail apkDetail or {@code null} for none
    */
   public GetApkDetailsResponse setApkDetail(ApkDetail apkDetail) {

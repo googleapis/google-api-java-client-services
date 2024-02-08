@@ -247,6 +247,29 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         return (GetApkDetails) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app
+       * %40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
+       */
+      @com.google.api.client.util.Key("bundleLocation.gcsPath")
+      private java.lang.String bundleLocationGcsPath;
+
+      /** A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-
+     unaligned.apk These paths are expected to be url encoded (percent encoding)
+       */
+      public java.lang.String getBundleLocationGcsPath() {
+        return bundleLocationGcsPath;
+      }
+
+      /**
+       * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app
+       * %40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
+       */
+      public GetApkDetails setBundleLocationGcsPath(java.lang.String bundleLocationGcsPath) {
+        this.bundleLocationGcsPath = bundleLocationGcsPath;
+        return this;
+      }
+
       @Override
       public GetApkDetails set(String parameterName, Object value) {
         return (GetApkDetails) super.set(parameterName, value);

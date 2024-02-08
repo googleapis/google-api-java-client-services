@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * Android application details based on application manifest and apk archive contents.
+ * Android application details based on application manifest and archive contents.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:

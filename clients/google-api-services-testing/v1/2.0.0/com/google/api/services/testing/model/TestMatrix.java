@@ -45,6 +45,21 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   private EnvironmentMatrix environmentMatrix;
 
   /**
+   * Output only. Details about why a matrix was deemed invalid. If multiple checks can be safely
+   * performed, they will be reported but no assumptions should be made about the length of this
+   * list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MatrixErrorDetail> extendedInvalidMatrixDetails;
+
+  static {
+    // hack to force ProGuard to consider MatrixErrorDetail used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MatrixErrorDetail.class);
+  }
+
+  /**
    * If true, only a single attempt at most will be made to run each execution/shard in the matrix.
    * Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential
    * infrastructure issue is detected. This feature is for latency sensitive workloads. The
@@ -165,6 +180,27 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
    */
   public TestMatrix setEnvironmentMatrix(EnvironmentMatrix environmentMatrix) {
     this.environmentMatrix = environmentMatrix;
+    return this;
+  }
+
+  /**
+   * Output only. Details about why a matrix was deemed invalid. If multiple checks can be safely
+   * performed, they will be reported but no assumptions should be made about the length of this
+   * list.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MatrixErrorDetail> getExtendedInvalidMatrixDetails() {
+    return extendedInvalidMatrixDetails;
+  }
+
+  /**
+   * Output only. Details about why a matrix was deemed invalid. If multiple checks can be safely
+   * performed, they will be reported but no assumptions should be made about the length of this
+   * list.
+   * @param extendedInvalidMatrixDetails extendedInvalidMatrixDetails or {@code null} for none
+   */
+  public TestMatrix setExtendedInvalidMatrixDetails(java.util.List<MatrixErrorDetail> extendedInvalidMatrixDetails) {
+    this.extendedInvalidMatrixDetails = extendedInvalidMatrixDetails;
     return this;
   }
 

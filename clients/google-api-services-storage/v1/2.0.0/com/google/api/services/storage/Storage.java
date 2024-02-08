@@ -5694,6 +5694,32 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /**
+       * Allows the deletion of a managed folder even if it is not empty. A managed folder is empty
+       * if there are no objects or managed folders that it applies to. Callers must have
+       * storage.managedFolders.setIamPolicy permission.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean allowNonEmpty;
+
+      /** Allows the deletion of a managed folder even if it is not empty. A managed folder is empty if there
+     are no objects or managed folders that it applies to. Callers must have
+     storage.managedFolders.setIamPolicy permission.
+       */
+      public java.lang.Boolean getAllowNonEmpty() {
+        return allowNonEmpty;
+      }
+
+      /**
+       * Allows the deletion of a managed folder even if it is not empty. A managed folder is empty
+       * if there are no objects or managed folders that it applies to. Callers must have
+       * storage.managedFolders.setIamPolicy permission.
+       */
+      public Delete setAllowNonEmpty(java.lang.Boolean allowNonEmpty) {
+        this.allowNonEmpty = allowNonEmpty;
+        return this;
+      }
+
       /** If set, only deletes the managed folder if its metageneration matches this value. */
       @com.google.api.client.util.Key
       private java.lang.Long ifMetagenerationMatch;

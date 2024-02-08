@@ -17,7 +17,7 @@
 package com.google.api.services.language.v1.model;
 
 /**
- * Options for the V1 model.
+ * A model format used for iOS mobile devices.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed
@@ -28,16 +28,16 @@ package com.google.api.services.language.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class V1Model extends com.google.api.client.json.GenericJson {
+public final class XPSCoreMlFormat extends com.google.api.client.json.GenericJson {
 
   @Override
-  public V1Model set(String fieldName, Object value) {
-    return (V1Model) super.set(fieldName, value);
+  public XPSCoreMlFormat set(String fieldName, Object value) {
+    return (XPSCoreMlFormat) super.set(fieldName, value);
   }
 
   @Override
-  public V1Model clone() {
-    return (V1Model) super.clone();
+  public XPSCoreMlFormat clone() {
+    return (XPSCoreMlFormat) super.clone();
   }
 
 }

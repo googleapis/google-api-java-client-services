@@ -397,6 +397,278 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
       public class Functions {
 
         /**
+         * Aborts generation upgrade process for a function with the given name from the specified project.
+         * Deletes all 2nd Gen copy related configuration and resources which were created during the
+         * upgrade process.
+         *
+         * Create a request for the method "functions.abortFunctionUpgrade".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link AbortFunctionUpgrade#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name of the function for which upgrade should be aborted.
+         * @param content the {@link com.google.api.services.cloudfunctions.v2.model.AbortFunctionUpgradeRequest}
+         * @return the request
+         */
+        public AbortFunctionUpgrade abortFunctionUpgrade(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.AbortFunctionUpgradeRequest content) throws java.io.IOException {
+          AbortFunctionUpgrade result = new AbortFunctionUpgrade(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AbortFunctionUpgrade extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:abortFunctionUpgrade";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Aborts generation upgrade process for a function with the given name from the specified
+           * project. Deletes all 2nd Gen copy related configuration and resources which were created during
+           * the upgrade process.
+           *
+           * Create a request for the method "functions.abortFunctionUpgrade".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link AbortFunctionUpgrade#execute()} method to invoke the
+           * remote operation. <p> {@link AbortFunctionUpgrade#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the function for which upgrade should be aborted.
+           * @param content the {@link com.google.api.services.cloudfunctions.v2.model.AbortFunctionUpgradeRequest}
+           * @since 1.13
+           */
+          protected AbortFunctionUpgrade(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.AbortFunctionUpgradeRequest content) {
+            super(CloudFunctions.this, "POST", REST_PATH, content, com.google.api.services.cloudfunctions.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public AbortFunctionUpgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (AbortFunctionUpgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AbortFunctionUpgrade setAccessToken(java.lang.String accessToken) {
+            return (AbortFunctionUpgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AbortFunctionUpgrade setAlt(java.lang.String alt) {
+            return (AbortFunctionUpgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public AbortFunctionUpgrade setCallback(java.lang.String callback) {
+            return (AbortFunctionUpgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public AbortFunctionUpgrade setFields(java.lang.String fields) {
+            return (AbortFunctionUpgrade) super.setFields(fields);
+          }
+
+          @Override
+          public AbortFunctionUpgrade setKey(java.lang.String key) {
+            return (AbortFunctionUpgrade) super.setKey(key);
+          }
+
+          @Override
+          public AbortFunctionUpgrade setOauthToken(java.lang.String oauthToken) {
+            return (AbortFunctionUpgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AbortFunctionUpgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AbortFunctionUpgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AbortFunctionUpgrade setQuotaUser(java.lang.String quotaUser) {
+            return (AbortFunctionUpgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AbortFunctionUpgrade setUploadType(java.lang.String uploadType) {
+            return (AbortFunctionUpgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AbortFunctionUpgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AbortFunctionUpgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the function for which upgrade should be aborted. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the function for which upgrade should be aborted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the function for which upgrade should be aborted. */
+          public AbortFunctionUpgrade setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public AbortFunctionUpgrade set(String parameterName, Object value) {
+            return (AbortFunctionUpgrade) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Finalizes the upgrade after which function upgrade can not be rolled back. This is the last step
+         * of the multi step process to upgrade 1st Gen functions to 2nd Gen. Deletes all original 1st Gen
+         * related configuration and resources.
+         *
+         * Create a request for the method "functions.commitFunctionUpgrade".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link CommitFunctionUpgrade#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name of the function for which upgrade should be finalized.
+         * @param content the {@link com.google.api.services.cloudfunctions.v2.model.CommitFunctionUpgradeRequest}
+         * @return the request
+         */
+        public CommitFunctionUpgrade commitFunctionUpgrade(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.CommitFunctionUpgradeRequest content) throws java.io.IOException {
+          CommitFunctionUpgrade result = new CommitFunctionUpgrade(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CommitFunctionUpgrade extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:commitFunctionUpgrade";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Finalizes the upgrade after which function upgrade can not be rolled back. This is the last
+           * step of the multi step process to upgrade 1st Gen functions to 2nd Gen. Deletes all original
+           * 1st Gen related configuration and resources.
+           *
+           * Create a request for the method "functions.commitFunctionUpgrade".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link CommitFunctionUpgrade#execute()} method to invoke the
+           * remote operation. <p> {@link CommitFunctionUpgrade#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the function for which upgrade should be finalized.
+           * @param content the {@link com.google.api.services.cloudfunctions.v2.model.CommitFunctionUpgradeRequest}
+           * @since 1.13
+           */
+          protected CommitFunctionUpgrade(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.CommitFunctionUpgradeRequest content) {
+            super(CloudFunctions.this, "POST", REST_PATH, content, com.google.api.services.cloudfunctions.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public CommitFunctionUpgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (CommitFunctionUpgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CommitFunctionUpgrade setAccessToken(java.lang.String accessToken) {
+            return (CommitFunctionUpgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CommitFunctionUpgrade setAlt(java.lang.String alt) {
+            return (CommitFunctionUpgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public CommitFunctionUpgrade setCallback(java.lang.String callback) {
+            return (CommitFunctionUpgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public CommitFunctionUpgrade setFields(java.lang.String fields) {
+            return (CommitFunctionUpgrade) super.setFields(fields);
+          }
+
+          @Override
+          public CommitFunctionUpgrade setKey(java.lang.String key) {
+            return (CommitFunctionUpgrade) super.setKey(key);
+          }
+
+          @Override
+          public CommitFunctionUpgrade setOauthToken(java.lang.String oauthToken) {
+            return (CommitFunctionUpgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CommitFunctionUpgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CommitFunctionUpgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CommitFunctionUpgrade setQuotaUser(java.lang.String quotaUser) {
+            return (CommitFunctionUpgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CommitFunctionUpgrade setUploadType(java.lang.String uploadType) {
+            return (CommitFunctionUpgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CommitFunctionUpgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CommitFunctionUpgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the function for which upgrade should be finalized. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the function for which upgrade should be finalized.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the function for which upgrade should be finalized. */
+          public CommitFunctionUpgrade setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public CommitFunctionUpgrade set(String parameterName, Object value) {
+            return (CommitFunctionUpgrade) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a new function. If a function with the given name already exists in the specified
          * project, the long running operation will return `ALREADY_EXISTS` error.
          *
@@ -1758,6 +2030,294 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
         }
         /**
+         * Changes the traffic target of a function from the original 1st Gen function to the 2nd Gen copy.
+         * This is the second step of the multi step process to upgrade 1st Gen functions to 2nd Gen. After
+         * this operation, all new traffic will be served by 2nd Gen copy.
+         *
+         * Create a request for the method "functions.redirectFunctionUpgradeTraffic".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link RedirectFunctionUpgradeTraffic#execute()} method to invoke
+         * the remote operation.
+         *
+         * @param name Required. The name of the function for which traffic target should be changed to 2nd Gen from 1st
+         *        Gen.
+         * @param content the {@link com.google.api.services.cloudfunctions.v2.model.RedirectFunctionUpgradeTrafficRequest}
+         * @return the request
+         */
+        public RedirectFunctionUpgradeTraffic redirectFunctionUpgradeTraffic(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.RedirectFunctionUpgradeTrafficRequest content) throws java.io.IOException {
+          RedirectFunctionUpgradeTraffic result = new RedirectFunctionUpgradeTraffic(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RedirectFunctionUpgradeTraffic extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:redirectFunctionUpgradeTraffic";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Changes the traffic target of a function from the original 1st Gen function to the 2nd Gen
+           * copy. This is the second step of the multi step process to upgrade 1st Gen functions to 2nd
+           * Gen. After this operation, all new traffic will be served by 2nd Gen copy.
+           *
+           * Create a request for the method "functions.redirectFunctionUpgradeTraffic".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link RedirectFunctionUpgradeTraffic#execute()} method to invoke
+           * the remote operation. <p> {@link RedirectFunctionUpgradeTraffic#initialize(com.google.api.clien
+           * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the function for which traffic target should be changed to 2nd Gen from 1st
+         *        Gen.
+           * @param content the {@link com.google.api.services.cloudfunctions.v2.model.RedirectFunctionUpgradeTrafficRequest}
+           * @since 1.13
+           */
+          protected RedirectFunctionUpgradeTraffic(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.RedirectFunctionUpgradeTrafficRequest content) {
+            super(CloudFunctions.this, "POST", REST_PATH, content, com.google.api.services.cloudfunctions.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic set$Xgafv(java.lang.String $Xgafv) {
+            return (RedirectFunctionUpgradeTraffic) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic setAccessToken(java.lang.String accessToken) {
+            return (RedirectFunctionUpgradeTraffic) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic setAlt(java.lang.String alt) {
+            return (RedirectFunctionUpgradeTraffic) super.setAlt(alt);
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic setCallback(java.lang.String callback) {
+            return (RedirectFunctionUpgradeTraffic) super.setCallback(callback);
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic setFields(java.lang.String fields) {
+            return (RedirectFunctionUpgradeTraffic) super.setFields(fields);
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic setKey(java.lang.String key) {
+            return (RedirectFunctionUpgradeTraffic) super.setKey(key);
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic setOauthToken(java.lang.String oauthToken) {
+            return (RedirectFunctionUpgradeTraffic) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RedirectFunctionUpgradeTraffic) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic setQuotaUser(java.lang.String quotaUser) {
+            return (RedirectFunctionUpgradeTraffic) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic setUploadType(java.lang.String uploadType) {
+            return (RedirectFunctionUpgradeTraffic) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RedirectFunctionUpgradeTraffic) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the function for which traffic target should be changed to 2nd
+           * Gen from 1st Gen.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the function for which traffic target should be changed to 2nd Gen from 1st
+         Gen.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the function for which traffic target should be changed to 2nd
+           * Gen from 1st Gen.
+           */
+          public RedirectFunctionUpgradeTraffic setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RedirectFunctionUpgradeTraffic set(String parameterName, Object value) {
+            return (RedirectFunctionUpgradeTraffic) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Reverts the traffic target of a function from the 2nd Gen copy to the original 1st Gen function.
+         * After this operation, all new traffic would be served by the 1st Gen.
+         *
+         * Create a request for the method "functions.rollbackFunctionUpgradeTraffic".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link RollbackFunctionUpgradeTraffic#execute()} method to invoke
+         * the remote operation.
+         *
+         * @param name Required. The name of the function for which traffic target should be changed back to 1st Gen from
+         *        2nd Gen.
+         * @param content the {@link com.google.api.services.cloudfunctions.v2.model.RollbackFunctionUpgradeTrafficRequest}
+         * @return the request
+         */
+        public RollbackFunctionUpgradeTraffic rollbackFunctionUpgradeTraffic(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.RollbackFunctionUpgradeTrafficRequest content) throws java.io.IOException {
+          RollbackFunctionUpgradeTraffic result = new RollbackFunctionUpgradeTraffic(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RollbackFunctionUpgradeTraffic extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:rollbackFunctionUpgradeTraffic";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Reverts the traffic target of a function from the 2nd Gen copy to the original 1st Gen
+           * function. After this operation, all new traffic would be served by the 1st Gen.
+           *
+           * Create a request for the method "functions.rollbackFunctionUpgradeTraffic".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link RollbackFunctionUpgradeTraffic#execute()} method to invoke
+           * the remote operation. <p> {@link RollbackFunctionUpgradeTraffic#initialize(com.google.api.clien
+           * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the function for which traffic target should be changed back to 1st Gen from
+         *        2nd Gen.
+           * @param content the {@link com.google.api.services.cloudfunctions.v2.model.RollbackFunctionUpgradeTrafficRequest}
+           * @since 1.13
+           */
+          protected RollbackFunctionUpgradeTraffic(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.RollbackFunctionUpgradeTrafficRequest content) {
+            super(CloudFunctions.this, "POST", REST_PATH, content, com.google.api.services.cloudfunctions.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic set$Xgafv(java.lang.String $Xgafv) {
+            return (RollbackFunctionUpgradeTraffic) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic setAccessToken(java.lang.String accessToken) {
+            return (RollbackFunctionUpgradeTraffic) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic setAlt(java.lang.String alt) {
+            return (RollbackFunctionUpgradeTraffic) super.setAlt(alt);
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic setCallback(java.lang.String callback) {
+            return (RollbackFunctionUpgradeTraffic) super.setCallback(callback);
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic setFields(java.lang.String fields) {
+            return (RollbackFunctionUpgradeTraffic) super.setFields(fields);
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic setKey(java.lang.String key) {
+            return (RollbackFunctionUpgradeTraffic) super.setKey(key);
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic setOauthToken(java.lang.String oauthToken) {
+            return (RollbackFunctionUpgradeTraffic) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RollbackFunctionUpgradeTraffic) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic setQuotaUser(java.lang.String quotaUser) {
+            return (RollbackFunctionUpgradeTraffic) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic setUploadType(java.lang.String uploadType) {
+            return (RollbackFunctionUpgradeTraffic) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RollbackFunctionUpgradeTraffic) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the function for which traffic target should be changed back to
+           * 1st Gen from 2nd Gen.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the function for which traffic target should be changed back to 1st Gen from
+         2nd Gen.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the function for which traffic target should be changed back to
+           * 1st Gen from 2nd Gen.
+           */
+          public RollbackFunctionUpgradeTraffic setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RollbackFunctionUpgradeTraffic set(String parameterName, Object value) {
+            return (RollbackFunctionUpgradeTraffic) super.set(parameterName, value);
+          }
+        }
+        /**
          * Sets the access control policy on the specified resource. Replaces any existing policy. Can
          * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
@@ -1903,6 +2463,148 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           @Override
           public SetIamPolicy set(String parameterName, Object value) {
             return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a 2nd Gen copy of the function configuration based on the 1st Gen function with the given
+         * name. This is the first step of the multi step process to upgrade 1st Gen functions to 2nd Gen.
+         * Only 2nd Gen configuration is setup as part of this request and traffic continues to be served by
+         * 1st Gen.
+         *
+         * Create a request for the method "functions.setupFunctionUpgradeConfig".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link SetupFunctionUpgradeConfig#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The name of the function which should have configuration copied for upgrade.
+         * @param content the {@link com.google.api.services.cloudfunctions.v2.model.SetupFunctionUpgradeConfigRequest}
+         * @return the request
+         */
+        public SetupFunctionUpgradeConfig setupFunctionUpgradeConfig(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.SetupFunctionUpgradeConfigRequest content) throws java.io.IOException {
+          SetupFunctionUpgradeConfig result = new SetupFunctionUpgradeConfig(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetupFunctionUpgradeConfig extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:setupFunctionUpgradeConfig";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Creates a 2nd Gen copy of the function configuration based on the 1st Gen function with the
+           * given name. This is the first step of the multi step process to upgrade 1st Gen functions to
+           * 2nd Gen. Only 2nd Gen configuration is setup as part of this request and traffic continues to
+           * be served by 1st Gen.
+           *
+           * Create a request for the method "functions.setupFunctionUpgradeConfig".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link SetupFunctionUpgradeConfig#execute()} method to invoke the
+           * remote operation. <p> {@link SetupFunctionUpgradeConfig#initialize(com.google.api.client.google
+           * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the function which should have configuration copied for upgrade.
+           * @param content the {@link com.google.api.services.cloudfunctions.v2.model.SetupFunctionUpgradeConfigRequest}
+           * @since 1.13
+           */
+          protected SetupFunctionUpgradeConfig(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.SetupFunctionUpgradeConfigRequest content) {
+            super(CloudFunctions.this, "POST", REST_PATH, content, com.google.api.services.cloudfunctions.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (SetupFunctionUpgradeConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig setAccessToken(java.lang.String accessToken) {
+            return (SetupFunctionUpgradeConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig setAlt(java.lang.String alt) {
+            return (SetupFunctionUpgradeConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig setCallback(java.lang.String callback) {
+            return (SetupFunctionUpgradeConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig setFields(java.lang.String fields) {
+            return (SetupFunctionUpgradeConfig) super.setFields(fields);
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig setKey(java.lang.String key) {
+            return (SetupFunctionUpgradeConfig) super.setKey(key);
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig setOauthToken(java.lang.String oauthToken) {
+            return (SetupFunctionUpgradeConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetupFunctionUpgradeConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig setQuotaUser(java.lang.String quotaUser) {
+            return (SetupFunctionUpgradeConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig setUploadType(java.lang.String uploadType) {
+            return (SetupFunctionUpgradeConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetupFunctionUpgradeConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the function which should have configuration copied for upgrade.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the function which should have configuration copied for upgrade.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the function which should have configuration copied for upgrade.
+           */
+          public SetupFunctionUpgradeConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public SetupFunctionUpgradeConfig set(String parameterName, Object value) {
+            return (SetupFunctionUpgradeConfig) super.set(parameterName, value);
           }
         }
         /**

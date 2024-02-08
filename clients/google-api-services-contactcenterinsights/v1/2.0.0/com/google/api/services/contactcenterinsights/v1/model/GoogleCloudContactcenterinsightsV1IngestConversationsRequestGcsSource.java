@@ -45,6 +45,24 @@ public final class GoogleCloudContactcenterinsightsV1IngestConversationsRequestG
   private java.lang.String bucketUri;
 
   /**
+   * Optional. Custom keys to extract as conversation labels from metadata files in
+   * `metadata_bucket_uri`. Keys not included in this field will be ignored. Note that there is a
+   * limit of 20 labels per conversation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> customMetadataKeys;
+
+  /**
+   * Optional. The Cloud Storage path to the source object metadata. Note that: [1] metadata files
+   * are expected to be in JSON format [2] metadata and source objects must be in separate buckets
+   * [3] a source object's metadata object must share the same name to be properly ingested
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metadataBucketUri;
+
+  /**
    * Optional. Specifies the type of the objects in `bucket_uri`.
    * @return value or {@code null} for none
    */
@@ -75,6 +93,48 @@ public final class GoogleCloudContactcenterinsightsV1IngestConversationsRequestG
    */
   public GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource setBucketUri(java.lang.String bucketUri) {
     this.bucketUri = bucketUri;
+    return this;
+  }
+
+  /**
+   * Optional. Custom keys to extract as conversation labels from metadata files in
+   * `metadata_bucket_uri`. Keys not included in this field will be ignored. Note that there is a
+   * limit of 20 labels per conversation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCustomMetadataKeys() {
+    return customMetadataKeys;
+  }
+
+  /**
+   * Optional. Custom keys to extract as conversation labels from metadata files in
+   * `metadata_bucket_uri`. Keys not included in this field will be ignored. Note that there is a
+   * limit of 20 labels per conversation.
+   * @param customMetadataKeys customMetadataKeys or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource setCustomMetadataKeys(java.util.List<java.lang.String> customMetadataKeys) {
+    this.customMetadataKeys = customMetadataKeys;
+    return this;
+  }
+
+  /**
+   * Optional. The Cloud Storage path to the source object metadata. Note that: [1] metadata files
+   * are expected to be in JSON format [2] metadata and source objects must be in separate buckets
+   * [3] a source object's metadata object must share the same name to be properly ingested
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetadataBucketUri() {
+    return metadataBucketUri;
+  }
+
+  /**
+   * Optional. The Cloud Storage path to the source object metadata. Note that: [1] metadata files
+   * are expected to be in JSON format [2] metadata and source objects must be in separate buckets
+   * [3] a source object's metadata object must share the same name to be properly ingested
+   * @param metadataBucketUri metadataBucketUri or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource setMetadataBucketUri(java.lang.String metadataBucketUri) {
+    this.metadataBucketUri = metadataBucketUri;
     return this;
   }
 

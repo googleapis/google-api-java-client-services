@@ -32,8 +32,8 @@ package com.google.api.services.spanner.v1.model;
 public final class DirectedReadOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Exclude_replicas indicates that should be excluded from serving requests. Spanner will not
-   * route requests to the replicas in this list.
+   * Exclude_replicas indicates that specified replicas should be excluded from serving requests.
+   * Spanner will not route requests to the replicas in this list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +50,8 @@ public final class DirectedReadOptions extends com.google.api.client.json.Generi
   private IncludeReplicas includeReplicas;
 
   /**
-   * Exclude_replicas indicates that should be excluded from serving requests. Spanner will not
-   * route requests to the replicas in this list.
+   * Exclude_replicas indicates that specified replicas should be excluded from serving requests.
+   * Spanner will not route requests to the replicas in this list.
    * @return value or {@code null} for none
    */
   public ExcludeReplicas getExcludeReplicas() {
@@ -59,8 +59,8 @@ public final class DirectedReadOptions extends com.google.api.client.json.Generi
   }
 
   /**
-   * Exclude_replicas indicates that should be excluded from serving requests. Spanner will not
-   * route requests to the replicas in this list.
+   * Exclude_replicas indicates that specified replicas should be excluded from serving requests.
+   * Spanner will not route requests to the replicas in this list.
    * @param excludeReplicas excludeReplicas or {@code null} for none
    */
   public DirectedReadOptions setExcludeReplicas(ExcludeReplicas excludeReplicas) {

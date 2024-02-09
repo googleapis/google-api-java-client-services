@@ -45,6 +45,13 @@ public final class CreateInstanceMetadata extends com.google.api.client.json.Gen
   private String endTime;
 
   /**
+   * The expected fulfillment period of this create operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String expectedFulfillmentPeriod;
+
+  /**
    * The instance being created.
    * The value may be {@code null}.
    */
@@ -91,6 +98,23 @@ public final class CreateInstanceMetadata extends com.google.api.client.json.Gen
    */
   public CreateInstanceMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The expected fulfillment period of this create operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExpectedFulfillmentPeriod() {
+    return expectedFulfillmentPeriod;
+  }
+
+  /**
+   * The expected fulfillment period of this create operation.
+   * @param expectedFulfillmentPeriod expectedFulfillmentPeriod or {@code null} for none
+   */
+  public CreateInstanceMetadata setExpectedFulfillmentPeriod(java.lang.String expectedFulfillmentPeriod) {
+    this.expectedFulfillmentPeriod = expectedFulfillmentPeriod;
     return this;
   }
 

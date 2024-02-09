@@ -45,6 +45,13 @@ public final class UpdateInstanceMetadata extends com.google.api.client.json.Gen
   private String endTime;
 
   /**
+   * The expected fulfillment period of this update operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String expectedFulfillmentPeriod;
+
+  /**
    * The desired end state of the update.
    * The value may be {@code null}.
    */
@@ -91,6 +98,23 @@ public final class UpdateInstanceMetadata extends com.google.api.client.json.Gen
    */
   public UpdateInstanceMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The expected fulfillment period of this update operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExpectedFulfillmentPeriod() {
+    return expectedFulfillmentPeriod;
+  }
+
+  /**
+   * The expected fulfillment period of this update operation.
+   * @param expectedFulfillmentPeriod expectedFulfillmentPeriod or {@code null} for none
+   */
+  public UpdateInstanceMetadata setExpectedFulfillmentPeriod(java.lang.String expectedFulfillmentPeriod) {
+    this.expectedFulfillmentPeriod = expectedFulfillmentPeriod;
     return this;
   }
 

@@ -51,6 +51,13 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantFeedbackSummarizati
   private java.lang.String summaryText;
 
   /**
+   * Optional. Actual text sections of submitted summary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> textSections;
+
+  /**
    * Timestamp when composing of the summary starts.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantFeedbackSummarizati
    */
   public GoogleCloudDialogflowV2beta1AgentAssistantFeedbackSummarizationFeedback setSummaryText(java.lang.String summaryText) {
     this.summaryText = summaryText;
+    return this;
+  }
+
+  /**
+   * Optional. Actual text sections of submitted summary.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTextSections() {
+    return textSections;
+  }
+
+  /**
+   * Optional. Actual text sections of submitted summary.
+   * @param textSections textSections or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AgentAssistantFeedbackSummarizationFeedback setTextSections(java.util.Map<String, java.lang.String> textSections) {
+    this.textSections = textSections;
     return this;
   }
 

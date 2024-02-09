@@ -20,7 +20,7 @@ package com.google.api.services.dlp.v2.model;
  * Message for a unique key indicating a record that contains a finding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
+ * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -31,12 +31,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * Datastore key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2BigQueryKey bigQueryKey;
 
   /**
+   * Bigquery key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,6 +53,7 @@ public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.jso
   private java.util.List<java.lang.String> idValues;
 
   /**
+   * Datastore key
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryKey getBigQueryKey() {
@@ -58,6 +61,7 @@ public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.jso
   }
 
   /**
+   * Datastore key
    * @param bigQueryKey bigQueryKey or {@code null} for none
    */
   public GooglePrivacyDlpV2RecordKey setBigQueryKey(GooglePrivacyDlpV2BigQueryKey bigQueryKey) {
@@ -66,6 +70,7 @@ public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.jso
   }
 
   /**
+   * Bigquery key
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DatastoreKey getDatastoreKey() {
@@ -73,6 +78,7 @@ public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.jso
   }
 
   /**
+   * Bigquery key
    * @param datastoreKey datastoreKey or {@code null} for none
    */
   public GooglePrivacyDlpV2RecordKey setDatastoreKey(GooglePrivacyDlpV2DatastoreKey datastoreKey) {

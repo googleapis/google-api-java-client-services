@@ -20,7 +20,7 @@ package com.google.api.services.dlp.v2.model;
  * Shared message indicating Cloud storage type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
+ * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -59,6 +59,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   private GooglePrivacyDlpV2HybridOptions hybridOptions;
 
   /**
+   * Configuration of the timespan of the items to include in scanning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,6 +134,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   }
 
   /**
+   * Configuration of the timespan of the items to include in scanning.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2TimespanConfig getTimespanConfig() {
@@ -140,6 +142,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   }
 
   /**
+   * Configuration of the timespan of the items to include in scanning.
    * @param timespanConfig timespanConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2StorageConfig setTimespanConfig(GooglePrivacyDlpV2TimespanConfig timespanConfig) {

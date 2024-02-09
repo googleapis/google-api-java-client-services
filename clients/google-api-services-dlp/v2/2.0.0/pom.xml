@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-dlp</artifactId>
-  <version>v2-rev20240113-2.0.0</version>
-  <name>Cloud Data Loss Prevention (DLP) v2-rev20240113-2.0.0</name>
+  <version>v2-rev20240204-2.0.0</version>
+  <name>Sensitive Data Protection (DLP) v2-rev20240204-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Cloud Data Loss Prevention (DLP) ${project.version}</doctitle>
-          <windowtitle>Cloud Data Loss Prevention (DLP) ${project.version}</windowtitle>
+          <doctitle>Sensitive Data Protection (DLP) ${project.version}</doctitle>
+          <windowtitle>Sensitive Data Protection (DLP) ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.43.3/</link>

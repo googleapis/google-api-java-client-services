@@ -20,7 +20,7 @@ package com.google.api.services.dlp.v2.model;
  * A type of transformation that is applied over images.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
+ * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -31,6 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2ImageTransformations extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of transforms to make.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,6 +44,7 @@ public final class GooglePrivacyDlpV2ImageTransformations extends com.google.api
   }
 
   /**
+   * List of transforms to make.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2ImageTransformation> getTransforms() {
@@ -50,6 +52,7 @@ public final class GooglePrivacyDlpV2ImageTransformations extends com.google.api
   }
 
   /**
+   * List of transforms to make.
    * @param transforms transforms or {@code null} for none
    */
   public GooglePrivacyDlpV2ImageTransformations setTransforms(java.util.List<GooglePrivacyDlpV2ImageTransformation> transforms) {

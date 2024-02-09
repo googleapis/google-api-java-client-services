@@ -27,7 +27,7 @@ package com.google.api.services.dlp.v2.model;
  * before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
+ * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>

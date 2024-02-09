@@ -20,7 +20,7 @@ package com.google.api.services.dlp.v2;
  * Service definition for DLP (v2).
  *
  * <p>
- * Provides methods for detection, risk analysis, and de-identification of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.
+ * Discover and protect your sensitive data. A fully managed service designed to help you discover, classify, and protect your valuable data assets with ease.
  * </p>
  *
  * <p>
@@ -49,7 +49,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         com.google.api.client.googleapis.GoogleUtils.MAJOR_VERSION >= 2,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "2.0.0 of the Cloud Data Loss Prevention (DLP) library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "2.0.0 of the Sensitive Data Protection (DLP) library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

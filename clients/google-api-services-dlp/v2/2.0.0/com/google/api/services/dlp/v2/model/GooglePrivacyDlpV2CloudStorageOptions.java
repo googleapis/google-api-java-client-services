@@ -20,7 +20,7 @@ package com.google.api.services.dlp.v2.model;
  * Options defining a file or a set of files within a Cloud Storage bucket.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
+ * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -82,6 +82,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
   private java.lang.Integer filesLimitPercent;
 
   /**
+   * How to sample the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,6 +206,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
   }
 
   /**
+   * How to sample the data.
    * @return value or {@code null} for none
    */
   public java.lang.String getSampleMethod() {
@@ -212,6 +214,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
   }
 
   /**
+   * How to sample the data.
    * @param sampleMethod sampleMethod or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudStorageOptions setSampleMethod(java.lang.String sampleMethod) {

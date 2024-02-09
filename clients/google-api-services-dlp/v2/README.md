@@ -1,14 +1,14 @@
-# Cloud Data Loss Prevention (DLP) Client Library for Java
+# Sensitive Data Protection (DLP) Client Library for Java
 
-Provides methods for detection, risk analysis, and de-identification of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.
+Discover and protect your sensitive data. A fully managed service designed to help you discover, classify, and protect your valuable data assets with ease.
 
-This page contains information about getting started with the Cloud Data Loss Prevention (DLP)
+This page contains information about getting started with the Sensitive Data Protection (DLP)
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Cloud Data Loss Prevention (DLP)][javadoc]
+* Browse the [Javadoc reference for the Sensitive Data Protection (DLP)][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Cloud Data Loss Prevention (DLP)][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Sensitive Data Protection (DLP)][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-dlp</artifactId>
-      <version>v2-rev20240113-2.0.0</version>
+      <version>v2-rev20240204-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-dlp:v2-rev20240113-2.0.0'
+  implementation 'com.google.apis:google-api-services-dlp:v2-rev20240204-2.0.0'
 }
 ```
 

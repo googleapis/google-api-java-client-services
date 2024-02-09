@@ -79,7 +79,8 @@ public final class QueuedResourceState extends com.google.api.client.json.Generi
   private java.lang.String state;
 
   /**
-   * Output only. The initiator of the QueuedResources's current state.
+   * Output only. The initiator of the QueuedResources's current state. Used to indicate whether the
+   * SUSPENDING/SUSPENDED state was initiated by the user or the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +220,8 @@ public final class QueuedResourceState extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The initiator of the QueuedResources's current state.
+   * Output only. The initiator of the QueuedResources's current state. Used to indicate whether the
+   * SUSPENDING/SUSPENDED state was initiated by the user or the service.
    * @return value or {@code null} for none
    */
   public java.lang.String getStateInitiator() {
@@ -227,7 +229,8 @@ public final class QueuedResourceState extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The initiator of the QueuedResources's current state.
+   * Output only. The initiator of the QueuedResources's current state. Used to indicate whether the
+   * SUSPENDING/SUSPENDED state was initiated by the user or the service.
    * @param stateInitiator stateInitiator or {@code null} for none
    */
   public QueuedResourceState setStateInitiator(java.lang.String stateInitiator) {

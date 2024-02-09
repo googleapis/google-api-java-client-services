@@ -79,6 +79,20 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
+   * Optional. [Experimental] Configures the load job to only copy files to the destination BigLake
+   * managed table with an external storage_uri, without reading file content and writing them to
+   * new files. Copying files only is supported when: * source_uris are in the same external storage
+   * system as the destination table but they do not overlap with storage_uri of the destination
+   * table. * source_format is the same file format as the destination table. * destination_table is
+   * an existing BigLake managed table. Its schema does not have default value expression. It schema
+   * does not have type parameters other than precision and scale. * No options other than the above
+   * are specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean copyFilesOnly;
+
+  /**
    * Optional. Specifies whether the job is allowed to create new tables. The following values are
    * supported: * CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. *
    * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
@@ -490,6 +504,37 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setConnectionProperties(java.util.List<ConnectionProperty> connectionProperties) {
     this.connectionProperties = connectionProperties;
+    return this;
+  }
+
+  /**
+   * Optional. [Experimental] Configures the load job to only copy files to the destination BigLake
+   * managed table with an external storage_uri, without reading file content and writing them to
+   * new files. Copying files only is supported when: * source_uris are in the same external storage
+   * system as the destination table but they do not overlap with storage_uri of the destination
+   * table. * source_format is the same file format as the destination table. * destination_table is
+   * an existing BigLake managed table. Its schema does not have default value expression. It schema
+   * does not have type parameters other than precision and scale. * No options other than the above
+   * are specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCopyFilesOnly() {
+    return copyFilesOnly;
+  }
+
+  /**
+   * Optional. [Experimental] Configures the load job to only copy files to the destination BigLake
+   * managed table with an external storage_uri, without reading file content and writing them to
+   * new files. Copying files only is supported when: * source_uris are in the same external storage
+   * system as the destination table but they do not overlap with storage_uri of the destination
+   * table. * source_format is the same file format as the destination table. * destination_table is
+   * an existing BigLake managed table. Its schema does not have default value expression. It schema
+   * does not have type parameters other than precision and scale. * No options other than the above
+   * are specified.
+   * @param copyFilesOnly copyFilesOnly or {@code null} for none
+   */
+  public JobConfigurationLoad setCopyFilesOnly(java.lang.Boolean copyFilesOnly) {
+    this.copyFilesOnly = copyFilesOnly;
     return this;
   }
 

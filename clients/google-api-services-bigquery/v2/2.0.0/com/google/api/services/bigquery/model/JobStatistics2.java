@@ -437,7 +437,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.util.List<QueryParameter> undeclaredQueryParameters;
 
   /**
-   * Output only. Search query specific statistics.
+   * Output only. Vector Search query specific statistics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1351,7 +1351,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Search query specific statistics.
+   * Output only. Vector Search query specific statistics.
    * @return value or {@code null} for none
    */
   public VectorSearchStatistics getVectorSearchStatistics() {
@@ -1359,7 +1359,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Search query specific statistics.
+   * Output only. Vector Search query specific statistics.
    * @param vectorSearchStatistics vectorSearchStatistics or {@code null} for none
    */
   public JobStatistics2 setVectorSearchStatistics(VectorSearchStatistics vectorSearchStatistics) {

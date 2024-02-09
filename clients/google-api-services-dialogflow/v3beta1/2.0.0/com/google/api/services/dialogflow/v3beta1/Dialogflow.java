@@ -2932,6 +2932,146 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
+           * Exports the selected entity types.
+           *
+           * Create a request for the method "entityTypes.export".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the parent agent to export entity types. Format:
+           *        `projects//locations//agents/`.
+           * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String parent, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest content) throws java.io.IOException {
+            Export result = new Export(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends DialogflowRequest<com.google.api.services.dialogflow.v3beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v3beta1/{+parent}/entityTypes:export";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+            /**
+             * Exports the selected entity types.
+             *
+             * Create a request for the method "entityTypes.export".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the parent agent to export entity types. Format:
+           *        `projects//locations//agents/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String parent, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3beta1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the parent agent to export entity types. Format:
+             * `projects//locations//agents/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the parent agent to export entity types. Format:
+           `projects//locations//agents/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the parent agent to export entity types. Format:
+             * `projects//locations//agents/`.
+             */
+            public Export setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
+            }
+          }
+          /**
            * Retrieves the specified entity type.
            *
            * Create a request for the method "entityTypes.get".
@@ -3107,6 +3247,143 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Imports the specified entitytypes into the agent.
+           *
+           * Create a request for the method "entityTypes.import".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link DialogflowImport#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The agent to import the entity types into. Format: `projects//locations//agents/`.
+           * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportEntityTypesRequest}
+           * @return the request
+           */
+          public DialogflowImport dialogflowImport(java.lang.String parent, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportEntityTypesRequest content) throws java.io.IOException {
+            DialogflowImport result = new DialogflowImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DialogflowImport extends DialogflowRequest<com.google.api.services.dialogflow.v3beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v3beta1/{+parent}/entityTypes:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+            /**
+             * Imports the specified entitytypes into the agent.
+             *
+             * Create a request for the method "entityTypes.import".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link DialogflowImport#execute()} method to invoke the remote
+             * operation. <p> {@link DialogflowImport#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param parent Required. The agent to import the entity types into. Format: `projects//locations//agents/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportEntityTypesRequest}
+             * @since 1.13
+             */
+            protected DialogflowImport(java.lang.String parent, com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportEntityTypesRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3beta1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+            }
+
+            @Override
+            public DialogflowImport set$Xgafv(java.lang.String $Xgafv) {
+              return (DialogflowImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DialogflowImport setAccessToken(java.lang.String accessToken) {
+              return (DialogflowImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DialogflowImport setAlt(java.lang.String alt) {
+              return (DialogflowImport) super.setAlt(alt);
+            }
+
+            @Override
+            public DialogflowImport setCallback(java.lang.String callback) {
+              return (DialogflowImport) super.setCallback(callback);
+            }
+
+            @Override
+            public DialogflowImport setFields(java.lang.String fields) {
+              return (DialogflowImport) super.setFields(fields);
+            }
+
+            @Override
+            public DialogflowImport setKey(java.lang.String key) {
+              return (DialogflowImport) super.setKey(key);
+            }
+
+            @Override
+            public DialogflowImport setOauthToken(java.lang.String oauthToken) {
+              return (DialogflowImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DialogflowImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DialogflowImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DialogflowImport setQuotaUser(java.lang.String quotaUser) {
+              return (DialogflowImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DialogflowImport setUploadType(java.lang.String uploadType) {
+              return (DialogflowImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DialogflowImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DialogflowImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The agent to import the entity types into. Format:
+             * `projects//locations//agents/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The agent to import the entity types into. Format: `projects//locations//agents/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The agent to import the entity types into. Format:
+             * `projects//locations//agents/`.
+             */
+            public DialogflowImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public DialogflowImport set(String parameterName, Object value) {
+              return (DialogflowImport) super.set(parameterName, value);
             }
           }
           /**

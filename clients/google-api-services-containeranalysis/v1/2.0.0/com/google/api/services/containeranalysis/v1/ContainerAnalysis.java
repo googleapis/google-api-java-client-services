@@ -3501,6 +3501,165 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
       }
 
     }
+    /**
+     * An accessor for creating requests from the Resources collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ContainerAnalysis containeranalysis = new ContainerAnalysis(...);}
+     *   {@code ContainerAnalysis.Resources.List request = containeranalysis.resources().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Resources resources() {
+      return new Resources();
+    }
+
+    /**
+     * The "resources" collection of methods.
+     */
+    public class Resources {
+
+      /**
+       * Generates an SBOM for the given resource.
+       *
+       * Create a request for the method "resources.exportSBOM".
+       *
+       * This request holds the parameters needed by the containeranalysis server.  After setting any
+       * optional parameters, call the {@link ExportSBOM#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the resource in the form of `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+       * @param content the {@link com.google.api.services.containeranalysis.v1.model.ExportSBOMRequest}
+       * @return the request
+       */
+      public ExportSBOM exportSBOM(java.lang.String name, com.google.api.services.containeranalysis.v1.model.ExportSBOMRequest content) throws java.io.IOException {
+        ExportSBOM result = new ExportSBOM(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ExportSBOM extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1.model.ExportSBOMResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:exportSBOM";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/resources/.*$");
+
+        /**
+         * Generates an SBOM for the given resource.
+         *
+         * Create a request for the method "resources.exportSBOM".
+         *
+         * This request holds the parameters needed by the the containeranalysis server.  After setting
+         * any optional parameters, call the {@link ExportSBOM#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * ExportSBOM#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the resource in the form of `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+         * @param content the {@link com.google.api.services.containeranalysis.v1.model.ExportSBOMRequest}
+         * @since 1.13
+         */
+        protected ExportSBOM(java.lang.String name, com.google.api.services.containeranalysis.v1.model.ExportSBOMRequest content) {
+          super(ContainerAnalysis.this, "POST", REST_PATH, content, com.google.api.services.containeranalysis.v1.model.ExportSBOMResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/resources/.*$");
+          }
+        }
+
+        @Override
+        public ExportSBOM set$Xgafv(java.lang.String $Xgafv) {
+          return (ExportSBOM) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ExportSBOM setAccessToken(java.lang.String accessToken) {
+          return (ExportSBOM) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ExportSBOM setAlt(java.lang.String alt) {
+          return (ExportSBOM) super.setAlt(alt);
+        }
+
+        @Override
+        public ExportSBOM setCallback(java.lang.String callback) {
+          return (ExportSBOM) super.setCallback(callback);
+        }
+
+        @Override
+        public ExportSBOM setFields(java.lang.String fields) {
+          return (ExportSBOM) super.setFields(fields);
+        }
+
+        @Override
+        public ExportSBOM setKey(java.lang.String key) {
+          return (ExportSBOM) super.setKey(key);
+        }
+
+        @Override
+        public ExportSBOM setOauthToken(java.lang.String oauthToken) {
+          return (ExportSBOM) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ExportSBOM setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ExportSBOM) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ExportSBOM setQuotaUser(java.lang.String quotaUser) {
+          return (ExportSBOM) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ExportSBOM setUploadType(java.lang.String uploadType) {
+          return (ExportSBOM) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ExportSBOM setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ExportSBOM) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the resource in the form of
+         * `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the resource in the form of `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the resource in the form of
+         * `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+         */
+        public ExportSBOM setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/resources/.*$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ExportSBOM set(String parameterName, Object value) {
+          return (ExportSBOM) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

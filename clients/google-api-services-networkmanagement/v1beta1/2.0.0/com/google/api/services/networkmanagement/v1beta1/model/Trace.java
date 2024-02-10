@@ -44,6 +44,15 @@ public final class Trace extends com.google.api.client.json.GenericJson {
   private EndpointInfo endpointInfo;
 
   /**
+   * ID of trace. For forward traces, this ID is unique for each trace. For return traces, it
+   * matches ID of associated forward trace. A single forward trace can be associated with none, one
+   * or more than one return trace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer forwardTraceId;
+
+  /**
    * A trace of a test contains multiple steps from the initial state to the final state (delivered,
    * dropped, forwarded, or aborted). The steps are ordered by the processing sequence within the
    * simulated network state machine. It is critical to preserve the order of the steps and avoid
@@ -77,6 +86,27 @@ public final class Trace extends com.google.api.client.json.GenericJson {
    */
   public Trace setEndpointInfo(EndpointInfo endpointInfo) {
     this.endpointInfo = endpointInfo;
+    return this;
+  }
+
+  /**
+   * ID of trace. For forward traces, this ID is unique for each trace. For return traces, it
+   * matches ID of associated forward trace. A single forward trace can be associated with none, one
+   * or more than one return trace.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getForwardTraceId() {
+    return forwardTraceId;
+  }
+
+  /**
+   * ID of trace. For forward traces, this ID is unique for each trace. For return traces, it
+   * matches ID of associated forward trace. A single forward trace can be associated with none, one
+   * or more than one return trace.
+   * @param forwardTraceId forwardTraceId or {@code null} for none
+   */
+  public Trace setForwardTraceId(java.lang.Integer forwardTraceId) {
+    this.forwardTraceId = forwardTraceId;
     return this;
   }
 

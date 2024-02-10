@@ -2779,6 +2779,807 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
 
       }
       /**
+       * An accessor for creating requests from the QueuedResources collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code TPU tpu = new TPU(...);}
+       *   {@code TPU.QueuedResources.List request = tpu.queuedResources().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public QueuedResources queuedResources() {
+        return new QueuedResources();
+      }
+
+      /**
+       * The "queuedResources" collection of methods.
+       */
+      public class QueuedResources {
+
+        /**
+         * Creates a QueuedResource TPU instance.
+         *
+         * Create a request for the method "queuedResources.create".
+         *
+         * This request holds the parameters needed by the tpu server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name.
+         * @param content the {@link com.google.api.services.tpu.v2.model.QueuedResource}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.tpu.v2.model.QueuedResource content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends TPURequest<com.google.api.services.tpu.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+parent}/queuedResources";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a QueuedResource TPU instance.
+           *
+           * Create a request for the method "queuedResources.create".
+           *
+           * This request holds the parameters needed by the the tpu server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name.
+           * @param content the {@link com.google.api.services.tpu.v2.model.QueuedResource}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.tpu.v2.model.QueuedResource content) {
+            super(TPU.this, "POST", REST_PATH, content, com.google.api.services.tpu.v2.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource name. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex
+           * format.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String queuedResourceId;
+
+          /** Optional. The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex format.
+           */
+          public java.lang.String getQueuedResourceId() {
+            return queuedResourceId;
+          }
+
+          /**
+           * Optional. The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex
+           * format.
+           */
+          public Create setQueuedResourceId(java.lang.String queuedResourceId) {
+            this.queuedResourceId = queuedResourceId;
+            return this;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a QueuedResource TPU instance.
+         *
+         * Create a request for the method "queuedResources.delete".
+         *
+         * This request holds the parameters needed by the tpu server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends TPURequest<com.google.api.services.tpu.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+
+          /**
+           * Deletes a QueuedResource TPU instance.
+           *
+           * Create a request for the method "queuedResources.delete".
+           *
+           * This request holds the parameters needed by the the tpu server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(TPU.this, "DELETE", REST_PATH, null, com.google.api.services.tpu.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, all running nodes belonging to this queued resource will be
+           * deleted first and then the queued resource will be deleted. Otherwise (i.e.
+           * force=false), the queued resource will only be deleted if its nodes have already been
+           * deleted or the queued resource is in the ACCEPTED, FAILED, or SUSPENDED state.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, all running nodes belonging to this queued resource will be deleted first
+         and then the queued resource will be deleted. Otherwise (i.e. force=false), the queued resource
+         will only be deleted if its nodes have already been deleted or the queued resource is in the
+         ACCEPTED, FAILED, or SUSPENDED state.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, all running nodes belonging to this queued resource will be
+           * deleted first and then the queued resource will be deleted. Otherwise (i.e.
+           * force=false), the queued resource will only be deleted if its nodes have already been
+           * deleted or the queued resource is in the ACCEPTED, FAILED, or SUSPENDED state.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a queued resource.
+         *
+         * Create a request for the method "queuedResources.get".
+         *
+         * This request holds the parameters needed by the tpu server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends TPURequest<com.google.api.services.tpu.v2.model.QueuedResource> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+
+          /**
+           * Gets details of a queued resource.
+           *
+           * Create a request for the method "queuedResources.get".
+           *
+           * This request holds the parameters needed by the the tpu server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(TPU.this, "GET", REST_PATH, null, com.google.api.services.tpu.v2.model.QueuedResource.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists queued resources.
+         *
+         * Create a request for the method "queuedResources.list".
+         *
+         * This request holds the parameters needed by the tpu server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends TPURequest<com.google.api.services.tpu.v2.model.ListQueuedResourcesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/queuedResources";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists queued resources.
+           *
+           * Create a request for the method "queuedResources.list".
+           *
+           * This request holds the parameters needed by the the tpu server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(TPU.this, "GET", REST_PATH, null, com.google.api.services.tpu.v2.model.ListQueuedResourcesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource name. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The maximum number of items to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of items to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The next_page_token value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The next_page_token value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The next_page_token value returned from a previous List request, if any. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Resets a QueuedResource TPU instance
+         *
+         * Create a request for the method "queuedResources.reset".
+         *
+         * This request holds the parameters needed by the tpu server.  After setting any optional
+         * parameters, call the {@link Reset#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the queued resource.
+         * @param content the {@link com.google.api.services.tpu.v2.model.ResetQueuedResourceRequest}
+         * @return the request
+         */
+        public Reset reset(java.lang.String name, com.google.api.services.tpu.v2.model.ResetQueuedResourceRequest content) throws java.io.IOException {
+          Reset result = new Reset(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Reset extends TPURequest<com.google.api.services.tpu.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:reset";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+
+          /**
+           * Resets a QueuedResource TPU instance
+           *
+           * Create a request for the method "queuedResources.reset".
+           *
+           * This request holds the parameters needed by the the tpu server.  After setting any optional
+           * parameters, call the {@link Reset#execute()} method to invoke the remote operation. <p> {@link
+           * Reset#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the queued resource.
+           * @param content the {@link com.google.api.services.tpu.v2.model.ResetQueuedResourceRequest}
+           * @since 1.13
+           */
+          protected Reset(java.lang.String name, com.google.api.services.tpu.v2.model.ResetQueuedResourceRequest content) {
+            super(TPU.this, "POST", REST_PATH, content, com.google.api.services.tpu.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+            }
+          }
+
+          @Override
+          public Reset set$Xgafv(java.lang.String $Xgafv) {
+            return (Reset) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Reset setAccessToken(java.lang.String accessToken) {
+            return (Reset) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Reset setAlt(java.lang.String alt) {
+            return (Reset) super.setAlt(alt);
+          }
+
+          @Override
+          public Reset setCallback(java.lang.String callback) {
+            return (Reset) super.setCallback(callback);
+          }
+
+          @Override
+          public Reset setFields(java.lang.String fields) {
+            return (Reset) super.setFields(fields);
+          }
+
+          @Override
+          public Reset setKey(java.lang.String key) {
+            return (Reset) super.setKey(key);
+          }
+
+          @Override
+          public Reset setOauthToken(java.lang.String oauthToken) {
+            return (Reset) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Reset setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Reset) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Reset setQuotaUser(java.lang.String quotaUser) {
+            return (Reset) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Reset setUploadType(java.lang.String uploadType) {
+            return (Reset) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Reset setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Reset) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the queued resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the queued resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the queued resource. */
+          public Reset setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Reset set(String parameterName, Object value) {
+            return (Reset) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the RuntimeVersions collection.
        *
        * <p>The typical use is:</p>

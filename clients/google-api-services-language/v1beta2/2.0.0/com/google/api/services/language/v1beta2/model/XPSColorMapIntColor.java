@@ -17,8 +17,7 @@
 package com.google.api.services.language.v1beta2.model;
 
 /**
- * The request message for the text annotation API, which can perform multiple analysis types
- * (sentiment, entities, and syntax) in one call.
+ * RGB color and each channel is represented by an integer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed
@@ -29,88 +28,88 @@ package com.google.api.services.language.v1beta2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AnnotateTextRequest extends com.google.api.client.json.GenericJson {
+public final class XPSColorMapIntColor extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Input document.
+   * The value should be in range of [0, 255].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Document document;
+  private java.lang.Integer blue;
 
   /**
-   * The encoding type used by the API to calculate offsets.
+   * The value should be in range of [0, 255].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String encodingType;
+  private java.lang.Integer green;
 
   /**
-   * Required. The enabled features.
+   * The value should be in range of [0, 255].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AnnotateTextRequestFeatures features;
+  private java.lang.Integer red;
 
   /**
-   * Required. Input document.
+   * The value should be in range of [0, 255].
    * @return value or {@code null} for none
    */
-  public Document getDocument() {
-    return document;
+  public java.lang.Integer getBlue() {
+    return blue;
   }
 
   /**
-   * Required. Input document.
-   * @param document document or {@code null} for none
+   * The value should be in range of [0, 255].
+   * @param blue blue or {@code null} for none
    */
-  public AnnotateTextRequest setDocument(Document document) {
-    this.document = document;
+  public XPSColorMapIntColor setBlue(java.lang.Integer blue) {
+    this.blue = blue;
     return this;
   }
 
   /**
-   * The encoding type used by the API to calculate offsets.
+   * The value should be in range of [0, 255].
    * @return value or {@code null} for none
    */
-  public java.lang.String getEncodingType() {
-    return encodingType;
+  public java.lang.Integer getGreen() {
+    return green;
   }
 
   /**
-   * The encoding type used by the API to calculate offsets.
-   * @param encodingType encodingType or {@code null} for none
+   * The value should be in range of [0, 255].
+   * @param green green or {@code null} for none
    */
-  public AnnotateTextRequest setEncodingType(java.lang.String encodingType) {
-    this.encodingType = encodingType;
+  public XPSColorMapIntColor setGreen(java.lang.Integer green) {
+    this.green = green;
     return this;
   }
 
   /**
-   * Required. The enabled features.
+   * The value should be in range of [0, 255].
    * @return value or {@code null} for none
    */
-  public AnnotateTextRequestFeatures getFeatures() {
-    return features;
+  public java.lang.Integer getRed() {
+    return red;
   }
 
   /**
-   * Required. The enabled features.
-   * @param features features or {@code null} for none
+   * The value should be in range of [0, 255].
+   * @param red red or {@code null} for none
    */
-  public AnnotateTextRequest setFeatures(AnnotateTextRequestFeatures features) {
-    this.features = features;
+  public XPSColorMapIntColor setRed(java.lang.Integer red) {
+    this.red = red;
     return this;
   }
 
   @Override
-  public AnnotateTextRequest set(String fieldName, Object value) {
-    return (AnnotateTextRequest) super.set(fieldName, value);
+  public XPSColorMapIntColor set(String fieldName, Object value) {
+    return (XPSColorMapIntColor) super.set(fieldName, value);
   }
 
   @Override
-  public AnnotateTextRequest clone() {
-    return (AnnotateTextRequest) super.clone();
+  public XPSColorMapIntColor clone() {
+    return (XPSColorMapIntColor) super.clone();
   }
 
 }

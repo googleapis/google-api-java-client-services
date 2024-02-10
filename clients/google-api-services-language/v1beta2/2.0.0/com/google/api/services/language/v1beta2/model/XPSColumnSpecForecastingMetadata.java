@@ -17,7 +17,8 @@
 package com.google.api.services.language.v1beta2.model;
 
 /**
- * Options for the V1 model.
+ * =========================================================================== # The fields below
+ * are used exclusively for Forecasting.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed
@@ -28,16 +29,40 @@ package com.google.api.services.language.v1beta2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class V1Model extends com.google.api.client.json.GenericJson {
+public final class XPSColumnSpecForecastingMetadata extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public V1Model set(String fieldName, Object value) {
-    return (V1Model) super.set(fieldName, value);
+  /**
+   * The type of the column for FORECASTING model training purposes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String columnType;
+
+  /**
+   * The type of the column for FORECASTING model training purposes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getColumnType() {
+    return columnType;
+  }
+
+  /**
+   * The type of the column for FORECASTING model training purposes.
+   * @param columnType columnType or {@code null} for none
+   */
+  public XPSColumnSpecForecastingMetadata setColumnType(java.lang.String columnType) {
+    this.columnType = columnType;
+    return this;
   }
 
   @Override
-  public V1Model clone() {
-    return (V1Model) super.clone();
+  public XPSColumnSpecForecastingMetadata set(String fieldName, Object value) {
+    return (XPSColumnSpecForecastingMetadata) super.set(fieldName, value);
+  }
+
+  @Override
+  public XPSColumnSpecForecastingMetadata clone() {
+    return (XPSColumnSpecForecastingMetadata) super.clone();
   }
 
 }

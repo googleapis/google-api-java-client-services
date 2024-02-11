@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Metadata describes the input video content.
+ * Nearest neighbors for one query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.aiplatform.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudAiNlLlmProtoServicePartVideoMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1NearestNeighbors extends com.google.api.client.json.GenericJson {
 
   /**
-   * The end offset of the video.
+   * All its neighbors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String endOffset;
+  private java.util.List<GoogleCloudAiplatformV1NearestNeighborsNeighbor> neighbors;
 
   /**
-   * The start offset of the video.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String startOffset;
-
-  /**
-   * The end offset of the video.
+   * All its neighbors.
    * @return value or {@code null} for none
    */
-  public String getEndOffset() {
-    return endOffset;
+  public java.util.List<GoogleCloudAiplatformV1NearestNeighborsNeighbor> getNeighbors() {
+    return neighbors;
   }
 
   /**
-   * The end offset of the video.
-   * @param endOffset endOffset or {@code null} for none
+   * All its neighbors.
+   * @param neighbors neighbors or {@code null} for none
    */
-  public CloudAiNlLlmProtoServicePartVideoMetadata setEndOffset(String endOffset) {
-    this.endOffset = endOffset;
-    return this;
-  }
-
-  /**
-   * The start offset of the video.
-   * @return value or {@code null} for none
-   */
-  public String getStartOffset() {
-    return startOffset;
-  }
-
-  /**
-   * The start offset of the video.
-   * @param startOffset startOffset or {@code null} for none
-   */
-  public CloudAiNlLlmProtoServicePartVideoMetadata setStartOffset(String startOffset) {
-    this.startOffset = startOffset;
+  public GoogleCloudAiplatformV1NearestNeighbors setNeighbors(java.util.List<GoogleCloudAiplatformV1NearestNeighborsNeighbor> neighbors) {
+    this.neighbors = neighbors;
     return this;
   }
 
   @Override
-  public CloudAiNlLlmProtoServicePartVideoMetadata set(String fieldName, Object value) {
-    return (CloudAiNlLlmProtoServicePartVideoMetadata) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1NearestNeighbors set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1NearestNeighbors) super.set(fieldName, value);
   }
 
   @Override
-  public CloudAiNlLlmProtoServicePartVideoMetadata clone() {
-    return (CloudAiNlLlmProtoServicePartVideoMetadata) super.clone();
+  public GoogleCloudAiplatformV1NearestNeighbors clone() {
+    return (GoogleCloudAiplatformV1NearestNeighbors) super.clone();
   }
 
 }

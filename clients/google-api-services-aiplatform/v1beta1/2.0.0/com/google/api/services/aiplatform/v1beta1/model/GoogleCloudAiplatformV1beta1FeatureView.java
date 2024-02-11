@@ -97,9 +97,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureView extends com.google.ap
   private String updateTime;
 
   /**
-   * Optional. Configuration for vector search. It contains the required configurations to create an
-   * index from source data, so that approximate nearest neighbor (a.k.a ANN) algorithms search can
-   * be performed during online serving.
+   * Optional. Deprecated: please use FeatureView.index_config instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,9 +260,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureView extends com.google.ap
   }
 
   /**
-   * Optional. Configuration for vector search. It contains the required configurations to create an
-   * index from source data, so that approximate nearest neighbor (a.k.a ANN) algorithms search can
-   * be performed during online serving.
+   * Optional. Deprecated: please use FeatureView.index_config instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureViewVectorSearchConfig getVectorSearchConfig() {
@@ -272,9 +268,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureView extends com.google.ap
   }
 
   /**
-   * Optional. Configuration for vector search. It contains the required configurations to create an
-   * index from source data, so that approximate nearest neighbor (a.k.a ANN) algorithms search can
-   * be performed during online serving.
+   * Optional. Deprecated: please use FeatureView.index_config instead.
    * @param vectorSearchConfig vectorSearchConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureView setVectorSearchConfig(GoogleCloudAiplatformV1beta1FeatureViewVectorSearchConfig vectorSearchConfig) {

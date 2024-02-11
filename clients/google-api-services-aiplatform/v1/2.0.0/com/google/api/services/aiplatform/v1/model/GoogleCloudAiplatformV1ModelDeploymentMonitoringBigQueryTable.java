@@ -53,6 +53,14 @@ public final class GoogleCloudAiplatformV1ModelDeploymentMonitoringBigQueryTable
   private java.lang.String logType;
 
   /**
+   * Output only. The schema version of the request/response logging BigQuery table. Default to v1
+   * if unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestResponseLoggingSchemaVersion;
+
+  /**
    * The created BigQuery table to store logs. Customer could do their own query & analysis. Format:
    * `bq://.model_deployment_monitoring_._`
    * @return value or {@code null} for none
@@ -102,6 +110,25 @@ public final class GoogleCloudAiplatformV1ModelDeploymentMonitoringBigQueryTable
    */
   public GoogleCloudAiplatformV1ModelDeploymentMonitoringBigQueryTable setLogType(java.lang.String logType) {
     this.logType = logType;
+    return this;
+  }
+
+  /**
+   * Output only. The schema version of the request/response logging BigQuery table. Default to v1
+   * if unset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestResponseLoggingSchemaVersion() {
+    return requestResponseLoggingSchemaVersion;
+  }
+
+  /**
+   * Output only. The schema version of the request/response logging BigQuery table. Default to v1
+   * if unset.
+   * @param requestResponseLoggingSchemaVersion requestResponseLoggingSchemaVersion or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelDeploymentMonitoringBigQueryTable setRequestResponseLoggingSchemaVersion(java.lang.String requestResponseLoggingSchemaVersion) {
+    this.requestResponseLoggingSchemaVersion = requestResponseLoggingSchemaVersion;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Metadata describes the input video content.
+ * Response message for FeatureOnlineStoreService.SearchNearestEntities
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.aiplatform.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudAiNlLlmProtoServicePartVideoMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1SearchNearestEntitiesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The end offset of the video.
+   * The nearest neighbors of the query entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String endOffset;
+  private GoogleCloudAiplatformV1NearestNeighbors nearestNeighbors;
 
   /**
-   * The start offset of the video.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String startOffset;
-
-  /**
-   * The end offset of the video.
+   * The nearest neighbors of the query entity.
    * @return value or {@code null} for none
    */
-  public String getEndOffset() {
-    return endOffset;
+  public GoogleCloudAiplatformV1NearestNeighbors getNearestNeighbors() {
+    return nearestNeighbors;
   }
 
   /**
-   * The end offset of the video.
-   * @param endOffset endOffset or {@code null} for none
+   * The nearest neighbors of the query entity.
+   * @param nearestNeighbors nearestNeighbors or {@code null} for none
    */
-  public CloudAiNlLlmProtoServicePartVideoMetadata setEndOffset(String endOffset) {
-    this.endOffset = endOffset;
-    return this;
-  }
-
-  /**
-   * The start offset of the video.
-   * @return value or {@code null} for none
-   */
-  public String getStartOffset() {
-    return startOffset;
-  }
-
-  /**
-   * The start offset of the video.
-   * @param startOffset startOffset or {@code null} for none
-   */
-  public CloudAiNlLlmProtoServicePartVideoMetadata setStartOffset(String startOffset) {
-    this.startOffset = startOffset;
+  public GoogleCloudAiplatformV1SearchNearestEntitiesResponse setNearestNeighbors(GoogleCloudAiplatformV1NearestNeighbors nearestNeighbors) {
+    this.nearestNeighbors = nearestNeighbors;
     return this;
   }
 
   @Override
-  public CloudAiNlLlmProtoServicePartVideoMetadata set(String fieldName, Object value) {
-    return (CloudAiNlLlmProtoServicePartVideoMetadata) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1SearchNearestEntitiesResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1SearchNearestEntitiesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public CloudAiNlLlmProtoServicePartVideoMetadata clone() {
-    return (CloudAiNlLlmProtoServicePartVideoMetadata) super.clone();
+  public GoogleCloudAiplatformV1SearchNearestEntitiesResponse clone() {
+    return (GoogleCloudAiplatformV1SearchNearestEntitiesResponse) super.clone();
   }
 
 }

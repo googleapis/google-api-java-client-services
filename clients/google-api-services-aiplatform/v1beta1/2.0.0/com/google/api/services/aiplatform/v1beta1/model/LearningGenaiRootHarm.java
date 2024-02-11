@@ -98,6 +98,9 @@ public final class LearningGenaiRootHarm extends com.google.api.client.json.Gene
   private LearningGenaiRootHarmSafetyCatCategories safetycat;
 
   /**
+   * Spii Filter uses buckets http://google3/google/privacy/dlp/v2/storage.proto;l=77;rcl=584719820
+   * to classify the input. LMRoot converts the bucket into double score. For example the score for
+   * "POSSIBLE" is 3 / 5 = 0.6 .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -304,6 +307,9 @@ public final class LearningGenaiRootHarm extends com.google.api.client.json.Gene
   }
 
   /**
+   * Spii Filter uses buckets http://google3/google/privacy/dlp/v2/storage.proto;l=77;rcl=584719820
+   * to classify the input. LMRoot converts the bucket into double score. For example the score for
+   * "POSSIBLE" is 3 / 5 = 0.6 .
    * @return value or {@code null} for none
    */
   public LearningGenaiRootHarmSpiiFilter getSpii() {
@@ -311,6 +317,9 @@ public final class LearningGenaiRootHarm extends com.google.api.client.json.Gene
   }
 
   /**
+   * Spii Filter uses buckets http://google3/google/privacy/dlp/v2/storage.proto;l=77;rcl=584719820
+   * to classify the input. LMRoot converts the bucket into double score. For example the score for
+   * "POSSIBLE" is 3 / 5 = 0.6 .
    * @param spii spii or {@code null} for none
    */
   public LearningGenaiRootHarm setSpii(LearningGenaiRootHarmSpiiFilter spii) {

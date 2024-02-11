@@ -31,7 +31,7 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
 
   /**
    * Immutable. The path to the directory containing the Model artifact and any of its supporting
-   * files. Not present for AutoML Models or Large Models.
+   * files. Not required for AutoML Models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
   /**
    * Input only. The specification of the container that is to be used when deploying this Model.
    * The specification is ingested upon ModelService.UploadModel, and all binaries it contains are
-   * copied and stored internally by Vertex AI. Not present for AutoML Models or Large Models.
+   * copied and stored internally by Vertex AI. Not required for AutoML Models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -301,7 +301,7 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
 
   /**
    * Immutable. The path to the directory containing the Model artifact and any of its supporting
-   * files. Not present for AutoML Models or Large Models.
+   * files. Not required for AutoML Models.
    * @return value or {@code null} for none
    */
   public java.lang.String getArtifactUri() {
@@ -310,7 +310,7 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
 
   /**
    * Immutable. The path to the directory containing the Model artifact and any of its supporting
-   * files. Not present for AutoML Models or Large Models.
+   * files. Not required for AutoML Models.
    * @param artifactUri artifactUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Model setArtifactUri(java.lang.String artifactUri) {
@@ -321,7 +321,7 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
   /**
    * Input only. The specification of the container that is to be used when deploying this Model.
    * The specification is ingested upon ModelService.UploadModel, and all binaries it contains are
-   * copied and stored internally by Vertex AI. Not present for AutoML Models or Large Models.
+   * copied and stored internally by Vertex AI. Not required for AutoML Models.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelContainerSpec getContainerSpec() {
@@ -331,7 +331,7 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
   /**
    * Input only. The specification of the container that is to be used when deploying this Model.
    * The specification is ingested upon ModelService.UploadModel, and all binaries it contains are
-   * copied and stored internally by Vertex AI. Not present for AutoML Models or Large Models.
+   * copied and stored internally by Vertex AI. Not required for AutoML Models.
    * @param containerSpec containerSpec or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Model setContainerSpec(GoogleCloudAiplatformV1beta1ModelContainerSpec containerSpec) {

@@ -15326,7 +15326,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Perform an unary online prediction request for Vertex first-party products and frameworks.
+         * Perform an unary online prediction request to a gRPC model server for Vertex first-party products
+         * and frameworks.
          *
          * Create a request for the method "endpoints.directPredict".
          *
@@ -15352,7 +15353,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
 
           /**
-           * Perform an unary online prediction request for Vertex first-party products and frameworks.
+           * Perform an unary online prediction request to a gRPC model server for Vertex first-party
+           * products and frameworks.
            *
            * Create a request for the method "endpoints.directPredict".
            *
@@ -15466,7 +15468,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Perform an online prediction request through gRPC.
+         * Perform an unary online prediction request to a gRPC model server for custom containers.
          *
          * Create a request for the method "endpoints.directRawPredict".
          *
@@ -15492,7 +15494,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
 
           /**
-           * Perform an online prediction request through gRPC.
+           * Perform an unary online prediction request to a gRPC model server for custom containers.
            *
            * Create a request for the method "endpoints.directRawPredict".
            *
@@ -15747,6 +15749,146 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           @Override
           public Explain set(String parameterName, Object value) {
             return (Explain) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Generate content with multimodal inputs.
+         *
+         * Create a request for the method "endpoints.generateContent".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link GenerateContent#execute()} method to invoke the remote operation.
+         *
+         * @param model Required. The name of the publisher model requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/publishers/models`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
+         * @return the request
+         */
+        public GenerateContent generateContent(java.lang.String model, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentRequest content) throws java.io.IOException {
+          GenerateContent result = new GenerateContent(model, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateContent extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+model}:generateContent";
+
+          private final java.util.regex.Pattern MODEL_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Generate content with multimodal inputs.
+           *
+           * Create a request for the method "endpoints.generateContent".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link GenerateContent#execute()} method to invoke the remote
+           * operation. <p> {@link GenerateContent#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param model Required. The name of the publisher model requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/publishers/models`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
+           * @since 1.13
+           */
+          protected GenerateContent(java.lang.String model, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentResponse.class);
+            this.model = com.google.api.client.util.Preconditions.checkNotNull(model, "Required parameter model must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
+                  "Parameter model must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateContent set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateContent) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateContent setAccessToken(java.lang.String accessToken) {
+            return (GenerateContent) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateContent setAlt(java.lang.String alt) {
+            return (GenerateContent) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateContent setCallback(java.lang.String callback) {
+            return (GenerateContent) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateContent setFields(java.lang.String fields) {
+            return (GenerateContent) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateContent setKey(java.lang.String key) {
+            return (GenerateContent) super.setKey(key);
+          }
+
+          @Override
+          public GenerateContent setOauthToken(java.lang.String oauthToken) {
+            return (GenerateContent) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateContent setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateContent) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateContent setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateContent) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateContent setUploadType(java.lang.String uploadType) {
+            return (GenerateContent) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateContent setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateContent) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the publisher model requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/publishers/models`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String model;
+
+          /** Required. The name of the publisher model requested to serve the prediction. Format:
+         `projects/{project}/locations/{location}/publishers/models`
+           */
+          public java.lang.String getModel() {
+            return model;
+          }
+
+          /**
+           * Required. The name of the publisher model requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/publishers/models`
+           */
+          public GenerateContent setModel(java.lang.String model) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
+                  "Parameter model must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.model = model;
+            return this;
+          }
+
+          @Override
+          public GenerateContent set(String parameterName, Object value) {
+            return (GenerateContent) super.set(parameterName, value);
           }
         }
         /**
@@ -25831,7 +25973,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * resource, not the full request. A field will be overwritten if it is in the mask. If
            * the user does not provide a mask then only the non-empty fields present in the request
            * will be overwritten. Set the update_mask to `*` to override all fields. Updatable
-           * fields: * `big_query_source` * `labels` * `sync_config`
+           * fields: * `big_query_source` * `bigtable` * `labels` * `sync_config`
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -25840,7 +25982,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          the update. The fields specified in the update_mask are relative to the resource, not the full
          request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
          only the non-empty fields present in the request will be overwritten. Set the update_mask to `*` to
-         override all fields. Updatable fields: * `big_query_source` * `labels` * `sync_config`
+         override all fields. Updatable fields: * `big_query_source` * `bigtable` * `labels` * `sync_config`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -25852,7 +25994,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * resource, not the full request. A field will be overwritten if it is in the mask. If
            * the user does not provide a mask then only the non-empty fields present in the request
            * will be overwritten. Set the update_mask to `*` to override all fields. Updatable
-           * fields: * `big_query_source` * `labels` * `sync_config`
+           * fields: * `big_query_source` * `bigtable` * `labels` * `sync_config`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -69455,6 +69597,146 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             @Override
             public CountTokens set(String parameterName, Object value) {
               return (CountTokens) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Generate content with multimodal inputs.
+           *
+           * Create a request for the method "models.generateContent".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link GenerateContent#execute()} method to invoke the remote operation.
+           *
+           * @param model Required. The name of the publisher model requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/publishers/models`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
+           * @return the request
+           */
+          public GenerateContent generateContent(java.lang.String model, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentRequest content) throws java.io.IOException {
+            GenerateContent result = new GenerateContent(model, content);
+            initialize(result);
+            return result;
+          }
+
+          public class GenerateContent extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+model}:generateContent";
+
+            private final java.util.regex.Pattern MODEL_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+
+            /**
+             * Generate content with multimodal inputs.
+             *
+             * Create a request for the method "models.generateContent".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link GenerateContent#execute()} method to invoke the remote
+             * operation. <p> {@link GenerateContent#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param model Required. The name of the publisher model requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/publishers/models`
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
+             * @since 1.13
+             */
+            protected GenerateContent(java.lang.String model, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1GenerateContentResponse.class);
+              this.model = com.google.api.client.util.Preconditions.checkNotNull(model, "Required parameter model must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
+                    "Parameter model must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public GenerateContent set$Xgafv(java.lang.String $Xgafv) {
+              return (GenerateContent) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GenerateContent setAccessToken(java.lang.String accessToken) {
+              return (GenerateContent) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GenerateContent setAlt(java.lang.String alt) {
+              return (GenerateContent) super.setAlt(alt);
+            }
+
+            @Override
+            public GenerateContent setCallback(java.lang.String callback) {
+              return (GenerateContent) super.setCallback(callback);
+            }
+
+            @Override
+            public GenerateContent setFields(java.lang.String fields) {
+              return (GenerateContent) super.setFields(fields);
+            }
+
+            @Override
+            public GenerateContent setKey(java.lang.String key) {
+              return (GenerateContent) super.setKey(key);
+            }
+
+            @Override
+            public GenerateContent setOauthToken(java.lang.String oauthToken) {
+              return (GenerateContent) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GenerateContent setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GenerateContent) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GenerateContent setQuotaUser(java.lang.String quotaUser) {
+              return (GenerateContent) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GenerateContent setUploadType(java.lang.String uploadType) {
+              return (GenerateContent) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GenerateContent setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GenerateContent) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the publisher model requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/publishers/models`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String model;
+
+            /** Required. The name of the publisher model requested to serve the prediction. Format:
+           `projects/{project}/locations/{location}/publishers/models`
+             */
+            public java.lang.String getModel() {
+              return model;
+            }
+
+            /**
+             * Required. The name of the publisher model requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/publishers/models`
+             */
+            public GenerateContent setModel(java.lang.String model) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
+                    "Parameter model must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+              this.model = model;
+              return this;
+            }
+
+            @Override
+            public GenerateContent set(String parameterName, Object value) {
+              return (GenerateContent) super.set(parameterName, value);
             }
           }
           /**

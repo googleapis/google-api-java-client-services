@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
  * String filter is used to search a subset of the entities by using boolean rules on string
@@ -31,7 +31,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1NearestNeighborQueryStringFilter extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The allowed tokens.
@@ -66,7 +66,7 @@ public final class GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter 
    * Optional. The allowed tokens.
    * @param allowTokens allowTokens or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter setAllowTokens(java.util.List<java.lang.String> allowTokens) {
+  public GoogleCloudAiplatformV1NearestNeighborQueryStringFilter setAllowTokens(java.util.List<java.lang.String> allowTokens) {
     this.allowTokens = allowTokens;
     return this;
   }
@@ -83,7 +83,7 @@ public final class GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter 
    * Optional. The denied tokens.
    * @param denyTokens denyTokens or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter setDenyTokens(java.util.List<java.lang.String> denyTokens) {
+  public GoogleCloudAiplatformV1NearestNeighborQueryStringFilter setDenyTokens(java.util.List<java.lang.String> denyTokens) {
     this.denyTokens = denyTokens;
     return this;
   }
@@ -100,19 +100,19 @@ public final class GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter 
    * Required. Column names in BigQuery that used as filters.
    * @param name name or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter setName(java.lang.String name) {
+  public GoogleCloudAiplatformV1NearestNeighborQueryStringFilter setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1NearestNeighborQueryStringFilter set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1NearestNeighborQueryStringFilter) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter clone() {
-    return (GoogleCloudAiplatformV1beta1NearestNeighborQueryStringFilter) super.clone();
+  public GoogleCloudAiplatformV1NearestNeighborQueryStringFilter clone() {
+    return (GoogleCloudAiplatformV1NearestNeighborQueryStringFilter) super.clone();
   }
 
 }

@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToAction extend
   private GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeploy deploy;
 
   /**
+   * Optional. Deploy PublisherModel to Google Kubernetes Engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployGke deployGke;
+
+  /**
    * Optional. Open evaluation pipeline of the PublisherModel.
    * The value may be {@code null}.
    */
@@ -144,6 +151,23 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToAction extend
    */
   public GoogleCloudAiplatformV1beta1PublisherModelCallToAction setDeploy(GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeploy deploy) {
     this.deploy = deploy;
+    return this;
+  }
+
+  /**
+   * Optional. Deploy PublisherModel to Google Kubernetes Engine.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployGke getDeployGke() {
+    return deployGke;
+  }
+
+  /**
+   * Optional. Deploy PublisherModel to Google Kubernetes Engine.
+   * @param deployGke deployGke or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToAction setDeployGke(GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployGke deployGke) {
+    this.deployGke = deployGke;
     return this;
   }
 

@@ -43,6 +43,16 @@ public final class GoogleCloudAiplatformV1UpsertDatapointsRequest extends com.go
   }
 
   /**
+   * Optional. Update mask is used to specify the fields to be overwritten in the datapoints by the
+   * update. The fields specified in the update_mask are relative to each IndexDatapoint inside
+   * datapoints, not the full request. Updatable fields: * Use `all_restricts` to update both
+   * restricts and numeric_restricts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateMask;
+
+  /**
    * A list of datapoints to be created/updated.
    * @return value or {@code null} for none
    */
@@ -56,6 +66,29 @@ public final class GoogleCloudAiplatformV1UpsertDatapointsRequest extends com.go
    */
   public GoogleCloudAiplatformV1UpsertDatapointsRequest setDatapoints(java.util.List<GoogleCloudAiplatformV1IndexDatapoint> datapoints) {
     this.datapoints = datapoints;
+    return this;
+  }
+
+  /**
+   * Optional. Update mask is used to specify the fields to be overwritten in the datapoints by the
+   * update. The fields specified in the update_mask are relative to each IndexDatapoint inside
+   * datapoints, not the full request. Updatable fields: * Use `all_restricts` to update both
+   * restricts and numeric_restricts.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateMask() {
+    return updateMask;
+  }
+
+  /**
+   * Optional. Update mask is used to specify the fields to be overwritten in the datapoints by the
+   * update. The fields specified in the update_mask are relative to each IndexDatapoint inside
+   * datapoints, not the full request. Updatable fields: * Use `all_restricts` to update both
+   * restricts and numeric_restricts.
+   * @param updateMask updateMask or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1UpsertDatapointsRequest setUpdateMask(String updateMask) {
+    this.updateMask = updateMask;
     return this;
   }
 

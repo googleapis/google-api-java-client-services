@@ -73,6 +73,13 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Optional. The properties of the workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SapDiscoveryWorkloadProperties workloadProperties;
+
+  /**
    * Optional. An SAP system may run without an application layer.
    * @return value or {@code null} for none
    */
@@ -173,6 +180,23 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
    */
   public SapDiscovery setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. The properties of the workload.
+   * @return value or {@code null} for none
+   */
+  public SapDiscoveryWorkloadProperties getWorkloadProperties() {
+    return workloadProperties;
+  }
+
+  /**
+   * Optional. The properties of the workload.
+   * @param workloadProperties workloadProperties or {@code null} for none
+   */
+  public SapDiscovery setWorkloadProperties(SapDiscoveryWorkloadProperties workloadProperties) {
+    this.workloadProperties = workloadProperties;
     return this;
   }
 

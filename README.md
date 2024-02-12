@@ -266,11 +266,12 @@ for how to use credentials with google-http-client and
 
 When a change is made in the API definitions, the following events happens:
 
-1. [The discovery-artifact-manager repository](https://github.com/googleapis/discovery-artifact-manager) has
+1. The Discovery documents are maintained within Google ([details(http://go/api-discovery)).
+2. [The discovery-artifact-manager repository](https://github.com/googleapis/discovery-artifact-manager) has
    [update-discoveries job](https://github.com/googleapis/discovery-artifact-manager/blob/master/.github/workflows/update-disco.yml)
    that copies the definition files from https://discovery.googleapis.com/discovery/v1/apis to
    the repository.
-2. This google-api-java-client-services repository has ([codegen workflow](
+3. This google-api-java-client-services repository has ([codegen workflow](
    https://github.com/googleapis/google-api-java-client-services/blob/main/.github/workflows/codegen.yaml)).
    This daily workflow has the following jobs:
     - **discovery**: It uses the discovery-artifact-manager repository's [List discovery services workflow](
@@ -288,8 +289,8 @@ When a change is made in the API definitions, the following events happens:
       https://github.com/googleapis/google-api-java-client-services/blob/main/.github/workflows/codegen.yaml).
       If there are code changes, this job creates pull requests
       (Example: [#18860](https://github.com/googleapis/google-api-java-client-services/pull/18860)).
-3. The yoshi-approver and merge-on-green bots merge the pull requests automatically.
-4. [The Kokoro job](http://fusion2/search?q=google-api-java-client-services%2Frelease&s=p)
+4. The yoshi-approver and merge-on-green bots merge the pull requests automatically.
+5. [The Kokoro job](http://fusion2/search?q=google-api-java-client-services%2Frelease&s=p)
    publishes the libraries in this repository.
 
 ## Generating the API clients locally

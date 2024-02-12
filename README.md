@@ -266,7 +266,7 @@ for how to use credentials with google-http-client and
 
 When a change is made in the API definitions, the following events happens:
 
-1. The Discovery documents are maintained within Google ([details(http://go/api-discovery)).
+1. The Discovery documents are maintained within Google ([details](http://go/api-discovery)).
 2. [The discovery-artifact-manager repository](https://github.com/googleapis/discovery-artifact-manager) has
    [update-discoveries job](https://github.com/googleapis/discovery-artifact-manager/blob/master/.github/workflows/update-disco.yml)
    that copies the definition files from https://discovery.googleapis.com/discovery/v1/apis to

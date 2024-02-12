@@ -38,6 +38,13 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String bucket;
 
   /**
+   * The creation time of the folder in RFC 3339 format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private com.google.api.client.util.DateTime createTime;
+
+  /**
    * The ID of the folder, including the bucket name, folder name.
    * The value may be {@code null}.
    */
@@ -82,18 +89,11 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * The creation time of the folder in RFC 3339 format.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime timeCreated;
-
-  /**
    * The modification time of the folder metadata in RFC 3339 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime updated;
+  private com.google.api.client.util.DateTime updateTime;
 
   /**
    * The name of the bucket containing this folder.
@@ -109,6 +109,23 @@ public final class Folder extends com.google.api.client.json.GenericJson {
    */
   public Folder setBucket(java.lang.String bucket) {
     this.bucket = bucket;
+    return this;
+  }
+
+  /**
+   * The creation time of the folder in RFC 3339 format.
+   * @return value or {@code null} for none
+   */
+  public com.google.api.client.util.DateTime getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * The creation time of the folder in RFC 3339 format.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Folder setCreateTime(com.google.api.client.util.DateTime createTime) {
+    this.createTime = createTime;
     return this;
   }
 
@@ -219,36 +236,19 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The creation time of the folder in RFC 3339 format.
+   * The modification time of the folder metadata in RFC 3339 format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getTimeCreated() {
-    return timeCreated;
-  }
-
-  /**
-   * The creation time of the folder in RFC 3339 format.
-   * @param timeCreated timeCreated or {@code null} for none
-   */
-  public Folder setTimeCreated(com.google.api.client.util.DateTime timeCreated) {
-    this.timeCreated = timeCreated;
-    return this;
+  public com.google.api.client.util.DateTime getUpdateTime() {
+    return updateTime;
   }
 
   /**
    * The modification time of the folder metadata in RFC 3339 format.
-   * @return value or {@code null} for none
+   * @param updateTime updateTime or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getUpdated() {
-    return updated;
-  }
-
-  /**
-   * The modification time of the folder metadata in RFC 3339 format.
-   * @param updated updated or {@code null} for none
-   */
-  public Folder setUpdated(com.google.api.client.util.DateTime updated) {
-    this.updated = updated;
+  public Folder setUpdateTime(com.google.api.client.util.DateTime updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

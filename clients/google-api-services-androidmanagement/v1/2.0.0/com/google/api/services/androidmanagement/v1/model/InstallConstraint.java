@@ -17,7 +17,7 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * Amongst apps with InstallTypeset to:FORCE_INSTALLEDPREINSTALLED this defines a set of
+ * Amongst apps with InstallType set to: FORCE_INSTALLED PREINSTALLEDthis defines a set of
  * restrictions for the app installation. At least one of the fields must be set. When multiple
  * fields are set, then all the constraints need to be satisfied for the app to be installed.
  *

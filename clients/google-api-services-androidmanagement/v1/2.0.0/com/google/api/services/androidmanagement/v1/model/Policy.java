@@ -207,6 +207,16 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean createWindowsDisabled;
 
   /**
+   * Controls which apps are allowed to act as credential providers on Android 14 and above. These
+   * apps store credentials, see this (https://developer.android.com/training/sign-in/passkeys) and
+   * this (https://developer.android.com/reference/androidx/credentials/CredentialManager) for
+   * details. See also credentialProviderPolicy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String credentialProviderPolicyDefault;
+
+  /**
    * Whether configuring user credentials is disabled.
    * The value may be {@code null}.
    */
@@ -574,6 +584,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String preferentialNetworkService;
+
+  /**
+   * Optional. Controls whether printing is allowed. This is supported on devices running Android 9
+   * and above. .
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String printingPolicy;
 
   /**
    * Allows showing UI on a device for a user to choose a private key alias if there are no matching
@@ -1156,6 +1174,29 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setCreateWindowsDisabled(java.lang.Boolean createWindowsDisabled) {
     this.createWindowsDisabled = createWindowsDisabled;
+    return this;
+  }
+
+  /**
+   * Controls which apps are allowed to act as credential providers on Android 14 and above. These
+   * apps store credentials, see this (https://developer.android.com/training/sign-in/passkeys) and
+   * this (https://developer.android.com/reference/androidx/credentials/CredentialManager) for
+   * details. See also credentialProviderPolicy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCredentialProviderPolicyDefault() {
+    return credentialProviderPolicyDefault;
+  }
+
+  /**
+   * Controls which apps are allowed to act as credential providers on Android 14 and above. These
+   * apps store credentials, see this (https://developer.android.com/training/sign-in/passkeys) and
+   * this (https://developer.android.com/reference/androidx/credentials/CredentialManager) for
+   * details. See also credentialProviderPolicy.
+   * @param credentialProviderPolicyDefault credentialProviderPolicyDefault or {@code null} for none
+   */
+  public Policy setCredentialProviderPolicyDefault(java.lang.String credentialProviderPolicyDefault) {
+    this.credentialProviderPolicyDefault = credentialProviderPolicyDefault;
     return this;
   }
 
@@ -1978,6 +2019,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setPreferentialNetworkService(java.lang.String preferentialNetworkService) {
     this.preferentialNetworkService = preferentialNetworkService;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether printing is allowed. This is supported on devices running Android 9
+   * and above. .
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrintingPolicy() {
+    return printingPolicy;
+  }
+
+  /**
+   * Optional. Controls whether printing is allowed. This is supported on devices running Android 9
+   * and above. .
+   * @param printingPolicy printingPolicy or {@code null} for none
+   */
+  public Policy setPrintingPolicy(java.lang.String printingPolicy) {
+    this.printingPolicy = printingPolicy;
     return this;
   }
 

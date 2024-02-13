@@ -248,6 +248,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesConversionAction conversionAction;
 
   /**
+   * The conversion custom variable referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesConversionCustomVariable conversionCustomVariable;
+
+  /**
    * The custom columns.
    * The value may be {@code null}.
    */
@@ -924,6 +931,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setConversionAction(GoogleAdsSearchads360V0ResourcesConversionAction conversionAction) {
     this.conversionAction = conversionAction;
+    return this;
+  }
+
+  /**
+   * The conversion custom variable referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesConversionCustomVariable getConversionCustomVariable() {
+    return conversionCustomVariable;
+  }
+
+  /**
+   * The conversion custom variable referenced in the query.
+   * @param conversionCustomVariable conversionCustomVariable or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setConversionCustomVariable(GoogleAdsSearchads360V0ResourcesConversionCustomVariable conversionCustomVariable) {
+    this.conversionCustomVariable = conversionCustomVariable;
     return this;
   }
 

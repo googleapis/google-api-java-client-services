@@ -383,6 +383,13 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double contentRankLostImpressionShare;
 
   /**
+   * The conversion custom metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0CommonValue> conversionCustomMetrics;
+
+  /**
    * The number of conversions. This only includes conversion actions which
    * include_in_conversions_metric attribute is set to true. If you use conversion-based bidding,
    * your bid strategies will optimize for these conversions.
@@ -715,6 +722,13 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Double mobileFriendlyClicksPercentage;
+
+  /**
+   * The raw event conversion metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0CommonValue> rawEventConversionMetrics;
 
   /**
    * The percentage of the customer's Shopping or Search ad impressions that are shown in the most
@@ -1671,6 +1685,23 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
+   * The conversion custom metrics.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0CommonValue> getConversionCustomMetrics() {
+    return conversionCustomMetrics;
+  }
+
+  /**
+   * The conversion custom metrics.
+   * @param conversionCustomMetrics conversionCustomMetrics or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setConversionCustomMetrics(java.util.List<GoogleAdsSearchads360V0CommonValue> conversionCustomMetrics) {
+    this.conversionCustomMetrics = conversionCustomMetrics;
+    return this;
+  }
+
+  /**
    * The number of conversions. This only includes conversion actions which
    * include_in_conversions_metric attribute is set to true. If you use conversion-based bidding,
    * your bid strategies will optimize for these conversions.
@@ -2434,6 +2465,23 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   public GoogleAdsSearchads360V0CommonMetrics setMobileFriendlyClicksPercentage(java.lang.Double mobileFriendlyClicksPercentage) {
     this.mobileFriendlyClicksPercentage = mobileFriendlyClicksPercentage;
+    return this;
+  }
+
+  /**
+   * The raw event conversion metrics.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0CommonValue> getRawEventConversionMetrics() {
+    return rawEventConversionMetrics;
+  }
+
+  /**
+   * The raw event conversion metrics.
+   * @param rawEventConversionMetrics rawEventConversionMetrics or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setRawEventConversionMetrics(java.util.List<GoogleAdsSearchads360V0CommonValue> rawEventConversionMetrics) {
+    this.rawEventConversionMetrics = rawEventConversionMetrics;
     return this;
   }
 

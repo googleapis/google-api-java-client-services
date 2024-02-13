@@ -31,6 +31,32 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response extends com.google.api.client.json.GenericJson {
 
   /**
+   * The headers of the conversion custom dimensions in the results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0ServicesConversionCustomDimensionHeader> conversionCustomDimensionHeaders;
+
+  static {
+    // hack to force ProGuard to consider GoogleAdsSearchads360V0ServicesConversionCustomDimensionHeader used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAdsSearchads360V0ServicesConversionCustomDimensionHeader.class);
+  }
+
+  /**
+   * The headers of the conversion custom metrics in the results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0ServicesConversionCustomMetricHeader> conversionCustomMetricHeaders;
+
+  static {
+    // hack to force ProGuard to consider GoogleAdsSearchads360V0ServicesConversionCustomMetricHeader used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAdsSearchads360V0ServicesConversionCustomMetricHeader.class);
+  }
+
+  /**
    * The headers of the custom columns in the results.
    * The value may be {@code null}.
    */
@@ -60,6 +86,32 @@ public final class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response ext
   private java.lang.String nextPageToken;
 
   /**
+   * The headers of the raw event conversion dimensions in the results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0ServicesRawEventConversionDimensionHeader> rawEventConversionDimensionHeaders;
+
+  static {
+    // hack to force ProGuard to consider GoogleAdsSearchads360V0ServicesRawEventConversionDimensionHeader used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAdsSearchads360V0ServicesRawEventConversionDimensionHeader.class);
+  }
+
+  /**
+   * The headers of the raw event conversion metrics in the results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0ServicesRawEventConversionMetricHeader> rawEventConversionMetricHeaders;
+
+  static {
+    // hack to force ProGuard to consider GoogleAdsSearchads360V0ServicesRawEventConversionMetricHeader used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAdsSearchads360V0ServicesRawEventConversionMetricHeader.class);
+  }
+
+  /**
    * The list of rows that matched the query.
    * The value may be {@code null}.
    */
@@ -86,6 +138,40 @@ public final class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response ext
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalResultsCount;
+
+  /**
+   * The headers of the conversion custom dimensions in the results.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0ServicesConversionCustomDimensionHeader> getConversionCustomDimensionHeaders() {
+    return conversionCustomDimensionHeaders;
+  }
+
+  /**
+   * The headers of the conversion custom dimensions in the results.
+   * @param conversionCustomDimensionHeaders conversionCustomDimensionHeaders or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response setConversionCustomDimensionHeaders(java.util.List<GoogleAdsSearchads360V0ServicesConversionCustomDimensionHeader> conversionCustomDimensionHeaders) {
+    this.conversionCustomDimensionHeaders = conversionCustomDimensionHeaders;
+    return this;
+  }
+
+  /**
+   * The headers of the conversion custom metrics in the results.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0ServicesConversionCustomMetricHeader> getConversionCustomMetricHeaders() {
+    return conversionCustomMetricHeaders;
+  }
+
+  /**
+   * The headers of the conversion custom metrics in the results.
+   * @param conversionCustomMetricHeaders conversionCustomMetricHeaders or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response setConversionCustomMetricHeaders(java.util.List<GoogleAdsSearchads360V0ServicesConversionCustomMetricHeader> conversionCustomMetricHeaders) {
+    this.conversionCustomMetricHeaders = conversionCustomMetricHeaders;
+    return this;
+  }
 
   /**
    * The headers of the custom columns in the results.
@@ -139,6 +225,40 @@ public final class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response ext
    */
   public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * The headers of the raw event conversion dimensions in the results.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0ServicesRawEventConversionDimensionHeader> getRawEventConversionDimensionHeaders() {
+    return rawEventConversionDimensionHeaders;
+  }
+
+  /**
+   * The headers of the raw event conversion dimensions in the results.
+   * @param rawEventConversionDimensionHeaders rawEventConversionDimensionHeaders or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response setRawEventConversionDimensionHeaders(java.util.List<GoogleAdsSearchads360V0ServicesRawEventConversionDimensionHeader> rawEventConversionDimensionHeaders) {
+    this.rawEventConversionDimensionHeaders = rawEventConversionDimensionHeaders;
+    return this;
+  }
+
+  /**
+   * The headers of the raw event conversion metrics in the results.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0ServicesRawEventConversionMetricHeader> getRawEventConversionMetricHeaders() {
+    return rawEventConversionMetricHeaders;
+  }
+
+  /**
+   * The headers of the raw event conversion metrics in the results.
+   * @param rawEventConversionMetricHeaders rawEventConversionMetricHeaders or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response setRawEventConversionMetricHeaders(java.util.List<GoogleAdsSearchads360V0ServicesRawEventConversionMetricHeader> rawEventConversionMetricHeaders) {
+    this.rawEventConversionMetricHeaders = rawEventConversionMetricHeaders;
     return this;
   }
 

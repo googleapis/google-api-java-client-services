@@ -72,6 +72,13 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
   private java.lang.String conversionActionName;
 
   /**
+   * The conversion custom dimensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0CommonValue> conversionCustomDimensions;
+
+  /**
    * Date to which metrics apply. yyyy-MM-dd format, for example, 2018-04-17.
    * The value may be {@code null}.
    */
@@ -417,6 +424,13 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
   private java.lang.String quarter;
 
   /**
+   * The raw event conversion dimensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0CommonValue> rawEventConversionDimensions;
+
+  /**
    * Week as defined as Monday through Sunday, and represented by the date of Monday. Formatted as
    * yyyy-MM-dd.
    * The value may be {@code null}.
@@ -525,6 +539,23 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
    */
   public GoogleAdsSearchads360V0CommonSegments setConversionActionName(java.lang.String conversionActionName) {
     this.conversionActionName = conversionActionName;
+    return this;
+  }
+
+  /**
+   * The conversion custom dimensions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0CommonValue> getConversionCustomDimensions() {
+    return conversionCustomDimensions;
+  }
+
+  /**
+   * The conversion custom dimensions.
+   * @param conversionCustomDimensions conversionCustomDimensions or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setConversionCustomDimensions(java.util.List<GoogleAdsSearchads360V0CommonValue> conversionCustomDimensions) {
+    this.conversionCustomDimensions = conversionCustomDimensions;
     return this;
   }
 
@@ -1362,6 +1393,23 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
    */
   public GoogleAdsSearchads360V0CommonSegments setQuarter(java.lang.String quarter) {
     this.quarter = quarter;
+    return this;
+  }
+
+  /**
+   * The raw event conversion dimensions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0CommonValue> getRawEventConversionDimensions() {
+    return rawEventConversionDimensions;
+  }
+
+  /**
+   * The raw event conversion dimensions.
+   * @param rawEventConversionDimensions rawEventConversionDimensions or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setRawEventConversionDimensions(java.util.List<GoogleAdsSearchads360V0CommonValue> rawEventConversionDimensions) {
+    this.rawEventConversionDimensions = rawEventConversionDimensions;
     return this;
   }
 

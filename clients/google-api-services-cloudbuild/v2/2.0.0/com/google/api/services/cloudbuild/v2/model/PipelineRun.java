@@ -149,6 +149,14 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   private Provenance provenance;
 
   /**
+   * Output only. The `Record` of this `PipelineRun`. Format:
+   * `projects/{project}/locations/{location}/results/{result_id}/records/{record_id}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String record;
+
+  /**
    * Output only. The exact PipelineSpec used to instantiate the run.
    * The value may be {@code null}.
    */
@@ -474,6 +482,25 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    */
   public PipelineRun setProvenance(Provenance provenance) {
     this.provenance = provenance;
+    return this;
+  }
+
+  /**
+   * Output only. The `Record` of this `PipelineRun`. Format:
+   * `projects/{project}/locations/{location}/results/{result_id}/records/{record_id}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecord() {
+    return record;
+  }
+
+  /**
+   * Output only. The `Record` of this `PipelineRun`. Format:
+   * `projects/{project}/locations/{location}/results/{result_id}/records/{record_id}`
+   * @param record record or {@code null} for none
+   */
+  public PipelineRun setRecord(java.lang.String record) {
+    this.record = record;
     return this;
   }
 

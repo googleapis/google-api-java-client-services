@@ -17,7 +17,8 @@
 package com.google.api.services.cloudbuild.v2.model;
 
 /**
- * A connection to a SCM like GitHub, GitHub Enterprise, Bitbucket Data Center or GitLab.
+ * A connection to a SCM like GitHub, GitHub Enterprise, Bitbucket Data Center, Bitbucket Cloud or
+ * GitLab.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:
@@ -35,6 +36,20 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> annotations;
+
+  /**
+   * Configuration for connections to Bitbucket Cloud.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BitbucketCloudConfig bitbucketCloudConfig;
+
+  /**
+   * Configuration for connections to Bitbucket Data Center.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BitbucketDataCenterConfig bitbucketDataCenterConfig;
 
   /**
    * Output only. Server assigned timestamp for when the connection was created.
@@ -123,6 +138,40 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Configuration for connections to Bitbucket Cloud.
+   * @return value or {@code null} for none
+   */
+  public BitbucketCloudConfig getBitbucketCloudConfig() {
+    return bitbucketCloudConfig;
+  }
+
+  /**
+   * Configuration for connections to Bitbucket Cloud.
+   * @param bitbucketCloudConfig bitbucketCloudConfig or {@code null} for none
+   */
+  public Connection setBitbucketCloudConfig(BitbucketCloudConfig bitbucketCloudConfig) {
+    this.bitbucketCloudConfig = bitbucketCloudConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for connections to Bitbucket Data Center.
+   * @return value or {@code null} for none
+   */
+  public BitbucketDataCenterConfig getBitbucketDataCenterConfig() {
+    return bitbucketDataCenterConfig;
+  }
+
+  /**
+   * Configuration for connections to Bitbucket Data Center.
+   * @param bitbucketDataCenterConfig bitbucketDataCenterConfig or {@code null} for none
+   */
+  public Connection setBitbucketDataCenterConfig(BitbucketDataCenterConfig bitbucketDataCenterConfig) {
+    this.bitbucketDataCenterConfig = bitbucketDataCenterConfig;
     return this;
   }
 

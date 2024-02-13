@@ -74,6 +74,13 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private GcsData gcsIntermediateDataLocation;
 
   /**
+   * An HDFS cluster data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HdfsData hdfsDataSource;
+
+  /**
    * An HTTP URL data source.
    * The value may be {@code null}.
    */
@@ -239,6 +246,23 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
    */
   public TransferSpec setGcsIntermediateDataLocation(GcsData gcsIntermediateDataLocation) {
     this.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
+    return this;
+  }
+
+  /**
+   * An HDFS cluster data source.
+   * @return value or {@code null} for none
+   */
+  public HdfsData getHdfsDataSource() {
+    return hdfsDataSource;
+  }
+
+  /**
+   * An HDFS cluster data source.
+   * @param hdfsDataSource hdfsDataSource or {@code null} for none
+   */
+  public TransferSpec setHdfsDataSource(HdfsData hdfsDataSource) {
+    this.hdfsDataSource = hdfsDataSource;
     return this;
   }
 

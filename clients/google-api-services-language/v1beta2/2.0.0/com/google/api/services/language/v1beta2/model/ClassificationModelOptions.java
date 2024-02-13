@@ -36,7 +36,7 @@ public final class ClassificationModelOptions extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ClassificationModelOptionsV1Model v1Model;
+  private V1Model v1Model;
 
   /**
    * Setting this field will use the V2 model with the appropriate content categories version. The
@@ -44,14 +44,14 @@ public final class ClassificationModelOptions extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ClassificationModelOptionsV2Model v2Model;
+  private V2Model v2Model;
 
   /**
    * Setting this field will use the V1 model and V1 content categories version. The V1 model is a
    * legacy model; support for this will be discontinued in the future.
    * @return value or {@code null} for none
    */
-  public ClassificationModelOptionsV1Model getV1Model() {
+  public V1Model getV1Model() {
     return v1Model;
   }
 
@@ -60,7 +60,7 @@ public final class ClassificationModelOptions extends com.google.api.client.json
    * legacy model; support for this will be discontinued in the future.
    * @param v1Model v1Model or {@code null} for none
    */
-  public ClassificationModelOptions setV1Model(ClassificationModelOptionsV1Model v1Model) {
+  public ClassificationModelOptions setV1Model(V1Model v1Model) {
     this.v1Model = v1Model;
     return this;
   }
@@ -70,7 +70,7 @@ public final class ClassificationModelOptions extends com.google.api.client.json
    * V2 model is a better performing model.
    * @return value or {@code null} for none
    */
-  public ClassificationModelOptionsV2Model getV2Model() {
+  public V2Model getV2Model() {
     return v2Model;
   }
 
@@ -79,7 +79,7 @@ public final class ClassificationModelOptions extends com.google.api.client.json
    * V2 model is a better performing model.
    * @param v2Model v2Model or {@code null} for none
    */
-  public ClassificationModelOptions setV2Model(ClassificationModelOptionsV2Model v2Model) {
+  public ClassificationModelOptions setV2Model(V2Model v2Model) {
     this.v2Model = v2Model;
     return this;
   }

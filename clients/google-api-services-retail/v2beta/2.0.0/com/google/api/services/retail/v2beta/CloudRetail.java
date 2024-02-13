@@ -20,7 +20,7 @@ package com.google.api.services.retail.v2beta;
  * Service definition for CloudRetail (v2beta).
  *
  * <p>
- * Cloud Retail service enables customers to build end-to-end personalized recommendation systems without requiring a high level of expertise in machine learning, recommendation system, or Google Cloud.
+ * Vertex AI Search for Retail API is made up of Retail Search, Browse and Recommendations. These discovery AI solutions help you implement personalized search, browse and recommendations, based on machine learning models, across your websites and mobile applications.
  * </p>
  *
  * <p>
@@ -49,7 +49,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
         com.google.api.client.googleapis.GoogleUtils.MAJOR_VERSION >= 2,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "2.0.0 of the Retail API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "2.0.0 of the Vertex AI Search for Retail API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

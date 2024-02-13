@@ -32,6 +32,17 @@ package com.google.api.services.blockchainnodeengine.v1.model;
 public final class ValidatorConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * An Ethereum address which the beacon client will send fee rewards to if no recipient is
+   * configured in the validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-
+   * recipient.html or https://docs.prylabs.network/docs/execution-node/fee-recipient for examples
+   * of how this is used. Note that while this is often described as "suggested", as we run the
+   * execution node we can trust the execution node, and therefore this is considered enforced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String beaconFeeRecipient;
+
+  /**
    * Immutable. When true, deploys a GCP-managed validator client alongside the beacon client.
    * The value may be {@code null}.
    */
@@ -45,6 +56,31 @@ public final class ValidatorConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> mevRelayUrls;
+
+  /**
+   * An Ethereum address which the beacon client will send fee rewards to if no recipient is
+   * configured in the validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-
+   * recipient.html or https://docs.prylabs.network/docs/execution-node/fee-recipient for examples
+   * of how this is used. Note that while this is often described as "suggested", as we run the
+   * execution node we can trust the execution node, and therefore this is considered enforced.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBeaconFeeRecipient() {
+    return beaconFeeRecipient;
+  }
+
+  /**
+   * An Ethereum address which the beacon client will send fee rewards to if no recipient is
+   * configured in the validator client. See https://lighthouse-book.sigmaprime.io/suggested-fee-
+   * recipient.html or https://docs.prylabs.network/docs/execution-node/fee-recipient for examples
+   * of how this is used. Note that while this is often described as "suggested", as we run the
+   * execution node we can trust the execution node, and therefore this is considered enforced.
+   * @param beaconFeeRecipient beaconFeeRecipient or {@code null} for none
+   */
+  public ValidatorConfig setBeaconFeeRecipient(java.lang.String beaconFeeRecipient) {
+    this.beaconFeeRecipient = beaconFeeRecipient;
+    return this;
+  }
 
   /**
    * Immutable. When true, deploys a GCP-managed validator client alongside the beacon client.

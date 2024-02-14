@@ -92,6 +92,15 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
   private java.lang.Integer ordinalPosition;
 
   /**
+   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
+   * this field is required. Possible values for the field element type of a RANGE include: * DATE *
+   * DATETIME * TIMESTAMP
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1ColumnSchemaFieldElementType rangeElementType;
+
+  /**
    * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
    * The value may be {@code null}.
    */
@@ -248,6 +257,27 @@ public final class GoogleCloudDatacatalogV1ColumnSchema extends com.google.api.c
    */
   public GoogleCloudDatacatalogV1ColumnSchema setOrdinalPosition(java.lang.Integer ordinalPosition) {
     this.ordinalPosition = ordinalPosition;
+    return this;
+  }
+
+  /**
+   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
+   * this field is required. Possible values for the field element type of a RANGE include: * DATE *
+   * DATETIME * TIMESTAMP
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ColumnSchemaFieldElementType getRangeElementType() {
+    return rangeElementType;
+  }
+
+  /**
+   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
+   * this field is required. Possible values for the field element type of a RANGE include: * DATE *
+   * DATETIME * TIMESTAMP
+   * @param rangeElementType rangeElementType or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ColumnSchema setRangeElementType(GoogleCloudDatacatalogV1ColumnSchemaFieldElementType rangeElementType) {
+    this.rangeElementType = rangeElementType;
     return this;
   }
 

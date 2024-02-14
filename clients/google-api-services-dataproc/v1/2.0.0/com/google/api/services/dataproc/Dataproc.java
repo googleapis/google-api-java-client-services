@@ -8950,12 +8950,12 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * have the following syntax:field = value AND field = value ...where field is one of
            * status.state, clusterName, or labels.[KEY], and [KEY] is a label key. value can be * to
            * match all values. status.state can be one of the following: ACTIVE, INACTIVE, CREATING,
-           * RUNNING, ERROR, DELETING, or UPDATING. ACTIVE contains the CREATING, UPDATING, and
-           * RUNNING states. INACTIVE contains the DELETING and ERROR states. clusterName is the
-           * name of the cluster provided at creation time. Only the logical AND operator is
-           * supported; space-separated items are treated as having an implicit AND operator.Example
-           * filter:status.state = ACTIVE AND clusterName = mycluster AND labels.env = staging AND
-           * labels.starred = *
+           * RUNNING, ERROR, DELETING, UPDATING, STOPPING, or STOPPED. ACTIVE contains the CREATING,
+           * UPDATING, and RUNNING states. INACTIVE contains the DELETING, ERROR, STOPPING, and
+           * STOPPED states. clusterName is the name of the cluster provided at creation time. Only
+           * the logical AND operator is supported; space-separated items are treated as having an
+           * implicit AND operator.Example filter:status.state = ACTIVE AND clusterName = mycluster
+           * AND labels.env = staging AND labels.starred = *
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -8963,12 +8963,12 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. A filter constraining the clusters to list. Filters are case-sensitive and have the
          following syntax:field = value AND field = value ...where field is one of status.state,
          clusterName, or labels.[KEY], and [KEY] is a label key. value can be * to match all values.
-         status.state can be one of the following: ACTIVE, INACTIVE, CREATING, RUNNING, ERROR, DELETING, or
-         UPDATING. ACTIVE contains the CREATING, UPDATING, and RUNNING states. INACTIVE contains the
-         DELETING and ERROR states. clusterName is the name of the cluster provided at creation time. Only
-         the logical AND operator is supported; space-separated items are treated as having an implicit AND
-         operator.Example filter:status.state = ACTIVE AND clusterName = mycluster AND labels.env = staging
-         AND labels.starred = *
+         status.state can be one of the following: ACTIVE, INACTIVE, CREATING, RUNNING, ERROR, DELETING,
+         UPDATING, STOPPING, or STOPPED. ACTIVE contains the CREATING, UPDATING, and RUNNING states.
+         INACTIVE contains the DELETING, ERROR, STOPPING, and STOPPED states. clusterName is the name of the
+         cluster provided at creation time. Only the logical AND operator is supported; space-separated
+         items are treated as having an implicit AND operator.Example filter:status.state = ACTIVE AND
+         clusterName = mycluster AND labels.env = staging AND labels.starred = *
            */
           public java.lang.String getFilter() {
             return filter;
@@ -8979,12 +8979,12 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * have the following syntax:field = value AND field = value ...where field is one of
            * status.state, clusterName, or labels.[KEY], and [KEY] is a label key. value can be * to
            * match all values. status.state can be one of the following: ACTIVE, INACTIVE, CREATING,
-           * RUNNING, ERROR, DELETING, or UPDATING. ACTIVE contains the CREATING, UPDATING, and
-           * RUNNING states. INACTIVE contains the DELETING and ERROR states. clusterName is the
-           * name of the cluster provided at creation time. Only the logical AND operator is
-           * supported; space-separated items are treated as having an implicit AND operator.Example
-           * filter:status.state = ACTIVE AND clusterName = mycluster AND labels.env = staging AND
-           * labels.starred = *
+           * RUNNING, ERROR, DELETING, UPDATING, STOPPING, or STOPPED. ACTIVE contains the CREATING,
+           * UPDATING, and RUNNING states. INACTIVE contains the DELETING, ERROR, STOPPING, and
+           * STOPPED states. clusterName is the name of the cluster provided at creation time. Only
+           * the logical AND operator is supported; space-separated items are treated as having an
+           * implicit AND operator.Example filter:status.state = ACTIVE AND clusterName = mycluster
+           * AND labels.env = staging AND labels.starred = *
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -10285,7 +10285,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. A unique ID used to identify the request. If the server receives two
              * CreateNodeGroupRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.c
-             * loud.dataproc.v1#google.cloud.dataproc.v1.CreateNodeGroupRequests) with the same ID,
+             * loud.dataproc.v1#google.cloud.dataproc.v1.CreateNodeGroupRequest) with the same ID,
              * the second request is ignored and the first google.longrunning.Operation created and
              * stored in the backend is returned.Recommendation: Set this value to a UUID
              * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain
@@ -10297,8 +10297,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
             /** Optional. A unique ID used to identify the request. If the server receives two
            CreateNodeGroupRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.
-           v1#google.cloud.dataproc.v1.CreateNodeGroupRequests) with the same ID, the second request is
-           ignored and the first google.longrunning.Operation created and stored in the backend is
+           v1#google.cloud.dataproc.v1.CreateNodeGroupRequest) with the same ID, the second request is ignored
+           and the first google.longrunning.Operation created and stored in the backend is
            returned.Recommendation: Set this value to a UUID
            (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters
            (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
@@ -10310,7 +10310,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. A unique ID used to identify the request. If the server receives two
              * CreateNodeGroupRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.c
-             * loud.dataproc.v1#google.cloud.dataproc.v1.CreateNodeGroupRequests) with the same ID,
+             * loud.dataproc.v1#google.cloud.dataproc.v1.CreateNodeGroupRequest) with the same ID,
              * the second request is ignored and the first google.longrunning.Operation created and
              * stored in the backend is returned.Recommendation: Set this value to a UUID
              * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain
@@ -10472,6 +10472,146 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Repair nodes in a node group.
+           *
+           * Create a request for the method "nodeGroups.repair".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link Repair#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the node group to resize. Format:
+           *        projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+           * @param content the {@link com.google.api.services.dataproc.model.RepairNodeGroupRequest}
+           * @return the request
+           */
+          public Repair repair(java.lang.String name, com.google.api.services.dataproc.model.RepairNodeGroupRequest content) throws java.io.IOException {
+            Repair result = new Repair(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Repair extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:repair";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/clusters/[^/]+/nodeGroups/[^/]+$");
+
+            /**
+             * Repair nodes in a node group.
+             *
+             * Create a request for the method "nodeGroups.repair".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link Repair#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Repair#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the node group to resize. Format:
+           *        projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             * @param content the {@link com.google.api.services.dataproc.model.RepairNodeGroupRequest}
+             * @since 1.13
+             */
+            protected Repair(java.lang.String name, com.google.api.services.dataproc.model.RepairNodeGroupRequest content) {
+              super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/regions/[^/]+/clusters/[^/]+/nodeGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public Repair set$Xgafv(java.lang.String $Xgafv) {
+              return (Repair) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Repair setAccessToken(java.lang.String accessToken) {
+              return (Repair) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Repair setAlt(java.lang.String alt) {
+              return (Repair) super.setAlt(alt);
+            }
+
+            @Override
+            public Repair setCallback(java.lang.String callback) {
+              return (Repair) super.setCallback(callback);
+            }
+
+            @Override
+            public Repair setFields(java.lang.String fields) {
+              return (Repair) super.setFields(fields);
+            }
+
+            @Override
+            public Repair setKey(java.lang.String key) {
+              return (Repair) super.setKey(key);
+            }
+
+            @Override
+            public Repair setOauthToken(java.lang.String oauthToken) {
+              return (Repair) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Repair setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Repair) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Repair setQuotaUser(java.lang.String quotaUser) {
+              return (Repair) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Repair setUploadType(java.lang.String uploadType) {
+              return (Repair) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Repair setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Repair) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the node group to resize. Format:
+             * projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the node group to resize. Format:
+           projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the node group to resize. Format:
+             * projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+             */
+            public Repair setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/regions/[^/]+/clusters/[^/]+/nodeGroups/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Repair set(String parameterName, Object value) {
+              return (Repair) super.set(parameterName, value);
             }
           }
           /**

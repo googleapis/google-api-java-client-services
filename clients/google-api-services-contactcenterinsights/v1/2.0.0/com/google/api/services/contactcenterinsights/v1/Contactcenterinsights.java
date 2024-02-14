@@ -1683,18 +1683,19 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           /**
            * Optional. The attribute by which to order conversations in the response. If empty,
            * conversations will be ordered by descending creation time. Supported values are one of
-           * the following: * create_time * duration * turn_count * latest_analysis The default sort
-           * order is ascending. To specify order, append `asc` or `desc`, i.e. `create_time desc`.
-           * See https://google.aip.dev/132#ordering for more details.
+           * the following: * create_time * customer_satisfaction_rating * duration *
+           * latest_analysis * start_time * turn_count The default sort order is ascending. To
+           * specify order, append `asc` or `desc`, i.e. `create_time desc`. See
+           * https://google.aip.dev/132#ordering for more details.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Optional. The attribute by which to order conversations in the response. If empty, conversations
          will be ordered by descending creation time. Supported values are one of the following: *
-         create_time * duration * turn_count * latest_analysis The default sort order is ascending. To
-         specify order, append `asc` or `desc`, i.e. `create_time desc`. See
-         https://google.aip.dev/132#ordering for more details.
+         create_time * customer_satisfaction_rating * duration * latest_analysis * start_time * turn_count
+         The default sort order is ascending. To specify order, append `asc` or `desc`, i.e. `create_time
+         desc`. See https://google.aip.dev/132#ordering for more details.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -1703,9 +1704,10 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           /**
            * Optional. The attribute by which to order conversations in the response. If empty,
            * conversations will be ordered by descending creation time. Supported values are one of
-           * the following: * create_time * duration * turn_count * latest_analysis The default sort
-           * order is ascending. To specify order, append `asc` or `desc`, i.e. `create_time desc`.
-           * See https://google.aip.dev/132#ordering for more details.
+           * the following: * create_time * customer_satisfaction_rating * duration *
+           * latest_analysis * start_time * turn_count The default sort order is ascending. To
+           * specify order, append `asc` or `desc`, i.e. `create_time desc`. See
+           * https://google.aip.dev/132#ordering for more details.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;

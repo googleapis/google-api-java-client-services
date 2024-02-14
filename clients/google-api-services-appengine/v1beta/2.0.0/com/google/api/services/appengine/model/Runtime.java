@@ -72,6 +72,13 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
   private java.lang.String stage;
 
   /**
+   * Supported operating systems for the runtime, e.g., 'ubuntu22', etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> supportedOperatingSystems;
+
+  /**
    * Warning messages, e.g., a deprecation warning.
    * The value may be {@code null}.
    */
@@ -177,6 +184,23 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
    */
   public Runtime setStage(java.lang.String stage) {
     this.stage = stage;
+    return this;
+  }
+
+  /**
+   * Supported operating systems for the runtime, e.g., 'ubuntu22', etc.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSupportedOperatingSystems() {
+    return supportedOperatingSystems;
+  }
+
+  /**
+   * Supported operating systems for the runtime, e.g., 'ubuntu22', etc.
+   * @param supportedOperatingSystems supportedOperatingSystems or {@code null} for none
+   */
+  public Runtime setSupportedOperatingSystems(java.util.List<java.lang.String> supportedOperatingSystems) {
+    this.supportedOperatingSystems = supportedOperatingSystems;
     return this;
   }
 

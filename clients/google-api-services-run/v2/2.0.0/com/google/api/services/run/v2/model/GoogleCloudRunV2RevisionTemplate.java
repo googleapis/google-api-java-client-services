@@ -70,6 +70,13 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.lang.String executionEnvironment;
 
   /**
+   * Optional. Disables health checking containers during deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean healthCheckDisabled;
+
+  /**
    * Unstructured key value map that can be used to organize and categorize objects. User-provided
    * labels are shared with Google's billing system, so they can be used to filter, or break down
    * billing charges by team, component, environment, state, etc. For more information, visit
@@ -116,7 +123,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.lang.String serviceAccount;
 
   /**
-   * Enable session affinity.
+   * Optional. Enable session affinity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,6 +228,23 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   public GoogleCloudRunV2RevisionTemplate setExecutionEnvironment(java.lang.String executionEnvironment) {
     this.executionEnvironment = executionEnvironment;
+    return this;
+  }
+
+  /**
+   * Optional. Disables health checking containers during deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHealthCheckDisabled() {
+    return healthCheckDisabled;
+  }
+
+  /**
+   * Optional. Disables health checking containers during deployment.
+   * @param healthCheckDisabled healthCheckDisabled or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setHealthCheckDisabled(java.lang.Boolean healthCheckDisabled) {
+    this.healthCheckDisabled = healthCheckDisabled;
     return this;
   }
 
@@ -332,7 +356,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Enable session affinity.
+   * Optional. Enable session affinity.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSessionAffinity() {
@@ -340,7 +364,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Enable session affinity.
+   * Optional. Enable session affinity.
    * @param sessionAffinity sessionAffinity or {@code null} for none
    */
   public GoogleCloudRunV2RevisionTemplate setSessionAffinity(java.lang.Boolean sessionAffinity) {

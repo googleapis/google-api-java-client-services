@@ -50,7 +50,7 @@ public final class AnnotateTextRequest extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Features features;
+  private AnnotateTextRequestFeatures features;
 
   /**
    * Required. Input document.
@@ -90,7 +90,7 @@ public final class AnnotateTextRequest extends com.google.api.client.json.Generi
    * Required. The enabled features.
    * @return value or {@code null} for none
    */
-  public Features getFeatures() {
+  public AnnotateTextRequestFeatures getFeatures() {
     return features;
   }
 
@@ -98,7 +98,7 @@ public final class AnnotateTextRequest extends com.google.api.client.json.Generi
    * Required. The enabled features.
    * @param features features or {@code null} for none
    */
-  public AnnotateTextRequest setFeatures(Features features) {
+  public AnnotateTextRequest setFeatures(AnnotateTextRequestFeatures features) {
     this.features = features;
     return this;
   }

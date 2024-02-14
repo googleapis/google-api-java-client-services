@@ -40,11 +40,32 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   private Cvssv3 cvssv3;
 
   /**
+   * The exploitation activity of the vulnerability in the wild.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exploitationActivity;
+
+  /**
    * The unique identifier for the vulnerability. e.g. CVE-2021-34527
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
+
+  /**
+   * The potential impact of the vulnerability if it was to be exploited.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String impact;
+
+  /**
+   * Whether or not the vulnerability has been observed in the wild.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean observedInTheWild;
 
   /**
    * Additional information about the CVE. e.g. https://cve.mitre.org/cgi-
@@ -60,6 +81,13 @@ public final class Cve extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean upstreamFixAvailable;
+
+  /**
+   * Whether or not the vulnerability was zero day when the finding was published.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean zeroDay;
 
   /**
    * Describe Common Vulnerability Scoring System specified at https://www.first.org/cvss/v3.1
@@ -81,6 +109,23 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The exploitation activity of the vulnerability in the wild.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExploitationActivity() {
+    return exploitationActivity;
+  }
+
+  /**
+   * The exploitation activity of the vulnerability in the wild.
+   * @param exploitationActivity exploitationActivity or {@code null} for none
+   */
+  public Cve setExploitationActivity(java.lang.String exploitationActivity) {
+    this.exploitationActivity = exploitationActivity;
+    return this;
+  }
+
+  /**
    * The unique identifier for the vulnerability. e.g. CVE-2021-34527
    * @return value or {@code null} for none
    */
@@ -94,6 +139,40 @@ public final class Cve extends com.google.api.client.json.GenericJson {
    */
   public Cve setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The potential impact of the vulnerability if it was to be exploited.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImpact() {
+    return impact;
+  }
+
+  /**
+   * The potential impact of the vulnerability if it was to be exploited.
+   * @param impact impact or {@code null} for none
+   */
+  public Cve setImpact(java.lang.String impact) {
+    this.impact = impact;
+    return this;
+  }
+
+  /**
+   * Whether or not the vulnerability has been observed in the wild.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getObservedInTheWild() {
+    return observedInTheWild;
+  }
+
+  /**
+   * Whether or not the vulnerability has been observed in the wild.
+   * @param observedInTheWild observedInTheWild or {@code null} for none
+   */
+  public Cve setObservedInTheWild(java.lang.Boolean observedInTheWild) {
+    this.observedInTheWild = observedInTheWild;
     return this;
   }
 
@@ -130,6 +209,23 @@ public final class Cve extends com.google.api.client.json.GenericJson {
    */
   public Cve setUpstreamFixAvailable(java.lang.Boolean upstreamFixAvailable) {
     this.upstreamFixAvailable = upstreamFixAvailable;
+    return this;
+  }
+
+  /**
+   * Whether or not the vulnerability was zero day when the finding was published.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getZeroDay() {
+    return zeroDay;
+  }
+
+  /**
+   * Whether or not the vulnerability was zero day when the finding was published.
+   * @param zeroDay zeroDay or {@code null} for none
+   */
+  public Cve setZeroDay(java.lang.Boolean zeroDay) {
+    this.zeroDay = zeroDay;
     return this;
   }
 

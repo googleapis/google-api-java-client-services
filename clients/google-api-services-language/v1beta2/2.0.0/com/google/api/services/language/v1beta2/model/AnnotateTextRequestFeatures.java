@@ -29,7 +29,7 @@ package com.google.api.services.language.v1beta2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Features extends com.google.api.client.json.GenericJson {
+public final class AnnotateTextRequestFeatures extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The model options to use for classification. Defaults to v1 options if not specified.
@@ -97,7 +97,7 @@ public final class Features extends com.google.api.client.json.GenericJson {
    * Only used if `classify_text` is set to true.
    * @param classificationModelOptions classificationModelOptions or {@code null} for none
    */
-  public Features setClassificationModelOptions(ClassificationModelOptions classificationModelOptions) {
+  public AnnotateTextRequestFeatures setClassificationModelOptions(ClassificationModelOptions classificationModelOptions) {
     this.classificationModelOptions = classificationModelOptions;
     return this;
   }
@@ -118,7 +118,7 @@ public final class Features extends com.google.api.client.json.GenericJson {
    * language/docs/categories).
    * @param classifyText classifyText or {@code null} for none
    */
-  public Features setClassifyText(java.lang.Boolean classifyText) {
+  public AnnotateTextRequestFeatures setClassifyText(java.lang.Boolean classifyText) {
     this.classifyText = classifyText;
     return this;
   }
@@ -135,7 +135,7 @@ public final class Features extends com.google.api.client.json.GenericJson {
    * Extract document-level sentiment.
    * @param extractDocumentSentiment extractDocumentSentiment or {@code null} for none
    */
-  public Features setExtractDocumentSentiment(java.lang.Boolean extractDocumentSentiment) {
+  public AnnotateTextRequestFeatures setExtractDocumentSentiment(java.lang.Boolean extractDocumentSentiment) {
     this.extractDocumentSentiment = extractDocumentSentiment;
     return this;
   }
@@ -152,7 +152,7 @@ public final class Features extends com.google.api.client.json.GenericJson {
    * Extract entities.
    * @param extractEntities extractEntities or {@code null} for none
    */
-  public Features setExtractEntities(java.lang.Boolean extractEntities) {
+  public AnnotateTextRequestFeatures setExtractEntities(java.lang.Boolean extractEntities) {
     this.extractEntities = extractEntities;
     return this;
   }
@@ -169,7 +169,7 @@ public final class Features extends com.google.api.client.json.GenericJson {
    * Extract entities and their associated sentiment.
    * @param extractEntitySentiment extractEntitySentiment or {@code null} for none
    */
-  public Features setExtractEntitySentiment(java.lang.Boolean extractEntitySentiment) {
+  public AnnotateTextRequestFeatures setExtractEntitySentiment(java.lang.Boolean extractEntitySentiment) {
     this.extractEntitySentiment = extractEntitySentiment;
     return this;
   }
@@ -186,7 +186,7 @@ public final class Features extends com.google.api.client.json.GenericJson {
    * Extract syntax information.
    * @param extractSyntax extractSyntax or {@code null} for none
    */
-  public Features setExtractSyntax(java.lang.Boolean extractSyntax) {
+  public AnnotateTextRequestFeatures setExtractSyntax(java.lang.Boolean extractSyntax) {
     this.extractSyntax = extractSyntax;
     return this;
   }
@@ -203,19 +203,19 @@ public final class Features extends com.google.api.client.json.GenericJson {
    * Moderate the document for harmful and sensitive categories.
    * @param moderateText moderateText or {@code null} for none
    */
-  public Features setModerateText(java.lang.Boolean moderateText) {
+  public AnnotateTextRequestFeatures setModerateText(java.lang.Boolean moderateText) {
     this.moderateText = moderateText;
     return this;
   }
 
   @Override
-  public Features set(String fieldName, Object value) {
-    return (Features) super.set(fieldName, value);
+  public AnnotateTextRequestFeatures set(String fieldName, Object value) {
+    return (AnnotateTextRequestFeatures) super.set(fieldName, value);
   }
 
   @Override
-  public Features clone() {
-    return (Features) super.clone();
+  public AnnotateTextRequestFeatures clone() {
+    return (AnnotateTextRequestFeatures) super.clone();
   }
 
 }

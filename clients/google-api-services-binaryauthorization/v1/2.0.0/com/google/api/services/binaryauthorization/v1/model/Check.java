@@ -66,6 +66,14 @@ public final class Check extends com.google.api.client.json.GenericJson {
   private ImageFreshnessCheck imageFreshnessCheck;
 
   /**
+   * Optional. Require that an image was signed by Cosign with a trusted key. This check requires
+   * that both the image and signature are stored in Artifact Registry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SigstoreSignatureCheck sigstoreSignatureCheck;
+
+  /**
    * Optional. Require a SimpleSigning-type attestation for every image in the deployment.
    * The value may be {@code null}.
    */
@@ -173,6 +181,25 @@ public final class Check extends com.google.api.client.json.GenericJson {
    */
   public Check setImageFreshnessCheck(ImageFreshnessCheck imageFreshnessCheck) {
     this.imageFreshnessCheck = imageFreshnessCheck;
+    return this;
+  }
+
+  /**
+   * Optional. Require that an image was signed by Cosign with a trusted key. This check requires
+   * that both the image and signature are stored in Artifact Registry.
+   * @return value or {@code null} for none
+   */
+  public SigstoreSignatureCheck getSigstoreSignatureCheck() {
+    return sigstoreSignatureCheck;
+  }
+
+  /**
+   * Optional. Require that an image was signed by Cosign with a trusted key. This check requires
+   * that both the image and signature are stored in Artifact Registry.
+   * @param sigstoreSignatureCheck sigstoreSignatureCheck or {@code null} for none
+   */
+  public Check setSigstoreSignatureCheck(SigstoreSignatureCheck sigstoreSignatureCheck) {
+    this.sigstoreSignatureCheck = sigstoreSignatureCheck;
     return this;
   }
 

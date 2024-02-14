@@ -24,7 +24,7 @@ package com.google.api.services.cloudsupport.v2beta.model;
  * organization would look like this: ``` organizations/123/cases/456 ``` Projects have two unique
  * identifiers, an ID and a number, and they look like this: ``` projects/abc/cases/456 ``` ```
  * projects/123/cases/456 ``` You can use either of them when calling the API. To learn more about
- * project identifiers, see [AIP-2510](https://google.aip.dev/cloud/2510).
+ * project identifiers, see [AIP-2510](https://google.aip.dev/cloud/2510). Next ID: 38
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Support API. For a detailed explanation

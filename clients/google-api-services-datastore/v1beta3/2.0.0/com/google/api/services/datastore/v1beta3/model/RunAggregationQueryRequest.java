@@ -37,6 +37,14 @@ public final class RunAggregationQueryRequest extends com.google.api.client.json
   private AggregationQuery aggregationQuery;
 
   /**
+   * Optional. Explain options for the query. If set, additional query statistics will be returned.
+   * If not, only query results will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExplainOptions explainOptions;
+
+  /**
    * The GQL query to run. This query must be an aggregation query.
    * The value may be {@code null}.
    */
@@ -73,6 +81,25 @@ public final class RunAggregationQueryRequest extends com.google.api.client.json
    */
   public RunAggregationQueryRequest setAggregationQuery(AggregationQuery aggregationQuery) {
     this.aggregationQuery = aggregationQuery;
+    return this;
+  }
+
+  /**
+   * Optional. Explain options for the query. If set, additional query statistics will be returned.
+   * If not, only query results will be returned.
+   * @return value or {@code null} for none
+   */
+  public ExplainOptions getExplainOptions() {
+    return explainOptions;
+  }
+
+  /**
+   * Optional. Explain options for the query. If set, additional query statistics will be returned.
+   * If not, only query results will be returned.
+   * @param explainOptions explainOptions or {@code null} for none
+   */
+  public RunAggregationQueryRequest setExplainOptions(ExplainOptions explainOptions) {
+    this.explainOptions = explainOptions;
     return this;
   }
 

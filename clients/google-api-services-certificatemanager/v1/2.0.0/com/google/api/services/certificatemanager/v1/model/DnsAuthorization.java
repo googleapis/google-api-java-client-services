@@ -77,6 +77,14 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * Immutable. Type of DnsAuthorization. If unset during resource creation the following default
+   * will be used: - in location global: FIXED_RECORD.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Output only. The last update timestamp of a DnsAuthorization.
    * The value may be {@code null}.
    */
@@ -188,6 +196,25 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
    */
   public DnsAuthorization setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Immutable. Type of DnsAuthorization. If unset during resource creation the following default
+   * will be used: - in location global: FIXED_RECORD.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Immutable. Type of DnsAuthorization. If unset during resource creation the following default
+   * will be used: - in location global: FIXED_RECORD.
+   * @param type type or {@code null} for none
+   */
+  public DnsAuthorization setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

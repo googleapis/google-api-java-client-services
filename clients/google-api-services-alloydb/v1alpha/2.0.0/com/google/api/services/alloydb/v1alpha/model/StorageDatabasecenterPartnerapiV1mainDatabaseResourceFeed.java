@@ -49,6 +49,12 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData recommendationSignalData;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData resourceHealthSignalData;
 
   /**
@@ -103,12 +109,27 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
    * More feed data would be added in subsequent CLs
    * @return value or {@code null} for none
    */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData getRecommendationSignalData() {
+    return recommendationSignalData;
+  }
+
+  /**
+   * More feed data would be added in subsequent CLs
+   * @param recommendationSignalData recommendationSignalData or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setRecommendationSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData recommendationSignalData) {
+    this.recommendationSignalData = recommendationSignalData;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData getResourceHealthSignalData() {
     return resourceHealthSignalData;
   }
 
   /**
-   * More feed data would be added in subsequent CLs
    * @param resourceHealthSignalData resourceHealthSignalData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setResourceHealthSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData resourceHealthSignalData) {

@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1beta.model;
 
 /**
- * Model definition for GoogleCloudDiscoveryengineV1TargetSiteFailureReasonQuotaFailure.
+ * Failed due to insufficient quota.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

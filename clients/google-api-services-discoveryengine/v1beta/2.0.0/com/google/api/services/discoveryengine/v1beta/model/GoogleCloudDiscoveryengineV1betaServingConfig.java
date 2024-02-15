@@ -144,6 +144,18 @@ public final class GoogleCloudDiscoveryengineV1betaServingConfig extends com.goo
   private java.util.List<java.lang.String> onewaySynonymsControlIds;
 
   /**
+   * The ranking expression controls the customized ranking on retrieval documents. To leverage
+   * this, document embedding is required. The ranking expression setting in ServingConfig applies
+   * to all search requests served by the serving config. However, if
+   * SearchRequest.ranking_expression is specified, it overrides the ServingConfig ranking
+   * expression. The ranking expression is a single function or multiple functions that are joined
+   * by "+". * ranking_expression = function, { " + ", function }; Supported functions: * double *
+   * relevance_score * double * dotProduct(embedding_field_path) Function variables:
+   * relevance_score: pre-defined keywords, used for measure relevance between query and document.
+   * embedding_field_path: the document embedding field used with query embedding vector.
+   * dotProduct: embedding function between embedding_field_path and query embedding vector. Example
+   * ranking expression: If document has an embedding field doc_embedding, the ranking expression
+   * could be 0.5 * relevance_score + 0.3 * dotProduct(doc_embedding).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -454,6 +466,18 @@ public final class GoogleCloudDiscoveryengineV1betaServingConfig extends com.goo
   }
 
   /**
+   * The ranking expression controls the customized ranking on retrieval documents. To leverage
+   * this, document embedding is required. The ranking expression setting in ServingConfig applies
+   * to all search requests served by the serving config. However, if
+   * SearchRequest.ranking_expression is specified, it overrides the ServingConfig ranking
+   * expression. The ranking expression is a single function or multiple functions that are joined
+   * by "+". * ranking_expression = function, { " + ", function }; Supported functions: * double *
+   * relevance_score * double * dotProduct(embedding_field_path) Function variables:
+   * relevance_score: pre-defined keywords, used for measure relevance between query and document.
+   * embedding_field_path: the document embedding field used with query embedding vector.
+   * dotProduct: embedding function between embedding_field_path and query embedding vector. Example
+   * ranking expression: If document has an embedding field doc_embedding, the ranking expression
+   * could be 0.5 * relevance_score + 0.3 * dotProduct(doc_embedding).
    * @return value or {@code null} for none
    */
   public java.lang.String getRankingExpression() {
@@ -461,6 +485,18 @@ public final class GoogleCloudDiscoveryengineV1betaServingConfig extends com.goo
   }
 
   /**
+   * The ranking expression controls the customized ranking on retrieval documents. To leverage
+   * this, document embedding is required. The ranking expression setting in ServingConfig applies
+   * to all search requests served by the serving config. However, if
+   * SearchRequest.ranking_expression is specified, it overrides the ServingConfig ranking
+   * expression. The ranking expression is a single function or multiple functions that are joined
+   * by "+". * ranking_expression = function, { " + ", function }; Supported functions: * double *
+   * relevance_score * double * dotProduct(embedding_field_path) Function variables:
+   * relevance_score: pre-defined keywords, used for measure relevance between query and document.
+   * embedding_field_path: the document embedding field used with query embedding vector.
+   * dotProduct: embedding function between embedding_field_path and query embedding vector. Example
+   * ranking expression: If document has an embedding field doc_embedding, the ranking expression
+   * could be 0.5 * relevance_score + 0.3 * dotProduct(doc_embedding).
    * @param rankingExpression rankingExpression or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaServingConfig setRankingExpression(java.lang.String rankingExpression) {

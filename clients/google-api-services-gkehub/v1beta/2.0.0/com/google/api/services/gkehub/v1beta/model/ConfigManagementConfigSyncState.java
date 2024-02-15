@@ -65,6 +65,13 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   private java.lang.String rootsyncCrd;
 
   /**
+   * The state of CS This field summarizes the other fields in this message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The state of ConfigSync's process to sync configs to a cluster
    * The value may be {@code null}.
    */
@@ -145,6 +152,23 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
    */
   public ConfigManagementConfigSyncState setRootsyncCrd(java.lang.String rootsyncCrd) {
     this.rootsyncCrd = rootsyncCrd;
+    return this;
+  }
+
+  /**
+   * The state of CS This field summarizes the other fields in this message.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * The state of CS This field summarizes the other fields in this message.
+   * @param state state or {@code null} for none
+   */
+  public ConfigManagementConfigSyncState setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

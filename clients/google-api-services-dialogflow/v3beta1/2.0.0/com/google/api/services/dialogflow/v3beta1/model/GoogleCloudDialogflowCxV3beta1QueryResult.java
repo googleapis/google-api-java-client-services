@@ -49,6 +49,14 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
   private java.lang.Boolean allowAnswerFeedback;
 
   /**
+   * The current Flow. Some, not all fields are filled in this message, including but not limited to
+   * `name` and `display_name`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1Flow currentFlow;
+
+  /**
    * The current Page. Some, not all fields are filled in this message, including but not limited to
    * `name` and `display_name`.
    * The value may be {@code null}.
@@ -78,6 +86,13 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1DtmfInput dtmf;
+
+  /**
+   * The information of a query if handled by generative agent resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1GenerativeInfo generativeInfo;
 
   /**
    * The Intent that matched the conversational query. Some, not all fields are filled in this
@@ -175,6 +190,27 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
   private java.lang.String triggerIntent;
 
   /**
+   * The list of webhook display names in the order of call sequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> webhookDisplayNames;
+
+  /**
+   * The list of webhook ids in the order of call sequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> webhookIds;
+
+  /**
+   * The list of webhook latencies in the order of call sequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<String> webhookLatencies;
+
+  /**
    * The list of webhook payload in WebhookResponse.payload, in the order of call sequence. If some
    * webhook call fails or doesn't return any payload, an empty `Struct` would be used instead.
    * The value may be {@code null}.
@@ -188,6 +224,13 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleRpcStatus> webhookStatuses;
+
+  /**
+   * The list of webhook tags in the order of call sequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> webhookTags;
 
   /**
    * Returns the current advanced settings including IVR settings. Even though the operations
@@ -230,6 +273,25 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    */
   public GoogleCloudDialogflowCxV3beta1QueryResult setAllowAnswerFeedback(java.lang.Boolean allowAnswerFeedback) {
     this.allowAnswerFeedback = allowAnswerFeedback;
+    return this;
+  }
+
+  /**
+   * The current Flow. Some, not all fields are filled in this message, including but not limited to
+   * `name` and `display_name`.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Flow getCurrentFlow() {
+    return currentFlow;
+  }
+
+  /**
+   * The current Flow. Some, not all fields are filled in this message, including but not limited to
+   * `name` and `display_name`.
+   * @param currentFlow currentFlow or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryResult setCurrentFlow(GoogleCloudDialogflowCxV3beta1Flow currentFlow) {
+    this.currentFlow = currentFlow;
     return this;
   }
 
@@ -301,6 +363,23 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    */
   public GoogleCloudDialogflowCxV3beta1QueryResult setDtmf(GoogleCloudDialogflowCxV3beta1DtmfInput dtmf) {
     this.dtmf = dtmf;
+    return this;
+  }
+
+  /**
+   * The information of a query if handled by generative agent resources.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1GenerativeInfo getGenerativeInfo() {
+    return generativeInfo;
+  }
+
+  /**
+   * The information of a query if handled by generative agent resources.
+   * @param generativeInfo generativeInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryResult setGenerativeInfo(GoogleCloudDialogflowCxV3beta1GenerativeInfo generativeInfo) {
+    this.generativeInfo = generativeInfo;
     return this;
   }
 
@@ -528,6 +607,57 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
   }
 
   /**
+   * The list of webhook display names in the order of call sequence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getWebhookDisplayNames() {
+    return webhookDisplayNames;
+  }
+
+  /**
+   * The list of webhook display names in the order of call sequence.
+   * @param webhookDisplayNames webhookDisplayNames or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryResult setWebhookDisplayNames(java.util.List<java.lang.String> webhookDisplayNames) {
+    this.webhookDisplayNames = webhookDisplayNames;
+    return this;
+  }
+
+  /**
+   * The list of webhook ids in the order of call sequence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getWebhookIds() {
+    return webhookIds;
+  }
+
+  /**
+   * The list of webhook ids in the order of call sequence.
+   * @param webhookIds webhookIds or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryResult setWebhookIds(java.util.List<java.lang.String> webhookIds) {
+    this.webhookIds = webhookIds;
+    return this;
+  }
+
+  /**
+   * The list of webhook latencies in the order of call sequence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<String> getWebhookLatencies() {
+    return webhookLatencies;
+  }
+
+  /**
+   * The list of webhook latencies in the order of call sequence.
+   * @param webhookLatencies webhookLatencies or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryResult setWebhookLatencies(java.util.List<String> webhookLatencies) {
+    this.webhookLatencies = webhookLatencies;
+    return this;
+  }
+
+  /**
    * The list of webhook payload in WebhookResponse.payload, in the order of call sequence. If some
    * webhook call fails or doesn't return any payload, an empty `Struct` would be used instead.
    * @return value or {@code null} for none
@@ -560,6 +690,23 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    */
   public GoogleCloudDialogflowCxV3beta1QueryResult setWebhookStatuses(java.util.List<GoogleRpcStatus> webhookStatuses) {
     this.webhookStatuses = webhookStatuses;
+    return this;
+  }
+
+  /**
+   * The list of webhook tags in the order of call sequence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getWebhookTags() {
+    return webhookTags;
+  }
+
+  /**
+   * The list of webhook tags in the order of call sequence.
+   * @param webhookTags webhookTags or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryResult setWebhookTags(java.util.List<java.lang.String> webhookTags) {
+    this.webhookTags = webhookTags;
     return this;
   }
 

@@ -59,6 +59,15 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   private java.lang.String currentPage;
 
   /**
+   * Optional. Start the session with the specified playbook. You can only specify the playbook at
+   * the beginning of the session. Otherwise, an error will be thrown. Format:
+   * `projects//locations//agents//playbooks/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String currentPlaybook;
+
+  /**
    * Whether to disable webhook calls for this request.
    * The value may be {@code null}.
    */
@@ -92,6 +101,13 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
    */
   @com.google.api.client.util.Key
   private GoogleTypeLatLng geoLocation;
+
+  /**
+   * Optional. Use the specified LLM model settings for processing the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1LlmModelSettings llmModelSettings;
 
   /**
    * Additional parameters to be put into session parameters. To remove a parameter from the
@@ -232,6 +248,27 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
+   * Optional. Start the session with the specified playbook. You can only specify the playbook at
+   * the beginning of the session. Otherwise, an error will be thrown. Format:
+   * `projects//locations//agents//playbooks/`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCurrentPlaybook() {
+    return currentPlaybook;
+  }
+
+  /**
+   * Optional. Start the session with the specified playbook. You can only specify the playbook at
+   * the beginning of the session. Otherwise, an error will be thrown. Format:
+   * `projects//locations//agents//playbooks/`.
+   * @param currentPlaybook currentPlaybook or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryParameters setCurrentPlaybook(java.lang.String currentPlaybook) {
+    this.currentPlaybook = currentPlaybook;
+    return this;
+  }
+
+  /**
    * Whether to disable webhook calls for this request.
    * @return value or {@code null} for none
    */
@@ -310,6 +347,23 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setGeoLocation(GoogleTypeLatLng geoLocation) {
     this.geoLocation = geoLocation;
+    return this;
+  }
+
+  /**
+   * Optional. Use the specified LLM model settings for processing the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1LlmModelSettings getLlmModelSettings() {
+    return llmModelSettings;
+  }
+
+  /**
+   * Optional. Use the specified LLM model settings for processing the request.
+   * @param llmModelSettings llmModelSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryParameters setLlmModelSettings(GoogleCloudDialogflowCxV3beta1LlmModelSettings llmModelSettings) {
+    this.llmModelSettings = llmModelSettings;
     return this;
   }
 

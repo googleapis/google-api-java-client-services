@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.networkservices.v1beta1.model;
+package com.google.api.services.networkservices.v1.model;
 
 /**
  * A single extension in the chain to execute for the matching request.

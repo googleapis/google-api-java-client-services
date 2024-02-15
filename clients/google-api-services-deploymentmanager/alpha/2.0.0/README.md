@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-deploymentmanager</artifactId>
-      <version>alpha-rev20240104-2.0.0</version>
+      <version>alpha-rev20240214-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-deploymentmanager:alpha-rev20240104-2.0.0'
+  implementation 'com.google.apis:google-api-services-deploymentmanager:alpha-rev20240214-2.0.0'
 }
 ```
 

@@ -72,6 +72,13 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
   private GoogleCloudDialogflowV2beta1EventInput eventInput;
 
   /**
+   * The intent to be triggered on V3 agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1IntentInput intentInput;
+
+  /**
    * Optional. The send time of the message from end user or human agent's perspective. It is used
    * for identifying the same message under one participant. Given two messages under the same
    * participant: * If send time are different regardless of whether the content of the messages are
@@ -219,6 +226,23 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentRequest setEventInput(GoogleCloudDialogflowV2beta1EventInput eventInput) {
     this.eventInput = eventInput;
+    return this;
+  }
+
+  /**
+   * The intent to be triggered on V3 agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1IntentInput getIntentInput() {
+    return intentInput;
+  }
+
+  /**
+   * The intent to be triggered on V3 agent.
+   * @param intentInput intentInput or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AnalyzeContentRequest setIntentInput(GoogleCloudDialogflowV2beta1IntentInput intentInput) {
+    this.intentInput = intentInput;
     return this;
   }
 

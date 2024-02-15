@@ -142,13 +142,24 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   private GoogleCloudDialogflowCxV3beta1SpeechToTextSettings speechToTextSettings;
 
   /**
-   * Immutable. Name of the start flow in this agent. A start flow will be automatically created
-   * when the agent is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//flows/`.
+   * Name of the start flow in this agent. A start flow will be automatically created when the agent
+   * is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//flows/`. Currently only the default start flow with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String startFlow;
+
+  /**
+   * Name of the start playbook in this agent. A start playbook will be automatically created when
+   * the agent is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startPlaybook;
 
   /**
    * The list of all languages supported by the agent (except for the `default_language_code`).
@@ -431,9 +442,10 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Immutable. Name of the start flow in this agent. A start flow will be automatically created
-   * when the agent is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//flows/`.
+   * Name of the start flow in this agent. A start flow will be automatically created when the agent
+   * is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//flows/`. Currently only the default start flow with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartFlow() {
@@ -441,13 +453,37 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Immutable. Name of the start flow in this agent. A start flow will be automatically created
-   * when the agent is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//flows/`.
+   * Name of the start flow in this agent. A start flow will be automatically created when the agent
+   * is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//flows/`. Currently only the default start flow with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
    * @param startFlow startFlow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setStartFlow(java.lang.String startFlow) {
     this.startFlow = startFlow;
+    return this;
+  }
+
+  /**
+   * Name of the start playbook in this agent. A start playbook will be automatically created when
+   * the agent is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartPlaybook() {
+    return startPlaybook;
+  }
+
+  /**
+   * Name of the start playbook in this agent. A start playbook will be automatically created when
+   * the agent is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * @param startPlaybook startPlaybook or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Agent setStartPlaybook(java.lang.String startPlaybook) {
+    this.startPlaybook = startPlaybook;
     return this;
   }
 

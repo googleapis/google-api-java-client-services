@@ -98,7 +98,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.util.List<TaskGroup> taskGroups;
 
   /**
-   * Output only. A system generated unique ID (in UUID4 format) for the Job.
+   * Output only. A system generated unique ID for the Job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +275,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A system generated unique ID (in UUID4 format) for the Job.
+   * Output only. A system generated unique ID for the Job.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -283,7 +283,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A system generated unique ID (in UUID4 format) for the Job.
+   * Output only. A system generated unique ID for the Job.
    * @param uid uid or {@code null} for none
    */
   public Job setUid(java.lang.String uid) {

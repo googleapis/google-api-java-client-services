@@ -95,14 +95,18 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The target video frame rate in frames per second (FPS). Must be less than or equal to
-   * 120. Will default to the input frame rate if larger than the input frame rate. The API will
-   * generate an output FPS that is divisible by the input FPS, and smaller or equal to the target
-   * FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate)
-   * for more information.
+   * 120.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double frameRate;
+
+  /**
+   * Optional. Frame rate conversion strategy for desired frame rate. The default is `DOWNSAMPLE`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String frameRateConversionStrategy;
 
   /**
    * Select the GOP size based on the specified duration. The default is `3s`. Note that
@@ -378,10 +382,7 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The target video frame rate in frames per second (FPS). Must be less than or equal to
-   * 120. Will default to the input frame rate if larger than the input frame rate. The API will
-   * generate an output FPS that is divisible by the input FPS, and smaller or equal to the target
-   * FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate)
-   * for more information.
+   * 120.
    * @return value or {@code null} for none
    */
   public java.lang.Double getFrameRate() {
@@ -390,14 +391,28 @@ public final class H264CodecSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The target video frame rate in frames per second (FPS). Must be less than or equal to
-   * 120. Will default to the input frame rate if larger than the input frame rate. The API will
-   * generate an output FPS that is divisible by the input FPS, and smaller or equal to the target
-   * FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate)
-   * for more information.
+   * 120.
    * @param frameRate frameRate or {@code null} for none
    */
   public H264CodecSettings setFrameRate(java.lang.Double frameRate) {
     this.frameRate = frameRate;
+    return this;
+  }
+
+  /**
+   * Optional. Frame rate conversion strategy for desired frame rate. The default is `DOWNSAMPLE`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFrameRateConversionStrategy() {
+    return frameRateConversionStrategy;
+  }
+
+  /**
+   * Optional. Frame rate conversion strategy for desired frame rate. The default is `DOWNSAMPLE`.
+   * @param frameRateConversionStrategy frameRateConversionStrategy or {@code null} for none
+   */
+  public H264CodecSettings setFrameRateConversionStrategy(java.lang.String frameRateConversionStrategy) {
+    this.frameRateConversionStrategy = frameRateConversionStrategy;
     return this;
   }
 

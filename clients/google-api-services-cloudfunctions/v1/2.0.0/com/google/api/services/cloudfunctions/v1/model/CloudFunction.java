@@ -31,7 +31,6 @@ package com.google.api.services.cloudfunctions.v1.model;
 public final class CloudFunction extends com.google.api.client.json.GenericJson {
 
   /**
-   * See the comment next to this message for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,7 +214,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
-   * See the comment next to this message for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -333,7 +331,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String vpcConnectorEgressSettings;
 
   /**
-   * See the comment next to this message for more details.
    * @return value or {@code null} for none
    */
   public AutomaticUpdatePolicy getAutomaticUpdatePolicy() {
@@ -341,7 +338,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * See the comment next to this message for more details.
    * @param automaticUpdatePolicy automaticUpdatePolicy or {@code null} for none
    */
   public CloudFunction setAutomaticUpdatePolicy(AutomaticUpdatePolicy automaticUpdatePolicy) {
@@ -764,7 +760,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * See the comment next to this message for more details.
    * @return value or {@code null} for none
    */
   public OnDeployUpdatePolicy getOnDeployUpdatePolicy() {
@@ -772,7 +767,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * See the comment next to this message for more details.
    * @param onDeployUpdatePolicy onDeployUpdatePolicy or {@code null} for none
    */
   public CloudFunction setOnDeployUpdatePolicy(OnDeployUpdatePolicy onDeployUpdatePolicy) {

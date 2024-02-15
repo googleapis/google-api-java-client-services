@@ -2930,7 +2930,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param name Must not be set.
+         * @param name The name of the operation's parent resource.
          * @return the request
          */
         public List list(java.lang.String name) throws java.io.IOException {
@@ -2957,7 +2957,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Must not be set.
+           * @param name The name of the operation's parent resource.
            * @since 1.13
            */
           protected List(java.lang.String name) {
@@ -3035,17 +3035,17 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Must not be set. */
+          /** The name of the operation's parent resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Must not be set.
+          /** The name of the operation's parent resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Must not be set. */
+          /** The name of the operation's parent resource. */
           public List setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3056,76 +3056,49 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return this;
           }
 
-          /**
-           * Required. A filter for matching the requested operations. The supported formats of
-           * *filter* are: To query for a specific function: project:*,location:*,function:* To
-           * query for all of the latest operations for a project: project:*,latest:true
-           */
+          /** The standard list filter. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Required. A filter for matching the requested operations. The supported formats of *filter* are: To
-         query for a specific function: project:*,location:*,function:* To query for all of the latest
-         operations for a project: project:*,latest:true
+          /** The standard list filter.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /**
-           * Required. A filter for matching the requested operations. The supported formats of
-           * *filter* are: To query for a specific function: project:*,location:*,function:* To
-           * query for all of the latest operations for a project: project:*,latest:true
-           */
+          /** The standard list filter. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /**
-           * The maximum number of records that should be returned. Requested page size cannot
-           * exceed 100. If not set, the default page size is 100. Pagination is only supported when
-           * querying for a specific function.
-           */
+          /** The standard list page size. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of records that should be returned. Requested page size cannot exceed 100. If
-         not set, the default page size is 100. Pagination is only supported when querying for a specific
-         function.
+          /** The standard list page size.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of records that should be returned. Requested page size cannot
-           * exceed 100. If not set, the default page size is 100. Pagination is only supported when
-           * querying for a specific function.
-           */
+          /** The standard list page size. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * Token identifying which result to start with, which is returned by a previous list
-           * call. Pagination is only supported when querying for a specific function.
-           */
+          /** The standard list page token. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Token identifying which result to start with, which is returned by a previous list call. Pagination
-         is only supported when querying for a specific function.
+          /** The standard list page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * Token identifying which result to start with, which is returned by a previous list
-           * call. Pagination is only supported when querying for a specific function.
-           */
+          /** The standard list page token. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

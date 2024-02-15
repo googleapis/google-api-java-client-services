@@ -30,7 +30,6 @@ package com.google.api.services.cloudfunctions.v2.model;
 public final class BuildConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * See the comment next to this message for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +84,6 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> environmentVariables;
 
   /**
-   * See the comment next to this message for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +141,6 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String workerPool;
 
   /**
-   * See the comment next to this message for more details.
    * @return value or {@code null} for none
    */
   public AutomaticUpdatePolicy getAutomaticUpdatePolicy() {
@@ -151,7 +148,6 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See the comment next to this message for more details.
    * @param automaticUpdatePolicy automaticUpdatePolicy or {@code null} for none
    */
   public BuildConfig setAutomaticUpdatePolicy(AutomaticUpdatePolicy automaticUpdatePolicy) {
@@ -271,7 +267,6 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See the comment next to this message for more details.
    * @return value or {@code null} for none
    */
   public OnDeployUpdatePolicy getOnDeployUpdatePolicy() {
@@ -279,7 +274,6 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See the comment next to this message for more details.
    * @param onDeployUpdatePolicy onDeployUpdatePolicy or {@code null} for none
    */
   public BuildConfig setOnDeployUpdatePolicy(OnDeployUpdatePolicy onDeployUpdatePolicy) {

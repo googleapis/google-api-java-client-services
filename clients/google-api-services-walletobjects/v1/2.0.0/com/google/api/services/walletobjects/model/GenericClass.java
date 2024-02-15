@@ -79,6 +79,14 @@ public final class GenericClass extends com.google.api.client.json.GenericJson {
   private LinksModuleData linksModuleData;
 
   /**
+   * An array of messages displayed in the app. All users of this object will receive its associated
+   * messages. The maximum number of these fields is 10.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Message> messages;
+
+  /**
    * Identifies whether multiple users and devices will save the same object referencing this class.
    * The value may be {@code null}.
    */
@@ -231,6 +239,25 @@ public final class GenericClass extends com.google.api.client.json.GenericJson {
    */
   public GenericClass setLinksModuleData(LinksModuleData linksModuleData) {
     this.linksModuleData = linksModuleData;
+    return this;
+  }
+
+  /**
+   * An array of messages displayed in the app. All users of this object will receive its associated
+   * messages. The maximum number of these fields is 10.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Message> getMessages() {
+    return messages;
+  }
+
+  /**
+   * An array of messages displayed in the app. All users of this object will receive its associated
+   * messages. The maximum number of these fields is 10.
+   * @param messages messages or {@code null} for none
+   */
+  public GenericClass setMessages(java.util.List<Message> messages) {
+    this.messages = messages;
     return this;
   }
 

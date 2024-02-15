@@ -30,6 +30,13 @@ package com.google.api.services.youtube.model;
 public final class ChannelToStoreLinkDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Information specific to billing (read-only).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChannelToStoreLinkDetailsBillingDetails billingDetails;
+
+  /**
    * Google Merchant Center id of the store.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class ChannelToStoreLinkDetails extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String storeUrl;
+
+  /**
+   * Information specific to billing (read-only).
+   * @return value or {@code null} for none
+   */
+  public ChannelToStoreLinkDetailsBillingDetails getBillingDetails() {
+    return billingDetails;
+  }
+
+  /**
+   * Information specific to billing (read-only).
+   * @param billingDetails billingDetails or {@code null} for none
+   */
+  public ChannelToStoreLinkDetails setBillingDetails(ChannelToStoreLinkDetailsBillingDetails billingDetails) {
+    this.billingDetails = billingDetails;
+    return this;
+  }
 
   /**
    * Google Merchant Center id of the store.

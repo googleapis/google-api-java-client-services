@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Next ID: 33
+ * Next ID: 34
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -37,7 +37,8 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * giftMembershipReceivedEvent - the user that received the gift membership messageDeletedEvent -
    * the moderator that took the action messageRetractedEvent - the author that retracted their
    * message userBannedEvent - the moderator that took the action superChatEvent - the user that
-   * made the purchase superStickerEvent - the user that made the purchase
+   * made the purchase superStickerEvent - the user that made the purchase pollEvent - the user that
+   * created the poll
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,6 +117,13 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   private LiveChatNewSponsorDetails newSponsorDetails;
 
   /**
+   * Details about the poll event, this is only set if the type is 'pollEvent'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiveChatPollDetails pollDetails;
+
+  /**
    * The date and time when the message was orignally published.
    * The value may be {@code null}.
    */
@@ -165,7 +173,8 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * giftMembershipReceivedEvent - the user that received the gift membership messageDeletedEvent -
    * the moderator that took the action messageRetractedEvent - the author that retracted their
    * message userBannedEvent - the moderator that took the action superChatEvent - the user that
-   * made the purchase superStickerEvent - the user that made the purchase
+   * made the purchase superStickerEvent - the user that made the purchase pollEvent - the user that
+   * created the poll
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorChannelId() {
@@ -180,7 +189,8 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * giftMembershipReceivedEvent - the user that received the gift membership messageDeletedEvent -
    * the moderator that took the action messageRetractedEvent - the author that retracted their
    * message userBannedEvent - the moderator that took the action superChatEvent - the user that
-   * made the purchase superStickerEvent - the user that made the purchase
+   * made the purchase superStickerEvent - the user that made the purchase pollEvent - the user that
+   * created the poll
    * @param authorChannelId authorChannelId or {@code null} for none
    */
   public LiveChatMessageSnippet setAuthorChannelId(java.lang.String authorChannelId) {
@@ -359,6 +369,23 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    */
   public LiveChatMessageSnippet setNewSponsorDetails(LiveChatNewSponsorDetails newSponsorDetails) {
     this.newSponsorDetails = newSponsorDetails;
+    return this;
+  }
+
+  /**
+   * Details about the poll event, this is only set if the type is 'pollEvent'.
+   * @return value or {@code null} for none
+   */
+  public LiveChatPollDetails getPollDetails() {
+    return pollDetails;
+  }
+
+  /**
+   * Details about the poll event, this is only set if the type is 'pollEvent'.
+   * @param pollDetails pollDetails or {@code null} for none
+   */
+  public LiveChatMessageSnippet setPollDetails(LiveChatPollDetails pollDetails) {
+    this.pollDetails = pollDetails;
     return this;
   }
 

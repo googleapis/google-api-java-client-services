@@ -52,6 +52,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends
   private java.lang.String summaryText;
 
   /**
+   * Summary with metadata information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,6 +112,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends
   }
 
   /**
+   * Summary with metadata information.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata getSummaryWithMetadata() {
@@ -118,6 +120,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends
   }
 
   /**
+   * Summary with metadata information.
    * @param summaryWithMetadata summaryWithMetadata or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponseSummary setSummaryWithMetadata(GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata summaryWithMetadata) {
